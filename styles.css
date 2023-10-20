@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('Background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    position: relative; /* Because the body has a blur, the content should be positioned on top of it without blur */
+    height: 100vh;
+    backdrop-filter: blur(3px); /* To give a frosted glass effect */
+}
+
+.circular-image {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15vh; /* Raise the image vertically */
+    width: 150px; /* Adjust as necessary */
+    height: 150px; /* Adjust as necessary */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black; /* You can change this to your desired link color */
+    margin: 0 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
