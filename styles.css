@@ -2,45 +2,61 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('Background.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(3px);
-    font-family: Arial, sans-serif;
+    font-family: Oswald, sans-serif;
+    overflow: hidden; 
 }
 
 .content {
-    position: relative; /* Because the body has a blur, the content should be positioned on top of it without blur */
+    position: relative;
+    display: inline-block; /* Changes from block to inline-block to wrap content */
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    padding: 40px; /* Padding to make the box extend past the content */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    text-align: center; /* To center-align the textual content inside */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    backdrop-filter: blur(3px); /* To give a frosted glass effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px); /* Blurring the background */
+    background-image: url("backgrounds/17.jpg");
 }
 
 .circular-image {
     display: block;
     margin: 0 auto;
-    margin-top: 15vh; /* Raise the image vertically */
-    width: 150px; /* Adjust as necessary */
-    height: 150px; /* Adjust as necessary */
-    border-radius: 50%; /* Makes the image circular */
+    /* margin-top: 10vh; */
+    width: 250px; /* Bigger image */
+    height: 250px; /* Bigger image */
+    border-radius: 100%; 
 }
 
 h1 {
     text-align: center;
     font-weight: bold;
-    margin-top: 20px;
+    font-size: 3em; /* Bigger font size */
+    margin-top: 30px;
 }
 
 .links {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 2em; /* Bigger font size */
 }
 
 .links a {
     text-decoration: none;
-    color: black; /* You can change this to your desired link color */
-    margin: 0 10px;
+    color: black; 
+    margin: 0 20px; /* More spacing between links */
 }
 
 .links a:hover {
     text-decoration: underline;
 }
+
