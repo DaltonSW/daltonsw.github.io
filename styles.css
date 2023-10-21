@@ -1,62 +1,123 @@
+/* Global styles and resets */
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: Oswald, sans-serif;
-    overflow: hidden; 
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Set body height to full viewport height */
+    overflow: hidden; /* Prevents scrollbar appearance */
+    font-family: Oswald, sans-serif; /* Set global font to Oswald, with fallback to sans-serif */
+    align-items: flex-end;
+}
+
+.fade {
+    display: none;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    visibility: hidden; 
+}
+
+.fade.visible {
+    display: block;
+    visibility: visible;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
 }
 
 .content {
-    position: relative;
-    display: inline-block; /* Changes from block to inline-block to wrap content */
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-    padding: 40px; /* Padding to make the box extend past the content */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    text-align: center; /* To center-align the textual content inside */
+    padding: 40px; /* Adds space around content inside container */
+    position: relative; /* Allows for absolute positioning of child elements relative to this container */
+    text-align: center; /* Centers text elements horizontally inside container */
+    border-radius: 10px; /* Rounds the corners of the container */
+    display: inline-block; /* Makes the container size adapt to its content and allows for centering */
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+    transition: transform 0.25s ease-out;
 }
 
+.content-detail {
+    display: none; /* Initially hidden */
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    margin: 2vh auto 0; /* 2vh top margin for spacing */
+    border-radius: 10px;
+    transition: opacity 0.3s; /* Smooth transition for fade effect */
+    width: calc(2 * (250px + 80px)); /* Twice the width of .content (image width + 2 * padding) */
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 60px; /* Increase padding */
+    width: calc(2.5 * (250px + 80px)); /* Make the width larger */
+    font-size: 1.5em; /* Increase font size */
+}
+
+/* Background and positioning styles for the body */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(5px); /* Blurring the background */
-    background-image: url("backgrounds/17.jpg");
+    display: flex; /* Enable flexbox for centering */
+    height: 100vh; /* Set body height to full viewport height */
+    align-items: center; /* Vertically center content */
+    background-size: cover; /* Scales background image to cover entire element */
+    justify-content: center; /* Horizontally center content */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-image: url("backgrounds/0.jpg"); /* Set background image source */
 }
 
 .circular-image {
-    display: block;
-    margin: 0 auto;
-    /* margin-top: 10vh; */
-    width: 250px; /* Bigger image */
-    height: 250px; /* Bigger image */
-    border-radius: 100%; 
+    width: 225px; /* Set image width */
+    height: 225px; /* Set image height */
+    margin: 0 auto; /* Horizontally center the image within its parent */
+    display: block; /* Display as a block, useful for centering with margin */
+    border-radius: 100%; /* Makes the image circular */
 }
 
 h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 3em; /* Bigger font size */
-    margin-top: 30px;
+    font-size: 3em; /* Increase font size */
+    margin-top: 30px; /* Add spacing at the top */
+    font-weight: bold; /* Bold the text */
+    text-align: center; /* Center align text */
 }
 
 .links {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2em; /* Bigger font size */
+    font-size: 2em; /* Increase font size */
+    margin-top: 20px; /* Add spacing at the top */
+    text-align: center; /* Center align links */
 }
 
 .links a {
-    text-decoration: none;
-    color: black; 
-    margin: 0 20px; /* More spacing between links */
+    color: black; /* Set link color to black */
+    margin: 0 20px; /* Add horizontal spacing between links */
+    text-decoration: none; /* Remove underlines from links */
 }
 
 .links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline link when hovered */
 }
 
+.links-content {
+    display: none; /* Initially hidden, similar to .content-detail */
+    width: 100vw;
+    max-width: 800px; /* Double the width of the .content box */
+    margin: 0 auto; /* Centering */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Spacing between each link */
+}
+
+.social-icon {
+    width: 40px; /* Size of the icon */
+    height: 40px;
+    margin-right: 15px; /* Spacing between icon and text */
+}

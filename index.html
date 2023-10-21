@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-        <script src="script.js"></script>
-        <title>Dog</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="content">
-            <img src="ProfilePic.png" alt="Circular Image" class="circular-image">
-            <h1>Howdy, I'm Dalton!</h1>
-            <div class="links">
-                <a href="#">Link 1</a> | <a href="#">Link 2</a> | <a href="#">Link 3</a>
-            </div>
-        </div>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Oswald"
+		/>
+		<title>Dog</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<img src="ProfilePic.png" alt="Circular Image" class="circular-image" />
+				<h1>Howdy, I'm Dalton!</h1>
+				<div class="links">
+					| <a href="#" class="about-link">About</a> 
+                    | <a href="#" class="links-link">Links</a>
+                    <!-- | <a href="#">Resume</a> -->
+                    |
+				</div>
+			</div>
+			<div class="content-detail fade" id="aboutContent">
+				<p>Lorem ipsum... (your long text here) ...</p>
+			</div>
+			<!-- Create a new content box for social links -->
+			<div class="links-content fade">
+				<div class="social-link">
+					<img src="path_to_icon_1.png" alt="Icon 1" class="social-icon" />
+					<span>@username1</span>
+				</div>
+                <div class="social-link">
+					<img src="path_to_icon_2.png" alt="Icon 2" class="social-icon" />
+					<span>@username2</span>
+				</div>
+                <div class="social-link">
+					<img src="path_to_icon_3.png" alt="Icon 3" class="social-icon" />
+					<span>@username3</span>
+				</div>
+                <div class="social-link">
+					<img src="path_to_icon_4.png" alt="Icon 4" class="social-icon" />
+					<span>@username4</span>
+				</div>
+                <div class="social-link">
+					<img src="path_to_icon_5.png" alt="Icon 5" class="social-icon" />
+					<span>@username5</span>
+				</div>
+                <div class="social-link">
+					<img src="path_to_icon_6.png" alt="Icon 6" class="social-icon" />
+					<span>@username6</span>
+				</div>
+				<!-- ... Repeat the structure above for the other 5 links ... -->
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
