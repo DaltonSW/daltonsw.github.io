@@ -1,45 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     randomBackground();
+
     const content = document.querySelector('.content');
-    const contentDetail = document.querySelector('.about-content');
+    const aboutContent = document.querySelector('.about-content');
     const linksContent = document.querySelector('.links-content');
 
     const aboutLink = document.querySelector('.about-link');
     const linksLink = document.querySelector('.links-link');
     const profilePic = document.querySelector('.circular-image');
 
-    const TRANSFORM_STYLE = 'translateY(-20%) scale(0.8)';
+    function resetContent() {
+        content.classList.remove('content-active');
+        aboutContent.classList.remove('content-show');
+        linksContent.classList.remove('content-show');
+    }
 
     aboutLink.addEventListener('click', function(event) {
         event.preventDefault();
-        if (!content.style.transform) {
-            content.style.transform = TRANSFORM_STYLE;
-        }
-        linksContent.classList.remove('visible');
-        linksContent.classList.add('displayNone');
-
-        contentDetail.classList.add('visible');
-        contentDetail.classList.remove('displayNone');
+        content.classList.add('content-active');
+        linksContent.classList.remove('content-show');
+        aboutContent.classList.add('content-show');
     });
 
     linksLink.addEventListener('click', function(event) {
         event.preventDefault();
-        if (!content.style.transform) {
-            content.style.transform = TRANSFORM_STYLE;
-        }
-        contentDetail.classList.remove('visible');
-        contentDetail.classList.add('displayNone');
-
-        linksContent.classList.add('visible');
-        linksContent.classList.remove('displayNone');
+        content.classList.add('content-active');
+        aboutContent.classList.remove('content-show');
+        linksContent.classList.add('content-show');
     });
 
     profilePic.addEventListener('click', function() {
-        content.style.transform = '';
-        contentDetail.classList.remove('visible');
-        contentDetail.classList.add('displayNone');
-        linksContent.classList.remove('visible');
-        linksContent.classList.add('displayNone');
+        resetContent();
     });
 });
 
