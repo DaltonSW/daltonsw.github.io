@@ -35,7 +35,7 @@ body {
     justify-content: space-around;
 }
 
-.content, .content-detail, .links-content {
+.content, .about-content, .links-content {
     padding: 40px;
     position: relative;
     text-align: center;
@@ -49,7 +49,7 @@ body {
     transition: transform 0.25s ease-out;
 }
 
-.content-detail {
+.about-content {
     margin: 2vh auto 0;
     width: calc(2.5 * (250px + 80px));
     font-size: 1.5em;

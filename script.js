@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     randomBackground();
     const content = document.querySelector('.content');
-    const contentDetail = document.querySelector('.content-detail');
+    const contentDetail = document.querySelector('.about-content');
     const linksContent = document.querySelector('.links-content');
 
     const aboutLink = document.querySelector('.about-link');
