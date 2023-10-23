@@ -1,45 +1,38 @@
 document.addEventListener('DOMContentLoaded', function() {
     randomBackground();
     const content = document.querySelector('.content');
-    const contentDetail = document.querySelector('.about-content');
-    const linksContent = document.querySelector('.links-content');
-
-    const aboutLink = document.querySelector('.about-link');
-    const linksLink = document.querySelector('.links-link');
     const profilePic = document.querySelector('.circular-image');
 
-    const TRANSFORM_STYLE = 'translateY(-20%) scale(0.8)';
+    function resetContentState(content) {
+        document.querySelector('.content').classList.remove('content-active');
+        document.querySelectorAll('.about-content, .links-content').forEach(section => {
+            section.classList.remove('content-show');
+            section.classList.add('content-hide');
+        });
+        content.classList.remove('content-active');
+    }
 
-    aboutLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (!content.style.transform) {
-            content.style.transform = TRANSFORM_STYLE;
-        }
-        linksContent.classList.remove('visible');
-        linksContent.classList.add('displayNone');
+    const links = document.querySelectorAll('.mainLinks a');
 
-        contentDetail.classList.add('visible');
-        contentDetail.classList.remove('displayNone');
+    // Add event listener to each link
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            resetContentState(content);
+
+            // Get the content associated with the clicked link
+            const targetContent = document.querySelector(`.${link.getAttribute('data-content')}`);
+
+            // Update content state
+            document.querySelector('.content').classList.add('content-active');
+            targetContent.classList.add('content-show');
+            targetContent.classList.remove('content-hide');
+        });
     });
 
-    linksLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (!content.style.transform) {
-            content.style.transform = TRANSFORM_STYLE;
-        }
-        contentDetail.classList.remove('visible');
-        contentDetail.classList.add('displayNone');
-
-        linksContent.classList.add('visible');
-        linksContent.classList.remove('displayNone');
-    });
-
+    // Reset to main content view on profile picture click
     profilePic.addEventListener('click', function() {
-        content.style.transform = '';
-        contentDetail.classList.remove('visible');
-        contentDetail.classList.add('displayNone');
-        linksContent.classList.remove('visible');
-        linksContent.classList.add('displayNone');
+        resetContentState(content);
     });
 });
 
@@ -48,3 +41,4 @@ function randomBackground() {
     const randomBgImage = Math.floor(Math.random() * numImages);
     document.body.style.backgroundImage = `url('backgrounds/${randomBgImage}.jpg')`;
 }
+
