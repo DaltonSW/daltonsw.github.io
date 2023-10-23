@@ -15,37 +15,40 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .content, .about-content, .links-content {
     padding: 40px;
-    position: relative;
     text-align: center;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.25s ease-out, opacity 0.3s ease-in-out;
 }
 
 .content {
     display: inline-block;
+    transition: transform 0.33s ease-in-out;
 }
 
 .about-content, .links-content {
-    opacity: 0;
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s, opacity 0.3s;
+    transition: max-height 0.5s, opacity 0.25s ease-out;
 }
 
 .content-active {
-    transform: translateY(-20%) scale(0.8);
+    transform: translateY(-15%) scale(0.75);
 }
 
 .content-show {
     opacity: 1;
-    max-height: 1000px;
+    max-height: 1000px; /* Adjust this value if your content is getting cut off */
+}
+
+.content-hide {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
 }
 
 .circular-image {
@@ -56,7 +59,7 @@ body {
     border-radius: 100%;
 }
 
-h1, .links {
+h1, .mainLinks {
     font-size: 2em;
     margin-top: 30px;
 }
@@ -65,13 +68,13 @@ h1 {
     font-weight: bold;
 }
 
-.links a {
+.mainLinks a {
     color: black;
     margin: 0 20px;
     text-decoration: none;
 }
 
-.links a:hover {
+.mainLinks a:hover {
     text-decoration: underline;
 }
 
@@ -91,6 +94,40 @@ h1 {
     margin-right: 15px;
 }
 
+/* Larger screens */
+@media (min-width: 1024px) {
+    .circular-image {
+        width: 300px;
+        height: 300px; /* increase image size */
+    }
+
+    h1, .mainLinks {
+        font-size: 2.5em; /* increase font size */
+    }
+
+    .social-link {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px; /* increase social icon size */
+        margin-right: 20px; /* increase margin */
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    .content-hide {
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+    }
+}
+
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
     .circular-image {
@@ -98,11 +135,19 @@ h1 {
         height: 150px;
     }
 
-    h1, .links {
+    h1, .mainLinks {
         font-size: 1.5em;
     }
 
     .content, .about-content, .links-content {
         padding: 20px;
     }
+
+    .content-hide {
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+    }
+    
 }

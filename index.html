@@ -15,17 +15,17 @@
 			<div class="content">
 				<img src="ProfilePic.png" alt="Circular Image" class="circular-image" />
 				<h1>Howdy!</h1>
-				<div class="links">
-					| <a href="#" class="about-link">About</a> 
-                    | <a href="#" class="links-link">Links</a>
+				<div class="mainLinks">
+					| <a href="#" data-content="about-content" class="content-link">About</a>
+                    | <a href="#" data-content="links-content" class="content-link">Links</a>
                     <!-- | <a href="#">Resume</a> -->
                     |
 				</div>
 			</div>
-            <div class="about-content fade displayNone" id="aboutContent">
+            <div class="about-content content-section fade content-hide" id="aboutContent">
                 <p>I'm Dalton. I write code and play Melee. Sometimes I make games.</p>
             </div>
-            <div class="links-content fade displayNone" id="linksContent">
+            <div class="links-content content-section fade content-hide" id="linksContent">
                 <div class="social-link">
                     <img src="icons/discord.png" alt="Discord Icon" class="social-icon" />
                     <span>@DaltonSW</span>

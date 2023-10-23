@@ -1,36 +1,38 @@
 document.addEventListener('DOMContentLoaded', function() {
     randomBackground();
-
     const content = document.querySelector('.content');
-    const aboutContent = document.querySelector('.about-content');
-    const linksContent = document.querySelector('.links-content');
-
-    const aboutLink = document.querySelector('.about-link');
-    const linksLink = document.querySelector('.links-link');
     const profilePic = document.querySelector('.circular-image');
 
-    function resetContent() {
+    function resetContentState(content) {
+        document.querySelector('.content').classList.remove('content-active');
+        document.querySelectorAll('.about-content, .links-content').forEach(section => {
+            section.classList.remove('content-show');
+            section.classList.add('content-hide');
+        });
         content.classList.remove('content-active');
-        aboutContent.classList.remove('content-show');
-        linksContent.classList.remove('content-show');
     }
 
-    aboutLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        content.classList.add('content-active');
-        linksContent.classList.remove('content-show');
-        aboutContent.classList.add('content-show');
+    const links = document.querySelectorAll('.mainLinks a');
+
+    // Add event listener to each link
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            resetContentState(content);
+
+            // Get the content associated with the clicked link
+            const targetContent = document.querySelector(`.${link.getAttribute('data-content')}`);
+
+            // Update content state
+            document.querySelector('.content').classList.add('content-active');
+            targetContent.classList.add('content-show');
+            targetContent.classList.remove('content-hide');
+        });
     });
 
-    linksLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        content.classList.add('content-active');
-        aboutContent.classList.remove('content-show');
-        linksContent.classList.add('content-show');
-    });
-
+    // Reset to main content view on profile picture click
     profilePic.addEventListener('click', function() {
-        resetContent();
+        resetContentState(content);
     });
 });
 
@@ -39,3 +41,4 @@ function randomBackground() {
     const randomBgImage = Math.floor(Math.random() * numImages);
     document.body.style.backgroundImage = `url('backgrounds/${randomBgImage}.jpg')`;
 }
+
