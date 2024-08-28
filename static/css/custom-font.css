@@ -1,0 +1,25 @@
+@font-face {
+	font-family: 'MartianMono NF';
+	font-style: normal;
+	font-weight: 400;
+	src: local('MartianMono NF'), url("/fonts/MartianMono-Regular.woff2") format('woff2');
+}
+
+@font-face {
+	font-family: 'MartianMono NF';
+	font-style: medium;
+	font-weight: 500;
+	src: local('MartianMono NF'), url("/fonts/MartianMono-Medium.woff2") format('woff2');
+}
+
+@font-face {
+	font-family: 'MartianMono NF';
+	font-style: bold;
+	font-weight: 600;
+	src: local('MartianMono NF'), url("/fonts/MartianMono-Bold.woff2") format('woff2');
+}
+
+p, h1, h2, h3, h4, h5, h6, code, pre, div, span, a {
+	font-family: 'MartianMono NF', Consolas, monospace;
+}
+

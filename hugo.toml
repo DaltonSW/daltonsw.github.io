@@ -41,6 +41,8 @@ showPostsLink = false # Show 'Posts' link in the header
     # fitImageInArticlePreview = false  # make article preview images fit the article preview instead of getting cropped
     # articleSummary = true  # show a summary in article preview; default true
 
+
+    # NOTE: To use custom fonts with Ficurinia, load the CSS file in /layouts/partials/inject/head.html
     fontFamily = "MartianMono NF"  # changes the font, default "JetBrains Mono"
     titleFontFamily = "MartianMono NF"  # font used for titles and headings
     monospaceFontFamily = "MartianMono NF"  # changes the monospace font for code, default "JetBrains Mono"
