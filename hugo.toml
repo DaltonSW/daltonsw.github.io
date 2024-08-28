@@ -16,13 +16,13 @@ summaryLength = 100
     author = "Dalton"
     description = "Dalton's little slice of the internet"
 
-posts = "thoughts"
-#showPostsLink = false # Show 'Posts' link in the header 
+#posts = "thoughts"
+showPostsLink = false # Show 'Posts' link in the header 
 # showcaseDir = "projects"
 
     showSinglePageAsHome = true # Gives a bespoke home page instead of auto-rendered
     homeSinglePage = "/home.md" # 'Works well with extraContentDirs', per README
-    # extraContentDirs = ["thoughts"]
+    extraContentDirs = ["thoughts"]
 
     # It's best to put these icons in the "static" folder of your site
     logo = "/logo.svg"
