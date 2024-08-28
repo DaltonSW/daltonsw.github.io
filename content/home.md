@@ -19,10 +19,10 @@ Welcome to my little slice of the internet. Hope you enjoy your stay. :)
 
 ### Peruse The Site
 
-There's some other stuff going on here (or there will be, if there isn't right now).  
+- Check out my [Projects](/projects)
+- Read through my [Thoughts](/thoughts)
+- Look at some certified [Neat Stuff](/neat-stuff)
   
-You can check out my [Projects](/projects) here or go look at some of my various musings here in [Posts](/posts)  
-
 ### Reach Out
 
 You can shoot me a message on any of the social medias linked at the top of the page.  
