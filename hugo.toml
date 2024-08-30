@@ -110,6 +110,10 @@ showPostsLink = false # Show 'Posts' link in the header
         identifer = "projects"
         name = "Projects"
         url = "/projects/"
+    [[menu.main]]
+        identifer = "neat-stuff"
+        name = "Neat Stuff"
+        url = "/neat-stuff/"
     # these links (menu.icons) will be added as icon links below the main nav
     [[menu.icons]]
         identifier = "github"

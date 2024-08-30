@@ -1,7 +1,28 @@
 ---
+title: Projects
 showDate: false
 ---
 
-# Here There Be Projects
+## Active Projects {class="l20"}
 
-## Soon (tm)
+### Termina
+
+### aocli
+
+### YouTerm
+
+## Other Projects {class="l20"}
+
+### PokeTerm
+
+## Game Jams {class="l20"}
+
+### I Wanna Hookshot
+
+### EnviroMetal
+
+### InvisiHeist
+
+### Cowball
+
+### Cult of the Closed Curcuit
