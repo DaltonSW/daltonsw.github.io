@@ -1,0 +1,21 @@
+baseURL = 'https://dalton.dog/'
+title = "Dalton's Web Place"
+theme = "ficurinia"
+languageCode = "en"
+defaultContentLanguage = "en"
+
+copyright = "Dalton Williams"
+
+# Article information
+paginate = 5
+summaryLength = 100
+
+cleanDestinationDir = true
+
+timezone = "America/Chicago"
+
+[frontmatter]
+    publishDate = ['published', 'publishDate', 'pub', 'date', ':default']
+    date = ['date', ':fileModTime', ':default']
+    lastmod = ['lastmod', ':fileModTime', ':default']
+

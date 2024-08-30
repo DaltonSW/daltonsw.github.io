@@ -1,0 +1,27 @@
+[[main]]
+    identifer = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+[[main]]
+    identifer = "favorites"
+    name = "Favorites"
+    url = "/favorites/"
+
+[[icons]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/DaltonSW"
+    weight = 10
+[[icons]]
+    identifier = "email"
+    name = "Contact"
+    url = "mailto:email@dalton.dog"
+[[icons]]
+    identifier = "steam"
+    name = "Steam"
+    url = "https://steamcommunity.com/id/daltonsw"
+[[icons]]
+    identifier = "telegram"
+    name = "Telegram"
+    url = "https://t.me/daltonsw"
