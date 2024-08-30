@@ -1,6 +1,8 @@
 ---
 title: Projects
 showDate: false
+date: 2024-08-29
+norss: true
 ---
 
 ## Active Projects {class="l20"}

@@ -1,7 +1,8 @@
 ---
 title: "Howdy, I'm Dalton!"
 showDate: false
-showShare: false
+date: 2024-08-29
+norss: true
 ---
 
 ## About Me
