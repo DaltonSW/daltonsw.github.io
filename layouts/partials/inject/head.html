@@ -1,2 +1,6 @@
 <link rel="stylesheet" href="/css/custom-font.css">
-<link rel="stylesheet" href="/css/custom-styling.css">
+<link rel="stylesheet" href="/css/overrides.css">
+
+{{ if .Params.customCSS }}
+    <link rel="stylesheet" href="{{ "css/" | relURL }}{{ .Params.customCSS}}">
+{{ end }}
