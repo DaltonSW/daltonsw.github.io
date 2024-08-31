@@ -20,13 +20,21 @@
     weight = 10
 [[icons]]
     identifier = "email"
-    name = "Contact"
+    name = "Email"
     url = "mailto:email@dalton.dog"
+    weight = 1
 [[icons]]
     identifier = "steam"
     name = "Steam"
     url = "https://steamcommunity.com/id/daltonsw"
+    weight = 30
 [[icons]]
     identifier = "telegram"
     name = "Telegram"
     url = "https://t.me/daltonsw"
+    weight = 15
+[[icons]]
+    identifier = "itch"
+    name = "Itch"
+    url = "https://daltonsw.itch.io/"
+    weight = 20
