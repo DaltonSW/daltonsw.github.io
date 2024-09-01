@@ -2,7 +2,7 @@
 title: Introducing aocli
 showDate: false
 url: /aocli
-# draft: true
+draft: true
 ---
 
 `aocli` is a command-line designed to interface with Advent of Code without leaving your terminal. The goal is to enhance your puzzle solving experience in fast, efficient, and beautiful way.

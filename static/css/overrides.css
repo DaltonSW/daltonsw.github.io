@@ -45,9 +45,17 @@ header nav:not(#TableOfContents) ul li a:hover {
 	border-radius: 10px;
 }
 
-header {
-	min-width: 160px !important;
-	max-width: 160px !important;
+@media (max-width: 950px) {
+    #titleContainer h1 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 950px) {
+    header {
+        min-width: 160px !important;
+        max-width: 160px !important;
+    }
 }
 
 li::marker {
@@ -76,6 +84,7 @@ li>a {
 	padding-right: 0px;
 	margin: 0px;
 	border-radius: 10px !important;
+	background: var(--default_bg) !important;
 }
 
 #links {

@@ -25,7 +25,7 @@ Welcome to my little slice of the internet. Hope you enjoy your stay. :)
 
 You can shoot me a message on any platform linked at the top of the page.  
   
-If you want to reach out about work specifically, do so at `jobs <at> dalton.dog`
+If you want to reach out about work specifically, do so at [`jobs <at> dalton.dog`](mailto:jobs@dalton.dog)
 
 ### Have A Nice Day
 
