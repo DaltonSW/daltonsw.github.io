@@ -19,3 +19,23 @@
 	src: local('MartianMono NF'), url("/fonts/MartianMono-Bold.woff2") format('woff2');
 }
 
+@font-face {
+	font-family: 'SauceCodePro NF';
+	font-style: normal;
+	font-weight: 400;
+	src: local('SauceCodePro NF'), url("fonts/SauceCode-Normal.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'SauceCodePro NF';
+	font-style: italic;
+	font-weight: 400;
+	src: local('SauceCodePro NF'), url("fonts/SauceCode-Italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'SauceCodePro NF';
+	font-style: bold;
+	font-weight: 600;
+	src: local('SauceCodePro NF'), url("fonts/SauceCode-Bold.woff2") format("woff2");
+}
