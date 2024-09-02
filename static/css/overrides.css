@@ -35,7 +35,7 @@
 	--link-underline: var(--bullet);
 }
 
-p code {
+code {
 	color: var(--code);
 }
 
@@ -109,17 +109,20 @@ nav a {
 
 em {
 	color: var(--dim-text);
+	font-style: italic;
 }
 
 h1 {
+	text-align: center;
 }
 
 h2 {
-	padding-top: 10px; */
+	padding-top: 10px;
 }
 
 h3 {
 	margin-bottom: 0px;
+	font-style: italic;
 }
 
 h4 {

@@ -13,6 +13,7 @@ With it, you can:
 - view the puzzle for a day
 - submit your guess
 - check out leaderboards
+- look at your user information
 
 ## Installation
 
@@ -20,7 +21,7 @@ You can install `aocli` in one of the following ways, listed in recommended orde
 
 ### GitHub Releases
 
-Check out the latest GitHub release, found [here](). Download the version for your OS.
+Check out the latest GitHub release, found [here](https://github.com/DaltonSW/aocgo/releases/latest). Download the version for your OS.
 
 ### Homebrew
 
@@ -36,15 +37,31 @@ brew install aocli
 
 *Note: Might not be the most up-to-date version, since this will match to the module version*
 
-Ensure you have `Go` installed. Then run the following: 
+Ensure you have `Go` [installed](https://go.dev/doc/install). Then, run the following: 
 
 `go install go.dalton.dog/aocli@latest`
 
 Ensure you have `$GOPATH` on your `$PATH`.
 
+## Required Setup
+
+1. Go to [Advent of Code](https://adventofcode.com) and login with your preferred method
+2. Access Dev Tools (either F12 or Right-Click -> Inspect)
+3. Click the `Storage` tab at the top of the section
+4. Locate the `session` token. Double click the `Value` and copy it
+5. Place the session token in one of the following places:
+    - `~/.config/aocgo/session.token`
+    - `AOC_SESSION_TOKEN` environment variable*
+6. Run `aocli health` to ensure the program can find the token properly
+
+**If you choose the environment variable method, ensure you include a line to set it in your shell's startup script so it gets set every launch.*
+
+
 ## After Installation
 
-Check out the repository [here](). It has required setup instructions and a list of available commands with examples.
+To view the available commands, check out the command list [here](https://github.com/DaltonSW/aocgo/tree/main/cmd/aocli) or run `aocli help` once installed.
+
+Check out the repository [here](https://github.com/DaltonSW/aocgo/tree/main/cmd/aocli). It has required setup instructions and a list of available commands with examples.
 
 ## Shoutouts
 
