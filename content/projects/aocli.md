@@ -54,7 +54,7 @@ Ensure you have `$GOPATH` on your `$PATH`.
     - `AOC_SESSION_TOKEN` environment variable*
 6. Run `aocli health` to ensure the program can find the token properly
 
-**If you choose the environment variable method, ensure you include a line to set it in your shell's startup script so it gets set every launch.*
+*\*If you choose the environment variable method, ensure you include a line to set it in your shell's startup script so it gets set every launch.*
 
 
 ## After Installation
