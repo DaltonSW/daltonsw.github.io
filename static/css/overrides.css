@@ -5,23 +5,13 @@
 	--accent-light: #DE87A3;
 	--accent-dark: #731031;
 
-	--main_text: #FFFFFF;
-	--dim_text: #B5B5B5;
+	--purple-pure: #9633FF;
 
-	/*
-	 * --main_text
-	 * --dim_text
-	 * --accent_text
-	 *
-	 * --main_bg
-	 * --card_bg
-	 *
-	 * --side_bg
-	 * --side_card_bg
-	 *
-	 * --stroke
-	 * --accent
-	 */
+	--code-accent: #FF6D91;
+
+	--underline-purple: #CBA6FF;
+	--code-purple: #B693FF;
+	--code-block-purple: #F8DDFF;
 
 	/* Ficuriana theme overrides
 	 * --default_bg
@@ -33,6 +23,24 @@
 	 * --default_sidebar_bg
 	 * --default_sidebar_fg
 	 */
+
+	--main-text: #FFFFFF;
+	--dim-text: #B7B7B7;
+
+	--code: var(--code-purple);
+	--code-block: var(--code-block-purple);
+
+	--bullet: var(--underline-purple);
+
+	--link-underline: var(--bullet);
+}
+
+p code {
+	color: var(--code);
+}
+
+pre code {
+	color: var(--code-block);
 }
 
 header nav:not(#TableOfContents) ul li a {
@@ -59,7 +67,7 @@ header nav:not(#TableOfContents) ul li a:hover {
 }
 
 li::marker {
-	color: var(--accent-light) !important;
+	color: var(--bullet) !important;
 }
 
 h2 + a {
@@ -68,15 +76,16 @@ h2 + a {
 
 
 a {
-	border-color: var(--accent-light);
+	border-color: var(--link-underline);
 }
 
 a:hover {
-	color: var(--accent-main);
+	color: var(--link-hover);
 }
 
-li>a {
+nav a {
 	text-align: center;
+	font-family: "MartianMono NF";	
 }
 
 .search #searchbar {
@@ -99,7 +108,7 @@ li>a {
 }
 
 em {
-	color: var(--dim_text);
+	color: var(--dim-text);
 }
 
 h1 {
@@ -109,6 +118,10 @@ h2 {
 	padding-top: 10px; */
 }
 
+h3 {
+	margin-bottom: 0px;
+}
+
 h4 {
 }
 
@@ -116,5 +129,8 @@ h5 {
 }
 
 h6 {
+}
+
+nav {
 }
 
