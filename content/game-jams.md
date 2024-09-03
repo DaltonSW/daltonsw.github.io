@@ -3,8 +3,10 @@ title: "Game Jam Games"
 date: 2024-08-31
 showDate: false
 description: "Information about the game jams that I've worked on with my friends"
-#TODO: customCSS: gamejams.css
+customCSS: gamejams.css
 ---
+
+{{< card >}}
 
 ## Cult of the Closed Curcuit (2024)
 
@@ -24,6 +26,9 @@ Theme: Ancient (Optional)
 - Patrick Caldwell: Game Design, Artwork
 - Shea Murphy: Music
 
+{{< /card >}}
+
+{{< card >}}
 ## Cowball (2023)
 
 *You're a cowboy, who is also a ball. Bounce your way to victory.*
@@ -41,7 +46,9 @@ Theme: None(?)
 - Patrick Caldwell: Artwork
 - Shea Murphy: Music
 - wooferzfg: Development
+{{< /card >}}
 
+{{< card >}}
 ## InvisiHeist (2022)
 
 *Use sound cues to rob a casino blind.*
@@ -58,7 +65,9 @@ Theme: Roll of the Dice
 - David Gipson: Development
 - Jack Sampson: Creative Lead
 - Patrick Caldwell: Artwork, Sound Effects
+{{< /card >}}
 
+{{< card >}}
 ## EnviroMetal (2022)
 
 *Work to save nature from robots from the future.*
@@ -78,7 +87,9 @@ Theme: Nature (Optional)
 - Kevin Kotleba: Artwork
 - Patrick Caldwell: Creative Lead
 - Shea Murphy: Music
+{{< /card >}}
 
+{{< card >}}
 ## I Wanna Hookshot (2018)
 
 *A platformer where you can't walk or jump.*
@@ -95,7 +106,9 @@ Theme: Genre Without Mechanic
 - David Gipson: Music, Development, Levels
 - Patrick Caldwell: Artwork, Levels
 - Riley Driscoll: Development Lead, Levels
+{{< /card >}}
 
+{{< card >}}
 ## Contributing Members
 
 - Brandon Habron
@@ -106,3 +119,4 @@ Theme: Genre Without Mechanic
 - [Patrick Caldwell](https://purplerta.com/)
 - Riley Driscoll
 - [wooferzfg](https://www.wooferzfg.me)
+{{< /card >}}
