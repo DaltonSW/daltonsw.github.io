@@ -1,9 +1,14 @@
 ---
 title: Introducing aocli
 showDate: false
+date: 2024-09-12
 url: /aocli
-draft: true
+customCSS: gamejams.css
+# TODO: Make this not game-jam-specific
 ---
+{{< card >}}
+
+## Welcome!
 
 `aocli` is a command-line designed to interface with Advent of Code without leaving your terminal.
 Written in `Go` to ensure speediness, and using `bubbletea` and `lipgloss` for pretiness, aocli strives to enhance your Advent of Code experience.
@@ -15,6 +20,9 @@ With it, you can:
 - check out leaderboards
 - look at your user information
 
+{{</ card >}}
+
+{{< card >}}
 ## Installation
 
 You can install `aocli` in one of the following ways, listed in recommended order. `aocli` has a self-updater built in, so you can use that to update it going forward.
@@ -43,6 +51,10 @@ Ensure you have `Go` [installed](https://go.dev/doc/install). Then, run the foll
 
 Ensure you have `$GOPATH` on your `$PATH`.
 
+{{</ card >}}
+
+{{< card >}}
+
 ## Required Setup
 
 1. Go to [Advent of Code](https://adventofcode.com) and login with your preferred method
@@ -56,6 +68,9 @@ Ensure you have `$GOPATH` on your `$PATH`.
 
 *\*If you choose the environment variable method, ensure you include a line to set it in your shell's startup script so it gets set every launch.*
 
+{{</ card >}}
+
+{{< card >}}
 
 ## After Installation
 
@@ -63,8 +78,14 @@ To view the available commands, check out the command list [here](https://github
 
 Check out the repository [here](https://github.com/DaltonSW/aocgo/tree/main/cmd/aocli). It has required setup instructions and a list of available commands with examples.
 
+{{</ card >}}
+
+{{< card >}}
+
 ## Shoutouts
 
 - [Eric Wastl](http://was.tl): Creator of [Advent of Code](https://adventofcode.com). Thanks for providing years of entertainment and fun puzzles :)
 - [CharmBracelet](https://charm.sh): Creators of [BubbleTea](https://github.com/charmbracelet/bubbletea) and [LipGloss](https://github.com/charmbraclet/lipgloss)
 - My friend, David, who guinea-pig'd the program along the way
+
+{{</ card >}}
