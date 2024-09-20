@@ -20,6 +20,8 @@ With it, you can:
 - check out leaderboards
 - look at your user information
 
+!["aocli Landing Page"](/images/aocliLandingPage.png)
+
 {{</ card >}}
 
 {{< card >}}

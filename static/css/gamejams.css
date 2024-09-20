@@ -3,6 +3,10 @@ article {
 
 }
 
+img {
+	border-radius: 10px !important;
+}
+
 .card-div {
 	background-color: var(--default_hl_bg) !important;
 	padding: 0px 10px 3px;
