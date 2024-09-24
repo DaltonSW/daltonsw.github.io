@@ -20,7 +20,7 @@ With it, you can:
 - check out leaderboards
 - look at your user information
 
-!["aocli Landing Page"](/images/aocliLandingPage.png)
+![aocli Landing Page](/images/aocliLandingPage.png)
 
 {{</ card >}}
 
@@ -37,7 +37,7 @@ Check out the latest GitHub release, found [here](https://github.com/DaltonSW/ao
 
 *Note: Can't be used on Windows*
 
-Run the following commands:
+Ensure you have `brew` [installed](https://brew.sh/). Then, run the following:
 ```sh
 brew tap daltonsw/packages
 brew install aocli
@@ -45,7 +45,7 @@ brew install aocli
 
 ### Using Go
 
-*Note: Might not be the most up-to-date version, since this will match to the module version*
+*Note: Might not install the most up-to-date version, since it will go by the overall module version, but you can use the built-in updater after install.*
 
 Ensure you have `Go` [installed](https://go.dev/doc/install). Then, run the following: 
 
