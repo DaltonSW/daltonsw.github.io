@@ -39,7 +39,7 @@ Check out the latest GitHub release, found [here](https://github.com/DaltonSW/ao
 
 Run the following commands:
 ```sh
-brew tap daltonsw-packages
+brew tap daltonsw/packages
 brew install aocli
 ```
 
