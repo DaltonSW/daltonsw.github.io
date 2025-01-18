@@ -7,33 +7,44 @@ customCSS: projects.css
 #TODO: Add projects to drop-down list
 ---
 
-## Active Projects
-
-### Termina
-
-A programming language designed and developed by me.
-
-[GitHub Repo](https://github.com/daltonsw/termina)
+## Stable Projects
 
 ### aocli
 
 Fast, efficient, and beautiful CLI program for interfacing with Advent of Code without leaving your terminal.
 
-[Site Page](/aocli)  -  [GitHub Repo](https://github.com/daltonsw/aocgo) - [Parent Go Package](https://pkg.go.dev/go.dalton.dog/aocgo)
-
-### YouTerm
-
-Quick and clean YouTube subscription box that shows you want you want, without any algorithm garbage.
-
-[GitHub Repo](https://github.com/terminality/youterm)
-
-## Other Projects
+- [Site](/aocli)
+- [Repo](https://github.com/daltonsw/aocgo)
+- [Go Package](https://pkg.go.dev/go.dalton.dog/aocgo)
 
 ### PokeTerm
 
 Terminal-based PokeDex that focuses on combining important information from multiple different sources, and displaying it without any bloat.
 
-[Site](https://poketerm.com)  -  [GitHub Repo](https://github.com/daltonsw/poketerm)
+- [Site](https://poketerm.com)
+- [GitHub Repo](https://github.com/daltonsw/poketerm)
+
+### stylish
+
+A simple and intuitive way to create and apply stylish config files.
+
+- [Site](/stylish)
+- [Repo](https://github.com/daltonsw/stylish)
+- [Go Package](https://pkg.go.dev/go.dalton.dog/stylish)
+
+## Unfinished Projects
+
+### Termina
+
+A programming language designed and developed by me.
+
+- [GitHub Repo](https://github.com/daltonsw/termina)
+
+### YouTerm
+
+Quick and clean YouTube subscription box that shows you want you want, without any algorithm garbage.
+
+- [GitHub Repo](https://github.com/terminality/youterm)
 
 ## Game Jams
 

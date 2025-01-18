@@ -149,3 +149,12 @@ h6 {
 nav {
 }
 
+.command code > span::before {
+  color: #00f2c3;
+  content: "$ ";
+}
+
+.command .copy-btn {
+  float: right;
+  cursor: pointer;
+}
