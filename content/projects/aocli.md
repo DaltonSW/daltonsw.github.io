@@ -39,8 +39,7 @@ Check out the latest GitHub release, found [here](https://github.com/DaltonSW/ao
 
 Ensure you have `brew` [installed](https://brew.sh/). Then, run the following:
 ```sh
-brew tap daltonsw/packages
-brew install aocli
+brew install daltonsw/tap/aocli
 ```
 
 ### Using Go
