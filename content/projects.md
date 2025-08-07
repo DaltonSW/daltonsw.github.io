@@ -17,6 +17,14 @@ Fast, efficient, and beautiful CLI program for interfacing with Advent of Code w
 - [Repo](https://github.com/daltonsw/aocgo)
 - [Go Package](https://pkg.go.dev/go.dalton.dog/aocgo)
 
+### campfire
+
+Simple log monitoring companion that makes them cozy instead of cumbersome.
+
+- [Site](/campfire)
+- [Repo](https://github.com/daltonsw/campfire)
+- [Go Package](https://pkg.go.dev/go.dalton.dog/campfire)
+
 ### PokeTerm
 
 Terminal-based PokeDex that focuses on combining important information from multiple different sources, and displaying it without any bloat.
