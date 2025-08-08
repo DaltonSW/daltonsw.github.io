@@ -2,7 +2,7 @@
 title: Introducing campfire 🔥🪵
 showDate: false
 date: 2025-08-07
-url: /stylish
+url: /campfire
 customCSS: gamejams.css
 # TODO: Make this not game-jam-specific
 ---
@@ -40,7 +40,7 @@ mv campfire [somewhere on your $PATH] # Move the file to somewhere on your path 
 - Have `brew` installed ([brew.sh](https://brew.sh))
 - Run the following:
 ```sh
-brew install daltonsw/tap/campfire
+brew install --cask daltonsw/tap/campfire
 ```
 
 ### Go 🖥️ 
