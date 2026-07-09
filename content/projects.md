@@ -25,12 +25,28 @@ Simple log monitoring companion that makes them cozy instead of cumbersome.
 - [Repo](https://github.com/daltonsw/campfire)
 - [Go Package](https://pkg.go.dev/go.dalton.dog/campfire)
 
+### headline
+
+Generate banner and social-preview PNG images from a single JSON config.
+
+- [Site](/headline)
+- [Repo](https://github.com/daltonsw/headline)
+- [Go Package](https://pkg.go.dev/go.dalton.dog/headline)
+
 ### PokeTerm
 
 Terminal-based PokeDex that focuses on combining important information from multiple different sources, and displaying it without any bloat.
 
 - [Site](https://poketerm.com)
 - [GitHub Repo](https://github.com/daltonsw/poketerm)
+
+### spruce
+
+Pretty TUI front-end that drives your existing package managers (system, brew, flatpak, snap) through one upgrade screen.
+
+- [Site](/spruce)
+- [Repo](https://github.com/daltonsw/spruce)
+- [Go Package](https://pkg.go.dev/go.dalton.dog/spruce)
 
 ### stylish
 
