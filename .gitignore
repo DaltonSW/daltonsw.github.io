@@ -3,3 +3,9 @@ public/
 resources/
 example_frontmatter.txt
 node_modules/
+tools/gamelog/gamelog
+
+# API credentials — never commit. .env.example is the committed template.
+.env
+.env.*
+!.env.example
