@@ -1,7 +1,6 @@
 baseURL = 'https://dalton.dog/'
 title = "Dalton's Web Place"
-theme = "ficurinia"
-languageCode = "en"
+locale = "en-US"
 defaultContentLanguage = "en"
 
 copyright = "Dalton Williams"
@@ -10,8 +9,21 @@ cleanDestinationDir = true
 
 timezone = "America/Chicago"
 
-[frontmatter]
-    publishDate = ['published', 'publishDate', 'pub', 'date', ':default']
-    date = ['date', ':fileModTime', ':default']
-    lastmod = ['lastmod', ':fileModTime', ':default']
+# Unused taxonomies — keep the build lean.
+disableKinds = ["taxonomy", "term"]
 
+# Games track real dates in `started`/`finished`; projects use `date`. Wire both
+# into Hugo's canonical dates so feeds, sitemap <lastmod>, and .Date are accurate
+# instead of falling back to file mod time.
+[frontmatter]
+    date = ['date', 'started', ':fileModTime', ':default']
+    lastmod = ['lastmod', 'finished', 'started', ':fileModTime', ':default']
+    publishDate = ['publishDate', 'published', 'pub', 'date', 'started', ':default']
+
+# Individual projects live at the site root (e.g. /prism); the /projects
+# section page stays the index.
+[permalinks.page]
+    projects = "/:slug/"
+
+[markup.goldmark.renderer]
+    unsafe = true

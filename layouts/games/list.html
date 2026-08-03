@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+<ul class="entry-list">
+  {{- range sort .Pages "Params.started" "desc" }}
+  <li class="entry">
+    <a class="entry__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- with .Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+    <span class="entry__meta">
+      {{- with .Params.started }}{{ . | time.Format "Jan 2006" }}{{ end }}
+      {{- with .Params.rating }} · {{ . }}/10{{ end -}}
+    </span>
+  </li>
+  {{- else }}
+  <li class="entry"><span class="entry__sub">No games logged yet.</span></li>
+  {{- end }}
+</ul>
+{{ end }}

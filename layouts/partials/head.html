@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{- $title := cond .IsHome site.Title (printf "%s · %s" .Title site.Title) -}}
+  <title>{{ $title }}</title>
+
+  {{- $desc := .Description | default site.Params.description -}}
+  {{- with $desc }}<meta name="description" content="{{ . }}">{{ end }}
+  {{- with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{- with $desc }}<meta property="og:description" content="{{ . }}">{{ end }}
+  <meta name="twitter:card" content="summary">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{/* Styles: SCSS compiled with Dart Sass, fingerprinted for cache-busting */}}
+  {{- $opts := dict "transpiler" "dartsass" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) -}}
+  {{- $css := resources.Get "scss/main.scss" | css.Sass $opts | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $css.Data.Integrity }}"{{ end }}>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  {{ hugo.Generator }}
+</head>

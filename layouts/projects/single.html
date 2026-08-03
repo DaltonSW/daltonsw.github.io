@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article>
+  <p class="hero__prompt">dalton@dog:~/projects$ ./{{ .File.ContentBaseName }} --about</p>
+  <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
+  {{- with .Params.tagline }}<p class="lead">{{ . }}</p>{{ end }}
+
+  {{- $links := .Params.links | default slice }}
+  {{- with .Params.repo }}{{ $links = $links | append (dict "label" "Repo" "url" .) }}{{ end }}
+  {{- with $links }}
+  <div class="meta-row">
+    {{- range . }}<span><a href="{{ .url }}" rel="noopener">{{ .label }} ↗</a></span>{{ end }}
+  </div>
+  {{- end }}
+
+  <div class="prose">{{ .Content }}</div>
+</article>
+{{ end }}

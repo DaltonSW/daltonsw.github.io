@@ -1,10 +1,13 @@
 ---
-title: Introducing aocli
-showDate: false
+title: aocli
+tagline: "Advent of Code from your terminal — fast, efficient, and pretty."
+status: stable
 date: 2024-09-12
-url: /aocli
-customCSS: gamejams.css
-# TODO: Make this not game-jam-specific
+repo: https://github.com/DaltonSW/aocgo
+links:
+  - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/aocgo" }
+weight: 10
+draft: false
 ---
 {{< card >}}
 

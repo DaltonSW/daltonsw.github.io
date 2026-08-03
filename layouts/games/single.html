@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article>
+  <p class="hero__prompt">dalton@dog:~/games$ cat {{ .File.ContentBaseName }}</p>
+  <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
+
+  <div class="meta-row">
+    {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
+    {{- with .Params.started }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with .Params.finished }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with .Params.rating }}<span><b>Rating:</b> {{ . }}/10</span>{{ end }}
+  </div>
+
+  {{- with .Params.cover }}
+  <img src="{{ . | relURL }}" alt="{{ $.Title }} cover art">
+  {{- end }}
+
+  <div class="prose">{{ .Content }}</div>
+</article>
+{{ end }}

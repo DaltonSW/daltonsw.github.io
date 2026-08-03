@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="hero__prompt">dalton@dog:~$ whoami</p>
+  <h1>{{ .Title }}</h1>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</section>
+
+<div class="card-grid">
+  {{- range slice "games" "projects" }}
+    {{- with $.GetPage . }}
+      <a class="entry" href="{{ .RelPermalink }}">
+        <span class="entry__title">{{ .Title }} →</span>
+        <p class="entry__sub">{{ .Description | default (printf "Browse %s" (.Title | lower)) }}</p>
+      </a>
+    {{- end }}
+  {{- end }}
+</div>
+{{ end }}

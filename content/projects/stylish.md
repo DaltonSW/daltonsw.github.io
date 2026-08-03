@@ -1,10 +1,13 @@
 ---
-title: Introducing stylish 🖌️
-showDate: false
+title: stylish
+tagline: "Create and apply stylish $LS_COLORS themes without the pain."
+status: stable
 date: 2025-01-18
-url: /stylish
-customCSS: gamejams.css
-# TODO: Make this not game-jam-specific
+repo: https://github.com/DaltonSW/stylish
+links:
+  - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/stylish" }
+weight: 30
+draft: false
 ---
 {{< card >}}
 

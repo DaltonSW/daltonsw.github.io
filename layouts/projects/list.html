@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+{{- $labels := dict "stable" "Stable" "wip" "In Progress" "unfinished" "Unfinished" }}
+{{- range $status := slice "stable" "wip" "unfinished" }}
+  {{- with where $.Pages "Params.status" $status }}
+  <h2>{{ index $labels $status }}</h2>
+  <div class="card-grid">
+    {{- range sort . "Weight" }}
+    <a class="entry" href="{{ .RelPermalink }}">
+      <span class="entry__title">{{ .Title }} →</span>
+      {{- with .Params.tagline }}<p class="entry__sub">{{ . }}</p>{{ end }}
+    </a>
+    {{- end }}
+  </div>
+  {{- end }}
+{{- end }}
+{{ end }}

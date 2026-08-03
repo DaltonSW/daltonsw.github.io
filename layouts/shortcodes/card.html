@@ -1,4 +1,5 @@
-<div class="card-div">
+{{- $title := .Get "title" -}}
+<section class="card">
+  {{- with $title }}<h2>{{ . }}</h2>{{ end -}}
   {{ .Inner | markdownify }}
-</div>
-
+</section>

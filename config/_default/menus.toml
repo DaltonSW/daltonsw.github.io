@@ -1,17 +1,13 @@
 [[main]]
-    identifer = "projects"
-    name = "Projects"
-    url = "/projects/"
+    identifier = "games"
+    name = "Games"
+    url = "/games/"
     weight = 10
 [[main]]
-    identifier = "game-jams"
-    name = "Game Jams"
-    url = "/game-jams"
-    weight = 11
-# [[main]]
-#     identifer = "favorites"
-#     name = "Favorites"
-#     url = "/favorites/"
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
 
 [[icons]]
     identifier = "github"
@@ -19,22 +15,22 @@
     url = "https://github.com/DaltonSW"
     weight = 10
 [[icons]]
-    identifier = "email"
-    name = "Email"
-    url = "mailto:email@dalton.dog"
-    weight = 1
-[[icons]]
     identifier = "steam"
     name = "Steam"
     url = "https://steamcommunity.com/id/daltonsw"
+    weight = 20
+[[icons]]
+    identifier = "itch"
+    name = "Itch"
+    url = "https://daltonsw.itch.io/"
     weight = 30
 [[icons]]
     identifier = "telegram"
     name = "Telegram"
     url = "https://t.me/daltonsw"
-    weight = 15
+    weight = 40
 [[icons]]
-    identifier = "itch"
-    name = "Itch"
-    url = "https://daltonsw.itch.io/"
-    weight = 20
+    identifier = "email"
+    name = "Email"
+    url = "mailto:email@dalton.dog"
+    weight = 50

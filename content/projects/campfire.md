@@ -1,10 +1,13 @@
 ---
-title: Introducing campfire 🔥🪵
-showDate: false
+title: campfire
+tagline: "A cozy companion for tailing and filtering log files."
+status: stable
 date: 2025-08-07
-url: /campfire
-customCSS: gamejams.css
-# TODO: Make this not game-jam-specific
+repo: https://github.com/DaltonSW/campfire
+links:
+  - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/campfire" }
+weight: 20
+draft: false
 ---
 {{< card >}}
 

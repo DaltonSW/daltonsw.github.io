@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <span class="brand__prompt">dalton@dog</span><span>:~$</span><span class="brand__cursor" aria-hidden="true"></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      {{- range site.Menus.main -}}
+        {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+        <a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end -}}
+    </nav>
+
+    {{- with site.Menus.icons }}
+    <div class="social" aria-label="Elsewhere">
+      {{- range . -}}
+        <a href="{{ .URL }}"{{ if not (hasPrefix .URL "mailto:") }} rel="me noopener" target="_blank"{{ end }}>{{ .Name | lower }}</a>
+      {{- end -}}
+    </div>
+    {{- end }}
+  </div>
+</header>

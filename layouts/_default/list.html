@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+<ul class="entry-list">
+  {{- range .Pages }}
+  <li class="entry">
+    <a class="entry__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{- else }}
+  <li class="entry"><span class="entry__sub">Nothing here yet.</span></li>
+  {{- end }}
+</ul>
+{{ end }}

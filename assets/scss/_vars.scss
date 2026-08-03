@@ -1,0 +1,73 @@
+// ── Type ────────────────────────────────────────────────────────────────
+// Everything is monospace on purpose: the whole site is styled like a
+// terminal, which is where Dalton's projects live.
+$font-ui:   "MartianMono", ui-monospace, "SFMono-Regular", monospace;
+$font-body: "SauceCode", ui-monospace, "SFMono-Regular", monospace;
+
+$measure: 76ch; // readable line length
+$content-width: 860px;
+
+// Font faces are declared here so both roles are available everywhere.
+@font-face {
+  font-family: "MartianMono";
+  src: url("/fonts/MartianMono-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "MartianMono";
+  src: url("/fonts/MartianMono-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "MartianMono";
+  src: url("/fonts/MartianMono-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SauceCode";
+  src: url("/fonts/SauceCode-Normal.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SauceCode";
+  src: url("/fonts/SauceCode-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "SauceCode";
+  src: url("/fonts/SauceCode-Italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
+// ── Color ───────────────────────────────────────────────────────────────
+// Sourced from data/colors.yml. Dark by default; light via prefers-color-scheme.
+:root {
+  --bg:      #242629;
+  --panel:   #2b2d31;
+  --panel-2: #34363b;
+  --fg:      #ececec;
+  --dim:     #a6a6a6;
+  --stroke:  #4f4f4f;
+  --accent:  #db5793;   // pink prompt/accent, from the existing palette
+  --accent-2:#f0a0c4;
+
+  // semantic status colors (used for game/project state pills)
+  --ok:   #7bd88f;      // finished / stable
+  --warn: #e6c07b;      // playing / wip
+  --stop: #e57373;      // dropped / unfinished
+
+  --radius: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:      #f5f5f5;
+    --panel:   #ffffff;
+    --panel-2: #e9e9ec;
+    --fg:      #1f2023;
+    --dim:     #55565a;
+    --stroke:  #cfcfd4;
+    --accent:  #c23b7c;
+    --accent-2:#a12e63;
+  }
+}
