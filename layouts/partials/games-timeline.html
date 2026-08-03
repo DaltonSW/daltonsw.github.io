@@ -109,13 +109,37 @@
       {{- else -}}
         {{- $titleParts = $titleParts | append "ongoing" -}}
       {{- end -}}
-      {{- with $entry.rating -}}{{- $titleParts = $titleParts | append (printf "%v/10" .) -}}{{- end -}}
       {{- $statusLabel := replace $status "_" " " | title -}}
       {{- with $entry.subgame -}}{{- $statusLabel = printf "%s — %s" . $statusLabel -}}{{- end -}}
-      {{- with $entry.platform -}}{{- $statusLabel = printf "%s (%s)" $statusLabel . -}}{{- end -}}
-      {{- $title := printf "%s · %s" $statusLabel (delimit $titleParts " – ") -}}
+      {{- $titleParts = $titleParts | append $statusLabel -}}
+      {{- with $entry.platform -}}{{- $titleParts = $titleParts | append $entry.platform -}}{{- end -}}
+      {{/* Playtime from achievement-summary.yaml, matched to this entry's platform. */}}
+      {{- with $game.Resources.Get "achievement-summary.yaml" -}}
+        {{- $summary := . | transform.Unmarshal -}}
+        {{- with $summary.providers -}}
+          {{- $matched := where . "platform" "eq" $entry.platform -}}
+          {{- if eq (len $matched) 1 -}}
+            {{- with (index $matched 0).playtime_mins -}}
+              {{- $titleParts = $titleParts | append (printf "%.1fh" (div . 60.0)) -}}
+            {{- end -}}
+          {{- else if eq (len $summary.providers) 1 -}}
+            {{- with (index $summary.providers 0).playtime_mins -}}
+              {{- $titleParts = $titleParts | append (printf "%.1fh" (div . 60.0)) -}}
+            {{- end -}}
+          {{- else -}}
+            {{- with $summary.playtime_mins -}}
+              {{- $titleParts = $titleParts | append (printf "%.1fh" (div . 60.0)) -}}
+            {{- end -}}
+          {{- end -}}
+        {{- else -}}
+          {{- with $summary.playtime_mins -}}
+            {{- $titleParts = $titleParts | append (printf "%.1fh" (div . 60.0)) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $title := delimit $titleParts " · " -}}
       {{- with $entry.notes -}}
-        {{- $title = printf "%s<br>%s" $title (. | markdownify | plainify | truncate 160) -}}
+        {{- $title = printf "%s<br>%s" $title (. | markdownify | plainify | truncate 300) -}}
       {{- end -}}
 
       {{- $permalink := "" -}}
@@ -135,10 +159,16 @@
           {{- if and (eq $sEnd "") (not (in $openEndedStatuses $status)) -}}
             {{- $sEnd = $sStart -}}
           {{- end -}}
+          {{/* Per-session tooltip: dates + session title (if any) + platform. */}}
+          {{- $sTitleParts := slice ($session.started | time.Format "Jan 2, 2006") -}}
+          {{- with $session.finished -}}{{- $sTitleParts = $sTitleParts | append ($session.finished | time.Format "Jan 2, 2006") -}}{{- else -}}{{- $sTitleParts = $sTitleParts | append "ongoing" -}}{{- end -}}
+          {{- with $session.title -}}{{- $sTitleParts = $sTitleParts | append . -}}{{- end -}}
+          {{- with $entry.platform -}}{{- $sTitleParts = $sTitleParts | append . -}}{{- end -}}
+          {{- $sTitle := delimit $sTitleParts " · " -}}
           {{- $items = $items | append (dict
               "id" (printf "%s--session-%d" $baseID $sIdx) "group" $slug "subgroup" $sub
               "type" "range" "className" (printf "pt-session pt--%s" $status)
-              "content" "" "title" $title "status" (replace $status "_" " " | title) "start" $sStart "end" $sEnd
+              "content" "" "title" $sTitle "status" (replace $status "_" " " | title) "start" $sStart "end" $sEnd
             )
           -}}
         {{- end -}}

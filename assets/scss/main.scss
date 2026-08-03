@@ -495,17 +495,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 /* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
 .games-timeline {
   margin: 1.5rem 0 2rem;
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--panel);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--fg) 4%, transparent) 0,
-    color-mix(in srgb, var(--fg) 4%, transparent) 1px,
-    transparent 1px,
-    transparent 3px
-  );
 }
 .games-timeline__fallback { color: var(--dim); padding: 1rem; margin: 0; }
 // Anchors the fade overlays below (vis-timeline also sets this inline once it mounts).
@@ -536,11 +525,11 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .games-timeline__fade--top {
   top: var(--games-timeline-axis-height, 0px);
-  background: linear-gradient(to bottom, var(--panel), transparent);
+  background: linear-gradient(to bottom, var(--bg), transparent);
 }
 .games-timeline__fade--bottom {
   bottom: 0;
-  background: linear-gradient(to top, var(--panel), transparent);
+  background: linear-gradient(to top, var(--bg), transparent);
 }
 .games-timeline__root--can-scroll-up .games-timeline__fade--top,
 .games-timeline__root--can-scroll-down .games-timeline__fade--bottom {
@@ -560,7 +549,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .games-timeline .vis-panel.vis-right { overscroll-behavior-y: contain; }
 
 .games-timeline .vis-labelset .vis-label {
-  color: var(--fg); border-bottom-color: var(--stroke); background: var(--panel);
+  color: var(--fg); border-bottom-color: var(--stroke); background: var(--bg);
 }
 .games-timeline .vis-labelset .vis-label a { color: var(--fg); }
 .games-timeline .vis-labelset .vis-label a:hover { color: var(--accent); }
@@ -570,12 +559,12 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 // selectors must use the same parity or the two columns stripe out of step.
 .games-timeline .vis-labelset > .vis-label:nth-child(even),
 .games-timeline .vis-foreground > .vis-group:nth-child(even) {
-  background: color-mix(in srgb, var(--fg) 5%, var(--panel));
+  background: color-mix(in srgb, var(--fg) 5%, var(--bg));
 }
 // Toggled from games-timeline.ts, which resolves the hovered group on both sides.
 .games-timeline .vis-labelset > .vis-label.games-timeline-row--hover,
 .games-timeline .vis-foreground > .vis-group.games-timeline-row--hover {
-  background: color-mix(in srgb, var(--accent) 14%, var(--panel));
+  background: color-mix(in srgb, var(--accent) 14%, var(--bg));
 }
 // Inset rather than a real border so the label text doesn't shift on hover.
 .games-timeline .vis-labelset > .vis-label.games-timeline-row--hover {
@@ -596,7 +585,27 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   // Force uniform height — vis-timeline otherwise sizes bars from their own content.
   height: 22px !important;
 }
-@each $status, $color in $status-colors {
+// Timeline bar colors: 11 statuses collapsed into 3-4 calmer families so the chart
+// reads as active / complete / stopped / structural rather than a hue free-for-all.
+// Active (playing, ongoing, multiplayer) — desaturated from their pill versions.
+// Complete (finished, mastered) — harmonized green family, different luminance.
+// Stopped (dropped, paused) — kept distinct (abandoned vs on-hold).
+// Structural (software, misc_launch, unplayed) — muted to recede.
+$timeline-status-colors: (
+  playing:       color-mix(in srgb, var(--warn) 65%, var(--dim)),
+  ongoing:       color-mix(in srgb, var(--ongoing) 65%, var(--dim)),
+  multiplayer:   color-mix(in srgb, var(--multi) 65%, var(--dim)),
+  finished:      var(--ok),
+  mastered:      var(--mastered),
+  dropped:       var(--stop),
+  paused:        var(--pause),
+  software:      color-mix(in srgb, var(--software) 70%, var(--dim)),
+  misc_launch:   color-mix(in srgb, var(--misc-launch) 70%, var(--dim)),
+  unplayed:      color-mix(in srgb, var(--unplayed) 70%, var(--dim)),
+  backlog:       var(--dim),
+  planned:       color-mix(in srgb, var(--accent) 65%, var(--dim)),
+);
+@each $status, $color in $timeline-status-colors {
   .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
 }
 // Connectors span a whole session cluster, not just the gaps between sessions, so
