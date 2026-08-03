@@ -1,0 +1,42 @@
+{{/* Context: a game's term Page (Kind "term"). Returns a slice of entries merging
+     the game's embedded `playthroughs` front matter with its nested written
+     playthrough pages, normalizing both into a common shape. Extracted from
+     layouts/games/term.html so the aggregate timeline can reuse the same
+     sessions-derived date-range logic without duplicating it. */}}
+{{- $entries := slice -}}
+
+{{- range .Params.playthroughs }}
+  {{- $started := .started }}
+  {{- $finished := .finished }}
+  {{- with .sessions }}
+    {{- $sorted := sort . "started" "asc" }}
+    {{- $started = (index $sorted 0).started }}
+    {{- $finished = (index $sorted (sub (len $sorted) 1)).finished }}
+  {{- end }}
+  {{- $entries = $entries | append (dict
+      "written"  false
+      "started"  $started
+      "finished" $finished
+      "status"   .status
+      "rating"   .rating
+      "notes"    .notes
+      "sessions" (.sessions | default slice)
+    )
+  }}
+{{- end }}
+
+{{- range where .Pages "Kind" "page" }}
+  {{- $entries = $entries | append (dict
+      "written"   true
+      "title"     .Title
+      "permalink" .RelPermalink
+      "started"   .Params.started
+      "finished"  .Params.finished
+      "status"    .Params.status
+      "rating"    .Params.rating
+      "sessions"  slice
+    )
+  }}
+{{- end }}
+
+{{- return $entries -}}

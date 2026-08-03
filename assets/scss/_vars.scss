@@ -52,9 +52,10 @@ $content-width: 860px;
   --accent-2:#f0a0c4;
 
   // semantic status colors (used for game/project state pills)
-  --ok:   #7bd88f;      // finished / stable
-  --warn: #e6c07b;      // playing / wip
-  --stop: #e57373;      // dropped / unfinished
+  --ok:    #7bd88f;     // finished / stable
+  --warn:  #e6c07b;     // playing / wip
+  --stop:  #e57373;     // dropped / unfinished
+  --pause: #7aa6da;     // paused — on hold, distinct from --dim (never started)
 
   --radius: 8px;
 }
@@ -69,5 +70,6 @@ $content-width: 860px;
     --stroke:  #cfcfd4;
     --accent:  #c23b7c;
     --accent-2:#a12e63;
+    --pause:   #3f74ad;
   }
 }

@@ -1,0 +1,125 @@
+{{/* Aggregate gameplay history timeline. Builds vis-timeline `groups` (one per
+     game) and `items` (one per playthrough entry — a solid range item, or for
+     sessions-bearing entries a low-opacity connector plus one item per
+     session sharing a subgroup so they overlap instead of stacking) from
+     every game's merged entries (see playthrough-entries.html), then renders
+     the container, JSON islands, and the js.Build + vendored-CSS pipeline.
+     Included from layouts/games/taxonomy.html; context is the games
+     taxonomy page. */}}
+{{- $fmt := "2006-01-02" -}}
+{{- $groups := slice -}}
+{{- $items := slice -}}
+
+{{- range .Pages -}}
+  {{- $game := . -}}
+  {{- $slug := $game.File.ContentBaseName -}}
+  {{- $entries := partial "playthrough-entries.html" $game -}}
+
+  {{- if eq (len $entries) 0 -}}
+    {{- with $game.Params.started -}}
+      {{- $entries = slice (dict
+          "written"  false
+          "started"  .
+          "finished" $game.Params.finished
+          "status"   $game.Params.status
+          "rating"   $game.Params.rating
+          "notes"    nil
+          "sessions" slice
+        )
+      -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $subgroupStack := dict -}}
+  {{- $hasItems := false -}}
+
+  {{- range $idx, $entry := $entries -}}
+    {{- if $entry.started -}}
+      {{- $hasItems = true -}}
+      {{- $sub := printf "pt-%d" $idx -}}
+      {{- $baseID := printf "%s--%s" $slug $sub -}}
+      {{- $status := $entry.status | default "backlog" -}}
+
+      {{- $start := $entry.started | time.Format $fmt -}}
+      {{- $end := "" -}}
+      {{- with $entry.finished -}}{{- $end = (. | time.Format $fmt) -}}{{- end -}}
+
+      {{- $titleParts := slice ($entry.started | time.Format "Jan 2, 2006") -}}
+      {{- if $end -}}
+        {{- $titleParts = $titleParts | append ($entry.finished | time.Format "Jan 2, 2006") -}}
+      {{- else -}}
+        {{- $titleParts = $titleParts | append "ongoing" -}}
+      {{- end -}}
+      {{- with $entry.rating -}}{{- $titleParts = $titleParts | append (printf "%v/10" .) -}}{{- end -}}
+      {{- $title := printf "%s · %s" ($status | title) (delimit $titleParts " – ") -}}
+      {{- with $entry.notes -}}
+        {{- $title = printf "%s<br>%s" $title (. | markdownify | plainify | truncate 160) -}}
+      {{- end -}}
+
+      {{- $permalink := "" -}}
+      {{- if $entry.written -}}{{- $permalink = $entry.permalink -}}{{- end -}}
+
+      {{- if gt (len $entry.sessions) 0 -}}
+        {{- $subgroupStack = merge $subgroupStack (dict $sub false) -}}
+        {{- $items = $items | append (dict
+            "id" (printf "%s--connector" $baseID) "group" $slug "subgroup" $sub
+            "type" "range" "className" (printf "pt-connector pt--%s" $status)
+            "content" "" "start" $start "end" $end
+          )
+        -}}
+        {{- range $sIdx, $session := (sort $entry.sessions "started" "asc") -}}
+          {{- $sStart := $session.started | time.Format $fmt -}}
+          {{- $sEnd := "" -}}
+          {{- with $session.finished -}}{{- $sEnd = (. | time.Format $fmt) -}}{{- end -}}
+          {{- $items = $items | append (dict
+              "id" (printf "%s--session-%d" $baseID $sIdx) "group" $slug "subgroup" $sub
+              "type" "range" "className" (printf "pt-session pt--%s" $status)
+              "content" "" "title" $title "start" $sStart "end" $sEnd
+            )
+          -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $items = $items | append (dict
+            "id" $baseID "group" $slug "subgroup" $sub
+            "type" "range" "className" (printf "pt pt--%s" $status)
+            "content" "" "title" $title "permalink" $permalink
+            "start" $start "end" $end
+          )
+        -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if $hasItems -}}
+    {{- $groups = $groups | append (dict
+        "id" $slug
+        "content" (printf "<a href=%q>%s</a>" $game.RelPermalink $game.Title)
+        "subgroupStack" $subgroupStack
+      )
+    -}}
+  {{- end -}}
+{{- end -}}
+
+<section class="games-timeline" aria-label="Gameplay history timeline">
+  <div class="games-timeline__toolbar">
+    <button type="button" id="games-timeline-today" class="games-timeline__today-btn" hidden>today</button>
+  </div>
+  <div id="games-timeline-root" class="games-timeline__root">
+    <p class="games-timeline__fallback">Enable JavaScript to see the visual timeline — the full list is below.</p>
+  </div>
+</section>
+
+<script type="application/json" id="games-timeline-groups">{{ $groups | jsonify | safeJS }}</script>
+<script type="application/json" id="games-timeline-items">{{ $items | jsonify | safeJS }}</script>
+
+{{- $visCSS := resources.Get "vendor/vis-timeline-styles/vis-timeline-graph2d.min.css" | fingerprint -}}
+<link rel="stylesheet" href="{{ $visCSS.RelPermalink }}">
+
+{{- $jsOpts := dict
+    "targetPath" "js/games-timeline.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $timelineJS := resources.Get "js/games-timeline.ts" | js.Build $jsOpts | fingerprint -}}
+<script src="{{ $timelineJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $timelineJS.Data.Integrity }}"{{ end }} defer></script>

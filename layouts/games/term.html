@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article>
+  <p class="hero__prompt">dalton@dog:~/games$ cat {{ .File.ContentBaseName }}</p>
+  <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
+
+  <div class="meta-row">
+    {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
+    {{- with .Params.started }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with .Params.finished }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with .Params.rating }}<span><b>Rating:</b> {{ . }}/10</span>{{ end }}
+  </div>
+
+  {{- with .Params.cover }}
+  <img src="{{ . | relURL }}" alt="{{ $.Title }} cover art">
+  {{- end }}
+
+  <div class="prose">{{ .Content }}</div>
+
+  {{- $entries := partial "playthrough-entries.html" . }}
+
+  {{- with sort $entries "started" "desc" }}
+  <h2>Playthroughs</h2>
+  <ul class="entry-list">
+    {{- range . }}
+    <li class="entry{{ if not .written }} entry--bare{{ end }}">
+      {{- if .written }}
+      <a class="entry__title" href="{{ .permalink }}">{{ .title }}</a>
+      {{- else }}
+      <span class="entry__title entry__title--bare">Playthrough</span>
+      {{- end }}
+      {{- with .status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+      <span class="entry__meta">
+        {{- with .started }}{{ . | time.Format "Jan 2006" }}{{ end }}
+        {{- with .finished }} – {{ . | time.Format "Jan 2006" }}{{ end }}
+        {{- with .rating }} · {{ . }}/10{{ end }}
+      </span>
+      {{- with .notes }}
+      <div class="entry__notes prose">{{ . | markdownify }}</div>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</article>
+{{ end }}

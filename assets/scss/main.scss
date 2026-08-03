@@ -146,6 +146,7 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 .pill--finished, .pill--stable    { color: var(--ok); }
 .pill--dropped, .pill--unfinished { color: var(--stop); }
 .pill--backlog                    { color: var(--dim); }
+.pill--paused                     { color: var(--pause); }
 
 /* ── Prose helpers ──────────────────────────────────────────────────────── */
 .prose { max-width: $measure; }
@@ -167,10 +168,77 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   background: var(--panel);
 }
 .entry:hover { border-color: var(--accent); }
+.entry--bare:hover { border-color: var(--stroke); }
 .entry__title { font-family: $font-ui; font-weight: 500; color: var(--fg); }
+.entry__title--bare { color: var(--dim); font-weight: 400; }
 .entry:hover .entry__title { color: var(--accent); }
+.entry--bare:hover .entry__title--bare { color: var(--dim); }
 .entry__meta { color: var(--dim); font-size: 0.85rem; margin-left: auto; font-family: $font-ui; }
 .entry__sub { color: var(--dim); font-size: 0.85rem; width: 100%; margin: 0; }
+.entry__notes { width: 100%; margin: 0.4rem 0 0; font-size: 0.9rem; color: var(--fg); }
+.entry__notes p:last-child { margin-bottom: 0; }
+
+/* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
+.games-timeline {
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+}
+.games-timeline__fallback { color: var(--dim); padding: 1rem; margin: 0; }
+
+.games-timeline__toolbar { display: flex; justify-content: flex-end; margin-bottom: 0.5rem; }
+.games-timeline__today-btn {
+  font-family: $font-ui; font-size: 0.78rem; color: var(--dim);
+  background: none; border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.15rem 0.5rem; cursor: pointer;
+}
+.games-timeline__today-btn::before { content: "["; color: var(--stroke); }
+.games-timeline__today-btn::after  { content: "]"; color: var(--stroke); }
+.games-timeline__today-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* vis-timeline ships its own stylesheet; these overrides are scoped under
+   .games-timeline so they win regardless of link order, and reuse the same
+   custom properties as the pill/entry styles above so the widget matches
+   the rest of the site instead of vis-timeline's default blue theme. */
+.games-timeline .vis-timeline { font-family: $font-ui; font-size: 0.8rem; border: none; }
+.games-timeline .vis-panel.vis-center,
+.games-timeline .vis-panel.vis-left,
+.games-timeline .vis-panel.vis-right,
+.games-timeline .vis-panel.vis-top,
+.games-timeline .vis-panel.vis-bottom { border-color: var(--stroke); }
+
+.games-timeline .vis-labelset .vis-label {
+  color: var(--fg); border-bottom-color: var(--stroke); background: var(--panel);
+}
+.games-timeline .vis-labelset .vis-label a { color: var(--fg); }
+.games-timeline .vis-labelset .vis-label a:hover { color: var(--accent); }
+
+.games-timeline .vis-time-axis .vis-text { color: var(--dim); }
+.games-timeline .vis-time-axis .vis-grid.vis-minor { border-color: var(--stroke); opacity: 0.5; }
+.games-timeline .vis-time-axis .vis-grid.vis-major { border-color: var(--stroke); }
+.games-timeline .vis-current-time { background-color: var(--accent); }
+
+.games-timeline .vis-item {
+  border-width: 1px; border-radius: 3px;
+  background: var(--dim); border-color: var(--dim);
+}
+.games-timeline .vis-item.pt--playing  { background: var(--warn); border-color: var(--warn); }
+.games-timeline .vis-item.pt--finished { background: var(--ok); border-color: var(--ok); }
+.games-timeline .vis-item.pt--dropped  { background: var(--stop); border-color: var(--stop); }
+.games-timeline .vis-item.pt--paused   { background: var(--pause); border-color: var(--pause); }
+.games-timeline .vis-item.pt--backlog  { background: var(--dim); border-color: var(--dim); }
+.games-timeline .vis-item.pt-connector { opacity: 0.35; }
+.games-timeline .vis-item.vis-selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.games-timeline .vis-item[class*="pt"] { cursor: pointer; }
+
+.games-timeline div.vis-tooltip {
+  font-family: $font-ui; font-size: 0.8rem;
+  color: var(--fg); background-color: var(--panel-2);
+  border: 1px solid var(--stroke);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
 
 .card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); margin: 1.5rem 0; }
 .card-grid .entry { flex-direction: column; align-items: flex-start; }

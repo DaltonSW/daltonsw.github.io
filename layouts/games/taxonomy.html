@@ -2,6 +2,9 @@
 <h1>{{ .Title }}</h1>
 {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
+<h2>Gameplay History</h2>
+{{ partial "games-timeline.html" . }}
+
 <ul class="entry-list">
   {{- range sort .Pages "Params.started" "desc" }}
   <li class="entry">

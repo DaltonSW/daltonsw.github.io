@@ -9,8 +9,12 @@ cleanDestinationDir = true
 
 timezone = "America/Chicago"
 
-# Unused taxonomies — keep the build lean.
-disableKinds = ["taxonomy", "term"]
+# `games` is a real taxonomy so each game gets its own term page — playthroughs
+# then nest under that game's directory and inherit the tag via `cascade`, with
+# no per-page front matter needed. Defining [taxonomies] replaces Hugo's
+# implicit tag/category defaults — unused here, so no loss.
+[taxonomies]
+    game = "games"
 
 # Games track real dates in `started`/`finished`; projects use `date`. Wire both
 # into Hugo's canonical dates so feeds, sitemap <lastmod>, and .Date are accurate
@@ -27,3 +31,12 @@ disableKinds = ["taxonomy", "term"]
 
 [markup.goldmark.renderer]
     unsafe = true
+
+# Vendors vis-timeline's base stylesheet from node_modules so it's addressable
+# via resources.Get, same as any other asset.
+[[module.mounts]]
+    source = "assets"
+    target = "assets"
+[[module.mounts]]
+    source = "node_modules/vis-timeline/styles"
+    target = "assets/vendor/vis-timeline-styles"

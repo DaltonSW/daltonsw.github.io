@@ -7,6 +7,9 @@ finished: 2025-05-20
 rating: 10
 cover:
 draft: false
+cascade:
+  params:
+    games: ["elden-ring"]
 ---
 
 Sample entry. The open world is the best in the genre — every horizon hides something worth riding
