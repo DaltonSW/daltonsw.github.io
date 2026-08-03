@@ -24,7 +24,7 @@ With it, you can:
 - check out leaderboards
 - look at your user information
 
-![aocli Landing Page](/images/aocliLandingPage.png)
+{{< img src="aocliLandingPage.png" alt="aocli Landing Page" >}}
 
 {{</ card >}}
 

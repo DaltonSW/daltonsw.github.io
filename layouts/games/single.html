@@ -1,6 +1,5 @@
 {{ define "main" }}
 <article>
-  <p class="hero__prompt">dalton@dog:~/games$ cat {{ .File.ContentBaseName }}</p>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
 
   <div class="meta-row">

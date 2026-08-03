@@ -5,7 +5,7 @@ $font-ui:   "MartianMono", ui-monospace, "SFMono-Regular", monospace;
 $font-body: "SauceCode", ui-monospace, "SFMono-Regular", monospace;
 
 $measure: 76ch; // readable line length
-$content-width: 860px;
+$content-width: 1100px;
 
 // Font faces are declared here so both roles are available everywhere.
 @font-face {
@@ -48,7 +48,7 @@ $content-width: 860px;
   --fg:      #ececec;
   --dim:     #a6a6a6;
   --stroke:  #4f4f4f;
-  --accent:  #db5793;   // pink prompt/accent, from the existing palette
+  --accent:  #e06ea2;   // pink prompt/accent, from the existing palette (lightened for AA text contrast)
   --accent-2:#f0a0c4;
 
   // semantic status colors (used for game/project state pills)
@@ -64,7 +64,7 @@ $content-width: 860px;
   --multi:    #f0a0c4;  // multiplayer — played with other people
   // Deliberately desaturated: software sits off the completion spectrum
   // entirely, so it should read as muted next to the saturated game states.
-  --software: #8891a8;  // software — a tool, not a game
+  --software: #8b94aa;  // software — a tool, not a game (lightened for AA text contrast)
 
   --radius: 8px;
 }
@@ -79,6 +79,10 @@ $content-width: 860px;
     --stroke:  #cfcfd4;
     --accent:  #c23b7c;
     --accent-2:#a12e63;
+    --ok:      #28883d;  // darkened from the dark value: reused unchanged it was 1.74:1 on white
+    --warn:    #9a4dec;  // darkened: was 2.14:1 on white
+    --stop:    #da3939;  // darkened: was 2.99:1 on white
+    --mastered:#a46a13;  // darkened: was 2.16:1 on white
     --pause:   #3f74ad;
     --session: #1f7f7f;
     --multi:   #b03a70;

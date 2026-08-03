@@ -1,6 +1,5 @@
 {{ define "main" }}
 <article>
-  <p class="hero__prompt">dalton@dog:~/projects$ ./{{ .File.ContentBaseName }} --about</p>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
   {{- with .Params.tagline }}<p class="lead">{{ . }}</p>{{ end }}
 

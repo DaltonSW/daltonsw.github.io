@@ -1,4 +1,5 @@
 @use "vars" as *;
+@use "sass:map";
 
 /* ── Reset / base ───────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
@@ -21,6 +22,17 @@ a {
 }
 a:hover { text-decoration: underline; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+.skip-link {
+  position: absolute; top: -3rem; left: 0.75rem; z-index: 100;
+  background: var(--panel); color: var(--fg);
+  border: 1px solid var(--accent); border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-family: $font-ui; font-size: 0.9rem;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0.75rem; text-decoration: none; }
+@media (prefers-reduced-motion: reduce) { .skip-link { transition: none; } }
 
 h1, h2, h3, h4 {
   font-family: $font-ui;
@@ -140,21 +152,37 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 }
 
 /* ── Status pills ───────────────────────────────────────────────────────── */
+// Single source of truth for status → color, consumed here and by the
+// .entry--* (Games / projects lists section) and .games-timeline
+// .vis-item.pt--* (timeline section) rules below, so a new status is one
+// map entry instead of three hand-edited spots.
+$status-colors: (
+  playing:       var(--warn),
+  finished:      var(--ok),
+  mastered:      var(--mastered),
+  dropped:       var(--stop),
+  backlog:       var(--dim),
+  paused:        var(--pause),
+  session-based: var(--session),
+  multiplayer:   var(--multi),
+  software:      var(--software),
+);
+// Project-only aliases: these status values appear on .pill via project
+// front matter (e.g. status: "wip"), never on .entry or the timeline.
+$status-aliases: (wip: playing, stable: finished, unfinished: dropped);
+
 .pill {
   display: inline-block; font-family: $font-ui; font-size: 0.72rem;
   font-weight: 500; letter-spacing: 0.03em;
   padding: 0.1rem 0.5rem; border-radius: 999px;
   border: 1px solid currentColor; vertical-align: middle;
 }
-.pill--playing, .pill--wip        { color: var(--warn); }
-.pill--finished, .pill--stable    { color: var(--ok); }
-.pill--mastered                   { color: var(--mastered); }
-.pill--dropped, .pill--unfinished { color: var(--stop); }
-.pill--backlog                    { color: var(--dim); }
-.pill--paused                     { color: var(--pause); }
-.pill--session-based              { color: var(--session); }
-.pill--multiplayer                { color: var(--multi); }
-.pill--software                   { color: var(--software); }
+@each $status, $color in $status-colors {
+  .pill--#{$status} { color: $color; }
+}
+@each $alias, $canonical in $status-aliases {
+  .pill--#{$alias} { color: map.get($status-colors, $canonical); }
+}
 
 /* ── Prose helpers ──────────────────────────────────────────────────────── */
 .prose { max-width: $measure; }
@@ -164,7 +192,6 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 
 /* ── Homepage ───────────────────────────────────────────────────────────── */
 .hero { padding-block: 1rem 0.5rem; }
-.hero__prompt { font-family: $font-ui; color: var(--accent); font-size: 0.9rem; }
 .hero h1 { margin-top: 0.3rem; font-size: 2rem; }
 
 /* ── Games / projects lists ─────────────────────────────────────────────── */
@@ -177,15 +204,9 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 }
 .entry:hover { border-color: var(--accent); }
 .entry--bare:hover { border-color: var(--stroke); }
-.entry--playing                     { border-color: var(--warn); }
-.entry--finished                    { border-color: var(--ok); }
-.entry--mastered                    { border-color: var(--mastered); }
-.entry--dropped                     { border-color: var(--stop); }
-.entry--backlog                     { border-color: var(--dim); }
-.entry--paused                      { border-color: var(--pause); }
-.entry--session-based               { border-color: var(--session); }
-.entry--multiplayer                 { border-color: var(--multi); }
-.entry--software                    { border-color: var(--software); }
+@each $status, $color in $status-colors {
+  .entry--#{$status} { border-color: $color; }
+}
 .entry__title { font-family: $font-ui; font-weight: 500; color: var(--fg); }
 .entry__title--bare { color: var(--dim); font-weight: 400; }
 .entry:hover .entry__title { color: var(--accent); }
@@ -306,6 +327,16 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 @media (prefers-reduced-motion: reduce) { .ps-meter__fill { transition: none; } }
 .ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; }
 
+/* Tablet: still the 6-column layout, just tighter — the 640px breakpoint
+   below switches to a stacked layout instead, so this only covers the gap
+   between full desktop width and that switch. */
+@media (max-width: 768px) {
+  .ps-row {
+    grid-template-columns: 9ch minmax(8ch, 1.3fr) minmax(5ch, 0.7fr) minmax(7ch, 0.9fr) 8ch minmax(6rem, 0.9fr);
+    column-gap: 0.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   .ps-row--head { display: none; }
   .ps-row {
@@ -327,9 +358,8 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 }
 
 /* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
-.games-timeline__prompt { margin: 1.5rem 0 0.4rem; }
 .games-timeline {
-  margin: 0 0 2rem;
+  margin: 1.5rem 0 2rem;
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
   overflow: hidden;
@@ -383,15 +413,9 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   border-width: 1px; border-radius: 3px;
   background: var(--dim); border-color: var(--dim);
 }
-.games-timeline .vis-item.pt--playing  { background: var(--warn); border-color: var(--warn); }
-.games-timeline .vis-item.pt--finished { background: var(--ok); border-color: var(--ok); }
-.games-timeline .vis-item.pt--mastered { background: var(--mastered); border-color: var(--mastered); }
-.games-timeline .vis-item.pt--dropped  { background: var(--stop); border-color: var(--stop); }
-.games-timeline .vis-item.pt--paused   { background: var(--pause); border-color: var(--pause); }
-.games-timeline .vis-item.pt--backlog  { background: var(--dim); border-color: var(--dim); }
-.games-timeline .vis-item.pt--session-based { background: var(--session); border-color: var(--session); }
-.games-timeline .vis-item.pt--multiplayer { background: var(--multi); border-color: var(--multi); }
-.games-timeline .vis-item.pt--software { background: var(--software); border-color: var(--software); }
+@each $status, $color in $status-colors {
+  .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
+}
 .games-timeline .vis-item.pt-connector { opacity: 0.35; }
 .games-timeline .vis-item.vis-selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 .games-timeline .vis-item[class*="pt"] { cursor: pointer; }

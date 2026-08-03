@@ -1,0 +1,8 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $img := .Page.Resources.Get $src -}}
+{{- with $img -}}
+  {{- $resized := . -}}
+  {{- if gt .Width 1400 -}}{{- $resized = .Resize "1400x" -}}{{- end -}}
+  <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}

@@ -152,9 +152,6 @@
   {{- $groups = $groups | append (dict "id" .id "content" .content "subgroupStack" .subgroupStack) -}}
 {{- end -}}
 
-{{- $sinceYear := "" -}}
-{{- with $earliestStart -}}{{- $sinceYear = strings.Substr . 0 4 -}}{{- end -}}
-<p class="hero__prompt games-timeline__prompt">dalton@dog:~$ ps games{{ with $sinceYear }} --since={{ . }}{{ end }}</p>
 <section class="games-timeline" aria-label="Gameplay history timeline">
   <div class="games-timeline__toolbar">
     <button type="button" id="games-timeline-zoom-out" class="games-timeline__toolbar-btn" hidden>−</button>
@@ -162,16 +159,14 @@
     <button type="button" id="games-timeline-today" class="games-timeline__toolbar-btn" hidden>today</button>
   </div>
   <div id="games-timeline-root" class="games-timeline__root">
-    <p class="games-timeline__fallback">Enable JavaScript to see the visual timeline — the full list is below.</p>
+    <p class="games-timeline__fallback">Enable JavaScript to see the visual timeline - the full list is below.</p>
   </div>
 </section>
 
 <script type="application/json" id="games-timeline-groups">{{ $groups | jsonify | safeJS }}</script>
 <script type="application/json" id="games-timeline-items">{{ $items | jsonify | safeJS }}</script>
 
-{{- $visCSS := resources.Get "vendor/vis-timeline-styles/vis-timeline-graph2d.min.css" | fingerprint -}}
-<link rel="stylesheet" href="{{ $visCSS.RelPermalink }}">
-
+{{/* Vendor stylesheet is loaded from head.html instead (see there for why). */}}
 {{- $jsOpts := dict
     "targetPath" "js/games-timeline.js"
     "format"     "iife"

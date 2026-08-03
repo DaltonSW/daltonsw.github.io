@@ -22,6 +22,15 @@
   {{- $css := resources.Get "scss/main.scss" | css.Sass $opts | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $css.Data.Integrity }}"{{ end }}>
 
+  {{/* The games taxonomy page renders the vis-timeline widget (see
+       games-timeline.html); its vendored stylesheet is loaded here instead of
+       inline in the page body so it's discovered with the rest of the head-level
+       CSS instead of loading late and flashing an unstyled timeline. */}}
+  {{- if eq .Kind "taxonomy" -}}
+    {{- $visCSS := resources.Get "vendor/vis-timeline-styles/vis-timeline-graph2d.min.css" | fingerprint -}}
+    <link rel="stylesheet" href="{{ $visCSS.RelPermalink }}">
+  {{- end }}
+
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

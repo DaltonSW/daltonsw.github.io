@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="wrap site-header__bar">
     <a class="brand" href="{{ "/" | relURL }}">
-      <span class="brand__prompt">dalton@dog</span><span>:~$</span><span class="brand__cursor" aria-hidden="true"></span>
+      <span class="brand__prompt">home@{{ (site.BaseURL | urls.Parse).Host }}</span><span>:~$</span><span class="brand__cursor" aria-hidden="true"></span>
     </a>
 
     <nav class="nav" aria-label="Primary">
