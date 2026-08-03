@@ -1,0 +1,527 @@
+{
+ "provider": "steam",
+ "title": "Hammerwatch",
+ "updated": "2026-07-26",
+ "id": "239070",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 6,
+ "total": 38,
+ "first": "2013-11-27",
+ "last": "2014-06-23",
+ "platform": "PC",
+ "icon": "2d07672b1ccb294a5986ebc36c4138216c55d60d",
+ "playtime_mins": 1207,
+ "last_played": "2017-02-24",
+ "achievements": [
+  {
+   "key": "kills_1",
+   "name": "Mass murder",
+   "description": "Kill 2,500 enemies in the campaign",
+   "unlocked": true,
+   "date": "2013-11-27T19:41:55-06:00"
+  },
+  {
+   "key": "medium_boss_1",
+   "name": "The Queen",
+   "description": "Kill the Queen on medium difficulty without having any crutches enabled",
+   "unlocked": true,
+   "date": "2013-11-27T19:48:59-06:00"
+  },
+  {
+   "key": "money_1",
+   "name": "Affluent",
+   "description": "Get 10,000 coins in the campaign",
+   "unlocked": true,
+   "date": "2013-11-27T21:37:40-06:00"
+  },
+  {
+   "key": "medium_boss_2",
+   "name": "The Knight",
+   "description": "Kill the Knight on medium difficulty without having any crutches enabled",
+   "unlocked": true,
+   "date": "2013-11-28T21:39:34-06:00"
+  },
+  {
+   "key": "easter_egg_1",
+   "name": "Harvesting",
+   "description": "Find the first easter egg",
+   "unlocked": true,
+   "date": "2013-11-28T23:44:20-06:00"
+  },
+  {
+   "key": "grisly_grotto",
+   "name": "The Grisly Combination",
+   "description": "Solve it like it was E1M4",
+   "unlocked": true,
+   "date": "2014-06-23T17:12:12-05:00"
+  },
+  {
+   "key": "almost_out",
+   "name": "Midway",
+   "description": "Air-walk between the start and the end!",
+   "unlocked": false
+  },
+  {
+   "key": "combo_1",
+   "name": "Combo Killer!",
+   "description": "Get combo kills until you reach 200",
+   "unlocked": false
+  },
+  {
+   "key": "combo_2",
+   "name": "Combo Master!",
+   "description": "Get combo kills until you reach 1000",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_2",
+   "name": "The Heist",
+   "description": "Find the second easter egg",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_3",
+   "name": "Earth \u0026 Void",
+   "description": "Find the third easter egg",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_4",
+   "name": "Doomed Space Marine",
+   "description": "Find the fourth easter egg",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_5",
+   "name": "Do it like Jones",
+   "description": "It was better in the movie",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_6",
+   "name": "Serious Pickup",
+   "description": "Seriously?! That's what I got?",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_8",
+   "name": "Desert Zone...",
+   "description": "...is far away from the Green Hill Zone",
+   "unlocked": false
+  },
+  {
+   "key": "easter_egg_9",
+   "name": "Pyramid of Fear",
+   "description": "Enter and exit the Pyramid of Fear",
+   "unlocked": false
+  },
+  {
+   "key": "end_desert",
+   "name": "Temple of the Sun",
+   "description": "Complete the Temple campaign",
+   "unlocked": false
+  },
+  {
+   "key": "end_survive",
+   "name": "Survivalist",
+   "description": "Survive the castle collapsing",
+   "unlocked": false
+  },
+  {
+   "key": "end_survive_and_desert",
+   "name": "Full House",
+   "description": "Beat both the Castle Hammerwatch and the Temple of the Sun campaigns",
+   "unlocked": false
+  },
+  {
+   "key": "ghost_and",
+   "name": "Worse than Ghost and Goblins",
+   "description": "Fail, where they fail: http://www.youtube.com/watch?v=-IAVCdu_DDs#t=467",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_1",
+   "name": "The Hard Queen",
+   "description": "Kill the Queen on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_2",
+   "name": "The Hard Knight",
+   "description": "Kill the Knight on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_3",
+   "name": "The Hard Lich",
+   "description": "Kill the Lich on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_4",
+   "name": "The Hard Dragon",
+   "description": "Kill the Dragon on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_desert_1",
+   "name": "The Hard Dune Sharks",
+   "description": "Kill the Dune Sharks on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_desert_2",
+   "name": "The Hard Frost Sorcerer",
+   "description": "Kill Krilith on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_desert_3",
+   "name": "The Hard Sun Guardian",
+   "description": "Kill Sha'Rand on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "hard_boss_surv",
+   "name": "Hard Crystal Lich",
+   "description": "Kill the Crystal Lich in the survival level on hard difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "kills_2",
+   "name": "Massacre",
+   "description": "Kill 25,000 enemies in the campaign",
+   "unlocked": false
+  },
+  {
+   "key": "kills_3",
+   "name": "Genocide",
+   "description": "Kill 250,000 enemies in the campaign",
+   "unlocked": false
+  },
+  {
+   "key": "medium_boss_3",
+   "name": "The Lich",
+   "description": "Kill the Lich on medium difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "medium_boss_4",
+   "name": "The Dragon",
+   "description": "Kill the Dragon on medium difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "medium_boss_desert_1",
+   "name": "The Dune Sharks",
+   "description": "Kill the Dune Sharks on medium difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "medium_boss_desert_2",
+   "name": "The Frost Sorcerer",
+   "description": "Kill Krilith on medium difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "medium_boss_desert_3",
+   "name": "The Sun Guardian",
+   "description": "Kill Sha'Rand on medium difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "medium_boss_surv",
+   "name": "Crystal Lich",
+   "description": "Kill the Crystal Lich in the survival level on medium difficulty without having any crutches enabled",
+   "unlocked": false
+  },
+  {
+   "key": "money_2",
+   "name": "Rich",
+   "description": "Get 100,000 coins in the campaign",
+   "unlocked": false
+  },
+  {
+   "key": "money_3",
+   "name": "Millionaire",
+   "description": "Get 1,000,000 coins in the campaign",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Hammerwatch",
+   "achievements": [
+    {
+     "apiname": "medium_boss_1",
+     "achieved": 1,
+     "unlocktime": 1385603339,
+     "name": "The Queen",
+     "description": "Kill the Queen on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "medium_boss_2",
+     "achieved": 1,
+     "unlocktime": 1385696374,
+     "name": "The Knight",
+     "description": "Kill the Knight on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "medium_boss_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Lich",
+     "description": "Kill the Lich on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "medium_boss_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Dragon",
+     "description": "Kill the Dragon on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Queen",
+     "description": "Kill the Queen on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Knight",
+     "description": "Kill the Knight on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Lich",
+     "description": "Kill the Lich on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Dragon",
+     "description": "Kill the Dragon on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "easter_egg_1",
+     "achieved": 1,
+     "unlocktime": 1385703860,
+     "name": "Harvesting",
+     "description": "Find the first easter egg"
+    },
+    {
+     "apiname": "easter_egg_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Heist",
+     "description": "Find the second easter egg"
+    },
+    {
+     "apiname": "easter_egg_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Earth \u0026 Void",
+     "description": "Find the third easter egg"
+    },
+    {
+     "apiname": "easter_egg_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Doomed Space Marine",
+     "description": "Find the fourth easter egg"
+    },
+    {
+     "apiname": "money_1",
+     "achieved": 1,
+     "unlocktime": 1385609860,
+     "name": "Affluent",
+     "description": "Get 10,000 coins in the campaign"
+    },
+    {
+     "apiname": "money_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rich",
+     "description": "Get 100,000 coins in the campaign"
+    },
+    {
+     "apiname": "money_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Millionaire",
+     "description": "Get 1,000,000 coins in the campaign"
+    },
+    {
+     "apiname": "kills_1",
+     "achieved": 1,
+     "unlocktime": 1385602915,
+     "name": "Mass murder",
+     "description": "Kill 2,500 enemies in the campaign"
+    },
+    {
+     "apiname": "kills_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Massacre",
+     "description": "Kill 25,000 enemies in the campaign"
+    },
+    {
+     "apiname": "kills_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Genocide",
+     "description": "Kill 250,000 enemies in the campaign"
+    },
+    {
+     "apiname": "end_survive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survivalist",
+     "description": "Survive the castle collapsing"
+    },
+    {
+     "apiname": "medium_boss_surv",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crystal Lich",
+     "description": "Kill the Crystal Lich in the survival level on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_surv",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Crystal Lich",
+     "description": "Kill the Crystal Lich in the survival level on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "almost_out",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Midway",
+     "description": "Air-walk between the start and the end!"
+    },
+    {
+     "apiname": "grisly_grotto",
+     "achieved": 1,
+     "unlocktime": 1403561532,
+     "name": "The Grisly Combination",
+     "description": "Solve it like it was E1M4"
+    },
+    {
+     "apiname": "ghost_and",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Worse than Ghost and Goblins",
+     "description": "Fail, where they fail: http://www.youtube.com/watch?v=-IAVCdu_DDs#t=467"
+    },
+    {
+     "apiname": "combo_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Combo Killer!",
+     "description": "Get combo kills until you reach 200"
+    },
+    {
+     "apiname": "combo_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Combo Master!",
+     "description": "Get combo kills until you reach 1000"
+    },
+    {
+     "apiname": "medium_boss_desert_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Dune Sharks",
+     "description": "Kill the Dune Sharks on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "medium_boss_desert_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Frost Sorcerer",
+     "description": "Kill Krilith on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "medium_boss_desert_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Sun Guardian",
+     "description": "Kill Sha'Rand on medium difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_desert_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Dune Sharks",
+     "description": "Kill the Dune Sharks on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_desert_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Frost Sorcerer",
+     "description": "Kill Krilith on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "hard_boss_desert_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard Sun Guardian",
+     "description": "Kill Sha'Rand on hard difficulty without having any crutches enabled"
+    },
+    {
+     "apiname": "end_desert",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Temple of the Sun",
+     "description": "Complete the Temple campaign"
+    },
+    {
+     "apiname": "end_survive_and_desert",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full House",
+     "description": "Beat both the Castle Hammerwatch and the Temple of the Sun campaigns"
+    },
+    {
+     "apiname": "easter_egg_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Do it like Jones",
+     "description": "It was better in the movie"
+    },
+    {
+     "apiname": "easter_egg_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Serious Pickup",
+     "description": "Seriously?! That's what I got?"
+    },
+    {
+     "apiname": "easter_egg_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Desert Zone...",
+     "description": "...is far away from the Green Hill Zone"
+    },
+    {
+     "apiname": "easter_egg_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pyramid of Fear",
+     "description": "Enter and exit the Pyramid of Fear"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,593 @@
+{
+ "provider": "steam",
+ "title": "Infinitode 2",
+ "updated": "2026-07-26",
+ "id": "937310",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 3,
+ "total": 45,
+ "first": "2023-11-26",
+ "last": "2023-12-06",
+ "platform": "PC",
+ "icon": "9fd6c6bf9ffde161b09acb9d2d57343323c0e885",
+ "playtime_mins": 455,
+ "playtime": {
+  "windows": 455
+ },
+ "last_played": "2023-12-23",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_TUTORIALS_COMPLETE",
+   "name": "Tower defense 101",
+   "description": "Complete all of the tutorials",
+   "unlocked": true,
+   "date": "2023-11-26T22:01:09-06:00"
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_BURN_ENEMIES",
+   "name": "Ash generator",
+   "unlocked": true,
+   "date": "2023-12-01T22:30:40-06:00"
+  },
+  {
+   "key": "ACHIEVEMENT_STAGE_1_COMPLETE",
+   "name": "Responsibilities taken",
+   "description": "Get 3 stars on first 8 levels of Stage 1",
+   "unlocked": true,
+   "date": "2023-12-06T21:21:55-06:00"
+  },
+  {
+   "key": "ACHIEVEMENT_BUILD_TOWER_FINISH_WITH_TEN",
+   "name": "Worth of dozen",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_COPY_TOWERS_ONE_GAME",
+   "name": "Ctrl+C, Ctrl+V",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_DOUBLE_LASER_DAMAGE",
+   "name": "Eye protection required",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_EVERY_ENEMY_MET",
+   "name": "New acquaintances",
+   "description": "Meet every enemy type",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_EXPLODE_ENEMY_WITH_BULLET",
+   "name": "Explosive bullets",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FAIL_TUTORIAL",
+   "name": "How?",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FAST_BOSS_KILL",
+   "name": "No boss in sight",
+   "description": "Kill any boss in less than 3 seconds",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FIVE_HUNDRED_RESEARCH",
+   "name": "Rising scholar",
+   "description": "Do 500 different research",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FIVE_HUNDRED_TILE_CUSTOM_MAP",
+   "name": "Crazy battlefield architect",
+   "description": "Build a map with 500 tiles",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FULL_REGULAR_RESEARCH",
+   "name": "Mad scientist",
+   "description": "Complete all of the regular research",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_HIT_ENEMY_WITH_SNOWBALLS",
+   "name": "Snowball combo",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_HUGE_TOWER_ATTACK_SPEED",
+   "name": "Bullet storm",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_HUNDRED_KILLS_NUKE",
+   "name": "Wow, this blew up",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_HUNDRED_TILE_CUSTOM_MAP",
+   "name": "Battlefield architect",
+   "description": "Build a map with 100 tiles",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_BOSS_BONUS_COINS",
+   "name": "Stonks",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_BOSS_WITH_RECRUIT",
+   "name": "Team-boss-kill",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_ENEMY_WITH_BACK_PROJECTILE",
+   "name": "Offhand shooting",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_GROUND_ENEMY_WITH_AIR",
+   "name": "Death from the sky",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_MILLION_ENEMIES",
+   "name": "Seven numbers",
+   "description": "Kill 1,000,000 enemies",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_TEN_MILLION_ENEMIES",
+   "name": "Eight numbers",
+   "description": "Kill 10,000,000 enemies",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KILL_THROWN_BACK_ENEMIES",
+   "name": "Step back",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_BALL_LIGHTNINGS",
+   "name": "Light show",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_BUFF_ENEMY",
+   "name": "Vinaigrette",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_MINERS",
+   "name": "Mass production",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_MISSILES",
+   "name": "Rocket rain",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_STUN_ENEMIES_ONE_SHOT",
+   "name": "Stunning shot",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MASS_TOWERS_LEVEL_DEV",
+   "name": "Tightly packed rainbow",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MILLION_MDPS_ONE_GAME",
+   "name": "That's a lot of damage",
+   "description": "Build 1,000,000 MDPS on any level",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MILLION_PAPERS",
+   "name": "Basically rich",
+   "description": "Get 1,000,000 Green Papers",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_MILLION_SCORE_ONE_GAME",
+   "name": "Millionaire",
+   "description": "Get 1,000,000+ score in one game",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PLACE_MICROGUNS",
+   "name": "Space efficient",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PLACE_MINES_ONE_GAME",
+   "name": "Minefield walk",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PRESTIGE",
+   "name": "Prestige",
+   "description": "Sell any map or reset quests for Prestige",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_REACH_HIGH_WAVE_ONE_GAME",
+   "name": "On the wave",
+   "description": "Reach wave 300 on any level",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_RECRUIT_ENEMIES",
+   "name": "Art of persuasion",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_RECRUIT_SPIDER",
+   "name": "Spiders on my side",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_SPLASH_CHAIN_KILL",
+   "name": "Thorny chain",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_STAGE_2_COMPLETE",
+   "name": "Beginnings ended",
+   "description": "Get 3 stars on first 8 levels of Stage 2",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_STAGE_3_COMPLETE",
+   "name": "Resistance overcame",
+   "description": "Get 3 stars on first 8 levels of Stage 3",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_STAGE_4_COMPLETE",
+   "name": "Evolvement performed",
+   "description": "Get 3 stars on first 8 levels of Stage 4",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_STAGE_5_COMPLETE",
+   "name": "Denouement approached",
+   "description": "Get 3 stars on first 8 levels of Stage 5",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_UNLOCK_ALL_TROPHIES",
+   "name": "Trophy hunter",
+   "description": "Unlock all of the trophies",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Infinitode 2",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_TUTORIALS_COMPLETE",
+     "achieved": 1,
+     "unlocktime": 1701057669,
+     "name": "Tower defense 101",
+     "description": "Complete all of the tutorials"
+    },
+    {
+     "apiname": "ACHIEVEMENT_STAGE_1_COMPLETE",
+     "achieved": 1,
+     "unlocktime": 1701919315,
+     "name": "Responsibilities taken",
+     "description": "Get 3 stars on first 8 levels of Stage 1"
+    },
+    {
+     "apiname": "ACHIEVEMENT_STAGE_2_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beginnings ended",
+     "description": "Get 3 stars on first 8 levels of Stage 2"
+    },
+    {
+     "apiname": "ACHIEVEMENT_STAGE_3_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Resistance overcame",
+     "description": "Get 3 stars on first 8 levels of Stage 3"
+    },
+    {
+     "apiname": "ACHIEVEMENT_STAGE_4_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Evolvement performed",
+     "description": "Get 3 stars on first 8 levels of Stage 4"
+    },
+    {
+     "apiname": "ACHIEVEMENT_STAGE_5_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Denouement approached",
+     "description": "Get 3 stars on first 8 levels of Stage 5"
+    },
+    {
+     "apiname": "ACHIEVEMENT_FIVE_HUNDRED_RESEARCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rising scholar",
+     "description": "Do 500 different research"
+    },
+    {
+     "apiname": "ACHIEVEMENT_FULL_REGULAR_RESEARCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mad scientist",
+     "description": "Complete all of the regular research"
+    },
+    {
+     "apiname": "ACHIEVEMENT_MILLION_SCORE_ONE_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Millionaire",
+     "description": "Get 1,000,000+ score in one game"
+    },
+    {
+     "apiname": "ACHIEVEMENT_PRESTIGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prestige",
+     "description": "Sell any map or reset quests for Prestige"
+    },
+    {
+     "apiname": "ACHIEVEMENT_HUNDRED_TILE_CUSTOM_MAP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Battlefield architect",
+     "description": "Build a map with 100 tiles"
+    },
+    {
+     "apiname": "ACHIEVEMENT_FIVE_HUNDRED_TILE_CUSTOM_MAP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crazy battlefield architect",
+     "description": "Build a map with 500 tiles"
+    },
+    {
+     "apiname": "ACHIEVEMENT_FAST_BOSS_KILL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No boss in sight",
+     "description": "Kill any boss in less than 3 seconds"
+    },
+    {
+     "apiname": "ACHIEVEMENT_EVERY_ENEMY_MET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New acquaintances",
+     "description": "Meet every enemy type"
+    },
+    {
+     "apiname": "ACHIEVEMENT_UNLOCK_ALL_TROPHIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trophy hunter",
+     "description": "Unlock all of the trophies"
+    },
+    {
+     "apiname": "ACHIEVEMENT_MILLION_PAPERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Basically rich",
+     "description": "Get 1,000,000 Green Papers"
+    },
+    {
+     "apiname": "ACHIEVEMENT_MILLION_MDPS_ONE_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That's a lot of damage",
+     "description": "Build 1,000,000 MDPS on any level"
+    },
+    {
+     "apiname": "ACHIEVEMENT_REACH_HIGH_WAVE_ONE_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On the wave",
+     "description": "Reach wave 300 on any level"
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_MILLION_ENEMIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seven numbers",
+     "description": "Kill 1,000,000 enemies"
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_TEN_MILLION_ENEMIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eight numbers",
+     "description": "Kill 10,000,000 enemies"
+    },
+    {
+     "apiname": "ACHIEVEMENT_HUNDRED_KILLS_NUKE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wow, this blew up",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_COPY_TOWERS_ONE_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ctrl+C, Ctrl+V",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_PLACE_MINES_ONE_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Minefield walk",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_EXPLODE_ENEMY_WITH_BULLET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Explosive bullets",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_HIT_ENEMY_WITH_SNOWBALLS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Snowball combo",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_GROUND_ENEMY_WITH_AIR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death from the sky",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_SPLASH_CHAIN_KILL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thorny chain",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_THROWN_BACK_ENEMIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Step back",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_ENEMY_WITH_BACK_PROJECTILE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Offhand shooting",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_PLACE_MICROGUNS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Space efficient",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_BUFF_ENEMY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vinaigrette",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_BALL_LIGHTNINGS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Light show",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_MISSILES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rocket rain",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_BURN_ENEMIES",
+     "achieved": 1,
+     "unlocktime": 1701491440,
+     "name": "Ash generator",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_DOUBLE_LASER_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eye protection required",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_STUN_ENEMIES_ONE_SHOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stunning shot",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_RECRUIT_ENEMIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Art of persuasion",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_FAIL_TUTORIAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "How?",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_HUGE_TOWER_ATTACK_SPEED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bullet storm",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_TOWERS_LEVEL_DEV",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tightly packed rainbow",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_MASS_MINERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mass production",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_BOSS_BONUS_COINS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stonks",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_BUILD_TOWER_FINISH_WITH_TEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Worth of dozen",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_RECRUIT_SPIDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spiders on my side",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_KILL_BOSS_WITH_RECRUIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Team-boss-kill",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

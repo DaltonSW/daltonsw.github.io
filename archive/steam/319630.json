@@ -1,0 +1,825 @@
+{
+ "provider": "steam",
+ "title": "Life is Strange™",
+ "updated": "2026-07-26",
+ "id": "319630",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 18,
+ "total": 60,
+ "first": "2015-12-16",
+ "last": "2015-12-23",
+ "platform": "PC",
+ "icon": "e54b13da0710a35e7088664a77632e79157d8332",
+ "playtime_mins": 983,
+ "last_played": "2015-12-23",
+ "achievements": [
+  {
+   "key": "AC_2",
+   "name": "Macro Eyes",
+   "description": "Take optional photo #1 in Episode 1: Chrysalis",
+   "unlocked": true,
+   "date": "2015-12-16T18:15:20-06:00"
+  },
+  {
+   "key": "AC_5",
+   "name": "Close-Ups",
+   "description": "Take optional photo #4 in Episode 1: Chrysalis",
+   "unlocked": true,
+   "date": "2015-12-16T18:58:36-06:00"
+  },
+  {
+   "key": "AC_8",
+   "name": "Zoomed In",
+   "description": "Take optional photo #7 in Episode 1: Chrysalis",
+   "unlocked": true,
+   "date": "2015-12-16T19:37:14-06:00"
+  },
+  {
+   "key": "AC_1",
+   "name": "Chrysalis",
+   "description": "Finish Episode 1: Chrysalis",
+   "unlocked": true,
+   "date": "2015-12-16T20:33:41-06:00"
+  },
+  {
+   "key": "AC_14",
+   "name": "Field Of View",
+   "description": "Take optional photo #1 in Episode 2: Out of Time",
+   "unlocked": true,
+   "date": "2015-12-16T21:03:13-06:00"
+  },
+  {
+   "key": "AC_20",
+   "name": "Dynamic Range",
+   "description": "Take optional photo #7 in Episode 2: Out of Time",
+   "unlocked": true,
+   "date": "2015-12-16T21:41:30-06:00"
+  },
+  {
+   "key": "AC_13",
+   "name": "Out of Time",
+   "description": "Finish Episode 2: Out of Time",
+   "unlocked": true,
+   "date": "2015-12-16T22:44:54-06:00"
+  },
+  {
+   "key": "Ac_28",
+   "name": "The Reflex",
+   "description": "Take optional photo #3 in Episode 3: Chaos Theory",
+   "unlocked": true,
+   "date": "2015-12-17T14:55:12-06:00"
+  },
+  {
+   "key": "AC_35",
+   "name": "Flash!",
+   "description": "Take optional photo #10 in Episode 3: Chaos Theory",
+   "unlocked": true,
+   "date": "2015-12-17T19:10:07-06:00"
+  },
+  {
+   "key": "AC_25",
+   "name": "Chaos Theory",
+   "description": "Finish Episode 3: Chaos Theory",
+   "unlocked": true,
+   "date": "2015-12-17T19:20:37-06:00"
+  },
+  {
+   "key": "AC_38",
+   "name": "Ambient",
+   "description": "Take optional photo #1 in Episode 4: Dark Room",
+   "unlocked": true,
+   "date": "2015-12-23T14:57:27-06:00"
+  },
+  {
+   "key": "AC_39",
+   "name": "Time-Lapsed",
+   "description": "Take optional photo #2 in Episode 4: Dark Room",
+   "unlocked": true,
+   "date": "2015-12-23T15:07:07-06:00"
+  },
+  {
+   "key": "AC_44",
+   "name": "Fisheye",
+   "description": "Take optional photo #7 in Episode 4: Dark Room",
+   "unlocked": true,
+   "date": "2015-12-23T16:53:31-06:00"
+  },
+  {
+   "key": "AC_45",
+   "name": "Manually Exposed",
+   "description": "Take optional photo #8 in Episode 4: Dark Room",
+   "unlocked": true,
+   "date": "2015-12-23T16:58:44-06:00"
+  },
+  {
+   "key": "AC_47",
+   "name": "Tripod",
+   "description": "Take optional photo #10 in Episode 4: Dark Room",
+   "unlocked": true,
+   "date": "2015-12-23T17:34:42-06:00"
+  },
+  {
+   "key": "AC_37",
+   "name": "Dark Room",
+   "description": "Finish Episode 4: Dark Room",
+   "unlocked": true,
+   "date": "2015-12-23T17:50:57-06:00"
+  },
+  {
+   "key": "AC_59",
+   "name": "Silhouettes",
+   "description": "Take optional photo #10 in Episode 5: Polarized",
+   "unlocked": true,
+   "date": "2015-12-23T19:48:55-06:00"
+  },
+  {
+   "key": "AC_49",
+   "name": "Polarized",
+   "description": "Finish Episode 5: Polarized",
+   "unlocked": true,
+   "date": "2015-12-23T20:13:01-06:00"
+  },
+  {
+   "key": "AC_10",
+   "name": "Maximum Aperture",
+   "description": "Take optional photo #9 in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_11",
+   "name": "Light Leak",
+   "description": "Take optional photo #10 in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_12",
+   "name": "Visionary",
+   "description": "Take all optional photos in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_15",
+   "name": "Full Exposure",
+   "description": "Take optional photo #2 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_16",
+   "name": "Processor",
+   "description": "Take optional photo #3 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_17",
+   "name": "Image Stabilizer",
+   "description": "Take optional photo #4 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_18",
+   "name": "Compressed",
+   "description": "Take optional photo #5 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_19",
+   "name": "Pixelated",
+   "description": "Take optional photo #6 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_21",
+   "name": "Colorized",
+   "description": "Take optional photo #8 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_22",
+   "name": "Meter Made",
+   "description": "Take optional photo #9 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_23",
+   "name": "Resolution Revolution",
+   "description": "Take optional photo #10 in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_24",
+   "name": "Lab Master",
+   "description": "Take all optional photos in Episode 2: Out of Time",
+   "unlocked": false
+  },
+  {
+   "key": "AC_26",
+   "name": "Parallax View",
+   "description": "Take optional photo #1 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_27",
+   "name": "Lenscrafted",
+   "description": "Take optional photo #2 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_29",
+   "name": "Histogrammar",
+   "description": "Take optional photo #4 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_3",
+   "name": "Wide Angles",
+   "description": "Take optional photo #2 in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_30",
+   "name": "Bokeh",
+   "description": "Take optional photo #5 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_31",
+   "name": "Pinholed",
+   "description": "Take optional photo #6 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_32",
+   "name": "RAW Strength",
+   "description": "Take optional photo #7 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_33",
+   "name": "Viewfinder",
+   "description": "Take optional photo #8 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_34",
+   "name": "Optican",
+   "description": "Take optional photo #9 in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_36",
+   "name": "Camera Eye",
+   "description": "Take all optional photos in Episode 3: Chaos Theory",
+   "unlocked": false
+  },
+  {
+   "key": "AC_4",
+   "name": "Telephotogenic",
+   "description": "Take optional photo #3 in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_40",
+   "name": "Balance",
+   "description": "Take optional photo #3 in Episode 4: Dark Room",
+   "unlocked": false
+  },
+  {
+   "key": "AC_41",
+   "name": "Rangefinder",
+   "description": "Take optional photo #4 in Episode 4: Dark Room",
+   "unlocked": false
+  },
+  {
+   "key": "AC_42",
+   "name": "Gamma Value",
+   "description": "Take optional photo #5 in Episode 4: Dark Room",
+   "unlocked": false
+  },
+  {
+   "key": "AC_43",
+   "name": "Dioptric Power",
+   "description": "Take optional photo #6 in Episode 4: Dark Room",
+   "unlocked": false
+  },
+  {
+   "key": "AC_46",
+   "name": "Slideshow",
+   "description": "Take optional photo #9 in Episode 4: Dark Room",
+   "unlocked": false
+  },
+  {
+   "key": "AC_48",
+   "name": "Shutterbug",
+   "description": "Take all optional photos in Episode 4: Dark Room",
+   "unlocked": false
+  },
+  {
+   "key": "AC_50",
+   "name": "Incandescent",
+   "description": "Take optional photo #1 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_51",
+   "name": "Night Vision",
+   "description": "Take optional photo #2 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_52",
+   "name": "Framed",
+   "description": "Take optional photo #3 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_53",
+   "name": "Camera Obscura",
+   "description": "Take optional photo #4 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_54",
+   "name": "Blowup",
+   "description": "Take optional photo #5 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_55",
+   "name": "Iris",
+   "description": "Take optional photo #6 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_56",
+   "name": "Sensor",
+   "description": "Take optional photo #7 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_57",
+   "name": "On Display",
+   "description": "Take optional photo #8 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_58",
+   "name": "Light Meter",
+   "description": "Take optional photo #9 in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_6",
+   "name": "Red Eye",
+   "description": "Take optional photo #5 in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_60",
+   "name": "Selfie Awareness",
+   "description": "Take all optional photos in Episode 5: Polarized",
+   "unlocked": false
+  },
+  {
+   "key": "AC_7",
+   "name": "Focused",
+   "description": "Take optional photo #6 in Episode 1: Chrysalis",
+   "unlocked": false
+  },
+  {
+   "key": "AC_9",
+   "name": "Focal Pointed",
+   "description": "Take optional photo #8 in Episode 1: Chrysalis",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Life is Strange™",
+   "achievements": [
+    {
+     "apiname": "AC_1",
+     "achieved": 1,
+     "unlocktime": 1450319621,
+     "name": "Chrysalis",
+     "description": "Finish Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_2",
+     "achieved": 1,
+     "unlocktime": 1450311320,
+     "name": "Macro Eyes",
+     "description": "Take optional photo #1 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wide Angles",
+     "description": "Take optional photo #2 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Telephotogenic",
+     "description": "Take optional photo #3 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_5",
+     "achieved": 1,
+     "unlocktime": 1450313916,
+     "name": "Close-Ups",
+     "description": "Take optional photo #4 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Red Eye",
+     "description": "Take optional photo #5 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Focused",
+     "description": "Take optional photo #6 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_8",
+     "achieved": 1,
+     "unlocktime": 1450316234,
+     "name": "Zoomed In",
+     "description": "Take optional photo #7 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Focal Pointed",
+     "description": "Take optional photo #8 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maximum Aperture",
+     "description": "Take optional photo #9 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Light Leak",
+     "description": "Take optional photo #10 in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Visionary",
+     "description": "Take all optional photos in Episode 1: Chrysalis"
+    },
+    {
+     "apiname": "AC_13",
+     "achieved": 1,
+     "unlocktime": 1450327494,
+     "name": "Out of Time",
+     "description": "Finish Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_14",
+     "achieved": 1,
+     "unlocktime": 1450321393,
+     "name": "Field Of View",
+     "description": "Take optional photo #1 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Exposure",
+     "description": "Take optional photo #2 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Processor",
+     "description": "Take optional photo #3 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Image Stabilizer",
+     "description": "Take optional photo #4 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Compressed",
+     "description": "Take optional photo #5 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pixelated",
+     "description": "Take optional photo #6 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_20",
+     "achieved": 1,
+     "unlocktime": 1450323690,
+     "name": "Dynamic Range",
+     "description": "Take optional photo #7 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Colorized",
+     "description": "Take optional photo #8 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meter Made",
+     "description": "Take optional photo #9 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Resolution Revolution",
+     "description": "Take optional photo #10 in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lab Master",
+     "description": "Take all optional photos in Episode 2: Out of Time"
+    },
+    {
+     "apiname": "AC_25",
+     "achieved": 1,
+     "unlocktime": 1450401637,
+     "name": "Chaos Theory",
+     "description": "Finish Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallax View",
+     "description": "Take optional photo #1 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lenscrafted",
+     "description": "Take optional photo #2 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "Ac_28",
+     "achieved": 1,
+     "unlocktime": 1450385712,
+     "name": "The Reflex",
+     "description": "Take optional photo #3 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Histogrammar",
+     "description": "Take optional photo #4 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bokeh",
+     "description": "Take optional photo #5 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pinholed",
+     "description": "Take optional photo #6 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "RAW Strength",
+     "description": "Take optional photo #7 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Viewfinder",
+     "description": "Take optional photo #8 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Optican",
+     "description": "Take optional photo #9 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_35",
+     "achieved": 1,
+     "unlocktime": 1450401007,
+     "name": "Flash!",
+     "description": "Take optional photo #10 in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Camera Eye",
+     "description": "Take all optional photos in Episode 3: Chaos Theory"
+    },
+    {
+     "apiname": "AC_37",
+     "achieved": 1,
+     "unlocktime": 1450914657,
+     "name": "Dark Room",
+     "description": "Finish Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_38",
+     "achieved": 1,
+     "unlocktime": 1450904247,
+     "name": "Ambient",
+     "description": "Take optional photo #1 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_39",
+     "achieved": 1,
+     "unlocktime": 1450904827,
+     "name": "Time-Lapsed",
+     "description": "Take optional photo #2 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Balance",
+     "description": "Take optional photo #3 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rangefinder",
+     "description": "Take optional photo #4 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gamma Value",
+     "description": "Take optional photo #5 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dioptric Power",
+     "description": "Take optional photo #6 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_44",
+     "achieved": 1,
+     "unlocktime": 1450911211,
+     "name": "Fisheye",
+     "description": "Take optional photo #7 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_45",
+     "achieved": 1,
+     "unlocktime": 1450911524,
+     "name": "Manually Exposed",
+     "description": "Take optional photo #8 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slideshow",
+     "description": "Take optional photo #9 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_47",
+     "achieved": 1,
+     "unlocktime": 1450913682,
+     "name": "Tripod",
+     "description": "Take optional photo #10 in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shutterbug",
+     "description": "Take all optional photos in Episode 4: Dark Room"
+    },
+    {
+     "apiname": "AC_49",
+     "achieved": 1,
+     "unlocktime": 1450923181,
+     "name": "Polarized",
+     "description": "Finish Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Incandescent",
+     "description": "Take optional photo #1 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Night Vision",
+     "description": "Take optional photo #2 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Framed",
+     "description": "Take optional photo #3 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Camera Obscura",
+     "description": "Take optional photo #4 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blowup",
+     "description": "Take optional photo #5 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Iris",
+     "description": "Take optional photo #6 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_56",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sensor",
+     "description": "Take optional photo #7 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Display",
+     "description": "Take optional photo #8 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Light Meter",
+     "description": "Take optional photo #9 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_59",
+     "achieved": 1,
+     "unlocktime": 1450921735,
+     "name": "Silhouettes",
+     "description": "Take optional photo #10 in Episode 5: Polarized"
+    },
+    {
+     "apiname": "AC_60",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Selfie Awareness",
+     "description": "Take all optional photos in Episode 5: Polarized"
+    }
+   ],
+   "success": true
+  }
+ }
+}

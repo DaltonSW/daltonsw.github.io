@@ -1,0 +1,449 @@
+{
+ "provider": "steam",
+ "title": "Among Us",
+ "updated": "2026-07-26",
+ "id": "945360",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 0,
+ "total": 33,
+ "platform": "PC",
+ "icon": "b82c3f46da8f3c918e1c9e0d18bd6fa8fcef6801",
+ "playtime_mins": 685,
+ "playtime": {
+  "windows": 685
+ },
+ "last_played": "2021-03-31",
+ "achievements": [
+  {
+   "key": "block_kill_as_guardian",
+   "name": "I CAN BE YOUR ANGLE",
+   "description": "Block a kill as a guardian angel",
+   "unlocked": false
+  },
+  {
+   "key": "card_first_try",
+   "name": "IMPOSSIBLE TASK",
+   "unlocked": false
+  },
+  {
+   "key": "die_during_medscan",
+   "name": "WATCH ME SCAN",
+   "unlocked": false
+  },
+  {
+   "key": "fix_own_sabotage",
+   "name": "CREWPOSTOR",
+   "unlocked": false
+  },
+  {
+   "key": "hns_complete_all_tasks",
+   "name": "PERFORM UNDER PRESSURE",
+   "description": "Do all your tasks in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "hns_crewmate_wins_easy",
+   "name": "YOU CAN'T RUN",
+   "description": "10 wins as a hider in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "hns_crewmate_wins_hard",
+   "name": "BUT YOU CAN HIDE",
+   "description": "50 wins as a hider in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "hns_impostor_kill_all",
+   "name": "NO ESCAPE",
+   "description": "Kill all hiders as impostor in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "hns_impostor_kills_easy",
+   "name": "YOU CAN RUN",
+   "description": "100 kills as a seeker in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "hns_impostor_kills_hard",
+   "name": "BUT YOU CAN'T HIDE",
+   "description": "200 kills as a seeker in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "hns_survive_crewmate",
+   "name": "HIDDEN TALENT",
+   "description": "Survive a Game as Crew in Hide n Seek Mode",
+   "unlocked": false
+  },
+  {
+   "key": "kill_during_lights",
+   "name": "LIGHTS OUT",
+   "description": "Get a kill during a lights sabotage",
+   "unlocked": false
+  },
+  {
+   "key": "kill_while_shifted",
+   "name": "TRUST NO ONE",
+   "description": "Kill Someone while disguised as them",
+   "unlocked": false
+  },
+  {
+   "key": "kills_easy",
+   "name": "KILLER",
+   "description": "Get 5 total kills",
+   "unlocked": false
+  },
+  {
+   "key": "kills_first",
+   "name": "A TASTE FOR IT",
+   "description": "Get your first kill",
+   "unlocked": false
+  },
+  {
+   "key": "kills_hard",
+   "name": "SCOURGE",
+   "unlocked": false
+  },
+  {
+   "key": "kills_medium",
+   "name": "ASSASSIN",
+   "description": "Get 50 total kills",
+   "unlocked": false
+  },
+  {
+   "key": "no_vents_impostor_win",
+   "name": "CIRCUMVENTER",
+   "unlocked": false
+  },
+  {
+   "key": "survive_crewmate",
+   "name": "SURVIVOR",
+   "description": "Survive and win a game as a crewmate",
+   "unlocked": false
+  },
+  {
+   "key": "survive_two_impostors",
+   "name": "NEVER SUSPECT A THING",
+   "unlocked": false
+  },
+  {
+   "key": "task_complete_easy",
+   "name": "INTERN",
+   "description": "Complete 10 total tasks",
+   "unlocked": false
+  },
+  {
+   "key": "task_complete_hard",
+   "name": "TASKMASTER",
+   "unlocked": false
+  },
+  {
+   "key": "task_complete_medium",
+   "name": "MANAGER",
+   "description": "Complete 100 total tasks",
+   "unlocked": false
+  },
+  {
+   "key": "three_kills_before_meeting",
+   "name": "H U N G E R",
+   "unlocked": false
+  },
+  {
+   "key": "win_all_tasks",
+   "name": "A WELL-OILED MACHINE",
+   "description": "Win a game by completing all tasks as a crewmate",
+   "unlocked": false
+  },
+  {
+   "key": "win_always_correct_votes",
+   "name": "SHERLOCK",
+   "description": "Win a game as crew with your only votes being for the Impostor",
+   "unlocked": false
+  },
+  {
+   "key": "win_impostor_vote",
+   "name": "SMOOTH TALKER",
+   "description": "Win a game by vote as Impostor",
+   "unlocked": false
+  },
+  {
+   "key": "win_kills",
+   "name": "SLASHER",
+   "description": "Win a game by killing all crewmates as Impostor.",
+   "unlocked": false
+  },
+  {
+   "key": "win_sabotage",
+   "name": "SABOTEUR",
+   "description": "Win a game by sabotaging a critical system as Impostor.",
+   "unlocked": false
+  },
+  {
+   "key": "wins_airship",
+   "name": "TOPPAT CREWMATES",
+   "description": "Win 3 games on The Airship",
+   "unlocked": false
+  },
+  {
+   "key": "wins_mira",
+   "name": "CORPORATE LOCKDOWN",
+   "description": "Win 3 games on MIRA",
+   "unlocked": false
+  },
+  {
+   "key": "wins_polus",
+   "name": "UNEARTHED",
+   "description": "Win 3 games on Polus",
+   "unlocked": false
+  },
+  {
+   "key": "wins_skeld",
+   "name": "A SHIP ADRIFT",
+   "description": "Win 3 games on Skeld",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Among Us",
+   "achievements": [
+    {
+     "apiname": "kills_first",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A TASTE FOR IT",
+     "description": "Get your first kill"
+    },
+    {
+     "apiname": "kills_easy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "KILLER",
+     "description": "Get 5 total kills"
+    },
+    {
+     "apiname": "kills_medium",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "ASSASSIN",
+     "description": "Get 50 total kills"
+    },
+    {
+     "apiname": "kills_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SCOURGE",
+     "description": ""
+    },
+    {
+     "apiname": "task_complete_easy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "INTERN",
+     "description": "Complete 10 total tasks"
+    },
+    {
+     "apiname": "task_complete_medium",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MANAGER",
+     "description": "Complete 100 total tasks"
+    },
+    {
+     "apiname": "task_complete_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TASKMASTER",
+     "description": ""
+    },
+    {
+     "apiname": "wins_skeld",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A SHIP ADRIFT",
+     "description": "Win 3 games on Skeld"
+    },
+    {
+     "apiname": "wins_mira",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "CORPORATE LOCKDOWN",
+     "description": "Win 3 games on MIRA"
+    },
+    {
+     "apiname": "wins_polus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "UNEARTHED",
+     "description": "Win 3 games on Polus"
+    },
+    {
+     "apiname": "wins_airship",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TOPPAT CREWMATES",
+     "description": "Win 3 games on The Airship"
+    },
+    {
+     "apiname": "survive_two_impostors",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "NEVER SUSPECT A THING",
+     "description": ""
+    },
+    {
+     "apiname": "win_all_tasks",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A WELL-OILED MACHINE",
+     "description": "Win a game by completing all tasks as a crewmate"
+    },
+    {
+     "apiname": "win_sabotage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SABOTEUR",
+     "description": "Win a game by sabotaging a critical system as Impostor."
+    },
+    {
+     "apiname": "win_kills",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SLASHER",
+     "description": "Win a game by killing all crewmates as Impostor."
+    },
+    {
+     "apiname": "survive_crewmate",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SURVIVOR",
+     "description": "Survive and win a game as a crewmate"
+    },
+    {
+     "apiname": "win_impostor_vote",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SMOOTH TALKER",
+     "description": "Win a game by vote as Impostor"
+    },
+    {
+     "apiname": "card_first_try",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IMPOSSIBLE TASK",
+     "description": ""
+    },
+    {
+     "apiname": "kill_during_lights",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "LIGHTS OUT",
+     "description": "Get a kill during a lights sabotage"
+    },
+    {
+     "apiname": "die_during_medscan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "WATCH ME SCAN",
+     "description": ""
+    },
+    {
+     "apiname": "fix_own_sabotage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "CREWPOSTOR",
+     "description": ""
+    },
+    {
+     "apiname": "three_kills_before_meeting",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "H U N G E R",
+     "description": ""
+    },
+    {
+     "apiname": "win_always_correct_votes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SHERLOCK",
+     "description": "Win a game as crew with your only votes being for the Impostor"
+    },
+    {
+     "apiname": "no_vents_impostor_win",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "CIRCUMVENTER",
+     "description": ""
+    },
+    {
+     "apiname": "hns_survive_crewmate",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "HIDDEN TALENT",
+     "description": "Survive a Game as Crew in Hide n Seek Mode"
+    },
+    {
+     "apiname": "hns_impostor_kill_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "NO ESCAPE",
+     "description": "Kill all hiders as impostor in Hide n Seek Mode"
+    },
+    {
+     "apiname": "hns_complete_all_tasks",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "PERFORM UNDER PRESSURE",
+     "description": "Do all your tasks in Hide n Seek Mode"
+    },
+    {
+     "apiname": "kill_while_shifted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TRUST NO ONE",
+     "description": "Kill Someone while disguised as them"
+    },
+    {
+     "apiname": "block_kill_as_guardian",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I CAN BE YOUR ANGLE",
+     "description": "Block a kill as a guardian angel"
+    },
+    {
+     "apiname": "hns_crewmate_wins_easy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "YOU CAN'T RUN",
+     "description": "10 wins as a hider in Hide n Seek Mode"
+    },
+    {
+     "apiname": "hns_crewmate_wins_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BUT YOU CAN HIDE",
+     "description": "50 wins as a hider in Hide n Seek Mode"
+    },
+    {
+     "apiname": "hns_impostor_kills_easy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "YOU CAN RUN",
+     "description": "100 kills as a seeker in Hide n Seek Mode"
+    },
+    {
+     "apiname": "hns_impostor_kills_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BUT YOU CAN'T HIDE",
+     "description": "200 kills as a seeker in Hide n Seek Mode"
+    }
+   ],
+   "success": true
+  }
+ }
+}

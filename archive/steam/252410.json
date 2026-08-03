@@ -1,0 +1,348 @@
+{
+ "provider": "steam",
+ "title": "SteamWorld Dig",
+ "updated": "2026-07-26",
+ "id": "252410",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 13,
+ "total": 24,
+ "first": "2013-12-28",
+ "last": "2014-01-13",
+ "platform": "PC",
+ "icon": "7757c90bbf65e312ea4871106250077e78007bc6",
+ "playtime_mins": 340,
+ "last_played": "2014-01-13",
+ "achievements": [
+  {
+   "key": "ach_archaea",
+   "name": "Scratching the Surface",
+   "unlocked": true,
+   "date": "2013-12-28T05:28:13-06:00"
+  },
+  {
+   "key": "ach_sell_resources_archaea",
+   "name": "Trash Man",
+   "description": "Find and sell 8 Trashium ores at the same time.",
+   "unlocked": true,
+   "date": "2013-12-28T05:33:09-06:00"
+  },
+  {
+   "key": "ach_sleeping_trilobites",
+   "name": "The Good",
+   "description": "Defeat 10 trilobites before they wake up.",
+   "unlocked": true,
+   "date": "2013-12-30T23:48:06-06:00"
+  },
+  {
+   "key": "ach_old_world",
+   "name": "Mythical Creatures",
+   "unlocked": true,
+   "date": "2013-12-31T00:20:14-06:00"
+  },
+  {
+   "key": "ach_sleeping_shiners",
+   "name": "The Bad",
+   "description": "Defeat 10 shiners before they wake up.",
+   "unlocked": true,
+   "date": "2014-01-12T13:33:35-06:00"
+  },
+  {
+   "key": "ach_vectron",
+   "name": "It Goes Deeper!?",
+   "unlocked": true,
+   "date": "2014-01-12T13:53:49-06:00"
+  },
+  {
+   "key": "ach_buy_from_shops",
+   "name": "Support Your Community",
+   "description": "Buy from all of Tumbleton's shops.",
+   "unlocked": true,
+   "date": "2014-01-12T14:35:34-06:00"
+  },
+  {
+   "key": "ach_rock_bottom",
+   "name": "Rock Bottom",
+   "description": "Reach the bottom of the world.",
+   "unlocked": true,
+   "date": "2014-01-12T14:42:20-06:00"
+  },
+  {
+   "key": "ach_killed_laser_box",
+   "name": "99 Problems and the Box Ain't One",
+   "description": "Destroy a laser box.",
+   "unlocked": true,
+   "date": "2014-01-13T18:33:04-06:00"
+  },
+  {
+   "key": "ach_sell_resources_vectron",
+   "name": "What's the Matter?",
+   "description": "Find and sell 16 Dark Matter ores at the same time.",
+   "unlocked": true,
+   "date": "2014-01-13T18:48:20-06:00"
+  },
+  {
+   "key": "ach_defeat_boss",
+   "name": "Assimilated",
+   "unlocked": true,
+   "date": "2014-01-13T19:28:10-06:00"
+  },
+  {
+   "key": "ach_clear_orbs_gold",
+   "name": "Shine on, You Crazy Round Thing",
+   "description": "Complete the game with more than 150 orbs collected in total.",
+   "unlocked": true,
+   "date": "2014-01-13T19:28:11-06:00"
+  },
+  {
+   "key": "ach_clear_cash_gold",
+   "name": "Two Kinds of People",
+   "description": "Complete the game with more than 20000 gold collected in total.",
+   "unlocked": true,
+   "date": "2014-01-13T19:28:11-06:00"
+  },
+  {
+   "key": "ach_clear_all_gold",
+   "name": "Master Prospector",
+   "description": "Get all four gold stars in the same playthrough.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_clear_death_gold",
+   "name": "Just Like Real Life",
+   "description": "Complete the game without getting killed once.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_clear_time_gold",
+   "name": "Quicker Than a Tumbleweed",
+   "description": "Complete the game in less than 2 hours, 30 minutes.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_crushed_enemies",
+   "name": "Dig Dug Skills",
+   "description": "Crush 10 enemies with falling blocks.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_destroy_blocks",
+   "name": "A Fistful of Dirt",
+   "description": "Dig out 15000 tiles.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_found_secrets",
+   "name": "It's a Secret to Everybody",
+   "description": "Find all secret areas in the caves.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_fully_loaded",
+   "name": "Fully Loaded",
+   "description": "Maximize all upgrades.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_sell_resources_oldworld",
+   "name": "Half Life 8 Confirmed",
+   "description": "Find and sell 8 Uranium ores at the same time.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_sequence_breaker",
+   "name": "Sequence Breaker",
+   "description": "Destroy two generators before entering Vectron.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_sleeping_mecha_trilobites",
+   "name": "The Ugly",
+   "description": "Defeat 10 mecha trilobites before they wake up.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_turtle_soup",
+   "name": "Turtle Soup, Yum!",
+   "description": "Defeat a turtle submerged in water.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "SteamWorld Dig",
+   "achievements": [
+    {
+     "apiname": "ach_clear_cash_gold",
+     "achieved": 1,
+     "unlocktime": 1389662891,
+     "name": "Two Kinds of People",
+     "description": "Complete the game with more than 20000 gold collected in total."
+    },
+    {
+     "apiname": "ach_clear_time_gold",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quicker Than a Tumbleweed",
+     "description": "Complete the game in less than 2 hours, 30 minutes."
+    },
+    {
+     "apiname": "ach_clear_orbs_gold",
+     "achieved": 1,
+     "unlocktime": 1389662891,
+     "name": "Shine on, You Crazy Round Thing",
+     "description": "Complete the game with more than 150 orbs collected in total."
+    },
+    {
+     "apiname": "ach_clear_death_gold",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Like Real Life",
+     "description": "Complete the game without getting killed once."
+    },
+    {
+     "apiname": "ach_clear_all_gold",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Prospector",
+     "description": "Get all four gold stars in the same playthrough."
+    },
+    {
+     "apiname": "ach_sleeping_trilobites",
+     "achieved": 1,
+     "unlocktime": 1388468886,
+     "name": "The Good",
+     "description": "Defeat 10 trilobites before they wake up."
+    },
+    {
+     "apiname": "ach_sleeping_shiners",
+     "achieved": 1,
+     "unlocktime": 1389555215,
+     "name": "The Bad",
+     "description": "Defeat 10 shiners before they wake up."
+    },
+    {
+     "apiname": "ach_sleeping_mecha_trilobites",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Ugly",
+     "description": "Defeat 10 mecha trilobites before they wake up."
+    },
+    {
+     "apiname": "ach_sequence_breaker",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sequence Breaker",
+     "description": "Destroy two generators before entering Vectron."
+    },
+    {
+     "apiname": "ach_old_world",
+     "achieved": 1,
+     "unlocktime": 1388470814,
+     "name": "Mythical Creatures",
+     "description": ""
+    },
+    {
+     "apiname": "ach_vectron",
+     "achieved": 1,
+     "unlocktime": 1389556429,
+     "name": "It Goes Deeper!?",
+     "description": ""
+    },
+    {
+     "apiname": "ach_defeat_boss",
+     "achieved": 1,
+     "unlocktime": 1389662890,
+     "name": "Assimilated",
+     "description": ""
+    },
+    {
+     "apiname": "ach_archaea",
+     "achieved": 1,
+     "unlocktime": 1388230093,
+     "name": "Scratching the Surface",
+     "description": ""
+    },
+    {
+     "apiname": "ach_turtle_soup",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Turtle Soup, Yum!",
+     "description": "Defeat a turtle submerged in water."
+    },
+    {
+     "apiname": "ach_buy_from_shops",
+     "achieved": 1,
+     "unlocktime": 1389558934,
+     "name": "Support Your Community",
+     "description": "Buy from all of Tumbleton's shops."
+    },
+    {
+     "apiname": "ach_crushed_enemies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dig Dug Skills",
+     "description": "Crush 10 enemies with falling blocks."
+    },
+    {
+     "apiname": "ach_sell_resources_oldworld",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Half Life 8 Confirmed",
+     "description": "Find and sell 8 Uranium ores at the same time."
+    },
+    {
+     "apiname": "ach_found_secrets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's a Secret to Everybody",
+     "description": "Find all secret areas in the caves."
+    },
+    {
+     "apiname": "ach_sell_resources_vectron",
+     "achieved": 1,
+     "unlocktime": 1389660500,
+     "name": "What's the Matter?",
+     "description": "Find and sell 16 Dark Matter ores at the same time."
+    },
+    {
+     "apiname": "ach_fully_loaded",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Loaded",
+     "description": "Maximize all upgrades."
+    },
+    {
+     "apiname": "ach_killed_laser_box",
+     "achieved": 1,
+     "unlocktime": 1389659584,
+     "name": "99 Problems and the Box Ain't One",
+     "description": "Destroy a laser box."
+    },
+    {
+     "apiname": "ach_rock_bottom",
+     "achieved": 1,
+     "unlocktime": 1389559340,
+     "name": "Rock Bottom",
+     "description": "Reach the bottom of the world."
+    },
+    {
+     "apiname": "ach_destroy_blocks",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Fistful of Dirt",
+     "description": "Dig out 15000 tiles."
+    },
+    {
+     "apiname": "ach_sell_resources_archaea",
+     "achieved": 1,
+     "unlocktime": 1388230389,
+     "name": "Trash Man",
+     "description": "Find and sell 8 Trashium ores at the same time."
+    }
+   ],
+   "success": true
+  }
+ }
+}

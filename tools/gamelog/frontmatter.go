@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -11,15 +12,15 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// FrontMatter is the authored layer of a game: the fields a human writes and
-// the tool only ever reads. Playthrough history lives in playthroughs.yaml and
-// captured API history lives in archive/, so nothing here is tool-generated
-// past the moment the file is created.
+// FrontMatter is the authored layer of a game: the fields a human writes.
+// The tool only read this after creation until the review/edit flow added a
+// write path — see Doc.Save.
 type FrontMatter struct {
-	Title    string `yaml:"title"`
-	Platform string `yaml:"platform"`
-	Status   string `yaml:"status"`
-	Draft    bool   `yaml:"draft"`
+	Title               string `yaml:"title"`
+	Platform            string `yaml:"platform"`
+	RetroAchievementsID any    `yaml:"retroachievements_id"`
+	SteamAppID          any    `yaml:"steam_appid"`
+	Status              string `yaml:"status"`
 
 	// Dates are typed as strings on purpose. YAML resolves an unquoted
 	// 2026-01-04 to a timestamp, and decoding that into `any` yields a
@@ -27,20 +28,46 @@ type FrontMatter struct {
 	Started  string `yaml:"started"`
 	Finished string `yaml:"finished"`
 
-	// Rating and the external IDs are written bare (`steam_appid: 1145360`),
-	// so they decode as ints. `any` plus scalarString keeps whichever form
-	// the file used.
-	Rating              any `yaml:"rating"`
-	RetroAchievementsID any `yaml:"retroachievements_id"`
-	SteamAppID          any `yaml:"steam_appid"`
+	// Rating is written bare (`rating: 9`), so it decodes as an int. `any`
+	// plus scalarString keeps whichever form the file used.
+	Rating any  `yaml:"rating"`
+	Draft  bool `yaml:"draft"`
+
+	// Extra preserves keys this struct doesn't model — cover, cascade, and
+	// anything else. Without it, a rewrite would silently drop them, the same
+	// class of loss Extra already prevents on PlaythroughEntry.
+	Extra map[string]any `yaml:",inline"`
 }
 
-// Doc is a loaded game entry. The tool used to hold this file open as a line
-// buffer plus a yaml.Node tree so it could splice edits into it; it no longer
-// writes front matter at all, so a plain decode is enough.
+// RatingString renders the rating as the form the TUI edits.
+func (f FrontMatter) RatingString() string { return scalarString(f.Rating) }
+
+// SetRating stores a rating typed as text, as a number when it is one, so
+// the file keeps `rating: 9` rather than `rating: "9"`.
+func (f *FrontMatter) SetRating(s string) {
+	s = strings.TrimSpace(s)
+	if s == "" {
+		f.Rating = nil
+		return
+	}
+	if n, err := strconv.Atoi(s); err == nil {
+		f.Rating = n
+		return
+	}
+	f.Rating = s
+}
+
+// Doc is a loaded game entry. fmRaw/prefix/suffix are kept so a front-matter
+// edit can be written back as a splice — replacing only the front-matter
+// block — rather than reconstructing the file from the decoded struct, which
+// would risk rewriting hand-written prose in the body below the delimiters.
 type Doc struct {
 	Path string
 	FM   FrontMatter
+
+	fmRaw  []byte // front-matter YAML exactly as read — the "before" side of the loss-check
+	prefix []byte // raw bytes through the end of the opening "---\n" line
+	suffix []byte // raw bytes from the closing "---" line through EOF (delimiter + markdown body)
 }
 
 func LoadDoc(path string) (*Doc, error) {
@@ -48,38 +75,93 @@ func LoadDoc(path string) (*Doc, error) {
 	if err != nil {
 		return nil, err
 	}
-	fm, err := parseFrontMatter(raw)
+	fm, prefix, fmRaw, suffix, err := parseFrontMatter(raw)
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", path, err)
 	}
-	return &Doc{Path: path, FM: *fm}, nil
+	return &Doc{Path: path, FM: *fm, fmRaw: fmRaw, prefix: prefix, suffix: suffix}, nil
 }
 
-// parseFrontMatter decodes the YAML between the leading `---` delimiters,
-// ignoring the Markdown body below them.
-func parseFrontMatter(raw []byte) (*FrontMatter, error) {
-	lines := strings.Split(string(raw), "\n")
+// parseFrontMatter splits raw into the bytes before the front matter (the
+// opening delimiter line), the front-matter YAML text itself, and the bytes
+// from the closing delimiter onward (which includes the markdown body). The
+// three concatenate back to raw exactly, so a rewrite can replace only the
+// middle piece.
+func parseFrontMatter(raw []byte) (fm *FrontMatter, prefix, fmRaw, suffix []byte, err error) {
+	text := string(raw)
+	lines := strings.SplitAfter(text, "\n")
+
 	start, end := -1, -1
+	offset := 0
+	starts := make([]int, len(lines))
 	for i, l := range lines {
+		starts[i] = offset
 		if strings.TrimSpace(l) == "---" {
 			if start == -1 {
 				start = i
-				continue
+			} else {
+				end = i
+				break
 			}
-			end = i
-			break
 		}
+		offset += len(l)
 	}
 	if start == -1 || end == -1 {
-		return nil, fmt.Errorf("could not find front matter delimiters")
+		return nil, nil, nil, nil, fmt.Errorf("could not find front matter delimiters")
 	}
 
-	var fm FrontMatter
-	text := strings.Join(lines[start+1:end], "\n")
-	if err := yaml.Unmarshal([]byte(text), &fm); err != nil {
-		return nil, fmt.Errorf("parsing front matter: %w", err)
+	prefixEnd := starts[start] + len(lines[start])
+	fmEnd := starts[end]
+	prefix = raw[:prefixEnd]
+	fmRaw = raw[prefixEnd:fmEnd]
+	suffix = raw[fmEnd:]
+
+	var decoded FrontMatter
+	if err := yaml.Unmarshal(fmRaw, &decoded); err != nil {
+		return nil, nil, nil, nil, fmt.Errorf("parsing front matter: %w", err)
 	}
-	return &fm, nil
+	return &decoded, prefix, fmRaw, suffix, nil
+}
+
+// encodeFM renders just the front-matter YAML block, matching what
+// collectYAMLFields expects to compare against fmRaw.
+func (d *Doc) encodeFM() ([]byte, error) {
+	var buf bytes.Buffer
+	enc := yaml.NewEncoder(&buf)
+	enc.SetIndent(2)
+	if err := enc.Encode(d.FM); err != nil {
+		return nil, err
+	}
+	if err := enc.Close(); err != nil {
+		return nil, err
+	}
+	return buf.Bytes(), nil
+}
+
+// Encode renders the whole file as Save would write it. Only the block
+// between prefix and suffix changes — the markdown body is sliced from the
+// original bytes, never reconstructed.
+func (d *Doc) Encode() ([]byte, error) {
+	fm, err := d.encodeFM()
+	if err != nil {
+		return nil, err
+	}
+	out := make([]byte, 0, len(d.prefix)+len(fm)+len(d.suffix))
+	out = append(out, d.prefix...)
+	out = append(out, fm...)
+	out = append(out, d.suffix...)
+	return out, nil
+}
+
+// Save writes the file atomically, splicing the current FM back into the
+// original bytes. This is a whole-file rewrite of the only copy of this
+// data, so it uses the same atomic-write helper playthroughs.go does.
+func (d *Doc) Save() error {
+	out, err := d.Encode()
+	if err != nil {
+		return err
+	}
+	return writeFileAtomic(d.Path, out, 0o644)
 }
 
 // GameDir is the bundle directory holding this game's _index.md, its

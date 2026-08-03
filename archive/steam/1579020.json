@@ -1,0 +1,300 @@
+{
+ "provider": "steam",
+ "title": "Golfie",
+ "updated": "2026-07-26",
+ "id": "1579020",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 0,
+ "total": 21,
+ "platform": "PC",
+ "icon": "8e4eae77e09f9c619344fc1330450e32d9679246",
+ "playtime_mins": 540,
+ "playtime": {
+  "windows": 540
+ },
+ "last_played": "2022-11-02",
+ "achievements": [
+  {
+   "key": "ACH_ALL_IN",
+   "name": "All In",
+   "description": "Play at least 6 cards in a single turn.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_ARCHNEMESIS",
+   "name": "Archnemesis",
+   "description": "Defeat Golfoe.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_BEACH_BUDDY",
+   "name": "Beach Buddy",
+   "description": "Complete 50 Beach holes.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CAVE_COMRADE",
+   "name": "Cave Comrade",
+   "description": "Complete 50 Cave Ruin holes.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CHALLENGER",
+   "name": "Challenger",
+   "description": "Complete all challenges.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CHEATER",
+   "name": "Cheater",
+   "description": "Use the 'Cheater' card 3 turns in a row.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CHERRY_COMPATRIOT",
+   "name": "Cherry Compatriot",
+   "description": "Complete 50 Cherry Garden holes.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COLLECTOR",
+   "name": "Collector",
+   "description": "Build a deck with at least 20 different cards.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DADS_CREDIT_CARD",
+   "name": "Dad's Credit Card",
+   "description": "Buy something in the shop for 0 coins.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DRESS_UP",
+   "name": "Dress Up",
+   "description": "Equip one non-default customization in each category.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DUNGEON_DISCIPLE",
+   "name": "Dungeon Disciple",
+   "description": "Complete 50 Dungeon holes.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_FLOATING_FRIEND",
+   "name": "Floating Friend",
+   "description": "Complete 50 Floating Islands holes.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_FULL_COURSE",
+   "name": "Full Course",
+   "description": "Complete 18 holes in a run.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_GO_BIG_OR_GO_HOME",
+   "name": "Go Big or Go Home",
+   "description": "Use 4 'Inflate' cards in one turn.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HOLE_IN_NONE",
+   "name": "Hole in... None?",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HOLE_IN_ONE",
+   "name": "Hole in one!",
+   "description": "Get a hole in one.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_MONEYBALL",
+   "name": "Moneyball",
+   "description": "Collect 10.000 coins.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PARFECT",
+   "name": "Parfect",
+   "description": "Finish on par.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PERKY",
+   "name": "Perky",
+   "description": "Obtain at least 20 different perks in a single run.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SHOPPING_SPREE",
+   "name": "Shopping Spree",
+   "description": "Buy all items in a shop.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WEALTHY",
+   "name": "Wealthy",
+   "description": "Gain at least 1000 coins in a single run.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Golfie",
+   "achievements": [
+    {
+     "apiname": "ACH_HOLE_IN_ONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hole in one!",
+     "description": "Get a hole in one."
+    },
+    {
+     "apiname": "ACH_HOLE_IN_NONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hole in... None?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_CHEATER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cheater",
+     "description": "Use the 'Cheater' card 3 turns in a row."
+    },
+    {
+     "apiname": "ACH_GO_BIG_OR_GO_HOME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go Big or Go Home",
+     "description": "Use 4 'Inflate' cards in one turn."
+    },
+    {
+     "apiname": "ACH_DRESS_UP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dress Up",
+     "description": "Equip one non-default customization in each category."
+    },
+    {
+     "apiname": "ACH_WEALTHY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wealthy",
+     "description": "Gain at least 1000 coins in a single run."
+    },
+    {
+     "apiname": "ACH_ARCHNEMESIS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Archnemesis",
+     "description": "Defeat Golfoe."
+    },
+    {
+     "apiname": "ACH_CHALLENGER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Challenger",
+     "description": "Complete all challenges."
+    },
+    {
+     "apiname": "ACH_SHOPPING_SPREE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shopping Spree",
+     "description": "Buy all items in a shop."
+    },
+    {
+     "apiname": "ACH_DADS_CREDIT_CARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dad's Credit Card",
+     "description": "Buy something in the shop for 0 coins."
+    },
+    {
+     "apiname": "ACH_MONEYBALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moneyball",
+     "description": "Collect 10.000 coins."
+    },
+    {
+     "apiname": "ACH_ALL_IN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All In",
+     "description": "Play at least 6 cards in a single turn."
+    },
+    {
+     "apiname": "ACH_FULL_COURSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Course",
+     "description": "Complete 18 holes in a run."
+    },
+    {
+     "apiname": "ACH_COLLECTOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collector",
+     "description": "Build a deck with at least 20 different cards."
+    },
+    {
+     "apiname": "ACH_PERKY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perky",
+     "description": "Obtain at least 20 different perks in a single run."
+    },
+    {
+     "apiname": "ACH_BEACH_BUDDY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beach Buddy",
+     "description": "Complete 50 Beach holes."
+    },
+    {
+     "apiname": "ACH_FLOATING_FRIEND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Floating Friend",
+     "description": "Complete 50 Floating Islands holes."
+    },
+    {
+     "apiname": "ACH_DUNGEON_DISCIPLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dungeon Disciple",
+     "description": "Complete 50 Dungeon holes."
+    },
+    {
+     "apiname": "ACH_CHERRY_COMPATRIOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cherry Compatriot",
+     "description": "Complete 50 Cherry Garden holes."
+    },
+    {
+     "apiname": "ACH_PARFECT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parfect",
+     "description": "Finish on par."
+    },
+    {
+     "apiname": "ACH_CAVE_COMRADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cave Comrade",
+     "description": "Complete 50 Cave Ruin holes."
+    }
+   ],
+   "success": true
+  }
+ }
+}

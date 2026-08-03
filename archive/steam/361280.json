@@ -1,0 +1,544 @@
+{
+ "provider": "steam",
+ "title": "Turmoil",
+ "updated": "2026-07-26",
+ "id": "361280",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 10,
+ "total": 39,
+ "first": "2018-05-11",
+ "last": "2018-05-11",
+ "platform": "PC",
+ "icon": "37bfa1637243c416174c039a23ebe370a3c04e78",
+ "playtime_mins": 419,
+ "last_played": "2018-05-12",
+ "achievements": [
+  {
+   "key": "ach_auction_overbid",
+   "name": "Overbidder",
+   "description": "Overbid someone at the land auction.",
+   "unlocked": true,
+   "date": "2018-05-11T14:38:52-05:00"
+  },
+  {
+   "key": "ach_level_profit_10000",
+   "name": "Promising",
+   "description": "Earn a profit of more than $10,000 in a single level.",
+   "unlocked": true,
+   "date": "2018-05-11T15:13:44-05:00"
+  },
+  {
+   "key": "ach_level_profit_25000",
+   "name": "Juicy",
+   "description": "Earn a profit of more than $25,000 in a single level.",
+   "unlocked": true,
+   "date": "2018-05-11T15:34:41-05:00"
+  },
+  {
+   "key": "ach_bonus_oil_depleted",
+   "name": "Empty Milkshake",
+   "description": "Get all the oil in a level above ground.",
+   "unlocked": true,
+   "date": "2018-05-11T15:52:07-05:00"
+  },
+  {
+   "key": "ach_oil_sold_below_25",
+   "name": "Dubious Deal",
+   "description": "Sell oil at a price below $0.25.",
+   "unlocked": true,
+   "date": "2018-05-11T15:59:29-05:00"
+  },
+  {
+   "key": "ach_diamond_pickup",
+   "name": "Shiny",
+   "description": "Get a diamond.",
+   "unlocked": true,
+   "date": "2018-05-11T21:26:53-05:00"
+  },
+  {
+   "key": "ach_auction_estateprice_10000",
+   "name": "Big Spender",
+   "description": "Pay $10,000 or more for a piece of land.",
+   "unlocked": true,
+   "date": "2018-05-11T21:28:10-05:00"
+  },
+  {
+   "key": "ach_level_spillage_10000",
+   "name": "Big Spiller",
+   "description": "Get a spillage fine of over $10,000.",
+   "unlocked": true,
+   "date": "2018-05-11T22:03:26-05:00"
+  },
+  {
+   "key": "ach_oilprice_200",
+   "name": "Good Deal",
+   "description": "Boost the oil price above $2.00.",
+   "unlocked": true,
+   "date": "2018-05-11T22:20:35-05:00"
+  },
+  {
+   "key": "ach_oilprice_250",
+   "name": "Great Deal",
+   "description": "Boost the oil price above $2.50.",
+   "unlocked": true,
+   "date": "2018-05-11T22:28:36-05:00"
+  },
+  {
+   "key": "ach_1000_deep",
+   "name": "Truly, Madly, Deeply",
+   "description": "Reach a depth of 1000 meters in Deep Mode (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_artefact_highprice",
+   "name": "As Good As It Gets",
+   "description": "Sell a treasure for $2,000 or more (The Heat Is On)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_artefacts_all",
+   "name": "Digging It",
+   "description": "Complete Anthony’s treasure collection. (The Heat Is On)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_bird_shot",
+   "name": "Dove Hunt",
+   "description": "Practice shooting on the dove. (The Heat Is On)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_expertwon_du",
+   "name": "You're the Best",
+   "description": "Beat the Deeper Underground campaign in expert mode (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_dlc",
+   "name": "Taking the Heat",
+   "description": "Beat the The Heat Is On campaign.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_dlcexpert",
+   "name": "On Fire",
+   "description": "Beat the The Heat Is On campaign in expert mode.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_du",
+   "name": "There's no more panic in this town",
+   "description": "Beat the Deeper Underground campaign (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_expert",
+   "name": "Expert",
+   "description": "Beat the campaign in expert mode.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_money_1000000",
+   "name": "Filthy Rich",
+   "description": "Beat the campaign and have more than one million in your bank account.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_money_1000000_stocks_99",
+   "name": "Oil Tycoon",
+   "description": "Own all the shares and have one million in your bank account.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_normal",
+   "name": "Cake!",
+   "description": "Beat the campaign.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_campaign_won_stocks_99",
+   "name": "Mayor Shareholder",
+   "description": "Own all the shares.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_cat_talk",
+   "name": "Cat Whisperer",
+   "description": "Acquaint yourself with the village cat. (The Heat Is On)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_dice_win",
+   "name": "Know when to hold 'em",
+   "description": "Win a game of Dice Dice Dice (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_hard_boom",
+   "name": "Boom, boom, boom, boom!!",
+   "description": "Blow up hard rock with dynamite (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_level_convertandtriple",
+   "name": "Magmificent",
+   "description": "Convert an oil well to gas and triple its size. (The Heat Is On)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_level_profit_100000",
+   "name": "The Big Haul",
+   "description": "Earn a profit of more than $100,000 in a single level.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_level_profit_50000",
+   "name": "Serious Money",
+   "description": "Earn a profit of more than $50,000 in a single level.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_mayorstips_bought_all",
+   "name": "Tip Top",
+   "description": "Read all the Mayor's Tips.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_money_1000000",
+   "name": "Millionaire",
+   "description": "Have more than one million in your bank account",
+   "unlocked": false
+  },
+  {
+   "key": "ach_oilprice_350",
+   "name": "Tree Fiddy",
+   "description": "Boost the oil price up to $3.50.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_refinery_boost",
+   "name": "Gasolina",
+   "description": "Boost a refinery (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_ruby_get",
+   "name": "Ruby ruby ruby ruby!",
+   "description": "Get a ruby (Deeper Underground)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_upgrades_factory_all",
+   "name": "Factory Man",
+   "description": "Buy all the factory upgrades.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_upgrades_stable_all",
+   "name": "Stablelized",
+   "description": "Buy all the stable upgrades.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_upgrades_warehouse_all",
+   "name": "Methodical",
+   "description": "Buy all the shed upgrades. (The Heat Is On)",
+   "unlocked": false
+  },
+  {
+   "key": "ach_upgrades_workshop_all",
+   "name": "Workshopper",
+   "description": "Buy all the workshop upgrades.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_water_research",
+   "name": "Chasing Waterfalls",
+   "description": "Do a water map research (Deeper Underground)",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Turmoil",
+   "achievements": [
+    {
+     "apiname": "ach_level_profit_50000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Serious Money",
+     "description": "Earn a profit of more than $50,000 in a single level."
+    },
+    {
+     "apiname": "ach_level_profit_100000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Big Haul",
+     "description": "Earn a profit of more than $100,000 in a single level."
+    },
+    {
+     "apiname": "ach_money_1000000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Millionaire",
+     "description": "Have more than one million in your bank account"
+    },
+    {
+     "apiname": "ach_campaign_won_normal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cake!",
+     "description": "Beat the campaign."
+    },
+    {
+     "apiname": "ach_campaign_won_expert",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Expert",
+     "description": "Beat the campaign in expert mode."
+    },
+    {
+     "apiname": "ach_campaign_won_money_1000000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Filthy Rich",
+     "description": "Beat the campaign and have more than one million in your bank account."
+    },
+    {
+     "apiname": "ach_campaign_won_stocks_99",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mayor Shareholder",
+     "description": "Own all the shares."
+    },
+    {
+     "apiname": "ach_campaign_won_money_1000000_stocks_99",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oil Tycoon",
+     "description": "Own all the shares and have one million in your bank account."
+    },
+    {
+     "apiname": "ach_bonus_oil_depleted",
+     "achieved": 1,
+     "unlocktime": 1526071927,
+     "name": "Empty Milkshake",
+     "description": "Get all the oil in a level above ground."
+    },
+    {
+     "apiname": "ach_oilprice_200",
+     "achieved": 1,
+     "unlocktime": 1526095235,
+     "name": "Good Deal",
+     "description": "Boost the oil price above $2.00."
+    },
+    {
+     "apiname": "ach_oilprice_250",
+     "achieved": 1,
+     "unlocktime": 1526095716,
+     "name": "Great Deal",
+     "description": "Boost the oil price above $2.50."
+    },
+    {
+     "apiname": "ach_oil_sold_below_25",
+     "achieved": 1,
+     "unlocktime": 1526072369,
+     "name": "Dubious Deal",
+     "description": "Sell oil at a price below $0.25."
+    },
+    {
+     "apiname": "ach_upgrades_factory_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Factory Man",
+     "description": "Buy all the factory upgrades."
+    },
+    {
+     "apiname": "ach_upgrades_workshop_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Workshopper",
+     "description": "Buy all the workshop upgrades."
+    },
+    {
+     "apiname": "ach_upgrades_stable_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stablelized",
+     "description": "Buy all the stable upgrades."
+    },
+    {
+     "apiname": "ach_diamond_pickup",
+     "achieved": 1,
+     "unlocktime": 1526092013,
+     "name": "Shiny",
+     "description": "Get a diamond."
+    },
+    {
+     "apiname": "ach_mayorstips_bought_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tip Top",
+     "description": "Read all the Mayor's Tips."
+    },
+    {
+     "apiname": "ach_level_spillage_10000",
+     "achieved": 1,
+     "unlocktime": 1526094206,
+     "name": "Big Spiller",
+     "description": "Get a spillage fine of over $10,000."
+    },
+    {
+     "apiname": "ach_auction_overbid",
+     "achieved": 1,
+     "unlocktime": 1526067532,
+     "name": "Overbidder",
+     "description": "Overbid someone at the land auction."
+    },
+    {
+     "apiname": "ach_auction_estateprice_10000",
+     "achieved": 1,
+     "unlocktime": 1526092090,
+     "name": "Big Spender",
+     "description": "Pay $10,000 or more for a piece of land."
+    },
+    {
+     "apiname": "ach_level_profit_10000",
+     "achieved": 1,
+     "unlocktime": 1526069624,
+     "name": "Promising",
+     "description": "Earn a profit of more than $10,000 in a single level."
+    },
+    {
+     "apiname": "ach_level_profit_25000",
+     "achieved": 1,
+     "unlocktime": 1526070881,
+     "name": "Juicy",
+     "description": "Earn a profit of more than $25,000 in a single level."
+    },
+    {
+     "apiname": "ach_oilprice_350",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tree Fiddy",
+     "description": "Boost the oil price up to $3.50."
+    },
+    {
+     "apiname": "ach_bird_shot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dove Hunt",
+     "description": "Practice shooting on the dove. (The Heat Is On)"
+    },
+    {
+     "apiname": "ach_cat_talk",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cat Whisperer",
+     "description": "Acquaint yourself with the village cat. (The Heat Is On)"
+    },
+    {
+     "apiname": "ach_artefact_highprice",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "As Good As It Gets",
+     "description": "Sell a treasure for $2,000 or more (The Heat Is On)"
+    },
+    {
+     "apiname": "ach_artefacts_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Digging It",
+     "description": "Complete Anthony’s treasure collection. (The Heat Is On)"
+    },
+    {
+     "apiname": "ach_level_convertandtriple",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magmificent",
+     "description": "Convert an oil well to gas and triple its size. (The Heat Is On)"
+    },
+    {
+     "apiname": "ach_upgrades_warehouse_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Methodical",
+     "description": "Buy all the shed upgrades. (The Heat Is On)"
+    },
+    {
+     "apiname": "ach_campaign_won_dlc",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Taking the Heat",
+     "description": "Beat the The Heat Is On campaign."
+    },
+    {
+     "apiname": "ach_campaign_won_dlcexpert",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Fire",
+     "description": "Beat the The Heat Is On campaign in expert mode."
+    },
+    {
+     "apiname": "ach_campaign_won_du",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "There's no more panic in this town",
+     "description": "Beat the Deeper Underground campaign (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_ruby_get",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ruby ruby ruby ruby!",
+     "description": "Get a ruby (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_1000_deep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Truly, Madly, Deeply",
+     "description": "Reach a depth of 1000 meters in Deep Mode (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_dice_win",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Know when to hold 'em",
+     "description": "Win a game of Dice Dice Dice (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_hard_boom",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boom, boom, boom, boom!!",
+     "description": "Blow up hard rock with dynamite (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_water_research",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chasing Waterfalls",
+     "description": "Do a water map research (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_refinery_boost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gasolina",
+     "description": "Boost a refinery (Deeper Underground)"
+    },
+    {
+     "apiname": "ach_campaign_expertwon_du",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You're the Best",
+     "description": "Beat the Deeper Underground campaign in expert mode (Deeper Underground)"
+    }
+   ],
+   "success": true
+  }
+ }
+}

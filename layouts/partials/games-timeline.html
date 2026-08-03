@@ -7,7 +7,7 @@
      Included from layouts/games/taxonomy.html; context is the games
      taxonomy page. */}}
 {{- $fmt := "2006-01-02" -}}
-{{- $groups := slice -}}
+{{- $groupCandidates := slice -}}
 {{- $items := slice -}}
 
 {{- range .Pages -}}
@@ -32,10 +32,14 @@
 
   {{- $subgroupStack := dict -}}
   {{- $hasItems := false -}}
+  {{- $groupStart := "" -}}
 
   {{- range $idx, $entry := $entries -}}
     {{- if $entry.started -}}
       {{- $hasItems = true -}}
+      {{- if or (eq $groupStart "") (lt $entry.started $groupStart) -}}
+        {{- $groupStart = $entry.started -}}
+      {{- end -}}
       {{- $sub := printf "pt-%d" $idx -}}
       {{- $baseID := printf "%s--%s" $slug $sub -}}
       {{- $status := $entry.status | default "backlog" -}}
@@ -91,13 +95,20 @@
   {{- end -}}
 
   {{- if $hasItems -}}
-    {{- $groups = $groups | append (dict
+    {{- $groupCandidates = $groupCandidates | append (dict
         "id" $slug
         "content" (printf "<a href=%q>%s</a>" $game.RelPermalink $game.Title)
         "subgroupStack" $subgroupStack
+        "sortKey" $groupStart
       )
     -}}
   {{- end -}}
+{{- end -}}
+
+{{/* Row order matches the list below: most-recently-started game at the top. */}}
+{{- $groups := slice -}}
+{{- range sort $groupCandidates "sortKey" "desc" -}}
+  {{- $groups = $groups | append (dict "id" .id "content" .content "subgroupStack" .subgroupStack) -}}
 {{- end -}}
 
 <section class="games-timeline" aria-label="Gameplay history timeline">

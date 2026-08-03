@@ -1,0 +1,87 @@
+{
+ "provider": "steam",
+ "title": "Murder by Numbers",
+ "updated": "2026-07-26",
+ "id": "1140290",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 4,
+ "total": 4,
+ "first": "2020-06-07",
+ "last": "2021-03-10",
+ "award_kind": "all achievements",
+ "platform": "PC",
+ "icon": "740b7aef24e75e885cff5d34d09d1cdab2aa5bbc",
+ "playtime_mins": 1572,
+ "playtime": {
+  "windows": 1572
+ },
+ "last_played": "2021-03-10",
+ "achievements": [
+  {
+   "key": "ACH_COMPLETE_CASE_1",
+   "name": "Show's Over, Crime!",
+   "description": "Complete Case 1",
+   "unlocked": true,
+   "date": "2020-06-07T17:06:41-05:00"
+  },
+  {
+   "key": "ACH_COMPLETE_CASE_2",
+   "name": "Lights, Camera, Justice!",
+   "description": "Complete Case 2",
+   "unlocked": true,
+   "date": "2020-06-17T19:33:35-05:00"
+  },
+  {
+   "key": "ACH_COMPLETE_CASE_3",
+   "name": "What a Drag!",
+   "description": "Complete Case 3",
+   "unlocked": true,
+   "date": "2021-03-07T19:32:02-06:00"
+  },
+  {
+   "key": "ACH_COMPLETE_CASE_4",
+   "name": "Scout's Honor",
+   "description": "Complete Case 4",
+   "unlocked": true,
+   "date": "2021-03-10T21:35:06-06:00"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Murder by Numbers",
+   "achievements": [
+    {
+     "apiname": "ACH_COMPLETE_CASE_1",
+     "achieved": 1,
+     "unlocktime": 1591567601,
+     "name": "Show's Over, Crime!",
+     "description": "Complete Case 1"
+    },
+    {
+     "apiname": "ACH_COMPLETE_CASE_2",
+     "achieved": 1,
+     "unlocktime": 1592440415,
+     "name": "Lights, Camera, Justice!",
+     "description": "Complete Case 2"
+    },
+    {
+     "apiname": "ACH_COMPLETE_CASE_3",
+     "achieved": 1,
+     "unlocktime": 1615167122,
+     "name": "What a Drag!",
+     "description": "Complete Case 3"
+    },
+    {
+     "apiname": "ACH_COMPLETE_CASE_4",
+     "achieved": 1,
+     "unlocktime": 1615433706,
+     "name": "Scout's Honor",
+     "description": "Complete Case 4"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,731 @@
+{
+ "provider": "steam",
+ "title": "Hades II",
+ "updated": "2026-07-26",
+ "id": "1145350",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 50,
+ "total": 50,
+ "first": "2025-10-04",
+ "last": "2025-12-07",
+ "award_kind": "all achievements",
+ "platform": "PC",
+ "icon": "621d9f1cfa204c0bae07a981f41007d2cf03a56c",
+ "playtime_mins": 7569,
+ "playtime": {
+  "linux": 7569
+ },
+ "last_played": "2025-12-13",
+ "achievements": [
+  {
+   "key": "AchClearErebus",
+   "name": "Witch of the Woods",
+   "description": "Clear Erebus",
+   "unlocked": true,
+   "date": "2025-10-04T10:07:27-05:00"
+  },
+  {
+   "key": "AchClearOceanus",
+   "name": "Witch of the Depths",
+   "description": "Clear Oceanus",
+   "unlocked": true,
+   "date": "2025-10-04T11:06:47-05:00"
+  },
+  {
+   "key": "AchConfideFrinos",
+   "name": "Familiar Confidant",
+   "description": "Fulfill the Prophecy 'Familiar Confidant'",
+   "unlocked": true,
+   "date": "2025-10-04T16:37:40-05:00"
+  },
+  {
+   "key": "AchClearFields",
+   "name": "Witch of the Plains",
+   "description": "Clear the Fields of Mourning",
+   "unlocked": true,
+   "date": "2025-10-07T20:45:30-05:00"
+  },
+  {
+   "key": "AchClearEphyra",
+   "name": "Witch of the Outskirts",
+   "description": "Clear the City of Ephyra",
+   "unlocked": true,
+   "date": "2025-10-08T21:23:09-05:00"
+  },
+  {
+   "key": "AchBathHouse",
+   "name": "Soothing Soak",
+   "description": "Take one of your comrades to the Hot Springs",
+   "unlocked": true,
+   "date": "2025-10-08T21:43:17-05:00"
+  },
+  {
+   "key": "AchFishingPier",
+   "name": "Catch of the Night",
+   "description": "Take one of your comrades to the Fishing Pier",
+   "unlocked": true,
+   "date": "2025-10-09T20:26:18-05:00"
+  },
+  {
+   "key": "AchClearThessaly",
+   "name": "Witch of the Waters",
+   "description": "Clear the Rift of Thessaly",
+   "unlocked": true,
+   "date": "2025-10-11T12:43:40-05:00"
+  },
+  {
+   "key": "AchAllWeapons",
+   "name": "The Arms of Night",
+   "description": "Fulfill the Prophecy 'The Arms of Night'",
+   "unlocked": true,
+   "date": "2025-10-11T13:12:21-05:00"
+  },
+  {
+   "key": "AchKillWitchAsSheep",
+   "name": "Sheep's Clothing",
+   "description": "Slay a Sister of the Dead while afflicted with Twilight Curse",
+   "unlocked": true,
+   "date": "2025-10-12T09:29:37-05:00"
+  },
+  {
+   "key": "AchClearOlympus",
+   "name": "Witch of the Mountains",
+   "description": "Clear Mount Olympus",
+   "unlocked": true,
+   "date": "2025-10-12T12:37:06-05:00"
+  },
+  {
+   "key": "AchAllArcana",
+   "name": "Breadth of Knowledge",
+   "description": "Fulfill the Prophecy 'Breadth of Knowledge'",
+   "unlocked": true,
+   "date": "2025-10-12T12:39:50-05:00"
+  },
+  {
+   "key": "AchClearTartarus",
+   "name": "Witch of the Abyss",
+   "description": "Clear Tartarus",
+   "unlocked": true,
+   "date": "2025-10-12T18:38:33-05:00"
+  },
+  {
+   "key": "AchBeatHecateNoArcana",
+   "name": "Natural Talent",
+   "description": "Fulfill the Prophecy 'Natural Talent'",
+   "unlocked": true,
+   "date": "2025-11-05T17:53:51-06:00"
+  },
+  {
+   "key": "AchCauldronSpells1",
+   "name": "So Mote It Be",
+   "description": "Cast 50 Incantations at the Crossroads Cauldron",
+   "unlocked": true,
+   "date": "2025-11-11T12:14:18-06:00"
+  },
+  {
+   "key": "AchTaverna",
+   "name": "Ambrosia for Two",
+   "description": "Take one of your comrades to the Taverna",
+   "unlocked": true,
+   "date": "2025-11-11T18:58:59-06:00"
+  },
+  {
+   "key": "AchClearSummit",
+   "name": "Witch of the Clouds",
+   "description": "Clear the Summit",
+   "unlocked": true,
+   "date": "2025-11-13T18:47:15-06:00"
+  },
+  {
+   "key": "AchMaxMem",
+   "name": "Mind for Magick",
+   "description": "Gain 30 Grasp at the Altar of Ashes",
+   "unlocked": true,
+   "date": "2025-11-15T19:04:15-06:00"
+  },
+  {
+   "key": "AchCatchFish",
+   "name": "Denizens of the Depths",
+   "description": "Fulfill the Prophecy 'Denizens of the Depths'",
+   "unlocked": true,
+   "date": "2025-11-15T19:31:38-06:00"
+  },
+  {
+   "key": "AchAllFamiliars",
+   "name": "Animal Whisperer",
+   "description": "Recruit all Animal Familiars",
+   "unlocked": true,
+   "date": "2025-11-15T20:09:51-06:00"
+  },
+  {
+   "key": "AchEarnPrestige1",
+   "name": "Giving Back",
+   "description": "Earn 10,000 Kudos",
+   "unlocked": true,
+   "date": "2025-11-21T21:01:53-06:00"
+  },
+  {
+   "key": "AchHelpDora",
+   "name": "Haunted by the Past",
+   "description": "Fulfill the Prophecy 'Haunted by the Past'",
+   "unlocked": true,
+   "date": "2025-11-22T11:47:23-06:00"
+  },
+  {
+   "key": "AchClearChaosQuest",
+   "name": "Born to Win",
+   "description": "Fulfill the Prophecy 'Born to Win'",
+   "unlocked": true,
+   "date": "2025-11-22T15:27:22-06:00"
+  },
+  {
+   "key": "AchTrueEnding",
+   "name": "Death to Chronos",
+   "description": "Complete the lifelong task of the Princess of the Underworld",
+   "unlocked": true,
+   "date": "2025-11-22T15:58:56-06:00"
+  },
+  {
+   "key": "AchProphecies1",
+   "name": "Hand of the Fates",
+   "description": "Fulfill 60 Minor Prophecies",
+   "unlocked": true,
+   "date": "2025-11-22T17:45:22-06:00"
+  },
+  {
+   "key": "AchBeatChronosWithArcana",
+   "name": "Arcana of the Ages",
+   "description": "Fulfill the Prophecy 'Arcana of the Ages'",
+   "unlocked": true,
+   "date": "2025-11-23T10:45:12-06:00"
+  },
+  {
+   "key": "AchSummonSiren",
+   "name": "Breaking Up the Band",
+   "description": "Use Night Bloom to raise a Siren",
+   "unlocked": true,
+   "date": "2025-11-23T13:44:58-06:00"
+  },
+  {
+   "key": "AchBounties1",
+   "name": "Infinite Possibility",
+   "description": "Clear 20 Chaos Trials",
+   "unlocked": true,
+   "date": "2025-11-23T13:45:31-06:00"
+  },
+  {
+   "key": "AchWinSecretContest",
+   "name": "Elysian Glory",
+   "description": "Prevail in the Contest of Champions",
+   "unlocked": true,
+   "date": "2025-11-23T19:43:48-06:00"
+  },
+  {
+   "key": "AchEarnStatue1",
+   "name": "Behold Night's Champion",
+   "description": "Earn the first Gift of the Veil",
+   "unlocked": true,
+   "date": "2025-11-25T18:14:31-06:00"
+  },
+  {
+   "key": "AchAllKeepsakes",
+   "name": "Sentimental Value",
+   "description": "Collect every Keepsake",
+   "unlocked": true,
+   "date": "2025-11-27T11:05:52-06:00"
+  },
+  {
+   "key": "AchForgeBonds",
+   "name": "Close Comrades",
+   "description": "Forge a bond with 10 comrades",
+   "unlocked": true,
+   "date": "2025-11-27T13:04:53-06:00"
+  },
+  {
+   "key": "AchHelpHypnos",
+   "name": "Soundest of Sleepers",
+   "description": "Fulfill the Prophecy 'Soundest of Sleepers'",
+   "unlocked": true,
+   "date": "2025-11-27T17:40:16-06:00"
+  },
+  {
+   "key": "AchHelpOdysseus",
+   "name": "Unfinished Business",
+   "description": "Fulfill the Prophecy 'Unfinished Business'",
+   "unlocked": true,
+   "date": "2025-11-28T09:25:13-06:00"
+  },
+  {
+   "key": "AchAllAspects",
+   "name": "The Unseen Sentinel",
+   "description": "Fulfill the Prophecy 'The Unseen Sentinel'",
+   "unlocked": true,
+   "date": "2025-11-28T10:38:29-06:00"
+  },
+  {
+   "key": "AchEpilogue",
+   "name": "Golden Age",
+   "description": "Reach the epilogue of the story",
+   "unlocked": true,
+   "date": "2025-11-28T11:59:27-06:00"
+  },
+  {
+   "key": "AchAllFamiliarsMax",
+   "name": "Beast Master",
+   "description": "Fully upgrade all Animal Familiars",
+   "unlocked": true,
+   "date": "2025-11-28T16:43:19-06:00"
+  },
+  {
+   "key": "AchFamiliarCostumes",
+   "name": "Unfamiliar Forms",
+   "description": "Alter the appearance of each Animal Familiar",
+   "unlocked": true,
+   "date": "2025-11-28T17:35:22-06:00"
+  },
+  {
+   "key": "AchEarnStatue2",
+   "name": "Mercy, Night's Executioner",
+   "description": "Earn the second Gift of the Veil",
+   "unlocked": true,
+   "date": "2025-11-30T15:58:41-06:00"
+  },
+  {
+   "key": "AchNemesisCombat",
+   "name": "Fair Fight",
+   "description": "Earn 1,000 Gold competing against Nemesis",
+   "unlocked": true,
+   "date": "2025-12-02T21:05:09-06:00"
+  },
+  {
+   "key": "AchHelpArachne",
+   "name": "Silk and Spitefulness",
+   "description": "Fulfill the Prophecy 'Silk and Spitefulness'",
+   "unlocked": true,
+   "date": "2025-12-04T17:37:22-06:00"
+  },
+  {
+   "key": "AchAllArcanaMax",
+   "name": "Unassailable Insight",
+   "description": "Fully upgrade all Arcana",
+   "unlocked": true,
+   "date": "2025-12-04T18:48:39-06:00"
+  },
+  {
+   "key": "AchHelpNarcissusAndEcho",
+   "name": "Voice and Vanity",
+   "description": "Fulfill the Prophecy 'Voice and Vanity'",
+   "unlocked": true,
+   "date": "2025-12-06T08:50:33-06:00"
+  },
+  {
+   "key": "AchAllRandomStreak",
+   "name": "Improbable Outcomes",
+   "description": "Fulfill the Prophecy 'Improbable Outcomes'",
+   "unlocked": true,
+   "date": "2025-12-06T09:09:50-06:00"
+  },
+  {
+   "key": "AchBeatTyphonWithWeapons",
+   "name": "Sword of the Night",
+   "description": "Fulfill the Prophecy 'Sword of the Night'",
+   "unlocked": true,
+   "date": "2025-12-06T09:50:09-06:00"
+  },
+  {
+   "key": "AchTartarusInDress",
+   "name": "Dressed to Kill",
+   "description": "Reach the final confrontation in an Arachne outfit",
+   "unlocked": true,
+   "date": "2025-12-07T15:47:13-06:00"
+  },
+  {
+   "key": "AchClearWithAllAspects",
+   "name": "Bearing Dark Gifts",
+   "description": "Fulfill the Prophecy 'Bearing Dark Gifts'",
+   "unlocked": true,
+   "date": "2025-12-07T15:49:51-06:00"
+  },
+  {
+   "key": "AchAllRandomUnderworld",
+   "name": "Chaos in Hell",
+   "description": "Clear the 'Great Chaos Below' Trial",
+   "unlocked": true,
+   "date": "2025-12-07T19:07:35-06:00"
+  },
+  {
+   "key": "AchBeatRivalsVow1",
+   "name": "Unrivaled Prowess",
+   "description": "Fulfill the Prophecy 'Unrivaled Prowess'",
+   "unlocked": true,
+   "date": "2025-12-07T19:07:35-06:00"
+  },
+  {
+   "key": "AchAllOtherAch",
+   "name": "Goddess of Nightmares",
+   "description": "Earn all other Achievements",
+   "unlocked": true,
+   "date": "2025-12-07T19:07:36-06:00"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Hades II",
+   "achievements": [
+    {
+     "apiname": "AchClearErebus",
+     "achieved": 1,
+     "unlocktime": 1759590447,
+     "name": "Witch of the Woods",
+     "description": "Clear Erebus"
+    },
+    {
+     "apiname": "AchClearOceanus",
+     "achieved": 1,
+     "unlocktime": 1759594007,
+     "name": "Witch of the Depths",
+     "description": "Clear Oceanus"
+    },
+    {
+     "apiname": "AchClearFields",
+     "achieved": 1,
+     "unlocktime": 1759887930,
+     "name": "Witch of the Plains",
+     "description": "Clear the Fields of Mourning"
+    },
+    {
+     "apiname": "AchClearTartarus",
+     "achieved": 1,
+     "unlocktime": 1760312313,
+     "name": "Witch of the Abyss",
+     "description": "Clear Tartarus"
+    },
+    {
+     "apiname": "AchClearEphyra",
+     "achieved": 1,
+     "unlocktime": 1759976589,
+     "name": "Witch of the Outskirts",
+     "description": "Clear the City of Ephyra"
+    },
+    {
+     "apiname": "AchClearThessaly",
+     "achieved": 1,
+     "unlocktime": 1760204620,
+     "name": "Witch of the Waters",
+     "description": "Clear the Rift of Thessaly"
+    },
+    {
+     "apiname": "AchClearOlympus",
+     "achieved": 1,
+     "unlocktime": 1760290626,
+     "name": "Witch of the Mountains",
+     "description": "Clear Mount Olympus"
+    },
+    {
+     "apiname": "AchClearSummit",
+     "achieved": 1,
+     "unlocktime": 1763081235,
+     "name": "Witch of the Clouds",
+     "description": "Clear the Summit"
+    },
+    {
+     "apiname": "AchCauldronSpells1",
+     "achieved": 1,
+     "unlocktime": 1762884858,
+     "name": "So Mote It Be",
+     "description": "Cast 50 Incantations at the Crossroads Cauldron"
+    },
+    {
+     "apiname": "AchBathHouse",
+     "achieved": 1,
+     "unlocktime": 1759977797,
+     "name": "Soothing Soak",
+     "description": "Take one of your comrades to the Hot Springs"
+    },
+    {
+     "apiname": "AchFishingPier",
+     "achieved": 1,
+     "unlocktime": 1760059578,
+     "name": "Catch of the Night",
+     "description": "Take one of your comrades to the Fishing Pier"
+    },
+    {
+     "apiname": "AchTaverna",
+     "achieved": 1,
+     "unlocktime": 1762909139,
+     "name": "Ambrosia for Two",
+     "description": "Take one of your comrades to the Taverna"
+    },
+    {
+     "apiname": "AchForgeBonds",
+     "achieved": 1,
+     "unlocktime": 1764270293,
+     "name": "Close Comrades",
+     "description": "Forge a bond with 10 comrades"
+    },
+    {
+     "apiname": "AchProphecies1",
+     "achieved": 1,
+     "unlocktime": 1763855122,
+     "name": "Hand of the Fates",
+     "description": "Fulfill 60 Minor Prophecies"
+    },
+    {
+     "apiname": "AchMaxMem",
+     "achieved": 1,
+     "unlocktime": 1763255055,
+     "name": "Mind for Magick",
+     "description": "Gain 30 Grasp at the Altar of Ashes"
+    },
+    {
+     "apiname": "AchAllArcana",
+     "achieved": 1,
+     "unlocktime": 1760290790,
+     "name": "Breadth of Knowledge",
+     "description": "Fulfill the Prophecy 'Breadth of Knowledge'"
+    },
+    {
+     "apiname": "AchAllArcanaMax",
+     "achieved": 1,
+     "unlocktime": 1764895719,
+     "name": "Unassailable Insight",
+     "description": "Fully upgrade all Arcana"
+    },
+    {
+     "apiname": "AchAllWeapons",
+     "achieved": 1,
+     "unlocktime": 1760206341,
+     "name": "The Arms of Night",
+     "description": "Fulfill the Prophecy 'The Arms of Night'"
+    },
+    {
+     "apiname": "AchAllAspects",
+     "achieved": 1,
+     "unlocktime": 1764347909,
+     "name": "The Unseen Sentinel",
+     "description": "Fulfill the Prophecy 'The Unseen Sentinel'"
+    },
+    {
+     "apiname": "AchConfideFrinos",
+     "achieved": 1,
+     "unlocktime": 1759613860,
+     "name": "Familiar Confidant",
+     "description": "Fulfill the Prophecy 'Familiar Confidant'"
+    },
+    {
+     "apiname": "AchAllFamiliars",
+     "achieved": 1,
+     "unlocktime": 1763258991,
+     "name": "Animal Whisperer",
+     "description": "Recruit all Animal Familiars"
+    },
+    {
+     "apiname": "AchAllFamiliarsMax",
+     "achieved": 1,
+     "unlocktime": 1764369799,
+     "name": "Beast Master",
+     "description": "Fully upgrade all Animal Familiars"
+    },
+    {
+     "apiname": "AchEarnPrestige1",
+     "achieved": 1,
+     "unlocktime": 1763780513,
+     "name": "Giving Back",
+     "description": "Earn 10,000 Kudos"
+    },
+    {
+     "apiname": "AchAllKeepsakes",
+     "achieved": 1,
+     "unlocktime": 1764263152,
+     "name": "Sentimental Value",
+     "description": "Collect every Keepsake"
+    },
+    {
+     "apiname": "AchBounties1",
+     "achieved": 1,
+     "unlocktime": 1763927131,
+     "name": "Infinite Possibility",
+     "description": "Clear 20 Chaos Trials"
+    },
+    {
+     "apiname": "AchAllRandomStreak",
+     "achieved": 1,
+     "unlocktime": 1765033790,
+     "name": "Improbable Outcomes",
+     "description": "Fulfill the Prophecy 'Improbable Outcomes'"
+    },
+    {
+     "apiname": "AchAllRandomUnderworld",
+     "achieved": 1,
+     "unlocktime": 1765156055,
+     "name": "Chaos in Hell",
+     "description": "Clear the 'Great Chaos Below' Trial"
+    },
+    {
+     "apiname": "AchBeatHecateNoArcana",
+     "achieved": 1,
+     "unlocktime": 1762386831,
+     "name": "Natural Talent",
+     "description": "Fulfill the Prophecy 'Natural Talent'"
+    },
+    {
+     "apiname": "AchHelpOdysseus",
+     "achieved": 1,
+     "unlocktime": 1764343513,
+     "name": "Unfinished Business",
+     "description": "Fulfill the Prophecy 'Unfinished Business'"
+    },
+    {
+     "apiname": "AchHelpDora",
+     "achieved": 1,
+     "unlocktime": 1763833643,
+     "name": "Haunted by the Past",
+     "description": "Fulfill the Prophecy 'Haunted by the Past'"
+    },
+    {
+     "apiname": "AchHelpHypnos",
+     "achieved": 1,
+     "unlocktime": 1764286816,
+     "name": "Soundest of Sleepers",
+     "description": "Fulfill the Prophecy 'Soundest of Sleepers'"
+    },
+    {
+     "apiname": "AchHelpArachne",
+     "achieved": 1,
+     "unlocktime": 1764891442,
+     "name": "Silk and Spitefulness",
+     "description": "Fulfill the Prophecy 'Silk and Spitefulness'"
+    },
+    {
+     "apiname": "AchHelpNarcissusAndEcho",
+     "achieved": 1,
+     "unlocktime": 1765032633,
+     "name": "Voice and Vanity",
+     "description": "Fulfill the Prophecy 'Voice and Vanity'"
+    },
+    {
+     "apiname": "AchCatchFish",
+     "achieved": 1,
+     "unlocktime": 1763256698,
+     "name": "Denizens of the Depths",
+     "description": "Fulfill the Prophecy 'Denizens of the Depths'"
+    },
+    {
+     "apiname": "AchBeatRivalsVow1",
+     "achieved": 1,
+     "unlocktime": 1765156055,
+     "name": "Unrivaled Prowess",
+     "description": "Fulfill the Prophecy 'Unrivaled Prowess'"
+    },
+    {
+     "apiname": "AchBeatTyphonWithWeapons",
+     "achieved": 1,
+     "unlocktime": 1765036209,
+     "name": "Sword of the Night",
+     "description": "Fulfill the Prophecy 'Sword of the Night'"
+    },
+    {
+     "apiname": "AchBeatChronosWithArcana",
+     "achieved": 1,
+     "unlocktime": 1763916312,
+     "name": "Arcana of the Ages",
+     "description": "Fulfill the Prophecy 'Arcana of the Ages'"
+    },
+    {
+     "apiname": "AchClearWithAllAspects",
+     "achieved": 1,
+     "unlocktime": 1765144191,
+     "name": "Bearing Dark Gifts",
+     "description": "Fulfill the Prophecy 'Bearing Dark Gifts'"
+    },
+    {
+     "apiname": "AchClearChaosQuest",
+     "achieved": 1,
+     "unlocktime": 1763846842,
+     "name": "Born to Win",
+     "description": "Fulfill the Prophecy 'Born to Win'"
+    },
+    {
+     "apiname": "AchNemesisCombat",
+     "achieved": 1,
+     "unlocktime": 1764731109,
+     "name": "Fair Fight",
+     "description": "Earn 1,000 Gold competing against Nemesis"
+    },
+    {
+     "apiname": "AchFamiliarCostumes",
+     "achieved": 1,
+     "unlocktime": 1764372922,
+     "name": "Unfamiliar Forms",
+     "description": "Alter the appearance of each Animal Familiar"
+    },
+    {
+     "apiname": "AchKillWitchAsSheep",
+     "achieved": 1,
+     "unlocktime": 1760279377,
+     "name": "Sheep's Clothing",
+     "description": "Slay a Sister of the Dead while afflicted with Twilight Curse"
+    },
+    {
+     "apiname": "AchSummonSiren",
+     "achieved": 1,
+     "unlocktime": 1763927098,
+     "name": "Breaking Up the Band",
+     "description": "Use Night Bloom to raise a Siren"
+    },
+    {
+     "apiname": "AchTartarusInDress",
+     "achieved": 1,
+     "unlocktime": 1765144033,
+     "name": "Dressed to Kill",
+     "description": "Reach the final confrontation in an Arachne outfit"
+    },
+    {
+     "apiname": "AchEarnStatue1",
+     "achieved": 1,
+     "unlocktime": 1764116071,
+     "name": "Behold Night's Champion",
+     "description": "Earn the first Gift of the Veil"
+    },
+    {
+     "apiname": "AchEarnStatue2",
+     "achieved": 1,
+     "unlocktime": 1764539921,
+     "name": "Mercy, Night's Executioner",
+     "description": "Earn the second Gift of the Veil"
+    },
+    {
+     "apiname": "AchWinSecretContest",
+     "achieved": 1,
+     "unlocktime": 1763948628,
+     "name": "Elysian Glory",
+     "description": "Prevail in the Contest of Champions"
+    },
+    {
+     "apiname": "AchTrueEnding",
+     "achieved": 1,
+     "unlocktime": 1763848736,
+     "name": "Death to Chronos",
+     "description": "Complete the lifelong task of the Princess of the Underworld"
+    },
+    {
+     "apiname": "AchEpilogue",
+     "achieved": 1,
+     "unlocktime": 1764352767,
+     "name": "Golden Age",
+     "description": "Reach the epilogue of the story"
+    },
+    {
+     "apiname": "AchAllOtherAch",
+     "achieved": 1,
+     "unlocktime": 1765156056,
+     "name": "Goddess of Nightmares",
+     "description": "Earn all other Achievements"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,535 @@
+{
+ "provider": "steam",
+ "title": "Paradise Killer",
+ "updated": "2026-07-26",
+ "id": "1160220",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 0,
+ "total": 39,
+ "platform": "PC",
+ "icon": "66484f8aa0c3780492ade1f85aaad7a24181e306",
+ "playtime_mins": 905,
+ "playtime": {
+  "windows": 905
+ },
+ "last_played": "2020-12-27",
+ "achievements": [
+  {
+   "key": "AcceleratedJustice",
+   "name": "Accelerated Justice",
+   "description": "Speedrun the game and complete it in under 10 minutes",
+   "unlocked": false
+  },
+  {
+   "key": "AccessingSecrets",
+   "name": "Accessing Secrets",
+   "description": "Access the barracks",
+   "unlocked": false
+  },
+  {
+   "key": "CollectingCrestsLikein96",
+   "name": "Collecting Crests Like in ‘96",
+   "description": "Complete the Syndicate HQ puzzle",
+   "unlocked": false
+  },
+  {
+   "key": "ConversationsabouttheFuture",
+   "name": "Conversations about the Future",
+   "description": "Collected all bottles of whisky",
+   "unlocked": false
+  },
+  {
+   "key": "FrighteningRituals",
+   "name": "Frightening Rituals",
+   "description": "Acquire the Worship Starlight upgrade",
+   "unlocked": false
+  },
+  {
+   "key": "GazingattheCosmos",
+   "name": "Gazing at the Cosmos",
+   "description": "Acquire the Cosmos Starlight upgrade",
+   "unlocked": false
+  },
+  {
+   "key": "GenerationRemix",
+   "name": "Generation Remix",
+   "description": "Collect all Starlight Skins",
+   "unlocked": false
+  },
+  {
+   "key": "GoodGirl",
+   "name": "Good Girl",
+   "description": "Give a treat to [REDACTED]",
+   "unlocked": false
+  },
+  {
+   "key": "HalloftheDead",
+   "name": "Hall of the Dead",
+   "description": "Access the Syndicate Graveyard",
+   "unlocked": false
+  },
+  {
+   "key": "HelperofAngryGhost",
+   "name": "Helper of Angry Ghost",
+   "description": "Deliver the manifesto letter",
+   "unlocked": false
+  },
+  {
+   "key": "HelperofPowerStationGhost",
+   "name": "Helper of Power Station Ghost",
+   "description": "Tell the ghost who they are",
+   "unlocked": false
+  },
+  {
+   "key": "HelperofSearchingGhost",
+   "name": "Helper of Murdered Ghost",
+   "description": "Tell the ghost what happened to their friend",
+   "unlocked": false
+  },
+  {
+   "key": "HelperofSorrowfulGhost",
+   "name": "Helper of Sorrowful Ghost",
+   "description": "Return the missing gem",
+   "unlocked": false
+  },
+  {
+   "key": "HelperofVampireVictimGhost",
+   "name": "Helper of Vampire Victim Ghost",
+   "description": "Deliver reassurance that justice was done (it wasn’t)",
+   "unlocked": false
+  },
+  {
+   "key": "HonestWork",
+   "name": "Honest Work",
+   "description": "Unload the cargo",
+   "unlocked": false
+  },
+  {
+   "key": "ImDownrightAmazed",
+   "name": "I’m Downright Amazed",
+   "description": "Use the [REDACTED] to open the [REDACTED]",
+   "unlocked": false
+  },
+  {
+   "key": "InfiniteTerror",
+   "name": "Infinite Terror",
+   "description": "Visit [REDACTED]",
+   "unlocked": false
+  },
+  {
+   "key": "MonolithicDread",
+   "name": "Monolithic Dread",
+   "description": "Acquire the Pyramid Starlight upgrade",
+   "unlocked": false
+  },
+  {
+   "key": "MoreRefreshingthanaCosmicApocalypse",
+   "name": "More Refreshing than a Cosmic Apocalypse",
+   "description": "Collect all drinks",
+   "unlocked": false
+  },
+  {
+   "key": "ParadisePlaylist",
+   "name": "Paradise Playlist",
+   "description": "Find all music tracks",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofArchitect",
+   "name": "Philosophy of Architect",
+   "description": "Achieve max hangout level with Carmelina",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofBarMaster",
+   "name": "Philosophy of Bar Master",
+   "description": "Achieve max hangout level with Sam",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofCitizen",
+   "name": "Philosophy of Citizen",
+   "description": "Achieve max hangout level with Henry",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofDoctor",
+   "name": "Philosophy of Doctor",
+   "description": "Achieve max hangout level with Doom Jazz",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofDriver",
+   "name": "Philosophy of Driver",
+   "description": "Achieve max hangout level with Lydia",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofGhost",
+   "name": "Philosophy of Ghost",
+   "description": "Achieve max hangout level with One Last Kiss",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofIdol",
+   "name": "Philosophy of Idol",
+   "description": "Achieve max hangout level with Crimson",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofSecretary",
+   "name": "Philosophy of Secretary",
+   "description": "Achieve max hangout level with Yuri",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofSoldier",
+   "name": "Philosophy of Soldier",
+   "description": "Achieve max hangout level with Akiko",
+   "unlocked": false
+  },
+  {
+   "key": "PhilosophyofZealot",
+   "name": "Philosophy of Zealot",
+   "description": "Achieve max hangout level with Witness",
+   "unlocked": false
+  },
+  {
+   "key": "ReturnWatertoParadise",
+   "name": "Return Water to Paradise",
+   "description": "Complete the valve puzzle",
+   "unlocked": false
+  },
+  {
+   "key": "ScholarofDemons",
+   "name": "Scholar of Demons",
+   "description": "Speak to every Shinji",
+   "unlocked": false
+  },
+  {
+   "key": "ScholarofIslandSequences",
+   "name": "Scholar of Island Sequences",
+   "description": "Collect all Island Sequence Mementos",
+   "unlocked": false
+  },
+  {
+   "key": "ScholarofthePantheon",
+   "name": "Scholar of the Pantheon",
+   "description": "Collect every shrine tablet",
+   "unlocked": false
+  },
+  {
+   "key": "SeeingtheLines",
+   "name": "Seeing the Lines",
+   "description": "Find all recordings",
+   "unlocked": false
+  },
+  {
+   "key": "TheSweetestTaste",
+   "name": "The Sweetest Taste",
+   "description": "Acquire Elusive Chocolate",
+   "unlocked": false
+  },
+  {
+   "key": "TheseIslandsareWeird",
+   "name": "These Islands are Weird",
+   "description": "Unlock all footbath upgrades",
+   "unlocked": false
+  },
+  {
+   "key": "WhenaGodWeeps",
+   "name": "When a God Weeps",
+   "description": "Activate all Crying Grudge statues",
+   "unlocked": false
+  },
+  {
+   "key": "WhiteLilies",
+   "name": "White Lilies",
+   "description": "Speak to a [REDACTED]",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Paradise Killer",
+   "achievements": [
+    {
+     "apiname": "ScholarofthePantheon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scholar of the Pantheon",
+     "description": "Collect every shrine tablet"
+    },
+    {
+     "apiname": "ScholarofDemons",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scholar of Demons",
+     "description": "Speak to every Shinji"
+    },
+    {
+     "apiname": "ScholarofIslandSequences",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scholar of Island Sequences",
+     "description": "Collect all Island Sequence Mementos"
+    },
+    {
+     "apiname": "SeeingtheLines",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seeing the Lines",
+     "description": "Find all recordings"
+    },
+    {
+     "apiname": "ParadisePlaylist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Paradise Playlist",
+     "description": "Find all music tracks"
+    },
+    {
+     "apiname": "MoreRefreshingthanaCosmicApocalypse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "More Refreshing than a Cosmic Apocalypse",
+     "description": "Collect all drinks"
+    },
+    {
+     "apiname": "TheseIslandsareWeird",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "These Islands are Weird",
+     "description": "Unlock all footbath upgrades"
+    },
+    {
+     "apiname": "CollectingCrestsLikein96",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collecting Crests Like in ‘96",
+     "description": "Complete the Syndicate HQ puzzle"
+    },
+    {
+     "apiname": "GoodGirl",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Girl",
+     "description": "Give a treat to [REDACTED]"
+    },
+    {
+     "apiname": "HelperofSorrowfulGhost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helper of Sorrowful Ghost",
+     "description": "Return the missing gem"
+    },
+    {
+     "apiname": "HelperofSearchingGhost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helper of Murdered Ghost",
+     "description": "Tell the ghost what happened to their friend"
+    },
+    {
+     "apiname": "HelperofAngryGhost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helper of Angry Ghost",
+     "description": "Deliver the manifesto letter"
+    },
+    {
+     "apiname": "HelperofVampireVictimGhost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helper of Vampire Victim Ghost",
+     "description": "Deliver reassurance that justice was done (it wasn’t)"
+    },
+    {
+     "apiname": "HelperofPowerStationGhost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helper of Power Station Ghost",
+     "description": "Tell the ghost who they are"
+    },
+    {
+     "apiname": "GazingattheCosmos",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gazing at the Cosmos",
+     "description": "Acquire the Cosmos Starlight upgrade"
+    },
+    {
+     "apiname": "MonolithicDread",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monolithic Dread",
+     "description": "Acquire the Pyramid Starlight upgrade"
+    },
+    {
+     "apiname": "FrighteningRituals",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Frightening Rituals",
+     "description": "Acquire the Worship Starlight upgrade"
+    },
+    {
+     "apiname": "TheSweetestTaste",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Sweetest Taste",
+     "description": "Acquire Elusive Chocolate"
+    },
+    {
+     "apiname": "HonestWork",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Honest Work",
+     "description": "Unload the cargo"
+    },
+    {
+     "apiname": "WhiteLilies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "White Lilies",
+     "description": "Speak to a [REDACTED]"
+    },
+    {
+     "apiname": "HalloftheDead",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hall of the Dead",
+     "description": "Access the Syndicate Graveyard"
+    },
+    {
+     "apiname": "AccessingSecrets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Accessing Secrets",
+     "description": "Access the barracks"
+    },
+    {
+     "apiname": "InfiniteTerror",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Infinite Terror",
+     "description": "Visit [REDACTED]"
+    },
+    {
+     "apiname": "ImDownrightAmazed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I’m Downright Amazed",
+     "description": "Use the [REDACTED] to open the [REDACTED]"
+    },
+    {
+     "apiname": "PhilosophyofSoldier",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Soldier",
+     "description": "Achieve max hangout level with Akiko"
+    },
+    {
+     "apiname": "PhilosophyofArchitect",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Architect",
+     "description": "Achieve max hangout level with Carmelina"
+    },
+    {
+     "apiname": "PhilosophyofIdol",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Idol",
+     "description": "Achieve max hangout level with Crimson"
+    },
+    {
+     "apiname": "PhilosophyofDoctor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Doctor",
+     "description": "Achieve max hangout level with Doom Jazz"
+    },
+    {
+     "apiname": "PhilosophyofCitizen",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Citizen",
+     "description": "Achieve max hangout level with Henry"
+    },
+    {
+     "apiname": "PhilosophyofDriver",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Driver",
+     "description": "Achieve max hangout level with Lydia"
+    },
+    {
+     "apiname": "PhilosophyofBarMaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Bar Master",
+     "description": "Achieve max hangout level with Sam"
+    },
+    {
+     "apiname": "PhilosophyofZealot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Zealot",
+     "description": "Achieve max hangout level with Witness"
+    },
+    {
+     "apiname": "PhilosophyofSecretary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Secretary",
+     "description": "Achieve max hangout level with Yuri"
+    },
+    {
+     "apiname": "PhilosophyofGhost",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Philosophy of Ghost",
+     "description": "Achieve max hangout level with One Last Kiss"
+    },
+    {
+     "apiname": "WhenaGodWeeps",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "When a God Weeps",
+     "description": "Activate all Crying Grudge statues"
+    },
+    {
+     "apiname": "ReturnWatertoParadise",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Return Water to Paradise",
+     "description": "Complete the valve puzzle"
+    },
+    {
+     "apiname": "AcceleratedJustice",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Accelerated Justice",
+     "description": "Speedrun the game and complete it in under 10 minutes"
+    },
+    {
+     "apiname": "GenerationRemix",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Generation Remix",
+     "description": "Collect all Starlight Skins"
+    },
+    {
+     "apiname": "ConversationsabouttheFuture",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Conversations about the Future",
+     "description": "Collected all bottles of whisky"
+    }
+   ],
+   "success": true
+  }
+ }
+}

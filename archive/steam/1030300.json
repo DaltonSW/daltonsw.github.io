@@ -1,0 +1,744 @@
+{
+ "provider": "steam",
+ "title": "Hollow Knight: Silksong",
+ "updated": "2026-07-26",
+ "id": "1030300",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 52,
+ "total": 52,
+ "first": "2025-09-04",
+ "last": "2025-10-03",
+ "award_kind": "all achievements",
+ "platform": "PC",
+ "icon": "b4a999c1302e3ac123c041fd41bb8a34528c6ab5",
+ "playtime_mins": 6178,
+ "playtime": {
+  "disconnected": 1585,
+  "linux": 6178
+ },
+ "last_played": "2025-10-03",
+ "achievements": [
+  {
+   "key": "FIRST_TOOL",
+   "name": "Equipped",
+   "description": "Acquire your first Tool",
+   "unlocked": true,
+   "date": "2025-09-04T20:36:47-05:00"
+  },
+  {
+   "key": "FIRST_SILK_SKILL",
+   "name": "Bound",
+   "description": "Bind your first Silk Skill",
+   "unlocked": true,
+   "date": "2025-09-04T20:42:10-05:00"
+  },
+  {
+   "key": "DEFEATED_BELLBEAST",
+   "name": "Liberated",
+   "description": "Defeat the Bell Beast",
+   "unlocked": true,
+   "date": "2025-09-04T20:51:53-05:00"
+  },
+  {
+   "key": "FIRST_WISH",
+   "name": "Granted",
+   "description": "Grant your first wish",
+   "unlocked": true,
+   "date": "2025-09-04T20:57:11-05:00"
+  },
+  {
+   "key": "DEFEATED_LACE_1",
+   "name": "Pharloom's Welcome",
+   "description": "Defeat Lace in Deep Docks",
+   "unlocked": true,
+   "date": "2025-09-05T13:44:16-05:00"
+  },
+  {
+   "key": "DEFEATED_SONG_GOLEM",
+   "name": "Servant",
+   "description": "Defeat Fourth Chorus",
+   "unlocked": true,
+   "date": "2025-09-05T14:16:31-05:00"
+  },
+  {
+   "key": "FIRST_SILK_SPOOL",
+   "name": "Restored",
+   "description": "Acquire 2 Spool Fragments",
+   "unlocked": true,
+   "date": "2025-09-05T14:43:16-05:00"
+  },
+  {
+   "key": "FIRST_CREST",
+   "name": "Claimed",
+   "description": "Claim your first Crest",
+   "unlocked": true,
+   "date": "2025-09-05T15:31:18-05:00"
+  },
+  {
+   "key": "FIRST_MASK",
+   "name": "Protected",
+   "description": "Acquire 4 Mask Shards",
+   "unlocked": true,
+   "date": "2025-09-05T17:23:50-05:00"
+  },
+  {
+   "key": "DEFEATED_WIDOW",
+   "name": "Fanatic",
+   "description": "Defeat Widow",
+   "unlocked": true,
+   "date": "2025-09-05T20:49:50-05:00"
+  },
+  {
+   "key": "DEFEATED_PHANTOM_1",
+   "name": "Grey Ghost",
+   "unlocked": true,
+   "date": "2025-09-06T15:25:03-05:00"
+  },
+  {
+   "key": "DEFEATED_COGWORK_DANCERS",
+   "name": "Last Dance",
+   "description": "Defeat the Cogwork Dancers",
+   "unlocked": true,
+   "date": "2025-09-06T16:41:38-05:00"
+  },
+  {
+   "key": "DEFEATED_LAST_JUDGE_1",
+   "name": "Judge",
+   "description": "Defeat the Last Judge",
+   "unlocked": true,
+   "date": "2025-09-06T17:44:23-05:00"
+  },
+  {
+   "key": "JOURNAL_HALF",
+   "name": "Keen Hunter",
+   "description": "Grant Nuu's wish",
+   "unlocked": true,
+   "date": "2025-09-06T18:33:33-05:00"
+  },
+  {
+   "key": "DEFEATED_TROBBIO",
+   "name": "Tragedian",
+   "description": "Defeat Trobbio",
+   "unlocked": true,
+   "date": "2025-09-07T09:08:37-05:00"
+  },
+  {
+   "key": "FLEAS_HALF",
+   "name": "Flea Finder",
+   "description": "Rescue half of Pharloom's lost fleas",
+   "unlocked": true,
+   "date": "2025-09-07T10:34:51-05:00"
+  },
+  {
+   "key": "CITADEL_SONG",
+   "name": "Harmonious",
+   "description": "Learn the Citadel's Threefold song",
+   "unlocked": true,
+   "date": "2025-09-09T14:50:52-05:00"
+  },
+  {
+   "key": "DEFEATED_LACE_2",
+   "name": "White Knight",
+   "description": "Defeat Lace in the Cradle",
+   "unlocked": true,
+   "date": "2025-09-09T16:25:52-05:00"
+  },
+  {
+   "key": "ALL_SILK_HEARTS",
+   "name": "Regenerated",
+   "description": "Acquire all Silk Hearts",
+   "unlocked": true,
+   "date": "2025-09-09T16:27:23-05:00"
+  },
+  {
+   "key": "ENDING_A",
+   "name": "Weaver Queen",
+   "unlocked": true,
+   "date": "2025-09-09T16:40:27-05:00"
+  },
+  {
+   "key": "BELLHOME",
+   "name": "Resident",
+   "description": "Acquire your own Bellhome",
+   "unlocked": true,
+   "date": "2025-09-09T19:13:57-05:00"
+  },
+  {
+   "key": "TUBES_FULL",
+   "name": "Transported",
+   "description": "Open all of the Citadel's Ventrica Stations",
+   "unlocked": true,
+   "date": "2025-09-11T16:55:12-05:00"
+  },
+  {
+   "key": "SHAKRA_FINAL_QUEST",
+   "name": "Trail's End",
+   "description": "Grant Shakra's wish",
+   "unlocked": true,
+   "date": "2025-09-11T17:53:20-05:00"
+  },
+  {
+   "key": "DEFEATED_FIRST_SINNER",
+   "name": "Heretic",
+   "unlocked": true,
+   "date": "2025-09-11T18:41:00-05:00"
+  },
+  {
+   "key": "BELLWAYS_FULL",
+   "name": "Connected",
+   "description": "Open all of Pharloom's Bellways",
+   "unlocked": true,
+   "date": "2025-09-11T19:59:13-05:00"
+  },
+  {
+   "key": "GOURMAND_WISH",
+   "name": "Glutton",
+   "description": "Satiate the Grand Gourmand",
+   "unlocked": true,
+   "date": "2025-09-12T17:40:02-05:00"
+  },
+  {
+   "key": "ENDING_D",
+   "name": "Twisted Child",
+   "unlocked": true,
+   "date": "2025-09-12T20:38:41-05:00"
+  },
+  {
+   "key": "ENDING_C",
+   "name": "Snared Silk",
+   "unlocked": true,
+   "date": "2025-09-12T21:19:23-05:00"
+  },
+  {
+   "key": "BELLWAY_MELODY",
+   "name": "Bonded",
+   "unlocked": true,
+   "date": "2025-09-12T21:47:06-05:00"
+  },
+  {
+   "key": "FLEAS_ALL",
+   "name": "Fleafriend",
+   "description": "Rescue all of Pharloom's lost fleas and receive their final gift",
+   "unlocked": true,
+   "date": "2025-09-13T09:43:41-05:00"
+  },
+  {
+   "key": "ALL_CRESTS",
+   "name": "Consumed",
+   "description": "Claim all Crests",
+   "unlocked": true,
+   "date": "2025-09-13T11:04:51-05:00"
+  },
+  {
+   "key": "DEFEATED_HUNTER_QUEEN",
+   "name": "Diva",
+   "unlocked": true,
+   "date": "2025-09-13T17:04:51-05:00"
+  },
+  {
+   "key": "DEFEATED_CORAL_KING",
+   "name": "Tyrant",
+   "unlocked": true,
+   "date": "2025-09-13T17:24:21-05:00"
+  },
+  {
+   "key": "DEFEATED_FLOWER_QUEEN",
+   "name": "Seed",
+   "unlocked": true,
+   "date": "2025-09-13T18:05:44-05:00"
+  },
+  {
+   "key": "PINSTRESS_WISH",
+   "name": "Fatal Resolve",
+   "unlocked": true,
+   "date": "2025-09-13T18:21:46-05:00"
+  },
+  {
+   "key": "WHITE_FLOWER_GAINED",
+   "name": "Remembrance",
+   "unlocked": true,
+   "date": "2025-09-13T18:38:27-05:00"
+  },
+  {
+   "key": "ALL_MAPS",
+   "name": "Cartographer",
+   "description": "Acquire a map of each area",
+   "unlocked": true,
+   "date": "2025-09-14T09:34:18-05:00"
+  },
+  {
+   "key": "DEFEATED_GREEN_PRINCE",
+   "name": "Lamenter",
+   "unlocked": true,
+   "date": "2025-09-14T10:01:48-05:00"
+  },
+  {
+   "key": "GARMOND_FINAL_QUEST",
+   "name": "Hero's Call",
+   "unlocked": true,
+   "date": "2025-09-14T10:09:12-05:00"
+  },
+  {
+   "key": "ALL_TOOLS",
+   "name": "Arsenal",
+   "description": "Acquire all Tools",
+   "unlocked": true,
+   "date": "2025-09-14T15:25:13-05:00"
+  },
+  {
+   "key": "ALL_SILK_SKILLS",
+   "name": "Woven",
+   "description": "Bind all Silk Skills",
+   "unlocked": true,
+   "date": "2025-09-14T15:32:09-05:00"
+  },
+  {
+   "key": "ALL_MASKS",
+   "name": "Masked",
+   "description": "Acquire all Mask Shards",
+   "unlocked": true,
+   "date": "2025-09-14T15:59:32-05:00"
+  },
+  {
+   "key": "ALL_SILK_SPOOLS",
+   "name": "Extended",
+   "description": "Acquire all Spool Fragments",
+   "unlocked": true,
+   "date": "2025-09-14T16:06:51-05:00"
+  },
+  {
+   "key": "EVA_FINAL_QUEST",
+   "name": "Entwined",
+   "unlocked": true,
+   "date": "2025-09-14T16:28:37-05:00"
+  },
+  {
+   "key": "ENDING_E",
+   "name": "Sister of the Void",
+   "unlocked": true,
+   "date": "2025-09-14T17:03:04-05:00"
+  },
+  {
+   "key": "COMPLETION",
+   "name": "Completion",
+   "description": "Achieve 100% game completion and finish the game",
+   "unlocked": true,
+   "date": "2025-09-14T17:05:36-05:00"
+  },
+  {
+   "key": "SPEEDRUN_1",
+   "name": "Speedrunner",
+   "description": "Complete the game in under 5 hours",
+   "unlocked": true,
+   "date": "2025-09-21T21:09:21-05:00"
+  },
+  {
+   "key": "JOURNAL_FULL",
+   "name": "True Hunter",
+   "description": "Receive the Hunter's Memento",
+   "unlocked": true,
+   "date": "2025-09-23T21:04:53-05:00"
+  },
+  {
+   "key": "HERALD_WISH",
+   "name": "Passing of the Age",
+   "unlocked": true,
+   "date": "2025-09-27T07:45:56-05:00"
+  },
+  {
+   "key": "STEEL_SOUL",
+   "name": "Steel Soul",
+   "description": "Finish the game in Steel Soul mode",
+   "unlocked": true,
+   "date": "2025-09-30T21:50:02-05:00"
+  },
+  {
+   "key": "SPEED_COMPLETION",
+   "name": "Speed Completion",
+   "description": "Achieve 100% game completion and finish the game in under 30 hours",
+   "unlocked": true,
+   "date": "2025-10-03T21:23:02-05:00"
+  },
+  {
+   "key": "STEEL_SOUL_FULL",
+   "name": "Steel Heart",
+   "description": "Achieve 100% game completion and finish the game in Steel Soul mode",
+   "unlocked": true,
+   "date": "2025-10-03T21:23:02-05:00"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Hollow Knight: Silksong",
+   "achievements": [
+    {
+     "apiname": "FIRST_TOOL",
+     "achieved": 1,
+     "unlocktime": 1757036207,
+     "name": "Equipped",
+     "description": "Acquire your first Tool"
+    },
+    {
+     "apiname": "ALL_TOOLS",
+     "achieved": 1,
+     "unlocktime": 1757881513,
+     "name": "Arsenal",
+     "description": "Acquire all Tools"
+    },
+    {
+     "apiname": "FIRST_SILK_SKILL",
+     "achieved": 1,
+     "unlocktime": 1757036530,
+     "name": "Bound",
+     "description": "Bind your first Silk Skill"
+    },
+    {
+     "apiname": "ALL_SILK_SKILLS",
+     "achieved": 1,
+     "unlocktime": 1757881929,
+     "name": "Woven",
+     "description": "Bind all Silk Skills"
+    },
+    {
+     "apiname": "FIRST_CREST",
+     "achieved": 1,
+     "unlocktime": 1757104278,
+     "name": "Claimed",
+     "description": "Claim your first Crest"
+    },
+    {
+     "apiname": "ALL_CRESTS",
+     "achieved": 1,
+     "unlocktime": 1757779491,
+     "name": "Consumed",
+     "description": "Claim all Crests"
+    },
+    {
+     "apiname": "FIRST_MASK",
+     "achieved": 1,
+     "unlocktime": 1757111030,
+     "name": "Protected",
+     "description": "Acquire 4 Mask Shards"
+    },
+    {
+     "apiname": "ALL_MASKS",
+     "achieved": 1,
+     "unlocktime": 1757883572,
+     "name": "Masked",
+     "description": "Acquire all Mask Shards"
+    },
+    {
+     "apiname": "FIRST_SILK_SPOOL",
+     "achieved": 1,
+     "unlocktime": 1757101396,
+     "name": "Restored",
+     "description": "Acquire 2 Spool Fragments"
+    },
+    {
+     "apiname": "ALL_SILK_SPOOLS",
+     "achieved": 1,
+     "unlocktime": 1757884011,
+     "name": "Extended",
+     "description": "Acquire all Spool Fragments"
+    },
+    {
+     "apiname": "ALL_SILK_HEARTS",
+     "achieved": 1,
+     "unlocktime": 1757453243,
+     "name": "Regenerated",
+     "description": "Acquire all Silk Hearts"
+    },
+    {
+     "apiname": "ALL_MAPS",
+     "achieved": 1,
+     "unlocktime": 1757860458,
+     "name": "Cartographer",
+     "description": "Acquire a map of each area"
+    },
+    {
+     "apiname": "BELLWAYS_FULL",
+     "achieved": 1,
+     "unlocktime": 1757638753,
+     "name": "Connected",
+     "description": "Open all of Pharloom's Bellways"
+    },
+    {
+     "apiname": "BELLWAY_MELODY",
+     "achieved": 1,
+     "unlocktime": 1757731626,
+     "name": "Bonded",
+     "description": ""
+    },
+    {
+     "apiname": "TUBES_FULL",
+     "achieved": 1,
+     "unlocktime": 1757627712,
+     "name": "Transported",
+     "description": "Open all of the Citadel's Ventrica Stations"
+    },
+    {
+     "apiname": "JOURNAL_HALF",
+     "achieved": 1,
+     "unlocktime": 1757201613,
+     "name": "Keen Hunter",
+     "description": "Grant Nuu's wish"
+    },
+    {
+     "apiname": "JOURNAL_FULL",
+     "achieved": 1,
+     "unlocktime": 1758679493,
+     "name": "True Hunter",
+     "description": "Receive the Hunter's Memento"
+    },
+    {
+     "apiname": "FLEAS_HALF",
+     "achieved": 1,
+     "unlocktime": 1757259291,
+     "name": "Flea Finder",
+     "description": "Rescue half of Pharloom's lost fleas"
+    },
+    {
+     "apiname": "FLEAS_ALL",
+     "achieved": 1,
+     "unlocktime": 1757774621,
+     "name": "Fleafriend",
+     "description": "Rescue all of Pharloom's lost fleas and receive their final gift"
+    },
+    {
+     "apiname": "DEFEATED_BELLBEAST",
+     "achieved": 1,
+     "unlocktime": 1757037113,
+     "name": "Liberated",
+     "description": "Defeat the Bell Beast"
+    },
+    {
+     "apiname": "DEFEATED_LACE_1",
+     "achieved": 1,
+     "unlocktime": 1757097856,
+     "name": "Pharloom's Welcome",
+     "description": "Defeat Lace in Deep Docks"
+    },
+    {
+     "apiname": "DEFEATED_SONG_GOLEM",
+     "achieved": 1,
+     "unlocktime": 1757099791,
+     "name": "Servant",
+     "description": "Defeat Fourth Chorus"
+    },
+    {
+     "apiname": "DEFEATED_WIDOW",
+     "achieved": 1,
+     "unlocktime": 1757123390,
+     "name": "Fanatic",
+     "description": "Defeat Widow"
+    },
+    {
+     "apiname": "DEFEATED_LAST_JUDGE_1",
+     "achieved": 1,
+     "unlocktime": 1757198663,
+     "name": "Judge",
+     "description": "Defeat the Last Judge"
+    },
+    {
+     "apiname": "DEFEATED_COGWORK_DANCERS",
+     "achieved": 1,
+     "unlocktime": 1757194898,
+     "name": "Last Dance",
+     "description": "Defeat the Cogwork Dancers"
+    },
+    {
+     "apiname": "DEFEATED_TROBBIO",
+     "achieved": 1,
+     "unlocktime": 1757254117,
+     "name": "Tragedian",
+     "description": "Defeat Trobbio"
+    },
+    {
+     "apiname": "DEFEATED_LACE_2",
+     "achieved": 1,
+     "unlocktime": 1757453152,
+     "name": "White Knight",
+     "description": "Defeat Lace in the Cradle"
+    },
+    {
+     "apiname": "DEFEATED_PHANTOM_1",
+     "achieved": 1,
+     "unlocktime": 1757190303,
+     "name": "Grey Ghost",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEATED_FIRST_SINNER",
+     "achieved": 1,
+     "unlocktime": 1757634060,
+     "name": "Heretic",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEATED_CORAL_KING",
+     "achieved": 1,
+     "unlocktime": 1757802261,
+     "name": "Tyrant",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEATED_FLOWER_QUEEN",
+     "achieved": 1,
+     "unlocktime": 1757804744,
+     "name": "Seed",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEATED_HUNTER_QUEEN",
+     "achieved": 1,
+     "unlocktime": 1757801091,
+     "name": "Diva",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEATED_GREEN_PRINCE",
+     "achieved": 1,
+     "unlocktime": 1757862108,
+     "name": "Lamenter",
+     "description": ""
+    },
+    {
+     "apiname": "FIRST_WISH",
+     "achieved": 1,
+     "unlocktime": 1757037431,
+     "name": "Granted",
+     "description": "Grant your first wish"
+    },
+    {
+     "apiname": "GOURMAND_WISH",
+     "achieved": 1,
+     "unlocktime": 1757716802,
+     "name": "Glutton",
+     "description": "Satiate the Grand Gourmand"
+    },
+    {
+     "apiname": "SHAKRA_FINAL_QUEST",
+     "achieved": 1,
+     "unlocktime": 1757631200,
+     "name": "Trail's End",
+     "description": "Grant Shakra's wish"
+    },
+    {
+     "apiname": "GARMOND_FINAL_QUEST",
+     "achieved": 1,
+     "unlocktime": 1757862552,
+     "name": "Hero's Call",
+     "description": ""
+    },
+    {
+     "apiname": "PINSTRESS_WISH",
+     "achieved": 1,
+     "unlocktime": 1757805706,
+     "name": "Fatal Resolve",
+     "description": ""
+    },
+    {
+     "apiname": "EVA_FINAL_QUEST",
+     "achieved": 1,
+     "unlocktime": 1757885317,
+     "name": "Entwined",
+     "description": ""
+    },
+    {
+     "apiname": "BELLHOME",
+     "achieved": 1,
+     "unlocktime": 1757463237,
+     "name": "Resident",
+     "description": "Acquire your own Bellhome"
+    },
+    {
+     "apiname": "CITADEL_SONG",
+     "achieved": 1,
+     "unlocktime": 1757447452,
+     "name": "Harmonious",
+     "description": "Learn the Citadel's Threefold song"
+    },
+    {
+     "apiname": "WHITE_FLOWER_GAINED",
+     "achieved": 1,
+     "unlocktime": 1757806707,
+     "name": "Remembrance",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING_A",
+     "achieved": 1,
+     "unlocktime": 1757454027,
+     "name": "Weaver Queen",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING_C",
+     "achieved": 1,
+     "unlocktime": 1757729963,
+     "name": "Snared Silk",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING_D",
+     "achieved": 1,
+     "unlocktime": 1757727521,
+     "name": "Twisted Child",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING_E",
+     "achieved": 1,
+     "unlocktime": 1757887384,
+     "name": "Sister of the Void",
+     "description": ""
+    },
+    {
+     "apiname": "HERALD_WISH",
+     "achieved": 1,
+     "unlocktime": 1758977156,
+     "name": "Passing of the Age",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETION",
+     "achieved": 1,
+     "unlocktime": 1757887536,
+     "name": "Completion",
+     "description": "Achieve 100% game completion and finish the game"
+    },
+    {
+     "apiname": "SPEEDRUN_1",
+     "achieved": 1,
+     "unlocktime": 1758506961,
+     "name": "Speedrunner",
+     "description": "Complete the game in under 5 hours"
+    },
+    {
+     "apiname": "SPEED_COMPLETION",
+     "achieved": 1,
+     "unlocktime": 1759544582,
+     "name": "Speed Completion",
+     "description": "Achieve 100% game completion and finish the game in under 30 hours"
+    },
+    {
+     "apiname": "STEEL_SOUL",
+     "achieved": 1,
+     "unlocktime": 1759287002,
+     "name": "Steel Soul",
+     "description": "Finish the game in Steel Soul mode"
+    },
+    {
+     "apiname": "STEEL_SOUL_FULL",
+     "achieved": 1,
+     "unlocktime": 1759544582,
+     "name": "Steel Heart",
+     "description": "Achieve 100% game completion and finish the game in Steel Soul mode"
+    }
+   ],
+   "success": true
+  }
+ }
+}

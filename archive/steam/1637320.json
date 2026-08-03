@@ -1,0 +1,647 @@
+{
+ "provider": "steam",
+ "title": "Dome Keeper",
+ "updated": "2026-07-26",
+ "id": "1637320",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 17,
+ "total": 47,
+ "first": "2022-10-01",
+ "last": "2022-10-11",
+ "platform": "PC",
+ "icon": "4ecf3a011cf5eeb37d0072a1a182b7ea5140e3e2",
+ "playtime_mins": 664,
+ "playtime": {
+  "windows": 664
+ },
+ "last_played": "2022-10-11",
+ "achievements": [
+  {
+   "key": "KEEPER_TIMELY",
+   "name": "Precisely when I meant to",
+   "unlocked": true,
+   "date": "2022-10-01T19:40:30-05:00"
+  },
+  {
+   "key": "RELICHUNT_RELICTAKEN",
+   "name": "Gifts from the past",
+   "description": "Retrieve a relic.",
+   "unlocked": true,
+   "date": "2022-10-02T10:11:59-05:00"
+  },
+  {
+   "key": "RELICHUNT_MAPSMALL",
+   "name": "Bite sized",
+   "description": "Complete relic hunt on a small map.",
+   "unlocked": true,
+   "date": "2022-10-02T10:13:22-05:00"
+  },
+  {
+   "key": "WORLD2_UNLOCK",
+   "name": "Land of the orbs",
+   "description": "Unlock the orb world.",
+   "unlocked": true,
+   "date": "2022-10-02T10:13:26-05:00"
+  },
+  {
+   "key": "DOME2_UNLOCK",
+   "name": "Stick them with the pointy end",
+   "description": "Unlock the sword dome.",
+   "unlocked": true,
+   "date": "2022-10-02T10:20:08-05:00"
+  },
+  {
+   "key": "PET_FOUND",
+   "name": "Find a Friend",
+   "unlocked": true,
+   "date": "2022-10-02T13:42:20-05:00"
+  },
+  {
+   "key": "RELICHUNT_MAPMEDIUM",
+   "name": "The regular",
+   "description": "Complete relic hunt on a medium sized map.",
+   "unlocked": true,
+   "date": "2022-10-02T13:45:51-05:00"
+  },
+  {
+   "key": "WORLD3_UNLOCK",
+   "name": "Land of the behemoth",
+   "description": "Unlock the behemoth world.",
+   "unlocked": true,
+   "date": "2022-10-02T13:45:55-05:00"
+  },
+  {
+   "key": "PRESTIGE_UNLOCK",
+   "name": "A keeper of status",
+   "description": "Unlock the prestige mode.",
+   "unlocked": true,
+   "date": "2022-10-02T13:46:52-05:00"
+  },
+  {
+   "key": "RESOURCES_COBALTSTACK",
+   "name": "Hoarder",
+   "description": "Hoard 8 cobalt.",
+   "unlocked": true,
+   "date": "2022-10-02T20:06:35-05:00"
+  },
+  {
+   "key": "RELICHUNT_MAPLARGE",
+   "name": "The deep end",
+   "description": "Complete relic hunt on a large map.",
+   "unlocked": true,
+   "date": "2022-10-03T18:51:38-05:00"
+  },
+  {
+   "key": "PROBE_USE",
+   "name": "The third eye",
+   "description": "Detect 15 resources with the probe in one cycle.",
+   "unlocked": true,
+   "date": "2022-10-04T20:46:07-05:00"
+  },
+  {
+   "key": "CONDENSER_USE",
+   "name": "Waterworld",
+   "description": "Produce 10 water with the condenser in one run.",
+   "unlocked": true,
+   "date": "2022-10-04T20:56:08-05:00"
+  },
+  {
+   "key": "WORLD4_UNLOCK",
+   "name": "Land of the stalks",
+   "description": "Unlock the stalk world.",
+   "unlocked": true,
+   "date": "2022-10-04T21:05:15-05:00"
+  },
+  {
+   "key": "REPELLENT_COMPLETE",
+   "name": "Repellent completed",
+   "description": "Unlock every battle ability of the repellent.",
+   "unlocked": true,
+   "date": "2022-10-04T21:05:23-05:00"
+  },
+  {
+   "key": "MINE_ALL",
+   "name": "Thorough",
+   "unlocked": true,
+   "date": "2022-10-11T17:21:47-05:00"
+  },
+  {
+   "key": "ORCHARD_COMPLETE",
+   "name": "Orchard completed",
+   "description": "Unlock every battle ability of the orchard.",
+   "unlocked": true,
+   "date": "2022-10-11T17:23:34-05:00"
+  },
+  {
+   "key": "BLASTMINING_USE",
+   "name": "Earth shattering",
+   "description": "Use 15 blast charges in one run.",
+   "unlocked": false
+  },
+  {
+   "key": "CONVERTER_USE",
+   "name": "Transmogrification",
+   "description": "Perform 10 conversions in one run.",
+   "unlocked": false
+  },
+  {
+   "key": "DOME_LOWHEALTH",
+   "name": "Close Call",
+   "unlocked": false
+  },
+  {
+   "key": "DRILLBERT_TREATS",
+   "name": "Doping",
+   "description": "Feed 10 treats to Drillbert in one run.",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER1_SHOPPINGBAG",
+   "name": "Shopping Bag Conundrum",
+   "description": "Carry 20 resources back to the dome in one go.",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER1_SPEED",
+   "name": "The Need for Speed",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_AMMO",
+   "name": "Full Clip",
+   "description": "Have 6 spheres ready to fire as the Assessor.",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_BIGBUNDLE",
+   "name": "Bulky Goods",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_EXPLODE",
+   "name": "Hat Trick",
+   "description": "Explode 3 spheres with one activation as the Assessor.",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_REFLECTIONS",
+   "name": "Solitaire Pong",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_SPHEREDURATION",
+   "name": "Perfect Placement",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_SPLITS",
+   "name": "Great-Great-Grandspheres",
+   "description": "Split a sphere into the 5th generation as the Assessor.",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER2_UNLOCK",
+   "name": "Master of Gravity",
+   "description": "Unlock the Assessor.",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER_BOTTOM",
+   "name": "Deep and Greedy",
+   "unlocked": false
+  },
+  {
+   "key": "KEEPER_MARATHON",
+   "name": "Half Marathon",
+   "description": "Travel half the length of a Marathon in one run.",
+   "unlocked": false
+  },
+  {
+   "key": "LIFT_JAM",
+   "name": "We're gonna need a bigger lift",
+   "description": "Have 80 resources hanging in the lift.",
+   "unlocked": false
+  },
+  {
+   "key": "LIFT_TRANSPORT",
+   "name": "My good mule",
+   "description": "Have the lift transport 200 resources in one run.",
+   "unlocked": false
+  },
+  {
+   "key": "ORCHARD_LONG",
+   "name": "Rich in Fiber",
+   "description": "Consume a fruit that buffs you for at least 0.9 cycles.",
+   "unlocked": false
+  },
+  {
+   "key": "PRESTIGE_CHUNK",
+   "name": "Bringing home the big bucks",
+   "description": "Gain 200 prestige in one wave.",
+   "unlocked": false
+  },
+  {
+   "key": "PRESTIGE_MULTIPLIER",
+   "name": "Compounding interest",
+   "description": "Reach a prestige multiplier of 10 in endless mode.",
+   "unlocked": false
+  },
+  {
+   "key": "PRESTIGE_WIN",
+   "name": "My name shall be known",
+   "description": "Win a prestige run with 1000 points or more.",
+   "unlocked": false
+  },
+  {
+   "key": "RELICHUNT_BEATFINALE",
+   "name": "I came prepared",
+   "description": "After retrieving the relic, beat the final wave without the help of the relic bomb.",
+   "unlocked": false
+  },
+  {
+   "key": "RELICHUNT_SPEEDY",
+   "name": "Quick Finish",
+   "description": "Retrieve the relic within 20 minutes.",
+   "unlocked": false
+  },
+  {
+   "key": "REPELLENT_BIGDELAY",
+   "name": "Take your time",
+   "description": "Delay a wave by more than 0.5 cycles.",
+   "unlocked": false
+  },
+  {
+   "key": "RESOURCES_COBALTRESCUE",
+   "name": "My Savior",
+   "unlocked": false
+  },
+  {
+   "key": "RUN_LOSEMANY",
+   "name": "Learning Opportunity",
+   "unlocked": false
+  },
+  {
+   "key": "RUN_WINMANY",
+   "name": "Veteran Keeper",
+   "description": "Win 10 runs.",
+   "unlocked": false
+  },
+  {
+   "key": "SHIELD_COMPLETE",
+   "name": "Shield Completed",
+   "description": "Unlock every battle ability of the shield.",
+   "unlocked": false
+  },
+  {
+   "key": "SHIELD_STRONG",
+   "name": "Ready for Battle",
+   "description": "Have 200 or more shield hp ready.",
+   "unlocked": false
+  },
+  {
+   "key": "WORLD5_UNLOCK",
+   "name": "Land of the Spores",
+   "description": "Unlock the mushroom world.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Dome Keeper",
+   "achievements": [
+    {
+     "apiname": "RELICHUNT_RELICTAKEN",
+     "achieved": 1,
+     "unlocktime": 1664723519,
+     "name": "Gifts from the past",
+     "description": "Retrieve a relic."
+    },
+    {
+     "apiname": "SHIELD_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shield Completed",
+     "description": "Unlock every battle ability of the shield."
+    },
+    {
+     "apiname": "WORLD2_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1664723606,
+     "name": "Land of the orbs",
+     "description": "Unlock the orb world."
+    },
+    {
+     "apiname": "WORLD3_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1664736355,
+     "name": "Land of the behemoth",
+     "description": "Unlock the behemoth world."
+    },
+    {
+     "apiname": "WORLD4_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1664935515,
+     "name": "Land of the stalks",
+     "description": "Unlock the stalk world."
+    },
+    {
+     "apiname": "WORLD5_UNLOCK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Land of the Spores",
+     "description": "Unlock the mushroom world."
+    },
+    {
+     "apiname": "DOME2_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1664724008,
+     "name": "Stick them with the pointy end",
+     "description": "Unlock the sword dome."
+    },
+    {
+     "apiname": "RESOURCES_COBALTSTACK",
+     "achieved": 1,
+     "unlocktime": 1664759195,
+     "name": "Hoarder",
+     "description": "Hoard 8 cobalt."
+    },
+    {
+     "apiname": "DRILLBERT_TREATS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Doping",
+     "description": "Feed 10 treats to Drillbert in one run."
+    },
+    {
+     "apiname": "RELICHUNT_SPEEDY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quick Finish",
+     "description": "Retrieve the relic within 20 minutes."
+    },
+    {
+     "apiname": "PRESTIGE_MULTIPLIER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Compounding interest",
+     "description": "Reach a prestige multiplier of 10 in endless mode."
+    },
+    {
+     "apiname": "PRESTIGE_WIN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My name shall be known",
+     "description": "Win a prestige run with 1000 points or more."
+    },
+    {
+     "apiname": "PRESTIGE_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1664736412,
+     "name": "A keeper of status",
+     "description": "Unlock the prestige mode."
+    },
+    {
+     "apiname": "PRESTIGE_CHUNK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bringing home the big bucks",
+     "description": "Gain 200 prestige in one wave."
+    },
+    {
+     "apiname": "DOME_LOWHEALTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Close Call",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER_BOTTOM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deep and Greedy",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER_TIMELY",
+     "achieved": 1,
+     "unlocktime": 1664671230,
+     "name": "Precisely when I meant to",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER_MARATHON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Half Marathon",
+     "description": "Travel half the length of a Marathon in one run."
+    },
+    {
+     "apiname": "KEEPER1_SHOPPINGBAG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shopping Bag Conundrum",
+     "description": "Carry 20 resources back to the dome in one go."
+    },
+    {
+     "apiname": "LIFT_JAM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We're gonna need a bigger lift",
+     "description": "Have 80 resources hanging in the lift."
+    },
+    {
+     "apiname": "MINE_ALL",
+     "achieved": 1,
+     "unlocktime": 1665526907,
+     "name": "Thorough",
+     "description": ""
+    },
+    {
+     "apiname": "RELICHUNT_BEATFINALE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I came prepared",
+     "description": "After retrieving the relic, beat the final wave without the help of the relic bomb."
+    },
+    {
+     "apiname": "RELICHUNT_MAPLARGE",
+     "achieved": 1,
+     "unlocktime": 1664841098,
+     "name": "The deep end",
+     "description": "Complete relic hunt on a large map."
+    },
+    {
+     "apiname": "RELICHUNT_MAPMEDIUM",
+     "achieved": 1,
+     "unlocktime": 1664736351,
+     "name": "The regular",
+     "description": "Complete relic hunt on a medium sized map."
+    },
+    {
+     "apiname": "RELICHUNT_MAPSMALL",
+     "achieved": 1,
+     "unlocktime": 1664723602,
+     "name": "Bite sized",
+     "description": "Complete relic hunt on a small map."
+    },
+    {
+     "apiname": "REPELLENT_BIGDELAY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take your time",
+     "description": "Delay a wave by more than 0.5 cycles."
+    },
+    {
+     "apiname": "SHIELD_STRONG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ready for Battle",
+     "description": "Have 200 or more shield hp ready."
+    },
+    {
+     "apiname": "BLASTMINING_USE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Earth shattering",
+     "description": "Use 15 blast charges in one run."
+    },
+    {
+     "apiname": "PROBE_USE",
+     "achieved": 1,
+     "unlocktime": 1664934367,
+     "name": "The third eye",
+     "description": "Detect 15 resources with the probe in one cycle."
+    },
+    {
+     "apiname": "CONDENSER_USE",
+     "achieved": 1,
+     "unlocktime": 1664934968,
+     "name": "Waterworld",
+     "description": "Produce 10 water with the condenser in one run."
+    },
+    {
+     "apiname": "CONVERTER_USE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Transmogrification",
+     "description": "Perform 10 conversions in one run."
+    },
+    {
+     "apiname": "REPELLENT_COMPLETE",
+     "achieved": 1,
+     "unlocktime": 1664935523,
+     "name": "Repellent completed",
+     "description": "Unlock every battle ability of the repellent."
+    },
+    {
+     "apiname": "ORCHARD_COMPLETE",
+     "achieved": 1,
+     "unlocktime": 1665527014,
+     "name": "Orchard completed",
+     "description": "Unlock every battle ability of the orchard."
+    },
+    {
+     "apiname": "LIFT_TRANSPORT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My good mule",
+     "description": "Have the lift transport 200 resources in one run."
+    },
+    {
+     "apiname": "RUN_WINMANY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Veteran Keeper",
+     "description": "Win 10 runs."
+    },
+    {
+     "apiname": "RUN_LOSEMANY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Learning Opportunity",
+     "description": ""
+    },
+    {
+     "apiname": "ORCHARD_LONG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rich in Fiber",
+     "description": "Consume a fruit that buffs you for at least 0.9 cycles."
+    },
+    {
+     "apiname": "RESOURCES_COBALTRESCUE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My Savior",
+     "description": ""
+    },
+    {
+     "apiname": "PET_FOUND",
+     "achieved": 1,
+     "unlocktime": 1664736140,
+     "name": "Find a Friend",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER1_SPEED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Need for Speed",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER2_REFLECTIONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Solitaire Pong",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER2_SPHEREDURATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect Placement",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER2_UNLOCK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of Gravity",
+     "description": "Unlock the Assessor."
+    },
+    {
+     "apiname": "KEEPER2_BIGBUNDLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bulky Goods",
+     "description": ""
+    },
+    {
+     "apiname": "KEEPER2_SPLITS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Great-Great-Grandspheres",
+     "description": "Split a sphere into the 5th generation as the Assessor."
+    },
+    {
+     "apiname": "KEEPER2_EXPLODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hat Trick",
+     "description": "Explode 3 spheres with one activation as the Assessor."
+    },
+    {
+     "apiname": "KEEPER2_AMMO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Clip",
+     "description": "Have 6 spheres ready to fire as the Assessor."
+    }
+   ],
+   "success": true
+  }
+ }
+}

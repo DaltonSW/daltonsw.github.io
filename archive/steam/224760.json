@@ -1,0 +1,190 @@
+{
+ "provider": "steam",
+ "title": "FEZ",
+ "updated": "2026-07-26",
+ "id": "224760",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 7,
+ "total": 12,
+ "first": "2013-09-08",
+ "last": "2013-09-21",
+ "platform": "PC",
+ "icon": "900590f739d69da4f50112669f5d949a2e6b9261",
+ "playtime_mins": 724,
+ "last_played": "2015-11-03",
+ "achievements": [
+  {
+   "key": "Achievement_02",
+   "name": "Get a cube",
+   "description": "Find your very first cube shard.",
+   "unlocked": true,
+   "date": "2013-09-08T22:00:47-05:00"
+  },
+  {
+   "key": "Achievement_07",
+   "name": "Mightier than the sword",
+   "description": "Find the Writing Cube artifact.",
+   "unlocked": true,
+   "date": "2013-09-21T12:37:38-05:00"
+  },
+  {
+   "key": "Achievement_11",
+   "name": "Cryptographer",
+   "description": "Break the code. ",
+   "unlocked": true,
+   "date": "2013-09-21T12:41:05-05:00"
+  },
+  {
+   "key": "Achievement_09",
+   "name": "Equal and opposite",
+   "description": "Find an Anti-Cube.",
+   "unlocked": true,
+   "date": "2013-09-21T12:46:55-05:00"
+  },
+  {
+   "key": "Achievement_12",
+   "name": "Achievement unlocked",
+   "description": "RTRTLTRTRTLTLTLT",
+   "unlocked": true,
+   "date": "2013-09-21T14:35:39-05:00"
+  },
+  {
+   "key": "Achievement_03",
+   "name": "Kill screen",
+   "description": "Get to the end.",
+   "unlocked": true,
+   "date": "2013-09-21T16:29:29-05:00"
+  },
+  {
+   "key": "Achievement_06",
+   "name": "Phrenologist",
+   "description": "Find the Skull artifact.",
+   "unlocked": true,
+   "date": "2013-09-21T16:29:29-05:00"
+  },
+  {
+   "key": "Achievement_01",
+   "name": "Sum total",
+   "description": "Find ALL collectibles.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_04",
+   "name": "Hexahedronaut",
+   "description": "Collect all 32 Golden Cubes and 32 Anti-Cubes.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_05",
+   "name": "Haikus not epics",
+   "description": "Find the Tome artifact.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_08",
+   "name": "A numbers game",
+   "description": "Find the Counting Cube artifact.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_10",
+   "name": "Warp zone",
+   "description": "Reactivate all 5 warp gates.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "FEZ",
+   "achievements": [
+    {
+     "apiname": "Achievement_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sum total",
+     "description": "Find ALL collectibles."
+    },
+    {
+     "apiname": "Achievement_02",
+     "achieved": 1,
+     "unlocktime": 1378695647,
+     "name": "Get a cube",
+     "description": "Find your very first cube shard."
+    },
+    {
+     "apiname": "Achievement_03",
+     "achieved": 1,
+     "unlocktime": 1379798969,
+     "name": "Kill screen",
+     "description": "Get to the end."
+    },
+    {
+     "apiname": "Achievement_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hexahedronaut",
+     "description": "Collect all 32 Golden Cubes and 32 Anti-Cubes."
+    },
+    {
+     "apiname": "Achievement_05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Haikus not epics",
+     "description": "Find the Tome artifact."
+    },
+    {
+     "apiname": "Achievement_06",
+     "achieved": 1,
+     "unlocktime": 1379798969,
+     "name": "Phrenologist",
+     "description": "Find the Skull artifact."
+    },
+    {
+     "apiname": "Achievement_07",
+     "achieved": 1,
+     "unlocktime": 1379785058,
+     "name": "Mightier than the sword",
+     "description": "Find the Writing Cube artifact."
+    },
+    {
+     "apiname": "Achievement_08",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A numbers game",
+     "description": "Find the Counting Cube artifact."
+    },
+    {
+     "apiname": "Achievement_09",
+     "achieved": 1,
+     "unlocktime": 1379785615,
+     "name": "Equal and opposite",
+     "description": "Find an Anti-Cube."
+    },
+    {
+     "apiname": "Achievement_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Warp zone",
+     "description": "Reactivate all 5 warp gates."
+    },
+    {
+     "apiname": "Achievement_11",
+     "achieved": 1,
+     "unlocktime": 1379785265,
+     "name": "Cryptographer",
+     "description": "Break the code. "
+    },
+    {
+     "apiname": "Achievement_12",
+     "achieved": 1,
+     "unlocktime": 1379792139,
+     "name": "Achievement unlocked",
+     "description": "RTRTLTRTRTLTLTLT"
+    }
+   ],
+   "success": true
+  }
+ }
+}

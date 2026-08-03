@@ -1,0 +1,213 @@
+{
+ "provider": "steam",
+ "title": "Comet 64",
+ "updated": "2026-07-26",
+ "id": "1397290",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 13,
+ "total": 13,
+ "first": "2024-01-20",
+ "last": "2025-02-09",
+ "award_kind": "all achievements",
+ "platform": "PC",
+ "icon": "e993829d5f2d792efd92b8ebd46b5361bd12c76a",
+ "playtime_mins": 507,
+ "playtime": {
+  "windows": 507
+ },
+ "last_played": "2025-02-09",
+ "achievements": [
+  {
+   "key": "welcome",
+   "name": "Hello World;",
+   "description": "Solve your first puzzle.",
+   "unlocked": true,
+   "date": "2024-01-20T08:24:10-06:00"
+  },
+  {
+   "key": "disk1",
+   "name": "End of Disk 1",
+   "description": "Solve all puzzles in Disk 1",
+   "unlocked": true,
+   "date": "2025-02-08T19:35:28-06:00"
+  },
+  {
+   "key": "voodoo",
+   "name": "What Sorcery is This?",
+   "description": "Enter the correct password to access voodoo.txt",
+   "unlocked": true,
+   "date": "2025-02-09T20:36:45-06:00"
+  },
+  {
+   "key": "master",
+   "name": "The Master",
+   "description": "Play the secret ending",
+   "unlocked": true,
+   "date": "2025-02-09T20:52:41-06:00"
+  },
+  {
+   "key": "trinity",
+   "name": "The Holy Trinity",
+   "description": "Solve 'Must Come Down' in exactly 3 lines and 303 cycles",
+   "unlocked": true,
+   "date": "2025-02-09T21:06:55-06:00"
+  },
+  {
+   "key": "disk2",
+   "name": "End of Disk 2",
+   "description": "Solve all puzzles in Disk 2",
+   "unlocked": true,
+   "date": "2025-02-09T21:16:43-06:00"
+  },
+  {
+   "key": "disk3",
+   "name": "End of Disk 3",
+   "description": "Solve all puzzles in Disk 3",
+   "unlocked": true,
+   "date": "2025-02-09T21:24:32-06:00"
+  },
+  {
+   "key": "disk4",
+   "name": "End of Disk 4",
+   "description": "Solve all puzzles in Disk 4",
+   "unlocked": true,
+   "date": "2025-02-09T21:32:22-06:00"
+  },
+  {
+   "key": "diska",
+   "name": "A:\\\u003e Completed",
+   "description": "Solve all puzzles in Disk A",
+   "unlocked": true,
+   "date": "2025-02-09T21:35:23-06:00"
+  },
+  {
+   "key": "diskb",
+   "name": "B:\\\u003e Completed",
+   "description": "Solve all puzzles in Disk B",
+   "unlocked": true,
+   "date": "2025-02-09T21:40:47-06:00"
+  },
+  {
+   "key": "bethlehem",
+   "name": "Star of Bethlehem",
+   "description": "Get the secret star",
+   "unlocked": true,
+   "date": "2025-02-09T22:07:28-06:00"
+  },
+  {
+   "key": "allstar",
+   "name": "Always Be Closing",
+   "description": "Get every star in the game",
+   "unlocked": true,
+   "date": "2025-02-09T22:08:26-06:00"
+  },
+  {
+   "key": "father",
+   "name": "The Father",
+   "description": "Play the real ending",
+   "unlocked": true,
+   "date": "2025-02-09T22:09:53-06:00"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Comet 64",
+   "achievements": [
+    {
+     "apiname": "welcome",
+     "achieved": 1,
+     "unlocktime": 1705760650,
+     "name": "Hello World;",
+     "description": "Solve your first puzzle."
+    },
+    {
+     "apiname": "disk1",
+     "achieved": 1,
+     "unlocktime": 1739064928,
+     "name": "End of Disk 1",
+     "description": "Solve all puzzles in Disk 1"
+    },
+    {
+     "apiname": "disk2",
+     "achieved": 1,
+     "unlocktime": 1739157403,
+     "name": "End of Disk 2",
+     "description": "Solve all puzzles in Disk 2"
+    },
+    {
+     "apiname": "disk3",
+     "achieved": 1,
+     "unlocktime": 1739157872,
+     "name": "End of Disk 3",
+     "description": "Solve all puzzles in Disk 3"
+    },
+    {
+     "apiname": "disk4",
+     "achieved": 1,
+     "unlocktime": 1739158342,
+     "name": "End of Disk 4",
+     "description": "Solve all puzzles in Disk 4"
+    },
+    {
+     "apiname": "diska",
+     "achieved": 1,
+     "unlocktime": 1739158523,
+     "name": "A:\\\u003e Completed",
+     "description": "Solve all puzzles in Disk A"
+    },
+    {
+     "apiname": "diskb",
+     "achieved": 1,
+     "unlocktime": 1739158847,
+     "name": "B:\\\u003e Completed",
+     "description": "Solve all puzzles in Disk B"
+    },
+    {
+     "apiname": "voodoo",
+     "achieved": 1,
+     "unlocktime": 1739155005,
+     "name": "What Sorcery is This?",
+     "description": "Enter the correct password to access voodoo.txt"
+    },
+    {
+     "apiname": "bethlehem",
+     "achieved": 1,
+     "unlocktime": 1739160448,
+     "name": "Star of Bethlehem",
+     "description": "Get the secret star"
+    },
+    {
+     "apiname": "allstar",
+     "achieved": 1,
+     "unlocktime": 1739160506,
+     "name": "Always Be Closing",
+     "description": "Get every star in the game"
+    },
+    {
+     "apiname": "trinity",
+     "achieved": 1,
+     "unlocktime": 1739156815,
+     "name": "The Holy Trinity",
+     "description": "Solve 'Must Come Down' in exactly 3 lines and 303 cycles"
+    },
+    {
+     "apiname": "master",
+     "achieved": 1,
+     "unlocktime": 1739155961,
+     "name": "The Master",
+     "description": "Play the secret ending"
+    },
+    {
+     "apiname": "father",
+     "achieved": 1,
+     "unlocktime": 1739160593,
+     "name": "The Father",
+     "description": "Play the real ending"
+    }
+   ],
+   "success": true
+  }
+ }
+}

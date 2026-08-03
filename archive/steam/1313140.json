@@ -1,0 +1,802 @@
+{
+ "provider": "steam",
+ "title": "Cult of the Lamb",
+ "updated": "2026-07-26",
+ "id": "1313140",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 37,
+ "total": 57,
+ "first": "2022-08-12",
+ "last": "2022-08-19",
+ "platform": "PC",
+ "icon": "337223c1a97705aee1714ad9534c7d6cfabd92b0",
+ "playtime_mins": 1411,
+ "playtime": {
+  "deck": 12,
+  "linux": 12,
+  "windows": 1398
+ },
+ "last_played": "2022-08-19",
+ "achievements": [
+  {
+   "key": "DEAL_WITH_THE_DEVIL",
+   "name": "Deal with the Devil",
+   "description": "A deal that cannot be undone.",
+   "unlocked": true,
+   "date": "2022-08-12T16:15:09-05:00"
+  },
+  {
+   "key": "FIRST_FOLLOWER",
+   "name": "First Follower",
+   "description": "The first devotee to the Cult of the Lamb.",
+   "unlocked": true,
+   "date": "2022-08-12T16:21:13-05:00"
+  },
+  {
+   "key": "KILL_FIRST_BOSS",
+   "name": "Death to Non-Believers",
+   "description": "Defeat the first mini-boss.",
+   "unlocked": true,
+   "date": "2022-08-12T17:12:21-05:00"
+  },
+  {
+   "key": "DELIVER_FIRST_SERMON",
+   "name": "Preacher of Truth",
+   "description": "Let the Word be known.",
+   "unlocked": true,
+   "date": "2022-08-12T17:50:04-05:00"
+  },
+  {
+   "key": "GAIN_FIVE_FOLLOWERS",
+   "name": "The Flock Grows",
+   "description": "Gain 5 Followers.",
+   "unlocked": true,
+   "date": "2022-08-13T08:38:39-05:00"
+  },
+  {
+   "key": "FIRST_RITUAL",
+   "name": "Crosser of Thresholds",
+   "description": "A new world awaits.",
+   "unlocked": true,
+   "date": "2022-08-13T08:42:59-05:00"
+  },
+  {
+   "key": "WIN_KNUCKLEBONES",
+   "name": "Game of Chance",
+   "description": "Win a game of Knucklebones.",
+   "unlocked": true,
+   "date": "2022-08-13T08:48:47-05:00"
+  },
+  {
+   "key": "KILL_BOSS_1",
+   "name": "See No Evil",
+   "description": "Defeat Leshy.",
+   "unlocked": true,
+   "date": "2022-08-13T09:37:10-05:00"
+  },
+  {
+   "key": "FIX_LIGHTHOUSE",
+   "name": "Bringer of Light",
+   "description": "Reignite the lighthouse.",
+   "unlocked": true,
+   "date": "2022-08-13T09:49:18-05:00"
+  },
+  {
+   "key": "TEN_FOLLOWERS",
+   "name": "Flock of Many",
+   "description": "Gain 10 Followers.",
+   "unlocked": true,
+   "date": "2022-08-13T13:12:32-05:00"
+  },
+  {
+   "key": "FIRST_DEATH",
+   "name": "The First Death",
+   "description": "Salvation awaits the fallen soul.",
+   "unlocked": true,
+   "date": "2022-08-13T13:15:51-05:00"
+  },
+  {
+   "key": "FIRST_SACRIFICE",
+   "name": "Sacrificial Beast",
+   "description": "Sacrifice a Follower.",
+   "unlocked": true,
+   "date": "2022-08-13T13:15:55-05:00"
+  },
+  {
+   "key": "UNLOCK_TUNIC",
+   "name": "Transform",
+   "description": "Unlock a new fleece.",
+   "unlocked": true,
+   "date": "2022-08-14T13:46:14-05:00"
+  },
+  {
+   "key": "KILL_BOSS_2",
+   "name": "Speak No Evil",
+   "description": "Defeat Heket.",
+   "unlocked": true,
+   "date": "2022-08-14T14:18:43-05:00"
+  },
+  {
+   "key": "FISH_ALL_TYPES",
+   "name": "Teach a Lamb to Fish",
+   "description": "Catch 1 of every fish.",
+   "unlocked": true,
+   "date": "2022-08-14T15:15:53-05:00"
+  },
+  {
+   "key": "ALL_CURSES_UNLOCKED",
+   "name": "Curses of Plenty",
+   "description": "Unlock all curses.",
+   "unlocked": true,
+   "date": "2022-08-14T19:33:14-05:00"
+  },
+  {
+   "key": "FULLY_UPGRADED_SHRINE",
+   "name": "Devotion",
+   "description": "Fully Upgrade Cult.",
+   "unlocked": true,
+   "date": "2022-08-14T19:34:37-05:00"
+  },
+  {
+   "key": "UPGRADE_ALL_SERMONS",
+   "name": "Gospel",
+   "description": "Unlock all doctrines.",
+   "unlocked": true,
+   "date": "2022-08-14T21:14:05-05:00"
+  },
+  {
+   "key": "ALL_WEAPONS_UNLOCKED",
+   "name": "Weapons of Plenty",
+   "description": "Unlock all weapons.",
+   "unlocked": true,
+   "date": "2022-08-15T16:14:17-05:00"
+  },
+  {
+   "key": "666_GOLD",
+   "name": "Hoarder of Wealth",
+   "description": "Have 666 gold coins.",
+   "unlocked": true,
+   "date": "2022-08-15T16:15:00-05:00"
+  },
+  {
+   "key": "KILL_BOSS_3",
+   "name": "Hear No Evil",
+   "description": "Defeat Kallamar.",
+   "unlocked": true,
+   "date": "2022-08-15T16:49:46-05:00"
+  },
+  {
+   "key": "TWENTY_FOLLOWERS",
+   "name": "Flock of All",
+   "description": "Gain 20 Followers.",
+   "unlocked": true,
+   "date": "2022-08-15T19:40:50-05:00"
+  },
+  {
+   "key": "TAKE_CONFESSION",
+   "name": "Keeper of Secrets",
+   "description": "Take confession.",
+   "unlocked": true,
+   "date": "2022-08-15T20:51:42-05:00"
+  },
+  {
+   "key": "FIND_ALL_LOCATIONS",
+   "name": "Leader of the Crusade",
+   "description": "Find all 5 locations.",
+   "unlocked": true,
+   "date": "2022-08-15T21:27:15-05:00"
+  },
+  {
+   "key": "WIN_KNUCKLEBONES_ALL",
+   "name": "Master of Chance",
+   "description": "Defeat all opponents in Knucklebones.",
+   "unlocked": true,
+   "date": "2022-08-16T16:30:33-05:00"
+  },
+  {
+   "key": "SACRIFICE_FOLLOWERS",
+   "name": "Weigher of Souls",
+   "description": "Sacrifice 10 Followers.",
+   "unlocked": true,
+   "date": "2022-08-16T20:41:17-05:00"
+  },
+  {
+   "key": "KILL_BOSS_4",
+   "name": "Think No Evil",
+   "description": "Defeat Shamura.",
+   "unlocked": true,
+   "date": "2022-08-17T18:00:07-05:00"
+  },
+  {
+   "key": "UNLOCK_ALL_TUNICS",
+   "name": "Transmute",
+   "description": "Unlock all fleeces.",
+   "unlocked": true,
+   "date": "2022-08-17T19:30:55-05:00"
+  },
+  {
+   "key": "KILL_BOSS_1_NODAMAGE",
+   "name": "Order",
+   "description": "Beat Leshy without taking damage.",
+   "unlocked": true,
+   "date": "2022-08-17T19:43:24-05:00"
+  },
+  {
+   "key": "KILL_BOSS_5",
+   "name": "Do No Evil",
+   "unlocked": true,
+   "date": "2022-08-17T20:01:54-05:00"
+  },
+  {
+   "key": "ALL_SKINS_UNLOCKED",
+   "name": "Full Flock",
+   "description": "Unlock all Follower Skins.",
+   "unlocked": true,
+   "date": "2022-08-17T20:05:55-05:00"
+  },
+  {
+   "key": "FEED_FOLLOWER_MEAT",
+   "name": "Cannibal",
+   "description": "Cook a Follower meat meal.",
+   "unlocked": true,
+   "date": "2022-08-17T20:06:36-05:00"
+  },
+  {
+   "key": "ALL_TAROTS_UNLOCKED",
+   "name": "Full Deck",
+   "description": "Unlock all tarot cards.",
+   "unlocked": true,
+   "date": "2022-08-19T16:10:05-05:00"
+  },
+  {
+   "key": "KILL_BOSS_2_NODAMAGE",
+   "name": "Sate",
+   "description": "Beat Heket without taking damage.",
+   "unlocked": true,
+   "date": "2022-08-19T16:16:10-05:00"
+  },
+  {
+   "key": "KILL_BOSS_3_NODAMAGE",
+   "name": "Cure",
+   "description": "Beat Kallamar without taking damage.",
+   "unlocked": true,
+   "date": "2022-08-19T17:59:47-05:00"
+  },
+  {
+   "key": "KILL_BOSS_4_NODAMAGE",
+   "name": "Peace",
+   "description": "Beat Shamura without taking damage.",
+   "unlocked": true,
+   "date": "2022-08-19T21:51:08-05:00"
+  },
+  {
+   "key": "GODHOOD",
+   "name": "Godhood",
+   "description": "No longer a servant, no less than a God.",
+   "unlocked": true,
+   "date": "2022-08-19T21:51:29-05:00"
+  },
+  {
+   "key": "ALL_FLOCKADE",
+   "name": "The Complete Collection",
+   "description": "Collect all Flockade pieces",
+   "unlocked": false
+  },
+  {
+   "key": "ALL_LEADER_FOLLOWERS",
+   "name": "Leader of Leaders",
+   "unlocked": false
+  },
+  {
+   "key": "ALL_LEGENDARY_WEAPONS",
+   "name": "Maker of Legends",
+   "description": "Restore all Legendary Weapons",
+   "unlocked": false
+  },
+  {
+   "key": "ALL_LORE",
+   "name": "Holder of History",
+   "description": "Unlock all lore.",
+   "unlocked": false
+  },
+  {
+   "key": "ALL_OUTFITS",
+   "name": "Setter of Trends",
+   "description": "Unlock all outfits.",
+   "unlocked": false
+  },
+  {
+   "key": "ALL_RELICS_UNLOCKED",
+   "name": "Relics of the Old Faith",
+   "description": "Collect all Relics.",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_EXECUTIONER",
+   "name": "Swing of the Axe",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_UP_MIDAS",
+   "name": "Shake Down",
+   "description": "Get your Gold back from Midas.",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_WOLF",
+   "name": "Killer Instinct",
+   "description": "Defeat Marchosias",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_YNGYA",
+   "name": "Rot No More",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_YNGYA_NOATTACK",
+   "name": "Respect Thy Mother",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_CHALLENGE_ROW",
+   "name": "Slayer of Souls",
+   "description": "Complete a row in Purgatory.",
+   "unlocked": false
+  },
+  {
+   "key": "DISCIPLES_5",
+   "name": "Apostles",
+   "description": "Have 12 Disciples.",
+   "unlocked": false
+  },
+  {
+   "key": "FULLY_UPGRADE_RANKING",
+   "name": "Aesthetics of the Lamb",
+   "description": "Completely Upgrade the Temple.",
+   "unlocked": false
+  },
+  {
+   "key": "INDOCTRINATE_MIDAS",
+   "name": "Eat the Rich",
+   "unlocked": false
+  },
+  {
+   "key": "MATING_5",
+   "name": "Propagate the Flock",
+   "description": "Hatch 5 eggs.",
+   "unlocked": false
+  },
+  {
+   "key": "RATAU_END",
+   "name": "The Prodigal Child",
+   "description": "Inherit Ratau's legacy",
+   "unlocked": false
+  },
+  {
+   "key": "RETURN_BAAL_AYM",
+   "name": "True Love Found",
+   "unlocked": false
+  },
+  {
+   "key": "SOZO_QUEST",
+   "name": "Regenerate",
+   "unlocked": false
+  },
+  {
+   "key": "WOOLHAVEN_COMPLETE",
+   "name": "Woolhaven Reborn",
+   "description": "Complete everything in Woolhaven",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Cult of the Lamb",
+   "achievements": [
+    {
+     "apiname": "FIRST_FOLLOWER",
+     "achieved": 1,
+     "unlocktime": 1660339273,
+     "name": "First Follower",
+     "description": "The first devotee to the Cult of the Lamb."
+    },
+    {
+     "apiname": "DEAL_WITH_THE_DEVIL",
+     "achieved": 1,
+     "unlocktime": 1660338909,
+     "name": "Deal with the Devil",
+     "description": "A deal that cannot be undone."
+    },
+    {
+     "apiname": "DELIVER_FIRST_SERMON",
+     "achieved": 1,
+     "unlocktime": 1660344604,
+     "name": "Preacher of Truth",
+     "description": "Let the Word be known."
+    },
+    {
+     "apiname": "FIRST_DEATH",
+     "achieved": 1,
+     "unlocktime": 1660414551,
+     "name": "The First Death",
+     "description": "Salvation awaits the fallen soul."
+    },
+    {
+     "apiname": "KILL_FIRST_BOSS",
+     "achieved": 1,
+     "unlocktime": 1660342341,
+     "name": "Death to Non-Believers",
+     "description": "Defeat the first mini-boss."
+    },
+    {
+     "apiname": "GAIN_FIVE_FOLLOWERS",
+     "achieved": 1,
+     "unlocktime": 1660397919,
+     "name": "The Flock Grows",
+     "description": "Gain 5 Followers."
+    },
+    {
+     "apiname": "TEN_FOLLOWERS",
+     "achieved": 1,
+     "unlocktime": 1660414352,
+     "name": "Flock of Many",
+     "description": "Gain 10 Followers."
+    },
+    {
+     "apiname": "TWENTY_FOLLOWERS",
+     "achieved": 1,
+     "unlocktime": 1660610450,
+     "name": "Flock of All",
+     "description": "Gain 20 Followers."
+    },
+    {
+     "apiname": "KILL_BOSS_1",
+     "achieved": 1,
+     "unlocktime": 1660401430,
+     "name": "See No Evil",
+     "description": "Defeat Leshy."
+    },
+    {
+     "apiname": "KILL_BOSS_2",
+     "achieved": 1,
+     "unlocktime": 1660504723,
+     "name": "Speak No Evil",
+     "description": "Defeat Heket."
+    },
+    {
+     "apiname": "KILL_BOSS_3",
+     "achieved": 1,
+     "unlocktime": 1660600186,
+     "name": "Hear No Evil",
+     "description": "Defeat Kallamar."
+    },
+    {
+     "apiname": "KILL_BOSS_4",
+     "achieved": 1,
+     "unlocktime": 1660777207,
+     "name": "Think No Evil",
+     "description": "Defeat Shamura."
+    },
+    {
+     "apiname": "KILL_BOSS_5",
+     "achieved": 1,
+     "unlocktime": 1660784514,
+     "name": "Do No Evil",
+     "description": ""
+    },
+    {
+     "apiname": "KILL_BOSS_1_NODAMAGE",
+     "achieved": 1,
+     "unlocktime": 1660783404,
+     "name": "Order",
+     "description": "Beat Leshy without taking damage."
+    },
+    {
+     "apiname": "KILL_BOSS_2_NODAMAGE",
+     "achieved": 1,
+     "unlocktime": 1660943770,
+     "name": "Sate",
+     "description": "Beat Heket without taking damage."
+    },
+    {
+     "apiname": "KILL_BOSS_3_NODAMAGE",
+     "achieved": 1,
+     "unlocktime": 1660949987,
+     "name": "Cure",
+     "description": "Beat Kallamar without taking damage."
+    },
+    {
+     "apiname": "KILL_BOSS_4_NODAMAGE",
+     "achieved": 1,
+     "unlocktime": 1660963868,
+     "name": "Peace",
+     "description": "Beat Shamura without taking damage."
+    },
+    {
+     "apiname": "TAKE_CONFESSION",
+     "achieved": 1,
+     "unlocktime": 1660614702,
+     "name": "Keeper of Secrets",
+     "description": "Take confession."
+    },
+    {
+     "apiname": "FIND_ALL_LOCATIONS",
+     "achieved": 1,
+     "unlocktime": 1660616835,
+     "name": "Leader of the Crusade",
+     "description": "Find all 5 locations."
+    },
+    {
+     "apiname": "FIX_LIGHTHOUSE",
+     "achieved": 1,
+     "unlocktime": 1660402158,
+     "name": "Bringer of Light",
+     "description": "Reignite the lighthouse."
+    },
+    {
+     "apiname": "ALL_SKINS_UNLOCKED",
+     "achieved": 1,
+     "unlocktime": 1660784755,
+     "name": "Full Flock",
+     "description": "Unlock all Follower Skins."
+    },
+    {
+     "apiname": "ALL_TAROTS_UNLOCKED",
+     "achieved": 1,
+     "unlocktime": 1660943405,
+     "name": "Full Deck",
+     "description": "Unlock all tarot cards."
+    },
+    {
+     "apiname": "FISH_ALL_TYPES",
+     "achieved": 1,
+     "unlocktime": 1660508153,
+     "name": "Teach a Lamb to Fish",
+     "description": "Catch 1 of every fish."
+    },
+    {
+     "apiname": "FIRST_RITUAL",
+     "achieved": 1,
+     "unlocktime": 1660398179,
+     "name": "Crosser of Thresholds",
+     "description": "A new world awaits."
+    },
+    {
+     "apiname": "FIRST_SACRIFICE",
+     "achieved": 1,
+     "unlocktime": 1660414555,
+     "name": "Sacrificial Beast",
+     "description": "Sacrifice a Follower."
+    },
+    {
+     "apiname": "SACRIFICE_FOLLOWERS",
+     "achieved": 1,
+     "unlocktime": 1660700477,
+     "name": "Weigher of Souls",
+     "description": "Sacrifice 10 Followers."
+    },
+    {
+     "apiname": "666_GOLD",
+     "achieved": 1,
+     "unlocktime": 1660598100,
+     "name": "Hoarder of Wealth",
+     "description": "Have 666 gold coins."
+    },
+    {
+     "apiname": "ALL_WEAPONS_UNLOCKED",
+     "achieved": 1,
+     "unlocktime": 1660598057,
+     "name": "Weapons of Plenty",
+     "description": "Unlock all weapons."
+    },
+    {
+     "apiname": "ALL_CURSES_UNLOCKED",
+     "achieved": 1,
+     "unlocktime": 1660523594,
+     "name": "Curses of Plenty",
+     "description": "Unlock all curses."
+    },
+    {
+     "apiname": "FULLY_UPGRADED_SHRINE",
+     "achieved": 1,
+     "unlocktime": 1660523677,
+     "name": "Devotion",
+     "description": "Fully Upgrade Cult."
+    },
+    {
+     "apiname": "UNLOCK_TUNIC",
+     "achieved": 1,
+     "unlocktime": 1660502774,
+     "name": "Transform",
+     "description": "Unlock a new fleece."
+    },
+    {
+     "apiname": "UNLOCK_ALL_TUNICS",
+     "achieved": 1,
+     "unlocktime": 1660782655,
+     "name": "Transmute",
+     "description": "Unlock all fleeces."
+    },
+    {
+     "apiname": "FEED_FOLLOWER_MEAT",
+     "achieved": 1,
+     "unlocktime": 1660784796,
+     "name": "Cannibal",
+     "description": "Cook a Follower meat meal."
+    },
+    {
+     "apiname": "UPGRADE_ALL_SERMONS",
+     "achieved": 1,
+     "unlocktime": 1660529645,
+     "name": "Gospel",
+     "description": "Unlock all doctrines."
+    },
+    {
+     "apiname": "WIN_KNUCKLEBONES",
+     "achieved": 1,
+     "unlocktime": 1660398527,
+     "name": "Game of Chance",
+     "description": "Win a game of Knucklebones."
+    },
+    {
+     "apiname": "WIN_KNUCKLEBONES_ALL",
+     "achieved": 1,
+     "unlocktime": 1660685433,
+     "name": "Master of Chance",
+     "description": "Defeat all opponents in Knucklebones."
+    },
+    {
+     "apiname": "GODHOOD",
+     "achieved": 1,
+     "unlocktime": 1660963889,
+     "name": "Godhood",
+     "description": "No longer a servant, no less than a God."
+    },
+    {
+     "apiname": "ALL_RELICS_UNLOCKED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Relics of the Old Faith",
+     "description": "Collect all Relics."
+    },
+    {
+     "apiname": "BEAT_UP_MIDAS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shake Down",
+     "description": "Get your Gold back from Midas."
+    },
+    {
+     "apiname": "RETURN_BAAL_AYM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Love Found",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_CHALLENGE_ROW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slayer of Souls",
+     "description": "Complete a row in Purgatory."
+    },
+    {
+     "apiname": "ALL_LEADER_FOLLOWERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leader of Leaders",
+     "description": ""
+    },
+    {
+     "apiname": "ALL_LORE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Holder of History",
+     "description": "Unlock all lore."
+    },
+    {
+     "apiname": "ALL_OUTFITS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Setter of Trends",
+     "description": "Unlock all outfits."
+    },
+    {
+     "apiname": "DISCIPLES_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Apostles",
+     "description": "Have 12 Disciples."
+    },
+    {
+     "apiname": "FULLY_UPGRADE_RANKING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Aesthetics of the Lamb",
+     "description": "Completely Upgrade the Temple."
+    },
+    {
+     "apiname": "SOZO_QUEST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Regenerate",
+     "description": ""
+    },
+    {
+     "apiname": "MATING_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Propagate the Flock",
+     "description": "Hatch 5 eggs."
+    },
+    {
+     "apiname": "ALL_LEGENDARY_WEAPONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maker of Legends",
+     "description": "Restore all Legendary Weapons"
+    },
+    {
+     "apiname": "RATAU_END",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Prodigal Child",
+     "description": "Inherit Ratau's legacy"
+    },
+    {
+     "apiname": "INDOCTRINATE_MIDAS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eat the Rich",
+     "description": ""
+    },
+    {
+     "apiname": "ALL_FLOCKADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Complete Collection",
+     "description": "Collect all Flockade pieces"
+    },
+    {
+     "apiname": "WOOLHAVEN_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Woolhaven Reborn",
+     "description": "Complete everything in Woolhaven"
+    },
+    {
+     "apiname": "BEAT_EXECUTIONER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Swing of the Axe",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_WOLF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Killer Instinct",
+     "description": "Defeat Marchosias"
+    },
+    {
+     "apiname": "BEAT_YNGYA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rot No More",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_YNGYA_NOATTACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Respect Thy Mother",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

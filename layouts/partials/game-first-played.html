@@ -1,0 +1,18 @@
+{{/* Context: a game's term Page. Returns the earliest known "started" date as
+     a string: the true first-played date from playthroughs.yaml/written
+     playthroughs when any exist, falling back to front-matter Params.started
+     only for games with nothing logged yet — same fallback games-timeline.html
+     uses, so sort order matches what the chart shows. */}}
+{{- $entries := partial "playthrough-entries.html" . -}}
+{{- $earliest := "" -}}
+{{- range $entries -}}
+  {{- if .started -}}
+    {{- if or (eq $earliest "") (lt .started $earliest) -}}
+      {{- $earliest = .started -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $earliest "" -}}
+  {{- with .Params.started -}}{{- $earliest = . -}}{{- end -}}
+{{- end -}}
+{{- return $earliest -}}

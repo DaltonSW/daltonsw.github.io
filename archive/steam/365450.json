@@ -1,0 +1,180 @@
+{
+ "provider": "steam",
+ "title": "Hacknet",
+ "updated": "2026-07-26",
+ "id": "365450",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 10,
+ "total": 11,
+ "first": "2018-02-10",
+ "last": "2018-02-11",
+ "platform": "PC",
+ "icon": "2445c4ead6ee47784a326922271ec1c0b41d64e2",
+ "playtime_mins": 423,
+ "last_played": "2018-02-11",
+ "achievements": [
+  {
+   "key": "progress_entropy",
+   "name": "Entropy",
+   "description": "Be granted an account within Entropy",
+   "unlocked": true,
+   "date": "2018-02-10T23:29:15-06:00"
+  },
+  {
+   "key": "pointclicker_expert",
+   "name": "You better not have clicked for those...",
+   "description": "Have a truly absurd number of pointclicker points",
+   "unlocked": true,
+   "date": "2018-02-10T23:37:20-06:00"
+  },
+  {
+   "key": "trace_close",
+   "name": "To the Wire",
+   "description": "Disconnect from a traced system with less than half a second to spare",
+   "unlocked": true,
+   "date": "2018-02-11T00:34:02-06:00"
+  },
+  {
+   "key": "progress_csec",
+   "name": "CSEC",
+   "description": "Be granted an account within CSEC",
+   "unlocked": true,
+   "date": "2018-02-11T00:48:09-06:00"
+  },
+  {
+   "key": "themeswitch_run",
+   "name": "Makeover!",
+   "description": "Run ThemeSwitcher",
+   "unlocked": true,
+   "date": "2018-02-11T00:59:06-06:00"
+  },
+  {
+   "key": "progress_complete",
+   "name": "Hacknet",
+   "description": "Complete Bit's final request",
+   "unlocked": true,
+   "date": "2018-02-11T19:57:01-06:00"
+  },
+  {
+   "key": "kill_tutorial",
+   "name": "Quickdraw",
+   "description": "Complete the tutorial earlier than normal",
+   "unlocked": true,
+   "date": "2018-02-11T20:06:44-06:00"
+  },
+  {
+   "key": "pointclicker_basic",
+   "name": "PointClicker",
+   "description": "Purchase the final PointClicker upgrade",
+   "unlocked": true,
+   "date": "2018-02-11T20:27:46-06:00"
+  },
+  {
+   "key": "secret_path_complete",
+   "name": "/el Sec Champion",
+   "description": "Master of /el's friendly community",
+   "unlocked": true,
+   "date": "2018-02-11T21:45:33-06:00"
+  },
+  {
+   "key": "clock_run",
+   "name": "TRUE ULTIMATE POWER",
+   "description": "Run Clock.exe",
+   "unlocked": true,
+   "date": "2018-02-11T21:51:42-06:00"
+  },
+  {
+   "key": "rude_response",
+   "name": "Rude",
+   "description": "That's just impolite",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Hacknet",
+   "achievements": [
+    {
+     "apiname": "kill_tutorial",
+     "achieved": 1,
+     "unlocktime": 1518401204,
+     "name": "Quickdraw",
+     "description": "Complete the tutorial earlier than normal"
+    },
+    {
+     "apiname": "rude_response",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rude",
+     "description": "That's just impolite"
+    },
+    {
+     "apiname": "progress_complete",
+     "achieved": 1,
+     "unlocktime": 1518400621,
+     "name": "Hacknet",
+     "description": "Complete Bit's final request"
+    },
+    {
+     "apiname": "progress_csec",
+     "achieved": 1,
+     "unlocktime": 1518331689,
+     "name": "CSEC",
+     "description": "Be granted an account within CSEC"
+    },
+    {
+     "apiname": "progress_entropy",
+     "achieved": 1,
+     "unlocktime": 1518326955,
+     "name": "Entropy",
+     "description": "Be granted an account within Entropy"
+    },
+    {
+     "apiname": "pointclicker_basic",
+     "achieved": 1,
+     "unlocktime": 1518402466,
+     "name": "PointClicker",
+     "description": "Purchase the final PointClicker upgrade"
+    },
+    {
+     "apiname": "pointclicker_expert",
+     "achieved": 1,
+     "unlocktime": 1518327440,
+     "name": "You better not have clicked for those...",
+     "description": "Have a truly absurd number of pointclicker points"
+    },
+    {
+     "apiname": "clock_run",
+     "achieved": 1,
+     "unlocktime": 1518407502,
+     "name": "TRUE ULTIMATE POWER",
+     "description": "Run Clock.exe"
+    },
+    {
+     "apiname": "themeswitch_run",
+     "achieved": 1,
+     "unlocktime": 1518332346,
+     "name": "Makeover!",
+     "description": "Run ThemeSwitcher"
+    },
+    {
+     "apiname": "trace_close",
+     "achieved": 1,
+     "unlocktime": 1518330842,
+     "name": "To the Wire",
+     "description": "Disconnect from a traced system with less than half a second to spare"
+    },
+    {
+     "apiname": "secret_path_complete",
+     "achieved": 1,
+     "unlocktime": 1518407133,
+     "name": "/el Sec Champion",
+     "description": "Master of /el's friendly community"
+    }
+   ],
+   "success": true
+  }
+ }
+}

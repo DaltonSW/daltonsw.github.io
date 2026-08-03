@@ -1,0 +1,241 @@
+{
+ "provider": "steam",
+ "title": "Risk of Rain (2013)",
+ "updated": "2026-07-26",
+ "id": "248820",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 15,
+ "total": 15,
+ "first": "2013-12-21",
+ "last": "2019-09-13",
+ "award_kind": "all achievements",
+ "platform": "PC",
+ "icon": "27c63bdc153de52355c8e6983baa4bc0aedc3699",
+ "playtime_mins": 5625,
+ "playtime": {
+  "windows": 150
+ },
+ "last_played": "2019-09-13",
+ "achievements": [
+  {
+   "key": "FAIL_3_SHRINES",
+   "name": "Better Luck Next Time",
+   "description": "Fail a shrine 3 times in a row.",
+   "unlocked": true,
+   "date": "2013-12-21T12:43:06-06:00"
+  },
+  {
+   "key": "LEMURIANS_20",
+   "name": "Lizard Bait",
+   "description": "Defeat 20 lemurians in one playthrough.",
+   "unlocked": true,
+   "date": "2013-12-21T12:45:51-06:00"
+  },
+  {
+   "key": "KILL_MW_WV_GSG",
+   "name": "Master Hunter",
+   "description": "Kill the Magma Worm, Wandering Vagrant, and Giant Stone Golem.",
+   "unlocked": true,
+   "date": "2014-01-12T22:18:55-06:00"
+  },
+  {
+   "key": "PASS_4_SHRINES",
+   "name": "Lucky Devil",
+   "description": "Pass a shrine 4 times in a row.",
+   "unlocked": true,
+   "date": "2014-01-17T18:18:34-06:00"
+  },
+  {
+   "key": "SURVIVE_40_MINUTES",
+   "name": "The Lone Survivor",
+   "description": "Survive 40 minutes.",
+   "unlocked": true,
+   "date": "2014-01-20T13:36:04-06:00"
+  },
+  {
+   "key": "OPEN_4_DOORS",
+   "name": "Endless Voyager",
+   "description": "Collect 4 Keycards. ",
+   "unlocked": true,
+   "date": "2014-01-20T13:45:25-06:00"
+  },
+  {
+   "key": "LIGHTS_OUT",
+   "name": "Night Night",
+   "description": "Kill a boss with 'Lights Out'.",
+   "unlocked": true,
+   "date": "2014-01-20T14:05:35-06:00"
+  },
+  {
+   "key": "BLOATED_SURVIVOR",
+   "name": "Finders Keepers",
+   "description": "Find the bloated survivor.",
+   "unlocked": true,
+   "date": "2014-01-24T11:03:59-06:00"
+  },
+  {
+   "key": "MONSTER_LOGS_15",
+   "name": "Seasoned Wanderer",
+   "description": "Collect 15 Monster Logs.",
+   "unlocked": true,
+   "date": "2014-01-24T11:14:41-06:00"
+  },
+  {
+   "key": "DIE_100_TIMES",
+   "name": "Sole Survivor",
+   "description": "Die 50 times.",
+   "unlocked": true,
+   "date": "2014-01-24T11:25:36-06:00"
+  },
+  {
+   "key": "ROBOT_JANITOR",
+   "name": "You Won't Regret It",
+   "description": "Find the robot janitor.",
+   "unlocked": true,
+   "date": "2014-01-24T14:37:56-06:00"
+  },
+  {
+   "key": "GOLD_20000",
+   "name": "Diamond Casket ",
+   "description": "Bank 20,000 gold.",
+   "unlocked": true,
+   "date": "2014-02-16T13:21:44-06:00"
+  },
+  {
+   "key": "ONE_SHOT_5000",
+   "name": "Macho",
+   "description": "Deal 5000 damage in one shot.",
+   "unlocked": true,
+   "date": "2014-05-12T19:21:08-05:00"
+  },
+  {
+   "key": "GOLDEN_CHEST_KEY",
+   "name": "Don't Mind If I Do",
+   "description": "Unlock a golden chest with the Explorer's Key.",
+   "unlocked": true,
+   "date": "2014-05-17T13:32:37-05:00"
+  },
+  {
+   "key": "KILL_ALL_FISHIES",
+   "name": "Sleepin' With The...",
+   "description": "Drown 20 Whorls.",
+   "unlocked": true,
+   "date": "2019-09-13T16:51:50-05:00"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Risk of Rain (2013)",
+   "achievements": [
+    {
+     "apiname": "LEMURIANS_20",
+     "achieved": 1,
+     "unlocktime": 1387651551,
+     "name": "Lizard Bait",
+     "description": "Defeat 20 lemurians in one playthrough."
+    },
+    {
+     "apiname": "FAIL_3_SHRINES",
+     "achieved": 1,
+     "unlocktime": 1387651386,
+     "name": "Better Luck Next Time",
+     "description": "Fail a shrine 3 times in a row."
+    },
+    {
+     "apiname": "SURVIVE_40_MINUTES",
+     "achieved": 1,
+     "unlocktime": 1390246564,
+     "name": "The Lone Survivor",
+     "description": "Survive 40 minutes."
+    },
+    {
+     "apiname": "KILL_MW_WV_GSG",
+     "achieved": 1,
+     "unlocktime": 1389586735,
+     "name": "Master Hunter",
+     "description": "Kill the Magma Worm, Wandering Vagrant, and Giant Stone Golem."
+    },
+    {
+     "apiname": "PASS_4_SHRINES",
+     "achieved": 1,
+     "unlocktime": 1390004314,
+     "name": "Lucky Devil",
+     "description": "Pass a shrine 4 times in a row."
+    },
+    {
+     "apiname": "LIGHTS_OUT",
+     "achieved": 1,
+     "unlocktime": 1390248335,
+     "name": "Night Night",
+     "description": "Kill a boss with 'Lights Out'."
+    },
+    {
+     "apiname": "BLOATED_SURVIVOR",
+     "achieved": 1,
+     "unlocktime": 1390583039,
+     "name": "Finders Keepers",
+     "description": "Find the bloated survivor."
+    },
+    {
+     "apiname": "MONSTER_LOGS_15",
+     "achieved": 1,
+     "unlocktime": 1390583681,
+     "name": "Seasoned Wanderer",
+     "description": "Collect 15 Monster Logs."
+    },
+    {
+     "apiname": "ONE_SHOT_5000",
+     "achieved": 1,
+     "unlocktime": 1399940468,
+     "name": "Macho",
+     "description": "Deal 5000 damage in one shot."
+    },
+    {
+     "apiname": "GOLDEN_CHEST_KEY",
+     "achieved": 1,
+     "unlocktime": 1400351557,
+     "name": "Don't Mind If I Do",
+     "description": "Unlock a golden chest with the Explorer's Key."
+    },
+    {
+     "apiname": "DIE_100_TIMES",
+     "achieved": 1,
+     "unlocktime": 1390584336,
+     "name": "Sole Survivor",
+     "description": "Die 50 times."
+    },
+    {
+     "apiname": "GOLD_20000",
+     "achieved": 1,
+     "unlocktime": 1392578504,
+     "name": "Diamond Casket ",
+     "description": "Bank 20,000 gold."
+    },
+    {
+     "apiname": "KILL_ALL_FISHIES",
+     "achieved": 1,
+     "unlocktime": 1568411510,
+     "name": "Sleepin' With The...",
+     "description": "Drown 20 Whorls."
+    },
+    {
+     "apiname": "ROBOT_JANITOR",
+     "achieved": 1,
+     "unlocktime": 1390595876,
+     "name": "You Won't Regret It",
+     "description": "Find the robot janitor."
+    },
+    {
+     "apiname": "OPEN_4_DOORS",
+     "achieved": 1,
+     "unlocktime": 1390247125,
+     "name": "Endless Voyager",
+     "description": "Collect 4 Keycards. "
+    }
+   ],
+   "success": true
+  }
+ }
+}

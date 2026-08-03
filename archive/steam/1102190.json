@@ -1,0 +1,733 @@
+{
+ "provider": "steam",
+ "title": "Monster Train",
+ "updated": "2026-07-26",
+ "id": "1102190",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 18,
+ "total": 53,
+ "first": "2020-08-31",
+ "last": "2023-02-22",
+ "platform": "PC",
+ "icon": "71b1344e42cc348d3b1a40404ab0547f9ed860ae",
+ "playtime_mins": 1479,
+ "playtime": {
+  "windows": 1479
+ },
+ "last_played": "2023-05-28",
+ "achievements": [
+  {
+   "key": "ACH_BEAT_LEVEL1_BOSS",
+   "name": "Early Survivor",
+   "description": "Defeat the first boss.",
+   "unlocked": true,
+   "date": "2020-08-31T21:27:33-05:00"
+  },
+  {
+   "key": "ACH_PLAY_IMP",
+   "name": "S-imp-le!",
+   "description": "Play an Imp card.",
+   "unlocked": true,
+   "date": "2020-08-31T21:41:34-05:00"
+  },
+  {
+   "key": "ACH_CHAMPION_UPGRADE_TWICE",
+   "name": "Upgraded Champion",
+   "description": "Upgrade your Champion twice.",
+   "unlocked": true,
+   "date": "2020-08-31T21:48:11-05:00"
+  },
+  {
+   "key": "ACH_LOSE_RUN",
+   "name": "You Died!",
+   "description": "Lose a run.",
+   "unlocked": true,
+   "date": "2020-08-31T22:08:30-05:00"
+  },
+  {
+   "key": "ACH_LEVEL_UP",
+   "name": "Level Up!",
+   "description": "Level up any clan.",
+   "unlocked": true,
+   "date": "2020-08-31T22:08:31-05:00"
+  },
+  {
+   "key": "ACH_CLASS4_UNLOCK",
+   "name": "Into the Deep Sea",
+   "description": "Unlock The Stygian Guard.",
+   "unlocked": true,
+   "date": "2020-09-01T22:45:03-05:00"
+  },
+  {
+   "key": "ACH_BEAT_LEVEL6_BOSS",
+   "name": "Angel Hunter",
+   "description": "Defeat Fel.",
+   "unlocked": true,
+   "date": "2020-09-01T22:45:18-05:00"
+  },
+  {
+   "key": "ACH_SPELL_BIG_DAMAGE",
+   "name": "All Brain, No Brawn",
+   "description": "Have a spell deal at least 120 damage in one hit.",
+   "unlocked": true,
+   "date": "2020-09-02T22:00:31-05:00"
+  },
+  {
+   "key": "ACH_BEAT_LEVEL8_BOSS",
+   "name": "Seraph the Defeated",
+   "description": "Defeat Seraph.",
+   "unlocked": true,
+   "date": "2020-09-02T22:27:54-05:00"
+  },
+  {
+   "key": "ACH_MONSTER_BIG_DAMAGE",
+   "name": "Hell’s Finest",
+   "description": "Have a monster deal at least 60 damage in one hit.",
+   "unlocked": true,
+   "date": "2020-09-03T22:05:05-05:00"
+  },
+  {
+   "key": "ACH_CLASS4_LEVEL5",
+   "name": "Guardian of the Styx",
+   "description": "Reach Level 5 on The Stygian Guard.",
+   "unlocked": true,
+   "date": "2020-09-04T16:16:23-05:00"
+  },
+  {
+   "key": "ACH_CLASS2_LEVEL5",
+   "name": "A Semblance of Sentience",
+   "description": "Reach Level 5 on The Awoken.",
+   "unlocked": true,
+   "date": "2020-09-05T21:34:03-05:00"
+  },
+  {
+   "key": "ACH_CLASS5_UNLOCK",
+   "name": "Diabolical Automation",
+   "description": "Unlock The Umbra.",
+   "unlocked": true,
+   "date": "2020-09-05T21:52:19-05:00"
+  },
+  {
+   "key": "ACH_VIEW_CREDITS",
+   "name": "Creators of Hell",
+   "description": "View the credits.",
+   "unlocked": true,
+   "date": "2020-09-05T22:27:52-05:00"
+  },
+  {
+   "key": "ACH_DAILY_CHALLENGE",
+   "name": "Is That a Challenge?",
+   "description": "Start a Daily Challenge.",
+   "unlocked": true,
+   "date": "2020-09-06T14:58:47-05:00"
+  },
+  {
+   "key": "ACH_EVENT_DANTE",
+   "name": "Dante’s Inferno",
+   "unlocked": true,
+   "date": "2020-09-06T15:23:30-05:00"
+  },
+  {
+   "key": "ACH_CLASS1_LEVEL5",
+   "name": "The Breaker of Horns",
+   "description": "Reach Level 5 on The Hellhorned.",
+   "unlocked": true,
+   "date": "2021-10-10T19:49:34-05:00"
+  },
+  {
+   "key": "ACH_CLASS3_UNLOCK",
+   "name": "Guided by Candles",
+   "description": "Unlock The Melting Remnant.",
+   "unlocked": true,
+   "date": "2023-02-22T20:58:19-06:00"
+  },
+  {
+   "key": "ACH_ASCENSION_TIER1",
+   "name": "The Long Journey Begins",
+   "description": "Win a run at Covenant 5.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_ASCENSION_TIER2",
+   "name": "The Devil is in the Details",
+   "description": "Win a run at Covenant 10.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_ASCENSION_TIER3",
+   "name": "Hell Hath No Fury",
+   "description": "Win a run at Covenant 15.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_ASCENSION_TIER4",
+   "name": "We Were Born of Monsters",
+   "description": "Win a run at Covenant 25.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_BOTHER_SHOPKEEPER",
+   "name": "Buy Something, Won't You?",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS1_COVENANTS",
+   "name": "The Hellhorned",
+   "description": "Win a run with all covenants enabled on The Hellhorned.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS1_LEVEL10",
+   "name": "Hellhorned Dominance",
+   "description": "Reach Level 10 on The Hellhorned.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS2_COVENANTS",
+   "name": "The Awoken",
+   "description": "Win a run with all covenants enabled on The Awoken.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS2_LEVEL10",
+   "name": "Fully Awakened",
+   "description": "Reach Level 10 on The Awoken.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS3_COVENANTS",
+   "name": "The Melting Remnant",
+   "description": "Win a run with all covenants enabled on The Melting Remnant.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS3_LEVEL10",
+   "name": "An Endless Flicker",
+   "description": "Reach Level 10 on The Melting Remnant.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS3_LEVEL5",
+   "name": "A Vicarious Remnant",
+   "description": "Reach Level 5 on The Melting Remnant.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS4_COVENANTS",
+   "name": "The Stygian Guard",
+   "description": "Win a run with all covenants enabled on The Stygian Guard.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS4_LEVEL10",
+   "name": "Stygian Defender",
+   "description": "Reach Level 10 on The Stygian Guard.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS5_COVENANTS",
+   "name": "The Umbra",
+   "description": "Win a run with all covenants enabled on The Umbra.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS5_LEVEL10",
+   "name": "Penultimate",
+   "description": "Reach Level 10 on The Umbra.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CLASS5_LEVEL5",
+   "name": "A Wisp Reanimated",
+   "description": "Reach Level 5 on The Umbra.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CUSTOM_CHALLENGE",
+   "name": "My Game, My Rules",
+   "description": "Create a Custom Challenge.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DAILY_CHALLENGE_TIER1",
+   "name": "Trainee of the Pyre",
+   "description": "Score at least 30,000 points in a Daily Challenge.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DAILY_CHALLENGE_TIER2",
+   "name": "Apprentice of the Pyre",
+   "description": "Score at least 40,000 points in a Daily Challenge.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DAILY_CHALLENGE_TIER3",
+   "name": "Master of the Pyre",
+   "description": "Score at least 50,000 points in a Daily Challenge.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DEFEAT_BIGBOSS1_EARLY",
+   "name": "Dead-alus",
+   "description": "Defeat Daedalus before his combat phase.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DEFEAT_BIGBOSS1_VARIANT_EARLY",
+   "name": "Ta-ta Talos",
+   "description": "Defeat Talos before her combat phase.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DEFEAT_BIGBOSS2_EARLY",
+   "name": "Li-Fel-less",
+   "description": "Defeat Fel before her combat phase.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DEFEAT_BIGBOSS2_VARIANT_EARLY",
+   "name": "Archpocalypse",
+   "description": "Defeat Archus before his combat phase.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_DEFEAT_BIGBOSS3_EARLY",
+   "name": "Sans Seraph",
+   "description": "Defeat Seraph before his combat phase.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_EVENT_HIDDEN_UPGRADE",
+   "name": "It’s a Secret...",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_EVENT_PICKPOCKET",
+   "name": "Thief! Stop!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_LEVEL10_ALL",
+   "name": "Igniter of Pyre, Savior of Hell",
+   "description": "Achieve max level on all clans.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WIN_FEW_CARDS",
+   "name": "The Ragtag Bunch",
+   "description": "Win a run with 10 or fewer cards at the end of the run.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WIN_GOOGLY_EYES",
+   "name": "20/20 Vision",
+   "description": "Win a run with googly eyes enabled.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WIN_MANY_CARDS",
+   "name": "A Cramped Train",
+   "description": "Win a run with at least 40 cards at the end of the run.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WIN_NO_BLESSINGS",
+   "name": "Only Determination",
+   "description": "Win a run without collecting any artifacts.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WIN_NO_CHAMPION",
+   "name": "On Your Own",
+   "description": "Win a run without a Champion.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WIN_ZERO_CARDS",
+   "name": "How to Deckbuilder",
+   "description": "Win a run with 0 cards at the end of the run.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Monster Train",
+   "achievements": [
+    {
+     "apiname": "ACH_PLAY_IMP",
+     "achieved": 1,
+     "unlocktime": 1598928094,
+     "name": "S-imp-le!",
+     "description": "Play an Imp card."
+    },
+    {
+     "apiname": "ACH_BEAT_LEVEL1_BOSS",
+     "achieved": 1,
+     "unlocktime": 1598927253,
+     "name": "Early Survivor",
+     "description": "Defeat the first boss."
+    },
+    {
+     "apiname": "ACH_LEVEL_UP",
+     "achieved": 1,
+     "unlocktime": 1598929711,
+     "name": "Level Up!",
+     "description": "Level up any clan."
+    },
+    {
+     "apiname": "ACH_DAILY_CHALLENGE",
+     "achieved": 1,
+     "unlocktime": 1599422327,
+     "name": "Is That a Challenge?",
+     "description": "Start a Daily Challenge."
+    },
+    {
+     "apiname": "ACH_LOSE_RUN",
+     "achieved": 1,
+     "unlocktime": 1598929710,
+     "name": "You Died!",
+     "description": "Lose a run."
+    },
+    {
+     "apiname": "ACH_CLASS1_LEVEL5",
+     "achieved": 1,
+     "unlocktime": 1633913374,
+     "name": "The Breaker of Horns",
+     "description": "Reach Level 5 on The Hellhorned."
+    },
+    {
+     "apiname": "ACH_CLASS1_LEVEL10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hellhorned Dominance",
+     "description": "Reach Level 10 on The Hellhorned."
+    },
+    {
+     "apiname": "ACH_CLASS2_LEVEL5",
+     "achieved": 1,
+     "unlocktime": 1599359643,
+     "name": "A Semblance of Sentience",
+     "description": "Reach Level 5 on The Awoken."
+    },
+    {
+     "apiname": "ACH_CLASS2_LEVEL10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Awakened",
+     "description": "Reach Level 10 on The Awoken."
+    },
+    {
+     "apiname": "ACH_CLASS3_LEVEL5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Vicarious Remnant",
+     "description": "Reach Level 5 on The Melting Remnant."
+    },
+    {
+     "apiname": "ACH_CLASS3_LEVEL10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An Endless Flicker",
+     "description": "Reach Level 10 on The Melting Remnant."
+    },
+    {
+     "apiname": "ACH_CLASS4_LEVEL5",
+     "achieved": 1,
+     "unlocktime": 1599254183,
+     "name": "Guardian of the Styx",
+     "description": "Reach Level 5 on The Stygian Guard."
+    },
+    {
+     "apiname": "ACH_CLASS4_LEVEL10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stygian Defender",
+     "description": "Reach Level 10 on The Stygian Guard."
+    },
+    {
+     "apiname": "ACH_CLASS5_LEVEL5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Wisp Reanimated",
+     "description": "Reach Level 5 on The Umbra."
+    },
+    {
+     "apiname": "ACH_CLASS5_LEVEL10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Penultimate",
+     "description": "Reach Level 10 on The Umbra."
+    },
+    {
+     "apiname": "ACH_LEVEL10_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Igniter of Pyre, Savior of Hell",
+     "description": "Achieve max level on all clans."
+    },
+    {
+     "apiname": "ACH_CLASS1_COVENANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hellhorned",
+     "description": "Win a run with all covenants enabled on The Hellhorned."
+    },
+    {
+     "apiname": "ACH_CLASS2_COVENANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Awoken",
+     "description": "Win a run with all covenants enabled on The Awoken."
+    },
+    {
+     "apiname": "ACH_CLASS3_COVENANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Melting Remnant",
+     "description": "Win a run with all covenants enabled on The Melting Remnant."
+    },
+    {
+     "apiname": "ACH_CLASS4_COVENANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Stygian Guard",
+     "description": "Win a run with all covenants enabled on The Stygian Guard."
+    },
+    {
+     "apiname": "ACH_CLASS5_COVENANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Umbra",
+     "description": "Win a run with all covenants enabled on The Umbra."
+    },
+    {
+     "apiname": "ACH_WIN_NO_BLESSINGS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Only Determination",
+     "description": "Win a run without collecting any artifacts."
+    },
+    {
+     "apiname": "ACH_BEAT_LEVEL6_BOSS",
+     "achieved": 1,
+     "unlocktime": 1599018318,
+     "name": "Angel Hunter",
+     "description": "Defeat Fel."
+    },
+    {
+     "apiname": "ACH_BEAT_LEVEL8_BOSS",
+     "achieved": 1,
+     "unlocktime": 1599103674,
+     "name": "Seraph the Defeated",
+     "description": "Defeat Seraph."
+    },
+    {
+     "apiname": "ACH_CUSTOM_CHALLENGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My Game, My Rules",
+     "description": "Create a Custom Challenge."
+    },
+    {
+     "apiname": "ACH_CHAMPION_UPGRADE_TWICE",
+     "achieved": 1,
+     "unlocktime": 1598928491,
+     "name": "Upgraded Champion",
+     "description": "Upgrade your Champion twice."
+    },
+    {
+     "apiname": "ACH_DAILY_CHALLENGE_TIER1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trainee of the Pyre",
+     "description": "Score at least 30,000 points in a Daily Challenge."
+    },
+    {
+     "apiname": "ACH_DAILY_CHALLENGE_TIER2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Apprentice of the Pyre",
+     "description": "Score at least 40,000 points in a Daily Challenge."
+    },
+    {
+     "apiname": "ACH_DAILY_CHALLENGE_TIER3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of the Pyre",
+     "description": "Score at least 50,000 points in a Daily Challenge."
+    },
+    {
+     "apiname": "ACH_MONSTER_BIG_DAMAGE",
+     "achieved": 1,
+     "unlocktime": 1599188705,
+     "name": "Hell’s Finest",
+     "description": "Have a monster deal at least 60 damage in one hit."
+    },
+    {
+     "apiname": "ACH_SPELL_BIG_DAMAGE",
+     "achieved": 1,
+     "unlocktime": 1599102031,
+     "name": "All Brain, No Brawn",
+     "description": "Have a spell deal at least 120 damage in one hit."
+    },
+    {
+     "apiname": "ACH_EVENT_DANTE",
+     "achieved": 1,
+     "unlocktime": 1599423810,
+     "name": "Dante’s Inferno",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_EVENT_HIDDEN_UPGRADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It’s a Secret...",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_EVENT_PICKPOCKET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thief! Stop!",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_ASCENSION_TIER1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Long Journey Begins",
+     "description": "Win a run at Covenant 5."
+    },
+    {
+     "apiname": "ACH_ASCENSION_TIER2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Devil is in the Details",
+     "description": "Win a run at Covenant 10."
+    },
+    {
+     "apiname": "ACH_ASCENSION_TIER3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hell Hath No Fury",
+     "description": "Win a run at Covenant 15."
+    },
+    {
+     "apiname": "ACH_ASCENSION_TIER4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We Were Born of Monsters",
+     "description": "Win a run at Covenant 25."
+    },
+    {
+     "apiname": "ACH_WIN_FEW_CARDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Ragtag Bunch",
+     "description": "Win a run with 10 or fewer cards at the end of the run."
+    },
+    {
+     "apiname": "ACH_WIN_MANY_CARDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Cramped Train",
+     "description": "Win a run with at least 40 cards at the end of the run."
+    },
+    {
+     "apiname": "ACH_CLASS3_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1677121099,
+     "name": "Guided by Candles",
+     "description": "Unlock The Melting Remnant."
+    },
+    {
+     "apiname": "ACH_CLASS4_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1599018303,
+     "name": "Into the Deep Sea",
+     "description": "Unlock The Stygian Guard."
+    },
+    {
+     "apiname": "ACH_CLASS5_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1599360739,
+     "name": "Diabolical Automation",
+     "description": "Unlock The Umbra."
+    },
+    {
+     "apiname": "ACH_VIEW_CREDITS",
+     "achieved": 1,
+     "unlocktime": 1599362872,
+     "name": "Creators of Hell",
+     "description": "View the credits."
+    },
+    {
+     "apiname": "ACH_BOTHER_SHOPKEEPER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Buy Something, Won't You?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_BIGBOSS1_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dead-alus",
+     "description": "Defeat Daedalus before his combat phase."
+    },
+    {
+     "apiname": "ACH_DEFEAT_BIGBOSS2_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Li-Fel-less",
+     "description": "Defeat Fel before her combat phase."
+    },
+    {
+     "apiname": "ACH_DEFEAT_BIGBOSS3_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sans Seraph",
+     "description": "Defeat Seraph before his combat phase."
+    },
+    {
+     "apiname": "ACH_WIN_ZERO_CARDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "How to Deckbuilder",
+     "description": "Win a run with 0 cards at the end of the run."
+    },
+    {
+     "apiname": "ACH_WIN_NO_CHAMPION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Your Own",
+     "description": "Win a run without a Champion."
+    },
+    {
+     "apiname": "ACH_WIN_GOOGLY_EYES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "20/20 Vision",
+     "description": "Win a run with googly eyes enabled."
+    },
+    {
+     "apiname": "ACH_DEFEAT_BIGBOSS1_VARIANT_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ta-ta Talos",
+     "description": "Defeat Talos before her combat phase."
+    },
+    {
+     "apiname": "ACH_DEFEAT_BIGBOSS2_VARIANT_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Archpocalypse",
+     "description": "Defeat Archus before his combat phase."
+    }
+   ],
+   "success": true
+  }
+ }
+}

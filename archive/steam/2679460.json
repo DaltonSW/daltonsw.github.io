@@ -1,0 +1,622 @@
+{
+ "provider": "steam",
+ "title": "Metaphor: ReFantazio",
+ "updated": "2026-07-26",
+ "id": "2679460",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 33,
+ "total": 44,
+ "first": "2025-07-12",
+ "last": "2025-08-24",
+ "platform": "PC",
+ "icon": "76497828e18653273818f428323bd2a5684e689d",
+ "playtime_mins": 8280,
+ "playtime": {
+  "linux": 8280
+ },
+ "last_played": "2025-08-28",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_20",
+   "name": "Stunning!",
+   "description": "Stun an enemy.",
+   "unlocked": true,
+   "date": "2025-07-12T14:34:27-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_3",
+   "name": "Allies United",
+   "unlocked": true,
+   "date": "2025-07-12T14:55:17-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_28",
+   "name": "Shake on It",
+   "description": "Obtain a Follower.",
+   "unlocked": true,
+   "date": "2025-07-12T19:20:41-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_4",
+   "name": "Out of the Fire",
+   "unlocked": true,
+   "date": "2025-07-13T16:13:50-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_16",
+   "name": "United Front",
+   "description": "Use a Synthesis skill for the first time.",
+   "unlocked": true,
+   "date": "2025-07-13T18:39:06-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_33",
+   "name": "Blessed Power",
+   "description": "Purify a piece of equipment.",
+   "unlocked": true,
+   "date": "2025-07-13T19:37:45-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_25",
+   "name": "No Mercy",
+   "description": "End 50 battles without taking damage.",
+   "unlocked": true,
+   "date": "2025-07-15T19:08:02-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_5",
+   "name": "Calamity Averted",
+   "unlocked": true,
+   "date": "2025-07-16T20:40:39-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_34",
+   "name": "Shrewd Shopper",
+   "description": "Buy an item on discount.",
+   "unlocked": true,
+   "date": "2025-07-16T20:58:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_31",
+   "name": "Monster Hunter",
+   "description": "Subjugate a bounty.",
+   "unlocked": true,
+   "date": "2025-07-18T19:04:13-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_13",
+   "name": "Archetype Adept",
+   "description": "Master an Archetype.",
+   "unlocked": true,
+   "date": "2025-07-19T10:17:17-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_21",
+   "name": "Tactical Strike",
+   "description": "Inflict ambush damage against stunned enemies 100 times.",
+   "unlocked": true,
+   "date": "2025-07-19T10:37:52-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_24",
+   "name": "Stray Elements",
+   "description": "Defeat 10 Elmentas.",
+   "unlocked": true,
+   "date": "2025-07-19T13:54:48-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_22",
+   "name": "What's Yours is Mine",
+   "description": "Steal an item from an enemy.",
+   "unlocked": true,
+   "date": "2025-07-25T20:03:50-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_6",
+   "name": "Dark Truths",
+   "unlocked": true,
+   "date": "2025-07-26T16:19:06-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_7",
+   "name": "On Knife's Edge",
+   "unlocked": true,
+   "date": "2025-08-02T07:59:10-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_18",
+   "name": "For Science!",
+   "description": "Perform a Special Experiment.",
+   "unlocked": true,
+   "date": "2025-08-02T08:44:29-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_8",
+   "name": "History Untold",
+   "unlocked": true,
+   "date": "2025-08-03T15:36:11-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_9",
+   "name": "Mission Accomplished",
+   "unlocked": true,
+   "date": "2025-08-09T10:44:25-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_35",
+   "name": "Globetrotter",
+   "description": "Visit all towns.",
+   "unlocked": true,
+   "date": "2025-08-09T21:57:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_27",
+   "name": "Hey, Listen!",
+   "description": "Consult Gallica 100 times.",
+   "unlocked": true,
+   "date": "2025-08-12T18:16:08-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_15",
+   "name": "His Majesty",
+   "unlocked": true,
+   "date": "2025-08-12T20:02:35-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_17",
+   "name": "Teamwork Makes the Dream Work",
+   "description": "Use 50 different Synthesis skills.",
+   "unlocked": true,
+   "date": "2025-08-15T18:07:42-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_29",
+   "name": "Hearts as One",
+   "description": "Max all Follower ranks.",
+   "unlocked": true,
+   "date": "2025-08-15T18:33:50-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_37",
+   "name": "Vista Viewer",
+   "description": "Collect all drawings of the journey.",
+   "unlocked": true,
+   "date": "2025-08-16T08:30:42-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_23",
+   "name": "Money is Power",
+   "description": "Spend a total of 100,000 reeve using skills that consume money.",
+   "unlocked": true,
+   "date": "2025-08-16T19:58:04-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_39",
+   "name": "Coliseum Champion",
+   "description": "Win 30 consecutive Gold Class battles at the coliseum.",
+   "unlocked": true,
+   "date": "2025-08-17T10:09:28-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_42",
+   "name": "Entrusted",
+   "unlocked": true,
+   "date": "2025-08-17T20:42:10-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_10",
+   "name": "Skybound Hope",
+   "unlocked": true,
+   "date": "2025-08-20T20:55:38-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_36",
+   "name": "Worldly Wisdom",
+   "description": "Unlock the entire map.",
+   "unlocked": true,
+   "date": "2025-08-20T21:01:23-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_14",
+   "name": "Archetype Hero",
+   "description": "Master all the Archetypes with the protagonist.",
+   "unlocked": true,
+   "date": "2025-08-23T12:57:19-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_32",
+   "name": "Help Anyone in Need",
+   "description": "Complete all quests.",
+   "unlocked": true,
+   "date": "2025-08-23T15:02:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_2",
+   "name": "Coronation of the King",
+   "unlocked": true,
+   "date": "2025-08-24T09:10:23-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_1",
+   "name": "The Traveller",
+   "description": "Acquire all achievements.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_11",
+   "name": "Closing the Book",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_12",
+   "name": "Star Shatterer",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_19",
+   "name": "Summon Mask Time",
+   "description": "Create all summoning vessels and masks.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_26",
+   "name": "All That Glitters",
+   "description": "Make all possible gold beetle item exchanges.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_30",
+   "name": "King of Cuisine",
+   "description": "Make all recipes.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_38",
+   "name": "Debate Me",
+   "description": "Win debates against all candidates.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_40",
+   "name": "Sword Surfer",
+   "description": "Travel a significant distance by blade-riding.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_41",
+   "name": "Chef in Training",
+   "description": "Help cook a meal at the inn with Maria.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_43",
+   "name": "At Your Own Risk",
+   "description": "Successfully challenge the test of courage at the highest difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_44",
+   "name": "Bookworm",
+   "description": "Finish reading all books.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Metaphor: ReFantazio",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Traveller",
+     "description": "Acquire all achievements."
+    },
+    {
+     "apiname": "ACHIEVEMENT_2",
+     "achieved": 1,
+     "unlocktime": 1756044623,
+     "name": "Coronation of the King",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_3",
+     "achieved": 1,
+     "unlocktime": 1752350117,
+     "name": "Allies United",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_4",
+     "achieved": 1,
+     "unlocktime": 1752441230,
+     "name": "Out of the Fire",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_5",
+     "achieved": 1,
+     "unlocktime": 1752716439,
+     "name": "Calamity Averted",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_6",
+     "achieved": 1,
+     "unlocktime": 1753564746,
+     "name": "Dark Truths",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_7",
+     "achieved": 1,
+     "unlocktime": 1754139550,
+     "name": "On Knife's Edge",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_8",
+     "achieved": 1,
+     "unlocktime": 1754253371,
+     "name": "History Untold",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_9",
+     "achieved": 1,
+     "unlocktime": 1754754265,
+     "name": "Mission Accomplished",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_10",
+     "achieved": 1,
+     "unlocktime": 1755741338,
+     "name": "Skybound Hope",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Closing the Book",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star Shatterer",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_13",
+     "achieved": 1,
+     "unlocktime": 1752938237,
+     "name": "Archetype Adept",
+     "description": "Master an Archetype."
+    },
+    {
+     "apiname": "ACHIEVEMENT_14",
+     "achieved": 1,
+     "unlocktime": 1755971839,
+     "name": "Archetype Hero",
+     "description": "Master all the Archetypes with the protagonist."
+    },
+    {
+     "apiname": "ACHIEVEMENT_15",
+     "achieved": 1,
+     "unlocktime": 1755046955,
+     "name": "His Majesty",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_16",
+     "achieved": 1,
+     "unlocktime": 1752449946,
+     "name": "United Front",
+     "description": "Use a Synthesis skill for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_17",
+     "achieved": 1,
+     "unlocktime": 1755299262,
+     "name": "Teamwork Makes the Dream Work",
+     "description": "Use 50 different Synthesis skills."
+    },
+    {
+     "apiname": "ACHIEVEMENT_18",
+     "achieved": 1,
+     "unlocktime": 1754142269,
+     "name": "For Science!",
+     "description": "Perform a Special Experiment."
+    },
+    {
+     "apiname": "ACHIEVEMENT_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Summon Mask Time",
+     "description": "Create all summoning vessels and masks."
+    },
+    {
+     "apiname": "ACHIEVEMENT_20",
+     "achieved": 1,
+     "unlocktime": 1752348867,
+     "name": "Stunning!",
+     "description": "Stun an enemy."
+    },
+    {
+     "apiname": "ACHIEVEMENT_21",
+     "achieved": 1,
+     "unlocktime": 1752939472,
+     "name": "Tactical Strike",
+     "description": "Inflict ambush damage against stunned enemies 100 times."
+    },
+    {
+     "apiname": "ACHIEVEMENT_22",
+     "achieved": 1,
+     "unlocktime": 1753491830,
+     "name": "What's Yours is Mine",
+     "description": "Steal an item from an enemy."
+    },
+    {
+     "apiname": "ACHIEVEMENT_23",
+     "achieved": 1,
+     "unlocktime": 1755392284,
+     "name": "Money is Power",
+     "description": "Spend a total of 100,000 reeve using skills that consume money."
+    },
+    {
+     "apiname": "ACHIEVEMENT_24",
+     "achieved": 1,
+     "unlocktime": 1752951288,
+     "name": "Stray Elements",
+     "description": "Defeat 10 Elmentas."
+    },
+    {
+     "apiname": "ACHIEVEMENT_25",
+     "achieved": 1,
+     "unlocktime": 1752624482,
+     "name": "No Mercy",
+     "description": "End 50 battles without taking damage."
+    },
+    {
+     "apiname": "ACHIEVEMENT_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All That Glitters",
+     "description": "Make all possible gold beetle item exchanges."
+    },
+    {
+     "apiname": "ACHIEVEMENT_27",
+     "achieved": 1,
+     "unlocktime": 1755040568,
+     "name": "Hey, Listen!",
+     "description": "Consult Gallica 100 times."
+    },
+    {
+     "apiname": "ACHIEVEMENT_28",
+     "achieved": 1,
+     "unlocktime": 1752366041,
+     "name": "Shake on It",
+     "description": "Obtain a Follower."
+    },
+    {
+     "apiname": "ACHIEVEMENT_29",
+     "achieved": 1,
+     "unlocktime": 1755300830,
+     "name": "Hearts as One",
+     "description": "Max all Follower ranks."
+    },
+    {
+     "apiname": "ACHIEVEMENT_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King of Cuisine",
+     "description": "Make all recipes."
+    },
+    {
+     "apiname": "ACHIEVEMENT_31",
+     "achieved": 1,
+     "unlocktime": 1752883453,
+     "name": "Monster Hunter",
+     "description": "Subjugate a bounty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_32",
+     "achieved": 1,
+     "unlocktime": 1755979320,
+     "name": "Help Anyone in Need",
+     "description": "Complete all quests."
+    },
+    {
+     "apiname": "ACHIEVEMENT_33",
+     "achieved": 1,
+     "unlocktime": 1752453465,
+     "name": "Blessed Power",
+     "description": "Purify a piece of equipment."
+    },
+    {
+     "apiname": "ACHIEVEMENT_34",
+     "achieved": 1,
+     "unlocktime": 1752717480,
+     "name": "Shrewd Shopper",
+     "description": "Buy an item on discount."
+    },
+    {
+     "apiname": "ACHIEVEMENT_35",
+     "achieved": 1,
+     "unlocktime": 1754794636,
+     "name": "Globetrotter",
+     "description": "Visit all towns."
+    },
+    {
+     "apiname": "ACHIEVEMENT_36",
+     "achieved": 1,
+     "unlocktime": 1755741683,
+     "name": "Worldly Wisdom",
+     "description": "Unlock the entire map."
+    },
+    {
+     "apiname": "ACHIEVEMENT_37",
+     "achieved": 1,
+     "unlocktime": 1755351042,
+     "name": "Vista Viewer",
+     "description": "Collect all drawings of the journey."
+    },
+    {
+     "apiname": "ACHIEVEMENT_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Debate Me",
+     "description": "Win debates against all candidates."
+    },
+    {
+     "apiname": "ACHIEVEMENT_39",
+     "achieved": 1,
+     "unlocktime": 1755443368,
+     "name": "Coliseum Champion",
+     "description": "Win 30 consecutive Gold Class battles at the coliseum."
+    },
+    {
+     "apiname": "ACHIEVEMENT_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sword Surfer",
+     "description": "Travel a significant distance by blade-riding."
+    },
+    {
+     "apiname": "ACHIEVEMENT_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chef in Training",
+     "description": "Help cook a meal at the inn with Maria."
+    },
+    {
+     "apiname": "ACHIEVEMENT_42",
+     "achieved": 1,
+     "unlocktime": 1755481330,
+     "name": "Entrusted",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "At Your Own Risk",
+     "description": "Successfully challenge the test of courage at the highest difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bookworm",
+     "description": "Finish reading all books."
+    }
+   ],
+   "success": true
+  }
+ }
+}

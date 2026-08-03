@@ -1,0 +1,437 @@
+{
+ "provider": "steam",
+ "title": "Sunless Skies",
+ "updated": "2026-07-26",
+ "id": "596970",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 3,
+ "total": 31,
+ "first": "2021-01-11",
+ "last": "2026-07-18",
+ "platform": "PC",
+ "icon": "959d17866ffcadd88c9b2629961588088f0d0126",
+ "playtime_mins": 890,
+ "playtime": {
+  "linux": 833,
+  "windows": 56
+ },
+ "last_played": "2026-07-23",
+ "achievements": [
+  {
+   "key": "ach_lineage",
+   "name": "A New Lineage",
+   "description": "Pass your locomotive to a new captain in your lineage.",
+   "unlocked": true,
+   "date": "2021-01-11T20:58:39-06:00"
+  },
+  {
+   "key": "ach_blythe",
+   "name": "Blythe Spirits",
+   "description": "Decide the fate of Percy Blythe.",
+   "unlocked": true,
+   "date": "2026-07-18T17:06:30-05:00"
+  },
+  {
+   "key": "ach_war",
+   "name": "The Fortunes of War",
+   "description": "Upset the balance of power in the Reach.",
+   "unlocked": true,
+   "date": "2026-07-18T17:08:37-05:00"
+  },
+  {
+   "key": "ach_albion",
+   "name": "The Clockwise Kingdom",
+   "description": "Discover all stations in Albion.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_allswell",
+   "name": "All Shall be Well",
+   "description": "Have 0 Crew, 0 Fuel, 0 Supplies, and Terror of 90 or more.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_berr",
+   "name": "Fully Armed and Operational",
+   "description": "Learn the Unassailable Founder's secret.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_bilbo",
+   "name": "Then and Back Again",
+   "description": "Return from a Weft of Unravelling Time.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_bk",
+   "name": "The Districts of the Dead",
+   "description": "Discover all stations in the Blue Kingdom.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_boat",
+   "name": "Tradition is the Democracy of the Dead",
+   "description": "Complete the Boatman's journey.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_cup",
+   "name": "Idylls of the King",
+   "description": "Complete the quest for the Martyr-King's Cup.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_dilly",
+   "name": "Lavenders Blue, Lavenders Green",
+   "description": "Hatch and adopt a certain lovable scamp, even if she keeps stealing your crew's fingers and toes.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_edge",
+   "name": "Where the Winds Wait",
+   "description": "Launch a successful expedition into the Graveyard of Stars.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_eleu",
+   "name": "The Midnight Groves",
+   "description": "Discover all stations in Eleutheria.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_fame",
+   "name": "Writ Upon the Sky",
+   "description": "Retire to a life of fame, having written the Song of the Sky.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_gods",
+   "name": "An Enemy of All Gods",
+   "description": "Anger all the sky-gods at once.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_level",
+   "name": "Who are you in the Dark?",
+   "description": "Advance a captain to level 20.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_nightmare",
+   "name": "Lose Yourself",
+   "description": "Be consumed by your nightmares.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_officer",
+   "name": "A Full Complement",
+   "description": "Appoint a full complement of officers, including a Mascot.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_reach",
+   "name": "The Garden of Heaven",
+   "description": "Discover all stations in the Reach.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_regions",
+   "name": "A Whistle-Stop Tour",
+   "description": "Visit all four regions with a single captain.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_seven",
+   "name": "Unto the Seventh Generation",
+   "description": "Continue a lineage to its seventh captain.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_soul",
+   "name": "A Soul the Devil Wouldn't Touch",
+   "description": "Possess a soul devoid of redeeming qualities.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_stove",
+   "name": "A Staunch Stovepipe",
+   "description": "Become a valued agent of the Windward Company.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_sun",
+   "name": "—E SUN THE SUN THE SUN THE SUN TH—",
+   "description": "Restore the Clockwork Sun to its strength and its glory.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_tack",
+   "name": "A True Tackety",
+   "description": "Become a hero to the Tacketies.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_terminate",
+   "name": "This Service Will Terminate Here",
+   "description": "Fly your locomotive beyond Death's Door and there meet your end.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_terror",
+   "name": "Off the Rails",
+   "description": "Succumb to your terror.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_truth",
+   "name": "The Stars are Dying",
+   "description": "Learn the secret that the stars hide, and find a way to survive it.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_wealth",
+   "name": "A Comfortable Retirement",
+   "description": "Retire to a grand mansion with a hoard to make a dragon envious.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_whitlock",
+   "name": "The Black Box",
+   "description": "Resolve Captain Whitlock's Legacy.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_zoo",
+   "name": "The Flying Zoo",
+   "description": "Have these on board at once: Inadvisably Big Dog, Perfect Pangolin, Useless Cat, Diffident Bat, Star-Smitten Bat, Intrepid Cavy, Ratronaut.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Sunless Skies",
+   "achievements": [
+    {
+     "apiname": "ach_wealth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Comfortable Retirement",
+     "description": "Retire to a grand mansion with a hoard to make a dragon envious."
+    },
+    {
+     "apiname": "ach_fame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Writ Upon the Sky",
+     "description": "Retire to a life of fame, having written the Song of the Sky."
+    },
+    {
+     "apiname": "ach_truth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Stars are Dying",
+     "description": "Learn the secret that the stars hide, and find a way to survive it."
+    },
+    {
+     "apiname": "ach_cup",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Idylls of the King",
+     "description": "Complete the quest for the Martyr-King's Cup."
+    },
+    {
+     "apiname": "ach_nightmare",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lose Yourself",
+     "description": "Be consumed by your nightmares."
+    },
+    {
+     "apiname": "ach_terror",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Off the Rails",
+     "description": "Succumb to your terror."
+    },
+    {
+     "apiname": "ach_level",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who are you in the Dark?",
+     "description": "Advance a captain to level 20."
+    },
+    {
+     "apiname": "ach_reach",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Garden of Heaven",
+     "description": "Discover all stations in the Reach."
+    },
+    {
+     "apiname": "ach_eleu",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Midnight Groves",
+     "description": "Discover all stations in Eleutheria."
+    },
+    {
+     "apiname": "ach_albion",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Clockwise Kingdom",
+     "description": "Discover all stations in Albion."
+    },
+    {
+     "apiname": "ach_bk",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Districts of the Dead",
+     "description": "Discover all stations in the Blue Kingdom."
+    },
+    {
+     "apiname": "ach_zoo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Flying Zoo",
+     "description": "Have these on board at once: Inadvisably Big Dog, Perfect Pangolin, Useless Cat, Diffident Bat, Star-Smitten Bat, Intrepid Cavy, Ratronaut."
+    },
+    {
+     "apiname": "ach_blythe",
+     "achieved": 1,
+     "unlocktime": 1784412390,
+     "name": "Blythe Spirits",
+     "description": "Decide the fate of Percy Blythe."
+    },
+    {
+     "apiname": "ach_berr",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Armed and Operational",
+     "description": "Learn the Unassailable Founder's secret."
+    },
+    {
+     "apiname": "ach_boat",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tradition is the Democracy of the Dead",
+     "description": "Complete the Boatman's journey."
+    },
+    {
+     "apiname": "ach_gods",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An Enemy of All Gods",
+     "description": "Anger all the sky-gods at once."
+    },
+    {
+     "apiname": "ach_tack",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A True Tackety",
+     "description": "Become a hero to the Tacketies."
+    },
+    {
+     "apiname": "ach_stove",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Staunch Stovepipe",
+     "description": "Become a valued agent of the Windward Company."
+    },
+    {
+     "apiname": "ach_officer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Full Complement",
+     "description": "Appoint a full complement of officers, including a Mascot."
+    },
+    {
+     "apiname": "ach_war",
+     "achieved": 1,
+     "unlocktime": 1784412517,
+     "name": "The Fortunes of War",
+     "description": "Upset the balance of power in the Reach."
+    },
+    {
+     "apiname": "ach_sun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "—E SUN THE SUN THE SUN THE SUN TH—",
+     "description": "Restore the Clockwork Sun to its strength and its glory."
+    },
+    {
+     "apiname": "ach_lineage",
+     "achieved": 1,
+     "unlocktime": 1610420319,
+     "name": "A New Lineage",
+     "description": "Pass your locomotive to a new captain in your lineage."
+    },
+    {
+     "apiname": "ach_seven",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unto the Seventh Generation",
+     "description": "Continue a lineage to its seventh captain."
+    },
+    {
+     "apiname": "ach_whitlock",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Black Box",
+     "description": "Resolve Captain Whitlock's Legacy."
+    },
+    {
+     "apiname": "ach_allswell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Shall be Well",
+     "description": "Have 0 Crew, 0 Fuel, 0 Supplies, and Terror of 90 or more."
+    },
+    {
+     "apiname": "ach_regions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Whistle-Stop Tour",
+     "description": "Visit all four regions with a single captain."
+    },
+    {
+     "apiname": "ach_soul",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Soul the Devil Wouldn't Touch",
+     "description": "Possess a soul devoid of redeeming qualities."
+    },
+    {
+     "apiname": "ach_bilbo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Then and Back Again",
+     "description": "Return from a Weft of Unravelling Time."
+    },
+    {
+     "apiname": "ach_edge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Where the Winds Wait",
+     "description": "Launch a successful expedition into the Graveyard of Stars."
+    },
+    {
+     "apiname": "ach_terminate",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This Service Will Terminate Here",
+     "description": "Fly your locomotive beyond Death's Door and there meet your end."
+    },
+    {
+     "apiname": "ach_dilly",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lavenders Blue, Lavenders Green",
+     "description": "Hatch and adopt a certain lovable scamp, even if she keeps stealing your crew's fingers and toes."
+    }
+   ],
+   "success": true
+  }
+ }
+}

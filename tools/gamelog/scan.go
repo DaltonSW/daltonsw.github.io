@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"path/filepath"
 	"regexp"
 	"sort"
 	"strconv"
@@ -206,13 +207,22 @@ func scanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 		if c.Finished {
 			c.FinishedOn = raDay(g.HighestAwardDate)
 			c.AwardKind = strings.ToLower(g.HighestAwardKind)
-			c.Status = "finished"
+			c.Status = statusForAward(c.AwardKind)
 		} else {
 			c.Status = "playing"
 		}
 		out = append(out, c)
 	}
 	return out, nil
+}
+
+// statusForAward maps an RA HighestAwardKind onto a front-matter status —
+// mastered/completed means every achievement was earned, not just beaten.
+func statusForAward(kind string) string {
+	if kind == "mastered" || kind == "completed" {
+		return "mastered"
+	}
+	return "finished"
 }
 
 func scanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts ScanOptions) ([]Candidate, error) {
@@ -306,10 +316,7 @@ func formatScanReport(candidates []Candidate, numLogged int, opts ScanOptions) s
 		}
 
 		if c.Finished {
-			// Name the award: "12/189 achievements" alongside "finished"
-			// only makes sense once you can see it was a beaten award
-			// rather than a mastery.
-			fmt.Fprintf(&b, "    -> finished %s (%s)\n", c.FinishedOn, c.AwardKind)
+			fmt.Fprintf(&b, "    -> %s %s (%s)\n", c.Status, c.FinishedOn, c.AwardKind)
 		}
 		b.WriteString("\n")
 	}
@@ -368,6 +375,8 @@ func offerToCreate(gamesDir string, candidates []Candidate) error {
 		}
 		if _, err := saveAchievements(ctx, archiveDir, c.Title, raID, steamAppID, creds); err != nil {
 			fmt.Fprintf(os.Stderr, "    (no achievements saved: %v)\n", err)
+		} else if _, err := writeAchievementSummary(archiveDir, filepath.Dir(path), raID, steamAppID); err != nil {
+			fmt.Fprintf(os.Stderr, "    (achievement summary not written: %v)\n", err)
 		}
 	}
 

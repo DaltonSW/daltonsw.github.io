@@ -1,0 +1,675 @@
+{
+ "provider": "steam",
+ "title": "Super Meat Boy",
+ "updated": "2026-07-26",
+ "id": "40800",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 29,
+ "total": 48,
+ "first": "2012-11-17",
+ "last": "2021-01-15",
+ "platform": "PC",
+ "icon": "64eec20c9375e7473b964f0d0bc41d19f03add3b",
+ "playtime_mins": 1598,
+ "playtime": {
+  "windows": 867
+ },
+ "last_played": "2024-04-07",
+ "achievements": [
+  {
+   "key": "ACH_WARP_1",
+   "name": "Nostalgia ",
+   "description": "Unlock a single retro warp zone ",
+   "unlocked": true,
+   "date": "2012-11-17T16:49:40-06:00"
+  },
+  {
+   "key": "ACH_CHAR_CV",
+   "name": "The Commander ",
+   "description": "Unlock CommanderVideo ",
+   "unlocked": true,
+   "date": "2012-11-17T17:20:22-06:00"
+  },
+  {
+   "key": "ACH_CHAR_HEADCRAB",
+   "name": "I Have Crabs! ",
+   "description": "Unlock the Head Crab (10 bandages) ",
+   "unlocked": true,
+   "date": "2012-11-17T17:45:53-06:00"
+  },
+  {
+   "key": "ACH_CHAR_JILL",
+   "name": "The Bootlicker ",
+   "description": "Unlock Jill ",
+   "unlocked": true,
+   "date": "2012-11-17T18:31:04-06:00"
+  },
+  {
+   "key": "ACH_WARP_5",
+   "name": "Living In the Past ",
+   "description": "Complete 5 retro warp zones ",
+   "unlocked": true,
+   "date": "2012-11-18T14:01:10-06:00"
+  },
+  {
+   "key": "ACH_CHAR_TOFU",
+   "name": "Well look at you!",
+   "unlocked": true,
+   "date": "2012-11-18T15:00:05-06:00"
+  },
+  {
+   "key": "ACH_CHAR_MACH",
+   "name": "Metal Head ",
+   "description": "Unlock the Machinarium Robot (30 bandages) ",
+   "unlocked": true,
+   "date": "2012-11-18T15:12:19-06:00"
+  },
+  {
+   "key": "ACH_CHAR_OGMO",
+   "name": "The Jump man ",
+   "description": "Unlock Ogmo ",
+   "unlocked": true,
+   "date": "2013-10-07T20:55:40-05:00"
+  },
+  {
+   "key": "ACH_CHAR_NAIJA",
+   "name": "I Smell something Fishy... ",
+   "description": "Unlock Naija (50 bandages) ",
+   "unlocked": true,
+   "date": "2021-01-09T14:21:59-06:00"
+  },
+  {
+   "key": "ACH_WARP_10",
+   "name": "Old School ",
+   "description": "Complete 10 retro warp zones ",
+   "unlocked": true,
+   "date": "2021-01-09T14:40:20-06:00"
+  },
+  {
+   "key": "ACH_THEEND",
+   "name": "The End ",
+   "description": "Beat the light world ",
+   "unlocked": true,
+   "date": "2021-01-09T16:23:43-06:00"
+  },
+  {
+   "key": "ACH_CHAR_RUNMAN",
+   "name": "MS PAINT RULZ! ",
+   "description": "Unlock RunMan (70 bandages) ",
+   "unlocked": true,
+   "date": "2021-01-10T18:42:42-06:00"
+  },
+  {
+   "key": "ACH_CH7LIGHT",
+   "name": "Suffragette ",
+   "unlocked": true,
+   "date": "2021-01-11T11:15:36-06:00"
+  },
+  {
+   "key": "ACH_GLITCH_4",
+   "name": "^**5%_=+12 ",
+   "description": "8*(@31^ ",
+   "unlocked": true,
+   "date": "2021-01-11T11:53:59-06:00"
+  },
+  {
+   "key": "ACH_CHAR_FLY",
+   "name": "The Fly guy ",
+   "description": "Unlock Flywrench ",
+   "unlocked": true,
+   "date": "2021-01-11T12:18:10-06:00"
+  },
+  {
+   "key": "ACH_CHAR_KID",
+   "name": "The Kid ",
+   "description": "Unlock the Kid ",
+   "unlocked": true,
+   "date": "2021-01-11T12:44:31-06:00"
+  },
+  {
+   "key": "ACH_GLITCH_1",
+   "name": "N#7*\u003c1!23 ",
+   "description": "8*(@31^ ",
+   "unlocked": true,
+   "date": "2021-01-11T13:13:42-06:00"
+  },
+  {
+   "key": "ACH_GLITCH_2",
+   "name": "\u0026*\u003e?1$ ",
+   "description": "8*(@31^ ",
+   "unlocked": true,
+   "date": "2021-01-11T13:22:25-06:00"
+  },
+  {
+   "key": "ACH_GLITCH_3",
+   "name": "(=+66\u00261$ ",
+   "description": "8*(@31^ ",
+   "unlocked": true,
+   "date": "2021-01-11T13:31:54-06:00"
+  },
+  {
+   "key": "ACH_CHAR_V",
+   "name": "Vx6 ",
+   "description": "Unlock Captain Viridian (90 bandages) ",
+   "unlocked": true,
+   "date": "2021-01-11T16:39:21-06:00"
+  },
+  {
+   "key": "ACH_GLITCH_5",
+   "name": "*|-0\u0026\u0026",
+   "description": "8*(@31^ ",
+   "unlocked": true,
+   "date": "2021-01-11T16:51:38-06:00"
+  },
+  {
+   "key": "ACH_THEREALEND",
+   "name": "The Real End ",
+   "description": "Beat the dark world ",
+   "unlocked": true,
+   "date": "2021-01-12T11:09:35-06:00"
+  },
+  {
+   "key": "ACH_IRONMAN_FOREST",
+   "name": "Wood Boy ",
+   "description": "Complete the Forest without dying ",
+   "unlocked": true,
+   "date": "2021-01-12T11:29:28-06:00"
+  },
+  {
+   "key": "ACH_RARE",
+   "name": "Rare",
+   "unlocked": true,
+   "date": "2021-01-12T11:39:09-06:00"
+  },
+  {
+   "key": "ACH_CH7DARK",
+   "name": "Seneca Falls ",
+   "unlocked": true,
+   "date": "2021-01-15T10:50:58-06:00"
+  },
+  {
+   "key": "ACH_WARP_20",
+   "name": "Retro Rampage ",
+   "description": "Complete all retro warp zones ",
+   "unlocked": true,
+   "date": "2021-01-15T13:04:58-06:00"
+  },
+  {
+   "key": "ACH_CHAR_MINECRAFT",
+   "name": "Accidental Arsonist  ",
+   "description": "Unlock Mr. Minecraft (100 bandages) ",
+   "unlocked": true,
+   "date": "2021-01-15T13:04:58-06:00"
+  },
+  {
+   "key": "ACH_100%",
+   "name": "Golden God ",
+   "description": "100% the game ",
+   "unlocked": true,
+   "date": "2021-01-15T13:28:33-06:00"
+  },
+  {
+   "key": "ACH_GLITCH_6",
+   "name": "N\u00268^2^%$1`` ",
+   "description": "8*(@31^ ",
+   "unlocked": true,
+   "date": "2021-01-15T14:24:21-06:00"
+  },
+  {
+   "key": "ACH_IRONMAN_COTTONALLEY",
+   "name": "Girl Boy ",
+   "description": "Complete the Cotton Alley without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKCOTTONALLEY",
+   "name": "Impossible Boy",
+   "description": "Complete The Cotton Alley Dark World without dying",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKFACTORY",
+   "name": "Missile Boy",
+   "description": "Complete the Salt Factory Dark World without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKFOREST",
+   "name": "Squirrel Boy",
+   "description": "Complete the Forest Dark World without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKHELL",
+   "name": "Demon Boy",
+   "description": "Complete the Hell Dark World without dying.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKHOSPITAL",
+   "name": "Blood Clot Boy",
+   "description": "Complete the Hospital Dark World without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKRAPTURE",
+   "name": "Zombie Boy",
+   "description": "Complete the Rapture Dark World without dying",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_DARKTHEEND",
+   "name": "Dr.Fetus Boy",
+   "description": "Complete The End Dark World without dying",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_HELL",
+   "name": "Brimstone Boy ",
+   "description": "Complete Hell without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_HOSPITAL",
+   "name": "Needle Boy ",
+   "description": "Complete the Hospital without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_RAPTURE",
+   "name": "Maggot Boy ",
+   "description": "Complete the Rapture without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_SALTFACTORY",
+   "name": "Salt Boy ",
+   "description": "Complete the Salt Factory without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_IRONMAN_THEEND",
+   "name": "Dead Boy ",
+   "description": "Complete The End without dying ",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_MEDIUM",
+   "name": "Medium",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_MEDIUMRARE",
+   "name": "Medium Rare",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SUMMER_HELL",
+   "name": "Medium Well",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WELLDONE",
+   "name": "Well Done",
+   "unlocked": false
+  },
+  {
+   "key": "kid_gift_1",
+   "name": "The Kids Xmas!",
+   "description": "Complete a single level of \"The Kids Xmas\" chapter in super meat world",
+   "unlocked": false
+  },
+  {
+   "key": "kid_gift_2",
+   "name": "The Golden Gift!",
+   "description": "Complete all levels in \"The Kids Xmas\" chapter in super meat world IN ONE PLAY SESSION.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Super Meat Boy",
+   "achievements": [
+    {
+     "apiname": "ACH_IRONMAN_FOREST",
+     "achieved": 1,
+     "unlocktime": 1610472568,
+     "name": "Wood Boy ",
+     "description": "Complete the Forest without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_HOSPITAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Needle Boy ",
+     "description": "Complete the Hospital without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_SALTFACTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Salt Boy ",
+     "description": "Complete the Salt Factory without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_HELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brimstone Boy ",
+     "description": "Complete Hell without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_RAPTURE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maggot Boy ",
+     "description": "Complete the Rapture without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_THEEND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dead Boy ",
+     "description": "Complete The End without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_COTTONALLEY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Girl Boy ",
+     "description": "Complete the Cotton Alley without dying "
+    },
+    {
+     "apiname": "ACH_WARP_1",
+     "achieved": 1,
+     "unlocktime": 1353192580,
+     "name": "Nostalgia ",
+     "description": "Unlock a single retro warp zone "
+    },
+    {
+     "apiname": "ACH_WARP_5",
+     "achieved": 1,
+     "unlocktime": 1353268870,
+     "name": "Living In the Past ",
+     "description": "Complete 5 retro warp zones "
+    },
+    {
+     "apiname": "ACH_WARP_10",
+     "achieved": 1,
+     "unlocktime": 1610224820,
+     "name": "Old School ",
+     "description": "Complete 10 retro warp zones "
+    },
+    {
+     "apiname": "ACH_WARP_20",
+     "achieved": 1,
+     "unlocktime": 1610737498,
+     "name": "Retro Rampage ",
+     "description": "Complete all retro warp zones "
+    },
+    {
+     "apiname": "ACH_THEEND",
+     "achieved": 1,
+     "unlocktime": 1610231023,
+     "name": "The End ",
+     "description": "Beat the light world "
+    },
+    {
+     "apiname": "ACH_THEREALEND",
+     "achieved": 1,
+     "unlocktime": 1610471375,
+     "name": "The Real End ",
+     "description": "Beat the dark world "
+    },
+    {
+     "apiname": "ACH_100%",
+     "achieved": 1,
+     "unlocktime": 1610738913,
+     "name": "Golden God ",
+     "description": "100% the game "
+    },
+    {
+     "apiname": "ACH_CH7LIGHT",
+     "achieved": 1,
+     "unlocktime": 1610385336,
+     "name": "Suffragette ",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_CH7DARK",
+     "achieved": 1,
+     "unlocktime": 1610729458,
+     "name": "Seneca Falls ",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_CHAR_HEADCRAB",
+     "achieved": 1,
+     "unlocktime": 1353195953,
+     "name": "I Have Crabs! ",
+     "description": "Unlock the Head Crab (10 bandages) "
+    },
+    {
+     "apiname": "ACH_CHAR_MACH",
+     "achieved": 1,
+     "unlocktime": 1353273139,
+     "name": "Metal Head ",
+     "description": "Unlock the Machinarium Robot (30 bandages) "
+    },
+    {
+     "apiname": "ACH_CHAR_NAIJA",
+     "achieved": 1,
+     "unlocktime": 1610223719,
+     "name": "I Smell something Fishy... ",
+     "description": "Unlock Naija (50 bandages) "
+    },
+    {
+     "apiname": "ACH_CHAR_MINECRAFT",
+     "achieved": 1,
+     "unlocktime": 1610737498,
+     "name": "Accidental Arsonist  ",
+     "description": "Unlock Mr. Minecraft (100 bandages) "
+    },
+    {
+     "apiname": "ACH_CHAR_RUNMAN",
+     "achieved": 1,
+     "unlocktime": 1610325762,
+     "name": "MS PAINT RULZ! ",
+     "description": "Unlock RunMan (70 bandages) "
+    },
+    {
+     "apiname": "ACH_CHAR_V",
+     "achieved": 1,
+     "unlocktime": 1610404761,
+     "name": "Vx6 ",
+     "description": "Unlock Captain Viridian (90 bandages) "
+    },
+    {
+     "apiname": "ACH_CHAR_CV",
+     "achieved": 1,
+     "unlocktime": 1353194422,
+     "name": "The Commander ",
+     "description": "Unlock CommanderVideo "
+    },
+    {
+     "apiname": "ACH_CHAR_JILL",
+     "achieved": 1,
+     "unlocktime": 1353198664,
+     "name": "The Bootlicker ",
+     "description": "Unlock Jill "
+    },
+    {
+     "apiname": "ACH_CHAR_OGMO",
+     "achieved": 1,
+     "unlocktime": 1381197340,
+     "name": "The Jump man ",
+     "description": "Unlock Ogmo "
+    },
+    {
+     "apiname": "ACH_CHAR_FLY",
+     "achieved": 1,
+     "unlocktime": 1610389090,
+     "name": "The Fly guy ",
+     "description": "Unlock Flywrench "
+    },
+    {
+     "apiname": "ACH_CHAR_KID",
+     "achieved": 1,
+     "unlocktime": 1610390671,
+     "name": "The Kid ",
+     "description": "Unlock the Kid "
+    },
+    {
+     "apiname": "ACH_GLITCH_1",
+     "achieved": 1,
+     "unlocktime": 1610392422,
+     "name": "N#7*\u003c1!23 ",
+     "description": "8*(@31^ "
+    },
+    {
+     "apiname": "ACH_GLITCH_2",
+     "achieved": 1,
+     "unlocktime": 1610392945,
+     "name": "\u0026*\u003e?1$ ",
+     "description": "8*(@31^ "
+    },
+    {
+     "apiname": "ACH_GLITCH_3",
+     "achieved": 1,
+     "unlocktime": 1610393514,
+     "name": "(=+66\u00261$ ",
+     "description": "8*(@31^ "
+    },
+    {
+     "apiname": "ACH_GLITCH_4",
+     "achieved": 1,
+     "unlocktime": 1610387639,
+     "name": "^**5%_=+12 ",
+     "description": "8*(@31^ "
+    },
+    {
+     "apiname": "ACH_GLITCH_5",
+     "achieved": 1,
+     "unlocktime": 1610405498,
+     "name": "*|-0\u0026\u0026",
+     "description": "8*(@31^ "
+    },
+    {
+     "apiname": "ACH_GLITCH_6",
+     "achieved": 1,
+     "unlocktime": 1610742261,
+     "name": "N\u00268^2^%$1`` ",
+     "description": "8*(@31^ "
+    },
+    {
+     "apiname": "ACH_CHAR_TOFU",
+     "achieved": 1,
+     "unlocktime": 1353272405,
+     "name": "Well look at you!",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKFOREST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squirrel Boy",
+     "description": "Complete the Forest Dark World without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKHOSPITAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blood Clot Boy",
+     "description": "Complete the Hospital Dark World without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKFACTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Missile Boy",
+     "description": "Complete the Salt Factory Dark World without dying "
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKHELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Demon Boy",
+     "description": "Complete the Hell Dark World without dying."
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKRAPTURE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zombie Boy",
+     "description": "Complete the Rapture Dark World without dying"
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKTHEEND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dr.Fetus Boy",
+     "description": "Complete The End Dark World without dying"
+    },
+    {
+     "apiname": "ACH_IRONMAN_DARKCOTTONALLEY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Impossible Boy",
+     "description": "Complete The Cotton Alley Dark World without dying"
+    },
+    {
+     "apiname": "ACH_SUMMER_HELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Medium Well",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_RARE",
+     "achieved": 1,
+     "unlocktime": 1610473149,
+     "name": "Rare",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_MEDIUM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Medium",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_WELLDONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well Done",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_MEDIUMRARE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Medium Rare",
+     "description": ""
+    },
+    {
+     "apiname": "kid_gift_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Kids Xmas!",
+     "description": "Complete a single level of \"The Kids Xmas\" chapter in super meat world"
+    },
+    {
+     "apiname": "kid_gift_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Golden Gift!",
+     "description": "Complete all levels in \"The Kids Xmas\" chapter in super meat world IN ONE PLAY SESSION."
+    }
+   ],
+   "success": true
+  }
+ }
+}

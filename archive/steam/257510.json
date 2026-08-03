@@ -1,0 +1,538 @@
+{
+ "provider": "steam",
+ "title": "The Talos Principle",
+ "updated": "2026-07-26",
+ "id": "257510",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 9,
+ "total": 40,
+ "first": "2019-10-29",
+ "last": "2019-11-01",
+ "platform": "PC",
+ "icon": "8222673c1eb13e6a8a8367ec0e2940a887ecf270",
+ "playtime_mins": 343,
+ "playtime": {
+  "windows": 343
+ },
+ "last_played": "2023-06-19",
+ "achievements": [
+  {
+   "key": "LogicCheckSuccess",
+   "name": "Logic check... OK",
+   "unlocked": true,
+   "date": "2019-10-29T16:01:54-05:00"
+  },
+  {
+   "key": "HallsOfHisTemple",
+   "name": "Halls of His Temple",
+   "unlocked": true,
+   "date": "2019-10-29T16:20:37-05:00"
+  },
+  {
+   "key": "SigilsAreNotEnough",
+   "name": "Sigils Are Not Enough",
+   "description": "Pick up a star.",
+   "unlocked": true,
+   "date": "2019-10-29T16:29:39-05:00"
+  },
+  {
+   "key": "IntoTheUnknown",
+   "name": "Into The Unknown",
+   "unlocked": true,
+   "date": "2019-10-30T11:59:33-05:00"
+  },
+  {
+   "key": "MakeConnections",
+   "name": "Make Connections",
+   "unlocked": true,
+   "date": "2019-10-30T13:53:13-05:00"
+  },
+  {
+   "key": "NotACube",
+   "name": "Not a Cube",
+   "unlocked": true,
+   "date": "2019-10-30T14:07:58-05:00"
+  },
+  {
+   "key": "LandOfDeath",
+   "name": "The Land of Death",
+   "unlocked": true,
+   "date": "2019-10-30T19:56:17-05:00"
+  },
+  {
+   "key": "Uplifted",
+   "name": "Uplifted",
+   "unlocked": true,
+   "date": "2019-11-01T18:26:29-05:00"
+  },
+  {
+   "key": "SeeDouble",
+   "name": "See Double",
+   "unlocked": true,
+   "date": "2019-11-01T19:06:29-05:00"
+  },
+  {
+   "key": "AGoodListener",
+   "name": "A Good Listener",
+   "description": "Listen to all she has to say.",
+   "unlocked": false
+  },
+  {
+   "key": "Ascension",
+   "name": "Ascension",
+   "unlocked": false
+  },
+  {
+   "key": "BlessedMessenger",
+   "name": "Blessed Messenger",
+   "unlocked": false
+  },
+  {
+   "key": "BreakDownBarriers",
+   "name": "Break Down Barriers",
+   "unlocked": false
+  },
+  {
+   "key": "ChangedMyMind",
+   "name": "Changed My Mind.",
+   "description": "It is never too late to accept Elohim's forgiveness.",
+   "unlocked": false
+  },
+  {
+   "key": "DealWithTheDeceiver",
+   "name": "Deal With The Deceiver",
+   "unlocked": false
+  },
+  {
+   "key": "EternalLife",
+   "name": "Eternal Life",
+   "unlocked": false
+  },
+  {
+   "key": "ExtremePersistenceDetected",
+   "name": "Extreme Persistence Detected",
+   "description": "Try, fail, try again, fail again, eventually succeed.",
+   "unlocked": false
+  },
+  {
+   "key": "First",
+   "name": "First!",
+   "unlocked": false
+  },
+  {
+   "key": "FreeAdmin",
+   "name": "Free Admin",
+   "unlocked": false
+  },
+  {
+   "key": "FreeWill",
+   "name": "Free Will",
+   "unlocked": false
+  },
+  {
+   "key": "HedgingMyBets",
+   "name": "Hedging My Bets",
+   "description": "Do as you're told (for now).",
+   "unlocked": false
+  },
+  {
+   "key": "HelpFromAbove",
+   "name": "Help From Above",
+   "description": "Receive guidance from Elohim's messengers.",
+   "unlocked": false
+  },
+  {
+   "key": "KnowYourLimits",
+   "name": "Know Your Limits",
+   "description": "Accept Elohim's wisdom.",
+   "unlocked": false
+  },
+  {
+   "key": "LOL",
+   "name": "LOL",
+   "description": "Laugh at the pointlessness of existence.",
+   "unlocked": false
+  },
+  {
+   "key": "LandOfFaith",
+   "name": "The Land of Faith",
+   "unlocked": false
+  },
+  {
+   "key": "LastStableVersion",
+   "name": "Last Stable Version",
+   "description": "Restore a backup version of yourself.",
+   "unlocked": false
+  },
+  {
+   "key": "LeaveYourMark",
+   "name": "Leave Your Mark",
+   "description": "Tell the others what you think.",
+   "unlocked": false
+  },
+  {
+   "key": "OffTheRadar",
+   "name": "Off The Radar",
+   "unlocked": false
+  },
+  {
+   "key": "OnTheEdge",
+   "name": "On The Edge",
+   "description": "Reach the top.",
+   "unlocked": false
+  },
+  {
+   "key": "OnTopOfThings",
+   "name": "On Top of Things",
+   "unlocked": false
+  },
+  {
+   "key": "PressTheSerpent",
+   "name": "Press The Serpent",
+   "description": "Expose the flaws in the code.",
+   "unlocked": false
+  },
+  {
+   "key": "QRReader",
+   "name": "QR Reader",
+   "description": "See what the others have to say.",
+   "unlocked": false
+  },
+  {
+   "key": "SacredGrounds",
+   "name": "Sacred Grounds",
+   "description": "Find a Messenger's abode.",
+   "unlocked": false
+  },
+  {
+   "key": "SilenceTheSerpent",
+   "name": "Silence The Serpent",
+   "description": "Do not allow the serpent to fill you with doubt.",
+   "unlocked": false
+  },
+  {
+   "key": "Solipsist",
+   "name": "Solipsist",
+   "description": "Get everything on your own.",
+   "unlocked": false
+  },
+  {
+   "key": "SplitPersonality",
+   "name": "Split Personality",
+   "description": "Communicate with your double.",
+   "unlocked": false
+  },
+  {
+   "key": "TakeItWithYou",
+   "name": "Take It With You",
+   "unlocked": false
+  },
+  {
+   "key": "ThoroughResearcher",
+   "name": "Thorough Researcher",
+   "description": "Collect all pieces of written information.",
+   "unlocked": false
+  },
+  {
+   "key": "Transgression",
+   "name": "Transgression",
+   "description": "Don't just peek. Do it.",
+   "unlocked": false
+  },
+  {
+   "key": "WelcomeToGehenna",
+   "name": "Welcome to Gehenna",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Talos Principle",
+   "achievements": [
+    {
+     "apiname": "LogicCheckSuccess",
+     "achieved": 1,
+     "unlocktime": 1572382914,
+     "name": "Logic check... OK",
+     "description": ""
+    },
+    {
+     "apiname": "HallsOfHisTemple",
+     "achieved": 1,
+     "unlocktime": 1572384037,
+     "name": "Halls of His Temple",
+     "description": ""
+    },
+    {
+     "apiname": "IntoTheUnknown",
+     "achieved": 1,
+     "unlocktime": 1572454773,
+     "name": "Into The Unknown",
+     "description": ""
+    },
+    {
+     "apiname": "MakeConnections",
+     "achieved": 1,
+     "unlocktime": 1572461593,
+     "name": "Make Connections",
+     "description": ""
+    },
+    {
+     "apiname": "NotACube",
+     "achieved": 1,
+     "unlocktime": 1572462478,
+     "name": "Not a Cube",
+     "description": ""
+    },
+    {
+     "apiname": "SigilsAreNotEnough",
+     "achieved": 1,
+     "unlocktime": 1572384579,
+     "name": "Sigils Are Not Enough",
+     "description": "Pick up a star."
+    },
+    {
+     "apiname": "ExtremePersistenceDetected",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extreme Persistence Detected",
+     "description": "Try, fail, try again, fail again, eventually succeed."
+    },
+    {
+     "apiname": "KnowYourLimits",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Know Your Limits",
+     "description": "Accept Elohim's wisdom."
+    },
+    {
+     "apiname": "LandOfDeath",
+     "achieved": 1,
+     "unlocktime": 1572483377,
+     "name": "The Land of Death",
+     "description": ""
+    },
+    {
+     "apiname": "LeaveYourMark",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leave Your Mark",
+     "description": "Tell the others what you think."
+    },
+    {
+     "apiname": "Uplifted",
+     "achieved": 1,
+     "unlocktime": 1572650789,
+     "name": "Uplifted",
+     "description": ""
+    },
+    {
+     "apiname": "LandOfFaith",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Land of Faith",
+     "description": ""
+    },
+    {
+     "apiname": "BreakDownBarriers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Break Down Barriers",
+     "description": ""
+    },
+    {
+     "apiname": "OffTheRadar",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Off The Radar",
+     "description": ""
+    },
+    {
+     "apiname": "SacredGrounds",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sacred Grounds",
+     "description": "Find a Messenger's abode."
+    },
+    {
+     "apiname": "HelpFromAbove",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Help From Above",
+     "description": "Receive guidance from Elohim's messengers."
+    },
+    {
+     "apiname": "SeeDouble",
+     "achieved": 1,
+     "unlocktime": 1572653189,
+     "name": "See Double",
+     "description": ""
+    },
+    {
+     "apiname": "OnTopOfThings",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Top of Things",
+     "description": ""
+    },
+    {
+     "apiname": "SplitPersonality",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Split Personality",
+     "description": "Communicate with your double."
+    },
+    {
+     "apiname": "Transgression",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Transgression",
+     "description": "Don't just peek. Do it."
+    },
+    {
+     "apiname": "LOL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "LOL",
+     "description": "Laugh at the pointlessness of existence."
+    },
+    {
+     "apiname": "DealWithTheDeceiver",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deal With The Deceiver",
+     "description": ""
+    },
+    {
+     "apiname": "HedgingMyBets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hedging My Bets",
+     "description": "Do as you're told (for now)."
+    },
+    {
+     "apiname": "Solipsist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Solipsist",
+     "description": "Get everything on your own."
+    },
+    {
+     "apiname": "QRReader",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "QR Reader",
+     "description": "See what the others have to say."
+    },
+    {
+     "apiname": "PressTheSerpent",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Press The Serpent",
+     "description": "Expose the flaws in the code."
+    },
+    {
+     "apiname": "SilenceTheSerpent",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silence The Serpent",
+     "description": "Do not allow the serpent to fill you with doubt."
+    },
+    {
+     "apiname": "EternalLife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eternal Life",
+     "description": ""
+    },
+    {
+     "apiname": "LastStableVersion",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last Stable Version",
+     "description": "Restore a backup version of yourself."
+    },
+    {
+     "apiname": "OnTheEdge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On The Edge",
+     "description": "Reach the top."
+    },
+    {
+     "apiname": "ChangedMyMind",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Changed My Mind.",
+     "description": "It is never too late to accept Elohim's forgiveness."
+    },
+    {
+     "apiname": "FreeWill",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Free Will",
+     "description": ""
+    },
+    {
+     "apiname": "TakeItWithYou",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take It With You",
+     "description": ""
+    },
+    {
+     "apiname": "ThoroughResearcher",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thorough Researcher",
+     "description": "Collect all pieces of written information."
+    },
+    {
+     "apiname": "AGoodListener",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Good Listener",
+     "description": "Listen to all she has to say."
+    },
+    {
+     "apiname": "BlessedMessenger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blessed Messenger",
+     "description": ""
+    },
+    {
+     "apiname": "WelcomeToGehenna",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to Gehenna",
+     "description": ""
+    },
+    {
+     "apiname": "First",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First!",
+     "description": ""
+    },
+    {
+     "apiname": "Ascension",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ascension",
+     "description": ""
+    },
+    {
+     "apiname": "FreeAdmin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Free Admin",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

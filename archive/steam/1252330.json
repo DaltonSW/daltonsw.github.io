@@ -1,0 +1,789 @@
+{
+ "provider": "steam",
+ "title": "DEATHLOOP",
+ "updated": "2026-07-26",
+ "id": "1252330",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 24,
+ "total": 58,
+ "first": "2021-12-12",
+ "last": "2021-12-21",
+ "platform": "PC",
+ "icon": "89c9294b6df3c0a2acae28c6376fd32c444b5a88",
+ "playtime_mins": 1408,
+ "playtime": {
+  "windows": 1408
+ },
+ "last_played": "2021-12-21",
+ "achievements": [
+  {
+   "key": "ach_10",
+   "name": "Gooooood Morning, Blackreef!",
+   "unlocked": true,
+   "date": "2021-12-12T09:03:22-06:00"
+  },
+  {
+   "key": "ach_1",
+   "name": "Nowhere To Run To",
+   "description": "Take out an invading Julianna while playing as Colt.",
+   "unlocked": true,
+   "date": "2021-12-12T10:54:03-06:00"
+  },
+  {
+   "key": "ach_11",
+   "name": "All The Live-Long Day",
+   "description": "Survive all 4 time periods in one day.",
+   "unlocked": true,
+   "date": "2021-12-12T10:56:57-06:00"
+  },
+  {
+   "key": "ach_51",
+   "name": "Chop Chop",
+   "description": "Kill 3 enemies with the machete in 10 seconds.",
+   "unlocked": true,
+   "date": "2021-12-12T11:11:41-06:00"
+  },
+  {
+   "key": "ach_4",
+   "name": "Welcome To Blackreef",
+   "unlocked": true,
+   "date": "2021-12-12T11:17:20-06:00"
+  },
+  {
+   "key": "ach_14",
+   "name": "Pieces Of Eight",
+   "description": "While playing as Colt, kill Frank. Or Charlie. Or Fia. Or Wenjie. Or Aleksis. Or Harriet. Egor will do as well.",
+   "unlocked": true,
+   "date": "2021-12-12T11:47:36-06:00"
+  },
+  {
+   "key": "ach_13",
+   "name": "Dead Drop",
+   "description": "Absorb Residuum from a body - like some kind of temporal sponge.",
+   "unlocked": true,
+   "date": "2021-12-12T13:18:48-06:00"
+  },
+  {
+   "key": "ach_50",
+   "name": "Residual Earnings",
+   "description": "Absorb more than 20000 Residuum in a map.",
+   "unlocked": true,
+   "date": "2021-12-12T13:40:20-06:00"
+  },
+  {
+   "key": "ach_25",
+   "name": "Forever Yours",
+   "description": "Infuse a Slab.",
+   "unlocked": true,
+   "date": "2021-12-12T13:50:34-06:00"
+  },
+  {
+   "key": "ach_12",
+   "name": "Die, Die, And Die Again",
+   "unlocked": true,
+   "date": "2021-12-12T16:32:43-06:00"
+  },
+  {
+   "key": "ach_22",
+   "name": "Didn't See It Coming",
+   "unlocked": true,
+   "date": "2021-12-17T20:19:39-06:00"
+  },
+  {
+   "key": "ach_43",
+   "name": "Clean Sweep",
+   "description": "Kill everyone in a time period and escape.",
+   "unlocked": true,
+   "date": "2021-12-17T21:30:30-06:00"
+  },
+  {
+   "key": "ach_6",
+   "name": "Egoraphobia",
+   "unlocked": true,
+   "date": "2021-12-18T12:29:52-06:00"
+  },
+  {
+   "key": "ach_49",
+   "name": "Sugar Crash",
+   "description": "While playing as Colt, use candy to gain a tactical advantage.",
+   "unlocked": true,
+   "date": "2021-12-19T14:31:55-06:00"
+  },
+  {
+   "key": "ach_7",
+   "name": "Dangerous Liaison",
+   "unlocked": true,
+   "date": "2021-12-19T15:56:52-06:00"
+  },
+  {
+   "key": "ach_38",
+   "name": "Know Your Enemy",
+   "description": "Complete one AEON dossier.",
+   "unlocked": true,
+   "date": "2021-12-19T21:17:47-06:00"
+  },
+  {
+   "key": "ach_5",
+   "name": "Baby, You're a Firework",
+   "unlocked": true,
+   "date": "2021-12-20T18:25:43-06:00"
+  },
+  {
+   "key": "ach_54",
+   "name": "Oops",
+   "description": "While playing as Colt, cause someone to fall to their death.",
+   "unlocked": true,
+   "date": "2021-12-20T18:35:50-06:00"
+  },
+  {
+   "key": "ach_15",
+   "name": "Ensemble Tragedy",
+   "description": "Kill each Visionary at least once.",
+   "unlocked": true,
+   "date": "2021-12-20T18:45:58-06:00"
+  },
+  {
+   "key": "ach_9",
+   "name": "Beyond The Horizon",
+   "unlocked": true,
+   "date": "2021-12-20T21:09:53-06:00"
+  },
+  {
+   "key": "ach_8",
+   "name": "An Offer She Can't Refuse",
+   "unlocked": true,
+   "date": "2021-12-20T21:26:17-06:00"
+  },
+  {
+   "key": "ach_3",
+   "name": "One Perfect Day",
+   "unlocked": true,
+   "date": "2021-12-21T19:10:08-06:00"
+  },
+  {
+   "key": "ach_23",
+   "name": "Violent Delights",
+   "unlocked": true,
+   "date": "2021-12-21T19:36:29-06:00"
+  },
+  {
+   "key": "ach_36",
+   "name": "Bling Bling Bang Bang",
+   "description": "Equip a loadout worth more than 45100 Residuum.",
+   "unlocked": true,
+   "date": "2021-12-21T19:40:06-06:00"
+  },
+  {
+   "key": "ach_16",
+   "name": "Alpha Burger",
+   "unlocked": false
+  },
+  {
+   "key": "ach_17",
+   "name": "Power Chord",
+   "unlocked": false
+  },
+  {
+   "key": "ach_18",
+   "name": "Judgement Day",
+   "unlocked": false
+  },
+  {
+   "key": "ach_19",
+   "name": "Game Over",
+   "unlocked": false
+  },
+  {
+   "key": "ach_2",
+   "name": "Nowhere To Hide",
+   "description": "While playing as Julianna, cross Colt off your kill list.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_20",
+   "name": "Quantum Solution",
+   "unlocked": false
+  },
+  {
+   "key": "ach_21",
+   "name": "Not-So-Invisible Man",
+   "unlocked": false
+  },
+  {
+   "key": "ach_24",
+   "name": "Ghost At The Feast",
+   "unlocked": false
+  },
+  {
+   "key": "ach_26",
+   "name": "Spare No Expense",
+   "description": "While playing as Colt, own all upgrades for a Slab.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_27",
+   "name": "Rip And Tear",
+   "description": "As Colt, inflict a truckload of damage to Eternalists during a single use of Havoc.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_28",
+   "name": "Blink Of An Eye",
+   "description": "As Colt, transport an enemy onto a mine using Shift.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_29",
+   "name": "Fwd: Fwd: Fwd: PAIN",
+   "description": "As Colt, transmit damage over more than 20 meters using Nexus.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_30",
+   "name": "Death Is In The Air",
+   "description": "As Colt, achieve 3 airborne headshots on enemies you've launched using Karnesis.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_31",
+   "name": "Don't Mind Me",
+   "description": "While using Aether as Colt, kill 3 enemies without alerting nearby enemies.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_32",
+   "name": "Dressing Down",
+   "description": "As Julianna, disguise yourself as Colt using Masquerade.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_33",
+   "name": "For Every Occasion",
+   "description": "Take 36 different Trinkets into the field with you while playing as Colt.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_34",
+   "name": "Spoiled for Choice",
+   "description": "Infuse one of each type of weapon.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_35",
+   "name": "The Spice Of Life",
+   "description": "Die every which way as Colt: Drown. Fall. Choke on poison gas. Succumb to fatal depressurization. Get blown up. Shot. Stabbed. Ground up. Fried by a rocket. Oh, and obliterated by a reactor. Fun, right?",
+   "unlocked": false
+  },
+  {
+   "key": "ach_37",
+   "name": "Full Deck",
+   "description": "Kill a Visionary using a full loadout, without any empty slots or sockets, and escape the map.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_39",
+   "name": "The G.O.D. of O.S.P.",
+   "description": "Enter a map with an empty loadout and kill all Visionaries present. Leave the map. Wash your hands.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_40",
+   "name": "Mightier Than The Gun",
+   "description": "Kill all Visionaries in a map - and make it to the exit - without using a gun.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_41",
+   "name": "Silent Disco",
+   "description": "Get in and out of a map without being spotted - and kill all Visionaries present.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_42",
+   "name": "Only The Guilty",
+   "description": "Kill all Visionaries present in a map and escape without killing any Eternalists.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_44",
+   "name": "You Only Die Once",
+   "description": "Finish an entire loop while wearing a ClassPass.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_45",
+   "name": "Play It Again, Colt",
+   "description": "After finishing the game once, kill all Visionaries in a map and escape.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_46",
+   "name": "Clean-ish Hands",
+   "description": "Kill all Visionaries - and no Eternalists - in a single loop.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_47",
+   "name": "A Charlie Montague Game",
+   "description": "Prove you're a real gamer by winning Charlie's Wake Up Challenge, Reward Scheme, the Moxie, Haul-A-Quinn, and the Yerhva.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_48",
+   "name": "Cooking With Gas",
+   "description": "While playing as Colt, ignite a gas cloud while someone is inside it.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_52",
+   "name": "Old Habits Die Hard",
+   "unlocked": false
+  },
+  {
+   "key": "ach_53",
+   "name": "Deathday Suit",
+   "description": "Kill the (mostly) naked character in each map.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_55",
+   "name": "Garbage Day!",
+   "description": "Kill the Garbage Collector and acquire the Fugue slab.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_56",
+   "name": "Out Like a Light",
+   "description": "Acquire the HALPS Prototype and disintegrate a Visionary.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_57",
+   "name": "Best of Both Worlds",
+   "description": "Use the experimental machine in Karl's Bay to craft a doubly-powerful trinket.",
+   "unlocked": false
+  },
+  {
+   "key": "ach_58",
+   "name": "Postmodern Abstractionism",
+   "description": "Kill an Eternalist with a Paint Bomb.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "DEATHLOOP",
+   "achievements": [
+    {
+     "apiname": "ach_1",
+     "achieved": 1,
+     "unlocktime": 1639328043,
+     "name": "Nowhere To Run To",
+     "description": "Take out an invading Julianna while playing as Colt."
+    },
+    {
+     "apiname": "ach_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nowhere To Hide",
+     "description": "While playing as Julianna, cross Colt off your kill list."
+    },
+    {
+     "apiname": "ach_3",
+     "achieved": 1,
+     "unlocktime": 1640135408,
+     "name": "One Perfect Day",
+     "description": ""
+    },
+    {
+     "apiname": "ach_4",
+     "achieved": 1,
+     "unlocktime": 1639329440,
+     "name": "Welcome To Blackreef",
+     "description": ""
+    },
+    {
+     "apiname": "ach_5",
+     "achieved": 1,
+     "unlocktime": 1640046343,
+     "name": "Baby, You're a Firework",
+     "description": ""
+    },
+    {
+     "apiname": "ach_6",
+     "achieved": 1,
+     "unlocktime": 1639852192,
+     "name": "Egoraphobia",
+     "description": ""
+    },
+    {
+     "apiname": "ach_7",
+     "achieved": 1,
+     "unlocktime": 1639951012,
+     "name": "Dangerous Liaison",
+     "description": ""
+    },
+    {
+     "apiname": "ach_8",
+     "achieved": 1,
+     "unlocktime": 1640057177,
+     "name": "An Offer She Can't Refuse",
+     "description": ""
+    },
+    {
+     "apiname": "ach_9",
+     "achieved": 1,
+     "unlocktime": 1640056193,
+     "name": "Beyond The Horizon",
+     "description": ""
+    },
+    {
+     "apiname": "ach_10",
+     "achieved": 1,
+     "unlocktime": 1639321402,
+     "name": "Gooooood Morning, Blackreef!",
+     "description": ""
+    },
+    {
+     "apiname": "ach_11",
+     "achieved": 1,
+     "unlocktime": 1639328217,
+     "name": "All The Live-Long Day",
+     "description": "Survive all 4 time periods in one day."
+    },
+    {
+     "apiname": "ach_12",
+     "achieved": 1,
+     "unlocktime": 1639348363,
+     "name": "Die, Die, And Die Again",
+     "description": ""
+    },
+    {
+     "apiname": "ach_13",
+     "achieved": 1,
+     "unlocktime": 1639336728,
+     "name": "Dead Drop",
+     "description": "Absorb Residuum from a body - like some kind of temporal sponge."
+    },
+    {
+     "apiname": "ach_14",
+     "achieved": 1,
+     "unlocktime": 1639331256,
+     "name": "Pieces Of Eight",
+     "description": "While playing as Colt, kill Frank. Or Charlie. Or Fia. Or Wenjie. Or Aleksis. Or Harriet. Egor will do as well."
+    },
+    {
+     "apiname": "ach_15",
+     "achieved": 1,
+     "unlocktime": 1640047558,
+     "name": "Ensemble Tragedy",
+     "description": "Kill each Visionary at least once."
+    },
+    {
+     "apiname": "ach_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Alpha Burger",
+     "description": ""
+    },
+    {
+     "apiname": "ach_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Power Chord",
+     "description": ""
+    },
+    {
+     "apiname": "ach_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Judgement Day",
+     "description": ""
+    },
+    {
+     "apiname": "ach_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Game Over",
+     "description": ""
+    },
+    {
+     "apiname": "ach_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quantum Solution",
+     "description": ""
+    },
+    {
+     "apiname": "ach_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not-So-Invisible Man",
+     "description": ""
+    },
+    {
+     "apiname": "ach_22",
+     "achieved": 1,
+     "unlocktime": 1639793979,
+     "name": "Didn't See It Coming",
+     "description": ""
+    },
+    {
+     "apiname": "ach_23",
+     "achieved": 1,
+     "unlocktime": 1640136989,
+     "name": "Violent Delights",
+     "description": ""
+    },
+    {
+     "apiname": "ach_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ghost At The Feast",
+     "description": ""
+    },
+    {
+     "apiname": "ach_25",
+     "achieved": 1,
+     "unlocktime": 1639338634,
+     "name": "Forever Yours",
+     "description": "Infuse a Slab."
+    },
+    {
+     "apiname": "ach_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spare No Expense",
+     "description": "While playing as Colt, own all upgrades for a Slab."
+    },
+    {
+     "apiname": "ach_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rip And Tear",
+     "description": "As Colt, inflict a truckload of damage to Eternalists during a single use of Havoc."
+    },
+    {
+     "apiname": "ach_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blink Of An Eye",
+     "description": "As Colt, transport an enemy onto a mine using Shift."
+    },
+    {
+     "apiname": "ach_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fwd: Fwd: Fwd: PAIN",
+     "description": "As Colt, transmit damage over more than 20 meters using Nexus."
+    },
+    {
+     "apiname": "ach_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death Is In The Air",
+     "description": "As Colt, achieve 3 airborne headshots on enemies you've launched using Karnesis."
+    },
+    {
+     "apiname": "ach_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't Mind Me",
+     "description": "While using Aether as Colt, kill 3 enemies without alerting nearby enemies."
+    },
+    {
+     "apiname": "ach_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dressing Down",
+     "description": "As Julianna, disguise yourself as Colt using Masquerade."
+    },
+    {
+     "apiname": "ach_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "For Every Occasion",
+     "description": "Take 36 different Trinkets into the field with you while playing as Colt."
+    },
+    {
+     "apiname": "ach_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spoiled for Choice",
+     "description": "Infuse one of each type of weapon."
+    },
+    {
+     "apiname": "ach_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Spice Of Life",
+     "description": "Die every which way as Colt: Drown. Fall. Choke on poison gas. Succumb to fatal depressurization. Get blown up. Shot. Stabbed. Ground up. Fried by a rocket. Oh, and obliterated by a reactor. Fun, right?"
+    },
+    {
+     "apiname": "ach_36",
+     "achieved": 1,
+     "unlocktime": 1640137206,
+     "name": "Bling Bling Bang Bang",
+     "description": "Equip a loadout worth more than 45100 Residuum."
+    },
+    {
+     "apiname": "ach_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Deck",
+     "description": "Kill a Visionary using a full loadout, without any empty slots or sockets, and escape the map."
+    },
+    {
+     "apiname": "ach_38",
+     "achieved": 1,
+     "unlocktime": 1639970267,
+     "name": "Know Your Enemy",
+     "description": "Complete one AEON dossier."
+    },
+    {
+     "apiname": "ach_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The G.O.D. of O.S.P.",
+     "description": "Enter a map with an empty loadout and kill all Visionaries present. Leave the map. Wash your hands."
+    },
+    {
+     "apiname": "ach_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mightier Than The Gun",
+     "description": "Kill all Visionaries in a map - and make it to the exit - without using a gun."
+    },
+    {
+     "apiname": "ach_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silent Disco",
+     "description": "Get in and out of a map without being spotted - and kill all Visionaries present."
+    },
+    {
+     "apiname": "ach_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Only The Guilty",
+     "description": "Kill all Visionaries present in a map and escape without killing any Eternalists."
+    },
+    {
+     "apiname": "ach_43",
+     "achieved": 1,
+     "unlocktime": 1639798230,
+     "name": "Clean Sweep",
+     "description": "Kill everyone in a time period and escape."
+    },
+    {
+     "apiname": "ach_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Only Die Once",
+     "description": "Finish an entire loop while wearing a ClassPass."
+    },
+    {
+     "apiname": "ach_45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Play It Again, Colt",
+     "description": "After finishing the game once, kill all Visionaries in a map and escape."
+    },
+    {
+     "apiname": "ach_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clean-ish Hands",
+     "description": "Kill all Visionaries - and no Eternalists - in a single loop."
+    },
+    {
+     "apiname": "ach_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Charlie Montague Game",
+     "description": "Prove you're a real gamer by winning Charlie's Wake Up Challenge, Reward Scheme, the Moxie, Haul-A-Quinn, and the Yerhva."
+    },
+    {
+     "apiname": "ach_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cooking With Gas",
+     "description": "While playing as Colt, ignite a gas cloud while someone is inside it."
+    },
+    {
+     "apiname": "ach_49",
+     "achieved": 1,
+     "unlocktime": 1639945915,
+     "name": "Sugar Crash",
+     "description": "While playing as Colt, use candy to gain a tactical advantage."
+    },
+    {
+     "apiname": "ach_50",
+     "achieved": 1,
+     "unlocktime": 1639338020,
+     "name": "Residual Earnings",
+     "description": "Absorb more than 20000 Residuum in a map."
+    },
+    {
+     "apiname": "ach_51",
+     "achieved": 1,
+     "unlocktime": 1639329101,
+     "name": "Chop Chop",
+     "description": "Kill 3 enemies with the machete in 10 seconds."
+    },
+    {
+     "apiname": "ach_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Old Habits Die Hard",
+     "description": ""
+    },
+    {
+     "apiname": "ach_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deathday Suit",
+     "description": "Kill the (mostly) naked character in each map."
+    },
+    {
+     "apiname": "ach_54",
+     "achieved": 1,
+     "unlocktime": 1640046950,
+     "name": "Oops",
+     "description": "While playing as Colt, cause someone to fall to their death."
+    },
+    {
+     "apiname": "ach_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Garbage Day!",
+     "description": "Kill the Garbage Collector and acquire the Fugue slab."
+    },
+    {
+     "apiname": "ach_56",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Out Like a Light",
+     "description": "Acquire the HALPS Prototype and disintegrate a Visionary."
+    },
+    {
+     "apiname": "ach_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best of Both Worlds",
+     "description": "Use the experimental machine in Karl's Bay to craft a doubly-powerful trinket."
+    },
+    {
+     "apiname": "ach_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Postmodern Abstractionism",
+     "description": "Kill an Eternalist with a Paint Bomb."
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,3557 @@
+{
+ "provider": "steam",
+ "title": "Mewgenics",
+ "updated": "2026-07-26",
+ "id": "686060",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 56,
+ "total": 281,
+ "first": "2026-02-15",
+ "last": "2026-03-18",
+ "platform": "PC",
+ "icon": "7ea8a70012dbedf73b6855e5e68ce504dd052998",
+ "playtime_mins": 3266,
+ "playtime": {
+  "linux": 3266
+ },
+ "last_played": "2026-03-19",
+ "achievements": [
+  {
+   "key": "map_unlock_sewers",
+   "name": "The Sewers",
+   "description": "Complete the Alley.",
+   "unlocked": true,
+   "date": "2026-02-15T19:35:58-06:00"
+  },
+  {
+   "key": "house_upgrade_attic",
+   "name": "House upgrade 1",
+   "description": "Send Frank 1 cat.",
+   "unlocked": true,
+   "date": "2026-02-15T19:41:56-06:00"
+  },
+  {
+   "key": "upgrade_storage_1",
+   "name": "Storage upgrade 1",
+   "description": "Send Butch 1 cat.",
+   "unlocked": true,
+   "date": "2026-02-15T20:51:02-06:00"
+  },
+  {
+   "key": "organ_unlock",
+   "name": "Mystery man upgrade 1",
+   "description": "Send the mystery man a dead cat.",
+   "unlocked": true,
+   "date": "2026-02-15T20:53:59-06:00"
+  },
+  {
+   "key": "tink_prettybow",
+   "name": "Tink reward 1",
+   "description": "Send Tink a kitten.",
+   "unlocked": true,
+   "date": "2026-02-15T21:27:20-06:00"
+  },
+  {
+   "key": "map_unlock_caves",
+   "name": "The Caves",
+   "description": "Complete the Sewers.",
+   "unlocked": true,
+   "date": "2026-02-16T21:53:05-06:00"
+  },
+  {
+   "key": "tracy_foodstorage1",
+   "name": "Food storage upgrade 1",
+   "description": "Send Tracy 1 cat.",
+   "unlocked": true,
+   "date": "2026-02-16T21:56:19-06:00"
+  },
+  {
+   "key": "jack_shopupgrade1",
+   "name": "Jack's shack upgrade 1",
+   "description": "Send Jack 1 cat.",
+   "unlocked": true,
+   "date": "2026-02-16T22:02:34-06:00"
+  },
+  {
+   "key": "map_unlock_junkyard",
+   "name": "The Junkyard",
+   "description": "Complete the hard path in the Alley.",
+   "unlocked": true,
+   "date": "2026-02-17T20:55:12-06:00"
+  },
+  {
+   "key": "map_unlock_boneyard",
+   "name": "The Boneyard",
+   "description": "Complete the Junkyard.",
+   "unlocked": true,
+   "date": "2026-02-17T21:51:20-06:00"
+  },
+  {
+   "key": "class_unlock_medic_passive",
+   "name": "Evil Patron",
+   "description": "Complete the Boneyard with the Cleric.",
+   "unlocked": true,
+   "date": "2026-02-19T17:57:51-06:00"
+  },
+  {
+   "key": "class_unlock_fighter_passive",
+   "name": "Dual Wield",
+   "description": "Complete the Boneyard with the Fighter.",
+   "unlocked": true,
+   "date": "2026-02-19T17:57:51-06:00"
+  },
+  {
+   "key": "class_unlock_hunter_passive",
+   "name": "Thrill Of The Hunt",
+   "description": "Complete the Boneyard with the Hunter.",
+   "unlocked": true,
+   "date": "2026-02-19T17:57:51-06:00"
+  },
+  {
+   "key": "class_unlock_mage_passive",
+   "name": "Three",
+   "description": "Complete the Boneyard with the Mage.",
+   "unlocked": true,
+   "date": "2026-02-19T17:57:51-06:00"
+  },
+  {
+   "key": "organ_upgrade1",
+   "name": "Mystery man upgrade 2",
+   "description": "Send the mystery man 10 more dead cats.",
+   "unlocked": true,
+   "date": "2026-02-19T21:44:46-06:00"
+  },
+  {
+   "key": "tink_basestats",
+   "name": "Tink reward 2",
+   "description": "Send Tink 10 more kittens.",
+   "unlocked": true,
+   "date": "2026-02-19T21:47:55-06:00"
+  },
+  {
+   "key": "quest_begin_gristle",
+   "name": "Throbbing Gristle",
+   "description": "Defeat Guillotina.",
+   "unlocked": true,
+   "date": "2026-02-20T18:32:07-06:00"
+  },
+  {
+   "key": "upgrade_storage_2",
+   "name": "Storage upgrade 2",
+   "description": "Send Butch 10 more cats.",
+   "unlocked": true,
+   "date": "2026-02-20T18:35:07-06:00"
+  },
+  {
+   "key": "class_unlock_necro_passive",
+   "name": "Servus Mortem",
+   "unlocked": true,
+   "date": "2026-02-21T10:52:42-06:00"
+  },
+  {
+   "key": "tracy_blankcollar1",
+   "name": "Blank collar unlock 1",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": true,
+   "date": "2026-02-22T11:22:59-06:00"
+  },
+  {
+   "key": "organ_upgrade2",
+   "name": "Mystery man upgrade 3",
+   "description": "Send the mystery man 25 more dead cats.",
+   "unlocked": true,
+   "date": "2026-02-26T21:33:12-06:00"
+  },
+  {
+   "key": "tink_inbreeding",
+   "name": "Tink reward 3",
+   "description": "Send Tink 10 more kittens.",
+   "unlocked": true,
+   "date": "2026-02-27T19:53:47-06:00"
+  },
+  {
+   "key": "class_unlock_necro_ability",
+   "name": "Summon Shade",
+   "unlocked": true,
+   "date": "2026-02-28T09:16:04-06:00"
+  },
+  {
+   "key": "class_unlock_fighter_ability",
+   "name": "Paw Breaker",
+   "description": "Complete the Caves with the Fighter.",
+   "unlocked": true,
+   "date": "2026-02-28T09:16:04-06:00"
+  },
+  {
+   "key": "class_unlock_medic_ability",
+   "name": "Ethereal",
+   "description": "Complete the Caves with the Cleric.",
+   "unlocked": true,
+   "date": "2026-02-28T09:16:04-06:00"
+  },
+  {
+   "key": "map_unlock_desert",
+   "name": "The Desert",
+   "description": "Complete the Caves and Boneyard.",
+   "unlocked": true,
+   "date": "2026-02-28T09:17:25-06:00"
+  },
+  {
+   "key": "class_unlock_tank_passive",
+   "name": "Bouncer",
+   "description": "Complete the Boneyard with the Tank.",
+   "unlocked": true,
+   "date": "2026-02-28T14:00:20-06:00"
+  },
+  {
+   "key": "beaniesquest_complete_PersuasionDevice",
+   "name": "Persuasion Device",
+   "unlocked": true,
+   "date": "2026-02-28T14:02:08-06:00"
+  },
+  {
+   "key": "class_unlock_thief_ability",
+   "name": "Nail Flurry",
+   "description": "Complete the Caves with the Thief.",
+   "unlocked": true,
+   "date": "2026-02-28T21:38:17-06:00"
+  },
+  {
+   "key": "class_unlock_tank_ability",
+   "name": "Suplex",
+   "description": "Complete the Caves with the Tank.",
+   "unlocked": true,
+   "date": "2026-02-28T21:38:17-06:00"
+  },
+  {
+   "key": "quest_begin_leech",
+   "name": "Putrid Leech",
+   "description": "Defeat Guillotina 2.",
+   "unlocked": true,
+   "date": "2026-02-28T21:52:32-06:00"
+  },
+  {
+   "key": "tink_sexuality",
+   "name": "Tink reward 4",
+   "description": "Send Tink 10 more kittens.",
+   "unlocked": true,
+   "date": "2026-02-28T21:54:26-06:00"
+  },
+  {
+   "key": "tink_tags",
+   "name": " Tink reward 5",
+   "description": "Send Tink 10 more kittens.",
+   "unlocked": true,
+   "date": "2026-03-05T21:28:36-06:00"
+  },
+  {
+   "key": "house_upgrade_mediumhouse",
+   "name": "House upgrade 2",
+   "description": "Send Frank 25 more cats.",
+   "unlocked": true,
+   "date": "2026-03-05T21:31:37-06:00"
+  },
+  {
+   "key": "quest_begin_tinahead",
+   "name": "Guillotinas Head",
+   "description": "Defeat Guillotina 3.",
+   "unlocked": true,
+   "date": "2026-03-07T21:14:55-06:00"
+  },
+  {
+   "key": "tink_aggression",
+   "name": "Tink reward 6",
+   "description": "Send Tink 10 more kittens.",
+   "unlocked": true,
+   "date": "2026-03-07T21:20:32-06:00"
+  },
+  {
+   "key": "jack_shopupgrade2",
+   "name": "Jack's shack upgrade 2",
+   "description": "Send Jack 10 more cats.",
+   "unlocked": true,
+   "date": "2026-03-07T21:25:32-06:00"
+  },
+  {
+   "key": "tracy_foodstorage2",
+   "name": "Food storage upgrade 2",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": true,
+   "date": "2026-03-08T12:00:34-05:00"
+  },
+  {
+   "key": "class_unlock_thief_passive",
+   "name": "First Strike",
+   "description": "Complete the Boneyard with the Thief.",
+   "unlocked": true,
+   "date": "2026-03-08T21:12:33-05:00"
+  },
+  {
+   "key": "tink_relationships",
+   "name": " Tink reward 7",
+   "description": "Send Tink 10 more kittens.",
+   "unlocked": true,
+   "date": "2026-03-13T16:52:10-05:00"
+  },
+  {
+   "key": "tracy_idol1",
+   "name": "Mysterious Idol unlock 1",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": true,
+   "date": "2026-03-13T17:07:47-05:00"
+  },
+  {
+   "key": "meat_world_open",
+   "name": "The Throbbing Domain",
+   "unlocked": true,
+   "date": "2026-03-14T09:28:21-05:00"
+  },
+  {
+   "key": "tracy_foodstorage3",
+   "name": " Food storage upgrade 3",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": true,
+   "date": "2026-03-15T13:42:36-05:00"
+  },
+  {
+   "key": "beaniesquest_complete_GlassCannon",
+   "name": "Glass Cannon",
+   "unlocked": true,
+   "date": "2026-03-16T17:18:12-05:00"
+  },
+  {
+   "key": "upgrade_storage_3",
+   "name": "Storage upgrade 3",
+   "description": "Send Butch 10 more cats.",
+   "unlocked": true,
+   "date": "2026-03-16T17:21:45-05:00"
+  },
+  {
+   "key": "map_unlock_crater",
+   "name": "The Crater",
+   "description": "Complete the Desert.",
+   "unlocked": true,
+   "date": "2026-03-16T18:01:44-05:00"
+  },
+  {
+   "key": "map_unlock_bunker",
+   "name": "The Bunker",
+   "description": "Complete the Desert.",
+   "unlocked": true,
+   "date": "2026-03-16T18:01:44-05:00"
+  },
+  {
+   "key": "jack_shopupgrade3",
+   "name": " Jack's shack upgrade 3",
+   "description": "Send Jack 20 more cats.",
+   "unlocked": true,
+   "date": "2026-03-16T18:43:28-05:00"
+  },
+  {
+   "key": "beaniesquest_complete_MysteriousDice",
+   "name": "Mysterious Dice",
+   "unlocked": true,
+   "date": "2026-03-16T20:43:24-05:00"
+  },
+  {
+   "key": "class_unlock_mage_ability",
+   "name": "Hyper Beam",
+   "description": "Complete the Caves with the Mage.",
+   "unlocked": true,
+   "date": "2026-03-16T20:43:24-05:00"
+  },
+  {
+   "key": "class_unlock_hunter_ability",
+   "name": "Ball of Spiders",
+   "description": "Complete the Caves with the Hunter.",
+   "unlocked": true,
+   "date": "2026-03-16T20:43:24-05:00"
+  },
+  {
+   "key": "class_unlock_medic_helmet",
+   "name": "Cleric's Mitre",
+   "unlocked": true,
+   "date": "2026-03-17T20:57:16-05:00"
+  },
+  {
+   "key": "class_unlock_fighter_helmet",
+   "name": "Fighter Helm",
+   "unlocked": true,
+   "date": "2026-03-17T20:57:16-05:00"
+  },
+  {
+   "key": "class_unlock_tank_helmet",
+   "name": "Tank Helmet",
+   "unlocked": true,
+   "date": "2026-03-17T20:57:16-05:00"
+  },
+  {
+   "key": "class_unlock_hunter_helmet",
+   "name": "Hunter Cap",
+   "unlocked": true,
+   "date": "2026-03-17T20:57:16-05:00"
+  },
+  {
+   "key": "map_unlock_core",
+   "name": "The Core",
+   "description": "Complete the Bunker.",
+   "unlocked": true,
+   "date": "2026-03-18T18:12:07-05:00"
+  },
+  {
+   "key": "beaniesquest_complete_AirHorn",
+   "name": "Air Horn",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_AngryFace",
+   "name": "Angry Face",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_BubbleBoy",
+   "name": "Bubble Boy",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_ChaosDevice",
+   "name": "Chaos Device",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_ExperimentalTreatment",
+   "name": "Experimental Treatment",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_FartFace",
+   "name": "Fart Face",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_HardPill",
+   "name": "Unidentified Pills",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_MagicMirror",
+   "name": "Magic Mirror",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_MeStone",
+   "name": "Me Stone",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_NuclearKnife",
+   "name": "Nuclear Knife",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_PartyDetonator",
+   "name": "Party Detonator",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_PrincessHat",
+   "name": "Princess Hat",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_Redacted",
+   "name": "Redacted",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_SpiderInjector",
+   "name": "Spider Injector",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_Stopwatch",
+   "name": "Stopwatch",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_StorageLocker",
+   "name": "Storage Locker",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_TheLoner",
+   "name": "The Loner",
+   "unlocked": false
+  },
+  {
+   "key": "beaniesquest_complete_UltraVision3000",
+   "name": "Ultra Vision 3000 ",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_box0",
+   "name": "The Box",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_box1",
+   "name": "The bOx",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_box2",
+   "name": "The boX",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_box3",
+   "name": "the box",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_ability",
+   "name": "Slice And Dice",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_colorless_ability",
+   "name": "Path Of The Butcher",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_colorless_passive",
+   "name": "Butchers Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_face",
+   "name": "Iron Jaw",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_helmet",
+   "name": "Flesh Shroud",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_neck",
+   "name": "Hooked Necklace",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_passive",
+   "name": "Indigestion",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_trinket",
+   "name": "Cookbook",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_trinket2",
+   "name": "Sack Of Meat",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_butcher_weapon",
+   "name": "Butchers Cleaver",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_ability",
+   "name": "Metronome",
+   "description": "Complete the Caves with a Collarless cat.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_colorless_ability",
+   "name": "Path Of The Void",
+   "description": "Complete the Core with a Collarless cat.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_colorless_passive",
+   "name": "Void Soul",
+   "description": "Complete the Moon with a Collarless cat.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_face",
+   "name": "Ordinary Whiskers",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_helmet",
+   "name": "Normal Ears",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_neck",
+   "name": "Mundane Collar",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_passive",
+   "name": "Skill Share",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_trinket",
+   "name": "Ball Of Yarn",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_trinket2",
+   "name": "Skill Split",
+   "description": "Complete all areas with a Collarless cat.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_colorless_weapon",
+   "name": "Lil Kitty",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_ability",
+   "name": "Summon Bear",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_colorless_ability",
+   "name": "Path Of The Druid",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_colorless_passive",
+   "name": "Druid's Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_face",
+   "name": "Greenman Mask",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_helmet",
+   "name": "Mushroom Hat",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_neck",
+   "name": "Ring Of Mushrooms",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_passive",
+   "name": "Suicide Squad",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_trinket",
+   "name": "Druids Whistle",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_trinket2",
+   "name": "Tiny Cage",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_druid_weapon",
+   "name": "Rain Staff",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_colorless_ability",
+   "name": "Path Of The Fighter",
+   "description": "Complete the Core with the Fighter.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_colorless_passive",
+   "name": "Fighters Soul",
+   "description": "Complete the Moon with the Fighter.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_face",
+   "name": "Fighter Scar",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_neck",
+   "name": "Fighter Shoulder Pad",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_trinket",
+   "name": "Rage Juice",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_trinket2",
+   "name": "Steroids",
+   "description": "Complete all areas with the Fighter.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_fighter_weapon",
+   "name": "Battle Axe",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_colorless_ability",
+   "name": "Path Of The Hunter",
+   "description": "Complete the Core with the Hunter.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_colorless_passive",
+   "name": "Hunters Soul",
+   "description": "Complete the Moon with the Hunter.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_face",
+   "name": "Hunter Monocle",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_neck",
+   "name": "Hunter Quiver",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_trinket",
+   "name": "Hunters Flute",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_trinket2",
+   "name": "Bag Of Seeds",
+   "description": "Complete all areas with the Hunter.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_hunter_weapon",
+   "name": "Arrow of Infinity",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_ability",
+   "name": "Smart Metronome (and more!)",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_colorless_ability",
+   "name": "Path Of The Jester",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_colorless_passive",
+   "name": "Jesters Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_face",
+   "name": "Clown Makeup",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_helmet",
+   "name": "Cap And Bells",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_neck",
+   "name": "Ruffle",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_passive",
+   "name": "Super Luck \u0026 Goofball",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_trinket",
+   "name": "Toy Gun",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_trinket2",
+   "name": "Joker Card",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_jester_weapon",
+   "name": "Ninny Stick",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_colorless_ability",
+   "name": "Path Of The Mage",
+   "description": "Complete the Core with the Mage.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_colorless_passive",
+   "name": "Mages Soul",
+   "description": "Complete the Moon with the Mage.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_face",
+   "name": "Mage Robe",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_helmet",
+   "name": "Mage Hat",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_neck",
+   "name": "Mage Scarf",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_trinket",
+   "name": "Ring Of Frost",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_trinket2",
+   "name": "Spell Book",
+   "description": "Complete all areas with the Mage.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_mage_weapon",
+   "name": "Staff Of Flame",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_colorless_ability",
+   "name": "Path Of The Cleric",
+   "description": "Complete the Core with the Cleric.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_colorless_passive",
+   "name": "Clerics Soul",
+   "description": "Complete the Moon with the Cleric.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_face",
+   "name": "Cleric Tears",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_neck",
+   "name": "Cleric Relic",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_trinket",
+   "name": "Holy Water",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_trinket2",
+   "name": "Prayer Card",
+   "description": "Complete all areas with the Cleric.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_medic_weapon",
+   "name": "Anointing Oil",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_ability",
+   "name": "Hundred Hand Slap",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_colorless_ability",
+   "name": "Path Of The Monk",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_colorless_passive",
+   "name": "Monks Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_face",
+   "name": "Face Brand",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_helmet",
+   "name": "Head Brand",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_neck",
+   "name": "Prayer Beads",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_passive",
+   "name": "Unstoppable",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_trinket",
+   "name": "Empty Hand",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_trinket2",
+   "name": "Tiny Pebble",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monk_weapon",
+   "name": "Bo",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monocolorless_face",
+   "name": "Copy Cat 2",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monocolorless_head",
+   "name": "Copy Cat 1",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_monocolorless_neck",
+   "name": " Copy Cat 3",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_colorless_ability",
+   "name": "Path Of The Necromancer",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_colorless_passive",
+   "name": "Necromancers Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_face",
+   "name": "Death Mask",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_helmet",
+   "name": "Spider Hat",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_neck",
+   "name": "Leech Necklace",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_trinket",
+   "name": "Satanic Bible",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_trinket2",
+   "name": "Cambion Conception",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_necro_weapon",
+   "name": "Staff of the Underworld",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_ability",
+   "name": "Supernova",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_colorless_ability",
+   "name": "Path Of The Psychic",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_colorless_passive",
+   "name": "Psychics Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_face",
+   "name": "Mystic Eye",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_helmet",
+   "name": "Tinfoil Hat",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_neck",
+   "name": "Diviners Cloth",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_passive",
+   "name": "Gravity Well",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_trinket",
+   "name": "Tarot Deck",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_trinket2",
+   "name": "Friendship Bracelet",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_psychic_weapon",
+   "name": "Bent Spoon",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_colorless_ability",
+   "name": "Path Of The Tank",
+   "description": "Complete the Core with the Tank.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_colorless_passive",
+   "name": "Tanks Soul",
+   "description": "Complete the Moon with the Tank.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_face",
+   "name": "Tank Tattoo",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_neck",
+   "name": "Tank Pads",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_trinket",
+   "name": "Tank Juice",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_trinket2",
+   "name": "Tank Toy",
+   "description": "Complete all areas with the Tank.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tank_weapon",
+   "name": "Girder",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_colorless_ability",
+   "name": "Path Of The Thief",
+   "description": "Complete the Core with the Thief.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_colorless_passive",
+   "name": "Thiefs Soul",
+   "description": "Complete the Moon with the Thief.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_face",
+   "name": "Thief Tattoo",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_helmet",
+   "name": "Thief Hood",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_neck",
+   "name": "Thief Cloak",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_trinket",
+   "name": "Lucky Coin Purse",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_trinket2",
+   "name": "Bag Of Bags",
+   "description": "Complete all areas with the Thief.",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_thief_weapon",
+   "name": "Laced Needle",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_ability",
+   "name": "Mech Suit",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_colorless_ability",
+   "name": "Path Of The Tinkerer",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_colorless_passive",
+   "name": "Tinkerers Soul",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_face",
+   "name": "Scrappers Mask",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_helmet",
+   "name": "Scrappers Hat",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_neck",
+   "name": "Scrappers Backpack",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_passive",
+   "name": "Armor Specialist",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_trinket",
+   "name": "Scrap Bag",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_trinket2",
+   "name": "Fireworks",
+   "unlocked": false
+  },
+  {
+   "key": "class_unlock_tinkerer_weapon",
+   "name": "Ball Peen Hammer",
+   "unlocked": false
+  },
+  {
+   "key": "end_of_time_unlock",
+   "name": "The Infinite",
+   "unlocked": false
+  },
+  {
+   "key": "house_upgrade_4throom",
+   "name": " House upgrade 4",
+   "description": "Send Frank 100 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "house_upgrade_largehouse",
+   "name": " House upgrade 3",
+   "description": "Send Frank 50 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "jack_shopupgrade4",
+   "name": " Jack's shack upgrade 4",
+   "description": "Send Jack 30 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_dimensionx",
+   "name": "The Rift",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_future",
+   "name": "The Future",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_iceage",
+   "name": "The Iceage",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_jurassic",
+   "name": "The Jurassic",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_lab",
+   "name": "The Lab",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_moon",
+   "name": "The Moon",
+   "description": "Complete the Crater.",
+   "unlocked": false
+  },
+  {
+   "key": "map_unlock_theend",
+   "name": "The End",
+   "unlocked": false
+  },
+  {
+   "key": "nuke_quest_complete",
+   "name": "???",
+   "unlocked": false
+  },
+  {
+   "key": "organ_upgrade3",
+   "name": "Mystery man upgrade 4",
+   "description": "Send the mystery man 50 more dead cats.",
+   "unlocked": false
+  },
+  {
+   "key": "organ_upgrade4",
+   "name": " Mystery man upgrade 5",
+   "description": "Send the mystery man 75 more dead cats.",
+   "unlocked": false
+  },
+  {
+   "key": "organ_upgrade5",
+   "name": "Mystery man upgrade 6",
+   "description": "Send the mystery man 100 more dead cats.",
+   "unlocked": false
+  },
+  {
+   "key": "organ_upgrade6",
+   "name": "Mystery man upgrade 7",
+   "description": "Send the mystery man 150 more dead cats.",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_amplifier2",
+   "name": "Signal Amplifier",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_blackshard",
+   "name": "Black Shard",
+   "description": "Defeat Zaratana.",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_pcollar",
+   "name": "Pyrophinas Collar",
+   "description": "Help Pyrophina win.",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_receiver2",
+   "name": "Receiver Antenna",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_scaldingorb",
+   "name": "Scalding Orb",
+   "description": "Defeat Pyrophina.",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_transmitter2",
+   "name": "Transmitter Antenna",
+   "unlocked": false
+  },
+  {
+   "key": "quest_begin_zcollar",
+   "name": "Zaratanas Collar",
+   "description": "Help Zaratana win.",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_infinite_crazy",
+   "name": "Stevens Shotgun",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_infinite_hard",
+   "name": "Childs Crown",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_infinite_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_kfight_crazy",
+   "name": "Steven Stone",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_kfight_hard",
+   "name": "Scorched Earth",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_kfight_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_pyro_crazy",
+   "name": "Stevens Helmet",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_pyro_hard",
+   "name": "Pyrophinas Toenail",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_pyro_impossible",
+   "name": " Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_rift_crazy",
+   "name": "Stevens Fart Face",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_rift_hard",
+   "name": "Crown Of Chaos",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_rift_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t1_crazy",
+   "name": "Steven Marrow",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t1_hard",
+   "name": "Robotic Arm",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t1_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t2_crazy",
+   "name": "Stevens Bottle",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t2_hard",
+   "name": "Liquid Metal",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t2_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t3_crazy",
+   "name": "Stevens Hat",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t3_hard",
+   "name": "Hitlers Toupe",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_t3_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_throb_crazy",
+   "name": "Stevens Gobbler",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_throb_hard",
+   "name": "Throbbing Crown",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_throb_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina1_crazy",
+   "name": "Stevens Mustache",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina1_hard",
+   "name": "Tinas Belly Button",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina1_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina2_crazy",
+   "name": "Stevens Gristle",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina2_hard",
+   "name": "Tinas Larynx",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina2_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina3_crazy",
+   "name": "Stevens Bag of Rocks",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina3_hard",
+   "name": "Tinas Friend",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_tina3_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_zara_crazy",
+   "name": "Stevens Friend",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_zara_hard",
+   "name": "Zaratana Turd",
+   "unlocked": false
+  },
+  {
+   "key": "steven_unlock_zara_impossible",
+   "name": "Steven",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_blankcollar2",
+   "name": "Blank collar unlock 2",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_blankcollar3",
+   "name": "Blank collar unlock 3",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage10",
+   "name": "Food storage upgrade 10",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage4",
+   "name": "Food storage upgrade 4",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage5",
+   "name": "Food storage upgrade 5",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage6",
+   "name": "Food storage upgrade 6",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage7",
+   "name": "Food storage upgrade 7",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage8",
+   "name": "Food storage upgrade 8",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_foodstorage9",
+   "name": "Food storage upgrade 9",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_idol2",
+   "name": "Mysterious Idol unlock 2",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_idol3",
+   "name": " Mysterious Idol unlock 3",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_idol4",
+   "name": "Mysterious Idol unlock 4",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_idol5",
+   "name": " Mysterious Idol unlock 5",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_idol6",
+   "name": "Mysterious Idol unlock 6",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "tracy_idol7",
+   "name": "Mysterious Idol unlock 7",
+   "description": "Send Tracy 10 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "upgrade_storage_4",
+   "name": "Storage upgrade 4",
+   "description": "Send Butch 15 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "upgrade_storage_5",
+   "name": "Storage upgrade 5",
+   "description": "Send Butch 15 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "upgrade_storage_6",
+   "name": "Storage upgrade 6",
+   "description": "Send Butch 20 more cats.",
+   "unlocked": false
+  },
+  {
+   "key": "upgrade_storage_7",
+   "name": "Storage upgrade 7",
+   "description": "Send Butch 20 more cats.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Mewgenics",
+   "achievements": [
+    {
+     "apiname": "class_unlock_fighter_ability",
+     "achieved": 1,
+     "unlocktime": 1772291764,
+     "name": "Paw Breaker",
+     "description": "Complete the Caves with the Fighter."
+    },
+    {
+     "apiname": "class_unlock_hunter_ability",
+     "achieved": 1,
+     "unlocktime": 1773711804,
+     "name": "Ball of Spiders",
+     "description": "Complete the Caves with the Hunter."
+    },
+    {
+     "apiname": "class_unlock_mage_ability",
+     "achieved": 1,
+     "unlocktime": 1773711804,
+     "name": "Hyper Beam",
+     "description": "Complete the Caves with the Mage."
+    },
+    {
+     "apiname": "class_unlock_medic_ability",
+     "achieved": 1,
+     "unlocktime": 1772291764,
+     "name": "Ethereal",
+     "description": "Complete the Caves with the Cleric."
+    },
+    {
+     "apiname": "class_unlock_thief_ability",
+     "achieved": 1,
+     "unlocktime": 1772336297,
+     "name": "Nail Flurry",
+     "description": "Complete the Caves with the Thief."
+    },
+    {
+     "apiname": "class_unlock_tank_ability",
+     "achieved": 1,
+     "unlocktime": 1772336297,
+     "name": "Suplex",
+     "description": "Complete the Caves with the Tank."
+    },
+    {
+     "apiname": "class_unlock_necro_ability",
+     "achieved": 1,
+     "unlocktime": 1772291764,
+     "name": "Summon Shade",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Supernova",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mech Suit",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slice And Dice",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hundred Hand Slap",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Smart Metronome (and more!)",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Metronome",
+     "description": "Complete the Caves with a Collarless cat."
+    },
+    {
+     "apiname": "class_unlock_fighter_passive",
+     "achieved": 1,
+     "unlocktime": 1771545471,
+     "name": "Dual Wield",
+     "description": "Complete the Boneyard with the Fighter."
+    },
+    {
+     "apiname": "class_unlock_hunter_passive",
+     "achieved": 1,
+     "unlocktime": 1771545471,
+     "name": "Thrill Of The Hunt",
+     "description": "Complete the Boneyard with the Hunter."
+    },
+    {
+     "apiname": "class_unlock_mage_passive",
+     "achieved": 1,
+     "unlocktime": 1771545471,
+     "name": "Three",
+     "description": "Complete the Boneyard with the Mage."
+    },
+    {
+     "apiname": "class_unlock_medic_passive",
+     "achieved": 1,
+     "unlocktime": 1771545471,
+     "name": "Evil Patron",
+     "description": "Complete the Boneyard with the Cleric."
+    },
+    {
+     "apiname": "class_unlock_thief_passive",
+     "achieved": 1,
+     "unlocktime": 1773022353,
+     "name": "First Strike",
+     "description": "Complete the Boneyard with the Thief."
+    },
+    {
+     "apiname": "class_unlock_necro_passive",
+     "achieved": 1,
+     "unlocktime": 1771692762,
+     "name": "Servus Mortem",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gravity Well",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Armor Specialist",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Indigestion",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Suicide Squad",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Summon Bear",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unstoppable",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Super Luck \u0026 Goofball",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skill Share",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tank_passive",
+     "achieved": 1,
+     "unlocktime": 1772308820,
+     "name": "Bouncer",
+     "description": "Complete the Boneyard with the Tank."
+    },
+    {
+     "apiname": "class_unlock_fighter_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Fighter",
+     "description": "Complete the Core with the Fighter."
+    },
+    {
+     "apiname": "class_unlock_hunter_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Hunter",
+     "description": "Complete the Core with the Hunter."
+    },
+    {
+     "apiname": "class_unlock_mage_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Mage",
+     "description": "Complete the Core with the Mage."
+    },
+    {
+     "apiname": "class_unlock_medic_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Cleric",
+     "description": "Complete the Core with the Cleric."
+    },
+    {
+     "apiname": "class_unlock_thief_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Thief",
+     "description": "Complete the Core with the Thief."
+    },
+    {
+     "apiname": "class_unlock_tank_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Tank",
+     "description": "Complete the Core with the Tank."
+    },
+    {
+     "apiname": "class_unlock_necro_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Necromancer",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Psychic",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Tinkerer",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Butcher",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Druid",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Monk",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Void",
+     "description": "Complete the Core with a Collarless cat."
+    },
+    {
+     "apiname": "class_unlock_jester_colorless_ability",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path Of The Jester",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fighters Soul",
+     "description": "Complete the Moon with the Fighter."
+    },
+    {
+     "apiname": "class_unlock_hunter_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hunters Soul",
+     "description": "Complete the Moon with the Hunter."
+    },
+    {
+     "apiname": "class_unlock_mage_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mages Soul",
+     "description": "Complete the Moon with the Mage."
+    },
+    {
+     "apiname": "class_unlock_medic_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clerics Soul",
+     "description": "Complete the Moon with the Cleric."
+    },
+    {
+     "apiname": "class_unlock_thief_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thiefs Soul",
+     "description": "Complete the Moon with the Thief."
+    },
+    {
+     "apiname": "class_unlock_tank_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tanks Soul",
+     "description": "Complete the Moon with the Tank."
+    },
+    {
+     "apiname": "class_unlock_necro_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Necromancers Soul",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Psychics Soul",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinkerers Soul",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Butchers Soul",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monks Soul",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Void Soul",
+     "description": "Complete the Moon with a Collarless cat."
+    },
+    {
+     "apiname": "class_unlock_jester_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jesters Soul",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Battle Axe",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_hunter_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arrow of Infinity",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_mage_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Staff Of Flame",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_medic_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Anointing Oil",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_thief_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Laced Needle",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tank_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Girder",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_necro_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Staff of the Underworld",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bent Spoon",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ball Peen Hammer",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rain Staff",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bo",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lil Kitty",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ninny Stick",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_weapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Butchers Cleaver",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rage Juice",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_hunter_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hunters Flute",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_mage_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ring Of Frost",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_medic_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Holy Water",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_thief_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucky Coin Purse",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tank_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tank Juice",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_necro_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Satanic Bible",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tarot Deck",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scrap Bag",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cookbook",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Druids Whistle",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Empty Hand",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ball Of Yarn",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_trinket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toy Gun",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_helmet",
+     "achieved": 1,
+     "unlocktime": 1773799036,
+     "name": "Fighter Helm",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_hunter_helmet",
+     "achieved": 1,
+     "unlocktime": 1773799036,
+     "name": "Hunter Cap",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_mage_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mage Hat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_medic_helmet",
+     "achieved": 1,
+     "unlocktime": 1773799036,
+     "name": "Cleric's Mitre",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_thief_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thief Hood",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tank_helmet",
+     "achieved": 1,
+     "unlocktime": 1773799036,
+     "name": "Tank Helmet",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_necro_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spider Hat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinfoil Hat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scrappers Hat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flesh Shroud",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mushroom Hat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Head Brand",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Normal Ears",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_helmet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cap And Bells",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fighter Scar",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_hunter_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hunter Monocle",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_mage_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mage Robe",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_medic_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cleric Tears",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_thief_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thief Tattoo",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tank_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tank Tattoo",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_necro_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death Mask",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mystic Eye",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scrappers Mask",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Iron Jaw",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Greenman Mask",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Face Brand",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ordinary Whiskers",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clown Makeup",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fighter Shoulder Pad",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_hunter_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hunter Quiver",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_mage_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mage Scarf",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_medic_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cleric Relic",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_thief_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thief Cloak",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tank_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tank Pads",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_necro_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leech Necklace",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Diviners Cloth",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hooked Necklace",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scrappers Backpack",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ring Of Mushrooms",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prayer Beads",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mundane Collar",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_jester_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ruffle",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_fighter_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steroids",
+     "description": "Complete all areas with the Fighter."
+    },
+    {
+     "apiname": "class_unlock_hunter_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bag Of Seeds",
+     "description": "Complete all areas with the Hunter."
+    },
+    {
+     "apiname": "class_unlock_mage_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spell Book",
+     "description": "Complete all areas with the Mage."
+    },
+    {
+     "apiname": "class_unlock_medic_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prayer Card",
+     "description": "Complete all areas with the Cleric."
+    },
+    {
+     "apiname": "class_unlock_thief_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bag Of Bags",
+     "description": "Complete all areas with the Thief."
+    },
+    {
+     "apiname": "class_unlock_tank_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tank Toy",
+     "description": "Complete all areas with the Tank."
+    },
+    {
+     "apiname": "class_unlock_necro_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cambion Conception",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_psychic_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Friendship Bracelet",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_tinkerer_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fireworks",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_butcher_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sack Of Meat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tiny Cage",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monk_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tiny Pebble",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_colorless_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skill Split",
+     "description": "Complete all areas with a Collarless cat."
+    },
+    {
+     "apiname": "class_unlock_jester_trinket2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Joker Card",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_throb_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Throbbing Crown",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_rift_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crown Of Chaos",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_infinite_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Childs Crown",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina1_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinas Belly Button",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina2_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinas Larynx",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina3_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinas Friend",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_pyro_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pyrophinas Toenail",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_zara_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zaratana Turd",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_kfight_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scorched Earth",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t1_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Robotic Arm",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t2_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Liquid Metal",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t3_hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hitlers Toupe",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_throb_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Gobbler",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_rift_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Fart Face",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_infinite_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Shotgun",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina1_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Mustache",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina2_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Gristle",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina3_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Bag of Rocks",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_pyro_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Helmet",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_zara_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Friend",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_kfight_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven Stone",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t1_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven Marrow",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t2_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Bottle",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t3_crazy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevens Hat",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_throb_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_rift_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_infinite_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina1_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina2_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_tina3_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_pyro_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_zara_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_kfight_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t1_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t2_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "steven_unlock_t3_impossible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steven",
+     "description": ""
+    },
+    {
+     "apiname": "map_unlock_sewers",
+     "achieved": 1,
+     "unlocktime": 1771205758,
+     "name": "The Sewers",
+     "description": "Complete the Alley."
+    },
+    {
+     "apiname": "map_unlock_junkyard",
+     "achieved": 1,
+     "unlocktime": 1771383312,
+     "name": "The Junkyard",
+     "description": "Complete the hard path in the Alley."
+    },
+    {
+     "apiname": "map_unlock_boneyard",
+     "achieved": 1,
+     "unlocktime": 1771386680,
+     "name": "The Boneyard",
+     "description": "Complete the Junkyard."
+    },
+    {
+     "apiname": "map_unlock_caves",
+     "achieved": 1,
+     "unlocktime": 1771300385,
+     "name": "The Caves",
+     "description": "Complete the Sewers."
+    },
+    {
+     "apiname": "map_unlock_desert",
+     "achieved": 1,
+     "unlocktime": 1772291845,
+     "name": "The Desert",
+     "description": "Complete the Caves and Boneyard."
+    },
+    {
+     "apiname": "map_unlock_bunker",
+     "achieved": 1,
+     "unlocktime": 1773702104,
+     "name": "The Bunker",
+     "description": "Complete the Desert."
+    },
+    {
+     "apiname": "map_unlock_crater",
+     "achieved": 1,
+     "unlocktime": 1773702104,
+     "name": "The Crater",
+     "description": "Complete the Desert."
+    },
+    {
+     "apiname": "map_unlock_core",
+     "achieved": 1,
+     "unlocktime": 1773875527,
+     "name": "The Core",
+     "description": "Complete the Bunker."
+    },
+    {
+     "apiname": "map_unlock_moon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Moon",
+     "description": "Complete the Crater."
+    },
+    {
+     "apiname": "map_unlock_lab",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Lab",
+     "description": ""
+    },
+    {
+     "apiname": "map_unlock_iceage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Iceage",
+     "description": ""
+    },
+    {
+     "apiname": "map_unlock_jurassic",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Jurassic",
+     "description": ""
+    },
+    {
+     "apiname": "map_unlock_future",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Future",
+     "description": ""
+    },
+    {
+     "apiname": "map_unlock_theend",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End",
+     "description": ""
+    },
+    {
+     "apiname": "meat_world_open",
+     "achieved": 1,
+     "unlocktime": 1773498501,
+     "name": "The Throbbing Domain",
+     "description": ""
+    },
+    {
+     "apiname": "map_unlock_dimensionx",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Rift",
+     "description": ""
+    },
+    {
+     "apiname": "end_of_time_unlock",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Infinite",
+     "description": ""
+    },
+    {
+     "apiname": "nuke_quest_complete",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "???",
+     "description": ""
+    },
+    {
+     "apiname": "quest_begin_gristle",
+     "achieved": 1,
+     "unlocktime": 1771633927,
+     "name": "Throbbing Gristle",
+     "description": "Defeat Guillotina."
+    },
+    {
+     "apiname": "quest_begin_leech",
+     "achieved": 1,
+     "unlocktime": 1772337152,
+     "name": "Putrid Leech",
+     "description": "Defeat Guillotina 2."
+    },
+    {
+     "apiname": "quest_begin_tinahead",
+     "achieved": 1,
+     "unlocktime": 1772939695,
+     "name": "Guillotinas Head",
+     "description": "Defeat Guillotina 3."
+    },
+    {
+     "apiname": "quest_begin_scaldingorb",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scalding Orb",
+     "description": "Defeat Pyrophina."
+    },
+    {
+     "apiname": "quest_begin_blackshard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Black Shard",
+     "description": "Defeat Zaratana."
+    },
+    {
+     "apiname": "quest_begin_pcollar",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pyrophinas Collar",
+     "description": "Help Pyrophina win."
+    },
+    {
+     "apiname": "quest_begin_zcollar",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zaratanas Collar",
+     "description": "Help Zaratana win."
+    },
+    {
+     "apiname": "quest_begin_receiver2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Receiver Antenna",
+     "description": ""
+    },
+    {
+     "apiname": "quest_begin_transmitter2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Transmitter Antenna",
+     "description": ""
+    },
+    {
+     "apiname": "quest_begin_amplifier2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Signal Amplifier",
+     "description": ""
+    },
+    {
+     "apiname": "upgrade_storage_1",
+     "achieved": 1,
+     "unlocktime": 1771210262,
+     "name": "Storage upgrade 1",
+     "description": "Send Butch 1 cat."
+    },
+    {
+     "apiname": "upgrade_storage_2",
+     "achieved": 1,
+     "unlocktime": 1771634107,
+     "name": "Storage upgrade 2",
+     "description": "Send Butch 10 more cats."
+    },
+    {
+     "apiname": "upgrade_storage_3",
+     "achieved": 1,
+     "unlocktime": 1773699705,
+     "name": "Storage upgrade 3",
+     "description": "Send Butch 10 more cats."
+    },
+    {
+     "apiname": "upgrade_storage_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storage upgrade 4",
+     "description": "Send Butch 15 more cats."
+    },
+    {
+     "apiname": "upgrade_storage_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storage upgrade 5",
+     "description": "Send Butch 15 more cats."
+    },
+    {
+     "apiname": "upgrade_storage_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storage upgrade 6",
+     "description": "Send Butch 20 more cats."
+    },
+    {
+     "apiname": "upgrade_storage_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storage upgrade 7",
+     "description": "Send Butch 20 more cats."
+    },
+    {
+     "apiname": "tink_prettybow",
+     "achieved": 1,
+     "unlocktime": 1771212440,
+     "name": "Tink reward 1",
+     "description": "Send Tink a kitten."
+    },
+    {
+     "apiname": "tink_basestats",
+     "achieved": 1,
+     "unlocktime": 1771559275,
+     "name": "Tink reward 2",
+     "description": "Send Tink 10 more kittens."
+    },
+    {
+     "apiname": "tink_inbreeding",
+     "achieved": 1,
+     "unlocktime": 1772243627,
+     "name": "Tink reward 3",
+     "description": "Send Tink 10 more kittens."
+    },
+    {
+     "apiname": "tink_sexuality",
+     "achieved": 1,
+     "unlocktime": 1772337266,
+     "name": "Tink reward 4",
+     "description": "Send Tink 10 more kittens."
+    },
+    {
+     "apiname": "tink_tags",
+     "achieved": 1,
+     "unlocktime": 1772767716,
+     "name": " Tink reward 5",
+     "description": "Send Tink 10 more kittens."
+    },
+    {
+     "apiname": "tink_aggression",
+     "achieved": 1,
+     "unlocktime": 1772940032,
+     "name": "Tink reward 6",
+     "description": "Send Tink 10 more kittens."
+    },
+    {
+     "apiname": "tink_relationships",
+     "achieved": 1,
+     "unlocktime": 1773438730,
+     "name": " Tink reward 7",
+     "description": "Send Tink 10 more kittens."
+    },
+    {
+     "apiname": "house_upgrade_attic",
+     "achieved": 1,
+     "unlocktime": 1771206116,
+     "name": "House upgrade 1",
+     "description": "Send Frank 1 cat."
+    },
+    {
+     "apiname": "house_upgrade_mediumhouse",
+     "achieved": 1,
+     "unlocktime": 1772767897,
+     "name": "House upgrade 2",
+     "description": "Send Frank 25 more cats."
+    },
+    {
+     "apiname": "house_upgrade_largehouse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " House upgrade 3",
+     "description": "Send Frank 50 more cats."
+    },
+    {
+     "apiname": "house_upgrade_4throom",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " House upgrade 4",
+     "description": "Send Frank 100 more cats."
+    },
+    {
+     "apiname": "jack_shopupgrade1",
+     "achieved": 1,
+     "unlocktime": 1771300954,
+     "name": "Jack's shack upgrade 1",
+     "description": "Send Jack 1 cat."
+    },
+    {
+     "apiname": "jack_shopupgrade2",
+     "achieved": 1,
+     "unlocktime": 1772940332,
+     "name": "Jack's shack upgrade 2",
+     "description": "Send Jack 10 more cats."
+    },
+    {
+     "apiname": "jack_shopupgrade3",
+     "achieved": 1,
+     "unlocktime": 1773704608,
+     "name": " Jack's shack upgrade 3",
+     "description": "Send Jack 20 more cats."
+    },
+    {
+     "apiname": "jack_shopupgrade4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Jack's shack upgrade 4",
+     "description": "Send Jack 30 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage1",
+     "achieved": 1,
+     "unlocktime": 1771300579,
+     "name": "Food storage upgrade 1",
+     "description": "Send Tracy 1 cat."
+    },
+    {
+     "apiname": "tracy_blankcollar1",
+     "achieved": 1,
+     "unlocktime": 1771780979,
+     "name": "Blank collar unlock 1",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage2",
+     "achieved": 1,
+     "unlocktime": 1772989234,
+     "name": "Food storage upgrade 2",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol1",
+     "achieved": 1,
+     "unlocktime": 1773439667,
+     "name": "Mysterious Idol unlock 1",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage3",
+     "achieved": 1,
+     "unlocktime": 1773600156,
+     "name": " Food storage upgrade 3",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_blankcollar2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blank collar unlock 2",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 4",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mysterious Idol unlock 2",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 5",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_blankcollar3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blank collar unlock 3",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 6",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Mysterious Idol unlock 3",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 7",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mysterious Idol unlock 4",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 8",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Mysterious Idol unlock 5",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 9",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mysterious Idol unlock 6",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_foodstorage10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Food storage upgrade 10",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "tracy_idol7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mysterious Idol unlock 7",
+     "description": "Send Tracy 10 more cats."
+    },
+    {
+     "apiname": "organ_unlock",
+     "achieved": 1,
+     "unlocktime": 1771210439,
+     "name": "Mystery man upgrade 1",
+     "description": "Send the mystery man a dead cat."
+    },
+    {
+     "apiname": "organ_upgrade1",
+     "achieved": 1,
+     "unlocktime": 1771559086,
+     "name": "Mystery man upgrade 2",
+     "description": "Send the mystery man 10 more dead cats."
+    },
+    {
+     "apiname": "organ_upgrade2",
+     "achieved": 1,
+     "unlocktime": 1772163192,
+     "name": "Mystery man upgrade 3",
+     "description": "Send the mystery man 25 more dead cats."
+    },
+    {
+     "apiname": "organ_upgrade3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mystery man upgrade 4",
+     "description": "Send the mystery man 50 more dead cats."
+    },
+    {
+     "apiname": "organ_upgrade4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Mystery man upgrade 5",
+     "description": "Send the mystery man 75 more dead cats."
+    },
+    {
+     "apiname": "organ_upgrade5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mystery man upgrade 6",
+     "description": "Send the mystery man 100 more dead cats."
+    },
+    {
+     "apiname": "organ_upgrade6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mystery man upgrade 7",
+     "description": "Send the mystery man 150 more dead cats."
+    },
+    {
+     "apiname": "class_unlock_box0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Box",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_box1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The bOx",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_box2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The boX",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_box3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "the box",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monocolorless_head",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Copy Cat 1",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monocolorless_face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Copy Cat 2",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_monocolorless_neck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Copy Cat 3",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_PersuasionDevice",
+     "achieved": 1,
+     "unlocktime": 1772308928,
+     "name": "Persuasion Device",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_MagicMirror",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magic Mirror",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_ChaosDevice",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chaos Device",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_MeStone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Me Stone",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_AngryFace",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Angry Face",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_FartFace",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fart Face",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_SpiderInjector",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spider Injector",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_PartyDetonator",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Party Detonator",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_AirHorn",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Air Horn",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_NuclearKnife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nuclear Knife",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_TheLoner",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Loner",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_GlassCannon",
+     "achieved": 1,
+     "unlocktime": 1773699492,
+     "name": "Glass Cannon",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_Stopwatch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stopwatch",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_HardPill",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unidentified Pills",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_MysteriousDice",
+     "achieved": 1,
+     "unlocktime": 1773711804,
+     "name": "Mysterious Dice",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_ExperimentalTreatment",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Experimental Treatment",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_Redacted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Redacted",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_UltraVision3000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ultra Vision 3000 ",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_StorageLocker",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storage Locker",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_BubbleBoy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bubble Boy",
+     "description": ""
+    },
+    {
+     "apiname": "beaniesquest_complete_PrincessHat",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Princess Hat",
+     "description": ""
+    },
+    {
+     "apiname": "class_unlock_druid_colorless_passive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Druid's Soul",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

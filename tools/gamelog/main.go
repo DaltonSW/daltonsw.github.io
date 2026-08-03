@@ -10,6 +10,7 @@ import (
 )
 
 const (
+	actionEditInfo       = "edit_info"
 	actionNewPlaythrough = "new_playthrough"
 	actionNewSession     = "new_session"
 	actionUpdate         = "update"
@@ -25,9 +26,16 @@ Usage:
   gamelog scan [flags]       find games on RetroAchievements/Steam that aren't
                              logged yet, then optionally create entries for them
                                --min-hours N   Steam playtime floor (default 5)
+  gamelog review             walk through draft games one at a time: publish,
+                             edit, mark dropped, skip, or delete the stub
   gamelog achievements [slug]
                              capture the full unlock history into
                              archive/<provider>/<id>.json (re-run to refresh)
+  gamelog project             regenerate every game's achievement-summary.yaml
+                             from the archive already on disk (no API calls)
+  gamelog stale [flags]       walk through "playing" Steam games that have
+                             gone quiet, suggesting finished/dropped
+                               --days N        quiet threshold (default 30)
   gamelog help               show this message
 
 Environment (or a .env beside this tool; real env vars take precedence):
@@ -66,12 +74,22 @@ func main() {
 		err = runSuggest(args[1:])
 	case args[0] == "scan":
 		err = runScan(args[1:])
+	case args[0] == "review":
+		if len(args) > 1 && isHelpFlag(args[1]) {
+			fmt.Println(usage)
+			return
+		}
+		err = runReview(args[1:])
 	case args[0] == "achievements":
 		if len(args) > 1 && isHelpFlag(args[1]) {
 			fmt.Println(usage)
 			return
 		}
 		err = runAchievements(args[1:])
+	case args[0] == "project":
+		err = runProject(args[1:])
+	case args[0] == "stale":
+		err = runStale(args[1:])
 	default:
 		// Previously any unknown argument silently opened the interactive
 		// form, which made a typo look like the tool ignoring you.
@@ -91,28 +109,46 @@ func run() error {
 		return err
 	}
 
-	games, err := ListGames(gamesDir)
-	if err != nil {
-		return err
-	}
+	for {
+		games, err := ListGames(gamesDir)
+		if err != nil {
+			return err
+		}
 
-	slug, err := SelectGame(games)
-	if err != nil {
-		return err
-	}
+		slug, err := SelectGame(games)
+		if err != nil {
+			return err
+		}
 
-	if slug == newGameSentinel {
-		return createGame(gamesDir)
-	}
+		if slug == newGameSentinel {
+			if err := createGame(gamesDir); err != nil {
+				return err
+			}
+		} else {
+			var summary GameSummary
+			for _, g := range games {
+				if g.Slug == slug {
+					summary = g
+					break
+				}
+			}
+			if err := logForGame(summary); err != nil {
+				return err
+			}
+		}
 
-	var summary GameSummary
-	for _, g := range games {
-		if g.Slug == slug {
-			summary = g
-			break
+		var again bool
+		if err := huh.NewForm(
+			huh.NewGroup(
+				huh.NewConfirm().Title("Do another?").Value(&again),
+			),
+		).Run(); err != nil {
+			return err
+		}
+		if !again {
+			return nil
 		}
 	}
-	return logForGame(summary)
 }
 
 func createGame(gamesDir string) error {
@@ -131,6 +167,10 @@ func createGame(gamesDir string) error {
 }
 
 func logForGame(g GameSummary) error {
+	doc, err := LoadDoc(g.Path)
+	if err != nil {
+		return err
+	}
 	pf, err := LoadPlaythroughs(filepath.Dir(g.Path))
 	if err != nil {
 		return err
@@ -138,8 +178,17 @@ func logForGame(g GameSummary) error {
 
 	playthroughs := pf.Views()
 
+	// A session-based game (roguelikes, multiplayer — no start/finish
+	// narrative) gets exactly one playthrough entry, ever. Once it has one,
+	// "Start a new playthrough" isn't offered at all, so there's nothing to
+	// undo later; doNewPlaythrough also guards this directly.
+	sessionBased := doc.FM.Status == "session-based"
+
 	options := []huh.Option[string]{
-		huh.NewOption("Start a new playthrough", actionNewPlaythrough),
+		huh.NewOption("Edit game info (title/platform/status/dates/rating/draft)", actionEditInfo),
+	}
+	if !sessionBased || len(playthroughs) == 0 {
+		options = append(options, huh.NewOption("Start a new playthrough", actionNewPlaythrough))
 	}
 	if len(playthroughs) > 0 {
 		options = append(options,
@@ -158,8 +207,10 @@ func logForGame(g GameSummary) error {
 	}
 
 	switch action {
+	case actionEditInfo:
+		return doEditGameInfo(doc, pf)
 	case actionNewPlaythrough:
-		return doNewPlaythrough(pf)
+		return doNewPlaythrough(pf, doc, sessionBased)
 	case actionNewSession:
 		return doNewSession(pf, playthroughs)
 	case actionUpdate:
@@ -168,13 +219,104 @@ func logForGame(g GameSummary) error {
 	return nil
 }
 
-func doNewPlaythrough(pf *PlaythroughsFile) error {
+func doNewPlaythrough(pf *PlaythroughsFile, doc *Doc, sessionBased bool) error {
+	if sessionBased && len(pf.Playthroughs) > 0 {
+		return fmt.Errorf("%s is session-based and already has a playthrough — log a new session instead", doc.FM.Title)
+	}
 	f, err := PlaythroughForm()
 	if err != nil {
 		return err
 	}
 	pf.AddPlaythrough(f)
 	return confirmAndWrite(pf, len(pf.Playthroughs)-1)
+}
+
+// doEditGameInfo edits a game's front-matter fields (title/platform/status/
+// dates/rating/draft), mirroring doUpdate's shape for playthroughs.
+func doEditGameInfo(doc *Doc, pf *PlaythroughsFile) error {
+	updated, err := EditGameForm(doc.FM)
+	if err != nil {
+		return err
+	}
+	if sameGameInfo(doc.FM, updated) {
+		fmt.Println("No changes.")
+		return nil
+	}
+	doc.FM = updated
+
+	// Unlike playthroughs.yaml's entries, front-matter scalar fields aren't
+	// omitempty — clearing one leaves the key present (now blank/null)
+	// rather than dropping it, matching how today's hand-authored files
+	// always keep `started:`/`rating:` visible even when unset. So there's
+	// never a legitimate removal to declare here.
+	return confirmAndWriteFrontMatter(doc, pf)
+}
+
+func sameGameInfo(a, b FrontMatter) bool {
+	return a.Title == b.Title && a.Platform == b.Platform && a.Status == b.Status &&
+		a.Started == b.Started && a.Finished == b.Finished && a.Draft == b.Draft &&
+		a.RatingString() == b.RatingString()
+}
+
+// confirmAndWriteFrontMatter is confirmAndWrite's front-matter analog:
+// preview, confirm, prove the rewrite loses nothing, then write. When pf is
+// non-nil, it also syncs and writes the playthrough via SyncStatus under the
+// same confirmation, so status and the timeline never drift apart again.
+func confirmAndWriteFrontMatter(doc *Doc, pf *PlaythroughsFile, allowedRemovals ...string) error {
+	fm, err := doc.encodeFM()
+	if err != nil {
+		return err
+	}
+	preview := strings.Split(strings.TrimRight(string(fm), "\n"), "\n")
+
+	syncing := pf != nil && pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
+	if syncing {
+		entryPreview, err := previewEntry(pf, 0)
+		if err != nil {
+			return err
+		}
+		preview = append(preview, "", "playthroughs.yaml:")
+		preview = append(preview, entryPreview...)
+	}
+
+	ok, err := ConfirmWrite(doc.Path, preview)
+	if err != nil {
+		return err
+	}
+	if !ok {
+		fmt.Println("Discarded.")
+		return nil
+	}
+
+	oldFields, err := collectYAMLFields(doc.fmRaw)
+	if err != nil {
+		return err
+	}
+	newFields, err := collectYAMLFields(fm)
+	if err != nil {
+		return fmt.Errorf("refusing to write %s — the result would not parse: %w", doc.Path, err)
+	}
+	if err := checkNoFieldLoss(oldFields, newFields, allowedRemovals); err != nil {
+		return err
+	}
+	if syncing {
+		if err := verifyNoLoss(pf, nil); err != nil {
+			return err
+		}
+	}
+
+	if err := doc.Save(); err != nil {
+		return err
+	}
+	fmt.Printf("Saved %s\n", doc.Path)
+
+	if syncing {
+		if err := pf.Save(); err != nil {
+			return err
+		}
+		fmt.Printf("Saved %s\n", pf.Path)
+	}
+	return nil
 }
 
 func doNewSession(pf *PlaythroughsFile, playthroughs []Playthrough) error {

@@ -1,0 +1,197 @@
+{
+ "provider": "steam",
+ "title": "Monaco",
+ "updated": "2026-07-26",
+ "id": "113020",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 2,
+ "total": 13,
+ "first": "2014-12-18",
+ "last": "2015-09-18",
+ "platform": "PC",
+ "icon": "169e693854d9f70984987fa3b6b5f1f9eb27122a",
+ "playtime_mins": 667,
+ "last_played": "2017-12-21",
+ "achievements": [
+  {
+   "key": "ACH_REZ_ONLINE_TEAMMATE_08",
+   "name": "Dem Bones",
+   "description": "Revive an online teammate",
+   "unlocked": true,
+   "date": "2014-12-18T21:05:02-06:00"
+  },
+  {
+   "key": "ACH_WIN_PVP_10",
+   "name": "Whacked",
+   "description": "Win an online PvP match",
+   "unlocked": true,
+   "date": "2015-09-18T23:15:50-05:00"
+  },
+  {
+   "key": "ACH_ALL_MEDALS_ALL_LEVELS_03",
+   "name": "Time to Retire",
+   "description": "Achieve all four trophies in every co-op mission",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_BEAT_BOTH_CAMPAIGNS_07",
+   "name": "Identified",
+   "description": "Complete Campaign Act II",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_BEAT_CAMPAIGN_SINGLE_PLAYER_06",
+   "name": "I Work Alone",
+   "description": "Complete Campaign Act I Single Player",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_FINISH_BANK_UNSEEN_02",
+   "name": "Silent Withdrawal",
+   "description": "Complete Banque Albert without being seen",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_FINISH_WITH_WRENCH_04",
+   "name": "Technician",
+   "description": "Finish any mission with only wrenches in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_GIB_3_GUARDS_05",
+   "name": "Bring the Bleach",
+   "description": "Gib three attacking guards simultaneously with C4 without dying in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HIDE_FROM_ATTACKING_GUARD_00",
+   "name": "Slippery",
+   "description": "Finish The Prison Break with a score under 1:10",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_KILL_EVERYONE_01",
+   "name": "Massacre",
+   "description": "Kill everyone in a mission",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_IT_AGAIN_SAM_09",
+   "name": "Play It Again Sam",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_UNSCATHED_11",
+   "name": "Unscathed",
+   "description": "Complete each mission once without dying",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_ZOMBIE_12",
+   "name": "Cerveau",
+   "description": "Beat all of Campaign 1 and 2 in Zombie Mode",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Monaco",
+   "achievements": [
+    {
+     "apiname": "ACH_HIDE_FROM_ATTACKING_GUARD_00",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slippery",
+     "description": "Finish The Prison Break with a score under 1:10"
+    },
+    {
+     "apiname": "ACH_KILL_EVERYONE_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Massacre",
+     "description": "Kill everyone in a mission"
+    },
+    {
+     "apiname": "ACH_FINISH_BANK_UNSEEN_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silent Withdrawal",
+     "description": "Complete Banque Albert without being seen"
+    },
+    {
+     "apiname": "ACH_FINISH_WITH_WRENCH_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Technician",
+     "description": "Finish any mission with only wrenches in single player"
+    },
+    {
+     "apiname": "ACH_GIB_3_GUARDS_05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bring the Bleach",
+     "description": "Gib three attacking guards simultaneously with C4 without dying in single player"
+    },
+    {
+     "apiname": "ACH_ALL_MEDALS_ALL_LEVELS_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Time to Retire",
+     "description": "Achieve all four trophies in every co-op mission"
+    },
+    {
+     "apiname": "ACH_BEAT_CAMPAIGN_SINGLE_PLAYER_06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Work Alone",
+     "description": "Complete Campaign Act I Single Player"
+    },
+    {
+     "apiname": "ACH_BEAT_BOTH_CAMPAIGNS_07",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Identified",
+     "description": "Complete Campaign Act II"
+    },
+    {
+     "apiname": "ACH_REZ_ONLINE_TEAMMATE_08",
+     "achieved": 1,
+     "unlocktime": 1418958302,
+     "name": "Dem Bones",
+     "description": "Revive an online teammate"
+    },
+    {
+     "apiname": "ACH_PLAY_IT_AGAIN_SAM_09",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Play It Again Sam",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_WIN_PVP_10",
+     "achieved": 1,
+     "unlocktime": 1442636150,
+     "name": "Whacked",
+     "description": "Win an online PvP match"
+    },
+    {
+     "apiname": "ACH_UNSCATHED_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unscathed",
+     "description": "Complete each mission once without dying"
+    },
+    {
+     "apiname": "ACH_ZOMBIE_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cerveau",
+     "description": "Beat all of Campaign 1 and 2 in Zombie Mode"
+    }
+   ],
+   "success": true
+  }
+ }
+}

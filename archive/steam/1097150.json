@@ -1,0 +1,502 @@
+{
+ "provider": "steam",
+ "title": "Fall Guys",
+ "updated": "2026-07-26",
+ "id": "1097150",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 30,
+ "total": 34,
+ "first": "2020-08-15",
+ "last": "2020-10-02",
+ "platform": "PC",
+ "icon": "6c027709b9eb1417c993bc7d513b97b232002368",
+ "playtime_mins": 1946,
+ "playtime": {
+  "windows": 1946
+ },
+ "last_played": "2020-10-02",
+ "achievements": [
+  {
+   "key": "ACH_SNOWFLAKE",
+   "name": "Snowflake",
+   "description": "Equip your first cosmetic item",
+   "unlocked": true,
+   "date": "2020-08-15T11:09:40-05:00"
+  },
+  {
+   "key": "ACH_BIG_BULLY",
+   "name": "Big Bully",
+   "description": "Knock someone over",
+   "unlocked": true,
+   "date": "2020-08-15T11:11:02-05:00"
+  },
+  {
+   "key": "ACH_TROUBLEMAKER",
+   "name": "Troublemaker",
+   "description": "Bump into 3 people while rolling on the ground before getting up",
+   "unlocked": true,
+   "date": "2020-08-15T11:11:09-05:00"
+  },
+  {
+   "key": "ACH_QUALIFY_1_ROUND",
+   "name": "One small trip",
+   "description": "Qualify from your first round",
+   "unlocked": true,
+   "date": "2020-08-15T11:11:34-05:00"
+  },
+  {
+   "key": "ACH_WIN_1_EPISODE",
+   "name": "Victory!",
+   "description": "Win your first Episode",
+   "unlocked": true,
+   "date": "2020-08-15T11:19:19-05:00"
+  },
+  {
+   "key": "ACH_DOWN_TO_THE_WIRE",
+   "name": "Down to the Wire",
+   "description": "Qualify after a round goes to overtime",
+   "unlocked": true,
+   "date": "2020-08-15T11:55:39-05:00"
+  },
+  {
+   "key": "ACH_SHOPPING_SPREE",
+   "name": "Shopping Spree",
+   "description": "Unlock 10 cosmetic items from the store",
+   "unlocked": true,
+   "date": "2020-08-15T12:04:06-05:00"
+  },
+  {
+   "key": "ACH_GRAB_PLAYER",
+   "name": "Fall Bae",
+   "description": "Share a hug with a Fall Guy",
+   "unlocked": true,
+   "date": "2020-08-15T12:13:57-05:00"
+  },
+  {
+   "key": "ACH_FALL_THROTTLE",
+   "name": "Fall Throttle",
+   "description": "Reach terminal velocity ",
+   "unlocked": true,
+   "date": "2020-08-15T16:53:18-05:00"
+  },
+  {
+   "key": "ACH_STYLE_POINTS",
+   "name": "Style Points",
+   "description": "Fall for at least 3 seconds before landing on your head",
+   "unlocked": true,
+   "date": "2020-08-15T17:02:44-05:00"
+  },
+  {
+   "key": "ACH_FLAWLESS_VICTORY",
+   "name": "Flawless Victory",
+   "description": "Qualify from a round without falling over even once",
+   "unlocked": true,
+   "date": "2020-08-21T20:48:13-05:00"
+  },
+  {
+   "key": "ACH_STUMBLE_CHUMS",
+   "name": "Stumble Chums",
+   "description": "Bump into other Fall Guys 1000 times in total",
+   "unlocked": true,
+   "date": "2020-08-21T20:56:56-05:00"
+  },
+  {
+   "key": "ACH_FAME_TIER_1",
+   "name": "One to Watch",
+   "description": "Reach lvl 10 fame during a season",
+   "unlocked": true,
+   "date": "2020-08-22T20:50:31-05:00"
+  },
+  {
+   "key": "ACH_RACING_TIER_1",
+   "name": "Ahead of the Pack",
+   "description": "Get first place in a racing round",
+   "unlocked": true,
+   "date": "2020-08-22T21:42:30-05:00"
+  },
+  {
+   "key": "ACH_FALL_10_QUALIFY_RACE",
+   "name": "Face First",
+   "description": "Qualify from a racing round despite falling over more than 10 times",
+   "unlocked": true,
+   "date": "2020-08-24T21:00:39-05:00"
+  },
+  {
+   "key": "ACH_QUALIFY_ROUND_TIER_2",
+   "name": "One giant leap",
+   "description": "Qualify from 100 rounds",
+   "unlocked": true,
+   "date": "2020-08-24T21:00:40-05:00"
+  },
+  {
+   "key": "ACHI_BARELY_MADE_IT",
+   "name": "Low Baller",
+   "description": "Qualify from a team game with a score of 1",
+   "unlocked": true,
+   "date": "2020-08-25T20:57:38-05:00"
+  },
+  {
+   "key": "ACH_SQUAD_GOALS",
+   "name": "Squad Goals",
+   "description": "Win an Episode as part of a party of 3 or more players",
+   "unlocked": true,
+   "date": "2020-08-25T22:08:48-05:00"
+  },
+  {
+   "key": "ACH_MAD_TRENDY",
+   "name": "Mad Trendy",
+   "description": "Equip a rare or legendary Body Colour, Pattern, Upper and Lower Costume piece",
+   "unlocked": true,
+   "date": "2020-08-26T21:33:05-05:00"
+  },
+  {
+   "key": "ACH_BARGAIN_BUCKET",
+   "name": "Bargain Bucket",
+   "description": "Equip an uncommon or better Body Colour, Pattern, Upper and Lower Costume piece",
+   "unlocked": true,
+   "date": "2020-08-26T21:33:05-05:00"
+  },
+  {
+   "key": "ACH_WIN_EPISODES_TIER_2",
+   "name": "Top Tier",
+   "description": "Win 7 Episodes",
+   "unlocked": true,
+   "date": "2020-08-27T14:38:08-05:00"
+  },
+  {
+   "key": "ACH_BIG_TEASE",
+   "name": "Big Tease",
+   "description": "Perform an emote just before coming first in a race round",
+   "unlocked": true,
+   "date": "2020-08-27T20:14:25-05:00"
+  },
+  {
+   "key": "ACH_FAME_TIER_2",
+   "name": "Household Name",
+   "description": "Reach lvl 25 fame during a season",
+   "unlocked": true,
+   "date": "2020-08-29T12:29:23-05:00"
+  },
+  {
+   "key": "ACH_RACING_TIER_2",
+   "name": "Quite Dashing",
+   "description": "Get first place in a racing round 5 times",
+   "unlocked": true,
+   "date": "2020-09-06T11:44:04-05:00"
+  },
+  {
+   "key": "ACH_CATWALK_MODEL",
+   "name": "Catwalk Model",
+   "description": "Equip your first legendary customization item",
+   "unlocked": true,
+   "date": "2020-09-08T21:06:43-05:00"
+  },
+  {
+   "key": "ACH_BIG_AIR",
+   "name": "Big Air",
+   "description": "Clock up 1 hour total time falling",
+   "unlocked": true,
+   "date": "2020-09-12T15:56:44-05:00"
+  },
+  {
+   "key": "ACH_WIN_EPISODES_TIER_3",
+   "name": "Golden Guy",
+   "description": "Win 20 Episodes",
+   "unlocked": true,
+   "date": "2020-09-14T23:38:45-05:00"
+  },
+  {
+   "key": "ACH_FASHIONISTA",
+   "name": "Fall Guy Fashionista",
+   "description": "Unlock 50 cosmetic items from the store",
+   "unlocked": true,
+   "date": "2020-09-30T20:27:30-05:00"
+  },
+  {
+   "key": "ACH_QUALIFY_ROUND_TIER_3",
+   "name": "Veteran Status",
+   "description": "Qualify from 500 rounds",
+   "unlocked": true,
+   "date": "2020-10-02T19:05:53-05:00"
+  },
+  {
+   "key": "ACH_RACING_TIER_3",
+   "name": "Track Star",
+   "description": "Get first place in a racing round 20 times",
+   "unlocked": true,
+   "date": "2020-10-02T19:18:52-05:00"
+  },
+  {
+   "key": "ACH_FAME_TIER_3",
+   "name": "Star of the Show",
+   "description": "Reach lvl 40 fame during a season",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HEAD_TURNER",
+   "name": "Head Turner",
+   "description": "Equip a legendary Body Colour, Pattern, Upper and Lower Costume piece",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_INFALLIBLE",
+   "name": "Infallible",
+   "description": "Win 5 Episodes in a row",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SHOW_OFF",
+   "name": "Show Off",
+   "description": "Win an Episode with a custom Celebration equipped",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Fall Guys",
+   "achievements": [
+    {
+     "apiname": "ACH_GRAB_PLAYER",
+     "achieved": 1,
+     "unlocktime": 1597511637,
+     "name": "Fall Bae",
+     "description": "Share a hug with a Fall Guy"
+    },
+    {
+     "apiname": "ACH_QUALIFY_1_ROUND",
+     "achieved": 1,
+     "unlocktime": 1597507894,
+     "name": "One small trip",
+     "description": "Qualify from your first round"
+    },
+    {
+     "apiname": "ACH_WIN_1_EPISODE",
+     "achieved": 1,
+     "unlocktime": 1597508359,
+     "name": "Victory!",
+     "description": "Win your first Episode"
+    },
+    {
+     "apiname": "ACH_FALL_10_QUALIFY_RACE",
+     "achieved": 1,
+     "unlocktime": 1598320839,
+     "name": "Face First",
+     "description": "Qualify from a racing round despite falling over more than 10 times"
+    },
+    {
+     "apiname": "ACH_FASHIONISTA",
+     "achieved": 1,
+     "unlocktime": 1601515650,
+     "name": "Fall Guy Fashionista",
+     "description": "Unlock 50 cosmetic items from the store"
+    },
+    {
+     "apiname": "ACH_SHOPPING_SPREE",
+     "achieved": 1,
+     "unlocktime": 1597511046,
+     "name": "Shopping Spree",
+     "description": "Unlock 10 cosmetic items from the store"
+    },
+    {
+     "apiname": "ACH_SNOWFLAKE",
+     "achieved": 1,
+     "unlocktime": 1597507780,
+     "name": "Snowflake",
+     "description": "Equip your first cosmetic item"
+    },
+    {
+     "apiname": "ACH_BARGAIN_BUCKET",
+     "achieved": 1,
+     "unlocktime": 1598495585,
+     "name": "Bargain Bucket",
+     "description": "Equip an uncommon or better Body Colour, Pattern, Upper and Lower Costume piece"
+    },
+    {
+     "apiname": "ACH_MAD_TRENDY",
+     "achieved": 1,
+     "unlocktime": 1598495585,
+     "name": "Mad Trendy",
+     "description": "Equip a rare or legendary Body Colour, Pattern, Upper and Lower Costume piece"
+    },
+    {
+     "apiname": "ACH_HEAD_TURNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Head Turner",
+     "description": "Equip a legendary Body Colour, Pattern, Upper and Lower Costume piece"
+    },
+    {
+     "apiname": "ACH_CATWALK_MODEL",
+     "achieved": 1,
+     "unlocktime": 1599617203,
+     "name": "Catwalk Model",
+     "description": "Equip your first legendary customization item"
+    },
+    {
+     "apiname": "ACH_FAME_TIER_1",
+     "achieved": 1,
+     "unlocktime": 1598147431,
+     "name": "One to Watch",
+     "description": "Reach lvl 10 fame during a season"
+    },
+    {
+     "apiname": "ACH_FAME_TIER_2",
+     "achieved": 1,
+     "unlocktime": 1598722163,
+     "name": "Household Name",
+     "description": "Reach lvl 25 fame during a season"
+    },
+    {
+     "apiname": "ACH_FAME_TIER_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star of the Show",
+     "description": "Reach lvl 40 fame during a season"
+    },
+    {
+     "apiname": "ACH_FLAWLESS_VICTORY",
+     "achieved": 1,
+     "unlocktime": 1598060893,
+     "name": "Flawless Victory",
+     "description": "Qualify from a round without falling over even once"
+    },
+    {
+     "apiname": "ACH_RACING_TIER_1",
+     "achieved": 1,
+     "unlocktime": 1598150550,
+     "name": "Ahead of the Pack",
+     "description": "Get first place in a racing round"
+    },
+    {
+     "apiname": "ACH_RACING_TIER_2",
+     "achieved": 1,
+     "unlocktime": 1599410644,
+     "name": "Quite Dashing",
+     "description": "Get first place in a racing round 5 times"
+    },
+    {
+     "apiname": "ACH_RACING_TIER_3",
+     "achieved": 1,
+     "unlocktime": 1601684332,
+     "name": "Track Star",
+     "description": "Get first place in a racing round 20 times"
+    },
+    {
+     "apiname": "ACH_INFALLIBLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Infallible",
+     "description": "Win 5 Episodes in a row"
+    },
+    {
+     "apiname": "ACH_WIN_EPISODES_TIER_2",
+     "achieved": 1,
+     "unlocktime": 1598557088,
+     "name": "Top Tier",
+     "description": "Win 7 Episodes"
+    },
+    {
+     "apiname": "ACH_WIN_EPISODES_TIER_3",
+     "achieved": 1,
+     "unlocktime": 1600144725,
+     "name": "Golden Guy",
+     "description": "Win 20 Episodes"
+    },
+    {
+     "apiname": "ACH_QUALIFY_ROUND_TIER_2",
+     "achieved": 1,
+     "unlocktime": 1598320840,
+     "name": "One giant leap",
+     "description": "Qualify from 100 rounds"
+    },
+    {
+     "apiname": "ACH_QUALIFY_ROUND_TIER_3",
+     "achieved": 1,
+     "unlocktime": 1601683553,
+     "name": "Veteran Status",
+     "description": "Qualify from 500 rounds"
+    },
+    {
+     "apiname": "ACH_SHOW_OFF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Show Off",
+     "description": "Win an Episode with a custom Celebration equipped"
+    },
+    {
+     "apiname": "ACH_SQUAD_GOALS",
+     "achieved": 1,
+     "unlocktime": 1598411328,
+     "name": "Squad Goals",
+     "description": "Win an Episode as part of a party of 3 or more players"
+    },
+    {
+     "apiname": "ACH_DOWN_TO_THE_WIRE",
+     "achieved": 1,
+     "unlocktime": 1597510539,
+     "name": "Down to the Wire",
+     "description": "Qualify after a round goes to overtime"
+    },
+    {
+     "apiname": "ACHI_BARELY_MADE_IT",
+     "achieved": 1,
+     "unlocktime": 1598407058,
+     "name": "Low Baller",
+     "description": "Qualify from a team game with a score of 1"
+    },
+    {
+     "apiname": "ACH_BIG_TEASE",
+     "achieved": 1,
+     "unlocktime": 1598577265,
+     "name": "Big Tease",
+     "description": "Perform an emote just before coming first in a race round"
+    },
+    {
+     "apiname": "ACH_BIG_AIR",
+     "achieved": 1,
+     "unlocktime": 1599944204,
+     "name": "Big Air",
+     "description": "Clock up 1 hour total time falling"
+    },
+    {
+     "apiname": "ACH_STUMBLE_CHUMS",
+     "achieved": 1,
+     "unlocktime": 1598061416,
+     "name": "Stumble Chums",
+     "description": "Bump into other Fall Guys 1000 times in total"
+    },
+    {
+     "apiname": "ACH_STYLE_POINTS",
+     "achieved": 1,
+     "unlocktime": 1597528964,
+     "name": "Style Points",
+     "description": "Fall for at least 3 seconds before landing on your head"
+    },
+    {
+     "apiname": "ACH_BIG_BULLY",
+     "achieved": 1,
+     "unlocktime": 1597507862,
+     "name": "Big Bully",
+     "description": "Knock someone over"
+    },
+    {
+     "apiname": "ACH_TROUBLEMAKER",
+     "achieved": 1,
+     "unlocktime": 1597507869,
+     "name": "Troublemaker",
+     "description": "Bump into 3 people while rolling on the ground before getting up"
+    },
+    {
+     "apiname": "ACH_FALL_THROTTLE",
+     "achieved": 1,
+     "unlocktime": 1597528398,
+     "name": "Fall Throttle",
+     "description": "Reach terminal velocity "
+    }
+   ],
+   "success": true
+  }
+ }
+}

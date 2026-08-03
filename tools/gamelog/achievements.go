@@ -9,6 +9,8 @@ import (
 	"sort"
 	"strconv"
 	"time"
+
+	"gopkg.in/yaml.v3"
 )
 
 // archiveDirName is the top-level directory holding captured provider
@@ -296,6 +298,63 @@ func SaveRecord(archiveDir, provider, id, title string, fresh *ProviderRecord) (
 	return path, nil
 }
 
+// achievementSummaryFilename is a slim, raw-free projection of a game's
+// achievement counts, written into its content bundle so Hugo can display
+// them without reading archive/ directly. Covered by the same
+// publishResources: false cascade as playthroughs.yaml.
+const achievementSummaryFilename = "achievement-summary.yaml"
+
+// AchievementSummary is the combined unlocked/total across every provider a
+// game is linked to, e.g. RetroAchievements 12/40 + Steam 46/54 -> 58/94.
+type AchievementSummary struct {
+	Unlocked int `yaml:"unlocked"`
+	Total    int `yaml:"total"`
+}
+
+func achievementSummaryPath(gameDir string) string {
+	return filepath.Join(gameDir, achievementSummaryFilename)
+}
+
+// writeAchievementSummary recomputes the projection from whatever is
+// currently archived for either provider, not just a record just fetched.
+// A game with nothing archived gets no file; a stale one is removed. wrote
+// reports whether a file now exists, so callers can tally writes vs. no-ops.
+func writeAchievementSummary(archiveDir, gameDir, raID, steamAppID string) (wrote bool, err error) {
+	var unlocked, total int
+	for _, link := range [][2]string{{providerRA, raID}, {providerSteam, steamAppID}} {
+		provider, id := link[0], link[1]
+		if id == "" {
+			continue
+		}
+		rec, err := LoadRecord(archiveDir, provider, id)
+		if err != nil {
+			return false, err
+		}
+		if rec == nil {
+			continue
+		}
+		unlocked += rec.Unlocked
+		total += rec.Total
+	}
+
+	path := achievementSummaryPath(gameDir)
+	if total == 0 {
+		if err := os.Remove(path); err != nil && !os.IsNotExist(err) {
+			return false, err
+		}
+		return false, nil
+	}
+
+	out, err := yaml.Marshal(AchievementSummary{Unlocked: unlocked, Total: total})
+	if err != nil {
+		return false, err
+	}
+	if err := writeFileAtomic(path, out, 0o644); err != nil {
+		return false, err
+	}
+	return true, nil
+}
+
 // stamp renders an instant the way the archive stores dates.
 func stamp(t time.Time) string {
 	return t.In(siteLocation).Format(time.RFC3339)
@@ -503,7 +562,8 @@ func runAchievements(args []string) error {
 		return fmt.Errorf("%s has no retroachievements_id or steam_appid set", slug)
 	}
 
-	saved, err := saveAchievements(context.Background(), findArchiveDir(gamesDir), summary.Title,
+	archiveDir := findArchiveDir(gamesDir)
+	saved, err := saveAchievements(context.Background(), archiveDir, summary.Title,
 		raID, steamAppID, loadCredentials())
 	if err != nil {
 		return err
@@ -518,5 +578,44 @@ func runAchievements(args []string) error {
 		}
 		fmt.Printf("Saved %s\n", s.Path)
 	}
+
+	if _, err := writeAchievementSummary(archiveDir, filepath.Dir(summary.Path), raID, steamAppID); err != nil {
+		fmt.Fprintf(os.Stderr, "  (achievement summary not updated: %v)\n", err)
+	}
+	return nil
+}
+
+// runProject regenerates every game's achievement-summary.yaml purely from
+// what's already archived — no API calls, so it's safe and fast to run any
+// time the projection needs rebuilding (after a manual archive edit, or a
+// change to what the summary contains) without re-fetching anything.
+func runProject(args []string) error {
+	gamesDir, err := findGamesDir()
+	if err != nil {
+		return err
+	}
+	games, err := ListGames(gamesDir)
+	if err != nil {
+		return err
+	}
+	archiveDir := findArchiveDir(gamesDir)
+
+	var written, empty, failed int
+	for _, g := range games {
+		if g.RAGameID == "" && g.SteamAppID == "" {
+			continue
+		}
+		wrote, err := writeAchievementSummary(archiveDir, filepath.Dir(g.Path), g.RAGameID, g.SteamAppID)
+		switch {
+		case err != nil:
+			fmt.Fprintf(os.Stderr, "  %s: %v\n", g.Slug, err)
+			failed++
+		case wrote:
+			written++
+		default:
+			empty++
+		}
+	}
+	fmt.Printf("%d summaries written, %d with nothing archived yet, %d failed\n", written, empty, failed)
 	return nil
 }

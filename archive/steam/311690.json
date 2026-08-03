@@ -1,0 +1,719 @@
+{
+ "provider": "steam",
+ "title": "Enter the Gungeon",
+ "updated": "2026-07-26",
+ "id": "311690",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 7,
+ "total": 54,
+ "first": "2016-06-01",
+ "last": "2023-02-13",
+ "platform": "PC",
+ "icon": "b459d94ad4b6a5eabd71005874037b9577a4ca31",
+ "playtime_mins": 1282,
+ "playtime": {
+  "windows": 627
+ },
+ "last_played": "2023-02-17",
+ "achievements": [
+  {
+   "key": "BEAT_TUTORIAL",
+   "name": "Gungeon Acolyte",
+   "description": "Complete the Tutorial",
+   "unlocked": true,
+   "date": "2016-06-01T18:23:41-05:00"
+  },
+  {
+   "key": "KILL_FROZEN_ENEMY_WITH_ROLL",
+   "name": "Demolition Man",
+   "description": "Kill a frozen enemy by rolling into it",
+   "unlocked": true,
+   "date": "2016-06-01T20:04:15-05:00"
+  },
+  {
+   "key": "REACH_SEWERS",
+   "name": "Grate Hall",
+   "unlocked": true,
+   "date": "2016-06-14T16:35:44-05:00"
+  },
+  {
+   "key": "PREFIRE_ON_MIMIC",
+   "name": "Not Just A Box",
+   "unlocked": true,
+   "date": "2019-04-23T16:45:12-05:00"
+  },
+  {
+   "key": "KILL_BOSS_WITH_GLITTER",
+   "name": "Day Ruiner",
+   "description": "Kill a boss after covering it with glitter",
+   "unlocked": true,
+   "date": "2023-02-12T18:55:46-06:00"
+  },
+  {
+   "key": "BEAT_MANFREDS_RIVAL",
+   "name": "Sworn Gun",
+   "description": "Avenge Manuel",
+   "unlocked": true,
+   "date": "2023-02-13T21:43:48-06:00"
+  },
+  {
+   "key": "SPEND_META_CURRENCY",
+   "name": "Patron",
+   "description": "Spend big at the Acquisitions Department",
+   "unlocked": true,
+   "date": "2023-02-13T22:02:51-06:00"
+  },
+  {
+   "key": "ACE_WINCHESTER_MULTI",
+   "name": "Trickshot",
+   "description": "Ace Winchester's game 3 times",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_ADVANCED_DRAGUN",
+   "name": "Advanced Slayer",
+   "description": "Defeat an Advanced Boss",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_A_JAMMED_BOSS",
+   "name": "Exorcist",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_FIVE",
+   "name": "Slayer",
+   "description": "Defeat the Boss of the Fifth Chamber",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_FIVE_MULTI",
+   "name": "Forger",
+   "description": "Clear the Fifth Chamber 10 Times",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_FOUR_MULTI",
+   "name": "Hollowed Out",
+   "description": "Clear the Fourth Chamber 20 Times",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_ONE_MULTI",
+   "name": "Castle Crasher",
+   "description": "Clear the First Chamber 50 Times",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_SIX",
+   "name": "Gungeon Master",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_THREE_MULTI",
+   "name": "Mine Master",
+   "description": "Clear the Third Chamber 30 Times",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_FLOOR_TWO_MULTI",
+   "name": "Dungeon Diver",
+   "description": "Clear the Second Chamber 40 Times",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_METAL_GEAR_RAT",
+   "name": "Resourceful",
+   "description": "Take Revenge",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_ALL",
+   "name": "Historian",
+   "description": "Complete all 4 main character Pasts",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_BULLET",
+   "name": "Hero of Gun",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_CONVICT",
+   "name": "Double Jeopardy",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_GUIDE",
+   "name": "Deadliest Game",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_MARINE",
+   "name": "Squad Captain",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_ROBOT",
+   "name": "Terminated",
+   "unlocked": false
+  },
+  {
+   "key": "BEAT_PAST_ROGUE",
+   "name": "Wingman",
+   "unlocked": false
+  },
+  {
+   "key": "BUILD_BULLET",
+   "name": "Gunsmith",
+   "description": "Construct the Bullet that can kill the Past",
+   "unlocked": false
+  },
+  {
+   "key": "COLLECT_FIVE_MASTERY_TOKENS",
+   "name": "Lead God",
+   "description": "Collect five Master Rounds in one run",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_FRIFLE_MULTI",
+   "name": "Weird Tale",
+   "description": "Complete Frifle's Challenges",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GAME_WITH_BEAST_MODE",
+   "name": "Beast Master",
+   "description": "Complete the game with Beast Mode on",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GAME_WITH_CHALLENGE_MODE",
+   "name": "Challenger",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GAME_WITH_ENCHANTED_GUN",
+   "name": "Gun Game",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GAME_WITH_TURBO_MODE",
+   "name": "Sledge-Dog",
+   "description": "Complete Tonic's Challenge",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GOLEM_ARM",
+   "name": "Re-Armed",
+   "description": "Deliver the Golem's replacement arm",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GUNSLING_MULTI",
+   "name": "Hedge Slinger",
+   "description": "Win a wager against the Gunsling King 5 times",
+   "unlocked": false
+  },
+  {
+   "key": "DIE_IN_PAST",
+   "name": "Time Paradox",
+   "unlocked": false
+  },
+  {
+   "key": "FALL_IN_END_TIMES",
+   "name": "Lion Leap",
+   "unlocked": false
+  },
+  {
+   "key": "FLIP_TABLES_MULTI",
+   "name": "Rage Mode",
+   "description": "Always be flipping. Guns are for flippers",
+   "unlocked": false
+  },
+  {
+   "key": "HAVE_MANY_COINS",
+   "name": "Biggest Wallet",
+   "description": "Carry a large amount of money at once",
+   "unlocked": false
+  },
+  {
+   "key": "HAVE_MAX_CURSE",
+   "name": "Jammed",
+   "unlocked": false
+  },
+  {
+   "key": "KILL_IN_MINE_CART_MULTI",
+   "name": "Rider",
+   "description": "Kill 100 enemies while riding in a mine cart",
+   "unlocked": false
+  },
+  {
+   "key": "KILL_WITH_CHANDELIER_MULTI",
+   "name": "Money Pit",
+   "description": "Kill 100 enemies by dropping chandeliers",
+   "unlocked": false
+  },
+  {
+   "key": "KILL_WITH_PITS_MULTI",
+   "name": "Pit Lord",
+   "description": "Kill 100 enemies by knocking them into pits",
+   "unlocked": false
+  },
+  {
+   "key": "MAP_MAIN_FLOORS",
+   "name": "Cartographer's Assistant",
+   "description": "Map the first Five Chambers for the lost adventurer",
+   "unlocked": false
+  },
+  {
+   "key": "POPULATE_BREACH",
+   "name": "Great Hall",
+   "description": "Populate the Breach",
+   "unlocked": false
+  },
+  {
+   "key": "PUSH_TABLE_INTO_PIT",
+   "name": "I Knew Someone Would Do It",
+   "unlocked": false
+  },
+  {
+   "key": "REACH_BLACK_MARKET",
+   "name": "The Password",
+   "unlocked": false
+  },
+  {
+   "key": "REACH_CATHEDRAL",
+   "name": "Reverence for the Dead",
+   "unlocked": false
+  },
+  {
+   "key": "STEAL_MULTI",
+   "name": "Woodsie Lord",
+   "description": "Steal 10 things",
+   "unlocked": false
+  },
+  {
+   "key": "UNLOCK_BULLET",
+   "name": "Case Closed",
+   "unlocked": false
+  },
+  {
+   "key": "UNLOCK_FLOOR_FIVE_SHORTCUT",
+   "name": "Last Stop",
+   "description": "Open the shortcut to the Fifth Chamber",
+   "unlocked": false
+  },
+  {
+   "key": "UNLOCK_FLOOR_FOUR_SHORTCUT",
+   "name": "Going Downest",
+   "description": "Open the shortcut to the Fourth Chamber",
+   "unlocked": false
+  },
+  {
+   "key": "UNLOCK_FLOOR_THREE_SHORTCUT",
+   "name": "Going Downer",
+   "description": "Open the shortcut to the Third Chamber",
+   "unlocked": false
+  },
+  {
+   "key": "UNLOCK_FLOOR_TWO_SHORTCUT",
+   "name": "Going Down",
+   "description": "Open the shortcut to the Second Chamber",
+   "unlocked": false
+  },
+  {
+   "key": "UNLOCK_ROBOT",
+   "name": "Beep",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Enter the Gungeon",
+   "achievements": [
+    {
+     "apiname": "COLLECT_FIVE_MASTERY_TOKENS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lead God",
+     "description": "Collect five Master Rounds in one run"
+    },
+    {
+     "apiname": "SPEND_META_CURRENCY",
+     "achieved": 1,
+     "unlocktime": 1676347371,
+     "name": "Patron",
+     "description": "Spend big at the Acquisitions Department"
+    },
+    {
+     "apiname": "COMPLETE_GAME_WITH_ENCHANTED_GUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gun Game",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_FLOOR_SIX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gungeon Master",
+     "description": ""
+    },
+    {
+     "apiname": "BUILD_BULLET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gunsmith",
+     "description": "Construct the Bullet that can kill the Past"
+    },
+    {
+     "apiname": "BEAT_PAST_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Historian",
+     "description": "Complete all 4 main character Pasts"
+    },
+    {
+     "apiname": "BEAT_PAST_ROGUE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wingman",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_PAST_CONVICT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Double Jeopardy",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_PAST_MARINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squad Captain",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_PAST_GUIDE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deadliest Game",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_FLOOR_FIVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slayer",
+     "description": "Defeat the Boss of the Fifth Chamber"
+    },
+    {
+     "apiname": "BEAT_FLOOR_ONE_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Castle Crasher",
+     "description": "Clear the First Chamber 50 Times"
+    },
+    {
+     "apiname": "BEAT_FLOOR_TWO_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dungeon Diver",
+     "description": "Clear the Second Chamber 40 Times"
+    },
+    {
+     "apiname": "BEAT_FLOOR_THREE_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mine Master",
+     "description": "Clear the Third Chamber 30 Times"
+    },
+    {
+     "apiname": "BEAT_FLOOR_FOUR_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hollowed Out",
+     "description": "Clear the Fourth Chamber 20 Times"
+    },
+    {
+     "apiname": "BEAT_FLOOR_FIVE_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forger",
+     "description": "Clear the Fifth Chamber 10 Times"
+    },
+    {
+     "apiname": "HAVE_MANY_COINS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Biggest Wallet",
+     "description": "Carry a large amount of money at once"
+    },
+    {
+     "apiname": "MAP_MAIN_FLOORS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cartographer's Assistant",
+     "description": "Map the first Five Chambers for the lost adventurer"
+    },
+    {
+     "apiname": "REACH_SEWERS",
+     "achieved": 1,
+     "unlocktime": 1465940144,
+     "name": "Grate Hall",
+     "description": ""
+    },
+    {
+     "apiname": "REACH_CATHEDRAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reverence for the Dead",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_GOLEM_ARM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Re-Armed",
+     "description": "Deliver the Golem's replacement arm"
+    },
+    {
+     "apiname": "COMPLETE_FRIFLE_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weird Tale",
+     "description": "Complete Frifle's Challenges"
+    },
+    {
+     "apiname": "ACE_WINCHESTER_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trickshot",
+     "description": "Ace Winchester's game 3 times"
+    },
+    {
+     "apiname": "COMPLETE_GUNSLING_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hedge Slinger",
+     "description": "Win a wager against the Gunsling King 5 times"
+    },
+    {
+     "apiname": "UNLOCK_BULLET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Case Closed",
+     "description": ""
+    },
+    {
+     "apiname": "UNLOCK_ROBOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beep",
+     "description": ""
+    },
+    {
+     "apiname": "UNLOCK_FLOOR_TWO_SHORTCUT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Going Down",
+     "description": "Open the shortcut to the Second Chamber"
+    },
+    {
+     "apiname": "UNLOCK_FLOOR_THREE_SHORTCUT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Going Downer",
+     "description": "Open the shortcut to the Third Chamber"
+    },
+    {
+     "apiname": "UNLOCK_FLOOR_FOUR_SHORTCUT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Going Downest",
+     "description": "Open the shortcut to the Fourth Chamber"
+    },
+    {
+     "apiname": "UNLOCK_FLOOR_FIVE_SHORTCUT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last Stop",
+     "description": "Open the shortcut to the Fifth Chamber"
+    },
+    {
+     "apiname": "BEAT_MANFREDS_RIVAL",
+     "achieved": 1,
+     "unlocktime": 1676346228,
+     "name": "Sworn Gun",
+     "description": "Avenge Manuel"
+    },
+    {
+     "apiname": "BEAT_TUTORIAL",
+     "achieved": 1,
+     "unlocktime": 1464823421,
+     "name": "Gungeon Acolyte",
+     "description": "Complete the Tutorial"
+    },
+    {
+     "apiname": "POPULATE_BREACH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Great Hall",
+     "description": "Populate the Breach"
+    },
+    {
+     "apiname": "PREFIRE_ON_MIMIC",
+     "achieved": 1,
+     "unlocktime": 1556055912,
+     "name": "Not Just A Box",
+     "description": ""
+    },
+    {
+     "apiname": "KILL_FROZEN_ENEMY_WITH_ROLL",
+     "achieved": 1,
+     "unlocktime": 1464829455,
+     "name": "Demolition Man",
+     "description": "Kill a frozen enemy by rolling into it"
+    },
+    {
+     "apiname": "PUSH_TABLE_INTO_PIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Knew Someone Would Do It",
+     "description": ""
+    },
+    {
+     "apiname": "STEAL_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Woodsie Lord",
+     "description": "Steal 10 things"
+    },
+    {
+     "apiname": "KILL_BOSS_WITH_GLITTER",
+     "achieved": 1,
+     "unlocktime": 1676249746,
+     "name": "Day Ruiner",
+     "description": "Kill a boss after covering it with glitter"
+    },
+    {
+     "apiname": "FALL_IN_END_TIMES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lion Leap",
+     "description": ""
+    },
+    {
+     "apiname": "KILL_WITH_CHANDELIER_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Money Pit",
+     "description": "Kill 100 enemies by dropping chandeliers"
+    },
+    {
+     "apiname": "KILL_IN_MINE_CART_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rider",
+     "description": "Kill 100 enemies while riding in a mine cart"
+    },
+    {
+     "apiname": "KILL_WITH_PITS_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pit Lord",
+     "description": "Kill 100 enemies by knocking them into pits"
+    },
+    {
+     "apiname": "DIE_IN_PAST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Time Paradox",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_A_JAMMED_BOSS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exorcist",
+     "description": ""
+    },
+    {
+     "apiname": "REACH_BLACK_MARKET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Password",
+     "description": ""
+    },
+    {
+     "apiname": "HAVE_MAX_CURSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jammed",
+     "description": ""
+    },
+    {
+     "apiname": "FLIP_TABLES_MULTI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rage Mode",
+     "description": "Always be flipping. Guns are for flippers"
+    },
+    {
+     "apiname": "COMPLETE_GAME_WITH_BEAST_MODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beast Master",
+     "description": "Complete the game with Beast Mode on"
+    },
+    {
+     "apiname": "BEAT_PAST_ROBOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Terminated",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_PAST_BULLET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hero of Gun",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_GAME_WITH_CHALLENGE_MODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Challenger",
+     "description": ""
+    },
+    {
+     "apiname": "BEAT_ADVANCED_DRAGUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Advanced Slayer",
+     "description": "Defeat an Advanced Boss"
+    },
+    {
+     "apiname": "BEAT_METAL_GEAR_RAT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Resourceful",
+     "description": "Take Revenge"
+    },
+    {
+     "apiname": "COMPLETE_GAME_WITH_TURBO_MODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sledge-Dog",
+     "description": "Complete Tonic's Challenge"
+    }
+   ],
+   "success": true
+  }
+ }
+}

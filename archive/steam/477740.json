@@ -1,0 +1,505 @@
+{
+ "provider": "steam",
+ "title": "Zero Escape: The Nonary Games",
+ "updated": "2026-07-26",
+ "id": "477740",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 9,
+ "total": 38,
+ "first": "2022-01-08",
+ "last": "2022-01-09",
+ "platform": "PC",
+ "icon": "87b8865a7286cf25d3b1373f14ac267518ae64b9",
+ "playtime_mins": 1316,
+ "playtime": {
+  "windows": 1316
+ },
+ "last_played": "2022-01-10",
+ "achievements": [
+  {
+   "key": "ACH_SKPV_03",
+   "name": "We All Die By a Yellow Submarine",
+   "unlocked": true,
+   "date": "2022-01-08T08:42:59-06:00"
+  },
+  {
+   "key": "ACH_SKPV_04",
+   "name": "Cut and Run",
+   "unlocked": true,
+   "date": "2022-01-08T16:54:10-06:00"
+  },
+  {
+   "key": "ACH_SKPV_05",
+   "name": "Let Me Ax You a Question",
+   "unlocked": true,
+   "date": "2022-01-08T17:35:23-06:00"
+  },
+  {
+   "key": "ACH_SKPV_02",
+   "name": "Chance of Loss is Not Zero",
+   "unlocked": true,
+   "date": "2022-01-08T22:11:18-06:00"
+  },
+  {
+   "key": "ACH_SKPV_07",
+   "name": "Seek a Way Out Again",
+   "description": "Gained all Memories of Escape in 999.",
+   "unlocked": true,
+   "date": "2022-01-09T13:07:00-06:00"
+  },
+  {
+   "key": "ACH_SKPV_08",
+   "name": "Is That Your Final Answer?",
+   "description": "Solved the final question in 999.",
+   "unlocked": true,
+   "date": "2022-01-09T13:48:04-06:00"
+  },
+  {
+   "key": "ACH_SKPV_01",
+   "name": "Don't Forget Your Towel",
+   "unlocked": true,
+   "date": "2022-01-09T14:29:48-06:00"
+  },
+  {
+   "key": "ACH_SKPV_06",
+   "name": "A Sixth Sense of What's Coming",
+   "description": "Saw all previews in 999.",
+   "unlocked": true,
+   "date": "2022-01-09T14:29:54-06:00"
+  },
+  {
+   "key": "ACH_SKP2_03",
+   "name": "Escapey",
+   "description": "Escaped on Hard difficulty in VLR.",
+   "unlocked": true,
+   "date": "2022-01-09T21:17:31-06:00"
+  },
+  {
+   "key": "ACH_SKP2_01",
+   "name": "Master of Escapology",
+   "description": "Escaped from eight rooms in VLR.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_02",
+   "name": "Doctor of Escapology",
+   "description": "Escaped from sixteen rooms in VLR.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_04",
+   "name": "Escapest",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_05",
+   "name": "Redacted",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_06",
+   "name": "A Consumate Collection",
+   "description": "Found ALL the files in VLR!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_07",
+   "name": "To Each According to His Needle",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_08",
+   "name": "I Can't Believe It's Not Murder!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_09",
+   "name": "Gotta Hand It To You",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_10",
+   "name": "If I Told You You Had A Nice Antibody...",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_11",
+   "name": "He Was Convicted of a String of Numbers",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_12",
+   "name": "No Lying Down On the Job",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_13",
+   "name": "Who Set Up Us The Bomb, Part 1",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_14",
+   "name": "Why'd You Do That, You Dumas!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_15",
+   "name": "Who Set Up Us The Bomb, Part A",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_16",
+   "name": "Some Days You Just Can't Get Rid of a Bomb",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_17",
+   "name": "Every Ending Begins Somewhere",
+   "description": "Saw any of the endings in VLR.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_18",
+   "name": "Tears in the Rain",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_19",
+   "name": "Through the Looking Glass",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_20",
+   "name": "Behind Blue Eyes",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_21",
+   "name": "In Root Beer Veritas",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_22",
+   "name": "An Equal and Opposite Reaction",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_23",
+   "name": "Secret Agent Woman",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_24",
+   "name": "Best Served Cold",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_25",
+   "name": "Arms Race",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_26",
+   "name": "Time After Time",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_27",
+   "name": "Fire and Ice",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_28",
+   "name": "A Certain Point of View",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKP2_29",
+   "name": "That Wasn't Supposed to Happen",
+   "description": "Saw any of the bad endings.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SKPV_AND_SKP2_PLATINUM",
+   "name": "You Found It",
+   "description": "Gained all trophies.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Zero Escape: The Nonary Games",
+   "achievements": [
+    {
+     "apiname": "ACH_SKPV_AND_SKP2_PLATINUM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Found It",
+     "description": "Gained all trophies."
+    },
+    {
+     "apiname": "ACH_SKPV_01",
+     "achieved": 1,
+     "unlocktime": 1641760188,
+     "name": "Don't Forget Your Towel",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKPV_02",
+     "achieved": 1,
+     "unlocktime": 1641701478,
+     "name": "Chance of Loss is Not Zero",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKPV_03",
+     "achieved": 1,
+     "unlocktime": 1641652979,
+     "name": "We All Die By a Yellow Submarine",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKPV_04",
+     "achieved": 1,
+     "unlocktime": 1641682450,
+     "name": "Cut and Run",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKPV_05",
+     "achieved": 1,
+     "unlocktime": 1641684923,
+     "name": "Let Me Ax You a Question",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKPV_06",
+     "achieved": 1,
+     "unlocktime": 1641760194,
+     "name": "A Sixth Sense of What's Coming",
+     "description": "Saw all previews in 999."
+    },
+    {
+     "apiname": "ACH_SKPV_07",
+     "achieved": 1,
+     "unlocktime": 1641755220,
+     "name": "Seek a Way Out Again",
+     "description": "Gained all Memories of Escape in 999."
+    },
+    {
+     "apiname": "ACH_SKPV_08",
+     "achieved": 1,
+     "unlocktime": 1641757684,
+     "name": "Is That Your Final Answer?",
+     "description": "Solved the final question in 999."
+    },
+    {
+     "apiname": "ACH_SKP2_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of Escapology",
+     "description": "Escaped from eight rooms in VLR."
+    },
+    {
+     "apiname": "ACH_SKP2_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Doctor of Escapology",
+     "description": "Escaped from sixteen rooms in VLR."
+    },
+    {
+     "apiname": "ACH_SKP2_03",
+     "achieved": 1,
+     "unlocktime": 1641784651,
+     "name": "Escapey",
+     "description": "Escaped on Hard difficulty in VLR."
+    },
+    {
+     "apiname": "ACH_SKP2_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Escapest",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Redacted",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Consumate Collection",
+     "description": "Found ALL the files in VLR!"
+    },
+    {
+     "apiname": "ACH_SKP2_07",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "To Each According to His Needle",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_08",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Can't Believe It's Not Murder!",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_09",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gotta Hand It To You",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "If I Told You You Had A Nice Antibody...",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "He Was Convicted of a String of Numbers",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Lying Down On the Job",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Set Up Us The Bomb, Part 1",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Why'd You Do That, You Dumas!",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Set Up Us The Bomb, Part A",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Some Days You Just Can't Get Rid of a Bomb",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Every Ending Begins Somewhere",
+     "description": "Saw any of the endings in VLR."
+    },
+    {
+     "apiname": "ACH_SKP2_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tears in the Rain",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Through the Looking Glass",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Behind Blue Eyes",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In Root Beer Veritas",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An Equal and Opposite Reaction",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Secret Agent Woman",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best Served Cold",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arms Race",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Time After Time",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fire and Ice",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Certain Point of View",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SKP2_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That Wasn't Supposed to Happen",
+     "description": "Saw any of the bad endings."
+    }
+   ],
+   "success": true
+  }
+ }
+}

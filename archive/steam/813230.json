@@ -1,0 +1,292 @@
+{
+ "provider": "steam",
+ "title": "ANIMAL WELL",
+ "updated": "2026-07-26",
+ "id": "813230",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 20,
+ "total": 20,
+ "first": "2026-01-24",
+ "last": "2026-01-30",
+ "award_kind": "all achievements",
+ "platform": "PC",
+ "icon": "860b275ec0e63d6a74f6f3f9fc8dd75a49065f07",
+ "playtime_mins": 1084,
+ "playtime": {
+  "linux": 1084
+ },
+ "last_played": "2026-05-03",
+ "achievements": [
+  {
+   "key": "COLLECT_MAP",
+   "name": "EXPLORER",
+   "description": "Find the map",
+   "unlocked": true,
+   "date": "2026-01-24T13:53:12-06:00"
+  },
+  {
+   "key": "COLLECT_EGG",
+   "name": "SECRET EGG",
+   "unlocked": true,
+   "date": "2026-01-24T14:04:59-06:00"
+  },
+  {
+   "key": "COLLECT_8_EGGS",
+   "name": "EGG ENJOYER",
+   "unlocked": true,
+   "date": "2026-01-24T15:17:00-06:00"
+  },
+  {
+   "key": "COLLECT_16_EGGS",
+   "name": "EGG HOBBYIST",
+   "unlocked": true,
+   "date": "2026-01-25T09:06:08-06:00"
+  },
+  {
+   "key": "GET_CRUSHED_BY_CHINCHILLA",
+   "name": "GOOD ENDING",
+   "unlocked": true,
+   "date": "2026-01-25T09:32:27-06:00"
+  },
+  {
+   "key": "YOYO_RIDE",
+   "name": "WALK THE DOG",
+   "unlocked": true,
+   "date": "2026-01-25T09:36:27-06:00"
+  },
+  {
+   "key": "DEFEAT_CHAMELEON",
+   "name": "CHAMELEON",
+   "unlocked": true,
+   "date": "2026-01-25T09:41:06-06:00"
+  },
+  {
+   "key": "RIDE_FRISBEE",
+   "name": "BACK AND FORTH FOREVER",
+   "unlocked": true,
+   "date": "2026-01-25T10:00:22-06:00"
+  },
+  {
+   "key": "FLUTE_WARP",
+   "name": "TRAVEL FLUTE",
+   "unlocked": true,
+   "date": "2026-01-25T10:10:40-06:00"
+  },
+  {
+   "key": "DEFEAT_GHOST_DOG",
+   "name": "GHOST",
+   "unlocked": true,
+   "date": "2026-01-25T11:54:34-06:00"
+  },
+  {
+   "key": "DEFEAT_OSTRICH",
+   "name": "OSTRICH",
+   "unlocked": true,
+   "date": "2026-01-25T12:18:39-06:00"
+  },
+  {
+   "key": "DEFEAT_SEAHORSE",
+   "name": "SEAHORSE",
+   "unlocked": true,
+   "date": "2026-01-25T12:47:48-06:00"
+  },
+  {
+   "key": "COLLECT_32_EGGS",
+   "name": "EGG LORD",
+   "unlocked": true,
+   "date": "2026-01-25T13:24:53-06:00"
+  },
+  {
+   "key": "DEFEAT_MANTICORE",
+   "name": "MANTICORE",
+   "unlocked": true,
+   "date": "2026-01-25T19:41:05-06:00"
+  },
+  {
+   "key": "LIGHT_ALL_CANDLES",
+   "name": "CANDLE BRIGHT",
+   "unlocked": true,
+   "date": "2026-01-25T20:05:20-06:00"
+  },
+  {
+   "key": "POP_BUBBLES",
+   "name": "BUBBLE ECSTASY",
+   "unlocked": true,
+   "date": "2026-01-25T21:39:41-06:00"
+  },
+  {
+   "key": "FIND_RABBIT",
+   "name": "SECRET RABBIT",
+   "unlocked": true,
+   "date": "2026-01-27T20:04:40-06:00"
+  },
+  {
+   "key": "COLLECT_ALL_EGGS",
+   "name": "EGG WELL",
+   "unlocked": true,
+   "date": "2026-01-28T19:15:44-06:00"
+  },
+  {
+   "key": "LEAVE_WELL",
+   "name": "EXIT",
+   "unlocked": true,
+   "date": "2026-01-28T19:45:43-06:00"
+  },
+  {
+   "key": "TOUCH_SQUIRREL",
+   "name": "SNEAK",
+   "unlocked": true,
+   "date": "2026-01-30T19:10:46-06:00"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "ANIMAL WELL",
+   "achievements": [
+    {
+     "apiname": "COLLECT_MAP",
+     "achieved": 1,
+     "unlocktime": 1769284392,
+     "name": "EXPLORER",
+     "description": "Find the map"
+    },
+    {
+     "apiname": "COLLECT_EGG",
+     "achieved": 1,
+     "unlocktime": 1769285099,
+     "name": "SECRET EGG",
+     "description": ""
+    },
+    {
+     "apiname": "COLLECT_8_EGGS",
+     "achieved": 1,
+     "unlocktime": 1769289420,
+     "name": "EGG ENJOYER",
+     "description": ""
+    },
+    {
+     "apiname": "COLLECT_16_EGGS",
+     "achieved": 1,
+     "unlocktime": 1769353568,
+     "name": "EGG HOBBYIST",
+     "description": ""
+    },
+    {
+     "apiname": "COLLECT_32_EGGS",
+     "achieved": 1,
+     "unlocktime": 1769369093,
+     "name": "EGG LORD",
+     "description": ""
+    },
+    {
+     "apiname": "COLLECT_ALL_EGGS",
+     "achieved": 1,
+     "unlocktime": 1769649344,
+     "name": "EGG WELL",
+     "description": ""
+    },
+    {
+     "apiname": "FIND_RABBIT",
+     "achieved": 1,
+     "unlocktime": 1769565880,
+     "name": "SECRET RABBIT",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEAT_CHAMELEON",
+     "achieved": 1,
+     "unlocktime": 1769355666,
+     "name": "CHAMELEON",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEAT_GHOST_DOG",
+     "achieved": 1,
+     "unlocktime": 1769363674,
+     "name": "GHOST",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEAT_SEAHORSE",
+     "achieved": 1,
+     "unlocktime": 1769366868,
+     "name": "SEAHORSE",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEAT_OSTRICH",
+     "achieved": 1,
+     "unlocktime": 1769365119,
+     "name": "OSTRICH",
+     "description": ""
+    },
+    {
+     "apiname": "LIGHT_ALL_CANDLES",
+     "achieved": 1,
+     "unlocktime": 1769393120,
+     "name": "CANDLE BRIGHT",
+     "description": ""
+    },
+    {
+     "apiname": "DEFEAT_MANTICORE",
+     "achieved": 1,
+     "unlocktime": 1769391665,
+     "name": "MANTICORE",
+     "description": ""
+    },
+    {
+     "apiname": "GET_CRUSHED_BY_CHINCHILLA",
+     "achieved": 1,
+     "unlocktime": 1769355147,
+     "name": "GOOD ENDING",
+     "description": ""
+    },
+    {
+     "apiname": "RIDE_FRISBEE",
+     "achieved": 1,
+     "unlocktime": 1769356822,
+     "name": "BACK AND FORTH FOREVER",
+     "description": ""
+    },
+    {
+     "apiname": "POP_BUBBLES",
+     "achieved": 1,
+     "unlocktime": 1769398781,
+     "name": "BUBBLE ECSTASY",
+     "description": ""
+    },
+    {
+     "apiname": "LEAVE_WELL",
+     "achieved": 1,
+     "unlocktime": 1769651143,
+     "name": "EXIT",
+     "description": ""
+    },
+    {
+     "apiname": "TOUCH_SQUIRREL",
+     "achieved": 1,
+     "unlocktime": 1769821846,
+     "name": "SNEAK",
+     "description": ""
+    },
+    {
+     "apiname": "FLUTE_WARP",
+     "achieved": 1,
+     "unlocktime": 1769357440,
+     "name": "TRAVEL FLUTE",
+     "description": ""
+    },
+    {
+     "apiname": "YOYO_RIDE",
+     "achieved": 1,
+     "unlocktime": 1769355387,
+     "name": "WALK THE DOG",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

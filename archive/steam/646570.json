@@ -1,0 +1,641 @@
+{
+ "provider": "steam",
+ "title": "Slay the Spire",
+ "updated": "2026-07-26",
+ "id": "646570",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 25,
+ "total": 46,
+ "first": "2017-12-12",
+ "last": "2025-09-03",
+ "platform": "PC",
+ "icon": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
+ "playtime_mins": 6530,
+ "playtime": {
+  "linux": 392,
+  "windows": 1397
+ },
+ "last_played": "2025-09-03",
+ "achievements": [
+  {
+   "key": "GUARDIAN",
+   "name": "The Guardian",
+   "unlocked": true,
+   "date": "2017-12-12T01:37:18-06:00"
+  },
+  {
+   "key": "ADRENALINE",
+   "name": "Adrenaline",
+   "description": "Have 9 Energy during a single turn of combat.",
+   "unlocked": true,
+   "date": "2017-12-12T01:42:38-06:00"
+  },
+  {
+   "key": "GHOST_GUARDIAN",
+   "name": "The Ghost",
+   "unlocked": true,
+   "date": "2017-12-12T02:48:22-06:00"
+  },
+  {
+   "key": "PLAGUE",
+   "name": "Plague",
+   "description": "Defeat 3 enemies with Poison in a single combat.",
+   "unlocked": true,
+   "date": "2017-12-12T04:21:05-06:00"
+  },
+  {
+   "key": "SLIME_BOSS",
+   "name": "The Boss",
+   "unlocked": true,
+   "date": "2017-12-12T04:21:21-06:00"
+  },
+  {
+   "key": "SHRUG_IT_OFF",
+   "name": "Shrug It Off",
+   "description": "Win a battle with 1 HP remaining.",
+   "unlocked": true,
+   "date": "2017-12-12T16:38:13-06:00"
+  },
+  {
+   "key": "AUTOMATON",
+   "name": "The Automaton",
+   "unlocked": true,
+   "date": "2017-12-12T21:11:37-06:00"
+  },
+  {
+   "key": "COLLECTOR",
+   "name": "The Collector",
+   "unlocked": true,
+   "date": "2017-12-13T00:12:59-06:00"
+  },
+  {
+   "key": "CHAMP",
+   "name": "The Champion",
+   "unlocked": true,
+   "date": "2017-12-13T23:59:37-06:00"
+  },
+  {
+   "key": "CROW",
+   "name": "The Crow",
+   "unlocked": true,
+   "date": "2017-12-17T22:21:08-06:00"
+  },
+  {
+   "key": "RUBY",
+   "name": "Ruby",
+   "description": "Beat the game with the Ironclad.",
+   "unlocked": true,
+   "date": "2017-12-17T22:21:33-06:00"
+  },
+  {
+   "key": "ASCEND_0",
+   "name": "Ascend 0",
+   "description": "Unlock Ascension mode.",
+   "unlocked": true,
+   "date": "2019-03-14T10:51:21-05:00"
+  },
+  {
+   "key": "COME_AT_ME",
+   "name": "Come At Me",
+   "description": "Win a combat without playing an Attack.",
+   "unlocked": true,
+   "date": "2019-03-14T23:05:01-05:00"
+  },
+  {
+   "key": "THE_PACT",
+   "name": "The Pact",
+   "description": "Exhaust 20 cards in a single combat.",
+   "unlocked": true,
+   "date": "2019-03-15T11:10:23-05:00"
+  },
+  {
+   "key": "TIME_EATER",
+   "name": "The Time Eater",
+   "unlocked": true,
+   "date": "2019-03-16T14:20:27-05:00"
+  },
+  {
+   "key": "PERFECT",
+   "name": "Perfect",
+   "description": "Defeat a boss without taking any damage.",
+   "unlocked": true,
+   "date": "2019-03-16T19:26:46-05:00"
+  },
+  {
+   "key": "IMPERVIOUS",
+   "name": "Impervious",
+   "description": "Have 99 or more Block during combat.",
+   "unlocked": true,
+   "date": "2019-03-17T21:38:52-05:00"
+  },
+  {
+   "key": "SAPPHIRE",
+   "name": "Sapphire",
+   "description": "Beat the game with the Defect.",
+   "unlocked": true,
+   "date": "2019-03-17T21:39:28-05:00"
+  },
+  {
+   "key": "SHAPES",
+   "name": "The Shapes",
+   "unlocked": true,
+   "date": "2019-03-18T20:20:07-05:00"
+  },
+  {
+   "key": "EMERALD",
+   "name": "Emerald",
+   "description": "Beat the game with the Silent.",
+   "unlocked": true,
+   "date": "2019-03-18T20:20:56-05:00"
+  },
+  {
+   "key": "JAXXED",
+   "name": "Jaxxed",
+   "description": "Have 50 or more Strength during combat.",
+   "unlocked": true,
+   "date": "2019-03-18T21:49:53-05:00"
+  },
+  {
+   "key": "CATALYST",
+   "name": "Catalyst",
+   "description": "Apply 99 or more Poison on a single enemy.",
+   "unlocked": true,
+   "date": "2023-05-08T20:23:11-05:00"
+  },
+  {
+   "key": "EMERALD_PLUS",
+   "name": "Emerald+",
+   "unlocked": true,
+   "date": "2024-05-19T08:56:51-05:00"
+  },
+  {
+   "key": "DONUT",
+   "name": "Ooh Donut!",
+   "description": "Finish Donu with a Feed.",
+   "unlocked": true,
+   "date": "2025-09-02T21:25:10-05:00"
+  },
+  {
+   "key": "AMETHYST",
+   "name": "Amethyst",
+   "description": "Beat the game with the Watcher.",
+   "unlocked": true,
+   "date": "2025-09-03T21:40:53-05:00"
+  },
+  {
+   "key": "AMETHYST_PLUS",
+   "name": "Amethyst+",
+   "description": "Complete the Ending with the Watcher.",
+   "unlocked": false
+  },
+  {
+   "key": "ASCEND_10",
+   "name": "Ascend 10",
+   "description": "Complete Ascension Level 10.",
+   "unlocked": false
+  },
+  {
+   "key": "ASCEND_20",
+   "name": "Ascend 20",
+   "description": "Complete Ascension Level 20.",
+   "unlocked": false
+  },
+  {
+   "key": "BARRICADED",
+   "name": "Barricaded",
+   "description": "Have 999 Block during combat.",
+   "unlocked": false
+  },
+  {
+   "key": "COMMON_SENSE",
+   "name": "Common Sense",
+   "description": "Beat the game with a deck containing no uncommons or rares.",
+   "unlocked": false
+  },
+  {
+   "key": "ETERNAL_ONE",
+   "name": "Eternal One",
+   "description": "Obtain all other Achievements.",
+   "unlocked": false
+  },
+  {
+   "key": "FOCUSED",
+   "name": "Focused",
+   "description": "Have 25 or more Focus during combat.",
+   "unlocked": false
+  },
+  {
+   "key": "INFINITY",
+   "name": "Infinity",
+   "description": "Play 25 cards in a single turn.",
+   "unlocked": false
+  },
+  {
+   "key": "LUCKY_DAY",
+   "name": "My Lucky Day",
+   "description": "Win a Daily Climb.",
+   "unlocked": false
+  },
+  {
+   "key": "MINIMALIST",
+   "name": "Minimalist",
+   "description": "Beat the game with a 5 card deck or smaller.",
+   "unlocked": false
+  },
+  {
+   "key": "NEON",
+   "name": "Neon",
+   "description": "Channel 9 Plasma in a single turn.",
+   "unlocked": false
+  },
+  {
+   "key": "NINJA",
+   "name": "Ninja",
+   "description": "Play 10 Shivs in a single turn.",
+   "unlocked": false
+  },
+  {
+   "key": "ONE_RELIC",
+   "name": "Who Needs Relics?",
+   "description": "Beat the game with a single relic.",
+   "unlocked": false
+  },
+  {
+   "key": "POWERFUL",
+   "name": "Powerful",
+   "description": "Have 10 or more buffs during combat.",
+   "unlocked": false
+  },
+  {
+   "key": "PURITY",
+   "name": "Purity",
+   "description": "Have 3 or fewer cards in hand, draw, and discard pile combined.",
+   "unlocked": false
+  },
+  {
+   "key": "RUBY_PLUS",
+   "name": "Ruby+",
+   "unlocked": false
+  },
+  {
+   "key": "SAPPHIRE_PLUS",
+   "name": "Sapphire+",
+   "unlocked": false
+  },
+  {
+   "key": "SPEED_CLIMBER",
+   "name": "Speed Climber",
+   "description": "Beat the game in under 20 minutes.",
+   "unlocked": false
+  },
+  {
+   "key": "THE_ENDING",
+   "name": "The End?",
+   "unlocked": false
+  },
+  {
+   "key": "TRANSIENT",
+   "name": "The Transient",
+   "description": "Defeat the Transient before it fades away.",
+   "unlocked": false
+  },
+  {
+   "key": "YOU_ARE_NOTHING",
+   "name": "You Are Nothing",
+   "description": "Defeat a boss on turn 1.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Slay the Spire",
+   "achievements": [
+    {
+     "apiname": "SHRUG_IT_OFF",
+     "achieved": 1,
+     "unlocktime": 1513118293,
+     "name": "Shrug It Off",
+     "description": "Win a battle with 1 HP remaining."
+    },
+    {
+     "apiname": "PURITY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Purity",
+     "description": "Have 3 or fewer cards in hand, draw, and discard pile combined."
+    },
+    {
+     "apiname": "COME_AT_ME",
+     "achieved": 1,
+     "unlocktime": 1552622701,
+     "name": "Come At Me",
+     "description": "Win a combat without playing an Attack."
+    },
+    {
+     "apiname": "THE_PACT",
+     "achieved": 1,
+     "unlocktime": 1552666223,
+     "name": "The Pact",
+     "description": "Exhaust 20 cards in a single combat."
+    },
+    {
+     "apiname": "ADRENALINE",
+     "achieved": 1,
+     "unlocktime": 1513064558,
+     "name": "Adrenaline",
+     "description": "Have 9 Energy during a single turn of combat."
+    },
+    {
+     "apiname": "POWERFUL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Powerful",
+     "description": "Have 10 or more buffs during combat."
+    },
+    {
+     "apiname": "JAXXED",
+     "achieved": 1,
+     "unlocktime": 1552963793,
+     "name": "Jaxxed",
+     "description": "Have 50 or more Strength during combat."
+    },
+    {
+     "apiname": "IMPERVIOUS",
+     "achieved": 1,
+     "unlocktime": 1552876732,
+     "name": "Impervious",
+     "description": "Have 99 or more Block during combat."
+    },
+    {
+     "apiname": "BARRICADED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Barricaded",
+     "description": "Have 999 Block during combat."
+    },
+    {
+     "apiname": "CATALYST",
+     "achieved": 1,
+     "unlocktime": 1683595391,
+     "name": "Catalyst",
+     "description": "Apply 99 or more Poison on a single enemy."
+    },
+    {
+     "apiname": "PLAGUE",
+     "achieved": 1,
+     "unlocktime": 1513074065,
+     "name": "Plague",
+     "description": "Defeat 3 enemies with Poison in a single combat."
+    },
+    {
+     "apiname": "NINJA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ninja",
+     "description": "Play 10 Shivs in a single turn."
+    },
+    {
+     "apiname": "INFINITY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Infinity",
+     "description": "Play 25 cards in a single turn."
+    },
+    {
+     "apiname": "YOU_ARE_NOTHING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Are Nothing",
+     "description": "Defeat a boss on turn 1."
+    },
+    {
+     "apiname": "PERFECT",
+     "achieved": 1,
+     "unlocktime": 1552782406,
+     "name": "Perfect",
+     "description": "Defeat a boss without taking any damage."
+    },
+    {
+     "apiname": "GUARDIAN",
+     "achieved": 1,
+     "unlocktime": 1513064238,
+     "name": "The Guardian",
+     "description": ""
+    },
+    {
+     "apiname": "GHOST_GUARDIAN",
+     "achieved": 1,
+     "unlocktime": 1513068502,
+     "name": "The Ghost",
+     "description": ""
+    },
+    {
+     "apiname": "SLIME_BOSS",
+     "achieved": 1,
+     "unlocktime": 1513074081,
+     "name": "The Boss",
+     "description": ""
+    },
+    {
+     "apiname": "AUTOMATON",
+     "achieved": 1,
+     "unlocktime": 1513134697,
+     "name": "The Automaton",
+     "description": ""
+    },
+    {
+     "apiname": "COLLECTOR",
+     "achieved": 1,
+     "unlocktime": 1513145579,
+     "name": "The Collector",
+     "description": ""
+    },
+    {
+     "apiname": "CHAMP",
+     "achieved": 1,
+     "unlocktime": 1513231177,
+     "name": "The Champion",
+     "description": ""
+    },
+    {
+     "apiname": "CROW",
+     "achieved": 1,
+     "unlocktime": 1513570868,
+     "name": "The Crow",
+     "description": ""
+    },
+    {
+     "apiname": "SHAPES",
+     "achieved": 1,
+     "unlocktime": 1552958407,
+     "name": "The Shapes",
+     "description": ""
+    },
+    {
+     "apiname": "TIME_EATER",
+     "achieved": 1,
+     "unlocktime": 1552764027,
+     "name": "The Time Eater",
+     "description": ""
+    },
+    {
+     "apiname": "RUBY",
+     "achieved": 1,
+     "unlocktime": 1513570893,
+     "name": "Ruby",
+     "description": "Beat the game with the Ironclad."
+    },
+    {
+     "apiname": "EMERALD",
+     "achieved": 1,
+     "unlocktime": 1552958456,
+     "name": "Emerald",
+     "description": "Beat the game with the Silent."
+    },
+    {
+     "apiname": "ONE_RELIC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Needs Relics?",
+     "description": "Beat the game with a single relic."
+    },
+    {
+     "apiname": "SPEED_CLIMBER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Climber",
+     "description": "Beat the game in under 20 minutes."
+    },
+    {
+     "apiname": "MINIMALIST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Minimalist",
+     "description": "Beat the game with a 5 card deck or smaller."
+    },
+    {
+     "apiname": "DONUT",
+     "achieved": 1,
+     "unlocktime": 1756866310,
+     "name": "Ooh Donut!",
+     "description": "Finish Donu with a Feed."
+    },
+    {
+     "apiname": "ASCEND_0",
+     "achieved": 1,
+     "unlocktime": 1552578681,
+     "name": "Ascend 0",
+     "description": "Unlock Ascension mode."
+    },
+    {
+     "apiname": "ASCEND_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ascend 10",
+     "description": "Complete Ascension Level 10."
+    },
+    {
+     "apiname": "SAPPHIRE",
+     "achieved": 1,
+     "unlocktime": 1552876768,
+     "name": "Sapphire",
+     "description": "Beat the game with the Defect."
+    },
+    {
+     "apiname": "COMMON_SENSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Common Sense",
+     "description": "Beat the game with a deck containing no uncommons or rares."
+    },
+    {
+     "apiname": "FOCUSED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Focused",
+     "description": "Have 25 or more Focus during combat."
+    },
+    {
+     "apiname": "NEON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Neon",
+     "description": "Channel 9 Plasma in a single turn."
+    },
+    {
+     "apiname": "LUCKY_DAY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My Lucky Day",
+     "description": "Win a Daily Climb."
+    },
+    {
+     "apiname": "TRANSIENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Transient",
+     "description": "Defeat the Transient before it fades away."
+    },
+    {
+     "apiname": "ASCEND_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ascend 20",
+     "description": "Complete Ascension Level 20."
+    },
+    {
+     "apiname": "RUBY_PLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ruby+",
+     "description": ""
+    },
+    {
+     "apiname": "EMERALD_PLUS",
+     "achieved": 1,
+     "unlocktime": 1716127011,
+     "name": "Emerald+",
+     "description": ""
+    },
+    {
+     "apiname": "SAPPHIRE_PLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sapphire+",
+     "description": ""
+    },
+    {
+     "apiname": "THE_ENDING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End?",
+     "description": ""
+    },
+    {
+     "apiname": "ETERNAL_ONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eternal One",
+     "description": "Obtain all other Achievements."
+    },
+    {
+     "apiname": "AMETHYST",
+     "achieved": 1,
+     "unlocktime": 1756953653,
+     "name": "Amethyst",
+     "description": "Beat the game with the Watcher."
+    },
+    {
+     "apiname": "AMETHYST_PLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Amethyst+",
+     "description": "Complete the Ending with the Watcher."
+    }
+   ],
+   "success": true
+  }
+ }
+}

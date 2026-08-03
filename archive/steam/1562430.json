@@ -1,0 +1,818 @@
+{
+ "provider": "steam",
+ "title": "DREDGE",
+ "updated": "2026-07-26",
+ "id": "1562430",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 27,
+ "total": 60,
+ "first": "2023-04-08",
+ "last": "2023-04-18",
+ "platform": "PC",
+ "icon": "c8b352e87c28aa9ffe3a4641b230beb5064a49e6",
+ "playtime_mins": 733,
+ "playtime": {
+  "windows": 733
+ },
+ "last_played": "2023-04-18",
+ "achievements": [
+  {
+   "key": "INTRODUCTIONS",
+   "name": "Introductions",
+   "description": "Complete the introduction quest.",
+   "unlocked": true,
+   "date": "2023-04-08T14:14:05-05:00"
+  },
+  {
+   "key": "COMPLETE_CHAPTER_1",
+   "name": "The Key",
+   "description": "Deliver the Key.",
+   "unlocked": true,
+   "date": "2023-04-08T20:40:24-05:00"
+  },
+  {
+   "key": "FULL_CARGO",
+   "name": "Perfect Packing",
+   "description": "Have a full cargo.",
+   "unlocked": true,
+   "date": "2023-04-08T21:13:20-05:00"
+  },
+  {
+   "key": "DEPLETE_FISH_SPOTS",
+   "name": "Careless Harvesting",
+   "description": "Deplete a total of 25 fishing spots.",
+   "unlocked": true,
+   "date": "2023-04-09T08:59:42-05:00"
+  },
+  {
+   "key": "FULL_EQUIPMENT",
+   "name": "Feeling Prepared",
+   "description": "Install equipment into every slot on your ship.",
+   "unlocked": true,
+   "date": "2023-04-09T10:07:59-05:00"
+  },
+  {
+   "key": "SELL_FISH_VALUE_1",
+   "name": "Lives for Profit",
+   "description": "Sell a total of $2500 worth of fish.",
+   "unlocked": true,
+   "date": "2023-04-09T10:42:50-05:00"
+  },
+  {
+   "key": "COMPLETE_CHAPTER_2",
+   "name": "The Secret",
+   "unlocked": true,
+   "date": "2023-04-09T11:23:55-05:00"
+  },
+  {
+   "key": "HULL_2",
+   "name": "Hull: Improved",
+   "description": "Upgrade to the 2nd tier hull.",
+   "unlocked": true,
+   "date": "2023-04-09T12:22:18-05:00"
+  },
+  {
+   "key": "HULL_3",
+   "name": "Hull: Refined",
+   "description": "Upgrade to the 3rd tier hull.",
+   "unlocked": true,
+   "date": "2023-04-15T20:10:54-05:00"
+  },
+  {
+   "key": "ABILITY_MANIFEST",
+   "name": "Dimensional Bypass",
+   "unlocked": true,
+   "date": "2023-04-15T20:10:54-05:00"
+  },
+  {
+   "key": "COMPLETE_CHAPTER_3",
+   "name": "The Bond",
+   "unlocked": true,
+   "date": "2023-04-15T20:10:54-05:00"
+  },
+  {
+   "key": "CATCH_FISH_ROD_1",
+   "name": "Lifted From the Deep",
+   "description": "Catch 250 fish using rods.",
+   "unlocked": true,
+   "date": "2023-04-15T20:10:54-05:00"
+  },
+  {
+   "key": "STAT_FISHING_SPEED",
+   "name": "Swift Reaper",
+   "description": "Have a combined fishing speed of 200%.",
+   "unlocked": true,
+   "date": "2023-04-15T20:10:54-05:00"
+  },
+  {
+   "key": "COMPLETE_CHAPTER_4",
+   "name": "The Chains",
+   "unlocked": true,
+   "date": "2023-04-16T14:48:07-05:00"
+  },
+  {
+   "key": "HULL_4",
+   "name": "Hull: Advanced",
+   "description": "Upgrade to the 4th tier hull.",
+   "unlocked": true,
+   "date": "2023-04-16T15:04:59-05:00"
+  },
+  {
+   "key": "CATCH_CRABS_POT_1",
+   "name": "Trapped by These Walls",
+   "description": "Catch 100 crabs in crab pots.",
+   "unlocked": true,
+   "date": "2023-04-16T19:55:51-05:00"
+  },
+  {
+   "key": "COMPLETE_CHAPTER_5",
+   "name": "The Moment",
+   "unlocked": true,
+   "date": "2023-04-16T20:32:16-05:00"
+  },
+  {
+   "key": "SELL_TRINKETS_VALUE_1",
+   "name": "Cash for Gold",
+   "description": "Sell a total of $1500 worth of trinkets.",
+   "unlocked": true,
+   "date": "2023-04-16T20:34:15-05:00"
+  },
+  {
+   "key": "STAT_ENGINE_SPEED",
+   "name": "No Time to Linger",
+   "description": "Have a combined engine speed of 75kn.",
+   "unlocked": true,
+   "date": "2023-04-16T21:26:30-05:00"
+  },
+  {
+   "key": "ABILITY_FOGHORN",
+   "name": "From the Fog",
+   "unlocked": true,
+   "date": "2023-04-16T21:27:28-05:00"
+  },
+  {
+   "key": "STAT_LIGHT_STRENGTH",
+   "name": "Light up the Night",
+   "description": "Have a combined light strength of 3000 lumens.",
+   "unlocked": true,
+   "date": "2023-04-17T20:09:52-05:00"
+  },
+  {
+   "key": "ABILITY_SPYGLASS",
+   "name": "Prey Sighted",
+   "unlocked": true,
+   "date": "2023-04-17T20:25:11-05:00"
+  },
+  {
+   "key": "COMPLETE_ALL_SIDE_QUESTS",
+   "name": "Providence",
+   "description": "Complete all side quests. One way or another.",
+   "unlocked": true,
+   "date": "2023-04-17T21:23:14-05:00"
+  },
+  {
+   "key": "RESEARCH_NETS",
+   "name": "Researcher: Nets",
+   "description": "Research all nets.",
+   "unlocked": true,
+   "date": "2023-04-18T20:32:21-05:00"
+  },
+  {
+   "key": "RESEARCH_RODS",
+   "name": "Researcher: Rods",
+   "description": "Research all rods.",
+   "unlocked": true,
+   "date": "2023-04-18T20:43:07-05:00"
+  },
+  {
+   "key": "RESEARCH_ENGINES",
+   "name": "Researcher: Engines",
+   "description": "Research all engines.",
+   "unlocked": true,
+   "date": "2023-04-18T20:43:23-05:00"
+  },
+  {
+   "key": "CATCH_FISH_NET_1",
+   "name": "Tangled in This Web",
+   "description": "Catch 150 fish in trawl nets.",
+   "unlocked": true,
+   "date": "2023-04-18T21:01:06-05:00"
+  },
+  {
+   "key": "ABILITY_ATROPHY",
+   "name": "Unsustainable Fishing",
+   "unlocked": false
+  },
+  {
+   "key": "ABILITY_BAIT",
+   "name": "Mixed Results",
+   "unlocked": false
+  },
+  {
+   "key": "ABILITY_BANISH",
+   "name": "Banisher",
+   "unlocked": false
+  },
+  {
+   "key": "ABILITY_HASTE",
+   "name": "Cruel Heat",
+   "unlocked": false
+  },
+  {
+   "key": "ALL_ACHIEVEMENTS",
+   "name": "From the Depths",
+   "description": "Obtain all other achievements.",
+   "unlocked": false
+  },
+  {
+   "key": "CATCH_ALL_ABERRATIONS",
+   "name": "Aberration Attractor",
+   "description": "Catch all aberrations.",
+   "unlocked": false
+  },
+  {
+   "key": "CATCH_ALL_REGULAR_FISH",
+   "name": "Master Angler",
+   "description": "Catch all known species of fish.",
+   "unlocked": false
+  },
+  {
+   "key": "DISCARD_FISH",
+   "name": "Unwanted",
+   "description": "Discard 25 fish.",
+   "unlocked": false
+  },
+  {
+   "key": "DISCOVER_ALL_DOCKS",
+   "name": "Safe Havens",
+   "description": "Visit every dock in the game.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_1",
+   "name": "Polar Angler",
+   "description": "Catch all known species of fish in The Pale Reach.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_2",
+   "name": "Cold Corruptions",
+   "description": "Catch all aberrations in The Pale Reach.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_3",
+   "name": "Feeding Time",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_4",
+   "name": "Under The Ice",
+   "description": "Finish the main quest in The Pale Reach.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_5",
+   "name": "Frozen Favors",
+   "description": "Finish all side quests in The Pale Reach.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_6",
+   "name": "Icebreaker",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_7",
+   "name": "Fresh Fish",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_3_8",
+   "name": "From The Black Depths",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_1",
+   "name": "Ancient Angler",
+   "description": "Catch all known species of fish in The Iron Rig.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_10",
+   "name": "Enhanced Abilities",
+   "description": "Upgrade all 3 basic abilities.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_11",
+   "name": "Shadowed Splashes",
+   "description": "Have 5 Dark Splashes in your inventory.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_12",
+   "name": "The Gleaming Goliath",
+   "description": "Evade that which stalks the disturbed sediment.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_2",
+   "name": "Primordial Deviations",
+   "description": "Catch all aberrations in The Iron Rig (excluding exotics).",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_3",
+   "name": "Missing Shipment",
+   "description": "Deliver the missing shipment to the rig.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_4",
+   "name": "The Iron Ruin",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_5",
+   "name": "Rig Architect",
+   "description": "Build all levels of all buildings on the rig.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_6",
+   "name": "Remedial Apparatus",
+   "description": "Equip the Siphon Trawler.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_7",
+   "name": "Dark Custodian",
+   "description": "Collect a total of 10 Dark Canisters.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_8",
+   "name": "Hull: Industrial",
+   "description": "Upgrade to the 5th tier hull.",
+   "unlocked": false
+  },
+  {
+   "key": "DLC_4_9",
+   "name": "Exotic Exemplar",
+   "description": "Catch any exotic aberration.",
+   "unlocked": false
+  },
+  {
+   "key": "ENDING",
+   "name": "Unshackled",
+   "unlocked": false
+  },
+  {
+   "key": "ENDING_ALT",
+   "name": "Sated",
+   "unlocked": false
+  },
+  {
+   "key": "RESEARCH_POTS",
+   "name": "Researcher: Pots",
+   "description": "Research all pots.",
+   "unlocked": false
+  },
+  {
+   "key": "SOLVE_ALL_SHRINES",
+   "name": "Servant of the Shrines",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "DREDGE",
+   "achievements": [
+    {
+     "apiname": "CATCH_FISH_ROD_1",
+     "achieved": 1,
+     "unlocktime": 1681607454,
+     "name": "Lifted From the Deep",
+     "description": "Catch 250 fish using rods."
+    },
+    {
+     "apiname": "CATCH_FISH_NET_1",
+     "achieved": 1,
+     "unlocktime": 1681869666,
+     "name": "Tangled in This Web",
+     "description": "Catch 150 fish in trawl nets."
+    },
+    {
+     "apiname": "CATCH_CRABS_POT_1",
+     "achieved": 1,
+     "unlocktime": 1681692951,
+     "name": "Trapped by These Walls",
+     "description": "Catch 100 crabs in crab pots."
+    },
+    {
+     "apiname": "SELL_FISH_VALUE_1",
+     "achieved": 1,
+     "unlocktime": 1681054970,
+     "name": "Lives for Profit",
+     "description": "Sell a total of $2500 worth of fish."
+    },
+    {
+     "apiname": "SELL_TRINKETS_VALUE_1",
+     "achieved": 1,
+     "unlocktime": 1681695255,
+     "name": "Cash for Gold",
+     "description": "Sell a total of $1500 worth of trinkets."
+    },
+    {
+     "apiname": "DISCARD_FISH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unwanted",
+     "description": "Discard 25 fish."
+    },
+    {
+     "apiname": "DEPLETE_FISH_SPOTS",
+     "achieved": 1,
+     "unlocktime": 1681048782,
+     "name": "Careless Harvesting",
+     "description": "Deplete a total of 25 fishing spots."
+    },
+    {
+     "apiname": "CATCH_ALL_REGULAR_FISH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Angler",
+     "description": "Catch all known species of fish."
+    },
+    {
+     "apiname": "COMPLETE_CHAPTER_1",
+     "achieved": 1,
+     "unlocktime": 1681004424,
+     "name": "The Key",
+     "description": "Deliver the Key."
+    },
+    {
+     "apiname": "COMPLETE_CHAPTER_2",
+     "achieved": 1,
+     "unlocktime": 1681057435,
+     "name": "The Secret",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_CHAPTER_3",
+     "achieved": 1,
+     "unlocktime": 1681607454,
+     "name": "The Bond",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_CHAPTER_4",
+     "achieved": 1,
+     "unlocktime": 1681674487,
+     "name": "The Chains",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_CHAPTER_5",
+     "achieved": 1,
+     "unlocktime": 1681695136,
+     "name": "The Moment",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unshackled",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING_ALT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sated",
+     "description": ""
+    },
+    {
+     "apiname": "HULL_2",
+     "achieved": 1,
+     "unlocktime": 1681060938,
+     "name": "Hull: Improved",
+     "description": "Upgrade to the 2nd tier hull."
+    },
+    {
+     "apiname": "HULL_3",
+     "achieved": 1,
+     "unlocktime": 1681607454,
+     "name": "Hull: Refined",
+     "description": "Upgrade to the 3rd tier hull."
+    },
+    {
+     "apiname": "HULL_4",
+     "achieved": 1,
+     "unlocktime": 1681675499,
+     "name": "Hull: Advanced",
+     "description": "Upgrade to the 4th tier hull."
+    },
+    {
+     "apiname": "FULL_CARGO",
+     "achieved": 1,
+     "unlocktime": 1681006400,
+     "name": "Perfect Packing",
+     "description": "Have a full cargo."
+    },
+    {
+     "apiname": "FULL_EQUIPMENT",
+     "achieved": 1,
+     "unlocktime": 1681052879,
+     "name": "Feeling Prepared",
+     "description": "Install equipment into every slot on your ship."
+    },
+    {
+     "apiname": "CATCH_ALL_ABERRATIONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Aberration Attractor",
+     "description": "Catch all aberrations."
+    },
+    {
+     "apiname": "ABILITY_FOGHORN",
+     "achieved": 1,
+     "unlocktime": 1681698448,
+     "name": "From the Fog",
+     "description": ""
+    },
+    {
+     "apiname": "ABILITY_SPYGLASS",
+     "achieved": 1,
+     "unlocktime": 1681781111,
+     "name": "Prey Sighted",
+     "description": ""
+    },
+    {
+     "apiname": "ABILITY_BAIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mixed Results",
+     "description": ""
+    },
+    {
+     "apiname": "ABILITY_HASTE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cruel Heat",
+     "description": ""
+    },
+    {
+     "apiname": "ABILITY_MANIFEST",
+     "achieved": 1,
+     "unlocktime": 1681607454,
+     "name": "Dimensional Bypass",
+     "description": ""
+    },
+    {
+     "apiname": "ABILITY_BANISH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banisher",
+     "description": ""
+    },
+    {
+     "apiname": "ABILITY_ATROPHY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unsustainable Fishing",
+     "description": ""
+    },
+    {
+     "apiname": "COMPLETE_ALL_SIDE_QUESTS",
+     "achieved": 1,
+     "unlocktime": 1681784594,
+     "name": "Providence",
+     "description": "Complete all side quests. One way or another."
+    },
+    {
+     "apiname": "DISCOVER_ALL_DOCKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Safe Havens",
+     "description": "Visit every dock in the game."
+    },
+    {
+     "apiname": "SOLVE_ALL_SHRINES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Servant of the Shrines",
+     "description": ""
+    },
+    {
+     "apiname": "RESEARCH_RODS",
+     "achieved": 1,
+     "unlocktime": 1681868587,
+     "name": "Researcher: Rods",
+     "description": "Research all rods."
+    },
+    {
+     "apiname": "RESEARCH_NETS",
+     "achieved": 1,
+     "unlocktime": 1681867941,
+     "name": "Researcher: Nets",
+     "description": "Research all nets."
+    },
+    {
+     "apiname": "RESEARCH_POTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Researcher: Pots",
+     "description": "Research all pots."
+    },
+    {
+     "apiname": "RESEARCH_ENGINES",
+     "achieved": 1,
+     "unlocktime": 1681868603,
+     "name": "Researcher: Engines",
+     "description": "Research all engines."
+    },
+    {
+     "apiname": "STAT_FISHING_SPEED",
+     "achieved": 1,
+     "unlocktime": 1681607454,
+     "name": "Swift Reaper",
+     "description": "Have a combined fishing speed of 200%."
+    },
+    {
+     "apiname": "STAT_ENGINE_SPEED",
+     "achieved": 1,
+     "unlocktime": 1681698390,
+     "name": "No Time to Linger",
+     "description": "Have a combined engine speed of 75kn."
+    },
+    {
+     "apiname": "STAT_LIGHT_STRENGTH",
+     "achieved": 1,
+     "unlocktime": 1681780192,
+     "name": "Light up the Night",
+     "description": "Have a combined light strength of 3000 lumens."
+    },
+    {
+     "apiname": "INTRODUCTIONS",
+     "achieved": 1,
+     "unlocktime": 1680981245,
+     "name": "Introductions",
+     "description": "Complete the introduction quest."
+    },
+    {
+     "apiname": "ALL_ACHIEVEMENTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From the Depths",
+     "description": "Obtain all other achievements."
+    },
+    {
+     "apiname": "DLC_3_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Polar Angler",
+     "description": "Catch all known species of fish in The Pale Reach."
+    },
+    {
+     "apiname": "DLC_3_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cold Corruptions",
+     "description": "Catch all aberrations in The Pale Reach."
+    },
+    {
+     "apiname": "DLC_3_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feeding Time",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_3_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Under The Ice",
+     "description": "Finish the main quest in The Pale Reach."
+    },
+    {
+     "apiname": "DLC_3_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Frozen Favors",
+     "description": "Finish all side quests in The Pale Reach."
+    },
+    {
+     "apiname": "DLC_3_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Icebreaker",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_3_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fresh Fish",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_3_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From The Black Depths",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_4_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ancient Angler",
+     "description": "Catch all known species of fish in The Iron Rig."
+    },
+    {
+     "apiname": "DLC_4_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Primordial Deviations",
+     "description": "Catch all aberrations in The Iron Rig (excluding exotics)."
+    },
+    {
+     "apiname": "DLC_4_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Missing Shipment",
+     "description": "Deliver the missing shipment to the rig."
+    },
+    {
+     "apiname": "DLC_4_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Iron Ruin",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_4_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rig Architect",
+     "description": "Build all levels of all buildings on the rig."
+    },
+    {
+     "apiname": "DLC_4_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Remedial Apparatus",
+     "description": "Equip the Siphon Trawler."
+    },
+    {
+     "apiname": "DLC_4_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dark Custodian",
+     "description": "Collect a total of 10 Dark Canisters."
+    },
+    {
+     "apiname": "DLC_4_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hull: Industrial",
+     "description": "Upgrade to the 5th tier hull."
+    },
+    {
+     "apiname": "DLC_4_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exotic Exemplar",
+     "description": "Catch any exotic aberration."
+    },
+    {
+     "apiname": "DLC_4_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enhanced Abilities",
+     "description": "Upgrade all 3 basic abilities."
+    },
+    {
+     "apiname": "DLC_4_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadowed Splashes",
+     "description": "Have 5 Dark Splashes in your inventory."
+    },
+    {
+     "apiname": "DLC_4_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Gleaming Goliath",
+     "description": "Evade that which stalks the disturbed sediment."
+    }
+   ],
+   "success": true
+  }
+ }
+}

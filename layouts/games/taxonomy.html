@@ -6,13 +6,23 @@
 {{ partial "games-timeline.html" . }}
 
 <ul class="entry-list">
-  {{- range sort .Pages "Params.started" "desc" }}
-  <li class="entry">
-    <a class="entry__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{- with .Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+  {{- $withDates := slice }}
+  {{- range .Pages }}
+    {{- $withDates = $withDates | append (dict "page" . "firstPlayed" (partial "game-first-played.html" .)) }}
+  {{- end }}
+  {{- range sort $withDates "firstPlayed" "desc" }}
+  {{- $page := .page }}
+  {{- $achievements := "" }}
+  {{- with $page.Resources.Get "achievement-summary.yaml" }}
+    {{- $achievements = . | transform.Unmarshal }}
+  {{- end }}
+  <li class="entry{{ with $page.Params.status }} entry--{{ . }}{{ end }}">
+    <a class="entry__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    {{- with $page.Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
     <span class="entry__meta">
-      {{- with .Params.started }}{{ . | time.Format "Jan 2006" }}{{ end }}
-      {{- with .Params.rating }} · {{ . }}/10{{ end -}}
+      {{- with .firstPlayed }}{{ . | time.Format "Jan 2006" }}{{ end }}
+      {{- with $page.Params.rating }} · {{ . }}/10{{ end }}
+      {{- with $achievements }} · {{ .unlocked }}/{{ .total }} achievements{{ end -}}
     </span>
   </li>
   {{- else }}

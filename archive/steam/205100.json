@@ -1,0 +1,1079 @@
+{
+ "provider": "steam",
+ "title": "Dishonored",
+ "updated": "2026-07-26",
+ "id": "205100",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 26,
+ "total": 80,
+ "first": "2016-06-18",
+ "last": "2021-05-18",
+ "platform": "PC",
+ "icon": "74f8ee1ba536e0759e64a9bf801fc013e16c8dd1",
+ "playtime_mins": 9558,
+ "playtime": {
+  "windows": 122
+ },
+ "last_played": "2021-05-18",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_23",
+   "name": "Dishonored",
+   "description": "Complete the Intro missions",
+   "unlocked": true,
+   "date": "2016-06-18T16:25:19-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_20",
+   "name": "Occultist",
+   "description": "Collect 10 bone charms",
+   "unlocked": true,
+   "date": "2016-06-18T16:40:44-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_22",
+   "name": "Cleaner",
+   "description": "Fight with 5 enemies at once, without any of them surviving",
+   "unlocked": true,
+   "date": "2016-06-18T17:26:54-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_24",
+   "name": "Excommunication",
+   "description": "Eliminate High Overseer Campbell",
+   "unlocked": true,
+   "date": "2016-06-20T00:30:21-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_40",
+   "name": "Bodyguard",
+   "unlocked": true,
+   "date": "2016-06-20T00:31:30-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_45",
+   "name": "Food Chain",
+   "unlocked": true,
+   "date": "2016-06-20T00:53:26-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_25",
+   "name": "Child Care",
+   "description": "Find Emily Kaldwin",
+   "unlocked": true,
+   "date": "2016-06-20T01:23:36-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_8",
+   "name": "Faceless",
+   "description": "After escaping Coldridge Prison, complete a single mission without alerting anyone",
+   "unlocked": true,
+   "date": "2016-06-20T01:28:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_6",
+   "name": "Rogue",
+   "description": "Assassinate 10 unaware enemies",
+   "unlocked": true,
+   "date": "2016-06-24T00:38:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_21",
+   "name": "The Escapist",
+   "description": "After Coldridge Prison, elude 5 pursuers at once without killing them or leaving the map",
+   "unlocked": true,
+   "date": "2016-06-24T01:01:32-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_5",
+   "name": "Wall of Sparks",
+   "description": "Kill an enemy using a Wall of Light",
+   "unlocked": true,
+   "date": "2016-06-24T01:02:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_26",
+   "name": "Capturing Genius and Madness",
+   "description": "Complete the Bridge mission",
+   "unlocked": true,
+   "date": "2016-06-24T01:05:18-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_9",
+   "name": "Manipulator",
+   "description": "Make others kill 5 of their own allies",
+   "unlocked": true,
+   "date": "2016-06-24T01:51:10-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_28",
+   "name": "Political Suicide",
+   "description": "Expose the Lord Regent's crimes and bring about his arrest",
+   "unlocked": true,
+   "date": "2016-06-24T02:02:22-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_27",
+   "name": "Regicide",
+   "description": "Assassinate the Lord Regent, Hiram Burrows",
+   "unlocked": true,
+   "date": "2016-06-24T02:03:51-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_29",
+   "name": "This Is Mine",
+   "description": "Recover your belongings",
+   "unlocked": true,
+   "date": "2016-06-24T02:23:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_35",
+   "name": "Street Conspiracy",
+   "unlocked": true,
+   "date": "2016-06-24T15:12:04-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_18",
+   "name": "Merchant of Disorder",
+   "description": "Acquire 15 equipment upgrades",
+   "unlocked": true,
+   "date": "2016-06-24T15:44:55-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_43",
+   "name": "Long Live the Empress",
+   "unlocked": true,
+   "date": "2016-06-25T02:34:04-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_30",
+   "name": "Resolution",
+   "description": "Complete the game",
+   "unlocked": true,
+   "date": "2016-06-25T02:34:23-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_31",
+   "name": "Dunwall in Chaos",
+   "unlocked": true,
+   "date": "2016-06-25T02:35:59-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_48",
+   "name": "Back Home",
+   "description": "Grab a live grenade and use it to kill an attacker",
+   "unlocked": true,
+   "date": "2016-08-19T22:24:45-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_11",
+   "name": "Surgical",
+   "description": "Play from the first mission through Kaldwin's Bridge killing fewer than 10 characters",
+   "unlocked": true,
+   "date": "2021-05-18T22:16:14-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_41",
+   "name": "Mercy is the Mark",
+   "unlocked": true,
+   "date": "2021-05-18T22:52:54-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_16",
+   "name": "Speed of Darkness",
+   "description": "Travel 30 meters in less than 1 second",
+   "unlocked": true,
+   "date": "2021-05-18T22:54:43-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_32",
+   "name": "Just Dark Enough",
+   "unlocked": true,
+   "date": "2021-05-18T23:05:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_0",
+   "name": "Thief",
+   "description": "Pickpocket items worth a total of 200 coins",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_1",
+   "name": "Versatile",
+   "description": "Kill characters with each weapon and offensive gadget",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_10",
+   "name": "Razor Rain",
+   "description": "Kill 5 characters with Drop Assassination",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_12",
+   "name": "Clean Hands",
+   "description": "Complete the game without killing anyone",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_13",
+   "name": "Harm's Way",
+   "description": "Cause 5 unintentional suicides",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_14",
+   "name": "Inhabitant",
+   "description": "Stay in possession of others for most of a 3 minute period",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_15",
+   "name": "Hornets' Nest",
+   "description": "Kill 4 enemies in less than 1 second using the crossbow",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_17",
+   "name": "Tempest",
+   "description": "Kill 6 enemies in less than 1 second",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_19",
+   "name": "Art Dealer",
+   "description": "Collect all the Sokolov paintings",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_2",
+   "name": "Ghost",
+   "description": "Complete all missions after the prologue, alerting no one or killing no one but key targets",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_3",
+   "name": "Shadow",
+   "description": "Complete all missions after the prologue without alerting anyone",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_33",
+   "name": "Vanished",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_34",
+   "name": "Gentleman Caller",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_36",
+   "name": "The Art of the Steal",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_37",
+   "name": "An Unfortunate Accident",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_38",
+   "name": "Well Mannered",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_39",
+   "name": "King of the World",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_4",
+   "name": "Mostly Flesh and Steel",
+   "description": "Finish the game without purchasing any supernatural powers or enhancements, besides Blink",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_42",
+   "name": "Lights Out",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_44",
+   "name": "Poetic Justice",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_46",
+   "name": "Alive Without Breath",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_47",
+   "name": "Creepy Crawly",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_49",
+   "name": "Big Boy",
+   "description": "Kill a tallboy with only your sword",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_50",
+   "name": "Mrs Pilsen's Remorse",
+   "description": "Find Emily's doll hidden in each of the 10 challenges",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_51",
+   "name": "Void Star",
+   "description": "Complete all Normal and Expert challenges with a 3-Stars rating",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_52",
+   "name": "By My Hand Alone",
+   "description": "Get to Wave 13 in Back Alley Brawl killing all combatants personally",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_53",
+   "name": "Assassin Vs. Machine",
+   "description": "Complete Train Runner before the train arrives at the station",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_54",
+   "name": "Rare Collector",
+   "description": "Find all of the collectable figurines in Burglar on Expert",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_55",
+   "name": "Long Way Down",
+   "description": "Perform a drop assassination of at least 150 meters in the Kill Cascade challenge",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_56",
+   "name": "Headhunter",
+   "description": "Complete Assassin's Run with 100% accuracy using only head shots",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_57",
+   "name": "Daredevil",
+   "description": "In Bonfires, perform all the special combination jumps in 1 round",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_58",
+   "name": "Natural Talent",
+   "description": "Finish Mystery Foe without using any active supernatural powers",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_59",
+   "name": "Time Management",
+   "description": "Finish Chain Kill or Bend Time Massacre without failing any wave, including bonuses",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_60",
+   "name": "Just Business ",
+   "description": "Get the information you need from the Rothwild Slaughterhouse",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_61",
+   "name": "Missing Pieces",
+   "description": "Meet with Thalia Timsh, the Barrister's Niece",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_62",
+   "name": "Well Connected",
+   "description": "Purchase all of the Favors in The Knife of Dunwall",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_63",
+   "name": "No Regrets",
+   "description": "Complete The Knife of Dunwall in High Chaos",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_64",
+   "name": "Redemptive Path",
+   "description": "Complete The Knife of Dunwall in Low Chaos",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_65",
+   "name": "Whisper Ways",
+   "description": "Complete The Knife of Dunwall without alerting anyone",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_66",
+   "name": "Cleaner Hands",
+   "description": "Complete The Knife of Dunwall without killing anyone",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_67",
+   "name": "Rats and Ashes",
+   "description": "Attach an arc mine to a rat, resulting in a kill",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_68",
+   "name": "Message from the Empress",
+   "description": "Perform a drop assassination from atop the Empress statue in The Knife of Dunwall",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_69",
+   "name": "Stone Cold Heart",
+   "description": "Speak with the statue of Delilah Copperspoon in Timsh's estate",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_7",
+   "name": "Specter",
+   "description": "After escaping prison, complete a mission without alerting anyone, and kill less than 5 people",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_70",
+   "name": "Parting Shot",
+   "description": "Deliver (or attempt) the killing blow on Corvo",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_71",
+   "name": "Breakout",
+   "description": "Break Lizzy Stride out of Coldridge Prison",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_72",
+   "name": "Gangs of Dunwall",
+   "description": "Restore the Undine to working condition",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_73",
+   "name": "Deal Maker",
+   "description": "Purchase at least 8 favors in The Brigmore Witches",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_74",
+   "name": "All Come To Ruin",
+   "description": "Complete The Brigmore Witches in High Chaos",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_75",
+   "name": "Changed Ways",
+   "description": "Complete The Brigmore Witches in Low Chaos",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_76",
+   "name": "Silence is Golden",
+   "description": "Complete The Brigmore Witches without alerting anyone",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_77",
+   "name": "Cleanest Hands",
+   "description": "Complete The Brigmore Witches without killing anyone",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_78",
+   "name": "Enough Coin to Disappear",
+   "description": "Survive The Brigmore Witches in low chaos with 10,000 coins",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_79",
+   "name": "Wall of Flesh",
+   "description": "Use an enemy lifted with Pull as a shield",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Dishonored",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thief",
+     "description": "Pickpocket items worth a total of 200 coins"
+    },
+    {
+     "apiname": "ACHIEVEMENT_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Versatile",
+     "description": "Kill characters with each weapon and offensive gadget"
+    },
+    {
+     "apiname": "ACHIEVEMENT_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ghost",
+     "description": "Complete all missions after the prologue, alerting no one or killing no one but key targets"
+    },
+    {
+     "apiname": "ACHIEVEMENT_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow",
+     "description": "Complete all missions after the prologue without alerting anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mostly Flesh and Steel",
+     "description": "Finish the game without purchasing any supernatural powers or enhancements, besides Blink"
+    },
+    {
+     "apiname": "ACHIEVEMENT_5",
+     "achieved": 1,
+     "unlocktime": 1466748120,
+     "name": "Wall of Sparks",
+     "description": "Kill an enemy using a Wall of Light"
+    },
+    {
+     "apiname": "ACHIEVEMENT_6",
+     "achieved": 1,
+     "unlocktime": 1466746681,
+     "name": "Rogue",
+     "description": "Assassinate 10 unaware enemies"
+    },
+    {
+     "apiname": "ACHIEVEMENT_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Specter",
+     "description": "After escaping prison, complete a mission without alerting anyone, and kill less than 5 people"
+    },
+    {
+     "apiname": "ACHIEVEMENT_8",
+     "achieved": 1,
+     "unlocktime": 1466404114,
+     "name": "Faceless",
+     "description": "After escaping Coldridge Prison, complete a single mission without alerting anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_9",
+     "achieved": 1,
+     "unlocktime": 1466751070,
+     "name": "Manipulator",
+     "description": "Make others kill 5 of their own allies"
+    },
+    {
+     "apiname": "ACHIEVEMENT_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Razor Rain",
+     "description": "Kill 5 characters with Drop Assassination"
+    },
+    {
+     "apiname": "ACHIEVEMENT_11",
+     "achieved": 1,
+     "unlocktime": 1621394174,
+     "name": "Surgical",
+     "description": "Play from the first mission through Kaldwin's Bridge killing fewer than 10 characters"
+    },
+    {
+     "apiname": "ACHIEVEMENT_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clean Hands",
+     "description": "Complete the game without killing anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Harm's Way",
+     "description": "Cause 5 unintentional suicides"
+    },
+    {
+     "apiname": "ACHIEVEMENT_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inhabitant",
+     "description": "Stay in possession of others for most of a 3 minute period"
+    },
+    {
+     "apiname": "ACHIEVEMENT_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hornets' Nest",
+     "description": "Kill 4 enemies in less than 1 second using the crossbow"
+    },
+    {
+     "apiname": "ACHIEVEMENT_16",
+     "achieved": 1,
+     "unlocktime": 1621396483,
+     "name": "Speed of Darkness",
+     "description": "Travel 30 meters in less than 1 second"
+    },
+    {
+     "apiname": "ACHIEVEMENT_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tempest",
+     "description": "Kill 6 enemies in less than 1 second"
+    },
+    {
+     "apiname": "ACHIEVEMENT_18",
+     "achieved": 1,
+     "unlocktime": 1466801095,
+     "name": "Merchant of Disorder",
+     "description": "Acquire 15 equipment upgrades"
+    },
+    {
+     "apiname": "ACHIEVEMENT_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Art Dealer",
+     "description": "Collect all the Sokolov paintings"
+    },
+    {
+     "apiname": "ACHIEVEMENT_20",
+     "achieved": 1,
+     "unlocktime": 1466286044,
+     "name": "Occultist",
+     "description": "Collect 10 bone charms"
+    },
+    {
+     "apiname": "ACHIEVEMENT_21",
+     "achieved": 1,
+     "unlocktime": 1466748092,
+     "name": "The Escapist",
+     "description": "After Coldridge Prison, elude 5 pursuers at once without killing them or leaving the map"
+    },
+    {
+     "apiname": "ACHIEVEMENT_22",
+     "achieved": 1,
+     "unlocktime": 1466288814,
+     "name": "Cleaner",
+     "description": "Fight with 5 enemies at once, without any of them surviving"
+    },
+    {
+     "apiname": "ACHIEVEMENT_23",
+     "achieved": 1,
+     "unlocktime": 1466285119,
+     "name": "Dishonored",
+     "description": "Complete the Intro missions"
+    },
+    {
+     "apiname": "ACHIEVEMENT_24",
+     "achieved": 1,
+     "unlocktime": 1466400621,
+     "name": "Excommunication",
+     "description": "Eliminate High Overseer Campbell"
+    },
+    {
+     "apiname": "ACHIEVEMENT_25",
+     "achieved": 1,
+     "unlocktime": 1466403816,
+     "name": "Child Care",
+     "description": "Find Emily Kaldwin"
+    },
+    {
+     "apiname": "ACHIEVEMENT_26",
+     "achieved": 1,
+     "unlocktime": 1466748318,
+     "name": "Capturing Genius and Madness",
+     "description": "Complete the Bridge mission"
+    },
+    {
+     "apiname": "ACHIEVEMENT_27",
+     "achieved": 1,
+     "unlocktime": 1466751831,
+     "name": "Regicide",
+     "description": "Assassinate the Lord Regent, Hiram Burrows"
+    },
+    {
+     "apiname": "ACHIEVEMENT_28",
+     "achieved": 1,
+     "unlocktime": 1466751742,
+     "name": "Political Suicide",
+     "description": "Expose the Lord Regent's crimes and bring about his arrest"
+    },
+    {
+     "apiname": "ACHIEVEMENT_29",
+     "achieved": 1,
+     "unlocktime": 1466752980,
+     "name": "This Is Mine",
+     "description": "Recover your belongings"
+    },
+    {
+     "apiname": "ACHIEVEMENT_30",
+     "achieved": 1,
+     "unlocktime": 1466840063,
+     "name": "Resolution",
+     "description": "Complete the game"
+    },
+    {
+     "apiname": "ACHIEVEMENT_31",
+     "achieved": 1,
+     "unlocktime": 1466840159,
+     "name": "Dunwall in Chaos",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_32",
+     "achieved": 1,
+     "unlocktime": 1621397101,
+     "name": "Just Dark Enough",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vanished",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gentleman Caller",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_35",
+     "achieved": 1,
+     "unlocktime": 1466799124,
+     "name": "Street Conspiracy",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Art of the Steal",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An Unfortunate Accident",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well Mannered",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King of the World",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_40",
+     "achieved": 1,
+     "unlocktime": 1466400690,
+     "name": "Bodyguard",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_41",
+     "achieved": 1,
+     "unlocktime": 1621396374,
+     "name": "Mercy is the Mark",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lights Out",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_43",
+     "achieved": 1,
+     "unlocktime": 1466840044,
+     "name": "Long Live the Empress",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poetic Justice",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_45",
+     "achieved": 1,
+     "unlocktime": 1466402006,
+     "name": "Food Chain",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Alive Without Breath",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Creepy Crawly",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_48",
+     "achieved": 1,
+     "unlocktime": 1471663485,
+     "name": "Back Home",
+     "description": "Grab a live grenade and use it to kill an attacker"
+    },
+    {
+     "apiname": "ACHIEVEMENT_49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Big Boy",
+     "description": "Kill a tallboy with only your sword"
+    },
+    {
+     "apiname": "ACHIEVEMENT_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mrs Pilsen's Remorse",
+     "description": "Find Emily's doll hidden in each of the 10 challenges"
+    },
+    {
+     "apiname": "ACHIEVEMENT_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Void Star",
+     "description": "Complete all Normal and Expert challenges with a 3-Stars rating"
+    },
+    {
+     "apiname": "ACHIEVEMENT_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "By My Hand Alone",
+     "description": "Get to Wave 13 in Back Alley Brawl killing all combatants personally"
+    },
+    {
+     "apiname": "ACHIEVEMENT_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Assassin Vs. Machine",
+     "description": "Complete Train Runner before the train arrives at the station"
+    },
+    {
+     "apiname": "ACHIEVEMENT_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rare Collector",
+     "description": "Find all of the collectable figurines in Burglar on Expert"
+    },
+    {
+     "apiname": "ACHIEVEMENT_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Long Way Down",
+     "description": "Perform a drop assassination of at least 150 meters in the Kill Cascade challenge"
+    },
+    {
+     "apiname": "ACHIEVEMENT_56",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Headhunter",
+     "description": "Complete Assassin's Run with 100% accuracy using only head shots"
+    },
+    {
+     "apiname": "ACHIEVEMENT_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Daredevil",
+     "description": "In Bonfires, perform all the special combination jumps in 1 round"
+    },
+    {
+     "apiname": "ACHIEVEMENT_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Natural Talent",
+     "description": "Finish Mystery Foe without using any active supernatural powers"
+    },
+    {
+     "apiname": "ACHIEVEMENT_59",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Time Management",
+     "description": "Finish Chain Kill or Bend Time Massacre without failing any wave, including bonuses"
+    },
+    {
+     "apiname": "ACHIEVEMENT_60",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Business ",
+     "description": "Get the information you need from the Rothwild Slaughterhouse"
+    },
+    {
+     "apiname": "ACHIEVEMENT_61",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Missing Pieces",
+     "description": "Meet with Thalia Timsh, the Barrister's Niece"
+    },
+    {
+     "apiname": "ACHIEVEMENT_62",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well Connected",
+     "description": "Purchase all of the Favors in The Knife of Dunwall"
+    },
+    {
+     "apiname": "ACHIEVEMENT_63",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Regrets",
+     "description": "Complete The Knife of Dunwall in High Chaos"
+    },
+    {
+     "apiname": "ACHIEVEMENT_64",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Redemptive Path",
+     "description": "Complete The Knife of Dunwall in Low Chaos"
+    },
+    {
+     "apiname": "ACHIEVEMENT_65",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Whisper Ways",
+     "description": "Complete The Knife of Dunwall without alerting anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_66",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cleaner Hands",
+     "description": "Complete The Knife of Dunwall without killing anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_67",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rats and Ashes",
+     "description": "Attach an arc mine to a rat, resulting in a kill"
+    },
+    {
+     "apiname": "ACHIEVEMENT_68",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Message from the Empress",
+     "description": "Perform a drop assassination from atop the Empress statue in The Knife of Dunwall"
+    },
+    {
+     "apiname": "ACHIEVEMENT_69",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stone Cold Heart",
+     "description": "Speak with the statue of Delilah Copperspoon in Timsh's estate"
+    },
+    {
+     "apiname": "ACHIEVEMENT_70",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parting Shot",
+     "description": "Deliver (or attempt) the killing blow on Corvo"
+    },
+    {
+     "apiname": "ACHIEVEMENT_71",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Breakout",
+     "description": "Break Lizzy Stride out of Coldridge Prison"
+    },
+    {
+     "apiname": "ACHIEVEMENT_72",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gangs of Dunwall",
+     "description": "Restore the Undine to working condition"
+    },
+    {
+     "apiname": "ACHIEVEMENT_73",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deal Maker",
+     "description": "Purchase at least 8 favors in The Brigmore Witches"
+    },
+    {
+     "apiname": "ACHIEVEMENT_74",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Come To Ruin",
+     "description": "Complete The Brigmore Witches in High Chaos"
+    },
+    {
+     "apiname": "ACHIEVEMENT_75",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Changed Ways",
+     "description": "Complete The Brigmore Witches in Low Chaos"
+    },
+    {
+     "apiname": "ACHIEVEMENT_76",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silence is Golden",
+     "description": "Complete The Brigmore Witches without alerting anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_77",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cleanest Hands",
+     "description": "Complete The Brigmore Witches without killing anyone"
+    },
+    {
+     "apiname": "ACHIEVEMENT_78",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enough Coin to Disappear",
+     "description": "Survive The Brigmore Witches in low chaos with 10,000 coins"
+    },
+    {
+     "apiname": "ACHIEVEMENT_79",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wall of Flesh",
+     "description": "Use an enemy lifted with Pull as a shield"
+    }
+   ],
+   "success": true
+  }
+ }
+}

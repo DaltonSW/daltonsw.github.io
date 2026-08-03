@@ -123,3 +123,30 @@ func TestLoadDocReadsBareExternalIDs(t *testing.T) {
 		t.Fatalf("ExternalIDs = %q/%q, want 4650/1145360", raID, steamAppID)
 	}
 }
+
+// Draft drives the `gamelog review` backlog filter, so ListGames has to
+// surface it, not just leave it readable via LoadDoc.
+func TestListGamesPopulatesDraft(t *testing.T) {
+	dir := t.TempDir()
+	if _, err := CreateGameFile(dir, "draft-game", NewGameFields{Title: "Draft Game", Status: "playing", Draft: true}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := CreateGameFile(dir, "published-game", NewGameFields{Title: "Published Game", Status: "playing", Draft: false}); err != nil {
+		t.Fatal(err)
+	}
+
+	games, err := ListGames(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	byTitle := map[string]bool{}
+	for _, g := range games {
+		byTitle[g.Title] = g.Draft
+	}
+	if !byTitle["Draft Game"] {
+		t.Error("Draft Game should have Draft == true")
+	}
+	if byTitle["Published Game"] {
+		t.Error("Published Game should have Draft == false")
+	}
+}

@@ -1,0 +1,1609 @@
+{
+ "provider": "steam",
+ "title": "Dead Cells",
+ "updated": "2026-07-26",
+ "id": "588650",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 41,
+ "total": 121,
+ "first": "2018-01-31",
+ "last": "2024-06-16",
+ "platform": "PC",
+ "icon": "a431361e5dae5fd6ac2433064b62b2a37abc38f1",
+ "playtime_mins": 2706,
+ "playtime": {
+  "deck": 15,
+  "linux": 15,
+  "windows": 930
+ },
+ "last_played": "2024-06-20",
+ "achievements": [
+  {
+   "key": "BIOME_REACHED_COURTYARD",
+   "name": "Love the serenity...",
+   "description": "Reach the Promenade of the Condemned for the first time.",
+   "unlocked": true,
+   "date": "2018-01-31T21:07:19-06:00"
+  },
+  {
+   "key": "EXPLO_FIRST_SECRETZONE",
+   "name": "Shrewd sleuth",
+   "description": "Find your first secret zone.",
+   "unlocked": true,
+   "date": "2018-01-31T22:15:05-06:00"
+  },
+  {
+   "key": "FEAT_KILLYOURSELF_NOPE",
+   "name": "YOLO! Or not?",
+   "description": "Cheat Death…",
+   "unlocked": true,
+   "date": "2018-01-31T22:16:14-06:00"
+  },
+  {
+   "key": "EXPLO_GETRUNE_VINE",
+   "name": "Quit tickling!",
+   "description": "Absorb the Vine Rune.",
+   "unlocked": true,
+   "date": "2018-01-31T22:30:59-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_PRISONROOF",
+   "name": "A room with a view!",
+   "description": "Reach the Ramparts for the first time.",
+   "unlocked": true,
+   "date": "2018-01-31T22:50:28-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_BRIDGE",
+   "name": "Finally, a moment of rest...",
+   "description": "Reach the Black Bridge for the first time.",
+   "unlocked": true,
+   "date": "2018-01-31T23:06:41-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_SEWERS",
+   "name": "What's that funky smell?",
+   "description": "Reach the Toxic Sewers for the first time.",
+   "unlocked": true,
+   "date": "2018-02-01T20:15:08-06:00"
+  },
+  {
+   "key": "EXPLO_FIRST_TIMEDDOOR",
+   "name": "¡Arriba, arriba! ¡Ándale, ándale!",
+   "description": "Open your first timed door.",
+   "unlocked": true,
+   "date": "2018-02-01T20:30:18-06:00"
+  },
+  {
+   "key": "FEAT_KILLWITH_ELEVATOR",
+   "name": "Going down!",
+   "description": "Kill an enemy with an elevator.",
+   "unlocked": true,
+   "date": "2018-02-01T22:15:49-06:00"
+  },
+  {
+   "key": "FIGHT_BEAT_BEHEMOTH",
+   "name": "The Fat and The Furious",
+   "description": "You beat \"The Concierge\"!",
+   "unlocked": true,
+   "date": "2018-02-01T22:58:08-06:00"
+  },
+  {
+   "key": "EXPLO_GETRUNE_SCORING",
+   "name": "Here comes a new challenger!",
+   "description": "Absorb the Challenger Rune!",
+   "unlocked": true,
+   "date": "2018-02-01T22:58:29-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_STILTVILLAGE",
+   "name": "My fish is fresh!",
+   "description": "Reach the Stilt Village for the first time.",
+   "unlocked": true,
+   "date": "2018-02-01T23:00:45-06:00"
+  },
+  {
+   "key": "FEAT_COMPLETE_1_DAILYRUN",
+   "name": "Faster than light!",
+   "description": "You finished a daily challenge. Well done!",
+   "unlocked": true,
+   "date": "2018-02-03T18:38:14-06:00"
+  },
+  {
+   "key": "EQUIP_UNLOCK_10_WEAPONS",
+   "name": "Slash! Slash! Roll!",
+   "description": "Unlock 10 weapons.",
+   "unlocked": true,
+   "date": "2018-02-03T18:40:24-06:00"
+  },
+  {
+   "key": "EXPLO_GETRUNE_TELEPORT",
+   "name": "What are you rubbing at anyway?",
+   "description": "Absorb the Teleportation rune.",
+   "unlocked": true,
+   "date": "2018-02-03T19:51:15-06:00"
+  },
+  {
+   "key": "FEAT_DIVE_SPIKES",
+   "name": "We've all been there before...",
+   "unlocked": true,
+   "date": "2018-02-04T20:00:13-06:00"
+  },
+  {
+   "key": "FEAT_SURVIVE_CURSE",
+   "name": "Absolution",
+   "description": "Be cursed... Survive.",
+   "unlocked": true,
+   "date": "2018-02-04T20:45:18-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_CLOCKTOWER",
+   "name": "Tic… Toc…",
+   "description": "Reach the Clock Tower for the first time!",
+   "unlocked": true,
+   "date": "2019-01-15T21:22:30-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_TOPCLOCKTOWER",
+   "name": "High drama",
+   "description": "Reach the Clock Room for the first time!",
+   "unlocked": true,
+   "date": "2019-01-15T21:34:47-06:00"
+  },
+  {
+   "key": "FIGHT_BEAT_BERSERK",
+   "name": "Blade Master",
+   "description": "You have beaten the \"Time Keeper\"!",
+   "unlocked": true,
+   "date": "2019-02-05T17:21:23-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_CASTLE",
+   "name": "Please leave your shoes at the entrance.",
+   "description": "Reach the Castle for the first time.",
+   "unlocked": true,
+   "date": "2019-02-05T17:22:44-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_CRYPT",
+   "name": "Afraid of the dark?",
+   "description": "Reach the Forgotten Sepulcher for the first time!",
+   "unlocked": true,
+   "date": "2019-02-07T15:27:07-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_THRONE",
+   "name": "Bend the knee? I think not…",
+   "description": "Reach the Throne Room for the first time.",
+   "unlocked": true,
+   "date": "2019-02-07T15:59:08-06:00"
+  },
+  {
+   "key": "EXPLO_FIRST_RIFTCHALLENGE",
+   "name": "See, that wasn't so hard now, was it?",
+   "description": "Successfully complete a Challenge Rift.",
+   "unlocked": true,
+   "date": "2019-02-07T16:46:20-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_OSSUARY",
+   "name": "Smells like burned flesh",
+   "description": "Reach the Ossuary for the first time.",
+   "unlocked": true,
+   "date": "2019-02-07T22:32:46-06:00"
+  },
+  {
+   "key": "EXPLO_GETRUNE_BREAKGROUND",
+   "name": "La Brute",
+   "description": "Absorb the Ram's Rune.",
+   "unlocked": true,
+   "date": "2019-02-07T23:29:31-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_SEWERSDEPTH",
+   "name": "Who needs an Italian plumber?",
+   "description": "Reach the Ancient Sewers for the first time.",
+   "unlocked": true,
+   "date": "2019-02-08T00:04:05-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_BEHOLDERPIT",
+   "name": "Even the rats avoid the place...",
+   "description": "Reach the Insufferable Crypt for the first time.",
+   "unlocked": true,
+   "date": "2019-02-10T11:10:31-06:00"
+  },
+  {
+   "key": "FIGHT_BEAT_BEHOLDER",
+   "name": "Is there something in your eye?",
+   "description": "You beat \"Conjunctivius\"!",
+   "unlocked": true,
+   "date": "2019-02-10T11:14:05-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_ANCIENTTEMPLE",
+   "name": "Fortune and glory, kid. Fortune and Glory...",
+   "description": "Reach the Slumbering Sanctuary for the first time!",
+   "unlocked": true,
+   "date": "2019-02-10T11:18:40-06:00"
+  },
+  {
+   "key": "EXPLO_GETRUNE_WALLGRAB",
+   "name": "Incy Wincy…",
+   "description": "Absorb the Spider's Rune!",
+   "unlocked": true,
+   "date": "2019-02-10T11:22:57-06:00"
+  },
+  {
+   "key": "FIGHT_BEAT_KINGSHAND",
+   "name": "The last rampart falls...",
+   "description": "Beat the Hand of the King.",
+   "unlocked": true,
+   "date": "2019-02-10T12:05:49-06:00"
+  },
+  {
+   "key": "EXPLO_GETBOSSRUNE_FIRST",
+   "name": "Surgical extraction",
+   "unlocked": true,
+   "date": "2019-02-10T12:06:12-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_PRISONDEPTH",
+   "name": "It rubs the lotion on its skin!",
+   "description": "Reach the Prison Depths for the first time.",
+   "unlocked": true,
+   "date": "2019-02-10T12:39:59-06:00"
+  },
+  {
+   "key": "EQUIP_UNLOCK_10_ACTIVES",
+   "name": "Pimp my ride.",
+   "description": "Unlock 10 skills.",
+   "unlocked": true,
+   "date": "2019-02-10T15:07:44-06:00"
+  },
+  {
+   "key": "BIOME_REACHED_BANK",
+   "name": "The Bank always wins in the end",
+   "description": "Reach the Bank for the first time.",
+   "unlocked": true,
+   "date": "2024-06-09T09:46:45-05:00"
+  },
+  {
+   "key": "BIOME_REACHED_DISTILLERY",
+   "name": "Cheers!",
+   "description": "Reach the Derelict Distillery for the first time!",
+   "unlocked": true,
+   "date": "2024-06-09T20:50:26-05:00"
+  },
+  {
+   "key": "FEAT_KILLWITH_BARREL",
+   "name": "Return to sender",
+   "description": "You killed an Infected Worker with his own barrel!",
+   "unlocked": true,
+   "date": "2024-06-09T20:50:57-05:00"
+  },
+  {
+   "key": "BIOME_REACHED_CEMETERY",
+   "name": "The dead center of the island...",
+   "description": "Reach the Graveyard for the first time.",
+   "unlocked": true,
+   "date": "2024-06-16T13:04:21-05:00"
+  },
+  {
+   "key": "FIGHT_BEAT_MIMIC",
+   "name": "Bag of Tricks",
+   "unlocked": true,
+   "date": "2024-06-16T19:55:11-05:00"
+  },
+  {
+   "key": "BIOME_REACHED_CAVERN",
+   "name": "You dig",
+   "description": "Reach the Cavern for the first time.",
+   "unlocked": true,
+   "date": "2024-06-16T20:43:57-05:00"
+  },
+  {
+   "key": "BIOME_REACHED_ASTROLAB",
+   "name": "Life on the edge",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_CLIFF",
+   "name": "Beware the step!",
+   "description": "Reach the Undying Shores for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_DEATH",
+   "name": "Don't fear the Reaper",
+   "description": "Reach the Defiled Necropolis for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_DOOKU",
+   "name": "What is a man?",
+   "description": "Reach the Master's Keep for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_GARDENER",
+   "name": "Blades N' Roses",
+   "description": "Reach the Mausoleum for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_GIANT",
+   "name": "Hot and cold",
+   "description": "Reach the Guardian's Haven for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_GREENHOUSE",
+   "name": "Go play outside!",
+   "description": "Reach the Arboretum for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_LIGHTHOUSE",
+   "name": "8th wonder",
+   "description": "Reach the Lighthouse for the first time!",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_OBSERVATORY",
+   "name": "Stargazing",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_PCASTLE",
+   "name": "Into the vampire's den",
+   "description": "Reach Dracula's Castle for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_PGARDEN",
+   "name": "Am I still on the island?",
+   "description": "Reach the Castle's Outskirts for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_PRISONCORRUPT",
+   "name": "Don't. Touch. Anything!",
+   "description": "Reach the Corrupted Prison for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_QUEENARENA",
+   "name": "A sparkle in the night",
+   "description": "Reach the Crown for the first time!",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_SHIPWRECK",
+   "name": "Iceberg right ahead!",
+   "description": "Reach the Shipwreck for the first time!",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_SWAMP",
+   "name": "The mud is getting warm, so you might as well swim.",
+   "description": "Reach the Morass of the Banished for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_SWAMPHEART",
+   "name": "Knee deep in mud...",
+   "description": "Reach the Nest for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "BIOME_REACHED_TUMULUS",
+   "name": "Sky Fall",
+   "description": "Reach the Fractured Shrines for the first time.",
+   "unlocked": false
+  },
+  {
+   "key": "EQUIP_ENDGAME_CURSEDSWORD",
+   "name": "I like to live dangerously…",
+   "unlocked": false
+  },
+  {
+   "key": "EQUIP_ENDGAME_YOLO",
+   "name": "Never fallen",
+   "unlocked": false
+  },
+  {
+   "key": "EXPLO_GETBOSSRUNE_FIFTH",
+   "name": "Perfect extraction",
+   "unlocked": false
+  },
+  {
+   "key": "EXPLO_GETBOSSRUNE_FOURTH",
+   "name": "Deft extraction",
+   "unlocked": false
+  },
+  {
+   "key": "EXPLO_GETBOSSRUNE_SECOND",
+   "name": "Masterful extraction",
+   "unlocked": false
+  },
+  {
+   "key": "EXPLO_GETBOSSRUNE_THIRD",
+   "name": "Artful extraction",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_AXE_KILL_WWOLF",
+   "name": "Can you stop moving please?!",
+   "description": "Kill a Werewolf with a Throwing Axe",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_BIBLE_MULTI_HIT",
+   "name": "Knowledge is power",
+   "description": "Hit the same enemy with 5 orbiting Bibles in short succession.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_CAT_KILL_DEATH",
+   "name": "I still have 8 lives",
+   "description": "Have Maria's Cat deal the last hit to Death.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_COMBO_SICKLES",
+   "name": "A cut above",
+   "description": "Defeat at least 5 enemies in a row with the Scarecrow's Sickles.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_COSTUME_REQUIRED",
+   "name": "The cowl does not make the monk",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_DEATH_LOST_100_CELLS",
+   "name": "Ohhhhhh! That hurt!",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_DEBT",
+   "name": "Up to the eyeball in debt",
+   "description": "Beat the game with the maximum debt remaining.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_ENDGAME_BOSSRUNE_1",
+   "name": "Up, Guards, and at them again!",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_ENDGAME_BOSSRUNE_2",
+   "name": "Finished, without fear.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_ENDGAME_BOSSRUNE_3",
+   "name": "Harder Better Faster Stronger",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_ENDGAME_BOSSRUNE_4",
+   "name": "Let's get down to the nitty gritty...",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_ENDGAME_NOKILL_MUSHROOM_BOI",
+   "name": "Who's a good boi?",
+   "description": "Finish the game without sacrificing the Mushroom Boi!",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_ENDGAME_STARTWEAPON",
+   "name": "What? There's nothing wrong with these...",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_EXPLODE_MUSHROOM_BOI",
+   "name": "Bound for Hell",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_FINISHLEVEL_NOLAUNCHER",
+   "name": "Born sapper",
+   "description": "You completed the Derelict Distillery without using the Barrel Launcher!",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_FLYINGSWORD_JEALOUSY",
+   "name": "Me, jealous?",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_HANDHOOK_SPIKES",
+   "name": "Plank walk",
+   "description": "Throw an enemy into spikes using the Hand Hook",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_KILLYOURSELF_ELEVATOR",
+   "name": "They came from behind!",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_KILL_PIRATE_CANNON",
+   "name": "Black flag",
+   "description": "Kill a Pirate Captain with the Scavenged Bombard",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_LIGHTNING_WATER_KILL",
+   "name": "Pool Party",
+   "description": "Electrify an enemy with the Lightning Rods while they are in water.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_NECROMANT_REVIVE_3_MOBS",
+   "name": "First aid",
+   "description": "Let an Apostate revive at least 3 souls.",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_PENDULO_TRAP_KILL",
+   "name": "Trapped Trapper",
+   "description": "Trap an enemy using the Fractured Shrines environment!",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_PRISON_NOBREAK_DOOR",
+   "name": "Gentleman",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_SACRIFICE_MUSHROOM_BOI",
+   "name": "Pact with the devil",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_SERVANT_COSTUME",
+   "name": "Infiltration",
+   "description": "Finish the Lighthouse while wearing a Servant outfit",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_SHARK_WATER",
+   "name": "Put that thing back where it came from or so help me",
+   "description": "Help the shark get back to the water",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_STAPHY_EVOLVE",
+   "name": "Oh how fast they grow!",
+   "description": "Get the Leghugger to evolve",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_STAPHY_KILL_STAPHY",
+   "name": "You're not my family",
+   "description": "Get the Leghugger to kill an Armored Shrimp",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_TWO_PETS",
+   "name": "Herder",
+   "description": "Have 2 pets active at the same time",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_VKILLER_KILL_DOOKU",
+   "name": "Does what it says on the tin",
+   "unlocked": false
+  },
+  {
+   "key": "FEAT_WRECKINGBALL_STRIKE",
+   "name": "Spare!",
+   "description": "Kill five enemies with a single throw and recall of the Wrecking Ball",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_100_ELITES",
+   "name": "Not so tough",
+   "description": "You slayed 100 elites. Badman.",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_AMAZONS",
+   "name": "Firefighter",
+   "description": "You finished the Lighthouse!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_AMAZONS_NODAMAGE",
+   "name": "Unwavering loyalty",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_BEHEMOTH_NODAMAGE",
+   "name": "Steam rolled.",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_BEHOLDER_NODAMAGE",
+   "name": "Flawless victory.",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_BERSERK_NODAMAGE",
+   "name": "The Dance",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_COLLECTOR",
+   "name": "I don't step on toes...",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_COLLECTOR_NODAMAGE",
+   "name": "Nothing left to... collect.",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_DEATH",
+   "name": "Death comes for us all... but not you!",
+   "description": "You beat Death!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_DEATH_NODAMAGE",
+   "name": "Dodge Death!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_DOOKU",
+   "name": "You don't belong in this world!",
+   "description": "You beat Dracula!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_DOOKU_BEAST",
+   "name": "See you in 100 years",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_DOOKU_NODAMAGE",
+   "name": "Honorary Belmont",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_GARDENER",
+   "name": "Watering Time!",
+   "description": "You beat the Scarecrow!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_GARDENER_NOBOUNCE",
+   "name": "In mushroom, we trust.",
+   "description": "Defeat the Scarecrow without bouncing on any mushrooms.",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_GARDENER_NODAMAGE",
+   "name": "Green thumbs",
+   "description": "You beat the Scarecrow without taking a single hit!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_GIANT",
+   "name": "Size doesn't matter",
+   "description": "You beat the Giant!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_GIANT_NODAMAGE",
+   "name": "David and Goliath...",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_KINGSHAND_NODAMAGE",
+   "name": "Do you need... A hand?? Bahaha!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_MAMATICK",
+   "name": "I've got my eyes on you...",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_MAMATICK_NODAMAGE",
+   "name": "Take that, sucker!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_QUEEN",
+   "name": "Her Majesty",
+   "description": "You beat the Queen!",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_QUEEN_CARDS",
+   "name": "Full house",
+   "description": "Beat the Queen with the Killing Deck",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_QUEEN_COSTUME",
+   "name": "On Her Majesty's Secret Service",
+   "description": "Beat the Queen with a Queen outfit",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_QUEEN_FALL",
+   "name": "Long live the Queen",
+   "description": "Beat the Queen by pushing her into the void",
+   "unlocked": false
+  },
+  {
+   "key": "FIGHT_BEAT_QUEEN_NODAMAGE",
+   "name": "Lilibet",
+   "description": "You beat the Queen without taking a single hit!",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Dead Cells",
+   "achievements": [
+    {
+     "apiname": "BIOME_REACHED_COURTYARD",
+     "achieved": 1,
+     "unlocktime": 1517454439,
+     "name": "Love the serenity...",
+     "description": "Reach the Promenade of the Condemned for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_PRISONROOF",
+     "achieved": 1,
+     "unlocktime": 1517460628,
+     "name": "A room with a view!",
+     "description": "Reach the Ramparts for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_BRIDGE",
+     "achieved": 1,
+     "unlocktime": 1517461601,
+     "name": "Finally, a moment of rest...",
+     "description": "Reach the Black Bridge for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_OSSUARY",
+     "achieved": 1,
+     "unlocktime": 1549600366,
+     "name": "Smells like burned flesh",
+     "description": "Reach the Ossuary for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_SEWERS",
+     "achieved": 1,
+     "unlocktime": 1517537708,
+     "name": "What's that funky smell?",
+     "description": "Reach the Toxic Sewers for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_SEWERSDEPTH",
+     "achieved": 1,
+     "unlocktime": 1549605845,
+     "name": "Who needs an Italian plumber?",
+     "description": "Reach the Ancient Sewers for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_STILTVILLAGE",
+     "achieved": 1,
+     "unlocktime": 1517547645,
+     "name": "My fish is fresh!",
+     "description": "Reach the Stilt Village for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_CEMETERY",
+     "achieved": 1,
+     "unlocktime": 1718561061,
+     "name": "The dead center of the island...",
+     "description": "Reach the Graveyard for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_PRISONDEPTH",
+     "achieved": 1,
+     "unlocktime": 1549823999,
+     "name": "It rubs the lotion on its skin!",
+     "description": "Reach the Prison Depths for the first time."
+    },
+    {
+     "apiname": "EXPLO_GETRUNE_VINE",
+     "achieved": 1,
+     "unlocktime": 1517459459,
+     "name": "Quit tickling!",
+     "description": "Absorb the Vine Rune."
+    },
+    {
+     "apiname": "EXPLO_GETRUNE_TELEPORT",
+     "achieved": 1,
+     "unlocktime": 1517709075,
+     "name": "What are you rubbing at anyway?",
+     "description": "Absorb the Teleportation rune."
+    },
+    {
+     "apiname": "FEAT_KILLWITH_ELEVATOR",
+     "achieved": 1,
+     "unlocktime": 1517544949,
+     "name": "Going down!",
+     "description": "Kill an enemy with an elevator."
+    },
+    {
+     "apiname": "FEAT_KILLYOURSELF_ELEVATOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "They came from behind!",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_KILLYOURSELF_NOPE",
+     "achieved": 1,
+     "unlocktime": 1517458574,
+     "name": "YOLO! Or not?",
+     "description": "Cheat Death…"
+    },
+    {
+     "apiname": "FEAT_DEATH_LOST_100_CELLS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ohhhhhh! That hurt!",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_BEHEMOTH",
+     "achieved": 1,
+     "unlocktime": 1517547488,
+     "name": "The Fat and The Furious",
+     "description": "You beat \"The Concierge\"!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_BEHOLDER",
+     "achieved": 1,
+     "unlocktime": 1549818845,
+     "name": "Is there something in your eye?",
+     "description": "You beat \"Conjunctivius\"!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_100_ELITES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not so tough",
+     "description": "You slayed 100 elites. Badman."
+    },
+    {
+     "apiname": "FIGHT_BEAT_BEHEMOTH_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steam rolled.",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_BEHOLDER_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flawless victory.",
+     "description": ""
+    },
+    {
+     "apiname": "EQUIP_UNLOCK_10_WEAPONS",
+     "achieved": 1,
+     "unlocktime": 1517704824,
+     "name": "Slash! Slash! Roll!",
+     "description": "Unlock 10 weapons."
+    },
+    {
+     "apiname": "EQUIP_UNLOCK_10_ACTIVES",
+     "achieved": 1,
+     "unlocktime": 1549832864,
+     "name": "Pimp my ride.",
+     "description": "Unlock 10 skills."
+    },
+    {
+     "apiname": "BIOME_REACHED_CRYPT",
+     "achieved": 1,
+     "unlocktime": 1549574827,
+     "name": "Afraid of the dark?",
+     "description": "Reach the Forgotten Sepulcher for the first time!"
+    },
+    {
+     "apiname": "FEAT_DIVE_SPIKES",
+     "achieved": 1,
+     "unlocktime": 1517796013,
+     "name": "We've all been there before...",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_ENDGAME_STARTWEAPON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What? There's nothing wrong with these...",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_SURVIVE_CURSE",
+     "achieved": 1,
+     "unlocktime": 1517798718,
+     "name": "Absolution",
+     "description": "Be cursed... Survive."
+    },
+    {
+     "apiname": "EXPLO_FIRST_TIMEDDOOR",
+     "achieved": 1,
+     "unlocktime": 1517538618,
+     "name": "¡Arriba, arriba! ¡Ándale, ándale!",
+     "description": "Open your first timed door."
+    },
+    {
+     "apiname": "EXPLO_FIRST_RIFTCHALLENGE",
+     "achieved": 1,
+     "unlocktime": 1549579580,
+     "name": "See, that wasn't so hard now, was it?",
+     "description": "Successfully complete a Challenge Rift."
+    },
+    {
+     "apiname": "EXPLO_FIRST_SECRETZONE",
+     "achieved": 1,
+     "unlocktime": 1517458505,
+     "name": "Shrewd sleuth",
+     "description": "Find your first secret zone."
+    },
+    {
+     "apiname": "FEAT_COMPLETE_1_DAILYRUN",
+     "achieved": 1,
+     "unlocktime": 1517704694,
+     "name": "Faster than light!",
+     "description": "You finished a daily challenge. Well done!"
+    },
+    {
+     "apiname": "EXPLO_GETRUNE_SCORING",
+     "achieved": 1,
+     "unlocktime": 1517547509,
+     "name": "Here comes a new challenger!",
+     "description": "Absorb the Challenger Rune!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_BERSERK",
+     "achieved": 1,
+     "unlocktime": 1549408883,
+     "name": "Blade Master",
+     "description": "You have beaten the \"Time Keeper\"!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_BERSERK_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Dance",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_CLOCKTOWER",
+     "achieved": 1,
+     "unlocktime": 1547608950,
+     "name": "Tic… Toc…",
+     "description": "Reach the Clock Tower for the first time!"
+    },
+    {
+     "apiname": "BIOME_REACHED_TOPCLOCKTOWER",
+     "achieved": 1,
+     "unlocktime": 1547609687,
+     "name": "High drama",
+     "description": "Reach the Clock Room for the first time!"
+    },
+    {
+     "apiname": "BIOME_REACHED_ANCIENTTEMPLE",
+     "achieved": 1,
+     "unlocktime": 1549819120,
+     "name": "Fortune and glory, kid. Fortune and Glory...",
+     "description": "Reach the Slumbering Sanctuary for the first time!"
+    },
+    {
+     "apiname": "EXPLO_GETRUNE_WALLGRAB",
+     "achieved": 1,
+     "unlocktime": 1549819377,
+     "name": "Incy Wincy…",
+     "description": "Absorb the Spider's Rune!"
+    },
+    {
+     "apiname": "EQUIP_ENDGAME_YOLO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Never fallen",
+     "description": ""
+    },
+    {
+     "apiname": "EQUIP_ENDGAME_CURSEDSWORD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I like to live dangerously…",
+     "description": ""
+    },
+    {
+     "apiname": "EXPLO_GETRUNE_BREAKGROUND",
+     "achieved": 1,
+     "unlocktime": 1549603771,
+     "name": "La Brute",
+     "description": "Absorb the Ram's Rune."
+    },
+    {
+     "apiname": "EXPLO_GETBOSSRUNE_FIRST",
+     "achieved": 1,
+     "unlocktime": 1549821972,
+     "name": "Surgical extraction",
+     "description": ""
+    },
+    {
+     "apiname": "EXPLO_GETBOSSRUNE_SECOND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Masterful extraction",
+     "description": ""
+    },
+    {
+     "apiname": "EXPLO_GETBOSSRUNE_THIRD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Artful extraction",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_ENDGAME_BOSSRUNE_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Up, Guards, and at them again!",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_ENDGAME_BOSSRUNE_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finished, without fear.",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_ENDGAME_BOSSRUNE_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Harder Better Faster Stronger",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_KINGSHAND",
+     "achieved": 1,
+     "unlocktime": 1549821949,
+     "name": "The last rampart falls...",
+     "description": "Beat the Hand of the King."
+    },
+    {
+     "apiname": "FIGHT_BEAT_KINGSHAND_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Do you need... A hand?? Bahaha!",
+     "description": ""
+    },
+    {
+     "apiname": "EXPLO_GETBOSSRUNE_FOURTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deft extraction",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_ENDGAME_BOSSRUNE_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let's get down to the nitty gritty...",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_CASTLE",
+     "achieved": 1,
+     "unlocktime": 1549408964,
+     "name": "Please leave your shoes at the entrance.",
+     "description": "Reach the Castle for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_THRONE",
+     "achieved": 1,
+     "unlocktime": 1549576748,
+     "name": "Bend the knee? I think not…",
+     "description": "Reach the Throne Room for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_BEHOLDERPIT",
+     "achieved": 1,
+     "unlocktime": 1549818631,
+     "name": "Even the rats avoid the place...",
+     "description": "Reach the Insufferable Crypt for the first time."
+    },
+    {
+     "apiname": "EXPLO_GETBOSSRUNE_FIFTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect extraction",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_GIANT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Size doesn't matter",
+     "description": "You beat the Giant!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_COLLECTOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I don't step on toes...",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_CAVERN",
+     "achieved": 1,
+     "unlocktime": 1718588637,
+     "name": "You dig",
+     "description": "Reach the Cavern for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_GIANT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot and cold",
+     "description": "Reach the Guardian's Haven for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_ASTROLAB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Life on the edge",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_OBSERVATORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stargazing",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_GIANT_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "David and Goliath...",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_COLLECTOR_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nothing left to... collect.",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_MAMATICK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I've got my eyes on you...",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_MAMATICK_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take that, sucker!",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_ENDGAME_NOKILL_MUSHROOM_BOI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who's a good boi?",
+     "description": "Finish the game without sacrificing the Mushroom Boi!"
+    },
+    {
+     "apiname": "FEAT_EXPLODE_MUSHROOM_BOI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bound for Hell",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_SACRIFICE_MUSHROOM_BOI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pact with the devil",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_PRISON_NOBREAK_DOOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gentleman",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_GREENHOUSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go play outside!",
+     "description": "Reach the Arboretum for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_SWAMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The mud is getting warm, so you might as well swim.",
+     "description": "Reach the Morass of the Banished for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_SWAMPHEART",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Knee deep in mud...",
+     "description": "Reach the Nest for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_PRISONCORRUPT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't. Touch. Anything!",
+     "description": "Reach the Corrupted Prison for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_DISTILLERY",
+     "achieved": 1,
+     "unlocktime": 1717984226,
+     "name": "Cheers!",
+     "description": "Reach the Derelict Distillery for the first time!"
+    },
+    {
+     "apiname": "FEAT_FINISHLEVEL_NOLAUNCHER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Born sapper",
+     "description": "You completed the Derelict Distillery without using the Barrel Launcher!"
+    },
+    {
+     "apiname": "FEAT_KILLWITH_BARREL",
+     "achieved": 1,
+     "unlocktime": 1717984257,
+     "name": "Return to sender",
+     "description": "You killed an Infected Worker with his own barrel!"
+    },
+    {
+     "apiname": "BIOME_REACHED_GARDENER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blades N' Roses",
+     "description": "Reach the Mausoleum for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_CLIFF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beware the step!",
+     "description": "Reach the Undying Shores for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_TUMULUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sky Fall",
+     "description": "Reach the Fractured Shrines for the first time."
+    },
+    {
+     "apiname": "FIGHT_BEAT_GARDENER_NOBOUNCE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In mushroom, we trust.",
+     "description": "Defeat the Scarecrow without bouncing on any mushrooms."
+    },
+    {
+     "apiname": "FIGHT_BEAT_GARDENER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Watering Time!",
+     "description": "You beat the Scarecrow!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_GARDENER_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Green thumbs",
+     "description": "You beat the Scarecrow without taking a single hit!"
+    },
+    {
+     "apiname": "FEAT_NECROMANT_REVIVE_3_MOBS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First aid",
+     "description": "Let an Apostate revive at least 3 souls."
+    },
+    {
+     "apiname": "FEAT_FLYINGSWORD_JEALOUSY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Me, jealous?",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_LIGHTNING_WATER_KILL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pool Party",
+     "description": "Electrify an enemy with the Lightning Rods while they are in water."
+    },
+    {
+     "apiname": "FEAT_COMBO_SICKLES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A cut above",
+     "description": "Defeat at least 5 enemies in a row with the Scarecrow's Sickles."
+    },
+    {
+     "apiname": "FEAT_PENDULO_TRAP_KILL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trapped Trapper",
+     "description": "Trap an enemy using the Fractured Shrines environment!"
+    },
+    {
+     "apiname": "FEAT_COSTUME_REQUIRED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The cowl does not make the monk",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_SHIPWRECK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Iceberg right ahead!",
+     "description": "Reach the Shipwreck for the first time!"
+    },
+    {
+     "apiname": "BIOME_REACHED_LIGHTHOUSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "8th wonder",
+     "description": "Reach the Lighthouse for the first time!"
+    },
+    {
+     "apiname": "BIOME_REACHED_QUEENARENA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A sparkle in the night",
+     "description": "Reach the Crown for the first time!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_QUEEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Her Majesty",
+     "description": "You beat the Queen!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_QUEEN_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lilibet",
+     "description": "You beat the Queen without taking a single hit!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_QUEEN_FALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Long live the Queen",
+     "description": "Beat the Queen by pushing her into the void"
+    },
+    {
+     "apiname": "FIGHT_BEAT_QUEEN_CARDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full house",
+     "description": "Beat the Queen with the Killing Deck"
+    },
+    {
+     "apiname": "FIGHT_BEAT_QUEEN_COSTUME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Her Majesty's Secret Service",
+     "description": "Beat the Queen with a Queen outfit"
+    },
+    {
+     "apiname": "FEAT_STAPHY_EVOLVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oh how fast they grow!",
+     "description": "Get the Leghugger to evolve"
+    },
+    {
+     "apiname": "FEAT_KILL_PIRATE_CANNON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Black flag",
+     "description": "Kill a Pirate Captain with the Scavenged Bombard"
+    },
+    {
+     "apiname": "FEAT_WRECKINGBALL_STRIKE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spare!",
+     "description": "Kill five enemies with a single throw and recall of the Wrecking Ball"
+    },
+    {
+     "apiname": "FEAT_HANDHOOK_SPIKES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Plank walk",
+     "description": "Throw an enemy into spikes using the Hand Hook"
+    },
+    {
+     "apiname": "FEAT_SHARK_WATER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Put that thing back where it came from or so help me",
+     "description": "Help the shark get back to the water"
+    },
+    {
+     "apiname": "FEAT_SERVANT_COSTUME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Infiltration",
+     "description": "Finish the Lighthouse while wearing a Servant outfit"
+    },
+    {
+     "apiname": "FEAT_TWO_PETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Herder",
+     "description": "Have 2 pets active at the same time"
+    },
+    {
+     "apiname": "FEAT_STAPHY_KILL_STAPHY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You're not my family",
+     "description": "Get the Leghugger to kill an Armored Shrimp"
+    },
+    {
+     "apiname": "FIGHT_BEAT_AMAZONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Firefighter",
+     "description": "You finished the Lighthouse!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_AMAZONS_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unwavering loyalty",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_BANK",
+     "achieved": 1,
+     "unlocktime": 1717944405,
+     "name": "The Bank always wins in the end",
+     "description": "Reach the Bank for the first time."
+    },
+    {
+     "apiname": "FEAT_DEBT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Up to the eyeball in debt",
+     "description": "Beat the game with the maximum debt remaining."
+    },
+    {
+     "apiname": "FIGHT_BEAT_MIMIC",
+     "achieved": 1,
+     "unlocktime": 1718585711,
+     "name": "Bag of Tricks",
+     "description": ""
+    },
+    {
+     "apiname": "BIOME_REACHED_PGARDEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Am I still on the island?",
+     "description": "Reach the Castle's Outskirts for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_PCASTLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Into the vampire's den",
+     "description": "Reach Dracula's Castle for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_DEATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't fear the Reaper",
+     "description": "Reach the Defiled Necropolis for the first time."
+    },
+    {
+     "apiname": "BIOME_REACHED_DOOKU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What is a man?",
+     "description": "Reach the Master's Keep for the first time."
+    },
+    {
+     "apiname": "FIGHT_BEAT_DEATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death comes for us all... but not you!",
+     "description": "You beat Death!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_DEATH_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dodge Death!",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_DOOKU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You don't belong in this world!",
+     "description": "You beat Dracula!"
+    },
+    {
+     "apiname": "FIGHT_BEAT_DOOKU_BEAST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "See you in 100 years",
+     "description": ""
+    },
+    {
+     "apiname": "FIGHT_BEAT_DOOKU_NODAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Honorary Belmont",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_CAT_KILL_DEATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I still have 8 lives",
+     "description": "Have Maria's Cat deal the last hit to Death."
+    },
+    {
+     "apiname": "FEAT_AXE_KILL_WWOLF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Can you stop moving please?!",
+     "description": "Kill a Werewolf with a Throwing Axe"
+    },
+    {
+     "apiname": "FEAT_VKILLER_KILL_DOOKU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Does what it says on the tin",
+     "description": ""
+    },
+    {
+     "apiname": "FEAT_BIBLE_MULTI_HIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Knowledge is power",
+     "description": "Hit the same enemy with 5 orbiting Bibles in short succession."
+    }
+   ],
+   "success": true
+  }
+ }
+}

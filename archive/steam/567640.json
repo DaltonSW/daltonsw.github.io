@@ -1,0 +1,549 @@
+{
+ "provider": "steam",
+ "title": "Danganronpa V3: Killing Harmony",
+ "updated": "2026-07-26",
+ "id": "567640",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 18,
+ "total": 41,
+ "first": "2017-09-26",
+ "last": "2017-10-19",
+ "platform": "PC",
+ "icon": "27e0b08d9506a81bc9f8d3a3616fb455106bfa68",
+ "playtime_mins": 2366,
+ "last_played": "2017-10-19",
+ "achievements": [
+  {
+   "key": "ID_PROLOGUE_CLEAR",
+   "name": "Ultimate Cold Open",
+   "unlocked": true,
+   "date": "2017-09-26T16:46:12-05:00"
+  },
+  {
+   "key": "ID_V_RONPA",
+   "name": "Veni Vidi Vici",
+   "unlocked": true,
+   "date": "2017-09-26T20:20:57-05:00"
+  },
+  {
+   "key": "ID_RONPA",
+   "name": "Just According to Ronpa",
+   "description": "Refute an argument.",
+   "unlocked": true,
+   "date": "2017-09-26T20:20:57-05:00"
+  },
+  {
+   "key": "ID_USO_RONPA",
+   "name": "From a Certain Point of View",
+   "description": "Present false evidence.",
+   "unlocked": true,
+   "date": "2017-09-26T21:38:30-05:00"
+  },
+  {
+   "key": "ID_CHAPTER1_CLEAR",
+   "name": "A Very Special Class Trial",
+   "unlocked": true,
+   "date": "2017-09-26T22:58:20-05:00"
+  },
+  {
+   "key": "ID_EVENT_TANSAKU_ITEM",
+   "name": "One Man's Trash...",
+   "unlocked": true,
+   "date": "2017-09-28T15:48:39-05:00"
+  },
+  {
+   "key": "ID_KAKURE_MONOKUMA",
+   "name": "Hidden Challenge",
+   "description": "Find a hidden Monokuma.",
+   "unlocked": true,
+   "date": "2017-09-28T16:15:48-05:00"
+  },
+  {
+   "key": "ID_CHAPTER2_CLEAR",
+   "name": "Sweeps Week",
+   "unlocked": true,
+   "date": "2017-09-28T21:30:17-05:00"
+  },
+  {
+   "key": "ID_EVENT_NECROMANCY",
+   "name": "Reach Out and Touch Wraith",
+   "unlocked": true,
+   "date": "2017-09-29T19:39:03-05:00"
+  },
+  {
+   "key": "ID_CHAPTER3_CLEAR",
+   "name": "Graveyard Slot",
+   "unlocked": true,
+   "date": "2017-09-29T23:06:29-05:00"
+  },
+  {
+   "key": "ID_KIZUNA_MAX",
+   "name": "Bond. True Bond.",
+   "description": "Achieve the highest level bond with someone.",
+   "unlocked": true,
+   "date": "2017-09-30T14:18:04-05:00"
+  },
+  {
+   "key": "ID_EVENT_PROGRAM_WORLD",
+   "name": "You Have to See It For Yourself",
+   "unlocked": true,
+   "date": "2017-09-30T15:06:35-05:00"
+  },
+  {
+   "key": "ID_CHAPTER4_CLEAR",
+   "name": "Virtual Remake",
+   "unlocked": true,
+   "date": "2017-09-30T19:21:49-05:00"
+  },
+  {
+   "key": "ID_EVENT_OUTSIDE",
+   "name": "The Truth Is Out There",
+   "unlocked": true,
+   "date": "2017-10-17T13:28:07-05:00"
+  },
+  {
+   "key": "ID_CHAPTER5_CLEAR",
+   "name": "Signing Off",
+   "unlocked": true,
+   "date": "2017-10-17T18:32:52-05:00"
+  },
+  {
+   "key": "ID_EVENT_MONOCHICHI",
+   "name": "Class Trial of the Century",
+   "unlocked": true,
+   "date": "2017-10-19T17:04:00-05:00"
+  },
+  {
+   "key": "ID_GAYA_BREAK_500",
+   "name": "Master Silencer",
+   "description": "Shoot down over 500 white noise.",
+   "unlocked": true,
+   "date": "2017-10-19T17:22:57-05:00"
+  },
+  {
+   "key": "ID_ALL_CLEAR",
+   "name": "Goodbye Studio Audience",
+   "unlocked": true,
+   "date": "2017-10-19T21:15:49-05:00"
+  },
+  {
+   "key": "ID_AINORI_TRUE_END",
+   "name": "A Bright Future Awaits Us",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ALL",
+   "name": "Harmony's Last Reward",
+   "description": "Obtain all achievements.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ALL_CARD",
+   "name": "That's All, Folks!",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ALL_GALLERY",
+   "name": "V3 Complete",
+   "description": "Unlock the entire gallery.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ALL_KAKURE_MONOKUMA",
+   "name": "Monokuma Wrangler",
+   "description": "Find every hidden Monokuma.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ALL_KIZUNA_MAX",
+   "name": "You Need to Diversify Yo Bonds.",
+   "description": "Achieve the highest level bond with everyone.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ALL_ROUTE_URA",
+   "name": "You'll Never Know If You Don't Go",
+   "unlocked": false
+  },
+  {
+   "key": "ID_COIN_10000",
+   "name": "Casino Royale with Cheese",
+   "unlocked": false
+  },
+  {
+   "key": "ID_EVENT_NIGHT",
+   "name": "Giving It Up at the Hotel Kumasutra",
+   "unlocked": false
+  },
+  {
+   "key": "ID_IKUSEI_ALL_CLEAR",
+   "name": "Masterful Development",
+   "unlocked": false
+  },
+  {
+   "key": "ID_IKUSEI_CLEAR",
+   "name": "New Kid on Campus",
+   "unlocked": false
+  },
+  {
+   "key": "ID_IKUSEI_SHIREN_CLEAR",
+   "name": "Passing Is Optional, Finishing is Mandatory",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ITEM_MAX",
+   "name": "We're More Like Present Protectors",
+   "description": "Collect every present.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_LEVEL_MAX",
+   "name": "True Discipline Come from Within",
+   "description": "Achieve the maximum level.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_MONORISU_HARD_S_CLEAR",
+   "name": "Monolithic Achievement",
+   "unlocked": false
+  },
+  {
+   "key": "ID_OBJECT_REACTION_1000",
+   "name": "King of Redecorating",
+   "description": "Slap around objects at least 1,000 times.",
+   "unlocked": false
+  },
+  {
+   "key": "ID_ROUTE_URA",
+   "name": "So What's Wrong with Taking the Back Streets?",
+   "unlocked": false
+  },
+  {
+   "key": "ID_RPG_BOSS_10F",
+   "name": "The First of Many",
+   "unlocked": false
+  },
+  {
+   "key": "ID_RPG_BOSS_50F",
+   "name": "Reaching the Summit",
+   "unlocked": false
+  },
+  {
+   "key": "ID_RPG_HIDE_BOSS",
+   "name": "Overcoming True Fear",
+   "unlocked": false
+  },
+  {
+   "key": "ID_SAKETSUKA_HARD_S_CLEAR",
+   "name": "Fisher King",
+   "unlocked": false
+  },
+  {
+   "key": "ID_SLOT_77777",
+   "name": "Lucky Number Seven",
+   "unlocked": false
+  },
+  {
+   "key": "ID_TOWARUN_HARD_S_CLEAR",
+   "name": "No Stopping This Outlaw",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Danganronpa V3: Killing Harmony",
+   "achievements": [
+    {
+     "apiname": "ID_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Harmony's Last Reward",
+     "description": "Obtain all achievements."
+    },
+    {
+     "apiname": "ID_PROLOGUE_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1506462372,
+     "name": "Ultimate Cold Open",
+     "description": ""
+    },
+    {
+     "apiname": "ID_CHAPTER1_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1506484700,
+     "name": "A Very Special Class Trial",
+     "description": ""
+    },
+    {
+     "apiname": "ID_CHAPTER2_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1506652217,
+     "name": "Sweeps Week",
+     "description": ""
+    },
+    {
+     "apiname": "ID_CHAPTER3_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1506744389,
+     "name": "Graveyard Slot",
+     "description": ""
+    },
+    {
+     "apiname": "ID_CHAPTER4_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1506817309,
+     "name": "Virtual Remake",
+     "description": ""
+    },
+    {
+     "apiname": "ID_CHAPTER5_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1508283172,
+     "name": "Signing Off",
+     "description": ""
+    },
+    {
+     "apiname": "ID_ALL_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1508465749,
+     "name": "Goodbye Studio Audience",
+     "description": ""
+    },
+    {
+     "apiname": "ID_EVENT_TANSAKU_ITEM",
+     "achieved": 1,
+     "unlocktime": 1506631719,
+     "name": "One Man's Trash...",
+     "description": ""
+    },
+    {
+     "apiname": "ID_EVENT_NECROMANCY",
+     "achieved": 1,
+     "unlocktime": 1506731943,
+     "name": "Reach Out and Touch Wraith",
+     "description": ""
+    },
+    {
+     "apiname": "ID_EVENT_PROGRAM_WORLD",
+     "achieved": 1,
+     "unlocktime": 1506801995,
+     "name": "You Have to See It For Yourself",
+     "description": ""
+    },
+    {
+     "apiname": "ID_EVENT_OUTSIDE",
+     "achieved": 1,
+     "unlocktime": 1508264887,
+     "name": "The Truth Is Out There",
+     "description": ""
+    },
+    {
+     "apiname": "ID_EVENT_MONOCHICHI",
+     "achieved": 1,
+     "unlocktime": 1508450640,
+     "name": "Class Trial of the Century",
+     "description": ""
+    },
+    {
+     "apiname": "ID_LEVEL_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Discipline Come from Within",
+     "description": "Achieve the maximum level."
+    },
+    {
+     "apiname": "ID_KIZUNA_MAX",
+     "achieved": 1,
+     "unlocktime": 1506799084,
+     "name": "Bond. True Bond.",
+     "description": "Achieve the highest level bond with someone."
+    },
+    {
+     "apiname": "ID_ALL_KIZUNA_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Need to Diversify Yo Bonds.",
+     "description": "Achieve the highest level bond with everyone."
+    },
+    {
+     "apiname": "ID_ITEM_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We're More Like Present Protectors",
+     "description": "Collect every present."
+    },
+    {
+     "apiname": "ID_RONPA",
+     "achieved": 1,
+     "unlocktime": 1506475257,
+     "name": "Just According to Ronpa",
+     "description": "Refute an argument."
+    },
+    {
+     "apiname": "ID_GAYA_BREAK_500",
+     "achieved": 1,
+     "unlocktime": 1508451777,
+     "name": "Master Silencer",
+     "description": "Shoot down over 500 white noise."
+    },
+    {
+     "apiname": "ID_USO_RONPA",
+     "achieved": 1,
+     "unlocktime": 1506479910,
+     "name": "From a Certain Point of View",
+     "description": "Present false evidence."
+    },
+    {
+     "apiname": "ID_V_RONPA",
+     "achieved": 1,
+     "unlocktime": 1506475257,
+     "name": "Veni Vidi Vici",
+     "description": ""
+    },
+    {
+     "apiname": "ID_ROUTE_URA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "So What's Wrong with Taking the Back Streets?",
+     "description": ""
+    },
+    {
+     "apiname": "ID_ALL_ROUTE_URA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You'll Never Know If You Don't Go",
+     "description": ""
+    },
+    {
+     "apiname": "ID_EVENT_NIGHT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Giving It Up at the Hotel Kumasutra",
+     "description": ""
+    },
+    {
+     "apiname": "ID_KAKURE_MONOKUMA",
+     "achieved": 1,
+     "unlocktime": 1506633348,
+     "name": "Hidden Challenge",
+     "description": "Find a hidden Monokuma."
+    },
+    {
+     "apiname": "ID_ALL_KAKURE_MONOKUMA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monokuma Wrangler",
+     "description": "Find every hidden Monokuma."
+    },
+    {
+     "apiname": "ID_OBJECT_REACTION_1000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King of Redecorating",
+     "description": "Slap around objects at least 1,000 times."
+    },
+    {
+     "apiname": "ID_TOWARUN_HARD_S_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Stopping This Outlaw",
+     "description": ""
+    },
+    {
+     "apiname": "ID_SAKETSUKA_HARD_S_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fisher King",
+     "description": ""
+    },
+    {
+     "apiname": "ID_MONORISU_HARD_S_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monolithic Achievement",
+     "description": ""
+    },
+    {
+     "apiname": "ID_SLOT_77777",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucky Number Seven",
+     "description": ""
+    },
+    {
+     "apiname": "ID_COIN_10000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Casino Royale with Cheese",
+     "description": ""
+    },
+    {
+     "apiname": "ID_AINORI_TRUE_END",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Bright Future Awaits Us",
+     "description": ""
+    },
+    {
+     "apiname": "ID_IKUSEI_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New Kid on Campus",
+     "description": ""
+    },
+    {
+     "apiname": "ID_IKUSEI_SHIREN_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Passing Is Optional, Finishing is Mandatory",
+     "description": ""
+    },
+    {
+     "apiname": "ID_IKUSEI_ALL_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Masterful Development",
+     "description": ""
+    },
+    {
+     "apiname": "ID_RPG_BOSS_10F",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The First of Many",
+     "description": ""
+    },
+    {
+     "apiname": "ID_RPG_BOSS_50F",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reaching the Summit",
+     "description": ""
+    },
+    {
+     "apiname": "ID_RPG_HIDE_BOSS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overcoming True Fear",
+     "description": ""
+    },
+    {
+     "apiname": "ID_ALL_CARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That's All, Folks!",
+     "description": ""
+    },
+    {
+     "apiname": "ID_ALL_GALLERY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "V3 Complete",
+     "description": "Unlock the entire gallery."
+    }
+   ],
+   "success": true
+  }
+ }
+}

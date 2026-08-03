@@ -1,0 +1,306 @@
+{
+ "provider": "steam",
+ "title": "Spelunky",
+ "updated": "2026-07-26",
+ "id": "239350",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 15,
+ "total": 20,
+ "first": "2013-11-27",
+ "last": "2020-09-26",
+ "platform": "PC",
+ "icon": "f11cc6800f5139e79643331be28c348cd7ccbba2",
+ "playtime_mins": 7928,
+ "playtime": {
+  "linux": 1,
+  "windows": 2587
+ },
+ "last_played": "2020-09-26",
+ "achievements": [
+  {
+   "key": "ACH_SO_IT_BEGINS",
+   "name": "So It Begins",
+   "description": "Beat the Tutorial.",
+   "unlocked": true,
+   "date": "2013-11-27T17:35:32-06:00"
+  },
+  {
+   "key": "ACH_MINES_SHAFTED",
+   "name": "Mines Shafted",
+   "description": "Reach the Jungle.",
+   "unlocked": true,
+   "date": "2013-12-05T22:02:20-06:00"
+  },
+  {
+   "key": "ACH_SEEN_A_LOT",
+   "name": "Seen a Lot",
+   "description": "Complete 50% of the journal.",
+   "unlocked": true,
+   "date": "2014-01-27T19:10:39-06:00"
+  },
+  {
+   "key": "ACH_PUBLIC_ENEMY",
+   "name": "Public Enemy",
+   "description": "Kill 12 or more shopkeepers in one game.",
+   "unlocked": true,
+   "date": "2014-02-02T02:08:37-06:00"
+  },
+  {
+   "key": "ACH_ETERNAL_LIFE",
+   "name": "Eternal Life",
+   "description": "Obtain the Ankh.",
+   "unlocked": true,
+   "date": "2014-02-02T02:08:55-06:00"
+  },
+  {
+   "key": "ACH_JUNGLE_JAMMED",
+   "name": "Jungle Jammed",
+   "description": "Reach the Ice Caves.",
+   "unlocked": true,
+   "date": "2014-02-08T21:34:54-06:00"
+  },
+  {
+   "key": "ACH_ICE_CREAMED",
+   "name": "Ice Creamed",
+   "description": "Reach the Temple.",
+   "unlocked": true,
+   "date": "2014-02-27T21:55:23-06:00"
+  },
+  {
+   "key": "ACH_HER_FAVORITE",
+   "name": "Her Favorite",
+   "description": "Win the kapala from Kali.",
+   "unlocked": true,
+   "date": "2018-11-01T12:02:19-05:00"
+  },
+  {
+   "key": "ACH_IRONMAN",
+   "name": "Ironman",
+   "description": "Complete the game without using shortcuts.",
+   "unlocked": true,
+   "date": "2019-05-27T22:06:04-05:00"
+  },
+  {
+   "key": "ACH_MADE_IT",
+   "name": "Made It",
+   "description": "Complete the game.",
+   "unlocked": true,
+   "date": "2019-05-27T22:06:04-05:00"
+  },
+  {
+   "key": "ACH_CASANOVA",
+   "name": "Casanova",
+   "description": "Rescue 10 or more damsels in one game.",
+   "unlocked": true,
+   "date": "2020-02-21T10:14:59-06:00"
+  },
+  {
+   "key": "ACH_CITY_OF_GOLD",
+   "name": "City of Gold",
+   "description": "Reach the City of Gold.",
+   "unlocked": true,
+   "date": "2020-08-16T22:34:47-05:00"
+  },
+  {
+   "key": "ACH_SEEN_IT_ALL",
+   "name": "Seen It All",
+   "description": "Complete 100% of the journal.",
+   "unlocked": true,
+   "date": "2020-09-26T15:22:37-05:00"
+  },
+  {
+   "key": "ACH_THE_ENTIRE_GANG",
+   "name": "The Entire Gang",
+   "description": "Rescue all 16 hidden characters.",
+   "unlocked": true,
+   "date": "2020-09-26T15:25:09-05:00"
+  },
+  {
+   "key": "ACH_TO_HELL_AND_BACK",
+   "name": "To Hell and Back",
+   "description": "Complete the game the hard way.",
+   "unlocked": true,
+   "date": "2020-09-26T15:25:09-05:00"
+  },
+  {
+   "key": "ACH_ADDICTED",
+   "name": "Addicted",
+   "description": "Play Adventure Mode 1000 times.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_BIG_MONEY",
+   "name": "Big Money",
+   "description": "Obtain 500,000 gold.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_GOOD_TEAMWORK",
+   "name": "Good Teamwork",
+   "description": "Complete the game with at least two players alive. No shortcuts.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_LOW_SCORER",
+   "name": "Low Scorer",
+   "description": "Complete the game without collecting any treasure. No shortcuts.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SPEEDLUNKY",
+   "name": "Speedlunky",
+   "description": "Complete the game in under 8 minutes. No shortcuts.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Spelunky",
+   "achievements": [
+    {
+     "apiname": "ACH_SO_IT_BEGINS",
+     "achieved": 1,
+     "unlocktime": 1385595332,
+     "name": "So It Begins",
+     "description": "Beat the Tutorial."
+    },
+    {
+     "apiname": "ACH_MINES_SHAFTED",
+     "achieved": 1,
+     "unlocktime": 1386302540,
+     "name": "Mines Shafted",
+     "description": "Reach the Jungle."
+    },
+    {
+     "apiname": "ACH_JUNGLE_JAMMED",
+     "achieved": 1,
+     "unlocktime": 1391916894,
+     "name": "Jungle Jammed",
+     "description": "Reach the Ice Caves."
+    },
+    {
+     "apiname": "ACH_ICE_CREAMED",
+     "achieved": 1,
+     "unlocktime": 1393559723,
+     "name": "Ice Creamed",
+     "description": "Reach the Temple."
+    },
+    {
+     "apiname": "ACH_MADE_IT",
+     "achieved": 1,
+     "unlocktime": 1559012764,
+     "name": "Made It",
+     "description": "Complete the game."
+    },
+    {
+     "apiname": "ACH_BIG_MONEY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Big Money",
+     "description": "Obtain 500,000 gold."
+    },
+    {
+     "apiname": "ACH_CITY_OF_GOLD",
+     "achieved": 1,
+     "unlocktime": 1597635287,
+     "name": "City of Gold",
+     "description": "Reach the City of Gold."
+    },
+    {
+     "apiname": "ACH_ETERNAL_LIFE",
+     "achieved": 1,
+     "unlocktime": 1391328535,
+     "name": "Eternal Life",
+     "description": "Obtain the Ankh."
+    },
+    {
+     "apiname": "ACH_IRONMAN",
+     "achieved": 1,
+     "unlocktime": 1559012764,
+     "name": "Ironman",
+     "description": "Complete the game without using shortcuts."
+    },
+    {
+     "apiname": "ACH_SPEEDLUNKY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedlunky",
+     "description": "Complete the game in under 8 minutes. No shortcuts."
+    },
+    {
+     "apiname": "ACH_ADDICTED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Addicted",
+     "description": "Play Adventure Mode 1000 times."
+    },
+    {
+     "apiname": "ACH_TO_HELL_AND_BACK",
+     "achieved": 1,
+     "unlocktime": 1601151909,
+     "name": "To Hell and Back",
+     "description": "Complete the game the hard way."
+    },
+    {
+     "apiname": "ACH_SEEN_A_LOT",
+     "achieved": 1,
+     "unlocktime": 1390871439,
+     "name": "Seen a Lot",
+     "description": "Complete 50% of the journal."
+    },
+    {
+     "apiname": "ACH_SEEN_IT_ALL",
+     "achieved": 1,
+     "unlocktime": 1601151757,
+     "name": "Seen It All",
+     "description": "Complete 100% of the journal."
+    },
+    {
+     "apiname": "ACH_CASANOVA",
+     "achieved": 1,
+     "unlocktime": 1582301699,
+     "name": "Casanova",
+     "description": "Rescue 10 or more damsels in one game."
+    },
+    {
+     "apiname": "ACH_PUBLIC_ENEMY",
+     "achieved": 1,
+     "unlocktime": 1391328517,
+     "name": "Public Enemy",
+     "description": "Kill 12 or more shopkeepers in one game."
+    },
+    {
+     "apiname": "ACH_LOW_SCORER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Low Scorer",
+     "description": "Complete the game without collecting any treasure. No shortcuts."
+    },
+    {
+     "apiname": "ACH_GOOD_TEAMWORK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Teamwork",
+     "description": "Complete the game with at least two players alive. No shortcuts."
+    },
+    {
+     "apiname": "ACH_HER_FAVORITE",
+     "achieved": 1,
+     "unlocktime": 1541091739,
+     "name": "Her Favorite",
+     "description": "Win the kapala from Kali."
+    },
+    {
+     "apiname": "ACH_THE_ENTIRE_GANG",
+     "achieved": 1,
+     "unlocktime": 1601151909,
+     "name": "The Entire Gang",
+     "description": "Rescue all 16 hidden characters."
+    }
+   ],
+   "success": true
+  }
+ }
+}

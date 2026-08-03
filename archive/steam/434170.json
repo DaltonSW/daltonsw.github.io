@@ -1,0 +1,294 @@
+{
+ "provider": "steam",
+ "title": "The Jackbox Party Pack 3",
+ "updated": "2026-07-26",
+ "id": "434170",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 4,
+ "total": 20,
+ "first": "2022-02-01",
+ "last": "2022-09-02",
+ "platform": "PC",
+ "icon": "2ad3706f17b4e4ab41a337c59a63972cf5d77032",
+ "playtime_mins": 2230,
+ "playtime": {
+  "linux": 2122,
+  "windows": 108
+ },
+ "last_played": "2024-04-27",
+ "achievements": [
+  {
+   "key": "TMP_SURVIVE_KILLING_FLOORS",
+   "name": "TMP: Deathproof",
+   "description": "Survive The Killing Floor 3 times in one game",
+   "unlocked": true,
+   "date": "2022-02-01T20:27:05-06:00"
+  },
+  {
+   "key": "TMP_MATH",
+   "name": "TMP: Murderithmatic",
+   "description": "Get a score of 25 or more in the Math Killing Floor",
+   "unlocked": true,
+   "date": "2022-02-01T20:52:58-06:00"
+  },
+  {
+   "key": "FAKINIT_FAKER_WINS_WITHOUT_SINGLE_VOTE",
+   "name": "Fakin' It: Deep Cover",
+   "description": "Faker gets through three tasks in a row without a single vote (or two tasks for three player games).",
+   "unlocked": true,
+   "date": "2022-09-02T23:16:33-05:00"
+  },
+  {
+   "key": "FAKINIT_FAKER_CAUGHT_ON_FIRST_VOTE",
+   "name": "Fakin' It: World's Greatest Detectives",
+   "description": "Catch the Faker on the first vote.",
+   "unlocked": true,
+   "date": "2022-09-02T23:22:46-05:00"
+  },
+  {
+   "key": "AWSHIRT_CREATE_EVERY_SHIRT_IN_FINAL_ROUND",
+   "name": "Tee K.O.: DOMINATION",
+   "description": "Be the creator of every shirt in the final gauntlet",
+   "unlocked": false
+  },
+  {
+   "key": "AWSHIRT_GET_A_SHIRTALITY",
+   "name": "Tee K.O.: SHIRTALITY",
+   "description": "Get all the votes in a single battle in a 5+ player game",
+   "unlocked": false
+  },
+  {
+   "key": "AWSHIRT_USE_ALL_COLORS_IN_SINGLE_DRAWING",
+   "name": "Tee K.O.: DYE! DYE! DYE!",
+   "description": "Use all of your colors in a single drawing that then gets used on a shirt",
+   "unlocked": false
+  },
+  {
+   "key": "AWSHIRT_VOTE_AGAINST_OWN_SHIRT",
+   "name": "Tee K.O.: I FOLD",
+   "description": "Vote against your own shirt in a battle",
+   "unlocked": false
+  },
+  {
+   "key": "FAKINIT_COMPLETE_40_POINTING_TASKS",
+   "name": "Fakin' It: Pointilism",
+   "description": "Play 40 You Gotta Point tasks.",
+   "unlocked": false
+  },
+  {
+   "key": "FAKINIT_PLAY_5_GAMES_IN_A_ROW",
+   "name": "Fakin' It: 2 Fake 2 Five-ious",
+   "description": "Play five games of Fakin' It in a row.",
+   "unlocked": false
+  },
+  {
+   "key": "POLLPOSITION_GUESSED_EXACT_PERCENTAGE",
+   "name": "Guesspionage: Perfect Surveillance",
+   "description": "Guess the exact percentage",
+   "unlocked": false
+  },
+  {
+   "key": "POLLPOSITION_GUESSED_WITHIN_FIVE_PERCENT_OF_AUDIENCE",
+   "name": "Guesspionage: Live Surveillance",
+   "description": "Guess within 5% of an audience's answer",
+   "unlocked": false
+  },
+  {
+   "key": "POLLPOSITION_PERFECT_GUESSING_HIGHER_LOWER",
+   "name": "Guesspionage: No More Secrets",
+   "description": "Perfect guessing of higher/lower",
+   "unlocked": false
+  },
+  {
+   "key": "POLLPOSITION_PICKED_TOP_THREE_IN_FINAL_ROUND",
+   "name": "Guesspionage: Top Agent",
+   "description": "Pick top three answers in final round",
+   "unlocked": false
+  },
+  {
+   "key": "QUIPLASH2_CREATE_UGC",
+   "name": "Quiplash 2: When I Quip You Quip We Quip",
+   "description": "Create a custom game",
+   "unlocked": false
+  },
+  {
+   "key": "QUIPLASH2_GET_SUPERQUIPLASH",
+   "name": "Quiplash 2: Quip it Good",
+   "description": "Get a Super Quiplash!  (all player votes and 90% audience votes in a 5+ player game)",
+   "unlocked": false
+  },
+  {
+   "key": "QUIPLASH2_WIN_ALL_R1_LOSE_ALL_R2",
+   "name": "Quiplash 2: Quipwreck",
+   "description": "Win all your battles in Round 1, but lose all your battles in Round 2",
+   "unlocked": false
+  },
+  {
+   "key": "QUIPLASH2_WIN_WITH_SECRET_ENTRY",
+   "name": "Quiplash 2: Gravy Castle",
+   "unlocked": false
+  },
+  {
+   "key": "TMP_QUESTION_STREAK",
+   "name": "TMP: Feels Good to Be A-Five",
+   "description": "Answer 5 Trivia Questions in a row correctly",
+   "unlocked": false
+  },
+  {
+   "key": "TMP_SEQUEL",
+   "name": "TMP: Trilogy Murder Party",
+   "description": "Play 3 games in a row with the same players",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Jackbox Party Pack 3",
+   "achievements": [
+    {
+     "apiname": "QUIPLASH2_GET_SUPERQUIPLASH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quiplash 2: Quip it Good",
+     "description": "Get a Super Quiplash!  (all player votes and 90% audience votes in a 5+ player game)"
+    },
+    {
+     "apiname": "QUIPLASH2_WIN_ALL_R1_LOSE_ALL_R2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quiplash 2: Quipwreck",
+     "description": "Win all your battles in Round 1, but lose all your battles in Round 2"
+    },
+    {
+     "apiname": "QUIPLASH2_CREATE_UGC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quiplash 2: When I Quip You Quip We Quip",
+     "description": "Create a custom game"
+    },
+    {
+     "apiname": "QUIPLASH2_WIN_WITH_SECRET_ENTRY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quiplash 2: Gravy Castle",
+     "description": ""
+    },
+    {
+     "apiname": "AWSHIRT_USE_ALL_COLORS_IN_SINGLE_DRAWING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tee K.O.: DYE! DYE! DYE!",
+     "description": "Use all of your colors in a single drawing that then gets used on a shirt"
+    },
+    {
+     "apiname": "AWSHIRT_VOTE_AGAINST_OWN_SHIRT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tee K.O.: I FOLD",
+     "description": "Vote against your own shirt in a battle"
+    },
+    {
+     "apiname": "AWSHIRT_GET_A_SHIRTALITY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tee K.O.: SHIRTALITY",
+     "description": "Get all the votes in a single battle in a 5+ player game"
+    },
+    {
+     "apiname": "AWSHIRT_CREATE_EVERY_SHIRT_IN_FINAL_ROUND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tee K.O.: DOMINATION",
+     "description": "Be the creator of every shirt in the final gauntlet"
+    },
+    {
+     "apiname": "FAKINIT_FAKER_CAUGHT_ON_FIRST_VOTE",
+     "achieved": 1,
+     "unlocktime": 1662178966,
+     "name": "Fakin' It: World's Greatest Detectives",
+     "description": "Catch the Faker on the first vote."
+    },
+    {
+     "apiname": "FAKINIT_FAKER_WINS_WITHOUT_SINGLE_VOTE",
+     "achieved": 1,
+     "unlocktime": 1662178593,
+     "name": "Fakin' It: Deep Cover",
+     "description": "Faker gets through three tasks in a row without a single vote (or two tasks for three player games)."
+    },
+    {
+     "apiname": "FAKINIT_PLAY_5_GAMES_IN_A_ROW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fakin' It: 2 Fake 2 Five-ious",
+     "description": "Play five games of Fakin' It in a row."
+    },
+    {
+     "apiname": "FAKINIT_COMPLETE_40_POINTING_TASKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fakin' It: Pointilism",
+     "description": "Play 40 You Gotta Point tasks."
+    },
+    {
+     "apiname": "TMP_SURVIVE_KILLING_FLOORS",
+     "achieved": 1,
+     "unlocktime": 1643768825,
+     "name": "TMP: Deathproof",
+     "description": "Survive The Killing Floor 3 times in one game"
+    },
+    {
+     "apiname": "TMP_QUESTION_STREAK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TMP: Feels Good to Be A-Five",
+     "description": "Answer 5 Trivia Questions in a row correctly"
+    },
+    {
+     "apiname": "TMP_SEQUEL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TMP: Trilogy Murder Party",
+     "description": "Play 3 games in a row with the same players"
+    },
+    {
+     "apiname": "TMP_MATH",
+     "achieved": 1,
+     "unlocktime": 1643770378,
+     "name": "TMP: Murderithmatic",
+     "description": "Get a score of 25 or more in the Math Killing Floor"
+    },
+    {
+     "apiname": "POLLPOSITION_GUESSED_EXACT_PERCENTAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guesspionage: Perfect Surveillance",
+     "description": "Guess the exact percentage"
+    },
+    {
+     "apiname": "POLLPOSITION_PERFECT_GUESSING_HIGHER_LOWER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guesspionage: No More Secrets",
+     "description": "Perfect guessing of higher/lower"
+    },
+    {
+     "apiname": "POLLPOSITION_PICKED_TOP_THREE_IN_FINAL_ROUND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guesspionage: Top Agent",
+     "description": "Pick top three answers in final round"
+    },
+    {
+     "apiname": "POLLPOSITION_GUESSED_WITHIN_FIVE_PERCENT_OF_AUDIENCE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guesspionage: Live Surveillance",
+     "description": "Guess within 5% of an audience's answer"
+    }
+   ],
+   "success": true
+  }
+ }
+}

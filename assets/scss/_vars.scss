@@ -52,10 +52,11 @@ $content-width: 860px;
   --accent-2:#f0a0c4;
 
   // semantic status colors (used for game/project state pills)
-  --ok:    #7bd88f;     // finished / stable
-  --warn:  #e6c07b;     // playing / wip
-  --stop:  #e57373;     // dropped / unfinished
-  --pause: #7aa6da;     // paused — on hold, distinct from --dim (never started)
+  --ok:       #7bd88f;  // finished / stable
+  --warn:     #c9a0f5;  // playing / wip
+  --stop:     #e57373;  // dropped / unfinished
+  --pause:    #7aa6da;  // paused — on hold, distinct from --dim (never started)
+  --mastered: #e8a33d;  // mastered — trophy gold, a step above finished
 
   --radius: 8px;
 }

@@ -1,0 +1,586 @@
+{
+ "provider": "steam",
+ "title": "Super Mega Baseball 2",
+ "updated": "2026-07-26",
+ "id": "414870",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 10,
+ "total": 42,
+ "first": "2020-05-30",
+ "last": "2020-06-25",
+ "platform": "PC",
+ "icon": "555fe6cd72eda6273750cd02019070f37831410f",
+ "playtime_mins": 520,
+ "playtime": {
+  "windows": 520
+ },
+ "last_played": "2020-07-16",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_ODE_TO_THE_LONGBALLO",
+   "name": "Ode to the Longballo",
+   "description": "Hit a homerun.",
+   "unlocked": true,
+   "date": "2020-05-30T10:29:02-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_GETTIN_AROUND",
+   "name": "Gettin' Around",
+   "description": "Have your entire lineup make a plate appearance in a single inning against the CPU.",
+   "unlocked": true,
+   "date": "2020-05-30T10:31:36-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_GOOD_WOOD",
+   "name": "Good Wood",
+   "description": "Make contact with a 95+ score power swing at least five times in a single game against the CPU.",
+   "unlocked": true,
+   "date": "2020-05-30T10:50:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_ROLL_IT_UP",
+   "name": "Roll It Up",
+   "description": "Get two outs on the same play against the CPU.",
+   "unlocked": true,
+   "date": "2020-06-08T22:07:03-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_GOTTA_LOOK_GOOD_TO_PLAY_GOOD",
+   "name": "Gotta Look Good to Play Good",
+   "description": "Edit a team logo.",
+   "unlocked": true,
+   "date": "2020-06-24T20:23:20-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_QUADINGER",
+   "name": "Quadinger",
+   "description": "Hit a homerun with the bases loaded.",
+   "unlocked": true,
+   "date": "2020-06-24T22:37:33-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_TRAVEL_BY_CYCLE",
+   "name": "Travel by Cycle",
+   "description": "Hit a single, double, triple, and homerun with the same player in a Season or Elimination game.",
+   "unlocked": true,
+   "date": "2020-06-24T22:46:06-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_WERE_BACK_IN_THIS",
+   "name": "We're Back in This",
+   "description": "Overcome a 5-run deficit for a win in a Season or Elimination game.",
+   "unlocked": true,
+   "date": "2020-06-24T22:48:06-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_NO_YOU_DONT",
+   "name": "No You Don't",
+   "description": "Throw out a CPU-controlled runner while they're attempting to steal a base.",
+   "unlocked": true,
+   "date": "2020-06-25T20:41:19-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_ILL_KEEP_IT_FAIR_TRUST_ME",
+   "name": "I'll Keep It Fair, Trust Me",
+   "description": "While editing a Custom team, increase all of one player's skills to 99.",
+   "unlocked": true,
+   "date": "2020-06-25T21:17:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_A_TOUCH_OF_CLUTCH",
+   "name": "A Touch of Clutch",
+   "description": "Win a game with a walk-off homerun using an \"On Fire\" or \"Jacked\" player against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_BATTAIR_EXTRAORDINAIRE",
+   "name": "Battaire Extraordinaire",
+   "description": "Tally a regular season batting average over .400 with a player on your team (60+ plate appearances).",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_BRACKET_BOSS",
+   "name": "Bracket Boss",
+   "description": "Win the championship of a Standard Elimination.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_DEFENSIVE_MELTDOWN",
+   "name": "Defensive Meltdown",
+   "description": "Witness the opposing team make two errors in a single inning.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_DIRTY_STUFF",
+   "name": "Dirty Stuff",
+   "description": "Throw a 95+ score power pitch at least five times in a single game against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_DISTINGUISHED_DINGER",
+   "name": "Distinguished Dinger",
+   "description": "Hit a 500+ foot homerun.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_EGO99_CHALLENGE",
+   "name": "#Ego99 Challenge",
+   "description": "Win a 9+ inning game against the CPU at Ego 99 where both teams are Standard teams.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FLASHING_THE_LEATHER",
+   "name": "Flashing the Leather",
+   "description": "Make an out with a diving catch.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_FUN_FUN_WITHOUT_A_RUN",
+   "name": "Fun, Fun, Without a Run",
+   "description": "Have a player with 6 RBIs but no runs in a single game against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_GET_A_REAL_HIT_NEXT_TIME",
+   "name": "Get a Real Hit Next Time",
+   "description": "Get a base hit with a bunt while playing against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_GOLDEN_SOMBRERO",
+   "name": "Golden Sombrero",
+   "description": "Strikeout 4 times in a single game with a single player.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_HANGIN_IN_THERE",
+   "name": "Hangin' In There",
+   "description": "Foul-off four pitches with a two-strike count against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_I_JUST_NEED_ONE",
+   "name": "I Just Need One",
+   "description": "Pinch hit with a full count and then hit a homerun against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_JACK_ATTACK",
+   "name": "Jack Attack",
+   "description": "Hit four homeruns in a row against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_JUST_GIVE_UP_ALREADY",
+   "name": "Just Give Up Already",
+   "description": "Reach a 10-run lead in a Season or Elimination game.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KEEP_EM_GUESSING",
+   "name": "Keep 'em Guessing",
+   "description": "Throw at least one pitch of each pitch type in a single game.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_KNIGHT_OF_KNOCKS",
+   "name": "Knight of Knocks",
+   "description": "Hit a total of 500 hits.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_LOOKIN_DEMORALIZED",
+   "name": "Lookin' Demoralized",
+   "description": "Throw a called 3rd strike for the 3rd out with the bases loaded in a Season or Elimination game.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PENNANT_TENANT",
+   "name": "Pennant Tenant",
+   "description": "Make it to the playoffs in a Season of any length.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PERFECTO",
+   "name": "Perfecto",
+   "description": "Pitch a 9+ inning complete-game perfect game in Season or Elimination mode.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PITCHAIRE_EXTRAORDINAIRE",
+   "name": "Pitchaire Extraordinaire",
+   "description": "Tally a regular season ERA under 1.50 with a pitcher on your team (30+ innings pitched).",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_PUT_A_RING_ON_IT",
+   "name": "Put a Ring on It",
+   "description": "Win the championship of a Standard Season.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_REPEAT_OFFENDER",
+   "name": "Repeat Offender",
+   "description": "Have a single runner steal both second and third base in the same inning against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_SANDBOX_SULTAN",
+   "name": "Cream of the Custom",
+   "description": "Win the championship of a Custom Season.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_SMB2_MASTER",
+   "name": "SMB2 Master",
+   "description": "Win the championship of a Standard Season with a season average Ego of 80 or higher.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_TAILORED_TOURNEY_TITAN",
+   "name": "Tailored Tourney Titan",
+   "description": "Win the championship of a Custom Elimination.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_TERMINATION_BY_INTIMIDATION",
+   "name": "Termination by Intimidation",
+   "description": "Win a game by striking out an opposing \"Rattled\" player against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_TOURIST",
+   "name": "Tourist",
+   "description": "Win a game in every stadium.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_UNCONCEALED_WEAPON",
+   "name": "Unconcealed Weapon",
+   "description": "Steal a base on the first pitch after bringing in a pinch runner against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_WHIFF_WIZARD",
+   "name": "Whiff Wizard",
+   "description": "Strike out 15 batters in one game with a single pitcher against the CPU.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_WORKHORSE",
+   "name": "Workhorse",
+   "description": "Pitch 10 complete-game wins against the CPU (9+ inning games only).",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_YOUR_BAGEL_SIR",
+   "name": "Your Bagel, Sir",
+   "description": "Pitch a 9+ inning complete-game shutout in a Standard Season or Standard Elimination game.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Super Mega Baseball 2",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_ODE_TO_THE_LONGBALLO",
+     "achieved": 1,
+     "unlocktime": 1590852542,
+     "name": "Ode to the Longballo",
+     "description": "Hit a homerun."
+    },
+    {
+     "apiname": "ACHIEVEMENT_GOOD_WOOD",
+     "achieved": 1,
+     "unlocktime": 1590853834,
+     "name": "Good Wood",
+     "description": "Make contact with a 95+ score power swing at least five times in a single game against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_DIRTY_STUFF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dirty Stuff",
+     "description": "Throw a 95+ score power pitch at least five times in a single game against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_ROLL_IT_UP",
+     "achieved": 1,
+     "unlocktime": 1591672023,
+     "name": "Roll It Up",
+     "description": "Get two outs on the same play against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_FLASHING_THE_LEATHER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flashing the Leather",
+     "description": "Make an out with a diving catch."
+    },
+    {
+     "apiname": "ACHIEVEMENT_HANGIN_IN_THERE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hangin' In There",
+     "description": "Foul-off four pitches with a two-strike count against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_DEFENSIVE_MELTDOWN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defensive Meltdown",
+     "description": "Witness the opposing team make two errors in a single inning."
+    },
+    {
+     "apiname": "ACHIEVEMENT_GOLDEN_SOMBRERO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golden Sombrero",
+     "description": "Strikeout 4 times in a single game with a single player."
+    },
+    {
+     "apiname": "ACHIEVEMENT_GOTTA_LOOK_GOOD_TO_PLAY_GOOD",
+     "achieved": 1,
+     "unlocktime": 1593048200,
+     "name": "Gotta Look Good to Play Good",
+     "description": "Edit a team logo."
+    },
+    {
+     "apiname": "ACHIEVEMENT_ILL_KEEP_IT_FAIR_TRUST_ME",
+     "achieved": 1,
+     "unlocktime": 1593137836,
+     "name": "I'll Keep It Fair, Trust Me",
+     "description": "While editing a Custom team, increase all of one player's skills to 99."
+    },
+    {
+     "apiname": "ACHIEVEMENT_QUADINGER",
+     "achieved": 1,
+     "unlocktime": 1593056253,
+     "name": "Quadinger",
+     "description": "Hit a homerun with the bases loaded."
+    },
+    {
+     "apiname": "ACHIEVEMENT_KEEP_EM_GUESSING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Keep 'em Guessing",
+     "description": "Throw at least one pitch of each pitch type in a single game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_WERE_BACK_IN_THIS",
+     "achieved": 1,
+     "unlocktime": 1593056886,
+     "name": "We're Back in This",
+     "description": "Overcome a 5-run deficit for a win in a Season or Elimination game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_JUST_GIVE_UP_ALREADY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Give Up Already",
+     "description": "Reach a 10-run lead in a Season or Elimination game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_TOURIST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tourist",
+     "description": "Win a game in every stadium."
+    },
+    {
+     "apiname": "ACHIEVEMENT_NO_YOU_DONT",
+     "achieved": 1,
+     "unlocktime": 1593135679,
+     "name": "No You Don't",
+     "description": "Throw out a CPU-controlled runner while they're attempting to steal a base."
+    },
+    {
+     "apiname": "ACHIEVEMENT_JACK_ATTACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jack Attack",
+     "description": "Hit four homeruns in a row against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_GET_A_REAL_HIT_NEXT_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get a Real Hit Next Time",
+     "description": "Get a base hit with a bunt while playing against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_I_JUST_NEED_ONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Just Need One",
+     "description": "Pinch hit with a full count and then hit a homerun against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_UNCONCEALED_WEAPON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unconcealed Weapon",
+     "description": "Steal a base on the first pitch after bringing in a pinch runner against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_REPEAT_OFFENDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Repeat Offender",
+     "description": "Have a single runner steal both second and third base in the same inning against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_GETTIN_AROUND",
+     "achieved": 1,
+     "unlocktime": 1590852696,
+     "name": "Gettin' Around",
+     "description": "Have your entire lineup make a plate appearance in a single inning against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_FUN_FUN_WITHOUT_A_RUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fun, Fun, Without a Run",
+     "description": "Have a player with 6 RBIs but no runs in a single game against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_WHIFF_WIZARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Whiff Wizard",
+     "description": "Strike out 15 batters in one game with a single pitcher against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_A_TOUCH_OF_CLUTCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Touch of Clutch",
+     "description": "Win a game with a walk-off homerun using an \"On Fire\" or \"Jacked\" player against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_TERMINATION_BY_INTIMIDATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Termination by Intimidation",
+     "description": "Win a game by striking out an opposing \"Rattled\" player against the CPU."
+    },
+    {
+     "apiname": "ACHIEVEMENT_TRAVEL_BY_CYCLE",
+     "achieved": 1,
+     "unlocktime": 1593056766,
+     "name": "Travel by Cycle",
+     "description": "Hit a single, double, triple, and homerun with the same player in a Season or Elimination game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_LOOKIN_DEMORALIZED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lookin' Demoralized",
+     "description": "Throw a called 3rd strike for the 3rd out with the bases loaded in a Season or Elimination game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_PENNANT_TENANT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pennant Tenant",
+     "description": "Make it to the playoffs in a Season of any length."
+    },
+    {
+     "apiname": "ACHIEVEMENT_BRACKET_BOSS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bracket Boss",
+     "description": "Win the championship of a Standard Elimination."
+    },
+    {
+     "apiname": "ACHIEVEMENT_TAILORED_TOURNEY_TITAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tailored Tourney Titan",
+     "description": "Win the championship of a Custom Elimination."
+    },
+    {
+     "apiname": "ACHIEVEMENT_PUT_A_RING_ON_IT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Put a Ring on It",
+     "description": "Win the championship of a Standard Season."
+    },
+    {
+     "apiname": "ACHIEVEMENT_SANDBOX_SULTAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cream of the Custom",
+     "description": "Win the championship of a Custom Season."
+    },
+    {
+     "apiname": "ACHIEVEMENT_DISTINGUISHED_DINGER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Distinguished Dinger",
+     "description": "Hit a 500+ foot homerun."
+    },
+    {
+     "apiname": "ACHIEVEMENT_YOUR_BAGEL_SIR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Your Bagel, Sir",
+     "description": "Pitch a 9+ inning complete-game shutout in a Standard Season or Standard Elimination game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_BATTAIR_EXTRAORDINAIRE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Battaire Extraordinaire",
+     "description": "Tally a regular season batting average over .400 with a player on your team (60+ plate appearances)."
+    },
+    {
+     "apiname": "ACHIEVEMENT_PITCHAIRE_EXTRAORDINAIRE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pitchaire Extraordinaire",
+     "description": "Tally a regular season ERA under 1.50 with a pitcher on your team (30+ innings pitched)."
+    },
+    {
+     "apiname": "ACHIEVEMENT_KNIGHT_OF_KNOCKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Knight of Knocks",
+     "description": "Hit a total of 500 hits."
+    },
+    {
+     "apiname": "ACHIEVEMENT_WORKHORSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Workhorse",
+     "description": "Pitch 10 complete-game wins against the CPU (9+ inning games only)."
+    },
+    {
+     "apiname": "ACHIEVEMENT_PERFECTO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfecto",
+     "description": "Pitch a 9+ inning complete-game perfect game in Season or Elimination mode."
+    },
+    {
+     "apiname": "ACHIEVEMENT_SMB2_MASTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SMB2 Master",
+     "description": "Win the championship of a Standard Season with a season average Ego of 80 or higher."
+    },
+    {
+     "apiname": "ACHIEVEMENT_EGO99_CHALLENGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "#Ego99 Challenge",
+     "description": "Win a 9+ inning game against the CPU at Ego 99 where both teams are Standard teams."
+    }
+   ],
+   "success": true
+  }
+ }
+}

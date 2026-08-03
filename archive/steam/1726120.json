@@ -1,0 +1,209 @@
+{
+ "provider": "steam",
+ "title": "Cursed to Golf",
+ "updated": "2026-07-26",
+ "id": "1726120",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 8,
+ "total": 13,
+ "first": "2022-09-24",
+ "last": "2022-10-04",
+ "platform": "PC",
+ "icon": "e30da2abdbcc21a8e55adec85d02e7afbd6546d3",
+ "playtime_mins": 376,
+ "playtime": {
+  "deck": 42,
+  "linux": 42,
+  "windows": 333
+ },
+ "last_played": "2022-10-04",
+ "achievements": [
+  {
+   "key": "Thunderstruck",
+   "name": "The GOAT?",
+   "description": "Player dies and passes 3 club tutorial",
+   "unlocked": true,
+   "date": "2022-09-24T22:33:26-05:00"
+  },
+  {
+   "key": "DoneWithTutorial",
+   "name": "You're on your own",
+   "description": "Player passes the golf purgatory tutorial",
+   "unlocked": true,
+   "date": "2022-09-24T22:33:26-05:00"
+  },
+  {
+   "key": "B01_Boss",
+   "name": "The Scotsman",
+   "description": "Beat the Scotsman boss fight",
+   "unlocked": true,
+   "date": "2022-09-24T22:33:26-05:00"
+  },
+  {
+   "key": "Front9",
+   "name": "Front 9",
+   "description": "First time beating 9 holes",
+   "unlocked": true,
+   "date": "2022-09-25T09:05:10-05:00"
+  },
+  {
+   "key": "B02_Boss",
+   "name": "The Explorer",
+   "description": "Beat the Explorer boss fight",
+   "unlocked": true,
+   "date": "2022-09-25T09:05:10-05:00"
+  },
+  {
+   "key": "B03_Boss",
+   "name": "The Forgotten",
+   "description": "Beat the Forgotten boss fight",
+   "unlocked": true,
+   "date": "2022-09-25T22:12:15-05:00"
+  },
+  {
+   "key": "B04_Boss",
+   "name": "The Greenskeeper",
+   "description": "Beat the Greenskeeper",
+   "unlocked": true,
+   "date": "2022-10-04T19:17:53-05:00"
+  },
+  {
+   "key": "Back9",
+   "name": "Back 9",
+   "description": "Finished all 18",
+   "unlocked": true,
+   "date": "2022-10-04T19:17:53-05:00"
+  },
+  {
+   "key": "ACE",
+   "name": "ACE!",
+   "description": "Finish a hole in 2 shots",
+   "unlocked": false
+  },
+  {
+   "key": "Birdie",
+   "name": "Birdie",
+   "description": "Finish a hole in 4 shots",
+   "unlocked": false
+  },
+  {
+   "key": "Eagle",
+   "name": "Eagle",
+   "description": "Finish a hole in 3 shots",
+   "unlocked": false
+  },
+  {
+   "key": "GOLD",
+   "name": "GOLD",
+   "description": "Smash 50 gold idols",
+   "unlocked": false
+  },
+  {
+   "key": "HoleInOne",
+   "name": "Hole in One",
+   "description": "Finish a hole in 1 shot",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Cursed to Golf",
+   "achievements": [
+    {
+     "apiname": "Thunderstruck",
+     "achieved": 1,
+     "unlocktime": 1664076806,
+     "name": "The GOAT?",
+     "description": "Player dies and passes 3 club tutorial"
+    },
+    {
+     "apiname": "DoneWithTutorial",
+     "achieved": 1,
+     "unlocktime": 1664076806,
+     "name": "You're on your own",
+     "description": "Player passes the golf purgatory tutorial"
+    },
+    {
+     "apiname": "B01_Boss",
+     "achieved": 1,
+     "unlocktime": 1664076806,
+     "name": "The Scotsman",
+     "description": "Beat the Scotsman boss fight"
+    },
+    {
+     "apiname": "B02_Boss",
+     "achieved": 1,
+     "unlocktime": 1664114710,
+     "name": "The Explorer",
+     "description": "Beat the Explorer boss fight"
+    },
+    {
+     "apiname": "B03_Boss",
+     "achieved": 1,
+     "unlocktime": 1664161935,
+     "name": "The Forgotten",
+     "description": "Beat the Forgotten boss fight"
+    },
+    {
+     "apiname": "B04_Boss",
+     "achieved": 1,
+     "unlocktime": 1664929073,
+     "name": "The Greenskeeper",
+     "description": "Beat the Greenskeeper"
+    },
+    {
+     "apiname": "Front9",
+     "achieved": 1,
+     "unlocktime": 1664114710,
+     "name": "Front 9",
+     "description": "First time beating 9 holes"
+    },
+    {
+     "apiname": "Back9",
+     "achieved": 1,
+     "unlocktime": 1664929073,
+     "name": "Back 9",
+     "description": "Finished all 18"
+    },
+    {
+     "apiname": "GOLD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "GOLD",
+     "description": "Smash 50 gold idols"
+    },
+    {
+     "apiname": "Eagle",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eagle",
+     "description": "Finish a hole in 3 shots"
+    },
+    {
+     "apiname": "Birdie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Birdie",
+     "description": "Finish a hole in 4 shots"
+    },
+    {
+     "apiname": "ACE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "ACE!",
+     "description": "Finish a hole in 2 shots"
+    },
+    {
+     "apiname": "HoleInOne",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hole in One",
+     "description": "Finish a hole in 1 shot"
+    }
+   ],
+   "success": true
+  }
+ }
+}

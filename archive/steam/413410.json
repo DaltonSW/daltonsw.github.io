@@ -1,0 +1,524 @@
+{
+ "provider": "steam",
+ "title": "Danganronpa: Trigger Happy Havoc",
+ "updated": "2026-07-26",
+ "id": "413410",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 9,
+ "total": 38,
+ "first": "2017-08-06",
+ "last": "2017-08-14",
+ "platform": "PC",
+ "icon": "221f5116c2c1d46fa71a7b014b5e882334a2d0da",
+ "playtime_mins": 3173,
+ "playtime": {
+  "windows": 4
+ },
+ "last_played": "2022-11-05",
+ "achievements": [
+  {
+   "key": "PROLOGUE",
+   "name": "From Zero to Hero",
+   "unlocked": true,
+   "date": "2017-08-06T18:07:55-05:00"
+  },
+  {
+   "key": "CHAPTER1",
+   "name": "One Is the Loneliest Number",
+   "unlocked": true,
+   "date": "2017-08-06T22:16:12-05:00"
+  },
+  {
+   "key": "NO_RETRY",
+   "name": "What's a Mistrial?",
+   "description": "Cleared a class trial without having to retry a single time",
+   "unlocked": true,
+   "date": "2017-08-06T22:16:12-05:00"
+  },
+  {
+   "key": "SKIL_10",
+   "name": "Skilling 'Em Softly",
+   "description": "Cleared the 10 SP threshold",
+   "unlocked": true,
+   "date": "2017-08-07T18:44:20-05:00"
+  },
+  {
+   "key": "CHAPTER2",
+   "name": "Two of a Kind",
+   "unlocked": true,
+   "date": "2017-08-07T22:36:10-05:00"
+  },
+  {
+   "key": "NOISE_100",
+   "name": "The Color of Television",
+   "description": "Destroyed 100 white noise lines across all class trials",
+   "unlocked": true,
+   "date": "2017-08-09T21:09:39-05:00"
+  },
+  {
+   "key": "CHAPTER3",
+   "name": "Three's a Crowd",
+   "unlocked": true,
+   "date": "2017-08-09T22:00:55-05:00"
+  },
+  {
+   "key": "CHAPTER4",
+   "name": "Four by Gore",
+   "unlocked": true,
+   "date": "2017-08-14T01:00:11-05:00"
+  },
+  {
+   "key": "CHAPTER5",
+   "name": "Five Alive",
+   "unlocked": true,
+   "date": "2017-08-14T21:44:16-05:00"
+  },
+  {
+   "key": "ASAHINA",
+   "name": "Mystic Donut",
+   "description": "Filled in every page of Aoi's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "CHAPTER_ALL",
+   "name": "All's Well That Ends...Umm...",
+   "unlocked": false
+  },
+  {
+   "key": "ENISHIMA",
+   "name": "Memoirs of a Fashionista",
+   "description": "Filled in every page of Junko's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "FRIENDSHIP_ALL",
+   "name": "Mr. Know-It-All",
+   "description": "Filled in every page of every character's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "FUJISAKI",
+   "name": "GoodFellows",
+   "description": "Filled in every page of Chihiro's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "FUKAWA",
+   "name": "Strangers in a Brain",
+   "description": "Filled in every page of Toko's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "GALLERY",
+   "name": "Rogue's Gallery",
+   "description": "Unlocked all gallery items",
+   "unlocked": false
+  },
+  {
+   "key": "HAGAKURE",
+   "name": "The Sixth Nonsense",
+   "description": "Filled in every page of Yasuhiro's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "ISHIMARU",
+   "name": "The Devil Wears a High School Uniform",
+   "description": "Filled in every page of Kiyotaka's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "ISLAND_CLEAR",
+   "name": "School's Out For Summer",
+   "unlocked": false
+  },
+  {
+   "key": "ISLAND_CLEAR_ALL",
+   "name": "School's Out Forever",
+   "unlocked": false
+  },
+  {
+   "key": "KIRIGIRI",
+   "name": "Hope's Peak Confidential",
+   "description": "Filled in every page of Kyoko's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "KUWATA",
+   "name": "Almost Almost Famous",
+   "description": "Filled in every page of Leon's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "LAST_REWARD",
+   "name": "Despair's Last Reward",
+   "description": "Earned every other achievement in the game",
+   "unlocked": false
+  },
+  {
+   "key": "MACHINE",
+   "name": "Hey, Big Spender",
+   "description": "Enjoyed the exciting excitement of the MonoMono Machine 100 times",
+   "unlocked": false
+  },
+  {
+   "key": "MAIZONO",
+   "name": "Psychic",
+   "description": "Filled in every page of Sayaka's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "MEDAL",
+   "name": "Nine Coins, Nine Purses, Nine Bears",
+   "description": "Collected 999 Monocoins",
+   "unlocked": false
+  },
+  {
+   "key": "NOISE_500",
+   "name": "Tuned to a Dead Channel",
+   "description": "Destroyed 500 white noise lines across all class trials",
+   "unlocked": false
+  },
+  {
+   "key": "NO_CONCENTRATE",
+   "name": "Not From Concentrate",
+   "description": "Cleared a class trial without using your Concentration skill a single time",
+   "unlocked": false
+  },
+  {
+   "key": "NO_DAMAGE",
+   "name": "You Must Acquit",
+   "description": "Cleared a class trial without taking any damage",
+   "unlocked": false
+  },
+  {
+   "key": "OHGAMI",
+   "name": "Lovesport",
+   "description": "Filled in every page of Sakura's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "OHWADA",
+   "name": "Rebel Without a High School Degree",
+   "description": "Filled in every page of Mondo's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "PRESENT_ALL",
+   "name": "Seriously, You Shouldn't Have",
+   "description": "Collected every possible present",
+   "unlocked": false
+  },
+  {
+   "key": "PRESENT_HALF",
+   "name": "Ooh, For Me?",
+   "description": "Collected 50 unique presents",
+   "unlocked": false
+  },
+  {
+   "key": "SERESU",
+   "name": "The French Disconnection",
+   "description": "Filled in every page of Celeste's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "SKIL_20",
+   "name": "Skill or Be Skilled",
+   "description": "Cleared the 20 SP threshold",
+   "unlocked": false
+  },
+  {
+   "key": "SKIL_30",
+   "name": "Ghostface Skillah",
+   "description": "Cleared the 30 SP threshold",
+   "unlocked": false
+  },
+  {
+   "key": "TOGAMI",
+   "name": "The Game Hungers",
+   "description": "Filled in every page of Byakuya's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "YAMADA",
+   "name": "Lost in Scanslation",
+   "description": "Filled in every page of Hifumi's Report Card",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Danganronpa: Trigger Happy Havoc",
+   "achievements": [
+    {
+     "apiname": "PROLOGUE",
+     "achieved": 1,
+     "unlocktime": 1502060875,
+     "name": "From Zero to Hero",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER1",
+     "achieved": 1,
+     "unlocktime": 1502075772,
+     "name": "One Is the Loneliest Number",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER2",
+     "achieved": 1,
+     "unlocktime": 1502163370,
+     "name": "Two of a Kind",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER3",
+     "achieved": 1,
+     "unlocktime": 1502334055,
+     "name": "Three's a Crowd",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER4",
+     "achieved": 1,
+     "unlocktime": 1502690411,
+     "name": "Four by Gore",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER5",
+     "achieved": 1,
+     "unlocktime": 1502765056,
+     "name": "Five Alive",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All's Well That Ends...Umm...",
+     "description": ""
+    },
+    {
+     "apiname": "ISHIMARU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Devil Wears a High School Uniform",
+     "description": "Filled in every page of Kiyotaka's Report Card"
+    },
+    {
+     "apiname": "TOGAMI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Game Hungers",
+     "description": "Filled in every page of Byakuya's Report Card"
+    },
+    {
+     "apiname": "OHWADA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rebel Without a High School Degree",
+     "description": "Filled in every page of Mondo's Report Card"
+    },
+    {
+     "apiname": "KUWATA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Almost Almost Famous",
+     "description": "Filled in every page of Leon's Report Card"
+    },
+    {
+     "apiname": "YAMADA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lost in Scanslation",
+     "description": "Filled in every page of Hifumi's Report Card"
+    },
+    {
+     "apiname": "HAGAKURE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Sixth Nonsense",
+     "description": "Filled in every page of Yasuhiro's Report Card"
+    },
+    {
+     "apiname": "MAIZONO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Psychic",
+     "description": "Filled in every page of Sayaka's Report Card"
+    },
+    {
+     "apiname": "KIRIGIRI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hope's Peak Confidential",
+     "description": "Filled in every page of Kyoko's Report Card"
+    },
+    {
+     "apiname": "ASAHINA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mystic Donut",
+     "description": "Filled in every page of Aoi's Report Card"
+    },
+    {
+     "apiname": "FUKAWA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strangers in a Brain",
+     "description": "Filled in every page of Toko's Report Card"
+    },
+    {
+     "apiname": "OHGAMI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lovesport",
+     "description": "Filled in every page of Sakura's Report Card"
+    },
+    {
+     "apiname": "SERESU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The French Disconnection",
+     "description": "Filled in every page of Celeste's Report Card"
+    },
+    {
+     "apiname": "ENISHIMA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Memoirs of a Fashionista",
+     "description": "Filled in every page of Junko's Report Card"
+    },
+    {
+     "apiname": "FUJISAKI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "GoodFellows",
+     "description": "Filled in every page of Chihiro's Report Card"
+    },
+    {
+     "apiname": "FRIENDSHIP_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mr. Know-It-All",
+     "description": "Filled in every page of every character's Report Card"
+    },
+    {
+     "apiname": "MEDAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nine Coins, Nine Purses, Nine Bears",
+     "description": "Collected 999 Monocoins"
+    },
+    {
+     "apiname": "PRESENT_HALF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ooh, For Me?",
+     "description": "Collected 50 unique presents"
+    },
+    {
+     "apiname": "PRESENT_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seriously, You Shouldn't Have",
+     "description": "Collected every possible present"
+    },
+    {
+     "apiname": "ISLAND_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "School's Out For Summer",
+     "description": ""
+    },
+    {
+     "apiname": "ISLAND_CLEAR_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "School's Out Forever",
+     "description": ""
+    },
+    {
+     "apiname": "SKIL_10",
+     "achieved": 1,
+     "unlocktime": 1502149460,
+     "name": "Skilling 'Em Softly",
+     "description": "Cleared the 10 SP threshold"
+    },
+    {
+     "apiname": "SKIL_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skill or Be Skilled",
+     "description": "Cleared the 20 SP threshold"
+    },
+    {
+     "apiname": "SKIL_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ghostface Skillah",
+     "description": "Cleared the 30 SP threshold"
+    },
+    {
+     "apiname": "MACHINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hey, Big Spender",
+     "description": "Enjoyed the exciting excitement of the MonoMono Machine 100 times"
+    },
+    {
+     "apiname": "GALLERY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rogue's Gallery",
+     "description": "Unlocked all gallery items"
+    },
+    {
+     "apiname": "NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Must Acquit",
+     "description": "Cleared a class trial without taking any damage"
+    },
+    {
+     "apiname": "NO_RETRY",
+     "achieved": 1,
+     "unlocktime": 1502075772,
+     "name": "What's a Mistrial?",
+     "description": "Cleared a class trial without having to retry a single time"
+    },
+    {
+     "apiname": "NOISE_100",
+     "achieved": 1,
+     "unlocktime": 1502330979,
+     "name": "The Color of Television",
+     "description": "Destroyed 100 white noise lines across all class trials"
+    },
+    {
+     "apiname": "NOISE_500",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tuned to a Dead Channel",
+     "description": "Destroyed 500 white noise lines across all class trials"
+    },
+    {
+     "apiname": "NO_CONCENTRATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not From Concentrate",
+     "description": "Cleared a class trial without using your Concentration skill a single time"
+    },
+    {
+     "apiname": "LAST_REWARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Despair's Last Reward",
+     "description": "Earned every other achievement in the game"
+    }
+   ],
+   "success": true
+  }
+ }
+}

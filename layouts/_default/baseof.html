@@ -4,7 +4,7 @@
 <body>
   {{ partial "header.html" . }}
   <main class="site-main">
-    <div class="wrap">
+    <div class="wrap{{ if eq .Kind "taxonomy" }} wrap--wide{{ end }}">
       {{ block "main" . }}{{ end }}
     </div>
   </main>

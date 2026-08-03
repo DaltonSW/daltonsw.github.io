@@ -1,0 +1,56 @@
+{
+ "provider": "steam",
+ "title": "The Witness",
+ "updated": "2026-07-26",
+ "id": "210970",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 1,
+ "total": 2,
+ "first": "2016-02-07",
+ "last": "2016-02-07",
+ "platform": "PC",
+ "icon": "5406b4e33862420abfb60a23e581cad2a1ec85f7",
+ "playtime_mins": 1375,
+ "playtime": {
+  "windows": 327
+ },
+ "last_played": "2024-04-07",
+ "achievements": [
+  {
+   "key": "endgame",
+   "name": "Endgame",
+   "description": "Finished.",
+   "unlocked": true,
+   "date": "2016-02-07T19:17:09-06:00"
+  },
+  {
+   "key": "challenge",
+   "name": "Challenge",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Witness",
+   "achievements": [
+    {
+     "apiname": "endgame",
+     "achieved": 1,
+     "unlocktime": 1454894229,
+     "name": "Endgame",
+     "description": "Finished."
+    },
+    {
+     "apiname": "challenge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Challenge",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

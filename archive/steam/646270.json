@@ -1,0 +1,614 @@
+{
+ "provider": "steam",
+ "title": "60 Parsecs!",
+ "updated": "2026-07-26",
+ "id": "646270",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 12,
+ "total": 44,
+ "first": "2020-01-26",
+ "last": "2020-01-27",
+ "platform": "PC",
+ "icon": "033862bceecdc058a47d488f0be480029342d49f",
+ "playtime_mins": 1327,
+ "playtime": {
+  "windows": 1327
+ },
+ "last_played": "2020-01-28",
+ "achievements": [
+  {
+   "key": "Achievement_DontPanic",
+   "name": "Don't Panic!",
+   "description": "Make it to the shuttle before nuclear impact.",
+   "unlocked": true,
+   "date": "2020-01-26T22:11:44-06:00"
+  },
+  {
+   "key": "Achievement_SpaceEngineer",
+   "name": "Space Engineer",
+   "description": "Upgrade a system.",
+   "unlocked": true,
+   "date": "2020-01-26T23:04:39-06:00"
+  },
+  {
+   "key": "Achievement_SpaceColonization",
+   "name": "Space Colonization",
+   "description": "Crash land on a planet.",
+   "unlocked": true,
+   "date": "2020-01-26T23:09:23-06:00"
+  },
+  {
+   "key": "Achievement_Friendzone",
+   "name": "Friendzone",
+   "description": "Make a friend.",
+   "unlocked": true,
+   "date": "2020-01-26T23:11:31-06:00"
+  },
+  {
+   "key": "Achievement_Tinkerer",
+   "name": "Tinkerer",
+   "description": "Upgrade an item.",
+   "unlocked": true,
+   "date": "2020-01-26T23:17:56-06:00"
+  },
+  {
+   "key": "Achievement_AcrossTheStars",
+   "name": "Across The Stars",
+   "description": "Find a soulmate.",
+   "unlocked": true,
+   "date": "2020-01-26T23:18:56-06:00"
+  },
+  {
+   "key": "Achievement_HelloWorld",
+   "name": "Hello World",
+   "description": "Fix the communicator console after landing.",
+   "unlocked": true,
+   "date": "2020-01-26T23:23:56-06:00"
+  },
+  {
+   "key": "Achievement_DustToDust",
+   "name": "Dust to Dust",
+   "description": "Perish on a planet.",
+   "unlocked": true,
+   "date": "2020-01-26T23:36:25-06:00"
+  },
+  {
+   "key": "Achievement_Crafty",
+   "name": "Crafty",
+   "description": "Craft 10 items.",
+   "unlocked": true,
+   "date": "2020-01-27T19:58:11-06:00"
+  },
+  {
+   "key": "Achievement_MeetThePetersons",
+   "name": "Meet the Petersons",
+   "description": "Befriend the unlikely neighbors.",
+   "unlocked": true,
+   "date": "2020-01-27T20:03:15-06:00"
+  },
+  {
+   "key": "Achievement_KIA",
+   "name": "KIA",
+   "description": "And you thought you were safe.",
+   "unlocked": true,
+   "date": "2020-01-27T20:25:02-06:00"
+  },
+  {
+   "key": "Achievement_AllSeatsTaken",
+   "name": "All Seats Taken",
+   "description": "Rescue three crewmates from the station during one playthrough.",
+   "unlocked": true,
+   "date": "2020-01-27T20:50:41-06:00"
+  },
+  {
+   "key": "Achievement_Aaargh",
+   "name": "AAARGH!",
+   "description": "Become a space monster's dinner.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_AirlockExit",
+   "name": "No Ticket",
+   "description": "Out the airlock with you.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_AxelInSpace",
+   "name": "Axel jump in space!",
+   "description": "Told you it was an achievement.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_BabyAstro",
+   "name": "Unidentified Flying Offspring",
+   "description": "Reach all endings featuring the UFO.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_Bingpot",
+   "name": "Bingpot!",
+   "description": "Reach personal goals for every captain.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_BovineDomain",
+   "name": "Bovine Domain",
+   "description": "Visit all locations on Mootopia.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_EcoShuttle",
+   "name": "Eco-Shuttle",
+   "description": "Recycle 10 items.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_ExtremeMakeover",
+   "name": "Extreme Makeover",
+   "description": "Upgrade all shuttle systems (across multiple playthroughs).",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_FeelsLikeHome",
+   "name": "Feels like home",
+   "description": "Visit all locations on Phobonos.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_Felix",
+   "name": "Liberté, Égalité, Félinité",
+   "description": "Reach all endings featuring Captain Félicette.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_FirstOfApril",
+   "name": "First of April",
+   "description": "Reach an ending as April.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_FixItFelix",
+   "name": "Fix-It Felix",
+   "description": "Repair 10 items.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_ForScience",
+   "name": "For Science!",
+   "description": "Reach an ending as Emmet.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_GiantLeap",
+   "name": "Giant Leap",
+   "description": "Fulfill all objectives in 6 different Missions.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_GoldMedalist",
+   "name": "Gold Medalist",
+   "description": "Reach an ending as Deedee.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_HandsFull",
+   "name": "Hands Full",
+   "description": "Collect each item from the station at least once.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_Improvinator",
+   "name": "The Improvinator",
+   "description": "Upgrade all items (across multiple playthroughs).",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_IntergalacticBreakup",
+   "name": "Intergalactic Breakup",
+   "description": "Dump your soulmate for someone else.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_LastSupper",
+   "name": "The Last Supper",
+   "description": "Enjoy the last meal before the job.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_Maegangement",
+   "name": "Flawless Maegangement",
+   "description": "Reach an ending as Maegan.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_MutinyInMaking",
+   "name": "Mutiny in making",
+   "description": "Make an enemy.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_Muttnik",
+   "name": "Man's best comrade",
+   "description": "Reach all endings featuring Commissar Laika.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_NoManLeftBehind",
+   "name": "No Man Left Behind",
+   "description": "Reach any ending with a full crew.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_NonFiction",
+   "name": "Non-Fiction",
+   "description": "Reach an ending as Tom.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_SecondLife",
+   "name": "Second Life",
+   "description": "Reach an ending as Baby.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_SmallStep",
+   "name": "Small Step",
+   "description": "Complete 6 Missions successfully.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_SoupOdyssey",
+   "name": "2018: A Soup Odyssey",
+   "description": "Collect 111 cans of soup from the station.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_SpaceExplorer",
+   "name": "Space Explorer",
+   "description": "Go on 10 successful expeditions.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_SpaceSelfie",
+   "name": "Space Selfie",
+   "description": "Share a memory from the shuttle with the world.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_StayCool",
+   "name": "Stay Cool",
+   "description": "Die in space.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_ThatsNoMoon",
+   "name": "That's No Moon!",
+   "description": "Visit all locations on Robotofu.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_Traitor",
+   "name": "Et tu, Astrocitizen?",
+   "description": "Discover a traitor.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "60 Parsecs!",
+   "achievements": [
+    {
+     "apiname": "Achievement_DontPanic",
+     "achieved": 1,
+     "unlocktime": 1580098304,
+     "name": "Don't Panic!",
+     "description": "Make it to the shuttle before nuclear impact."
+    },
+    {
+     "apiname": "Achievement_AllSeatsTaken",
+     "achieved": 1,
+     "unlocktime": 1580179841,
+     "name": "All Seats Taken",
+     "description": "Rescue three crewmates from the station during one playthrough."
+    },
+    {
+     "apiname": "Achievement_SpaceColonization",
+     "achieved": 1,
+     "unlocktime": 1580101763,
+     "name": "Space Colonization",
+     "description": "Crash land on a planet."
+    },
+    {
+     "apiname": "Achievement_HelloWorld",
+     "achieved": 1,
+     "unlocktime": 1580102636,
+     "name": "Hello World",
+     "description": "Fix the communicator console after landing."
+    },
+    {
+     "apiname": "Achievement_Tinkerer",
+     "achieved": 1,
+     "unlocktime": 1580102276,
+     "name": "Tinkerer",
+     "description": "Upgrade an item."
+    },
+    {
+     "apiname": "Achievement_SpaceEngineer",
+     "achieved": 1,
+     "unlocktime": 1580101479,
+     "name": "Space Engineer",
+     "description": "Upgrade a system."
+    },
+    {
+     "apiname": "Achievement_Friendzone",
+     "achieved": 1,
+     "unlocktime": 1580101891,
+     "name": "Friendzone",
+     "description": "Make a friend."
+    },
+    {
+     "apiname": "Achievement_MutinyInMaking",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mutiny in making",
+     "description": "Make an enemy."
+    },
+    {
+     "apiname": "Achievement_AcrossTheStars",
+     "achieved": 1,
+     "unlocktime": 1580102336,
+     "name": "Across The Stars",
+     "description": "Find a soulmate."
+    },
+    {
+     "apiname": "Achievement_IntergalacticBreakup",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Intergalactic Breakup",
+     "description": "Dump your soulmate for someone else."
+    },
+    {
+     "apiname": "Achievement_StayCool",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stay Cool",
+     "description": "Die in space."
+    },
+    {
+     "apiname": "Achievement_DustToDust",
+     "achieved": 1,
+     "unlocktime": 1580103385,
+     "name": "Dust to Dust",
+     "description": "Perish on a planet."
+    },
+    {
+     "apiname": "Achievement_Crafty",
+     "achieved": 1,
+     "unlocktime": 1580176691,
+     "name": "Crafty",
+     "description": "Craft 10 items."
+    },
+    {
+     "apiname": "Achievement_EcoShuttle",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eco-Shuttle",
+     "description": "Recycle 10 items."
+    },
+    {
+     "apiname": "Achievement_FixItFelix",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fix-It Felix",
+     "description": "Repair 10 items."
+    },
+    {
+     "apiname": "Achievement_SpaceExplorer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Space Explorer",
+     "description": "Go on 10 successful expeditions."
+    },
+    {
+     "apiname": "Achievement_Improvinator",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Improvinator",
+     "description": "Upgrade all items (across multiple playthroughs)."
+    },
+    {
+     "apiname": "Achievement_ExtremeMakeover",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extreme Makeover",
+     "description": "Upgrade all shuttle systems (across multiple playthroughs)."
+    },
+    {
+     "apiname": "Achievement_MeetThePetersons",
+     "achieved": 1,
+     "unlocktime": 1580176995,
+     "name": "Meet the Petersons",
+     "description": "Befriend the unlikely neighbors."
+    },
+    {
+     "apiname": "Achievement_AxelInSpace",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Axel jump in space!",
+     "description": "Told you it was an achievement."
+    },
+    {
+     "apiname": "Achievement_AirlockExit",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Ticket",
+     "description": "Out the airlock with you."
+    },
+    {
+     "apiname": "Achievement_KIA",
+     "achieved": 1,
+     "unlocktime": 1580178302,
+     "name": "KIA",
+     "description": "And you thought you were safe."
+    },
+    {
+     "apiname": "Achievement_Traitor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Et tu, Astrocitizen?",
+     "description": "Discover a traitor."
+    },
+    {
+     "apiname": "Achievement_Aaargh",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "AAARGH!",
+     "description": "Become a space monster's dinner."
+    },
+    {
+     "apiname": "Achievement_ThatsNoMoon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That's No Moon!",
+     "description": "Visit all locations on Robotofu."
+    },
+    {
+     "apiname": "Achievement_FeelsLikeHome",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feels like home",
+     "description": "Visit all locations on Phobonos."
+    },
+    {
+     "apiname": "Achievement_BovineDomain",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bovine Domain",
+     "description": "Visit all locations on Mootopia."
+    },
+    {
+     "apiname": "Achievement_GoldMedalist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gold Medalist",
+     "description": "Reach an ending as Deedee."
+    },
+    {
+     "apiname": "Achievement_ForScience",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "For Science!",
+     "description": "Reach an ending as Emmet."
+    },
+    {
+     "apiname": "Achievement_SecondLife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Second Life",
+     "description": "Reach an ending as Baby."
+    },
+    {
+     "apiname": "Achievement_NonFiction",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Non-Fiction",
+     "description": "Reach an ending as Tom."
+    },
+    {
+     "apiname": "Achievement_Maegangement",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flawless Maegangement",
+     "description": "Reach an ending as Maegan."
+    },
+    {
+     "apiname": "Achievement_Bingpot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bingpot!",
+     "description": "Reach personal goals for every captain."
+    },
+    {
+     "apiname": "Achievement_SpaceSelfie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Space Selfie",
+     "description": "Share a memory from the shuttle with the world."
+    },
+    {
+     "apiname": "Achievement_NoManLeftBehind",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Man Left Behind",
+     "description": "Reach any ending with a full crew."
+    },
+    {
+     "apiname": "Achievement_SoupOdyssey",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "2018: A Soup Odyssey",
+     "description": "Collect 111 cans of soup from the station."
+    },
+    {
+     "apiname": "Achievement_HandsFull",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hands Full",
+     "description": "Collect each item from the station at least once."
+    },
+    {
+     "apiname": "Achievement_SmallStep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Small Step",
+     "description": "Complete 6 Missions successfully."
+    },
+    {
+     "apiname": "Achievement_GiantLeap",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Giant Leap",
+     "description": "Fulfill all objectives in 6 different Missions."
+    },
+    {
+     "apiname": "Achievement_FirstOfApril",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First of April",
+     "description": "Reach an ending as April."
+    },
+    {
+     "apiname": "Achievement_Felix",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Liberté, Égalité, Félinité",
+     "description": "Reach all endings featuring Captain Félicette."
+    },
+    {
+     "apiname": "Achievement_Muttnik",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Man's best comrade",
+     "description": "Reach all endings featuring Commissar Laika."
+    },
+    {
+     "apiname": "Achievement_LastSupper",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Last Supper",
+     "description": "Enjoy the last meal before the job."
+    },
+    {
+     "apiname": "Achievement_BabyAstro",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unidentified Flying Offspring",
+     "description": "Reach all endings featuring the UFO."
+    }
+   ],
+   "success": true
+  }
+ }
+}

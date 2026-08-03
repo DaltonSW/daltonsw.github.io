@@ -1,0 +1,295 @@
+{
+ "provider": "steam",
+ "title": "The Jackbox Party Pack 8",
+ "updated": "2026-07-26",
+ "id": "1552350",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 5,
+ "total": 20,
+ "first": "2022-02-01",
+ "last": "2026-01-10",
+ "platform": "PC",
+ "icon": "29b6c9e8b43c09b806e8cd61c8318c6fb8b5b4d5",
+ "playtime_mins": 588,
+ "playtime": {
+  "linux": 243,
+  "windows": 344
+ },
+ "last_played": "2026-01-10",
+ "achievements": [
+  {
+   "key": "POLL_MINE_PERFECT_ROUND",
+   "name": "The Poll Mine: Perfect Round",
+   "description": "Your team went an entire round without selecting an incorrect door",
+   "unlocked": true,
+   "date": "2022-02-01T21:14:17-06:00"
+  },
+  {
+   "key": "JOB_JOB_TAPS",
+   "name": "Job Job: Logo Poke-a",
+   "description": "Poked the logo 40 times",
+   "unlocked": true,
+   "date": "2022-04-02T22:37:52-05:00"
+  },
+  {
+   "key": "JOB_JOB_TWO_SYNERGIES",
+   "name": "Job Job: Totally Synergized",
+   "description": "Got two Synergies in one round",
+   "unlocked": true,
+   "date": "2022-04-02T23:18:26-05:00"
+  },
+  {
+   "key": "JOB_JOB_THREE_RAINBOWS",
+   "name": "Job Job: Over the Rainbow",
+   "description": "Got a Rainbow Bonus in all three rounds",
+   "unlocked": true,
+   "date": "2022-04-02T23:24:17-05:00"
+  },
+  {
+   "key": "THEWHEEL_SPIN_WHEN_EVERYONE_CAN_WIN",
+   "name": "The Wheel: It’s Anyone’s Game",
+   "description": "Spun the wheel when all players had enough points to win the game",
+   "unlocked": true,
+   "date": "2026-01-10T21:42:00-06:00"
+  },
+  {
+   "key": "DRAWFULANIMATE_FOOL_SAME_PLAYER",
+   "name": "Drawful Animate: Fool Me Three Times",
+   "description": "Fooled the same player three times in a game",
+   "unlocked": false
+  },
+  {
+   "key": "DRAWFULANIMATE_PLAY_FRIEND_MODE",
+   "name": "Drawful Animate: Proof of Friends",
+   "description": "Played Friend Mode",
+   "unlocked": false
+  },
+  {
+   "key": "DRAWFULANIMATE_TYPE_ACHIEVEMENT",
+   "name": "Drawful Animate: “Accomplishment”",
+   "unlocked": false
+  },
+  {
+   "key": "DRAWFULANIMATE_USE_ALL_THREE_COLORS",
+   "name": "Drawful Animate: Palette Cleanser",
+   "description": "Used all three colors in an animation ",
+   "unlocked": false
+  },
+  {
+   "key": "JOB_JOB_WEEKDAY_PLAYING",
+   "name": "Job Job: Workin' 9 to 5",
+   "description": "Played a game every weekday between 9am and 5pm",
+   "unlocked": false
+  },
+  {
+   "key": "POLL_MINE_ALL_ALONE",
+   "name": "The Poll Mine: All Alone",
+   "description": "Won a game by yourself against nine people",
+   "unlocked": false
+  },
+  {
+   "key": "POLL_MINE_IN_THE_DARK",
+   "name": "The Poll Mine: In The Dark",
+   "description": "In round one, picked the eighth place door on first guess",
+   "unlocked": false
+  },
+  {
+   "key": "POLL_MINE_VS_THE_WORLD",
+   "name": "The Poll Mine: Vs the World",
+   "description": "In Streamer Mode, played against an audience of 1,000 or more",
+   "unlocked": false
+  },
+  {
+   "key": "THEWHEEL_BACK_TO_BACK_WINNER",
+   "name": "The Wheel: True Enlightenment",
+   "description": "Had your question answered two games in a row",
+   "unlocked": false
+  },
+  {
+   "key": "THEWHEEL_EARN_EVERY_POWER_SLICE",
+   "name": "The Wheel: Power Slice Hero",
+   "description": "Earned the power slice every round in a single game",
+   "unlocked": false
+  },
+  {
+   "key": "THEWHEEL_LOTS_OF_POINTS_FROM_ONE_SLICE",
+   "name": "The Wheel: The Big Score",
+   "description": "Earned over 10000 points from a single slice",
+   "unlocked": false
+  },
+  {
+   "key": "WEAPONS_DRAWN_FLAWLESS_DETECTIVE",
+   "name": "Weapons Drawn: Elementary",
+   "description": "At least one detective got every case right, including Cold Cases",
+   "unlocked": false
+  },
+  {
+   "key": "WEAPONS_DRAWN_MIDNIGHT_PLAYING",
+   "name": "Weapons Drawn: Dead of Night",
+   "description": "Played the game at midnight",
+   "unlocked": false
+  },
+  {
+   "key": "WEAPONS_DRAWN_SCHMITTY_KILLED",
+   "name": "Weapons Drawn: Lashed Out",
+   "description": "An Accomplice named Schmitty was murdered",
+   "unlocked": false
+  },
+  {
+   "key": "WEAPONS_DRAWN_TEN_TARGETS",
+   "name": "Weapons Drawn: Belle of the Ball",
+   "description": "A single Accomplice received 10 murder attempts",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Jackbox Party Pack 8",
+   "achievements": [
+    {
+     "apiname": "DRAWFULANIMATE_FOOL_SAME_PLAYER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drawful Animate: Fool Me Three Times",
+     "description": "Fooled the same player three times in a game"
+    },
+    {
+     "apiname": "DRAWFULANIMATE_USE_ALL_THREE_COLORS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drawful Animate: Palette Cleanser",
+     "description": "Used all three colors in an animation "
+    },
+    {
+     "apiname": "DRAWFULANIMATE_PLAY_FRIEND_MODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drawful Animate: Proof of Friends",
+     "description": "Played Friend Mode"
+    },
+    {
+     "apiname": "DRAWFULANIMATE_TYPE_ACHIEVEMENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drawful Animate: “Accomplishment”",
+     "description": ""
+    },
+    {
+     "apiname": "THEWHEEL_SPIN_WHEN_EVERYONE_CAN_WIN",
+     "achieved": 1,
+     "unlocktime": 1768102920,
+     "name": "The Wheel: It’s Anyone’s Game",
+     "description": "Spun the wheel when all players had enough points to win the game"
+    },
+    {
+     "apiname": "THEWHEEL_EARN_EVERY_POWER_SLICE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Wheel: Power Slice Hero",
+     "description": "Earned the power slice every round in a single game"
+    },
+    {
+     "apiname": "THEWHEEL_LOTS_OF_POINTS_FROM_ONE_SLICE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Wheel: The Big Score",
+     "description": "Earned over 10000 points from a single slice"
+    },
+    {
+     "apiname": "THEWHEEL_BACK_TO_BACK_WINNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Wheel: True Enlightenment",
+     "description": "Had your question answered two games in a row"
+    },
+    {
+     "apiname": "JOB_JOB_TWO_SYNERGIES",
+     "achieved": 1,
+     "unlocktime": 1648959506,
+     "name": "Job Job: Totally Synergized",
+     "description": "Got two Synergies in one round"
+    },
+    {
+     "apiname": "JOB_JOB_THREE_RAINBOWS",
+     "achieved": 1,
+     "unlocktime": 1648959857,
+     "name": "Job Job: Over the Rainbow",
+     "description": "Got a Rainbow Bonus in all three rounds"
+    },
+    {
+     "apiname": "JOB_JOB_TAPS",
+     "achieved": 1,
+     "unlocktime": 1648957072,
+     "name": "Job Job: Logo Poke-a",
+     "description": "Poked the logo 40 times"
+    },
+    {
+     "apiname": "JOB_JOB_WEEKDAY_PLAYING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Job Job: Workin' 9 to 5",
+     "description": "Played a game every weekday between 9am and 5pm"
+    },
+    {
+     "apiname": "POLL_MINE_IN_THE_DARK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Poll Mine: In The Dark",
+     "description": "In round one, picked the eighth place door on first guess"
+    },
+    {
+     "apiname": "POLL_MINE_PERFECT_ROUND",
+     "achieved": 1,
+     "unlocktime": 1643771657,
+     "name": "The Poll Mine: Perfect Round",
+     "description": "Your team went an entire round without selecting an incorrect door"
+    },
+    {
+     "apiname": "POLL_MINE_ALL_ALONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Poll Mine: All Alone",
+     "description": "Won a game by yourself against nine people"
+    },
+    {
+     "apiname": "POLL_MINE_VS_THE_WORLD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Poll Mine: Vs the World",
+     "description": "In Streamer Mode, played against an audience of 1,000 or more"
+    },
+    {
+     "apiname": "WEAPONS_DRAWN_FLAWLESS_DETECTIVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapons Drawn: Elementary",
+     "description": "At least one detective got every case right, including Cold Cases"
+    },
+    {
+     "apiname": "WEAPONS_DRAWN_TEN_TARGETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapons Drawn: Belle of the Ball",
+     "description": "A single Accomplice received 10 murder attempts"
+    },
+    {
+     "apiname": "WEAPONS_DRAWN_MIDNIGHT_PLAYING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapons Drawn: Dead of Night",
+     "description": "Played the game at midnight"
+    },
+    {
+     "apiname": "WEAPONS_DRAWN_SCHMITTY_KILLED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapons Drawn: Lashed Out",
+     "description": "An Accomplice named Schmitty was murdered"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -108,8 +108,12 @@ func SelectCandidates(candidates []Candidate) ([]int, error) {
 	return chosen, err
 }
 
-var gameStatuses = []string{"backlog", "playing", "finished", "dropped"}
-var playthroughStatuses = []string{"playing", "finished", "dropped", "paused"}
+// "session-based" marks a game (roguelikes, multiplayer) that doesn't have a
+// meaningful start/finish narrative — it's played in an open-ended series of
+// sessions with no state that ends play. Such a game gets exactly one
+// playthrough entry, ever; see the session-based gating in logForGame.
+var gameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "session-based"}
+var playthroughStatuses = []string{"playing", "finished", "mastered", "dropped", "paused"}
 
 func selectOptions(values []string) []huh.Option[string] {
 	opts := make([]huh.Option[string], len(values))
@@ -158,6 +162,109 @@ func NewGameForm(defaultTitle string) (NewGameFields, error) {
 		return f, err
 	}
 	return f, nil
+}
+
+// EditGameForm prompts to edit a game's front-matter fields, prefilled with
+// current values. RetroAchievementsID/SteamAppID and the markdown body
+// aren't editable here — relinking a provider deserves its own flow.
+func EditGameForm(fm FrontMatter) (FrontMatter, error) {
+	f := fm
+	rating := fm.RatingString()
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewInput().Title("Title").Value(&f.Title).Validate(func(s string) error {
+				if strings.TrimSpace(s) == "" {
+					return fmt.Errorf("title is required")
+				}
+				return nil
+			}),
+			huh.NewInput().Title("Platform").Value(&f.Platform),
+			huh.NewSelect[string]().Title("Status").Options(selectOptions(gameStatuses)...).Value(&f.Status),
+			huh.NewInput().Title("Started (YYYY-MM-DD)").Value(&f.Started).Validate(validateDate(false)),
+			huh.NewInput().Title("Finished (YYYY-MM-DD, blank if ongoing)").Value(&f.Finished).Validate(validateDate(false)),
+			huh.NewInput().Title("Rating (1-10, blank if none)").Value(&rating).Validate(validateRating),
+			huh.NewConfirm().Title("Draft (unpublished)?").Value(&f.Draft),
+		),
+	).Run()
+	if err != nil {
+		return fm, err
+	}
+	f.SetRating(rating)
+	return f, nil
+}
+
+const (
+	reviewPublish     = "publish"
+	reviewEditPublish = "edit_publish"
+	reviewEditOnly    = "edit_only"
+	reviewDrop        = "drop"
+	reviewSkip        = "skip"
+	reviewDelete      = "delete"
+	reviewQuit        = "quit"
+)
+
+// SelectReviewAction prompts for what to do with one draft game during
+// `gamelog review`. Delete is only offered when canDelete (no captured
+// playthroughs or archive history to risk).
+func SelectReviewAction(canDelete bool) (string, error) {
+	options := []huh.Option[string]{
+		huh.NewOption("Publish as-is", reviewPublish),
+		huh.NewOption("Edit, then publish", reviewEditPublish),
+		huh.NewOption("Edit without publishing", reviewEditOnly),
+		huh.NewOption("Mark dropped & publish", reviewDrop),
+		huh.NewOption("Skip (leave draft, show again next run)", reviewSkip),
+	}
+	if canDelete {
+		options = append(options, huh.NewOption("Delete this stub", reviewDelete))
+	}
+	options = append(options, huh.NewOption("Quit review", reviewQuit))
+
+	var action string
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[string]().Title("What next?").Options(options...).Value(&action),
+		),
+	).Run()
+	return action, err
+}
+
+// ConfirmDelete asks for explicit confirmation before removing a game's
+// directory entirely. Defaults to false — deletion is destructive and rare.
+func ConfirmDelete(path string) (bool, error) {
+	var ok bool
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewConfirm().Title(fmt.Sprintf("Permanently delete %s?", path)).Value(&ok),
+		),
+	).Run()
+	return ok, err
+}
+
+const (
+	staleAccept = "accept"
+	staleEdit   = "edit"
+	staleSkip   = "skip"
+	staleQuit   = "quit"
+)
+
+// SelectStaleAction prompts for what to do with one stale-game suggestion
+// during `gamelog stale`. Nothing here writes on its own — every path either
+// discards or hands off to the same confirm/loss-check write every other
+// front-matter edit goes through.
+func SelectStaleAction(suggested string) (string, error) {
+	options := []huh.Option[string]{
+		huh.NewOption(fmt.Sprintf("Accept — mark %s", suggested), staleAccept),
+		huh.NewOption("Edit before applying", staleEdit),
+		huh.NewOption("Still playing / skip for now", staleSkip),
+		huh.NewOption("Quit", staleQuit),
+	}
+	var action string
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[string]().Title("What next?").Options(options...).Value(&action),
+		),
+	).Run()
+	return action, err
 }
 
 // PlaythroughForm prompts for all fields of a new `playthroughs:` entry.

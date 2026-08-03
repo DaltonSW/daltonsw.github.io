@@ -1,0 +1,620 @@
+{
+ "provider": "steam",
+ "title": "LEGO® Star Wars™: The Skywalker Saga",
+ "updated": "2026-07-26",
+ "id": "920210",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 5,
+ "total": 45,
+ "first": "2023-01-17",
+ "last": "2023-02-16",
+ "platform": "PC",
+ "icon": "568a07f03f8dba0b74c4a02f6ebb43ce5e09075c",
+ "playtime_mins": 339,
+ "playtime": {
+  "windows": 339
+ },
+ "last_played": "2023-02-16",
+ "achievements": [
+  {
+   "key": "EARN_17K_STUDS",
+   "name": "''You guys got yourself a ship!''",
+   "description": "Earn 17,000 studs",
+   "unlocked": true,
+   "date": "2023-01-17T19:34:54-06:00"
+  },
+  {
+   "key": "COMBAT_MULTIPLIER_OF_30",
+   "name": "''I don't like you either!''",
+   "description": "Achieve a combat multiplier score of 30",
+   "unlocked": true,
+   "date": "2023-01-17T19:35:08-06:00"
+  },
+  {
+   "key": "TRUE_JEDI_ONE_LEVEL",
+   "name": "''You think you're some kind of Jedi?''",
+   "description": "Achieve True Jedi in a single level",
+   "unlocked": true,
+   "date": "2023-01-17T20:18:54-06:00"
+  },
+  {
+   "key": "COMPLETE_EPISODE_7",
+   "name": "The Force Awakens",
+   "description": "Complete ''Episode VII - The Force Awakens''",
+   "unlocked": true,
+   "date": "2023-02-16T16:08:44-06:00"
+  },
+  {
+   "key": "MINIKITS_ONE_LEVEL",
+   "name": "''A fine addition to my collection''",
+   "description": "Collect all Minikits in a single level",
+   "unlocked": true,
+   "date": "2023-02-16T16:17:15-06:00"
+  },
+  {
+   "key": "COLLECT_ALL_CHARACTERS",
+   "name": "''Hello there!''",
+   "description": "Collect all characters",
+   "unlocked": false
+  },
+  {
+   "key": "COLLECT_ALL_KYBERBRICKS",
+   "name": "''You may fire when ready''",
+   "description": "Collect 1000 Kyber Bricks",
+   "unlocked": false
+  },
+  {
+   "key": "COLLECT_EVERY_DATACARD",
+   "name": "''What have you done with those plans?''",
+   "description": "Collect every datacard",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_AHCHTO_ENDOR_KEF_EXEGOL",
+   "name": "Unknown Regions",
+   "description": "Complete all events on Ahch-To, Endor, Kef Bir and Exegol",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_ALL_GALAXY_CHALLENGES",
+   "name": "''Do or do not. There is no try''",
+   "description": "Complete all Galaxy Challenges",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_ALL_GALAXY_EVENTS",
+   "name": "''See you around, kid''",
+   "description": "Complete all of the events in the Galaxy",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_ALL_GNK",
+   "name": "''GONK!''",
+   "description": "Complete all the GNK droid escort missions",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_ALL_HUB_RACES",
+   "name": "''The fastest hunk of junk in the galaxy''",
+   "description": "Complete all races in the Galaxy",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_BESPIN_CRAIT_HOTH",
+   "name": "Greater Javin",
+   "description": "Complete all events on Bespin, Crait and Hoth",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_CANTONICA_YAVIN_AJAN",
+   "name": "New Territories",
+   "description": "Complete all events on Cantonica, Yavin 4 and Ajan Kloss",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_CORUSCANT_JAKKU_TAKODANA",
+   "name": "The Interior",
+   "description": "Complete all events on Coruscant, Jakku and Takodana",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_DAGOBAH_MUSTAFAR_UTAPAU",
+   "name": "Western Reaches",
+   "description": "Complete all events on Dagobah, Mustafar, Utapau",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_DQAR_NABOO_PASAANA",
+   "name": "Trailing Sectors",
+   "description": "Complete all events on D'Qar, Naboo and Pasaana",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_1",
+   "name": "The Phantom Menace",
+   "description": "Complete ''Episode I - The Phantom Menace''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_2",
+   "name": "Attack of the Clones",
+   "description": "Complete ''Episode II - Attack of the Clones''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_3",
+   "name": "Revenge of the Sith",
+   "description": "Complete ''Episode III - Revenge of the Sith''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_4",
+   "name": "A New Hope",
+   "description": "Complete ''Episode IV - A New Hope''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_5",
+   "name": "The Empire Strikes Back",
+   "description": "Complete ''Episode V - The Empire Strikes Back''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_6",
+   "name": "Return of the Jedi",
+   "description": "Complete ''Episode VI - Return of the Jedi''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_8",
+   "name": "The Last Jedi",
+   "description": "Complete ''Episode VIII - The Last Jedi''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_EPISODE_9",
+   "name": "The Rise of Skywalker",
+   "description": "Complete ''Episode IX - The Rise of Skywalker''",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_FAULTYDROID_ON_TATOOINE",
+   "name": "''Hey, what are you trying to push on us?''",
+   "description": "Complete all the Jawa's ''Faulty Droid'' missions on Tatooine",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_FLIGHT_LEVEL_WITHOUT_DYING",
+   "name": "''I can fly anything''",
+   "description": "Complete a flight level without dying",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_GEONOSIS_TATOOINE",
+   "name": "The Arkanis Sector",
+   "description": "Complete all events on Geonosis and Tatooine",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_KAMINO",
+   "name": "Rishi Maze",
+   "description": "Complete all events on Kamino",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_KASHYYYK_KIJIMI",
+   "name": "The Slice",
+   "description": "Complete all events on Kashyyyk and Kijimi",
+   "unlocked": false
+  },
+  {
+   "key": "COMPLETE_SKYWALKER_SAGA",
+   "name": "''It's true... all of it''",
+   "description": "Complete The Skywalker Saga",
+   "unlocked": false
+  },
+  {
+   "key": "CREATE_25_REBEL_DISGUISES",
+   "name": "''A little short for a Stormtrooper...''",
+   "description": "Create 25 disguises as a Hero character",
+   "unlocked": false
+  },
+  {
+   "key": "DEFEAT_3_ENEMIES_WITH_ONE_FORCE",
+   "name": "''Aggressive Negotiations''",
+   "description": "Defeat 3 enemies at the same time with an explosion",
+   "unlocked": false
+  },
+  {
+   "key": "DESTROY_100_TIE_FIGHTERS",
+   "name": "''Get the crews to their fighters''",
+   "description": "Destroy 100 TIE fighters",
+   "unlocked": false
+  },
+  {
+   "key": "EARN_10B_STUDS",
+   "name": "''Only one business in the Galaxy...''",
+   "description": "Earn 10,000,000,000 studs",
+   "unlocked": false
+  },
+  {
+   "key": "FULLY_UPGRADE_ALL_CHAR_CLASSES",
+   "name": "''Power! Unlimited power!''",
+   "description": "Fully upgrade all of the character classes",
+   "unlocked": false
+  },
+  {
+   "key": "FULLY_UPGRADE_ONE_CHAR_CLASS",
+   "name": "''Raw, untamed power''",
+   "description": "Fully upgrade a character class",
+   "unlocked": false
+  },
+  {
+   "key": "JEDI_MIND_TRICKS_CANTINA",
+   "name": "''Jedi Business''",
+   "description": "Use Jedi Mind Tricks to make 5 people fight simultaneously in the Cantina",
+   "unlocked": false
+  },
+  {
+   "key": "LEVEL_CHALLENGES_ALL_LEVELS",
+   "name": "''No more training, do you require''",
+   "description": "Complete all 'Level Challenges'",
+   "unlocked": false
+  },
+  {
+   "key": "LEVEL_CHALLENGES_ONE_LEVEL",
+   "name": "''Impressive, most impressive''",
+   "description": "Complete all 'Level Challenges' in a single level",
+   "unlocked": false
+  },
+  {
+   "key": "MINIKITS_ALL_LEVELS",
+   "name": "''You needn't worry about your reward''",
+   "description": "Collect all Minikits",
+   "unlocked": false
+  },
+  {
+   "key": "RIDE_ALL_CREATURES",
+   "name": "''I've never seen a real one!''",
+   "description": "Ride all creatures throughout the Galaxy",
+   "unlocked": false
+  },
+  {
+   "key": "SHOOT_50_ENEMIES_HATS",
+   "name": "''And who gave you permission...?''",
+   "description": "Shoot helmets off 50 enemies",
+   "unlocked": false
+  },
+  {
+   "key": "TRUE_JEDI_ALL_LEVELS",
+   "name": "''Now I am the Master''",
+   "description": "Achieve True Jedi in every level",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "LEGO® Star Wars™: The Skywalker Saga",
+   "achievements": [
+    {
+     "apiname": "COMPLETE_EPISODE_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Phantom Menace",
+     "description": "Complete ''Episode I - The Phantom Menace''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Attack of the Clones",
+     "description": "Complete ''Episode II - Attack of the Clones''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Revenge of the Sith",
+     "description": "Complete ''Episode III - Revenge of the Sith''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A New Hope",
+     "description": "Complete ''Episode IV - A New Hope''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Empire Strikes Back",
+     "description": "Complete ''Episode V - The Empire Strikes Back''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Return of the Jedi",
+     "description": "Complete ''Episode VI - Return of the Jedi''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_7",
+     "achieved": 1,
+     "unlocktime": 1676585324,
+     "name": "The Force Awakens",
+     "description": "Complete ''Episode VII - The Force Awakens''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Last Jedi",
+     "description": "Complete ''Episode VIII - The Last Jedi''"
+    },
+    {
+     "apiname": "COMPLETE_EPISODE_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Rise of Skywalker",
+     "description": "Complete ''Episode IX - The Rise of Skywalker''"
+    },
+    {
+     "apiname": "COMPLETE_SKYWALKER_SAGA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''It's true... all of it''",
+     "description": "Complete The Skywalker Saga"
+    },
+    {
+     "apiname": "COMPLETE_GEONOSIS_TATOOINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Arkanis Sector",
+     "description": "Complete all events on Geonosis and Tatooine"
+    },
+    {
+     "apiname": "COMPLETE_BESPIN_CRAIT_HOTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Greater Javin",
+     "description": "Complete all events on Bespin, Crait and Hoth"
+    },
+    {
+     "apiname": "COMPLETE_CANTONICA_YAVIN_AJAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New Territories",
+     "description": "Complete all events on Cantonica, Yavin 4 and Ajan Kloss"
+    },
+    {
+     "apiname": "COMPLETE_KAMINO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rishi Maze",
+     "description": "Complete all events on Kamino"
+    },
+    {
+     "apiname": "COMPLETE_CORUSCANT_JAKKU_TAKODANA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Interior",
+     "description": "Complete all events on Coruscant, Jakku and Takodana"
+    },
+    {
+     "apiname": "COMPLETE_KASHYYYK_KIJIMI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Slice",
+     "description": "Complete all events on Kashyyyk and Kijimi"
+    },
+    {
+     "apiname": "COMPLETE_DQAR_NABOO_PASAANA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trailing Sectors",
+     "description": "Complete all events on D'Qar, Naboo and Pasaana"
+    },
+    {
+     "apiname": "COMPLETE_AHCHTO_ENDOR_KEF_EXEGOL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unknown Regions",
+     "description": "Complete all events on Ahch-To, Endor, Kef Bir and Exegol"
+    },
+    {
+     "apiname": "COMPLETE_DAGOBAH_MUSTAFAR_UTAPAU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Western Reaches",
+     "description": "Complete all events on Dagobah, Mustafar, Utapau"
+    },
+    {
+     "apiname": "TRUE_JEDI_ONE_LEVEL",
+     "achieved": 1,
+     "unlocktime": 1674008334,
+     "name": "''You think you're some kind of Jedi?''",
+     "description": "Achieve True Jedi in a single level"
+    },
+    {
+     "apiname": "TRUE_JEDI_ALL_LEVELS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Now I am the Master''",
+     "description": "Achieve True Jedi in every level"
+    },
+    {
+     "apiname": "LEVEL_CHALLENGES_ONE_LEVEL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Impressive, most impressive''",
+     "description": "Complete all 'Level Challenges' in a single level"
+    },
+    {
+     "apiname": "LEVEL_CHALLENGES_ALL_LEVELS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''No more training, do you require''",
+     "description": "Complete all 'Level Challenges'"
+    },
+    {
+     "apiname": "MINIKITS_ONE_LEVEL",
+     "achieved": 1,
+     "unlocktime": 1676585835,
+     "name": "''A fine addition to my collection''",
+     "description": "Collect all Minikits in a single level"
+    },
+    {
+     "apiname": "MINIKITS_ALL_LEVELS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''You needn't worry about your reward''",
+     "description": "Collect all Minikits"
+    },
+    {
+     "apiname": "FULLY_UPGRADE_ONE_CHAR_CLASS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Raw, untamed power''",
+     "description": "Fully upgrade a character class"
+    },
+    {
+     "apiname": "FULLY_UPGRADE_ALL_CHAR_CLASSES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Power! Unlimited power!''",
+     "description": "Fully upgrade all of the character classes"
+    },
+    {
+     "apiname": "COLLECT_EVERY_DATACARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''What have you done with those plans?''",
+     "description": "Collect every datacard"
+    },
+    {
+     "apiname": "COLLECT_ALL_KYBERBRICKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''You may fire when ready''",
+     "description": "Collect 1000 Kyber Bricks"
+    },
+    {
+     "apiname": "COLLECT_ALL_CHARACTERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Hello there!''",
+     "description": "Collect all characters"
+    },
+    {
+     "apiname": "COMPLETE_ALL_GALAXY_EVENTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''See you around, kid''",
+     "description": "Complete all of the events in the Galaxy"
+    },
+    {
+     "apiname": "COMPLETE_ALL_HUB_RACES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''The fastest hunk of junk in the galaxy''",
+     "description": "Complete all races in the Galaxy"
+    },
+    {
+     "apiname": "COMPLETE_ALL_GALAXY_CHALLENGES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Do or do not. There is no try''",
+     "description": "Complete all Galaxy Challenges"
+    },
+    {
+     "apiname": "JEDI_MIND_TRICKS_CANTINA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Jedi Business''",
+     "description": "Use Jedi Mind Tricks to make 5 people fight simultaneously in the Cantina"
+    },
+    {
+     "apiname": "RIDE_ALL_CREATURES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''I've never seen a real one!''",
+     "description": "Ride all creatures throughout the Galaxy"
+    },
+    {
+     "apiname": "EARN_17K_STUDS",
+     "achieved": 1,
+     "unlocktime": 1674005694,
+     "name": "''You guys got yourself a ship!''",
+     "description": "Earn 17,000 studs"
+    },
+    {
+     "apiname": "EARN_10B_STUDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Only one business in the Galaxy...''",
+     "description": "Earn 10,000,000,000 studs"
+    },
+    {
+     "apiname": "DESTROY_100_TIE_FIGHTERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Get the crews to their fighters''",
+     "description": "Destroy 100 TIE fighters"
+    },
+    {
+     "apiname": "DEFEAT_3_ENEMIES_WITH_ONE_FORCE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Aggressive Negotiations''",
+     "description": "Defeat 3 enemies at the same time with an explosion"
+    },
+    {
+     "apiname": "SHOOT_50_ENEMIES_HATS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''And who gave you permission...?''",
+     "description": "Shoot helmets off 50 enemies"
+    },
+    {
+     "apiname": "CREATE_25_REBEL_DISGUISES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''A little short for a Stormtrooper...''",
+     "description": "Create 25 disguises as a Hero character"
+    },
+    {
+     "apiname": "COMBAT_MULTIPLIER_OF_30",
+     "achieved": 1,
+     "unlocktime": 1674005708,
+     "name": "''I don't like you either!''",
+     "description": "Achieve a combat multiplier score of 30"
+    },
+    {
+     "apiname": "COMPLETE_FAULTYDROID_ON_TATOOINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''Hey, what are you trying to push on us?''",
+     "description": "Complete all the Jawa's ''Faulty Droid'' missions on Tatooine"
+    },
+    {
+     "apiname": "COMPLETE_ALL_GNK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''GONK!''",
+     "description": "Complete all the GNK droid escort missions"
+    },
+    {
+     "apiname": "COMPLETE_FLIGHT_LEVEL_WITHOUT_DYING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "''I can fly anything''",
+     "description": "Complete a flight level without dying"
+    }
+   ],
+   "success": true
+  }
+ }
+}

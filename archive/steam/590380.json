@@ -1,0 +1,955 @@
+{
+ "provider": "steam",
+ "title": "Into the Breach",
+ "updated": "2026-07-26",
+ "id": "590380",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 15,
+ "total": 70,
+ "first": "2018-04-12",
+ "last": "2018-04-15",
+ "platform": "PC",
+ "icon": "0539a82edc8163180b672bf9e073d53687ab3cad",
+ "playtime_mins": 767,
+ "playtime": {
+  "windows": 239
+ },
+ "last_played": "2023-05-21",
+ "achievements": [
+  {
+   "key": "Ach_Global_Pilot_Max",
+   "name": "Field Promotion",
+   "description": "Have a Pilot reach maximum level",
+   "unlocked": true,
+   "date": "2018-04-12T01:14:18-05:00"
+  },
+  {
+   "key": "Ach_Archive_A_3",
+   "name": "Island Secure",
+   "description": "Complete 1st Corporate Island with the Rift Walkers squad",
+   "unlocked": true,
+   "date": "2018-04-12T01:31:26-05:00"
+  },
+  {
+   "key": "Ach_Global_Island_Perfect",
+   "name": "Perfect Island",
+   "description": "Do not fail any objective on a single Corporate Island",
+   "unlocked": true,
+   "date": "2018-04-12T02:10:00-05:00"
+  },
+  {
+   "key": "Ach_Global_Meta_Unlock",
+   "name": "Emerging Technologies",
+   "description": "Unlock a new Mech Squad",
+   "unlocked": true,
+   "date": "2018-04-12T02:10:00-05:00"
+  },
+  {
+   "key": "Ach_Archive_A_1",
+   "name": "Watery Grave",
+   "description": "Drown 3 enemies in water in a single battle with the Rift Walkers squad",
+   "unlocked": true,
+   "date": "2018-04-13T01:30:22-05:00"
+  },
+  {
+   "key": "Ach_Global_Island_Rep",
+   "name": "Good Samaritan",
+   "description": "Earn 9 Reputation from missions on a single Corporate Island",
+   "unlocked": true,
+   "date": "2018-04-13T22:22:43-05:00"
+  },
+  {
+   "key": "Ach_Archive_A_2",
+   "name": "Ramming Speed",
+   "description": "Kill an enemy 5 or more tiles away with a Dash Punch with the Rift Walkers squad",
+   "unlocked": true,
+   "date": "2018-04-13T22:28:38-05:00"
+  },
+  {
+   "key": "Ach_Global_Meta_Reputation",
+   "name": "Friends in High Places",
+   "description": "Spend 50 Reputation across all games",
+   "unlocked": true,
+   "date": "2018-04-14T15:18:39-05:00"
+  },
+  {
+   "key": "Ach_Global_Challenge_Power",
+   "name": "Sustainable Energy",
+   "description": "Finish 3 Corporate Islands without dropping below 4 Grid Power",
+   "unlocked": true,
+   "date": "2018-04-14T15:19:15-05:00"
+  },
+  {
+   "key": "Ach_Global_Challenge_Perfect",
+   "name": "There is No Try",
+   "description": "Finish 3 Corporate Islands without failing an objective",
+   "unlocked": true,
+   "date": "2018-04-14T15:19:15-05:00"
+  },
+  {
+   "key": "Ach_Global_Pilot_Unlocked",
+   "name": "Come Together",
+   "description": "Unlock 6 additional Pilots",
+   "unlocked": true,
+   "date": "2018-04-14T15:28:19-05:00"
+  },
+  {
+   "key": "Ach_Global_Pilot_Three",
+   "name": "Best of the Best",
+   "description": "Have 3 Pilots at maximum level simultaneously",
+   "unlocked": true,
+   "date": "2018-04-14T15:36:39-05:00"
+  },
+  {
+   "key": "Ach_Global_Victory_Any",
+   "name": "Victory",
+   "description": "Beat the game (any length)",
+   "unlocked": true,
+   "date": "2018-04-14T16:10:50-05:00"
+  },
+  {
+   "key": "Ach_Global_Meta_Block",
+   "name": "Immovable Objects",
+   "description": "Block 100 Vek across all games",
+   "unlocked": true,
+   "date": "2018-04-15T22:59:54-05:00"
+  },
+  {
+   "key": "Ach_Archive_B_3",
+   "name": "Mass Displacement",
+   "description": "Push 3 enemies with a single attack with the Steel Judoka squad",
+   "unlocked": true,
+   "date": "2018-04-15T23:35:14-05:00"
+  },
+  {
+   "key": "Ach_Archive_B_1",
+   "name": "Unbreakable",
+   "description": "Have Mech Armor absorb 5 damage in a single battle with the Steel Judoka squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Archive_B_2",
+   "name": "Unwitting Allies",
+   "description": "Have 4 enemies die from enemy fire in a single battle with the Steel Judoka squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Custom_1",
+   "name": "Mech Specialist",
+   "description": "Beat the game with 3 of the same Mech in a Custom squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Custom_2",
+   "name": "Class Specialist",
+   "description": "Beat the game with 3 different Mechs from the same class in a Custom squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Custom_3",
+   "name": "Flight Specialist",
+   "description": "Beat the game with 3 flying Mechs in a Custom squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Detritus_A_1",
+   "name": "Chain Attack",
+   "description": "Have the Chain Whip attack chain through 10 tiles with the Blitzkrieg squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Detritus_A_2",
+   "name": "Lightning War",
+   "description": "Finish the first 2 Corporate Islands in under 30 minutes with the Blitzkrieg squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Detritus_A_3",
+   "name": "Hold the Line",
+   "description": "Block 4 emerging Vek in a single turn with the Blitzkrieg squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Detritus_B_1",
+   "name": "Healing",
+   "description": "Heal 10 Mech Health in a single battle with the Hazardous Mechs squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Detritus_B_2",
+   "name": "Immortal",
+   "description": "Finish 4 Corporate Islands without a Mech being destroyed at the end of a battle with the Hazardous Mechs squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Detritus_B_3",
+   "name": "Overkill",
+   "description": "Deal 8 damage to a unit with a single attack with the Hazardous Mechs squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Challenge_Mods",
+   "name": "Engineering Dropout",
+   "description": "Finish 3 Corporate Islands without powering a Weapon Modification",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Challenge_New",
+   "name": "Trusted Equipment",
+   "description": "Finish 3 Corporate Islands without equipping any new Pilots or weapons",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Challenge_Pods",
+   "name": "Chronophobia",
+   "description": "Finish 3 Corporate Islands and destroy every Time Pod discovered",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Island_Building",
+   "name": "The Defenders",
+   "description": "Finish a Corporate Island without taking Building Damage",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Island_Mechs",
+   "name": "Untouchable",
+   "description": "Finish a Corporate Island without taking Mech Damage (Repaired damage is still damage)",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Island_Power",
+   "name": "Backup Batteries",
+   "description": "Earn or buy 10 Grid Power on a single Corporate Island",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Meta_Perfect",
+   "name": "Perfect Strategy",
+   "description": "Collect 10 Perfect Island rewards across all games",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Meta_Rescue",
+   "name": "Humanity's Savior",
+   "description": "Rescue 100,000 civilians across all games",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Pilot_Face",
+   "name": "Distant Friends",
+   "description": "Encounter a familiar face",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Pilot_Final",
+   "name": "I'm getting too old for this...",
+   "description": "Have an individual Pilot fight the final battle 3 times across multiple games",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Victory_Complete",
+   "name": "Complete Victory",
+   "description": "Beat the game with all 10 primary Squads (any length)",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Victory_Four",
+   "name": "Squads Victory",
+   "description": "Beat the game with 4 different Squads (any length)",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Victory_Hard",
+   "name": "Hard Victory",
+   "description": "Beat the game on Hard (any length)",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Global_Victory_Islands",
+   "name": "Adaptable Victory",
+   "description": "Beat the game at least once per length (2, 3, \u0026 4 Islands secured)",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Pinnacle_A_1",
+   "name": "Get Over Here",
+   "description": "Kill an enemy by pulling it into yourself with the Zenith Guard squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Pinnacle_A_2",
+   "name": "Glittering C-Beam",
+   "description": "Hit 4 enemies with a single laser with the Zenith Guard squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Pinnacle_A_3",
+   "name": "Shield Mastery",
+   "description": "Block damage with a Shield 4 times in a single battle with the Zenith Guard squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Pinnacle_B_1",
+   "name": "Cryo Expert",
+   "description": "Shoot the Cryo-Launcher 4 times in a single battle with the Frozen Titans squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Pinnacle_B_2",
+   "name": "Trick Shot",
+   "description": "Kill 3 enemies with a single attack of the Janus Cannon with the Frozen Titans squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Pinnacle_B_3",
+   "name": "Pacifist",
+   "description": "Kill less than 3 enemies in a single battle with the Frozen Titans squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Random_1",
+   "name": "Loot Boxes!",
+   "description": "Open 5 Time Pods in a single game with a Random squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Random_2",
+   "name": "Lucky Start",
+   "description": "Beat the game (any length) without spending any Reputation with a Random squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Random_3",
+   "name": "Change the Odds",
+   "description": "Raise Grid Defense to 30% or more with a Random squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Rust_A_1",
+   "name": "Overpowered",
+   "description": "Overpower your Power Grid twice by earning or buying Power when it is full with the Rusting Hulks squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Rust_A_2",
+   "name": "Stormy Weather",
+   "description": "Deal 12 damage with Electric Smoke in a single battle with the Rusting Hulks squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Rust_A_3",
+   "name": "Perfect Battle",
+   "description": "Take no Mech or Building Damage in a single battle with the Rusting Hulks squad (Repaired damage is still damage)",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Rust_B_1",
+   "name": "Quantum Entanglement",
+   "description": "Teleport a unit 4 tiles away with the Flame Behemoths squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Rust_B_2",
+   "name": "Scorched Earth",
+   "description": "End a battle with 12 tiles on Fire with the Flame Behemoths squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Rust_B_3",
+   "name": "This is Fine",
+   "description": "Have 5 enemies on Fire simultaneously with the Flame Behemoths squad",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Bomber_1",
+   "name": "Hold the Door",
+   "description": "Block 30 Emerging Vek by the end of Island 2 with the Bombermechs squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Bomber_2",
+   "name": "No Survivors",
+   "description": "Have 7 units (any team) die in a single turn with the Bombermechs squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Bomber_3",
+   "name": "Powered Blast",
+   "description": "Pierce a Walking Bomb with the AP Cannon to kill an Enemy with the Bombermechs squad. ",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Cataclysm_1",
+   "name": "Unstable Ground",
+   "description": "Crack 10 tiles in one mission with the Cataclysm squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Cataclysm_2",
+   "name": "Core of the Earth",
+   "description": "Drop 10 Enemies into pits on one Island with the Cataclysm squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Cataclysm_3",
+   "name": "Miner Inconvenience",
+   "description": "Destroy 20 mountains in one game with the Cataclysm squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Heat_1",
+   "name": "Boosted",
+   "description": "Boost 8 Mechs in one mission with the Heat Sinkers squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Heat_2",
+   "name": "Feed the Flame",
+   "description": "Light 3 Enemies on fire with a single attack with the Heat Sinkers squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Heat_3",
+   "name": "Maximum Firepower",
+   "description": "Deal 8 damage with a single activation of the Quick-Fire Rockets with the Heat Sinkers squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Mist_1",
+   "name": "Stay With Me!",
+   "description": "Heal 12 damage over the course of a single Island with the Mist Eaters squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Mist_2",
+   "name": "Let's Walk",
+   "description": "Move Enemies with Control Shot 120 spaces in one game with the Mist Eaters squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Mist_3",
+   "name": "On the Backburner",
+   "description": "Do 4 damage with the Reverse Thrusters with the Mist Eaters squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Spiders_1",
+   "name": "Spider Breeding",
+   "description": "Spawn 15 Arachnoids in one Island with the Arachnophile squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Spiders_2",
+   "name": "Working Together",
+   "description": "Area Shift 4 units at once with the Arachnophile squad with the Arachnophile squad.",
+   "unlocked": false
+  },
+  {
+   "key": "Ach_Squad_Spiders_3",
+   "name": "Efficient Explosives",
+   "description": "Kill 3 Enemies with 1 shot of the Ricochet Rocket with the Arachnophile squad.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Into the Breach",
+   "achievements": [
+    {
+     "apiname": "Ach_Global_Victory_Any",
+     "achieved": 1,
+     "unlocktime": 1523740250,
+     "name": "Victory",
+     "description": "Beat the game (any length)"
+    },
+    {
+     "apiname": "Ach_Global_Victory_Hard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Victory",
+     "description": "Beat the game on Hard (any length)"
+    },
+    {
+     "apiname": "Ach_Global_Victory_Islands",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adaptable Victory",
+     "description": "Beat the game at least once per length (2, 3, \u0026 4 Islands secured)"
+    },
+    {
+     "apiname": "Ach_Global_Victory_Four",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squads Victory",
+     "description": "Beat the game with 4 different Squads (any length)"
+    },
+    {
+     "apiname": "Ach_Global_Victory_Complete",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Complete Victory",
+     "description": "Beat the game with all 10 primary Squads (any length)"
+    },
+    {
+     "apiname": "Ach_Global_Meta_Unlock",
+     "achieved": 1,
+     "unlocktime": 1523517000,
+     "name": "Emerging Technologies",
+     "description": "Unlock a new Mech Squad"
+    },
+    {
+     "apiname": "Ach_Global_Meta_Reputation",
+     "achieved": 1,
+     "unlocktime": 1523737119,
+     "name": "Friends in High Places",
+     "description": "Spend 50 Reputation across all games"
+    },
+    {
+     "apiname": "Ach_Global_Meta_Block",
+     "achieved": 1,
+     "unlocktime": 1523851194,
+     "name": "Immovable Objects",
+     "description": "Block 100 Vek across all games"
+    },
+    {
+     "apiname": "Ach_Global_Meta_Rescue",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Humanity's Savior",
+     "description": "Rescue 100,000 civilians across all games"
+    },
+    {
+     "apiname": "Ach_Global_Meta_Perfect",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect Strategy",
+     "description": "Collect 10 Perfect Island rewards across all games"
+    },
+    {
+     "apiname": "Ach_Global_Island_Perfect",
+     "achieved": 1,
+     "unlocktime": 1523517000,
+     "name": "Perfect Island",
+     "description": "Do not fail any objective on a single Corporate Island"
+    },
+    {
+     "apiname": "Ach_Global_Island_Building",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Defenders",
+     "description": "Finish a Corporate Island without taking Building Damage"
+    },
+    {
+     "apiname": "Ach_Global_Island_Mechs",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Untouchable",
+     "description": "Finish a Corporate Island without taking Mech Damage (Repaired damage is still damage)"
+    },
+    {
+     "apiname": "Ach_Global_Island_Power",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Backup Batteries",
+     "description": "Earn or buy 10 Grid Power on a single Corporate Island"
+    },
+    {
+     "apiname": "Ach_Global_Island_Rep",
+     "achieved": 1,
+     "unlocktime": 1523676163,
+     "name": "Good Samaritan",
+     "description": "Earn 9 Reputation from missions on a single Corporate Island"
+    },
+    {
+     "apiname": "Ach_Global_Pilot_Max",
+     "achieved": 1,
+     "unlocktime": 1523513658,
+     "name": "Field Promotion",
+     "description": "Have a Pilot reach maximum level"
+    },
+    {
+     "apiname": "Ach_Global_Pilot_Three",
+     "achieved": 1,
+     "unlocktime": 1523738199,
+     "name": "Best of the Best",
+     "description": "Have 3 Pilots at maximum level simultaneously"
+    },
+    {
+     "apiname": "Ach_Global_Pilot_Unlocked",
+     "achieved": 1,
+     "unlocktime": 1523737699,
+     "name": "Come Together",
+     "description": "Unlock 6 additional Pilots"
+    },
+    {
+     "apiname": "Ach_Global_Pilot_Final",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm getting too old for this...",
+     "description": "Have an individual Pilot fight the final battle 3 times across multiple games"
+    },
+    {
+     "apiname": "Ach_Global_Pilot_Face",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Distant Friends",
+     "description": "Encounter a familiar face"
+    },
+    {
+     "apiname": "Ach_Global_Challenge_Power",
+     "achieved": 1,
+     "unlocktime": 1523737155,
+     "name": "Sustainable Energy",
+     "description": "Finish 3 Corporate Islands without dropping below 4 Grid Power"
+    },
+    {
+     "apiname": "Ach_Global_Challenge_Mods",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Engineering Dropout",
+     "description": "Finish 3 Corporate Islands without powering a Weapon Modification"
+    },
+    {
+     "apiname": "Ach_Global_Challenge_Pods",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chronophobia",
+     "description": "Finish 3 Corporate Islands and destroy every Time Pod discovered"
+    },
+    {
+     "apiname": "Ach_Global_Challenge_Perfect",
+     "achieved": 1,
+     "unlocktime": 1523737155,
+     "name": "There is No Try",
+     "description": "Finish 3 Corporate Islands without failing an objective"
+    },
+    {
+     "apiname": "Ach_Global_Challenge_New",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trusted Equipment",
+     "description": "Finish 3 Corporate Islands without equipping any new Pilots or weapons"
+    },
+    {
+     "apiname": "Ach_Archive_A_1",
+     "achieved": 1,
+     "unlocktime": 1523601022,
+     "name": "Watery Grave",
+     "description": "Drown 3 enemies in water in a single battle with the Rift Walkers squad"
+    },
+    {
+     "apiname": "Ach_Archive_A_2",
+     "achieved": 1,
+     "unlocktime": 1523676518,
+     "name": "Ramming Speed",
+     "description": "Kill an enemy 5 or more tiles away with a Dash Punch with the Rift Walkers squad"
+    },
+    {
+     "apiname": "Ach_Archive_A_3",
+     "achieved": 1,
+     "unlocktime": 1523514686,
+     "name": "Island Secure",
+     "description": "Complete 1st Corporate Island with the Rift Walkers squad"
+    },
+    {
+     "apiname": "Ach_Archive_B_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unbreakable",
+     "description": "Have Mech Armor absorb 5 damage in a single battle with the Steel Judoka squad"
+    },
+    {
+     "apiname": "Ach_Archive_B_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unwitting Allies",
+     "description": "Have 4 enemies die from enemy fire in a single battle with the Steel Judoka squad"
+    },
+    {
+     "apiname": "Ach_Archive_B_3",
+     "achieved": 1,
+     "unlocktime": 1523853314,
+     "name": "Mass Displacement",
+     "description": "Push 3 enemies with a single attack with the Steel Judoka squad"
+    },
+    {
+     "apiname": "Ach_Rust_A_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overpowered",
+     "description": "Overpower your Power Grid twice by earning or buying Power when it is full with the Rusting Hulks squad"
+    },
+    {
+     "apiname": "Ach_Rust_A_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stormy Weather",
+     "description": "Deal 12 damage with Electric Smoke in a single battle with the Rusting Hulks squad"
+    },
+    {
+     "apiname": "Ach_Rust_A_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect Battle",
+     "description": "Take no Mech or Building Damage in a single battle with the Rusting Hulks squad (Repaired damage is still damage)"
+    },
+    {
+     "apiname": "Ach_Rust_B_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quantum Entanglement",
+     "description": "Teleport a unit 4 tiles away with the Flame Behemoths squad"
+    },
+    {
+     "apiname": "Ach_Rust_B_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scorched Earth",
+     "description": "End a battle with 12 tiles on Fire with the Flame Behemoths squad"
+    },
+    {
+     "apiname": "Ach_Rust_B_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is Fine",
+     "description": "Have 5 enemies on Fire simultaneously with the Flame Behemoths squad"
+    },
+    {
+     "apiname": "Ach_Pinnacle_A_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get Over Here",
+     "description": "Kill an enemy by pulling it into yourself with the Zenith Guard squad"
+    },
+    {
+     "apiname": "Ach_Pinnacle_A_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glittering C-Beam",
+     "description": "Hit 4 enemies with a single laser with the Zenith Guard squad"
+    },
+    {
+     "apiname": "Ach_Pinnacle_A_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shield Mastery",
+     "description": "Block damage with a Shield 4 times in a single battle with the Zenith Guard squad"
+    },
+    {
+     "apiname": "Ach_Pinnacle_B_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cryo Expert",
+     "description": "Shoot the Cryo-Launcher 4 times in a single battle with the Frozen Titans squad"
+    },
+    {
+     "apiname": "Ach_Pinnacle_B_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trick Shot",
+     "description": "Kill 3 enemies with a single attack of the Janus Cannon with the Frozen Titans squad"
+    },
+    {
+     "apiname": "Ach_Pinnacle_B_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pacifist",
+     "description": "Kill less than 3 enemies in a single battle with the Frozen Titans squad"
+    },
+    {
+     "apiname": "Ach_Detritus_A_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chain Attack",
+     "description": "Have the Chain Whip attack chain through 10 tiles with the Blitzkrieg squad"
+    },
+    {
+     "apiname": "Ach_Detritus_A_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lightning War",
+     "description": "Finish the first 2 Corporate Islands in under 30 minutes with the Blitzkrieg squad"
+    },
+    {
+     "apiname": "Ach_Detritus_A_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hold the Line",
+     "description": "Block 4 emerging Vek in a single turn with the Blitzkrieg squad"
+    },
+    {
+     "apiname": "Ach_Detritus_B_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Healing",
+     "description": "Heal 10 Mech Health in a single battle with the Hazardous Mechs squad"
+    },
+    {
+     "apiname": "Ach_Detritus_B_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Immortal",
+     "description": "Finish 4 Corporate Islands without a Mech being destroyed at the end of a battle with the Hazardous Mechs squad"
+    },
+    {
+     "apiname": "Ach_Detritus_B_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overkill",
+     "description": "Deal 8 damage to a unit with a single attack with the Hazardous Mechs squad"
+    },
+    {
+     "apiname": "Ach_Random_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Loot Boxes!",
+     "description": "Open 5 Time Pods in a single game with a Random squad"
+    },
+    {
+     "apiname": "Ach_Random_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucky Start",
+     "description": "Beat the game (any length) without spending any Reputation with a Random squad"
+    },
+    {
+     "apiname": "Ach_Random_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Change the Odds",
+     "description": "Raise Grid Defense to 30% or more with a Random squad"
+    },
+    {
+     "apiname": "Ach_Custom_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mech Specialist",
+     "description": "Beat the game with 3 of the same Mech in a Custom squad"
+    },
+    {
+     "apiname": "Ach_Custom_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Class Specialist",
+     "description": "Beat the game with 3 different Mechs from the same class in a Custom squad"
+    },
+    {
+     "apiname": "Ach_Custom_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flight Specialist",
+     "description": "Beat the game with 3 flying Mechs in a Custom squad"
+    },
+    {
+     "apiname": "Ach_Squad_Bomber_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hold the Door",
+     "description": "Block 30 Emerging Vek by the end of Island 2 with the Bombermechs squad."
+    },
+    {
+     "apiname": "Ach_Squad_Bomber_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Survivors",
+     "description": "Have 7 units (any team) die in a single turn with the Bombermechs squad."
+    },
+    {
+     "apiname": "Ach_Squad_Bomber_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Powered Blast",
+     "description": "Pierce a Walking Bomb with the AP Cannon to kill an Enemy with the Bombermechs squad. "
+    },
+    {
+     "apiname": "Ach_Squad_Spiders_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spider Breeding",
+     "description": "Spawn 15 Arachnoids in one Island with the Arachnophile squad."
+    },
+    {
+     "apiname": "Ach_Squad_Spiders_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Working Together",
+     "description": "Area Shift 4 units at once with the Arachnophile squad with the Arachnophile squad."
+    },
+    {
+     "apiname": "Ach_Squad_Spiders_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Efficient Explosives",
+     "description": "Kill 3 Enemies with 1 shot of the Ricochet Rocket with the Arachnophile squad."
+    },
+    {
+     "apiname": "Ach_Squad_Mist_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stay With Me!",
+     "description": "Heal 12 damage over the course of a single Island with the Mist Eaters squad."
+    },
+    {
+     "apiname": "Ach_Squad_Mist_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let's Walk",
+     "description": "Move Enemies with Control Shot 120 spaces in one game with the Mist Eaters squad."
+    },
+    {
+     "apiname": "Ach_Squad_Mist_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On the Backburner",
+     "description": "Do 4 damage with the Reverse Thrusters with the Mist Eaters squad."
+    },
+    {
+     "apiname": "Ach_Squad_Heat_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boosted",
+     "description": "Boost 8 Mechs in one mission with the Heat Sinkers squad."
+    },
+    {
+     "apiname": "Ach_Squad_Heat_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feed the Flame",
+     "description": "Light 3 Enemies on fire with a single attack with the Heat Sinkers squad."
+    },
+    {
+     "apiname": "Ach_Squad_Heat_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maximum Firepower",
+     "description": "Deal 8 damage with a single activation of the Quick-Fire Rockets with the Heat Sinkers squad."
+    },
+    {
+     "apiname": "Ach_Squad_Cataclysm_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unstable Ground",
+     "description": "Crack 10 tiles in one mission with the Cataclysm squad."
+    },
+    {
+     "apiname": "Ach_Squad_Cataclysm_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Core of the Earth",
+     "description": "Drop 10 Enemies into pits on one Island with the Cataclysm squad."
+    },
+    {
+     "apiname": "Ach_Squad_Cataclysm_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Miner Inconvenience",
+     "description": "Destroy 20 mountains in one game with the Cataclysm squad."
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -26,12 +26,18 @@ Consequences that should drive design decisions:
 
 - Run `npm install` before `hugo server` on a fresh clone — the timeline depends on
   `vis-timeline` from `node_modules`, mounted into `assets/` by `config/_default/hugo.toml`.
-- `tools/gamelog/` is the Go CLI that maintains `content/games/`. Its README documents the
-  RetroAchievements/Steam API quirks that are easy to regress — read it before touching either
-  client.
-- **`tools/gamelog/KNOWN-ISSUES.md` lists outstanding defects with runnable reproductions.** Two
-  of them silently destroy or misattribute front-matter data. Read it before editing
-  `patch.go`, `frontmatter.go`, or `games.go:Slugify`.
+- `tools/gamelog/` is the Go CLI that maintains the game log. Its README documents the storage
+  layout and the RetroAchievements/Steam API quirks that are easy to regress — read it before
+  touching either client.
+- **Storage is split three ways, on purpose.** `content/games/<slug>/_index.md` is authored by
+  hand and only read by the tool after creation; `playthroughs.yaml` beside it is tool-owned and
+  rewritten whole; `archive/<provider>/<id>.json` holds captured API history, keyed by IDs that
+  never change and kept outside `content/` so a rename or delete can't destroy it — and so Hugo
+  never parses or publishes it.
+- **`tools/gamelog/KNOWN-ISSUES.md` lists what's outstanding and, just as importantly, the
+  invariants not to undo.** Read it before editing `playthroughs.go` or `achievements.go` — the
+  inline `Extra` catch-all, the string-typed dates, and the pre-write loss check each prevent a
+  specific silent data loss that has already happened once.
 - Credentials live in `tools/gamelog/.env` (gitignored). `.env.example` is the template.
 
 ## Working style

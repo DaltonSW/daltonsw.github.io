@@ -1,0 +1,832 @@
+{
+ "provider": "steam",
+ "title": "Borderlands: The Pre-Sequel",
+ "updated": "2026-07-26",
+ "id": "261640",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 13,
+ "total": 63,
+ "first": "2015-06-15",
+ "last": "2019-09-28",
+ "platform": "PC",
+ "icon": "af5ef05eac8b1eb618e4f57354ac7b3e918ab1bd",
+ "playtime_mins": 1047,
+ "playtime": {
+  "windows": 657
+ },
+ "last_played": "2019-10-05",
+ "achievements": [
+  {
+   "key": "Achievement_1",
+   "name": "Invaders Must Die",
+   "unlocked": true,
+   "date": "2015-06-15T16:18:26-05:00"
+  },
+  {
+   "key": "Achievement_32",
+   "name": "Space Rookie",
+   "description": "Reached level 5.",
+   "unlocked": true,
+   "date": "2015-06-15T16:33:56-05:00"
+  },
+  {
+   "key": "Achievement_2",
+   "name": "Welcome To The Rock",
+   "unlocked": true,
+   "date": "2015-06-15T17:00:02-05:00"
+  },
+  {
+   "key": "Achievement_3",
+   "name": "Dejamminated",
+   "unlocked": true,
+   "date": "2015-06-15T17:34:40-05:00"
+  },
+  {
+   "key": "Achievement_42",
+   "name": "High Fashion",
+   "description": "Unlocked 10 Customization Items.",
+   "unlocked": true,
+   "date": "2015-06-15T22:56:10-05:00"
+  },
+  {
+   "key": "Achievement_4",
+   "name": "I Shot The Meriff",
+   "unlocked": true,
+   "date": "2015-06-15T23:01:34-05:00"
+  },
+  {
+   "key": "Achievement_33",
+   "name": "Lunar Lieutenant",
+   "description": "Reached level 10.",
+   "unlocked": true,
+   "date": "2015-06-17T15:27:56-05:00"
+  },
+  {
+   "key": "Achievement_21",
+   "name": "Grind 'n' Bear It",
+   "description": "Used the Grinder to create an item.",
+   "unlocked": true,
+   "date": "2015-06-17T16:23:42-05:00"
+  },
+  {
+   "key": "Achievement_49",
+   "name": "Pancake Parlor",
+   "description": "Pancaked an enemy in the Stingray.",
+   "unlocked": true,
+   "date": "2015-06-17T16:58:26-05:00"
+  },
+  {
+   "key": "Achievement_18",
+   "name": "Modern Fart",
+   "unlocked": true,
+   "date": "2015-06-17T17:52:05-05:00"
+  },
+  {
+   "key": "Achievement_5",
+   "name": "Drakensburg, Schmakensburg",
+   "unlocked": true,
+   "date": "2015-06-17T18:45:35-05:00"
+  },
+  {
+   "key": "Achievement_45",
+   "name": "360 No Scope",
+   "description": "While airborne, spun 360 degrees then got a kill with a Sniper Rifle without using the scope.",
+   "unlocked": true,
+   "date": "2019-09-20T20:35:22-05:00"
+  },
+  {
+   "key": "Achievement_25",
+   "name": "Super Secret Stash",
+   "unlocked": true,
+   "date": "2019-09-28T13:28:33-05:00"
+  },
+  {
+   "key": "Achievement_10",
+   "name": "A House Divided",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_11",
+   "name": "Vault Hunter Superior",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_12",
+   "name": "Multi Face-eted",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_13",
+   "name": "Once More With Feeling",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_14",
+   "name": "Do Shoot the Messenger",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_15",
+   "name": "The Gun In The Stone",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_16",
+   "name": "Who You Gonna Call?",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_17",
+   "name": "Guardian Guardian",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_19",
+   "name": "Side Quest Student",
+   "description": "Completed 30 side missions.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_20",
+   "name": "Moon Mission Meister",
+   "description": "Completed all of the side missions.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_22",
+   "name": "The Bigger They Are",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_23",
+   "name": "Mouth To Mouth",
+   "description": "Revived 10 players with Oxygen.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_24",
+   "name": "Rocketeer",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_26",
+   "name": "Air Supremacy",
+   "description": "Killed 100 enemies with Wolf.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_27",
+   "name": "No, I'm Athena!",
+   "description": "Killed 100 enemies with the Aspis.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_28",
+   "name": "That Helped, Right?",
+   "description": "Experienced all Vault Hunter Modes using VaultHunter.EXE.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_29",
+   "name": "Executioner",
+   "description": "Killed 10 enemies in a single activation of Showdown.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_30",
+   "name": "That Tasted Purple!",
+   "description": "Had purple-rated gear or better equipped in every slot.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_31",
+   "name": "Challenger",
+   "description": "Completed level 1 of all challenges with a single character.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_34",
+   "name": "Moon Master",
+   "description": "Reached level 25.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_35",
+   "name": "Space Lord",
+   "description": "Reached level 50.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_36",
+   "name": "Moxxi's Sampler",
+   "description": "Tried all the Moxxtails in the Up Over Bar in Concordia.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_37",
+   "name": "Lunar Looter",
+   "description": "Looted 10 Moonstone Chests.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_38",
+   "name": "I Come From The Land Up Over",
+   "description": "Discovered all named locations in Serenity's Waste, Triton Flats and Stanton's Liver.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_39",
+   "name": "Beam Me Up",
+   "description": "Discovered all named locations aboard the Helios Space Station.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_40",
+   "name": "Eridian Explorer",
+   "description": "Discovered all named locations in Outlands Canyon, Outlands Spur and Vorago Solitude.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_41",
+   "name": "Cosmic Completionist",
+   "description": "Discovered all named locations.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_43",
+   "name": "The Duelist",
+   "description": "Won a duel.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_44",
+   "name": "Collateral Damage",
+   "description": "Had a Lost Legion Eternal kill 3 of his friends.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_46",
+   "name": "Expensive Taste",
+   "description": "Used the Grinder to create a Legendary item.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_47",
+   "name": "Ice To Meet You",
+   "description": "Shattered 3 frozen enemies with a single slam attack.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_48",
+   "name": "Elementalist",
+   "description": "Had an enemy frozen, corroded, ignited, and electrocuted at the same time.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_50",
+   "name": "Who Needs Air?",
+   "description": "Suffocated for 5 continuous minutes without dying.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_51",
+   "name": "Smash the System",
+   "description": "Completed all 5 rounds of The Holodome.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_52",
+   "name": "Stronger! Smarter!",
+   "description": "Completed the Badass Round of The Holodome.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_53",
+   "name": "I Welcome Your Attack, Fool",
+   "description": "Completed the Badass Round without going into Fight For Your Life.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_54",
+   "name": "Digitize Me!",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_55",
+   "name": "Smash and Not Grab",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_56",
+   "name": "Totally Recalled",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_57",
+   "name": "Shadow Play",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_58",
+   "name": "Shadow of Your Former Self",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_59",
+   "name": "Wheely Fast",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_6",
+   "name": "Who Constructs The Constructor?",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_60",
+   "name": "Sociopathic Networker",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_61",
+   "name": "The Gift that Keeps on Giving",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_62",
+   "name": "It's Raining Cats and Hotdogs",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_63",
+   "name": "No Photographs, Please!",
+   "description": "Killed 10 SpyBugs before they took your photo.",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_7",
+   "name": "Helios Rising",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_8",
+   "name": "Brain Drain",
+   "unlocked": false
+  },
+  {
+   "key": "Achievement_9",
+   "name": "The Guts Of Helios",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Borderlands: The Pre-Sequel",
+   "achievements": [
+    {
+     "apiname": "Achievement_1",
+     "achieved": 1,
+     "unlocktime": 1434403106,
+     "name": "Invaders Must Die",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_2",
+     "achieved": 1,
+     "unlocktime": 1434405602,
+     "name": "Welcome To The Rock",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_3",
+     "achieved": 1,
+     "unlocktime": 1434407680,
+     "name": "Dejamminated",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_4",
+     "achieved": 1,
+     "unlocktime": 1434427294,
+     "name": "I Shot The Meriff",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_5",
+     "achieved": 1,
+     "unlocktime": 1434584735,
+     "name": "Drakensburg, Schmakensburg",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Constructs The Constructor?",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helios Rising",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brain Drain",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Guts Of Helios",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A House Divided",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vault Hunter Superior",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Multi Face-eted",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Once More With Feeling",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Do Shoot the Messenger",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Gun In The Stone",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who You Gonna Call?",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guardian Guardian",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_18",
+     "achieved": 1,
+     "unlocktime": 1434581525,
+     "name": "Modern Fart",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Side Quest Student",
+     "description": "Completed 30 side missions."
+    },
+    {
+     "apiname": "Achievement_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moon Mission Meister",
+     "description": "Completed all of the side missions."
+    },
+    {
+     "apiname": "Achievement_21",
+     "achieved": 1,
+     "unlocktime": 1434576222,
+     "name": "Grind 'n' Bear It",
+     "description": "Used the Grinder to create an item."
+    },
+    {
+     "apiname": "Achievement_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bigger They Are",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mouth To Mouth",
+     "description": "Revived 10 players with Oxygen."
+    },
+    {
+     "apiname": "Achievement_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rocketeer",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_25",
+     "achieved": 1,
+     "unlocktime": 1569695313,
+     "name": "Super Secret Stash",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Air Supremacy",
+     "description": "Killed 100 enemies with Wolf."
+    },
+    {
+     "apiname": "Achievement_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No, I'm Athena!",
+     "description": "Killed 100 enemies with the Aspis."
+    },
+    {
+     "apiname": "Achievement_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That Helped, Right?",
+     "description": "Experienced all Vault Hunter Modes using VaultHunter.EXE."
+    },
+    {
+     "apiname": "Achievement_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Executioner",
+     "description": "Killed 10 enemies in a single activation of Showdown."
+    },
+    {
+     "apiname": "Achievement_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That Tasted Purple!",
+     "description": "Had purple-rated gear or better equipped in every slot."
+    },
+    {
+     "apiname": "Achievement_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Challenger",
+     "description": "Completed level 1 of all challenges with a single character."
+    },
+    {
+     "apiname": "Achievement_32",
+     "achieved": 1,
+     "unlocktime": 1434404036,
+     "name": "Space Rookie",
+     "description": "Reached level 5."
+    },
+    {
+     "apiname": "Achievement_33",
+     "achieved": 1,
+     "unlocktime": 1434572876,
+     "name": "Lunar Lieutenant",
+     "description": "Reached level 10."
+    },
+    {
+     "apiname": "Achievement_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moon Master",
+     "description": "Reached level 25."
+    },
+    {
+     "apiname": "Achievement_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Space Lord",
+     "description": "Reached level 50."
+    },
+    {
+     "apiname": "Achievement_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moxxi's Sampler",
+     "description": "Tried all the Moxxtails in the Up Over Bar in Concordia."
+    },
+    {
+     "apiname": "Achievement_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lunar Looter",
+     "description": "Looted 10 Moonstone Chests."
+    },
+    {
+     "apiname": "Achievement_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Come From The Land Up Over",
+     "description": "Discovered all named locations in Serenity's Waste, Triton Flats and Stanton's Liver."
+    },
+    {
+     "apiname": "Achievement_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beam Me Up",
+     "description": "Discovered all named locations aboard the Helios Space Station."
+    },
+    {
+     "apiname": "Achievement_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eridian Explorer",
+     "description": "Discovered all named locations in Outlands Canyon, Outlands Spur and Vorago Solitude."
+    },
+    {
+     "apiname": "Achievement_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cosmic Completionist",
+     "description": "Discovered all named locations."
+    },
+    {
+     "apiname": "Achievement_42",
+     "achieved": 1,
+     "unlocktime": 1434426970,
+     "name": "High Fashion",
+     "description": "Unlocked 10 Customization Items."
+    },
+    {
+     "apiname": "Achievement_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Duelist",
+     "description": "Won a duel."
+    },
+    {
+     "apiname": "Achievement_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collateral Damage",
+     "description": "Had a Lost Legion Eternal kill 3 of his friends."
+    },
+    {
+     "apiname": "Achievement_45",
+     "achieved": 1,
+     "unlocktime": 1569029722,
+     "name": "360 No Scope",
+     "description": "While airborne, spun 360 degrees then got a kill with a Sniper Rifle without using the scope."
+    },
+    {
+     "apiname": "Achievement_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Expensive Taste",
+     "description": "Used the Grinder to create a Legendary item."
+    },
+    {
+     "apiname": "Achievement_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ice To Meet You",
+     "description": "Shattered 3 frozen enemies with a single slam attack."
+    },
+    {
+     "apiname": "Achievement_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elementalist",
+     "description": "Had an enemy frozen, corroded, ignited, and electrocuted at the same time."
+    },
+    {
+     "apiname": "Achievement_49",
+     "achieved": 1,
+     "unlocktime": 1434578306,
+     "name": "Pancake Parlor",
+     "description": "Pancaked an enemy in the Stingray."
+    },
+    {
+     "apiname": "Achievement_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Needs Air?",
+     "description": "Suffocated for 5 continuous minutes without dying."
+    },
+    {
+     "apiname": "Achievement_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Smash the System",
+     "description": "Completed all 5 rounds of The Holodome."
+    },
+    {
+     "apiname": "Achievement_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stronger! Smarter!",
+     "description": "Completed the Badass Round of The Holodome."
+    },
+    {
+     "apiname": "Achievement_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Welcome Your Attack, Fool",
+     "description": "Completed the Badass Round without going into Fight For Your Life."
+    },
+    {
+     "apiname": "Achievement_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Digitize Me!",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Smash and Not Grab",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_56",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Totally Recalled",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Play",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow of Your Former Self",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_59",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wheely Fast",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_60",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sociopathic Networker",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_61",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Gift that Keeps on Giving",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_62",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's Raining Cats and Hotdogs",
+     "description": ""
+    },
+    {
+     "apiname": "Achievement_63",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Photographs, Please!",
+     "description": "Killed 10 SpyBugs before they took your photo."
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,1154 @@
+{
+ "provider": "steam",
+ "title": "XCOM: Enemy Unknown",
+ "updated": "2026-07-26",
+ "id": "200510",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 37,
+ "total": 85,
+ "first": "2013-12-21",
+ "last": "2018-10-13",
+ "platform": "PC",
+ "icon": "48be2fee1d0d511b5c7313e1359beafd36ea92ed",
+ "playtime_mins": 1020,
+ "last_played": "2018-10-13",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_47",
+   "name": "And So It Begins…",
+   "description": "Complete the tutorial mission.",
+   "unlocked": true,
+   "date": "2013-12-21T21:32:29-06:00"
+  },
+  {
+   "key": "ACHIEVEMENT_28",
+   "name": "We Happy Few ",
+   "description": "Complete a mission without losing a soldier.",
+   "unlocked": true,
+   "date": "2018-10-07T23:27:32-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_39",
+   "name": "What Wonders Await",
+   "description": "Complete a Research Project.",
+   "unlocked": true,
+   "date": "2018-10-07T23:30:38-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_41",
+   "name": "Combat Ready",
+   "description": "Build an item.",
+   "unlocked": true,
+   "date": "2018-10-07T23:31:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_23",
+   "name": "Eye in the Sky",
+   "description": "Launch a Satellite.",
+   "unlocked": true,
+   "date": "2018-10-08T11:51:21-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_46",
+   "name": "Tables Turned",
+   "description": "Shoot down a UFO.",
+   "unlocked": true,
+   "date": "2018-10-08T11:52:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_40",
+   "name": "Up and Running",
+   "description": "Build a base facility.",
+   "unlocked": true,
+   "date": "2018-10-08T12:05:33-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_43",
+   "name": "Happy to Oblige",
+   "description": "Fulfill a Council request.",
+   "unlocked": true,
+   "date": "2018-10-08T12:06:45-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_17",
+   "name": "Prisoner of War",
+   "unlocked": true,
+   "date": "2018-10-08T12:24:25-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_66",
+   "name": "Taking A Load Off",
+   "description": "Stop a squad member from suffocating in single player",
+   "unlocked": true,
+   "date": "2018-10-08T12:46:41-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_55",
+   "name": "Who Needs Limbs?",
+   "description": "Augment a soldier in single player",
+   "unlocked": true,
+   "date": "2018-10-08T14:18:27-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_36",
+   "name": "...and Practice.",
+   "description": "Build a Workshop.",
+   "unlocked": true,
+   "date": "2018-10-08T17:22:25-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_50",
+   "name": "New Friend",
+   "unlocked": true,
+   "date": "2018-10-08T18:53:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_35",
+   "name": "Theory...",
+   "description": "Build a Laboratory.",
+   "unlocked": true,
+   "date": "2018-10-08T19:18:26-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_30",
+   "name": "Worth Every Penny",
+   "description": "Acquire 1000 credits in one month.",
+   "unlocked": true,
+   "date": "2018-10-08T19:19:47-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_18",
+   "name": "The Gatekeeper",
+   "unlocked": true,
+   "date": "2018-10-08T21:34:25-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_51",
+   "name": "Bait the Hook",
+   "unlocked": true,
+   "date": "2018-10-08T22:34:07-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_19",
+   "name": "X Marks the Spot",
+   "unlocked": true,
+   "date": "2018-10-08T22:35:43-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_8",
+   "name": "Welcoming Committee",
+   "description": "Kill 150 aliens.",
+   "unlocked": true,
+   "date": "2018-10-09T14:21:20-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_75",
+   "name": "Remington… Max Remington",
+   "description": "Have your special-duty soldier kill three enemies in the same mission",
+   "unlocked": true,
+   "date": "2018-10-09T14:29:37-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_82",
+   "name": "Elite Defense",
+   "description": "Beat a new special mission without losing any assets",
+   "unlocked": true,
+   "date": "2018-10-09T14:44:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_24",
+   "name": "All Together Now",
+   "description": "Get satellite coverage over every country on one continent.",
+   "unlocked": true,
+   "date": "2018-10-09T23:20:54-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_42",
+   "name": "Drums in the Deep",
+   "description": "Gain access to the lowest level in your base.",
+   "unlocked": true,
+   "date": "2018-10-09T23:59:12-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_56",
+   "name": "A Little Bit Alien",
+   "description": "Modify a soldier in single player",
+   "unlocked": true,
+   "date": "2018-10-09T23:59:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_7",
+   "name": "Bada Boom",
+   "description": "Kill 50 aliens with explosive weapons.",
+   "unlocked": true,
+   "date": "2018-10-10T00:09:32-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_29",
+   "name": "The Hardest Road",
+   "description": "Advance one of your soldiers to Colonel rank.",
+   "unlocked": true,
+   "date": "2018-10-10T00:17:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_77",
+   "name": "Regenerate This",
+   "description": "Kill an elite enemy Medic with explosive damage in single player",
+   "unlocked": true,
+   "date": "2018-10-10T14:32:48-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_79",
+   "name": "Pain in the Neck",
+   "description": "Cause an enemy to suicide",
+   "unlocked": true,
+   "date": "2018-10-10T14:40:09-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_64",
+   "name": "Shieldbuster",
+   "description": "Eliminate an enemy's shield and kill it on the same turn in single player",
+   "unlocked": true,
+   "date": "2018-10-10T15:43:29-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_76",
+   "name": "G’day",
+   "description": "Kill an elite enemy Sniper with one of your own snipers in single player",
+   "unlocked": true,
+   "date": "2018-10-10T23:39:41-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_45",
+   "name": "Off My Planet",
+   "unlocked": true,
+   "date": "2018-10-11T23:53:20-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_84",
+   "name": "All Hands on Deck",
+   "description": "Get at least 4 kills with XCOM Base Security personnel",
+   "unlocked": true,
+   "date": "2018-10-13T16:10:41-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_60",
+   "name": "They Shall Not Pass",
+   "description": "Eliminate all alien waves",
+   "unlocked": true,
+   "date": "2018-10-13T16:42:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_26",
+   "name": "Man No More",
+   "description": "Build a suit of powered armor.",
+   "unlocked": true,
+   "date": "2018-10-13T16:51:44-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_20",
+   "name": "See All, Know All",
+   "unlocked": true,
+   "date": "2018-10-13T16:54:11-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_80",
+   "name": "Solid Prospect",
+   "description": "Complete Deluge",
+   "unlocked": true,
+   "date": "2018-10-13T17:22:57-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_16",
+   "name": "Beyond the Veil",
+   "unlocked": true,
+   "date": "2018-10-13T17:25:07-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_0",
+   "name": "No Looking Back",
+   "description": "Beat the game in Ironman mode on Classic or Impossible Difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_1",
+   "name": "Meet New People. Then Kill Them.",
+   "description": "Win a multiplayer match.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_10",
+   "name": "Shooting Stars",
+   "description": "Shoot down 40 UFOs.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_11",
+   "name": "Ain't No Cavalry Comin'",
+   "description": "Have a soldier survive every mission in a full game.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_12",
+   "name": "As A Scalpel",
+   "description": "Earn the \"Excellent\" rating in every performance category on a terror mission.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_13",
+   "name": "Edison",
+   "description": "In a single game, complete every Research Project.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_14",
+   "name": "Angel of Death",
+   "description": "Kill an alien while flying. Single player only.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_15",
+   "name": "All Employees Must Wash Hands…",
+   "description": "In a single game, complete every Autopsy.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_2",
+   "name": "Xavier",
+   "description": "Mind Control an Ethereal. Single player only.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_21",
+   "name": "On the Shoulders of Giants",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_22",
+   "name": "Ride the Lightning",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_25",
+   "name": "Hunter/Killer",
+   "description": "In a single game, shoot down one of each alien craft.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_27",
+   "name": "Bubonic",
+   "description": "Play a multiplayer match against someone with this achievement.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_3",
+   "name": "Humanity's Savior",
+   "description": "Beat the game on any difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_31",
+   "name": "Oppenheimer",
+   "description": "Staff the Research Labs with 80 scientists.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_32",
+   "name": "One Gun at a Time",
+   "description": "Staff the Engineering Department with 80 engineers.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_33",
+   "name": "Skunkworks",
+   "description": "In a single game, complete every Foundry project.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_34",
+   "name": "You Have 5 Seconds to Comply",
+   "description": "Build a S.H.I.V.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_37",
+   "name": "Wet Work",
+   "description": "Complete a Very Hard abduction mission in five turns or less on Classic or Impossible difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_38",
+   "name": "A Continental Fellow",
+   "description": "Win the game from each of the 5 starting locations.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_4",
+   "name": "Earth First",
+   "description": "Beat the game on Classic difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_44",
+   "name": "And Hell's Coming With Me",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_48",
+   "name": "The Volunteer",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_49",
+   "name": "Flight of the Valkyries",
+   "description": "Win a mission with an all-female squad. Single player only.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_5",
+   "name": "Our Finest Hour",
+   "description": "Beat the game on Impossible difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_52",
+   "name": "The Bigger They Are",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_53",
+   "name": "Rising Dragon",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_54",
+   "name": "All Aboard",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_57",
+   "name": "Enemy Within",
+   "description": "Get a Soldier to have 5 modifications in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_58",
+   "name": "Steel Martyr",
+   "description": "Deploy three tactical subsystems on a single soldier in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_59",
+   "name": "Apotheosis Denied",
+   "description": "Deal with the newest global threat",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_6",
+   "name": "Lone Wolf",
+   "description": "Clear a UFO crash site with one soldier on Classic or Impossible difficulty.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_61",
+   "name": "Zom-B-Gone",
+   "description": "Eradicate the infestation",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_62",
+   "name": "An Army Of Four",
+   "description": "Beat the game without buying a Squad Size upgrade (Classic+ difficulty)",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_63",
+   "name": "The Meld Squad",
+   "description": "Field a fully enhanced squad and win the mission",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_65",
+   "name": "Someone Your Own Size",
+   "description": "Kill a Muton Berserker in melee combat in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_67",
+   "name": "Where in the World",
+   "description": "Make certain of the new threat's location",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_68",
+   "name": "Mind the Step",
+   "description": "Jump two stories in one move in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_69",
+   "name": "Nice Cover",
+   "description": "Use Collateral Damage to blow up a car in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_70",
+   "name": "By Our Powers Combined",
+   "description": "Field a squad with 4 augmented soldiers, each with a different base ability and win the mission",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_71",
+   "name": "Rise of the Machines",
+   "description": "Field a squad consisting entirely of augmented soldiers and SHIVs (min. 4) and win the mission",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_72",
+   "name": "Mutatis Mutandis",
+   "description": "Field a squad where all members have at least two modifications (min. 4) and win the mission",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_73",
+   "name": "Mental Minefield",
+   "description": "Kill an enemy as it is psionically attacking you in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_74",
+   "name": "Anger Management",
+   "description": "Proc Combat Rush on the entire squad (min. 4)",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_78",
+   "name": "Tingling Sensation",
+   "description": "Kill an unseen enemy detected by a specially modified soldier in single player",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_81",
+   "name": "Ours are the Furies",
+   "description": "Complete Furies",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_83",
+   "name": "Guardian of Earth",
+   "description": "Designate a highly decorated soldier as the Volunteer",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_9",
+   "name": "Pale Horse",
+   "description": "Kill 500 aliens.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "XCOM: Enemy Unknown",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Looking Back",
+     "description": "Beat the game in Ironman mode on Classic or Impossible Difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meet New People. Then Kill Them.",
+     "description": "Win a multiplayer match."
+    },
+    {
+     "apiname": "ACHIEVEMENT_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Xavier",
+     "description": "Mind Control an Ethereal. Single player only."
+    },
+    {
+     "apiname": "ACHIEVEMENT_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Humanity's Savior",
+     "description": "Beat the game on any difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Earth First",
+     "description": "Beat the game on Classic difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Our Finest Hour",
+     "description": "Beat the game on Impossible difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lone Wolf",
+     "description": "Clear a UFO crash site with one soldier on Classic or Impossible difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_7",
+     "achieved": 1,
+     "unlocktime": 1539148172,
+     "name": "Bada Boom",
+     "description": "Kill 50 aliens with explosive weapons."
+    },
+    {
+     "apiname": "ACHIEVEMENT_8",
+     "achieved": 1,
+     "unlocktime": 1539112880,
+     "name": "Welcoming Committee",
+     "description": "Kill 150 aliens."
+    },
+    {
+     "apiname": "ACHIEVEMENT_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pale Horse",
+     "description": "Kill 500 aliens."
+    },
+    {
+     "apiname": "ACHIEVEMENT_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shooting Stars",
+     "description": "Shoot down 40 UFOs."
+    },
+    {
+     "apiname": "ACHIEVEMENT_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ain't No Cavalry Comin'",
+     "description": "Have a soldier survive every mission in a full game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "As A Scalpel",
+     "description": "Earn the \"Excellent\" rating in every performance category on a terror mission."
+    },
+    {
+     "apiname": "ACHIEVEMENT_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Edison",
+     "description": "In a single game, complete every Research Project."
+    },
+    {
+     "apiname": "ACHIEVEMENT_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Angel of Death",
+     "description": "Kill an alien while flying. Single player only."
+    },
+    {
+     "apiname": "ACHIEVEMENT_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Employees Must Wash Hands…",
+     "description": "In a single game, complete every Autopsy."
+    },
+    {
+     "apiname": "ACHIEVEMENT_16",
+     "achieved": 1,
+     "unlocktime": 1539469507,
+     "name": "Beyond the Veil",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_17",
+     "achieved": 1,
+     "unlocktime": 1539019465,
+     "name": "Prisoner of War",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_18",
+     "achieved": 1,
+     "unlocktime": 1539052465,
+     "name": "The Gatekeeper",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_19",
+     "achieved": 1,
+     "unlocktime": 1539056143,
+     "name": "X Marks the Spot",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_20",
+     "achieved": 1,
+     "unlocktime": 1539467651,
+     "name": "See All, Know All",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On the Shoulders of Giants",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ride the Lightning",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_23",
+     "achieved": 1,
+     "unlocktime": 1539017481,
+     "name": "Eye in the Sky",
+     "description": "Launch a Satellite."
+    },
+    {
+     "apiname": "ACHIEVEMENT_24",
+     "achieved": 1,
+     "unlocktime": 1539145254,
+     "name": "All Together Now",
+     "description": "Get satellite coverage over every country on one continent."
+    },
+    {
+     "apiname": "ACHIEVEMENT_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hunter/Killer",
+     "description": "In a single game, shoot down one of each alien craft."
+    },
+    {
+     "apiname": "ACHIEVEMENT_26",
+     "achieved": 1,
+     "unlocktime": 1539467504,
+     "name": "Man No More",
+     "description": "Build a suit of powered armor."
+    },
+    {
+     "apiname": "ACHIEVEMENT_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bubonic",
+     "description": "Play a multiplayer match against someone with this achievement."
+    },
+    {
+     "apiname": "ACHIEVEMENT_28",
+     "achieved": 1,
+     "unlocktime": 1538972852,
+     "name": "We Happy Few ",
+     "description": "Complete a mission without losing a soldier."
+    },
+    {
+     "apiname": "ACHIEVEMENT_29",
+     "achieved": 1,
+     "unlocktime": 1539148621,
+     "name": "The Hardest Road",
+     "description": "Advance one of your soldiers to Colonel rank."
+    },
+    {
+     "apiname": "ACHIEVEMENT_30",
+     "achieved": 1,
+     "unlocktime": 1539044387,
+     "name": "Worth Every Penny",
+     "description": "Acquire 1000 credits in one month."
+    },
+    {
+     "apiname": "ACHIEVEMENT_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oppenheimer",
+     "description": "Staff the Research Labs with 80 scientists."
+    },
+    {
+     "apiname": "ACHIEVEMENT_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Gun at a Time",
+     "description": "Staff the Engineering Department with 80 engineers."
+    },
+    {
+     "apiname": "ACHIEVEMENT_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skunkworks",
+     "description": "In a single game, complete every Foundry project."
+    },
+    {
+     "apiname": "ACHIEVEMENT_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Have 5 Seconds to Comply",
+     "description": "Build a S.H.I.V."
+    },
+    {
+     "apiname": "ACHIEVEMENT_35",
+     "achieved": 1,
+     "unlocktime": 1539044306,
+     "name": "Theory...",
+     "description": "Build a Laboratory."
+    },
+    {
+     "apiname": "ACHIEVEMENT_36",
+     "achieved": 1,
+     "unlocktime": 1539037345,
+     "name": "...and Practice.",
+     "description": "Build a Workshop."
+    },
+    {
+     "apiname": "ACHIEVEMENT_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wet Work",
+     "description": "Complete a Very Hard abduction mission in five turns or less on Classic or Impossible difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Continental Fellow",
+     "description": "Win the game from each of the 5 starting locations."
+    },
+    {
+     "apiname": "ACHIEVEMENT_39",
+     "achieved": 1,
+     "unlocktime": 1538973038,
+     "name": "What Wonders Await",
+     "description": "Complete a Research Project."
+    },
+    {
+     "apiname": "ACHIEVEMENT_40",
+     "achieved": 1,
+     "unlocktime": 1539018333,
+     "name": "Up and Running",
+     "description": "Build a base facility."
+    },
+    {
+     "apiname": "ACHIEVEMENT_41",
+     "achieved": 1,
+     "unlocktime": 1538973094,
+     "name": "Combat Ready",
+     "description": "Build an item."
+    },
+    {
+     "apiname": "ACHIEVEMENT_42",
+     "achieved": 1,
+     "unlocktime": 1539147552,
+     "name": "Drums in the Deep",
+     "description": "Gain access to the lowest level in your base."
+    },
+    {
+     "apiname": "ACHIEVEMENT_43",
+     "achieved": 1,
+     "unlocktime": 1539018405,
+     "name": "Happy to Oblige",
+     "description": "Fulfill a Council request."
+    },
+    {
+     "apiname": "ACHIEVEMENT_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "And Hell's Coming With Me",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_45",
+     "achieved": 1,
+     "unlocktime": 1539320000,
+     "name": "Off My Planet",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_46",
+     "achieved": 1,
+     "unlocktime": 1539017536,
+     "name": "Tables Turned",
+     "description": "Shoot down a UFO."
+    },
+    {
+     "apiname": "ACHIEVEMENT_47",
+     "achieved": 1,
+     "unlocktime": 1387683149,
+     "name": "And So It Begins…",
+     "description": "Complete the tutorial mission."
+    },
+    {
+     "apiname": "ACHIEVEMENT_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Volunteer",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flight of the Valkyries",
+     "description": "Win a mission with an all-female squad. Single player only."
+    },
+    {
+     "apiname": "ACHIEVEMENT_50",
+     "achieved": 1,
+     "unlocktime": 1539042814,
+     "name": "New Friend",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_51",
+     "achieved": 1,
+     "unlocktime": 1539056047,
+     "name": "Bait the Hook",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bigger They Are",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rising Dragon",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Aboard",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_55",
+     "achieved": 1,
+     "unlocktime": 1539026307,
+     "name": "Who Needs Limbs?",
+     "description": "Augment a soldier in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_56",
+     "achieved": 1,
+     "unlocktime": 1539147556,
+     "name": "A Little Bit Alien",
+     "description": "Modify a soldier in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enemy Within",
+     "description": "Get a Soldier to have 5 modifications in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steel Martyr",
+     "description": "Deploy three tactical subsystems on a single soldier in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_59",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Apotheosis Denied",
+     "description": "Deal with the newest global threat"
+    },
+    {
+     "apiname": "ACHIEVEMENT_60",
+     "achieved": 1,
+     "unlocktime": 1539466954,
+     "name": "They Shall Not Pass",
+     "description": "Eliminate all alien waves"
+    },
+    {
+     "apiname": "ACHIEVEMENT_61",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zom-B-Gone",
+     "description": "Eradicate the infestation"
+    },
+    {
+     "apiname": "ACHIEVEMENT_62",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An Army Of Four",
+     "description": "Beat the game without buying a Squad Size upgrade (Classic+ difficulty)"
+    },
+    {
+     "apiname": "ACHIEVEMENT_63",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Meld Squad",
+     "description": "Field a fully enhanced squad and win the mission"
+    },
+    {
+     "apiname": "ACHIEVEMENT_64",
+     "achieved": 1,
+     "unlocktime": 1539204209,
+     "name": "Shieldbuster",
+     "description": "Eliminate an enemy's shield and kill it on the same turn in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_65",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Someone Your Own Size",
+     "description": "Kill a Muton Berserker in melee combat in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_66",
+     "achieved": 1,
+     "unlocktime": 1539020801,
+     "name": "Taking A Load Off",
+     "description": "Stop a squad member from suffocating in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_67",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Where in the World",
+     "description": "Make certain of the new threat's location"
+    },
+    {
+     "apiname": "ACHIEVEMENT_68",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mind the Step",
+     "description": "Jump two stories in one move in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_69",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nice Cover",
+     "description": "Use Collateral Damage to blow up a car in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_70",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "By Our Powers Combined",
+     "description": "Field a squad with 4 augmented soldiers, each with a different base ability and win the mission"
+    },
+    {
+     "apiname": "ACHIEVEMENT_71",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rise of the Machines",
+     "description": "Field a squad consisting entirely of augmented soldiers and SHIVs (min. 4) and win the mission"
+    },
+    {
+     "apiname": "ACHIEVEMENT_72",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mutatis Mutandis",
+     "description": "Field a squad where all members have at least two modifications (min. 4) and win the mission"
+    },
+    {
+     "apiname": "ACHIEVEMENT_73",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mental Minefield",
+     "description": "Kill an enemy as it is psionically attacking you in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_74",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Anger Management",
+     "description": "Proc Combat Rush on the entire squad (min. 4)"
+    },
+    {
+     "apiname": "ACHIEVEMENT_75",
+     "achieved": 1,
+     "unlocktime": 1539113377,
+     "name": "Remington… Max Remington",
+     "description": "Have your special-duty soldier kill three enemies in the same mission"
+    },
+    {
+     "apiname": "ACHIEVEMENT_76",
+     "achieved": 1,
+     "unlocktime": 1539232781,
+     "name": "G’day",
+     "description": "Kill an elite enemy Sniper with one of your own snipers in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_77",
+     "achieved": 1,
+     "unlocktime": 1539199968,
+     "name": "Regenerate This",
+     "description": "Kill an elite enemy Medic with explosive damage in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_78",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tingling Sensation",
+     "description": "Kill an unseen enemy detected by a specially modified soldier in single player"
+    },
+    {
+     "apiname": "ACHIEVEMENT_79",
+     "achieved": 1,
+     "unlocktime": 1539200409,
+     "name": "Pain in the Neck",
+     "description": "Cause an enemy to suicide"
+    },
+    {
+     "apiname": "ACHIEVEMENT_80",
+     "achieved": 1,
+     "unlocktime": 1539469377,
+     "name": "Solid Prospect",
+     "description": "Complete Deluge"
+    },
+    {
+     "apiname": "ACHIEVEMENT_81",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ours are the Furies",
+     "description": "Complete Furies"
+    },
+    {
+     "apiname": "ACHIEVEMENT_82",
+     "achieved": 1,
+     "unlocktime": 1539114241,
+     "name": "Elite Defense",
+     "description": "Beat a new special mission without losing any assets"
+    },
+    {
+     "apiname": "ACHIEVEMENT_83",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guardian of Earth",
+     "description": "Designate a highly decorated soldier as the Volunteer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_84",
+     "achieved": 1,
+     "unlocktime": 1539465041,
+     "name": "All Hands on Deck",
+     "description": "Get at least 4 kills with XCOM Base Security personnel"
+    }
+   ],
+   "success": true
+  }
+ }
+}

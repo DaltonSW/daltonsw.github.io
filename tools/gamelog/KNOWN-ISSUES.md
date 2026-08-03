@@ -20,30 +20,7 @@ losing captured data is the worst thing that can happen.**
 
 ---
 
-## 6. Nothing renders the archive
-
-`gamelog achievements` has always captured full per-achievement history, and no template has
-ever read it. The site's timeline is still driven entirely by hand-typed playthrough dates, so
-the richest data in the repo is invisible.
-
-This is now a clean piece of work rather than a tangled one, which is the point of the split: the
-archive is not reachable from templates, so displaying it means adding a **projection** step —
-`gamelog` generating a slim, `raw`-free file into each game bundle for Hugo to read. Iterating on
-the display shape then never touches captured data and never re-fetches.
-
-Two things to know before starting:
-
-- **Hugo copies bundle resources to the built site.** That is why `playthroughs.yaml` is covered
-  by `_build.publishResources: false`, cascaded from `content/games/_index.md`. A projection file
-  needs the same treatment or it gets served publicly.
-- The obvious first consumer is `layouts/partials/games-timeline.html`, which currently derives
-  everything from `playthroughs`/`sessions`. Real unlock dates are a far better signal for a game
-  played across years (Spelunky's run 2013 → 2020 with multi-year gaps), but it is a reshape of
-  the main existing consumer — worth doing separately from wiring the data in.
-
----
-
-## 7. Open question: archive size at full backfill
+## 6. Open question: archive size at full backfill
 
 Each record keeps the verbatim API response under `raw`, so no future field needs a re-fetch.
 The owner has confirmed keeping it in full.
@@ -61,6 +38,24 @@ unnormalised fields than RA's.
 ---
 
 ## Resolved
+
+### 6 — nothing rendered the archive
+
+`gamelog achievements` had always captured full per-achievement history, and no template read it.
+Resolved with the projection step this issue anticipated: `gamelog project` sums each game's
+`unlocked`/`total` across every provider it's linked to and writes the result to
+`content/games/<slug>/achievement-summary.yaml` — no `raw`, no per-achievement list, just the two
+numbers. `gamelog scan`/`gamelog achievements` call the same write automatically; `project` itself
+makes no API calls, so it's free to re-run for a bulk backfill or after the summary's shape
+changes. Covered by the same `_build.publishResources: false` cascade as `playthroughs.yaml`, so
+it's readable via `.Resources.Get` at build time but never published.
+
+The first consumer is the games list (`layouts/games/taxonomy.html`), which now shows the count
+on the right side of each row, next to the date/rating. `layouts/partials/games-timeline.html`
+(the vis-timeline visualisation) still derives everything from `playthroughs`/`sessions` —
+reshaping it to use real unlock dates (Spelunky's run 2013 → 2020 with multi-year gaps is a much
+better signal than a hand-typed date range) is still open, and is a separate piece of work from
+wiring the data in at all.
 
 ### 4 — two storage formats, no archive/presentation split
 

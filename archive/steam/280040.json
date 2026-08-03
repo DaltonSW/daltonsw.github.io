@@ -1,0 +1,289 @@
+{
+ "provider": "steam",
+ "title": "A Wizard's Lizard",
+ "updated": "2026-07-26",
+ "id": "280040",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 2,
+ "total": 20,
+ "first": "2016-02-29",
+ "last": "2016-02-29",
+ "platform": "PC",
+ "icon": "3fcfb12d6f4efe270d29acabc919ce0f26cae9b6",
+ "playtime_mins": 417,
+ "last_played": "2016-02-29",
+ "achievements": [
+  {
+   "key": "boss1",
+   "name": "Thriller",
+   "description": "Defeat the Zombie Warlord in the Cemetery.",
+   "unlocked": true,
+   "date": "2016-02-29T19:55:58-06:00"
+  },
+  {
+   "key": "boss2",
+   "name": "These Pipes Are Clean",
+   "description": "Defeat the Sewer Hag in the Sewer.",
+   "unlocked": true,
+   "date": "2016-02-29T20:14:01-06:00"
+  },
+  {
+   "key": "boss3",
+   "name": "Immortal",
+   "description": "Defeat Death in the Crypt.",
+   "unlocked": false
+  },
+  {
+   "key": "char_engineer",
+   "name": "Gold Cartridge Effect",
+   "description": "Rescue the Engineer from the Crypt.",
+   "unlocked": false
+  },
+  {
+   "key": "char_luna",
+   "name": "The Floor is Lava",
+   "description": "Rescue Luna from the Crypt.",
+   "unlocked": false
+  },
+  {
+   "key": "char_moto",
+   "name": "Born to Fight",
+   "description": "Rescue Moto from the Crypt.",
+   "unlocked": false
+  },
+  {
+   "key": "char_wizard",
+   "name": "Reunion",
+   "description": "Rescue the Wizard from the Crypt.",
+   "unlocked": false
+  },
+  {
+   "key": "char_xam",
+   "name": "Onslaught",
+   "description": "Rescue Xam from the Arena.",
+   "unlocked": false
+  },
+  {
+   "key": "den",
+   "name": "Scum and Villainy",
+   "description": "Enter the Den of Thieves.",
+   "unlocked": false
+  },
+  {
+   "key": "emptyHanded",
+   "name": "Empty Handed",
+   "description": "Without buying anything in town, start from the Cemetery, and exit the Crypt.",
+   "unlocked": false
+  },
+  {
+   "key": "forest",
+   "name": "Wildling",
+   "description": "Enter the Forest.",
+   "unlocked": false
+  },
+  {
+   "key": "goldHoarder",
+   "name": "Gold Digger",
+   "description": "Collect 100,000 gold in one crawl.",
+   "unlocked": false
+  },
+  {
+   "key": "goodSamaritan",
+   "name": "Good Samaritan",
+   "description": "Rescue 3 hostages in a single crawl.",
+   "unlocked": false
+  },
+  {
+   "key": "killSession_merchant",
+   "name": "Merchant Murderer",
+   "description": "Kill 12 merchants in one crawl.",
+   "unlocked": false
+  },
+  {
+   "key": "patriot",
+   "name": "Patriot",
+   "description": "Purchase the Skyrocket weapon from the vendor in Amberfall.",
+   "unlocked": false
+  },
+  {
+   "key": "playDead",
+   "name": "Play Dead",
+   "description": "Starting from the Cemetery, exit the Crypt without resurrecting.",
+   "unlocked": false
+  },
+  {
+   "key": "soulHoarder",
+   "name": "Soul Hoarder",
+   "description": "Collect 30 Soul Orbs in one crawl.",
+   "unlocked": false
+  },
+  {
+   "key": "speedRun",
+   "name": "Speed Run",
+   "description": "Starting from the Cemetery, exit the Crypt in 20 minutes or less.",
+   "unlocked": false
+  },
+  {
+   "key": "stillAlive",
+   "name": "Still Alive",
+   "description": "Starting from the Cemetery, exit the Crypt without dying.",
+   "unlocked": false
+  },
+  {
+   "key": "tour",
+   "name": "Around the World",
+   "description": "Starting from the Cemetery, exit the Crypt after visiting the Forest and Den of Thieves.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "A Wizard's Lizard",
+   "achievements": [
+    {
+     "apiname": "stillAlive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Still Alive",
+     "description": "Starting from the Cemetery, exit the Crypt without dying."
+    },
+    {
+     "apiname": "playDead",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Play Dead",
+     "description": "Starting from the Cemetery, exit the Crypt without resurrecting."
+    },
+    {
+     "apiname": "emptyHanded",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Empty Handed",
+     "description": "Without buying anything in town, start from the Cemetery, and exit the Crypt."
+    },
+    {
+     "apiname": "speedRun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Run",
+     "description": "Starting from the Cemetery, exit the Crypt in 20 minutes or less."
+    },
+    {
+     "apiname": "killSession_merchant",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Merchant Murderer",
+     "description": "Kill 12 merchants in one crawl."
+    },
+    {
+     "apiname": "soulHoarder",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soul Hoarder",
+     "description": "Collect 30 Soul Orbs in one crawl."
+    },
+    {
+     "apiname": "goodSamaritan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Samaritan",
+     "description": "Rescue 3 hostages in a single crawl."
+    },
+    {
+     "apiname": "goldHoarder",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gold Digger",
+     "description": "Collect 100,000 gold in one crawl."
+    },
+    {
+     "apiname": "tour",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Around the World",
+     "description": "Starting from the Cemetery, exit the Crypt after visiting the Forest and Den of Thieves."
+    },
+    {
+     "apiname": "forest",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wildling",
+     "description": "Enter the Forest."
+    },
+    {
+     "apiname": "den",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scum and Villainy",
+     "description": "Enter the Den of Thieves."
+    },
+    {
+     "apiname": "boss1",
+     "achieved": 1,
+     "unlocktime": 1456797358,
+     "name": "Thriller",
+     "description": "Defeat the Zombie Warlord in the Cemetery."
+    },
+    {
+     "apiname": "boss2",
+     "achieved": 1,
+     "unlocktime": 1456798441,
+     "name": "These Pipes Are Clean",
+     "description": "Defeat the Sewer Hag in the Sewer."
+    },
+    {
+     "apiname": "boss3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Immortal",
+     "description": "Defeat Death in the Crypt."
+    },
+    {
+     "apiname": "char_wizard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reunion",
+     "description": "Rescue the Wizard from the Crypt."
+    },
+    {
+     "apiname": "char_xam",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Onslaught",
+     "description": "Rescue Xam from the Arena."
+    },
+    {
+     "apiname": "char_luna",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Floor is Lava",
+     "description": "Rescue Luna from the Crypt."
+    },
+    {
+     "apiname": "char_engineer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gold Cartridge Effect",
+     "description": "Rescue the Engineer from the Crypt."
+    },
+    {
+     "apiname": "char_moto",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Born to Fight",
+     "description": "Rescue Moto from the Crypt."
+    },
+    {
+     "apiname": "patriot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Patriot",
+     "description": "Purchase the Skyrocket weapon from the vendor in Amberfall."
+    }
+   ],
+   "success": true
+  }
+ }
+}

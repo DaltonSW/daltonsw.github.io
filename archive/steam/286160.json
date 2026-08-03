@@ -1,0 +1,378 @@
+{
+ "provider": "steam",
+ "title": "Tabletop Simulator",
+ "updated": "2026-07-26",
+ "id": "286160",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 10,
+ "total": 26,
+ "first": "2015-06-16",
+ "last": "2023-09-06",
+ "platform": "PC",
+ "icon": "19f5b90e3c7084758f885ded843631b13929fa26",
+ "playtime_mins": 3781,
+ "playtime": {
+  "linux": 269,
+  "windows": 723
+ },
+ "last_played": "2026-01-18",
+ "achievements": [
+  {
+   "key": "ACH_COMPLETE_TUTORIAL",
+   "name": "Did you do it?",
+   "description": "Complete the in-game tutorial.",
+   "unlocked": true,
+   "date": "2015-06-16T15:38:04-05:00"
+  },
+  {
+   "key": "ACH_PLAY_WITH_STEAM_FRIEND",
+   "name": "Follow the leader",
+   "description": "Play a game with someone on your friend's list",
+   "unlocked": true,
+   "date": "2015-06-16T15:38:50-05:00"
+  },
+  {
+   "key": "ACH_PLAY_GAME_1_HOUR_NO_FLIP",
+   "name": "Restraint ",
+   "description": "Play the game for 1 hour without flipping the table.",
+   "unlocked": true,
+   "date": "2015-06-16T16:28:48-05:00"
+  },
+  {
+   "key": "ACH_USE_PRIVATE_NOTEPAD",
+   "name": "Confidential ",
+   "description": "Use your personal color page in the notebook.",
+   "unlocked": true,
+   "date": "2015-06-16T16:36:46-05:00"
+  },
+  {
+   "key": "ACH_FULL_GAME_OF_8_PLAYERS",
+   "name": "Complete Set",
+   "description": "Play a game with a full room of 8 players.",
+   "unlocked": true,
+   "date": "2016-09-04T19:41:49-05:00"
+  },
+  {
+   "key": "ACH_FLIP_TABLE_FAILED",
+   "name": "Too weak",
+   "description": "You tried to flip the table… and failed!",
+   "unlocked": true,
+   "date": "2016-09-04T21:16:14-05:00"
+  },
+  {
+   "key": "ACH_PLAY_10_HOURS",
+   "name": "Good Times",
+   "description": "Play Tabletop Simulator for over 10 hours.",
+   "unlocked": true,
+   "date": "2016-09-13T19:37:46-05:00"
+  },
+  {
+   "key": "ACH_FLIP_TABLE_100_TIMES",
+   "name": "Rage Quit ",
+   "description": "Flip the table in an absolute fit of rage… 100 times.",
+   "unlocked": true,
+   "date": "2016-09-18T19:12:12-05:00"
+  },
+  {
+   "key": "ACH_PLAY_50_HOURS",
+   "name": "Faithful",
+   "description": "Play Tabletop Simulator for over 50 hours.",
+   "unlocked": true,
+   "date": "2021-04-12T21:14:47-05:00"
+  },
+  {
+   "key": "ACH_CHANGE_COLOR_50_TIMES",
+   "name": "Wishy-Washy",
+   "description": "Change your color more than 50 times.",
+   "unlocked": true,
+   "date": "2023-09-06T20:34:44-05:00"
+  },
+  {
+   "key": "ACH_COMPLETE_TUTORIAL_UNDER_30_SECONDS",
+   "name": "Speed Machine",
+   "description": "Complete the tutorial in under 30 seconds.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_FLIP_TABLE_1000_TIMES",
+   "name": "Ultimate Rage",
+   "description": "Flip the table over 1000 times.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HIDDEN_KNIL_KIMI",
+   "name": "Surprise!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_LASER_LIGHT_SHOW_8_PLAYER",
+   "name": "Laser Light Show",
+   "description": "Create an 8 player “light show” with the line drawing tool.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_LOCK_5000_ITEMS",
+   "name": "Don’t Touch!",
+   "description": "Lock 5000 items over time.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_1000_HOURS",
+   "name": "True Champion",
+   "description": "Play Tabletop Simulator for over 1000 hours.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_100_HOURS",
+   "name": "Devoted",
+   "description": "Play Tabletop Simulator for over 100 hours.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_200_HOURS",
+   "name": "Dedication",
+   "description": "Play Tabletop Simulator for over 200 hours.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_500_HOURS",
+   "name": "Addict",
+   "description": "Play Tabletop Simulator for over 500 hours.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_CHESS_1_HOUR",
+   "name": "A Spot of Tea?",
+   "description": "Play a civilized game of Chess for 1 hour.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLAY_GAME_ZERO_GRAVITY",
+   "name": "Space Time Fun",
+   "description": "Play a game in zero gravity.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_RPG_FIGURINES_ATTACK",
+   "name": "Attack of the Figurines!",
+   "description": "Have two RPG figurines attack one another. They must hit!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SAVE_100_ITEMS_TO_CHEST",
+   "name": "Treasure Trove",
+   "description": "Save 100 items to your Chest.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SPAWN_10,000_CHIPS",
+   "name": "Money, Money, Money",
+   "description": "Spawn 10,000 poker chips!",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_TINT_1000_OBJECTS",
+   "name": "Color me pretty",
+   "description": "Tint 1000 objects a different color.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_UPLOAD_3_WORKSHOP_ITEMS",
+   "name": "Sharing is Caring",
+   "description": "Upload at least 3 legitimate Steam Workshop items.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Tabletop Simulator",
+   "achievements": [
+    {
+     "apiname": "ACH_CHANGE_COLOR_50_TIMES",
+     "achieved": 1,
+     "unlocktime": 1694050484,
+     "name": "Wishy-Washy",
+     "description": "Change your color more than 50 times."
+    },
+    {
+     "apiname": "ACH_FLIP_TABLE_1000_TIMES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ultimate Rage",
+     "description": "Flip the table over 1000 times."
+    },
+    {
+     "apiname": "ACH_FLIP_TABLE_FAILED",
+     "achieved": 1,
+     "unlocktime": 1473041774,
+     "name": "Too weak",
+     "description": "You tried to flip the table… and failed!"
+    },
+    {
+     "apiname": "ACH_PLAY_CHESS_1_HOUR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Spot of Tea?",
+     "description": "Play a civilized game of Chess for 1 hour."
+    },
+    {
+     "apiname": "ACH_COMPLETE_TUTORIAL_UNDER_30_SECONDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Machine",
+     "description": "Complete the tutorial in under 30 seconds."
+    },
+    {
+     "apiname": "ACH_FLIP_TABLE_100_TIMES",
+     "achieved": 1,
+     "unlocktime": 1474243932,
+     "name": "Rage Quit ",
+     "description": "Flip the table in an absolute fit of rage… 100 times."
+    },
+    {
+     "apiname": "ACH_SPAWN_10,000_CHIPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Money, Money, Money",
+     "description": "Spawn 10,000 poker chips!"
+    },
+    {
+     "apiname": "ACH_RPG_FIGURINES_ATTACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Attack of the Figurines!",
+     "description": "Have two RPG figurines attack one another. They must hit!"
+    },
+    {
+     "apiname": "ACH_FULL_GAME_OF_8_PLAYERS",
+     "achieved": 1,
+     "unlocktime": 1473036109,
+     "name": "Complete Set",
+     "description": "Play a game with a full room of 8 players."
+    },
+    {
+     "apiname": "ACH_PLAY_GAME_ZERO_GRAVITY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Space Time Fun",
+     "description": "Play a game in zero gravity."
+    },
+    {
+     "apiname": "ACH_PLAY_GAME_1_HOUR_NO_FLIP",
+     "achieved": 1,
+     "unlocktime": 1434490128,
+     "name": "Restraint ",
+     "description": "Play the game for 1 hour without flipping the table."
+    },
+    {
+     "apiname": "ACH_USE_PRIVATE_NOTEPAD",
+     "achieved": 1,
+     "unlocktime": 1434490606,
+     "name": "Confidential ",
+     "description": "Use your personal color page in the notebook."
+    },
+    {
+     "apiname": "ACH_SAVE_100_ITEMS_TO_CHEST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Treasure Trove",
+     "description": "Save 100 items to your Chest."
+    },
+    {
+     "apiname": "ACH_LASER_LIGHT_SHOW_8_PLAYER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Laser Light Show",
+     "description": "Create an 8 player “light show” with the line drawing tool."
+    },
+    {
+     "apiname": "ACH_LOCK_5000_ITEMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don’t Touch!",
+     "description": "Lock 5000 items over time."
+    },
+    {
+     "apiname": "ACH_TINT_1000_OBJECTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Color me pretty",
+     "description": "Tint 1000 objects a different color."
+    },
+    {
+     "apiname": "ACH_HIDDEN_KNIL_KIMI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Surprise!",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PLAY_WITH_STEAM_FRIEND",
+     "achieved": 1,
+     "unlocktime": 1434487130,
+     "name": "Follow the leader",
+     "description": "Play a game with someone on your friend's list"
+    },
+    {
+     "apiname": "ACH_UPLOAD_3_WORKSHOP_ITEMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sharing is Caring",
+     "description": "Upload at least 3 legitimate Steam Workshop items."
+    },
+    {
+     "apiname": "ACH_COMPLETE_TUTORIAL",
+     "achieved": 1,
+     "unlocktime": 1434487084,
+     "name": "Did you do it?",
+     "description": "Complete the in-game tutorial."
+    },
+    {
+     "apiname": "ACH_PLAY_10_HOURS",
+     "achieved": 1,
+     "unlocktime": 1473813466,
+     "name": "Good Times",
+     "description": "Play Tabletop Simulator for over 10 hours."
+    },
+    {
+     "apiname": "ACH_PLAY_50_HOURS",
+     "achieved": 1,
+     "unlocktime": 1618280087,
+     "name": "Faithful",
+     "description": "Play Tabletop Simulator for over 50 hours."
+    },
+    {
+     "apiname": "ACH_PLAY_100_HOURS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Devoted",
+     "description": "Play Tabletop Simulator for over 100 hours."
+    },
+    {
+     "apiname": "ACH_PLAY_200_HOURS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dedication",
+     "description": "Play Tabletop Simulator for over 200 hours."
+    },
+    {
+     "apiname": "ACH_PLAY_500_HOURS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Addict",
+     "description": "Play Tabletop Simulator for over 500 hours."
+    },
+    {
+     "apiname": "ACH_PLAY_1000_HOURS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Champion",
+     "description": "Play Tabletop Simulator for over 1000 hours."
+    }
+   ],
+   "success": true
+  }
+ }
+}

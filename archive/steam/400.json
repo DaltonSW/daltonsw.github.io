@@ -1,0 +1,237 @@
+{
+ "provider": "steam",
+ "title": "Portal",
+ "updated": "2026-07-26",
+ "id": "400",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 12,
+ "total": 15,
+ "first": "2012-08-12",
+ "last": "2026-01-10",
+ "platform": "PC",
+ "icon": "cfa928ab4119dd137e50d728e8fe703e4e970aff",
+ "playtime_mins": 671,
+ "playtime": {
+  "linux": 452
+ },
+ "last_played": "2026-01-10",
+ "achievements": [
+  {
+   "key": "PORTAL_GET_PORTALGUNS",
+   "name": "Lab Rat",
+   "description": "Acquire the fully powered Aperture Science Handheld Portal Device.",
+   "unlocked": true,
+   "date": "2012-08-12T22:34:55-05:00"
+  },
+  {
+   "key": "PORTAL_HIT_TURRET_WITH_TURRET",
+   "name": "Friendly Fire",
+   "description": "Knock down a turret with another turret.",
+   "unlocked": true,
+   "date": "2012-08-13T13:50:34-05:00"
+  },
+  {
+   "key": "PORTAL_KILL_COMPANIONCUBE",
+   "name": "Fratricide",
+   "description": "Do whatever it takes to survive.",
+   "unlocked": true,
+   "date": "2012-09-30T02:03:04-05:00"
+  },
+  {
+   "key": "PORTAL_ESCAPE_TESTCHAMBERS",
+   "name": "Partygoer",
+   "description": "Make the correct party escort submission position decision.",
+   "unlocked": true,
+   "date": "2012-10-20T23:48:33-05:00"
+  },
+  {
+   "key": "PORTAL_BEAT_GAME",
+   "name": "Heartbreaker",
+   "description": "Complete Portal.",
+   "unlocked": true,
+   "date": "2012-10-21T00:52:05-05:00"
+  },
+  {
+   "key": "PORTAL_INFINITEFALL",
+   "name": "Terminal Velocity",
+   "description": "Fall 30,000 feet.",
+   "unlocked": true,
+   "date": "2026-01-07T20:45:59-06:00"
+  },
+  {
+   "key": "PORTAL_DETACH_ALL_CAMERAS",
+   "name": "Camera Shy",
+   "description": "Detach security cameras from the walls.",
+   "unlocked": true,
+   "date": "2026-01-08T21:18:38-06:00"
+  },
+  {
+   "key": "PORTAL_TRANSMISSION_RECEIVED",
+   "name": "Transmission Received",
+   "description": "..?",
+   "unlocked": true,
+   "date": "2026-01-09T19:19:20-06:00"
+  },
+  {
+   "key": "PORTAL_LONGJUMP",
+   "name": "Long Jump",
+   "description": "Jump 300 feet.",
+   "unlocked": true,
+   "date": "2026-01-09T19:21:15-06:00"
+  },
+  {
+   "key": "PORTAL_BEAT_2ADVANCEDMAPS",
+   "name": "Cupcake",
+   "description": "Beat two Portal advanced maps.",
+   "unlocked": true,
+   "date": "2026-01-09T19:47:21-06:00"
+  },
+  {
+   "key": "PORTAL_BEAT_4ADVANCEDMAPS",
+   "name": "Fruitcake",
+   "description": "Beat four Portal advanced maps.",
+   "unlocked": true,
+   "date": "2026-01-10T12:58:35-06:00"
+  },
+  {
+   "key": "PORTAL_BEAT_6ADVANCEDMAPS",
+   "name": "Vanilla Crazy Cake",
+   "description": "Beat all six Portal advanced maps.",
+   "unlocked": true,
+   "date": "2026-01-10T13:16:48-06:00"
+  },
+  {
+   "key": "PORTAL_GET_ALLBRONZE",
+   "name": "Basic Science",
+   "description": "Earn bronze medals on all Portal challenges.",
+   "unlocked": false
+  },
+  {
+   "key": "PORTAL_GET_ALLGOLD",
+   "name": "Aperture Science",
+   "description": "Earn gold medals on all Portal challenges.",
+   "unlocked": false
+  },
+  {
+   "key": "PORTAL_GET_ALLSILVER",
+   "name": "Rocket Science",
+   "description": "Earn silver medals on all Portal challenges.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Portal",
+   "achievements": [
+    {
+     "apiname": "PORTAL_GET_PORTALGUNS",
+     "achieved": 1,
+     "unlocktime": 1344828895,
+     "name": "Lab Rat",
+     "description": "Acquire the fully powered Aperture Science Handheld Portal Device."
+    },
+    {
+     "apiname": "PORTAL_KILL_COMPANIONCUBE",
+     "achieved": 1,
+     "unlocktime": 1348988584,
+     "name": "Fratricide",
+     "description": "Do whatever it takes to survive."
+    },
+    {
+     "apiname": "PORTAL_ESCAPE_TESTCHAMBERS",
+     "achieved": 1,
+     "unlocktime": 1350794913,
+     "name": "Partygoer",
+     "description": "Make the correct party escort submission position decision."
+    },
+    {
+     "apiname": "PORTAL_BEAT_GAME",
+     "achieved": 1,
+     "unlocktime": 1350798725,
+     "name": "Heartbreaker",
+     "description": "Complete Portal."
+    },
+    {
+     "apiname": "PORTAL_INFINITEFALL",
+     "achieved": 1,
+     "unlocktime": 1767840359,
+     "name": "Terminal Velocity",
+     "description": "Fall 30,000 feet."
+    },
+    {
+     "apiname": "PORTAL_LONGJUMP",
+     "achieved": 1,
+     "unlocktime": 1768008075,
+     "name": "Long Jump",
+     "description": "Jump 300 feet."
+    },
+    {
+     "apiname": "PORTAL_BEAT_2ADVANCEDMAPS",
+     "achieved": 1,
+     "unlocktime": 1768009641,
+     "name": "Cupcake",
+     "description": "Beat two Portal advanced maps."
+    },
+    {
+     "apiname": "PORTAL_BEAT_4ADVANCEDMAPS",
+     "achieved": 1,
+     "unlocktime": 1768071515,
+     "name": "Fruitcake",
+     "description": "Beat four Portal advanced maps."
+    },
+    {
+     "apiname": "PORTAL_BEAT_6ADVANCEDMAPS",
+     "achieved": 1,
+     "unlocktime": 1768072608,
+     "name": "Vanilla Crazy Cake",
+     "description": "Beat all six Portal advanced maps."
+    },
+    {
+     "apiname": "PORTAL_GET_ALLBRONZE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Basic Science",
+     "description": "Earn bronze medals on all Portal challenges."
+    },
+    {
+     "apiname": "PORTAL_GET_ALLSILVER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rocket Science",
+     "description": "Earn silver medals on all Portal challenges."
+    },
+    {
+     "apiname": "PORTAL_GET_ALLGOLD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Aperture Science",
+     "description": "Earn gold medals on all Portal challenges."
+    },
+    {
+     "apiname": "PORTAL_DETACH_ALL_CAMERAS",
+     "achieved": 1,
+     "unlocktime": 1767928718,
+     "name": "Camera Shy",
+     "description": "Detach security cameras from the walls."
+    },
+    {
+     "apiname": "PORTAL_HIT_TURRET_WITH_TURRET",
+     "achieved": 1,
+     "unlocktime": 1344883834,
+     "name": "Friendly Fire",
+     "description": "Knock down a turret with another turret."
+    },
+    {
+     "apiname": "PORTAL_TRANSMISSION_RECEIVED",
+     "achieved": 1,
+     "unlocktime": 1768007960,
+     "name": "Transmission Received",
+     "description": "..?"
+    }
+   ],
+   "success": true
+  }
+ }
+}

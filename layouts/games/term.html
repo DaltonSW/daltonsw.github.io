@@ -22,7 +22,7 @@
   <h2>Playthroughs</h2>
   <ul class="entry-list">
     {{- range . }}
-    <li class="entry{{ if not .written }} entry--bare{{ end }}">
+    <li class="entry{{ if not .written }} entry--bare{{ end }}{{ with .status }} entry--{{ . }}{{ end }}">
       {{- if .written }}
       <a class="entry__title" href="{{ .permalink }}">{{ .title }}</a>
       {{- else }}

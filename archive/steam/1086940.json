@@ -1,0 +1,748 @@
+{
+ "provider": "steam",
+ "title": "Baldur's Gate 3",
+ "updated": "2026-07-26",
+ "id": "1086940",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 45,
+ "total": 54,
+ "first": "2023-10-15",
+ "last": "2025-03-04",
+ "platform": "PC",
+ "icon": "d866cae7ea1e471fdbc206287111f1b642373bd9",
+ "playtime_mins": 25862,
+ "playtime": {
+  "windows": 25862
+ },
+ "last_played": "2025-03-04",
+ "achievements": [
+  {
+   "key": "BG3_Quest01",
+   "name": "Descent From Avernus",
+   "description": "Take control of the nautiloid and escape the Hells.",
+   "unlocked": true,
+   "date": "2023-10-15T16:48:33-05:00"
+  },
+  {
+   "key": "BG3_Quest50",
+   "name": "Just a Nibble",
+   "unlocked": true,
+   "date": "2023-10-19T18:55:52-05:00"
+  },
+  {
+   "key": "BG3_Quest11",
+   "name": "Expand Your Mind",
+   "unlocked": true,
+   "date": "2023-10-24T17:45:38-05:00"
+  },
+  {
+   "key": "BG3_Quest10",
+   "name": "Bedrolls and Breakfast",
+   "description": "Take four full Long Rests in a single playthrough - adventuring's tiring work.",
+   "unlocked": true,
+   "date": "2023-11-02T19:57:14-05:00"
+  },
+  {
+   "key": "BG3_Quest09",
+   "name": "Roleplayer",
+   "description": "Complete ten background goals in a single playthrough - you are one with your character.",
+   "unlocked": true,
+   "date": "2023-11-04T17:47:23-05:00"
+  },
+  {
+   "key": "BG3_Quest13",
+   "name": "No Penny Required",
+   "description": "Successfully use Detect Thoughts to pry into someone's thoughts. ",
+   "unlocked": true,
+   "date": "2023-11-06T21:47:20-06:00"
+  },
+  {
+   "key": "BG3_Quest14",
+   "name": "Escapologist",
+   "description": "Break out of prison after being arrested - aren't you daring?",
+   "unlocked": true,
+   "date": "2023-11-09T20:35:14-06:00"
+  },
+  {
+   "key": "BG3_Quest02",
+   "name": "The Plot Thickens",
+   "unlocked": true,
+   "date": "2023-11-11T14:03:32-06:00"
+  },
+  {
+   "key": "BG3_Quest12",
+   "name": "Dig for Victory",
+   "description": "Dig up five buried chests in a single playthrough - treasure! ",
+   "unlocked": true,
+   "date": "2023-12-02T15:17:46-06:00"
+  },
+  {
+   "key": "BG3_Quest35",
+   "name": "Penny Pincher",
+   "description": "Defeat the Toll Collector without her using gold against you - excellent budgeting. ",
+   "unlocked": true,
+   "date": "2023-12-03T11:16:02-06:00"
+  },
+  {
+   "key": "BG3_Quest42",
+   "name": "Shove Off",
+   "description": "Kill a creature with falling damage.",
+   "unlocked": true,
+   "date": "2023-12-31T22:46:59-06:00"
+  },
+  {
+   "key": "BG3_Quest41",
+   "name": "Bottoms Up",
+   "description": "Long Rest using only alcohol - a time-honoured dwarven tradition. ",
+   "unlocked": true,
+   "date": "2024-01-07T13:31:05-06:00"
+  },
+  {
+   "key": "BG3_Quest21",
+   "name": "Under Lock and Key",
+   "unlocked": true,
+   "date": "2024-01-09T10:53:51-06:00"
+  },
+  {
+   "key": "BG3_Quest43",
+   "name": "Bookworm",
+   "description": "Read 100 different books in a single playthrough. Adventuring isn't just daring quests, you know.",
+   "unlocked": true,
+   "date": "2024-01-09T11:03:33-06:00"
+  },
+  {
+   "key": "BG3_Quest29",
+   "name": "Action Surge",
+   "description": "Perform five attacks in one turn. Your enemies won't know what hit them (literally).",
+   "unlocked": true,
+   "date": "2024-01-09T15:26:00-06:00"
+  },
+  {
+   "key": "BG3_Quest45",
+   "name": "Fetch Quest",
+   "description": "Play fetch with Scratch - the best boy in the Realms.",
+   "unlocked": true,
+   "date": "2024-01-09T20:50:38-06:00"
+  },
+  {
+   "key": "BG3_Quest23",
+   "name": "Taking Blood",
+   "unlocked": true,
+   "date": "2024-01-10T13:20:29-06:00"
+  },
+  {
+   "key": "BG3_Quest47",
+   "name": "The Lich-Queen's Wrath",
+   "unlocked": true,
+   "date": "2024-01-11T19:34:42-06:00"
+  },
+  {
+   "key": "BG3_Quest20",
+   "name": "Forged in Blood and Fire",
+   "unlocked": true,
+   "date": "2024-01-13T08:10:32-06:00"
+  },
+  {
+   "key": "BG3_Quest17",
+   "name": "Homebrewer",
+   "description": "Create three unique alchemical solutions in a single playthrough - bottoms up! ",
+   "unlocked": true,
+   "date": "2024-01-14T11:33:27-06:00"
+  },
+  {
+   "key": "BG3_Quest30",
+   "name": "Fists of Fury",
+   "description": "Kill a character with an Unarmed Strike.",
+   "unlocked": true,
+   "date": "2024-01-22T17:59:22-06:00"
+  },
+  {
+   "key": "BG3_Quest36",
+   "name": "No Free Lunches",
+   "unlocked": true,
+   "date": "2024-01-23T17:48:29-06:00"
+  },
+  {
+   "key": "BG3_Quest03",
+   "name": "The City Awaits",
+   "unlocked": true,
+   "date": "2024-01-26T16:35:57-06:00"
+  },
+  {
+   "key": "BG3_Quest34",
+   "name": "Non-Invasive Procedure",
+   "description": "Kill the Surgeon before he performs surgery on you in combat.",
+   "unlocked": true,
+   "date": "2024-01-28T19:25:37-06:00"
+  },
+  {
+   "key": "BG3_Quest19",
+   "name": "Rude, Crude, and Full of Attitude",
+   "unlocked": true,
+   "date": "2024-02-02T20:41:14-06:00"
+  },
+  {
+   "key": "BG3_Quest26",
+   "name": "Mind Blown",
+   "unlocked": true,
+   "date": "2024-02-11T11:07:19-06:00"
+  },
+  {
+   "key": "BG3_Quest48",
+   "name": "To Bloom in Darkest Night",
+   "unlocked": true,
+   "date": "2024-11-02T10:46:06-05:00"
+  },
+  {
+   "key": "BG3_Quest27",
+   "name": "Kill Two Birds With One Gnome",
+   "description": "Use one enemy as an improvised weapon against another. ",
+   "unlocked": true,
+   "date": "2024-12-01T13:54:29-06:00"
+  },
+  {
+   "key": "BG3_Quest46",
+   "name": "Repairing the Weave",
+   "unlocked": true,
+   "date": "2024-12-23T16:39:14-06:00"
+  },
+  {
+   "key": "BG3_Quest52",
+   "name": "Embrace Your Urge",
+   "unlocked": true,
+   "date": "2024-12-25T10:09:53-06:00"
+  },
+  {
+   "key": "BG3_Quest40",
+   "name": "Crash Landing",
+   "description": "In the Wyrmway, wait until the dragon is mid-flight, then knock it out of the sky - KAPOW.",
+   "unlocked": true,
+   "date": "2025-01-14T18:59:32-06:00"
+  },
+  {
+   "key": "BG3_Quest15",
+   "name": "Outsourcing",
+   "description": "Recruit a hireling. You can befriend them or use them as cannon-fodder - we won't judge.",
+   "unlocked": true,
+   "date": "2025-01-14T19:16:25-06:00"
+  },
+  {
+   "key": "BG3_Quest04",
+   "name": "All's Well That Ends Well",
+   "unlocked": true,
+   "date": "2025-01-18T11:11:56-06:00"
+  },
+  {
+   "key": "BG3_Quest06",
+   "name": "Hero of the Forgotten Realms",
+   "unlocked": true,
+   "date": "2025-01-18T11:11:56-06:00"
+  },
+  {
+   "key": "BG3_Quest08",
+   "name": "Ceremorphosis",
+   "unlocked": true,
+   "date": "2025-01-18T11:11:56-06:00"
+  },
+  {
+   "key": "BG3_Quest39",
+   "name": "Interfectorem Draconis",
+   "unlocked": true,
+   "date": "2025-01-18T19:34:28-06:00"
+  },
+  {
+   "key": "BG3_Quest32",
+   "name": "Pest Control",
+   "unlocked": true,
+   "date": "2025-01-29T18:52:59-06:00"
+  },
+  {
+   "key": "BG3_Quest18",
+   "name": "You Have Two Hands for a Reason",
+   "unlocked": true,
+   "date": "2025-01-31T16:10:02-06:00"
+  },
+  {
+   "key": "BG3_Quest07",
+   "name": "Sins of the Father",
+   "unlocked": true,
+   "date": "2025-02-04T17:55:01-06:00"
+  },
+  {
+   "key": "BG3_Quest53",
+   "name": "Critical Hit",
+   "description": "Complete the game in Tactician mode.",
+   "unlocked": true,
+   "date": "2025-02-04T17:55:01-06:00"
+  },
+  {
+   "key": "BG3_Quest33",
+   "name": "A Grym Fate",
+   "unlocked": true,
+   "date": "2025-02-15T10:47:57-06:00"
+  },
+  {
+   "key": "BG3_Quest51",
+   "name": "Loophole",
+   "unlocked": true,
+   "date": "2025-02-22T10:52:40-06:00"
+  },
+  {
+   "key": "BG3_Quest25",
+   "name": "Murder in Baldur's Gate",
+   "unlocked": true,
+   "date": "2025-02-22T20:40:31-06:00"
+  },
+  {
+   "key": "BG3_Quest38",
+   "name": "First Blood",
+   "unlocked": true,
+   "date": "2025-02-23T13:35:36-06:00"
+  },
+  {
+   "key": "BG3_Quest54",
+   "name": "Foehammer",
+   "description": "Complete the game in Honour mode.",
+   "unlocked": true,
+   "date": "2025-03-04T16:37:42-06:00"
+  },
+  {
+   "key": "BG3_Quest05",
+   "name": "Absolute Power Corrupts",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest16",
+   "name": "Jack-of-all-Trades",
+   "description": "Multiclass into every class in one playthrough without asking Withers to change your character.",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest22",
+   "name": "She Cannot Be Caged!",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest24",
+   "name": "Leave No One Behind",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest28",
+   "name": "Busker",
+   "description": "Earn a hundred gold from playing sweet, sweet music in a single playthrough. ",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest31",
+   "name": "Devil's in the Details ",
+   "description": "Defeat Commander Zhalk on the nautiloid.",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest37",
+   "name": "Fancy Footwork",
+   "description": "Defeat Gortash in Wyrm's Rock without activating any traps.",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest44",
+   "name": "Punch Drunk",
+   "description": "Defeat twenty opponents while drunk - down them.",
+   "unlocked": false
+  },
+  {
+   "key": "BG3_Quest49",
+   "name": "Hot Date",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Baldur's Gate 3",
+   "achievements": [
+    {
+     "apiname": "BG3_Quest01",
+     "achieved": 1,
+     "unlocktime": 1697406513,
+     "name": "Descent From Avernus",
+     "description": "Take control of the nautiloid and escape the Hells."
+    },
+    {
+     "apiname": "BG3_Quest02",
+     "achieved": 1,
+     "unlocktime": 1699733012,
+     "name": "The Plot Thickens",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest03",
+     "achieved": 1,
+     "unlocktime": 1706308557,
+     "name": "The City Awaits",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest04",
+     "achieved": 1,
+     "unlocktime": 1737220316,
+     "name": "All's Well That Ends Well",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Absolute Power Corrupts",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest06",
+     "achieved": 1,
+     "unlocktime": 1737220316,
+     "name": "Hero of the Forgotten Realms",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest07",
+     "achieved": 1,
+     "unlocktime": 1738713301,
+     "name": "Sins of the Father",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest08",
+     "achieved": 1,
+     "unlocktime": 1737220316,
+     "name": "Ceremorphosis",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest09",
+     "achieved": 1,
+     "unlocktime": 1699138043,
+     "name": "Roleplayer",
+     "description": "Complete ten background goals in a single playthrough - you are one with your character."
+    },
+    {
+     "apiname": "BG3_Quest10",
+     "achieved": 1,
+     "unlocktime": 1698973034,
+     "name": "Bedrolls and Breakfast",
+     "description": "Take four full Long Rests in a single playthrough - adventuring's tiring work."
+    },
+    {
+     "apiname": "BG3_Quest11",
+     "achieved": 1,
+     "unlocktime": 1698187538,
+     "name": "Expand Your Mind",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest12",
+     "achieved": 1,
+     "unlocktime": 1701551866,
+     "name": "Dig for Victory",
+     "description": "Dig up five buried chests in a single playthrough - treasure! "
+    },
+    {
+     "apiname": "BG3_Quest13",
+     "achieved": 1,
+     "unlocktime": 1699328840,
+     "name": "No Penny Required",
+     "description": "Successfully use Detect Thoughts to pry into someone's thoughts. "
+    },
+    {
+     "apiname": "BG3_Quest14",
+     "achieved": 1,
+     "unlocktime": 1699583714,
+     "name": "Escapologist",
+     "description": "Break out of prison after being arrested - aren't you daring?"
+    },
+    {
+     "apiname": "BG3_Quest15",
+     "achieved": 1,
+     "unlocktime": 1736903785,
+     "name": "Outsourcing",
+     "description": "Recruit a hireling. You can befriend them or use them as cannon-fodder - we won't judge."
+    },
+    {
+     "apiname": "BG3_Quest16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jack-of-all-Trades",
+     "description": "Multiclass into every class in one playthrough without asking Withers to change your character."
+    },
+    {
+     "apiname": "BG3_Quest17",
+     "achieved": 1,
+     "unlocktime": 1705253607,
+     "name": "Homebrewer",
+     "description": "Create three unique alchemical solutions in a single playthrough - bottoms up! "
+    },
+    {
+     "apiname": "BG3_Quest18",
+     "achieved": 1,
+     "unlocktime": 1738361402,
+     "name": "You Have Two Hands for a Reason",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest19",
+     "achieved": 1,
+     "unlocktime": 1706928074,
+     "name": "Rude, Crude, and Full of Attitude",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest20",
+     "achieved": 1,
+     "unlocktime": 1705155032,
+     "name": "Forged in Blood and Fire",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest21",
+     "achieved": 1,
+     "unlocktime": 1704819231,
+     "name": "Under Lock and Key",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "She Cannot Be Caged!",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest23",
+     "achieved": 1,
+     "unlocktime": 1704914429,
+     "name": "Taking Blood",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leave No One Behind",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest25",
+     "achieved": 1,
+     "unlocktime": 1740278431,
+     "name": "Murder in Baldur's Gate",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest26",
+     "achieved": 1,
+     "unlocktime": 1707671239,
+     "name": "Mind Blown",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest27",
+     "achieved": 1,
+     "unlocktime": 1733082869,
+     "name": "Kill Two Birds With One Gnome",
+     "description": "Use one enemy as an improvised weapon against another. "
+    },
+    {
+     "apiname": "BG3_Quest28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Busker",
+     "description": "Earn a hundred gold from playing sweet, sweet music in a single playthrough. "
+    },
+    {
+     "apiname": "BG3_Quest29",
+     "achieved": 1,
+     "unlocktime": 1704835560,
+     "name": "Action Surge",
+     "description": "Perform five attacks in one turn. Your enemies won't know what hit them (literally)."
+    },
+    {
+     "apiname": "BG3_Quest30",
+     "achieved": 1,
+     "unlocktime": 1705967962,
+     "name": "Fists of Fury",
+     "description": "Kill a character with an Unarmed Strike."
+    },
+    {
+     "apiname": "BG3_Quest31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Devil's in the Details ",
+     "description": "Defeat Commander Zhalk on the nautiloid."
+    },
+    {
+     "apiname": "BG3_Quest32",
+     "achieved": 1,
+     "unlocktime": 1738198379,
+     "name": "Pest Control",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest33",
+     "achieved": 1,
+     "unlocktime": 1739638077,
+     "name": "A Grym Fate",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest34",
+     "achieved": 1,
+     "unlocktime": 1706491537,
+     "name": "Non-Invasive Procedure",
+     "description": "Kill the Surgeon before he performs surgery on you in combat."
+    },
+    {
+     "apiname": "BG3_Quest35",
+     "achieved": 1,
+     "unlocktime": 1701623762,
+     "name": "Penny Pincher",
+     "description": "Defeat the Toll Collector without her using gold against you - excellent budgeting. "
+    },
+    {
+     "apiname": "BG3_Quest36",
+     "achieved": 1,
+     "unlocktime": 1706053709,
+     "name": "No Free Lunches",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fancy Footwork",
+     "description": "Defeat Gortash in Wyrm's Rock without activating any traps."
+    },
+    {
+     "apiname": "BG3_Quest38",
+     "achieved": 1,
+     "unlocktime": 1740339336,
+     "name": "First Blood",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest39",
+     "achieved": 1,
+     "unlocktime": 1737250468,
+     "name": "Interfectorem Draconis",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest40",
+     "achieved": 1,
+     "unlocktime": 1736902772,
+     "name": "Crash Landing",
+     "description": "In the Wyrmway, wait until the dragon is mid-flight, then knock it out of the sky - KAPOW."
+    },
+    {
+     "apiname": "BG3_Quest41",
+     "achieved": 1,
+     "unlocktime": 1704655865,
+     "name": "Bottoms Up",
+     "description": "Long Rest using only alcohol - a time-honoured dwarven tradition. "
+    },
+    {
+     "apiname": "BG3_Quest42",
+     "achieved": 1,
+     "unlocktime": 1704084419,
+     "name": "Shove Off",
+     "description": "Kill a creature with falling damage."
+    },
+    {
+     "apiname": "BG3_Quest43",
+     "achieved": 1,
+     "unlocktime": 1704819813,
+     "name": "Bookworm",
+     "description": "Read 100 different books in a single playthrough. Adventuring isn't just daring quests, you know."
+    },
+    {
+     "apiname": "BG3_Quest44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Punch Drunk",
+     "description": "Defeat twenty opponents while drunk - down them."
+    },
+    {
+     "apiname": "BG3_Quest45",
+     "achieved": 1,
+     "unlocktime": 1704855038,
+     "name": "Fetch Quest",
+     "description": "Play fetch with Scratch - the best boy in the Realms."
+    },
+    {
+     "apiname": "BG3_Quest46",
+     "achieved": 1,
+     "unlocktime": 1734993554,
+     "name": "Repairing the Weave",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest47",
+     "achieved": 1,
+     "unlocktime": 1705023282,
+     "name": "The Lich-Queen's Wrath",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest48",
+     "achieved": 1,
+     "unlocktime": 1730562366,
+     "name": "To Bloom in Darkest Night",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot Date",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest50",
+     "achieved": 1,
+     "unlocktime": 1697759752,
+     "name": "Just a Nibble",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest51",
+     "achieved": 1,
+     "unlocktime": 1740243160,
+     "name": "Loophole",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest52",
+     "achieved": 1,
+     "unlocktime": 1735142993,
+     "name": "Embrace Your Urge",
+     "description": ""
+    },
+    {
+     "apiname": "BG3_Quest53",
+     "achieved": 1,
+     "unlocktime": 1738713301,
+     "name": "Critical Hit",
+     "description": "Complete the game in Tactician mode."
+    },
+    {
+     "apiname": "BG3_Quest54",
+     "achieved": 1,
+     "unlocktime": 1741127862,
+     "name": "Foehammer",
+     "description": "Complete the game in Honour mode."
+    }
+   ],
+   "success": true
+  }
+ }
+}

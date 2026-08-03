@@ -2,12 +2,14 @@
 
 A terminal tool for maintaining this site's `content/games/<slug>/_index.md` playthrough log.
 
-Run with no arguments for the interactive flow: pick or create a game, then log a new
+Run with no arguments for the interactive flow: pick or create a game, edit its info, log a new
 playthrough, log a new session, or update an existing playthrough (finish date, status,
-rating, notes).
+rating, notes). It loops — "Do another?" after each action — so a sitting can cover several
+games without relaunching.
 
 ```
 go run .          # interactive
+go run . review   # walk through draft games one at a time
 go run . help     # usage summary
 ```
 
@@ -17,8 +19,9 @@ Three layers, deliberately separate, because they have different owners and diff
 
 ```
 content/games/<slug>/
-  _index.md          authored by hand. The tool writes it once, at creation, and
-                     only ever reads it afterwards.
+  _index.md          authored by hand. The tool writes it at creation, and can edit
+                     select fields afterwards (see "How front matter is edited")
+                     without ever touching the markdown body below it.
   playthroughs.yaml  tool-owned. Encoded whole on every write.
 
 archive/
@@ -73,12 +76,51 @@ explicitly: YAML resolves an unquoted `2026-01-04` to a timestamp, and letting t
 *not* `omitempty`, so an ongoing session keeps the key rather than having the field vanish.
 
 **Comments in `playthroughs.yaml` are not preserved** — the file says so in a banner it re-emits
-on every write. Prose belongs in `_index.md`, which the tool never rewrites.
+on every write. Prose belongs in `_index.md`'s markdown body, which a front-matter edit never
+touches (see below).
 
 Game directory names come from `Slugify`, which folds accents to ASCII (`Ōkami` → `okami`,
 `Pokémon Red` → `pokemon-red`) and drops symbols like `™`/`®`. A title that yields no slug at all
 is refused rather than written, and a slug already in use names the game holding it — distinct
 titles can collide (`Hades: II` and `Hades II` both give `hades-ii`).
+
+## How front matter is edited
+
+`_index.md` stays conceptually hand-authored — unlike `playthroughs.yaml`, the tool doesn't own
+the whole file, so there's no re-emitted banner and no attempt to reformat the file each write.
+An edit is a **splice**: the bytes before the front matter and everything from the closing `---`
+onward (the markdown body) are kept exactly as read, and only the front-matter block between the
+delimiters is replaced. A hand-written overview paragraph below the front matter is never at risk,
+because it's never reconstructed — only ever copied verbatim from the original file.
+
+Title, platform, status, dates, rating, and `draft` are editable, through "Edit game info" in the
+interactive flow or via `gamelog review`. `retroachievements_id`/`steam_appid` are deliberately
+not — relinking a provider ID is a more consequential action than a date fix, and isn't
+implemented yet.
+
+`status: mastered` is `finished`'s stronger sibling — the game was beaten *and* every achievement
+was earned, not just the ones that come from beating it. It's a distinct value rather than a flag
+on `finished` so the timeline/list can color and filter them separately.
+
+`status: session-based` marks a game (roguelikes, multiplayer) that doesn't have a meaningful
+start/finish narrative — it's played in an open-ended series of sessions with no state that ends
+play. Such a game gets exactly one `playthroughs.yaml` entry, ever, whose `sessions:` list *is*
+the record: once it has that one entry, "Start a new playthrough" stops being offered for it, so
+there's nothing to accidentally fragment into a second discrete playthrough later.
+
+The same two safeguards as `playthroughs.yaml` apply: an `Extra map[string]any` inline field
+catches `cover`, `cascade`, and anything else the struct doesn't model, so it round-trips instead
+of vanishing on a rewrite; and the pending rewrite is diffed against the bytes on disk before
+being allowed to land. One difference from `playthroughs.yaml`: front-matter scalar fields
+(`started`, `rating`, ...) are **not** `omitempty`, so clearing one leaves the key present with a
+blank/null value rather than dropping it — matching how a freshly-created file already looks
+(`started:`, `rating:` with nothing after the colon). That means clearing a field is never
+reported as data loss; there's nothing to declare.
+
+Re-encoding the front-matter block through `yaml.v3` won't reproduce today's hand-formatted
+quoting exactly — `title: "X"` may come back as `title: X` or `title: 'X'`, and a blank field may
+render as `null` instead of bare. This is cosmetic, not lossy: the loss-check compares decoded
+field *presence*, not text, and the same tradeoff is already accepted for `playthroughs.yaml`.
 
 ## `gamelog suggest` — playtime date suggestions
 
@@ -135,8 +177,65 @@ rate-limited, but those endpoints carry no start dates. Create the entry, then r
 
 A RetroAchievements game counts as finished when it carries a real award — the report names
 which one, since `12/189 achievements → finished` only makes sense once you can see it was
-`beaten-hardcore` rather than a mastery. **Steam games are never auto-marked finished**:
-playtime alone says nothing about completion.
+`beaten-hardcore` rather than a mastery. A `mastered`/`completed` award — every achievement, not
+just the ones needed to beat it — is suggested as `status: mastered` instead of `finished`.
+**Steam games are never auto-marked finished**: playtime alone says nothing about completion.
+
+## `gamelog review` — triage the draft backlog
+
+`scan` always writes new entries with `draft: true`. `gamelog review` is how you work through
+them: it walks every draft game one at a time and asks what to do with it.
+
+```
+go run . review
+```
+
+Each game shows a summary card — title, provider links, current status/dates, and its logged
+playthroughs — followed by a choice:
+
+- **Publish as-is** — flips `draft: false`, nothing else changes.
+- **Edit, then publish** — opens the same form as "Edit game info," then publishes regardless of
+  what its own `draft` toggle was left at.
+- **Edit without publishing** — same form, but `draft` stays whatever the form set it to, for
+  partial progress you'll come back to.
+- **Mark dropped & publish** — sets `status: dropped` and publishes.
+- **Skip** — leaves it draft and moves on; it's excluded for the rest of *this* run, but
+  `gamelog review` re-filters `draft: true` fresh every time you run it, so nothing skipped is
+  lost — it just shows up again next time.
+- **Delete this stub** — only offered when the game has no logged playthroughs *and* no archive
+  record for either linked provider ID. Once either exists, this isn't a plausible false-positive
+  scan match anymore, so the option disappears rather than risking real data.
+- **Quit** — stops the loop; everything not yet acted on stays `draft: true`.
+
+## `gamelog stale` — nudge for games that have gone quiet
+
+Steam's `GetOwnedGames` reports `rtime_last_played` per game, captured into every Steam archive
+record as `last_played`. `gamelog stale` uses it to find games you've probably stopped playing but
+never marked as such: published, currently `status: playing`, Steam-linked, and untouched for a
+while.
+
+```
+go run . stale                # 30+ days since last played
+go run . stale --days 60      # narrower
+```
+
+For each one it computes a guess — **mastered** at 100% achievement completion, **finished** at
+≥90%, **dropped** otherwise, or **dropped at low confidence** when the game has no achievements to
+go on at all (playtime alone doesn't prove completion, so "dropped" is the safer default, not a
+claim) — and shows it alongside the last-played date, achievement count, and playtime. Nothing is
+ever written automatically; you choose:
+
+- **Accept** — applies the suggested status as-is.
+- **Edit before applying** — opens "Edit game info," prefilled with the suggested status, so you
+  can change it, add a finish date, or adjust anything else before confirming.
+- **Still playing / skip for now** — leaves it untouched. There's no persistent dismissal — if it's
+  still `playing` and still stale, the next `gamelog stale` run will surface it again.
+- **Quit** — stops the loop.
+
+A game marked `session-based` never shows up here — it isn't `status: playing` by definition (see
+above), and games played in indefinite session bursts have no "done" to detect from staleness
+alone. Same reasoning `gamelog scan` already applies to Steam elsewhere: a completion signal comes
+from achievements or an explicit human decision, never from playtime or silence by itself.
 
 ## `gamelog achievements` — full unlock history
 
@@ -149,10 +248,8 @@ run the command directly to refresh a game or backfill one that predates it.
 go run . achievements spelunky
 ```
 
-Nothing renders this yet. Wiring it into the site means generating a slim, `raw`-free projection
-into the game's bundle for Hugo to read — the archive itself is deliberately not reachable from
-templates, so that trying a new display shape never means touching captured data or re-fetching
-it.
+The archive itself is deliberately not reachable from templates — see `gamelog project` below for
+how a slice of it (achievement counts) reaches the site without that changing.
 
 ### The two rules that shape this file
 
@@ -250,8 +347,36 @@ The committed `testdata/*.json` fixtures were corrected against live responses �
 way, since a fixture written from the documentation is what let all of the above pass tests
 while being broken in practice.
 
+## `gamelog project` — achievement counts for the site
+
+The archive lives outside `content/` on purpose (see above), so Hugo can never read it directly.
+`gamelog project` is the projection step: it walks every game with a `retroachievements_id` or
+`steam_appid`, sums that game's `unlocked`/`total` across whichever providers it's linked to (RA
+12/40 + Steam 46/54 → 58/94), and writes the result to
+`content/games/<slug>/achievement-summary.yaml` — no `raw`, no per-achievement list, just the two
+numbers the games list actually displays.
+
+```
+go run . project
+```
+
+It only ever reads what's already in `archive/` — **no API calls**, so it's safe and fast to
+re-run any time the projection needs rebuilding (after `gamelog achievements` refreshes a game, or
+after the summary's shape changes) without touching credentials or rate limits. `gamelog scan` and
+`gamelog achievements` already call the same write for whichever game they just touched, so a
+full `project` run is only needed for a bulk backfill or to pick up an archive edited by hand.
+
+A game with nothing archived for either provider gets no file — not a `0/0` one — and any stale
+file left over from a cleared or relinked provider ID is removed rather than shown. The games list
+(`layouts/games/taxonomy.html`) reads the file via `.Resources.Get`, which is silently absent for
+those games, so the achievement count just doesn't render rather than showing a wrong or empty
+count. Like `playthroughs.yaml`, the file is covered by `content/games/_index.md`'s
+`_build.publishResources: false` cascade — Hugo can read it at build time, but it's never copied
+to the public site.
+
 ### Not implemented (by design)
 
-No auto-write to front matter, no `--json` output, no per-playthrough attribution (see above —
-the API data doesn't support it), no CLI-flag credential overrides, and no rendering of the
-archive (see `KNOWN-ISSUES.md`).
+No relinking `retroachievements_id`/`steam_appid` or editing the markdown body from within the
+tool, no `--json` output, no per-playthrough attribution (see above — the API data doesn't
+support it), no CLI-flag credential overrides, and no rendering of the archive (see
+`KNOWN-ISSUES.md`).

@@ -1,0 +1,641 @@
+{
+ "provider": "steam",
+ "title": "Danganronpa 2: Goodbye Despair",
+ "updated": "2026-07-26",
+ "id": "413420",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 14,
+ "total": 47,
+ "first": "2017-08-26",
+ "last": "2017-09-15",
+ "platform": "PC",
+ "icon": "912bb82c4ee0f7734ed28c97fde01a1371978896",
+ "playtime_mins": 2012,
+ "last_played": "2017-10-20",
+ "achievements": [
+  {
+   "key": "PROLOGUE",
+   "name": "Murderous Marooning",
+   "unlocked": true,
+   "date": "2017-08-26T19:46:01-05:00"
+  },
+  {
+   "key": "CHAPTER1",
+   "name": "Dead Man's Party",
+   "unlocked": true,
+   "date": "2017-08-31T22:00:03-05:00"
+  },
+  {
+   "key": "CHAPTER2",
+   "name": "Death, Lies, and Video Games",
+   "unlocked": true,
+   "date": "2017-09-03T19:58:54-05:00"
+  },
+  {
+   "key": "NANAMI",
+   "name": "Co-Op Partner",
+   "description": "Filled in every page of Chiaki's Report Card",
+   "unlocked": true,
+   "date": "2017-09-04T19:27:40-05:00"
+  },
+  {
+   "key": "NOISE_100",
+   "name": "Blowin' Through My Screen",
+   "description": "Destroyed 100 white noise lines across all class trials",
+   "unlocked": true,
+   "date": "2017-09-05T18:51:51-05:00"
+  },
+  {
+   "key": "CHAPTER3",
+   "name": "Is It Medicine or Social Skill?",
+   "unlocked": true,
+   "date": "2017-09-05T21:12:45-05:00"
+  },
+  {
+   "key": "NO_RETRY",
+   "name": "Case Closed",
+   "description": "Cleared a class trial without having to retry once",
+   "unlocked": true,
+   "date": "2017-09-08T18:43:13-05:00"
+  },
+  {
+   "key": "CHAPTER4",
+   "name": "Bred for Destruction",
+   "unlocked": true,
+   "date": "2017-09-08T19:00:13-05:00"
+  },
+  {
+   "key": "MONOKUMA_HALF",
+   "name": "Be Beary, Beary Quiet...",
+   "description": "Found half of the Hidden Monokumas",
+   "unlocked": true,
+   "date": "2017-09-14T21:31:17-05:00"
+  },
+  {
+   "key": "PET",
+   "name": "Can We Keep Him?",
+   "description": "Fully raised one type of pet",
+   "unlocked": true,
+   "date": "2017-09-14T21:56:50-05:00"
+  },
+  {
+   "key": "CHAPTER5",
+   "name": "Abandon All Hope",
+   "unlocked": true,
+   "date": "2017-09-15T19:43:13-05:00"
+  },
+  {
+   "key": "LEVEL_50",
+   "name": "Halfway There!",
+   "description": "Hajime Hinata breaks through level 50",
+   "unlocked": true,
+   "date": "2017-09-15T20:07:25-05:00"
+  },
+  {
+   "key": "NOISE_500",
+   "name": "The Airborne Static Event",
+   "description": "Destroyed 500 white noise lines across all class trials",
+   "unlocked": true,
+   "date": "2017-09-15T22:48:13-05:00"
+  },
+  {
+   "key": "CHAPTER_ALL",
+   "name": "Goodbye Academy of Despair",
+   "unlocked": true,
+   "date": "2017-09-15T23:50:15-05:00"
+  },
+  {
+   "key": "COIN_MACHINE",
+   "name": "A Fool and His Money...",
+   "description": "Obtained all types of items in vending machine",
+   "unlocked": false
+  },
+  {
+   "key": "FRIENDSHIP_ALL",
+   "name": "Mr. Congeniality",
+   "description": "Filled in every page of every character's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "GALLERY",
+   "name": "This Belongs in a Museum!",
+   "description": "Unlocked all gallery items",
+   "unlocked": false
+  },
+  {
+   "key": "HANAMURA",
+   "name": "Cooking With Passion",
+   "description": "Filled in every page of Teruteru's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "ISLAND_CLEAR",
+   "name": "I Wanna Soak Up Some Sun",
+   "unlocked": false
+  },
+  {
+   "key": "ISLAND_CLEAR_ALL",
+   "name": "Life's a Real Beach",
+   "unlocked": false
+  },
+  {
+   "key": "KOIZUMI",
+   "name": "Picture Perfect",
+   "description": "Filled in every page of Mahiru's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "KOMAEDA",
+   "name": "Hope Springs Eternal",
+   "description": "Filled in every page of Nagito's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "KUZURYU",
+   "name": "Honor and Humanity",
+   "description": "Filled in every page of Fuyuhiko's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "LAST_REWARD",
+   "name": "Hope's Last Reward",
+   "description": "Earned every other achievement in the game",
+   "unlocked": false
+  },
+  {
+   "key": "LEVEL_99",
+   "name": "Capped Out!",
+   "description": "Hajime Hinata breaks through level 99",
+   "unlocked": false
+  },
+  {
+   "key": "MEDAL",
+   "name": "The 1 Percent",
+   "description": "Collected 999 Monocoins",
+   "unlocked": false
+  },
+  {
+   "key": "MIODA",
+   "name": "Dynamic Duet",
+   "description": "Filled in every page of Ibuki's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "MONOKUMA_ALL",
+   "name": "I Should Start a Circus",
+   "description": "Found every Hidden Monokuma",
+   "unlocked": false
+  },
+  {
+   "key": "MONOMI_CLEAR_ALL",
+   "name": "A Magical Ending",
+   "unlocked": false
+  },
+  {
+   "key": "MONOMI_ITEM",
+   "name": "Monomi Won't Miss These, Right?",
+   "unlocked": false
+  },
+  {
+   "key": "NIDAI",
+   "name": "Caught in a Rad Bromance",
+   "description": "Filled in every page of Nekomaru's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "NO_CONCENTRATE",
+   "name": "I'm Sorry, What Were You Saying?",
+   "description": "Cleared a class trial without using your Concentration skill once",
+   "unlocked": false
+  },
+  {
+   "key": "NO_DAMAGE",
+   "name": "Any Objections?",
+   "description": "Cleared a class trial without taking any damage",
+   "unlocked": false
+  },
+  {
+   "key": "OWARI",
+   "name": "Starving for Affection",
+   "description": "Filled in every page of Akane's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "PEKOYAMA",
+   "name": "Feudal Friendship",
+   "description": "Filled in every page of Peko's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "PET_ALL",
+   "name": "Gotta Raise 'Em All!",
+   "description": "Fully raised every type of pet",
+   "unlocked": false
+  },
+  {
+   "key": "PRESENT_ALL",
+   "name": "For the Hoard",
+   "description": "Collected every possible present",
+   "unlocked": false
+  },
+  {
+   "key": "PRESENT_HALF",
+   "name": "Look at This Stuff, Isn't it Neat?",
+   "description": "Collected 50 unique presents",
+   "unlocked": false
+  },
+  {
+   "key": "SAIONJI",
+   "name": "It's Lolita Complicated",
+   "description": "Filled in every page of Hiyoko's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "SONIA",
+   "name": "A Royal Affair",
+   "description": "Filled in every page of Sonia's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "SOUDA",
+   "name": "Grease Monkeying Around",
+   "description": "Filled in every page of Kazuichi's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "TANAKA",
+   "name": "Overlord's Vassal",
+   "description": "Filled in every page of Gundham's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "TOGAMI",
+   "name": "The Game Hungers for Seconds...and Thirds",
+   "description": "Filled in every page of Byakuya's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "TUMIKI",
+   "name": "Helloooooooooooooooo Nurse!",
+   "description": "Filled in every page of Mikan's Report Card",
+   "unlocked": false
+  },
+  {
+   "key": "WALK_10000",
+   "name": "Nice Calves",
+   "description": "Break through 10,000 total number of steps",
+   "unlocked": false
+  },
+  {
+   "key": "WALK_5000",
+   "name": "Walking the Walk",
+   "description": "Break through 5000 total number of steps",
+   "unlocked": false
+  },
+  {
+   "key": "YACHINE",
+   "name": "Hey, Big Vendor",
+   "description": "Challenged vending machine 100 times",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Danganronpa 2: Goodbye Despair",
+   "achievements": [
+    {
+     "apiname": "PROLOGUE",
+     "achieved": 1,
+     "unlocktime": 1503794761,
+     "name": "Murderous Marooning",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER1",
+     "achieved": 1,
+     "unlocktime": 1504234803,
+     "name": "Dead Man's Party",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER2",
+     "achieved": 1,
+     "unlocktime": 1504486734,
+     "name": "Death, Lies, and Video Games",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER3",
+     "achieved": 1,
+     "unlocktime": 1504663965,
+     "name": "Is It Medicine or Social Skill?",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER4",
+     "achieved": 1,
+     "unlocktime": 1504915213,
+     "name": "Bred for Destruction",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER5",
+     "achieved": 1,
+     "unlocktime": 1505522593,
+     "name": "Abandon All Hope",
+     "description": ""
+    },
+    {
+     "apiname": "CHAPTER_ALL",
+     "achieved": 1,
+     "unlocktime": 1505537415,
+     "name": "Goodbye Academy of Despair",
+     "description": ""
+    },
+    {
+     "apiname": "KOMAEDA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hope Springs Eternal",
+     "description": "Filled in every page of Nagito's Report Card"
+    },
+    {
+     "apiname": "TANAKA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overlord's Vassal",
+     "description": "Filled in every page of Gundham's Report Card"
+    },
+    {
+     "apiname": "SOUDA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grease Monkeying Around",
+     "description": "Filled in every page of Kazuichi's Report Card"
+    },
+    {
+     "apiname": "TOGAMI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Game Hungers for Seconds...and Thirds",
+     "description": "Filled in every page of Byakuya's Report Card"
+    },
+    {
+     "apiname": "HANAMURA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cooking With Passion",
+     "description": "Filled in every page of Teruteru's Report Card"
+    },
+    {
+     "apiname": "NIDAI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Caught in a Rad Bromance",
+     "description": "Filled in every page of Nekomaru's Report Card"
+    },
+    {
+     "apiname": "KUZURYU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Honor and Humanity",
+     "description": "Filled in every page of Fuyuhiko's Report Card"
+    },
+    {
+     "apiname": "OWARI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Starving for Affection",
+     "description": "Filled in every page of Akane's Report Card"
+    },
+    {
+     "apiname": "NANAMI",
+     "achieved": 1,
+     "unlocktime": 1504571260,
+     "name": "Co-Op Partner",
+     "description": "Filled in every page of Chiaki's Report Card"
+    },
+    {
+     "apiname": "SONIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Royal Affair",
+     "description": "Filled in every page of Sonia's Report Card"
+    },
+    {
+     "apiname": "SAIONJI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's Lolita Complicated",
+     "description": "Filled in every page of Hiyoko's Report Card"
+    },
+    {
+     "apiname": "KOIZUMI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Picture Perfect",
+     "description": "Filled in every page of Mahiru's Report Card"
+    },
+    {
+     "apiname": "TUMIKI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helloooooooooooooooo Nurse!",
+     "description": "Filled in every page of Mikan's Report Card"
+    },
+    {
+     "apiname": "MIODA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dynamic Duet",
+     "description": "Filled in every page of Ibuki's Report Card"
+    },
+    {
+     "apiname": "PEKOYAMA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feudal Friendship",
+     "description": "Filled in every page of Peko's Report Card"
+    },
+    {
+     "apiname": "FRIENDSHIP_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mr. Congeniality",
+     "description": "Filled in every page of every character's Report Card"
+    },
+    {
+     "apiname": "MEDAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The 1 Percent",
+     "description": "Collected 999 Monocoins"
+    },
+    {
+     "apiname": "PRESENT_HALF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Look at This Stuff, Isn't it Neat?",
+     "description": "Collected 50 unique presents"
+    },
+    {
+     "apiname": "PRESENT_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "For the Hoard",
+     "description": "Collected every possible present"
+    },
+    {
+     "apiname": "MONOKUMA_HALF",
+     "achieved": 1,
+     "unlocktime": 1505442677,
+     "name": "Be Beary, Beary Quiet...",
+     "description": "Found half of the Hidden Monokumas"
+    },
+    {
+     "apiname": "MONOKUMA_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Should Start a Circus",
+     "description": "Found every Hidden Monokuma"
+    },
+    {
+     "apiname": "PET",
+     "achieved": 1,
+     "unlocktime": 1505444210,
+     "name": "Can We Keep Him?",
+     "description": "Fully raised one type of pet"
+    },
+    {
+     "apiname": "PET_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gotta Raise 'Em All!",
+     "description": "Fully raised every type of pet"
+    },
+    {
+     "apiname": "ISLAND_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Wanna Soak Up Some Sun",
+     "description": ""
+    },
+    {
+     "apiname": "ISLAND_CLEAR_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Life's a Real Beach",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_50",
+     "achieved": 1,
+     "unlocktime": 1505524045,
+     "name": "Halfway There!",
+     "description": "Hajime Hinata breaks through level 50"
+    },
+    {
+     "apiname": "LEVEL_99",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Capped Out!",
+     "description": "Hajime Hinata breaks through level 99"
+    },
+    {
+     "apiname": "WALK_5000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Walking the Walk",
+     "description": "Break through 5000 total number of steps"
+    },
+    {
+     "apiname": "WALK_10000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nice Calves",
+     "description": "Break through 10,000 total number of steps"
+    },
+    {
+     "apiname": "YACHINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hey, Big Vendor",
+     "description": "Challenged vending machine 100 times"
+    },
+    {
+     "apiname": "COIN_MACHINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Fool and His Money...",
+     "description": "Obtained all types of items in vending machine"
+    },
+    {
+     "apiname": "MONOMI_CLEAR_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Magical Ending",
+     "description": ""
+    },
+    {
+     "apiname": "MONOMI_ITEM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monomi Won't Miss These, Right?",
+     "description": ""
+    },
+    {
+     "apiname": "GALLERY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This Belongs in a Museum!",
+     "description": "Unlocked all gallery items"
+    },
+    {
+     "apiname": "NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Any Objections?",
+     "description": "Cleared a class trial without taking any damage"
+    },
+    {
+     "apiname": "NO_RETRY",
+     "achieved": 1,
+     "unlocktime": 1504914193,
+     "name": "Case Closed",
+     "description": "Cleared a class trial without having to retry once"
+    },
+    {
+     "apiname": "NOISE_100",
+     "achieved": 1,
+     "unlocktime": 1504655511,
+     "name": "Blowin' Through My Screen",
+     "description": "Destroyed 100 white noise lines across all class trials"
+    },
+    {
+     "apiname": "NOISE_500",
+     "achieved": 1,
+     "unlocktime": 1505533693,
+     "name": "The Airborne Static Event",
+     "description": "Destroyed 500 white noise lines across all class trials"
+    },
+    {
+     "apiname": "NO_CONCENTRATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm Sorry, What Were You Saying?",
+     "description": "Cleared a class trial without using your Concentration skill once"
+    },
+    {
+     "apiname": "LAST_REWARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hope's Last Reward",
+     "description": "Earned every other achievement in the game"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,1243 @@
+{
+ "provider": "steam",
+ "title": "OCTOPATH TRAVELER",
+ "updated": "2026-07-26",
+ "id": "921570",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 67,
+ "total": 88,
+ "first": "2022-05-14",
+ "last": "2022-06-19",
+ "platform": "PC",
+ "icon": "f044bcf179c1f3609c730d5ed4e0af0a984ea8b5",
+ "playtime_mins": 5342,
+ "playtime": {
+  "deck": 9,
+  "linux": 9,
+  "windows": 5333
+ },
+ "last_played": "2022-07-19",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_086",
+   "name": "Sticky-Fingered",
+   "description": "Stole something for the first time.",
+   "unlocked": true,
+   "date": "2022-05-14T15:52:21-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_075",
+   "name": "Ultimate Power",
+   "description": "Used a Lv.4 Boost for the first time in battle.",
+   "unlocked": true,
+   "date": "2022-05-14T16:40:47-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_072",
+   "name": "Novice Scrapper",
+   "description": "Fought 10 battles.",
+   "unlocked": true,
+   "date": "2022-05-14T16:55:11-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_071",
+   "name": "Better Safe Than Sorry",
+   "description": "Fled from battle.",
+   "unlocked": true,
+   "date": "2022-05-14T16:55:36-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_029",
+   "name": "Setting Out – Freedom",
+   "description": "Therion sets out to obtain the three dragonstones in a bargain that would see the fool's bangle marking him a criminal removed.",
+   "unlocked": true,
+   "date": "2022-05-15T10:22:08-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_085",
+   "name": "Tell Me More",
+   "description": "Inquired about something for the first time.",
+   "unlocked": true,
+   "date": "2022-05-15T20:39:40-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_021",
+   "name": "Setting Out – Healing",
+   "description": "With the encouragement of his dear friend Zeph, Alfyn embarks on a journey to heal Orsterra's sick and wounded.",
+   "unlocked": true,
+   "date": "2022-05-15T21:48:15-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_084",
+   "name": "Irresistible",
+   "description": "Allured someone for the first time.",
+   "unlocked": true,
+   "date": "2022-05-16T21:11:48-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_017",
+   "name": "Setting Out – Revenge",
+   "description": "Primrose, finally in possession of the lead she needed, takes off in pursuit of the three men bearing the mark of the crow—the men against whom she swore revenge.",
+   "unlocked": true,
+   "date": "2022-05-18T20:24:29-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_083",
+   "name": "A New Challenger",
+   "description": "Challenged someone for the first time.",
+   "unlocked": true,
+   "date": "2022-05-19T21:10:19-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_013",
+   "name": "Setting Out – Renewed Purpose",
+   "description": "The denizens of Cobbleston come out to give their hero Olberic a proper sendoff. The battle with the brigands behind him, Olberic sets out with a renewed sense of purpose.",
+   "unlocked": true,
+   "date": "2022-05-19T22:03:11-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_073",
+   "name": "Fighter",
+   "description": "Fought 100 battles.",
+   "unlocked": true,
+   "date": "2022-05-21T09:27:47-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_082",
+   "name": "Bargain Hunter",
+   "description": "Purchased something for the first time.",
+   "unlocked": true,
+   "date": "2022-05-21T09:46:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_009",
+   "name": "Setting Out – In Search of Treasure",
+   "description": "Tressa dreams of becoming a renowned merchant. With the mysterious notebook she received from Captain Leon in hand, she sets out on her journey to see all the treasures the world holds.",
+   "unlocked": true,
+   "date": "2022-05-21T11:09:41-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_076",
+   "name": "Traveler",
+   "description": "Played more than 10 hours.",
+   "unlocked": true,
+   "date": "2022-05-21T13:28:17-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_081",
+   "name": "In the Know",
+   "description": "Scrutinized someone for the first time.",
+   "unlocked": true,
+   "date": "2022-05-21T13:55:57-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_005",
+   "name": "Setting Out – The Search for Truth",
+   "description": "Driven from the academy, Cyrus sets out to unravel the mystery of From the Far Reaches of Hell, a tome missing for fifteen years.",
+   "unlocked": true,
+   "date": "2022-05-21T16:07:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_080",
+   "name": "Lead the Way",
+   "description": "Guided someone for the first time.",
+   "unlocked": true,
+   "date": "2022-05-21T17:00:14-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_001",
+   "name": "Setting Out – The Kindling",
+   "description": "The ember from the Cave of Origin in hand, Ophilia embarks on the first leg of the Kindling as the Flamebearer.",
+   "unlocked": true,
+   "date": "2022-05-21T18:09:24-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_087",
+   "name": "Start Something",
+   "description": "Provoked a fight for the first time.",
+   "unlocked": true,
+   "date": "2022-05-21T21:52:23-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_025",
+   "name": "Setting Out – For Master",
+   "description": "H'aanit and her trusty snow leopard companion Linde begin their hunt for Master Z'aanta, who has gone missing.",
+   "unlocked": true,
+   "date": "2022-05-21T22:52:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_040",
+   "name": "Aeber's Wisdom",
+   "description": "Obtained thief as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T08:29:43-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_039",
+   "name": "Draefendi's Wisdom",
+   "description": "Obtained hunter as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T09:24:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_074",
+   "name": "Brawler",
+   "description": "Fought 200 battles.",
+   "unlocked": true,
+   "date": "2022-05-22T09:51:59-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_034",
+   "name": "Alephan's Wisdom",
+   "description": "Obtained scholar as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T10:02:31-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_069",
+   "name": "Moneybags",
+   "description": "Obtained 80,000 leaves.",
+   "unlocked": true,
+   "date": "2022-05-22T16:32:40-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_036",
+   "name": "Brand's Wisdom",
+   "description": "Obtained warrior as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T18:59:02-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_033",
+   "name": "Aelfric's Wisdom",
+   "description": "Obtained cleric as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T19:35:50-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_035",
+   "name": "Bifelgan's Wisdom",
+   "description": "Obtained merchant as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T20:25:33-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_038",
+   "name": "Dohter's Wisdom",
+   "description": "Obtained apothecary as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T20:54:29-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_037",
+   "name": "Sealticge's Wisdom",
+   "description": "Obtained dancer as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-22T21:11:19-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_030",
+   "name": "Chasing the Dragonstones",
+   "description": "Therion vanquishes Orlick to claim the ruby dragonstone before following the trail of the emerald dragonstone to a desert town.",
+   "unlocked": true,
+   "date": "2022-05-23T19:58:31-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_018",
+   "name": "Faith Shall Be Your Shield",
+   "description": "Primrose crosses Rufus, the Left-hand Man, off her list and takes the next step in her journey to learn the truth about her father's death.",
+   "unlocked": true,
+   "date": "2022-05-23T21:53:30-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_002",
+   "name": "Gentle Guidance",
+   "description": "Rite completed, Ophilia helps three quarreling children mend their friendship before setting out for her next destination.",
+   "unlocked": true,
+   "date": "2022-05-24T21:46:30-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_010",
+   "name": "The Merchants' Fair",
+   "description": "Tressa rescues her rival, Ali, and drives Morlock from the town. Before resuming her journey, Tressa promises Ali they will one day meet again at the Merchants' Fair.",
+   "unlocked": true,
+   "date": "2022-05-26T22:15:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_006",
+   "name": "Traces of the Tome",
+   "description": "After Cyrus solves the mystery of the missing townspeople, he and Odette ascertain where a copy of the tome was reproduced.",
+   "unlocked": true,
+   "date": "2022-05-27T22:09:05-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_022",
+   "name": "The Quack",
+   "description": "Alfyn exposes Vanessa's plot to sicken the residents of Goldshore so she may treat them at a premium, and saves a young girl who fell ill by Vanessa's hand. His journey now takes him to Saintsbridge, the largest city in the Riverlands.",
+   "unlocked": true,
+   "date": "2022-05-28T11:33:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_026",
+   "name": "Chasing Master's Footprints",
+   "description": "H'aanit finds Z'aanta turned to stone by the beast known as Redeye. Following the instructions in Z'aanta's letter, she travels to see Susanna the Seeress.",
+   "unlocked": true,
+   "date": "2022-05-28T16:34:15-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_052",
+   "name": "Aeber's Reckoning",
+   "description": "Mastered thief as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-28T17:00:08-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_014",
+   "name": "Reasons for Wielding",
+   "description": "Olberic emerges victorious from the tournament and ventures into the desert in pursuit of Erhardt.",
+   "unlocked": true,
+   "date": "2022-05-28T21:21:29-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_023",
+   "name": "Life's Worth",
+   "description": "Alfyn's faith in his journey is shaken when a man he helped nearly kills a young boy. Ogen's theory that some lives aren't worth saving echoes in Alfyn's head as he makes his way to the Cliftlands.",
+   "unlocked": true,
+   "date": "2022-05-29T21:26:56-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_015",
+   "name": "The Twin Blades of Hornburg",
+   "description": "The brief reunion of the twin blades of Hornburg comes to an end as Olberic takes his leave of the desert town in search of his true adversary: the tyrant Werner.",
+   "unlocked": true,
+   "date": "2022-05-30T14:47:57-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_047",
+   "name": "Bifelgan's Bounty",
+   "description": "Mastered merchant as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-30T18:42:50-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_045",
+   "name": "Aelfric's Auspices",
+   "description": "Mastered cleric as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-30T18:43:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_049",
+   "name": "Sealticge's Seduction",
+   "description": "Mastered dancer as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-30T18:43:24-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_046",
+   "name": "Alephan's Enlightenment",
+   "description": "Mastered scholar as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-30T21:43:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_051",
+   "name": "Draefendi's Rage",
+   "description": "Mastered hunter as a secondary job.",
+   "unlocked": true,
+   "date": "2022-05-30T21:43:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_031",
+   "name": "\"Partner\"",
+   "description": "Therion finds the emerald dragonstone at last, only to have it stolen by none other than Darius, his former partner in crime.",
+   "unlocked": true,
+   "date": "2022-05-30T22:00:52-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_077",
+   "name": "Seasoned Traveler",
+   "description": "Played more than 50 hours.",
+   "unlocked": true,
+   "date": "2022-06-08T18:39:45-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_027",
+   "name": "Dragon Hunting",
+   "description": "H'aanit fells a dragon and obtains the herb that should ward off Redeye's curse. Brew in hand, H'aanit makes haste for the desert where Redeye was last seen.",
+   "unlocked": true,
+   "date": "2022-06-09T20:41:41-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_011",
+   "name": "The Most Precious Treasure",
+   "description": "After reuniting with Leon and hearing him tell of his friend Baltazar, Tressa wonders just what she treasures most. With those thoughts in mind, she makes for Grandport and the Merchants' Fair.",
+   "unlocked": true,
+   "date": "2022-06-09T22:08:17-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_003",
+   "name": "The Savior",
+   "description": "Ophilia rescues the child kidnapped by the Savior's followers and performs the rite, but she is later betrayed by Lianna. Ophilia must hurry to Wispermill in the Flatlands in pursuit of her sister and the stolen ember.",
+   "unlocked": true,
+   "date": "2022-06-10T21:53:51-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_007",
+   "name": "The Demonic Headmaster",
+   "description": "Yvon defeated, Cyrus chases after the mastermind behind the plot: Lucia, the headmaster's secretary.",
+   "unlocked": true,
+   "date": "2022-06-11T13:03:21-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_019",
+   "name": "A Familiar Place",
+   "description": "With Albus, the Right-hand Man, vanquished, Primrose learns the truth: Simeon, her childhood friend, is responsible for her father's murder.",
+   "unlocked": true,
+   "date": "2022-06-11T14:52:01-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_024",
+   "name": "His Hero's Words",
+   "description": "Alfyn cures Ogen and continues on his journey, carrying on the convictions of Graham, the traveling apothecary who once saved Alfyn's own life.",
+   "unlocked": true,
+   "date": "2022-06-12T20:45:10-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_048",
+   "name": "Brand's Thunder",
+   "description": "Mastered warrior as a secondary job.",
+   "unlocked": true,
+   "date": "2022-06-13T17:22:34-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_020",
+   "name": "A Vow Fulfilled",
+   "description": "Her revenge complete, Primrose sets out anew, vowing to continue dancing.",
+   "unlocked": true,
+   "date": "2022-06-13T18:38:16-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_004",
+   "name": "A Hill to Remember",
+   "description": "The Savior defeated and Lianna saved, Ophilia continues offering guidance to the people of the realm. May the Sacred Flame light your path.",
+   "unlocked": true,
+   "date": "2022-06-15T21:12:50-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_012",
+   "name": "The Next Chapter",
+   "description": "Content in the knowledge that her journey itself was her treasure all along, Tressa entrusts the next chapter of the journal to Noa and presses on, determined to become a famed merchant.",
+   "unlocked": true,
+   "date": "2022-06-16T18:06:22-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_070",
+   "name": "Millionaire",
+   "description": "Obtained 1,000,000 leaves.",
+   "unlocked": true,
+   "date": "2022-06-16T20:27:53-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_028",
+   "name": "Master and Prentice",
+   "description": "H'aanit defeats Redeye and at last reunites with her master. Surely this is the first in a long line of tales yet to be told.",
+   "unlocked": true,
+   "date": "2022-06-16T20:36:11-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_050",
+   "name": "Dohter's Charity",
+   "description": "Mastered apothecary as a secondary job.",
+   "unlocked": true,
+   "date": "2022-06-18T15:06:29-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_032",
+   "name": "A Wanderer's Life",
+   "description": "Therion wrests control of the emerald and gold dragonstones from Darius. His freedom restored, Therion resumes traveling wherever the wind takes him.",
+   "unlocked": true,
+   "date": "2022-06-18T15:42:07-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_008",
+   "name": "For the Future's Sake",
+   "description": "After defeating Lucia in the ancient ruins, Cyrus succeeds in deciphering From the Far Reaches of Hell. He continues his research, resolute in his personal mission to see knowledge passed on to future generations.",
+   "unlocked": true,
+   "date": "2022-06-18T17:18:00-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_016",
+   "name": "To Protect Those in Need",
+   "description": "With Werner defeated, Olberic continues his journey, vowing to protect those in need.",
+   "unlocked": true,
+   "date": "2022-06-18T18:03:53-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_079",
+   "name": "Training",
+   "description": "Challenged every villager in Cobbleston.",
+   "unlocked": true,
+   "date": "2022-06-18T19:27:13-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_044",
+   "name": "Dreisang's Wisdom",
+   "description": "Obtained sorcerer as a secondary job.",
+   "unlocked": true,
+   "date": "2022-06-19T09:30:40-05:00"
+  },
+  {
+   "key": "ACHIEVEMENT_000",
+   "name": "A Story All Your Own",
+   "description": "Unlocked all achievements.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_041",
+   "name": "Balogar's Wisdom",
+   "description": "Obtained runelord as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_042",
+   "name": "Steorra's Wisdom",
+   "description": "Obtained starseer as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_043",
+   "name": "Winnehild's Wisdom",
+   "description": "Obtained warmaster as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_053",
+   "name": "Balogar's Blade",
+   "description": "Mastered runelord as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_054",
+   "name": "Steorra's Prophecy",
+   "description": "Mastered starseer as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_055",
+   "name": "Winnehild's Battle Cry",
+   "description": "Mastered warmaster as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_056",
+   "name": "Dreisang's Spell",
+   "description": "Mastered sorcerer as a secondary job.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_057",
+   "name": "Lone Traveler",
+   "description": "Saw your journey through without aid from others.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_058",
+   "name": "Fleetfoot",
+   "description": "Finished your journey with lightning speed.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_059",
+   "name": "Closure",
+   "description": "Defeated the dark god Galdera and sealed the Gate of Finis once more.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_060",
+   "name": "Worth the Detour",
+   "description": "Resolved the troubles of everyone in the realm.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_061",
+   "name": "Master of Orsterra",
+   "description": "Traveled to every location on the map.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_062",
+   "name": "Skillful",
+   "description": "Learned every skill.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_063",
+   "name": "Full Support",
+   "description": "Learned every support skill.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_064",
+   "name": "Treasure Hunter",
+   "description": "Opened every treasure chest.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_065",
+   "name": "Eagle-Eyed",
+   "description": "Found every hidden item.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_066",
+   "name": "Strategist",
+   "description": "Discovered every enemy's weaknesses.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_067",
+   "name": "Collector",
+   "description": "Acquired every item.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_068",
+   "name": "The Strongest Sojourner",
+   "description": "Dealt maximum damage.",
+   "unlocked": false
+  },
+  {
+   "key": "ACHIEVEMENT_078",
+   "name": "Renowned Traveler",
+   "description": "Played more than 100 hours.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "OCTOPATH TRAVELER",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Story All Your Own",
+     "description": "Unlocked all achievements."
+    },
+    {
+     "apiname": "ACHIEVEMENT_001",
+     "achieved": 1,
+     "unlocktime": 1653174564,
+     "name": "Setting Out – The Kindling",
+     "description": "The ember from the Cave of Origin in hand, Ophilia embarks on the first leg of the Kindling as the Flamebearer."
+    },
+    {
+     "apiname": "ACHIEVEMENT_002",
+     "achieved": 1,
+     "unlocktime": 1653446790,
+     "name": "Gentle Guidance",
+     "description": "Rite completed, Ophilia helps three quarreling children mend their friendship before setting out for her next destination."
+    },
+    {
+     "apiname": "ACHIEVEMENT_003",
+     "achieved": 1,
+     "unlocktime": 1654916031,
+     "name": "The Savior",
+     "description": "Ophilia rescues the child kidnapped by the Savior's followers and performs the rite, but she is later betrayed by Lianna. Ophilia must hurry to Wispermill in the Flatlands in pursuit of her sister and the stolen ember."
+    },
+    {
+     "apiname": "ACHIEVEMENT_004",
+     "achieved": 1,
+     "unlocktime": 1655345570,
+     "name": "A Hill to Remember",
+     "description": "The Savior defeated and Lianna saved, Ophilia continues offering guidance to the people of the realm. May the Sacred Flame light your path."
+    },
+    {
+     "apiname": "ACHIEVEMENT_005",
+     "achieved": 1,
+     "unlocktime": 1653167220,
+     "name": "Setting Out – The Search for Truth",
+     "description": "Driven from the academy, Cyrus sets out to unravel the mystery of From the Far Reaches of Hell, a tome missing for fifteen years."
+    },
+    {
+     "apiname": "ACHIEVEMENT_006",
+     "achieved": 1,
+     "unlocktime": 1653707345,
+     "name": "Traces of the Tome",
+     "description": "After Cyrus solves the mystery of the missing townspeople, he and Odette ascertain where a copy of the tome was reproduced."
+    },
+    {
+     "apiname": "ACHIEVEMENT_007",
+     "achieved": 1,
+     "unlocktime": 1654970601,
+     "name": "The Demonic Headmaster",
+     "description": "Yvon defeated, Cyrus chases after the mastermind behind the plot: Lucia, the headmaster's secretary."
+    },
+    {
+     "apiname": "ACHIEVEMENT_008",
+     "achieved": 1,
+     "unlocktime": 1655590680,
+     "name": "For the Future's Sake",
+     "description": "After defeating Lucia in the ancient ruins, Cyrus succeeds in deciphering From the Far Reaches of Hell. He continues his research, resolute in his personal mission to see knowledge passed on to future generations."
+    },
+    {
+     "apiname": "ACHIEVEMENT_009",
+     "achieved": 1,
+     "unlocktime": 1653149381,
+     "name": "Setting Out – In Search of Treasure",
+     "description": "Tressa dreams of becoming a renowned merchant. With the mysterious notebook she received from Captain Leon in hand, she sets out on her journey to see all the treasures the world holds."
+    },
+    {
+     "apiname": "ACHIEVEMENT_010",
+     "achieved": 1,
+     "unlocktime": 1653621301,
+     "name": "The Merchants' Fair",
+     "description": "Tressa rescues her rival, Ali, and drives Morlock from the town. Before resuming her journey, Tressa promises Ali they will one day meet again at the Merchants' Fair."
+    },
+    {
+     "apiname": "ACHIEVEMENT_011",
+     "achieved": 1,
+     "unlocktime": 1654830497,
+     "name": "The Most Precious Treasure",
+     "description": "After reuniting with Leon and hearing him tell of his friend Baltazar, Tressa wonders just what she treasures most. With those thoughts in mind, she makes for Grandport and the Merchants' Fair."
+    },
+    {
+     "apiname": "ACHIEVEMENT_012",
+     "achieved": 1,
+     "unlocktime": 1655420782,
+     "name": "The Next Chapter",
+     "description": "Content in the knowledge that her journey itself was her treasure all along, Tressa entrusts the next chapter of the journal to Noa and presses on, determined to become a famed merchant."
+    },
+    {
+     "apiname": "ACHIEVEMENT_013",
+     "achieved": 1,
+     "unlocktime": 1653015791,
+     "name": "Setting Out – Renewed Purpose",
+     "description": "The denizens of Cobbleston come out to give their hero Olberic a proper sendoff. The battle with the brigands behind him, Olberic sets out with a renewed sense of purpose."
+    },
+    {
+     "apiname": "ACHIEVEMENT_014",
+     "achieved": 1,
+     "unlocktime": 1653790889,
+     "name": "Reasons for Wielding",
+     "description": "Olberic emerges victorious from the tournament and ventures into the desert in pursuit of Erhardt."
+    },
+    {
+     "apiname": "ACHIEVEMENT_015",
+     "achieved": 1,
+     "unlocktime": 1653940077,
+     "name": "The Twin Blades of Hornburg",
+     "description": "The brief reunion of the twin blades of Hornburg comes to an end as Olberic takes his leave of the desert town in search of his true adversary: the tyrant Werner."
+    },
+    {
+     "apiname": "ACHIEVEMENT_016",
+     "achieved": 1,
+     "unlocktime": 1655593433,
+     "name": "To Protect Those in Need",
+     "description": "With Werner defeated, Olberic continues his journey, vowing to protect those in need."
+    },
+    {
+     "apiname": "ACHIEVEMENT_017",
+     "achieved": 1,
+     "unlocktime": 1652923469,
+     "name": "Setting Out – Revenge",
+     "description": "Primrose, finally in possession of the lead she needed, takes off in pursuit of the three men bearing the mark of the crow—the men against whom she swore revenge."
+    },
+    {
+     "apiname": "ACHIEVEMENT_018",
+     "achieved": 1,
+     "unlocktime": 1653360810,
+     "name": "Faith Shall Be Your Shield",
+     "description": "Primrose crosses Rufus, the Left-hand Man, off her list and takes the next step in her journey to learn the truth about her father's death."
+    },
+    {
+     "apiname": "ACHIEVEMENT_019",
+     "achieved": 1,
+     "unlocktime": 1654977121,
+     "name": "A Familiar Place",
+     "description": "With Albus, the Right-hand Man, vanquished, Primrose learns the truth: Simeon, her childhood friend, is responsible for her father's murder."
+    },
+    {
+     "apiname": "ACHIEVEMENT_020",
+     "achieved": 1,
+     "unlocktime": 1655163496,
+     "name": "A Vow Fulfilled",
+     "description": "Her revenge complete, Primrose sets out anew, vowing to continue dancing."
+    },
+    {
+     "apiname": "ACHIEVEMENT_021",
+     "achieved": 1,
+     "unlocktime": 1652669295,
+     "name": "Setting Out – Healing",
+     "description": "With the encouragement of his dear friend Zeph, Alfyn embarks on a journey to heal Orsterra's sick and wounded."
+    },
+    {
+     "apiname": "ACHIEVEMENT_022",
+     "achieved": 1,
+     "unlocktime": 1653755581,
+     "name": "The Quack",
+     "description": "Alfyn exposes Vanessa's plot to sicken the residents of Goldshore so she may treat them at a premium, and saves a young girl who fell ill by Vanessa's hand. His journey now takes him to Saintsbridge, the largest city in the Riverlands."
+    },
+    {
+     "apiname": "ACHIEVEMENT_023",
+     "achieved": 1,
+     "unlocktime": 1653877616,
+     "name": "Life's Worth",
+     "description": "Alfyn's faith in his journey is shaken when a man he helped nearly kills a young boy. Ogen's theory that some lives aren't worth saving echoes in Alfyn's head as he makes his way to the Cliftlands."
+    },
+    {
+     "apiname": "ACHIEVEMENT_024",
+     "achieved": 1,
+     "unlocktime": 1655084710,
+     "name": "His Hero's Words",
+     "description": "Alfyn cures Ogen and continues on his journey, carrying on the convictions of Graham, the traveling apothecary who once saved Alfyn's own life."
+    },
+    {
+     "apiname": "ACHIEVEMENT_025",
+     "achieved": 1,
+     "unlocktime": 1653191520,
+     "name": "Setting Out – For Master",
+     "description": "H'aanit and her trusty snow leopard companion Linde begin their hunt for Master Z'aanta, who has gone missing."
+    },
+    {
+     "apiname": "ACHIEVEMENT_026",
+     "achieved": 1,
+     "unlocktime": 1653773655,
+     "name": "Chasing Master's Footprints",
+     "description": "H'aanit finds Z'aanta turned to stone by the beast known as Redeye. Following the instructions in Z'aanta's letter, she travels to see Susanna the Seeress."
+    },
+    {
+     "apiname": "ACHIEVEMENT_027",
+     "achieved": 1,
+     "unlocktime": 1654825301,
+     "name": "Dragon Hunting",
+     "description": "H'aanit fells a dragon and obtains the herb that should ward off Redeye's curse. Brew in hand, H'aanit makes haste for the desert where Redeye was last seen."
+    },
+    {
+     "apiname": "ACHIEVEMENT_028",
+     "achieved": 1,
+     "unlocktime": 1655429771,
+     "name": "Master and Prentice",
+     "description": "H'aanit defeats Redeye and at last reunites with her master. Surely this is the first in a long line of tales yet to be told."
+    },
+    {
+     "apiname": "ACHIEVEMENT_029",
+     "achieved": 1,
+     "unlocktime": 1652628128,
+     "name": "Setting Out – Freedom",
+     "description": "Therion sets out to obtain the three dragonstones in a bargain that would see the fool's bangle marking him a criminal removed."
+    },
+    {
+     "apiname": "ACHIEVEMENT_030",
+     "achieved": 1,
+     "unlocktime": 1653353911,
+     "name": "Chasing the Dragonstones",
+     "description": "Therion vanquishes Orlick to claim the ruby dragonstone before following the trail of the emerald dragonstone to a desert town."
+    },
+    {
+     "apiname": "ACHIEVEMENT_031",
+     "achieved": 1,
+     "unlocktime": 1653966052,
+     "name": "\"Partner\"",
+     "description": "Therion finds the emerald dragonstone at last, only to have it stolen by none other than Darius, his former partner in crime."
+    },
+    {
+     "apiname": "ACHIEVEMENT_032",
+     "achieved": 1,
+     "unlocktime": 1655584927,
+     "name": "A Wanderer's Life",
+     "description": "Therion wrests control of the emerald and gold dragonstones from Darius. His freedom restored, Therion resumes traveling wherever the wind takes him."
+    },
+    {
+     "apiname": "ACHIEVEMENT_033",
+     "achieved": 1,
+     "unlocktime": 1653266150,
+     "name": "Aelfric's Wisdom",
+     "description": "Obtained cleric as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_034",
+     "achieved": 1,
+     "unlocktime": 1653231751,
+     "name": "Alephan's Wisdom",
+     "description": "Obtained scholar as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_035",
+     "achieved": 1,
+     "unlocktime": 1653269133,
+     "name": "Bifelgan's Wisdom",
+     "description": "Obtained merchant as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_036",
+     "achieved": 1,
+     "unlocktime": 1653263942,
+     "name": "Brand's Wisdom",
+     "description": "Obtained warrior as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_037",
+     "achieved": 1,
+     "unlocktime": 1653271879,
+     "name": "Sealticge's Wisdom",
+     "description": "Obtained dancer as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_038",
+     "achieved": 1,
+     "unlocktime": 1653270869,
+     "name": "Dohter's Wisdom",
+     "description": "Obtained apothecary as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_039",
+     "achieved": 1,
+     "unlocktime": 1653229474,
+     "name": "Draefendi's Wisdom",
+     "description": "Obtained hunter as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_040",
+     "achieved": 1,
+     "unlocktime": 1653226183,
+     "name": "Aeber's Wisdom",
+     "description": "Obtained thief as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_041",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Balogar's Wisdom",
+     "description": "Obtained runelord as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_042",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steorra's Wisdom",
+     "description": "Obtained starseer as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_043",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Winnehild's Wisdom",
+     "description": "Obtained warmaster as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_044",
+     "achieved": 1,
+     "unlocktime": 1655649040,
+     "name": "Dreisang's Wisdom",
+     "description": "Obtained sorcerer as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_045",
+     "achieved": 1,
+     "unlocktime": 1653954181,
+     "name": "Aelfric's Auspices",
+     "description": "Mastered cleric as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_046",
+     "achieved": 1,
+     "unlocktime": 1653964996,
+     "name": "Alephan's Enlightenment",
+     "description": "Mastered scholar as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_047",
+     "achieved": 1,
+     "unlocktime": 1653954170,
+     "name": "Bifelgan's Bounty",
+     "description": "Mastered merchant as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_048",
+     "achieved": 1,
+     "unlocktime": 1655158954,
+     "name": "Brand's Thunder",
+     "description": "Mastered warrior as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_049",
+     "achieved": 1,
+     "unlocktime": 1653954204,
+     "name": "Sealticge's Seduction",
+     "description": "Mastered dancer as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_050",
+     "achieved": 1,
+     "unlocktime": 1655582789,
+     "name": "Dohter's Charity",
+     "description": "Mastered apothecary as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_051",
+     "achieved": 1,
+     "unlocktime": 1653964996,
+     "name": "Draefendi's Rage",
+     "description": "Mastered hunter as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_052",
+     "achieved": 1,
+     "unlocktime": 1653775208,
+     "name": "Aeber's Reckoning",
+     "description": "Mastered thief as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_053",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Balogar's Blade",
+     "description": "Mastered runelord as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_054",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steorra's Prophecy",
+     "description": "Mastered starseer as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_055",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Winnehild's Battle Cry",
+     "description": "Mastered warmaster as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_056",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dreisang's Spell",
+     "description": "Mastered sorcerer as a secondary job."
+    },
+    {
+     "apiname": "ACHIEVEMENT_057",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lone Traveler",
+     "description": "Saw your journey through without aid from others."
+    },
+    {
+     "apiname": "ACHIEVEMENT_058",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fleetfoot",
+     "description": "Finished your journey with lightning speed."
+    },
+    {
+     "apiname": "ACHIEVEMENT_059",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Closure",
+     "description": "Defeated the dark god Galdera and sealed the Gate of Finis once more."
+    },
+    {
+     "apiname": "ACHIEVEMENT_060",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Worth the Detour",
+     "description": "Resolved the troubles of everyone in the realm."
+    },
+    {
+     "apiname": "ACHIEVEMENT_061",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of Orsterra",
+     "description": "Traveled to every location on the map."
+    },
+    {
+     "apiname": "ACHIEVEMENT_062",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skillful",
+     "description": "Learned every skill."
+    },
+    {
+     "apiname": "ACHIEVEMENT_063",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Support",
+     "description": "Learned every support skill."
+    },
+    {
+     "apiname": "ACHIEVEMENT_064",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Treasure Hunter",
+     "description": "Opened every treasure chest."
+    },
+    {
+     "apiname": "ACHIEVEMENT_065",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eagle-Eyed",
+     "description": "Found every hidden item."
+    },
+    {
+     "apiname": "ACHIEVEMENT_066",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strategist",
+     "description": "Discovered every enemy's weaknesses."
+    },
+    {
+     "apiname": "ACHIEVEMENT_067",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collector",
+     "description": "Acquired every item."
+    },
+    {
+     "apiname": "ACHIEVEMENT_068",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Strongest Sojourner",
+     "description": "Dealt maximum damage."
+    },
+    {
+     "apiname": "ACHIEVEMENT_069",
+     "achieved": 1,
+     "unlocktime": 1653255160,
+     "name": "Moneybags",
+     "description": "Obtained 80,000 leaves."
+    },
+    {
+     "apiname": "ACHIEVEMENT_070",
+     "achieved": 1,
+     "unlocktime": 1655429273,
+     "name": "Millionaire",
+     "description": "Obtained 1,000,000 leaves."
+    },
+    {
+     "apiname": "ACHIEVEMENT_071",
+     "achieved": 1,
+     "unlocktime": 1652565336,
+     "name": "Better Safe Than Sorry",
+     "description": "Fled from battle."
+    },
+    {
+     "apiname": "ACHIEVEMENT_072",
+     "achieved": 1,
+     "unlocktime": 1652565311,
+     "name": "Novice Scrapper",
+     "description": "Fought 10 battles."
+    },
+    {
+     "apiname": "ACHIEVEMENT_073",
+     "achieved": 1,
+     "unlocktime": 1653143267,
+     "name": "Fighter",
+     "description": "Fought 100 battles."
+    },
+    {
+     "apiname": "ACHIEVEMENT_074",
+     "achieved": 1,
+     "unlocktime": 1653231119,
+     "name": "Brawler",
+     "description": "Fought 200 battles."
+    },
+    {
+     "apiname": "ACHIEVEMENT_075",
+     "achieved": 1,
+     "unlocktime": 1652564447,
+     "name": "Ultimate Power",
+     "description": "Used a Lv.4 Boost for the first time in battle."
+    },
+    {
+     "apiname": "ACHIEVEMENT_076",
+     "achieved": 1,
+     "unlocktime": 1653157697,
+     "name": "Traveler",
+     "description": "Played more than 10 hours."
+    },
+    {
+     "apiname": "ACHIEVEMENT_077",
+     "achieved": 1,
+     "unlocktime": 1654731585,
+     "name": "Seasoned Traveler",
+     "description": "Played more than 50 hours."
+    },
+    {
+     "apiname": "ACHIEVEMENT_078",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Renowned Traveler",
+     "description": "Played more than 100 hours."
+    },
+    {
+     "apiname": "ACHIEVEMENT_079",
+     "achieved": 1,
+     "unlocktime": 1655598433,
+     "name": "Training",
+     "description": "Challenged every villager in Cobbleston."
+    },
+    {
+     "apiname": "ACHIEVEMENT_080",
+     "achieved": 1,
+     "unlocktime": 1653170414,
+     "name": "Lead the Way",
+     "description": "Guided someone for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_081",
+     "achieved": 1,
+     "unlocktime": 1653159357,
+     "name": "In the Know",
+     "description": "Scrutinized someone for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_082",
+     "achieved": 1,
+     "unlocktime": 1653144361,
+     "name": "Bargain Hunter",
+     "description": "Purchased something for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_083",
+     "achieved": 1,
+     "unlocktime": 1653012619,
+     "name": "A New Challenger",
+     "description": "Challenged someone for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_084",
+     "achieved": 1,
+     "unlocktime": 1652753508,
+     "name": "Irresistible",
+     "description": "Allured someone for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_085",
+     "achieved": 1,
+     "unlocktime": 1652665180,
+     "name": "Tell Me More",
+     "description": "Inquired about something for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_086",
+     "achieved": 1,
+     "unlocktime": 1652561541,
+     "name": "Sticky-Fingered",
+     "description": "Stole something for the first time."
+    },
+    {
+     "apiname": "ACHIEVEMENT_087",
+     "achieved": 1,
+     "unlocktime": 1653187943,
+     "name": "Start Something",
+     "description": "Provoked a fight for the first time."
+    }
+   ],
+   "success": true
+  }
+ }
+}

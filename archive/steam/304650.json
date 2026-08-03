@@ -1,0 +1,729 @@
+{
+ "provider": "steam",
+ "title": "Sunless Sea",
+ "updated": "2026-07-26",
+ "id": "304650",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 5,
+ "total": 54,
+ "first": "2017-01-07",
+ "last": "2017-01-12",
+ "platform": "PC",
+ "icon": "d96957b85c273bfed7986cb229669492f19e12aa",
+ "playtime_mins": 693,
+ "last_played": "2019-05-03",
+ "achievements": [
+  {
+   "key": "ach_newstories",
+   "name": "Open Your Ears",
+   "description": "Download new stories",
+   "unlocked": true,
+   "date": "2017-01-07T12:46:14-06:00"
+  },
+  {
+   "key": "ach_die1",
+   "name": "Sink Beneath the Waves",
+   "description": "Die for the first time",
+   "unlocked": true,
+   "date": "2017-01-08T00:15:05-06:00"
+  },
+  {
+   "key": "ach_legacyshipmate",
+   "name": "Shipmate",
+   "description": "Take the Shipmate legacy",
+   "unlocked": true,
+   "date": "2017-01-08T00:15:58-06:00"
+  },
+  {
+   "key": "ach_legacycorrespondent",
+   "name": "Correspondent",
+   "description": "Take the Correspondent legacy",
+   "unlocked": true,
+   "date": "2017-01-08T01:27:19-06:00"
+  },
+  {
+   "key": "ach_sweetheart",
+   "name": "Sweet Sorrow",
+   "description": "Woo a sweetheart in London",
+   "unlocked": true,
+   "date": "2017-01-12T21:26:19-06:00"
+  },
+  {
+   "key": "ach_abysschange",
+   "name": "A zee-change",
+   "description": "Accept a power of the deep zee",
+   "unlocked": false
+  },
+  {
+   "key": "ach_abysslady",
+   "name": "The Lady's Parlour",
+   "description": "Perform an abyssal ritual to encounter Lady Black",
+   "unlocked": false
+  },
+  {
+   "key": "ach_admirality10",
+   "name": "Rules the Waves",
+   "description": "Achieve Admiralty's Favour 10",
+   "unlocked": false
+  },
+  {
+   "key": "ach_antiquarian10",
+   "name": "Old Unhappy Far-Off Things",
+   "description": "Achieve Antiquarian 10",
+   "unlocked": false
+  },
+  {
+   "key": "ach_combuoy",
+   "name": "A buoyant escape",
+   "description": "Escape underwater combat by resurfacing",
+   "unlocked": false
+  },
+  {
+   "key": "ach_constant",
+   "name": "What lies beneath",
+   "description": "Come face to face with the Constant Companion",
+   "unlocked": false
+  },
+  {
+   "key": "ach_contdrownie",
+   "name": "A Drownie devotee",
+   "description": "Collect all of Drownie Love-song, Drownie Counterpoint and Drownie Hymn",
+   "unlocked": false
+  },
+  {
+   "key": "ach_controman",
+   "name": "Romans 6:9",
+   "description": "Complete the Zubmariner ambition",
+   "unlocked": false
+  },
+  {
+   "key": "ach_cursesalt",
+   "name": "Salt's Curse",
+   "description": "Suffer Salt's Curse",
+   "unlocked": false
+  },
+  {
+   "key": "ach_cursestone",
+   "name": "Stone's Curse",
+   "description": "Suffer Stone's Curse",
+   "unlocked": false
+  },
+  {
+   "key": "ach_cursestorm",
+   "name": "Storm's Curse",
+   "description": "Suffer Storm's Curse",
+   "unlocked": false
+  },
+  {
+   "key": "ach_dawnmachine",
+   "name": "HE SUN THE SUN THE SUN T",
+   "unlocked": false
+  },
+  {
+   "key": "ach_deathofermod",
+   "name": "Ofermod",
+   "description": "Be killed by the Constant Companion",
+   "unlocked": false
+  },
+  {
+   "key": "ach_deathphlebas",
+   "name": "Consider Phlebas",
+   "description": "Be killed by an underwater creature",
+   "unlocked": false
+  },
+  {
+   "key": "ach_deathwat",
+   "name": "Death By Water",
+   "description": "Die of suffocation",
+   "unlocked": false
+  },
+  {
+   "key": "ach_die10",
+   "name": "Never Stop Sinking...",
+   "description": "Die 10 times in an unbroken lineage",
+   "unlocked": false
+  },
+  {
+   "key": "ach_die5",
+   "name": "Sink Beneath the Waves. Again.",
+   "description": "Die 5 times in an unbroken lineage",
+   "unlocked": false
+  },
+  {
+   "key": "ach_dive",
+   "name": "Frightful, sheer, no-man-fathomed",
+   "description": "Venture beneath the waves",
+   "unlocked": false
+  },
+  {
+   "key": "ach_dreadnaught",
+   "name": "We're Gonna Need a Bigger Boat",
+   "description": "Acquire the Eschatologue-class Dreadnaught",
+   "unlocked": false
+  },
+  {
+   "key": "ach_eye",
+   "name": "Roaring Rise",
+   "unlocked": false
+  },
+  {
+   "key": "ach_hunterskeep",
+   "name": "The Fall of the House",
+   "unlocked": false
+  },
+  {
+   "key": "ach_invictus",
+   "name": "I am the Captain of my Soul",
+   "description": "Complete the game without saving manually",
+   "unlocked": false
+  },
+  {
+   "key": "ach_ladylilac",
+   "name": "Come Closer",
+   "unlocked": false
+  },
+  {
+   "key": "ach_legacypupil",
+   "name": "Pupil",
+   "description": "Take the Pupil legacy",
+   "unlocked": false
+  },
+  {
+   "key": "ach_legacyrival",
+   "name": "Rival",
+   "description": "Take the Rival legacy",
+   "unlocked": false
+  },
+  {
+   "key": "ach_legacysalvager",
+   "name": "Salvager",
+   "description": "Take the Salvager legacy",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portbell",
+   "name": "The Bell Tolls",
+   "description": "Discover Low Barnet",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portbones",
+   "name": "His bones in whispers",
+   "description": "Discover Scrimshander",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portdeep",
+   "name": "The beauty of the deep",
+   "description": "Discover Dahut",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portdragon",
+   "name": "The dragon in the zee",
+   "description": "Discover Nook",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portfish",
+   "name": "Thanks for all the fish",
+   "description": "Discover The Gant Pole",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portknife",
+   "name": "Knife, Cup and Bone",
+   "description": "Discover Wrack",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portleviathan",
+   "name": "Leviathan",
+   "description": "Discover Hideaway",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portpearls",
+   "name": "Those are pearls that were his eyes",
+   "description": "Discover Anthe",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portregret",
+   "name": "No regrets",
+   "description": "Discover Aigul",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portrose",
+   "name": "Rosewater sailor",
+   "description": "Discover Rosegate",
+   "unlocked": false
+  },
+  {
+   "key": "ach_portunder",
+   "name": "Under the zee",
+   "description": "Discover Undercrow",
+   "unlocked": false
+  },
+  {
+   "key": "ach_scion",
+   "name": "Zee Fever",
+   "description": "Send your child to zee",
+   "unlocked": false
+  },
+  {
+   "key": "ach_stranger",
+   "name": "A Past Wreathed in Shadows",
+   "description": "Complete the game without ever choosing a past",
+   "unlocked": false
+  },
+  {
+   "key": "ach_surface",
+   "name": "The Ascent of Man",
+   "unlocked": false
+  },
+  {
+   "key": "ach_terror100",
+   "name": "Lose your Mind",
+   "description": "Let your terror reach 100",
+   "unlocked": false
+  },
+  {
+   "key": "ach_terror90",
+   "name": "Thou, All-Shaking Thunder",
+   "description": "Let your terror reach 90",
+   "unlocked": false
+  },
+  {
+   "key": "ach_undercurrent",
+   "name": "A current under zee",
+   "description": "Use underwater currents to bear you on your way",
+   "unlocked": false
+  },
+  {
+   "key": "ach_underdepth",
+   "name": "Depth charge",
+   "description": "Use an oasis to increase your oxygen levels",
+   "unlocked": false
+  },
+  {
+   "key": "ach_underpressure",
+   "name": "Under pressure",
+   "description": "Avoid being killed by the Unexploded Unclear Bomb",
+   "unlocked": false
+  },
+  {
+   "key": "ach_will",
+   "name": "Sound Mind?",
+   "description": "Create an ironclad will",
+   "unlocked": false
+  },
+  {
+   "key": "ach_year1",
+   "name": "One Year at Zee",
+   "description": "Spend one year out at zee in an unbroken lineage",
+   "unlocked": false
+  },
+  {
+   "key": "ach_year10",
+   "name": "Ten Years at Zee",
+   "description": "Spend ten years out at zee in an unbroken lineage",
+   "unlocked": false
+  },
+  {
+   "key": "ach_year5",
+   "name": "Five Years at Zee",
+   "description": "Spend five years out at zee in an unbroken lineage",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Sunless Sea",
+   "achievements": [
+    {
+     "apiname": "ach_die1",
+     "achieved": 1,
+     "unlocktime": 1483856105,
+     "name": "Sink Beneath the Waves",
+     "description": "Die for the first time"
+    },
+    {
+     "apiname": "ach_die5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sink Beneath the Waves. Again.",
+     "description": "Die 5 times in an unbroken lineage"
+    },
+    {
+     "apiname": "ach_die10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Never Stop Sinking...",
+     "description": "Die 10 times in an unbroken lineage"
+    },
+    {
+     "apiname": "ach_dawnmachine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "HE SUN THE SUN THE SUN T",
+     "description": ""
+    },
+    {
+     "apiname": "ach_scion",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zee Fever",
+     "description": "Send your child to zee"
+    },
+    {
+     "apiname": "ach_terror90",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thou, All-Shaking Thunder",
+     "description": "Let your terror reach 90"
+    },
+    {
+     "apiname": "ach_terror100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lose your Mind",
+     "description": "Let your terror reach 100"
+    },
+    {
+     "apiname": "ach_year1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Year at Zee",
+     "description": "Spend one year out at zee in an unbroken lineage"
+    },
+    {
+     "apiname": "ach_year5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Five Years at Zee",
+     "description": "Spend five years out at zee in an unbroken lineage"
+    },
+    {
+     "apiname": "ach_year10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ten Years at Zee",
+     "description": "Spend ten years out at zee in an unbroken lineage"
+    },
+    {
+     "apiname": "ach_dreadnaught",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We're Gonna Need a Bigger Boat",
+     "description": "Acquire the Eschatologue-class Dreadnaught"
+    },
+    {
+     "apiname": "ach_hunterskeep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Fall of the House",
+     "description": ""
+    },
+    {
+     "apiname": "ach_eye",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Roaring Rise",
+     "description": ""
+    },
+    {
+     "apiname": "ach_surface",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Ascent of Man",
+     "description": ""
+    },
+    {
+     "apiname": "ach_sweetheart",
+     "achieved": 1,
+     "unlocktime": 1484277979,
+     "name": "Sweet Sorrow",
+     "description": "Woo a sweetheart in London"
+    },
+    {
+     "apiname": "ach_cursesalt",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Salt's Curse",
+     "description": "Suffer Salt's Curse"
+    },
+    {
+     "apiname": "ach_cursestone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stone's Curse",
+     "description": "Suffer Stone's Curse"
+    },
+    {
+     "apiname": "ach_cursestorm",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storm's Curse",
+     "description": "Suffer Storm's Curse"
+    },
+    {
+     "apiname": "ach_newstories",
+     "achieved": 1,
+     "unlocktime": 1483814774,
+     "name": "Open Your Ears",
+     "description": "Download new stories"
+    },
+    {
+     "apiname": "ach_admirality10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rules the Waves",
+     "description": "Achieve Admiralty's Favour 10"
+    },
+    {
+     "apiname": "ach_antiquarian10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Old Unhappy Far-Off Things",
+     "description": "Achieve Antiquarian 10"
+    },
+    {
+     "apiname": "ach_ladylilac",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Come Closer",
+     "description": ""
+    },
+    {
+     "apiname": "ach_legacyrival",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rival",
+     "description": "Take the Rival legacy"
+    },
+    {
+     "apiname": "ach_legacypupil",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pupil",
+     "description": "Take the Pupil legacy"
+    },
+    {
+     "apiname": "ach_legacyshipmate",
+     "achieved": 1,
+     "unlocktime": 1483856158,
+     "name": "Shipmate",
+     "description": "Take the Shipmate legacy"
+    },
+    {
+     "apiname": "ach_legacycorrespondent",
+     "achieved": 1,
+     "unlocktime": 1483860439,
+     "name": "Correspondent",
+     "description": "Take the Correspondent legacy"
+    },
+    {
+     "apiname": "ach_legacysalvager",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Salvager",
+     "description": "Take the Salvager legacy"
+    },
+    {
+     "apiname": "ach_will",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sound Mind?",
+     "description": "Create an ironclad will"
+    },
+    {
+     "apiname": "ach_invictus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I am the Captain of my Soul",
+     "description": "Complete the game without saving manually"
+    },
+    {
+     "apiname": "ach_stranger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Past Wreathed in Shadows",
+     "description": "Complete the game without ever choosing a past"
+    },
+    {
+     "apiname": "ach_dive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Frightful, sheer, no-man-fathomed",
+     "description": "Venture beneath the waves"
+    },
+    {
+     "apiname": "ach_deathwat",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death By Water",
+     "description": "Die of suffocation"
+    },
+    {
+     "apiname": "ach_deathphlebas",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Consider Phlebas",
+     "description": "Be killed by an underwater creature"
+    },
+    {
+     "apiname": "ach_deathofermod",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ofermod",
+     "description": "Be killed by the Constant Companion"
+    },
+    {
+     "apiname": "ach_constant",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What lies beneath",
+     "description": "Come face to face with the Constant Companion"
+    },
+    {
+     "apiname": "ach_combuoy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A buoyant escape",
+     "description": "Escape underwater combat by resurfacing"
+    },
+    {
+     "apiname": "ach_portregret",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No regrets",
+     "description": "Discover Aigul"
+    },
+    {
+     "apiname": "ach_portpearls",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Those are pearls that were his eyes",
+     "description": "Discover Anthe"
+    },
+    {
+     "apiname": "ach_portunder",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Under the zee",
+     "description": "Discover Undercrow"
+    },
+    {
+     "apiname": "ach_portdeep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The beauty of the deep",
+     "description": "Discover Dahut"
+    },
+    {
+     "apiname": "ach_portfish",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thanks for all the fish",
+     "description": "Discover The Gant Pole"
+    },
+    {
+     "apiname": "ach_portleviathan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leviathan",
+     "description": "Discover Hideaway"
+    },
+    {
+     "apiname": "ach_portbell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bell Tolls",
+     "description": "Discover Low Barnet"
+    },
+    {
+     "apiname": "ach_portdragon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The dragon in the zee",
+     "description": "Discover Nook"
+    },
+    {
+     "apiname": "ach_portrose",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rosewater sailor",
+     "description": "Discover Rosegate"
+    },
+    {
+     "apiname": "ach_portbones",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "His bones in whispers",
+     "description": "Discover Scrimshander"
+    },
+    {
+     "apiname": "ach_portknife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Knife, Cup and Bone",
+     "description": "Discover Wrack"
+    },
+    {
+     "apiname": "ach_undercurrent",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A current under zee",
+     "description": "Use underwater currents to bear you on your way"
+    },
+    {
+     "apiname": "ach_underpressure",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Under pressure",
+     "description": "Avoid being killed by the Unexploded Unclear Bomb"
+    },
+    {
+     "apiname": "ach_underdepth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Depth charge",
+     "description": "Use an oasis to increase your oxygen levels"
+    },
+    {
+     "apiname": "ach_abysschange",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A zee-change",
+     "description": "Accept a power of the deep zee"
+    },
+    {
+     "apiname": "ach_abysslady",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Lady's Parlour",
+     "description": "Perform an abyssal ritual to encounter Lady Black"
+    },
+    {
+     "apiname": "ach_controman",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Romans 6:9",
+     "description": "Complete the Zubmariner ambition"
+    },
+    {
+     "apiname": "ach_contdrownie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Drownie devotee",
+     "description": "Collect all of Drownie Love-song, Drownie Counterpoint and Drownie Hymn"
+    }
+   ],
+   "success": true
+  }
+ }
+}

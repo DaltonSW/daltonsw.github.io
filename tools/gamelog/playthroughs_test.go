@@ -361,3 +361,65 @@ func TestConversionDeclaresExactlyWhatItRemoves(t *testing.T) {
 		}
 	}
 }
+
+// "ongoing" on the timeline comes from a blank finished date, not from
+// status text — the bug SyncStatus exists to close is a front-matter status
+// of "finished" with a playthrough whose last session is still open.
+func TestSyncStatus_ClosesTheLastOpenSession(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: playing
+    sessions:
+      - started: "2024-01-01"
+        finished: "2024-01-05"
+      - started: "2024-06-01"
+        finished: ""
+`)
+	if !pf.SyncStatus("finished", "2024-06-03") {
+		t.Fatal("expected a change")
+	}
+	e := pf.Playthroughs[0]
+	if e.Status != "finished" {
+		t.Errorf("status = %q, want finished", e.Status)
+	}
+	last := e.Sessions[len(e.Sessions)-1]
+	if last.Finished != "2024-06-03" {
+		t.Errorf("last session finished = %q, want 2024-06-03", last.Finished)
+	}
+	if e.Sessions[0].Finished != "2024-01-05" {
+		t.Error("an earlier, already-closed session must not be touched")
+	}
+}
+
+func TestSyncStatus_NeverOverwritesAnExistingFinishedDate(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: playing
+    started: "2024-01-01"
+    finished: "2024-01-05"
+`)
+	if pf.SyncStatus("finished", "2024-06-03") == false {
+		t.Fatal("status itself should still change even though the date doesn't")
+	}
+	if pf.Playthroughs[0].Finished != "2024-01-05" {
+		t.Error("an existing finished date must never be overwritten")
+	}
+}
+
+func TestSyncStatus_SkipsWhenAmbiguousOrIrrelevant(t *testing.T) {
+	cases := []struct {
+		name    string
+		fixture string
+		status  string
+	}{
+		{"no playthroughs", `playthroughs: []`, "finished"},
+		{"multiple playthroughs", "playthroughs:\n  - status: playing\n    started: \"2024-01-01\"\n  - status: playing\n    started: \"2024-02-01\"\n", "finished"},
+		{"status is playing", "playthroughs:\n  - status: playing\n    started: \"2024-01-01\"\n", "playing"},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			pf := loadFixture(t, tc.fixture)
+			if pf.SyncStatus(tc.status, "2024-06-03") {
+				t.Error("expected no change")
+			}
+		})
+	}
+}

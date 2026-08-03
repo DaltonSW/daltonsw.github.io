@@ -19,6 +19,7 @@ type GameSummary struct {
 	Path            string
 	Title           string
 	Status          string
+	Draft           bool
 	Started         string
 	Finished        string
 	NumPlaythroughs int
@@ -30,6 +31,8 @@ func (g GameSummary) Label() string {
 	switch g.Status {
 	case "finished":
 		return fmt.Sprintf("%s — finished %s", g.Title, g.Finished)
+	case "mastered":
+		return fmt.Sprintf("%s — mastered %s", g.Title, g.Finished)
 	case "playing":
 		return fmt.Sprintf("%s — playing since %s", g.Title, g.Started)
 	default:
@@ -110,6 +113,7 @@ func ListGames(gamesDir string) ([]GameSummary, error) {
 			Path:            path,
 			Title:           doc.FM.Title,
 			Status:          doc.FM.Status,
+			Draft:           doc.FM.Draft,
 			Started:         doc.FM.Started,
 			Finished:        doc.FM.Finished,
 			NumPlaythroughs: len(pf.Playthroughs),

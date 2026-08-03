@@ -82,6 +82,7 @@ func TestFormatScanReport_NamesTheAward(t *testing.T) {
 		Provider: "RetroAchievements", Title: "Animal Crossing: City Folk",
 		Platform: "Wii", ID: "34566",
 		Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-05-02",
+		Status:        "finished",
 		AchievementsA: 12, AchievementsB: 189,
 	}}, 3, ScanOptions{MinHours: 5})
 
@@ -94,6 +95,36 @@ func TestFormatScanReport_NamesTheAward(t *testing.T) {
 	} {
 		if !strings.Contains(out, want) {
 			t.Errorf("report missing %q\n---\n%s", want, out)
+		}
+	}
+}
+
+// A "mastered"/"completed" award is a stronger signal than a plain beaten
+// award, so the report — and the status it suggests — should say so.
+func TestFormatScanReport_NamesMasteredSeparatelyFromFinished(t *testing.T) {
+	out := formatScanReport([]Candidate{{
+		Provider: "RetroAchievements", Title: "Earthbound",
+		Platform: "SNES", ID: "264",
+		Finished: true, AwardKind: "mastered", FinishedOn: "2026-05-02",
+		Status:        "mastered",
+		AchievementsA: 79, AchievementsB: 79,
+	}}, 3, ScanOptions{MinHours: 5})
+
+	if !strings.Contains(out, "-> mastered 2026-05-02 (mastered)") {
+		t.Errorf("report should name the mastered award, got:\n%s", out)
+	}
+}
+
+func TestStatusForAward(t *testing.T) {
+	cases := map[string]string{
+		"mastered":        "mastered",
+		"completed":       "mastered",
+		"beaten-hardcore": "finished",
+		"beaten-softcore": "finished",
+	}
+	for kind, want := range cases {
+		if got := statusForAward(kind); got != want {
+			t.Errorf("statusForAward(%q) = %q, want %q", kind, got, want)
 		}
 	}
 }

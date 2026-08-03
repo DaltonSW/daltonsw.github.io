@@ -1,0 +1,624 @@
+{
+ "provider": "steam",
+ "title": "Disco Elysium",
+ "updated": "2026-07-26",
+ "id": "632470",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 13,
+ "total": 45,
+ "first": "2020-07-22",
+ "last": "2021-06-30",
+ "platform": "PC",
+ "icon": "b681544caa931c7c1a6788e6e3e33cb42892d17c",
+ "playtime_mins": 4370,
+ "playtime": {
+  "windows": 4370
+ },
+ "last_played": "2022-11-20",
+ "achievements": [
+  {
+   "key": "ACH_COP_SORRY",
+   "name": "Literally The Sorriest Cop On Earth",
+   "description": "Apologize 10 (!!!) times",
+   "unlocked": true,
+   "date": "2020-07-22T20:07:25-05:00"
+  },
+  {
+   "key": "ACH_COP_COMMUNIST",
+   "name": "Biggest Communism Builder",
+   "description": "Employ critical theory 9 times",
+   "unlocked": true,
+   "date": "2020-07-24T21:06:59-05:00"
+  },
+  {
+   "key": "ACH_COP_LIBERAL",
+   "name": "Baddest Hustler In The Neoliberal Hood",
+   "description": "Preach free market for 9 times",
+   "unlocked": true,
+   "date": "2020-07-25T17:31:13-05:00"
+  },
+  {
+   "key": "ACH_COP_GOOD",
+   "name": "Goodest Of The Good Cops",
+   "description": "Really get Kim to trust you",
+   "unlocked": true,
+   "date": "2020-07-26T14:23:05-05:00"
+  },
+  {
+   "key": "ACH_COP_ART",
+   "name": "Il Coppo Del'Arte!",
+   "description": "Say 5 Art Cop lines",
+   "unlocked": true,
+   "date": "2020-07-26T16:53:52-05:00"
+  },
+  {
+   "key": "ACH_COP_STAR",
+   "name": "Hyperstellar Law Official",
+   "description": "Say 7 deranged superstar lines",
+   "unlocked": true,
+   "date": "2020-07-30T23:11:23-05:00"
+  },
+  {
+   "key": "ACH_DOLORES",
+   "name": "The Figurines Won't Win Her Back",
+   "description": "They do nothing",
+   "unlocked": true,
+   "date": "2020-07-31T22:37:51-05:00"
+  },
+  {
+   "key": "ACH_COP_MORALIST",
+   "name": "The World's Most Laughable Centrist",
+   "description": "Defend the political centre 7 times",
+   "unlocked": true,
+   "date": "2020-07-31T22:48:33-05:00"
+  },
+  {
+   "key": "ACH_KIM",
+   "name": "Recruit Detective Kim Kitsuragi",
+   "description": "Precinct 57's finest",
+   "unlocked": true,
+   "date": "2020-08-01T10:35:25-05:00"
+  },
+  {
+   "key": "ACH_COP_TRAD",
+   "name": "Truly Rabid \"Traditionalist\"",
+   "description": "Say 10 \"traditionalist\" things",
+   "unlocked": true,
+   "date": "2021-04-29T22:02:20-05:00"
+  },
+  {
+   "key": "ACH_COP_DESTROY",
+   "name": "Enemy Of The Physical Realm",
+   "description": "Bang up 5 inanimate objects",
+   "unlocked": true,
+   "date": "2021-05-28T23:01:17-05:00"
+  },
+  {
+   "key": "ACH_COMMITTEE",
+   "name": "Committee of la Responsabilité",
+   "description": "Someone should do something about this.",
+   "unlocked": true,
+   "date": "2021-06-29T22:22:56-05:00"
+  },
+  {
+   "key": "ACH_POWERARMOR",
+   "name": "Fairweather t-500 Vitreous Enamel",
+   "description": "Suit up. Head to toe.",
+   "unlocked": true,
+   "date": "2021-06-30T21:27:31-05:00"
+  },
+  {
+   "key": "ACH_BADDEST_BROW",
+   "name": "Baddest Brow in Town",
+   "description": "Force Kim to reveal his secrets",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CAUSE_SHITSTORM",
+   "name": "Cause a Shitstorm",
+   "description": "You brought this on yourself",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_APO",
+   "name": "The Opener Of The Eighth Seal",
+   "description": "Warn them of the coming end 8 times",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_BAD",
+   "name": "Baddest Of the Bad Cops",
+   "description": "Hit an all time low with Kim",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_BORING",
+   "name": "Unbelievably Boring F**k",
+   "description": "Say 7 incredibly boring things",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_DORK",
+   "name": "Massive Torque Dork",
+   "description": "Yack about machines 4 times",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_HONOUR",
+   "name": "The Most Honourable Cop in The Land",
+   "description": "Gather 11 honour points",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_LAW",
+   "name": "The Lawbringer",
+   "description": "Say you're the law 7 times",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_COP_REMOTE",
+   "name": "Expert Advanced Remote Viewer",
+   "description": "See beyond the veil 6 times",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_CUNO",
+   "name": "Recruit Detective Kuuno de Ruyter",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_GLUTEN",
+   "name": "Gluten-Free Topping Pie",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HARDCORE_ENDGAME",
+   "name": "True Detective",
+   "description": "Finish the game in HARDCORE mode",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HARDCORE_TASK",
+   "name": "Venture into the HARDCORE",
+   "description": "Godspeed",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_HARDIE",
+   "name": "Hardie's Heroes",
+   "description": "Pour one out for social democracy",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_ICEBREAKER",
+   "name": "The Icebreaker",
+   "description": "You can still move your face with your fingers.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_INFRAMATERIALIST",
+   "name": "Avowed Inframaterialist",
+   "description": "Don't call it a book club.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_KIM_AFTER_HOURS",
+   "name": "Bother Kim After Hours",
+   "description": "He probably won't mind",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_KIM_JACKET",
+   "name": "Get Kim to Wear *The Jacket*",
+   "description": "You know which one",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_LEOPART_MINDSET",
+   "name": "Leopard Mindset ",
+   "description": "*This* is the kind of animal you want to be",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_MEDAL",
+   "name": "Medal dispenser",
+   "description": "Here, just have one, they're free.",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_MULLEN",
+   "name": "Modus: Mullen",
+   "description": "It's black-and-white out there",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_NETWORTHY",
+   "name": "Networthy Individual",
+   "description": "Every day you're husslin'...",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_OLD_FLAME",
+   "name": "Old Flame",
+   "description": "Surely, it can be killed with fire",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PALERUNNER",
+   "name": "Palerunner",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PINBALL",
+   "name": "Gurdi-Ball Is Lit",
+   "description": "Get your pinball on",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PLEASURE_WHEEL",
+   "name": "Wheel of Pleasure and Light",
+   "description": "Reconstruct a vision from the past",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PRICELESS",
+   "name": "Priceless Facade",
+   "description": "Money-smooth streets of gentrification",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PROGRESS",
+   "name": "Looks Like Progress",
+   "description": "Spinning its wheels",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_PROVENANCE",
+   "name": "Now For A Difficult Provenance",
+   "description": "Restore all of the hidden photos",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_REAL_MUSOR",
+   "name": "Real Musor",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_SPECTRES",
+   "name": "Spectres of Hope",
+   "description": "Glimpse it while you can",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_WHATBODY",
+   "name": "What body?",
+   "description": "Solve the case without even inspecting the body.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Disco Elysium",
+   "achievements": [
+    {
+     "apiname": "ACH_COP_BORING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unbelievably Boring F**k",
+     "description": "Say 7 incredibly boring things"
+    },
+    {
+     "apiname": "ACH_COP_STAR",
+     "achieved": 1,
+     "unlocktime": 1596168683,
+     "name": "Hyperstellar Law Official",
+     "description": "Say 7 deranged superstar lines"
+    },
+    {
+     "apiname": "ACH_COP_APO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Opener Of The Eighth Seal",
+     "description": "Warn them of the coming end 8 times"
+    },
+    {
+     "apiname": "ACH_COP_SORRY",
+     "achieved": 1,
+     "unlocktime": 1595466445,
+     "name": "Literally The Sorriest Cop On Earth",
+     "description": "Apologize 10 (!!!) times"
+    },
+    {
+     "apiname": "ACH_COP_COMMUNIST",
+     "achieved": 1,
+     "unlocktime": 1595642819,
+     "name": "Biggest Communism Builder",
+     "description": "Employ critical theory 9 times"
+    },
+    {
+     "apiname": "ACH_COP_TRAD",
+     "achieved": 1,
+     "unlocktime": 1619751740,
+     "name": "Truly Rabid \"Traditionalist\"",
+     "description": "Say 10 \"traditionalist\" things"
+    },
+    {
+     "apiname": "ACH_COP_MORALIST",
+     "achieved": 1,
+     "unlocktime": 1596253713,
+     "name": "The World's Most Laughable Centrist",
+     "description": "Defend the political centre 7 times"
+    },
+    {
+     "apiname": "ACH_COP_LIBERAL",
+     "achieved": 1,
+     "unlocktime": 1595716273,
+     "name": "Baddest Hustler In The Neoliberal Hood",
+     "description": "Preach free market for 9 times"
+    },
+    {
+     "apiname": "ACH_COP_REMOTE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Expert Advanced Remote Viewer",
+     "description": "See beyond the veil 6 times"
+    },
+    {
+     "apiname": "ACH_COP_DORK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Massive Torque Dork",
+     "description": "Yack about machines 4 times"
+    },
+    {
+     "apiname": "ACH_COP_ART",
+     "achieved": 1,
+     "unlocktime": 1595800432,
+     "name": "Il Coppo Del'Arte!",
+     "description": "Say 5 Art Cop lines"
+    },
+    {
+     "apiname": "ACH_COP_HONOUR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Most Honourable Cop in The Land",
+     "description": "Gather 11 honour points"
+    },
+    {
+     "apiname": "ACH_COP_DESTROY",
+     "achieved": 1,
+     "unlocktime": 1622260877,
+     "name": "Enemy Of The Physical Realm",
+     "description": "Bang up 5 inanimate objects"
+    },
+    {
+     "apiname": "ACH_COP_LAW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Lawbringer",
+     "description": "Say you're the law 7 times"
+    },
+    {
+     "apiname": "ACH_COP_BAD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Baddest Of the Bad Cops",
+     "description": "Hit an all time low with Kim"
+    },
+    {
+     "apiname": "ACH_COP_GOOD",
+     "achieved": 1,
+     "unlocktime": 1595791385,
+     "name": "Goodest Of The Good Cops",
+     "description": "Really get Kim to trust you"
+    },
+    {
+     "apiname": "ACH_KIM",
+     "achieved": 1,
+     "unlocktime": 1596296125,
+     "name": "Recruit Detective Kim Kitsuragi",
+     "description": "Precinct 57's finest"
+    },
+    {
+     "apiname": "ACH_CUNO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Recruit Detective Kuuno de Ruyter",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DOLORES",
+     "achieved": 1,
+     "unlocktime": 1596253071,
+     "name": "The Figurines Won't Win Her Back",
+     "description": "They do nothing"
+    },
+    {
+     "apiname": "ACH_POWERARMOR",
+     "achieved": 1,
+     "unlocktime": 1625106451,
+     "name": "Fairweather t-500 Vitreous Enamel",
+     "description": "Suit up. Head to toe."
+    },
+    {
+     "apiname": "ACH_GLUTEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gluten-Free Topping Pie",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_HARDCORE_TASK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Venture into the HARDCORE",
+     "description": "Godspeed"
+    },
+    {
+     "apiname": "ACH_HARDCORE_ENDGAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Detective",
+     "description": "Finish the game in HARDCORE mode"
+    },
+    {
+     "apiname": "ACH_PALERUNNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Palerunner",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_REAL_MUSOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Real Musor",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_INFRAMATERIALIST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Avowed Inframaterialist",
+     "description": "Don't call it a book club."
+    },
+    {
+     "apiname": "ACH_ICEBREAKER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Icebreaker",
+     "description": "You can still move your face with your fingers."
+    },
+    {
+     "apiname": "ACH_NETWORTHY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Networthy Individual",
+     "description": "Every day you're husslin'..."
+    },
+    {
+     "apiname": "ACH_COMMITTEE",
+     "achieved": 1,
+     "unlocktime": 1625023376,
+     "name": "Committee of la Responsabilité",
+     "description": "Someone should do something about this."
+    },
+    {
+     "apiname": "ACH_WHATBODY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What body?",
+     "description": "Solve the case without even inspecting the body."
+    },
+    {
+     "apiname": "ACH_MEDAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Medal dispenser",
+     "description": "Here, just have one, they're free."
+    },
+    {
+     "apiname": "ACH_HARDIE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hardie's Heroes",
+     "description": "Pour one out for social democracy"
+    },
+    {
+     "apiname": "ACH_CAUSE_SHITSTORM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cause a Shitstorm",
+     "description": "You brought this on yourself"
+    },
+    {
+     "apiname": "ACH_LEOPART_MINDSET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leopard Mindset ",
+     "description": "*This* is the kind of animal you want to be"
+    },
+    {
+     "apiname": "ACH_PLEASURE_WHEEL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wheel of Pleasure and Light",
+     "description": "Reconstruct a vision from the past"
+    },
+    {
+     "apiname": "ACH_MULLEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Modus: Mullen",
+     "description": "It's black-and-white out there"
+    },
+    {
+     "apiname": "ACH_KIM_AFTER_HOURS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bother Kim After Hours",
+     "description": "He probably won't mind"
+    },
+    {
+     "apiname": "ACH_BADDEST_BROW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Baddest Brow in Town",
+     "description": "Force Kim to reveal his secrets"
+    },
+    {
+     "apiname": "ACH_PINBALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gurdi-Ball Is Lit",
+     "description": "Get your pinball on"
+    },
+    {
+     "apiname": "ACH_KIM_JACKET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get Kim to Wear *The Jacket*",
+     "description": "You know which one"
+    },
+    {
+     "apiname": "ACH_SPECTRES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spectres of Hope",
+     "description": "Glimpse it while you can"
+    },
+    {
+     "apiname": "ACH_OLD_FLAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Old Flame",
+     "description": "Surely, it can be killed with fire"
+    },
+    {
+     "apiname": "ACH_PROGRESS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Looks Like Progress",
+     "description": "Spinning its wheels"
+    },
+    {
+     "apiname": "ACH_PRICELESS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Priceless Facade",
+     "description": "Money-smooth streets of gentrification"
+    },
+    {
+     "apiname": "ACH_PROVENANCE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Now For A Difficult Provenance",
+     "description": "Restore all of the hidden photos"
+    }
+   ],
+   "success": true
+  }
+ }
+}

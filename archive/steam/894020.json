@@ -1,0 +1,353 @@
+{
+ "provider": "steam",
+ "title": "Death's Door",
+ "updated": "2026-07-26",
+ "id": "894020",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 14,
+ "total": 24,
+ "first": "2022-08-22",
+ "last": "2022-08-24",
+ "platform": "PC",
+ "icon": "d48d2167c15e8d2af57cfbc31228b90e36f4508c",
+ "playtime_mins": 637,
+ "playtime": {
+  "windows": 637
+ },
+ "last_played": "2022-08-24",
+ "achievements": [
+  {
+   "key": "ach_clever",
+   "name": "Clever Too Much",
+   "description": "Gain a devoted fan",
+   "unlocked": true,
+   "date": "2022-08-22T20:27:01-05:00"
+  },
+  {
+   "key": "ach_soup",
+   "name": "Squid Soup?",
+   "description": "Accept Jefferson's Soup",
+   "unlocked": true,
+   "date": "2022-08-22T20:28:53-05:00"
+  },
+  {
+   "key": "ach_specialist",
+   "name": "Specialist",
+   "description": "Max out any of the 4 stats",
+   "unlocked": true,
+   "date": "2022-08-22T21:00:48-05:00"
+  },
+  {
+   "key": "ach_weapons",
+   "name": "Weapon Master",
+   "description": "Collect all weapons",
+   "unlocked": true,
+   "date": "2022-08-23T17:42:50-05:00"
+  },
+  {
+   "key": "ach_arrow",
+   "name": "Hawk Eye",
+   "description": "Upgrade the arrow ability",
+   "unlocked": true,
+   "date": "2022-08-23T19:03:01-05:00"
+  },
+  {
+   "key": "ach_spend",
+   "name": "Big Spender",
+   "description": "Purchase 12 stat upgrades",
+   "unlocked": true,
+   "date": "2022-08-23T19:05:16-05:00"
+  },
+  {
+   "key": "ach_bomb",
+   "name": "Demo Crow",
+   "description": "Upgrade the bomb ability",
+   "unlocked": true,
+   "date": "2022-08-23T19:10:55-05:00"
+  },
+  {
+   "key": "ach_game",
+   "name": "Crow Gamer",
+   "description": "Beat the game",
+   "unlocked": true,
+   "date": "2022-08-23T20:30:05-05:00"
+  },
+  {
+   "key": "ach_tune",
+   "name": "Banging Tune",
+   "description": "Listen to Barb's magnum opus",
+   "unlocked": true,
+   "date": "2022-08-23T20:33:34-05:00"
+  },
+  {
+   "key": "ach_conga",
+   "name": "Conga Line",
+   "description": "Have a gang of 10+ forest spirits follow you",
+   "unlocked": true,
+   "date": "2022-08-23T20:42:10-05:00"
+  },
+  {
+   "key": "ach_fire",
+   "name": "Cremation",
+   "description": "Upgrade the fire ability",
+   "unlocked": true,
+   "date": "2022-08-23T20:50:00-05:00"
+  },
+  {
+   "key": "ach_pothead",
+   "name": "Plot Head",
+   "description": "Access Pothead's secret garden",
+   "unlocked": true,
+   "date": "2022-08-23T21:02:15-05:00"
+  },
+  {
+   "key": "ach_hook",
+   "name": "Crouching Tiger Hidden Crow",
+   "description": "Upgrade the hookshot ability",
+   "unlocked": true,
+   "date": "2022-08-23T21:11:43-05:00"
+  },
+  {
+   "key": "ach_shiny",
+   "name": "Ooh Shiny!",
+   "description": "Collect all shiny things",
+   "unlocked": true,
+   "date": "2022-08-24T17:21:02-05:00"
+  },
+  {
+   "key": "ach_chore",
+   "name": "Lord of Chores",
+   "description": "100% Complete the game",
+   "unlocked": false
+  },
+  {
+   "key": "ach_hotpot",
+   "name": "Hot Pot",
+   "description": "Set Grandma's pot on fire",
+   "unlocked": false
+  },
+  {
+   "key": "ach_jeff",
+   "name": "A Stroll with Jefferson",
+   "unlocked": false
+  },
+  {
+   "key": "ach_king",
+   "name": "Meal for a King",
+   "description": "Feed the Frog King an explosive treat",
+   "unlocked": false
+  },
+  {
+   "key": "ach_owls",
+   "name": "In Caw-Hoots",
+   "unlocked": false
+  },
+  {
+   "key": "ach_plants",
+   "name": "Reap what you sow",
+   "description": "All seeds collected and planted",
+   "unlocked": false
+  },
+  {
+   "key": "ach_shrines",
+   "name": "Zen",
+   "description": "Find all shrines",
+   "unlocked": false
+  },
+  {
+   "key": "ach_truth",
+   "name": "A True End",
+   "unlocked": false
+  },
+  {
+   "key": "ach_tsa",
+   "name": "Baul Plart, Hall Cop",
+   "description": "Trigger the metal detector without detecting a threat",
+   "unlocked": false
+  },
+  {
+   "key": "ach_umbrella",
+   "name": "Academy of Umbrellas",
+   "description": "Beat the game only ever using an umbrella as your melee weapon",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Death's Door",
+   "achievements": [
+    {
+     "apiname": "ach_game",
+     "achieved": 1,
+     "unlocktime": 1661304605,
+     "name": "Crow Gamer",
+     "description": "Beat the game"
+    },
+    {
+     "apiname": "ach_umbrella",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Academy of Umbrellas",
+     "description": "Beat the game only ever using an umbrella as your melee weapon"
+    },
+    {
+     "apiname": "ach_king",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meal for a King",
+     "description": "Feed the Frog King an explosive treat"
+    },
+    {
+     "apiname": "ach_hotpot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot Pot",
+     "description": "Set Grandma's pot on fire"
+    },
+    {
+     "apiname": "ach_tune",
+     "achieved": 1,
+     "unlocktime": 1661304814,
+     "name": "Banging Tune",
+     "description": "Listen to Barb's magnum opus"
+    },
+    {
+     "apiname": "ach_clever",
+     "achieved": 1,
+     "unlocktime": 1661218021,
+     "name": "Clever Too Much",
+     "description": "Gain a devoted fan"
+    },
+    {
+     "apiname": "ach_specialist",
+     "achieved": 1,
+     "unlocktime": 1661220048,
+     "name": "Specialist",
+     "description": "Max out any of the 4 stats"
+    },
+    {
+     "apiname": "ach_spend",
+     "achieved": 1,
+     "unlocktime": 1661299516,
+     "name": "Big Spender",
+     "description": "Purchase 12 stat upgrades"
+    },
+    {
+     "apiname": "ach_shiny",
+     "achieved": 1,
+     "unlocktime": 1661379662,
+     "name": "Ooh Shiny!",
+     "description": "Collect all shiny things"
+    },
+    {
+     "apiname": "ach_weapons",
+     "achieved": 1,
+     "unlocktime": 1661294570,
+     "name": "Weapon Master",
+     "description": "Collect all weapons"
+    },
+    {
+     "apiname": "ach_shrines",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zen",
+     "description": "Find all shrines"
+    },
+    {
+     "apiname": "ach_jeff",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Stroll with Jefferson",
+     "description": ""
+    },
+    {
+     "apiname": "ach_plants",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reap what you sow",
+     "description": "All seeds collected and planted"
+    },
+    {
+     "apiname": "ach_conga",
+     "achieved": 1,
+     "unlocktime": 1661305330,
+     "name": "Conga Line",
+     "description": "Have a gang of 10+ forest spirits follow you"
+    },
+    {
+     "apiname": "ach_pothead",
+     "achieved": 1,
+     "unlocktime": 1661306535,
+     "name": "Plot Head",
+     "description": "Access Pothead's secret garden"
+    },
+    {
+     "apiname": "ach_chore",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lord of Chores",
+     "description": "100% Complete the game"
+    },
+    {
+     "apiname": "ach_soup",
+     "achieved": 1,
+     "unlocktime": 1661218133,
+     "name": "Squid Soup?",
+     "description": "Accept Jefferson's Soup"
+    },
+    {
+     "apiname": "ach_tsa",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Baul Plart, Hall Cop",
+     "description": "Trigger the metal detector without detecting a threat"
+    },
+    {
+     "apiname": "ach_owls",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In Caw-Hoots",
+     "description": ""
+    },
+    {
+     "apiname": "ach_fire",
+     "achieved": 1,
+     "unlocktime": 1661305800,
+     "name": "Cremation",
+     "description": "Upgrade the fire ability"
+    },
+    {
+     "apiname": "ach_bomb",
+     "achieved": 1,
+     "unlocktime": 1661299855,
+     "name": "Demo Crow",
+     "description": "Upgrade the bomb ability"
+    },
+    {
+     "apiname": "ach_hook",
+     "achieved": 1,
+     "unlocktime": 1661307103,
+     "name": "Crouching Tiger Hidden Crow",
+     "description": "Upgrade the hookshot ability"
+    },
+    {
+     "apiname": "ach_arrow",
+     "achieved": 1,
+     "unlocktime": 1661299381,
+     "name": "Hawk Eye",
+     "description": "Upgrade the arrow ability"
+    },
+    {
+     "apiname": "ach_truth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A True End",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

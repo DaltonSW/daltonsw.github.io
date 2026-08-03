@@ -1,0 +1,456 @@
+{
+ "provider": "steam",
+ "title": "Balatro",
+ "updated": "2026-07-26",
+ "id": "2379780",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 21,
+ "total": 31,
+ "first": "2024-02-21",
+ "last": "2024-11-30",
+ "platform": "PC",
+ "icon": "b6018068070ab0e23561694c11f7950dd6f4c752",
+ "playtime_mins": 5139,
+ "playtime": {
+  "deck": 117,
+  "linux": 117,
+  "windows": 5021
+ },
+ "last_played": "2025-02-05",
+ "achievements": [
+  {
+   "key": "BAL_16",
+   "name": "10K",
+   "description": "Score 10,000 Chips in a single hand",
+   "unlocked": true,
+   "date": "2024-02-21T21:46:54-06:00"
+  },
+  {
+   "key": "BAL_01",
+   "name": "Ante Up!",
+   "description": "Reach Ante 4",
+   "unlocked": true,
+   "date": "2024-02-21T21:48:54-06:00"
+  },
+  {
+   "key": "BAL_02",
+   "name": "Ante Upper!",
+   "description": "Reach Ante 8",
+   "unlocked": true,
+   "date": "2024-02-22T18:59:36-06:00"
+  },
+  {
+   "key": "BAL_15",
+   "name": "Retrograde",
+   "description": "Get any poker hand to level 10",
+   "unlocked": true,
+   "date": "2024-02-22T19:01:36-06:00"
+  },
+  {
+   "key": "BAL_03",
+   "name": "Heads Up",
+   "description": "Win a Run",
+   "unlocked": true,
+   "date": "2024-02-22T19:07:18-06:00"
+  },
+  {
+   "key": "BAL_14",
+   "name": "Royale",
+   "description": "Play a Royal Flush",
+   "unlocked": true,
+   "date": "2024-02-24T14:30:12-06:00"
+  },
+  {
+   "key": "BAL_26",
+   "name": "Cartomancy",
+   "description": "Discover every Tarot card",
+   "unlocked": true,
+   "date": "2024-02-25T21:47:24-06:00"
+  },
+  {
+   "key": "BAL_24",
+   "name": "Legendary",
+   "description": "Discover a Legendary Joker",
+   "unlocked": true,
+   "date": "2024-02-27T17:35:24-06:00"
+  },
+  {
+   "key": "BAL_17",
+   "name": "1,000K",
+   "description": "Score 1,000,000 Chips in a single hand",
+   "unlocked": true,
+   "date": "2024-02-27T22:22:11-06:00"
+  },
+  {
+   "key": "BAL_07",
+   "name": "Card Player",
+   "description": "Play at least 2500 Cards",
+   "unlocked": true,
+   "date": "2024-03-02T18:07:17-06:00"
+  },
+  {
+   "key": "BAL_21",
+   "name": "You Get What You Get",
+   "description": "Win a run without rerolling the shop",
+   "unlocked": true,
+   "date": "2024-03-10T10:25:49-05:00"
+  },
+  {
+   "key": "BAL_08",
+   "name": "Card Discarder",
+   "description": "Discard at least 2500 Cards",
+   "unlocked": true,
+   "date": "2024-03-10T10:46:57-05:00"
+  },
+  {
+   "key": "BAL_20",
+   "name": "Big Hands",
+   "description": "Have 80 or more cards in your deck",
+   "unlocked": true,
+   "date": "2024-03-14T22:27:17-05:00"
+  },
+  {
+   "key": "BAL_27",
+   "name": "Clairvoyance",
+   "description": "Discover every Spectral card",
+   "unlocked": true,
+   "date": "2024-03-14T22:29:17-05:00"
+  },
+  {
+   "key": "BAL_18",
+   "name": "100,000K",
+   "description": "Score 100,000,000 Chips in a single hand",
+   "unlocked": true,
+   "date": "2024-03-14T22:44:59-05:00"
+  },
+  {
+   "key": "BAL_09",
+   "name": "Nest Egg",
+   "description": "Have $400 or more during a single run",
+   "unlocked": true,
+   "date": "2024-03-16T09:11:27-05:00"
+  },
+  {
+   "key": "BAL_22",
+   "name": "Rule Bender",
+   "description": "Complete any challenge run",
+   "unlocked": true,
+   "date": "2024-03-17T10:20:10-05:00"
+  },
+  {
+   "key": "BAL_04",
+   "name": "Low Stakes",
+   "description": "Win a run on at least Red Stake difficulty",
+   "unlocked": true,
+   "date": "2024-03-19T19:26:24-05:00"
+  },
+  {
+   "key": "BAL_11",
+   "name": "Speedrunner",
+   "description": "Win a run in 12 or fewer rounds",
+   "unlocked": true,
+   "date": "2024-04-02T18:37:16-05:00"
+  },
+  {
+   "key": "BAL_05",
+   "name": "Mid Stakes",
+   "description": "Win a run on at least Black Stake difficulty",
+   "unlocked": true,
+   "date": "2024-04-02T18:37:16-05:00"
+  },
+  {
+   "key": "BAL_13",
+   "name": "Shattered",
+   "description": "Break 2 Glass Cards in a single hand",
+   "unlocked": true,
+   "date": "2024-11-30T11:04:25-06:00"
+  },
+  {
+   "key": "BAL_06",
+   "name": "High Stakes",
+   "description": "Win a run on at least Gold Stake difficulty",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_10",
+   "name": "Flushed",
+   "description": "Play a Flush with 5 Wild Cards",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_12",
+   "name": "ROI",
+   "description": "Buy 5 Vouchers by the end of Ante 4",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_19",
+   "name": "Tiny Hands",
+   "description": "Thin your deck down to 20 or fewer cards",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_23",
+   "name": "Rule Breaker",
+   "description": "Complete every challenge run",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_25",
+   "name": "Astronomy",
+   "description": "Discover every Planet card",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_28",
+   "name": "Extreme Couponer",
+   "description": "Discover every Voucher",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_29",
+   "name": "Completionist",
+   "description": "Discover 100% of your collection",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_30",
+   "name": "Completionist+",
+   "description": "Win with every deck on Gold Stake difficulty",
+   "unlocked": false
+  },
+  {
+   "key": "BAL_31",
+   "name": "Completionist++",
+   "description": "Earn a Gold Sticker on every Joker",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Balatro",
+   "achievements": [
+    {
+     "apiname": "BAL_01",
+     "achieved": 1,
+     "unlocktime": 1708573734,
+     "name": "Ante Up!",
+     "description": "Reach Ante 4"
+    },
+    {
+     "apiname": "BAL_02",
+     "achieved": 1,
+     "unlocktime": 1708649976,
+     "name": "Ante Upper!",
+     "description": "Reach Ante 8"
+    },
+    {
+     "apiname": "BAL_03",
+     "achieved": 1,
+     "unlocktime": 1708650438,
+     "name": "Heads Up",
+     "description": "Win a Run"
+    },
+    {
+     "apiname": "BAL_04",
+     "achieved": 1,
+     "unlocktime": 1710894384,
+     "name": "Low Stakes",
+     "description": "Win a run on at least Red Stake difficulty"
+    },
+    {
+     "apiname": "BAL_05",
+     "achieved": 1,
+     "unlocktime": 1712101036,
+     "name": "Mid Stakes",
+     "description": "Win a run on at least Black Stake difficulty"
+    },
+    {
+     "apiname": "BAL_06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "High Stakes",
+     "description": "Win a run on at least Gold Stake difficulty"
+    },
+    {
+     "apiname": "BAL_07",
+     "achieved": 1,
+     "unlocktime": 1709424437,
+     "name": "Card Player",
+     "description": "Play at least 2500 Cards"
+    },
+    {
+     "apiname": "BAL_08",
+     "achieved": 1,
+     "unlocktime": 1710085617,
+     "name": "Card Discarder",
+     "description": "Discard at least 2500 Cards"
+    },
+    {
+     "apiname": "BAL_09",
+     "achieved": 1,
+     "unlocktime": 1710598287,
+     "name": "Nest Egg",
+     "description": "Have $400 or more during a single run"
+    },
+    {
+     "apiname": "BAL_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flushed",
+     "description": "Play a Flush with 5 Wild Cards"
+    },
+    {
+     "apiname": "BAL_11",
+     "achieved": 1,
+     "unlocktime": 1712101036,
+     "name": "Speedrunner",
+     "description": "Win a run in 12 or fewer rounds"
+    },
+    {
+     "apiname": "BAL_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "ROI",
+     "description": "Buy 5 Vouchers by the end of Ante 4"
+    },
+    {
+     "apiname": "BAL_13",
+     "achieved": 1,
+     "unlocktime": 1732986265,
+     "name": "Shattered",
+     "description": "Break 2 Glass Cards in a single hand"
+    },
+    {
+     "apiname": "BAL_14",
+     "achieved": 1,
+     "unlocktime": 1708806612,
+     "name": "Royale",
+     "description": "Play a Royal Flush"
+    },
+    {
+     "apiname": "BAL_15",
+     "achieved": 1,
+     "unlocktime": 1708650096,
+     "name": "Retrograde",
+     "description": "Get any poker hand to level 10"
+    },
+    {
+     "apiname": "BAL_16",
+     "achieved": 1,
+     "unlocktime": 1708573614,
+     "name": "10K",
+     "description": "Score 10,000 Chips in a single hand"
+    },
+    {
+     "apiname": "BAL_17",
+     "achieved": 1,
+     "unlocktime": 1709094131,
+     "name": "1,000K",
+     "description": "Score 1,000,000 Chips in a single hand"
+    },
+    {
+     "apiname": "BAL_18",
+     "achieved": 1,
+     "unlocktime": 1710474299,
+     "name": "100,000K",
+     "description": "Score 100,000,000 Chips in a single hand"
+    },
+    {
+     "apiname": "BAL_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tiny Hands",
+     "description": "Thin your deck down to 20 or fewer cards"
+    },
+    {
+     "apiname": "BAL_20",
+     "achieved": 1,
+     "unlocktime": 1710473237,
+     "name": "Big Hands",
+     "description": "Have 80 or more cards in your deck"
+    },
+    {
+     "apiname": "BAL_21",
+     "achieved": 1,
+     "unlocktime": 1710084349,
+     "name": "You Get What You Get",
+     "description": "Win a run without rerolling the shop"
+    },
+    {
+     "apiname": "BAL_22",
+     "achieved": 1,
+     "unlocktime": 1710688810,
+     "name": "Rule Bender",
+     "description": "Complete any challenge run"
+    },
+    {
+     "apiname": "BAL_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rule Breaker",
+     "description": "Complete every challenge run"
+    },
+    {
+     "apiname": "BAL_24",
+     "achieved": 1,
+     "unlocktime": 1709076924,
+     "name": "Legendary",
+     "description": "Discover a Legendary Joker"
+    },
+    {
+     "apiname": "BAL_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Astronomy",
+     "description": "Discover every Planet card"
+    },
+    {
+     "apiname": "BAL_26",
+     "achieved": 1,
+     "unlocktime": 1708919244,
+     "name": "Cartomancy",
+     "description": "Discover every Tarot card"
+    },
+    {
+     "apiname": "BAL_27",
+     "achieved": 1,
+     "unlocktime": 1710473357,
+     "name": "Clairvoyance",
+     "description": "Discover every Spectral card"
+    },
+    {
+     "apiname": "BAL_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extreme Couponer",
+     "description": "Discover every Voucher"
+    },
+    {
+     "apiname": "BAL_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Completionist",
+     "description": "Discover 100% of your collection"
+    },
+    {
+     "apiname": "BAL_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Completionist+",
+     "description": "Win with every deck on Gold Stake difficulty"
+    },
+    {
+     "apiname": "BAL_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Completionist++",
+     "description": "Earn a Gold Sticker on every Joker"
+    }
+   ],
+   "success": true
+  }
+ }
+}

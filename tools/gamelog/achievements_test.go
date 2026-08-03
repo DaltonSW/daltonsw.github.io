@@ -9,6 +9,8 @@ import (
 	"path/filepath"
 	"testing"
 	"time"
+
+	"gopkg.in/yaml.v3"
 )
 
 func unlocked(key, date string) ArchivedAchievement {
@@ -397,5 +399,97 @@ func TestSaveRecord_PreservesRawResponse(t *testing.T) {
 	json.Unmarshal(raw, &want)
 	if fmt.Sprint(got) != fmt.Sprint(want) {
 		t.Errorf("raw changed: %v, want %v", got, want)
+	}
+}
+
+// nUnlocked builds n distinct unlocked achievements — Unlocked is derived by
+// summarize() from the achievement list, not taken at face value, so a
+// realistic fixture needs the achievements themselves, not just the count.
+func nUnlocked(prefix string, n int) []ArchivedAchievement {
+	out := make([]ArchivedAchievement, n)
+	for i := range out {
+		out[i] = unlocked(fmt.Sprintf("%s-%d", prefix, i), "2024-01-01T00:00:00-06:00")
+	}
+	return out
+}
+
+// The projection sums both providers rather than picking one, so a
+// dual-tracked game's card shows its whole achievement history, not just
+// whichever provider happened to be checked first.
+func TestWriteAchievementSummary_SumsBothProviders(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+	if _, err := SaveRecord(archiveDir, providerRA, "4650", "Hades II", &ProviderRecord{Total: 40, Achievements: nUnlocked("ra", 12)}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := SaveRecord(archiveDir, providerSteam, "1145360", "Hades", &ProviderRecord{Total: 54, Achievements: nUnlocked("steam", 46)}); err != nil {
+		t.Fatal(err)
+	}
+
+	wrote, err := writeAchievementSummary(archiveDir, gameDir, "4650", "1145360")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !wrote {
+		t.Error("expected wrote == true")
+	}
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+	if got.Unlocked != 58 || got.Total != 94 {
+		t.Errorf("summary = %+v, want 58/94", got)
+	}
+}
+
+// A provider with nothing archived contributes nothing — a game linked only
+// to Steam shouldn't need a phantom RetroAchievements record to work.
+func TestWriteAchievementSummary_MissingProviderIsSkipped(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+	if _, err := SaveRecord(archiveDir, providerSteam, "1145360", "Hades", &ProviderRecord{Total: 54, Achievements: nUnlocked("steam", 46)}); err != nil {
+		t.Fatal(err)
+	}
+
+	if _, err := writeAchievementSummary(archiveDir, gameDir, "", "1145360"); err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+	if got.Unlocked != 46 || got.Total != 54 {
+		t.Errorf("summary = %+v, want 46/54", got)
+	}
+}
+
+// Nothing archived for either provider means nothing to show — and a stale
+// summary from a since-cleared or relinked provider must not linger and keep
+// displaying an outdated count.
+func TestWriteAchievementSummary_RemovesStaleSummaryWhenNothingArchived(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+	path := achievementSummaryPath(gameDir)
+	if err := os.WriteFile(path, []byte("unlocked: 9\ntotal: 9\n"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+
+	wrote, err := writeAchievementSummary(archiveDir, gameDir, "4650", "1145360")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if wrote {
+		t.Error("expected wrote == false when nothing is archived")
+	}
+	if _, err := os.Stat(path); !os.IsNotExist(err) {
+		t.Error("expected the stale summary to be removed")
 	}
 }

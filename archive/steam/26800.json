@@ -1,0 +1,197 @@
+{
+ "provider": "steam",
+ "title": "Braid",
+ "updated": "2026-07-26",
+ "id": "26800",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 11,
+ "total": 12,
+ "first": "2012-11-18",
+ "last": "2013-01-20",
+ "platform": "PC",
+ "icon": "1468d086e684d6a3067bd4bdc63f699fc0aede3d",
+ "playtime_mins": 555,
+ "playtime": {
+  "linux": 47
+ },
+ "last_played": "2025-03-23",
+ "achievements": [
+  {
+   "key": "traversed2",
+   "name": "Traversed World 2",
+   "description": "Travel all the way across World 2.",
+   "unlocked": true,
+   "date": "2012-11-18T00:58:59-06:00"
+  },
+  {
+   "key": "traversed3",
+   "name": "Traversed World 3",
+   "description": "Travel all the way across World 3.",
+   "unlocked": true,
+   "date": "2012-11-18T13:11:53-06:00"
+  },
+  {
+   "key": "solved2",
+   "name": "Solved World 2",
+   "description": "Fit together all the world 2 puzzle pieces and align the puzzle in its frame.",
+   "unlocked": true,
+   "date": "2012-12-24T11:43:57-06:00"
+  },
+  {
+   "key": "solved3",
+   "name": "Solved World 3",
+   "description": "Fit together all the world 3 puzzle pieces and align the puzzle in its frame.",
+   "unlocked": true,
+   "date": "2013-01-20T13:34:40-06:00"
+  },
+  {
+   "key": "traversed4",
+   "name": "Traversed World 4",
+   "description": "Travel all the way across World 4.",
+   "unlocked": true,
+   "date": "2013-01-20T14:12:29-06:00"
+  },
+  {
+   "key": "solved4",
+   "name": "Solved World 4",
+   "description": "Fit together all the world 4 puzzle pieces and align the puzzle in its frame.",
+   "unlocked": true,
+   "date": "2013-01-20T14:15:05-06:00"
+  },
+  {
+   "key": "traversed5",
+   "name": "Traversed World 5",
+   "description": "Travel all the way across World 5.",
+   "unlocked": true,
+   "date": "2013-01-20T14:37:57-06:00"
+  },
+  {
+   "key": "solved5",
+   "name": "Solved World 5",
+   "description": "Fit together all the world 5 puzzle pieces and align the puzzle in its frame.",
+   "unlocked": true,
+   "date": "2013-01-20T14:39:30-06:00"
+  },
+  {
+   "key": "traversed6",
+   "name": "Traversed World 6",
+   "description": "Travel all the way across World 6.",
+   "unlocked": true,
+   "date": "2013-01-20T15:07:10-06:00"
+  },
+  {
+   "key": "solved6",
+   "name": "Solved World 6",
+   "description": "Fit together all the world 6 puzzle pieces and align the puzzle in its frame.",
+   "unlocked": true,
+   "date": "2013-01-20T15:08:25-06:00"
+  },
+  {
+   "key": "closure",
+   "name": "Closure",
+   "description": "Complete the game.",
+   "unlocked": true,
+   "date": "2013-01-20T15:28:40-06:00"
+  },
+  {
+   "key": "speed_run",
+   "name": "Speed Run",
+   "description": "Complete a full speed run, beating the challenge time.",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Braid",
+   "achievements": [
+    {
+     "apiname": "traversed2",
+     "achieved": 1,
+     "unlocktime": 1353221939,
+     "name": "Traversed World 2",
+     "description": "Travel all the way across World 2."
+    },
+    {
+     "apiname": "traversed3",
+     "achieved": 1,
+     "unlocktime": 1353265913,
+     "name": "Traversed World 3",
+     "description": "Travel all the way across World 3."
+    },
+    {
+     "apiname": "traversed4",
+     "achieved": 1,
+     "unlocktime": 1358712749,
+     "name": "Traversed World 4",
+     "description": "Travel all the way across World 4."
+    },
+    {
+     "apiname": "traversed5",
+     "achieved": 1,
+     "unlocktime": 1358714277,
+     "name": "Traversed World 5",
+     "description": "Travel all the way across World 5."
+    },
+    {
+     "apiname": "traversed6",
+     "achieved": 1,
+     "unlocktime": 1358716030,
+     "name": "Traversed World 6",
+     "description": "Travel all the way across World 6."
+    },
+    {
+     "apiname": "solved2",
+     "achieved": 1,
+     "unlocktime": 1356371037,
+     "name": "Solved World 2",
+     "description": "Fit together all the world 2 puzzle pieces and align the puzzle in its frame."
+    },
+    {
+     "apiname": "solved3",
+     "achieved": 1,
+     "unlocktime": 1358710480,
+     "name": "Solved World 3",
+     "description": "Fit together all the world 3 puzzle pieces and align the puzzle in its frame."
+    },
+    {
+     "apiname": "solved4",
+     "achieved": 1,
+     "unlocktime": 1358712905,
+     "name": "Solved World 4",
+     "description": "Fit together all the world 4 puzzle pieces and align the puzzle in its frame."
+    },
+    {
+     "apiname": "solved5",
+     "achieved": 1,
+     "unlocktime": 1358714370,
+     "name": "Solved World 5",
+     "description": "Fit together all the world 5 puzzle pieces and align the puzzle in its frame."
+    },
+    {
+     "apiname": "solved6",
+     "achieved": 1,
+     "unlocktime": 1358716105,
+     "name": "Solved World 6",
+     "description": "Fit together all the world 6 puzzle pieces and align the puzzle in its frame."
+    },
+    {
+     "apiname": "closure",
+     "achieved": 1,
+     "unlocktime": 1358717320,
+     "name": "Closure",
+     "description": "Complete the game."
+    },
+    {
+     "apiname": "speed_run",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Run",
+     "description": "Complete a full speed run, beating the challenge time."
+    }
+   ],
+   "success": true
+  }
+ }
+}

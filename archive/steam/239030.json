@@ -1,0 +1,192 @@
+{
+ "provider": "steam",
+ "title": "Papers, Please",
+ "updated": "2026-07-26",
+ "id": "239030",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 2,
+ "total": 13,
+ "first": "2014-04-12",
+ "last": "2014-04-13",
+ "platform": "PC",
+ "icon": "102e22fc7e0689cb5a9d8cfdd5a6725d571d1a0f",
+ "playtime_mins": 300,
+ "last_played": "2016-02-27",
+ "achievements": [
+  {
+   "key": "ACH_TOKEN_OBRISTAN",
+   "name": "Obristan Token",
+   "description": "Collect the hidden Obristan Token",
+   "unlocked": true,
+   "date": "2014-04-12T20:30:54-05:00"
+  },
+  {
+   "key": "ACH_TOKEN_ARSTOTZKA",
+   "name": "Arstotzka Token",
+   "description": "Collect the hidden Arstotzka Token",
+   "unlocked": true,
+   "date": "2014-04-13T13:53:35-05:00"
+  },
+  {
+   "key": "ACH_APT_CLASS5",
+   "name": "Worker's Best",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_END_ESCAPE",
+   "name": "Snowier Pastures",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_END_HELPEZICHOLDFIRE",
+   "name": "Member of the Order",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_END_IGNOREEZIC",
+   "name": "Glory to Arstotzka",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_END_KILLEDTARGET",
+   "name": "Hired Rifle",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_END_TURNEDOVEREZICDOCS",
+   "name": "Too Honest",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_TOKEN_ANTEGRIA",
+   "name": "Antegria Token",
+   "description": "Collect the hidden Antegria Token",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_TOKEN_IMPOR",
+   "name": "Impor Token",
+   "description": "Collect the hidden Impor Token",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_TOKEN_KOLECHIA",
+   "name": "Kolechia Token",
+   "description": "Collect the hidden Kolechia Token",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_TOKEN_REPUBLIA",
+   "name": "Republia Token",
+   "description": "Collect the hidden Republia Token",
+   "unlocked": false
+  },
+  {
+   "key": "ACH_TOKEN_UNITEDFED",
+   "name": "United Federation Token",
+   "description": "Collect the hidden United Federation Token",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Papers, Please",
+   "achievements": [
+    {
+     "apiname": "ACH_TOKEN_ANTEGRIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Antegria Token",
+     "description": "Collect the hidden Antegria Token"
+    },
+    {
+     "apiname": "ACH_TOKEN_REPUBLIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Republia Token",
+     "description": "Collect the hidden Republia Token"
+    },
+    {
+     "apiname": "ACH_TOKEN_IMPOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Impor Token",
+     "description": "Collect the hidden Impor Token"
+    },
+    {
+     "apiname": "ACH_TOKEN_OBRISTAN",
+     "achieved": 1,
+     "unlocktime": 1397352654,
+     "name": "Obristan Token",
+     "description": "Collect the hidden Obristan Token"
+    },
+    {
+     "apiname": "ACH_TOKEN_KOLECHIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kolechia Token",
+     "description": "Collect the hidden Kolechia Token"
+    },
+    {
+     "apiname": "ACH_TOKEN_ARSTOTZKA",
+     "achieved": 1,
+     "unlocktime": 1397415215,
+     "name": "Arstotzka Token",
+     "description": "Collect the hidden Arstotzka Token"
+    },
+    {
+     "apiname": "ACH_TOKEN_UNITEDFED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "United Federation Token",
+     "description": "Collect the hidden United Federation Token"
+    },
+    {
+     "apiname": "ACH_END_TURNEDOVEREZICDOCS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Too Honest",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_END_KILLEDTARGET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hired Rifle",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_END_HELPEZICHOLDFIRE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Member of the Order",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_END_ESCAPE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Snowier Pastures",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_END_IGNOREEZIC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glory to Arstotzka",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_APT_CLASS5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Worker's Best",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,890 @@
+{
+ "provider": "steam",
+ "title": "Neon White",
+ "updated": "2026-07-26",
+ "id": "1533420",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 58,
+ "total": 63,
+ "first": "2022-12-10",
+ "last": "2023-04-01",
+ "platform": "PC",
+ "icon": "0c26e58be78678cb80716370bd607778d85b3ab5",
+ "playtime_mins": 3162,
+ "playtime": {
+  "windows": 3162
+ },
+ "last_played": "2023-04-01",
+ "achievements": [
+  {
+   "key": "ACE_FIRST",
+   "name": "Ace",
+   "description": "Earn your first Ace medal",
+   "unlocked": true,
+   "date": "2022-12-10T15:15:19-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_1",
+   "name": "Mission 1 Complete",
+   "description": "Complete Mission 1",
+   "unlocked": true,
+   "date": "2022-12-10T15:57:13-06:00"
+  },
+  {
+   "key": "GIFT_GIVE_FIRST",
+   "name": "How thoughtful",
+   "description": "Give your first gift",
+   "unlocked": true,
+   "date": "2022-12-10T17:28:11-06:00"
+  },
+  {
+   "key": "HEAVENLYDELIGHT_FIRST",
+   "name": "Heavenly Delight",
+   "unlocked": true,
+   "date": "2022-12-10T17:39:45-06:00"
+  },
+  {
+   "key": "PARRY",
+   "name": "Parry",
+   "description": "Kill an enemy by parrying a bullet at them using the Katana card",
+   "unlocked": true,
+   "date": "2022-12-10T18:50:18-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_2",
+   "name": "Mission 2 Complete",
+   "description": "Complete Mission 2",
+   "unlocked": true,
+   "date": "2022-12-10T19:23:11-06:00"
+  },
+  {
+   "key": "FIST",
+   "name": "Not very effective...",
+   "description": "Use the Fists card",
+   "unlocked": true,
+   "date": "2022-12-11T08:07:34-06:00"
+  },
+  {
+   "key": "FIST_DEATH",
+   "name": "Bloody Knuckles",
+   "unlocked": true,
+   "date": "2022-12-11T08:09:20-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_3",
+   "name": "Mission 3 Complete",
+   "description": "Complete Mission 3",
+   "unlocked": true,
+   "date": "2022-12-11T08:42:00-06:00"
+  },
+  {
+   "key": "BOSS_CLOCKTOWER",
+   "name": "Clocktower",
+   "unlocked": true,
+   "date": "2022-12-11T09:20:35-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_4",
+   "name": "Mission 4 Complete",
+   "description": "Complete Mission 4",
+   "unlocked": true,
+   "date": "2022-12-11T09:23:34-06:00"
+  },
+  {
+   "key": "VENDOR",
+   "name": "Vending Machine",
+   "description": "Collect ten cards from vending machines",
+   "unlocked": true,
+   "date": "2022-12-11T12:27:25-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_5",
+   "name": "Mission 5 Complete",
+   "description": "Complete Mission 5",
+   "unlocked": true,
+   "date": "2022-12-11T13:55:55-06:00"
+  },
+  {
+   "key": "STOMP",
+   "name": "Cannonball",
+   "description": "Stomp off of the edge of a level",
+   "unlocked": true,
+   "date": "2022-12-11T16:12:19-06:00"
+  },
+  {
+   "key": "TRIPWIRE",
+   "name": "Trippy",
+   "description": "Get killed by a Tripwire",
+   "unlocked": true,
+   "date": "2022-12-11T16:14:27-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_6",
+   "name": "Mission 6 Complete",
+   "description": "Complete Mission 6",
+   "unlocked": true,
+   "date": "2022-12-11T17:03:34-06:00"
+  },
+  {
+   "key": "ACE_HALF",
+   "name": "Mikey's Pet",
+   "description": "Earn 50% of the total Ace medals",
+   "unlocked": true,
+   "date": "2022-12-11T20:16:10-06:00"
+  },
+  {
+   "key": "IDIOTISLAND",
+   "name": "Idiot",
+   "unlocked": true,
+   "date": "2022-12-11T21:00:54-06:00"
+  },
+  {
+   "key": "VIOLET_MEMORY",
+   "name": "Vault",
+   "description": "Unlock one of Violet's memories",
+   "unlocked": true,
+   "date": "2022-12-11T21:04:08-06:00"
+  },
+  {
+   "key": "YELLOW_MEMORY",
+   "name": "Trinity",
+   "description": "Unlock one of Yellow's memories",
+   "unlocked": true,
+   "date": "2022-12-11T21:06:38-06:00"
+  },
+  {
+   "key": "RED_MEMORY",
+   "name": "Sweet Dreams",
+   "description": "Unlock one of Red's memories",
+   "unlocked": true,
+   "date": "2022-12-11T21:13:37-06:00"
+  },
+  {
+   "key": "GIFT_COLLECT_HALF",
+   "name": "Gift Collector",
+   "description": "Collect 50% of the total gifts",
+   "unlocked": true,
+   "date": "2022-12-11T21:34:48-06:00"
+  },
+  {
+   "key": "MIMIC_DEATH",
+   "name": "Mimic",
+   "description": "Die from a Mimic's bullet",
+   "unlocked": true,
+   "date": "2022-12-12T20:42:48-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_7",
+   "name": "Mission 7 Complete",
+   "description": "Complete Mission 7",
+   "unlocked": true,
+   "date": "2022-12-12T21:25:33-06:00"
+  },
+  {
+   "key": "COIN",
+   "name": "Souvenir",
+   "description": "Find a Strange Coin",
+   "unlocked": true,
+   "date": "2022-12-13T18:44:41-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_8",
+   "name": "Mission 8 Complete",
+   "description": "Complete Mission 8",
+   "unlocked": true,
+   "date": "2022-12-14T17:28:11-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_9",
+   "name": "Mission 9 Complete",
+   "description": "Complete Mission 9",
+   "unlocked": true,
+   "date": "2022-12-16T17:22:24-06:00"
+  },
+  {
+   "key": "BOSS_TEMPLE",
+   "name": "Third Temple",
+   "unlocked": true,
+   "date": "2022-12-16T18:59:25-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_10",
+   "name": "Mission 10 Complete",
+   "description": "Complete Mission 10",
+   "unlocked": true,
+   "date": "2022-12-16T19:01:01-06:00"
+  },
+  {
+   "key": "HEAVENLYDELIGHT_ALL",
+   "name": "Lousy Keychain",
+   "unlocked": true,
+   "date": "2022-12-16T19:06:50-06:00"
+  },
+  {
+   "key": "MIMIC_BOOKOFLIFE",
+   "name": "Surprise!",
+   "unlocked": true,
+   "date": "2022-12-16T19:20:03-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_11",
+   "name": "Mission 11 Complete",
+   "description": "Complete Mission 11",
+   "unlocked": true,
+   "date": "2022-12-16T20:21:25-06:00"
+  },
+  {
+   "key": "BOSS_HANDOFGOD",
+   "name": "Hand of God",
+   "unlocked": true,
+   "date": "2022-12-16T20:57:46-06:00"
+  },
+  {
+   "key": "BOOKOFDEATH",
+   "name": "Book of Death",
+   "unlocked": true,
+   "date": "2022-12-16T21:01:08-06:00"
+  },
+  {
+   "key": "MISSIONCOMPLETE_12",
+   "name": "Mission 12 Complete",
+   "description": "Complete Mission 12",
+   "unlocked": true,
+   "date": "2022-12-16T21:01:08-06:00"
+  },
+  {
+   "key": "BEATGAME",
+   "name": "Absolution",
+   "unlocked": true,
+   "date": "2022-12-16T21:02:37-06:00"
+  },
+  {
+   "key": "BOSS_CLOCKTOWER_EARLY",
+   "name": "Clockwork",
+   "unlocked": true,
+   "date": "2022-12-17T08:55:11-06:00"
+  },
+  {
+   "key": "ACE_ALL",
+   "name": "Straight A's",
+   "description": "Earn an Ace medal on every level",
+   "unlocked": true,
+   "date": "2022-12-17T09:13:01-06:00"
+  },
+  {
+   "key": "VIOLET_SIDEQUEST",
+   "name": "Rigged Game",
+   "description": "Complete Violet's Sidequests",
+   "unlocked": true,
+   "date": "2022-12-17T11:10:41-06:00"
+  },
+  {
+   "key": "YELLOW_SIDEQUEST",
+   "name": "Don't Think",
+   "description": "Complete Yellow's Sidequests",
+   "unlocked": true,
+   "date": "2022-12-17T11:17:43-06:00"
+  },
+  {
+   "key": "MIKEY_RELATIONSHIP",
+   "name": "Mikey",
+   "description": "Complete your relationship with Mikey",
+   "unlocked": true,
+   "date": "2022-12-17T12:33:18-06:00"
+  },
+  {
+   "key": "RAZ_RELATIONSHIP",
+   "name": "Raz",
+   "description": "Complete your relationship with Raz",
+   "unlocked": true,
+   "date": "2022-12-17T12:33:51-06:00"
+  },
+  {
+   "key": "RED_SIDEQUEST",
+   "name": "Solitary Grace",
+   "description": "Complete Red's Sidequests",
+   "unlocked": true,
+   "date": "2022-12-17T13:02:29-06:00"
+  },
+  {
+   "key": "RED_RELATIONSHIP",
+   "name": "Red",
+   "description": "Complete your relationship with Red",
+   "unlocked": true,
+   "date": "2022-12-17T13:03:15-06:00"
+  },
+  {
+   "key": "YELLOW_RELATIONSHIP",
+   "name": "Yellow",
+   "description": "Complete your relationship with Yellow",
+   "unlocked": true,
+   "date": "2022-12-17T13:05:38-06:00"
+  },
+  {
+   "key": "VIOLET_RELATIONSHIP",
+   "name": "Violet",
+   "description": "Complete your relationship with Violet",
+   "unlocked": true,
+   "date": "2022-12-17T13:09:35-06:00"
+  },
+  {
+   "key": "GREEN_RELATIONSHIP",
+   "name": "Green",
+   "unlocked": true,
+   "date": "2022-12-17T13:26:40-06:00"
+  },
+  {
+   "key": "ALLMEMORIES",
+   "name": "Whole again",
+   "description": "Unlock all of White's memories",
+   "unlocked": true,
+   "date": "2022-12-17T13:28:24-06:00"
+  },
+  {
+   "key": "GIFT_COLLECT_ALL",
+   "name": "Gift Hunter",
+   "description": "Collect all gifts",
+   "unlocked": true,
+   "date": "2022-12-17T13:31:54-06:00"
+  },
+  {
+   "key": "100_PERCENT",
+   "name": "100%",
+   "description": "Complete 100% of the game",
+   "unlocked": true,
+   "date": "2022-12-17T13:31:54-06:00"
+  },
+  {
+   "key": "LEVELRUSH_RED_HEAVEN",
+   "name": "Red's Heaven Rush Complete",
+   "description": "Complete Red's Heaven Rush",
+   "unlocked": true,
+   "date": "2022-12-17T19:20:08-06:00"
+  },
+  {
+   "key": "BOOKOFLIFE",
+   "name": "Book of Life",
+   "unlocked": true,
+   "date": "2022-12-18T08:24:52-06:00"
+  },
+  {
+   "key": "GOODENDING",
+   "name": "Cheese!",
+   "unlocked": true,
+   "date": "2022-12-18T08:28:07-06:00"
+  },
+  {
+   "key": "LEVELRUSH_RED_HELL",
+   "name": "Red's Hell Rush Complete",
+   "description": "Complete Red's Hell Rush",
+   "unlocked": true,
+   "date": "2022-12-18T08:35:31-06:00"
+  },
+  {
+   "key": "LEVELRUSH_VIOLET_HEAVEN",
+   "name": "Violet's Heaven Rush Complete",
+   "description": "Complete Violet's Heaven Rush",
+   "unlocked": true,
+   "date": "2022-12-18T08:46:14-06:00"
+  },
+  {
+   "key": "LEVELRUSH_VIOLET_HELL",
+   "name": "Violet's Hell Rush Complete",
+   "description": "Complete Violet's Hell Rush",
+   "unlocked": true,
+   "date": "2022-12-18T09:39:24-06:00"
+  },
+  {
+   "key": "LEVELRUSH_YELLOW_HEAVEN",
+   "name": "Yellow's Heaven Rush Complete",
+   "description": "Complete Yellow's Heaven Rush",
+   "unlocked": true,
+   "date": "2022-12-19T21:01:52-06:00"
+  },
+  {
+   "key": "BOSS_TEMPLE_EARLY",
+   "name": "Divine Intervention",
+   "unlocked": true,
+   "date": "2023-04-01T11:44:12-05:00"
+  },
+  {
+   "key": "LEVELRUSH_MIKEY_HEAVEN",
+   "name": "Mikey's Heaven Rush Complete",
+   "unlocked": false
+  },
+  {
+   "key": "LEVELRUSH_MIKEY_HELL",
+   "name": "Mikey's Hell Rush Complete",
+   "unlocked": false
+  },
+  {
+   "key": "LEVELRUSH_WHITE_HEAVEN",
+   "name": "White's Heaven Rush Complete",
+   "description": "Complete White's Heaven Rush",
+   "unlocked": false
+  },
+  {
+   "key": "LEVELRUSH_WHITE_HELL",
+   "name": "White's Hell Rush Complete",
+   "description": "Complete White's Hell Rush",
+   "unlocked": false
+  },
+  {
+   "key": "LEVELRUSH_YELLOW_HELL",
+   "name": "Yellow's Hell Rush Complete",
+   "description": "Complete Yellow's Hell Rush",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Neon White",
+   "achievements": [
+    {
+     "apiname": "MISSIONCOMPLETE_1",
+     "achieved": 1,
+     "unlocktime": 1670709433,
+     "name": "Mission 1 Complete",
+     "description": "Complete Mission 1"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_2",
+     "achieved": 1,
+     "unlocktime": 1670721791,
+     "name": "Mission 2 Complete",
+     "description": "Complete Mission 2"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_3",
+     "achieved": 1,
+     "unlocktime": 1670769720,
+     "name": "Mission 3 Complete",
+     "description": "Complete Mission 3"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_4",
+     "achieved": 1,
+     "unlocktime": 1670772214,
+     "name": "Mission 4 Complete",
+     "description": "Complete Mission 4"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_5",
+     "achieved": 1,
+     "unlocktime": 1670788555,
+     "name": "Mission 5 Complete",
+     "description": "Complete Mission 5"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_6",
+     "achieved": 1,
+     "unlocktime": 1670799814,
+     "name": "Mission 6 Complete",
+     "description": "Complete Mission 6"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_7",
+     "achieved": 1,
+     "unlocktime": 1670901933,
+     "name": "Mission 7 Complete",
+     "description": "Complete Mission 7"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_8",
+     "achieved": 1,
+     "unlocktime": 1671060491,
+     "name": "Mission 8 Complete",
+     "description": "Complete Mission 8"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_9",
+     "achieved": 1,
+     "unlocktime": 1671232944,
+     "name": "Mission 9 Complete",
+     "description": "Complete Mission 9"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_10",
+     "achieved": 1,
+     "unlocktime": 1671238861,
+     "name": "Mission 10 Complete",
+     "description": "Complete Mission 10"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_11",
+     "achieved": 1,
+     "unlocktime": 1671243685,
+     "name": "Mission 11 Complete",
+     "description": "Complete Mission 11"
+    },
+    {
+     "apiname": "MISSIONCOMPLETE_12",
+     "achieved": 1,
+     "unlocktime": 1671246068,
+     "name": "Mission 12 Complete",
+     "description": "Complete Mission 12"
+    },
+    {
+     "apiname": "BEATGAME",
+     "achieved": 1,
+     "unlocktime": 1671246157,
+     "name": "Absolution",
+     "description": ""
+    },
+    {
+     "apiname": "GOODENDING",
+     "achieved": 1,
+     "unlocktime": 1671373687,
+     "name": "Cheese!",
+     "description": ""
+    },
+    {
+     "apiname": "STOMP",
+     "achieved": 1,
+     "unlocktime": 1670796739,
+     "name": "Cannonball",
+     "description": "Stomp off of the edge of a level"
+    },
+    {
+     "apiname": "VENDOR",
+     "achieved": 1,
+     "unlocktime": 1670783245,
+     "name": "Vending Machine",
+     "description": "Collect ten cards from vending machines"
+    },
+    {
+     "apiname": "ALLMEMORIES",
+     "achieved": 1,
+     "unlocktime": 1671305304,
+     "name": "Whole again",
+     "description": "Unlock all of White's memories"
+    },
+    {
+     "apiname": "100_PERCENT",
+     "achieved": 1,
+     "unlocktime": 1671305514,
+     "name": "100%",
+     "description": "Complete 100% of the game"
+    },
+    {
+     "apiname": "RED_MEMORY",
+     "achieved": 1,
+     "unlocktime": 1670814817,
+     "name": "Sweet Dreams",
+     "description": "Unlock one of Red's memories"
+    },
+    {
+     "apiname": "RED_RELATIONSHIP",
+     "achieved": 1,
+     "unlocktime": 1671303795,
+     "name": "Red",
+     "description": "Complete your relationship with Red"
+    },
+    {
+     "apiname": "RED_SIDEQUEST",
+     "achieved": 1,
+     "unlocktime": 1671303749,
+     "name": "Solitary Grace",
+     "description": "Complete Red's Sidequests"
+    },
+    {
+     "apiname": "YELLOW_MEMORY",
+     "achieved": 1,
+     "unlocktime": 1670814398,
+     "name": "Trinity",
+     "description": "Unlock one of Yellow's memories"
+    },
+    {
+     "apiname": "YELLOW_RELATIONSHIP",
+     "achieved": 1,
+     "unlocktime": 1671303938,
+     "name": "Yellow",
+     "description": "Complete your relationship with Yellow"
+    },
+    {
+     "apiname": "YELLOW_SIDEQUEST",
+     "achieved": 1,
+     "unlocktime": 1671297463,
+     "name": "Don't Think",
+     "description": "Complete Yellow's Sidequests"
+    },
+    {
+     "apiname": "VIOLET_MEMORY",
+     "achieved": 1,
+     "unlocktime": 1670814248,
+     "name": "Vault",
+     "description": "Unlock one of Violet's memories"
+    },
+    {
+     "apiname": "VIOLET_RELATIONSHIP",
+     "achieved": 1,
+     "unlocktime": 1671304175,
+     "name": "Violet",
+     "description": "Complete your relationship with Violet"
+    },
+    {
+     "apiname": "VIOLET_SIDEQUEST",
+     "achieved": 1,
+     "unlocktime": 1671297041,
+     "name": "Rigged Game",
+     "description": "Complete Violet's Sidequests"
+    },
+    {
+     "apiname": "MIKEY_RELATIONSHIP",
+     "achieved": 1,
+     "unlocktime": 1671301998,
+     "name": "Mikey",
+     "description": "Complete your relationship with Mikey"
+    },
+    {
+     "apiname": "RAZ_RELATIONSHIP",
+     "achieved": 1,
+     "unlocktime": 1671302031,
+     "name": "Raz",
+     "description": "Complete your relationship with Raz"
+    },
+    {
+     "apiname": "COIN",
+     "achieved": 1,
+     "unlocktime": 1670978681,
+     "name": "Souvenir",
+     "description": "Find a Strange Coin"
+    },
+    {
+     "apiname": "GREEN_RELATIONSHIP",
+     "achieved": 1,
+     "unlocktime": 1671305200,
+     "name": "Green",
+     "description": ""
+    },
+    {
+     "apiname": "ACE_FIRST",
+     "achieved": 1,
+     "unlocktime": 1670706919,
+     "name": "Ace",
+     "description": "Earn your first Ace medal"
+    },
+    {
+     "apiname": "ACE_HALF",
+     "achieved": 1,
+     "unlocktime": 1670811370,
+     "name": "Mikey's Pet",
+     "description": "Earn 50% of the total Ace medals"
+    },
+    {
+     "apiname": "ACE_ALL",
+     "achieved": 1,
+     "unlocktime": 1671289981,
+     "name": "Straight A's",
+     "description": "Earn an Ace medal on every level"
+    },
+    {
+     "apiname": "HEAVENLYDELIGHT_FIRST",
+     "achieved": 1,
+     "unlocktime": 1670715585,
+     "name": "Heavenly Delight",
+     "description": ""
+    },
+    {
+     "apiname": "HEAVENLYDELIGHT_ALL",
+     "achieved": 1,
+     "unlocktime": 1671239210,
+     "name": "Lousy Keychain",
+     "description": ""
+    },
+    {
+     "apiname": "TRIPWIRE",
+     "achieved": 1,
+     "unlocktime": 1670796867,
+     "name": "Trippy",
+     "description": "Get killed by a Tripwire"
+    },
+    {
+     "apiname": "FIST",
+     "achieved": 1,
+     "unlocktime": 1670767654,
+     "name": "Not very effective...",
+     "description": "Use the Fists card"
+    },
+    {
+     "apiname": "FIST_DEATH",
+     "achieved": 1,
+     "unlocktime": 1670767760,
+     "name": "Bloody Knuckles",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_CLOCKTOWER",
+     "achieved": 1,
+     "unlocktime": 1670772035,
+     "name": "Clocktower",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_CLOCKTOWER_EARLY",
+     "achieved": 1,
+     "unlocktime": 1671288911,
+     "name": "Clockwork",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_TEMPLE",
+     "achieved": 1,
+     "unlocktime": 1671238765,
+     "name": "Third Temple",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_TEMPLE_EARLY",
+     "achieved": 1,
+     "unlocktime": 1680367452,
+     "name": "Divine Intervention",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_HANDOFGOD",
+     "achieved": 1,
+     "unlocktime": 1671245866,
+     "name": "Hand of God",
+     "description": ""
+    },
+    {
+     "apiname": "BOOKOFLIFE",
+     "achieved": 1,
+     "unlocktime": 1671373492,
+     "name": "Book of Life",
+     "description": ""
+    },
+    {
+     "apiname": "BOOKOFDEATH",
+     "achieved": 1,
+     "unlocktime": 1671246068,
+     "name": "Book of Death",
+     "description": ""
+    },
+    {
+     "apiname": "GIFT_GIVE_FIRST",
+     "achieved": 1,
+     "unlocktime": 1670714891,
+     "name": "How thoughtful",
+     "description": "Give your first gift"
+    },
+    {
+     "apiname": "GIFT_COLLECT_HALF",
+     "achieved": 1,
+     "unlocktime": 1670816088,
+     "name": "Gift Collector",
+     "description": "Collect 50% of the total gifts"
+    },
+    {
+     "apiname": "GIFT_COLLECT_ALL",
+     "achieved": 1,
+     "unlocktime": 1671305514,
+     "name": "Gift Hunter",
+     "description": "Collect all gifts"
+    },
+    {
+     "apiname": "MIMIC_DEATH",
+     "achieved": 1,
+     "unlocktime": 1670899368,
+     "name": "Mimic",
+     "description": "Die from a Mimic's bullet"
+    },
+    {
+     "apiname": "MIMIC_BOOKOFLIFE",
+     "achieved": 1,
+     "unlocktime": 1671240003,
+     "name": "Surprise!",
+     "description": ""
+    },
+    {
+     "apiname": "PARRY",
+     "achieved": 1,
+     "unlocktime": 1670719818,
+     "name": "Parry",
+     "description": "Kill an enemy by parrying a bullet at them using the Katana card"
+    },
+    {
+     "apiname": "LEVELRUSH_WHITE_HEAVEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "White's Heaven Rush Complete",
+     "description": "Complete White's Heaven Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_WHITE_HELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "White's Hell Rush Complete",
+     "description": "Complete White's Hell Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_RED_HEAVEN",
+     "achieved": 1,
+     "unlocktime": 1671326408,
+     "name": "Red's Heaven Rush Complete",
+     "description": "Complete Red's Heaven Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_RED_HELL",
+     "achieved": 1,
+     "unlocktime": 1671374131,
+     "name": "Red's Hell Rush Complete",
+     "description": "Complete Red's Hell Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_VIOLET_HEAVEN",
+     "achieved": 1,
+     "unlocktime": 1671374774,
+     "name": "Violet's Heaven Rush Complete",
+     "description": "Complete Violet's Heaven Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_VIOLET_HELL",
+     "achieved": 1,
+     "unlocktime": 1671377964,
+     "name": "Violet's Hell Rush Complete",
+     "description": "Complete Violet's Hell Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_YELLOW_HEAVEN",
+     "achieved": 1,
+     "unlocktime": 1671505312,
+     "name": "Yellow's Heaven Rush Complete",
+     "description": "Complete Yellow's Heaven Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_YELLOW_HELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yellow's Hell Rush Complete",
+     "description": "Complete Yellow's Hell Rush"
+    },
+    {
+     "apiname": "LEVELRUSH_MIKEY_HEAVEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mikey's Heaven Rush Complete",
+     "description": ""
+    },
+    {
+     "apiname": "LEVELRUSH_MIKEY_HELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mikey's Hell Rush Complete",
+     "description": ""
+    },
+    {
+     "apiname": "IDIOTISLAND",
+     "achieved": 1,
+     "unlocktime": 1670814054,
+     "name": "Idiot",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

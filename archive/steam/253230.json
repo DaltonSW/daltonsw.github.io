@@ -1,0 +1,655 @@
+{
+ "provider": "steam",
+ "title": "A Hat in Time",
+ "updated": "2026-07-26",
+ "id": "253230",
+ "fetched": "2026-07-26",
+ "last_attempt": "2026-07-26",
+ "unlocked": 30,
+ "total": 46,
+ "first": "2017-12-25",
+ "last": "2019-05-21",
+ "platform": "PC",
+ "icon": "7b934282eeb45507669ed7c08378c51bb902721f",
+ "playtime_mins": 2018,
+ "last_played": "2019-05-22",
+ "achievements": [
+  {
+   "key": "HAT_ACHIEVEMENT_FIRSTPIN",
+   "name": "Put a Badge On It",
+   "description": "Put on your first badge!",
+   "unlocked": true,
+   "date": "2017-12-25T21:14:46-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MAFIATOWN_UNLOCK",
+   "name": "Let there be light",
+   "description": "Light up the spaceship!",
+   "unlocked": true,
+   "date": "2017-12-25T21:20:37-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SITCHAIRS",
+   "name": "If I fit, I sit",
+   "description": "Sit in 3 different chairs!",
+   "unlocked": true,
+   "date": "2017-12-25T21:20:59-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SLIDE_LONGTIME",
+   "name": "Slip 'n Slide",
+   "description": "Slide down a really long slope!",
+   "unlocked": true,
+   "date": "2017-12-25T23:01:58-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_3_BADGES",
+   "name": "Badge Master",
+   "description": "Equip 3 badges!",
+   "unlocked": true,
+   "date": "2017-12-26T01:44:07-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SUBCONWELL_NOSWIM",
+   "name": "Afraid of Water",
+   "description": "Don't fall into the rising water in Subcon Well!",
+   "unlocked": true,
+   "date": "2017-12-26T02:34:29-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_BIRDS_HIGHSCORE",
+   "name": "Fueling the Feud",
+   "description": "Get a total of 2000 points in Battle of the Birds!",
+   "unlocked": true,
+   "date": "2017-12-26T03:03:07-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MAFIATOWN_CLEAR",
+   "name": "Mafia Town - All clear!",
+   "description": "Collect all Time Pieces in Mafia Town!",
+   "unlocked": true,
+   "date": "2017-12-26T15:10:49-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_BIRDS_CLEAR",
+   "name": "Battle of the Birds - All clear!",
+   "description": "Collect all Time Pieces in Battle of the Birds!",
+   "unlocked": true,
+   "date": "2017-12-26T15:21:33-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SPACESHIP_HIDEOUT",
+   "name": "Pillow Fort",
+   "description": "Find Your Secret Hideout!",
+   "unlocked": true,
+   "date": "2017-12-26T15:22:32-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SUBCON_MUSHROOM",
+   "name": "Take a Hike",
+   "description": "Climb to the top of Subcon Forest's big mushroom!",
+   "unlocked": true,
+   "date": "2017-12-26T21:00:27-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_ALPINE_CLEAR",
+   "name": "Alpine Skyline - All clear!",
+   "description": "Collect all Time Pieces in Alpine Skyline!",
+   "unlocked": true,
+   "date": "2017-12-26T22:22:59-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SUBCON_CLEAR",
+   "name": "Subcon Forest - All clear!",
+   "description": "Collect all Time Pieces in Subcon Forest!",
+   "unlocked": true,
+   "date": "2017-12-27T18:28:46-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_ALL_TIMEPIECES",
+   "name": "Return Home",
+   "description": "Collect all Time Pieces!",
+   "unlocked": true,
+   "date": "2017-12-27T18:28:46-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MAFIA_KNOCKOFF_ALL",
+   "name": "A Series of Unfortunate Accidents",
+   "description": "Knock off all the sitting Mafia in Mafia Town!",
+   "unlocked": true,
+   "date": "2017-12-27T18:59:03-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SCOOTER_360",
+   "name": "360 no-feet",
+   "description": "Do a 360 flip on the scooter!",
+   "unlocked": true,
+   "date": "2017-12-27T19:00:35-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MAILROOM_FAN",
+   "name": "Fan-tastic!",
+   "description": "Hook onto a ceiling fan with the hookshot!",
+   "unlocked": true,
+   "date": "2017-12-27T19:02:26-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SEQBREAK",
+   "name": "Sequence Break",
+   "description": "No hand-holding for you, apparently!",
+   "unlocked": true,
+   "date": "2017-12-27T19:06:10-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_RIDE_VACUUM",
+   "name": "Vacuum Vandal",
+   "description": "Ride the vacuum!",
+   "unlocked": true,
+   "date": "2017-12-27T19:06:53-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_SWEARWORD",
+   "name": "Why",
+   "description": "just... why... ?",
+   "unlocked": true,
+   "date": "2017-12-27T19:11:07-06:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_PLAYMOD",
+   "name": "Unlimited Possibilities",
+   "description": "Play a mod from the Steam Workshop!",
+   "unlocked": true,
+   "date": "2018-09-28T12:43:37-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_DW_CLEAR_3_OBJ",
+   "name": "Prepare to Die",
+   "description": "Clear All Objectives In a Single Death Wish!",
+   "unlocked": true,
+   "date": "2018-09-28T13:42:40-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_RATEMOD",
+   "name": "Community Contributor",
+   "description": "Rate a Steam Workshop level!",
+   "unlocked": true,
+   "date": "2018-09-28T17:42:31-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_TRAINWRECK_TIME",
+   "name": "No Time To Explain",
+   "description": "Complete Train Rush without dying or time bonuses!",
+   "unlocked": true,
+   "date": "2018-09-29T10:37:57-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_HOMING_CHAIN_5",
+   "name": "Personally I Prefer the Air",
+   "description": "Do 5 homing attacks in a row, without touching the ground!",
+   "unlocked": true,
+   "date": "2018-09-29T16:30:53-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_FOODCOMBO",
+   "name": "Culinary Creativity",
+   "description": "Discover a secret food combination!",
+   "unlocked": true,
+   "date": "2019-05-20T13:21:25-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_RARE_STICKER",
+   "name": "Stick It To The Man",
+   "description": "Collect your first holographic sticker!",
+   "unlocked": true,
+   "date": "2019-05-20T15:42:39-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_METRO_CLEAR",
+   "name": "Nyakuza Metro - All clear!",
+   "description": "Collect all Time Pieces in Nyakuza Metro!",
+   "unlocked": true,
+   "date": "2019-05-20T19:25:58-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_CRUISE_CLEAR",
+   "name": "The Arctic Cruise - All clear!",
+   "description": "Collect all Time Pieces in The Arctic Cruise!",
+   "unlocked": true,
+   "date": "2019-05-21T12:08:18-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_10_STICKERS_CAMERA",
+   "name": "A Work of Art",
+   "description": "Put 10 different stickers on a single screenshot!",
+   "unlocked": true,
+   "date": "2019-05-21T12:16:27-05:00"
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_1HITKILL",
+   "name": "One Punch",
+   "description": "Defeat any boss with the 1-hit hero badge equipped!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_CHALLENGEROAD",
+   "name": "Challenge Road",
+   "description": "Clear a Challenge Road!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_COOP_TP",
+   "name": "Little Help From My Friends",
+   "description": "Collect 3 new Time Pieces In local Co-op!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_CRUISE_FASTDELIVERY",
+   "name": "Minimum Shippable",
+   "description": "Clear Ship Shape Without Upsetting The Captain!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_DEADBIRD_NOSPOT",
+   "name": "Secret Intruder",
+   "description": "Make it through Dead Bird Studio without being seen at all!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_DW_70",
+   "name": "Punished Kid",
+   "description": "Obtain 50 Death Wish Stamps!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_DW_CLEAR",
+   "name": "I Refuse To Die!",
+   "description": "Obtain All Death Wish Stamps!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_GP_BIGPARTY",
+   "name": "Party Planner",
+   "description": "Participate in an Online Party with 10 or more total players!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_GP_CLEAR_CROWN",
+   "name": "Life of the Party",
+   "description": "Clear an act in Online Party as the person in lead!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_GP_COLLECT_TP",
+   "name": "Party Animal",
+   "description": "Collect 10 Time Pieces in an active Online Party!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_LAVACAKE_NOTOUCH",
+   "name": "The Floor is Lava",
+   "description": "Complete the Lava Cake peak without touching the lava at all!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MANY_MOD_TIMEPIECES",
+   "name": "The Community Thanks You",
+   "description": "Collect 30 Mod Rift Tokens from Steam Workshop levels!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MANY_STICKERS",
+   "name": "Stickin' Star",
+   "description": "Collect 30 Stickers in Nyakuza Metro!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MURDER_ALLCLUES",
+   "name": "True Detective",
+   "description": "Find all Murder on the Owl Express clues!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_MURDER_NOCLUES",
+   "name": "False Detective",
+   "description": "Make it through Murder on the Owl Express without finding any clues (you suck)!",
+   "unlocked": false
+  },
+  {
+   "key": "HAT_ACHIEVEMENT_PARADE_NOTOUCH",
+   "name": "Encore!",
+   "description": "Complete The Big Parade without falling into the audience below!",
+   "unlocked": false
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "A Hat in Time",
+   "achievements": [
+    {
+     "apiname": "HAT_ACHIEVEMENT_FIRSTPIN",
+     "achieved": 1,
+     "unlocktime": 1514258086,
+     "name": "Put a Badge On It",
+     "description": "Put on your first badge!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SEQBREAK",
+     "achieved": 1,
+     "unlocktime": 1514423170,
+     "name": "Sequence Break",
+     "description": "No hand-holding for you, apparently!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_TRAINWRECK_TIME",
+     "achieved": 1,
+     "unlocktime": 1538235477,
+     "name": "No Time To Explain",
+     "description": "Complete Train Rush without dying or time bonuses!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MAILROOM_FAN",
+     "achieved": 1,
+     "unlocktime": 1514422946,
+     "name": "Fan-tastic!",
+     "description": "Hook onto a ceiling fan with the hookshot!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_1HITKILL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Punch",
+     "description": "Defeat any boss with the 1-hit hero badge equipped!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SITCHAIRS",
+     "achieved": 1,
+     "unlocktime": 1514258459,
+     "name": "If I fit, I sit",
+     "description": "Sit in 3 different chairs!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SCOOTER_360",
+     "achieved": 1,
+     "unlocktime": 1514422835,
+     "name": "360 no-feet",
+     "description": "Do a 360 flip on the scooter!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MAFIATOWN_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1514322649,
+     "name": "Mafia Town - All clear!",
+     "description": "Collect all Time Pieces in Mafia Town!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SUBCON_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1514420926,
+     "name": "Subcon Forest - All clear!",
+     "description": "Collect all Time Pieces in Subcon Forest!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_BIRDS_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1514323293,
+     "name": "Battle of the Birds - All clear!",
+     "description": "Collect all Time Pieces in Battle of the Birds!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_ALPINE_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1514348579,
+     "name": "Alpine Skyline - All clear!",
+     "description": "Collect all Time Pieces in Alpine Skyline!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_DEADBIRD_NOSPOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Secret Intruder",
+     "description": "Make it through Dead Bird Studio without being seen at all!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MURDER_ALLCLUES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Detective",
+     "description": "Find all Murder on the Owl Express clues!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MURDER_NOCLUES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "False Detective",
+     "description": "Make it through Murder on the Owl Express without finding any clues (you suck)!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_RIDE_VACUUM",
+     "achieved": 1,
+     "unlocktime": 1514423213,
+     "name": "Vacuum Vandal",
+     "description": "Ride the vacuum!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SUBCONWELL_NOSWIM",
+     "achieved": 1,
+     "unlocktime": 1514277269,
+     "name": "Afraid of Water",
+     "description": "Don't fall into the rising water in Subcon Well!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SLIDE_LONGTIME",
+     "achieved": 1,
+     "unlocktime": 1514264518,
+     "name": "Slip 'n Slide",
+     "description": "Slide down a really long slope!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_LAVACAKE_NOTOUCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Floor is Lava",
+     "description": "Complete the Lava Cake peak without touching the lava at all!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_PARADE_NOTOUCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Encore!",
+     "description": "Complete The Big Parade without falling into the audience below!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SUBCON_MUSHROOM",
+     "achieved": 1,
+     "unlocktime": 1514343627,
+     "name": "Take a Hike",
+     "description": "Climb to the top of Subcon Forest's big mushroom!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SPACESHIP_HIDEOUT",
+     "achieved": 1,
+     "unlocktime": 1514323352,
+     "name": "Pillow Fort",
+     "description": "Find Your Secret Hideout!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_3_BADGES",
+     "achieved": 1,
+     "unlocktime": 1514274247,
+     "name": "Badge Master",
+     "description": "Equip 3 badges!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MAFIA_KNOCKOFF_ALL",
+     "achieved": 1,
+     "unlocktime": 1514422743,
+     "name": "A Series of Unfortunate Accidents",
+     "description": "Knock off all the sitting Mafia in Mafia Town!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_HOMING_CHAIN_5",
+     "achieved": 1,
+     "unlocktime": 1538256653,
+     "name": "Personally I Prefer the Air",
+     "description": "Do 5 homing attacks in a row, without touching the ground!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_ALL_TIMEPIECES",
+     "achieved": 1,
+     "unlocktime": 1514420926,
+     "name": "Return Home",
+     "description": "Collect all Time Pieces!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_BIRDS_HIGHSCORE",
+     "achieved": 1,
+     "unlocktime": 1514278987,
+     "name": "Fueling the Feud",
+     "description": "Get a total of 2000 points in Battle of the Birds!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MAFIATOWN_UNLOCK",
+     "achieved": 1,
+     "unlocktime": 1514258437,
+     "name": "Let there be light",
+     "description": "Light up the spaceship!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_SWEARWORD",
+     "achieved": 1,
+     "unlocktime": 1514423467,
+     "name": "Why",
+     "description": "just... why... ?"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_PLAYMOD",
+     "achieved": 1,
+     "unlocktime": 1538156617,
+     "name": "Unlimited Possibilities",
+     "description": "Play a mod from the Steam Workshop!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_RATEMOD",
+     "achieved": 1,
+     "unlocktime": 1538174551,
+     "name": "Community Contributor",
+     "description": "Rate a Steam Workshop level!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MANY_MOD_TIMEPIECES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Community Thanks You",
+     "description": "Collect 30 Mod Rift Tokens from Steam Workshop levels!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_DW_CLEAR_3_OBJ",
+     "achieved": 1,
+     "unlocktime": 1538160160,
+     "name": "Prepare to Die",
+     "description": "Clear All Objectives In a Single Death Wish!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_DW_70",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Punished Kid",
+     "description": "Obtain 50 Death Wish Stamps!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_DW_CLEAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Refuse To Die!",
+     "description": "Obtain All Death Wish Stamps!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_CRUISE_FASTDELIVERY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Minimum Shippable",
+     "description": "Clear Ship Shape Without Upsetting The Captain!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_CRUISE_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1558458498,
+     "name": "The Arctic Cruise - All clear!",
+     "description": "Collect all Time Pieces in The Arctic Cruise!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_COOP_TP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Little Help From My Friends",
+     "description": "Collect 3 new Time Pieces In local Co-op!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_10_STICKERS_CAMERA",
+     "achieved": 1,
+     "unlocktime": 1558458987,
+     "name": "A Work of Art",
+     "description": "Put 10 different stickers on a single screenshot!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_MANY_STICKERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stickin' Star",
+     "description": "Collect 30 Stickers in Nyakuza Metro!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_RARE_STICKER",
+     "achieved": 1,
+     "unlocktime": 1558384959,
+     "name": "Stick It To The Man",
+     "description": "Collect your first holographic sticker!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_FOODCOMBO",
+     "achieved": 1,
+     "unlocktime": 1558376485,
+     "name": "Culinary Creativity",
+     "description": "Discover a secret food combination!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_METRO_CLEAR",
+     "achieved": 1,
+     "unlocktime": 1558398358,
+     "name": "Nyakuza Metro - All clear!",
+     "description": "Collect all Time Pieces in Nyakuza Metro!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_GP_CLEAR_CROWN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Life of the Party",
+     "description": "Clear an act in Online Party as the person in lead!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_GP_BIGPARTY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Party Planner",
+     "description": "Participate in an Online Party with 10 or more total players!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_GP_COLLECT_TP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Party Animal",
+     "description": "Collect 10 Time Pieces in an active Online Party!"
+    },
+    {
+     "apiname": "HAT_ACHIEVEMENT_CHALLENGEROAD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Challenge Road",
+     "description": "Clear a Challenge Road!"
+    }
+   ],
+   "success": true
+  }
+ }
+}
