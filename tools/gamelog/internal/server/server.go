@@ -126,6 +126,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /games/{slug}", s.handleGameDetail)
 	mux.HandleFunc("POST /games/{slug}/delete", s.handleDeleteGame)
 	mux.HandleFunc("POST /games/{slug}/info", s.handleEditInfo)
+	mux.HandleFunc("POST /games/{slug}/providers", s.handleUpdateProviders)
 	mux.HandleFunc("POST /games/{slug}/quickedit", s.handleQuickEditGame)
 	mux.HandleFunc("POST /games/{slug}/undraft", s.handleUndraftGame)
 	mux.HandleFunc("POST /games/{slug}/playthroughs", s.handleNewPlaythrough)
@@ -189,6 +190,15 @@ var funcMap = template.FuncMap{
 	"add1":            func(i int) int { return i + 1 },
 	"itoa":            strconv.Itoa,
 	"formatHoursFunc": commands.FormatHours,
+	// dateOnly trims an RFC3339 achievement-unlock timestamp down to its date
+	// for compact sidebar display; the full timestamp stays available via the
+	// element's title attribute for anyone who needs the time too.
+	"dateOnly": func(s string) string {
+		if len(s) >= 10 {
+			return s[:10]
+		}
+		return s
+	},
 }
 
 // loadPage parses layout.html together with one page-specific template file

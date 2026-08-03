@@ -8,6 +8,9 @@
 </div>
 <p class="dim">{{.Slug}}{{if .HasProviderLink}} · linked{{end}}</p>
 
+<div class="detail-layout">
+<div class="detail-main">
+
 <div class="tui">
   <span class="tui__title">edit game info</span>
   <form method="post" action="/games/{{.Slug}}/info" class="field-grid">
@@ -110,4 +113,41 @@
 {{else}}
 <p class="dim">This game has logged playthroughs or archived provider history, so it can't be deleted here.</p>
 {{end}}
+
+</div>
+
+<aside class="detail-sidebar">
+  <div class="tui">
+    <span class="tui__title">provider IDs</span>
+    <form method="post" action="/games/{{.Slug}}/providers" class="field-grid">
+      <div class="field"><label>RetroAchievements ID</label><input type="text" name="ra_id" value="{{.RAGameID}}" placeholder="numeric ID or game URL"></div>
+      <div class="field"><label>Steam appid</label><input type="text" name="steam_id" value="{{.SteamAppID}}" placeholder="numeric appid or store URL"></div>
+      <div class="field"><label>PSN trophy-set ID</label><input type="text" name="psn_id" value="{{.PSNID}}" placeholder="NPWR…"></div>
+      <div class="field"><label>Ubisoft (Exophase) ID</label><input type="text" name="ubisoft_id" value="{{.UbisoftID}}"></div>
+      <div class="field"><label>Xbox title ID</label><input type="text" name="xbox_id" value="{{.XboxID}}"></div>
+      <div class="btn-row"><button type="submit" class="btn--primary">Save</button></div>
+    </form>
+  </div>
+
+  <div class="tui achv-panel">
+    <span class="tui__title">achievements{{if .Achievements}} ({{len .Achievements}}){{end}}</span>
+    {{if .Achievements}}
+    <div class="achv-list">
+      {{range .Achievements}}
+      <div class="achv-item">
+        <div class="achv-item__meta">
+          <span title="{{.Date}}">{{dateOnly .Date}}</span> · {{.Provider}}{{with .Platform}} · {{.}}{{end}}
+        </div>
+        <div class="achv-item__name">{{.Name}}</div>
+        {{with .Description}}<div class="achv-item__desc dim">{{.}}</div>{{end}}
+      </div>
+      {{end}}
+    </div>
+    {{else}}
+    <p class="empty">None captured yet.</p>
+    {{end}}
+  </div>
+</aside>
+
+</div>
 {{end}}

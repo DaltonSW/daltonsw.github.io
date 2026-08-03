@@ -13,8 +13,10 @@ import (
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
 	"go.dalton.dog/gamelog/internal/providers/exophase"
+	"go.dalton.dog/gamelog/internal/providers/psn"
 	"go.dalton.dog/gamelog/internal/providers/retroachievements"
 	"go.dalton.dog/gamelog/internal/providers/steam"
+	"go.dalton.dog/gamelog/internal/providers/xbox"
 )
 
 // savedRecord is one provider's outcome from a fetch-and-archive run.
@@ -37,7 +39,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			byProvider[l.Provider] = l.ID
 		}
 	}
-	raID, steamAppID, psnID := byProvider[model.ProviderRA], byProvider[model.ProviderSteam], byProvider[model.ProviderPSN]
+	raID, steamAppID, psnID, ubisoftID, xboxID := byProvider[model.ProviderRA], byProvider[model.ProviderSteam], byProvider[model.ProviderPSN], byProvider[model.ProviderUbisoft], byProvider[model.ProviderXbox]
 
 	if raID != "" && creds.RAConfigured() {
 		client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
@@ -64,13 +66,29 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 		}
 		fresh[model.ProviderSteam], ids[model.ProviderSteam] = rec, steamAppID
 	}
-	if psnID != "" && creds.ExophaseConfigured() {
-		client := &exophase.ExophaseClient{User: creds.ExophaseUser}
-		rec, err := exophase.FetchPSNRecord(ctx, client, psnID)
+	if psnID != "" && creds.PSNConfigured() {
+		client := &psn.PSNClient{Npsso: creds.PSNNpsso}
+		rec, err := psn.FetchRecord(ctx, client, psnID)
 		if err != nil {
 			return nil, err
 		}
 		fresh[model.ProviderPSN], ids[model.ProviderPSN] = rec, psnID
+	}
+	if ubisoftID != "" && creds.ExophaseConfigured() {
+		client := &exophase.ExophaseClient{User: creds.ExophaseUser}
+		rec, err := exophase.FetchUbisoftRecord(ctx, client, ubisoftID)
+		if err != nil {
+			return nil, err
+		}
+		fresh[model.ProviderUbisoft], ids[model.ProviderUbisoft] = rec, ubisoftID
+	}
+	if xboxID != "" && creds.XBLConfigured() {
+		client := &xbox.XBLClient{APIKey: creds.XBLAPIKey}
+		rec, err := xbox.FetchRecord(ctx, client, xboxID)
+		if err != nil {
+			return nil, err
+		}
+		fresh[model.ProviderXbox], ids[model.ProviderXbox] = rec, xboxID
 	}
 
 	if len(fresh) == 0 {
@@ -134,7 +152,7 @@ func RunAchievements(args []string) error {
 	}
 	links := doc.ProviderLinks()
 	if len(links) == 0 {
-		return fmt.Errorf("%s has no retroachievements_id, steam_appid or psn_id set", slug)
+		return fmt.Errorf("%s has no retroachievements_id, steam_appid, psn_id, ubisoft_id or xbox_id set", slug)
 	}
 
 	archiveDir := model.FindArchiveDir(gamesDir)

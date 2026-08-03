@@ -247,7 +247,7 @@ func TestWriteAchievementSummary_SumsBothProviders(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", ""))
+	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "", "", ""))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -284,7 +284,7 @@ func TestWriteAchievementSummary_LastPlayedPrefersTheMostRecentSignal(t *testing
 		t.Fatal(err)
 	}
 
-	if _, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "")); err != nil {
+	if _, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "", "", "")); err != nil {
 		t.Fatal(err)
 	}
 	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
@@ -367,7 +367,7 @@ func TestWriteAchievementSummary_RemovesStaleSummaryWhenNothingArchived(t *testi
 		t.Fatal(err)
 	}
 
-	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", ""))
+	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "", "", ""))
 	if err != nil {
 		t.Fatal(err)
 	}

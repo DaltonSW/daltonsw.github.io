@@ -273,6 +273,15 @@ type gameDetailData struct {
 	Finished         string
 	StartedEditable  bool
 	FinishedEditable bool
+	Achievements     []model.EarnedAchievement
+	// Provider ID fields, rendered as strings regardless of how the YAML
+	// scalar underneath decoded — see model.GameSummary's fields of the
+	// same name.
+	RAGameID   string
+	SteamAppID string
+	PSNID      string
+	UbisoftID  string
+	XboxID     string
 }
 
 func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, pf *model.PlaythroughsFile) gameDetailData {
@@ -294,6 +303,17 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
 	canDelete := g.NumPlaythroughs == 0 && !commands.HasArchiveRecord(model.FindArchiveDir(s.gamesDir), g.ProviderLinks())
 
+	var achievements []model.EarnedAchievement
+	if summary, err := model.LoadAchievementSummary(doc.GameDir()); err == nil && summary != nil {
+		// Display newest-first; the stored file is oldest-first (see
+		// AchievementSummary.Earned's doc comment) since display order is a
+		// reader's choice, not the archive's.
+		achievements = make([]model.EarnedAchievement, len(summary.Earned))
+		for i, a := range summary.Earned {
+			achievements[len(summary.Earned)-1-i] = a
+		}
+	}
+
 	return gameDetailData{
 		Page:             newPage(r, doc.FM.Title, "games"),
 		Slug:             slug,
@@ -309,6 +329,12 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		Finished:         g.Finished,
 		StartedEditable:  g.StartedEditable,
 		FinishedEditable: g.FinishedEditable,
+		Achievements:     achievements,
+		RAGameID:         g.RAGameID,
+		SteamAppID:       g.SteamAppID,
+		PSNID:            g.PSNID,
+		UbisoftID:        g.UbisoftID,
+		XboxID:           g.XboxID,
 	}
 }
 
@@ -407,6 +433,63 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	// removal to declare, matching doEditGameInfo in main.go.
 	syncing := pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
 	if err := mutate.WriteFrontMatter(doc, pf, syncing); err != nil {
+		redirectErr(w, r, gamePath(slug), err)
+		return
+	}
+	redirectOK(w, r, gamePath(slug), "Saved.")
+}
+
+// handleUpdateProviders edits the game's provider IDs — RetroAchievements,
+// Steam, PSN, Ubisoft, Xbox — the fields that drive both achievement-fetch
+// linking (Doc.ProviderLinks) and the `suggest` picker. Split out from
+// handleEditInfo since these fields have their own validation (RA/Steam
+// accept a pasted URL or bare ID; PSN/Ubisoft/Xbox are free text since PSN's
+// NPWR… ids aren't numeric) and their own field-loss story: PSNID/UbisoftID/
+// XboxID are `omitempty`, so clearing one is a real key removal that must be
+// declared, unlike every field handleEditInfo touches.
+func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	doc, pf, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, gamePath(slug), err)
+		return
+	}
+
+	raID, err := externalid.ParseExternalID(r.FormValue("ra_id"))
+	if err != nil {
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("RetroAchievements ID: %w", err))
+		return
+	}
+	steamID, err := externalid.ParseExternalID(r.FormValue("steam_id"))
+	if err != nil {
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("Steam appid: %w", err))
+		return
+	}
+	psnID := strings.TrimSpace(r.FormValue("psn_id"))
+	ubisoftID := strings.TrimSpace(r.FormValue("ubisoft_id"))
+	xboxID := strings.TrimSpace(r.FormValue("xbox_id"))
+
+	var allowedRemovals []string
+	if psnID == "" && doc.FM.PSNID != nil {
+		allowedRemovals = append(allowedRemovals, "psn_id")
+	}
+	if ubisoftID == "" && doc.FM.UbisoftID != nil {
+		allowedRemovals = append(allowedRemovals, "ubisoft_id")
+	}
+	if xboxID == "" && doc.FM.XboxID != nil {
+		allowedRemovals = append(allowedRemovals, "xbox_id")
+	}
+
+	doc.FM.RetroAchievementsID = model.ScalarFromInput(raID)
+	doc.FM.SteamAppID = model.ScalarFromInput(steamID)
+	doc.FM.PSNID = model.ScalarFromInput(psnID)
+	doc.FM.UbisoftID = model.ScalarFromInput(ubisoftID)
+	doc.FM.XboxID = model.ScalarFromInput(xboxID)
+
+	if err := mutate.WriteFrontMatter(doc, pf, false, allowedRemovals...); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
@@ -1070,7 +1153,7 @@ func (s *server) handleRefreshAchievements(w http.ResponseWriter, r *http.Reques
 	}
 	links := doc.ProviderLinks()
 	if len(links) == 0 {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no retroachievements_id, steam_appid or psn_id set"))
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("no retroachievements_id, steam_appid, psn_id, ubisoft_id or xbox_id set"))
 		return
 	}
 	archiveDir := model.FindArchiveDir(s.gamesDir)

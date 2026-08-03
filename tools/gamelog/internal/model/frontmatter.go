@@ -27,6 +27,17 @@ type FrontMatter struct {
 	// on. See exophase.go.
 	PSNID any `yaml:"psn_id,omitempty"`
 
+	// UbisoftID is the game's Exophase canonical id on the "uplay" (Ubisoft
+	// Connect) environment. Ubisoft has no public achievements API either, so
+	// this comes from the same public Exophase profile as PSNID. See
+	// exophase.go.
+	UbisoftID any `yaml:"ubisoft_id,omitempty"`
+
+	// XboxID is the game's Xbox titleId, from a public OpenXBL export. See
+	// the ProviderXbox doc comment in archive.go for why those records are
+	// shaped differently from every other provider's.
+	XboxID any `yaml:"xbox_id,omitempty"`
+
 	Status string `yaml:"status"`
 
 	// Subgames is the declared roster of a compilation's parts — e.g. Shovel
@@ -187,6 +198,22 @@ func (d *Doc) GameDir() string { return filepath.Dir(d.Path) }
 // pending write's loss-check.
 func (d *Doc) FMRaw() []byte { return d.fmRaw }
 
+// ScalarFromInput converts a trimmed form value back into the `any` shape
+// FrontMatter's ID fields expect: nil for blank (so omitempty fields drop
+// the key), an int64 for a bare numeric ID (matching how these fields
+// decode when the file already has one, e.g. `steam_appid: 12345`), or the
+// string itself for anything else (PSN's NPWR… ids aren't purely numeric).
+func ScalarFromInput(s string) any {
+	s = strings.TrimSpace(s)
+	if s == "" {
+		return nil
+	}
+	if n, err := strconv.ParseInt(s, 10, 64); err == nil {
+		return n
+	}
+	return s
+}
+
 // ExternalIDs returns the game's optional RetroAchievements game ID and
 // Steam appid, or "" for either that isn't set.
 func (d *Doc) ExternalIDs() (raID, steamAppID string) {
@@ -200,13 +227,15 @@ func (d *Doc) ProviderLinks() []ProviderLink {
 		scalarString(d.FM.RetroAchievementsID),
 		scalarString(d.FM.SteamAppID),
 		scalarString(d.FM.PSNID),
+		scalarString(d.FM.UbisoftID),
+		scalarString(d.FM.XboxID),
 	)
 }
 
 // BuildProviderLinks is shared by Doc and GameSummary so the two can't drift
 // on which providers exist or what order they come in.
-func BuildProviderLinks(raID, steamAppID, psnID string) []ProviderLink {
-	all := map[string]string{ProviderRA: raID, ProviderSteam: steamAppID, ProviderPSN: psnID}
+func BuildProviderLinks(raID, steamAppID, psnID, ubisoftID, xboxID string) []ProviderLink {
+	all := map[string]string{ProviderRA: raID, ProviderSteam: steamAppID, ProviderPSN: psnID, ProviderUbisoft: ubisoftID, ProviderXbox: xboxID}
 	var out []ProviderLink
 	for _, p := range ProviderOrder {
 		if all[p] != "" {

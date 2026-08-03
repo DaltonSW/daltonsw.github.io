@@ -234,12 +234,31 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 - **The archive is keyed by provider ID, not slug, and lives outside `content/`.** Both halves
   matter: slugs change, and anything inside `content/` gets published.
 - **Exophase 403s Go's default User-Agent** (Cloudflare). Requests must send a browser one.
-- **Exophase's JSON API omits `canonical_id`** — the real `NPWR…` PlayStation ID the archive keys
-  on. It exists only in the `window.playerGames` payload embedded in the profile HTML, so the
-  client reads both and joins on `master_id`. A game whose canonical ID can't be resolved is
-  **skipped, not guessed at**: mis-keying the archive is the exact failure the ID scheme prevents.
-- **Only the account page carries per-service player ids.** `/psn/user/<name>/` does not, and the
-  per-service username differs from the account name (Nintendo's is an opaque hash).
+- **Exophase's JSON API omits `canonical_id`** — the real ID the archive keys on. It exists only
+  in the `window.playerGames` payload embedded in the profile HTML, so the client reads both and
+  joins on `master_id`. A game whose canonical ID can't be resolved is **skipped, not guessed
+  at**: mis-keying the archive is the exact failure the ID scheme prevents.
+- **Only the account page carries per-service player ids.** `/uplay/user/<name>/` does not, and
+  the per-service username differs from the account name (Nintendo's is an opaque hash).
+- **PSN moved off Exophase to Sony's own trophy API** (`internal/providers/psn`) — see
+  `README.md`'s "PlayStation, via Sony's own trophy API". Quirks specific to it:
+  - The OAuth `authorize` step returns its code as a query parameter on a **302 redirect to a
+    non-resolvable app-scheme URI**; the client must read `code` off the `Location` header rather
+    than follow the redirect (`http.ErrUseLastResponse` in `PSNClient.authorize`).
+  - `npServiceName` **must** be `"trophy"` on every per-title call for a PS3/PS4/Vita title, or
+    the API responds as though the title doesn't exist. `"trophy2"` (PS5/PC) titles work either
+    way. The client always sends whatever `trophyTitles` reported for that title, so this doesn't
+    need separate handling per call site.
+  - The npsso→access-token exchange happens once per `PSNClient`, in-memory, never persisted.
+    That's deliberate: the access token outlives any single CLI run, and there is no
+    machinery anywhere else in this tool for caching a refresh token across runs — don't add it
+    unless a real need (a long-running daemon, say) shows up.
+  - The 12 archive files that predate this (`archive/psn/*.json`, captured via Exophase) were
+    deleted and refetched rather than merged in place: Exophase's achievement `Key` was its own
+    slug, Sony's is a numeric `trophyId`, and the archive merges achievements by `Key` — merging
+    the two sources in place would have kept every trophy twice, once under each key scheme,
+    permanently doubling `unlocked`/`total`. Safe to do since Exophase was already relaying Sony's
+    own unlock timestamps verbatim; nothing was lost.
 - **Nothing removes an entry from `playthroughs[]` by index.** `SplitPlaythrough` always appends
   its new entry at the true end of the slice specifically so no existing entry's index — and
   therefore no path into a later entry's nested `sessions[]` — ever moves. A delete-by-index
@@ -259,12 +278,15 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 
 - **The Exophase canonical-ID map only covers the first 50 games per service.** The embedded
   profile payload isn't paginated the way the JSON API is, so a service with more than 50 games
-  would silently resolve IDs for only the first page. PSN currently has 13, so this isn't biting
-  yet — but it will for Steam-sized libraries, and games beyond the ceiling are skipped rather
-  than mis-keyed.
-- **Nintendo and Ubisoft are captured on the Exophase profile but not archived.** Switch has no
-  achievements at all (playtime and last-played only), so it needs a record shape that doesn't
-  pretend otherwise before `providerNintendo` is worth adding.
+  would silently resolve IDs for only the first page. Now Ubisoft-only (PSN moved to Sony's own
+  API, which paginates properly): Ubisoft currently has well under 50 games, so this isn't biting
+  yet, and games beyond the ceiling are skipped rather than mis-keyed if it ever does.
+- **Nintendo is captured on the Exophase profile but not archived.** Switch has no achievements
+  at all (playtime and last-played only), so it needs a record shape that doesn't pretend
+  otherwise before `providerNintendo` is worth adding. Ubisoft was in the same boat and has since
+  been archived the same way PSN briefly was (`providerUbisoft`, `ubisoft_id`,
+  `exophase.FetchUbisoftRecord`, Exophase's `uplay` environment) — see README.md's "Ubisoft, via
+  Exophase".
 - **`games-timeline.html` and `game-year-rows.html` each independently reimplement the same
   "fold across playthroughs, max against achievement-summary" algorithm** that
   `layouts/partials/game-first-played.html`/`game-last-played.html` also implement (now wired into

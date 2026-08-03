@@ -45,9 +45,22 @@ func FirstNonEmpty(values ...string) string {
 const archiveDirName = "archive"
 
 const (
-	ProviderRA    = "retroachievements"
-	ProviderSteam = "steam"
-	ProviderPSN   = "psn"
+	ProviderRA      = "retroachievements"
+	ProviderSteam   = "steam"
+	ProviderPSN     = "psn"
+	ProviderUbisoft = "ubisoft"
+
+	// ProviderXbox comes from OpenXBL (https://xbl.io), an unofficial Xbox
+	// Live API — Microsoft has no public first-party one. Like Steam's
+	// GetPlayerAchievements, the x360-specific achievement endpoint this
+	// uses only reports achievements that are actually unlocked; the total
+	// possible count comes from a separate title-history call instead (see
+	// providers/xbox). A handful of the earliest records here were seeded
+	// from a one-time pasted export before the live client existed, and are
+	// summary-only (Unlocked/Total set directly, Achievements empty) —
+	// refreshing them through the live client backfills real per-achievement
+	// data and merges normally from that point on.
+	ProviderXbox = "xbox"
 )
 
 // ProviderLink pairs a provider with this game's ID on it. Everything that
@@ -61,7 +74,7 @@ type ProviderLink struct {
 
 // ProviderOrder fixes the order records are written and reported in, so
 // output and tests don't depend on map iteration.
-var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN}
+var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox}
 
 // ArchivedAchievement is one achievement as recorded. Locked ones are kept
 // too: they carry the denominator, and knowing an achievement exists but is
@@ -75,6 +88,9 @@ type ArchivedAchievement struct {
 	Points      int    `json:"points,omitempty"`
 	Hardcore    bool   `json:"hardcore,omitempty"`
 	Icon        string `json:"icon,omitempty"`
+	// Tier is PSN's trophy grade — bronze/silver/gold/platinum. Left empty by
+	// every other provider; no equivalent concept exists for RA/Steam/Xbox.
+	Tier string `json:"tier,omitempty"`
 }
 
 // ProviderRecord is everything one service knows about one game.
@@ -258,6 +274,7 @@ func mergeAchievement(old, fresh ArchivedAchievement) ArchivedAchievement {
 	out.Name = FirstNonEmpty(fresh.Name, old.Name)
 	out.Description = FirstNonEmpty(fresh.Description, old.Description)
 	out.Icon = FirstNonEmpty(fresh.Icon, old.Icon)
+	out.Tier = FirstNonEmpty(fresh.Tier, old.Tier)
 	if fresh.Points == 0 {
 		out.Points = old.Points
 	}
@@ -489,4 +506,23 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 		return false, err
 	}
 	return true, nil
+}
+
+// LoadAchievementSummary reads back the projection WriteAchievementSummary
+// wrote, returning nil (not an error) when the game has no achievements
+// captured yet.
+func LoadAchievementSummary(gameDir string) (*AchievementSummary, error) {
+	path := achievementSummaryPath(gameDir)
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil, nil
+		}
+		return nil, err
+	}
+	var s AchievementSummary
+	if err := yaml.Unmarshal(raw, &s); err != nil {
+		return nil, fmt.Errorf("%s: %w", path, err)
+	}
+	return &s, nil
 }

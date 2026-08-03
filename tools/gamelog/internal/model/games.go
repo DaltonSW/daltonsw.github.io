@@ -44,12 +44,14 @@ type GameSummary struct {
 	RAGameID         string
 	SteamAppID       string
 	PSNID            string
+	UbisoftID        string
+	XboxID           string
 }
 
 // ProviderLinks returns every provider this game is linked to, in
 // ProviderOrder, skipping the ones with no ID set.
 func (g GameSummary) ProviderLinks() []ProviderLink {
-	return BuildProviderLinks(g.RAGameID, g.SteamAppID, g.PSNID)
+	return BuildProviderLinks(g.RAGameID, g.SteamAppID, g.PSNID, g.UbisoftID, g.XboxID)
 }
 
 func (g GameSummary) Label() string {
@@ -78,6 +80,12 @@ func (g GameSummary) SuggestLabel() string {
 	}
 	if g.PSNID != "" {
 		linked = append(linked, "PSN")
+	}
+	if g.UbisoftID != "" {
+		linked = append(linked, "Ubisoft")
+	}
+	if g.XboxID != "" {
+		linked = append(linked, "Xbox")
 	}
 	if len(linked) == 0 {
 		return g.Label() + "  [not linked]"
@@ -114,6 +122,8 @@ func FindGamesDir() (string, error) {
 func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSummary {
 	raID, steamAppID := doc.ExternalIDs()
 	psnID := scalarString(doc.FM.PSNID)
+	ubisoftID := scalarString(doc.FM.UbisoftID)
+	xboxID := scalarString(doc.FM.XboxID)
 	// The real per-run dates live in playthroughs.yaml, not front matter —
 	// see gameDateRange. Front matter's own started/finished is only a
 	// fallback, for a game with nothing logged yet.
@@ -150,6 +160,8 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		RAGameID:         raID,
 		SteamAppID:       steamAppID,
 		PSNID:            psnID,
+		UbisoftID:        ubisoftID,
+		XboxID:           xboxID,
 	}
 }
 
@@ -267,6 +279,8 @@ type NewGameFields struct {
 	RetroAchievementsID string
 	SteamAppID          string
 	PSNID               string
+	UbisoftID           string
+	XboxID              string
 	Status              string // backlog|playing|finished|dropped
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
@@ -288,6 +302,8 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		"retroachievements_id: " + f.RetroAchievementsID,
 		"steam_appid: " + f.SteamAppID,
 		"psn_id: " + f.PSNID,
+		"ubisoft_id: " + f.UbisoftID,
+		"xbox_id: " + f.XboxID,
 		fmt.Sprintf("status: %q", f.Status),
 		"subgames:",
 	}

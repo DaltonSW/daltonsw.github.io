@@ -24,11 +24,24 @@ type Credentials struct {
 	SteamAPIKey string
 	SteamID     string
 
-	// ExophaseUser is a public profile name, not a secret. PlayStation has no
-	// public API, so trophy history comes from a public Exophase profile —
-	// there is nothing to authenticate with, which is why this is the only
-	// "credential" that is safe to be wrong in public.
+	// ExophaseUser is a public profile name, not a secret. Neither PlayStation
+	// nor Ubisoft has a public achievements API, so both PSN trophy history
+	// and Ubisoft Connect achievement history come from the same public
+	// Exophase account — there is nothing to authenticate with, which is why
+	// this is the only "credential" that is safe to be wrong in public.
 	ExophaseUser string
+
+	// XBLAPIKey is a personal key from xbl.io, scoped to whichever Microsoft
+	// account signed in there to create it. Unlike ExophaseUser this is a
+	// real secret — OpenXBL has no public-profile mode, only the caller's
+	// own account.
+	XBLAPIKey string
+
+	// PSNNpsso is the npsso session value from a logged-in
+	// ca.account.sony.com session (~2 month lifetime). A real secret, unlike
+	// ExophaseUser: it's exchanged for a bearer token good for Sony's own
+	// trophy API, not a public profile name.
+	PSNNpsso string
 }
 
 func LoadCredentials() Credentials {
@@ -40,8 +53,12 @@ func LoadCredentials() Credentials {
 		// STEAM_USER_ID is accepted as an alias: it's the name a Steam
 		// profile URL actually suggests, and either may hold a SteamID64
 		// or a vanity name (resolved later by SteamClient).
-		SteamID:      model.FirstNonEmpty(os.Getenv("STEAM_ID"), os.Getenv("STEAM_USER_ID")),
-		ExophaseUser: os.Getenv("EXOPHASE_PSN_USER"),
+		SteamID: model.FirstNonEmpty(os.Getenv("STEAM_ID"), os.Getenv("STEAM_USER_ID")),
+		// EXOPHASE_PSN_USER is accepted as an alias, from when this only
+		// covered PSN.
+		ExophaseUser: model.FirstNonEmpty(os.Getenv("EXOPHASE_USER"), os.Getenv("EXOPHASE_PSN_USER")),
+		XBLAPIKey:    os.Getenv("XBLIO_API_KEY"),
+		PSNNpsso:     os.Getenv("PSN_NPSSO"),
 	}
 }
 
@@ -56,6 +73,12 @@ func (c Credentials) SteamConfigured() bool { return c.SteamAPIKey != "" && c.St
 
 // ExophaseConfigured needs only a username — the profile is public.
 func (c Credentials) ExophaseConfigured() bool { return c.ExophaseUser != "" }
+
+func (c Credentials) XBLConfigured() bool { return c.XBLAPIKey != "" }
+
+// PSNConfigured needs only the npsso value — the OAuth exchange happens at
+// request time in the psn client.
+func (c Credentials) PSNConfigured() bool { return c.PSNNpsso != "" }
 
 // ProviderResult is one provider's outcome for a suggestion report: either
 // a usable suggestion, or a reason it was skipped/failed. A skipped or

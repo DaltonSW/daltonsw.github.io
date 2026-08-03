@@ -41,6 +41,11 @@ func FindOpenEntries(archiveDir, gamesDir string, games []model.GameSummary, thr
 		if g.Status == "paused" {
 			continue
 		}
+		// "planned" means not started yet — skip these even if they have an
+		// open entry (shouldn't happen, but be defensive).
+		if g.Status == "planned" {
+			continue
+		}
 		pf, err := model.LoadPlaythroughs(filepath.Dir(g.Path))
 		if err != nil {
 			return nil, err

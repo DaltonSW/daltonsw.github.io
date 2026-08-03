@@ -24,7 +24,7 @@ internal/forms         the shared validation/status vocabulary, plus the couple 
                         gamelog suggest and gamelog achievements still use
 internal/mutate        confirm-preview-and-write-with-loss-check, shared by the web server and
                         the achievements command's own-session nudge
-internal/providers/*   one package per API client (steam, retroachievements, exophase)
+internal/providers/*   one package per API client (steam, retroachievements, exophase, xbox)
 internal/dotenv        the tool's own minimal .env reader
 internal/externalid    parses a pasted RA/Steam ID or URL into a bare ID
 internal/commands      suggest/achievements/project, plus the scan/stale/close library
@@ -52,6 +52,8 @@ archive/
   retroachievements/4650.json      captured from the API. Merge-on-write, never
   steam/1145360.json               hand-edited, never read by Hugo.
   psn/NPWR16532_00.json            PlayStation, mirrored via Exophase (see below).
+  ubisoft/12345.json                Ubisoft Connect, mirrored via Exophase too.
+  xbox/1480657033.json              Xbox 360, via OpenXBL (see below).
 ```
 
 **The archive is keyed by provider ID, not by slug, and lives outside `content/`.** A slug is a
@@ -62,8 +64,8 @@ publishes it: bundle resources are copied to the built site, so the old layout w
 captured API response publicly.
 
 A game on several services gets one archive file each. Nothing in the archive links them —
-`retroachievements_id`, `steam_appid` and `psn_id` in front matter do, which is the right place
-for a judgement a human made rather than something any provider reported.
+`retroachievements_id`, `steam_appid`, `psn_id`, `ubisoft_id` and `xbox_id` in front matter do, which is the
+right place for a judgement a human made rather than something any provider reported.
 
 ## How playthroughs are written
 
@@ -455,6 +457,8 @@ skipped):
 retroachievements_id: 4650      # numeric ID from the game's retroachievements.org URL
 steam_appid: 1145360            # numeric appid from the game's Steam store URL
 psn_id: "NPWR16532_00"          # PlayStation trophy-set ID (see below)
+ubisoft_id: "12345"             # Ubisoft Connect canonical ID, via Exophase (see below)
+xbox_id: 1480657033             # Xbox titleId, via OpenXBL (see below)
 ```
 
 The interactive "new game" form accepts either the bare number or the full URL you copied it
@@ -466,28 +470,79 @@ Everything that walks a game's archive takes `[]providerLink` (from `Doc.Provide
 provider is a client file plus one entry in `providerOrder` — not an edit to every signature
 that touches the archive.
 
-### PlayStation, via Exophase
+### PlayStation, via Sony's own trophy API
 
-**Sony has no public API.** Trophy history is read from a public [Exophase](https://www.exophase.com)
-profile instead, which mirrors PSN including per-trophy unlock timestamps — the part actually
-worth archiving. The alternative is reverse-engineering Sony's endpoints and holding an NPSSO
-cookie that expires every couple of months; that can be added later behind the same
-`providerPSN` key, and `Source` on the record exists so the two are distinguishable.
+PSN trophy history is read from **Sony's own trophy API (v2)** — the same one the PS App itself
+uses — documented unofficially at
+[andshrew's PlayStation-Trophies docs](https://andshrew.github.io/PlayStation-Trophies/#/APIv2)
+(reverse-engineered; Sony has never published one). This replaced an earlier version that mirrored
+the data through a public Exophase profile; `Source` on `ProviderRecord` exists specifically so a
+record fetched the old, mirrored way is distinguishable from one fetched first-party — see
+`internal/model/archive.go`. `psn_id` is the `NPWR…` trophy-set ID (`npCommunicationId`), Sony's
+own and permanent, and both the old and new clients key the archive on it, so no migration of the
+front-matter field was needed.
 
-`psn_id` is the `NPWR…` trophy-set ID, which is Sony's and permanent — Exophase reports it as
-`canonical_id`. The archive keys on that, not on anything Exophase owns, so the records survive
-the mirror going away.
+**Auth is an npsso session cookie, exchanged for a short-lived bearer token — not a stable API
+key.** Get one by logging into `store.playstation.com`, then in the same browser visiting
+`https://ca.account.sony.com/api/v1/ssocookie`; the response is `{"npsso":"<value>"}`. That value
+goes in `PSN_NPSSO` (a real secret, unlike `EXOPHASE_USER` below) and is good for ~2 months. Each
+`PSNClient` exchanges it for an OAuth access token (valid ~60 minutes) once, on first use, and
+reuses that token for the rest of the process — there's no refresh-token persistence across runs,
+since a CLI invocation finishes well inside the token's lifetime.
 
-There are no secrets involved: `EXOPHASE_PSN_USER` is a public profile name, and the profile
-just has to be public. Records are written with `source: exophase` and are merged by exactly
-the same never-lose rules as every other provider — a private profile or a failed fetch updates
-`last_attempt`/`last_error` and leaves the history alone.
+Three calls make up a fetch, all under `/api/trophy/v1` on `m.np.playstation.com`:
+
+1. `users/me/trophyTitles` — every title on the account, including each one's `npServiceName`
+   (`"trophy"` for PS3/PS4/Vita, `"trophy2"` for PS5/PC — **required** on the other two calls for
+   a `"trophy"` title). Fetched once per run and cached by `npCommunicationId`; this is also what
+   backs `gamelog psn list`.
+2. `npCommunicationIds/{id}/trophyGroups/all/trophies` — each trophy's static metadata: name,
+   description, icon, tier (bronze/silver/gold/platinum).
+3. `users/me/npCommunicationIds/{id}/trophyGroups/all/trophies` — the account's earned status per
+   trophy: unlocked or not, and when.
+
+The client joins 2 and 3 on `trophyId` client-side — no single Sony response carries both. A
+platinum unlock sets `AwardKind`/`AwardDate` on the record, matching how Steam reports "all
+achievements". Trophy tier (bronze/silver/gold/platinum) is stored in each achievement's `Tier`
+field — a real API field, not a derived guess, and one no other provider has an equivalent for.
+
+There's no lookup UI for `npCommunicationId` in Sony's own apps, so run `gamelog psn list`: it
+prints every trophy title on the account next to its ID and current unlock count, sorted by title,
+ready to paste into `psn_id`.
+
+Records are merged by exactly the same never-lose rules as every other provider — a bad fetch (an
+expired `npsso`, a title never launched on this account) updates `last_attempt`/`last_error` and
+leaves history alone. Sony's documented rate limit is ~300 requests per 15 minutes (unconfirmed by
+Sony itself); `PSNClient` paces requests the same way `RAClient` does.
+
+### Ubisoft, via Exophase
+
+**Ubisoft has no public achievements API at all**, so Ubisoft Connect history is read from a
+public [Exophase](https://www.exophase.com) profile instead, which mirrors it including
+per-unlock timestamps — the part actually worth archiving. This is the same mechanism PSN used to
+use; see git history / the section above if you're wondering why PSN isn't here anymore.
+
+`ubisoft_id` is the canonical ID Exophase reports for the `uplay` environment, from Exophase's own
+`canonical_id` field — the archive keys on that rather than on anything Exophase owns, so records
+survive the mirror going away.
+
+The ID isn't shown anywhere in Exophase's own UI — `canonical_id` only exists in a JS payload
+embedded in the profile page's HTML (see `canonicalIDs` above). Rather than view-source-diving for
+it, run `gamelog exophase list ubisoft`: it prints every game on the configured `EXOPHASE_USER`
+profile next to its canonical ID and current unlock count, sorted by title, ready to paste into
+`ubisoft_id`.
+
+There are no secrets involved: `EXOPHASE_USER` (`EXOPHASE_PSN_USER` still works as an alias, from
+when this also covered PSN) is a public profile name, and the profile just has to be public, with
+Ubisoft Connect linked to it. Records are written with `source: exophase` and are merged by
+exactly the same never-lose rules as every other provider — a private profile or a failed fetch
+updates `last_attempt`/`last_error` and leaves the history alone.
 
 Three quirks, all found against live responses:
 
 - Cloudflare serves an interstitial to Go's default `Go-http-client/1.1` User-Agent. Requests
   must send a browser one (`exophaseUserAgent`) — the same class of trap as RA's 403.
-- **The JSON API's per-game `meta` omits `canonical_id`.** The `NPWR…` ID only appears in the
+- **The JSON API's per-game `meta` omits `canonical_id`.** The real ID only appears in the
   `window.playerGames` payload embedded in the profile HTML, so the client reads both and joins
   them on Exophase's own `master_id`.
 - Only the **account** page (`/user/<name>/`) carries the widgets naming each linked service's
@@ -519,6 +574,31 @@ The breakdown is labelled by `platform`, not by provider — `PS4` is what a rea
 `psn` is plumbing. A game on one provider renders the combined figure as before, which is the
 same number either way.
 
+### Xbox 360, via OpenXBL
+
+**Microsoft has no public achievements API either.** Unlike Ubisoft, there's no Exophase-style
+public mirror for Xbox, so this goes through [OpenXBL](https://xbl.io) instead — an unofficial API
+that requires signing in with the actual Microsoft account and creating a personal key on your
+xbl.io profile page (`XBLIO_API_KEY`). That key is a real secret, not a public profile name like
+`EXOPHASE_USER` — OpenXBL only ever reads the key owner's own account.
+
+Two quirks, found against live responses:
+
+- **The modern per-title achievement endpoint returns an empty list for legacy Xbox 360 titles.**
+  A separate endpoint (`/achievements/x360/{xuid}/title/{titleId}`) exists specifically for them,
+  and `xbox.FetchRecord` always uses it — there's no non-360 Xbox title in this archive yet.
+- **That endpoint only reports achievements that are actually unlocked**, the same shape as
+  Exophase's earned list. The total-possible count and last-played date come from a separate
+  `player/titleHistory` call instead, which lists every title on the account in one response.
+
+A handful of `archive/xbox/*.json` records predate the live client: they were seeded from a
+one-time pasted OpenXBL export, before `XBLIO_API_KEY` existed. Those are summary-only —
+`unlocked`/`total` set directly, no per-achievement list — and `mergeProvider`'s `Summarize` step
+would silently zero `unlocked` for one if it ever ran through the normal merge path, so they were
+written straight to `archive/`, not through `SaveRecord`. Refreshing one of those games now (with
+a key configured) fetches real per-achievement data and merges normally from then on, the same as
+any other provider.
+
 ### Credentials
 
 Copy `.env.example` to `.env` (gitignored) and fill it in. `suggest` finds that file whether
@@ -531,7 +611,9 @@ precedence, so `RA_API_KEY=... go run ./cmd/gamelog suggest x` still overrides t
 | `RA_API_KEY` | RetroAchievements API key, from your account settings on retroachievements.org |
 | `STEAM_API_KEY` | Steam Web API key, from steamcommunity.com/dev/apikey |
 | `STEAM_ID` | Your SteamID64 **or** the vanity name from your profile URL — a vanity name is resolved automatically. `STEAM_USER_ID` is accepted as an alias. |
-| `EXOPHASE_PSN_USER` | Your Exophase profile name, for PlayStation trophies. **Not a secret** — it's a public profile, which just has to be public. |
+| `EXOPHASE_USER` | Your Exophase profile name, for Ubisoft Connect achievements. **Not a secret** — it's a public profile, which just has to be public. `EXOPHASE_PSN_USER` is accepted as an alias, from when this also covered PSN. |
+| `PSN_NPSSO` | npsso session value, for PSN trophies via Sony's own trophy API. **This is a real secret**, and it expires after ~2 months — see "PlayStation, via Sony's own trophy API" above for how to get one. |
+| `XBLIO_API_KEY` | Personal API key from xbl.io/console, for Xbox 360 achievements. **This one is a real secret** — it's scoped to your own Microsoft account, unlike `EXOPHASE_USER` above. |
 
 Steam's achievement/playtime endpoints only return data for a public profile, or your own
 profile when the key you're using belongs to that account. Note that per-game achievement
@@ -540,8 +622,8 @@ privacy is separate from profile privacy, so an otherwise-public account can sti
 
 ### Notes for future maintenance
 
-Both APIs have sharp edges that aren't obvious from their docs, and each one silently produced
-wrong or missing output before it was found by running against live data:
+Every one of these APIs has sharp edges that aren't obvious from their docs, and each one silently
+produced wrong or missing output before it was found by running against live data:
 
 - RetroAchievements returns **403 for Go's default `Go-http-client/1.1` User-Agent.** Requests
   must send a descriptive one (`raUserAgent`).
@@ -555,7 +637,13 @@ wrong or missing output before it was found by running against live data:
 - Steam's API only accepts a 17-digit SteamID64; a vanity name must go through
   `ISteamUser/ResolveVanityURL` first.
 - Exophase 403s Go's default User-Agent (Cloudflare), omits `canonical_id` from its JSON API,
-  and only exposes per-service player ids on the account page. See "PlayStation, via Exophase".
+  and only exposes per-service player ids on the account page. See "Ubisoft, via Exophase".
+- PSN's OAuth authorize step hands back its authorization code as a query parameter on a **302
+  redirect to a non-resolvable app-scheme URI** (`com.scee.psxandroid.scecompcall://redirect`) —
+  the client must not follow it, only read `code` off the `Location` header. And a title whose
+  service is `"trophy"` (PS3/PS4/Vita) **requires** `npServiceName=trophy` on every per-title call
+  or the API answers as if the title doesn't exist; `"trophy2"` (PS5/PC) titles work with or
+  without it. See "PlayStation, via Sony's own trophy API".
 
 The committed `testdata/*.json` fixtures were corrected against live responses — keep them that
 way, since a fixture written from the documentation is what let all of the above pass tests

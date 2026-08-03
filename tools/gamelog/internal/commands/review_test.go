@@ -11,17 +11,17 @@ import (
 
 func TestHasArchiveRecord(t *testing.T) {
 	dir := t.TempDir()
-	if HasArchiveRecord(dir, model.BuildProviderLinks("4650", "1145360", "")) {
+	if HasArchiveRecord(dir, model.BuildProviderLinks("4650", "1145360", "", "", "")) {
 		t.Fatal("expected no archive record for either ID before any is saved")
 	}
 
 	if _, err := model.SaveRecord(dir, model.ProviderRA, "4650", "Hades II", &model.ProviderRecord{}); err != nil {
 		t.Fatal(err)
 	}
-	if !HasArchiveRecord(dir, model.BuildProviderLinks("4650", "1145360", "")) {
+	if !HasArchiveRecord(dir, model.BuildProviderLinks("4650", "1145360", "", "", "")) {
 		t.Fatal("expected the saved RA record to be found")
 	}
-	if HasArchiveRecord(dir, model.BuildProviderLinks("", "1145360", "")) {
+	if HasArchiveRecord(dir, model.BuildProviderLinks("", "1145360", "", "", "")) {
 		t.Fatal("a blank ID should never match a record")
 	}
 }

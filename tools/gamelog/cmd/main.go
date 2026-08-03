@@ -22,6 +22,11 @@ Usage:
                              instead of one slug at a time
   gamelog project             regenerate every game's achievement-summary.yaml
                              from the archive already on disk (no API calls)
+  gamelog exophase list ubisoft
+                             print every game on your Exophase profile next to
+                             its canonical ID, for filling in ubisoft_id
+  gamelog psn list           print every PSN trophy title on your account next
+                             to its npCommunicationId, for filling in psn_id
   gamelog serve [flags]       serve a local web UI over content/games
                                --port N        port to listen on (default 8080)
   gamelog help               show this message
@@ -31,6 +36,12 @@ Environment (or a .env beside this tool; real env vars take precedence):
   STEAM_API_KEY              https://steamcommunity.com/dev/apikey
   STEAM_ID                   SteamID64 or profile vanity name
                              (STEAM_USER_ID works too)
+  EXOPHASE_USER              public Exophase profile name, for Ubisoft
+                             Connect achievements
+  PSN_NPSSO                  npsso session value for PSN trophies, from
+                             https://ca.account.sony.com/api/v1/ssocookie
+                             after logging into store.playstation.com
+  XBLIO_API_KEY              personal key from https://xbl.io, for Xbox
 
 See tools/gamelog/README.md for details.`
 
@@ -68,6 +79,18 @@ func Exec() {
 		err = commands.RunAchievements(args[1:])
 	case args[0] == "project":
 		err = commands.RunProject(args[1:])
+	case args[0] == "exophase":
+		if len(args) > 1 && isHelpFlag(args[1]) {
+			fmt.Println(usage)
+			return
+		}
+		err = commands.RunExophase(args[1:])
+	case args[0] == "psn":
+		if len(args) > 1 && isHelpFlag(args[1]) {
+			fmt.Println(usage)
+			return
+		}
+		err = commands.RunPSN(args[1:])
 	case args[0] == "serve":
 		err = server.Run(args[1:])
 	default:

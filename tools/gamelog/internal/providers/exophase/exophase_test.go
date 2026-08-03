@@ -49,10 +49,12 @@ func TestParseExophasePlaytime(t *testing.T) {
 	}
 }
 
-// profileHTML is the shape the client actually parses: service widgets for
-// the player id, and the embedded payload for canonical ids.
-func profileHTML(masterID int, canonical string) string {
-	payload := fmt.Sprintf(`{"games":[{"master_id":%d,"meta":{"canonical_id":"%s","title":"Sekiro"}}]}`, masterID, canonical)
+// uplayProfileHTML is the shape the client actually parses for the "uplay"
+// environment: service widgets for the player id, and the embedded payload
+// for canonical ids.
+// service widget naming that environment instead of "psn".
+func uplayProfileHTML(masterID int, canonical string) string {
+	payload := fmt.Sprintf(`{"games":[{"master_id":%d,"meta":{"canonical_id":"%s","title":"Far Cry 6"}}]}`, masterID, canonical)
 	var esc strings.Builder
 	for _, r := range payload {
 		if r == '"' || r == '{' || r == '}' || r == ':' || r == ',' || r == '[' || r == ']' {
@@ -61,59 +63,90 @@ func profileHTML(masterID int, canonical string) string {
 		}
 		esc.WriteRune(r)
 	}
-	return `<li data-endpoint="/psn/user/DaltonSW/" data-environment="psn" data-playerid="4103091" class="psn service-widget"></li>` +
+	return `<li data-endpoint="/uplay/user/DaltonSW/" data-environment="uplay" data-playerid="9001" class="uplay service-widget"></li>` +
 		`<script>window.playerGames = '` + esc.String() + `';</script>`
 }
 
-func TestFetchPSNRecordBuildsArchiveRecord(t *testing.T) {
+func TestFetchUbisoftRecordBuildsArchiveRecord(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if r.Header.Get("User-Agent") == "" || strings.HasPrefix(r.Header.Get("User-Agent"), "Go-http-client") {
-			// Cloudflare serves an interstitial to Go's default UA; a client
-			// that forgets the browser UA must fail loudly in tests too.
-			http.Error(w, "blocked", http.StatusForbidden)
-			return
-		}
 		switch {
 		case strings.Contains(r.URL.Path, "/user/"):
-			fmt.Fprint(w, profileHTML(182258, "NPWR15587_00"))
+			fmt.Fprint(w, uplayProfileHTML(555, "12345"))
 		case strings.HasSuffix(r.URL.Path, "/earned"):
-			fmt.Fprint(w, `{"list":[
-			  {"slug":"shura","timestamp":1744845788},
-			  {"slug":"isshin","timestamp":1640400000}]}`)
+			fmt.Fprint(w, `{"list":[{"slug":"guerrilla","timestamp":1700000000}]}`)
 		case strings.HasSuffix(r.URL.Path, "/games"):
-			fmt.Fprint(w, `{"success":true,"games":[{"master_id":182258,"earned_awards":2,
-			  "total_awards":34,"playtime":"15h 6m","lastplayed":1744845847,"percent":73,
-			  "meta":{"title":"Sekiro","platforms":[{"name":"PS4"}]}}]}`)
+			fmt.Fprint(w, `{"success":true,"games":[{"master_id":555,"earned_awards":1,
+			  "total_awards":51,"playtime":"40h","lastplayed":1700000100,"percent":2,
+			  "meta":{"title":"Far Cry 6","platforms":[{"name":"PC"}]}}]}`)
 		default:
 			http.NotFound(w, r)
 		}
 	}))
 	defer srv.Close()
-
 	defer swapExophaseURLs(srv.URL)()
 
-	rec, err := FetchPSNRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "NPWR15587_00")
+	rec, err := FetchUbisoftRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "12345")
 	if err != nil {
 		t.Fatal(err)
 	}
 	if rec.LastError != "" {
 		t.Fatalf("unexpected error: %s", rec.LastError)
 	}
-	if rec.Unlocked != 2 || rec.Total != 34 {
-		t.Errorf("got %d/%d, want 2/34", rec.Unlocked, rec.Total)
+	if rec.Unlocked != 1 || rec.Total != 51 {
+		t.Errorf("got %d/%d, want 1/51", rec.Unlocked, rec.Total)
 	}
 	if rec.Source != "exophase" {
-		t.Errorf("source = %q, want exophase — a mirror must be distinguishable from a first-party fetch", rec.Source)
+		t.Errorf("source = %q, want exophase", rec.Source)
 	}
-	if rec.Platform != "PS4" {
-		t.Errorf("platform = %q, want PS4", rec.Platform)
+	if rec.Platform != "PC" {
+		t.Errorf("platform = %q, want PC", rec.Platform)
 	}
-	if rec.PlaytimeMins != 906 {
-		t.Errorf("playtime = %d, want 906", rec.PlaytimeMins)
+}
+
+// TestFetchUbisoftRecordDetails covers the parts of fetchRecord that
+// TestFetchUbisoftRecordBuildsArchiveRecord's fixture doesn't exercise: the
+// browser User-Agent requirement (Cloudflare 403s Go's default one), icon
+// URL resolution, and unlocked-achievements-sort-first-by-date ordering.
+func TestFetchUbisoftRecordDetails(t *testing.T) {
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.Header.Get("User-Agent") == "" || strings.HasPrefix(r.Header.Get("User-Agent"), "Go-http-client") {
+			http.Error(w, "blocked", http.StatusForbidden)
+			return
+		}
+		switch {
+		case strings.Contains(r.URL.Path, "/user/"):
+			fmt.Fprint(w, uplayProfileHTML(182258, "67890"))
+		case strings.HasSuffix(r.URL.Path, "/earned"):
+			fmt.Fprint(w, `{"list":[
+			  {"slug":"early-bird","timestamp":1744845788},
+			  {"slug":"launch-day","timestamp":1640400000,"icons":{"m":"/uplay/awards/m/abc123.png"}}]}`)
+		case strings.HasSuffix(r.URL.Path, "/games"):
+			fmt.Fprint(w, `{"success":true,"games":[{"master_id":182258,"earned_awards":2,
+			  "total_awards":34,"playtime":"15h 6m","lastplayed":1744845847,"percent":73,
+			  "meta":{"title":"Far Cry 6","platforms":[{"name":"PC"}]}}]}`)
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	defer srv.Close()
+	defer swapExophaseURLs(srv.URL)()
+
+	rec, err := FetchUbisoftRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "67890")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastError != "" {
+		t.Fatalf("unexpected error: %s", rec.LastError)
 	}
 	// Unlocked achievements sort first in date order, so the older unlock leads.
-	if rec.Achievements[0].Key != "isshin" {
+	if rec.Achievements[0].Key != "launch-day" {
 		t.Errorf("achievements not in date order: %+v", rec.Achievements)
+	}
+	if want := srv.URL + "/uplay/awards/m/abc123.png"; rec.Achievements[0].Icon != want {
+		t.Errorf("icon = %q, want %q", rec.Achievements[0].Icon, want)
+	}
+	if rec.Achievements[1].Icon != "" {
+		t.Errorf("early-bird has no icon in the fixture, got %q", rec.Achievements[1].Icon)
 	}
 	if len(rec.Raw) == 0 {
 		t.Error("raw response not kept")
@@ -122,11 +155,11 @@ func TestFetchPSNRecordBuildsArchiveRecord(t *testing.T) {
 
 // A game that isn't on the profile must report the miss and keep whatever is
 // already archived, not overwrite it with an empty record.
-func TestFetchPSNRecordUnknownGameIsAnError(t *testing.T) {
+func TestFetchUbisoftRecordUnknownGameIsAnError(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch {
 		case strings.Contains(r.URL.Path, "/user/"):
-			fmt.Fprint(w, profileHTML(182258, "NPWR15587_00"))
+			fmt.Fprint(w, uplayProfileHTML(182258, "67890"))
 		default:
 			fmt.Fprint(w, `{"success":true,"games":[]}`)
 		}
@@ -134,7 +167,7 @@ func TestFetchPSNRecordUnknownGameIsAnError(t *testing.T) {
 	defer srv.Close()
 	defer swapExophaseURLs(srv.URL)()
 
-	rec, err := FetchPSNRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "NPWR99999_00")
+	rec, err := FetchUbisoftRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "nonexistent")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -150,11 +183,12 @@ func TestFetchPSNRecordUnknownGameIsAnError(t *testing.T) {
 }
 
 func swapExophaseURLs(base string) func() {
-	site, games, earned := exophaseBaseURL, exophaseGamesURL, exophaseEarnedURL
+	site, games, earned, media := exophaseBaseURL, exophaseGamesURL, exophaseEarnedURL, exophaseMediaBaseURL
 	exophaseBaseURL = base
 	exophaseGamesURL = base + "/public/player/%s/games"
 	exophaseEarnedURL = base + "/public/player/%s/game/%s/earned"
+	exophaseMediaBaseURL = base
 	return func() {
-		exophaseBaseURL, exophaseGamesURL, exophaseEarnedURL = site, games, earned
+		exophaseBaseURL, exophaseGamesURL, exophaseEarnedURL, exophaseMediaBaseURL = site, games, earned, media
 	}
 }

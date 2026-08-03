@@ -146,7 +146,8 @@ func TestCloseEntry_PreservesUnknownFields(t *testing.T) {
 }
 
 // Only quiet, genuinely-open entries qualify. "playing" is excluded because an
-// open date is correct there; "paused" because it's on hold, not over.
+// open date is correct there; "paused" because it's on hold, not over;
+// "planned" because it hasn't been started yet.
 func TestFindOpenEntries_FiltersToEligibleGames(t *testing.T) {
 	dir := t.TempDir()
 	archiveDir := t.TempDir()
@@ -155,6 +156,7 @@ func TestFindOpenEntries_FiltersToEligibleGames(t *testing.T) {
 		writeGameWithPlaythroughs(t, dir, "quiet", "ongoing", openFlatYAML),
 		writeGameWithPlaythroughs(t, dir, "playing-now", "playing", openFlatYAML),
 		writeGameWithPlaythroughs(t, dir, "on-hold", "paused", openFlatYAML),
+		writeGameWithPlaythroughs(t, dir, "planned", "planned", openFlatYAML),
 		writeGameWithPlaythroughs(t, dir, "closed", "ongoing", `playthroughs:
   - started: "2019-03-02"
     finished: "2019-04-01"
@@ -184,8 +186,8 @@ func TestFindOpenEntries_FiltersToEligibleGames(t *testing.T) {
 	}
 }
 
-// --all reaches "playing" games but must still leave "paused" alone.
-func TestFindOpenEntries_AllIncludesPlayingButNotPaused(t *testing.T) {
+// --all reaches "playing" games but must still leave "paused" and "planned" alone.
+func TestFindOpenEntries_AllIncludesPlayingButNotPausedOrPlanned(t *testing.T) {
 	dir := t.TempDir()
 	games := []model.GameSummary{
 		writeGameWithPlaythroughs(t, dir, "playing-now", "playing", openFlatYAML),

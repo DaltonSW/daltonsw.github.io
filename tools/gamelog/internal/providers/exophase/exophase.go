@@ -40,6 +40,12 @@ var (
 	exophaseBaseURL   = "https://www.exophase.com"
 	exophaseGamesURL  = "https://api.exophase.com/public/player/%s/games"
 	exophaseEarnedURL = "https://api.exophase.com/public/player/%s/game/%s/earned"
+	// exophaseMediaBaseURL serves award/trophy icons — a different host than
+	// the site itself (exophaseBaseURL 404s on these paths). Confirmed
+	// against the profile page's own embedded config, which names it
+	// `baseMediaUrl` alongside `baseUrl`/`baseApiUrl`/`baseImagesUrl` (the
+	// last of which, despite the name, is not it either).
+	exophaseMediaBaseURL = "https://m.exophase.com"
 )
 
 // exophaseUserAgent must look like a browser; see the Cloudflare note above.
@@ -277,11 +283,26 @@ func (c *ExophaseClient) Games(ctx context.Context, env string) (map[string]Game
 }
 
 // Award is one earned trophy. Only earned ones are listed — the
-// locked denominator comes from the game's TotalAwards.
+// locked denominator comes from the game's TotalAwards. The feed carries no
+// display name or description (see fetchRecord), but it does carry icons —
+// site-relative paths in five sizes; "m" is used as a reasonable match for
+// the badge-sized rows RA/Steam icons already render at.
 type Award struct {
 	Slug      string `json:"slug"`
 	Earned    string `json:"earned"`
 	Timestamp int64  `json:"timestamp"`
+	Icons     struct {
+		Medium string `json:"m"`
+	} `json:"icons"`
+}
+
+// IconURL resolves this award's medium icon to an absolute URL, or "" if the
+// feed didn't include one.
+func (a Award) IconURL() string {
+	if a.Icons.Medium == "" {
+		return ""
+	}
+	return exophaseMediaBaseURL + a.Icons.Medium
 }
 
 // Earned returns the unlock list for one game on the profile.
@@ -299,8 +320,8 @@ func (c *ExophaseClient) Earned(ctx context.Context, playerID string, masterID i
 	return payload.List, body, nil
 }
 
-// EnvPSN is Exophase's slug for the PlayStation Network.
-const EnvPSN = "psn"
+// EnvUbisoft is Exophase's slug for Ubisoft Connect (formerly Uplay).
+const EnvUbisoft = "uplay"
 
 var exophasePlaytimeRe = regexp.MustCompile(`(?:(\d+)h)?\s*(?:(\d+)m)?`)
 
@@ -329,28 +350,35 @@ func ParsePlaytime(s string) int {
 	return mins
 }
 
-// FetchPSNRecord builds an archive record for one PlayStation game.
-//
-// Source is set to "exophase" so a later run against Sony's own endpoints is
-// distinguishable from this mirror. The merge rules still apply as normal:
-// unlock dates here are PlayStation's own timestamps relayed verbatim, so the
-// two sources agree where they overlap.
-func FetchPSNRecord(ctx context.Context, client *ExophaseClient, npwrID string) (*model.ProviderRecord, error) {
-	rec := &model.ProviderRecord{ID: npwrID, LastAttempt: today(), Source: "exophase"}
+// FetchUbisoftRecord builds an archive record for one Ubisoft Connect game.
+// Ubisoft has no first-party achievements API at all — unlike PlayStation,
+// which moved to Sony's own trophy API (see internal/providers/psn) — so this
+// mirror remains the only source. Source is set to "exophase" on the
+// resulting record, same as PSN's records were while it was mirrored here.
+func FetchUbisoftRecord(ctx context.Context, client *ExophaseClient, gameID string) (*model.ProviderRecord, error) {
+	return fetchRecord(ctx, client, EnvUbisoft, "Ubisoft", gameID)
+}
 
-	playerID, err := client.PlayerID(ctx, EnvPSN)
+// fetchRecord is FetchUbisoftRecord's body, kept separate from it only
+// because it used to be shared with FetchPSNRecord too — env/label are still
+// parameters rather than hardcoded so that shape doesn't need to change if
+// another Exophase-mirrored provider shows up.
+func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id string) (*model.ProviderRecord, error) {
+	rec := &model.ProviderRecord{ID: id, LastAttempt: today(), Source: "exophase"}
+
+	playerID, err := client.PlayerID(ctx, env)
 	if err != nil {
 		rec.LastError = err.Error()
 		return rec, nil
 	}
-	games, err := client.Games(ctx, EnvPSN)
+	games, err := client.Games(ctx, env)
 	if err != nil {
 		rec.LastError = err.Error()
 		return rec, nil
 	}
-	g, ok := games[npwrID]
+	g, ok := games[id]
 	if !ok {
-		rec.LastError = fmt.Sprintf("no PlayStation game %s on this profile", npwrID)
+		rec.LastError = fmt.Sprintf("no %s game %s on this profile", label, id)
 		return rec, nil
 	}
 
@@ -379,6 +407,7 @@ func FetchPSNRecord(ctx context.Context, client *ExophaseClient, npwrID string) 
 			Name:     a.Slug,
 			Unlocked: true,
 			Date:     stamp(time.Unix(a.Timestamp, 0)),
+			Icon:     a.IconURL(),
 		})
 	}
 	rec.Raw = raw
