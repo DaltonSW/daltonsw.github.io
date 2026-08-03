@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Mewgenics",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "686060",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 56,
  "total": 281,
  "first": "2026-02-15",
@@ -166,7 +166,8 @@
    "name": "Servus Mortem",
    "unlocked": true,
    "date": "2026-02-21T10:52:42-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7e5ff593efff79bc1813023f108269cb733dc7f5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7e5ff593efff79bc1813023f108269cb733dc7f5.jpg",
+   "hidden": true
   },
   {
    "key": "tracy_blankcollar1",
@@ -197,7 +198,8 @@
    "name": "Summon Shade",
    "unlocked": true,
    "date": "2026-02-28T09:16:04-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/609ad6411a9ffd1c9d9cf7317143e37a5b5df95b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/609ad6411a9ffd1c9d9cf7317143e37a5b5df95b.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_fighter_ability",
@@ -236,7 +238,8 @@
    "name": "Persuasion Device",
    "unlocked": true,
    "date": "2026-02-28T14:02:08-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/024b60054ab1de097846f0c6556e454a40ffdad3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/024b60054ab1de097846f0c6556e454a40ffdad3.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_thief_ability",
@@ -347,7 +350,8 @@
    "name": "The Throbbing Domain",
    "unlocked": true,
    "date": "2026-03-14T09:28:21-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4fa46f26c1fdd6f8b05ed1daf85666514027e3b5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4fa46f26c1fdd6f8b05ed1daf85666514027e3b5.jpg",
+   "hidden": true
   },
   {
    "key": "tracy_foodstorage3",
@@ -362,7 +366,8 @@
    "name": "Glass Cannon",
    "unlocked": true,
    "date": "2026-03-16T17:18:12-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6ae662811d9a1d42f28a1e310da8127ee39ce151.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6ae662811d9a1d42f28a1e310da8127ee39ce151.jpg",
+   "hidden": true
   },
   {
    "key": "upgrade_storage_3",
@@ -401,7 +406,8 @@
    "name": "Mysterious Dice",
    "unlocked": true,
    "date": "2026-03-16T20:43:24-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7607f809509c4e2e14d60c033bb4bf0a41890e14.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7607f809509c4e2e14d60c033bb4bf0a41890e14.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_mage_ability",
@@ -424,28 +430,32 @@
    "name": "Cleric's Mitre",
    "unlocked": true,
    "date": "2026-03-17T20:57:16-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8c8d1950a7cf08087c182e3a04fd53228cb17acf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8c8d1950a7cf08087c182e3a04fd53228cb17acf.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_fighter_helmet",
    "name": "Fighter Helm",
    "unlocked": true,
    "date": "2026-03-17T20:57:16-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6a15a845fef4c4ab93783c946ac5413cf0232edc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6a15a845fef4c4ab93783c946ac5413cf0232edc.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tank_helmet",
    "name": "Tank Helmet",
    "unlocked": true,
    "date": "2026-03-17T20:57:16-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c6a9c5dbb3ef2ba1772f16feb665cb408eb81380.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c6a9c5dbb3ef2ba1772f16feb665cb408eb81380.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_hunter_helmet",
    "name": "Hunter Cap",
    "unlocked": true,
    "date": "2026-03-17T20:57:16-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6f7c15778473c1f81069fabefdf82fe389715c4f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6f7c15778473c1f81069fabefdf82fe389715c4f.jpg",
+   "hidden": true
   },
   {
    "key": "map_unlock_core",
@@ -459,193 +469,225 @@
    "key": "beaniesquest_complete_AirHorn",
    "name": "Air Horn",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/68f856f8cf2095f53f67742203d8bad06defb044.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/68f856f8cf2095f53f67742203d8bad06defb044.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_AngryFace",
    "name": "Angry Face",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/10cb9f916a0ef0d72707bfc2b248929c7fc12ab5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/10cb9f916a0ef0d72707bfc2b248929c7fc12ab5.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_BubbleBoy",
    "name": "Bubble Boy",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/92f812615cc042222263cc03c1ad64981c5f7c94.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/92f812615cc042222263cc03c1ad64981c5f7c94.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_ChaosDevice",
    "name": "Chaos Device",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5972a5366f195397452bf881dc4fe9bab89e8d94.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5972a5366f195397452bf881dc4fe9bab89e8d94.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_ExperimentalTreatment",
    "name": "Experimental Treatment",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fe4b151c73f68de04d34009a4411c93cdd34ac15.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fe4b151c73f68de04d34009a4411c93cdd34ac15.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_FartFace",
    "name": "Fart Face",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d14a459c5af583fd21c195dc07cd88f2ebbf9744.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d14a459c5af583fd21c195dc07cd88f2ebbf9744.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_HardPill",
    "name": "Unidentified Pills",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7c87b41683961b6c6ba2b21f35ee62ccb64c7146.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7c87b41683961b6c6ba2b21f35ee62ccb64c7146.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_MagicMirror",
    "name": "Magic Mirror",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/da578f82826ee55eaacd574d7028f854350ebcc7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/da578f82826ee55eaacd574d7028f854350ebcc7.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_MeStone",
    "name": "Me Stone",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8d12e500697a9ee34888462e4b6fadd7b0828334.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8d12e500697a9ee34888462e4b6fadd7b0828334.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_NuclearKnife",
    "name": "Nuclear Knife",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/229ef59f4b014fe61540bcf776087a597f32f236.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/229ef59f4b014fe61540bcf776087a597f32f236.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_PartyDetonator",
    "name": "Party Detonator",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f77ab0fb6cb78e8cb2afc347b009e439df42c14e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f77ab0fb6cb78e8cb2afc347b009e439df42c14e.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_PrincessHat",
    "name": "Princess Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0aa0112f5a16c9c9edf1156642007008feaf6aab.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0aa0112f5a16c9c9edf1156642007008feaf6aab.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_Redacted",
    "name": "Redacted",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/78b461a2ece8a80ba7e39c274bbe8fb041043b3f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/78b461a2ece8a80ba7e39c274bbe8fb041043b3f.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_SpiderInjector",
    "name": "Spider Injector",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a993fa1fb20d4af735ecc77117f7648be7980fb1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a993fa1fb20d4af735ecc77117f7648be7980fb1.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_Stopwatch",
    "name": "Stopwatch",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e64ea1c863a512aaad2c22050de759721bd23ff9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e64ea1c863a512aaad2c22050de759721bd23ff9.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_StorageLocker",
    "name": "Storage Locker",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/38bfbf9d556ac4b22395769cdebb1828f3e7c810.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/38bfbf9d556ac4b22395769cdebb1828f3e7c810.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_TheLoner",
    "name": "The Loner",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/331de59cfaba96e1d055682e243a009e36369f0c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/331de59cfaba96e1d055682e243a009e36369f0c.jpg",
+   "hidden": true
   },
   {
    "key": "beaniesquest_complete_UltraVision3000",
    "name": "Ultra Vision 3000 ",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/9723341936c5d2d4ca9a15af7101686b50885086.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/9723341936c5d2d4ca9a15af7101686b50885086.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_box0",
    "name": "The Box",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f095737c04f3becc7311ed3ebba5a68a7cdd28cc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f095737c04f3becc7311ed3ebba5a68a7cdd28cc.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_box1",
    "name": "The bOx",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e82ffd887623cc26f769798466a9efe89567ca9a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e82ffd887623cc26f769798466a9efe89567ca9a.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_box2",
    "name": "The boX",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0cb48a08c245681b8e5c61c5e3b2d3c74a7320e0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0cb48a08c245681b8e5c61c5e3b2d3c74a7320e0.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_box3",
    "name": "the box",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0b50bd9cd883fa95f977b20fa8cc51ef37c3601f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0b50bd9cd883fa95f977b20fa8cc51ef37c3601f.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_ability",
    "name": "Slice And Dice",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ddf367f8129c0d5e48099e375b2daf070b00a84e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ddf367f8129c0d5e48099e375b2daf070b00a84e.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_colorless_ability",
    "name": "Path Of The Butcher",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/25b9605e9b98901e41fcbf38ccb20c7d127562ee.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/25b9605e9b98901e41fcbf38ccb20c7d127562ee.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_colorless_passive",
    "name": "Butchers Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/cba6051a3502fb85b615814c42fa06f4dffcb3a9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/cba6051a3502fb85b615814c42fa06f4dffcb3a9.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_face",
    "name": "Iron Jaw",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/69cb5e0752d85a95189d0762c2ab53110e9a7c3a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/69cb5e0752d85a95189d0762c2ab53110e9a7c3a.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_helmet",
    "name": "Flesh Shroud",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1369b11374c48819fb6f1005af61e8db9240edd3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1369b11374c48819fb6f1005af61e8db9240edd3.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_neck",
    "name": "Hooked Necklace",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8ff22f30ce9f0da1071f9d66b2a54de7689173fb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8ff22f30ce9f0da1071f9d66b2a54de7689173fb.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_passive",
    "name": "Indigestion",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f703b65fde7b3728fe46ac97937aae058add13c3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f703b65fde7b3728fe46ac97937aae058add13c3.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_trinket",
    "name": "Cookbook",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/20050036ab0fe61af6b6ab983b9de564e1f2be66.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/20050036ab0fe61af6b6ab983b9de564e1f2be66.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_trinket2",
    "name": "Sack Of Meat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7a29d37380a66bc2c16e8ee84d6a2fb62076ee28.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7a29d37380a66bc2c16e8ee84d6a2fb62076ee28.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_butcher_weapon",
    "name": "Butchers Cleaver",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ead1dcea5b792d7251e76c47114c5afdef28d8e0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ead1dcea5b792d7251e76c47114c5afdef28d8e0.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_colorless_ability",
@@ -672,31 +714,36 @@
    "key": "class_unlock_colorless_face",
    "name": "Ordinary Whiskers",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4bf0b84c4d0868ced138f91b60476ff63a237124.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4bf0b84c4d0868ced138f91b60476ff63a237124.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_colorless_helmet",
    "name": "Normal Ears",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8d1248fb5cc0624977d5495015f1f4f8ed322586.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8d1248fb5cc0624977d5495015f1f4f8ed322586.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_colorless_neck",
    "name": "Mundane Collar",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c10e9f576e44e4e7a97f3fcf98769d2c9816ac48.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c10e9f576e44e4e7a97f3fcf98769d2c9816ac48.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_colorless_passive",
    "name": "Skill Share",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5594806d6144e4bc0e595a2b27fe62ceebde6a0b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5594806d6144e4bc0e595a2b27fe62ceebde6a0b.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_colorless_trinket",
    "name": "Ball Of Yarn",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bbcda3aaa5ef2dfca5c14edd2dd04d92e1e59f05.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bbcda3aaa5ef2dfca5c14edd2dd04d92e1e59f05.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_colorless_trinket2",
@@ -709,67 +756,78 @@
    "key": "class_unlock_colorless_weapon",
    "name": "Lil Kitty",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/75fa75c75bcc86ea4f74e63fdb22cabada59bff9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/75fa75c75bcc86ea4f74e63fdb22cabada59bff9.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_ability",
    "name": "Summon Bear",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c7483df11b6d099781c3ced0d62644fa2137a43c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c7483df11b6d099781c3ced0d62644fa2137a43c.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_colorless_ability",
    "name": "Path Of The Druid",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/11e7fa99ff725bcf28c192eedcf95f5f00a83421.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/11e7fa99ff725bcf28c192eedcf95f5f00a83421.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_colorless_passive",
    "name": "Druid's Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5314ea4aafd81d3944a78b941191c309c9c90f1d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5314ea4aafd81d3944a78b941191c309c9c90f1d.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_face",
    "name": "Greenman Mask",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/41b4187a8ef0461f50b4e2b9053558a66668e16a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/41b4187a8ef0461f50b4e2b9053558a66668e16a.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_helmet",
    "name": "Mushroom Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8e924ad8a7a8faa8ffe9f42565a09573dfe9ce41.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8e924ad8a7a8faa8ffe9f42565a09573dfe9ce41.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_neck",
    "name": "Ring Of Mushrooms",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1d9de23890ec56631ee2211277653e5424e33326.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1d9de23890ec56631ee2211277653e5424e33326.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_passive",
    "name": "Suicide Squad",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/da03f9ace10dc74708d549b8912e16f763d13587.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/da03f9ace10dc74708d549b8912e16f763d13587.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_trinket",
    "name": "Druids Whistle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/73f0336d829c6e9357c5677adfa1d84bd7d92564.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/73f0336d829c6e9357c5677adfa1d84bd7d92564.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_trinket2",
    "name": "Tiny Cage",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/621198bbdf005b4c421151c5708c814b0cc978aa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/621198bbdf005b4c421151c5708c814b0cc978aa.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_druid_weapon",
    "name": "Rain Staff",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d656d8487aa4d0ca5dd6fc3e3ebbdd392aadd466.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d656d8487aa4d0ca5dd6fc3e3ebbdd392aadd466.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_fighter_colorless_ability",
@@ -789,19 +847,22 @@
    "key": "class_unlock_fighter_face",
    "name": "Fighter Scar",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e6979d7ea672264427ff874310bd68da374fb74e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e6979d7ea672264427ff874310bd68da374fb74e.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_fighter_neck",
    "name": "Fighter Shoulder Pad",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/06af3827965439c3772b7ac0e1d8e6f87911b732.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/06af3827965439c3772b7ac0e1d8e6f87911b732.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_fighter_trinket",
    "name": "Rage Juice",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8ab2e16d16e3ef70e5af94eb4d500250356f3fc7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8ab2e16d16e3ef70e5af94eb4d500250356f3fc7.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_fighter_trinket2",
@@ -814,7 +875,8 @@
    "key": "class_unlock_fighter_weapon",
    "name": "Battle Axe",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/dd02cb577129f1e3228c2f938290cdc0ba2994d2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/dd02cb577129f1e3228c2f938290cdc0ba2994d2.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_hunter_colorless_ability",
@@ -834,19 +896,22 @@
    "key": "class_unlock_hunter_face",
    "name": "Hunter Monocle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/64f5da17f4eb751e86177a48420bb687bdb92c5f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/64f5da17f4eb751e86177a48420bb687bdb92c5f.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_hunter_neck",
    "name": "Hunter Quiver",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0d4429f4f5c5ec82abbdc2870672968e720d0ce1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0d4429f4f5c5ec82abbdc2870672968e720d0ce1.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_hunter_trinket",
    "name": "Hunters Flute",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7a080c236b5d4a60dd4eda98df7c18c69d834bf0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7a080c236b5d4a60dd4eda98df7c18c69d834bf0.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_hunter_trinket2",
@@ -859,67 +924,78 @@
    "key": "class_unlock_hunter_weapon",
    "name": "Arrow of Infinity",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/67b8b5949b53da5c2196996425e96c221f69aaa3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/67b8b5949b53da5c2196996425e96c221f69aaa3.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_ability",
    "name": "Smart Metronome (and more!)",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/24928e006f7e82d171038900678c390b7d062d5d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/24928e006f7e82d171038900678c390b7d062d5d.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_colorless_ability",
    "name": "Path Of The Jester",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/49868e7488de0bda804dd0d10b3b28af8bb777d4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/49868e7488de0bda804dd0d10b3b28af8bb777d4.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_colorless_passive",
    "name": "Jesters Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/60daf787309ab577607142e220cf9f77181a2f55.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/60daf787309ab577607142e220cf9f77181a2f55.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_face",
    "name": "Clown Makeup",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ce6116255c6e2131bbb82587c9695bd9ededd63e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ce6116255c6e2131bbb82587c9695bd9ededd63e.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_helmet",
    "name": "Cap And Bells",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e1b34bf3d99be184490f4f7e1e2ee7d12aac44c1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e1b34bf3d99be184490f4f7e1e2ee7d12aac44c1.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_neck",
    "name": "Ruffle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/631e1e5a69c1503bed9bb324c3ee6106f8c2b1fd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/631e1e5a69c1503bed9bb324c3ee6106f8c2b1fd.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_passive",
    "name": "Super Luck \u0026 Goofball",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bec78da57b1efde2ac0cf8c8828065130f7ff8b4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bec78da57b1efde2ac0cf8c8828065130f7ff8b4.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_trinket",
    "name": "Toy Gun",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d1e29180df9fa5eab96184a25506e062a0d4d875.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d1e29180df9fa5eab96184a25506e062a0d4d875.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_trinket2",
    "name": "Joker Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fb1504521d4ae747f511190b1d2192ed1fb8939c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fb1504521d4ae747f511190b1d2192ed1fb8939c.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_jester_weapon",
    "name": "Ninny Stick",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e124625cfe943d19d1cd96bcdbe1eff501c1a38b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e124625cfe943d19d1cd96bcdbe1eff501c1a38b.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_mage_colorless_ability",
@@ -939,25 +1015,29 @@
    "key": "class_unlock_mage_face",
    "name": "Mage Robe",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/430a77fb87c46867f02d9e30f16061aaaa52e164.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/430a77fb87c46867f02d9e30f16061aaaa52e164.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_mage_helmet",
    "name": "Mage Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4f7b4e55dbf2add98584384d4fb7bfc4151a7079.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4f7b4e55dbf2add98584384d4fb7bfc4151a7079.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_mage_neck",
    "name": "Mage Scarf",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/25147da07796e9c41916b2dc116333cb8f1bcb14.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/25147da07796e9c41916b2dc116333cb8f1bcb14.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_mage_trinket",
    "name": "Ring Of Frost",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f87e19c6aca122bb2a1261be8c890e2cd70fceff.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f87e19c6aca122bb2a1261be8c890e2cd70fceff.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_mage_trinket2",
@@ -970,7 +1050,8 @@
    "key": "class_unlock_mage_weapon",
    "name": "Staff Of Flame",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/470499249d6041e01169c0347802dacf5924bfcf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/470499249d6041e01169c0347802dacf5924bfcf.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_medic_colorless_ability",
@@ -990,19 +1071,22 @@
    "key": "class_unlock_medic_face",
    "name": "Cleric Tears",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4ebcd34e8dc86d7991472d8c4e706b7912094be9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4ebcd34e8dc86d7991472d8c4e706b7912094be9.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_medic_neck",
    "name": "Cleric Relic",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4a7912539a075780688fa7e7b28da2d368dc4442.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4a7912539a075780688fa7e7b28da2d368dc4442.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_medic_trinket",
    "name": "Holy Water",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/77e007d0822e9b15658a4c3128cd1a08c9bb1e0e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/77e007d0822e9b15658a4c3128cd1a08c9bb1e0e.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_medic_trinket2",
@@ -1015,193 +1099,225 @@
    "key": "class_unlock_medic_weapon",
    "name": "Anointing Oil",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/67ec67f8240eddf9fd3634deef699636adc08d29.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/67ec67f8240eddf9fd3634deef699636adc08d29.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_ability",
    "name": "Hundred Hand Slap",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/739da78d09ebc021847fcb0c0f8e2fae3da07101.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/739da78d09ebc021847fcb0c0f8e2fae3da07101.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_colorless_ability",
    "name": "Path Of The Monk",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/66329126ed2fb50e5a1704d215fedb5092f628ce.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/66329126ed2fb50e5a1704d215fedb5092f628ce.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_colorless_passive",
    "name": "Monks Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/dd91e61554d4a8008b64a451d46e38c1906ec34b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/dd91e61554d4a8008b64a451d46e38c1906ec34b.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_face",
    "name": "Face Brand",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6f5544dccaca96b851e66e937a23f93fa9f1bc95.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6f5544dccaca96b851e66e937a23f93fa9f1bc95.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_helmet",
    "name": "Head Brand",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a586517aa87a770563eb1fecb47ae30b4d70f0db.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a586517aa87a770563eb1fecb47ae30b4d70f0db.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_neck",
    "name": "Prayer Beads",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/33cea2fe7f8ac857081b7a8397f9c35e50178f81.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/33cea2fe7f8ac857081b7a8397f9c35e50178f81.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_passive",
    "name": "Unstoppable",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ffd4cff21be7376ff7401ae93ca6f9228334ef4e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ffd4cff21be7376ff7401ae93ca6f9228334ef4e.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_trinket",
    "name": "Empty Hand",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ab8d1cff003fd548c4a13190a3471a0dbc4a2c96.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ab8d1cff003fd548c4a13190a3471a0dbc4a2c96.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_trinket2",
    "name": "Tiny Pebble",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/25a4f6c99824a4c455161f8b1da8ccfd965d5b80.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/25a4f6c99824a4c455161f8b1da8ccfd965d5b80.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monk_weapon",
    "name": "Bo",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b8b01ca5efd7d02e2474c7e00fc6bd9ca383b914.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b8b01ca5efd7d02e2474c7e00fc6bd9ca383b914.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monocolorless_face",
    "name": "Copy Cat 2",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f730d4a4648feac6d4644cc07eb822338226939e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f730d4a4648feac6d4644cc07eb822338226939e.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monocolorless_head",
    "name": "Copy Cat 1",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b31f1013f767df7c39913fd2e4e56b9762d2b173.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b31f1013f767df7c39913fd2e4e56b9762d2b173.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_monocolorless_neck",
    "name": " Copy Cat 3",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/411e71696d3f79f6d4a19ccf9133beaf1167d213.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/411e71696d3f79f6d4a19ccf9133beaf1167d213.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_colorless_ability",
    "name": "Path Of The Necromancer",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/981ba02a77b96e65d8246b75f5a1471392cf05fb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/981ba02a77b96e65d8246b75f5a1471392cf05fb.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_colorless_passive",
    "name": "Necromancers Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/91a43fca2268723ddbd337b267e711210c820e51.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/91a43fca2268723ddbd337b267e711210c820e51.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_face",
    "name": "Death Mask",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/768fe34129b7d72e9d0fbff0a65880c968430214.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/768fe34129b7d72e9d0fbff0a65880c968430214.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_helmet",
    "name": "Spider Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c31cc6687e4a8e816fe8fc48599c3cacece51934.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c31cc6687e4a8e816fe8fc48599c3cacece51934.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_neck",
    "name": "Leech Necklace",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/796df85b620d757e046e2f3cee28ac673d337cd3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/796df85b620d757e046e2f3cee28ac673d337cd3.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_trinket",
    "name": "Satanic Bible",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/04c5def58340f61eff312cbd6e3cd3c637ebc6ab.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/04c5def58340f61eff312cbd6e3cd3c637ebc6ab.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_trinket2",
    "name": "Cambion Conception",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b27de20af6595355805df31aa43e2bfdb3094658.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b27de20af6595355805df31aa43e2bfdb3094658.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_necro_weapon",
    "name": "Staff of the Underworld",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d8b8152c415cd678cd8f900bbd1dd5ebf2fc4485.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d8b8152c415cd678cd8f900bbd1dd5ebf2fc4485.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_ability",
    "name": "Supernova",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5aff9c7cab40d6edaf51b4b688861d8b54a0bf26.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5aff9c7cab40d6edaf51b4b688861d8b54a0bf26.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_colorless_ability",
    "name": "Path Of The Psychic",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f327c8c6c28e08b5d68d63708829365d2c3fb83d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f327c8c6c28e08b5d68d63708829365d2c3fb83d.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_colorless_passive",
    "name": "Psychics Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/efb3ed99d50d813ae2dee2c224deff085d007468.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/efb3ed99d50d813ae2dee2c224deff085d007468.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_face",
    "name": "Mystic Eye",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/14eb21720d64e2bb763a3f094de84bdf6091d799.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/14eb21720d64e2bb763a3f094de84bdf6091d799.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_helmet",
    "name": "Tinfoil Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/832c6f8b14ecf9d3cc1547aad65333bfa42f7401.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/832c6f8b14ecf9d3cc1547aad65333bfa42f7401.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_neck",
    "name": "Diviners Cloth",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4a666950840efdfc8801a8983b716e12135d6c8b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4a666950840efdfc8801a8983b716e12135d6c8b.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_passive",
    "name": "Gravity Well",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/54ca12076f3510f2437835d1f04fddfc934543a5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/54ca12076f3510f2437835d1f04fddfc934543a5.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_trinket",
    "name": "Tarot Deck",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/efd7bbae05bc12960ce98b0e31c4e14b7d8125c7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/efd7bbae05bc12960ce98b0e31c4e14b7d8125c7.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_trinket2",
    "name": "Friendship Bracelet",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7cd18d6b2600777cb13bae95e36b89ae8b9fe33c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7cd18d6b2600777cb13bae95e36b89ae8b9fe33c.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_psychic_weapon",
    "name": "Bent Spoon",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/21c414c741a8ebf172766ee0f97b9d00b12cd54a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/21c414c741a8ebf172766ee0f97b9d00b12cd54a.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tank_colorless_ability",
@@ -1221,19 +1337,22 @@
    "key": "class_unlock_tank_face",
    "name": "Tank Tattoo",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/407aed0c469d3ade55ce7c322dd22ba0ecfe19c1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/407aed0c469d3ade55ce7c322dd22ba0ecfe19c1.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tank_neck",
    "name": "Tank Pads",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f9d510722258008ffc4a25602b2a6a3f777a8c82.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f9d510722258008ffc4a25602b2a6a3f777a8c82.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tank_trinket",
    "name": "Tank Juice",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7b14fd5f8a0c0f9eaf2706ffd727e07d4adb8641.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7b14fd5f8a0c0f9eaf2706ffd727e07d4adb8641.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tank_trinket2",
@@ -1246,7 +1365,8 @@
    "key": "class_unlock_tank_weapon",
    "name": "Girder",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/665ef37247b26c34047567e816df2e6dd8d3eb53.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/665ef37247b26c34047567e816df2e6dd8d3eb53.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_thief_colorless_ability",
@@ -1266,25 +1386,29 @@
    "key": "class_unlock_thief_face",
    "name": "Thief Tattoo",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6e991825dc0cae3613ee41b4598e5bfa63edd172.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6e991825dc0cae3613ee41b4598e5bfa63edd172.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_thief_helmet",
    "name": "Thief Hood",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/3f87ce6c9785ff6c7218419c2a53d528ce170ee7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/3f87ce6c9785ff6c7218419c2a53d528ce170ee7.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_thief_neck",
    "name": "Thief Cloak",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e46389c9de4677f652f2947a60f9299574f74ba9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e46389c9de4677f652f2947a60f9299574f74ba9.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_thief_trinket",
    "name": "Lucky Coin Purse",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/48e7d09fd53c83ed530e9f5d85183034fbc54eeb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/48e7d09fd53c83ed530e9f5d85183034fbc54eeb.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_thief_trinket2",
@@ -1297,73 +1421,85 @@
    "key": "class_unlock_thief_weapon",
    "name": "Laced Needle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bd6a6cdc4f2d45b0b6e2109c0e3d06c4d7fa7054.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bd6a6cdc4f2d45b0b6e2109c0e3d06c4d7fa7054.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_ability",
    "name": "Mech Suit",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7dee2f4a12a1de54b9d317d2fcf469b98954ed8b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7dee2f4a12a1de54b9d317d2fcf469b98954ed8b.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_colorless_ability",
    "name": "Path Of The Tinkerer",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bb7d575239ddb69a9962b430cc1e20205bc3dc7f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/bb7d575239ddb69a9962b430cc1e20205bc3dc7f.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_colorless_passive",
    "name": "Tinkerers Soul",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c4387091186bb53a9f7ea79c08b2923fb1720bbe.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c4387091186bb53a9f7ea79c08b2923fb1720bbe.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_face",
    "name": "Scrappers Mask",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f00edd5c62d54541daf8f9890cb9881543e636c8.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f00edd5c62d54541daf8f9890cb9881543e636c8.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_helmet",
    "name": "Scrappers Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/12d3d8b4772ab1e5f6368fcd66081e25843f75a4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/12d3d8b4772ab1e5f6368fcd66081e25843f75a4.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_neck",
    "name": "Scrappers Backpack",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8344f2830650885882d0234c59ddbfb52626c1fc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8344f2830650885882d0234c59ddbfb52626c1fc.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_passive",
    "name": "Armor Specialist",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a3ec825e63a12b792843bacfdde71e28c9cc1eb1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a3ec825e63a12b792843bacfdde71e28c9cc1eb1.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_trinket",
    "name": "Scrap Bag",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d78409c8d2bc3cc1661dd35fd83c0365d54aa073.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d78409c8d2bc3cc1661dd35fd83c0365d54aa073.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_trinket2",
    "name": "Fireworks",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f295a2d60adde2a9de9810410c1b3f992a31cf52.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f295a2d60adde2a9de9810410c1b3f992a31cf52.jpg",
+   "hidden": true
   },
   {
    "key": "class_unlock_tinkerer_weapon",
    "name": "Ball Peen Hammer",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f6d4e895d57cace8132daca48ab2dda5505a45e0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/f6d4e895d57cace8132daca48ab2dda5505a45e0.jpg",
+   "hidden": true
   },
   {
    "key": "end_of_time_unlock",
    "name": "The Infinite",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2faf9a0bf40555fee7bef6bc3e64199d64969bd0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2faf9a0bf40555fee7bef6bc3e64199d64969bd0.jpg",
+   "hidden": true
   },
   {
    "key": "house_upgrade_4throom",
@@ -1390,31 +1526,36 @@
    "key": "map_unlock_dimensionx",
    "name": "The Rift",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0ff208283a13ddb1c70dcff8ee83f7bf55921ee5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0ff208283a13ddb1c70dcff8ee83f7bf55921ee5.jpg",
+   "hidden": true
   },
   {
    "key": "map_unlock_future",
    "name": "The Future",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ea1179cbe1f25949172b13f55f1d30552f4369ee.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ea1179cbe1f25949172b13f55f1d30552f4369ee.jpg",
+   "hidden": true
   },
   {
    "key": "map_unlock_iceage",
    "name": "The Iceage",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4ae43b46acd161767f4f90539c978fbf62f30487.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4ae43b46acd161767f4f90539c978fbf62f30487.jpg",
+   "hidden": true
   },
   {
    "key": "map_unlock_jurassic",
    "name": "The Jurassic",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5683b212a5425466e8d5fa9ad73063d3577071bd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/5683b212a5425466e8d5fa9ad73063d3577071bd.jpg",
+   "hidden": true
   },
   {
    "key": "map_unlock_lab",
    "name": "The Lab",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b690e4939570af515385f4e6bcfefb96c2f68cba.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b690e4939570af515385f4e6bcfefb96c2f68cba.jpg",
+   "hidden": true
   },
   {
    "key": "map_unlock_moon",
@@ -1427,13 +1568,15 @@
    "key": "map_unlock_theend",
    "name": "The End",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0d86ddd6952bda4e50d6b43fd981d502869a15a4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0d86ddd6952bda4e50d6b43fd981d502869a15a4.jpg",
+   "hidden": true
   },
   {
    "key": "nuke_quest_complete",
    "name": "???",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/13be2d7eaae6b4ea914063abf02d5fbdfda1edb0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/13be2d7eaae6b4ea914063abf02d5fbdfda1edb0.jpg",
+   "hidden": true
   },
   {
    "key": "organ_upgrade3",
@@ -1467,7 +1610,8 @@
    "key": "quest_begin_amplifier2",
    "name": "Signal Amplifier",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c71478c12d97f4b43e9a247d3fb502b21edfe1f6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/c71478c12d97f4b43e9a247d3fb502b21edfe1f6.jpg",
+   "hidden": true
   },
   {
    "key": "quest_begin_blackshard",
@@ -1487,7 +1631,8 @@
    "key": "quest_begin_receiver2",
    "name": "Receiver Antenna",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/77993ffb2c90150b8da9053e84431465cf4cc5ad.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/77993ffb2c90150b8da9053e84431465cf4cc5ad.jpg",
+   "hidden": true
   },
   {
    "key": "quest_begin_scaldingorb",
@@ -1500,7 +1645,8 @@
    "key": "quest_begin_transmitter2",
    "name": "Transmitter Antenna",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/41efd039c19c94736a7ec5f853a6dae09f5d1273.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/41efd039c19c94736a7ec5f853a6dae09f5d1273.jpg",
+   "hidden": true
   },
   {
    "key": "quest_begin_zcollar",
@@ -1513,217 +1659,253 @@
    "key": "steven_unlock_infinite_crazy",
    "name": "Stevens Shotgun",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/73953501191230ed510fb739e6f1ab2ab820b25d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/73953501191230ed510fb739e6f1ab2ab820b25d.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_infinite_hard",
    "name": "Childs Crown",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8b7a33e5f51a82f123b9f8494795b67ef79986a6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/8b7a33e5f51a82f123b9f8494795b67ef79986a6.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_infinite_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4acae91151e5cf592c7bf7a49d4eb53304986e6d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4acae91151e5cf592c7bf7a49d4eb53304986e6d.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_kfight_crazy",
    "name": "Steven Stone",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d92931646747270ab4addd79102dd520ae4de114.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d92931646747270ab4addd79102dd520ae4de114.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_kfight_hard",
    "name": "Scorched Earth",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4af6bf57f1b6ecbc8b754b71ad468a87a50c42d0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/4af6bf57f1b6ecbc8b754b71ad468a87a50c42d0.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_kfight_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b6ae62c52948a15fbbf64211876be237e8eac95c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/b6ae62c52948a15fbbf64211876be237e8eac95c.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_pyro_crazy",
    "name": "Stevens Helmet",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0033c4c3acbc395974295042af32c6b484c224bd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/0033c4c3acbc395974295042af32c6b484c224bd.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_pyro_hard",
    "name": "Pyrophinas Toenail",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2ad4bde60444b727e48702e950acc3095b4feb20.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2ad4bde60444b727e48702e950acc3095b4feb20.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_pyro_impossible",
    "name": " Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1c207151f14f1f8c186ae4bdb3c217f144bf0ac3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1c207151f14f1f8c186ae4bdb3c217f144bf0ac3.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_rift_crazy",
    "name": "Stevens Fart Face",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7c9736ac4fba5b7f71088eaeb0c3dd822d6fc9aa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/7c9736ac4fba5b7f71088eaeb0c3dd822d6fc9aa.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_rift_hard",
    "name": "Crown Of Chaos",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/dbb564cbc8f3686c0e30be307f7c7083c99d074b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/dbb564cbc8f3686c0e30be307f7c7083c99d074b.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_rift_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e95dfefb5487c1f0ee9ce3f091b81170589747da.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e95dfefb5487c1f0ee9ce3f091b81170589747da.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t1_crazy",
    "name": "Steven Marrow",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/93555e51f46977400f3f77c41bf25ace1abfac15.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/93555e51f46977400f3f77c41bf25ace1abfac15.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t1_hard",
    "name": "Robotic Arm",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fd187a85d0e0908aa35994cb85f6e39b61554433.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fd187a85d0e0908aa35994cb85f6e39b61554433.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t1_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/85242581afac1b7ea4f751fd20e0153c99f0aeb2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/85242581afac1b7ea4f751fd20e0153c99f0aeb2.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t2_crazy",
    "name": "Stevens Bottle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a67799a808e682e6a81e1b9c3f488ad0b49e65f0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/a67799a808e682e6a81e1b9c3f488ad0b49e65f0.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t2_hard",
    "name": "Liquid Metal",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2626d6e3194776ca40a8607a6ba3c4436c15a7e4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2626d6e3194776ca40a8607a6ba3c4436c15a7e4.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t2_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/028678c10897948eba41ea636eb70f12ea92610a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/028678c10897948eba41ea636eb70f12ea92610a.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t3_crazy",
    "name": "Stevens Hat",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e9c263ffdbb151645afe4a43086e81c5c2ad5c95.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e9c263ffdbb151645afe4a43086e81c5c2ad5c95.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t3_hard",
    "name": "Hitlers Toupe",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/889452cd37bd814528664603e6fee498b844a920.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/889452cd37bd814528664603e6fee498b844a920.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_t3_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fb63f09ac3f6c75b878073fb9af3dcc628ab7274.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/fb63f09ac3f6c75b878073fb9af3dcc628ab7274.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_throb_crazy",
    "name": "Stevens Gobbler",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/aa9c29bf7b591d98e9c269799ce9c49d9fe236cb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/aa9c29bf7b591d98e9c269799ce9c49d9fe236cb.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_throb_hard",
    "name": "Throbbing Crown",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/33b0b8a02f139f13589f3590c4d4afa416338a9a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/33b0b8a02f139f13589f3590c4d4afa416338a9a.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_throb_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1fde124ac1d509d168af7c02337844b3377fa0b2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/1fde124ac1d509d168af7c02337844b3377fa0b2.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina1_crazy",
    "name": "Stevens Mustache",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e292055d6198f29a847e04fe924e69baabe73df2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/e292055d6198f29a847e04fe924e69baabe73df2.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina1_hard",
    "name": "Tinas Belly Button",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2b2d5f514f843189c1234fb45c9aff947aa7c81b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/2b2d5f514f843189c1234fb45c9aff947aa7c81b.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina1_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ffc288097f42979ba3dfe4b5643850c56af559d5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ffc288097f42979ba3dfe4b5643850c56af559d5.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina2_crazy",
    "name": "Stevens Gristle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ffc288097f42979ba3dfe4b5643850c56af559d5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/ffc288097f42979ba3dfe4b5643850c56af559d5.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina2_hard",
    "name": "Tinas Larynx",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d13d5d0a95f29a0774d9edd1f89f8c627a49d88b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d13d5d0a95f29a0774d9edd1f89f8c627a49d88b.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina2_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d1eca05d902e807d48cc135d9bf626a58ea41a2c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d1eca05d902e807d48cc135d9bf626a58ea41a2c.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina3_crazy",
    "name": "Stevens Bag of Rocks",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d17e83537017ac048933bced6a4f60bc50e4ba1b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/d17e83537017ac048933bced6a4f60bc50e4ba1b.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina3_hard",
    "name": "Tinas Friend",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/222a31c6d866836cb755c990a7986e154bc03efb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/222a31c6d866836cb755c990a7986e154bc03efb.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_tina3_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6673efc8700e683ae694b05369efed241f3b30dd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/6673efc8700e683ae694b05369efed241f3b30dd.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_zara_crazy",
    "name": "Stevens Friend",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/772999068e5d7d2fa48394ce93db800cc741dcb3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/772999068e5d7d2fa48394ce93db800cc741dcb3.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_zara_hard",
    "name": "Zaratana Turd",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/339cde8dae44645f51b19435bdb71fb1aa2ae2bf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/339cde8dae44645f51b19435bdb71fb1aa2ae2bf.jpg",
+   "hidden": true
   },
   {
    "key": "steven_unlock_zara_impossible",
    "name": "Steven",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/22c566c097a2a00479090b297f458bcc53d4e3a2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/686060/22c566c097a2a00479090b297f458bcc53d4e3a2.jpg",
+   "hidden": true
   },
   {
    "key": "tracy_blankcollar2",

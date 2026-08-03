@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Enter the Gungeon",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "311690",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 7,
  "total": 54,
  "first": "2016-06-01",
@@ -38,14 +38,16 @@
    "name": "Grate Hall",
    "unlocked": true,
    "date": "2016-06-14T16:35:44-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/c7ad5641861af3c4552ab01b03e043a004c3a5fd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/c7ad5641861af3c4552ab01b03e043a004c3a5fd.jpg",
+   "hidden": true
   },
   {
    "key": "PREFIRE_ON_MIMIC",
    "name": "Not Just A Box",
    "unlocked": true,
    "date": "2019-04-23T16:45:12-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/356aa655558bac7075fb9917c1ea88f0e1237b87.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/356aa655558bac7075fb9917c1ea88f0e1237b87.jpg",
+   "hidden": true
   },
   {
    "key": "KILL_BOSS_WITH_GLITTER",
@@ -89,7 +91,8 @@
    "key": "BEAT_A_JAMMED_BOSS",
    "name": "Exorcist",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/da82dcc4389fce5b86b3a35a1d3a7ef1fc286353.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/da82dcc4389fce5b86b3a35a1d3a7ef1fc286353.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_FLOOR_FIVE",
@@ -123,7 +126,8 @@
    "key": "BEAT_FLOOR_SIX",
    "name": "Gungeon Master",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/ef80cbe750dc9ecd37e238af04a5512c79b373b5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/ef80cbe750dc9ecd37e238af04a5512c79b373b5.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_FLOOR_THREE_MULTI",
@@ -157,37 +161,43 @@
    "key": "BEAT_PAST_BULLET",
    "name": "Hero of Gun",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/6e534853d4e95d7abfbc5a89e7d66d362c6b67cc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/6e534853d4e95d7abfbc5a89e7d66d362c6b67cc.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_PAST_CONVICT",
    "name": "Double Jeopardy",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/fcde74bf33d000961ff5ac824917bb9bfd7faf17.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/fcde74bf33d000961ff5ac824917bb9bfd7faf17.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_PAST_GUIDE",
    "name": "Deadliest Game",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/d8d67287e3b676c62befd3c37749002929937c86.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/d8d67287e3b676c62befd3c37749002929937c86.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_PAST_MARINE",
    "name": "Squad Captain",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/e5ecaa89003589d3644c944a3e5506db959ca060.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/e5ecaa89003589d3644c944a3e5506db959ca060.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_PAST_ROBOT",
    "name": "Terminated",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/0805736e3ec13486759028a66d5452853d2948a1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/0805736e3ec13486759028a66d5452853d2948a1.jpg",
+   "hidden": true
   },
   {
    "key": "BEAT_PAST_ROGUE",
    "name": "Wingman",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/48fdfbf0fe39b04bc576ba4ee79ea31bc7585ba2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/48fdfbf0fe39b04bc576ba4ee79ea31bc7585ba2.jpg",
+   "hidden": true
   },
   {
    "key": "BUILD_BULLET",
@@ -221,13 +231,15 @@
    "key": "COMPLETE_GAME_WITH_CHALLENGE_MODE",
    "name": "Challenger",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/fdc56be5b82a3bfa96e1d73b5a72b831d7860d32.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/fdc56be5b82a3bfa96e1d73b5a72b831d7860d32.jpg",
+   "hidden": true
   },
   {
    "key": "COMPLETE_GAME_WITH_ENCHANTED_GUN",
    "name": "Gun Game",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/54d36086989ff2f3a320f481162670b7930ffa17.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/54d36086989ff2f3a320f481162670b7930ffa17.jpg",
+   "hidden": true
   },
   {
    "key": "COMPLETE_GAME_WITH_TURBO_MODE",
@@ -254,13 +266,15 @@
    "key": "DIE_IN_PAST",
    "name": "Time Paradox",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/0a3d21f75bf9c64c1464385ba2eb64c7efa0efc4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/0a3d21f75bf9c64c1464385ba2eb64c7efa0efc4.jpg",
+   "hidden": true
   },
   {
    "key": "FALL_IN_END_TIMES",
    "name": "Lion Leap",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/c111c9be5591ee205144159e558cdf40d6b7cf66.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/c111c9be5591ee205144159e558cdf40d6b7cf66.jpg",
+   "hidden": true
   },
   {
    "key": "FLIP_TABLES_MULTI",
@@ -280,7 +294,8 @@
    "key": "HAVE_MAX_CURSE",
    "name": "Jammed",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/0ea1dd7d904199e2606e98951d6064def6965e74.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/0ea1dd7d904199e2606e98951d6064def6965e74.jpg",
+   "hidden": true
   },
   {
    "key": "KILL_IN_MINE_CART_MULTI",
@@ -321,19 +336,22 @@
    "key": "PUSH_TABLE_INTO_PIT",
    "name": "I Knew Someone Would Do It",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/6584c7ad02e595b3cde781948e845c1342c43b77.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/6584c7ad02e595b3cde781948e845c1342c43b77.jpg",
+   "hidden": true
   },
   {
    "key": "REACH_BLACK_MARKET",
    "name": "The Password",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/85398bf3841874ba99550c562850eb55488867a7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/85398bf3841874ba99550c562850eb55488867a7.jpg",
+   "hidden": true
   },
   {
    "key": "REACH_CATHEDRAL",
    "name": "Reverence for the Dead",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/398e5f612500dc25c2bc51ad2557e6fc1fb932b9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/398e5f612500dc25c2bc51ad2557e6fc1fb932b9.jpg",
+   "hidden": true
   },
   {
    "key": "STEAL_MULTI",
@@ -346,7 +364,8 @@
    "key": "UNLOCK_BULLET",
    "name": "Case Closed",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/ea97c5238431f888add00150d1b1f06487ae965e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/ea97c5238431f888add00150d1b1f06487ae965e.jpg",
+   "hidden": true
   },
   {
    "key": "UNLOCK_FLOOR_FIVE_SHORTCUT",
@@ -380,7 +399,8 @@
    "key": "UNLOCK_ROBOT",
    "name": "Beep",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/ba219ca81c3f288cf055f5831806215acdc91185.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311690/ba219ca81c3f288cf055f5831806215acdc91185.jpg",
+   "hidden": true
   }
  ],
  "raw": {

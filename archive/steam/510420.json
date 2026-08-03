@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Hex",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "510420",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 10,
  "total": 28,
  "first": "2022-07-28",
@@ -94,7 +94,8 @@
    "name": "The Hex",
    "unlocked": true,
    "date": "2022-07-30T20:07:53-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/dea72d8c11128fac2c4af7ef878385b692c30ad9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/dea72d8c11128fac2c4af7ef878385b692c30ad9.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_FLASHBACK_FIGHTER_SECRET",
@@ -114,13 +115,15 @@
    "key": "ACH_FPP_SECRET",
    "name": "Card Captive",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/0d564a60ae6fc13f9e7546c7261f17f2f98c69cf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/0d564a60ae6fc13f9e7546c7261f17f2f98c69cf.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_PLATFORMER_SECRET",
    "name": "The Full Truth",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/6e14f5c3506c9eb61cab9938ef78248c0a7c3580.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/6e14f5c3506c9eb61cab9938ef78248c0a7c3580.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_PLATFORMER_SKILL",
@@ -147,7 +150,8 @@
    "key": "ACH_SORCERESS_SECRET",
    "name": "Got To Catch Them All",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/a68d990afca73830decdf51ea6c9655ca1e916cf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/a68d990afca73830decdf51ea6c9655ca1e916cf.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SORCERESS_SKILL",
@@ -160,7 +164,8 @@
    "key": "ACH_SPACEMARINE_SECRET",
    "name": "What's Kraken",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/6dde8d689a55ed18d2622ff988b27c8eea019cc7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/6dde8d689a55ed18d2622ff988b27c8eea019cc7.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SPACEMARINE_SKILL",
@@ -173,37 +178,43 @@
    "key": "ACH_SUPERSECRET_1",
    "name": "ERROR 57",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/17ee7570dad91d74341889816e1ec2af8b0dd0e6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/17ee7570dad91d74341889816e1ec2af8b0dd0e6.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SUPERSECRET_2",
    "name": "ERROR 2X",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/ccfceb354ec3f72bffed3153b34a654c17528a18.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/ccfceb354ec3f72bffed3153b34a654c17528a18.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SUPERSECRET_3",
    "name": "ERROR 33",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/d98fbc406b489cd4de51217457ed555820860b1d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/d98fbc406b489cd4de51217457ed555820860b1d.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SUPERSECRET_4",
    "name": "ERROR 09",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/550d72f3449d71db97168446f7b0df14b1617a0d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/550d72f3449d71db97168446f7b0df14b1617a0d.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SUPERSECRET_5",
    "name": "ERROR 3",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/cdf4a53ac4db51ecafa88c7f611dd937f6ee8f70.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/cdf4a53ac4db51ecafa88c7f611dd937f6ee8f70.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_SURVIVOR_SECRET",
    "name": "M0RE_FRI#NDLY(C0NTENT)",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/6dc94d7181f52b51a1da3ff30da4757914d29e82.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/510420/6dc94d7181f52b51a1da3ff30da4757914d29e82.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_TOKENS_2",

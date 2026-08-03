@@ -91,6 +91,10 @@ type ArchivedAchievement struct {
 	// Tier is PSN's trophy grade — bronze/silver/gold/platinum. Left empty by
 	// every other provider; no equivalent concept exists for RA/Steam/Xbox.
 	Tier string `json:"tier,omitempty"`
+	// Hidden marks an achievement whose name/description the provider
+	// withholds until earned, to avoid spoiling it. Steam and PSN both
+	// report this; RA/Xbox/Exophase have no equivalent concept.
+	Hidden bool `json:"hidden,omitempty"`
 }
 
 // ProviderRecord is everything one service knows about one game.
@@ -275,6 +279,7 @@ func mergeAchievement(old, fresh ArchivedAchievement) ArchivedAchievement {
 	out.Description = FirstNonEmpty(fresh.Description, old.Description)
 	out.Icon = FirstNonEmpty(fresh.Icon, old.Icon)
 	out.Tier = FirstNonEmpty(fresh.Tier, old.Tier)
+	out.Hidden = fresh.Hidden || old.Hidden
 	if fresh.Points == 0 {
 		out.Points = old.Points
 	}
@@ -408,6 +413,7 @@ type EarnedAchievement struct {
 	Icon        string `yaml:"icon,omitempty"`
 	Provider    string `yaml:"provider"`
 	Platform    string `yaml:"platform,omitempty"`
+	Hidden      bool   `yaml:"hidden,omitempty"`
 }
 
 // ProviderBreakdown is one provider's contribution to a game's summary.
@@ -471,6 +477,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				Icon:        a.Icon,
 				Provider:    provider,
 				Platform:    rec.Platform,
+				Hidden:      a.Hidden,
 			})
 		}
 		// RetroAchievements has no "last played" signal — the closest proxy

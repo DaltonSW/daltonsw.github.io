@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Monster Train",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "1102190",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 18,
  "total": 53,
  "first": "2020-08-31",
@@ -142,7 +142,8 @@
    "name": "Dante’s Inferno",
    "unlocked": true,
    "date": "2020-09-06T15:23:30-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/812e9fc7478489607c7c52a47005ae2b039a52d9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/812e9fc7478489607c7c52a47005ae2b039a52d9.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_CLASS1_LEVEL5",
@@ -192,7 +193,8 @@
    "key": "ACH_BOTHER_SHOPKEEPER",
    "name": "Buy Something, Won't You?",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/a9eea1908d9a35b9d2934b6269dd4b855fa23e75.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/a9eea1908d9a35b9d2934b6269dd4b855fa23e75.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_CLASS1_COVENANTS",
@@ -345,13 +347,15 @@
    "key": "ACH_EVENT_HIDDEN_UPGRADE",
    "name": "It’s a Secret...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/8d8c7db09d34676ff396f02cd23dc475cd496785.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/8d8c7db09d34676ff396f02cd23dc475cd496785.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_EVENT_PICKPOCKET",
    "name": "Thief! Stop!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/2c838abcb1ba31a7d701feda1f238a9238492f70.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1102190/2c838abcb1ba31a7d701feda1f238a9238492f70.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_LEVEL10_ALL",

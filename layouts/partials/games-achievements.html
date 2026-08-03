@@ -42,6 +42,7 @@
 {{- end -}}
 
 {{- $earned = sort $earned "date" "desc" -}}
+{{- $hasHidden := gt (len (where $earned "hidden" "eq" true)) 0 -}}
 
 {{/* Distinct years, newest first, "Undated" pinned last — mirrors the Game List tab. */}}
 {{- $years := slice -}}
@@ -52,8 +53,11 @@
 {{- $years = sort (complement (slice "Undated") $years) "value" "desc" -}}
 {{- if $hasUndated }}{{ $years = $years | append "Undated" }}{{ end -}}
 
-<div class="ach-panel">
+<div class="ach-panel" data-ach-root>
   <aside class="ach-sidebar" aria-label="Achievement stats">
+    {{- if $hasHidden }}
+    <button type="button" class="ach-reveal-toggle" data-ach-reveal-toggle hidden aria-pressed="false">Unhide everything</button>
+    {{- end }}
     <div class="ach-stat">
       <span class="ach-stat__value">{{ len $earned }}</span>
       <span class="ach-stat__label">achievements earned</span>
@@ -97,7 +101,8 @@
       <div class="ach-rows">
         {{- range $inYear }}
         {{- $row := . }}
-        <div class="ach-row">
+        {{- $hidden := $row.hidden | default false }}
+        <div class="ach-row{{ if $hidden }} ach-row--hidden{{ end }}"{{ if $hidden }} data-hidden tabindex="0" role="button" aria-pressed="false" aria-label="Hidden achievement — click to reveal" title="Hidden achievement — click to reveal"{{ end }}>
           {{/* RA's icon is a bare badge id needing a URL built for it; Steam's
                (from the game's schema, not the player-achievements endpoint)
                is already a full CDN URL. PSN has no per-achievement icon
@@ -116,11 +121,18 @@
           <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
           {{- end }}
           <div class="ach-row__body">
-            <div class="ach-row__title-line">
-              <span class="ach-row__name">{{ $row.name }}</span>
-              {{- with $row.points }}<span class="ach-row__points">{{ . }} pt{{ if ne . 1 }}s{{ end }}{{ if $row.hardcore }} · HC{{ end }}</span>{{ end }}
+            {{/* Only the name/description text is spoiler-bearing, so only
+                 that gets blurred — icon and meta (game, platform, date) stay
+                 legible even on a hidden row, so a reader browsing this big
+                 feed can still tell which game a hidden entry belongs to. */}}
+            <div class="ach-row__blur-content">
+              <div class="ach-row__title-line">
+                <span class="ach-row__name">{{ $row.name }}</span>
+                {{- with $row.points }}<span class="ach-row__points">{{ . }} pt{{ if ne . 1 }}s{{ end }}{{ if $row.hardcore }} · HC{{ end }}</span>{{ end }}
+              </div>
+              {{- with $row.description }}<p class="ach-row__desc">{{ . }}</p>{{ end }}
+              {{- if $hidden }}<span class="ach-row__hidden-tag" aria-hidden="true">hidden — click to reveal</span>{{ end }}
             </div>
-            {{- with $row.description }}<p class="ach-row__desc">{{ . }}</p>{{ end }}
             <div class="ach-row__meta">
               <a class="ach-row__game" href="{{ $row.page.RelPermalink }}">{{ $row.page.Title }}</a>
               {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}

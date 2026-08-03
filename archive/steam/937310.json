@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Infinitode 2",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "937310",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 3,
  "total": 45,
  "first": "2023-11-26",
@@ -30,7 +30,8 @@
    "name": "Ash generator",
    "unlocked": true,
    "date": "2023-12-01T22:30:40-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/858cc4cc0fc5128ef1093622d4ebb702c22ec2aa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/858cc4cc0fc5128ef1093622d4ebb702c22ec2aa.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_STAGE_1_COMPLETE",
@@ -44,19 +45,22 @@
    "key": "ACHIEVEMENT_BUILD_TOWER_FINISH_WITH_TEN",
    "name": "Worth of dozen",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/be281010655bacb17729a3ff005391de15d1a37d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/be281010655bacb17729a3ff005391de15d1a37d.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_COPY_TOWERS_ONE_GAME",
    "name": "Ctrl+C, Ctrl+V",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/6996463dcfe0209cf649d7a5f0c6647d8a47be6f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/6996463dcfe0209cf649d7a5f0c6647d8a47be6f.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_DOUBLE_LASER_DAMAGE",
    "name": "Eye protection required",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/8b0c78a4d94814e71c683019d94bd9540aa2fe15.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/8b0c78a4d94814e71c683019d94bd9540aa2fe15.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_EVERY_ENEMY_MET",
@@ -69,13 +73,15 @@
    "key": "ACHIEVEMENT_EXPLODE_ENEMY_WITH_BULLET",
    "name": "Explosive bullets",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/6a73756eca611c792bbe87d8c31ed034af8f9a20.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/6a73756eca611c792bbe87d8c31ed034af8f9a20.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_FAIL_TUTORIAL",
    "name": "How?",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/5f980c0d7ec0f4b473277041ed0aefc894a8ec0c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/5f980c0d7ec0f4b473277041ed0aefc894a8ec0c.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_FAST_BOSS_KILL",
@@ -109,19 +115,22 @@
    "key": "ACHIEVEMENT_HIT_ENEMY_WITH_SNOWBALLS",
    "name": "Snowball combo",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/2283a4458f09e0b838c9cf10c6a6d685b0a0e4b5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/2283a4458f09e0b838c9cf10c6a6d685b0a0e4b5.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_HUGE_TOWER_ATTACK_SPEED",
    "name": "Bullet storm",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/8fa41453ee38623e11d2d40328756972dadc8f70.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/8fa41453ee38623e11d2d40328756972dadc8f70.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_HUNDRED_KILLS_NUKE",
    "name": "Wow, this blew up",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/c8554e9d354680ed52f4cf7a152a02c703a45471.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/c8554e9d354680ed52f4cf7a152a02c703a45471.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_HUNDRED_TILE_CUSTOM_MAP",
@@ -134,25 +143,29 @@
    "key": "ACHIEVEMENT_KILL_BOSS_BONUS_COINS",
    "name": "Stonks",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/b8e258f732fa896b2a591e21056abfaaeb65a3c8.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/b8e258f732fa896b2a591e21056abfaaeb65a3c8.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_KILL_BOSS_WITH_RECRUIT",
    "name": "Team-boss-kill",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/17613c20f9212031ab6f213a59840845f2dae65c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/17613c20f9212031ab6f213a59840845f2dae65c.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_KILL_ENEMY_WITH_BACK_PROJECTILE",
    "name": "Offhand shooting",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/0239fe1b8be420cb8f64f4ecda72ae6882903e0e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/0239fe1b8be420cb8f64f4ecda72ae6882903e0e.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_KILL_GROUND_ENEMY_WITH_AIR",
    "name": "Death from the sky",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/bf0fa47eadb4e585d2a3ebf5957ade4e7e734030.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/bf0fa47eadb4e585d2a3ebf5957ade4e7e734030.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_KILL_MILLION_ENEMIES",
@@ -172,43 +185,50 @@
    "key": "ACHIEVEMENT_KILL_THROWN_BACK_ENEMIES",
    "name": "Step back",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/1946b328a2e15a53e92b896a1a039d1033d4dcee.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/1946b328a2e15a53e92b896a1a039d1033d4dcee.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MASS_BALL_LIGHTNINGS",
    "name": "Light show",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/675d318f63faec239beec890154aad8ded58d556.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/675d318f63faec239beec890154aad8ded58d556.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MASS_BUFF_ENEMY",
    "name": "Vinaigrette",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/10965aa3b1c6da56b42991aa04bea5e702410211.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/10965aa3b1c6da56b42991aa04bea5e702410211.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MASS_MINERS",
    "name": "Mass production",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/f83504a80facb7fc1f05328f1c1f02961f0d93f6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/f83504a80facb7fc1f05328f1c1f02961f0d93f6.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MASS_MISSILES",
    "name": "Rocket rain",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/d2ad234e41826bbd3a2f5f55092b0feebafbaab7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/d2ad234e41826bbd3a2f5f55092b0feebafbaab7.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MASS_STUN_ENEMIES_ONE_SHOT",
    "name": "Stunning shot",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/687d6d6df3550ea2dafd5365215161d246c11059.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/687d6d6df3550ea2dafd5365215161d246c11059.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MASS_TOWERS_LEVEL_DEV",
    "name": "Tightly packed rainbow",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/70e215ce340fe7d35658a2ea072183fbadfca339.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/70e215ce340fe7d35658a2ea072183fbadfca339.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_MILLION_MDPS_ONE_GAME",
@@ -235,13 +255,15 @@
    "key": "ACHIEVEMENT_PLACE_MICROGUNS",
    "name": "Space efficient",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/0f4fdc37102fbbdf12ebb8ee262dec8bce05a3b9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/0f4fdc37102fbbdf12ebb8ee262dec8bce05a3b9.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_PLACE_MINES_ONE_GAME",
    "name": "Minefield walk",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/46e723743cd74f7aff1dfe32c5cafa61f70ca569.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/46e723743cd74f7aff1dfe32c5cafa61f70ca569.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_PRESTIGE",
@@ -261,19 +283,22 @@
    "key": "ACHIEVEMENT_RECRUIT_ENEMIES",
    "name": "Art of persuasion",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/77cff261b0e73277911ff27d8ec7f0e67e95cf25.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/77cff261b0e73277911ff27d8ec7f0e67e95cf25.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_RECRUIT_SPIDER",
    "name": "Spiders on my side",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/1e9c3b8f7202ffb2a84bfedae875095c45e5257e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/1e9c3b8f7202ffb2a84bfedae875095c45e5257e.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_SPLASH_CHAIN_KILL",
    "name": "Thorny chain",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/61c225227d0a2a8e1ee01397132c9dfb922c7d6c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/61c225227d0a2a8e1ee01397132c9dfb922c7d6c.jpg",
+   "hidden": true
   },
   {
    "key": "ACHIEVEMENT_STAGE_2_COMPLETE",

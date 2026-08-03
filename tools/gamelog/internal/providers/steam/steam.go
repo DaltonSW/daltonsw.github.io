@@ -194,6 +194,9 @@ type SteamSchemaAchievement struct {
 	APIName  string `json:"name"`
 	Icon     string `json:"icon"`
 	IconGray string `json:"icongray"`
+	// Hidden is 1 when the developer marked this a secret achievement,
+	// spoiled by name/description alone.
+	Hidden int `json:"hidden"`
 }
 
 type steamSchemaResponse struct {
@@ -431,20 +434,21 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 		rec.Achievements = append(rec.Achievements, entry)
 	}
 
-	// Icons aren't in GetPlayerAchievements at all — only the static schema
-	// carries them. Best-effort: a game whose schema call fails (or a very
-	// old/delisted title with no schema) still keeps its unlock data, just
-	// without icons.
+	// Icons and hidden-status aren't in GetPlayerAchievements at all — only
+	// the static schema carries them. Best-effort: a game whose schema call
+	// fails (or a very old/delisted title with no schema) still keeps its
+	// unlock data, just without icons or hidden-status.
 	if schema, err := client.GetSchemaForGame(ctx, appID); err == nil {
-		icons := make(map[string]string, len(schema))
+		byName := make(map[string]SteamSchemaAchievement, len(schema))
 		for _, a := range schema {
-			if a.Icon != "" {
-				icons[a.APIName] = a.Icon
-			}
+			byName[a.APIName] = a
 		}
 		for i := range rec.Achievements {
-			if icon, ok := icons[rec.Achievements[i].Key]; ok {
-				rec.Achievements[i].Icon = icon
+			if a, ok := byName[rec.Achievements[i].Key]; ok {
+				if a.Icon != "" {
+					rec.Achievements[i].Icon = a.Icon
+				}
+				rec.Achievements[i].Hidden = a.Hidden == 1
 			}
 		}
 	}

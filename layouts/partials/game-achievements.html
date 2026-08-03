@@ -11,13 +11,17 @@
 {{- if and $summary (gt ($summary.total | default 0) 0) -}}
 {{- $providers := $summary.providers | default slice -}}
 {{- $earned := sort ($summary.earned | default slice) "date" "desc" -}}
-<section class="game-achievements" aria-label="Achievements">
+{{- $hasHidden := gt (len (where $earned "hidden" "eq" true)) 0 -}}
+<section class="game-achievements" aria-label="Achievements" data-ach-root>
   <h2>Achievements</h2>
 
   <div class="ach-overview">
     {{- partial "achievement-meter.html" (dict "unlocked" $summary.unlocked "total" $summary.total) }}
     {{- with $summary.playtime_mins }}<span class="ach-overview__stat">{{ printf "%.1fh" (div . 60.0) }} played</span>{{ end }}
     {{- with $summary.last_played }}<span class="ach-overview__stat">last played {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- if $hasHidden }}
+    <button type="button" class="ach-reveal-toggle" data-ach-reveal-toggle hidden aria-pressed="false">Unhide everything</button>
+    {{- end }}
   </div>
 
   {{- if gt (len $providers) 1 }}
@@ -41,7 +45,8 @@
     <div class="ach-rows">
       {{- range . }}
       {{- $row := . }}
-      <div class="ach-row">
+      {{- $hidden := $row.hidden | default false }}
+      <div class="ach-row{{ if $hidden }} ach-row--hidden{{ end }}"{{ if $hidden }} data-hidden tabindex="0" role="button" aria-pressed="false" aria-label="Hidden achievement — click to reveal" title="Hidden achievement — click to reveal"{{ end }}>
         {{- $iconSrc := "" }}
         {{- if $row.icon }}
           {{- if eq $row.provider "retroachievements" }}
@@ -56,11 +61,18 @@
         <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
         {{- end }}
         <div class="ach-row__body">
-          <div class="ach-row__title-line">
-            <span class="ach-row__name">{{ $row.name }}</span>
-            {{- with $row.points }}<span class="ach-row__points">{{ . }} pt{{ if ne . 1 }}s{{ end }}{{ if $row.hardcore }} · HC{{ end }}</span>{{ end }}
+          {{/* Only the name/description text is spoiler-bearing, so only that
+               gets blurred — icon and meta (platform, date) stay legible even
+               on a hidden row, so a reader browsing the big achievement list
+               can still tell which game a hidden entry belongs to. */}}
+          <div class="ach-row__blur-content">
+            <div class="ach-row__title-line">
+              <span class="ach-row__name">{{ $row.name }}</span>
+              {{- with $row.points }}<span class="ach-row__points">{{ . }} pt{{ if ne . 1 }}s{{ end }}{{ if $row.hardcore }} · HC{{ end }}</span>{{ end }}
+            </div>
+            {{- with $row.description }}<p class="ach-row__desc">{{ . }}</p>{{ end }}
+            {{- if $hidden }}<span class="ach-row__hidden-tag" aria-hidden="true">hidden — click to reveal</span>{{ end }}
           </div>
-          {{- with $row.description }}<p class="ach-row__desc">{{ . }}</p>{{ end }}
           <div class="ach-row__meta">
             {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
             {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Tangle Tower",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "359510",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 9,
  "total": 10,
  "first": "2021-05-18",
@@ -86,13 +86,15 @@
    "name": "A Secret",
    "unlocked": true,
    "date": "2021-05-18T19:48:29-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359510/53e7e96ecb043ec7b35e56250579df61b187dec6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359510/53e7e96ecb043ec7b35e56250579df61b187dec6.jpg",
+   "hidden": true
   },
   {
    "key": "untangledTower",
    "name": "Untangled Tower",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359510/5f07d77a2cde9f4ee6645125e49e78252f7d2dd3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359510/5f07d77a2cde9f4ee6645125e49e78252f7d2dd3.jpg",
+   "hidden": true
   }
  ],
  "raw": {

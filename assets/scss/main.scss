@@ -417,6 +417,51 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ach-row__game:hover { text-decoration: underline; }
 .ach-row__date--unknown { font-style: italic; }
 
+/* Spoiler blur for secret achievements — click (or the section's "Unhide
+   everything" toggle) reveals. Only the name/description text blurs, inside
+   .ach-row__blur-content; the icon and .ach-row__meta (game, platform, date)
+   stay sharp, so a hidden entry in the big feed is still identifiable. */
+.ach-row--hidden { position: relative; cursor: pointer; }
+.ach-row--hidden:hover { border-color: var(--accent); }
+.ach-row--hidden:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ach-row__blur-content { position: relative; }
+.ach-row--hidden .ach-row__icon,
+.ach-row--hidden .ach-row__title-line,
+.ach-row--hidden .ach-row__desc {
+  filter: blur(4px);
+  user-select: none;
+}
+.ach-row__hidden-tag {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: $font-ui; font-size: 0.72rem; letter-spacing: 0.02em; color: var(--dim);
+  background: color-mix(in srgb, var(--panel) 55%, transparent);
+  pointer-events: none;
+  border-radius: 4px;
+}
+.ach-row--hidden.ach-row--revealed .ach-row__icon,
+.ach-row--hidden.ach-row--revealed .ach-row__title-line,
+.ach-row--hidden.ach-row--revealed .ach-row__desc,
+.ach-reveal-all .ach-row--hidden .ach-row__icon,
+.ach-reveal-all .ach-row--hidden .ach-row__title-line,
+.ach-reveal-all .ach-row--hidden .ach-row__desc { filter: none; }
+.ach-row--hidden.ach-row--revealed .ach-row__hidden-tag,
+.ach-reveal-all .ach-row--hidden .ach-row__hidden-tag { display: none; }
+.ach-row--hidden.ach-row--revealed { cursor: default; }
+
+.ach-reveal-toggle {
+  font-family: $font-ui; font-size: 0.78rem; color: var(--dim);
+  background: none; border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.15rem 0.5rem; cursor: pointer;
+}
+.ach-reveal-toggle::before { content: "["; color: var(--stroke); }
+.ach-reveal-toggle::after  { content: "]"; color: var(--stroke); }
+.ach-reveal-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.ach-reveal-toggle--active {
+  color: var(--accent); border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
 @media (max-width: 640px) {
   .ach-panel { flex-direction: column; }
   .ach-sidebar {

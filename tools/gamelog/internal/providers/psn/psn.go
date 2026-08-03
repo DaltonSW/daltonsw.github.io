@@ -459,6 +459,7 @@ func FetchRecord(ctx context.Context, client *PSNClient, npCommunicationID strin
 			Description: d.TrophyDetail,
 			Icon:        d.TrophyIconURL,
 			Tier:        d.TrophyType,
+			Hidden:      d.TrophyHidden,
 		}
 		if e.Earned {
 			entry.Unlocked = true

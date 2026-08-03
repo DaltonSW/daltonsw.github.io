@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Jackbox Party Pack 8",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "1552350",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 5,
  "total": 20,
  "first": "2022-02-01",
@@ -76,7 +76,8 @@
    "key": "DRAWFULANIMATE_TYPE_ACHIEVEMENT",
    "name": "Drawful Animate: “Accomplishment”",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/1de7008797d5738537ad27c452e26245a633157b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/1de7008797d5738537ad27c452e26245a633157b.jpg",
+   "hidden": true
   },
   {
    "key": "DRAWFULANIMATE_USE_ALL_THREE_COLORS",

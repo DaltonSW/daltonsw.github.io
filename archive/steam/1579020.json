@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Golfie",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "1579020",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 0,
  "total": 21,
  "platform": "PC",
@@ -117,7 +117,8 @@
    "key": "ACH_HOLE_IN_NONE",
    "name": "Hole in... None?",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1579020/e4dc09aacc82d91732e5ecbc18299c87c2fcf1e9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1579020/e4dc09aacc82d91732e5ecbc18299c87c2fcf1e9.jpg",
+   "hidden": true
   },
   {
    "key": "ACH_HOLE_IN_ONE",

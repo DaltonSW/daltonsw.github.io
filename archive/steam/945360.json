@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Among Us",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "945360",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 0,
  "total": 33,
  "platform": "PC",
@@ -26,19 +26,22 @@
    "key": "card_first_try",
    "name": "IMPOSSIBLE TASK",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/c486b2f15c031a9929e6193a334c8f947b326009.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/c486b2f15c031a9929e6193a334c8f947b326009.jpg",
+   "hidden": true
   },
   {
    "key": "die_during_medscan",
    "name": "WATCH ME SCAN",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/bf78b9db17985ba127345ac32258f3116ed7ec00.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/bf78b9db17985ba127345ac32258f3116ed7ec00.jpg",
+   "hidden": true
   },
   {
    "key": "fix_own_sabotage",
    "name": "CREWPOSTOR",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/cb4695fda4b61e880404ba5051185a1c154e6156.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/cb4695fda4b61e880404ba5051185a1c154e6156.jpg",
+   "hidden": true
   },
   {
    "key": "hns_complete_all_tasks",
@@ -121,7 +124,8 @@
    "key": "kills_hard",
    "name": "SCOURGE",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/6a0dd8539784b692366028f41774673397d04c13.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/6a0dd8539784b692366028f41774673397d04c13.jpg",
+   "hidden": true
   },
   {
    "key": "kills_medium",
@@ -134,7 +138,8 @@
    "key": "no_vents_impostor_win",
    "name": "CIRCUMVENTER",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/d98da75d64e92504c70b54339a17ab98b8b732fa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/d98da75d64e92504c70b54339a17ab98b8b732fa.jpg",
+   "hidden": true
   },
   {
    "key": "survive_crewmate",
@@ -147,7 +152,8 @@
    "key": "survive_two_impostors",
    "name": "NEVER SUSPECT A THING",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/9c5048637cd0aecf7f9fcd4ac4f46c0d0c1d7541.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/9c5048637cd0aecf7f9fcd4ac4f46c0d0c1d7541.jpg",
+   "hidden": true
   },
   {
    "key": "task_complete_easy",
@@ -160,7 +166,8 @@
    "key": "task_complete_hard",
    "name": "TASKMASTER",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/c7782fd07440b564df902fb0d80daa292f06ee9e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/c7782fd07440b564df902fb0d80daa292f06ee9e.jpg",
+   "hidden": true
   },
   {
    "key": "task_complete_medium",
@@ -173,7 +180,8 @@
    "key": "three_kills_before_meeting",
    "name": "H U N G E R",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/f5a1d827b0b4c4709d3a16a6e5a309a302ca4187.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/f5a1d827b0b4c4709d3a16a6e5a309a302ca4187.jpg",
+   "hidden": true
   },
   {
    "key": "win_all_tasks",

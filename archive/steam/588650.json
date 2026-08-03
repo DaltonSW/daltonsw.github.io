@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Dead Cells",
- "updated": "2026-08-02",
+ "updated": "2026-08-03",
  "id": "588650",
- "fetched": "2026-08-02",
- "last_attempt": "2026-08-02",
+ "fetched": "2026-08-03",
+ "last_attempt": "2026-08-03",
  "unlocked": 41,
  "total": 121,
  "first": "2018-01-31",
@@ -144,7 +144,8 @@
    "name": "We've all been there before...",
    "unlocked": true,
    "date": "2018-02-04T20:00:13-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/d9f0ce0a2da664b568b44595763c2161e1a787e5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/d9f0ce0a2da664b568b44595763c2161e1a787e5.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_SURVIVE_CURSE",
@@ -279,7 +280,8 @@
    "name": "Surgical extraction",
    "unlocked": true,
    "date": "2019-02-10T12:06:12-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/217d776600011a0c2d29fea974f43df0b362ec78.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/217d776600011a0c2d29fea974f43df0b362ec78.jpg",
+   "hidden": true
   },
   {
    "key": "BIOME_REACHED_PRISONDEPTH",
@@ -334,7 +336,8 @@
    "name": "Bag of Tricks",
    "unlocked": true,
    "date": "2024-06-16T19:55:11-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/cac66cdbbd3a6cf72c91615df06a55e146d310e4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/cac66cdbbd3a6cf72c91615df06a55e146d310e4.jpg",
+   "hidden": true
   },
   {
    "key": "BIOME_REACHED_CAVERN",
@@ -348,7 +351,8 @@
    "key": "BIOME_REACHED_ASTROLAB",
    "name": "Life on the edge",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/941b9ca51bda3929dbc7670d813578e26d1aaf57.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/941b9ca51bda3929dbc7670d813578e26d1aaf57.jpg",
+   "hidden": true
   },
   {
    "key": "BIOME_REACHED_CLIFF",
@@ -403,7 +407,8 @@
    "key": "BIOME_REACHED_OBSERVATORY",
    "name": "Stargazing",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/a92356a3854a3044e12989bde8a6a75153b72b10.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/a92356a3854a3044e12989bde8a6a75153b72b10.jpg",
+   "hidden": true
   },
   {
    "key": "BIOME_REACHED_PCASTLE",
@@ -465,37 +470,43 @@
    "key": "EQUIP_ENDGAME_CURSEDSWORD",
    "name": "I like to live dangerously…",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/4705bfe885c4c5a352ed3cf449f413c5e7b88771.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/4705bfe885c4c5a352ed3cf449f413c5e7b88771.jpg",
+   "hidden": true
   },
   {
    "key": "EQUIP_ENDGAME_YOLO",
    "name": "Never fallen",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/ea1197ebd0b45044c4346d2142e9e9e4c7bb5a6a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/ea1197ebd0b45044c4346d2142e9e9e4c7bb5a6a.jpg",
+   "hidden": true
   },
   {
    "key": "EXPLO_GETBOSSRUNE_FIFTH",
    "name": "Perfect extraction",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6a9e943ce5c45509dd1be2bfe6da66ecbf54db17.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6a9e943ce5c45509dd1be2bfe6da66ecbf54db17.jpg",
+   "hidden": true
   },
   {
    "key": "EXPLO_GETBOSSRUNE_FOURTH",
    "name": "Deft extraction",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/8c0f5f930579d79d552ce39fe00f86b6d2dec08d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/8c0f5f930579d79d552ce39fe00f86b6d2dec08d.jpg",
+   "hidden": true
   },
   {
    "key": "EXPLO_GETBOSSRUNE_SECOND",
    "name": "Masterful extraction",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/a36d80e10e1335d0f933ab3f550c03c71dd40e11.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/a36d80e10e1335d0f933ab3f550c03c71dd40e11.jpg",
+   "hidden": true
   },
   {
    "key": "EXPLO_GETBOSSRUNE_THIRD",
    "name": "Artful extraction",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6b9bd4007fc2d4e43b929f004f5a57fbc5d2835e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6b9bd4007fc2d4e43b929f004f5a57fbc5d2835e.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_AXE_KILL_WWOLF",
@@ -529,13 +540,15 @@
    "key": "FEAT_COSTUME_REQUIRED",
    "name": "The cowl does not make the monk",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/eb7b6de67826a36b03a01b173d295d363ec2daa4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/eb7b6de67826a36b03a01b173d295d363ec2daa4.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_DEATH_LOST_100_CELLS",
    "name": "Ohhhhhh! That hurt!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/b3db962f5d72d6c4eab9a0b0a754462509ea5e87.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/b3db962f5d72d6c4eab9a0b0a754462509ea5e87.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_DEBT",
@@ -548,25 +561,29 @@
    "key": "FEAT_ENDGAME_BOSSRUNE_1",
    "name": "Up, Guards, and at them again!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/81df33c2b65fba0aa3dedf7a02d015245b0050db.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/81df33c2b65fba0aa3dedf7a02d015245b0050db.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_ENDGAME_BOSSRUNE_2",
    "name": "Finished, without fear.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/cdaaf22a606b42ea755271fa7af553e46bc3896e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/cdaaf22a606b42ea755271fa7af553e46bc3896e.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_ENDGAME_BOSSRUNE_3",
    "name": "Harder Better Faster Stronger",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/754e88ddfb53cfe2bd274c264b248b7aa8da0540.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/754e88ddfb53cfe2bd274c264b248b7aa8da0540.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_ENDGAME_BOSSRUNE_4",
    "name": "Let's get down to the nitty gritty...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6beeb09405bb751ef7054d0823bf73afb4e671cb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6beeb09405bb751ef7054d0823bf73afb4e671cb.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_ENDGAME_NOKILL_MUSHROOM_BOI",
@@ -579,13 +596,15 @@
    "key": "FEAT_ENDGAME_STARTWEAPON",
    "name": "What? There's nothing wrong with these...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/13613c1ddaa4face7b33463fb619b8dd8b573ea3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/13613c1ddaa4face7b33463fb619b8dd8b573ea3.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_EXPLODE_MUSHROOM_BOI",
    "name": "Bound for Hell",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/1ba2e08ce6b5676794eaf64d9ea822789e2acca8.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/1ba2e08ce6b5676794eaf64d9ea822789e2acca8.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_FINISHLEVEL_NOLAUNCHER",
@@ -598,7 +617,8 @@
    "key": "FEAT_FLYINGSWORD_JEALOUSY",
    "name": "Me, jealous?",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/9f9011af101063c67a3c9bf862a97864def5441e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/9f9011af101063c67a3c9bf862a97864def5441e.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_HANDHOOK_SPIKES",
@@ -611,7 +631,8 @@
    "key": "FEAT_KILLYOURSELF_ELEVATOR",
    "name": "They came from behind!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/623ca7b12b20a4cc86484348894648bee5922672.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/623ca7b12b20a4cc86484348894648bee5922672.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_KILL_PIRATE_CANNON",
@@ -645,13 +666,15 @@
    "key": "FEAT_PRISON_NOBREAK_DOOR",
    "name": "Gentleman",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/09d59e6ed39184aa50f8b6f4d3b934672c99a11a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/09d59e6ed39184aa50f8b6f4d3b934672c99a11a.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_SACRIFICE_MUSHROOM_BOI",
    "name": "Pact with the devil",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/c3309a489832ff0b9fd22d590568082e29d8ed76.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/c3309a489832ff0b9fd22d590568082e29d8ed76.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_SERVANT_COSTUME",
@@ -692,7 +715,8 @@
    "key": "FEAT_VKILLER_KILL_DOOKU",
    "name": "Does what it says on the tin",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/39d045328cf0df144998ca94122dc2b7e7363064.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/39d045328cf0df144998ca94122dc2b7e7363064.jpg",
+   "hidden": true
   },
   {
    "key": "FEAT_WRECKINGBALL_STRIKE",
@@ -719,37 +743,43 @@
    "key": "FIGHT_BEAT_AMAZONS_NODAMAGE",
    "name": "Unwavering loyalty",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/b0987f1e43f49146f02bd91759303f1f76c03368.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/b0987f1e43f49146f02bd91759303f1f76c03368.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_BEHEMOTH_NODAMAGE",
    "name": "Steam rolled.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/812814d2ce0e6bcca5114c37e7a0e73a8f56e1fb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/812814d2ce0e6bcca5114c37e7a0e73a8f56e1fb.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_BEHOLDER_NODAMAGE",
    "name": "Flawless victory.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/4a1165f22bafe5b52b6454648c467ccffd8078f7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/4a1165f22bafe5b52b6454648c467ccffd8078f7.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_BERSERK_NODAMAGE",
    "name": "The Dance",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6b0198aca19d5f42b173593403247f39346e416a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6b0198aca19d5f42b173593403247f39346e416a.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_COLLECTOR",
    "name": "I don't step on toes...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/af87fd270d381213ead871872b06275cba6d80fe.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/af87fd270d381213ead871872b06275cba6d80fe.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_COLLECTOR_NODAMAGE",
    "name": "Nothing left to... collect.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/312ecc68fd07534d80661fd795a24fd94a3974a4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/312ecc68fd07534d80661fd795a24fd94a3974a4.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_DEATH",
@@ -762,7 +792,8 @@
    "key": "FIGHT_BEAT_DEATH_NODAMAGE",
    "name": "Dodge Death!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6f09f75418d05248f700c9788df3e747374834c3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/6f09f75418d05248f700c9788df3e747374834c3.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_DOOKU",
@@ -775,13 +806,15 @@
    "key": "FIGHT_BEAT_DOOKU_BEAST",
    "name": "See you in 100 years",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/b8fa7241d6e2f1f319cb1d7d82db4794756e125c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/b8fa7241d6e2f1f319cb1d7d82db4794756e125c.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_DOOKU_NODAMAGE",
    "name": "Honorary Belmont",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/3e0529d32aae0585a9b988081e9eb6a521dad28c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/3e0529d32aae0585a9b988081e9eb6a521dad28c.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_GARDENER",
@@ -815,25 +848,29 @@
    "key": "FIGHT_BEAT_GIANT_NODAMAGE",
    "name": "David and Goliath...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/51e5672fba30c7932ee54b9d13dee4d6fafbeec4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/51e5672fba30c7932ee54b9d13dee4d6fafbeec4.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_KINGSHAND_NODAMAGE",
    "name": "Do you need... A hand?? Bahaha!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/0ff8b596c9c7dce66bd2fa7fc5fb4240ea5c9fb5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/0ff8b596c9c7dce66bd2fa7fc5fb4240ea5c9fb5.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_MAMATICK",
    "name": "I've got my eyes on you...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/4f843ae65f7e1f60911d768171bbd7011622f5af.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/4f843ae65f7e1f60911d768171bbd7011622f5af.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_MAMATICK_NODAMAGE",
    "name": "Take that, sucker!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/a37c175e74075b7f73a856a7b6229add0e7ab783.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588650/a37c175e74075b7f73a856a7b6229add0e7ab783.jpg",
+   "hidden": true
   },
   {
    "key": "FIGHT_BEAT_QUEEN",

@@ -148,4 +148,13 @@
 -}}
 {{- $tabsJS := resources.Get "js/tabs.ts" | js.Build $jsOpts | fingerprint -}}
 <script src="{{ $tabsJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $tabsJS.Data.Integrity }}"{{ end }} defer></script>
+
+{{- $achJSOpts := dict
+    "targetPath" "js/achievements.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $achJS := resources.Get "js/achievements.ts" | js.Build $achJSOpts | fingerprint -}}
+<script src="{{ $achJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $achJS.Data.Integrity }}"{{ end }} defer></script>
 {{ end }}
