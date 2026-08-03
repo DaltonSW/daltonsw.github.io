@@ -215,6 +215,19 @@ type Playthrough struct {
 
 func (p Playthrough) HasSessions() bool { return len(p.Sessions) > 0 }
 
+// LatestDate is the most recent date this playthrough is known to have
+// touched — the last session's end (or start, if that session is still
+// open), or the flat started/finished pair for an entry that predates
+// sessions entirely. Used to tell whether freshly fetched provider activity
+// is already reflected here or represents a session nothing has logged yet.
+func (p Playthrough) LatestDate() string {
+	if p.HasSessions() {
+		last := p.Sessions[len(p.Sessions)-1]
+		return firstNonEmpty(last.Finished, last.Started)
+	}
+	return firstNonEmpty(p.Finished, p.Started)
+}
+
 // IsOpen reports whether this playthrough (or, if it has sessions, its most
 // recent session) has a blank `finished` field.
 func (p Playthrough) IsOpen() bool {

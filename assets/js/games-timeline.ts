@@ -21,20 +21,13 @@ function toTime(value: string | number | Date): number {
 
 const daySpan = 1000 * 60 * 60 * 24;
 
-// How far outside a window a game still counts as "near" it, as a fraction of
-// that window's own span — so the buffer scales with zoom level instead of
-// being a fixed number of days.
+// Buffer around a window for counting a game as "near" it, as a fraction of the window's span.
 const NEARBY_PADDING_RATIO = 0.5;
 
-// Absolute cap on the padding above. Without this, zooming out to view years
-// of history inflates the ratio-based padding to years wide too, pulling in
-// groups whose items sit nowhere near the actual viewport and leaving their
-// rows visibly empty.
+// Cap on the ratio-based padding so zooming out to years of history doesn't pull in far-off groups.
 const MAX_PADDING_DAYS = 60;
 
-// Default width of the initial view. Without this, the timeline would default
-// to fitting the *entire* history, which becomes a useless, tiny-barred mess
-// after years of logged games — so default to a recent slice instead.
+// Initial view width; without a default it'd fit the entire multi-year history at once.
 const DEFAULT_WINDOW_DAYS = 180;
 
 function visibleGroupIds(
@@ -74,17 +67,12 @@ function main(): void {
 
   root.replaceChildren();
 
-  // Passed as options.start/end (rather than setWindow() after construction)
-  // because vis-timeline auto-fits to the full item range on its own initial
-  // draw when no start/end is given, which would silently override a
-  // post-construction setWindow() call.
+  // Set via options.start/end, not a post-construction setWindow() — vis-timeline auto-fits
+  // to the full item range on its initial draw and would silently override that call.
   const initialEnd = domainEnd;
   const initialStart = Math.max(domainStart, initialEnd - daySpan * DEFAULT_WINDOW_DAYS);
 
-  // Clamp panning/zooming so the timeline can't scroll into empty space
-  // before the earliest logged activity or past today. A couple weeks of
-  // buffer on each edge keeps "today" from sitting flush against the right
-  // edge of the view.
+  // Clamp panning to the data range, with a two-week buffer so "today" isn't flush against the edge.
   const minDate = new Date(domainStart - daySpan * 14);
   const maxDate = new Date(Date.now() + daySpan * 14);
 
@@ -92,6 +80,7 @@ function main(): void {
     editable: false,
     selectable: true,
     stack: false,
+    zoomable: false,
     zoomMin: daySpan * 30,
     zoomMax: Math.round(domainSpan * 1.2),
     start: initialStart,
@@ -100,14 +89,10 @@ function main(): void {
     max: maxDate,
   });
 
-  // vis-timeline's zoom handler checks the legacy, non-standard
-  // event.wheelDelta property before the modern deltaY — and Chromium
-  // derives wheelDelta from the horizontal delta when there's no vertical
-  // motion. So a pure horizontal mouse-wheel notch still reads as a zoom
-  // tick. Intercept horizontal-dominant wheel gestures in the capture
-  // phase (before they reach vis-timeline's own listeners) and pan the
-  // window manually instead. Vertical-dominant scrolling is left alone
-  // and still zooms as before.
+  // zoomable: false disables vis-timeline's wheel/pinch zoom (the +/- buttons below call
+  // zoomIn/zoomOut directly instead). But Chromium derives the legacy wheelDelta from a pure
+  // horizontal scroll, which still hits vis-timeline's disabled zoom path oddly — so intercept
+  // horizontal-dominant wheel events here and pan manually; vertical scrolling passes through untouched.
   const PAN_WHEEL_DIVISOR = 2400; // matches vis-timeline's own horizontalScroll formula (delta/120 * span/20)
 
   root.addEventListener(
@@ -149,6 +134,24 @@ function main(): void {
     todayBtn.hidden = false;
     todayBtn.addEventListener("click", () => {
       timeline.moveTo(new Date());
+    });
+  }
+
+  const ZOOM_STEP = 0.2;
+
+  const zoomInBtn = document.getElementById("games-timeline-zoom-in");
+  if (zoomInBtn) {
+    zoomInBtn.hidden = false;
+    zoomInBtn.addEventListener("click", () => {
+      timeline.zoomIn(ZOOM_STEP);
+    });
+  }
+
+  const zoomOutBtn = document.getElementById("games-timeline-zoom-out");
+  if (zoomOutBtn) {
+    zoomOutBtn.hidden = false;
+    zoomOutBtn.addEventListener("click", () => {
+      timeline.zoomOut(ZOOM_STEP);
     });
   }
 

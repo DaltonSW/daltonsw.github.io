@@ -8,5 +8,5 @@ cascade:
     publishResources: false
 ---
 
-A running log of what I'm playing and what I've finished — newest first. Ratings and reviews get
+A running log of what I'm playing and what I've finished - newest first. Ratings and reviews get
 filled in once I wrap something up.

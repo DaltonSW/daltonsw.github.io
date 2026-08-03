@@ -1,7 +1,8 @@
 ---
 title: aocli
-tagline: "Advent of Code from your terminal — fast, efficient, and pretty."
+tagline: "Advent of Code from your terminal - fast, efficient, and pretty."
 status: stable
+category: main
 date: 2024-09-12
 repo: https://github.com/DaltonSW/aocgo
 links:

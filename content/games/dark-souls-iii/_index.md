@@ -14,5 +14,5 @@ cascade:
     games: ["dark-souls-iii"]
 ---
 
-First tried at a roommate's request in May 2018 — bounced off it after Iudex Gundyr.
+First tried at a roommate's request in May 2018 - bounced off it after Iudex Gundyr.
 Came back to it properly three years later and finished it in a fortnight.

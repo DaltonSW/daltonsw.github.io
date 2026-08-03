@@ -370,9 +370,13 @@ func orDash(s string) string {
 
 // SessionForm prompts for a new session's date range and an optional title,
 // for a session worth telling apart from the others on the playthrough bar
-// (a DLC release, "wrapping up achievements", and so on).
-func SessionForm() (started, finished, title string, err error) {
-	started = today()
+// (a DLC release, "wrapping up achievements", and so on). defaultStarted and
+// defaultFinished prefill the two date fields — the manual "log a session"
+// flow defaults to today/ongoing, while a nudge triggered by a provider
+// refresh prefills both with the activity date that triggered it, since
+// that's all a playtime/last-unlock signal can tell you.
+func SessionForm(defaultStarted, defaultFinished string) (started, finished, title string, err error) {
+	started, finished = defaultStarted, defaultFinished
 	err = huh.NewForm(
 		huh.NewGroup(
 			huh.NewInput().Title("Session started (YYYY-MM-DD)").Value(&started).Validate(validateDate(true)),

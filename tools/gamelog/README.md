@@ -342,7 +342,31 @@ run the command directly to refresh a game or backfill one that predates it.
 
 ```
 go run . achievements spelunky
+go run . achievements --all    # refresh every game with a provider link
 ```
+
+`--all` is the same fetch-and-merge call as the single-slug path, just looped over every game
+`ListGames` returns that has a provider link — it inherits the merge-only guarantees below rather
+than needing its own, which is what makes it safe to point an unattended, scheduled run at.
+
+### Closing the gap with the timeline
+
+Everything above only touches `archive/` and `achievement-summary.yaml` — never
+`playthroughs.yaml`. That matters because the timeline's visible bars are built from
+`playthroughs.yaml` alone (see `layouts/partials/playthrough-entries.html`); `achievement-summary.yaml`
+only feeds a game's `last_played` sort key. Refreshing a game's achievements can therefore leave the
+archive fully up to date while the timeline shows nothing new — the fix isn't a rebuild, it's that
+nobody logged a session for the activity that just got captured.
+
+For the one-shot statuses (`session-based`/`multiplayer`/`software` — see above), where the whole
+playthrough record *is* its `sessions:` list, the single-slug `gamelog achievements <slug>` closes
+that gap itself: if the refresh pulled in playtime or an unlock date past what's already logged, it
+offers to log a session right then, prefilled with the activity date the provider reported (that's
+all a playtime/last-unlock signal can tell you — a real multi-day range is still yours to correct).
+Declining leaves nothing written. This only fires for a game with exactly one playthrough entry; a
+rarer multi-platform one-shot game is left to "Log a new session" by hand, same as before.
+`gamelog achievements --all` never prompts — it's meant for unattended runs, so a one-shot game
+refreshed that way still needs a manual session log afterward.
 
 The archive itself is deliberately not reachable from templates — see `gamelog project` below for
 how a slice of it (achievement counts) reaches the site without that changing.

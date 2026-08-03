@@ -344,15 +344,15 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 }
 .games-timeline__fallback { color: var(--dim); padding: 1rem; margin: 0; }
 
-.games-timeline__toolbar { display: flex; justify-content: flex-end; margin-bottom: 0.5rem; }
-.games-timeline__today-btn {
+.games-timeline__toolbar { display: flex; justify-content: flex-end; gap: 0.4rem; margin-bottom: 0.5rem; }
+.games-timeline__toolbar-btn {
   font-family: $font-ui; font-size: 0.78rem; color: var(--dim);
   background: none; border: 1px solid var(--stroke); border-radius: 6px;
   padding: 0.15rem 0.5rem; cursor: pointer;
 }
-.games-timeline__today-btn::before { content: "["; color: var(--stroke); }
-.games-timeline__today-btn::after  { content: "]"; color: var(--stroke); }
-.games-timeline__today-btn:hover { color: var(--accent); border-color: var(--accent); }
+.games-timeline__toolbar-btn::before { content: "["; color: var(--stroke); }
+.games-timeline__toolbar-btn::after  { content: "]"; color: var(--stroke); }
+.games-timeline__toolbar-btn:hover { color: var(--accent); border-color: var(--accent); }
 
 /* vis-timeline ships its own stylesheet; these overrides are scoped under
    .games-timeline so they win regardless of link order, and reuse the same

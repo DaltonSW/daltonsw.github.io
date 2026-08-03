@@ -31,6 +31,8 @@ Usage:
   gamelog achievements [slug]
                              capture the full unlock history into
                              archive/<provider>/<id>.json (re-run to refresh)
+  gamelog achievements --all refresh every game that has a provider link,
+                             instead of one slug at a time
   gamelog project             regenerate every game's achievement-summary.yaml
                              from the archive already on disk (no API calls)
   gamelog stale [flags]       walk through "playing" Steam games that have
@@ -341,12 +343,19 @@ func doNewSession(pf *PlaythroughsFile, playthroughs []Playthrough) error {
 	if err != nil {
 		return err
 	}
-	started, finished, title, err := SessionForm()
+	started, finished, title, err := SessionForm(today(), "")
 	if err != nil {
 		return err
 	}
+	return addSessionAndWrite(pf, idx, playthroughs[idx].HasSessions(), started, finished, title)
+}
 
-	hadSessions := playthroughs[idx].HasSessions()
+// addSessionAndWrite logs a session against an existing playthrough and
+// writes it. hadSessions must reflect the entry's state *before* this call —
+// converting a flat started/finished pair into a sessions list is this
+// call's own doing, not data loss, so the check needs to know whether that
+// conversion is about to happen.
+func addSessionAndWrite(pf *PlaythroughsFile, idx int, hadSessions bool, started, finished, title string) error {
 	if err := pf.AddSession(idx, started, finished, title); err != nil {
 		return err
 	}

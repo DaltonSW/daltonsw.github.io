@@ -2,10 +2,10 @@
 <h1>{{ .Title }}</h1>
 {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
-{{- $labels := dict "stable" "Stable" "wip" "In Progress" "unfinished" "Unfinished" }}
-{{- range $status := slice "stable" "wip" "unfinished" }}
-  {{- with where $.Pages "Params.status" $status }}
-  <h2>{{ index $labels $status }}</h2>
+{{- $labels := dict "main" "Main Projects" "setcount" "SetCount" "gomodule" "Go Modules" "jam" "Game Jams" }}
+{{- range $category := slice "main" "setcount" "gomodule" "jam" }}
+  {{- with where $.Pages "Params.category" $category }}
+  <h2>{{ index $labels $category }}</h2>
   <div class="card-grid">
     {{- range sort . "Weight" }}
     <a class="entry" href="{{ .RelPermalink }}">

@@ -2,6 +2,7 @@
 title: campfire
 tagline: "A cozy companion for tailing and filtering log files."
 status: stable
+category: main
 date: 2025-08-07
 repo: https://github.com/DaltonSW/campfire
 links:

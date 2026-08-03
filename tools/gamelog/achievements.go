@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/charmbracelet/huh"
 	"gopkg.in/yaml.v3"
 )
 
@@ -619,6 +620,10 @@ func saveAchievements(ctx context.Context, archiveDir, title string, links []pro
 // runAchievements fetches (or refreshes) the achievement history for one game
 // that already exists in content/games.
 func runAchievements(args []string) error {
+	if len(args) > 0 && args[0] == "--all" {
+		return runAchievementsAll()
+	}
+
 	gamesDir, err := findGamesDir()
 	if err != nil {
 		return err
@@ -673,6 +678,119 @@ func runAchievements(args []string) error {
 	if _, err := writeAchievementSummary(archiveDir, filepath.Dir(summary.Path), links); err != nil {
 		fmt.Fprintf(os.Stderr, "  (achievement summary not updated: %v)\n", err)
 	}
+
+	if isOneShot(doc.FM.Status) {
+		if err := maybePromptNewSession(filepath.Dir(summary.Path), summary.Title, saved); err != nil {
+			fmt.Fprintf(os.Stderr, "  (session check skipped: %v)\n", err)
+		}
+	}
+	return nil
+}
+
+// maybePromptNewSession closes the gap this command otherwise leaves open:
+// the timeline's visible bars come only from playthroughs.yaml, which
+// refreshing provider data never touches on its own, so a burst of new play
+// on a one-shot game (session-based/multiplayer/software — the statuses
+// whose entire record *is* its sessions list) can sit invisible until
+// someone remembers to log a session by hand. If this refresh pulled in
+// activity past what's already logged, offer to log it right now instead.
+//
+// Only handles the unambiguous case: exactly one playthrough entry. A game
+// with none yet, or more than one (a rare multi-platform one-shot), is left
+// to "Log a new session" by hand rather than guessing which entry a new
+// session belongs to.
+func maybePromptNewSession(gameDir, title string, saved []savedRecord) error {
+	pf, err := LoadPlaythroughs(gameDir)
+	if err != nil {
+		return err
+	}
+	views := pf.Views()
+	if len(views) != 1 {
+		return nil
+	}
+
+	var latest string
+	for _, s := range saved {
+		for _, d := range []string{s.Record.LastPlayed, s.Record.Last} {
+			if d > latest {
+				latest = d
+			}
+		}
+	}
+	known := views[0].LatestDate()
+	if latest == "" || latest <= known {
+		return nil
+	}
+
+	var log bool
+	if err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewConfirm().
+				Title(fmt.Sprintf("%s: activity through %s isn't logged yet (last session %s). Log a session now?",
+					title, latest, orDash(known))).
+				Value(&log),
+		),
+	).Run(); err != nil {
+		return err
+	}
+	if !log {
+		return nil
+	}
+
+	started, finished, sessTitle, err := SessionForm(latest, latest)
+	if err != nil {
+		return err
+	}
+	return addSessionAndWrite(pf, 0, views[0].HasSessions(), started, finished, sessTitle)
+}
+
+// runAchievementsAll refreshes every game that has a provider link, in the
+// order ListGames returns them. It's the entry point a scheduled, unattended
+// run would call instead of naming one slug at a time — the loop is nothing
+// more than saveAchievements/writeAchievementSummary called per game, so it
+// inherits the same merge-only, never-lose-data guarantees as the one-game
+// path rather than needing its own.
+func runAchievementsAll() error {
+	gamesDir, err := findGamesDir()
+	if err != nil {
+		return err
+	}
+	games, err := ListGames(gamesDir)
+	if err != nil {
+		return err
+	}
+	archiveDir := findArchiveDir(gamesDir)
+	creds := loadCredentials()
+
+	var refreshed, skipped, failed int
+	for _, g := range games {
+		links := g.ProviderLinks()
+		if len(links) == 0 {
+			skipped++
+			continue
+		}
+
+		fmt.Println(g.Title)
+		saved, err := saveAchievements(context.Background(), archiveDir, g.Title, links, creds)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "  %v\n", err)
+			failed++
+			continue
+		}
+		for _, s := range saved {
+			p := s.Record
+			if p.LastError != "" {
+				fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Provider, p.LastError)
+			} else {
+				fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Provider, p.Unlocked, p.Total, p.First, p.Last)
+			}
+		}
+		if _, err := writeAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {
+			fmt.Fprintf(os.Stderr, "  (achievement summary not updated: %v)\n", err)
+		}
+		refreshed++
+	}
+	fmt.Printf("%d refreshed, %d with no provider link, %d failed\n", refreshed, skipped, failed)
 	return nil
 }
 

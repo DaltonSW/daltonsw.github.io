@@ -157,7 +157,9 @@
 <p class="hero__prompt games-timeline__prompt">dalton@dog:~$ ps games{{ with $sinceYear }} --since={{ . }}{{ end }}</p>
 <section class="games-timeline" aria-label="Gameplay history timeline">
   <div class="games-timeline__toolbar">
-    <button type="button" id="games-timeline-today" class="games-timeline__today-btn" hidden>today</button>
+    <button type="button" id="games-timeline-zoom-out" class="games-timeline__toolbar-btn" hidden>−</button>
+    <button type="button" id="games-timeline-zoom-in" class="games-timeline__toolbar-btn" hidden>+</button>
+    <button type="button" id="games-timeline-today" class="games-timeline__toolbar-btn" hidden>today</button>
   </div>
   <div id="games-timeline-root" class="games-timeline__root">
     <p class="games-timeline__fallback">Enable JavaScript to see the visual timeline — the full list is below.</p>
