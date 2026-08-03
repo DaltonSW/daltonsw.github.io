@@ -9,3 +9,21 @@ providers:
       total: 45
       playtime_mins: 455
       last_played: "2023-12-23"
+earned:
+    - name: Tower defense 101
+      description: Complete all of the tutorials
+      date: "2023-11-26T22:01:09-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/69ea4b9cb08ab1c0cb281afafa1c69aba254a0d9.jpg
+      provider: steam
+      platform: PC
+    - name: Ash generator
+      date: "2023-12-01T22:30:40-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/858cc4cc0fc5128ef1093622d4ebb702c22ec2aa.jpg
+      provider: steam
+      platform: PC
+    - name: Responsibilities taken
+      description: Get 3 stars on first 8 levels of Stage 1
+      date: "2023-12-06T21:21:55-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/937310/9f403024834bf6df9121e819f72695c2598b5c7d.jpg
+      provider: steam
+      platform: PC

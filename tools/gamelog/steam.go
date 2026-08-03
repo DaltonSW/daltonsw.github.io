@@ -18,6 +18,7 @@ var (
 	steamPlayerAchievementsURL = "https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/"
 	steamOwnedGamesURL         = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/"
 	steamResolveVanityURL      = "https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/"
+	steamSchemaForGameURL      = "https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/"
 )
 
 // SteamClient talks to the Steam Web API.
@@ -182,6 +183,58 @@ func (c *SteamClient) GetPlayerAchievements(ctx context.Context, appID string) (
 		Error:        parsed.PlayerStats.Error,
 		Raw:          json.RawMessage(body),
 	}, nil
+}
+
+// SteamSchemaAchievement is one achievement's static definition — not
+// player-specific, so it carries the icon URLs GetPlayerAchievements doesn't:
+// Icon is shown once unlocked, IconGray beforehand.
+type SteamSchemaAchievement struct {
+	APIName  string `json:"name"`
+	Icon     string `json:"icon"`
+	IconGray string `json:"icongray"`
+}
+
+type steamSchemaResponse struct {
+	Game struct {
+		AvailableGameStats struct {
+			Achievements []SteamSchemaAchievement `json:"achievements"`
+		} `json:"availableGameStats"`
+	} `json:"game"`
+}
+
+// GetSchemaForGame fetches one app's static achievement definitions, keyed by
+// apiname. Used only for icon URLs — names/descriptions already come from
+// GetPlayerAchievements with "l=english" set. Not player-specific: no
+// SteamID needed, and it works even against a private profile.
+func (c *SteamClient) GetSchemaForGame(ctx context.Context, appID string) ([]SteamSchemaAchievement, error) {
+	q := url.Values{}
+	q.Set("key", c.APIKey)
+	q.Set("appid", appID)
+	q.Set("l", "english")
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, steamSchemaForGameURL+"?"+q.Encode(), nil)
+	if err != nil {
+		return nil, err
+	}
+	resp, err := c.httpClient().Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("steam: schema request for appid %s: %w", appID, err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("steam: reading schema response for appid %s: %w", appID, err)
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("steam: schema for appid %s: unexpected status %s", appID, resp.Status)
+	}
+
+	var parsed steamSchemaResponse
+	if err := json.Unmarshal(body, &parsed); err != nil {
+		return nil, fmt.Errorf("steam: decoding schema response for appid %s: %w", appID, err)
+	}
+	return parsed.Game.AvailableGameStats.Achievements, nil
 }
 
 // SteamOwnedGame is one entry in the user's library. LastPlayed is a Unix

@@ -9,3 +9,52 @@ providers:
       total: 13
       playtime_mins: 376
       last_played: "2022-10-04"
+earned:
+    - name: The GOAT?
+      description: Player dies and passes 3 club tutorial
+      date: "2022-09-24T22:33:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/cdf4b7861e3a351ebdc3d9c33804a74db0619a66.jpg
+      provider: steam
+      platform: PC
+    - name: You're on your own
+      description: Player passes the golf purgatory tutorial
+      date: "2022-09-24T22:33:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/819b5a4ad6af5a89508191ebf010273c50b283bf.jpg
+      provider: steam
+      platform: PC
+    - name: The Scotsman
+      description: Beat the Scotsman boss fight
+      date: "2022-09-24T22:33:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/5806acba2a035c21ba9da76fcbf96a11dc9c382b.jpg
+      provider: steam
+      platform: PC
+    - name: Front 9
+      description: First time beating 9 holes
+      date: "2022-09-25T09:05:10-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/b5b5818b959791385ae885896c9bcc6d8f8c64cc.jpg
+      provider: steam
+      platform: PC
+    - name: The Explorer
+      description: Beat the Explorer boss fight
+      date: "2022-09-25T09:05:10-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/f4c2a33c8f906626912006144940b145e52137a5.jpg
+      provider: steam
+      platform: PC
+    - name: The Forgotten
+      description: Beat the Forgotten boss fight
+      date: "2022-09-25T22:12:15-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/08d12b94b25c73e966e05acdc3a81a5521d17e8e.jpg
+      provider: steam
+      platform: PC
+    - name: The Greenskeeper
+      description: Beat the Greenskeeper
+      date: "2022-10-04T19:17:53-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/3a43657be91c2f4fefc4dea392bc6d70b58cafba.jpg
+      provider: steam
+      platform: PC
+    - name: Back 9
+      description: Finished all 18
+      date: "2022-10-04T19:17:53-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/eb2b3e951a2026b1d21718bcf34b93e7684be1c6.jpg
+      provider: steam
+      platform: PC

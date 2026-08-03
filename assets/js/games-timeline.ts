@@ -31,6 +31,12 @@ const MAX_PADDING_DAYS = 60;
 // Initial view width; without a default it'd fit the entire multi-year history at once.
 const DEFAULT_WINDOW_DAYS = 180;
 
+// Trailing delay before re-filtering rows, so a pan gesture never reflows mid-swipe.
+const REGROUP_DELAY_MS = 200;
+
+// Ceiling on the blank space reserved above the first row (see setPadTop).
+const MAX_PAD_TOP = 96;
+
 // Gap beyond which two sessions of the same playthrough no longer bridge into one bar.
 const CONNECTOR_GAP_DAYS = 180;
 
@@ -181,7 +187,10 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     // Defaults to false — without it, overflow content just clips with no scroll.
     verticalScroll: true,
     locale: "en",
-    orientation: { axis: "top" },
+    // item: "top" is load-bearing: the default "bottom" makes vis-timeline shift its own
+    // scrollTop by the height delta on every row-set change, which is most of the
+    // vertical jumping when panning and silently overrides repin().
+    orientation: { axis: "top", item: "top" },
     tooltip: {
       followMouse: true,
       overflowMethod: "cap",
@@ -223,6 +232,12 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
       userScrolled = true;
       const max = scrollPanel.scrollHeight - scrollPanel.clientHeight;
       scrollPanel.scrollTop = Math.min(Math.max(scrollPanel.scrollTop + event.deltaY, 0), max);
+      // Scrolling up to the very top is a deliberate "show me the first row", so give
+      // back any reserved space rather than leaving a blank strip above it.
+      if (event.deltaY < 0 && scrollPanel.scrollTop === 0) setPadTop(0);
+      // Scrolling vertically *is* re-aiming — without this, repin() would fight it
+      // and snap the view straight back.
+      captureAnchor();
     },
     { capture: true, passive: false },
   );
@@ -253,18 +268,152 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     refreshFades = (): void => requestAnimationFrame(updateFades);
   }
 
+  // Group ids currently drawn, in render order — .vis-label and .vis-group children
+  // line up with this, which is how a row's on-screen position gets measured.
+  let appliedOrder: unknown[] = [];
+  let hoveredGroupId: unknown = null;
+  let rowsLocked = false;
+
+  // Label column and chart lane for one row — same index into both, since
+  // vis-timeline renders each in group order.
+  const rowsAt = (index: number): HTMLElement[] =>
+    [".vis-labelset > .vis-label", ".vis-foreground > .vis-group"]
+      .map((selector) => root.querySelectorAll<HTMLElement>(selector)[index])
+      .filter((element): element is HTMLElement => Boolean(element));
+
+  // Measured for anchoring: the label column is the side with native scroll.
+  const labelAt = (index: number): HTMLElement | undefined =>
+    root.querySelectorAll<HTMLElement>(".vis-labelset > .vis-label")[index];
+
+  // Rows that vanish are usually *above* the tracked one (newest-first order, panning
+  // backwards), and at scrollTop 0 there's no scroll left to give back — so reserve
+  // space above the first row to scroll into. Self-heals once a regroup leaves slack.
+  const PAD_TARGETS = [".vis-labelset", ".vis-foreground", ".vis-itemset > .vis-background", ".vis-axis"];
+  let padTop = 0;
+  function setPadTop(value: number): void {
+    padTop = Math.min(Math.max(Math.round(value), 0), MAX_PAD_TOP);
+    for (const selector of PAD_TARGETS) {
+      const el = root.querySelector<HTMLElement>(selector);
+      if (el) el.style.paddingTop = `${padTop}px`;
+    }
+  }
+
+  // Highlighting the label and the lane together is what makes one game readable
+  // straight across the chart.
+  function paintHoveredRow(): void {
+    for (const stale of root.querySelectorAll(".games-timeline-row--hover")) {
+      stale.classList.remove("games-timeline-row--hover");
+    }
+    const index = appliedOrder.indexOf(hoveredGroupId);
+    if (hoveredGroupId === null || index === -1) return;
+    for (const row of rowsAt(index)) row.classList.add("games-timeline-row--hover");
+  }
+
+  const rowScreenY = (id: unknown): number | null => {
+    const label = labelAt(appliedOrder.indexOf(id));
+    return label ? label.getBoundingClientRect().top : null;
+  };
+
+  // The visitor's frame of reference — the row under the cursor and where it sits now,
+  // else whatever's nearest the middle. Re-captured only on pointer movement and
+  // vertical scrolling, i.e. "this is where I'm looking"; held across everything else.
+  let anchor: { id: unknown; screenY: number } | null = null;
+  function captureAnchor(): void {
+    let id = hoveredGroupId;
+    if (id === null && scrollPanel) {
+      const middle = scrollPanel.getBoundingClientRect().top + scrollPanel.clientHeight / 2;
+      let bestDistance = Infinity;
+      for (const candidate of appliedOrder) {
+        const y = rowScreenY(candidate);
+        if (y === null) continue;
+        const distance = Math.abs(y - middle);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          id = candidate;
+        }
+      }
+    }
+    const screenY = id === null ? null : rowScreenY(id);
+    anchor = screenY === null ? null : { id, screenY };
+  }
+
+  // Re-pinned after every redraw, not just on regroup: a group's height tracks the items
+  // currently in range, so panning alone reflows every row below it.
+  let repinning = false;
+  function repin(): void {
+    if (!scrollPanel || !anchor || repinning) return;
+    const current = rowScreenY(anchor.id);
+    if (current === null) {
+      // The tracked row has panned out of range, so there's nothing left to hold in
+      // place — hand back the reserved space now rather than leaving a blank strip.
+      anchor = null;
+      if (padTop > 0) {
+        setPadTop(0);
+        scrollPanel.dispatchEvent(new Event("scroll"));
+        refreshFades();
+      }
+      return;
+    }
+    const delta = anchor.screenY - current;
+    if (Math.abs(delta) < 1) return;
+
+    repinning = true;
+    let desired = scrollPanel.scrollTop - delta;
+    if (desired < 0) {
+      setPadTop(padTop - desired);
+      desired = 0;
+    } else if (padTop > 0) {
+      const shrink = Math.min(padTop, desired);
+      setPadTop(padTop - shrink);
+      desired -= shrink;
+    }
+    const max = Math.max(scrollPanel.scrollHeight - scrollPanel.clientHeight, 0);
+    scrollPanel.scrollTop = Math.min(Math.max(desired, 0), max);
+    // Only the label column scrolls natively; vis-timeline drives the lanes off this
+    // event, so fire it by hand to keep both columns in step within this frame.
+    scrollPanel.dispatchEvent(new Event("scroll"));
+    repinning = false;
+    refreshFades();
+  }
+
   // setGroups can otherwise leave the chart scrolled to the bottom on first render
   // (including from vis-timeline's own rangechanged firing right after construction)
   // — re-pin to the top until the visitor scrolls it themselves.
   function applyVisibleGroups(range: { start: Date; end: Date }): void {
+    if (rowsLocked) return;
     const ids = visibleGroupIds(items, {
       start: range.start.getTime(),
       end: range.end.getTime(),
     });
+
+    const nextOrder = groups.map((group) => group.id).filter((id) => ids.has(id));
+    // Panning within a stretch where the same games are active changes nothing —
+    // skip the re-render rather than tearing the chart down and rebuilding it.
+    if (
+      nextOrder.length === appliedOrder.length &&
+      nextOrder.every((id, index) => id === appliedOrder[index])
+    ) {
+      return;
+    }
+
+    // Anchoring happens in repin(), driven off the redraw below, so it covers row
+    // heights changing as well as rows coming and going.
+    const hadAnchor = anchor !== null;
     timeline.setGroups(
       groups.map((group) => ({ ...group, visible: ids.has(group.id) })),
     );
-    if (scrollPanel && !userScrolled) {
+    appliedOrder = nextOrder;
+    // Forces the layout synchronously; vis-timeline would otherwise redraw a frame later.
+    timeline.redraw();
+    paintHoveredRow();
+    repin();
+    // So keyboard/toolbar-driven panning has something to hold onto before the
+    // visitor has ever moved the pointer over the chart.
+    if (!anchor) captureAnchor();
+
+    // Only when there was no row to anchor to (first render) — otherwise this would
+    // undo the restore above.
+    if (scrollPanel && !userScrolled && !hadAnchor) {
       requestAnimationFrame(() => {
         scrollPanel.scrollTop = 0;
         refreshFades();
@@ -276,9 +425,47 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
 
   applyVisibleGroups({ start: new Date(initialStart), end: new Date(initialEnd) });
 
+  // Every wheel-pan setWindow() emits rangechanged, so filtering on it directly reflowed
+  // rows dozens of times per swipe. Trailing-only, so the set settles once panning stops.
+  let regroupTimer: number | undefined;
   timeline.on("rangechanged", () => {
-    applyVisibleGroups(timeline.getWindow());
+    window.clearTimeout(regroupTimer);
+    regroupTimer = window.setTimeout(
+      () => applyVisibleGroups(timeline.getWindow()),
+      REGROUP_DELAY_MS,
+    );
   });
+
+  // mousemove, not vis-timeline's mouseOver: mouseOver also fires when a regroup slides
+  // a different row under a stationary cursor, which kept re-pointing the anchor at
+  // whatever had just moved underneath. A wheel-pan moves no pointer, so this holds.
+  root.addEventListener("mousemove", (event: MouseEvent) => {
+    const group = timeline.getEventProperties(event).group ?? null;
+    if (group !== hoveredGroupId) {
+      hoveredGroupId = group;
+      paintHoveredRow();
+    }
+    // Pointer movement is the visitor re-aiming, so the anchor follows it.
+    captureAnchor();
+  });
+
+  // Anything vis-timeline redraws — panning, zooming, a regroup — can move rows.
+  timeline.on("changed", repin);
+  root.addEventListener("mouseleave", () => {
+    hoveredGroupId = null;
+    paintHoveredRow();
+  });
+
+  const lockBtn = document.getElementById("games-timeline-lock");
+  if (lockBtn) {
+    lockBtn.hidden = false;
+    lockBtn.addEventListener("click", () => {
+      rowsLocked = !rowsLocked;
+      lockBtn.setAttribute("aria-pressed", String(rowsLocked));
+      lockBtn.classList.toggle("games-timeline__toolbar-btn--active", rowsLocked);
+      if (!rowsLocked) applyVisibleGroups(timeline.getWindow());
+    });
+  }
 
   const todayBtn = document.getElementById("games-timeline-today");
   if (todayBtn) {

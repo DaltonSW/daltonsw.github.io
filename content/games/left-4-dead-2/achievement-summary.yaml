@@ -9,3 +9,40 @@ providers:
       total: 101
       playtime_mins: 536
       last_played: "2017-04-23"
+earned:
+    - name: A RIDE DENIED
+      description: Kill a Jockey within 2 seconds of it jumping on a Survivor.
+      date: "2017-03-21T17:34:44-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/b65a6518c0680448e996e2190d1ed6b00ad14935.jpg
+      provider: steam
+      platform: PC
+    - name: BACK IN THE SADDLE
+      description: As the Jockey, ride the Survivors twice in a single life.
+      date: "2017-04-08T19:24:08-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/3a038d4447457dee981281742d1e1c5dfa29b16d.jpg
+      provider: steam
+      platform: PC
+    - name: RODE HARD, PUT AWAY WET
+      description: As the Jockey, ride a Survivor and steer them into a Spitter's acid patch.
+      date: "2017-04-08T20:53:06-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/7e7d9018a52b03503ac5e3c626932fb7056a9645.jpg
+      provider: steam
+      platform: PC
+    - name: QUALIFIED RIDE
+      description: As the Jockey, ride a Survivor for more than 12 seconds.
+      date: "2017-04-08T21:21:17-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/09bb54c6930bc815b40930b228f63e897c6018b3.jpg
+      provider: steam
+      platform: PC
+    - name: GREAT EXPECTORATIONS
+      description: As the Spitter, hit every Survivor with a single acid patch.
+      date: "2017-04-23T18:22:46-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/93aa9619d54a32b082f90d64c1449673beca86bd.jpg
+      provider: steam
+      platform: PC
+    - name: ACID REFLEX
+      description: Kill a Spitter before she is able to spit.
+      date: "2017-04-23T19:24:51-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/8d94a8ffcb20fd11de547a6972bcef319fd93bf6.jpg
+      provider: steam
+      platform: PC

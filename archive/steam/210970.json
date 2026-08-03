@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Witness",
- "updated": "2026-07-26",
+ "updated": "2026-07-29",
  "id": "210970",
- "fetched": "2026-07-26",
- "last_attempt": "2026-07-26",
+ "fetched": "2026-07-29",
+ "last_attempt": "2026-07-29",
  "unlocked": 1,
  "total": 2,
  "first": "2016-02-07",
@@ -22,12 +22,14 @@
    "name": "Endgame",
    "description": "Finished.",
    "unlocked": true,
-   "date": "2016-02-07T19:17:09-06:00"
+   "date": "2016-02-07T19:17:09-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/210970/8798d84c285cb937acb7daab3d100e6d97f71f09.jpg"
   },
   {
    "key": "challenge",
    "name": "Challenge",
-   "unlocked": false
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/210970/344505a37b06acf0ce1e877f872acc91d48807dc.jpg"
   }
  ],
  "raw": {

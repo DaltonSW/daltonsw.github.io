@@ -19,12 +19,13 @@ func steamStub(t *testing.T, handler http.HandlerFunc) {
 	srv := httptest.NewServer(handler)
 	t.Cleanup(srv.Close)
 
-	oldAch, oldOwned, oldVanity := steamPlayerAchievementsURL, steamOwnedGamesURL, steamResolveVanityURL
+	oldAch, oldOwned, oldVanity, oldSchema := steamPlayerAchievementsURL, steamOwnedGamesURL, steamResolveVanityURL, steamSchemaForGameURL
 	steamPlayerAchievementsURL = srv.URL + "/achievements"
 	steamOwnedGamesURL = srv.URL + "/owned"
 	steamResolveVanityURL = srv.URL + "/vanity"
+	steamSchemaForGameURL = srv.URL + "/schema"
 	t.Cleanup(func() {
-		steamPlayerAchievementsURL, steamOwnedGamesURL, steamResolveVanityURL = oldAch, oldOwned, oldVanity
+		steamPlayerAchievementsURL, steamOwnedGamesURL, steamResolveVanityURL, steamSchemaForGameURL = oldAch, oldOwned, oldVanity, oldSchema
 	})
 }
 
@@ -138,6 +139,25 @@ func TestResolveSteamID_UnknownVanityName(t *testing.T) {
 	}
 	if !strings.Contains(err.Error(), "nobody-here") {
 		t.Errorf("error should name the failing input, got %v", err)
+	}
+}
+
+// GetSchemaForGame is the only Steam endpoint that carries icon URLs —
+// GetPlayerAchievements doesn't, even with a language set.
+func TestGetSchemaForGame_ParsesIcons(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{"game":{"gameName":"Test Game","availableGameStats":{"achievements":[
+		  {"name":"A","displayName":"Escaped","icon":"https://cdn.example/a.jpg","icongray":"https://cdn.example/a-gray.jpg"}
+		]}}}`))
+	})
+
+	c := &SteamClient{APIKey: "k"}
+	got, err := c.GetSchemaForGame(context.Background(), "1145360")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(got) != 1 || got[0].APIName != "A" || got[0].Icon != "https://cdn.example/a.jpg" {
+		t.Errorf("schema not parsed as expected: %+v", got)
 	}
 }
 

@@ -9,3 +9,524 @@ providers:
       total: 120
       playtime_mins: 891
       last_played: "2024-10-27"
+earned:
+    - name: Star Get
+      description: Win a Star Chance and regain a superstar in Exhibition or Challenge Mode.
+      date: "2024-10-25T20:33:01-05:00"
+      points: 2
+      hardcore: true
+      icon: "507476"
+      provider: retroachievements
+      platform: GameCube
+    - name: The Heart of the Mushroom Kingdom
+      description: Purchase the Lovely Heart from the shop for the first time in Challenge Mode.
+      date: "2024-10-25T20:37:40-05:00"
+      points: 3
+      hardcore: true
+      icon: "507363"
+      provider: retroachievements
+      platform: GameCube
+    - name: Because 'Daisy' is a Type of Flower, Get It?
+      description: Purchase the Pretty Flowers from the shop for the first time in Challenge Mode.
+      date: "2024-10-25T20:37:43-05:00"
+      points: 3
+      hardcore: true
+      icon: "507364"
+      provider: retroachievements
+      platform: GameCube
+    - name: Going... Going... GONE!
+      description: Hit a solo home run in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-25T20:45:04-05:00"
+      points: 5
+      hardcore: true
+      icon: "507480"
+      provider: retroachievements
+      platform: GameCube
+    - name: A Walk in the Park
+      description: Hit an Inside of the Park Home Run in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-25T20:45:36-05:00"
+      points: 25
+      hardcore: true
+      icon: "507482"
+      provider: retroachievements
+      platform: GameCube
+    - name: Mario's Fire Flower
+      description: Purchase the Red Fireball from the shop for the first time in Challenge Mode.
+      date: "2024-10-25T20:50:17-05:00"
+      points: 3
+      hardcore: true
+      icon: "507361"
+      provider: retroachievements
+      platform: GameCube
+    - name: Let's Play Baseball Every Day
+      description: Clear Challenge Mode on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-25T21:24:48-05:00"
+      points: 10
+      hardcore: true
+      icon: "507471"
+      provider: retroachievements
+      platform: GameCube
+    - name: A Toad With...Pigtails?
+      description: Unlock Toadette by clearing Challenge Mode as Peach.
+      date: "2024-10-25T21:24:52-05:00"
+      points: 5
+      hardcore: true
+      icon: "507468"
+      provider: retroachievements
+      platform: GameCube
+    - name: Bob-Omb Derby Rookie
+      description: Clear Bob-Omb Derby on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-25T21:27:59-05:00"
+      points: 3
+      hardcore: true
+      icon: "506820"
+      provider: retroachievements
+      platform: GameCube
+    - name: Bob-Omb Derby Amateur
+      description: Clear Bob-Omb Derby on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-25T21:29:15-05:00"
+      points: 4
+      hardcore: true
+      icon: "506821"
+      provider: retroachievements
+      platform: GameCube
+    - name: Bob-Omb Derby Pro
+      description: Clear Bob-Omb Derby on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-25T21:31:04-05:00"
+      points: 5
+      hardcore: true
+      icon: "506822"
+      provider: retroachievements
+      platform: GameCube
+    - name: We're Running Out of Fireworks!!!
+      description: Reach a combo of 15 in Bob-Omb Derby on Special Difficulty.
+      date: "2024-10-25T21:34:09-05:00"
+      points: 25
+      hardcore: true
+      icon: "507484"
+      provider: retroachievements
+      platform: GameCube
+    - name: Bob-Omb Derby Superstar
+      description: Beat Bowser's default high score of 3,000 in Bob-Omb Derby on Special Difficulty.
+      date: "2024-10-25T21:34:21-05:00"
+      points: 10
+      hardcore: true
+      icon: "506823"
+      provider: retroachievements
+      platform: GameCube
+    - name: Wall Ball Rookie
+      description: Clear Wall Ball on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-25T21:41:04-05:00"
+      points: 3
+      hardcore: true
+      icon: "506824"
+      provider: retroachievements
+      platform: GameCube
+    - name: Wall Ball Amateur
+      description: Clear Wall Ball on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-25T21:42:01-05:00"
+      points: 4
+      hardcore: true
+      icon: "506825"
+      provider: retroachievements
+      platform: GameCube
+    - name: Luigi's Fire Flower
+      description: Purchase the Green Fireball from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T07:55:29-05:00"
+      points: 3
+      hardcore: true
+      icon: "507362"
+      provider: retroachievements
+      platform: GameCube
+    - name: Yoshi's Story
+      description: Purchase the Egg from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T08:52:22-05:00"
+      points: 3
+      hardcore: true
+      icon: "507367"
+      provider: retroachievements
+      platform: GameCube
+    - name: Let's Play Baseball Every Night
+      description: Clear Challenge Mode on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-26T09:08:06-05:00"
+      points: 10
+      hardcore: true
+      icon: "507472"
+      provider: retroachievements
+      platform: GameCube
+    - name: Speedy Above AND Below Ground
+      description: Unlock Monty Mole by clearing Challenge Mode as Mario.
+      date: "2024-10-26T09:08:08-05:00"
+      points: 5
+      hardcore: true
+      icon: "507469"
+      provider: retroachievements
+      platform: GameCube
+    - name: Wall Ball Pro
+      description: Clear Wall Ball on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-26T09:10:20-05:00"
+      points: 5
+      hardcore: true
+      icon: "506826"
+      provider: retroachievements
+      platform: GameCube
+    - name: Wario-Man Incoming
+      description: Purchase the Gnarly Garlic from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T09:33:38-05:00"
+      points: 3
+      hardcore: true
+      icon: "507365"
+      provider: retroachievements
+      platform: GameCube
+    - name: Waluigi Time!
+      description: Purchase the Whiskered Eggplant from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T09:33:40-05:00"
+      points: 3
+      hardcore: true
+      icon: "507366"
+      provider: retroachievements
+      platform: GameCube
+    - name: MORE POWER!
+      description: Purchase the Power Bat from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T09:33:50-05:00"
+      points: 2
+      hardcore: true
+      icon: "507356"
+      provider: retroachievements
+      platform: GameCube
+    - name: Big Fly for Two
+      description: Hit a Two-Run Homer in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-26T10:12:17-05:00"
+      points: 5
+      hardcore: true
+      icon: "507478"
+      provider: retroachievements
+      platform: GameCube
+    - name: Tactical Violence
+      description: Hit any batter with a pitch in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-26T10:21:41-05:00"
+      points: 1
+      hardcore: true
+      icon: "507475"
+      provider: retroachievements
+      platform: GameCube
+    - name: Batter Up
+      description: Purchase the Nice Bat from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T10:27:17-05:00"
+      points: 2
+      hardcore: true
+      icon: "507355"
+      provider: retroachievements
+      platform: GameCube
+    - name: Let's Play Baseball All of the Time
+      description: Clear Challenge Mode on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-26T10:44:00-05:00"
+      points: 25
+      hardcore: true
+      icon: "507470"
+      provider: retroachievements
+      platform: GameCube
+    - name: This Ain't Sunshine, Petey
+      description: Unlock Petey Piranha by clearing Challenge Mode as Wario.
+      date: "2024-10-26T10:44:01-05:00"
+      points: 5
+      hardcore: true
+      icon: "507467"
+      provider: retroachievements
+      platform: GameCube
+    - name: Chain Chomp Sprint Rookie
+      description: Clear Chain Chomp Sprint on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-26T13:10:27-05:00"
+      points: 3
+      hardcore: true
+      icon: "507155"
+      provider: retroachievements
+      platform: GameCube
+    - name: Chain Chomp Sprint Amateur
+      description: Clear Chain Chomp Sprint on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-26T13:12:02-05:00"
+      points: 4
+      hardcore: true
+      icon: "507156"
+      provider: retroachievements
+      platform: GameCube
+    - name: Chain Chomp Sprint Pro
+      description: Clear Chain Chomp Sprint on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-26T13:13:35-05:00"
+      points: 5
+      hardcore: true
+      icon: "507157"
+      provider: retroachievements
+      platform: GameCube
+    - name: No Sudden Movements
+      description: Win a round of Chain Chomp Sprint on Special Difficulty without getting chomped (no ties).
+      date: "2024-10-26T13:17:12-05:00"
+      points: 10
+      hardcore: true
+      icon: "507327"
+      provider: retroachievements
+      platform: GameCube
+    - name: Chain Chomp Sprint Superstar
+      description: Beat Baby Mario's default high score of 40 and win or tie in Chain Chomp Sprint on Special Difficulty.
+      date: "2024-10-26T13:17:12-05:00"
+      points: 10
+      hardcore: true
+      icon: "507158"
+      provider: retroachievements
+      platform: GameCube
+    - name: King of the Banana Hoard
+      description: Purchase the King Banana from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T13:24:30-05:00"
+      points: 3
+      hardcore: true
+      icon: "507369"
+      provider: retroachievements
+      platform: GameCube
+    - name: Prince of the Banana Hoard
+      description: Purchase the Chimp Banana from the shop for the first time in Challenge Mode.
+      date: "2024-10-26T13:24:34-05:00"
+      points: 3
+      hardcore: true
+      icon: "507370"
+      provider: retroachievements
+      platform: GameCube
+    - name: Putting the Squeeze on 'em
+      description: Successfully execute a squeeze bunt in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-26T13:45:29-05:00"
+      points: 5
+      hardcore: true
+      icon: "507477"
+      provider: retroachievements
+      platform: GameCube
+    - name: Moonshot
+      description: Land a perfect contact Star Swing while having a full Star Meter. [Default Control Options]
+      date: "2024-10-26T14:44:30-05:00"
+      points: 10
+      hardcore: true
+      icon: "507483"
+      provider: retroachievements
+      platform: GameCube
+    - name: Long Ball for Three
+      description: Hit a Three-Run Homer in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-26T14:44:34-05:00"
+      points: 10
+      hardcore: true
+      icon: "507479"
+      provider: retroachievements
+      platform: GameCube
+    - name: WE LOVE BASEBALL!!
+      description: Clear Challenge Mode on Special Difficulty for the first time and unlock Bowser as a Challenge Mode captain.
+      date: "2024-10-26T15:47:18-05:00"
+      points: 50
+      hardcore: true
+      icon: "507473"
+      provider: retroachievements
+      platform: GameCube
+    - name: Back from the Country
+      description: Unlock Dixie Kong by clearing Challenge Mode as Donkey Kong.
+      date: "2024-10-26T15:47:19-05:00"
+      points: 5
+      hardcore: true
+      icon: "507465"
+      provider: retroachievements
+      platform: GameCube
+    - name: Piranha Panic Rookie
+      description: Clear Piranha Panic on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-26T19:27:09-05:00"
+      points: 3
+      hardcore: true
+      icon: "507159"
+      provider: retroachievements
+      platform: GameCube
+    - name: Piranha Panic Amateur
+      description: Clear Piranha Panic on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-26T19:28:35-05:00"
+      points: 4
+      hardcore: true
+      icon: "507160"
+      provider: retroachievements
+      platform: GameCube
+    - name: Where's Your Magic Paintbrush?
+      description: Purchase the Jr. Mask from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T09:06:20-05:00"
+      points: 3
+      hardcore: true
+      icon: "507372"
+      provider: retroachievements
+      platform: GameCube
+    - name: An Arm Like a Bill Blaster
+      description: Purchase the Bullet Bill from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T09:06:22-05:00"
+      points: 3
+      hardcore: true
+      icon: "507371"
+      provider: retroachievements
+      platform: GameCube
+    - name: The Bro Code
+      description: Complete all of Hammer Bro's star missions and unlock his Superstar status in Challenge Mode.
+      date: "2024-10-27T09:19:48-05:00"
+      points: 10
+      hardcore: true
+      icon: "507508"
+      provider: retroachievements
+      platform: GameCube
+    - name: Rattle Me Bones
+      description: Complete all of Dry Bones's star missions and unlock their Superstar status in Challenge Mode.
+      date: "2024-10-27T10:23:08-05:00"
+      points: 25
+      hardcore: true
+      icon: "507516"
+      provider: retroachievements
+      platform: GameCube
+    - name: In My Villain Era
+      description: Clear Challenge Mode on Special Difficulty as Bowser.
+      date: "2024-10-27T10:54:59-05:00"
+      points: 50
+      hardcore: true
+      icon: "507474"
+      provider: retroachievements
+      platform: GameCube
+    - name: STOP! Hammer Time
+      description: Unlock Hammer Bro by clearing Challenge Mode as Bowser.
+      date: "2024-10-27T10:55:09-05:00"
+      points: 5
+      hardcore: true
+      icon: "508171"
+      provider: retroachievements
+      platform: GameCube
+    - name: Ready, Aim, FIRE!
+      description: Hit the bonus barrel in Barrel Batter on any difficulty (no Mario Grand Prix).
+      date: "2024-10-27T11:41:01-05:00"
+      points: 5
+      hardcore: true
+      icon: "507278"
+      provider: retroachievements
+      platform: GameCube
+    - name: A Path to the Land of Toys
+      description: Purchase the Secret Map from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T11:50:48-05:00"
+      points: 10
+      hardcore: true
+      icon: "507373"
+      provider: retroachievements
+      platform: GameCube
+    - name: Is This a Super Mario Land Reference?
+      description: Purchase the Super Ball from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T12:12:26-05:00"
+      points: 2
+      hardcore: true
+      icon: "507357"
+      provider: retroachievements
+      platform: GameCube
+    - name: Birdo's Revenge
+      description: Purchase the Pink Egg from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T12:30:20-05:00"
+      points: 3
+      hardcore: true
+      icon: "507368"
+      provider: retroachievements
+      platform: GameCube
+    - name: Having a Field Day
+      description: Purchase the Lucky Glove from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T12:30:29-05:00"
+      points: 2
+      hardcore: true
+      icon: "507358"
+      provider: retroachievements
+      platform: GameCube
+    - name: With These Spiky Cleats, Anything is Possible!
+      description: Purchase the Dash Spikes from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T12:51:06-05:00"
+      points: 2
+      hardcore: true
+      icon: "507359"
+      provider: retroachievements
+      platform: GameCube
+    - name: Why Can't We Be Friends?
+      description: Purchase the Buddy Emblem from the shop for the first time in Challenge Mode.
+      date: "2024-10-27T13:04:22-05:00"
+      points: 2
+      hardcore: true
+      icon: "507360"
+      provider: retroachievements
+      platform: GameCube
+    - name: Dinger for Four
+      description: Hit a Grand Slam in Exhibition or Challenge Mode. [Default Control Options]
+      date: "2024-10-27T14:08:13-05:00"
+      points: 25
+      hardcore: true
+      icon: "507481"
+      provider: retroachievements
+      platform: GameCube
+    - name: Partner in Time
+      description: Unlock Baby Luigi by clearing Challenge Mode as Yoshi.
+      date: "2024-10-27T14:58:05-05:00"
+      points: 5
+      hardcore: true
+      icon: "507466"
+      provider: retroachievements
+      platform: GameCube
+    - name: Piranha Panic Pro
+      description: Clear Piranha Panic on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-27T16:31:54-05:00"
+      points: 5
+      hardcore: true
+      icon: "507161"
+      provider: retroachievements
+      platform: GameCube
+    - name: Barrel Batter Rookie
+      description: Clear Barrel Batter on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-27T16:35:06-05:00"
+      points: 5
+      hardcore: true
+      icon: "507163"
+      provider: retroachievements
+      platform: GameCube
+    - name: Barrel Batter Amateur
+      description: Clear Barrel Batter on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-27T16:40:18-05:00"
+      points: 10
+      hardcore: true
+      icon: "507164"
+      provider: retroachievements
+      platform: GameCube
+    - name: Barrel Batter Pro
+      description: Clear Barrel Batter on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-27T16:44:27-05:00"
+      points: 10
+      hardcore: true
+      icon: "507165"
+      provider: retroachievements
+      platform: GameCube
+    - name: Star Dash Rookie
+      description: Clear Star Dash on Mushroom Difficulty for the first time and unlock Flower Difficulty.
+      date: "2024-10-27T16:56:42-05:00"
+      points: 3
+      hardcore: true
+      icon: "507180"
+      provider: retroachievements
+      platform: GameCube
+    - name: Star Dash Amateur
+      description: Clear Star Dash on Flower Difficulty for the first time and unlock Star Difficulty.
+      date: "2024-10-27T17:27:17-05:00"
+      points: 4
+      hardcore: true
+      icon: "507181"
+      provider: retroachievements
+      platform: GameCube
+    - name: Star Dash Pro
+      description: Clear Star Dash on Star Difficulty for the first time and unlock Special Difficulty.
+      date: "2024-10-27T17:32:54-05:00"
+      points: 5
+      hardcore: true
+      icon: "507182"
+      provider: retroachievements
+      platform: GameCube
+    - name: Mini Mario Party
+      description: Unlock Mario Grand Prix by clearing all minigames on Star Difficulty.
+      date: "2024-10-27T17:32:55-05:00"
+      points: 5
+      hardcore: true
+      icon: "507274"
+      provider: retroachievements
+      platform: GameCube

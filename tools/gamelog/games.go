@@ -15,13 +15,23 @@ import (
 // GameSummary is a lightweight view over one content/games/<slug>/_index.md,
 // used to build the game picker.
 type GameSummary struct {
-	Slug            string
-	Path            string
-	Title           string
-	Status          string
-	Draft           bool
-	Started         string
-	Finished        string
+	Slug     string
+	Path     string
+	Title    string
+	Status   string
+	Draft    bool
+	Started  string
+	Finished string
+	// FMStarted/FMFinished are the raw front-matter fields, unlike
+	// Started/Finished above which fall back to the playthroughs-derived
+	// range for display. Editing started/finished must bind to these raw
+	// fields — writing the derived value back would silently turn an
+	// intentionally-blank fallback into a hardcoded front-matter override
+	// every time any other field on the row is saved.
+	FMStarted       string
+	FMFinished      string
+	Platform        string
+	Rating          string
 	NumPlaythroughs int
 	RAGameID        string
 	SteamAppID      string
@@ -88,6 +98,44 @@ func findGamesDir() (string, error) {
 	}
 }
 
+// gameSummaryFor builds the GameSummary for one already-loaded game, the
+// shared derivation ListGames uses per entry and the web UI reuses after a
+// quick edit so a freshly-saved row reflects the exact same rules (e.g. the
+// playthroughs-first started/finished fallback below) instead of a second,
+// possibly-drifting copy of them.
+func gameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSummary {
+	raID, steamAppID := doc.ExternalIDs()
+	psnID := scalarString(doc.FM.PSNID)
+	// The real per-run dates live in playthroughs.yaml, not front matter —
+	// see gameDateRange. Front matter's own started/finished is only a
+	// fallback, for a game with nothing logged yet.
+	started, finished := gameDateRange(pf.Views())
+	if started == "" {
+		started = doc.FM.Started
+	}
+	if finished == "" {
+		finished = doc.FM.Finished
+	}
+
+	return GameSummary{
+		Slug:            slug,
+		Path:            path,
+		Title:           doc.FM.Title,
+		Status:          doc.FM.Status,
+		Draft:           doc.FM.Draft,
+		Started:         started,
+		Finished:        finished,
+		FMStarted:       doc.FM.Started,
+		FMFinished:      doc.FM.Finished,
+		Platform:        doc.FM.Platform,
+		Rating:          doc.FM.RatingString(),
+		NumPlaythroughs: len(pf.Playthroughs),
+		RAGameID:        raID,
+		SteamAppID:      steamAppID,
+		PSNID:           psnID,
+	}
+}
+
 func ListGames(gamesDir string) ([]GameSummary, error) {
 	entries, err := os.ReadDir(gamesDir)
 	if err != nil {
@@ -110,8 +158,6 @@ func ListGames(gamesDir string) ([]GameSummary, error) {
 			fmt.Fprintf(os.Stderr, "gamelog: skipping %s: %v\n", path, err)
 			continue
 		}
-		raID, steamAppID := doc.ExternalIDs()
-		psnID := scalarString(doc.FM.PSNID)
 		// Playthroughs are their own file now; a game without one simply has
 		// none logged, which is not worth skipping the game over.
 		pf, err := LoadPlaythroughs(filepath.Dir(path))
@@ -119,30 +165,8 @@ func ListGames(gamesDir string) ([]GameSummary, error) {
 			fmt.Fprintf(os.Stderr, "gamelog: skipping %s: %v\n", PlaythroughsPath(filepath.Dir(path)), err)
 			pf = &PlaythroughsFile{}
 		}
-		// The real per-run dates live in playthroughs.yaml, not front matter —
-		// see gameDateRange. Front matter's own started/finished is only a
-		// fallback, for a game with nothing logged yet.
-		started, finished := gameDateRange(pf.Views())
-		if started == "" {
-			started = doc.FM.Started
-		}
-		if finished == "" {
-			finished = doc.FM.Finished
-		}
 
-		out = append(out, GameSummary{
-			Slug:            e.Name(),
-			Path:            path,
-			Title:           doc.FM.Title,
-			Status:          doc.FM.Status,
-			Draft:           doc.FM.Draft,
-			Started:         started,
-			Finished:        finished,
-			NumPlaythroughs: len(pf.Playthroughs),
-			RAGameID:        raID,
-			SteamAppID:      steamAppID,
-			PSNID:           psnID,
-		})
+		out = append(out, gameSummaryFor(e.Name(), path, doc, pf))
 	}
 
 	sort.Slice(out, func(i, j int) bool { return out[i].Title < out[j].Title })

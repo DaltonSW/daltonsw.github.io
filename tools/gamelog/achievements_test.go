@@ -322,6 +322,60 @@ func TestFetchSteamRecord_CapturesPlaytimeBreakdown(t *testing.T) {
 	}
 }
 
+// Icons come from GetSchemaForGame, not GetPlayerAchievements, and must be
+// joined onto the right achievement by apiname.
+func TestFetchSteamRecord_AttachesIconsFromSchema(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/achievements":
+			w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
+			  {"apiname":"A","achieved":1,"unlocktime":1603510789,"name":"Escaped","description":"d"}
+			]}}`))
+		case "/schema":
+			w.Write([]byte(`{"game":{"availableGameStats":{"achievements":[
+			  {"name":"A","displayName":"Escaped","icon":"https://cdn.example/a.jpg","icongray":"https://cdn.example/a-gray.jpg"}
+			]}}}`))
+		default:
+			t.Errorf("unexpected path %s", r.URL.Path)
+		}
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchSteamRecord(context.Background(), client, "1145360", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rec.Achievements) != 1 || rec.Achievements[0].Icon != "https://cdn.example/a.jpg" {
+		t.Errorf("icon not attached: %+v", rec.Achievements)
+	}
+}
+
+// A schema fetch failing (a delisted game, a transient error) must not fail
+// the whole record — the unlock data is what matters, icons are best-effort.
+func TestFetchSteamRecord_SchemaFailureIsNotFatal(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/achievements":
+			w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
+			  {"apiname":"A","achieved":1,"unlocktime":1603510789,"name":"Escaped","description":"d"}
+			]}}`))
+		case "/schema":
+			w.WriteHeader(http.StatusInternalServerError)
+		default:
+			t.Errorf("unexpected path %s", r.URL.Path)
+		}
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchSteamRecord(context.Background(), client, "1145360", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rec.Achievements) != 1 || rec.Achievements[0].Icon != "" {
+		t.Errorf("expected unlock data intact with no icon: %+v", rec.Achievements)
+	}
+}
+
 // A failed fetch must produce a record that records the failure rather than
 // one that looks like an empty success.
 func TestFetchSteamRecord_FailureIsMarked(t *testing.T) {

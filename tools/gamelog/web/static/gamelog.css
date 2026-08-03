@@ -275,11 +275,27 @@ th {
 tr:hover td { background: var(--panel-2); }
 .table-wrap { overflow-x: auto; }
 
+/* Editable index rows: compact controls so a full row of status/dates/
+   platform/rating/actions stays scannable rather than each cell blowing up
+   to input's default block width. */
+.table-wrap select, .table-wrap input[type="text"] { padding: 0.3rem 0.5rem; font-size: 0.88rem; }
+
+/* One-shot confirmation flash on the row htmx just swapped in after a save —
+   pure CSS, runs automatically because the row is freshly inserted into the
+   DOM, no JS beyond htmx's own swap needed. */
+@keyframes row-saved-flash {
+  from { background: color-mix(in srgb, var(--ok) 25%, transparent); }
+  to   { background: transparent; }
+}
+tr.row--saved td { animation: row-saved-flash 1.1s ease-out; }
+tr.row-error td { color: var(--stop); font-size: 0.85rem; }
+
 /* ── Misc ──────────────────────────────────────────────────────────────── */
 .dim { color: var(--dim); }
 .stack { display: flex; flex-direction: column; gap: 1rem; }
 .row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
 .row--between { justify-content: space-between; }
+.row--nowrap { flex-wrap: nowrap; }
 .flash { border-radius: var(--radius); padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.92rem; }
 .flash--error { border: 1px solid var(--stop); color: var(--stop); }
 .flash--ok { border: 1px solid var(--ok); color: var(--ok); }

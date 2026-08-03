@@ -110,7 +110,7 @@
         {{- $titleParts = $titleParts | append "ongoing" -}}
       {{- end -}}
       {{- with $entry.rating -}}{{- $titleParts = $titleParts | append (printf "%v/10" .) -}}{{- end -}}
-      {{- $statusLabel := $status | title -}}
+      {{- $statusLabel := ($status | replace "_" " ") | title -}}
       {{- with $entry.platform -}}{{- $statusLabel = printf "%s (%s)" $statusLabel . -}}{{- end -}}
       {{- $title := printf "%s · %s" $statusLabel (delimit $titleParts " – ") -}}
       {{- with $entry.notes -}}
@@ -137,7 +137,7 @@
           {{- $items = $items | append (dict
               "id" (printf "%s--session-%d" $baseID $sIdx) "group" $slug "subgroup" $sub
               "type" "range" "className" (printf "pt-session pt--%s" $status)
-              "content" "" "title" $title "status" ($status | title) "start" $sStart "end" $sEnd
+              "content" "" "title" $title "status" ($status | replace "_" " " | title) "start" $sStart "end" $sEnd
             )
           -}}
         {{- end -}}
@@ -145,7 +145,7 @@
         {{- $items = $items | append (dict
             "id" $baseID "group" $slug "subgroup" $sub
             "type" "range" "className" (printf "pt pt--%s" $status)
-            "content" "" "title" $title "status" ($status | title) "permalink" $permalink
+            "content" "" "title" $title "status" ($status | replace "_" " " | title) "permalink" $permalink
             "start" $start "end" $end
           )
         -}}
@@ -183,6 +183,8 @@
     <button type="button" id="games-timeline-zoom-out" class="games-timeline__toolbar-btn" hidden>−</button>
     <button type="button" id="games-timeline-zoom-in" class="games-timeline__toolbar-btn" hidden>+</button>
     <button type="button" id="games-timeline-today" class="games-timeline__toolbar-btn" hidden>today</button>
+    {{/* Freezes the row set so panning can't add or drop rows — see games-timeline.ts. */}}
+    <button type="button" id="games-timeline-lock" class="games-timeline__toolbar-btn" aria-pressed="false" hidden>lock rows</button>
   </div>
   <div id="games-timeline-root" class="games-timeline__root">
     <p class="games-timeline__fallback">Enable JavaScript to see the visual timeline - the full list is below.</p>

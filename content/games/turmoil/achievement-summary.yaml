@@ -9,3 +9,64 @@ providers:
       total: 39
       playtime_mins: 419
       last_played: "2018-05-12"
+earned:
+    - name: Overbidder
+      description: Overbid someone at the land auction.
+      date: "2018-05-11T14:38:52-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/f3e927e76b53b36def79f803705f6a16f1af9c1c.jpg
+      provider: steam
+      platform: PC
+    - name: Promising
+      description: Earn a profit of more than $10,000 in a single level.
+      date: "2018-05-11T15:13:44-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/ca54cd55236b7e58c122528630ca70ce3b2673ce.jpg
+      provider: steam
+      platform: PC
+    - name: Juicy
+      description: Earn a profit of more than $25,000 in a single level.
+      date: "2018-05-11T15:34:41-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/ecb20aa8bfb0eaa40a2ce211a9dfcbfc1417827e.jpg
+      provider: steam
+      platform: PC
+    - name: Empty Milkshake
+      description: Get all the oil in a level above ground.
+      date: "2018-05-11T15:52:07-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/f7f1fceb0281e00550f1e3ab980c15c470fad401.jpg
+      provider: steam
+      platform: PC
+    - name: Dubious Deal
+      description: Sell oil at a price below $0.25.
+      date: "2018-05-11T15:59:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/10aa60493ef7075f958141285482335ec5314149.jpg
+      provider: steam
+      platform: PC
+    - name: Shiny
+      description: Get a diamond.
+      date: "2018-05-11T21:26:53-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/a272c23c11870a33571d9bbd86c597736b52ba6e.jpg
+      provider: steam
+      platform: PC
+    - name: Big Spender
+      description: Pay $10,000 or more for a piece of land.
+      date: "2018-05-11T21:28:10-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/199711eb2c436437942788d1ac8b23af956a25ac.jpg
+      provider: steam
+      platform: PC
+    - name: Big Spiller
+      description: Get a spillage fine of over $10,000.
+      date: "2018-05-11T22:03:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/f4e9906f7d58ef2ce303fa299aadcb8b6e808e4c.jpg
+      provider: steam
+      platform: PC
+    - name: Good Deal
+      description: Boost the oil price above $2.00.
+      date: "2018-05-11T22:20:35-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/4dac0c00d9f86e76bf70390f936ae0bb5af5a5b1.jpg
+      provider: steam
+      platform: PC
+    - name: Great Deal
+      description: Boost the oil price above $2.50.
+      date: "2018-05-11T22:28:36-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/e43b3a10f47e655c2a89be5847ed1219632c7266.jpg
+      provider: steam
+      platform: PC

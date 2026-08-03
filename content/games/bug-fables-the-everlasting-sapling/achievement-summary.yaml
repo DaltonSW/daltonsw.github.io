@@ -9,3 +9,28 @@ providers:
       total: 30
       playtime_mins: 395
       last_played: "2021-10-06"
+earned:
+    - name: Chapter 1 Complete
+      description: Finished Chapter 1!
+      date: "2021-10-02T17:36:13-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1082710/47837735b8c71b4a5af7c19039bf6dfc4bdc525b.jpg
+      provider: steam
+      platform: PC
+    - name: Vicious Spider
+      description: Defeated Chapter 1's boss in Hard Mode!
+      date: "2021-10-02T17:37:37-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1082710/0fc0dfdca474c8ba3a42a6c03fa15391b8141040.jpg
+      provider: steam
+      platform: PC
+    - name: The Guardian
+      description: Defeated Chapter 2's boss in Hard Mode!
+      date: "2021-10-02T22:34:48-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1082710/de85cad8c0f28755e47d93bc968ccad90ae60304.jpg
+      provider: steam
+      platform: PC
+    - name: Chapter 2 Complete
+      description: Finished Chapter 2!
+      date: "2021-10-02T22:36:57-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1082710/4a68576162a9395c30ddbf98f514e322f8d4c9af.jpg
+      provider: steam
+      platform: PC

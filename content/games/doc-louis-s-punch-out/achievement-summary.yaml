@@ -9,3 +9,60 @@ providers:
       total: 7
       playtime_mins: 122
       last_played: "2026-05-23"
+earned:
+    - name: One-Upped the Doc
+      description: Win against Doc Louis in the Warm-Up Lesson
+      date: "2026-05-23T14:01:56-05:00"
+      points: 2
+      hardcore: true
+      icon: "669345"
+      provider: retroachievements
+      platform: Wii
+    - name: Lucky Seven
+      description: Defeat Doc Louis in the Warm-Up Lesson without throwing more than 7 punches
+      date: "2026-05-23T14:10:54-05:00"
+      points: 5
+      hardcore: true
+      icon: "669348"
+      provider: retroachievements
+      platform: Wii
+    - name: Train Some Pain
+      description: Win against Doc Louis in the Training Lesson
+      date: "2026-05-23T14:37:11-05:00"
+      points: 3
+      hardcore: true
+      icon: "669346"
+      provider: retroachievements
+      platform: Wii
+    - name: Ducked This One
+      description: Defeat Doc Louis in the Training Lesson without losing health
+      date: "2026-05-23T14:37:12-05:00"
+      points: 10
+      hardcore: true
+      icon: "669349"
+      provider: retroachievements
+      platform: Wii
+    - name: You Are Not Sparred
+      description: Win against Doc Louis in the Sparring Lesson
+      date: "2026-05-23T15:22:04-05:00"
+      points: 5
+      hardcore: true
+      icon: "669347"
+      provider: retroachievements
+      platform: Wii
+    - name: Sugar Crush
+      description: Defeat Doc Louis in the Sparring Lesson without punching his chocolate away
+      date: "2026-05-23T15:22:04-05:00"
+      points: 5
+      hardcore: true
+      icon: "669351"
+      provider: retroachievements
+      platform: Wii
+    - name: Master the Master
+      description: Defeat Doc Louis in the Sparring Lesson without throwing star punches, recovering health or being knocked down
+      date: "2026-05-23T16:16:16-05:00"
+      points: 10
+      hardcore: true
+      icon: "669350"
+      provider: retroachievements
+      platform: Wii

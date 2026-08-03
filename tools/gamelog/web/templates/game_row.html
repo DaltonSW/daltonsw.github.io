@@ -1,0 +1,24 @@
+{{define "game_row"}}
+<tr id="row-{{.Slug}}"{{if .Saved}} class="row--saved"{{else if .Error}} class="row--error"{{end}}>
+  <td><a href="/games/{{.Slug}}">{{.Title}}</a>{{if .Draft}} <span class="pill pill--draft">draft</span>{{end}}</td>
+  <td>
+    <select name="status">{{$cur := .Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>
+  </td>
+  <td><input type="text" name="started" value="{{.FMStarted}}" placeholder="{{.Started}}"></td>
+  <td><input type="text" name="finished" value="{{.FMFinished}}" placeholder="{{.Finished}}"></td>
+  <td><input type="text" name="platform" value="{{.Platform}}"></td>
+  <td><input type="text" name="rating" value="{{.Rating}}" style="max-width: 4rem;"></td>
+  <td class="dim">{{.NumPlaythroughs}}</td>
+  <td class="row row--nowrap">
+    <button type="button" class="btn--primary"
+      hx-post="/games/{{.Slug}}/quickedit"
+      hx-include="closest tr"
+      hx-target="#row-{{.Slug}}"
+      hx-swap="outerHTML">Save</button>
+    <a class="btn" href="/games/{{.Slug}}">Details &rarr;</a>
+  </td>
+</tr>
+{{if .Error}}
+<tr class="row-error"><td colspan="8">{{.Error}}</td></tr>
+{{end}}
+{{end}}

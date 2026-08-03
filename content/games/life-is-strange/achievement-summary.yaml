@@ -9,3 +9,112 @@ providers:
       total: 60
       playtime_mins: 983
       last_played: "2015-12-23"
+earned:
+    - name: Macro Eyes
+      description: 'Take optional photo #1 in Episode 1: Chrysalis'
+      date: "2015-12-16T18:15:20-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/8be7a4efc0ac66e1f1fa557e4c9756fea5b09b6c.jpg
+      provider: steam
+      platform: PC
+    - name: Close-Ups
+      description: 'Take optional photo #4 in Episode 1: Chrysalis'
+      date: "2015-12-16T18:58:36-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/4e071e534c0d8509b3159702dd0a2c5701710a3e.jpg
+      provider: steam
+      platform: PC
+    - name: Zoomed In
+      description: 'Take optional photo #7 in Episode 1: Chrysalis'
+      date: "2015-12-16T19:37:14-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/69c4fc832be9a287a973f2537cb5dae4612bf142.jpg
+      provider: steam
+      platform: PC
+    - name: Chrysalis
+      description: 'Finish Episode 1: Chrysalis'
+      date: "2015-12-16T20:33:41-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/b5678a10f4ac8d7403f2dab2eef17df1c1780b15.jpg
+      provider: steam
+      platform: PC
+    - name: Field Of View
+      description: 'Take optional photo #1 in Episode 2: Out of Time'
+      date: "2015-12-16T21:03:13-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/79f9bb20daadc082b3b40a809a794abd3aea70b9.jpg
+      provider: steam
+      platform: PC
+    - name: Dynamic Range
+      description: 'Take optional photo #7 in Episode 2: Out of Time'
+      date: "2015-12-16T21:41:30-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/fef56c783fe25ead520cb28ce3fd71645bae1137.jpg
+      provider: steam
+      platform: PC
+    - name: Out of Time
+      description: 'Finish Episode 2: Out of Time'
+      date: "2015-12-16T22:44:54-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/3ae2297e3023e3060205a90abf8accf8550c670f.jpg
+      provider: steam
+      platform: PC
+    - name: The Reflex
+      description: 'Take optional photo #3 in Episode 3: Chaos Theory'
+      date: "2015-12-17T14:55:12-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/c97fbadcd8355aca73d1f41c4ecf6e4c05a82438.jpg
+      provider: steam
+      platform: PC
+    - name: Flash!
+      description: 'Take optional photo #10 in Episode 3: Chaos Theory'
+      date: "2015-12-17T19:10:07-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/b85c7dec6032c9328237c6ace62b6b28547c6dc4.jpg
+      provider: steam
+      platform: PC
+    - name: Chaos Theory
+      description: 'Finish Episode 3: Chaos Theory'
+      date: "2015-12-17T19:20:37-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/8f7ca10b51cdcf2601de6873dfefbec58b4e66d1.jpg
+      provider: steam
+      platform: PC
+    - name: Ambient
+      description: 'Take optional photo #1 in Episode 4: Dark Room'
+      date: "2015-12-23T14:57:27-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/0eab5cc0568612b3cf56a67770c624f7f37e2ae0.jpg
+      provider: steam
+      platform: PC
+    - name: Time-Lapsed
+      description: 'Take optional photo #2 in Episode 4: Dark Room'
+      date: "2015-12-23T15:07:07-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/0e5d6b65d567a80894bbddcc4feb03bf6aca78c1.jpg
+      provider: steam
+      platform: PC
+    - name: Fisheye
+      description: 'Take optional photo #7 in Episode 4: Dark Room'
+      date: "2015-12-23T16:53:31-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/23294cbc3cd13edc693adc5f0c48a974e203f561.jpg
+      provider: steam
+      platform: PC
+    - name: Manually Exposed
+      description: 'Take optional photo #8 in Episode 4: Dark Room'
+      date: "2015-12-23T16:58:44-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/95b10f9ab58e93b1229fc25a43a045c92083062d.jpg
+      provider: steam
+      platform: PC
+    - name: Tripod
+      description: 'Take optional photo #10 in Episode 4: Dark Room'
+      date: "2015-12-23T17:34:42-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/73f8f635a04d14235e27c37d51ebc5c429628ec2.jpg
+      provider: steam
+      platform: PC
+    - name: Dark Room
+      description: 'Finish Episode 4: Dark Room'
+      date: "2015-12-23T17:50:57-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/222d03444cc4f674cb5906610a0fe5666b30c0c3.jpg
+      provider: steam
+      platform: PC
+    - name: Silhouettes
+      description: 'Take optional photo #10 in Episode 5: Polarized'
+      date: "2015-12-23T19:48:55-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/225940db6a576d2aee4884206923ba7876a63947.jpg
+      provider: steam
+      platform: PC
+    - name: Polarized
+      description: 'Finish Episode 5: Polarized'
+      date: "2015-12-23T20:13:01-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/319630/381657a2d8789ca6c2caa432bda1a91f7e3749b1.jpg
+      provider: steam
+      platform: PC

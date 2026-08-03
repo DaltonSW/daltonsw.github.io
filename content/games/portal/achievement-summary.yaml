@@ -9,3 +9,76 @@ providers:
       total: 15
       playtime_mins: 671
       last_played: "2026-01-10"
+earned:
+    - name: Lab Rat
+      description: Acquire the fully powered Aperture Science Handheld Portal Device.
+      date: "2012-08-12T22:34:55-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_getportalguns.jpg
+      provider: steam
+      platform: PC
+    - name: Friendly Fire
+      description: Knock down a turret with another turret.
+      date: "2012-08-13T13:50:34-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_hit_turret_with_turret.jpg
+      provider: steam
+      platform: PC
+    - name: Fratricide
+      description: Do whatever it takes to survive.
+      date: "2012-09-30T02:03:04-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_kill_companioncube.jpg
+      provider: steam
+      platform: PC
+    - name: Partygoer
+      description: Make the correct party escort submission position decision.
+      date: "2012-10-20T23:48:33-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_escape_testchambers.jpg
+      provider: steam
+      platform: PC
+    - name: Heartbreaker
+      description: Complete Portal.
+      date: "2012-10-21T00:52:05-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_game.jpg
+      provider: steam
+      platform: PC
+    - name: Terminal Velocity
+      description: Fall 30,000 feet.
+      date: "2026-01-07T20:45:59-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_infinitefall.jpg
+      provider: steam
+      platform: PC
+    - name: Camera Shy
+      description: Detach security cameras from the walls.
+      date: "2026-01-08T21:18:38-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_detach_all_cameras.jpg
+      provider: steam
+      platform: PC
+    - name: Transmission Received
+      description: ..?
+      date: "2026-01-09T19:19:20-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/cfc27e918907ca28d9a4b77f7f4537cf52b4bfa2.jpg
+      provider: steam
+      platform: PC
+    - name: Long Jump
+      description: Jump 300 feet.
+      date: "2026-01-09T19:21:15-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_longjump.jpg
+      provider: steam
+      platform: PC
+    - name: Cupcake
+      description: Beat two Portal advanced maps.
+      date: "2026-01-09T19:47:21-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_2advancedmaps.jpg
+      provider: steam
+      platform: PC
+    - name: Fruitcake
+      description: Beat four Portal advanced maps.
+      date: "2026-01-10T12:58:35-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_4advancedmaps.jpg
+      provider: steam
+      platform: PC
+    - name: Vanilla Crazy Cake
+      description: Beat all six Portal advanced maps.
+      date: "2026-01-10T13:16:48-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_6advancedmaps.jpg
+      provider: steam
+      platform: PC

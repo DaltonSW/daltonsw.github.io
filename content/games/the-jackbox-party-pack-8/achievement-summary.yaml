@@ -9,3 +9,34 @@ providers:
       total: 20
       playtime_mins: 588
       last_played: "2026-01-10"
+earned:
+    - name: 'The Poll Mine: Perfect Round'
+      description: Your team went an entire round without selecting an incorrect door
+      date: "2022-02-01T21:14:17-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/1de7008797d5738537ad27c452e26245a633157b.jpg
+      provider: steam
+      platform: PC
+    - name: 'Job Job: Logo Poke-a'
+      description: Poked the logo 40 times
+      date: "2022-04-02T22:37:52-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/1de7008797d5738537ad27c452e26245a633157b.jpg
+      provider: steam
+      platform: PC
+    - name: 'Job Job: Totally Synergized'
+      description: Got two Synergies in one round
+      date: "2022-04-02T23:18:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/f339a8bfd9fec2343a5d6d23411a860cf93a3af0.jpg
+      provider: steam
+      platform: PC
+    - name: 'Job Job: Over the Rainbow'
+      description: Got a Rainbow Bonus in all three rounds
+      date: "2022-04-02T23:24:17-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/1de7008797d5738537ad27c452e26245a633157b.jpg
+      provider: steam
+      platform: PC
+    - name: 'The Wheel: It’s Anyone’s Game'
+      description: Spun the wheel when all players had enough points to win the game
+      date: "2026-01-10T21:42:00-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1552350/1de7008797d5738537ad27c452e26245a633157b.jpg
+      provider: steam
+      platform: PC

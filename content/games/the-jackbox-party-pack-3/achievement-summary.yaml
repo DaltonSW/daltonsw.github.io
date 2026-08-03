@@ -9,3 +9,28 @@ providers:
       total: 20
       playtime_mins: 2230
       last_played: "2024-04-27"
+earned:
+    - name: 'TMP: Deathproof'
+      description: Survive The Killing Floor 3 times in one game
+      date: "2022-02-01T20:27:05-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/434170/24f78a43c56cadff3685330bd3ffdc96b6eac535.jpg
+      provider: steam
+      platform: PC
+    - name: 'TMP: Murderithmatic'
+      description: Get a score of 25 or more in the Math Killing Floor
+      date: "2022-02-01T20:52:58-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/434170/24f78a43c56cadff3685330bd3ffdc96b6eac535.jpg
+      provider: steam
+      platform: PC
+    - name: 'Fakin'' It: Deep Cover'
+      description: Faker gets through three tasks in a row without a single vote (or two tasks for three player games).
+      date: "2022-09-02T23:16:33-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/434170/7162db10214069629eeebe8d9329e157c3f573ba.jpg
+      provider: steam
+      platform: PC
+    - name: 'Fakin'' It: World''s Greatest Detectives'
+      description: Catch the Faker on the first vote.
+      date: "2022-09-02T23:22:46-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/434170/7162db10214069629eeebe8d9329e157c3f573ba.jpg
+      provider: steam
+      platform: PC

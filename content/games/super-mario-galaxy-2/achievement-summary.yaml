@@ -9,3 +9,396 @@ providers:
       total: 100
       playtime_mins: 926
       last_played: "2026-06-26"
+earned:
+    - name: Starstruck
+      description: Collect your first Power Star
+      date: "2026-06-23T16:06:36-05:00"
+      points: 1
+      hardcore: true
+      icon: "637074"
+      provider: retroachievements
+      platform: Wii
+    - name: Money in the Mantle
+      description: Collect every coin in a Warp Pipe bonus room and earn 3 extra lives
+      date: "2026-06-23T16:43:05-05:00"
+      points: 3
+      hardcore: true
+      icon: "637860"
+      provider: retroachievements
+      platform: Wii
+    - name: Balloon Pop
+      description: In Bowser Jr.'s Fiery Flotilla, collect the Grand Star "Gobblegut's Aching Belly" without spinning more than 6 times during the Gobblegut battle (must use the launch star)
+      date: "2026-06-23T16:59:46-05:00"
+      points: 5
+      hardcore: true
+      icon: "638413"
+      provider: retroachievements
+      platform: Wii
+    - name: Grand Opening Concluded
+      description: Clear "Gobblegut's Aching Belly" in Bowser Jr.'s Fiery Flotilla and collect the first Grand Star
+      date: "2026-06-23T16:59:59-05:00"
+      points: 10
+      hardcore: true
+      icon: "637079"
+      provider: retroachievements
+      platform: Wii
+    - name: Heavy Roller
+      description: In Boulder Bowl Galaxy, collect the Power Star "Rock and Rollodillo" without rolling more than 4 times during the Rollodillo battle
+      date: "2026-06-23T17:19:41-05:00"
+      points: 3
+      hardcore: true
+      icon: "638422"
+      provider: retroachievements
+      platform: Wii
+    - name: To the Koopa King!
+      description: Collect 16 Power Stars
+      date: "2026-06-23T17:24:09-05:00"
+      points: 3
+      hardcore: true
+      icon: "637075"
+      provider: retroachievements
+      platform: Wii
+    - name: The Precision of a Plumber
+      description: Defeat Bowser in Bowser's Lava Lair without using the Ground Pound more than 4 times and without taking damage
+      date: "2026-06-23T17:42:27-05:00"
+      points: 10
+      hardcore: true
+      icon: "638147"
+      provider: retroachievements
+      platform: Wii
+    - name: Shrinking the Koopa King
+      description: Clear "Bowser's Big Lava Power Party" in Bowser's Lava Lair and collect the second Grand Star
+      date: "2026-06-23T17:43:24-05:00"
+      points: 10
+      hardcore: true
+      icon: "637080"
+      provider: retroachievements
+      platform: Wii
+    - name: Friends Made Along the Way
+      description: Welcome 8 passengers to Starship Mario
+      date: "2026-06-23T21:18:33-05:00"
+      points: 3
+      hardcore: true
+      icon: "637945"
+      provider: retroachievements
+      platform: Wii
+    - name: Plenty of Clouds Already
+      description: In Cloudy Court Galaxy, collect the Power Star "Silver Stars in the Purple Pond" without creating any clouds on the purple pond planet
+      date: "2026-06-23T21:27:22-05:00"
+      points: 3
+      hardcore: true
+      icon: "638460"
+      provider: retroachievements
+      platform: Wii
+    - name: Golden Plumber
+      description: Collect 16 Comet Medals
+      date: "2026-06-23T21:33:09-05:00"
+      points: 10
+      hardcore: true
+      icon: "637462"
+      provider: retroachievements
+      platform: Wii
+    - name: Bullseye
+      description: In Bowser Jr.'s Fearsome Fleet, collect the Grand Star "Bowser Jr.'s Mighty Megahammer" without shooting more than 8 Bullet Bills during the Megahammer battle
+      date: "2026-06-23T21:47:29-05:00"
+      points: 10
+      hardcore: true
+      icon: "638942"
+      provider: retroachievements
+      platform: Wii
+    - name: Teaching Junior a Lesson
+      description: Clear "Bowser Jr.'s Mighty Megahammer" in Bowser Jr.'s Fearsome Fleet and collect the third Grand Star
+      date: "2026-06-23T21:47:42-05:00"
+      points: 10
+      hardcore: true
+      icon: "637081"
+      provider: retroachievements
+      platform: Wii
+    - name: Unique and Useless
+      description: In Chompworks Galaxy, collect the Power Star "Spring into the Chompworks" without using any Spring Mushrooms
+      date: "2026-06-24T09:46:03-05:00"
+      points: 10
+      hardcore: true
+      icon: "638984"
+      provider: retroachievements
+      platform: Wii
+    - name: Exotic Delicacies
+      description: Feed Yoshi a Dash Pepper, a Blimp Fruit, and a Bulb Berry without changing character
+      date: "2026-06-24T09:48:03-05:00"
+      points: 3
+      hardcore: true
+      icon: "637862"
+      provider: retroachievements
+      platform: Wii
+    - name: Chased Down to His Castle
+      description: Collect 40 Power Stars
+      date: "2026-06-24T09:53:16-05:00"
+      points: 5
+      hardcore: true
+      icon: "637076"
+      provider: retroachievements
+      platform: Wii
+    - name: Learned All Your Moves the Last Time, Bowser!
+      description: Defeat Bowser in Bowser's Gravity Gauntlet without using the Ground Pound more than 4 times and without taking damage
+      date: "2026-06-24T09:58:43-05:00"
+      points: 10
+      hardcore: true
+      icon: "638149"
+      provider: retroachievements
+      platform: Wii
+    - name: Castle Invasion
+      description: Clear "Breaking into Bowser's Castle" in Bowser's Gravity Gauntlet and collect the fourth Grand Star
+      date: "2026-06-24T09:59:17-05:00"
+      points: 10
+      hardcore: true
+      icon: "637082"
+      provider: retroachievements
+      platform: Wii
+    - name: Knock the Life Out of 'Em
+      description: Collect the 3 1-Up Mushrooms after successfully clearing a teleporter gauntlet
+      date: "2026-06-24T10:59:52-05:00"
+      points: 3
+      hardcore: true
+      icon: "637859"
+      provider: retroachievements
+      platform: Wii
+    - name: A Kid in His Grand Mecha
+      description: Clear "Bowser Jr.'s Boomsday Machine" in Bowser Jr.'s Boom Bunker and collect the fifth Grand Star
+      date: "2026-06-24T11:04:39-05:00"
+      points: 10
+      hardcore: true
+      icon: "637083"
+      provider: retroachievements
+      platform: Wii
+    - name: Wish Upon a Star
+      description: Collect 32 Comet Medals
+      date: "2026-06-24T11:04:39-05:00"
+      points: 10
+      hardcore: true
+      icon: "637463"
+      provider: retroachievements
+      platform: Wii
+    - name: Tools of the Trade
+      description: Bring every power-up to the engine room of Starship Mario
+      date: "2026-06-24T11:34:29-05:00"
+      points: 5
+      hardcore: true
+      icon: "637944"
+      provider: retroachievements
+      platform: Wii
+    - name: Jump Out of Orbit
+      description: In Battle Belt Galaxy, collect any Power Star without using the Fire Flower
+      date: "2026-06-24T11:44:33-05:00"
+      points: 5
+      hardcore: true
+      icon: "639017"
+      provider: retroachievements
+      platform: Wii
+    - name: Bowser Cornered, Let's Finish This!
+      description: Collect 70 Power Stars
+      date: "2026-06-24T13:42:30-05:00"
+      points: 10
+      hardcore: true
+      icon: "637077"
+      provider: retroachievements
+      platform: Wii
+    - name: Cake Denied
+      description: Clear "Bowser's Fortified Fortress" in Bowser's Galaxy Generator to collect the final Grand Star and save Princess Peach!
+      date: "2026-06-24T13:54:14-05:00"
+      points: 25
+      hardcore: true
+      icon: "637084"
+      provider: retroachievements
+      platform: Wii
+    - name: Bee Fuelled Up
+      description: In Honeybloom Galaxy, collect the Power Star "Bumble Beginnings" without letting your Bee form's Fly meter turn red
+      date: "2026-06-24T14:27:52-05:00"
+      points: 5
+      hardcore: true
+      icon: "638445"
+      provider: retroachievements
+      platform: Wii
+    - name: The Great Space Journey Begins
+      description: Complete every galaxy in World 1
+      date: "2026-06-24T14:54:16-05:00"
+      points: 10
+      hardcore: true
+      icon: "637506"
+      provider: retroachievements
+      platform: Wii
+    - name: Shooting Through the Stars
+      description: Complete every galaxy in World 2
+      date: "2026-06-24T14:56:35-05:00"
+      points: 10
+      hardcore: true
+      icon: "637507"
+      provider: retroachievements
+      platform: Wii
+    - name: The Far Reaches of the Universe
+      description: Complete every galaxy in World 3
+      date: "2026-06-24T20:02:33-05:00"
+      points: 10
+      hardcore: true
+      icon: "637508"
+      provider: retroachievements
+      platform: Wii
+    - name: Afraid of the Dark
+      description: In Sweet Mystery Galaxy, collect the Power Star "Bulb Berry's Purple Coin Glow" without letting Bulb Yoshi's glow fade out
+      date: "2026-06-24T20:08:54-05:00"
+      points: 3
+      hardcore: true
+      icon: "638985"
+      provider: retroachievements
+      platform: Wii
+    - name: The Many Mysteries of the Cosmos
+      description: Complete every galaxy in World 4
+      date: "2026-06-24T20:17:44-05:00"
+      points: 10
+      hardcore: true
+      icon: "637509"
+      provider: retroachievements
+      platform: Wii
+    - name: Trial of the Galaxies
+      description: Complete every galaxy in World 5
+      date: "2026-06-24T20:39:46-05:00"
+      points: 10
+      hardcore: true
+      icon: "637510"
+      provider: retroachievements
+      platform: Wii
+    - name: The More, the Merrier
+      description: Welcome 15 passengers to Starship Mario
+      date: "2026-06-24T21:16:27-05:00"
+      points: 5
+      hardcore: true
+      icon: "637946"
+      provider: retroachievements
+      platform: Wii
+    - name: Bowser in Your Sights
+      description: Complete every galaxy in World 6
+      date: "2026-06-24T21:24:59-05:00"
+      points: 10
+      hardcore: true
+      icon: "637511"
+      provider: retroachievements
+      platform: Wii
+    - name: Pranksters Everywhere
+      description: Collect 48 Comet Medals
+      date: "2026-06-25T10:23:38-05:00"
+      points: 10
+      hardcore: true
+      icon: "637464"
+      provider: retroachievements
+      platform: Wii
+    - name: Here We Go!
+      description: Complete every galaxy in World S except the Grandmaster Galaxy
+      date: "2026-06-25T10:33:26-05:00"
+      points: 10
+      hardcore: true
+      icon: "637512"
+      provider: retroachievements
+      platform: Wii
+    - name: I Feel the Power Rushing Through My Veins
+      description: Collect all 120 Power Stars. You can gain access to the elusive Green Stars by defeating Bowser in his galaxy generator again!
+      date: "2026-06-25T10:33:27-05:00"
+      points: 25
+      hardcore: true
+      icon: "637078"
+      provider: retroachievements
+      platform: Wii
+    - name: Taller, Faster, Greener
+      description: Collect a star as Luigi in under 00:20.00
+      date: "2026-06-25T10:55:36-05:00"
+      points: 5
+      hardcore: true
+      icon: "637861"
+      provider: retroachievements
+      platform: Wii
+    - name: Green-Flavored Isn't Bad
+      description: Collect 20 Green Stars
+      date: "2026-06-25T11:34:12-05:00"
+      points: 10
+      hardcore: true
+      icon: "637513"
+      provider: retroachievements
+      platform: Wii
+    - name: Hiding in Plain Sight
+      description: Collect 40 Green Stars
+      date: "2026-06-25T12:22:42-05:00"
+      points: 10
+      hardcore: true
+      icon: "637514"
+      provider: retroachievements
+      platform: Wii
+    - name: Need a Ride?
+      description: Earn 10 extra lives in a row in Supermassive Galaxy
+      date: "2026-06-26T09:06:45-05:00"
+      points: 3
+      hardcore: true
+      icon: "638145"
+      provider: retroachievements
+      platform: Wii
+    - name: Powered Off Pure Green Energy
+      description: Collect 60 Green Stars
+      date: "2026-06-26T09:08:45-05:00"
+      points: 10
+      hardcore: true
+      icon: "637515"
+      provider: retroachievements
+      platform: Wii
+    - name: Green-Tinted Glasses
+      description: Collect 80 Green Stars
+      date: "2026-06-26T09:55:16-05:00"
+      points: 10
+      hardcore: true
+      icon: "637516"
+      provider: retroachievements
+      platform: Wii
+    - name: Now What?
+      description: In Throwback Galaxy, clear the teleporter gauntlet and collect the 3 1-Up Mushrooms without entering the teleporter
+      date: "2026-06-26T13:41:12-05:00"
+      points: 3
+      hardcore: true
+      icon: "639016"
+      provider: retroachievements
+      platform: Wii
+    - name: All I Can See Is Green Now
+      description: Collect 100 Green Stars
+      date: "2026-06-26T13:46:28-05:00"
+      points: 10
+      hardcore: true
+      icon: "637517"
+      provider: retroachievements
+      platform: Wii
+    - name: Sprinting Through the Time Stream
+      description: In Stone Cyclone Galaxy, collect the first Green Star while time is slowed down
+      date: "2026-06-26T14:19:47-05:00"
+      points: 10
+      hardcore: true
+      icon: "639025"
+      provider: retroachievements
+      platform: Wii
+    - name: Green, Mean, and Ready for an Ultimate Test!
+      description: Collect 120 Green Stars and gain access to Grandmaster Galaxy, the final galaxy
+      date: "2026-06-26T14:33:33-05:00"
+      points: 25
+      hardcore: true
+      icon: "637518"
+      provider: retroachievements
+      platform: Wii
+    - name: Rock and Roll
+      description: In Melty Monster Galaxy, collect the Power Star "A Stroll Down Rolling Lane" with at least 150 Star Bits and without dying
+      date: "2026-06-26T14:36:01-05:00"
+      points: 10
+      hardcore: true
+      icon: "639014"
+      provider: retroachievements
+      platform: Wii
+    - name: Bonus Pair
+      description: Earn an extra life from collecting 100 Star Bits and an extra life from collecting 100 coins in a single mission
+      date: "2026-06-26T14:51:33-05:00"
+      points: 5
+      hardcore: true
+      icon: "637858"
+      provider: retroachievements
+      platform: Wii

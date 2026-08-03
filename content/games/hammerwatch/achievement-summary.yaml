@@ -9,3 +9,40 @@ providers:
       total: 38
       playtime_mins: 1207
       last_played: "2017-02-24"
+earned:
+    - name: Mass murder
+      description: Kill 2,500 enemies in the campaign
+      date: "2013-11-27T19:41:55-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239070/1359a503dbd91c3b54dfae8fed0eddbbf0fcd024.jpg
+      provider: steam
+      platform: PC
+    - name: The Queen
+      description: Kill the Queen on medium difficulty without having any crutches enabled
+      date: "2013-11-27T19:48:59-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239070/006de6cec6b027de1bbb7436937b74a50112df72.jpg
+      provider: steam
+      platform: PC
+    - name: Affluent
+      description: Get 10,000 coins in the campaign
+      date: "2013-11-27T21:37:40-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239070/25b405c1a4508f91001d479c9831abc3e56f2423.jpg
+      provider: steam
+      platform: PC
+    - name: The Knight
+      description: Kill the Knight on medium difficulty without having any crutches enabled
+      date: "2013-11-28T21:39:34-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239070/71157a8d01dd068618759a9ac35aa8d9470c7f23.jpg
+      provider: steam
+      platform: PC
+    - name: Harvesting
+      description: Find the first easter egg
+      date: "2013-11-28T23:44:20-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239070/d9a80e42cf7714793a4823078f735059a6f7538b.jpg
+      provider: steam
+      platform: PC
+    - name: The Grisly Combination
+      description: Solve it like it was E1M4
+      date: "2014-06-23T17:12:12-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239070/7ae0ff0a63ed6847ce34b6f11f761f2d52cd8ef8.jpg
+      provider: steam
+      platform: PC

@@ -9,3 +9,16 @@ providers:
       total: 13
       playtime_mins: 667
       last_played: "2017-12-21"
+earned:
+    - name: Dem Bones
+      description: Revive an online teammate
+      date: "2014-12-18T21:05:02-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/113020/8888264dc72e70d7f6c553b480e26bf4efc00ca6.jpg
+      provider: steam
+      platform: PC
+    - name: Whacked
+      description: Win an online PvP match
+      date: "2015-09-18T23:15:50-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/113020/bc14728a9246ac85f18b8d9474293dce7c40a45a.jpg
+      provider: steam
+      platform: PC

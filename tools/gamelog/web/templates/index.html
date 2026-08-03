@@ -1,6 +1,7 @@
 {{define "content"}}
 <h1>Games</h1>
 <p class="lead">{{len .Games}} logged.</p>
+<p class="hint">Started/Finished are the game's own dates; a greyed-out date is known from a playthrough instead — edit that from the game's own page.</p>
 
 <form method="get" action="/" class="row">
   <input type="search" name="q" placeholder="filter by title..." value="{{.Query}}" style="max-width: 22rem;">
@@ -10,18 +11,10 @@
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Title</th><th>Status</th><th>Started</th><th>Finished</th><th>Playthroughs</th></tr></thead>
+  <thead><tr><th>Title</th><th>Status</th><th>Started</th><th>Finished</th><th>Platform</th><th>Rating</th><th>Playthroughs</th><th></th></tr></thead>
   <tbody>
-    {{range .Games}}
-    <tr>
-      <td><a href="/games/{{.Slug}}">{{.Title}}</a>{{if .Draft}} <span class="pill pill--draft">draft</span>{{end}}</td>
-      <td><span class="{{pillClass .Status}}">{{.Status}}</span></td>
-      <td class="dim">{{.Started}}</td>
-      <td class="dim">{{.Finished}}</td>
-      <td class="dim">{{.NumPlaythroughs}}</td>
-    </tr>
-    {{else}}
-    <tr><td colspan="5" class="empty">No games match.</td></tr>
+    {{range .Games}}{{template "game_row" .}}{{else}}
+    <tr><td colspan="8" class="empty">No games match.</td></tr>
     {{end}}
   </tbody>
 </table>

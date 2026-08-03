@@ -70,6 +70,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /games/new", s.handleCreateGame)
 	mux.HandleFunc("GET /games/{slug}", s.handleGameDetail)
 	mux.HandleFunc("POST /games/{slug}/info", s.handleEditInfo)
+	mux.HandleFunc("POST /games/{slug}/quickedit", s.handleQuickEditGame)
 	mux.HandleFunc("POST /games/{slug}/playthroughs", s.handleNewPlaythrough)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}", s.handleUpdatePlaythrough)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/split", s.handleSplitPlaythrough)
@@ -139,18 +140,31 @@ var funcMap = template.FuncMap{
 	"formatHoursFunc": formatHours,
 }
 
-// loadPage parses layout.html together with exactly one page-specific
-// template file, in an isolated *template.Template each call — every page
-// file defines a template named "content", and parsing them one at a time
-// like this is what lets each page reuse that same name without colliding
-// with any other page's.
-func loadPage(name string) *template.Template {
-	return template.Must(template.New("layout.html").Funcs(funcMap).
-		ParseFS(templateFiles, "web/templates/layout.html", "web/templates/"+name))
+// loadPage parses layout.html together with one page-specific template file
+// and any additional partials it references, in an isolated
+// *template.Template each call — every page file defines a template named
+// "content", and parsing them one at a time like this is what lets each page
+// reuse that same name without colliding with any other page's.
+func loadPage(name string, partials ...string) *template.Template {
+	files := append([]string{"web/templates/layout.html", "web/templates/" + name}, partials...)
+	return template.Must(template.New("layout.html").Funcs(funcMap).ParseFS(templateFiles, files...))
+}
+
+// rowTemplate renders game_row.html on its own — the fragment
+// handleQuickEditGame swaps into the index page via htmx, as opposed to a
+// full "layout" page render.
+var rowTemplate = template.Must(template.New("game_row.html").Funcs(funcMap).
+	ParseFS(templateFiles, "web/templates/game_row.html"))
+
+func (s *server) renderRow(w http.ResponseWriter, view gameRowView) {
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	if err := rowTemplate.ExecuteTemplate(w, "game_row", view); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 var pageTemplates = map[string]*template.Template{
-	"index":          loadPage("index.html"),
+	"index":          loadPage("index.html", "web/templates/game_row.html"),
 	"game_new":       loadPage("game_new.html"),
 	"game_detail":    loadPage("game_detail.html"),
 	"scan":           loadPage("scan.html"),

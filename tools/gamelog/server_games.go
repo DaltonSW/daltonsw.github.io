@@ -39,9 +39,18 @@ func gamePath(slug string) string { return "/games/" + slug }
 
 // ── Games list / create ────────────────────────────────────────────────────
 
+// gameRowView is what game_row.html renders: a GameSummary plus the one bit
+// of state that only exists mid-edit — a quickedit validation error, shown
+// inline with the values the user actually typed rather than reverting them.
+type gameRowView struct {
+	GameSummary
+	Error string
+	Saved bool // true right after a successful quickedit, for a one-shot CSS flash
+}
+
 type indexData struct {
 	Page
-	Games []GameSummary
+	Games []gameRowView
 	Query string
 }
 
@@ -62,7 +71,11 @@ func (s *server) handleIndex(w http.ResponseWriter, r *http.Request) {
 		}
 		games = filtered
 	}
-	s.render(w, "index", indexData{Page: newPage(r, "Games", "games"), Games: games, Query: q})
+	rows := make([]gameRowView, len(games))
+	for i, g := range games {
+		rows[i] = gameRowView{GameSummary: g}
+	}
+	s.render(w, "index", indexData{Page: newPage(r, "Games", "games"), Games: rows, Query: q})
 }
 
 type gameNewData struct {
@@ -258,6 +271,71 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	redirectOK(w, r, gamePath(slug), "Saved.")
+}
+
+// handleQuickEditGame is the games-index row's Save button: the same
+// Status/Started/Finished/Platform/Rating edit as handleEditInfo, minus
+// Title/Draft, always answering with the row fragment (game_row.html)
+// instead of a redirect — the index page swaps it in with htmx instead of
+// reloading, so a sweep down the whole list never has to visit
+// /games/{slug} at all. A failed validation re-renders the row with
+// whatever was typed (not the saved values) plus an inline error, so a typo
+// doesn't cost the rest of the edit.
+func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	doc, pf, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	if err := r.ParseForm(); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	status := r.FormValue("status")
+	started, finished := r.FormValue("started"), r.FormValue("finished")
+	platform, rating := r.FormValue("platform"), r.FormValue("rating")
+
+	fail := func(err error) {
+		row := gameSummaryFor(slug, doc.Path, doc, pf)
+		row.Status, row.FMStarted, row.FMFinished, row.Platform, row.Rating = status, started, finished, platform, rating
+		s.renderRow(w, gameRowView{GameSummary: row, Error: err.Error()})
+	}
+
+	if err := validateDate(false)(started); err != nil {
+		fail(fmt.Errorf("started: %w", err))
+		return
+	}
+	if err := validateDate(false)(finished); err != nil {
+		fail(fmt.Errorf("finished: %w", err))
+		return
+	}
+	if err := validateRating(rating); err != nil {
+		fail(fmt.Errorf("rating: %w", err))
+		return
+	}
+
+	updated := doc.FM
+	updated.Status = status
+	updated.Started = started
+	updated.Finished = finished
+	updated.Platform = platform
+	updated.SetRating(rating)
+
+	if !sameGameInfo(doc.FM, updated) {
+		doc.FM = updated
+		// Front-matter scalar fields aren't omitempty, so clearing one leaves
+		// the key present rather than dropping it — same reasoning as
+		// handleEditInfo above: nothing here is ever a legitimate removal to
+		// declare.
+		syncing := pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
+		if err := writeFrontMatter(doc, pf, syncing); err != nil {
+			fail(err)
+			return
+		}
+	}
+
+	s.renderRow(w, gameRowView{GameSummary: gameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
 }
 
 // ── Playthroughs ─────────────────────────────────────────────────────────

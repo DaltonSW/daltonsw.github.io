@@ -11,6 +11,8 @@
       aria-selected="false" tabindex="-1" aria-controls="games-panel-list">Game list</button>
     <button type="button" class="tabs__tab" id="games-tab-backlog" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-backlog">Backlog</button>
+    <button type="button" class="tabs__tab" id="games-tab-achievements" role="tab"
+      aria-selected="false" tabindex="-1" aria-controls="games-panel-achievements">Achievements</button>
   </div>
 
   {{/* data-self-sized: the timeline chart sizes/scrolls itself; tabs.ts and main.scss key off this. */}}
@@ -125,6 +127,10 @@
 
   <div class="tabs__panel" id="games-panel-backlog" role="tabpanel" aria-labelledby="games-tab-backlog">
     {{ partial "games-backlog.html" . }}
+  </div>
+
+  <div class="tabs__panel" id="games-panel-achievements" role="tabpanel" aria-labelledby="games-tab-achievements">
+    {{ partial "games-achievements.html" . }}
   </div>
 </div>
 

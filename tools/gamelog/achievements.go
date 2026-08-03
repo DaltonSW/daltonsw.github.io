@@ -349,6 +349,28 @@ type AchievementSummary struct {
 	// querying rather than for one layout. Which of the two a given view uses
 	// is a display decision.
 	Providers []ProviderBreakdown `yaml:"providers,omitempty"`
+
+	// Earned is every unlocked achievement across every linked provider, kept
+	// here (rather than read from archive/ directly) for the same reason the
+	// rest of this projection exists: Hugo never reads archive/ or its `raw`
+	// payloads at build time. Sorted oldest-first, matching summarize()'s
+	// convention on ProviderRecord.Achievements — newest-first is a display
+	// choice, made by whatever reads this file.
+	Earned []EarnedAchievement `yaml:"earned,omitempty"`
+}
+
+// EarnedAchievement is one unlocked achievement, flattened out of a game's
+// provider records for display. Locked achievements aren't included here —
+// this is a "what did I earn" projection, not a duplicate of the archive.
+type EarnedAchievement struct {
+	Name        string `yaml:"name"`
+	Description string `yaml:"description,omitempty"`
+	Date        string `yaml:"date"`
+	Points      int    `yaml:"points,omitempty"`
+	Hardcore    bool   `yaml:"hardcore,omitempty"`
+	Icon        string `yaml:"icon,omitempty"`
+	Provider    string `yaml:"provider"`
+	Platform    string `yaml:"platform,omitempty"`
 }
 
 // ProviderBreakdown is one provider's contribution to a game's summary.
@@ -375,6 +397,7 @@ func writeAchievementSummary(archiveDir, gameDir string, links []providerLink) (
 	var unlocked, total, playtimeMins int
 	var lastPlayed string
 	var breakdown []ProviderBreakdown
+	var earned []EarnedAchievement
 	for _, link := range links {
 		provider, id := link.Provider, link.ID
 		if id == "" {
@@ -398,6 +421,21 @@ func writeAchievementSummary(archiveDir, gameDir string, links []providerLink) (
 		unlocked += rec.Unlocked
 		total += rec.Total
 		playtimeMins += rec.PlaytimeMins
+		for _, a := range rec.Achievements {
+			if !a.Unlocked {
+				continue
+			}
+			earned = append(earned, EarnedAchievement{
+				Name:        a.Name,
+				Description: a.Description,
+				Date:        a.Date,
+				Points:      a.Points,
+				Hardcore:    a.Hardcore,
+				Icon:        a.Icon,
+				Provider:    provider,
+				Platform:    rec.Platform,
+			})
+		}
 		// RetroAchievements has no "last played" signal — the closest proxy
 		// is the most recent achievement unlock, already tracked as Last.
 		// Steam's LastPlayed (rtime_last_played) and PSN's are the real
@@ -418,9 +456,11 @@ func writeAchievementSummary(archiveDir, gameDir string, links []providerLink) (
 		return false, nil
 	}
 
+	sort.Slice(earned, func(i, j int) bool { return earned[i].Date < earned[j].Date })
+
 	out, err := yaml.Marshal(AchievementSummary{
 		Unlocked: unlocked, Total: total, PlaytimeMins: playtimeMins, LastPlayed: lastPlayed,
-		Providers: breakdown,
+		Providers: breakdown, Earned: earned,
 	})
 	if err != nil {
 		return false, err
@@ -531,6 +571,25 @@ func FetchSteamRecord(ctx context.Context, client *SteamClient, appID string, ow
 		}
 		rec.Achievements = append(rec.Achievements, entry)
 	}
+
+	// Icons aren't in GetPlayerAchievements at all — only the static schema
+	// carries them. Best-effort: a game whose schema call fails (or a very
+	// old/delisted title with no schema) still keeps its unlock data, just
+	// without icons.
+	if schema, err := client.GetSchemaForGame(ctx, appID); err == nil {
+		icons := make(map[string]string, len(schema))
+		for _, a := range schema {
+			if a.Icon != "" {
+				icons[a.APIName] = a.Icon
+			}
+		}
+		for i := range rec.Achievements {
+			if icon, ok := icons[rec.Achievements[i].Key]; ok {
+				rec.Achievements[i].Icon = icon
+			}
+		}
+	}
+
 	rec.summarize()
 	if rec.Total > 0 && rec.Unlocked == rec.Total {
 		rec.AwardKind = "all achievements"
