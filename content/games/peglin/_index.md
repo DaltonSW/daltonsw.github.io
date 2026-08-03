@@ -1,17 +1,18 @@
 ---
-title: "Peglin"
-platform: "PC"
-retroachievements_id:
+title: Peglin
+platform: PC
+retroachievements_id: null
 steam_appid: 1296610
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["peglin"]
+    games:
+      - peglin
+cover: null
 ---
 
 

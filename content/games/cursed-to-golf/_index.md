@@ -3,9 +3,9 @@ title: "Cursed to Golf"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1726120
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-10-04"
 rating:
 cover:
 draft: true

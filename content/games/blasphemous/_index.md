@@ -1,17 +1,18 @@
 ---
-title: "Blasphemous"
-platform: "PC"
-retroachievements_id:
+title: Blasphemous
+platform: PC
+retroachievements_id: null
 steam_appid: 774361
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["blasphemous"]
+    games:
+      - blasphemous
+cover: null
 ---
 
 

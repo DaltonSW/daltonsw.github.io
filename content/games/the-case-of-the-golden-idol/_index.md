@@ -1,17 +1,18 @@
 ---
-title: "The Case of the Golden Idol"
-platform: "PC"
-retroachievements_id:
+title: The Case of the Golden Idol
+platform: PC
+retroachievements_id: null
 steam_appid: 1677770
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["the-case-of-the-golden-idol"]
+    games:
+      - the-case-of-the-golden-idol
+cover: null
 ---
 
 

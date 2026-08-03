@@ -3,9 +3,9 @@ title: "Danganronpa V3: Killing Harmony"
 platform: "PC"
 retroachievements_id:
 steam_appid: 567640
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2017-10-19"
 rating:
 cover:
 draft: true

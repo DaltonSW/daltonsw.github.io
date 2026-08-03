@@ -3,9 +3,9 @@ title: "Crash Bandicoot™ N. Sane Trilogy"
 platform: "PC"
 retroachievements_id:
 steam_appid: 731490
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-05-14"
 rating:
 cover:
 draft: true

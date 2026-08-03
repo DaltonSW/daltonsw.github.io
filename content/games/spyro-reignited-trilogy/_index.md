@@ -3,9 +3,9 @@ title: "Spyro™ Reignited Trilogy"
 platform: "PC"
 retroachievements_id:
 steam_appid: 996580
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2025-08-02"
 rating:
 cover:
 draft: true

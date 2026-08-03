@@ -3,7 +3,7 @@ title: "Super Mega Baseball 2"
 platform: "PC"
 retroachievements_id:
 steam_appid: 414870
-status: "playing"
+status: "multiplayer"
 started:
 finished:
 rating:

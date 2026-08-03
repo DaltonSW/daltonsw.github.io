@@ -3,9 +3,9 @@ title: "Halo: The Master Chief Collection"
 platform: "PC"
 retroachievements_id:
 steam_appid: 976730
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2019-12-12"
 rating:
 cover:
 draft: true

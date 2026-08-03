@@ -1,17 +1,18 @@
 ---
-title: "Cookie Clicker"
-platform: "PC"
-retroachievements_id:
+title: Cookie Clicker
+platform: PC
+retroachievements_id: null
 steam_appid: 1454400
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["cookie-clicker"]
+    games:
+      - cookie-clicker
+cover: null
 ---
 
 

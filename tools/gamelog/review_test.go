@@ -35,17 +35,17 @@ func TestCountDraftsAndNextDraft(t *testing.T) {
 
 func TestHasArchiveRecord(t *testing.T) {
 	dir := t.TempDir()
-	if hasArchiveRecord(dir, "4650", "1145360") {
+	if hasArchiveRecord(dir, buildProviderLinks("4650", "1145360", "")) {
 		t.Fatal("expected no archive record for either ID before any is saved")
 	}
 
 	if _, err := SaveRecord(dir, providerRA, "4650", "Hades II", &ProviderRecord{}); err != nil {
 		t.Fatal(err)
 	}
-	if !hasArchiveRecord(dir, "4650", "1145360") {
+	if !hasArchiveRecord(dir, buildProviderLinks("4650", "1145360", "")) {
 		t.Fatal("expected the saved RA record to be found")
 	}
-	if hasArchiveRecord(dir, "", "1145360") {
+	if hasArchiveRecord(dir, buildProviderLinks("", "1145360", "")) {
 		t.Fatal("a blank ID should never match a record")
 	}
 }

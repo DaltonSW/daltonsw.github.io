@@ -1,17 +1,18 @@
 ---
-title: "Hades II"
-platform: "PC"
-retroachievements_id:
+title: Hades II
+platform: PC
+retroachievements_id: null
 steam_appid: 1145350
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["hades-ii"]
+    games:
+      - hades-ii
+cover: null
 ---
 
 

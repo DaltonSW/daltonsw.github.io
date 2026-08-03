@@ -1,17 +1,18 @@
 ---
-title: "Enter the Gungeon"
-platform: "PC"
-retroachievements_id:
+title: Enter the Gungeon
+platform: PC
+retroachievements_id: null
 steam_appid: 311690
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["enter-the-gungeon"]
+    games:
+      - enter-the-gungeon
+cover: null
 ---
 
 

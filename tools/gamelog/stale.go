@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"strings"
 	"time"
 )
 
@@ -34,10 +35,11 @@ type StaleCandidate struct {
 	Confidence      string // "medium" | "low"
 }
 
-// runStale walks through every non-draft, currently-"playing" Steam game
-// that hasn't been touched in a while, offering a computed finished/dropped
-// guess to accept, adjust, or skip — mirroring gamelog suggest's own rule
-// that a guess is reported, never applied, until a human says so.
+// runStale walks through every currently-"playing" Steam game that hasn't
+// been touched in a while — draft or published — offering a computed
+// finished/mastered/dropped guess to accept, adjust, or skip — mirroring
+// gamelog suggest's own rule that a guess is reported, never applied, until
+// a human says so.
 func runStale(args []string) error {
 	fs := flag.NewFlagSet("stale", flag.ContinueOnError)
 	fs.SetOutput(os.Stderr)
@@ -94,14 +96,16 @@ func runStale(args []string) error {
 	}
 }
 
-// findStaleCandidates only considers published, currently-"playing" games —
-// session-based games are never "playing" by design, so they're naturally
-// excluded.
+// findStaleCandidates considers any currently-"playing" Steam-linked game,
+// draft or not — pre-classifying drafts before a `gamelog review` pass is
+// exactly what this is for. The one-shot statuses (session-based,
+// multiplayer, software) are never "playing" by design, so they're naturally
+// excluded — a finished/dropped guess is meaningless for all three.
 func findStaleCandidates(archiveDir string, games []GameSummary, thresholdDays int) ([]StaleCandidate, error) {
 	now := time.Now().In(siteLocation)
 	var out []StaleCandidate
 	for _, g := range games {
-		if g.Draft || g.SteamAppID == "" || g.Status != "playing" {
+		if g.SteamAppID == "" || g.Status != "playing" {
 			continue
 		}
 		rec, err := LoadRecord(archiveDir, providerSteam, g.SteamAppID)
@@ -176,12 +180,21 @@ func reviewStale(c StaleCandidate) (cont, did bool, err error) {
 		return false, false, err
 	}
 
-	switch action {
-	case staleAccept:
+	switch {
+	case action == staleAccept:
 		doc.FM.Status = c.SuggestedStatus
 		doc.FM.Finished = c.LastPlayed
 		return true, true, confirmAndWriteFrontMatter(doc, pf)
-	case staleEdit:
+	case strings.HasPrefix(action, staleMarkPrefix):
+		status := strings.TrimPrefix(action, staleMarkPrefix)
+		doc.FM.Status = status
+		// "paused" isn't a finish — the game's still meant to be played,
+		// just not right now, so it gets no finished date.
+		if status != "paused" {
+			doc.FM.Finished = c.LastPlayed
+		}
+		return true, true, confirmAndWriteFrontMatter(doc, pf)
+	case action == staleEdit:
 		doc.FM.Status = c.SuggestedStatus
 		doc.FM.Finished = c.LastPlayed
 		updated, err := EditGameForm(doc.FM)
@@ -190,17 +203,21 @@ func reviewStale(c StaleCandidate) (cont, did bool, err error) {
 		}
 		doc.FM = updated
 		return true, true, confirmAndWriteFrontMatter(doc, pf)
-	case staleSkip:
+	case action == staleSkip:
 		fmt.Println("Left as-is — will show again next run if still quiet.")
 		return true, false, nil
-	case staleQuit:
+	case action == staleQuit:
 		return false, false, nil
 	}
 	return true, false, nil
 }
 
 func formatStaleCard(c StaleCandidate) string {
-	s := fmt.Sprintf("%s  [Steam %s]\n", c.Game.Title, c.Game.SteamAppID)
+	draftTag := ""
+	if c.Game.Draft {
+		draftTag = "  [draft]"
+	}
+	s := fmt.Sprintf("%s  [Steam %s]%s\n", c.Game.Title, c.Game.SteamAppID, draftTag)
 	s += fmt.Sprintf("  last played %s (%d days ago)\n", c.LastPlayed, c.DaysSince)
 	if c.Total > 0 {
 		pct := float64(c.Unlocked) / float64(c.Total) * 100

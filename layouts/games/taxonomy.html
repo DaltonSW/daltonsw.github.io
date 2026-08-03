@@ -2,31 +2,122 @@
 <h1>{{ .Title }}</h1>
 {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
-<h2>Gameplay History</h2>
 {{ partial "games-timeline.html" . }}
 
-<ul class="entry-list">
-  {{- $withDates := slice }}
-  {{- range .Pages }}
-    {{- $withDates = $withDates | append (dict "page" . "firstPlayed" (partial "game-first-played.html" .)) }}
-  {{- end }}
-  {{- range sort $withDates "firstPlayed" "desc" }}
-  {{- $page := .page }}
+{{/* Build one record per game *per year it was played in*, so a game played
+     twice years apart appears under both — the list is the archive's answer to
+     "what was I playing in year X", and that question is about playthroughs, not
+     games. game-year-rows.html does the year expansion and merges a game's
+     several runs within one year into a single row; it walks every playthrough
+     entry, so it's called once per game here rather than once per use below. */}}
+{{- $rows := slice }}
+{{- range .Pages }}
+  {{- $page := . }}
   {{- $achievements := "" }}
-  {{- with $page.Resources.Get "achievement-summary.yaml" }}
+  {{- with .Resources.Get "achievement-summary.yaml" }}
     {{- $achievements = . | transform.Unmarshal }}
   {{- end }}
-  <li class="entry{{ with $page.Params.status }} entry--{{ . }}{{ end }}">
-    <a class="entry__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
-    {{- with $page.Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
-    <span class="entry__meta">
-      {{- with .firstPlayed }}{{ . | time.Format "Jan 2006" }}{{ end }}
-      {{- with $page.Params.rating }} · {{ . }}/10{{ end }}
-      {{- with $achievements }} · {{ .unlocked }}/{{ .total }} achievements{{ end -}}
-    </span>
-  </li>
-  {{- else }}
-  <li class="entry"><span class="entry__sub">No games logged yet.</span></li>
+  {{- $yearRows := partial "game-year-rows.html" . }}
+  {{- if eq (len $yearRows) 0 }}
+    {{- $yearRows = slice (dict "year" "Undated" "count" 0 "start" "" "end" ""
+        "status" $page.Params.status "platform" $page.Params.platform) }}
   {{- end }}
-</ul>
+  {{- range $yearRows }}
+    {{- $rows = $rows | append (merge . (dict "page" $page "achievements" $achievements)) }}
+  {{- end }}
+{{- end }}
+
+{{/* Newest year first. "Undated" is held out of the sort and pinned last rather
+     than sorted with the rest, where it would land above the years. */}}
+{{- $years := slice }}
+{{- range $rows }}
+  {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}
+{{- end }}
+{{- $hasUndated := in $years "Undated" }}
+{{- $years = sort (complement (slice "Undated") $years) "value" "desc" }}
+{{- if $hasUndated }}{{ $years = $years | append "Undated" }}{{ end }}
+
+{{- range $years }}
+{{- $year := . }}
+{{- $inYear := sort (where $rows "year" "eq" $year) "end" "desc" }}
+{{/* Only the newest year starts expanded — with 200+ games, everything open at
+     once buries the timeline and the recent entries under a wall of cards. */}}
+<details class="year-group"{{ if eq $year (index $years 0) }} open{{ end }}>
+  <summary class="year-group__heading">
+    <span class="year-group__caret" aria-hidden="true"></span>
+    <span class="year-group__year">{{ $year }}</span>
+    <span class="year-group__count">{{ len $inYear }} game{{ if ne (len $inYear) 1 }}s{{ end }}</span>
+  </summary>
+  <div class="ps-table" role="table">
+    <div class="ps-row ps-row--head" role="row">
+      <span class="ps-row__status" role="columnheader">status</span>
+      <span class="ps-row__game" role="columnheader">game</span>
+      <span class="ps-row__platform" role="columnheader">platform</span>
+      <span class="ps-row__played" role="columnheader">played</span>
+      <span class="ps-row__playtime" role="columnheader">playtime</span>
+      <span class="ps-row__achievements" role="columnheader">achievements</span>
+    </div>
+    {{- range $inYear }}
+    {{- $row := . }}
+    {{- $page := .page }}
+    {{- $achievements := .achievements }}
+    {{/* Achievement sets and playtime don't combine across platforms:
+         Persona 5 Royal is 53/53 on PS4 and 53/53 on Steam, and "106/106"
+         describes a set that doesn't exist. Now that a row belongs to one
+         playthrough on one platform, attribute the figures to that
+         platform's provider instead of fanning every provider out onto
+         every row. A single scored provider is unambiguous whatever the
+         platform string says; with several and no match, say nothing
+         rather than something wrong. */}}
+    {{- $source := "" }}
+    {{- with $achievements }}
+      {{- $providers := .providers | default slice }}
+      {{- $matched := where $providers "platform" "eq" $row.platform }}
+      {{- if eq (len $matched) 1 }}
+        {{- $source = index $matched 0 }}
+      {{- else if eq (len $providers) 1 }}
+        {{- $source = index $providers 0 }}
+      {{- else if eq (len $providers) 0 }}
+        {{/* older summaries predate the per-provider breakdown */}}
+        {{- $source = $achievements }}
+      {{- end }}
+    {{- end }}
+    <div class="ps-row{{ with $row.status }} ps-row--{{ . }}{{ end }}" role="row">
+      <span class="ps-row__status" role="cell">{{ with $row.status }}{{ partial "game-status-tag.html" . }}{{ end }}</span>
+      <span class="ps-row__game" role="cell">
+        <a class="ps-row__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+        {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
+      </span>
+      <span class="ps-row__platform" role="cell">{{ $row.platform }}</span>
+      <span class="ps-row__played" role="cell">
+        {{/* Dates are clipped to this year by game-year-rows.html, so a row says
+             what happened in the year it's filed under rather than repeating a
+             multi-year span under each one. */}}
+        {{- $start := "" }}{{ with $row.start }}{{ $start = . | time.Format "Jan 2006" }}{{ end }}
+        {{- $end := "" }}{{ with $row.end }}{{ $end = . | time.Format "Jan 2006" }}{{ end }}
+        {{- if and $start $end (ne $start $end) }}
+          {{- $start }} – {{ $end }}
+        {{- else if or $start $end }}
+          {{- or $start $end }}
+        {{- else }}
+        <span class="ps-row__played--none">—</span>
+        {{- end }}
+      </span>
+      <span class="ps-row__playtime" role="cell">
+        {{- with $source }}{{ with .playtime_mins }}{{ printf "%.1fh" (div . 60.0) }}{{ end }}{{ end -}}
+      </span>
+      <span class="ps-row__achievements" role="cell">
+        {{- with $source }}
+          {{- with .total }}{{ partial "achievement-meter.html" (dict "unlocked" $source.unlocked "total" .) }}{{ end }}
+        {{- end -}}
+      </span>
+    </div>
+    {{- end }}
+  </div>
+</details>
+{{- else }}
+<div class="ps-table" role="table">
+  <div class="ps-row" role="row"><span class="ps-row__game" role="cell">No games logged yet.</span></div>
+</div>
+{{- end }}
 {{ end }}

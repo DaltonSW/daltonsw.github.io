@@ -3,7 +3,7 @@ title: "The Great Ace Attorney Chronicles"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1158850
-status: "playing"
+status: "paused"
 started:
 finished:
 rating:

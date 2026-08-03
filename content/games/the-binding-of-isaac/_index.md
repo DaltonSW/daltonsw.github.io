@@ -1,17 +1,18 @@
 ---
-title: "The Binding of Isaac"
-platform: "PC"
-retroachievements_id:
+title: The Binding of Isaac
+platform: PC
+retroachievements_id: null
 steam_appid: 113200
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["the-binding-of-isaac"]
+    games:
+      - the-binding-of-isaac
+cover: null
 ---
 
 

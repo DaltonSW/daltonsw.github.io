@@ -3,9 +3,9 @@ title: "Divinity: Original Sin 2"
 platform: "PC"
 retroachievements_id:
 steam_appid: 435150
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2023-08-09"
 rating:
 cover:
 draft: true

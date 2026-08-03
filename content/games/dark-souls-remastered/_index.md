@@ -3,9 +3,9 @@ title: "DARK SOULS™: REMASTERED"
 platform: "PC"
 retroachievements_id:
 steam_appid: 570940
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2026-04-28"
 rating:
 cover:
 draft: true

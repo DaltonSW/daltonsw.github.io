@@ -3,9 +3,9 @@ title: "The Witcher 3: Wild Hunt"
 platform: "PC"
 retroachievements_id:
 steam_appid: 292030
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2017-08-08"
 rating:
 cover:
 draft: true

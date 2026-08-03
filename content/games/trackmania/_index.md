@@ -1,17 +1,18 @@
 ---
-title: "Trackmania"
-platform: "PC"
-retroachievements_id:
+title: Trackmania
+platform: PC
+retroachievements_id: null
 steam_appid: 2225070
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["trackmania"]
+    games:
+      - trackmania
+cover: null
 ---
 
 

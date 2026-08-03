@@ -3,9 +3,9 @@ title: "Far Cry 6"
 platform: "PC"
 retroachievements_id:
 steam_appid: 2369390
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2023-10-14"
 rating:
 cover:
 draft: true

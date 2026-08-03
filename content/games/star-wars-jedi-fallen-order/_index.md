@@ -3,9 +3,9 @@ title: "STAR WARS Jedi: Fallen Order™ "
 platform: "PC"
 retroachievements_id:
 steam_appid: 1172380
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-12-31"
 rating:
 cover:
 draft: true

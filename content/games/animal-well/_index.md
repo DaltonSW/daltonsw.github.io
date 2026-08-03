@@ -1,17 +1,18 @@
 ---
-title: "ANIMAL WELL"
-platform: "PC"
-retroachievements_id:
+title: ANIMAL WELL
+platform: PC
+retroachievements_id: null
 steam_appid: 813230
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["animal-well"]
+    games:
+      - animal-well
+cover: null
 ---
 
 

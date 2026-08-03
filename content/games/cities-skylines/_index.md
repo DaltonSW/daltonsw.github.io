@@ -1,17 +1,18 @@
 ---
-title: "Cities: Skylines"
-platform: "PC"
-retroachievements_id:
+title: 'Cities: Skylines'
+platform: PC
+retroachievements_id: null
 steam_appid: 255710
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["cities-skylines"]
+    games:
+      - cities-skylines
+cover: null
 ---
 
 

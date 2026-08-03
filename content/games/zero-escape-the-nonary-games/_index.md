@@ -3,7 +3,7 @@ title: "Zero Escape: The Nonary Games"
 platform: "PC"
 retroachievements_id:
 steam_appid: 477740
-status: "playing"
+status: "paused"
 started:
 finished:
 rating:

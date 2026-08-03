@@ -57,6 +57,14 @@ $content-width: 860px;
   --stop:     #e57373;  // dropped / unfinished
   --pause:    #7aa6da;  // paused — on hold, distinct from --dim (never started)
   --mastered: #e8a33d;  // mastered — trophy gold, a step above finished
+  // session-based and multiplayer are game-level states with no finish line,
+  // so they must not share a color with --pause (temporarily stopped) or
+  // --warn (an active playthrough). Both are permanent, not in-progress.
+  --session:  #5ec8c8;  // session-based — endless/cyclical
+  --multi:    #f0a0c4;  // multiplayer — played with other people
+  // Deliberately desaturated: software sits off the completion spectrum
+  // entirely, so it should read as muted next to the saturated game states.
+  --software: #8891a8;  // software — a tool, not a game
 
   --radius: 8px;
 }
@@ -72,5 +80,8 @@ $content-width: 860px;
     --accent:  #c23b7c;
     --accent-2:#a12e63;
     --pause:   #3f74ad;
+    --session: #1f7f7f;
+    --multi:   #b03a70;
+    --software:#5b6478;
   }
 }

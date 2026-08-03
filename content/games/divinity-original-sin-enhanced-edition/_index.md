@@ -3,9 +3,9 @@ title: "Divinity: Original Sin Enhanced Edition"
 platform: "PC"
 retroachievements_id:
 steam_appid: 373420
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2021-02-20"
 rating:
 cover:
 draft: true

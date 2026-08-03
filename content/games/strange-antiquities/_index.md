@@ -3,9 +3,9 @@ title: "Strange Antiquities"
 platform: "PC"
 retroachievements_id:
 steam_appid: 2885870
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2026-04-19"
 rating:
 cover:
 draft: true

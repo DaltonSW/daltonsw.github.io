@@ -25,8 +25,9 @@ content/games/<slug>/
   playthroughs.yaml  tool-owned. Encoded whole on every write.
 
 archive/
-  retroachievements/4650.json    captured from the API. Merge-on-write, never
-  steam/1145360.json             hand-edited, never read by Hugo.
+  retroachievements/4650.json      captured from the API. Merge-on-write, never
+  steam/1145360.json               hand-edited, never read by Hugo.
+  psn/NPWR16532_00.json            PlayStation, mirrored via Exophase (see below).
 ```
 
 **The archive is keyed by provider ID, not by slug, and lives outside `content/`.** A slug is a
@@ -36,9 +37,9 @@ IDs never change. Being outside the content tree also means Hugo never parses `r
 publishes it: bundle resources are copied to the built site, so the old layout was serving every
 captured API response publicly.
 
-A game on both services gets two archive files. Nothing in the archive links them —
-`retroachievements_id` and `steam_appid` in front matter do, which is the right place for a
-judgement a human made rather than something either provider reported.
+A game on several services gets one archive file each. Nothing in the archive links them —
+`retroachievements_id`, `steam_appid` and `psn_id` in front matter do, which is the right place
+for a judgement a human made rather than something any provider reported.
 
 ## How playthroughs are written
 
@@ -79,6 +80,41 @@ explicitly: YAML resolves an unquoted `2026-01-04` to a timestamp, and letting t
 on every write. Prose belongs in `_index.md`'s markdown body, which a front-matter edit never
 touches (see below).
 
+### `platform` on a playthrough
+
+A game's front matter has a `platform:`, but that can only describe one, and the same game does
+get played on more than one — Persona 5 Royal on PS4 and again on Steam when it released there,
+Octopath Traveler finished on PC and dropped on Switch. Those are separate runs with separate
+dates and separate outcomes, so an entry may carry its own `platform:`:
+
+```yaml
+playthroughs:
+  - started: "2020-05-19"
+    finished: "2020-10-17"
+    status: mastered
+    platform: PS4
+  - started: "2023-03-12"
+    finished: "2023-05-14"
+    status: mastered
+    platform: PC
+```
+
+It's `omitempty`, and **blank means "inherit the game's `platform:`"** rather than "unknown". That
+is what makes every file written before the field existed still mean what it did, and it's why the
+form offers the game's platform as a *label* on the blank option instead of prefilling it —
+prefilling would freeze a copy, so a later correction to the game would silently fail to reach its
+runs. Clearing the field in `gamelog` therefore declares `playthroughs[N].platform` as an allowed
+removal: handing a run back to the game is the intent, not loss.
+
+The games list and timeline render it per row, but only when a game's runs actually differ.
+Labelling one run `PS4` and leaving its sibling bare would make the reader infer what the bare one
+was; repeating `PC` on every row of the ~200 single-platform games is noise. `layouts/games/term.html`
+counts distinct platforms across the entries and shows the column only when there's more than one.
+
+Note this is a *human* judgement, deliberately, and not the same thing as per-playthrough provider
+attribution — which is still not implemented, because the API data genuinely can't support it (see
+`gamelog suggest`). You know you played it on PS4; Steam's achievement history can't tell you.
+
 Game directory names come from `Slugify`, which folds accents to ASCII (`Ōkami` → `okami`,
 `Pokémon Red` → `pokemon-red`) and drops symbols like `™`/`®`. A title that yields no slug at all
 is refused rather than written, and a slug already in use names the game holding it — distinct
@@ -102,11 +138,32 @@ implemented yet.
 was earned, not just the ones that come from beating it. It's a distinct value rather than a flag
 on `finished` so the timeline/list can color and filter them separately.
 
-`status: session-based` marks a game (roguelikes, multiplayer) that doesn't have a meaningful
-start/finish narrative — it's played in an open-ended series of sessions with no state that ends
-play. Such a game gets exactly one `playthroughs.yaml` entry, ever, whose `sessions:` list *is*
-the record: once it has that one entry, "Start a new playthrough" stops being offered for it, so
-there's nothing to accidentally fragment into a second discrete playthrough later.
+`status: paused` is distinct from `dropped`: it means the game is on hold, not abandoned — you
+mean to come back to it eventually. Setting it never writes a finished date, since the game isn't
+finished; `gamelog stale` in particular offers it as a one-click correction on a quiet game it
+otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
+
+`session-based`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
+no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
+ends play. They're separate statuses because the *reason* differs: `session-based` is a replay-loop
+design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `software` isn't a game at
+all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
+through the same `gamelog scan` and need somewhere to go that isn't a completion state.
+
+Any of the three gets exactly one `playthroughs.yaml` entry **per platform**, whose `sessions:`
+list *is* the record — so there's nothing to accidentally fragment into a second discrete
+playthrough on the same platform later. The cap is per-platform rather than absolute because
+saves don't cross consoles: Spelunky 2 on PS4 and on Steam is two separate records with two
+separate achievement sets, which is not the fragmentation the cap exists to prevent.
+
+`isOneShot` in `forms.go` is the predicate for the status; `doNewPlaythrough` enforces the
+per-platform half, which can only be checked once the form has collected the platform — so a
+same-platform second entry is refused after the form rather than hidden from the menu.
+`effectivePlatform` resolves blank to the game's platform, so an entry predating the field still
+compares equal to its own game.
+
+Note that the entry's own status stays `playing` — these three exist only in the game-level
+vocabulary, so anything reading entry status (the timeline, notably) has to special-case them.
 
 The same two safeguards as `playthroughs.yaml` apply: an `Extra map[string]any` inline field
 catches `cover`, `cascade`, and anything else the struct doesn't model, so it round-trips instead
@@ -211,8 +268,10 @@ playthroughs — followed by a choice:
 
 Steam's `GetOwnedGames` reports `rtime_last_played` per game, captured into every Steam archive
 record as `last_played`. `gamelog stale` uses it to find games you've probably stopped playing but
-never marked as such: published, currently `status: playing`, Steam-linked, and untouched for a
-while.
+never marked as such: currently `status: playing`, Steam-linked, and untouched for a while — draft
+or published. That makes it a fast way to pre-classify the `scan`-created draft backlog by
+achievement completion before doing a full `gamelog review` pass on it; cards for draft games are
+tagged `[draft]` so it's clear accepting one doesn't publish it.
 
 ```
 go run . stale                # 30+ days since last played
@@ -225,17 +284,54 @@ go on at all (playtime alone doesn't prove completion, so "dropped" is the safer
 claim) — and shows it alongside the last-played date, achievement count, and playtime. Nothing is
 ever written automatically; you choose:
 
-- **Accept** — applies the suggested status as-is.
+- **Correct — mark _status_** — applies the suggested status as-is.
+- **Nope — mark _status_ instead** — one for each of the other statuses `stale` might have
+  guessed (mastered/finished/dropped), so correcting a wrong guess doesn't require opening the
+  full edit form just to change one field.
 - **Edit before applying** — opens "Edit game info," prefilled with the suggested status, so you
   can change it, add a finish date, or adjust anything else before confirming.
 - **Still playing / skip for now** — leaves it untouched. There's no persistent dismissal — if it's
   still `playing` and still stale, the next `gamelog stale` run will surface it again.
 - **Quit** — stops the loop.
 
-A game marked `session-based` never shows up here — it isn't `status: playing` by definition (see
-above), and games played in indefinite session bursts have no "done" to detect from staleness
-alone. Same reasoning `gamelog scan` already applies to Steam elsewhere: a completion signal comes
+None of the one-shot statuses (`session-based`, `multiplayer`, `software`) ever shows up here —
+they aren't `status: playing` by definition (see above), and something used in indefinite session
+bursts has no "done" to detect from staleness alone. Same reasoning `gamelog scan` already applies to Steam elsewhere: a completion signal comes
 from achievements or an explicit human decision, never from playtime or silence by itself.
+
+## `gamelog close` — cap playthroughs left open
+
+`gamelog close` finds every playthrough whose trailing date is blank and offers to cap it at the
+last day it was actually played. **It never changes a status** — the only thing it writes is a
+date.
+
+This is a different question from the one `gamelog stale` asks, which is why it's a different
+command. `stale` looks at games still marked `playing` and guesses a *terminal status* from
+achievement completion. The entries `close` targets are mostly one-shot games whose status is
+already correct; the only thing wrong with them is a trailing `finished: ""` that renders as
+"ongoing" forever. A sandbox you last touched in 2017 isn't mid-playthrough, but it isn't
+"finished" either. Closing the date and picking a status are separate decisions.
+
+The whole list is presented as **one pre-selected multi-select**, not a game-at-a-time loop:
+"cap it at the last day I played" is right for most of them, so the cheap interaction is
+accepting in bulk and deselecting the exceptions. It's filterable — type to narrow the list.
+
+The closing date comes from the archive's `last_played` when there is one, falling back to the
+open session's own `started` date. The fallback is the right answer more often than it looks: a
+party game played on one evening has a start date and nothing else, and that evening *is* when it
+stopped. Each row shows which source it used, so a wrong date is visible before you confirm.
+
+Excluded by default:
+
+- **`playing` games** — an open date is correct there. `--all` includes them.
+- **`paused` games, always** — `--all` does not reach these. Paused means on hold, not abandoned;
+  it's the one status `gamelog stale` deliberately refuses to date-stamp, and an open-ended bar is
+  the honest render for something you intend to resume.
+- **Anything with no date anywhere.** Inventing one would be worse than leaving it open.
+
+Writes go through the same pre-write proof as every other playthrough write: the pending rewrite is
+diffed against what's on disk and refused if a field would vanish. An entry that was closed between
+building the list and confirming it is left alone rather than overwritten.
 
 ## `gamelog achievements` — full unlock history
 
@@ -296,17 +392,76 @@ and merging them is a presentation decision, not a storage one.
 
 ### Linking a game to external IDs
 
-Add either or both to a game's front matter (blank/omitted is fine — that provider is just
+Add any of these to a game's front matter (blank/omitted is fine — that provider is just
 skipped):
 
 ```yaml
 retroachievements_id: 4650      # numeric ID from the game's retroachievements.org URL
 steam_appid: 1145360            # numeric appid from the game's Steam store URL
+psn_id: "NPWR16532_00"          # PlayStation trophy-set ID (see below)
 ```
 
 The interactive "new game" form accepts either the bare number or the full URL you copied it
 from (`retroachievements.org/game/4650`, `store.steampowered.com/app/1145360/Hades/`) and
 stores the bare ID. `suggest` accepts a pasted URL in front matter too.
+
+Everything that walks a game's archive takes `[]providerLink` (from `Doc.ProviderLinks` or
+`GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, so a fourth
+provider is a client file plus one entry in `providerOrder` — not an edit to every signature
+that touches the archive.
+
+### PlayStation, via Exophase
+
+**Sony has no public API.** Trophy history is read from a public [Exophase](https://www.exophase.com)
+profile instead, which mirrors PSN including per-trophy unlock timestamps — the part actually
+worth archiving. The alternative is reverse-engineering Sony's endpoints and holding an NPSSO
+cookie that expires every couple of months; that can be added later behind the same
+`providerPSN` key, and `Source` on the record exists so the two are distinguishable.
+
+`psn_id` is the `NPWR…` trophy-set ID, which is Sony's and permanent — Exophase reports it as
+`canonical_id`. The archive keys on that, not on anything Exophase owns, so the records survive
+the mirror going away.
+
+There are no secrets involved: `EXOPHASE_PSN_USER` is a public profile name, and the profile
+just has to be public. Records are written with `source: exophase` and are merged by exactly
+the same never-lose rules as every other provider — a private profile or a failed fetch updates
+`last_attempt`/`last_error` and leaves the history alone.
+
+Three quirks, all found against live responses:
+
+- Cloudflare serves an interstitial to Go's default `Go-http-client/1.1` User-Agent. Requests
+  must send a browser one (`exophaseUserAgent`) — the same class of trap as RA's 403.
+- **The JSON API's per-game `meta` omits `canonical_id`.** The `NPWR…` ID only appears in the
+  `window.playerGames` payload embedded in the profile HTML, so the client reads both and joins
+  them on Exophase's own `master_id`.
+- Only the **account** page (`/user/<name>/`) carries the widgets naming each linked service's
+  player id; the per-service pages don't, and their usernames differ from the account name
+  anyway (Nintendo's is an opaque hash). So the account page is read first and its own
+  `data-endpoint` links are followed.
+
+A game linked to more than one provider keeps **both** figures in `achievement-summary.yaml`:
+the combined total, and a `providers:` breakdown of the numbers before they were added. The
+games list renders the breakdown, because achievement sets don't combine across platforms —
+Persona 5 Royal is 53/53 on PS4 and 53/53 on Steam, and "106/106" describes a set that doesn't
+exist:
+
+```yaml
+unlocked: 106          # still recorded: "how many in all" is a real question,
+total: 106             # it just isn't the one the games list asks
+providers:
+  - provider: steam
+    platform: PC
+    unlocked: 53
+    total: 53
+  - provider: psn
+    platform: PS4
+    unlocked: 53
+    total: 53
+```
+
+The breakdown is labelled by `platform`, not by provider — `PS4` is what a reader recognises;
+`psn` is plumbing. A game on one provider renders the combined figure as before, which is the
+same number either way.
 
 ### Credentials
 
@@ -320,6 +475,7 @@ precedence, so `RA_API_KEY=... go run . suggest x` still overrides the file.
 | `RA_API_KEY` | RetroAchievements API key, from your account settings on retroachievements.org |
 | `STEAM_API_KEY` | Steam Web API key, from steamcommunity.com/dev/apikey |
 | `STEAM_ID` | Your SteamID64 **or** the vanity name from your profile URL — a vanity name is resolved automatically. `STEAM_USER_ID` is accepted as an alias. |
+| `EXOPHASE_PSN_USER` | Your Exophase profile name, for PlayStation trophies. **Not a secret** — it's a public profile, which just has to be public. |
 
 Steam's achievement/playtime endpoints only return data for a public profile, or your own
 profile when the key you're using belongs to that account. Note that per-game achievement
@@ -342,6 +498,8 @@ wrong or missing output before it was found by running against live data:
   the body matters more than the status.
 - Steam's API only accepts a 17-digit SteamID64; a vanity name must go through
   `ISteamUser/ResolveVanityURL` first.
+- Exophase 403s Go's default User-Agent (Cloudflare), omits `canonical_id` from its JSON API,
+  and only exposes per-service player ids on the account page. See "PlayStation, via Exophase".
 
 The committed `testdata/*.json` fixtures were corrected against live responses — keep them that
 way, since a fixture written from the documentation is what let all of the above pass tests
@@ -352,9 +510,11 @@ while being broken in practice.
 The archive lives outside `content/` on purpose (see above), so Hugo can never read it directly.
 `gamelog project` is the projection step: it walks every game with a `retroachievements_id` or
 `steam_appid`, sums that game's `unlocked`/`total` across whichever providers it's linked to (RA
-12/40 + Steam 46/54 → 58/94), and writes the result to
-`content/games/<slug>/achievement-summary.yaml` — no `raw`, no per-achievement list, just the two
-numbers the games list actually displays.
+12/40 + Steam 46/54 → 58/94) while also recording each provider separately under `providers:` plus
+total playtime summed across whichever providers report it (Steam always has; RA added
+`UserTotalPlaytime` in late 2025, so older archived RA records may predate it and simply have
+none), and writes the result to `content/games/<slug>/achievement-summary.yaml` —
+no `raw`, no per-achievement list, just the numbers the games list actually displays.
 
 ```
 go run . project
@@ -367,7 +527,8 @@ after the summary's shape changes) without touching credentials or rate limits. 
 full `project` run is only needed for a bulk backfill or to pick up an archive edited by hand.
 
 A game with nothing archived for either provider gets no file — not a `0/0` one — and any stale
-file left over from a cleared or relinked provider ID is removed rather than shown. The games list
+file left over from a cleared or relinked provider ID is removed rather than shown. A Steam game
+with playtime but no achievements at all still gets one, just without the achievement line. The games list
 (`layouts/games/taxonomy.html`) reads the file via `.Resources.Get`, which is silently absent for
 those games, so the achievement count just doesn't render rather than showing a wrong or empty
 count. Like `playthroughs.yaml`, the file is covered by `content/games/_index.md`'s

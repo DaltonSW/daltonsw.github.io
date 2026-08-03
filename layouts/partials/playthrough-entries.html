@@ -25,11 +25,16 @@
     {{- $started = (index $sorted 0).started }}
     {{- $finished = (index $sorted (sub (len $sorted) 1)).finished }}
   {{- end }}
+  {{/* platform is per-playthrough because the same game gets played on more
+       than one — falling back to the game's own platform keeps every entry
+       written before the field existed meaning what it did. */}}
+  {{- $platform := .platform | default $.Params.platform }}
   {{- $entries = $entries | append (dict
       "written"  false
       "started"  $started
       "finished" $finished
       "status"   .status
+      "platform" $platform
       "rating"   .rating
       "notes"    .notes
       "sessions" (.sessions | default slice)
@@ -45,6 +50,7 @@
       "started"   .Params.started
       "finished"  .Params.finished
       "status"    .Params.status
+      "platform"  (.Params.platform | default $.Params.platform)
       "rating"    .Params.rating
       "sessions"  slice
     )

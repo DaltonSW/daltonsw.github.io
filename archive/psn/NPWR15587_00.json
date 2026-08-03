@@ -1,0 +1,641 @@
+{
+ "provider": "psn",
+ "title": "Sekiro™: Shadows Die Twice",
+ "updated": "2026-07-27",
+ "id": "NPWR15587_00",
+ "fetched": "2026-07-27",
+ "last_attempt": "2026-07-27",
+ "unlocked": 28,
+ "total": 34,
+ "first": "2021-12-24",
+ "last": "2025-04-16",
+ "platform": "PS4",
+ "completion": "73%",
+ "source": "exophase",
+ "playtime_mins": 906,
+ "last_played": "2025-04-16",
+ "achievements": [
+  {
+   "key": "revered-blade",
+   "name": "revered-blade",
+   "unlocked": true,
+   "date": "2021-12-24T09:54:35-06:00"
+  },
+  {
+   "key": "shinobi-prosthetic",
+   "name": "shinobi-prosthetic",
+   "unlocked": true,
+   "date": "2021-12-24T10:01:09-06:00"
+  },
+  {
+   "key": "resurrection",
+   "name": "resurrection",
+   "unlocked": true,
+   "date": "2021-12-24T10:09:45-06:00"
+  },
+  {
+   "key": "gyoubu-masataka-oniwa",
+   "name": "gyoubu-masataka-oniwa",
+   "unlocked": true,
+   "date": "2021-12-24T10:28:28-06:00"
+  },
+  {
+   "key": "memorial-mob",
+   "name": "memorial-mob",
+   "unlocked": true,
+   "date": "2021-12-24T10:32:30-06:00"
+  },
+  {
+   "key": "genichiro-ashina",
+   "name": "genichiro-ashina",
+   "unlocked": true,
+   "date": "2021-12-24T11:34:18-06:00"
+  },
+  {
+   "key": "folding-screen-monkeys",
+   "name": "folding-screen-monkeys",
+   "unlocked": true,
+   "date": "2021-12-24T20:02:47-06:00"
+  },
+  {
+   "key": "guardian-ape",
+   "name": "guardian-ape",
+   "unlocked": true,
+   "date": "2021-12-24T20:26:18-06:00"
+  },
+  {
+   "key": "great-shinobi-owl",
+   "name": "great-shinobi-owl",
+   "unlocked": true,
+   "date": "2025-04-12T10:45:12-05:00"
+  },
+  {
+   "key": "corrupted-monk",
+   "name": "corrupted-monk",
+   "unlocked": true,
+   "date": "2025-04-12T11:13:01-05:00"
+  },
+  {
+   "key": "ultimate-healing-gourd",
+   "name": "ultimate-healing-gourd",
+   "unlocked": true,
+   "date": "2025-04-12T11:20:44-05:00"
+  },
+  {
+   "key": "gracious-gift-of-tears",
+   "name": "gracious-gift-of-tears",
+   "unlocked": true,
+   "date": "2025-04-12T11:38:39-05:00"
+  },
+  {
+   "key": "demon-of-hatred",
+   "name": "demon-of-hatred",
+   "unlocked": true,
+   "date": "2025-04-12T11:53:21-05:00"
+  },
+  {
+   "key": "master-of-the-arts",
+   "name": "master-of-the-arts",
+   "unlocked": true,
+   "date": "2025-04-12T12:03:35-05:00"
+  },
+  {
+   "key": "guardian-ape-immortality-severed",
+   "name": "guardian-ape-immortality-severed",
+   "unlocked": true,
+   "date": "2025-04-12T12:18:10-05:00"
+  },
+  {
+   "key": "all-ninjutsu-techniques",
+   "name": "all-ninjutsu-techniques",
+   "unlocked": true,
+   "date": "2025-04-12T12:18:16-05:00"
+  },
+  {
+   "key": "ashina-traveler",
+   "name": "ashina-traveler",
+   "unlocked": true,
+   "date": "2025-04-12T12:23:13-05:00"
+  },
+  {
+   "key": "the-phantom-lady-butterfly",
+   "name": "the-phantom-lady-butterfly",
+   "unlocked": true,
+   "date": "2025-04-12T12:44:58-05:00"
+  },
+  {
+   "key": "all-prosthetic-tools",
+   "name": "all-prosthetic-tools",
+   "unlocked": true,
+   "date": "2025-04-12T12:45:28-05:00"
+  },
+  {
+   "key": "father-surpassed",
+   "name": "father-surpassed",
+   "unlocked": true,
+   "date": "2025-04-12T13:18:24-05:00"
+  },
+  {
+   "key": "great-colored-carp",
+   "name": "great-colored-carp",
+   "unlocked": true,
+   "date": "2025-04-12T13:21:15-05:00"
+  },
+  {
+   "key": "peak-physical-strength",
+   "name": "peak-physical-strength",
+   "unlocked": true,
+   "date": "2025-04-12T13:33:57-05:00"
+  },
+  {
+   "key": "sword-saint-isshin-ashina",
+   "name": "sword-saint-isshin-ashina",
+   "unlocked": true,
+   "date": "2025-04-12T13:44:18-05:00"
+  },
+  {
+   "key": "purification",
+   "name": "purification",
+   "unlocked": true,
+   "date": "2025-04-12T13:47:55-05:00"
+  },
+  {
+   "key": "immortal-severance",
+   "name": "immortal-severance",
+   "unlocked": true,
+   "date": "2025-04-14T19:32:00-05:00"
+  },
+  {
+   "key": "isshin-ashina",
+   "name": "isshin-ashina",
+   "unlocked": true,
+   "date": "2025-04-16T18:22:49-05:00"
+  },
+  {
+   "key": "man-without-equal",
+   "name": "man-without-equal",
+   "unlocked": true,
+   "date": "2025-04-16T18:22:49-05:00"
+  },
+  {
+   "key": "shura",
+   "name": "shura",
+   "unlocked": true,
+   "date": "2025-04-16T18:23:08-05:00"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 3015348,
+    "awardid": 3015348,
+    "earned": "April 16, 2025, 11:23 pm (UTC+0)",
+    "slug": "shura",
+    "canonical_id": 13,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249149-shura",
+    "icons": {
+     "s": "\/psn\/awards\/s\/545163j.png",
+     "m": "\/psn\/awards\/m\/545163j.png",
+     "l": "\/psn\/awards\/l\/545163j.png",
+     "o": "\/psn\/awards\/o\/545163j.png",
+     "t": "\/psn\/awards\/t\/545163j.png"
+    },
+    "timestamp": 1744845788
+   },
+   {
+    "masterAwardId": 3015337,
+    "awardid": 3015337,
+    "earned": "April 16, 2025, 11:22 pm (UTC+0)",
+    "slug": "man-without-equal",
+    "canonical_id": 2,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249138-man-without-equal",
+    "icons": {
+     "s": "\/psn\/awards\/s\/8gjbe61.png",
+     "m": "\/psn\/awards\/m\/8gjbe61.png",
+     "l": "\/psn\/awards\/l\/8gjbe61.png",
+     "o": "\/psn\/awards\/o\/8gjbe61.png",
+     "t": "\/psn\/awards\/t\/8gjbe61.png"
+    },
+    "timestamp": 1744845769
+   },
+   {
+    "masterAwardId": 3015366,
+    "awardid": 3015366,
+    "earned": "April 16, 2025, 11:22 pm (UTC+0)",
+    "slug": "isshin-ashina",
+    "canonical_id": 31,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249167-isshin-ashina",
+    "icons": {
+     "s": "\/psn\/awards\/s\/66debg5.png",
+     "m": "\/psn\/awards\/m\/66debg5.png",
+     "l": "\/psn\/awards\/l\/66debg5.png",
+     "o": "\/psn\/awards\/o\/66debg5.png",
+     "t": "\/psn\/awards\/t\/66debg5.png"
+    },
+    "timestamp": 1744845769
+   },
+   {
+    "masterAwardId": 3015345,
+    "awardid": 3015345,
+    "earned": "April 15, 2025, 12:32 am (UTC+0)",
+    "slug": "immortal-severance",
+    "canonical_id": 10,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249146-immortal-severance",
+    "icons": {
+     "s": "\/psn\/awards\/s\/1d3eg0d.png",
+     "m": "\/psn\/awards\/m\/1d3eg0d.png",
+     "l": "\/psn\/awards\/l\/1d3eg0d.png",
+     "o": "\/psn\/awards\/o\/1d3eg0d.png",
+     "t": "\/psn\/awards\/t\/1d3eg0d.png"
+    },
+    "timestamp": 1744677120
+   },
+   {
+    "masterAwardId": 3015346,
+    "awardid": 3015346,
+    "earned": "April 12, 2025, 6:47 pm (UTC+0)",
+    "slug": "purification",
+    "canonical_id": 11,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249147-purification",
+    "icons": {
+     "s": "\/psn\/awards\/s\/3e5dj08.png",
+     "m": "\/psn\/awards\/m\/3e5dj08.png",
+     "l": "\/psn\/awards\/l\/3e5dj08.png",
+     "o": "\/psn\/awards\/o\/3e5dj08.png",
+     "t": "\/psn\/awards\/t\/3e5dj08.png"
+    },
+    "timestamp": 1744483675
+   },
+   {
+    "masterAwardId": 3015349,
+    "awardid": 3015349,
+    "earned": "April 12, 2025, 6:44 pm (UTC+0)",
+    "slug": "sword-saint-isshin-ashina",
+    "canonical_id": 14,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249150-sword-saint-isshin-ashina",
+    "icons": {
+     "s": "\/psn\/awards\/s\/0g06bd4.png",
+     "m": "\/psn\/awards\/m\/0g06bd4.png",
+     "l": "\/psn\/awards\/l\/0g06bd4.png",
+     "o": "\/psn\/awards\/o\/0g06bd4.png",
+     "t": "\/psn\/awards\/t\/0g06bd4.png"
+    },
+    "timestamp": 1744483458
+   },
+   {
+    "masterAwardId": 3015343,
+    "awardid": 3015343,
+    "earned": "April 12, 2025, 6:33 pm (UTC+0)",
+    "slug": "peak-physical-strength",
+    "canonical_id": 8,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249144-peak-physical-strength",
+    "icons": {
+     "s": "\/psn\/awards\/s\/d5gd414.png",
+     "m": "\/psn\/awards\/m\/d5gd414.png",
+     "l": "\/psn\/awards\/l\/d5gd414.png",
+     "o": "\/psn\/awards\/o\/d5gd414.png",
+     "t": "\/psn\/awards\/t\/d5gd414.png"
+    },
+    "timestamp": 1744482837
+   },
+   {
+    "masterAwardId": 3015369,
+    "awardid": 3015369,
+    "earned": "April 12, 2025, 6:21 pm (UTC+0)",
+    "slug": "great-colored-carp",
+    "canonical_id": 34,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249170-great-colored-carp",
+    "icons": {
+     "s": "\/psn\/awards\/s\/d5gd484.png",
+     "m": "\/psn\/awards\/m\/d5gd484.png",
+     "l": "\/psn\/awards\/l\/d5gd484.png",
+     "o": "\/psn\/awards\/o\/d5gd484.png",
+     "t": "\/psn\/awards\/t\/d5gd484.png"
+    },
+    "timestamp": 1744482075
+   },
+   {
+    "masterAwardId": 3015363,
+    "awardid": 3015363,
+    "earned": "April 12, 2025, 6:18 pm (UTC+0)",
+    "slug": "father-surpassed",
+    "canonical_id": 28,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249164-father-surpassed",
+    "icons": {
+     "s": "\/psn\/awards\/s\/8gjbe41.png",
+     "m": "\/psn\/awards\/m\/8gjbe41.png",
+     "l": "\/psn\/awards\/l\/8gjbe41.png",
+     "o": "\/psn\/awards\/o\/8gjbe41.png",
+     "t": "\/psn\/awards\/t\/8gjbe41.png"
+    },
+    "timestamp": 1744481904
+   },
+   {
+    "masterAwardId": 3015341,
+    "awardid": 3015341,
+    "earned": "April 12, 2025, 5:45 pm (UTC+0)",
+    "slug": "all-prosthetic-tools",
+    "canonical_id": 6,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249142-all-prosthetic-tools",
+    "icons": {
+     "s": "\/psn\/awards\/s\/b08be64.png",
+     "m": "\/psn\/awards\/m\/b08be64.png",
+     "l": "\/psn\/awards\/l\/b08be64.png",
+     "o": "\/psn\/awards\/o\/b08be64.png",
+     "t": "\/psn\/awards\/t\/b08be64.png"
+    },
+    "timestamp": 1744479928
+   },
+   {
+    "masterAwardId": 3015357,
+    "awardid": 3015357,
+    "earned": "April 12, 2025, 5:44 pm (UTC+0)",
+    "slug": "the-phantom-lady-butterfly",
+    "canonical_id": 22,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249158-the-phantom-lady-butterfly",
+    "icons": {
+     "s": "\/psn\/awards\/s\/jj084e8.png",
+     "m": "\/psn\/awards\/m\/jj084e8.png",
+     "l": "\/psn\/awards\/l\/jj084e8.png",
+     "o": "\/psn\/awards\/o\/jj084e8.png",
+     "t": "\/psn\/awards\/t\/jj084e8.png"
+    },
+    "timestamp": 1744479898
+   },
+   {
+    "masterAwardId": 3015338,
+    "awardid": 3015338,
+    "earned": "April 12, 2025, 5:23 pm (UTC+0)",
+    "slug": "ashina-traveler",
+    "canonical_id": 3,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249139-ashina-traveler",
+    "icons": {
+     "s": "\/psn\/awards\/s\/e4ej61e.png",
+     "m": "\/psn\/awards\/m\/e4ej61e.png",
+     "l": "\/psn\/awards\/l\/e4ej61e.png",
+     "o": "\/psn\/awards\/o\/e4ej61e.png",
+     "t": "\/psn\/awards\/t\/e4ej61e.png"
+    },
+    "timestamp": 1744478593
+   },
+   {
+    "masterAwardId": 3015342,
+    "awardid": 3015342,
+    "earned": "April 12, 2025, 5:18 pm (UTC+0)",
+    "slug": "all-ninjutsu-techniques",
+    "canonical_id": 7,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249143-all-ninjutsu-techniques",
+    "icons": {
+     "s": "\/psn\/awards\/s\/gej8g37.png",
+     "m": "\/psn\/awards\/m\/gej8g37.png",
+     "l": "\/psn\/awards\/l\/gej8g37.png",
+     "o": "\/psn\/awards\/o\/gej8g37.png",
+     "t": "\/psn\/awards\/t\/gej8g37.png"
+    },
+    "timestamp": 1744478296
+   },
+   {
+    "masterAwardId": 3015360,
+    "awardid": 3015360,
+    "earned": "April 12, 2025, 5:18 pm (UTC+0)",
+    "slug": "guardian-ape-immortality-severed",
+    "canonical_id": 25,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249161-guardian-ape-immortality-severed",
+    "icons": {
+     "s": "\/psn\/awards\/s\/7e76g51.png",
+     "m": "\/psn\/awards\/m\/7e76g51.png",
+     "l": "\/psn\/awards\/l\/7e76g51.png",
+     "o": "\/psn\/awards\/o\/7e76g51.png",
+     "t": "\/psn\/awards\/t\/7e76g51.png"
+    },
+    "timestamp": 1744478290
+   },
+   {
+    "masterAwardId": 3015350,
+    "awardid": 3015350,
+    "earned": "April 12, 2025, 5:03 pm (UTC+0)",
+    "slug": "master-of-the-arts",
+    "canonical_id": 15,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249151-master-of-the-arts",
+    "icons": {
+     "s": "\/psn\/awards\/s\/8gjbe01.png",
+     "m": "\/psn\/awards\/m\/8gjbe01.png",
+     "l": "\/psn\/awards\/l\/8gjbe01.png",
+     "o": "\/psn\/awards\/o\/8gjbe01.png",
+     "t": "\/psn\/awards\/t\/8gjbe01.png"
+    },
+    "timestamp": 1744477415
+   },
+   {
+    "masterAwardId": 3015367,
+    "awardid": 3015367,
+    "earned": "April 12, 2025, 4:53 pm (UTC+0)",
+    "slug": "demon-of-hatred",
+    "canonical_id": 32,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249168-demon-of-hatred",
+    "icons": {
+     "s": "\/psn\/awards\/s\/b08be34.png",
+     "m": "\/psn\/awards\/m\/b08be34.png",
+     "l": "\/psn\/awards\/l\/b08be34.png",
+     "o": "\/psn\/awards\/o\/b08be34.png",
+     "t": "\/psn\/awards\/t\/b08be34.png"
+    },
+    "timestamp": 1744476801
+   },
+   {
+    "masterAwardId": 3015365,
+    "awardid": 3015365,
+    "earned": "April 12, 2025, 4:38 pm (UTC+0)",
+    "slug": "gracious-gift-of-tears",
+    "canonical_id": 30,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249166-gracious-gift-of-tears",
+    "icons": {
+     "s": "\/psn\/awards\/s\/430j46e.png",
+     "m": "\/psn\/awards\/m\/430j46e.png",
+     "l": "\/psn\/awards\/l\/430j46e.png",
+     "o": "\/psn\/awards\/o\/430j46e.png",
+     "t": "\/psn\/awards\/t\/430j46e.png"
+    },
+    "timestamp": 1744475919
+   },
+   {
+    "masterAwardId": 3015344,
+    "awardid": 3015344,
+    "earned": "April 12, 2025, 4:20 pm (UTC+0)",
+    "slug": "ultimate-healing-gourd",
+    "canonical_id": 9,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249145-ultimate-healing-gourd",
+    "icons": {
+     "s": "\/psn\/awards\/s\/jj08458.png",
+     "m": "\/psn\/awards\/m\/jj08458.png",
+     "l": "\/psn\/awards\/l\/jj08458.png",
+     "o": "\/psn\/awards\/o\/jj08458.png",
+     "t": "\/psn\/awards\/t\/jj08458.png"
+    },
+    "timestamp": 1744474844
+   },
+   {
+    "masterAwardId": 3015364,
+    "awardid": 3015364,
+    "earned": "April 12, 2025, 4:13 pm (UTC+0)",
+    "slug": "corrupted-monk",
+    "canonical_id": 29,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249165-corrupted-monk",
+    "icons": {
+     "s": "\/psn\/awards\/s\/e4ej68e.png",
+     "m": "\/psn\/awards\/m\/e4ej68e.png",
+     "l": "\/psn\/awards\/l\/e4ej68e.png",
+     "o": "\/psn\/awards\/o\/e4ej68e.png",
+     "t": "\/psn\/awards\/t\/e4ej68e.png"
+    },
+    "timestamp": 1744474381
+   },
+   {
+    "masterAwardId": 3015362,
+    "awardid": 3015362,
+    "earned": "April 12, 2025, 3:45 pm (UTC+0)",
+    "slug": "great-shinobi-owl",
+    "canonical_id": 27,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249163-great-shinobi-owl",
+    "icons": {
+     "s": "\/psn\/awards\/s\/0g06bj4.png",
+     "m": "\/psn\/awards\/m\/0g06bj4.png",
+     "l": "\/psn\/awards\/l\/0g06bj4.png",
+     "o": "\/psn\/awards\/o\/0g06bj4.png",
+     "t": "\/psn\/awards\/t\/0g06bj4.png"
+    },
+    "timestamp": 1744472712
+   },
+   {
+    "masterAwardId": 3015359,
+    "awardid": 3015359,
+    "earned": "December 25, 2021, 2:26 am (UTC+0)",
+    "slug": "guardian-ape",
+    "canonical_id": 24,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249160-guardian-ape",
+    "icons": {
+     "s": "\/psn\/awards\/s\/3e5dj68.png",
+     "m": "\/psn\/awards\/m\/3e5dj68.png",
+     "l": "\/psn\/awards\/l\/3e5dj68.png",
+     "o": "\/psn\/awards\/o\/3e5dj68.png",
+     "t": "\/psn\/awards\/t\/3e5dj68.png"
+    },
+    "timestamp": 1640399178
+   },
+   {
+    "masterAwardId": 3015361,
+    "awardid": 3015361,
+    "earned": "December 25, 2021, 2:02 am (UTC+0)",
+    "slug": "folding-screen-monkeys",
+    "canonical_id": 26,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249162-folding-screen-monkeys",
+    "icons": {
+     "s": "\/psn\/awards\/s\/54516gj.png",
+     "m": "\/psn\/awards\/m\/54516gj.png",
+     "l": "\/psn\/awards\/l\/54516gj.png",
+     "o": "\/psn\/awards\/o\/54516gj.png",
+     "t": "\/psn\/awards\/t\/54516gj.png"
+    },
+    "timestamp": 1640397767
+   },
+   {
+    "masterAwardId": 3015358,
+    "awardid": 3015358,
+    "earned": "December 24, 2021, 5:34 pm (UTC+0)",
+    "slug": "genichiro-ashina",
+    "canonical_id": 23,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249159-genichiro-ashina",
+    "icons": {
+     "s": "\/psn\/awards\/s\/1d3egjd.png",
+     "m": "\/psn\/awards\/m\/1d3egjd.png",
+     "l": "\/psn\/awards\/l\/1d3egjd.png",
+     "o": "\/psn\/awards\/o\/1d3egjd.png",
+     "t": "\/psn\/awards\/t\/1d3egjd.png"
+    },
+    "timestamp": 1640367258
+   },
+   {
+    "masterAwardId": 3015354,
+    "awardid": 3015354,
+    "earned": "December 24, 2021, 4:32 pm (UTC+0)",
+    "slug": "memorial-mob",
+    "canonical_id": 19,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249155-memorial-mob",
+    "icons": {
+     "s": "\/psn\/awards\/s\/b08be44.png",
+     "m": "\/psn\/awards\/m\/b08be44.png",
+     "l": "\/psn\/awards\/l\/b08be44.png",
+     "o": "\/psn\/awards\/o\/b08be44.png",
+     "t": "\/psn\/awards\/t\/b08be44.png"
+    },
+    "timestamp": 1640363550
+   },
+   {
+    "masterAwardId": 3015356,
+    "awardid": 3015356,
+    "earned": "December 24, 2021, 4:28 pm (UTC+0)",
+    "slug": "gyoubu-masataka-oniwa",
+    "canonical_id": 21,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249157-gyoubu-masataka-oniwa",
+    "icons": {
+     "s": "\/psn\/awards\/s\/d5gd4b4.png",
+     "m": "\/psn\/awards\/m\/d5gd4b4.png",
+     "l": "\/psn\/awards\/l\/d5gd4b4.png",
+     "o": "\/psn\/awards\/o\/d5gd4b4.png",
+     "t": "\/psn\/awards\/t\/d5gd4b4.png"
+    },
+    "timestamp": 1640363308
+   },
+   {
+    "masterAwardId": 3015355,
+    "awardid": 3015355,
+    "earned": "December 24, 2021, 4:09 pm (UTC+0)",
+    "slug": "resurrection",
+    "canonical_id": 20,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249156-resurrection",
+    "icons": {
+     "s": "\/psn\/awards\/s\/gej8g57.png",
+     "m": "\/psn\/awards\/m\/gej8g57.png",
+     "l": "\/psn\/awards\/l\/gej8g57.png",
+     "o": "\/psn\/awards\/o\/gej8g57.png",
+     "t": "\/psn\/awards\/t\/gej8g57.png"
+    },
+    "timestamp": 1640362185
+   },
+   {
+    "masterAwardId": 3015353,
+    "awardid": 3015353,
+    "earned": "December 24, 2021, 4:01 pm (UTC+0)",
+    "slug": "shinobi-prosthetic",
+    "canonical_id": 18,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249154-shinobi-prosthetic",
+    "icons": {
+     "s": "\/psn\/awards\/s\/66deb35.png",
+     "m": "\/psn\/awards\/m\/66deb35.png",
+     "l": "\/psn\/awards\/l\/66deb35.png",
+     "o": "\/psn\/awards\/o\/66deb35.png",
+     "t": "\/psn\/awards\/t\/66deb35.png"
+    },
+    "timestamp": 1640361669
+   },
+   {
+    "masterAwardId": 3015352,
+    "awardid": 3015352,
+    "earned": "December 24, 2021, 3:54 pm (UTC+0)",
+    "slug": "revered-blade",
+    "canonical_id": 17,
+    "endpoint": "\/trophy\/sekiro-shadows-die-twice-psn\/249153-revered-blade",
+    "icons": {
+     "s": "\/psn\/awards\/s\/430j4be.png",
+     "m": "\/psn\/awards\/m\/430j4be.png",
+     "l": "\/psn\/awards\/l\/430j4be.png",
+     "o": "\/psn\/awards\/o\/430j4be.png",
+     "t": "\/psn\/awards\/t\/430j4be.png"
+    },
+    "timestamp": 1640361275
+   }
+  ],
+  "master_gameid": "182258",
+  "success": true
+ }
+}

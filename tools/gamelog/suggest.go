@@ -16,6 +16,12 @@ type Credentials struct {
 	RAAPIKey    string
 	SteamAPIKey string
 	SteamID     string
+
+	// ExophaseUser is a public profile name, not a secret. PlayStation has no
+	// public API, so trophy history comes from a public Exophase profile —
+	// there is nothing to authenticate with, which is why this is the only
+	// "credential" that is safe to be wrong in public.
+	ExophaseUser string
 }
 
 func loadCredentials() Credentials {
@@ -27,7 +33,8 @@ func loadCredentials() Credentials {
 		// STEAM_USER_ID is accepted as an alias: it's the name a Steam
 		// profile URL actually suggests, and either may hold a SteamID64
 		// or a vanity name (resolved later by SteamClient).
-		SteamID: firstNonEmpty(os.Getenv("STEAM_ID"), os.Getenv("STEAM_USER_ID")),
+		SteamID:      firstNonEmpty(os.Getenv("STEAM_ID"), os.Getenv("STEAM_USER_ID")),
+		ExophaseUser: os.Getenv("EXOPHASE_PSN_USER"),
 	}
 }
 
@@ -61,6 +68,9 @@ func day(t time.Time) string {
 
 func (c Credentials) RAConfigured() bool    { return c.RAUsername != "" && c.RAAPIKey != "" }
 func (c Credentials) SteamConfigured() bool { return c.SteamAPIKey != "" && c.SteamID != "" }
+
+// ExophaseConfigured needs only a username — the profile is public.
+func (c Credentials) ExophaseConfigured() bool { return c.ExophaseUser != "" }
 
 // ProviderResult is one provider's outcome for a suggestion report: either
 // a usable suggestion, or a reason it was skipped/failed. A skipped or

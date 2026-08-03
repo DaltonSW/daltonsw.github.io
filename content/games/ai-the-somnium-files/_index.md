@@ -1,17 +1,18 @@
 ---
-title: "AI: The Somnium Files"
-platform: "PC"
-retroachievements_id:
+title: 'AI: The Somnium Files'
+platform: PC
+retroachievements_id: null
 steam_appid: 948740
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["ai-the-somnium-files"]
+    games:
+      - ai-the-somnium-files
+cover: null
 ---
 
 

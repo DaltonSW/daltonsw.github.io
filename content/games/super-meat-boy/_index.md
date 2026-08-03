@@ -3,9 +3,9 @@ title: "Super Meat Boy"
 platform: "PC"
 retroachievements_id:
 steam_appid: 40800
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2024-04-07"
 rating:
 cover:
 draft: true

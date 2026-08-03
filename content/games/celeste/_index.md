@@ -3,9 +3,9 @@ title: "Celeste"
 platform: "PC"
 retroachievements_id:
 steam_appid: 504230
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2025-01-03"
 rating:
 cover:
 draft: true

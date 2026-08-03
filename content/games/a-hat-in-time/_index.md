@@ -3,9 +3,9 @@ title: "A Hat in Time"
 platform: "PC"
 retroachievements_id:
 steam_appid: 253230
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2019-05-22"
 rating:
 cover:
 draft: true

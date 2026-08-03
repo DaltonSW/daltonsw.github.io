@@ -3,9 +3,9 @@ title: "Life is Strange™"
 platform: "PC"
 retroachievements_id:
 steam_appid: 319630
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2015-12-23"
 rating:
 cover:
 draft: true

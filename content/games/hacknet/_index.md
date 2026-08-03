@@ -3,9 +3,9 @@ title: "Hacknet"
 platform: "PC"
 retroachievements_id:
 steam_appid: 365450
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2018-02-11"
 rating:
 cover:
 draft: true

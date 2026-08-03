@@ -1,17 +1,18 @@
 ---
-title: "Cuphead"
-platform: "PC"
-retroachievements_id:
+title: Cuphead
+platform: PC
+retroachievements_id: null
 steam_appid: 268910
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["cuphead"]
+    games:
+      - cuphead
+cover: null
 ---
 
 

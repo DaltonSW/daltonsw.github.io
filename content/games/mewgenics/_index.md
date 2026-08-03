@@ -1,17 +1,18 @@
 ---
-title: "Mewgenics"
-platform: "PC"
-retroachievements_id:
+title: Mewgenics
+platform: PC
+retroachievements_id: null
 steam_appid: 686060
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["mewgenics"]
+    games:
+      - mewgenics
+cover: null
 ---
 
 

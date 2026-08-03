@@ -2,7 +2,13 @@
      a string: the true first-played date from playthroughs.yaml/written
      playthroughs when any exist, falling back to front-matter Params.started
      only for games with nothing logged yet — same fallback games-timeline.html
-     uses, so sort order matches what the chart shows. */}}
+     uses, so sort order matches what the chart shows.
+
+     hugo.toml's [frontmatter] config wires started/finished as .Date/.Lastmod
+     sources, so Hugo hands back a time.Time instead of a string for whichever
+     page actually uses one that way — piping through time.Format normalizes
+     both to a plain "2006-01-02" string so later string comparisons (lt/gt,
+     sort) never compare across mismatched types. */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $earliest := "" -}}
 {{- range $entries -}}
@@ -13,6 +19,6 @@
   {{- end -}}
 {{- end -}}
 {{- if eq $earliest "" -}}
-  {{- with .Params.started -}}{{- $earliest = . -}}{{- end -}}
+  {{- with .Params.started -}}{{- $earliest = (. | time.Format "2006-01-02") -}}{{- end -}}
 {{- end -}}
 {{- return $earliest -}}

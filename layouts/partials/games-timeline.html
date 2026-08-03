@@ -9,6 +9,7 @@
 {{- $fmt := "2006-01-02" -}}
 {{- $groupCandidates := slice -}}
 {{- $items := slice -}}
+{{- $earliestStart := "" -}}
 
 {{- range .Pages -}}
   {{- $game := . -}}
@@ -16,11 +17,18 @@
   {{- $entries := partial "playthrough-entries.html" $game -}}
 
   {{- if eq (len $entries) 0 -}}
+    {{/* hugo.toml's [frontmatter] config wires started/finished as
+         .Date/.Lastmod sources, so Hugo hands back a time.Time instead of a
+         string for whichever page actually uses one that way — normalize
+         through time.Format so later string comparisons never compare
+         across mismatched types. */}}
     {{- with $game.Params.started -}}
+      {{- $finished := "" -}}
+      {{- with $game.Params.finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
       {{- $entries = slice (dict
           "written"  false
-          "started"  .
-          "finished" $game.Params.finished
+          "started"  (. | time.Format "2006-01-02")
+          "finished" $finished
           "status"   $game.Params.status
           "rating"   $game.Params.rating
           "notes"    nil
@@ -32,21 +40,47 @@
 
   {{- $subgroupStack := dict -}}
   {{- $hasItems := false -}}
-  {{- $groupStart := "" -}}
+  {{- $groupLast := "" -}}
 
   {{- range $idx, $entry := $entries -}}
     {{- if $entry.started -}}
       {{- $hasItems = true -}}
-      {{- if or (eq $groupStart "") (lt $entry.started $groupStart) -}}
-        {{- $groupStart = $entry.started -}}
+      {{/* Last known activity: an entry's finished date once it has one,
+           otherwise the started date of whatever's still open — its last
+           session if it has any, else the entry itself. Mirrors
+           game-last-played.html so chart rows and the list below stay in
+           the same order. */}}
+      {{- $activityEnd := $entry.started -}}
+      {{- if gt (len $entry.sessions) 0 -}}
+        {{- $lastSession := index (sort $entry.sessions "started" "asc") (sub (len $entry.sessions) 1) -}}
+        {{- $activityEnd = $lastSession.started -}}
+        {{- with $lastSession.finished -}}{{- $activityEnd = . -}}{{- end -}}
+      {{- else -}}
+        {{- with $entry.finished -}}{{- $activityEnd = . -}}{{- end -}}
+      {{- end -}}
+      {{- if or (eq $groupLast "") (gt $activityEnd $groupLast) -}}
+        {{- $groupLast = $activityEnd -}}
       {{- end -}}
       {{- $sub := printf "pt-%d" $idx -}}
       {{- $baseID := printf "%s--%s" $slug $sub -}}
       {{- $status := $entry.status | default "backlog" -}}
+      {{/* session-based, multiplayer, and software exist only in the
+           game-level vocabulary — those entries keep a single playthrough
+           whose status stays "playing" while its sessions accumulate (see
+           tools/gamelog KNOWN-ISSUES). Colouring the bar from the entry would
+           render an endless sandbox — or a paint program — identically to an
+           active playthrough, so the game's own status wins for these three. */}}
+      {{- $gameStatus := $game.Params.status -}}
+      {{- if in (slice "session-based" "multiplayer" "software") $gameStatus -}}
+        {{- $status = $gameStatus -}}
+      {{- end -}}
 
       {{- $start := $entry.started | time.Format $fmt -}}
       {{- $end := "" -}}
       {{- with $entry.finished -}}{{- $end = (. | time.Format $fmt) -}}{{- end -}}
+      {{- if or (eq $earliestStart "") (lt $start $earliestStart) -}}
+        {{- $earliestStart = $start -}}
+      {{- end -}}
 
       {{- $titleParts := slice ($entry.started | time.Format "Jan 2, 2006") -}}
       {{- if $end -}}
@@ -95,22 +129,32 @@
   {{- end -}}
 
   {{- if $hasItems -}}
+    {{/* A refreshed archive (achievements/playtime) can be more recent than
+         any logged session — see game-last-played.html. */}}
+    {{- with $game.Resources.Get "achievement-summary.yaml" -}}
+      {{- with (. | transform.Unmarshal).last_played -}}
+        {{- if gt . $groupLast -}}{{- $groupLast = . -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
     {{- $groupCandidates = $groupCandidates | append (dict
         "id" $slug
         "content" (printf "<a href=%q>%s</a>" $game.RelPermalink $game.Title)
         "subgroupStack" $subgroupStack
-        "sortKey" $groupStart
+        "sortKey" $groupLast
       )
     -}}
   {{- end -}}
 {{- end -}}
 
-{{/* Row order matches the list below: most-recently-started game at the top. */}}
+{{/* Row order matches the list below: most-recently-played game at the top. */}}
 {{- $groups := slice -}}
 {{- range sort $groupCandidates "sortKey" "desc" -}}
   {{- $groups = $groups | append (dict "id" .id "content" .content "subgroupStack" .subgroupStack) -}}
 {{- end -}}
 
+{{- $sinceYear := "" -}}
+{{- with $earliestStart -}}{{- $sinceYear = strings.Substr . 0 4 -}}{{- end -}}
+<p class="hero__prompt games-timeline__prompt">dalton@dog:~$ ps games{{ with $sinceYear }} --since={{ . }}{{ end }}</p>
 <section class="games-timeline" aria-label="Gameplay history timeline">
   <div class="games-timeline__toolbar">
     <button type="button" id="games-timeline-today" class="games-timeline__today-btn" hidden>today</button>

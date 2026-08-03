@@ -3,9 +3,9 @@ title: "Borderlands: The Pre-Sequel"
 platform: "PC"
 retroachievements_id:
 steam_appid: 261640
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2019-10-05"
 rating:
 cover:
 draft: true

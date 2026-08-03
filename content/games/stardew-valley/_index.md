@@ -3,7 +3,7 @@ title: "Stardew Valley"
 platform: "PC"
 retroachievements_id:
 steam_appid: 413150
-status: "playing"
+status: "session-based"
 started:
 finished:
 rating:

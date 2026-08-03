@@ -1,17 +1,18 @@
 ---
-title: "Into the Breach"
-platform: "PC"
-retroachievements_id:
+title: Into the Breach
+platform: PC
+retroachievements_id: null
 steam_appid: 590380
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["into-the-breach"]
+    games:
+      - into-the-breach
+cover: null
 ---
 
 

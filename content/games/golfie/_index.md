@@ -3,7 +3,7 @@ title: "Golfie"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1579020
-status: "playing"
+status: "session-based"
 started:
 finished:
 rating:

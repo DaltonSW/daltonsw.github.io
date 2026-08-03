@@ -3,7 +3,7 @@ title: "Monaco"
 platform: "PC"
 retroachievements_id:
 steam_appid: 113020
-status: "playing"
+status: "multiplayer"
 started:
 finished:
 rating:

@@ -1,17 +1,18 @@
 ---
-title: "Streets of Rogue"
-platform: "PC"
-retroachievements_id:
+title: Streets of Rogue
+platform: PC
+retroachievements_id: null
 steam_appid: 512900
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["streets-of-rogue"]
+    games:
+      - streets-of-rogue
+cover: null
 ---
 
 

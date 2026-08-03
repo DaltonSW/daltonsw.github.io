@@ -3,9 +3,9 @@ title: "XCOM: Enemy Unknown"
 platform: "PC"
 retroachievements_id:
 steam_appid: 200510
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2018-10-13"
 rating:
 cover:
 draft: true

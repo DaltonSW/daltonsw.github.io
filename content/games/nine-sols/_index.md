@@ -3,9 +3,9 @@ title: "Nine Sols"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1809540
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2026-02-22"
 rating:
 cover:
 draft: true

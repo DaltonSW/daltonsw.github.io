@@ -3,9 +3,9 @@ title: "Undertale"
 platform: "PC"
 retroachievements_id:
 steam_appid: 391540
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2016-01-17"
 rating:
 cover:
 draft: true

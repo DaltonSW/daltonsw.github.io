@@ -3,9 +3,9 @@ title: "Portal 2"
 platform: "PC"
 retroachievements_id:
 steam_appid: 620
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2016-07-11"
 rating:
 cover:
 draft: true

@@ -34,6 +34,7 @@ const generatedBanner = `# Written by tools/gamelog. Safe to edit by hand, but c
 type SessionEntry struct {
 	Started  string `yaml:"started"`
 	Finished string `yaml:"finished"`
+	Title    string `yaml:"title,omitempty"`
 
 	// Extra preserves keys this tool doesn't know about. Without it a
 	// whole-file rewrite would silently drop any field added by hand or by a
@@ -46,10 +47,19 @@ type SessionEntry struct {
 //
 // Started/Finished are omitempty here because they legitimately disappear:
 // converting a playthrough to `sessions:` moves the pair into the list.
+//
+// Platform is per-playthrough because the same game is genuinely played on
+// more than one of them — Persona 5 Royal on PS4 and again on Steam, Octopath
+// Traveler finished on PC and dropped on Switch. Those are separate runs with
+// separate dates and separate outcomes, so the platform belongs to the run,
+// not to the game. It is omitempty and falls back to the game's front-matter
+// `platform:` when absent, which is why every file written before this field
+// existed still means what it did.
 type PlaythroughEntry struct {
 	Started  string         `yaml:"started,omitempty"`
 	Finished string         `yaml:"finished,omitempty"`
 	Status   string         `yaml:"status,omitempty"`
+	Platform string         `yaml:"platform,omitempty"`
 	Rating   any            `yaml:"rating,omitempty"`
 	Notes    string         `yaml:"notes,omitempty"`
 	Sessions []SessionEntry `yaml:"sessions,omitempty"`
@@ -63,6 +73,7 @@ type PlaythroughFields struct {
 	Started  string
 	Finished string
 	Status   string // playing|finished|dropped|paused
+	Platform string // blank means "same as the game's front matter"
 	Rating   string // 1-10 or ""
 	Notes    string
 }
@@ -196,6 +207,7 @@ type Playthrough struct {
 	Started  string
 	Finished string
 	Status   string
+	Platform string
 	Rating   string
 	Notes    string
 	Sessions []Session
@@ -221,6 +233,7 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 			Started:  e.Started,
 			Finished: e.Finished,
 			Status:   e.Status,
+			Platform: e.Platform,
 			Rating:   e.RatingString(),
 			Notes:    e.Notes,
 		}
@@ -238,6 +251,7 @@ func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 		Started:  pf.Started,
 		Finished: pf.Finished,
 		Status:   pf.Status,
+		Platform: pf.Platform,
 		Notes:    pf.Notes,
 	}
 	e.SetRating(pf.Rating)
@@ -251,7 +265,7 @@ func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 // This is the operation that used to destroy data. As a line splice it had to
 // locate and rewrite two possibly non-adjacent ranges without disturbing
 // anything between them; here it moves two strings into a slice.
-func (f *PlaythroughsFile) AddSession(idx int, started, finished string) error {
+func (f *PlaythroughsFile) AddSession(idx int, started, finished, title string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to add a session to", idx+1)
 	}
@@ -264,19 +278,23 @@ func (f *PlaythroughsFile) AddSession(idx int, started, finished string) error {
 		e.Sessions = []SessionEntry{{Started: e.Started, Finished: e.Finished}}
 		e.Started, e.Finished = "", ""
 	}
-	e.Sessions = append(e.Sessions, SessionEntry{Started: started, Finished: finished})
+	e.Sessions = append(e.Sessions, SessionEntry{Started: started, Finished: finished, Title: title})
 	return nil
 }
 
 // SyncStatus keeps a game's sole playthrough entry in step with a
-// front-matter status change to finished/dropped/mastered — playthroughs.yaml
-// is what actually renders once any playthrough exists, and "ongoing" comes
-// from the entry's finished date, not status text, so front matter alone
-// can't fix it. Only acts on exactly one playthrough (none: nothing to sync;
-// more than one: ambiguous, use "Update a playthrough" instead). Never
-// overwrites an already-set finished date. Safe to call unconditionally.
+// front-matter status change to finished/dropped/mastered/paused —
+// playthroughs.yaml is what actually renders once any playthrough exists,
+// and "ongoing" comes from the entry's finished date, not status text, so
+// front matter alone can't fix it. Only acts on exactly one playthrough
+// (none: nothing to sync; more than one: ambiguous, use "Update a
+// playthrough" instead). Never overwrites an already-set finished date, and
+// a blank closedOn (as "paused" should always pass) only syncs the status,
+// leaving dates untouched. Safe to call unconditionally.
 func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
-	if status != "finished" && status != "dropped" && status != "mastered" {
+	switch status {
+	case "finished", "dropped", "mastered", "paused":
+	default:
 		return false
 	}
 	if len(f.Playthroughs) != 1 {
@@ -307,7 +325,7 @@ func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
 // UpdatePlaythrough applies edited field values. The finished date belongs to
 // the last session once an entry has sessions, matching where the TUI showed
 // it.
-func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, rating, notes string) error {
+func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform, rating, notes string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to update", idx+1)
 	}
@@ -319,6 +337,7 @@ func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, rating, 
 		e.Finished = finished
 	}
 	e.Status = status
+	e.Platform = platform
 	e.SetRating(rating)
 	e.Notes = notes
 	return nil
@@ -364,4 +383,16 @@ func collectAny(v any, path string, out map[string]string) {
 	default:
 		out[path] = scalarString(v)
 	}
+}
+
+// effectivePlatform resolves a playthrough's platform, falling back to the
+// game's. A blank entry platform means "same as the game" rather than
+// "unknown", so the two must compare equal — otherwise a one-shot game whose
+// single entry predates the field would look like a different platform from
+// the game it belongs to.
+func effectivePlatform(entryPlatform, gamePlatform string) string {
+	if strings.TrimSpace(entryPlatform) != "" {
+		return entryPlatform
+	}
+	return gamePlatform
 }

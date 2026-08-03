@@ -20,7 +20,14 @@ type FrontMatter struct {
 	Platform            string `yaml:"platform"`
 	RetroAchievementsID any    `yaml:"retroachievements_id"`
 	SteamAppID          any    `yaml:"steam_appid"`
-	Status              string `yaml:"status"`
+
+	// PSNID is the game's NPWR… trophy-set id. PlayStation has no public API,
+	// so the archive fills this from a public Exophase profile — but the ID
+	// itself is Sony's and permanent, which is what the archive needs to key
+	// on. See exophase.go.
+	PSNID any `yaml:"psn_id,omitempty"`
+
+	Status string `yaml:"status"`
 
 	// Dates are typed as strings on purpose. YAML resolves an unquoted
 	// 2026-01-04 to a timestamp, and decoding that into `any` yields a
@@ -172,6 +179,29 @@ func (d *Doc) GameDir() string { return filepath.Dir(d.Path) }
 // Steam appid, or "" for either that isn't set.
 func (d *Doc) ExternalIDs() (raID, steamAppID string) {
 	return scalarString(d.FM.RetroAchievementsID), scalarString(d.FM.SteamAppID)
+}
+
+// ProviderLinks returns every provider this game is linked to, in
+// providerOrder, skipping the ones with no ID set.
+func (d *Doc) ProviderLinks() []providerLink {
+	return buildProviderLinks(
+		scalarString(d.FM.RetroAchievementsID),
+		scalarString(d.FM.SteamAppID),
+		scalarString(d.FM.PSNID),
+	)
+}
+
+// buildProviderLinks is shared by Doc and GameSummary so the two can't drift
+// on which providers exist or what order they come in.
+func buildProviderLinks(raID, steamAppID, psnID string) []providerLink {
+	all := map[string]string{providerRA: raID, providerSteam: steamAppID, providerPSN: psnID}
+	var out []providerLink
+	for _, p := range providerOrder {
+		if all[p] != "" {
+			out = append(out, providerLink{Provider: p, ID: all[p]})
+		}
+	}
+	return out
 }
 
 // scalarString renders a decoded YAML scalar as the text a form would edit.

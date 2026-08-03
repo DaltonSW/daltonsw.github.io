@@ -3,9 +3,9 @@ title: "Death's Door"
 platform: "PC"
 retroachievements_id:
 steam_appid: 894020
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-08-24"
 rating:
 cover:
 draft: true

@@ -1,0 +1,162 @@
+{{/* Context: a game's term Page (Kind "term"). Returns a slice of row dicts, one
+     per calendar year the game's playthroughs actually touched, newest first:
+
+       year     "2023" — the grouping key
+       count    how many playthroughs contributed to this year
+       start    earliest activity among them, clipped to the year
+       end      latest activity among them, clipped to the year
+       status   status of the latest-finishing contributor
+       platform platform of the latest-finishing contributor
+
+     A playthrough lands in *every* year it touched, so a game played in 2020 and
+     again in 2023 appears under both — the list below the timeline answers "what
+     was I playing in year X", and that question is about playthroughs, not games.
+     For sessions-bearing entries only the years that actually contain a session
+     count: a two-year dormant gap must not fabricate the years in between.
+
+     Rows merge per game per year rather than per playthrough: a year holding 12
+     Bloons TD 6 runs is one row carrying count 12, not twelve near-identical
+     lines. */}}
+{{- $game := . -}}
+{{- $entries := partial "playthrough-entries.html" $game -}}
+
+{{- if eq (len $entries) 0 -}}
+  {{/* hugo.toml's [frontmatter] config wires started/finished as .Date/.Lastmod
+       sources, so Hugo hands back a time.Time instead of a string for whichever
+       page actually uses one that way — normalize through time.Format so the
+       string comparisons below never compare across mismatched types. Mirrors
+       the same fallback in games-timeline.html. */}}
+  {{- with $game.Params.started -}}
+    {{- $finished := "" -}}
+    {{- with $game.Params.finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
+    {{- $entries = slice (dict
+        "started"  (. | time.Format "2006-01-02")
+        "finished" $finished
+        "status"   $game.Params.status
+        "platform" $game.Params.platform
+        "sessions" slice
+      )
+    -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Games with nothing logged but a refreshed achievement summary still have one
+     hard date: Steam's last-played timestamp, or RetroAchievements' last-unlock
+     date as its only available proxy. Without this they'd fall through to
+     "Undated" even though game-last-played.html has always dated them. */}}
+{{- $dated := false -}}
+{{- range $entries -}}{{- if .started -}}{{- $dated = true -}}{{- end -}}{{- end -}}
+{{- if not $dated -}}
+  {{- with $game.Resources.Get "achievement-summary.yaml" -}}
+    {{- with (. | transform.Unmarshal).last_played -}}
+      {{- $entries = slice (dict
+          "started"  .
+          "finished" .
+          "status"   $game.Params.status
+          "platform" $game.Params.platform
+          "sessions" slice
+        )
+      -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $rows := dict -}}
+
+{{- range $entries -}}
+  {{- if .started -}}
+    {{/* Written playthrough pages hand back .Params.started, which the
+         [frontmatter] wiring can make a time.Time — normalize both ends to
+         "2006-01-02" strings before any comparison or substr. */}}
+    {{- $started := .started | time.Format "2006-01-02" -}}
+    {{- $finished := "" -}}
+    {{- with .finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
+
+    {{/* Last known activity: an entry's finished date once it has one, otherwise
+         the started date of whatever's still open — its last session if it has
+         any, else the entry itself. Same rule as game-last-played.html and the
+         timeline, so rows and chart rows stay in the same order. */}}
+    {{- $end := $started -}}
+    {{- if gt (len .sessions) 0 -}}
+      {{- $sorted := sort .sessions "started" "asc" -}}
+      {{- $last := index $sorted (sub (len $sorted) 1) -}}
+      {{- $end = $last.started -}}
+      {{- with $last.finished -}}{{- $end = . -}}{{- end -}}
+    {{- else -}}
+      {{- with $finished -}}{{- $end = . -}}{{- end -}}
+    {{- end -}}
+
+    {{/* The span this entry contributes to each year, clipped to that year: a
+         row reads as what happened *in* the year heading it sits under, so the
+         2024 row of a playthrough that ran 2023-2025 doesn't advertise dates
+         from either neighbour. Sessions clip individually, which keeps the real
+         dates wherever we have them instead of flattening to Jan-Dec. */}}
+    {{- $spans := dict -}}
+    {{- $ranges := slice (dict "start" $started "end" $end) -}}
+    {{- if gt (len .sessions) 0 -}}
+      {{- $ranges = slice -}}
+      {{- range .sessions -}}
+        {{- $ranges = $ranges | append (dict "start" .started "end" (.finished | default .started)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range $ranges -}}
+      {{- $rs := .start -}}
+      {{- $re := .end -}}
+      {{- range seq (int (substr $rs 0 4)) (int (substr $re 0 4)) -}}
+        {{- $year := printf "%d" . -}}
+        {{- $cs := $rs -}}
+        {{- $ce := $re -}}
+        {{- if lt $cs (printf "%s-01-01" $year) -}}{{- $cs = printf "%s-01-01" $year -}}{{- end -}}
+        {{- if gt $ce (printf "%s-12-31" $year) -}}{{- $ce = printf "%s-12-31" $year -}}{{- end -}}
+        {{- $span := index $spans $year -}}
+        {{- if not $span -}}
+          {{- $span = dict "start" $cs "end" $ce -}}
+        {{- end -}}
+        {{- if lt $cs $span.start -}}{{- $span = merge $span (dict "start" $cs) -}}{{- end -}}
+        {{- if gt $ce $span.end -}}{{- $span = merge $span (dict "end" $ce) -}}{{- end -}}
+        {{- $spans = merge $spans (dict $year $span) -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $entry := . -}}
+    {{- range $year, $span := $spans -}}
+      {{- $row := index $rows $year -}}
+      {{- if not $row -}}
+        {{- $row = dict "year" $year "count" 0 "start" $span.start "end" $span.end
+            "status" $entry.status "platform" $entry.platform "latest" $span.end -}}
+      {{- end -}}
+      {{- $row = merge $row (dict "count" (add $row.count 1)) -}}
+      {{- if lt $span.start $row.start -}}
+        {{- $row = merge $row (dict "start" $span.start) -}}
+      {{- end -}}
+      {{- if gt $span.end $row.end -}}
+        {{- $row = merge $row (dict "end" $span.end) -}}
+      {{- end -}}
+      {{/* status and platform come from whichever contributor ran latest — with
+           several runs in one year, the most recent one is the one the row is
+           describing. */}}
+      {{- if ge $span.end $row.latest -}}
+        {{- $row = merge $row (dict "latest" $span.end "status" $entry.status "platform" $entry.platform) -}}
+      {{- end -}}
+      {{- $rows = merge $rows (dict $year $row) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* session-based, multiplayer, and software exist only in the game-level
+     vocabulary — those games keep a single playthrough whose status stays
+     "playing" while its sessions accumulate (see tools/gamelog KNOWN-ISSUES).
+     Letting the entry status win would pill an endless sandbox — or a paint
+     program — identically to an active playthrough, and would disagree with the
+     bar colour the timeline gives it. */}}
+{{- $gameStatus := $game.Params.status -}}
+{{- $override := in (slice "session-based" "multiplayer" "software") $gameStatus -}}
+
+{{- $out := slice -}}
+{{- range $year, $row := $rows -}}
+  {{- $status := $row.status | default $gameStatus -}}
+  {{- if $override -}}{{- $status = $gameStatus -}}{{- end -}}
+  {{- $out = $out | append (merge $row (dict "status" $status)) -}}
+{{- end -}}
+
+{{- return (sort $out "year" "desc") -}}

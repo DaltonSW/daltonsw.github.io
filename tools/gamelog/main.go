@@ -36,6 +36,10 @@ Usage:
   gamelog stale [flags]       walk through "playing" Steam games that have
                              gone quiet, suggesting finished/dropped
                                --days N        quiet threshold (default 30)
+  gamelog close [flags]       cap playthroughs left without a closing date at
+                             the last day they were played; statuses unchanged
+                               --days N        quiet threshold (default 30)
+                               --all           include "playing" games too
   gamelog help               show this message
 
 Environment (or a .env beside this tool; real env vars take precedence):
@@ -90,6 +94,8 @@ func main() {
 		err = runProject(args[1:])
 	case args[0] == "stale":
 		err = runStale(args[1:])
+	case args[0] == "close":
+		err = runClose(args[1:])
 	default:
 		// Previously any unknown argument silently opened the interactive
 		// form, which made a typo look like the tool ignoring you.
@@ -178,18 +184,20 @@ func logForGame(g GameSummary) error {
 
 	playthroughs := pf.Views()
 
-	// A session-based game (roguelikes, multiplayer — no start/finish
-	// narrative) gets exactly one playthrough entry, ever. Once it has one,
-	// "Start a new playthrough" isn't offered at all, so there's nothing to
-	// undo later; doNewPlaythrough also guards this directly.
-	sessionBased := doc.FM.Status == "session-based"
+	// A session-based, multiplayer, or software entry (no start/finish
+	// narrative — see gameStatuses) gets exactly one playthrough entry
+	// *per platform*. The cap exists so an open-ended game can't fragment
+	// into a series of bogus discrete playthroughs — but a second platform
+	// isn't fragmentation. Saves don't cross consoles, so playing it on PS4
+	// and on PC really is two separate records with two separate achievement
+	// sets. doNewPlaythrough enforces the per-platform half, which can only
+	// be checked once the form has collected the platform.
+	oneShot := isOneShot(doc.FM.Status)
 
 	options := []huh.Option[string]{
 		huh.NewOption("Edit game info (title/platform/status/dates/rating/draft)", actionEditInfo),
 	}
-	if !sessionBased || len(playthroughs) == 0 {
-		options = append(options, huh.NewOption("Start a new playthrough", actionNewPlaythrough))
-	}
+	options = append(options, huh.NewOption("Start a new playthrough", actionNewPlaythrough))
 	if len(playthroughs) > 0 {
 		options = append(options,
 			huh.NewOption("Log a new session", actionNewSession),
@@ -210,22 +218,31 @@ func logForGame(g GameSummary) error {
 	case actionEditInfo:
 		return doEditGameInfo(doc, pf)
 	case actionNewPlaythrough:
-		return doNewPlaythrough(pf, doc, sessionBased)
+		return doNewPlaythrough(pf, doc, oneShot)
 	case actionNewSession:
 		return doNewSession(pf, playthroughs)
 	case actionUpdate:
-		return doUpdate(pf, playthroughs)
+		return doUpdate(pf, playthroughs, doc.FM.Platform)
 	}
 	return nil
 }
 
-func doNewPlaythrough(pf *PlaythroughsFile, doc *Doc, sessionBased bool) error {
-	if sessionBased && len(pf.Playthroughs) > 0 {
-		return fmt.Errorf("%s is session-based and already has a playthrough — log a new session instead", doc.FM.Title)
-	}
-	f, err := PlaythroughForm()
+func doNewPlaythrough(pf *PlaythroughsFile, doc *Doc, oneShot bool) error {
+	f, err := PlaythroughForm(doc.FM.Platform)
 	if err != nil {
 		return err
+	}
+	// The one-shot cap is per platform: a second entry is only meaningful
+	// when it's a second platform, since that's a separate save and a
+	// separate achievement set. Same platform means "log a session" instead.
+	if oneShot {
+		want := effectivePlatform(f.Platform, doc.FM.Platform)
+		for _, e := range pf.Playthroughs {
+			if effectivePlatform(e.Platform, doc.FM.Platform) == want {
+				return fmt.Errorf("%s is %s and already has a playthrough on %s — log a new session instead",
+					doc.FM.Title, doc.FM.Status, orDash(want))
+			}
+		}
 	}
 	pf.AddPlaythrough(f)
 	return confirmAndWrite(pf, len(pf.Playthroughs)-1)
@@ -324,13 +341,13 @@ func doNewSession(pf *PlaythroughsFile, playthroughs []Playthrough) error {
 	if err != nil {
 		return err
 	}
-	started, finished, err := SessionForm()
+	started, finished, title, err := SessionForm()
 	if err != nil {
 		return err
 	}
 
 	hadSessions := playthroughs[idx].HasSessions()
-	if err := pf.AddSession(idx, started, finished); err != nil {
+	if err := pf.AddSession(idx, started, finished, title); err != nil {
 		return err
 	}
 
@@ -346,7 +363,7 @@ func doNewSession(pf *PlaythroughsFile, playthroughs []Playthrough) error {
 	return confirmAndWrite(pf, idx, allowed...)
 }
 
-func doUpdate(pf *PlaythroughsFile, playthroughs []Playthrough) error {
+func doUpdate(pf *PlaythroughsFile, playthroughs []Playthrough, gamePlatform string) error {
 	idx, err := SelectPlaythrough(playthroughs)
 	if err != nil {
 		return err
@@ -360,16 +377,17 @@ func doUpdate(pf *PlaythroughsFile, playthroughs []Playthrough) error {
 		display.Finished = p.Sessions[len(p.Sessions)-1].Finished
 	}
 
-	finished, status, rating, notes, err := UpdateForm(display)
+	finished, status, platform, rating, notes, err := UpdateForm(display, gamePlatform)
 	if err != nil {
 		return err
 	}
-	if finished == display.Finished && status == p.Status && rating == p.Rating && notes == p.Notes {
+	if finished == display.Finished && status == p.Status && platform == p.Platform &&
+		rating == p.Rating && notes == p.Notes {
 		fmt.Println("No changes.")
 		return nil
 	}
 
-	if err := pf.UpdatePlaythrough(idx, finished, status, rating, notes); err != nil {
+	if err := pf.UpdatePlaythrough(idx, finished, status, platform, rating, notes); err != nil {
 		return err
 	}
 
@@ -385,6 +403,11 @@ func doUpdate(pf *PlaythroughsFile, playthroughs []Playthrough) error {
 	}
 	if strings.TrimSpace(status) == "" {
 		allowed = append(allowed, base+".status")
+	}
+	// Clearing platform is how a run is handed back to the game's front
+	// matter, so the key going away is the intent, not loss.
+	if strings.TrimSpace(platform) == "" {
+		allowed = append(allowed, base+".platform")
 	}
 	if strings.TrimSpace(finished) == "" {
 		allowed = append(allowed, base+".finished",

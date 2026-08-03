@@ -1,17 +1,18 @@
 ---
-title: "Balatro"
-platform: "PC"
-retroachievements_id:
+title: Balatro
+platform: PC
+retroachievements_id: null
 steam_appid: 2379780
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["balatro"]
+    games:
+      - balatro
+cover: null
 ---
 
 

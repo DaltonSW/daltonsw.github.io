@@ -3,9 +3,9 @@ title: "LEGO® Star Wars™: The Skywalker Saga"
 platform: "PC"
 retroachievements_id:
 steam_appid: 920210
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2023-02-16"
 rating:
 cover:
 draft: true

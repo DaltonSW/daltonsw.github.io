@@ -1,17 +1,18 @@
 ---
-title: "Left 4 Dead 2"
-platform: "PC"
-retroachievements_id:
+title: Left 4 Dead 2
+platform: PC
+retroachievements_id: null
 steam_appid: 550
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["left-4-dead-2"]
+    games:
+      - left-4-dead-2
+cover: null
 ---
 
 

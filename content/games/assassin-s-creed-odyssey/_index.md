@@ -3,9 +3,9 @@ title: "Assassin's Creed Odyssey"
 platform: "PC"
 retroachievements_id:
 steam_appid: 812140
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2020-01-18"
 rating:
 cover:
 draft: true

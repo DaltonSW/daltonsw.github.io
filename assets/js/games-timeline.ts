@@ -19,10 +19,18 @@ function toTime(value: string | number | Date): number {
   return value instanceof Date ? value.getTime() : new Date(value).getTime();
 }
 
+const daySpan = 1000 * 60 * 60 * 24;
+
 // How far outside a window a game still counts as "near" it, as a fraction of
 // that window's own span — so the buffer scales with zoom level instead of
 // being a fixed number of days.
 const NEARBY_PADDING_RATIO = 0.5;
+
+// Absolute cap on the padding above. Without this, zooming out to view years
+// of history inflates the ratio-based padding to years wide too, pulling in
+// groups whose items sit nowhere near the actual viewport and leaving their
+// rows visibly empty.
+const MAX_PADDING_DAYS = 60;
 
 // Default width of the initial view. Without this, the timeline would default
 // to fitting the *entire* history, which becomes a useless, tiny-barred mess
@@ -34,7 +42,7 @@ function visibleGroupIds(
   range: { start: number; end: number },
 ): Set<unknown> {
   const span = range.end - range.start;
-  const padding = span * NEARBY_PADDING_RATIO;
+  const padding = Math.min(span * NEARBY_PADDING_RATIO, daySpan * MAX_PADDING_DAYS);
   const paddedStart = range.start - padding;
   const paddedEnd = range.end + padding;
 
@@ -60,7 +68,6 @@ function main(): void {
     if (!item.end) item.end = today;
   }
 
-  const daySpan = 1000 * 60 * 60 * 24;
   const domainStart = Math.min(...items.map((item) => toTime(item.start)));
   const domainEnd = Math.max(...items.map((item) => toTime(item.end as string)));
   const domainSpan = Math.max(domainEnd - domainStart, daySpan * 30);
@@ -74,6 +81,13 @@ function main(): void {
   const initialEnd = domainEnd;
   const initialStart = Math.max(domainStart, initialEnd - daySpan * DEFAULT_WINDOW_DAYS);
 
+  // Clamp panning/zooming so the timeline can't scroll into empty space
+  // before the earliest logged activity or past today. A couple weeks of
+  // buffer on each edge keeps "today" from sitting flush against the right
+  // edge of the view.
+  const minDate = new Date(domainStart - daySpan * 14);
+  const maxDate = new Date(Date.now() + daySpan * 14);
+
   const timeline = new Timeline(root, items, groups, {
     editable: false,
     selectable: true,
@@ -82,6 +96,8 @@ function main(): void {
     zoomMax: Math.round(domainSpan * 1.2),
     start: initialStart,
     end: initialEnd,
+    min: minDate,
+    max: maxDate,
   });
 
   // vis-timeline's zoom handler checks the legacy, non-standard

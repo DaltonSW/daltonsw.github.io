@@ -1,17 +1,18 @@
 ---
-title: "Don't Starve"
-platform: "PC"
-retroachievements_id:
+title: Don't Starve
+platform: PC
+retroachievements_id: null
 steam_appid: 219740
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["don-t-starve"]
+    games:
+      - don-t-starve
+cover: null
 ---
 
 

@@ -3,7 +3,7 @@ title: "Terraria"
 platform: "PC"
 retroachievements_id:
 steam_appid: 105600
-status: "playing"
+status: "session-based"
 started:
 finished:
 rating:

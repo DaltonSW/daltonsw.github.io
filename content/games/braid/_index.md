@@ -3,9 +3,9 @@ title: "Braid"
 platform: "PC"
 retroachievements_id:
 steam_appid: 26800
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2025-03-23"
 rating:
 cover:
 draft: true

@@ -3,9 +3,9 @@ title: "DAVE THE DIVER"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1868140
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2025-04-06"
 rating:
 cover:
 draft: true

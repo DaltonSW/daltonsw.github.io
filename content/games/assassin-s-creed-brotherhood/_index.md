@@ -3,9 +3,9 @@ title: "Assassin's Creed Brotherhood"
 platform: "PC"
 retroachievements_id:
 steam_appid: 48190
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2019-07-09"
 rating:
 cover:
 draft: true

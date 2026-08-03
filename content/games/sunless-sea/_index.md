@@ -1,17 +1,18 @@
 ---
-title: "Sunless Sea"
-platform: "PC"
-retroachievements_id:
+title: Sunless Sea
+platform: PC
+retroachievements_id: null
 steam_appid: 304650
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["sunless-sea"]
+    games:
+      - sunless-sea
+cover: null
 ---
 
 

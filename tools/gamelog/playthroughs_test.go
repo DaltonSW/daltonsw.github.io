@@ -51,7 +51,7 @@ const flatWithFieldsBetween = `playthroughs:
 
 func TestAddSession_ConvertsWithoutDisturbingSiblings(t *testing.T) {
 	pf := loadFixture(t, flatWithFieldsBetween)
-	if err := pf.AddSession(0, "2026-05-19", "2026-05-24"); err != nil {
+	if err := pf.AddSession(0, "2026-05-19", "2026-05-24", ""); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf)
@@ -97,7 +97,7 @@ func TestAddSession_LeavesTheEarlierSessionAlone(t *testing.T) {
         finished: 2026-04-09
         note: final stretch
 `)
-	if err := pf.AddSession(0, "2026-05-19", ""); err != nil {
+	if err := pf.AddSession(0, "2026-05-19", "", ""); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
@@ -119,7 +119,7 @@ func TestAddSession_LeavesTheEarlierSessionAlone(t *testing.T) {
 // An ongoing session keeps its `finished` key, so the shape stays stable.
 func TestOngoingSessionKeepsTheFinishedKey(t *testing.T) {
 	pf := loadFixture(t, "playthroughs:\n  - started: 2026-01-04\n    finished: 2026-02-11\n")
-	if err := pf.AddSession(0, "2026-05-19", ""); err != nil {
+	if err := pf.AddSession(0, "2026-05-19", "", ""); err != nil {
 		t.Fatal(err)
 	}
 	if err := pf.Save(); err != nil {
@@ -135,23 +135,30 @@ func TestOngoingSessionKeepsTheFinishedKey(t *testing.T) {
 // encoder drops anything the struct doesn't model, so `Extra` is what stands
 // between an unrecognised key and silent deletion.
 func TestUnknownFieldsSurviveARewrite(t *testing.T) {
+	// `platform` used to stand in for an unknown key here. It is a modeled
+	// field now, so it would prove nothing — these have to be keys the struct
+	// really doesn't know about.
 	pf := loadFixture(t, `playthroughs:
   - started: 2026-01-04
     finished: 2026-02-11
     platform: Switch
+    mood: obsessive
     co_op_with: sam
     sessions:
       - started: 2026-01-04
         finished: 2026-01-09
         device: deck
 `)
-	if err := pf.UpdatePlaythrough(0, "2026-02-12", "finished", "8", "done"); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2026-02-12", "finished", "Switch", "8", "done"); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
 
-	if got.Extra["platform"] != "Switch" || got.Extra["co_op_with"] != "sam" {
+	if got.Extra["mood"] != "obsessive" || got.Extra["co_op_with"] != "sam" {
 		t.Errorf("entry-level unknown fields lost: %v", got.Extra)
+	}
+	if got.Platform != "Switch" {
+		t.Errorf("platform = %q, want Switch", got.Platform)
 	}
 	if got.Sessions[0].Extra["device"] != "deck" {
 		t.Errorf("session-level unknown field lost: %v", got.Sessions[0].Extra)
@@ -225,8 +232,52 @@ func TestSaveRemovesTheFileWhenEmpty(t *testing.T) {
 
 func TestAddSessionRejectsAnEntryWithNoStartDate(t *testing.T) {
 	pf := loadFixture(t, "playthroughs:\n  - status: backlog\n")
-	if err := pf.AddSession(0, "2026-05-19", ""); err == nil {
+	if err := pf.AddSession(0, "2026-05-19", "", ""); err == nil {
 		t.Fatal("expected an error rather than a session with no origin")
+	}
+}
+
+// The case this field exists for: one game, two runs, different platforms and
+// different outcomes. Persona 5 Royal was played through on PS4 and again on
+// Steam; Octopath Traveler was finished on PC and dropped on Switch. Neither
+// is expressible with a single game-level platform.
+func TestPlaythroughsCarrySeparatePlatforms(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - started: 2020-05-19
+    finished: 2020-10-17
+    status: mastered
+    platform: PS4
+  - started: 2023-03-12
+    finished: 2023-05-14
+    status: mastered
+    platform: PC
+`)
+	got := saveAndReload(t, pf).Playthroughs
+	if len(got) != 2 {
+		t.Fatalf("got %d playthroughs, want 2", len(got))
+	}
+	if got[0].Platform != "PS4" || got[1].Platform != "PC" {
+		t.Errorf("platforms = %q / %q, want PS4 / PC", got[0].Platform, got[1].Platform)
+	}
+	if got[0].Finished != "2020-10-17" || got[1].Finished != "2023-05-14" {
+		t.Errorf("dates disturbed: %+v", got)
+	}
+}
+
+// A blank platform must not write the key. The entry inherits the game's
+// front-matter platform, so pinning a copy of it would make correcting the
+// game later silently fail to correct its runs.
+func TestBlankPlatformIsOmitted(t *testing.T) {
+	pf := loadFixture(t, "playthroughs:\n  - started: 2026-01-04\n    status: playing\n")
+	if err := pf.UpdatePlaythrough(0, "", "playing", "", "", ""); err != nil {
+		t.Fatal(err)
+	}
+	out, err := pf.Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if strings.Contains(string(out), "platform") {
+		t.Errorf("blank platform emitted a key:\n%s", out)
 	}
 }
 
@@ -239,7 +290,7 @@ func TestUpdateWritesFinishedToTheLastSession(t *testing.T) {
       - started: 2026-04-02
         finished:
 `)
-	if err := pf.UpdatePlaythrough(0, "2026-04-09", "finished", "", ""); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2026-04-09", "finished", "", "", ""); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
@@ -333,7 +384,7 @@ func TestConversionDeclaresExactlyWhatItRemoves(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if err := pf.AddSession(0, "2026-05-19", ""); err != nil {
+	if err := pf.AddSession(0, "2026-05-19", "", ""); err != nil {
 		t.Fatal(err)
 	}
 	encoded, err := pf.Encode()
@@ -404,6 +455,28 @@ func TestSyncStatus_NeverOverwritesAnExistingFinishedDate(t *testing.T) {
 	}
 }
 
+// Pausing isn't finishing: the entry's status should follow, but callers are
+// expected to pass closedOn="" for it (see reviewStale), and even so, no
+// date on the entry should ever be touched.
+func TestSyncStatus_PausedNeverSetsAFinishedDate(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: playing
+    sessions:
+      - started: "2024-01-01"
+        finished: ""
+`)
+	if !pf.SyncStatus("paused", "") {
+		t.Fatal("expected a change")
+	}
+	e := pf.Playthroughs[0]
+	if e.Status != "paused" {
+		t.Errorf("status = %q, want paused", e.Status)
+	}
+	if e.Sessions[0].Finished != "" {
+		t.Errorf("pausing must not close the open session, got finished=%q", e.Sessions[0].Finished)
+	}
+}
+
 func TestSyncStatus_SkipsWhenAmbiguousOrIrrelevant(t *testing.T) {
 	cases := []struct {
 		name    string
@@ -421,5 +494,24 @@ func TestSyncStatus_SkipsWhenAmbiguousOrIrrelevant(t *testing.T) {
 				t.Error("expected no change")
 			}
 		})
+	}
+}
+
+// A one-shot game (session-based/multiplayer/software) is capped at one entry
+// per platform, not one entry outright. Saves don't cross consoles, so a
+// second platform is a genuinely separate record — but a second entry on the
+// same platform is the fragmentation the cap exists to prevent.
+func TestEffectivePlatformTreatsBlankAsTheGames(t *testing.T) {
+	for _, tc := range []struct {
+		entry, game, want string
+	}{
+		{"", "PC", "PC"},     // pre-dates the field: same platform as its game
+		{"  ", "PC", "PC"},   // whitespace is not a platform
+		{"PS4", "PC", "PS4"}, // an explicit platform wins
+		{"PC", "PC", "PC"},   // spelled out, but still the game's
+	} {
+		if got := effectivePlatform(tc.entry, tc.game); got != tc.want {
+			t.Errorf("effectivePlatform(%q, %q) = %q, want %q", tc.entry, tc.game, got, tc.want)
+		}
 	}
 }

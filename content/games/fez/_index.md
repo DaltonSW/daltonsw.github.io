@@ -3,9 +3,9 @@ title: "FEZ"
 platform: "PC"
 retroachievements_id:
 steam_appid: 224760
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2015-11-03"
 rating:
 cover:
 draft: true

@@ -3,7 +3,7 @@ title: "The Oregon Trail"
 platform: "PC"
 retroachievements_id:
 steam_appid: 2013360
-status: "playing"
+status: "session-based"
 started:
 finished:
 rating:

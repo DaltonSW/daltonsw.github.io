@@ -8,15 +8,51 @@ losing captured data is the worst thing that can happen.**
 
 ## Current state
 
-- `content/games/` holds only the section index (`_index.md`). The sample entries that used to
-  live there were fake test data and have been deleted.
+- The backfill is **done**. `content/games/` holds **213 game bundles**, each with an `_index.md`
+  and an `achievement-summary.yaml`; **195** also have a `playthroughs.yaml`. The 18 without one
+  are legal, not broken — `LoadPlaythroughs` returns an empty struct for a missing file, and a
+  game with no logged playthrough is a real state.
 - Storage is split three ways: hand-authored front matter in `_index.md`, tool-owned
   `playthroughs.yaml` beside it, and captured API history in `archive/<provider>/<id>.json`
   outside `content/` entirely. `README.md` explains why each is where it is.
-- A review list of **211 unlogged games** (45 RetroAchievements, 166 Steam ≥5h) was generated and
-  is with the owner for triage. Creating them is pending their picks.
-- `gamelog scan` finds them; `gamelog achievements <slug>` captures per-game unlock history.
-  Both work and are tested.
+- `archive/` holds **213 records — 168 Steam, 45 RetroAchievements, 6.9 MB on disk** including
+  every verbatim `raw` response. One record per game.
+- `gamelog scan` finds unlogged games; `gamelog achievements <slug>` captures per-game unlock
+  history; `gamelog project` regenerates the summaries from disk without API calls. All tested.
+- **Every one of the 213 games is `draft: true`** — the game log is fully captured but not
+  published. Publishing is a separate decision from capture, and `gamelog review` is the tool for
+  walking the drafts.
+- Game-level status distribution, after the reclassification and dropped/finished triage passes:
+
+  | status | count |
+  |---|---|
+  | finished | 81 |
+  | mastered | 47 |
+  | session-based | 41 |
+  | dropped | 21 |
+  | multiplayer | 16 |
+  | playing | 4 |
+  | paused | 2 |
+  | software | 1 |
+
+  `backlog` is the only `gameStatuses` value now unused. The four `playing` entries are genuinely
+  active — anything quiet for 30+ days has been triaged.
+- **The vocabulary is split in two, on purpose:** `gameStatuses` (front matter, 9 values) and
+  `playthroughStatuses` (entries in `playthroughs.yaml`, 5 values). `session-based`,
+  `multiplayer`, and `software` are game-level only — those entries keep a single playthrough
+  whose status stays `playing` while its `sessions:` list accumulates, which is what `isOneShot`
+  in `forms.go` gates on. Two consequences worth knowing before touching either list:
+  - `gamelog stale` only considers `status == "playing"`, so all three are excluded from
+    finished/dropped triage automatically. That's correct: none of them has a finish line.
+  - `layouts/partials/games-timeline.html` colours bars from the **entry** status, which for these
+    three is always `playing`. It special-cases them and lets the game-level status win, or an
+    endless sandbox would render identically to an active playthrough. **Adding a fourth
+    one-shot status means updating that list too** — `isOneShot`, the timeline's slice, and the
+    `.pill--`/`.entry--`/`.pt--` rules in `main.scss` all have to move together.
+- `software` marks an entry that isn't a game at all (currently just Aseprite). Steam sells tools
+  alongside games and reports playtime for them identically, so they arrive through the same
+  `gamelog scan`; the status says the completion vocabulary doesn't apply rather than forcing a
+  finished/dropped answer to a question that was never asked.
 
 ---
 
@@ -34,6 +70,41 @@ Whatever the total, the cost is now repo size only. The archive sits outside the
 is never parsed at build time and never published. Revisit only if the owner asks; dropping `raw`
 for Steam alone would recover the most with the least loss, since Steam's response carries fewer
 unnormalised fields than RA's.
+
+---
+
+## 7. Open: every game has exactly one playthrough entry
+
+The backfill wrote a single `playthroughs.yaml` entry per game, so a game played through more
+than once is indistinguishable from one long stretch of play. Baldur's Gate 3 carries 431 hours
+and 45/54 achievements in one entry spanning 2023-10 → 2025-03; the owner confirms that is at
+least two separate campaigns.
+
+Nothing is broken. The schema already supports this — `playthroughs:` is a list, and both
+`AddSession` and "Start a new playthrough" exist. The historical data was simply never split.
+
+**Signal available for proposing splits:** 52 of 213 archived games show a 6+ month gap between
+consecutive achievement unlocks. Roughly half are already `session-based`, where the `sessions:`
+list is the correct representation and a split would be actively wrong. The real candidates are
+the narrative games — BG3, Dishonored, Celeste, DARK SOULS: REMASTERED, Fallout: New Vegas,
+Portal 2, Cuphead, Phoenix Wright, A Hat in Time, Super Meat Boy, Shovel Knight (~12 in total).
+
+**A gap in unlocks marks an activity arc, not a playthrough.** Resuming a three-year-old save
+looks identical to starting a fresh run. Boundaries have to be confirmed by the owner, never
+derived and applied.
+
+**Trade to weigh before splitting anything:** `SyncStatus` only acts when there is exactly one
+entry — `len(f.Playthroughs) != 1` returns false, because two entries make "which one does this
+status refer to?" ambiguous. Splitting a game therefore opts it out of automatic status sync
+permanently; `gamelog stale` and the front-matter status path stop keeping its entries in step
+and it becomes hand-maintained. That is deliberate, so it's a real cost, not a bug to route around.
+
+Related and currently unused: `notes:` and `rating:` exist on every entry and are set by zero
+games. `notes:` is the natural home for context the numbers can't carry — that Hollow Knight,
+FEZ, and Dishonored's high playtimes are speedrun practice rather than story progress, for
+instance, which is exactly the kind of fact that made playtime misleading during status triage.
+
+Deferred by the owner until the status reclassification lands.
 
 ---
 
@@ -123,6 +194,10 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 - **Award dates are RFC3339; per-achievement dates are zoneless SQL datetimes.** Two parsers on
   purpose (`parseRAAwardDate` vs `parseRADate`).
 - **An unknown RA game ID returns HTTP 200 with `[]`**, not a 404.
+- **RA's `UserTotalPlaytime` (added to `GetGameInfoAndUserProgress` in late 2025) is in seconds**,
+  unlike everything else in the archive which stores minutes — `FetchRARecord` divides by 60.
+  Client-tracked (RetroArch/RAIntegration), so games played before that rollout, or on an
+  unsupported emulator, legitimately have none.
 - **Steam puts useful JSON in 400/403 bodies** — read the body, don't bail on status.
 - **Steam needs a SteamID64**, not a vanity name; `resolveSteamID` handles both.
 - **RA rate-limits sustained bursts with 429** — `RAClient` throttles to ~1.2s and retries.
@@ -142,5 +217,23 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   copy of that data.
 - **The archive is keyed by provider ID, not slug, and lives outside `content/`.** Both halves
   matter: slugs change, and anything inside `content/` gets published.
+- **Exophase 403s Go's default User-Agent** (Cloudflare). Requests must send a browser one.
+- **Exophase's JSON API omits `canonical_id`** — the real `NPWR…` PlayStation ID the archive keys
+  on. It exists only in the `window.playerGames` payload embedded in the profile HTML, so the
+  client reads both and joins on `master_id`. A game whose canonical ID can't be resolved is
+  **skipped, not guessed at**: mis-keying the archive is the exact failure the ID scheme prevents.
+- **Only the account page carries per-service player ids.** `/psn/user/<name>/` does not, and the
+  per-service username differs from the account name (Nintendo's is an opaque hash).
+
+## Outstanding
+
+- **The Exophase canonical-ID map only covers the first 50 games per service.** The embedded
+  profile payload isn't paginated the way the JSON API is, so a service with more than 50 games
+  would silently resolve IDs for only the first page. PSN currently has 13, so this isn't biting
+  yet — but it will for Steam-sized libraries, and games beyond the ceiling are skipped rather
+  than mis-keyed.
+- **Nintendo and Ubisoft are captured on the Exophase profile but not archived.** Switch has no
+  achievements at all (playtime and last-played only), so it needs a record shape that doesn't
+  pretend otherwise before `providerNintendo` is worth adding.
 
 `tools/gamelog/README.md` documents all of the above in more detail.

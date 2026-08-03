@@ -3,9 +3,9 @@ title: "Danganronpa 2: Goodbye Despair"
 platform: "PC"
 retroachievements_id:
 steam_appid: 413420
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2017-10-20"
 rating:
 cover:
 draft: true

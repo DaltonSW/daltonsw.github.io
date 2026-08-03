@@ -3,9 +3,9 @@ title: "Ori and the Blind Forest: Definitive Edition"
 platform: "PC"
 retroachievements_id:
 steam_appid: 387290
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2017-02-04"
 rating:
 cover:
 draft: true

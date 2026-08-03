@@ -3,9 +3,9 @@ title: "DARK SOULS™ II: Scholar of the First Sin"
 platform: "PC"
 retroachievements_id:
 steam_appid: 335300
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2021-05-21"
 rating:
 cover:
 draft: true

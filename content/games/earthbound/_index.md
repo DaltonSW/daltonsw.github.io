@@ -3,9 +3,9 @@ title: "EarthBound"
 platform: "SNES/Super Famicom"
 retroachievements_id: 264
 steam_appid:
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2022-12-20"
 rating:
 cover:
 draft: true

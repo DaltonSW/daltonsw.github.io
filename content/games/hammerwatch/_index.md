@@ -1,17 +1,18 @@
 ---
-title: "Hammerwatch"
-platform: "PC"
-retroachievements_id:
+title: Hammerwatch
+platform: PC
+retroachievements_id: null
 steam_appid: 239070
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["hammerwatch"]
+    games:
+      - hammerwatch
+cover: null
 ---
 
 

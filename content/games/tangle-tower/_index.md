@@ -3,9 +3,9 @@ title: "Tangle Tower"
 platform: "PC"
 retroachievements_id:
 steam_appid: 359510
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2021-05-18"
 rating:
 cover:
 draft: true

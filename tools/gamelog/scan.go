@@ -367,15 +367,14 @@ func offerToCreate(gamesDir string, candidates []Candidate) error {
 		// Capture the unlock history into the archive. A failure here costs
 		// the history, not the game, so it's reported and stepped over —
 		// `gamelog achievements <slug>` can retry later.
-		raID, steamAppID := "", ""
+		provider := providerRA
 		if c.Provider == "Steam" {
-			steamAppID = c.ID
-		} else {
-			raID = c.ID
+			provider = providerSteam
 		}
-		if _, err := saveAchievements(ctx, archiveDir, c.Title, raID, steamAppID, creds); err != nil {
+		links := []providerLink{{Provider: provider, ID: c.ID}}
+		if _, err := saveAchievements(ctx, archiveDir, c.Title, links, creds); err != nil {
 			fmt.Fprintf(os.Stderr, "    (no achievements saved: %v)\n", err)
-		} else if _, err := writeAchievementSummary(archiveDir, filepath.Dir(path), raID, steamAppID); err != nil {
+		} else if _, err := writeAchievementSummary(archiveDir, filepath.Dir(path), links); err != nil {
 			fmt.Fprintf(os.Stderr, "    (achievement summary not written: %v)\n", err)
 		}
 	}

@@ -1,17 +1,19 @@
 ---
-title: "Sekiro™: Shadows Die Twice"
-platform: "PC"
-retroachievements_id:
+title: 'Sekiro™: Shadows Die Twice'
+platform: PC
+retroachievements_id: null
 steam_appid: 814380
-status: "playing"
-started:
-finished:
-rating:
-cover:
+psn_id: "NPWR15587_00"
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["sekiro-shadows-die-twice"]
+    games:
+      - sekiro-shadows-die-twice
+cover: null
 ---
 
 

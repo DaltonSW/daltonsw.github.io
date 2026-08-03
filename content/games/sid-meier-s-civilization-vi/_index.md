@@ -3,7 +3,7 @@ title: "Sid Meier's Civilization VI"
 platform: "PC"
 retroachievements_id:
 steam_appid: 289070
-status: "playing"
+status: "session-based"
 started:
 finished:
 rating:

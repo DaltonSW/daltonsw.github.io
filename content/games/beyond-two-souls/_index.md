@@ -3,9 +3,10 @@ title: "Beyond: Two Souls"
 platform: "PC"
 retroachievements_id:
 steam_appid: 960990
-status: "playing"
+psn_id: "NPWR06302_00"
+status: "finished"
 started:
-finished:
+finished: "2022-04-30"
 rating:
 cover:
 draft: true

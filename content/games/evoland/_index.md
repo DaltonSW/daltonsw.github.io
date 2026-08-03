@@ -3,9 +3,9 @@ title: "Evoland"
 platform: "PC"
 retroachievements_id:
 steam_appid: 233470
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2017-01-31"
 rating:
 cover:
 draft: true
@@ -14,4 +14,4 @@ cascade:
     games: ["evoland"]
 ---
 
-
+Speedran.

@@ -3,9 +3,9 @@ title: "Disco Elysium"
 platform: "PC"
 retroachievements_id:
 steam_appid: 632470
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-11-20"
 rating:
 cover:
 draft: true

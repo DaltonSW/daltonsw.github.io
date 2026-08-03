@@ -73,7 +73,7 @@ func TestSaveAchievements_PrivateProfileKeepsExistingData(t *testing.T) {
 		w.Write([]byte(`{"playerstats":{"error":"Profile is not public","success":false}}`))
 	})
 	creds := Credentials{SteamAPIKey: "k", SteamID: testSteamID64}
-	if _, err := saveAchievements(context.Background(), dir, "Hades", "", "1145360", creds); err != nil {
+	if _, err := saveAchievements(context.Background(), dir, "Hades", steamLink("1145360"), creds); err != nil {
 		t.Fatalf("refresh errored: %v", err)
 	}
 
@@ -234,6 +234,7 @@ func TestFetchRARecord_CapturesLockedAndRaw(t *testing.T) {
 	raStub(t, func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(`{
 		  "Title":"Kirby","ConsoleName":"Wii","NumAchievements":3,"UserCompletion":"66.67%",
+		  "UserTotalPlaytime":1029,
 		  "HighestAwardKind":"beaten-hardcore","HighestAwardDate":"2026-07-11T18:55:04+00:00",
 		  "Achievements":{
 		    "1":{"ID":1,"Title":"First","Description":"d1","Points":1,"BadgeName":"111",
@@ -257,6 +258,11 @@ func TestFetchRARecord_CapturesLockedAndRaw(t *testing.T) {
 	}
 	if rec.Platform != "Wii" || rec.Completion != "66.67%" {
 		t.Errorf("metadata not captured: %+v", rec)
+	}
+	// RA reports UserTotalPlaytime in seconds; PlaytimeMins is minutes
+	// everywhere else in the archive, so it must be converted, not copied.
+	if rec.PlaytimeMins != 17 {
+		t.Errorf("playtime = %d mins, want 17 (1029s)", rec.PlaytimeMins)
 	}
 	if len(rec.Raw) == 0 {
 		t.Error("raw response should be retained")
@@ -422,11 +428,13 @@ func TestWriteAchievementSummary_SumsBothProviders(t *testing.T) {
 	if _, err := SaveRecord(archiveDir, providerRA, "4650", "Hades II", &ProviderRecord{Total: 40, Achievements: nUnlocked("ra", 12)}); err != nil {
 		t.Fatal(err)
 	}
-	if _, err := SaveRecord(archiveDir, providerSteam, "1145360", "Hades", &ProviderRecord{Total: 54, Achievements: nUnlocked("steam", 46)}); err != nil {
+	if _, err := SaveRecord(archiveDir, providerSteam, "1145360", "Hades", &ProviderRecord{
+		Total: 54, Achievements: nUnlocked("steam", 46), PlaytimeMins: 300,
+	}); err != nil {
 		t.Fatal(err)
 	}
 
-	wrote, err := writeAchievementSummary(archiveDir, gameDir, "4650", "1145360")
+	wrote, err := writeAchievementSummary(archiveDir, gameDir, buildProviderLinks("4650", "1145360", ""))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -441,8 +449,72 @@ func TestWriteAchievementSummary_SumsBothProviders(t *testing.T) {
 	if err := yaml.Unmarshal(raw, &got); err != nil {
 		t.Fatal(err)
 	}
-	if got.Unlocked != 58 || got.Total != 94 {
-		t.Errorf("summary = %+v, want 58/94", got)
+	if got.Unlocked != 58 || got.Total != 94 || got.PlaytimeMins != 300 {
+		t.Errorf("summary = %+v, want 58/94, playtime_mins=300", got)
+	}
+}
+
+// last_played prefers Steam's real rtime_last_played over an achievement
+// unlock date when both are present and Steam's is more recent — and still
+// picks up RA's unlock-date proxy when that's the only signal available.
+func TestWriteAchievementSummary_LastPlayedPrefersTheMostRecentSignal(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+	if _, err := SaveRecord(archiveDir, providerRA, "4650", "Hades II", &ProviderRecord{
+		Total: 40, Achievements: nUnlocked("ra", 12), // last unlock 2024-01-01
+	}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := SaveRecord(archiveDir, providerSteam, "1145360", "Hades", &ProviderRecord{
+		Total: 54, Achievements: nUnlocked("steam", 46), LastPlayed: "2026-03-15",
+	}); err != nil {
+		t.Fatal(err)
+	}
+
+	if _, err := writeAchievementSummary(archiveDir, gameDir, buildProviderLinks("4650", "1145360", "")); err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+	if got.LastPlayed != "2026-03-15" {
+		t.Errorf("last_played = %q, want Steam's more recent 2026-03-15", got.LastPlayed)
+	}
+}
+
+// A Steam game with playtime and zero achievements still deserves a summary
+// file, not a discarded one.
+func TestWriteAchievementSummary_PlaytimeWithNoAchievementsStillWrites(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+	if _, err := SaveRecord(archiveDir, providerSteam, "1145360", "Hades", &ProviderRecord{
+		Total: 0, PlaytimeMins: 320,
+	}); err != nil {
+		t.Fatal(err)
+	}
+
+	wrote, err := writeAchievementSummary(archiveDir, gameDir, steamLink("1145360"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !wrote {
+		t.Fatal("expected wrote == true when there's playtime even with no achievements")
+	}
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+	if got.PlaytimeMins != 320 || got.Total != 0 {
+		t.Errorf("summary = %+v, want playtime_mins=320 total=0", got)
 	}
 }
 
@@ -455,7 +527,7 @@ func TestWriteAchievementSummary_MissingProviderIsSkipped(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if _, err := writeAchievementSummary(archiveDir, gameDir, "", "1145360"); err != nil {
+	if _, err := writeAchievementSummary(archiveDir, gameDir, steamLink("1145360")); err != nil {
 		t.Fatal(err)
 	}
 	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
@@ -482,7 +554,7 @@ func TestWriteAchievementSummary_RemovesStaleSummaryWhenNothingArchived(t *testi
 		t.Fatal(err)
 	}
 
-	wrote, err := writeAchievementSummary(archiveDir, gameDir, "4650", "1145360")
+	wrote, err := writeAchievementSummary(archiveDir, gameDir, buildProviderLinks("4650", "1145360", ""))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -491,5 +563,63 @@ func TestWriteAchievementSummary_RemovesStaleSummaryWhenNothingArchived(t *testi
 	}
 	if _, err := os.Stat(path); !os.IsNotExist(err) {
 		t.Error("expected the stale summary to be removed")
+	}
+}
+
+// steamLink is the common single-provider case in these tests.
+func steamLink(id string) []providerLink {
+	return []providerLink{{Provider: providerSteam, ID: id}}
+}
+
+// Two platforms are two separate achievement sets. Summing them describes a
+// set that doesn't exist (Persona 5 Royal is 53/53 on PS4 and 53/53 on Steam,
+// not 106/106 of anything), so the per-provider numbers have to survive into
+// the projection for the display to be able to split them.
+func TestSummaryKeepsPerProviderBreakdown(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+
+	if _, err := SaveRecord(archiveDir, providerSteam, "1687950", "Persona 5 Royal",
+		&ProviderRecord{Total: 53, Platform: "PC", Achievements: nUnlocked("steam", 53)}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := SaveRecord(archiveDir, providerPSN, "NPWR19151_00", "Persona 5 Royal",
+		&ProviderRecord{Total: 53, Platform: "PS4", Achievements: nUnlocked("psn", 53)}); err != nil {
+		t.Fatal(err)
+	}
+
+	links := []providerLink{
+		{Provider: providerSteam, ID: "1687950"},
+		{Provider: providerPSN, ID: "NPWR19151_00"},
+	}
+	if _, err := writeAchievementSummary(archiveDir, gameDir, links); err != nil {
+		t.Fatal(err)
+	}
+
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+
+	if len(got.Providers) != 2 {
+		t.Fatalf("got %d provider breakdowns, want 2:\n%s", len(got.Providers), raw)
+	}
+	for _, p := range got.Providers {
+		if p.Unlocked != 53 || p.Total != 53 {
+			t.Errorf("%s breakdown = %d/%d, want 53/53", p.Provider, p.Unlocked, p.Total)
+		}
+	}
+	if got.Providers[0].Platform != "PC" || got.Providers[1].Platform != "PS4" {
+		t.Errorf("platforms = %q/%q, want PC/PS4 — the display labels by platform, not provider",
+			got.Providers[0].Platform, got.Providers[1].Platform)
+	}
+	// The combined figure is still recorded: "how many in all" is a real
+	// question, it just isn't the one the games list asks.
+	if got.Unlocked != 106 || got.Total != 106 {
+		t.Errorf("combined = %d/%d, want 106/106", got.Unlocked, got.Total)
 	}
 }

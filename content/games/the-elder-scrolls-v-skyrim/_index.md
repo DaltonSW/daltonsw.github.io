@@ -3,9 +3,9 @@ title: "The Elder Scrolls V: Skyrim"
 platform: "PC"
 retroachievements_id:
 steam_appid: 72850
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2020-08-23"
 rating:
 cover:
 draft: true

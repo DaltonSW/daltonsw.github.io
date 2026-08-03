@@ -1,17 +1,18 @@
 ---
-title: "TrackMania Nations Forever"
-platform: "PC"
-retroachievements_id:
+title: TrackMania Nations Forever
+platform: PC
+retroachievements_id: null
 steam_appid: 11020
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["trackmania-nations-forever"]
+    games:
+      - trackmania-nations-forever
+cover: null
 ---
 
 

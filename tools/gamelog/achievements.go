@@ -26,7 +26,21 @@ const archiveDirName = "archive"
 const (
 	providerRA    = "retroachievements"
 	providerSteam = "steam"
+	providerPSN   = "psn"
 )
+
+// providerLink pairs a provider with this game's ID on it. Everything that
+// walks a game's archive takes a slice of these rather than a positional
+// (raID, steamAppID) pair, so adding a provider doesn't mean editing every
+// signature that touches the archive.
+type providerLink struct {
+	Provider string
+	ID       string
+}
+
+// providerOrder fixes the order records are written and reported in, so
+// output and tests don't depend on map iteration.
+var providerOrder = []string{providerRA, providerSteam, providerPSN}
 
 // ArchivedAchievement is one achievement as recorded. Locked ones are kept
 // too: they carry the denominator, and knowing an achievement exists but is
@@ -62,6 +76,12 @@ type ProviderRecord struct {
 	Platform   string `json:"platform,omitempty"`
 	Icon       string `json:"icon,omitempty"`
 	Completion string `json:"completion,omitempty"`
+
+	// Source names where the data came from when that isn't the provider's
+	// own API — "exophase" for the PlayStation mirror. Without it a later run
+	// against Sony's endpoints couldn't tell first-hand data from relayed
+	// data, and the merge rules would have no way to prefer the former.
+	Source string `json:"source,omitempty"`
 
 	PlaytimeMins int            `json:"playtime_mins,omitempty"`
 	Playtime     map[string]int `json:"playtime,omitempty"` // per-device breakdown
@@ -164,6 +184,10 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 	merged.Platform = firstNonEmpty(fresh.Platform, old.Platform)
 	merged.Icon = firstNonEmpty(fresh.Icon, old.Icon)
 	merged.Completion = firstNonEmpty(fresh.Completion, old.Completion)
+	// Deliberately assigned, not firstNonEmpty: a first-party fetch reports
+	// Source "" and must be able to clear an earlier "exophase", otherwise a
+	// record would claim to be relayed forever after a first-party refresh.
+	merged.Source = fresh.Source
 	merged.AwardKind = firstNonEmpty(fresh.AwardKind, old.AwardKind)
 	merged.AwardDate = firstNonEmpty(fresh.AwardDate, old.AwardDate)
 	merged.LastPlayed = firstNonEmpty(fresh.LastPlayed, old.LastPlayed)
@@ -304,11 +328,38 @@ func SaveRecord(archiveDir, provider, id, title string, fresh *ProviderRecord) (
 // publishResources: false cascade as playthroughs.yaml.
 const achievementSummaryFilename = "achievement-summary.yaml"
 
-// AchievementSummary is the combined unlocked/total across every provider a
-// game is linked to, e.g. RetroAchievements 12/40 + Steam 46/54 -> 58/94.
+// AchievementSummary is the per-game stat rollup Hugo reads at build time:
+// combined unlocked/total across every provider a game is linked to (e.g.
+// RetroAchievements 12/40 + Steam 46/54 -> 58/94), total playtime, and the
+// most recent activity date — both Steam-only stats, surfaced the same way.
 type AchievementSummary struct {
-	Unlocked int `yaml:"unlocked"`
-	Total    int `yaml:"total"`
+	Unlocked     int    `yaml:"unlocked"`
+	Total        int    `yaml:"total"`
+	PlaytimeMins int    `yaml:"playtime_mins,omitempty"`
+	LastPlayed   string `yaml:"last_played,omitempty"`
+
+	// Providers is the same numbers before they were added together. A game
+	// played on two platforms has two separate achievement sets, and summing
+	// them reads as one impossible set — Persona 5 Royal is 53/53 on PS4 and
+	// 53/53 on Steam, not 106/106 of anything.
+	//
+	// The totals above are kept because they are still the right answer to
+	// "how many achievements in all", and because the archive is shaped for
+	// querying rather than for one layout. Which of the two a given view uses
+	// is a display decision.
+	Providers []ProviderBreakdown `yaml:"providers,omitempty"`
+}
+
+// ProviderBreakdown is one provider's contribution to a game's summary.
+type ProviderBreakdown struct {
+	Provider string `yaml:"provider"`
+	// Platform is the provider's own name for where it was played (PS4, PC,
+	// GameCube). It's what a reader actually recognises — "psn" is plumbing.
+	Platform     string `yaml:"platform,omitempty"`
+	Unlocked     int    `yaml:"unlocked"`
+	Total        int    `yaml:"total"`
+	PlaytimeMins int    `yaml:"playtime_mins,omitempty"`
+	LastPlayed   string `yaml:"last_played,omitempty"`
 }
 
 func achievementSummaryPath(gameDir string) string {
@@ -319,10 +370,12 @@ func achievementSummaryPath(gameDir string) string {
 // currently archived for either provider, not just a record just fetched.
 // A game with nothing archived gets no file; a stale one is removed. wrote
 // reports whether a file now exists, so callers can tally writes vs. no-ops.
-func writeAchievementSummary(archiveDir, gameDir, raID, steamAppID string) (wrote bool, err error) {
-	var unlocked, total int
-	for _, link := range [][2]string{{providerRA, raID}, {providerSteam, steamAppID}} {
-		provider, id := link[0], link[1]
+func writeAchievementSummary(archiveDir, gameDir string, links []providerLink) (wrote bool, err error) {
+	var unlocked, total, playtimeMins int
+	var lastPlayed string
+	var breakdown []ProviderBreakdown
+	for _, link := range links {
+		provider, id := link.Provider, link.ID
 		if id == "" {
 			continue
 		}
@@ -333,19 +386,41 @@ func writeAchievementSummary(archiveDir, gameDir, raID, steamAppID string) (wrot
 		if rec == nil {
 			continue
 		}
+		breakdown = append(breakdown, ProviderBreakdown{
+			Provider:     provider,
+			Platform:     rec.Platform,
+			Unlocked:     rec.Unlocked,
+			Total:        rec.Total,
+			PlaytimeMins: rec.PlaytimeMins,
+			LastPlayed:   firstNonEmpty(rec.LastPlayed, rec.Last),
+		})
 		unlocked += rec.Unlocked
 		total += rec.Total
+		playtimeMins += rec.PlaytimeMins
+		// RetroAchievements has no "last played" signal — the closest proxy
+		// is the most recent achievement unlock, already tracked as Last.
+		// Steam's LastPlayed (rtime_last_played) and PSN's are the real
+		// thing when present, so prefer them, but fall back to Last for a
+		// record captured before playtime was linked in.
+		for _, d := range []string{rec.LastPlayed, rec.Last} {
+			if d != "" && d > lastPlayed {
+				lastPlayed = d
+			}
+		}
 	}
 
 	path := achievementSummaryPath(gameDir)
-	if total == 0 {
+	if total == 0 && playtimeMins == 0 && lastPlayed == "" {
 		if err := os.Remove(path); err != nil && !os.IsNotExist(err) {
 			return false, err
 		}
 		return false, nil
 	}
 
-	out, err := yaml.Marshal(AchievementSummary{Unlocked: unlocked, Total: total})
+	out, err := yaml.Marshal(AchievementSummary{
+		Unlocked: unlocked, Total: total, PlaytimeMins: playtimeMins, LastPlayed: lastPlayed,
+		Providers: breakdown,
+	})
 	if err != nil {
 		return false, err
 	}
@@ -376,6 +451,7 @@ func FetchRARecord(ctx context.Context, client *RAClient, gameID string) (*Provi
 	rec.Completion = progress.UserCompletion
 	rec.Total = progress.NumAchievements
 	rec.AwardKind = progress.HighestAwardKind
+	rec.PlaytimeMins = progress.UserTotalPlaytime / 60
 	rec.Raw = progress.Raw
 	if t, err := parseRAAwardDate(progress.HighestAwardDate); err == nil {
 		rec.AwardDate = day(t)
@@ -471,9 +547,17 @@ type savedRecord struct {
 
 // saveAchievements fetches from every configured provider the game is linked
 // to — not just the first — and merges each result into its own archive file.
-func saveAchievements(ctx context.Context, archiveDir, title, raID, steamAppID string, creds Credentials) ([]savedRecord, error) {
+func saveAchievements(ctx context.Context, archiveDir, title string, links []providerLink, creds Credentials) ([]savedRecord, error) {
 	fresh := map[string]*ProviderRecord{}
 	ids := map[string]string{}
+
+	byProvider := map[string]string{}
+	for _, l := range links {
+		if l.ID != "" {
+			byProvider[l.Provider] = l.ID
+		}
+	}
+	raID, steamAppID, psnID := byProvider[providerRA], byProvider[providerSteam], byProvider[providerPSN]
 
 	if raID != "" && creds.RAConfigured() {
 		client := &RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
@@ -500,14 +584,21 @@ func saveAchievements(ctx context.Context, archiveDir, title, raID, steamAppID s
 		}
 		fresh[providerSteam], ids[providerSteam] = rec, steamAppID
 	}
+	if psnID != "" && creds.ExophaseConfigured() {
+		client := &ExophaseClient{User: creds.ExophaseUser}
+		rec, err := FetchPSNRecord(ctx, client, psnID)
+		if err != nil {
+			return nil, err
+		}
+		fresh[providerPSN], ids[providerPSN] = rec, psnID
+	}
 
 	if len(fresh) == 0 {
 		return nil, fmt.Errorf("no configured provider for this game")
 	}
 
 	var saved []savedRecord
-	// Ordered so output and tests don't depend on map iteration order.
-	for _, provider := range []string{providerRA, providerSteam} {
+	for _, provider := range providerOrder {
 		rec, ok := fresh[provider]
 		if !ok {
 			continue
@@ -557,14 +648,14 @@ func runAchievements(args []string) error {
 	if err != nil {
 		return err
 	}
-	raID, steamAppID := doc.ExternalIDs()
-	if raID == "" && steamAppID == "" {
-		return fmt.Errorf("%s has no retroachievements_id or steam_appid set", slug)
+	links := doc.ProviderLinks()
+	if len(links) == 0 {
+		return fmt.Errorf("%s has no retroachievements_id, steam_appid or psn_id set", slug)
 	}
 
 	archiveDir := findArchiveDir(gamesDir)
 	saved, err := saveAchievements(context.Background(), archiveDir, summary.Title,
-		raID, steamAppID, loadCredentials())
+		links, loadCredentials())
 	if err != nil {
 		return err
 	}
@@ -579,7 +670,7 @@ func runAchievements(args []string) error {
 		fmt.Printf("Saved %s\n", s.Path)
 	}
 
-	if _, err := writeAchievementSummary(archiveDir, filepath.Dir(summary.Path), raID, steamAppID); err != nil {
+	if _, err := writeAchievementSummary(archiveDir, filepath.Dir(summary.Path), links); err != nil {
 		fmt.Fprintf(os.Stderr, "  (achievement summary not updated: %v)\n", err)
 	}
 	return nil
@@ -602,10 +693,11 @@ func runProject(args []string) error {
 
 	var written, empty, failed int
 	for _, g := range games {
-		if g.RAGameID == "" && g.SteamAppID == "" {
+		links := g.ProviderLinks()
+		if len(links) == 0 {
 			continue
 		}
-		wrote, err := writeAchievementSummary(archiveDir, filepath.Dir(g.Path), g.RAGameID, g.SteamAppID)
+		wrote, err := writeAchievementSummary(archiveDir, filepath.Dir(g.Path), links)
 		switch {
 		case err != nil:
 			fmt.Fprintf(os.Stderr, "  %s: %v\n", g.Slug, err)

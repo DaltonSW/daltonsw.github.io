@@ -1,17 +1,18 @@
 ---
-title: "Zero Escape: Zero Time Dilemma"
-platform: "PC"
-retroachievements_id:
+title: 'Zero Escape: Zero Time Dilemma'
+platform: PC
+retroachievements_id: null
 steam_appid: 311240
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["zero-escape-zero-time-dilemma"]
+    games:
+      - zero-escape-zero-time-dilemma
+cover: null
 ---
 
 

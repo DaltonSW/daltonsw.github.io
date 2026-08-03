@@ -3,9 +3,9 @@ title: "Grand Theft Auto V Legacy"
 platform: "PC"
 retroachievements_id:
 steam_appid: 271590
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2024-04-14"
 rating:
 cover:
 draft: true

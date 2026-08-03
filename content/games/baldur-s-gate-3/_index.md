@@ -3,9 +3,9 @@ title: "Baldur's Gate 3"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1086940
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2025-03-04"
 rating:
 cover:
 draft: true

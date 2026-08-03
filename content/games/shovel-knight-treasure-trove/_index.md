@@ -3,9 +3,9 @@ title: "Shovel Knight: Treasure Trove"
 platform: "PC"
 retroachievements_id:
 steam_appid: 250760
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2024-10-05"
 rating:
 cover:
 draft: true

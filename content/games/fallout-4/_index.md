@@ -3,9 +3,9 @@ title: "Fallout 4"
 platform: "PC"
 retroachievements_id:
 steam_appid: 377160
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2018-04-09"
 rating:
 cover:
 draft: true

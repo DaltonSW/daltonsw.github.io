@@ -1,17 +1,18 @@
 ---
-title: "Sunless Skies"
-platform: "PC"
-retroachievements_id:
+title: Sunless Skies
+platform: PC
+retroachievements_id: null
 steam_appid: 596970
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["sunless-skies"]
+    games:
+      - sunless-skies
+cover: null
 ---
 
 

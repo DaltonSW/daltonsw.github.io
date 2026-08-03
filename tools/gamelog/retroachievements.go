@@ -128,17 +128,22 @@ func (a RAAchievement) Earned() (time.Time, bool, bool) {
 // RAProgress is the subset of GetGameInfoAndUserProgress's response used
 // for date suggestions.
 type RAProgress struct {
-	Title                  string                   `json:"Title"`
-	ConsoleName            string                   `json:"ConsoleName"`
-	ImageIcon              string                   `json:"ImageIcon"`
-	NumAchievements        int                      `json:"NumAchievements"`
-	NumAwardedToUser       int                      `json:"NumAwardedToUser"`
-	NumAwardedHardcore     int                      `json:"NumAwardedToUserHardcore"`
-	UserCompletion         string                   `json:"UserCompletion"`
-	UserCompletionHardcore string                   `json:"UserCompletionHardcore"`
-	Achievements           map[string]RAAchievement `json:"Achievements"`
-	HighestAwardKind       string                   `json:"HighestAwardKind"`
-	HighestAwardDate       string                   `json:"HighestAwardDate"`
+	Title                  string `json:"Title"`
+	ConsoleName            string `json:"ConsoleName"`
+	ImageIcon              string `json:"ImageIcon"`
+	NumAchievements        int    `json:"NumAchievements"`
+	NumAwardedToUser       int    `json:"NumAwardedToUser"`
+	NumAwardedHardcore     int    `json:"NumAwardedToUserHardcore"`
+	UserCompletion         string `json:"UserCompletion"`
+	UserCompletionHardcore string `json:"UserCompletionHardcore"`
+	// UserTotalPlaytime is the client-tracked (RetroArch/RAIntegration)
+	// session time for this user on this game, in seconds. RA backfilled it
+	// across all profiles and added it to this endpoint in late 2025; older
+	// archived records predate it and simply have no playtime.
+	UserTotalPlaytime int                      `json:"UserTotalPlaytime"`
+	Achievements      map[string]RAAchievement `json:"Achievements"`
+	HighestAwardKind  string                   `json:"HighestAwardKind"`
+	HighestAwardDate  string                   `json:"HighestAwardDate"`
 
 	// Raw is the verbatim response body; see SteamAchievementsResult.Raw.
 	Raw json.RawMessage `json:"-"`

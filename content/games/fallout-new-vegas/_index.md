@@ -3,9 +3,9 @@ title: "Fallout: New Vegas"
 platform: "PC"
 retroachievements_id:
 steam_appid: 22380
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-11-06"
 rating:
 cover:
 draft: true

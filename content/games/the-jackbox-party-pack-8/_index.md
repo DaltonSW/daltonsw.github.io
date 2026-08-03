@@ -1,17 +1,18 @@
 ---
-title: "The Jackbox Party Pack 8"
-platform: "PC"
-retroachievements_id:
+title: The Jackbox Party Pack 8
+platform: PC
+retroachievements_id: null
 steam_appid: 1552350
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["the-jackbox-party-pack-8"]
+    games:
+      - the-jackbox-party-pack-8
+cover: null
 ---
 
 

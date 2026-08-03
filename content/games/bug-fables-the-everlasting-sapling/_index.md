@@ -3,9 +3,9 @@ title: "Bug Fables: The Everlasting Sapling"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1082710
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2021-10-06"
 rating:
 cover:
 draft: true

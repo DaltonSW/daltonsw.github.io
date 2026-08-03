@@ -3,9 +3,9 @@ title: "The Hex"
 platform: "PC"
 retroachievements_id:
 steam_appid: 510420
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-07-30"
 rating:
 cover:
 draft: true

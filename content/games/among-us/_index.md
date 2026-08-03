@@ -1,17 +1,18 @@
 ---
-title: "Among Us"
-platform: "PC"
-retroachievements_id:
+title: Among Us
+platform: PC
+retroachievements_id: null
 steam_appid: 945360
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["among-us"]
+    games:
+      - among-us
+cover: null
 ---
 
 

@@ -1,17 +1,18 @@
 ---
-title: "Dead Cells"
-platform: "PC"
-retroachievements_id:
+title: Dead Cells
+platform: PC
+retroachievements_id: null
 steam_appid: 588650
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: session-based
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["dead-cells"]
+    games:
+      - dead-cells
+cover: null
 ---
 
 

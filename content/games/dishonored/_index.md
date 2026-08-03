@@ -3,9 +3,9 @@ title: "Dishonored"
 platform: "PC"
 retroachievements_id:
 steam_appid: 205100
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2021-05-18"
 rating:
 cover:
 draft: true

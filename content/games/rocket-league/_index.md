@@ -1,17 +1,18 @@
 ---
-title: "Rocket League"
-platform: "PC"
-retroachievements_id:
+title: Rocket League
+platform: PC
+retroachievements_id: null
 steam_appid: 252950
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["rocket-league"]
+    games:
+      - rocket-league
+cover: null
 ---
 
 

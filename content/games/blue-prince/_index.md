@@ -1,17 +1,18 @@
 ---
-title: "Blue Prince"
-platform: "PC"
-retroachievements_id:
+title: Blue Prince
+platform: PC
+retroachievements_id: null
 steam_appid: 1569580
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["blue-prince"]
+    games:
+      - blue-prince
+cover: null
 ---
 
 

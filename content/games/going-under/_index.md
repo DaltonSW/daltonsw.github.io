@@ -3,9 +3,9 @@ title: "Going Under"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1154810
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2021-02-08"
 rating:
 cover:
 draft: true

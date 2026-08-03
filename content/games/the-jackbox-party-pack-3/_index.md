@@ -1,17 +1,18 @@
 ---
-title: "The Jackbox Party Pack 3"
-platform: "PC"
-retroachievements_id:
+title: The Jackbox Party Pack 3
+platform: PC
+retroachievements_id: null
 steam_appid: 434170
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["the-jackbox-party-pack-3"]
+    games:
+      - the-jackbox-party-pack-3
+cover: null
 ---
 
 

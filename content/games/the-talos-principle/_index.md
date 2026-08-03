@@ -3,9 +3,9 @@ title: "The Talos Principle"
 platform: "PC"
 retroachievements_id:
 steam_appid: 257510
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2023-06-19"
 rating:
 cover:
 draft: true

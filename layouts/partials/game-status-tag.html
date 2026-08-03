@@ -1,0 +1,14 @@
+{{/* Bracketed terminal-style status tag, e.g. "[playing]" — the single place
+     the games list (games/taxonomy.html) renders a status as a tag. Color
+     comes from the existing .pill--<status> rules (which set `color` only),
+     not a second color map. The two longest status values get a shorter
+     display label so the STATUS column doesn't need to reserve space for
+     "session-based"/"multiplayer" — this is presentation only, the
+     underlying status value (used for the color class, and everywhere else
+     in the codebase) is unchanged. Context: a status string. */}}
+{{- $status := . -}}
+{{- if $status -}}
+{{- $labels := dict "session-based" "ongoing" "multiplayer" "multi" -}}
+{{- $label := index $labels $status | default $status -}}
+<span class="ps-status pill--{{ $status }}">[{{ $label }}]</span>
+{{- end -}}

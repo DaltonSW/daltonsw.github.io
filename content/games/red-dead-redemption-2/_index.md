@@ -3,9 +3,9 @@ title: "Red Dead Redemption 2"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1174180
-status: "playing"
+status: "dropped"
 started:
-finished:
+finished: "2020-09-19"
 rating:
 cover:
 draft: true

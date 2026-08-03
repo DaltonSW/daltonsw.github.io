@@ -3,7 +3,7 @@ title: "Magicite"
 platform: "PC"
 retroachievements_id:
 steam_appid: 268750
-status: "playing"
+status: "session-based"
 started:
 finished:
 rating:

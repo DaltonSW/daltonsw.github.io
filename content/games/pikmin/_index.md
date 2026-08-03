@@ -1,17 +1,18 @@
 ---
-title: "Pikmin"
-platform: "GameCube"
+title: Pikmin
+platform: GameCube
 retroachievements_id: 15540
-steam_appid:
-status: "finished"
-started:
-finished: 2024-09-29
-rating:
-cover:
+steam_appid: null
+status: mastered
+started: ""
+finished: "2024-09-29"
+rating: null
 draft: true
 cascade:
   params:
-    games: ["pikmin"]
+    games:
+      - pikmin
+cover: null
 ---
 
 

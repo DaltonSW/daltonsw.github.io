@@ -1,17 +1,18 @@
 ---
-title: "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated"
-platform: "PC"
-retroachievements_id:
+title: 'SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated'
+platform: PC
+retroachievements_id: null
 steam_appid: 969990
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: mastered
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["spongebob-squarepants-battle-for-bikini-bottom-rehydrated"]
+    games:
+      - spongebob-squarepants-battle-for-bikini-bottom-rehydrated
+cover: null
 ---
 
 

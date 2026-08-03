@@ -1,17 +1,18 @@
 ---
-title: "Tabletop Simulator"
-platform: "PC"
-retroachievements_id:
+title: Tabletop Simulator
+platform: PC
+retroachievements_id: null
 steam_appid: 286160
-status: "playing"
-started:
-finished:
-rating:
-cover:
+status: multiplayer
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["tabletop-simulator"]
+    games:
+      - tabletop-simulator
+cover: null
 ---
 
 

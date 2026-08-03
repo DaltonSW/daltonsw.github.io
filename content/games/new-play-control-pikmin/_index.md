@@ -1,17 +1,18 @@
 ---
-title: "New Play Control! Pikmin"
-platform: "Wii"
+title: New Play Control! Pikmin
+platform: Wii
 retroachievements_id: 35989
-steam_appid:
-status: "finished"
-started:
-finished: 2026-06-02
-rating:
-cover:
+steam_appid: null
+status: mastered
+started: ""
+finished: "2026-06-02"
+rating: null
 draft: true
 cascade:
   params:
-    games: ["new-play-control-pikmin"]
+    games:
+      - new-play-control-pikmin
+cover: null
 ---
 
 

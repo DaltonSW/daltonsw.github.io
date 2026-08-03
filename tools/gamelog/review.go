@@ -95,7 +95,7 @@ func reviewOne(gamesDir, archiveDir string, g GameSummary) (cont, acted bool, er
 	// A game with captured playthroughs or archive history isn't a
 	// plausible false-positive scan match — deleting it would risk real
 	// data, so the option isn't even offered.
-	canDelete := g.NumPlaythroughs == 0 && !hasArchiveRecord(archiveDir, g.RAGameID, g.SteamAppID)
+	canDelete := g.NumPlaythroughs == 0 && !hasArchiveRecord(archiveDir, g.ProviderLinks())
 
 	fmt.Print(formatReviewCard(g, doc.FM, pf))
 	action, err := SelectReviewAction(canDelete)
@@ -169,14 +169,12 @@ func deleteGameStub(gamesDir string, g GameSummary, canDelete bool) error {
 	return os.RemoveAll(dir)
 }
 
-func hasArchiveRecord(archiveDir, raID, steamAppID string) bool {
-	if raID != "" {
-		if rec, _ := LoadRecord(archiveDir, providerRA, raID); rec != nil {
-			return true
+func hasArchiveRecord(archiveDir string, links []providerLink) bool {
+	for _, l := range links {
+		if l.ID == "" {
+			continue
 		}
-	}
-	if steamAppID != "" {
-		if rec, _ := LoadRecord(archiveDir, providerSteam, steamAppID); rec != nil {
+		if rec, _ := LoadRecord(archiveDir, l.Provider, l.ID); rec != nil {
 			return true
 		}
 	}
@@ -192,6 +190,9 @@ func formatReviewCard(g GameSummary, fm FrontMatter, pf *PlaythroughsFile) strin
 	}
 	if g.SteamAppID != "" {
 		links = append(links, "Steam "+g.SteamAppID)
+	}
+	if g.PSNID != "" {
+		links = append(links, "PSN "+g.PSNID)
 	}
 	linkStr := "not linked"
 	if len(links) > 0 {

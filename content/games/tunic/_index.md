@@ -3,9 +3,9 @@ title: "TUNIC"
 platform: "PC"
 retroachievements_id:
 steam_appid: 553420
-status: "playing"
+status: "mastered"
 started:
-finished:
+finished: "2026-07-16"
 rating:
 cover:
 draft: true
@@ -14,4 +14,4 @@ cascade:
     games: ["tunic"]
 ---
 
-
+The July 2026 session was part of a multiworld randomizer, not a new playthrough.

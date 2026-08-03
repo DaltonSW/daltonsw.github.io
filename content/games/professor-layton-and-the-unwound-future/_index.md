@@ -1,17 +1,18 @@
 ---
-title: "Professor Layton and the Unwound Future"
-platform: "Nintendo DS"
+title: Professor Layton and the Unwound Future
+platform: Nintendo DS
 retroachievements_id: 9831
-steam_appid:
-status: "finished"
-started:
-finished: 2026-06-14
-rating:
-cover:
+steam_appid: null
+status: mastered
+started: ""
+finished: "2026-06-14"
+rating: null
 draft: true
 cascade:
   params:
-    games: ["professor-layton-and-the-unwound-future"]
+    games:
+      - professor-layton-and-the-unwound-future
+cover: null
 ---
 
 

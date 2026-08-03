@@ -10,10 +10,11 @@ func daysAgo(n int) string {
 	return time.Now().In(siteLocation).AddDate(0, 0, -n).Format("2006-01-02")
 }
 
-// A game only qualifies once it's published, marked "playing", linked to
-// Steam, and quiet past the threshold — every other state has nothing to
-// suggest, including session-based games, which are supposed to stay
-// "playing" indefinitely by design.
+// A game qualifies once it's marked "playing", linked to Steam, and quiet
+// past the threshold — draft status doesn't exclude it (stale is meant to
+// help pre-classify the draft backlog too), but every other state has
+// nothing to suggest, including session-based games, which are supposed to
+// stay "playing" indefinitely by design.
 func TestFindStaleCandidates_FiltersToEligibleGames(t *testing.T) {
 	archiveDir := t.TempDir()
 	if _, err := SaveRecord(archiveDir, providerSteam, "1", "Quiet Game", &ProviderRecord{
@@ -34,8 +35,18 @@ func TestFindStaleCandidates_FiltersToEligibleGames(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(got) != 1 || got[0].Game.Slug != "quiet" {
-		t.Fatalf("expected only the eligible quiet game, got %+v", got)
+	gotSlugs := map[string]bool{}
+	for _, c := range got {
+		gotSlugs[c.Game.Slug] = true
+	}
+	want := map[string]bool{"quiet": true, "draft-game": true}
+	if len(got) != len(want) {
+		t.Fatalf("expected %v, got %+v", want, got)
+	}
+	for slug := range want {
+		if !gotSlugs[slug] {
+			t.Errorf("expected %q among candidates, got %+v", slug, got)
+		}
 	}
 }
 
@@ -110,5 +121,20 @@ func TestFormatStaleCard_ShowsSuggestionAndConfidence(t *testing.T) {
 		if !strings.Contains(card, want) {
 			t.Errorf("card missing %q, got:\n%s", want, card)
 		}
+	}
+	if strings.Contains(card, "[draft]") {
+		t.Errorf("published game's card shouldn't be tagged [draft], got:\n%s", card)
+	}
+}
+
+// A draft candidate is tagged so it's clear during the loop that accepting
+// a suggestion here pre-classifies a backlog entry, not a published game.
+func TestFormatStaleCard_TagsDraftGames(t *testing.T) {
+	c := StaleCandidate{
+		Game:            GameSummary{Title: "Hades", SteamAppID: "1145360", Draft: true},
+		SuggestedStatus: "dropped", Confidence: "medium",
+	}
+	if card := formatStaleCard(c); !strings.Contains(card, "[draft]") {
+		t.Errorf("draft game's card should be tagged [draft], got:\n%s", card)
 	}
 }

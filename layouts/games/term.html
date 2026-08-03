@@ -18,6 +18,14 @@
 
   {{- $entries := partial "playthrough-entries.html" . }}
 
+  {{/* Label each run's platform only when they actually differ — a game played
+       on one platform would otherwise repeat the same word on every row, and
+       labelling just the odd one out leaves the reader to infer what the
+       unlabelled rows were. */}}
+  {{- $platforms := slice }}
+  {{- range $entries }}{{ $platforms = $platforms | append (.platform | default "") }}{{ end }}
+  {{- $showPlatform := gt (len (uniq $platforms)) 1 }}
+
   {{- with sort $entries "started" "desc" }}
   <h2>Playthroughs</h2>
   <ul class="entry-list">
@@ -32,6 +40,7 @@
       <span class="entry__meta">
         {{- with .started }}{{ . | time.Format "Jan 2006" }}{{ end }}
         {{- with .finished }} – {{ . | time.Format "Jan 2006" }}{{ end }}
+        {{- if $showPlatform }}{{ with .platform }} · {{ . }}{{ end }}{{ end }}
         {{- with .rating }} · {{ . }}/10{{ end }}
       </span>
       {{- with .notes }}

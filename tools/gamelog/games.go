@@ -25,6 +25,13 @@ type GameSummary struct {
 	NumPlaythroughs int
 	RAGameID        string
 	SteamAppID      string
+	PSNID           string
+}
+
+// ProviderLinks returns every provider this game is linked to, in
+// providerOrder, skipping the ones with no ID set.
+func (g GameSummary) ProviderLinks() []providerLink {
+	return buildProviderLinks(g.RAGameID, g.SteamAppID, g.PSNID)
 }
 
 func (g GameSummary) Label() string {
@@ -50,6 +57,9 @@ func (g GameSummary) SuggestLabel() string {
 	}
 	if g.SteamAppID != "" {
 		linked = append(linked, "Steam")
+	}
+	if g.PSNID != "" {
+		linked = append(linked, "PSN")
 	}
 	if len(linked) == 0 {
 		return g.Label() + "  [not linked]"
@@ -101,6 +111,7 @@ func ListGames(gamesDir string) ([]GameSummary, error) {
 			continue
 		}
 		raID, steamAppID := doc.ExternalIDs()
+		psnID := scalarString(doc.FM.PSNID)
 		// Playthroughs are their own file now; a game without one simply has
 		// none logged, which is not worth skipping the game over.
 		pf, err := LoadPlaythroughs(filepath.Dir(path))
@@ -119,6 +130,7 @@ func ListGames(gamesDir string) ([]GameSummary, error) {
 			NumPlaythroughs: len(pf.Playthroughs),
 			RAGameID:        raID,
 			SteamAppID:      steamAppID,
+			PSNID:           psnID,
 		})
 	}
 
@@ -202,6 +214,7 @@ type NewGameFields struct {
 	Platform            string
 	RetroAchievementsID string
 	SteamAppID          string
+	PSNID               string
 	Status              string // backlog|playing|finished|dropped
 	Started             string
 	Finished            string
@@ -219,6 +232,7 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		fmt.Sprintf("platform: %q", f.Platform),
 		"retroachievements_id: " + f.RetroAchievementsID,
 		"steam_appid: " + f.SteamAppID,
+		"psn_id: " + f.PSNID,
 		fmt.Sprintf("status: %q", f.Status),
 		"started: " + f.Started,
 		"finished: " + f.Finished,

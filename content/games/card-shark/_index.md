@@ -3,9 +3,9 @@ title: "Card Shark"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1371720
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2022-11-19"
 rating:
 cover:
 draft: true

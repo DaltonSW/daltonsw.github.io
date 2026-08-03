@@ -3,9 +3,9 @@ title: "HITMAN World of Assassination"
 platform: "PC"
 retroachievements_id:
 steam_appid: 1659040
-status: "playing"
+status: "finished"
 started:
-finished:
+finished: "2023-05-29"
 rating:
 cover:
 draft: true
