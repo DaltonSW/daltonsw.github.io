@@ -1,17 +1,18 @@
 ---
-title: "Magicite"
-platform: "PC"
-retroachievements_id:
+title: Magicite
+platform: PC
+retroachievements_id: null
 steam_appid: 268750
-status: "ongoing"
-started:
-finished:
-rating:
-cover:
-draft: true
+status: ongoing
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["magicite"]
+    games:
+      - magicite
+cover: null
 ---
 
 

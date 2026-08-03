@@ -1,0 +1,538 @@
+{
+ "provider": "xbox",
+ "title": "Minecraft: Xbox 360 Edition",
+ "updated": "2026-08-02",
+ "id": "1480659447",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 16,
+ "total": 93,
+ "first": "2012-05-13",
+ "last": "2012-08-12",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-12-25",
+ "achievements": [
+  {
+   "key": "16",
+   "name": "Cow Tipper",
+   "description": "Harvest some leather.",
+   "unlocked": true,
+   "points": 15
+  },
+  {
+   "key": "2",
+   "name": "Getting Wood",
+   "description": "Punch a tree until the block of wood pops out.",
+   "unlocked": true,
+   "date": "2012-05-13T18:51:34-05:00",
+   "points": 10
+  },
+  {
+   "key": "1",
+   "name": "Taking Inventory",
+   "description": "Open your inventory.",
+   "unlocked": true,
+   "date": "2012-05-13T18:58:13-05:00",
+   "points": 10
+  },
+  {
+   "key": "3",
+   "name": "Benchmarking",
+   "description": "Craft a workbench with four blocks of wooden planks.",
+   "unlocked": true,
+   "date": "2012-05-13T19:10:37-05:00",
+   "points": 10
+  },
+  {
+   "key": "5",
+   "name": "Hot Topic",
+   "description": "Construct a furnace out of eight cobblestone blocks.",
+   "unlocked": true,
+   "date": "2012-05-13T19:10:56-05:00",
+   "points": 15
+  },
+  {
+   "key": "6",
+   "name": "Acquire Hardware",
+   "description": "Smelt an iron ingot.",
+   "unlocked": true,
+   "date": "2012-05-13T19:15:47-05:00",
+   "points": 15
+  },
+  {
+   "key": "7",
+   "name": "Time to Farm!",
+   "description": "Use planks and sticks to make a hoe.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:37-05:00",
+   "points": 10
+  },
+  {
+   "key": "4",
+   "name": "Time to Mine!",
+   "description": "Use planks and sticks to make a pickaxe.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:37-05:00",
+   "points": 10
+  },
+  {
+   "key": "14",
+   "name": "Time to Strike!",
+   "description": "Use planks and sticks to make a sword.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:38-05:00",
+   "points": 10
+  },
+  {
+   "key": "8",
+   "name": "Bake Bread",
+   "description": "Turn wheat into bread.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:38-05:00",
+   "points": 20
+  },
+  {
+   "key": "10",
+   "name": "Getting an Upgrade",
+   "description": "Construct a better pickaxe.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:38-05:00",
+   "points": 15
+  },
+  {
+   "key": "11",
+   "name": "Delicious Fish",
+   "description": "Catch and cook a fish!",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:38-05:00",
+   "points": 15
+  },
+  {
+   "key": "12",
+   "name": "On A Rail",
+   "description": "Travel by minecart to a point at least 500m in a single direction from where you started.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:38-05:00",
+   "points": 40
+  },
+  {
+   "key": "15",
+   "name": "Monster Hunter",
+   "description": "Attack and destroy a monster.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:38-05:00",
+   "points": 20
+  },
+  {
+   "key": "21",
+   "name": "Into The Nether",
+   "description": "Construct a Nether Portal.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:39-05:00",
+   "points": 40
+  },
+  {
+   "key": "19",
+   "name": "MOAR Tools",
+   "description": "Construct one type of each tool (one pickaxe, one spade, one axe and one hoe).",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:39-05:00",
+   "points": 15
+  },
+  {
+   "key": "20",
+   "name": "Dispense With This",
+   "description": "Construct a Dispenser.",
+   "unlocked": true,
+   "date": "2012-08-12T19:01:39-05:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 21,
+     "titleId": 1480659447,
+     "name": "Into The Nether",
+     "sequence": 37,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 40,
+     "imageId": 73,
+     "description": "Construct a Nether Portal.",
+     "lockedDescription": "Construct a Nether Portal.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:39.4670000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 21.11
+     }
+    },
+    {
+     "id": 20,
+     "titleId": 1480659447,
+     "name": "Dispense With This",
+     "sequence": 36,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 72,
+     "description": "Construct a Dispenser.",
+     "lockedDescription": "Construct a Dispenser.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:39.3000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 15.37
+     }
+    },
+    {
+     "id": 19,
+     "titleId": 1480659447,
+     "name": "MOAR Tools",
+     "sequence": 35,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 71,
+     "description": "Construct one type of each tool (one pickaxe, one spade, one axe and one hoe).",
+     "lockedDescription": "Construct one type of each tool (one pickaxe, one spade, one axe and one hoe).",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:39.1470000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 45.94
+     }
+    },
+    {
+     "id": 15,
+     "titleId": 1480659447,
+     "name": "Monster Hunter",
+     "sequence": 34,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 8,
+     "description": "Attack and destroy a monster.",
+     "lockedDescription": "Attack and destroy a monster.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:38.9970000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 60.81
+     }
+    },
+    {
+     "id": 14,
+     "titleId": 1480659447,
+     "name": "Time to Strike!",
+     "sequence": 33,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 7,
+     "description": "Use planks and sticks to make a sword.",
+     "lockedDescription": "Use planks and sticks to make a sword.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:38.8330000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 54.9
+     }
+    },
+    {
+     "id": 12,
+     "titleId": 1480659447,
+     "name": "On A Rail",
+     "sequence": 32,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 40,
+     "imageId": 64,
+     "description": "Travel by minecart to a point at least 500m in a single direction from where you started.",
+     "lockedDescription": "Travel by minecart to a point at least 500m in a single direction from where you started.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:38.6670000Z",
+     "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 9.18
+     }
+    },
+    {
+     "id": 11,
+     "titleId": 1480659447,
+     "name": "Delicious Fish",
+     "sequence": 31,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 62,
+     "description": "Catch and cook a fish!",
+     "lockedDescription": "Catch and cook a fish!",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:38.4800000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 24.82
+     }
+    },
+    {
+     "id": 10,
+     "titleId": 1480659447,
+     "name": "Getting an Upgrade",
+     "sequence": 30,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 12,
+     "description": "Construct a better pickaxe.",
+     "lockedDescription": "Construct a better pickaxe.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:38.2800000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 56.37
+     }
+    },
+    {
+     "id": 8,
+     "titleId": 1480659447,
+     "name": "Bake Bread",
+     "sequence": 29,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 5,
+     "description": "Turn wheat into bread.",
+     "lockedDescription": "Turn wheat into bread.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:38.0800000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 37.66
+     }
+    },
+    {
+     "id": 7,
+     "titleId": 1480659447,
+     "name": "Time to Farm!",
+     "sequence": 28,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 4,
+     "description": "Use planks and sticks to make a hoe.",
+     "lockedDescription": "Use planks and sticks to make a hoe.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:37.7800000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 42.52
+     }
+    },
+    {
+     "id": 4,
+     "titleId": 1480659447,
+     "name": "Time to Mine!",
+     "sequence": 27,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 11,
+     "description": "Use planks and sticks to make a pickaxe.",
+     "lockedDescription": "Use planks and sticks to make a pickaxe.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-08-13T00:01:37.1130000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 62.33
+     }
+    },
+    {
+     "id": 16,
+     "titleId": 1480659447,
+     "name": "Cow Tipper",
+     "sequence": 26,
+     "flags": 1179657,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 9,
+     "description": "Harvest some leather.",
+     "lockedDescription": "Harvest some leather.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 62.89
+     }
+    },
+    {
+     "id": 6,
+     "titleId": 1480659447,
+     "name": "Acquire Hardware",
+     "sequence": 25,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 63,
+     "description": "Smelt an iron ingot.",
+     "lockedDescription": "Smelt an iron ingot.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-05-14T00:15:47.6730000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 47.7
+     }
+    },
+    {
+     "id": 5,
+     "titleId": 1480659447,
+     "name": "Hot Topic",
+     "sequence": 24,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 61,
+     "description": "Construct a furnace out of eight cobblestone blocks.",
+     "lockedDescription": "Construct a furnace out of eight cobblestone blocks.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-05-14T00:10:56.8330000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 56.37
+     }
+    },
+    {
+     "id": 3,
+     "titleId": 1480659447,
+     "name": "Benchmarking",
+     "sequence": 23,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 3,
+     "description": "Craft a workbench with four blocks of wooden planks.",
+     "lockedDescription": "Craft a workbench with four blocks of wooden planks.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-05-14T00:10:37.9630000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 67.49
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1480659447,
+     "name": "Taking Inventory",
+     "sequence": 22,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 1,
+     "description": "Open your inventory.",
+     "lockedDescription": "Open your inventory.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-05-13T23:58:13.8530000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 75.54
+     }
+    },
+    {
+     "id": 2,
+     "titleId": 1480659447,
+     "name": "Getting Wood",
+     "sequence": 21,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 2,
+     "description": "Punch a tree until the block of wood pops out.",
+     "lockedDescription": "Punch a tree until the block of wood pops out.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-05-13T23:51:34.1730000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 72.69
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 17
+   }
+  },
+  "code": 200
+ }
+}

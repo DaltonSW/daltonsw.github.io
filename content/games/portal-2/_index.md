@@ -1,17 +1,18 @@
 ---
-title: "Portal 2"
-platform: "PC"
-retroachievements_id:
+title: Portal 2
+platform: PC
+retroachievements_id: null
 steam_appid: 620
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2016-07-11"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["portal-2"]
+    games:
+      - portal-2
+cover: null
 ---
 
 

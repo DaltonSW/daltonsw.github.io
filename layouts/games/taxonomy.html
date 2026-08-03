@@ -84,6 +84,12 @@
       {{- else if eq (len $providers) 0 }}
         {{/* older summaries predate the per-provider breakdown */}}
         {{- $source = $achievements }}
+      {{- else if gt (len (split $row.platform ", ")) 1 }}
+        {{/* $row.platform is itself a comma-joined list — the game-level front-matter fallback
+             a playthrough entry gets when it doesn't set its own platform (see
+             playthrough-entries.html). That can't be attributed to one provider, so show the
+             combined total rather than nothing. */}}
+        {{- $source = $achievements }}
       {{- end }}
     {{- end }}
     <div class="ps-row{{ with $row.status }} ps-row--{{ . }}{{ end }}" role="row">

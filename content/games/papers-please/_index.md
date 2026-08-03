@@ -1,17 +1,18 @@
 ---
-title: "Papers, Please"
-platform: "PC"
-retroachievements_id:
+title: Papers, Please
+platform: PC
+retroachievements_id: null
 steam_appid: 239030
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2016-02-27"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["papers-please"]
+    games:
+      - papers-please
+cover: null
 ---
 
 

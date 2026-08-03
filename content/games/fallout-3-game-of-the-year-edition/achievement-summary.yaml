@@ -1,5 +1,5 @@
-unlocked: 0
-total: 0
+unlocked: 2
+total: 72
 playtime_mins: 1065
 last_played: "2013-12-23"
 providers:
@@ -9,3 +9,27 @@ providers:
       total: 0
       playtime_mins: 1065
       last_played: "2013-12-23"
+    - provider: xbox
+      platform: Xbox 360
+      unlocked: 2
+      total: 72
+      last_played: "2013-08-24"
+earned:
+    - name: Vault 101 Citizenship Award
+      description: Got the Pip-Boy 3000
+      date: ""
+      points: 10
+      provider: xbox
+      platform: Xbox 360
+    - name: The G.O.A.T. Whisperer
+      description: Took the G.O.A.T.
+      date: "2013-08-19T20:11:15-05:00"
+      points: 10
+      provider: xbox
+      platform: Xbox 360
+    - name: Escape!
+      description: Completed "Escape!"
+      date: "2013-08-19T20:24:05-05:00"
+      points: 20
+      provider: xbox
+      platform: Xbox 360

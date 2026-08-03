@@ -1,0 +1,179 @@
+{
+ "provider": "xbox",
+ "title": "NCAA® Football 12",
+ "updated": "2026-08-02",
+ "id": "1161890126",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 5,
+ "total": 39,
+ "first": "2012-01-21",
+ "last": "2012-07-14",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-09-22",
+ "achievements": [
+  {
+   "key": "191",
+   "name": "Happy 20th EA SPORTS!",
+   "description": "Break off a 20 yard run to celebrate 20 years of EA SPORTS!",
+   "unlocked": true,
+   "date": "2012-01-21T18:36:47-06:00",
+   "points": 20
+  },
+  {
+   "key": "169",
+   "name": "Ultimate Ironman",
+   "description": "Finish High School as a 5 star prospect in Road to Glory on both offense and defense.",
+   "unlocked": true,
+   "date": "2012-02-18T11:55:15-06:00",
+   "points": 40
+  },
+  {
+   "key": "162",
+   "name": "Best in Class",
+   "description": "Finish High School as a 5 star prospect in Road to Glory.",
+   "unlocked": true,
+   "date": "2012-02-18T11:55:15-06:00",
+   "points": 15
+  },
+  {
+   "key": "170",
+   "name": "Battle Tested",
+   "description": "Win a position battle in Road To Glory",
+   "unlocked": true,
+   "date": "2012-02-18T12:22:06-06:00",
+   "points": 20
+  },
+  {
+   "key": "163",
+   "name": "Taking the Snaps",
+   "description": "Become a starter in Road to Glory Mode.",
+   "unlocked": true,
+   "date": "2012-07-14T21:21:18-05:00",
+   "points": 15
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 163,
+     "titleId": 1161890126,
+     "name": "Taking the Snaps",
+     "sequence": 44,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 8,
+     "description": "Become a starter in Road to Glory Mode.",
+     "lockedDescription": "Become a starter in Road to Glory Mode.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-07-15T02:21:18.1130000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 39.12
+     }
+    },
+    {
+     "id": 170,
+     "titleId": 1161890126,
+     "name": "Battle Tested",
+     "sequence": 43,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 8,
+     "description": "Win a position battle in Road To Glory",
+     "lockedDescription": "Win a position battle in Road To Glory",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-02-18T18:22:06.3430000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 34.48
+     }
+    },
+    {
+     "id": 169,
+     "titleId": 1161890126,
+     "name": "Ultimate Ironman",
+     "sequence": 42,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 40,
+     "imageId": 8,
+     "description": "Finish High School as a 5 star prospect in Road to Glory on both offense and defense.",
+     "lockedDescription": "Finish High School as a 5 star prospect in Road to Glory on both offense and defense.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-02-18T17:55:15.3500000Z",
+     "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 4.79
+     }
+    },
+    {
+     "id": 162,
+     "titleId": 1161890126,
+     "name": "Best in Class",
+     "sequence": 41,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 8,
+     "description": "Finish High School as a 5 star prospect in Road to Glory.",
+     "lockedDescription": "Finish High School as a 5 star prospect in Road to Glory.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-02-18T17:55:15.2670000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 35.23
+     }
+    },
+    {
+     "id": 191,
+     "titleId": 1161890126,
+     "name": "Happy 20th EA SPORTS!",
+     "sequence": 40,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 12,
+     "description": "Break off a 20 yard run to celebrate 20 years of EA SPORTS!",
+     "lockedDescription": "Break off a 20 yard run to celebrate 20 years of EA SPORTS!",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-22T00:36:47.9230000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 80.55
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 5
+   }
+  },
+  "code": 200
+ }
+}

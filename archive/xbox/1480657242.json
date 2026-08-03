@@ -1,0 +1,118 @@
+{
+ "provider": "xbox",
+ "title": "Trials HD",
+ "updated": "2026-08-02",
+ "id": "1480657242",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 2,
+ "total": 18,
+ "first": "2013-06-27",
+ "last": "2013-06-27",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2013-06-27",
+ "achievements": [
+  {
+   "key": "15",
+   "name": "The Challenger",
+   "description": "The player has unlocked the first tournament.",
+   "unlocked": true,
+   "points": 10
+  },
+  {
+   "key": "7",
+   "name": "Bling",
+   "description": "The player has made at least 5 Gold-level performances.",
+   "unlocked": true,
+   "date": "2013-06-27T09:31:57-05:00",
+   "points": 15
+  },
+  {
+   "key": "9",
+   "name": "Leave Nothing in One Piece",
+   "description": "The player has  completely destroyed the motorcycle and broken every single bone in a single crash.",
+   "unlocked": true,
+   "date": "2013-06-27T10:02:57-05:00",
+   "points": 5
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 9,
+     "titleId": 1480657242,
+     "name": "Leave Nothing in One Piece",
+     "sequence": 18,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 7,
+     "description": "The player has  completely destroyed the motorcycle and broken every single bone in a single crash.",
+     "lockedDescription": "The player has  completely destroyed the motorcycle and broken every single bone in a single crash.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2013-06-27T15:02:57.6400000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 37.99
+     }
+    },
+    {
+     "id": 7,
+     "titleId": 1480657242,
+     "name": "Bling",
+     "sequence": 17,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 5,
+     "description": "The player has made at least 5 Gold-level performances.",
+     "lockedDescription": "The player has made at least 5 Gold-level performances.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-06-27T14:31:57.0830000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 31.36
+     }
+    },
+    {
+     "id": 15,
+     "titleId": 1480657242,
+     "name": "The Challenger",
+     "sequence": 16,
+     "flags": 1179659,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 1,
+     "description": "The player has unlocked the first tournament.",
+     "lockedDescription": "The player has unlocked the first tournament.",
+     "type": 3,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 38.55
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 3
+   }
+  },
+  "code": 200
+ }
+}

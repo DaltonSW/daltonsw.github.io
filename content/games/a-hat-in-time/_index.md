@@ -1,17 +1,18 @@
 ---
-title: "A Hat in Time"
-platform: "PC"
-retroachievements_id:
+title: A Hat in Time
+platform: PC
+retroachievements_id: null
 steam_appid: 253230
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2019-05-22"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["a-hat-in-time"]
+    games:
+      - a-hat-in-time
+cover: null
 ---
 
 

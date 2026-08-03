@@ -1,21 +1,22 @@
 {
  "provider": "steam",
  "title": "Terraria",
- "updated": "2026-07-29",
+ "updated": "2026-08-02",
  "id": "105600",
- "fetched": "2026-07-29",
- "last_attempt": "2026-07-29",
- "unlocked": 84,
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 85,
  "total": 137,
  "first": "2015-08-16",
- "last": "2022-02-22",
+ "last": "2026-08-02",
  "platform": "PC",
  "icon": "858961e95fbf869f136e1770d586e0caefd4cfac",
- "playtime_mins": 11797,
+ "playtime_mins": 11799,
  "playtime": {
+  "linux": 1,
   "windows": 6462
  },
- "last_played": "2022-02-23",
+ "last_played": "2026-08-02",
  "achievements": [
   {
    "key": "TIMBER",
@@ -690,6 +691,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/105600/bc685bc68f0fa00ba3a78d0302a03b593d328bd2.jpg"
   },
   {
+   "key": "GOING_OLDSCHOOL",
+   "name": "Going Oldschool",
+   "description": "Bring back the original title screen.",
+   "unlocked": true,
+   "date": "2026-08-02T16:34:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/105600/04998850ce652bde23901e5a4a5838d03d88c725.jpg"
+  },
+  {
    "key": "ALL_TOWN_SLIMES",
    "name": "The Great Slime Mitosis",
    "description": "Find all of the Slime Pets and have them move in!",
@@ -856,13 +865,6 @@
    "description": "Obtain the Zenith, the culmination of a journey forged into the ultimate sword.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/105600/ad65c49e080605670ce5dee3e94c5863e5dcdb76.jpg"
-  },
-  {
-   "key": "GOING_OLDSCHOOL",
-   "name": "Going Oldschool",
-   "description": "Bring back the original title screen.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/105600/04998850ce652bde23901e5a4a5838d03d88c725.jpg"
   },
   {
    "key": "GRAVE_MISTAKE",
@@ -1992,8 +1994,8 @@
     },
     {
      "apiname": "GOING_OLDSCHOOL",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1785706498,
      "name": "Going Oldschool",
      "description": "Bring back the original title screen."
     },

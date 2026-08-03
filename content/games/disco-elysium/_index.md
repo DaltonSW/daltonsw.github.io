@@ -1,17 +1,18 @@
 ---
-title: "Disco Elysium"
-platform: "PC"
-retroachievements_id:
+title: Disco Elysium
+platform: PC
+retroachievements_id: null
 steam_appid: 632470
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2022-11-20"
-rating:
-cover:
-draft: true
+rating: 10
+draft: false
 cascade:
   params:
-    games: ["disco-elysium"]
+    games:
+      - disco-elysium
+cover: null
 ---
 
 

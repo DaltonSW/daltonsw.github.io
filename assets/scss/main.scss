@@ -415,6 +415,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ach-row__meta { display: flex; align-items: baseline; gap: 1.1rem; margin-top: 0.4rem; font-size: 0.75rem; color: var(--dim); }
 .ach-row__game { color: var(--accent); }
 .ach-row__game:hover { text-decoration: underline; }
+.ach-row__date--unknown { font-style: italic; }
 
 @media (max-width: 640px) {
   .ach-panel { flex-direction: column; }
@@ -425,6 +426,22 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   }
   .ach-stat { flex: 1 1 8rem; }
 }
+
+/* ── Achievements section on a single game's page ───────────────────────── */
+.game-achievements { margin: 1.5rem 0; }
+.ach-overview {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem 1.1rem;
+  font-family: $font-ui; font-size: 0.85rem; color: var(--dim);
+}
+.ach-overview__stat { white-space: nowrap; }
+.ach-provider-breakdown {
+  list-style: none; margin: 0.6rem 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.3rem;
+  font-family: $font-ui; font-size: 0.8rem;
+}
+.ach-provider-breakdown li { display: flex; align-items: center; gap: 0.6rem; }
+.ach-provider-breakdown__name { flex: 0 0 6rem; color: var(--fg); }
+.game-achievements .ach-rows { margin-top: 0.9rem; }
 
 /* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
 .games-timeline {
@@ -533,7 +550,10 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 @each $status, $color in $status-colors {
   .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
 }
-.games-timeline .vis-item.pt-connector { opacity: 0.35; }
+// Connectors span a whole session cluster, not just the gaps between sessions, so
+// they geometrically overlap every real session bar in the same subgroup/lane —
+// without this they'd paint on top (DOM order) and veil the session's own color/text.
+.games-timeline .vis-item.pt-connector { opacity: 0.35; z-index: 0; }
 .games-timeline .vis-item .vis-item-overflow {
   display: flex;
   align-items: center;

@@ -1,17 +1,18 @@
 ---
-title: "LEGO® Harry Potter: Years 1-4"
-platform: "PC"
-retroachievements_id:
+title: 'LEGO® Harry Potter: Years 1-4'
+platform: PC
+retroachievements_id: null
 steam_appid: 21130
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2019-10-19"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["lego-harry-potter-years-1-4"]
+    games:
+      - lego-harry-potter-years-1-4
+cover: null
 ---
 
 

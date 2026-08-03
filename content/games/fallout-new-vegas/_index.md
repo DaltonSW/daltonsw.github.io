@@ -1,17 +1,18 @@
 ---
-title: "Fallout: New Vegas"
-platform: "PC"
-retroachievements_id:
+title: 'Fallout: New Vegas'
+platform: PC
+retroachievements_id: null
 steam_appid: 22380
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2022-11-06"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["fallout-new-vegas"]
+    games:
+      - fallout-new-vegas
+cover: null
 ---
 
 

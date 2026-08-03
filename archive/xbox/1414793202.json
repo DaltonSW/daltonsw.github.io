@@ -1,0 +1,59 @@
+{
+ "provider": "xbox",
+ "title": "GTA IV",
+ "updated": "2026-08-02",
+ "id": "1414793202",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 1,
+ "total": 65,
+ "first": "2012-11-09",
+ "last": "2012-11-09",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-11-10",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "Off The Boat",
+   "description": "You have completed the first mission.",
+   "unlocked": true,
+   "date": "2012-11-09T21:02:14-06:00",
+   "points": 5
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 1,
+     "titleId": 1414793202,
+     "name": "Off The Boat",
+     "sequence": 66,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 1,
+     "description": "You have completed the first mission.",
+     "lockedDescription": "Complete the first mission.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-11-10T03:02:14.8670000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 76.55
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 1
+   }
+  },
+  "code": 200
+ }
+}

@@ -70,6 +70,7 @@ function buildConnectors(items: GameItem[]): GameItem[] {
         type: "range",
         className: (clusterStart.className ?? "").replace("pt-session", "pt-connector"),
         content: "",
+        title: clusterStart.title,
         start: clusterStart.start,
         end: last.end,
       } as GameItem);

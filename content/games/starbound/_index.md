@@ -1,17 +1,18 @@
 ---
-title: "Starbound"
-platform: "PC"
-retroachievements_id:
+title: Starbound
+platform: PC
+retroachievements_id: null
 steam_appid: 211820
-status: "ongoing"
-started:
-finished:
-rating:
-cover:
-draft: true
+status: ongoing
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["starbound"]
+    games:
+      - starbound
+cover: null
 ---
 
 

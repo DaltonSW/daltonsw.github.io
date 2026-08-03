@@ -1,18 +1,19 @@
 ---
-title: "KINGDOM HEARTS FINAL MIX"
-platform: "PS4"
-retroachievements_id:
-steam_appid:
-psn_id: "NPWR12334_00"
-status: ""
-started:
-finished:
-rating:
-cover:
-draft: true
+title: KINGDOM HEARTS FINAL MIX
+platform: PS4
+retroachievements_id: null
+steam_appid: null
+psn_id: NPWR12334_00
+status: finished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["kingdom-hearts-final-mix"]
+    games:
+      - kingdom-hearts-final-mix
+cover: null
 ---
 Imported from Exophase (psn).
 

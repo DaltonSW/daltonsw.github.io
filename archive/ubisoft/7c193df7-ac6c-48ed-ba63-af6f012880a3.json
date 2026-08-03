@@ -1,0 +1,807 @@
+{
+ "provider": "ubisoft",
+ "title": "Far Cry 6",
+ "updated": "2026-08-02",
+ "id": "7c193df7-ac6c-48ed-ba63-af6f012880a3",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 34,
+ "total": 92,
+ "first": "2023-09-02",
+ "last": "2023-10-14",
+ "platform": "Ubisoft",
+ "completion": "36%",
+ "source": "exophase",
+ "playtime_mins": 3236,
+ "last_played": "2023-10-14",
+ "achievements": [
+  {
+   "key": "just-getting-started",
+   "name": "just-getting-started",
+   "unlocked": true,
+   "date": "2023-09-02T15:59:13-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/g4j1ebe.png"
+  },
+  {
+   "key": "escape-from-isla-santuario",
+   "name": "escape-from-isla-santuario",
+   "unlocked": true,
+   "date": "2023-09-03T14:53:38-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/jg06j73.png"
+  },
+  {
+   "key": "pack-animal",
+   "name": "pack-animal",
+   "unlocked": true,
+   "date": "2023-09-03T18:24:52-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/87j581d.png"
+  },
+  {
+   "key": "gunslinger",
+   "name": "gunslinger",
+   "unlocked": true,
+   "date": "2023-09-03T18:50:28-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/b18gjg6.png"
+  },
+  {
+   "key": "winner-winner-chicken-dinner",
+   "name": "winner-winner-chicken-dinner",
+   "unlocked": true,
+   "date": "2023-09-04T13:39:52-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/4d0e850.png"
+  },
+  {
+   "key": "spared-no-expense",
+   "name": "spared-no-expense",
+   "unlocked": true,
+   "date": "2023-09-04T15:41:52-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/deg03g8.png"
+  },
+  {
+   "key": "grenadier",
+   "name": "grenadier",
+   "unlocked": true,
+   "date": "2023-09-07T20:50:03-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/0e0380e.png"
+  },
+  {
+   "key": "bad-intel",
+   "name": "bad-intel",
+   "unlocked": true,
+   "date": "2023-09-09T14:00:32-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/7370878.png"
+  },
+  {
+   "key": "street-racer",
+   "name": "street-racer",
+   "unlocked": true,
+   "date": "2023-09-09T14:31:40-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/61d7807.png"
+  },
+  {
+   "key": "stick-them-with-the-pointy-end",
+   "name": "stick-them-with-the-pointy-end",
+   "unlocked": true,
+   "date": "2023-09-09T19:41:59-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/3g57e11.png"
+  },
+  {
+   "key": "war-of-attrition",
+   "name": "war-of-attrition",
+   "unlocked": true,
+   "date": "2023-09-10T19:28:20-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/jg06db4.png"
+  },
+  {
+   "key": "good-boys-get-treats",
+   "name": "good-boys-get-treats",
+   "unlocked": true,
+   "date": "2023-09-10T19:29:50-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/5j578ed.png"
+  },
+  {
+   "key": "the-three-amigos",
+   "name": "the-three-amigos",
+   "unlocked": true,
+   "date": "2023-09-10T19:32:22-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/4d0e800.png"
+  },
+  {
+   "key": "master-tactician",
+   "name": "master-tactician",
+   "unlocked": true,
+   "date": "2023-09-10T19:33:22-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/deg03j8.png"
+  },
+  {
+   "key": "safety-first",
+   "name": "safety-first",
+   "unlocked": true,
+   "date": "2023-09-14T21:00:25-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/73708jj.png"
+  },
+  {
+   "key": "rockin-in-a-free-yara",
+   "name": "rockin-in-a-free-yara",
+   "unlocked": true,
+   "date": "2023-09-16T08:30:42-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/g4j16j5.png"
+  },
+  {
+   "key": "junior-treasure-hunter",
+   "name": "junior-treasure-hunter",
+   "unlocked": true,
+   "date": "2023-09-16T08:55:51-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/deg0573.png"
+  },
+  {
+   "key": "cruisin-y-a-r-a",
+   "name": "cruisin-y-a-r-a",
+   "unlocked": true,
+   "date": "2023-09-17T16:09:35-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/b18gj76.png"
+  },
+  {
+   "key": "gun-collector",
+   "name": "gun-collector",
+   "unlocked": true,
+   "date": "2023-09-17T16:16:16-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/61d7877.png"
+  },
+  {
+   "key": "quite-charming",
+   "name": "quite-charming",
+   "unlocked": true,
+   "date": "2023-09-19T20:45:41-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/b18gj86.png"
+  },
+  {
+   "key": "the-show-must-go-on",
+   "name": "the-show-must-go-on",
+   "unlocked": true,
+   "date": "2023-09-19T20:45:41-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/73708j8.png"
+  },
+  {
+   "key": "resistor",
+   "name": "resistor",
+   "unlocked": true,
+   "date": "2023-09-23T11:29:19-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/163785e.png"
+  },
+  {
+   "key": "diy",
+   "name": "diy",
+   "unlocked": true,
+   "date": "2023-09-23T11:32:51-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/e5e37ed.png"
+  },
+  {
+   "key": "cock-of-the-walk",
+   "name": "cock-of-the-walk",
+   "unlocked": true,
+   "date": "2023-09-24T12:42:36-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/0e0387e.png"
+  },
+  {
+   "key": "checkmate",
+   "name": "checkmate",
+   "unlocked": true,
+   "date": "2023-09-24T13:22:49-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/3g5783e.png"
+  },
+  {
+   "key": "paquete-collector",
+   "name": "paquete-collector",
+   "unlocked": true,
+   "date": "2023-10-01T15:55:31-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/deg0308.png"
+  },
+  {
+   "key": "reign-supreme",
+   "name": "reign-supreme",
+   "unlocked": true,
+   "date": "2023-10-06T08:48:22-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/e5e373d.png"
+  },
+  {
+   "key": "charmed-im-sure",
+   "name": "charmed-im-sure",
+   "unlocked": true,
+   "date": "2023-10-06T09:53:40-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/g4j1615.png"
+  },
+  {
+   "key": "ten-piece-nuggets",
+   "name": "ten-piece-nuggets",
+   "unlocked": true,
+   "date": "2023-10-06T16:23:33-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/87j58jd.png"
+  },
+  {
+   "key": "ingenious",
+   "name": "ingenious",
+   "unlocked": true,
+   "date": "2023-10-07T11:30:19-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/4d0e8e0.png"
+  },
+  {
+   "key": "puzzle-power",
+   "name": "puzzle-power",
+   "unlocked": true,
+   "date": "2023-10-14T09:18:27-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/61d78d7.png"
+  },
+  {
+   "key": "freeing-yara",
+   "name": "freeing-yara",
+   "unlocked": true,
+   "date": "2023-10-14T12:39:29-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/jg06d04.png"
+  },
+  {
+   "key": "expert-treasure-hunter",
+   "name": "expert-treasure-hunter",
+   "unlocked": true,
+   "date": "2023-10-14T13:10:18-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/3g5785e.png"
+  },
+  {
+   "key": "reclaimer",
+   "name": "reclaimer",
+   "unlocked": true,
+   "date": "2023-10-14T14:01:48-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/163783e.png"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 4118719,
+    "awardid": 4118719,
+    "earned": "October 14, 2023, 7:01 pm (UTC+0)",
+    "slug": "reclaimer",
+    "canonical_id": "15a296fa-5b27-4ce7-b376-22866da28b6f",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6780-reclaimer",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/163783e.png",
+     "m": "\/uplay\/awards\/m\/163783e.png",
+     "l": "\/uplay\/awards\/l\/163783e.png",
+     "o": "\/uplay\/awards\/o\/163783e.png",
+     "t": "\/uplay\/awards\/t\/163783e.png"
+    },
+    "timestamp": 1697310108
+   },
+   {
+    "masterAwardId": 4118720,
+    "awardid": 4118720,
+    "earned": "October 14, 2023, 6:10 pm (UTC+0)",
+    "slug": "expert-treasure-hunter",
+    "canonical_id": "92743f64-5965-4c50-9c6c-211e51ba1938",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6781-expert-treasure-hunter",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/3g5785e.png",
+     "m": "\/uplay\/awards\/m\/3g5785e.png",
+     "l": "\/uplay\/awards\/l\/3g5785e.png",
+     "o": "\/uplay\/awards\/o\/3g5785e.png",
+     "t": "\/uplay\/awards\/t\/3g5785e.png"
+    },
+    "timestamp": 1697307018
+   },
+   {
+    "masterAwardId": 4118718,
+    "awardid": 4118718,
+    "earned": "October 14, 2023, 5:39 pm (UTC+0)",
+    "slug": "freeing-yara",
+    "canonical_id": "d527fb00-891a-49da-8462-4cea5e741331",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6779-freeing-yara",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/jg06d04.png",
+     "m": "\/uplay\/awards\/m\/jg06d04.png",
+     "l": "\/uplay\/awards\/l\/jg06d04.png",
+     "o": "\/uplay\/awards\/o\/jg06d04.png",
+     "t": "\/uplay\/awards\/t\/jg06d04.png"
+    },
+    "timestamp": 1697305169
+   },
+   {
+    "masterAwardId": 4118714,
+    "awardid": 4118714,
+    "earned": "October 14, 2023, 2:18 pm (UTC+0)",
+    "slug": "puzzle-power",
+    "canonical_id": "1ab4f948-3656-4cd2-ba58-57bf51055549",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6775-puzzle-power",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/61d78d7.png",
+     "m": "\/uplay\/awards\/m\/61d78d7.png",
+     "l": "\/uplay\/awards\/l\/61d78d7.png",
+     "o": "\/uplay\/awards\/o\/61d78d7.png",
+     "t": "\/uplay\/awards\/t\/61d78d7.png"
+    },
+    "timestamp": 1697293107
+   },
+   {
+    "masterAwardId": 4118726,
+    "awardid": 4118726,
+    "earned": "October 7, 2023, 4:30 pm (UTC+0)",
+    "slug": "ingenious",
+    "canonical_id": "1a7f6169-56a9-49b5-8af1-efadedbd3332",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6787-ingenious",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/4d0e8e0.png",
+     "m": "\/uplay\/awards\/m\/4d0e8e0.png",
+     "l": "\/uplay\/awards\/l\/4d0e8e0.png",
+     "o": "\/uplay\/awards\/o\/4d0e8e0.png",
+     "t": "\/uplay\/awards\/t\/4d0e8e0.png"
+    },
+    "timestamp": 1696696219
+   },
+   {
+    "masterAwardId": 4118724,
+    "awardid": 4118724,
+    "earned": "October 6, 2023, 9:23 pm (UTC+0)",
+    "slug": "ten-piece-nuggets",
+    "canonical_id": "694b277c-75c5-4120-8f80-a8c509994cb2",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6785-ten-piece-nuggets",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/87j58jd.png",
+     "m": "\/uplay\/awards\/m\/87j58jd.png",
+     "l": "\/uplay\/awards\/l\/87j58jd.png",
+     "o": "\/uplay\/awards\/o\/87j58jd.png",
+     "t": "\/uplay\/awards\/t\/87j58jd.png"
+    },
+    "timestamp": 1696627413
+   },
+   {
+    "masterAwardId": 4118729,
+    "awardid": 4118729,
+    "earned": "October 6, 2023, 2:53 pm (UTC+0)",
+    "slug": "charmed-im-sure",
+    "canonical_id": "8f479757-0798-4238-951c-4e8e127d349b",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6790-charmed-im-sure",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/g4j1615.png",
+     "m": "\/uplay\/awards\/m\/g4j1615.png",
+     "l": "\/uplay\/awards\/l\/g4j1615.png",
+     "o": "\/uplay\/awards\/o\/g4j1615.png",
+     "t": "\/uplay\/awards\/t\/g4j1615.png"
+    },
+    "timestamp": 1696604020
+   },
+   {
+    "masterAwardId": 4118725,
+    "awardid": 4118725,
+    "earned": "October 6, 2023, 1:48 pm (UTC+0)",
+    "slug": "reign-supreme",
+    "canonical_id": "1c13d295-9ab2-4c5a-9542-2979f2ed3d44",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6786-reign-supreme",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/e5e373d.png",
+     "m": "\/uplay\/awards\/m\/e5e373d.png",
+     "l": "\/uplay\/awards\/l\/e5e373d.png",
+     "o": "\/uplay\/awards\/o\/e5e373d.png",
+     "t": "\/uplay\/awards\/t\/e5e373d.png"
+    },
+    "timestamp": 1696600102
+   },
+   {
+    "masterAwardId": 4118730,
+    "awardid": 4118730,
+    "earned": "October 1, 2023, 8:55 pm (UTC+0)",
+    "slug": "paquete-collector",
+    "canonical_id": "987d174e-4e00-4db7-9675-e516f65b17b2",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6791-paquete-collector",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/deg0308.png",
+     "m": "\/uplay\/awards\/m\/deg0308.png",
+     "l": "\/uplay\/awards\/l\/deg0308.png",
+     "o": "\/uplay\/awards\/o\/deg0308.png",
+     "t": "\/uplay\/awards\/t\/deg0308.png"
+    },
+    "timestamp": 1696193731
+   },
+   {
+    "masterAwardId": 4118707,
+    "awardid": 4118707,
+    "earned": "September 24, 2023, 6:22 pm (UTC+0)",
+    "slug": "checkmate",
+    "canonical_id": "f6e4df74-c002-418f-8813-6890e187006d",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6768-checkmate",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/3g5783e.png",
+     "m": "\/uplay\/awards\/m\/3g5783e.png",
+     "l": "\/uplay\/awards\/l\/3g5783e.png",
+     "o": "\/uplay\/awards\/o\/3g5783e.png",
+     "t": "\/uplay\/awards\/t\/3g5783e.png"
+    },
+    "timestamp": 1695579769
+   },
+   {
+    "masterAwardId": 4118710,
+    "awardid": 4118710,
+    "earned": "September 24, 2023, 5:42 pm (UTC+0)",
+    "slug": "cock-of-the-walk",
+    "canonical_id": "a67de2c6-f502-41c4-a940-3d858b205dc0",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6771-cock-of-the-walk",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/0e0387e.png",
+     "m": "\/uplay\/awards\/m\/0e0387e.png",
+     "l": "\/uplay\/awards\/l\/0e0387e.png",
+     "o": "\/uplay\/awards\/o\/0e0387e.png",
+     "t": "\/uplay\/awards\/t\/0e0387e.png"
+    },
+    "timestamp": 1695577356
+   },
+   {
+    "masterAwardId": 4118712,
+    "awardid": 4118712,
+    "earned": "September 23, 2023, 4:32 pm (UTC+0)",
+    "slug": "diy",
+    "canonical_id": "bcbf38e7-0728-4986-917e-5e0d615572f4",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6773-diy",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/e5e37ed.png",
+     "m": "\/uplay\/awards\/m\/e5e37ed.png",
+     "l": "\/uplay\/awards\/l\/e5e37ed.png",
+     "o": "\/uplay\/awards\/o\/e5e37ed.png",
+     "t": "\/uplay\/awards\/t\/e5e37ed.png"
+    },
+    "timestamp": 1695486771
+   },
+   {
+    "masterAwardId": 4118706,
+    "awardid": 4118706,
+    "earned": "September 23, 2023, 4:29 pm (UTC+0)",
+    "slug": "resistor",
+    "canonical_id": "8fa55f0e-5cb0-4345-b7ab-7c377b5e0476",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6767-resistor",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/163785e.png",
+     "m": "\/uplay\/awards\/m\/163785e.png",
+     "l": "\/uplay\/awards\/l\/163785e.png",
+     "o": "\/uplay\/awards\/o\/163785e.png",
+     "t": "\/uplay\/awards\/t\/163785e.png"
+    },
+    "timestamp": 1695486559
+   },
+   {
+    "masterAwardId": 4118708,
+    "awardid": 4118708,
+    "earned": "September 20, 2023, 1:45 am (UTC+0)",
+    "slug": "the-show-must-go-on",
+    "canonical_id": "19f6ee6d-9afa-42c0-94f9-b49a4285e909",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6769-the-show-must-go-on",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/73708j8.png",
+     "m": "\/uplay\/awards\/m\/73708j8.png",
+     "l": "\/uplay\/awards\/l\/73708j8.png",
+     "o": "\/uplay\/awards\/o\/73708j8.png",
+     "t": "\/uplay\/awards\/t\/73708j8.png"
+    },
+    "timestamp": 1695174341
+   },
+   {
+    "masterAwardId": 4118715,
+    "awardid": 4118715,
+    "earned": "September 20, 2023, 1:45 am (UTC+0)",
+    "slug": "quite-charming",
+    "canonical_id": "cf33d7d7-a82e-44a9-b2b2-80103025b59b",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6776-quite-charming",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/b18gj86.png",
+     "m": "\/uplay\/awards\/m\/b18gj86.png",
+     "l": "\/uplay\/awards\/l\/b18gj86.png",
+     "o": "\/uplay\/awards\/o\/b18gj86.png",
+     "t": "\/uplay\/awards\/t\/b18gj86.png"
+    },
+    "timestamp": 1695174341
+   },
+   {
+    "masterAwardId": 4118727,
+    "awardid": 4118727,
+    "earned": "September 17, 2023, 9:16 pm (UTC+0)",
+    "slug": "gun-collector",
+    "canonical_id": "a9cd1f71-9826-47dd-b7c1-bbe4c0d195ba",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6788-gun-collector",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/61d7877.png",
+     "m": "\/uplay\/awards\/m\/61d7877.png",
+     "l": "\/uplay\/awards\/l\/61d7877.png",
+     "o": "\/uplay\/awards\/o\/61d7877.png",
+     "t": "\/uplay\/awards\/t\/61d7877.png"
+    },
+    "timestamp": 1694985376
+   },
+   {
+    "masterAwardId": 4118702,
+    "awardid": 4118702,
+    "earned": "September 17, 2023, 9:09 pm (UTC+0)",
+    "slug": "cruisin-y-a-r-a",
+    "canonical_id": "bc278181-fd09-436e-b972-b37e4cf5dabb",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6763-cruisin-y-a-r-a",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/b18gj76.png",
+     "m": "\/uplay\/awards\/m\/b18gj76.png",
+     "l": "\/uplay\/awards\/l\/b18gj76.png",
+     "o": "\/uplay\/awards\/o\/b18gj76.png",
+     "t": "\/uplay\/awards\/t\/b18gj76.png"
+    },
+    "timestamp": 1694984975
+   },
+   {
+    "masterAwardId": 4118695,
+    "awardid": 4118695,
+    "earned": "September 16, 2023, 1:55 pm (UTC+0)",
+    "slug": "junior-treasure-hunter",
+    "canonical_id": "bae117bf-3eed-4257-a3ac-3fdfb7f5bae6",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6756-junior-treasure-hunter",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/deg0573.png",
+     "m": "\/uplay\/awards\/m\/deg0573.png",
+     "l": "\/uplay\/awards\/l\/deg0573.png",
+     "o": "\/uplay\/awards\/o\/deg0573.png",
+     "t": "\/uplay\/awards\/t\/deg0573.png"
+    },
+    "timestamp": 1694872551
+   },
+   {
+    "masterAwardId": 4118716,
+    "awardid": 4118716,
+    "earned": "September 16, 2023, 1:30 pm (UTC+0)",
+    "slug": "rockin-in-a-free-yara",
+    "canonical_id": "3736362f-7bab-4f5c-b3b7-0b178f240b77",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6777-rockin-in-a-free-yara",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/g4j16j5.png",
+     "m": "\/uplay\/awards\/m\/g4j16j5.png",
+     "l": "\/uplay\/awards\/l\/g4j16j5.png",
+     "o": "\/uplay\/awards\/o\/g4j16j5.png",
+     "t": "\/uplay\/awards\/t\/g4j16j5.png"
+    },
+    "timestamp": 1694871042
+   },
+   {
+    "masterAwardId": 4118699,
+    "awardid": 4118699,
+    "earned": "September 15, 2023, 2:00 am (UTC+0)",
+    "slug": "safety-first",
+    "canonical_id": "3ea6f609-8c10-44ad-8418-c69354db18b7",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6760-safety-first",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/73708jj.png",
+     "m": "\/uplay\/awards\/m\/73708jj.png",
+     "l": "\/uplay\/awards\/l\/73708jj.png",
+     "o": "\/uplay\/awards\/o\/73708jj.png",
+     "t": "\/uplay\/awards\/t\/73708jj.png"
+    },
+    "timestamp": 1694743225
+   },
+   {
+    "masterAwardId": 4118704,
+    "awardid": 4118704,
+    "earned": "September 11, 2023, 12:33 am (UTC+0)",
+    "slug": "master-tactician",
+    "canonical_id": "221f76a0-7400-4605-b9e3-808b35f66c83",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6765-master-tactician",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/deg03j8.png",
+     "m": "\/uplay\/awards\/m\/deg03j8.png",
+     "l": "\/uplay\/awards\/l\/deg03j8.png",
+     "o": "\/uplay\/awards\/o\/deg03j8.png",
+     "t": "\/uplay\/awards\/t\/deg03j8.png"
+    },
+    "timestamp": 1694392402
+   },
+   {
+    "masterAwardId": 4118713,
+    "awardid": 4118713,
+    "earned": "September 11, 2023, 12:32 am (UTC+0)",
+    "slug": "the-three-amigos",
+    "canonical_id": "a3d4ba82-8fb2-4c6e-8ee5-b8343cb14f18",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6774-the-three-amigos",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/4d0e800.png",
+     "m": "\/uplay\/awards\/m\/4d0e800.png",
+     "l": "\/uplay\/awards\/l\/4d0e800.png",
+     "o": "\/uplay\/awards\/o\/4d0e800.png",
+     "t": "\/uplay\/awards\/t\/4d0e800.png"
+    },
+    "timestamp": 1694392342
+   },
+   {
+    "masterAwardId": 4118709,
+    "awardid": 4118709,
+    "earned": "September 11, 2023, 12:29 am (UTC+0)",
+    "slug": "good-boys-get-treats",
+    "canonical_id": "05d9f980-4d14-4945-b78b-4b12e77fccfe",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6770-good-boys-get-treats",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/5j578ed.png",
+     "m": "\/uplay\/awards\/m\/5j578ed.png",
+     "l": "\/uplay\/awards\/l\/5j578ed.png",
+     "o": "\/uplay\/awards\/o\/5j578ed.png",
+     "t": "\/uplay\/awards\/t\/5j578ed.png"
+    },
+    "timestamp": 1694392190
+   },
+   {
+    "masterAwardId": 4118705,
+    "awardid": 4118705,
+    "earned": "September 11, 2023, 12:28 am (UTC+0)",
+    "slug": "war-of-attrition",
+    "canonical_id": "8eecdde9-0465-4e49-9c90-2444529f10cf",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6766-war-of-attrition",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/jg06db4.png",
+     "m": "\/uplay\/awards\/m\/jg06db4.png",
+     "l": "\/uplay\/awards\/l\/jg06db4.png",
+     "o": "\/uplay\/awards\/o\/jg06db4.png",
+     "t": "\/uplay\/awards\/t\/jg06db4.png"
+    },
+    "timestamp": 1694392100
+   },
+   {
+    "masterAwardId": 4118698,
+    "awardid": 4118698,
+    "earned": "September 10, 2023, 12:41 am (UTC+0)",
+    "slug": "stick-them-with-the-pointy-end",
+    "canonical_id": "cf30de55-aaca-48dc-a377-6d638323fbaf",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6759-stick-them-with-the-pointy-end",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/3g57e11.png",
+     "m": "\/uplay\/awards\/m\/3g57e11.png",
+     "l": "\/uplay\/awards\/l\/3g57e11.png",
+     "o": "\/uplay\/awards\/o\/3g57e11.png",
+     "t": "\/uplay\/awards\/t\/3g57e11.png"
+    },
+    "timestamp": 1694306519
+   },
+   {
+    "masterAwardId": 4118701,
+    "awardid": 4118701,
+    "earned": "September 9, 2023, 7:31 pm (UTC+0)",
+    "slug": "street-racer",
+    "canonical_id": "7ea46bd1-5d71-40e3-9b08-599785ed5ec0",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6762-street-racer",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/61d7807.png",
+     "m": "\/uplay\/awards\/m\/61d7807.png",
+     "l": "\/uplay\/awards\/l\/61d7807.png",
+     "o": "\/uplay\/awards\/o\/61d7807.png",
+     "t": "\/uplay\/awards\/t\/61d7807.png"
+    },
+    "timestamp": 1694287900
+   },
+   {
+    "masterAwardId": 4118721,
+    "awardid": 4118721,
+    "earned": "September 9, 2023, 7:00 pm (UTC+0)",
+    "slug": "bad-intel",
+    "canonical_id": "c8a9ed20-f6b4-456f-9258-4165b86018f8",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6782-bad-intel",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/7370878.png",
+     "m": "\/uplay\/awards\/m\/7370878.png",
+     "l": "\/uplay\/awards\/l\/7370878.png",
+     "o": "\/uplay\/awards\/o\/7370878.png",
+     "t": "\/uplay\/awards\/t\/7370878.png"
+    },
+    "timestamp": 1694286032
+   },
+   {
+    "masterAwardId": 4118723,
+    "awardid": 4118723,
+    "earned": "September 8, 2023, 1:50 am (UTC+0)",
+    "slug": "grenadier",
+    "canonical_id": "030bb1eb-4814-4873-895c-965f81230ada",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6784-grenadier",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/0e0380e.png",
+     "m": "\/uplay\/awards\/m\/0e0380e.png",
+     "l": "\/uplay\/awards\/l\/0e0380e.png",
+     "o": "\/uplay\/awards\/o\/0e0380e.png",
+     "t": "\/uplay\/awards\/t\/0e0380e.png"
+    },
+    "timestamp": 1694137803
+   },
+   {
+    "masterAwardId": 4118717,
+    "awardid": 4118717,
+    "earned": "September 4, 2023, 8:41 pm (UTC+0)",
+    "slug": "spared-no-expense",
+    "canonical_id": "1a8750c6-44ae-4ec9-8162-2b0c051edeb2",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6778-spared-no-expense",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/deg03g8.png",
+     "m": "\/uplay\/awards\/m\/deg03g8.png",
+     "l": "\/uplay\/awards\/l\/deg03g8.png",
+     "o": "\/uplay\/awards\/o\/deg03g8.png",
+     "t": "\/uplay\/awards\/t\/deg03g8.png"
+    },
+    "timestamp": 1693860112
+   },
+   {
+    "masterAwardId": 4118700,
+    "awardid": 4118700,
+    "earned": "September 4, 2023, 6:39 pm (UTC+0)",
+    "slug": "winner-winner-chicken-dinner",
+    "canonical_id": "ba50bd1b-a7c3-4e1f-854c-f6bacc886449",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6761-winner-winner-chicken-dinner",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/4d0e850.png",
+     "m": "\/uplay\/awards\/m\/4d0e850.png",
+     "l": "\/uplay\/awards\/l\/4d0e850.png",
+     "o": "\/uplay\/awards\/o\/4d0e850.png",
+     "t": "\/uplay\/awards\/t\/4d0e850.png"
+    },
+    "timestamp": 1693852792
+   },
+   {
+    "masterAwardId": 4118728,
+    "awardid": 4118728,
+    "earned": "September 3, 2023, 11:50 pm (UTC+0)",
+    "slug": "gunslinger",
+    "canonical_id": "398073b4-ba01-4740-89c7-d2640e40c210",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6789-gunslinger",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/b18gjg6.png",
+     "m": "\/uplay\/awards\/m\/b18gjg6.png",
+     "l": "\/uplay\/awards\/l\/b18gjg6.png",
+     "o": "\/uplay\/awards\/o\/b18gjg6.png",
+     "t": "\/uplay\/awards\/t\/b18gjg6.png"
+    },
+    "timestamp": 1693785028
+   },
+   {
+    "masterAwardId": 4118711,
+    "awardid": 4118711,
+    "earned": "September 3, 2023, 11:24 pm (UTC+0)",
+    "slug": "pack-animal",
+    "canonical_id": "06bce2a3-765b-490a-b4db-6f983d50495f",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6772-pack-animal",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/87j581d.png",
+     "m": "\/uplay\/awards\/m\/87j581d.png",
+     "l": "\/uplay\/awards\/l\/87j581d.png",
+     "o": "\/uplay\/awards\/o\/87j581d.png",
+     "t": "\/uplay\/awards\/t\/87j581d.png"
+    },
+    "timestamp": 1693783492
+   },
+   {
+    "masterAwardId": 4118696,
+    "awardid": 4118696,
+    "earned": "September 3, 2023, 7:53 pm (UTC+0)",
+    "slug": "escape-from-isla-santuario",
+    "canonical_id": "c1ae2661-0887-4d51-9164-a6195126eb42",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6757-escape-from-isla-santuario",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/jg06j73.png",
+     "m": "\/uplay\/awards\/m\/jg06j73.png",
+     "l": "\/uplay\/awards\/l\/jg06j73.png",
+     "o": "\/uplay\/awards\/o\/jg06j73.png",
+     "t": "\/uplay\/awards\/t\/jg06j73.png"
+    },
+    "timestamp": 1693770818
+   },
+   {
+    "masterAwardId": 4118694,
+    "awardid": 4118694,
+    "earned": "September 2, 2023, 8:59 pm (UTC+0)",
+    "slug": "just-getting-started",
+    "canonical_id": "640c14b2-f449-40cc-a450-aecd74057080",
+    "endpoint": "\/challenge\/far-cry-6-uplay\/6755-just-getting-started",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/g4j1ebe.png",
+     "m": "\/uplay\/awards\/m\/g4j1ebe.png",
+     "l": "\/uplay\/awards\/l\/g4j1ebe.png",
+     "o": "\/uplay\/awards\/o\/g4j1ebe.png",
+     "t": "\/uplay\/awards\/t\/g4j1ebe.png"
+    },
+    "timestamp": 1693688353
+   }
+  ],
+  "master_gameid": "458958",
+  "success": true
+ }
+}

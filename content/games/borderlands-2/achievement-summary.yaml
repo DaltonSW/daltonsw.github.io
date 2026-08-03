@@ -1,15 +1,68 @@
-unlocked: 35
-total: 75
-playtime_mins: 4601
-last_played: "2017-12-22"
+unlocked: 43
+total: 144
+playtime_mins: 4607
+last_played: "2026-08-02"
 providers:
     - provider: steam
       platform: PC
       unlocked: 35
       total: 75
-      playtime_mins: 4601
-      last_played: "2017-12-22"
+      playtime_mins: 4607
+      last_played: "2026-08-02"
+    - provider: xbox
+      platform: Xbox 360
+      unlocked: 8
+      total: 69
+      last_played: "2013-07-14"
 earned:
+    - name: First One's Free
+      description: Completed the mission "My First Gun"
+      date: "2012-12-24T13:26:01-06:00"
+      points: 10
+      provider: xbox
+      platform: Xbox 360
+    - name: Not Quite Dead
+      description: Reached level 5
+      date: "2012-12-24T14:17:12-06:00"
+      points: 5
+      provider: xbox
+      platform: Xbox 360
+    - name: Dragon Slayer
+      description: Completed the mission "Best Minion Ever"
+      date: "2012-12-28T14:34:51-06:00"
+      points: 20
+      provider: xbox
+      platform: Xbox 360
+    - name: A Road Less Traveled
+      description: Completed the mission "The Road To Sanctuary"
+      date: "2012-12-29T13:26:36-06:00"
+      points: 20
+      provider: xbox
+      platform: Xbox 360
+    - name: Better Than You Were
+      description: Reached level 10
+      date: "2012-12-29T13:59:17-06:00"
+      points: 10
+      provider: xbox
+      platform: Xbox 360
+    - name: New In Town
+      description: Completed the mission "Plan B"
+      date: "2012-12-29T14:43:50-06:00"
+      points: 20
+      provider: xbox
+      platform: Xbox 360
+    - name: An Old Flame
+      description: Completed the mission "Hunting The Firehawk"
+      date: "2012-12-29T15:06:33-06:00"
+      points: 20
+      provider: xbox
+      platform: Xbox 360
+    - name: Token Gesture
+      description: Redeemed 25 tokens
+      date: "2013-07-13T23:14:38-05:00"
+      points: 20
+      provider: xbox
+      platform: Xbox 360
     - name: First One's Free
       date: "2015-02-15T00:04:35-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49520/d32ad4c7edb12bca7affc57e213d29d8820936dc.jpg

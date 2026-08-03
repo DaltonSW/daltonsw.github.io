@@ -1,0 +1,1380 @@
+{
+ "provider": "steam",
+ "title": "Bitburner",
+ "updated": "2026-08-02",
+ "id": "1812820",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 40,
+ "total": 98,
+ "first": "2023-05-09",
+ "last": "2023-07-27",
+ "platform": "PC",
+ "achievements": [
+  {
+   "key": "NS2",
+   "name": "Maximum speed!",
+   "description": "Write an ns2 script.",
+   "unlocked": true,
+   "date": "2023-05-09T19:57:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/1ec27ef70f215b374b205f6c9f47f004fef37d2c.jpg"
+  },
+  {
+   "key": "FIRST_HACKNET_NODE",
+   "name": "Free money!",
+   "description": "Purchase your first hacknet node.",
+   "unlocked": true,
+   "date": "2023-05-09T20:00:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/0cd8a0756dcf00044cea08d76a590f541b917026.jpg"
+  },
+  {
+   "key": "FROZE",
+   "name": "while(true);",
+   "description": "Restart the game using the reload \u0026 kill all option because you froze it with an infinite loop.",
+   "unlocked": true,
+   "date": "2023-05-09T20:21:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/34f4b6da9c1ec37fa541e46239a1bd7c63d82099.jpg"
+  },
+  {
+   "key": "WORKOUT",
+   "name": "Gains!",
+   "description": "Workout at a gym.",
+   "unlocked": true,
+   "date": "2023-05-09T20:37:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ab6807dd4daa675775ce7e1970f21b00d7cd8707.jpg"
+  },
+  {
+   "key": "BRUTESSH.EXE",
+   "name": "BruteSSH.exe",
+   "description": "Acquire BruteSSH.exe",
+   "unlocked": true,
+   "date": "2023-05-09T21:08:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/7e8724968f40b6309c21f2a8c5c31b363b174f4b.jpg"
+  },
+  {
+   "key": "CYBERSEC",
+   "name": "CyberSec",
+   "description": "Join CyberSec.",
+   "unlocked": true,
+   "date": "2023-05-09T21:40:11-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/b9e9c729a20183a2d274bcb14438cc724707eeca.jpg"
+  },
+  {
+   "key": "HACKNET_NODE_10M",
+   "name": "The original hacker",
+   "description": "Make 10m from hacknet nodes.",
+   "unlocked": true,
+   "date": "2023-05-10T17:35:38-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/5cba869ff4749fbecf88c3b53a157994581ad5e4.jpg"
+  },
+  {
+   "key": "INSTALL_1",
+   "name": "I never asked for this.",
+   "description": "Install your first augmentation.",
+   "unlocked": true,
+   "date": "2023-05-10T17:40:38-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/345e94014a9f8cd769a69a82fc9069ba9d9b3a3e.jpg"
+  },
+  {
+   "key": "FTPCRACK.EXE",
+   "name": "FTPCrack.exe",
+   "description": "Acquire FTPCrack.exe",
+   "unlocked": true,
+   "date": "2023-05-11T21:20:35-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cafb6464ea0cddf8c44b2a3a4fb7cad5c7f7b477.jpg"
+  },
+  {
+   "key": "RELAYSMTP.EXE",
+   "name": "relaySMTP.exe",
+   "description": "Acquire relaySMTP.exe",
+   "unlocked": true,
+   "date": "2023-05-13T18:06:15-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/213268d0f38b0943ef512af0b6ed9717012ed3a0.jpg"
+  },
+  {
+   "key": "NITESEC",
+   "name": "avmnite-02h",
+   "description": "Join NiteSec.",
+   "unlocked": true,
+   "date": "2023-05-13T18:49:16-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fbd0b20d4378b2ad1cbe35a68d3d0b9997a90750.jpg"
+  },
+  {
+   "key": "TOR",
+   "name": "The Onion Network",
+   "description": "Purchase the TOR router.",
+   "unlocked": true,
+   "date": "2023-05-13T18:51:15-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/eb15aec50fd319e2310a20b6fc985a5e236a1c9c.jpg"
+  },
+  {
+   "key": "SCRIPT_32GB",
+   "name": "You'll need upgrade for this one.",
+   "description": "Write a script that costs 32GB per thread.",
+   "unlocked": true,
+   "date": "2023-05-13T22:00:16-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fd3898e143c9bb4293bf6fc2289415206a128d9d.jpg"
+  },
+  {
+   "key": "TRAVEL",
+   "name": "World explorer",
+   "description": "Travel anywhere.",
+   "unlocked": true,
+   "date": "2023-05-14T11:55:33-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/89d93d0167e2125b81e064b65cea48b7e2fb2031.jpg"
+  },
+  {
+   "key": "THE_BLACK_HAND",
+   "name": "I.I.I.I",
+   "description": "Join The Black Hand.",
+   "unlocked": true,
+   "date": "2023-05-17T17:56:13-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cd84d6a9357c7d8086b2c409d3228920502d8825.jpg"
+  },
+  {
+   "key": "DONATION",
+   "name": "Donate!",
+   "description": "Unlock donations with a faction.",
+   "unlocked": true,
+   "date": "2023-05-18T18:30:59-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c8bf7359254df8a1c9013680b796829cc6a9a15e.jpg"
+  },
+  {
+   "key": "MAX_HACKNET_NODE",
+   "name": "That's the limit",
+   "description": "Maximize a hacknet node.",
+   "unlocked": true,
+   "date": "2023-05-18T21:52:59-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/dd4940580d68e2924335618fccde5c39b9ae0c4d.jpg"
+  },
+  {
+   "key": "DRAIN_SERVER",
+   "name": "Big trouble",
+   "description": "Drain a server of all its money.",
+   "unlocked": true,
+   "date": "2023-05-20T17:26:51-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/e88aa69594e2c6487f3fbfc9107c3450f65cdc7b.jpg"
+  },
+  {
+   "key": "HOSPITALIZED",
+   "name": "Ouch!",
+   "description": "Go to the hospital.",
+   "unlocked": true,
+   "date": "2023-05-20T21:19:52-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/49354cbac54669c7f867ffb84598163422ee1605.jpg"
+  },
+  {
+   "key": "HTTPWORM.EXE",
+   "name": "HTTPWorm.exe",
+   "description": "Acquire HTTPWorm.exe",
+   "unlocked": true,
+   "date": "2023-05-21T15:20:34-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/e274a043552d0fb16955e407e7ad01a387c07a27.jpg"
+  },
+  {
+   "key": "BITRUNNERS",
+   "name": "run4theh111z",
+   "description": "Join the BitRunners.",
+   "unlocked": true,
+   "date": "2023-05-22T15:11:18-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/7d5d665364869ef2be9c718083ed0ad50d81f5b2.jpg"
+  },
+  {
+   "key": "SQLINJECT.EXE",
+   "name": "SQLInject.exe",
+   "description": "Acquire SQLInject.exe",
+   "unlocked": true,
+   "date": "2023-05-22T15:11:36-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/5582bc29aefaf270a2ecd6d18ff58e05c1befe32.jpg"
+  },
+  {
+   "key": "FORMULAS.EXE",
+   "name": "Formulas.exe",
+   "description": "Acquire Formulas.exe",
+   "unlocked": true,
+   "date": "2023-05-28T08:40:02-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ca5da21f1ec5cd33bbad525ef5ee88348a9de8de.jpg"
+  },
+  {
+   "key": "30_HACKNET_NODE",
+   "name": "Big network",
+   "description": "Have 30 hacknet nodes.",
+   "unlocked": true,
+   "date": "2023-05-29T13:14:51-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/3fb31e834c78032be1d84e27ee6b7897556dce29.jpg"
+  },
+  {
+   "key": "4S",
+   "name": "4S",
+   "description": "Purchase the 4S market data.",
+   "unlocked": true,
+   "date": "2023-05-30T13:09:15-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/54765ca0308ee456305254bec0f77d9590fa4b29.jpg"
+  },
+  {
+   "key": "DAEDALUS",
+   "name": "fl1ght.exe",
+   "description": "Join Daedalus.",
+   "unlocked": true,
+   "date": "2023-06-03T08:53:03-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/0ce0a689c7729f739d02870da3a2c5f4cf851e15.jpg"
+  },
+  {
+   "key": "SF1.1",
+   "name": "Source Genesis",
+   "unlocked": true,
+   "date": "2023-06-04T19:02:31-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/bf2685fc78361095e9784ed102b1cc345f4b4645.jpg"
+  },
+  {
+   "key": "GANG",
+   "name": "Gangster",
+   "unlocked": true,
+   "date": "2023-06-04T21:41:32-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/0f7e57a3f0c8ec56073cb12b8086a53e477cfab8.jpg"
+  },
+  {
+   "key": "FULL_GANG",
+   "name": "Don",
+   "unlocked": true,
+   "date": "2023-06-06T16:46:45-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9e39da46dd2dbd85677fa33bfc21facdf9ab5b0b.jpg"
+  },
+  {
+   "key": "GANG_MEMBER_POWER",
+   "name": "One punch guy",
+   "unlocked": true,
+   "date": "2023-06-06T21:37:03-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2928bbc19f4135db56628689404e8f91d266b2b0.jpg"
+  },
+  {
+   "key": "REPUTATION_10M",
+   "name": "Well liked",
+   "description": "Reach 10m reputation with a faction.",
+   "unlocked": true,
+   "date": "2023-06-07T16:43:25-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/7e6b9d89ad18e8a7ffb68ca8ae3e37bcdd01a0c2.jpg"
+  },
+  {
+   "key": "ILLUMINATI",
+   "name": "Illuminati",
+   "unlocked": true,
+   "date": "2023-06-10T14:15:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9e2d515b9f9cae01ca9f47782be363e0fa925181.jpg"
+  },
+  {
+   "key": "THE_COVENANT",
+   "name": "The Covenant",
+   "unlocked": true,
+   "date": "2023-06-10T14:16:59-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/aa608f01684a1a96865dee8b1d494639e12440de.jpg"
+  },
+  {
+   "key": "UNCLICKABLE",
+   "name": "Exploit: unclickable",
+   "unlocked": true,
+   "date": "2023-06-10T18:01:00-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "N00DLES",
+   "name": "Exploit: noodles",
+   "unlocked": true,
+   "date": "2023-06-10T19:27:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "COMBAT_3000",
+   "name": "One punch man",
+   "description": "Achieve 3000 in all combat stats.",
+   "unlocked": true,
+   "date": "2023-06-11T13:00:57-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/31470ee2413f7e0d76c18fc8e7b49494f983c487.jpg"
+  },
+  {
+   "key": "SF2.1",
+   "name": "Rise of the Underworld",
+   "unlocked": true,
+   "date": "2023-06-12T16:20:13-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/17d24c940b48c1b80b132cc173474560aabff8f7.jpg"
+  },
+  {
+   "key": "CORPORATION",
+   "name": "A small loan of 150b dollars.",
+   "unlocked": true,
+   "date": "2023-06-30T19:34:38-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/533ac94e89c5d52984c5863be4b55c4ece5ba7f1.jpg"
+  },
+  {
+   "key": "SCRIPTS_30",
+   "name": "Thank you folders!",
+   "description": "Have 30 scripts on your home computer.",
+   "unlocked": true,
+   "date": "2023-07-11T19:31:03-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2c25314e84d2833efb460941c7a5c71ca30a8416.jpg"
+  },
+  {
+   "key": "SF3.1",
+   "name": "Corporatocracy",
+   "unlocked": true,
+   "date": "2023-07-27T17:50:33-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/695f444cdc4898b6ea83bab4fc500e4faffec6b3.jpg"
+  },
+  {
+   "key": "ALL_HACKNET_SERVER",
+   "name": "Full network",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/bbfa8fff7a5db9334edfb09bc1376c9a473ffe03.jpg"
+  },
+  {
+   "key": "BLADEBURNER_DIVISION",
+   "name": "Bladeburners",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2514cdd107186087c8151d1902cf8ba0845b0697.jpg"
+  },
+  {
+   "key": "BLADEBURNER_OVERCLOCK",
+   "name": "Overclock!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cdf24382f7a50cf4f0a598733ab5b2be1a7e082b.jpg"
+  },
+  {
+   "key": "BLADEBURNER_UNSPENT_100000",
+   "name": "You should really spend those.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ab8b64cb31334759859bd25b0abbd7ccf3f57d87.jpg"
+  },
+  {
+   "key": "BYPASS",
+   "name": "Exploit: bypass",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN1",
+   "name": "BN1: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/25858f1b4d0265ba2a2e55080244991a7066299f.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN10",
+   "name": "BN10: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9f54d574cd9d105f86863233baecb1b5944cd4c9.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN12",
+   "name": "BN12: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/e629a34f98132329a1f2543827d3ca03b8432d34.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN13",
+   "name": "BN13: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/95c4259fff017e12d60598a5d832f6fcff0a33e2.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN2",
+   "name": "BN2: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c73dd2fb0fcf36d621273c4e06e3917d58bb36b0.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN3",
+   "name": "BN3: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ff98a0d8279c4e9c2b5ee00700f5fb5adc43282c.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN6",
+   "name": "BN6: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fc201d0abf28179b33af86e3c795bb1ecac48bd9.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN7",
+   "name": "BN7: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cdf761a2d380316447b917b13b156889aa705b9a.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN8",
+   "name": "BN8: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83db2bce979ed6ab401a11982af4ff6f23ee7537.jpg"
+  },
+  {
+   "key": "CHALLENGE_BN9",
+   "name": "BN9: Challenge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9591355095655ad7cedc9bee83f86434ff7a21ec.jpg"
+  },
+  {
+   "key": "CORPORATION_BRIBE",
+   "name": "Lobbying is great!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/6b4f0d909bdae1336d237840c17d198b7e46f02d.jpg"
+  },
+  {
+   "key": "CORPORATION_EMPLOYEE_3000",
+   "name": "Small town",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/df7f21e100c757de1d9f2d7535da81b891134522.jpg"
+  },
+  {
+   "key": "CORPORATION_PROD_1000",
+   "name": "Streamlined manufacturing",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/aca7c732154738c662f2cb2546f964beae63ebd4.jpg"
+  },
+  {
+   "key": "CORPORATION_REAL_ESTATE",
+   "name": "Own the land",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/7a11a884681a1ce31b6dd8ff2776daf73932032a.jpg"
+  },
+  {
+   "key": "DEVMENU",
+   "name": "Exploit: You're not meant to access this.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "DISCOUNT",
+   "name": "Discount!",
+   "description": "Get a discount at Powerhouse Gym by backdooring their server.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cb877b35b5102ebe86a2af5995e0f649326c87e6.jpg"
+  },
+  {
+   "key": "EDITSAVEFILE",
+   "name": "Exploit: edit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "FAST_BN",
+   "name": "Speed demon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/663158d0470d3d2b8efc003ecbb2d9ada6bffd3c.jpg"
+  },
+  {
+   "key": "FIRST_HACKNET_SERVER",
+   "name": "The improved hacker.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/f69a7a5f6f665b6ee71858e85cc0a5a0b927d665.jpg"
+  },
+  {
+   "key": "GANG_TERRITORY",
+   "name": "Stay out of my territory",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fe6da75c274bf52b2cebcf744c4f72ef5373f730.jpg"
+  },
+  {
+   "key": "HACKING_100000",
+   "name": "Power Overwhelming",
+   "description": "Achieve 100 000 hacking skill.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/a102351ccb6d319d28e2af166b3b6e32f7e35d46.jpg"
+  },
+  {
+   "key": "HACKNET_SERVER_1B",
+   "name": "Not passive anymore",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fdbd1599d0edcbfc3b86af05d860a19fe513c44a.jpg"
+  },
+  {
+   "key": "INDECISIVE",
+   "name": "Too many options.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/b67901172a4bede076893d48eec13bca3e831f37.jpg"
+  },
+  {
+   "key": "INSTALL_100",
+   "name": "I asked for this.",
+   "description": "Have 100 augmentation installed at once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/b12f2de170c9563fbfdb06313421b05cf73eeeaf.jpg"
+  },
+  {
+   "key": "INTELLIGENCE_255",
+   "name": "Smart!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/3185efaf4dd93f5d3edc9c07a3270490617ee149.jpg"
+  },
+  {
+   "key": "KARMA_1000000",
+   "name": "Wretched hive of scum and villainy",
+   "description": "Reach -1m karma.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ebf4dc6bfc7c6f59927c3e8efedfb564ace2a0e6.jpg"
+  },
+  {
+   "key": "MAX_CACHE",
+   "name": "What a waste.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9174efb36db7bba48e2beba35129ce917f0e91c8.jpg"
+  },
+  {
+   "key": "MAX_CORES",
+   "name": "Download more cores?",
+   "description": "Maximize your home computer cores.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/453b312d29a3a7978517fb11007083de5e9e3593.jpg"
+  },
+  {
+   "key": "MAX_HACKNET_SERVER",
+   "name": "That's the new limit.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/acc775938a3d3ec7c6e596f5e734af096b97efda.jpg"
+  },
+  {
+   "key": "MAX_RAM",
+   "name": "Download more ram",
+   "description": "Maximize your home computer ram.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/3f6bfd156c84b27442096c7161b40907b8906458.jpg"
+  },
+  {
+   "key": "MONEY_1Q",
+   "name": "Here comes the money!",
+   "description": "Have $1Q (not $1q) on your home computer.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/6e9e6243a4f4f925558ecf27fd7d2827f86c52ab.jpg"
+  },
+  {
+   "key": "MONEY_M1B",
+   "name": "Massive debt",
+   "description": "Be $1b in debt.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/971fa05cb22935cec06c111e6bfa7dbb7ace277a.jpg"
+  },
+  {
+   "key": "NEUROFLUX_255",
+   "name": "Neuroflux is love, Neuroflux is live",
+   "description": "Install Neuroflux Governor level 255",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/7d7e869ff2ca2d3872cb9e48de44984615825fa8.jpg"
+  },
+  {
+   "key": "PROTOTYPETAMPERING",
+   "name": "Exploit: prototype tampering",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "QUEUE_40",
+   "name": "It's time to install",
+   "description": "Have 40 augmentation queued at once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/d7e8aacc0b870b5cc44eea97954cf6051119e297.jpg"
+  },
+  {
+   "key": "RAINBOW",
+   "name": "Exploit: rainbow",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "REALITYALTERATION",
+   "name": "Exploit: reality alteration",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "RUNNING_SCRIPTS_1000",
+   "name": "Need more real life ram",
+   "description": "Run 1000 scripts simultaneously.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9483428fc2827d7d8a8faf1eb0f96a3c4968e6b5.jpg"
+  },
+  {
+   "key": "SF10.1",
+   "name": "Digital Carbon",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/6966047ac837703e65c6652f369b8af5acc418b8.jpg"
+  },
+  {
+   "key": "SF11.1",
+   "name": "The Big Crash",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2fee59872a6e9a585ce026671a926c87f3440458.jpg"
+  },
+  {
+   "key": "SF12.1",
+   "name": "The Recursion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/874863461bf8c6de39cc3e63d75ed61a8ab6a697.jpg"
+  },
+  {
+   "key": "SF4.1",
+   "name": "The Singularity",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/3b19130949f0490c96c5a54cdad9ec5b9b06dda8.jpg"
+  },
+  {
+   "key": "SF5.1",
+   "name": "Artificial Intelligence",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/a7432be46f7edf29a64ce1bd206cd97ef1e2ee39.jpg"
+  },
+  {
+   "key": "SF6.1",
+   "name": "Bladeburners",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/941d9b450c6ac701dec88f05c35add7e5db8dffa.jpg"
+  },
+  {
+   "key": "SF7.1",
+   "name": "Bladeburners 2079",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c82f089b65bf446e2fddfbb0309d5c6d12cee0af.jpg"
+  },
+  {
+   "key": "SF8.1",
+   "name": "Ghost of Wall Street",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/bb04916c88008eab173e1c5274551875a8e25e96.jpg"
+  },
+  {
+   "key": "SF9.1",
+   "name": "Hacktocracy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/62591a71bafa2fbcb5cb6c6c3c0a3271c72e7cbf.jpg"
+  },
+  {
+   "key": "SLEEVE_8",
+   "name": "You and what army?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/63f260fee4ea904c6f5d79304d2b5bc9abf8c69a.jpg"
+  },
+  {
+   "key": "STOCK_1q",
+   "name": "Wolf of wall street.",
+   "description": "Make 1q on the stock market.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/5c9384211fcb61934b8825377b106953281abe12.jpg"
+  },
+  {
+   "key": "TIMECOMPRESSION",
+   "name": "Exploit: time compression",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "TRUE_RECURSION",
+   "name": "Exploit: true recursion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg"
+  },
+  {
+   "key": "UNACHIEVABLE",
+   "name": "UNACHIEVABLE",
+   "description": "This achievement cannot be unlocked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9b3dd06f3021ae6409c848b84052b885a0b287eb.jpg"
+  },
+  {
+   "key": "UNDOCUMENTEDFUNCTIONCALL",
+   "name": "Exploit: undocumented",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c97cd48ea97731a8b5cf2ea1341408713f95d741.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Bitburner",
+   "achievements": [
+    {
+     "apiname": "CYBERSEC",
+     "achieved": 1,
+     "unlocktime": 1683686411,
+     "name": "CyberSec",
+     "description": "Join CyberSec."
+    },
+    {
+     "apiname": "NITESEC",
+     "achieved": 1,
+     "unlocktime": 1684021756,
+     "name": "avmnite-02h",
+     "description": "Join NiteSec."
+    },
+    {
+     "apiname": "THE_BLACK_HAND",
+     "achieved": 1,
+     "unlocktime": 1684364173,
+     "name": "I.I.I.I",
+     "description": "Join The Black Hand."
+    },
+    {
+     "apiname": "BITRUNNERS",
+     "achieved": 1,
+     "unlocktime": 1684786278,
+     "name": "run4theh111z",
+     "description": "Join the BitRunners."
+    },
+    {
+     "apiname": "DAEDALUS",
+     "achieved": 1,
+     "unlocktime": 1685800383,
+     "name": "fl1ght.exe",
+     "description": "Join Daedalus."
+    },
+    {
+     "apiname": "THE_COVENANT",
+     "achieved": 1,
+     "unlocktime": 1686424619,
+     "name": "The Covenant",
+     "description": ""
+    },
+    {
+     "apiname": "ILLUMINATI",
+     "achieved": 1,
+     "unlocktime": 1686424558,
+     "name": "Illuminati",
+     "description": ""
+    },
+    {
+     "apiname": "BRUTESSH.EXE",
+     "achieved": 1,
+     "unlocktime": 1683684490,
+     "name": "BruteSSH.exe",
+     "description": "Acquire BruteSSH.exe"
+    },
+    {
+     "apiname": "FTPCRACK.EXE",
+     "achieved": 1,
+     "unlocktime": 1683858035,
+     "name": "FTPCrack.exe",
+     "description": "Acquire FTPCrack.exe"
+    },
+    {
+     "apiname": "RELAYSMTP.EXE",
+     "achieved": 1,
+     "unlocktime": 1684019175,
+     "name": "relaySMTP.exe",
+     "description": "Acquire relaySMTP.exe"
+    },
+    {
+     "apiname": "HTTPWORM.EXE",
+     "achieved": 1,
+     "unlocktime": 1684700434,
+     "name": "HTTPWorm.exe",
+     "description": "Acquire HTTPWorm.exe"
+    },
+    {
+     "apiname": "SQLINJECT.EXE",
+     "achieved": 1,
+     "unlocktime": 1684786296,
+     "name": "SQLInject.exe",
+     "description": "Acquire SQLInject.exe"
+    },
+    {
+     "apiname": "FORMULAS.EXE",
+     "achieved": 1,
+     "unlocktime": 1685281202,
+     "name": "Formulas.exe",
+     "description": "Acquire Formulas.exe"
+    },
+    {
+     "apiname": "SF1.1",
+     "achieved": 1,
+     "unlocktime": 1685923351,
+     "name": "Source Genesis",
+     "description": ""
+    },
+    {
+     "apiname": "SF2.1",
+     "achieved": 1,
+     "unlocktime": 1686604813,
+     "name": "Rise of the Underworld",
+     "description": ""
+    },
+    {
+     "apiname": "SF3.1",
+     "achieved": 1,
+     "unlocktime": 1690498233,
+     "name": "Corporatocracy",
+     "description": ""
+    },
+    {
+     "apiname": "SF4.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Singularity",
+     "description": ""
+    },
+    {
+     "apiname": "SF5.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Artificial Intelligence",
+     "description": ""
+    },
+    {
+     "apiname": "SF6.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bladeburners",
+     "description": ""
+    },
+    {
+     "apiname": "SF7.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bladeburners 2079",
+     "description": ""
+    },
+    {
+     "apiname": "SF8.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ghost of Wall Street",
+     "description": ""
+    },
+    {
+     "apiname": "SF9.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hacktocracy",
+     "description": ""
+    },
+    {
+     "apiname": "SF10.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Digital Carbon",
+     "description": ""
+    },
+    {
+     "apiname": "SF11.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Big Crash",
+     "description": ""
+    },
+    {
+     "apiname": "SF12.1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Recursion",
+     "description": ""
+    },
+    {
+     "apiname": "MONEY_1Q",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Here comes the money!",
+     "description": "Have $1Q (not $1q) on your home computer."
+    },
+    {
+     "apiname": "MONEY_M1B",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Massive debt",
+     "description": "Be $1b in debt."
+    },
+    {
+     "apiname": "INSTALL_1",
+     "achieved": 1,
+     "unlocktime": 1683758438,
+     "name": "I never asked for this.",
+     "description": "Install your first augmentation."
+    },
+    {
+     "apiname": "INSTALL_100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I asked for this.",
+     "description": "Have 100 augmentation installed at once."
+    },
+    {
+     "apiname": "QUEUE_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's time to install",
+     "description": "Have 40 augmentation queued at once."
+    },
+    {
+     "apiname": "HACKING_100000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Power Overwhelming",
+     "description": "Achieve 100 000 hacking skill."
+    },
+    {
+     "apiname": "COMBAT_3000",
+     "achieved": 1,
+     "unlocktime": 1686506457,
+     "name": "One punch man",
+     "description": "Achieve 3000 in all combat stats."
+    },
+    {
+     "apiname": "NEUROFLUX_255",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Neuroflux is love, Neuroflux is live",
+     "description": "Install Neuroflux Governor level 255"
+    },
+    {
+     "apiname": "NS2",
+     "achieved": 1,
+     "unlocktime": 1683680230,
+     "name": "Maximum speed!",
+     "description": "Write an ns2 script."
+    },
+    {
+     "apiname": "FROZE",
+     "achieved": 1,
+     "unlocktime": 1683681670,
+     "name": "while(true);",
+     "description": "Restart the game using the reload \u0026 kill all option because you froze it with an infinite loop."
+    },
+    {
+     "apiname": "RUNNING_SCRIPTS_1000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Need more real life ram",
+     "description": "Run 1000 scripts simultaneously."
+    },
+    {
+     "apiname": "DRAIN_SERVER",
+     "achieved": 1,
+     "unlocktime": 1684621611,
+     "name": "Big trouble",
+     "description": "Drain a server of all its money."
+    },
+    {
+     "apiname": "MAX_RAM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Download more ram",
+     "description": "Maximize your home computer ram."
+    },
+    {
+     "apiname": "MAX_CORES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Download more cores?",
+     "description": "Maximize your home computer cores."
+    },
+    {
+     "apiname": "SCRIPTS_30",
+     "achieved": 1,
+     "unlocktime": 1689121863,
+     "name": "Thank you folders!",
+     "description": "Have 30 scripts on your home computer."
+    },
+    {
+     "apiname": "KARMA_1000000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wretched hive of scum and villainy",
+     "description": "Reach -1m karma."
+    },
+    {
+     "apiname": "STOCK_1q",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wolf of wall street.",
+     "description": "Make 1q on the stock market."
+    },
+    {
+     "apiname": "DISCOUNT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Discount!",
+     "description": "Get a discount at Powerhouse Gym by backdooring their server."
+    },
+    {
+     "apiname": "SCRIPT_32GB",
+     "achieved": 1,
+     "unlocktime": 1684033216,
+     "name": "You'll need upgrade for this one.",
+     "description": "Write a script that costs 32GB per thread."
+    },
+    {
+     "apiname": "FIRST_HACKNET_NODE",
+     "achieved": 1,
+     "unlocktime": 1683680410,
+     "name": "Free money!",
+     "description": "Purchase your first hacknet node."
+    },
+    {
+     "apiname": "30_HACKNET_NODE",
+     "achieved": 1,
+     "unlocktime": 1685384091,
+     "name": "Big network",
+     "description": "Have 30 hacknet nodes."
+    },
+    {
+     "apiname": "MAX_HACKNET_NODE",
+     "achieved": 1,
+     "unlocktime": 1684464779,
+     "name": "That's the limit",
+     "description": "Maximize a hacknet node."
+    },
+    {
+     "apiname": "HACKNET_NODE_10M",
+     "achieved": 1,
+     "unlocktime": 1683758138,
+     "name": "The original hacker",
+     "description": "Make 10m from hacknet nodes."
+    },
+    {
+     "apiname": "REPUTATION_10M",
+     "achieved": 1,
+     "unlocktime": 1686174205,
+     "name": "Well liked",
+     "description": "Reach 10m reputation with a faction."
+    },
+    {
+     "apiname": "DONATION",
+     "achieved": 1,
+     "unlocktime": 1684452659,
+     "name": "Donate!",
+     "description": "Unlock donations with a faction."
+    },
+    {
+     "apiname": "TRAVEL",
+     "achieved": 1,
+     "unlocktime": 1684083333,
+     "name": "World explorer",
+     "description": "Travel anywhere."
+    },
+    {
+     "apiname": "WORKOUT",
+     "achieved": 1,
+     "unlocktime": 1683682630,
+     "name": "Gains!",
+     "description": "Workout at a gym."
+    },
+    {
+     "apiname": "TOR",
+     "achieved": 1,
+     "unlocktime": 1684021875,
+     "name": "The Onion Network",
+     "description": "Purchase the TOR router."
+    },
+    {
+     "apiname": "HOSPITALIZED",
+     "achieved": 1,
+     "unlocktime": 1684635592,
+     "name": "Ouch!",
+     "description": "Go to the hospital."
+    },
+    {
+     "apiname": "GANG",
+     "achieved": 1,
+     "unlocktime": 1685932892,
+     "name": "Gangster",
+     "description": ""
+    },
+    {
+     "apiname": "FULL_GANG",
+     "achieved": 1,
+     "unlocktime": 1686088005,
+     "name": "Don",
+     "description": ""
+    },
+    {
+     "apiname": "GANG_TERRITORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stay out of my territory",
+     "description": ""
+    },
+    {
+     "apiname": "GANG_MEMBER_POWER",
+     "achieved": 1,
+     "unlocktime": 1686105423,
+     "name": "One punch guy",
+     "description": ""
+    },
+    {
+     "apiname": "CORPORATION",
+     "achieved": 1,
+     "unlocktime": 1688171678,
+     "name": "A small loan of 150b dollars.",
+     "description": ""
+    },
+    {
+     "apiname": "CORPORATION_BRIBE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lobbying is great!",
+     "description": ""
+    },
+    {
+     "apiname": "CORPORATION_PROD_1000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Streamlined manufacturing",
+     "description": ""
+    },
+    {
+     "apiname": "CORPORATION_EMPLOYEE_3000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Small town",
+     "description": ""
+    },
+    {
+     "apiname": "CORPORATION_REAL_ESTATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Own the land",
+     "description": ""
+    },
+    {
+     "apiname": "INTELLIGENCE_255",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Smart!",
+     "description": ""
+    },
+    {
+     "apiname": "BLADEBURNER_DIVISION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bladeburners",
+     "description": ""
+    },
+    {
+     "apiname": "BLADEBURNER_OVERCLOCK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overclock!",
+     "description": ""
+    },
+    {
+     "apiname": "BLADEBURNER_UNSPENT_100000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You should really spend those.",
+     "description": ""
+    },
+    {
+     "apiname": "4S",
+     "achieved": 1,
+     "unlocktime": 1685470155,
+     "name": "4S",
+     "description": "Purchase the 4S market data."
+    },
+    {
+     "apiname": "FIRST_HACKNET_SERVER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The improved hacker.",
+     "description": ""
+    },
+    {
+     "apiname": "ALL_HACKNET_SERVER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full network",
+     "description": ""
+    },
+    {
+     "apiname": "MAX_HACKNET_SERVER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That's the new limit.",
+     "description": ""
+    },
+    {
+     "apiname": "HACKNET_SERVER_1B",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not passive anymore",
+     "description": ""
+    },
+    {
+     "apiname": "MAX_CACHE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What a waste.",
+     "description": ""
+    },
+    {
+     "apiname": "SLEEVE_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You and what army?",
+     "description": ""
+    },
+    {
+     "apiname": "INDECISIVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Too many options.",
+     "description": ""
+    },
+    {
+     "apiname": "FAST_BN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed demon.",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN1: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN2: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN3: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN6: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN7: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN8: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN9: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN10: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "CHALLENGE_BN12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN12: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "BYPASS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: bypass",
+     "description": ""
+    },
+    {
+     "apiname": "PROTOTYPETAMPERING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: prototype tampering",
+     "description": ""
+    },
+    {
+     "apiname": "UNCLICKABLE",
+     "achieved": 1,
+     "unlocktime": 1686438060,
+     "name": "Exploit: unclickable",
+     "description": ""
+    },
+    {
+     "apiname": "UNDOCUMENTEDFUNCTIONCALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: undocumented",
+     "description": ""
+    },
+    {
+     "apiname": "TIMECOMPRESSION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: time compression",
+     "description": ""
+    },
+    {
+     "apiname": "REALITYALTERATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: reality alteration",
+     "description": ""
+    },
+    {
+     "apiname": "N00DLES",
+     "achieved": 1,
+     "unlocktime": 1686443278,
+     "name": "Exploit: noodles",
+     "description": ""
+    },
+    {
+     "apiname": "EDITSAVEFILE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: edit",
+     "description": ""
+    },
+    {
+     "apiname": "UNACHIEVABLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "UNACHIEVABLE",
+     "description": "This achievement cannot be unlocked."
+    },
+    {
+     "apiname": "CHALLENGE_BN13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BN13: Challenge",
+     "description": ""
+    },
+    {
+     "apiname": "DEVMENU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: You're not meant to access this.",
+     "description": ""
+    },
+    {
+     "apiname": "RAINBOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: rainbow",
+     "description": ""
+    },
+    {
+     "apiname": "TRUE_RECURSION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exploit: true recursion",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

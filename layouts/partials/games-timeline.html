@@ -110,7 +110,7 @@
         {{- $titleParts = $titleParts | append "ongoing" -}}
       {{- end -}}
       {{- with $entry.rating -}}{{- $titleParts = $titleParts | append (printf "%v/10" .) -}}{{- end -}}
-      {{- $statusLabel := ($status | replace "_" " ") | title -}}
+      {{- $statusLabel := replace $status "_" " " | title -}}
       {{- with $entry.subgame -}}{{- $statusLabel = printf "%s — %s" . $statusLabel -}}{{- end -}}
       {{- with $entry.platform -}}{{- $statusLabel = printf "%s (%s)" $statusLabel . -}}{{- end -}}
       {{- $title := printf "%s · %s" $statusLabel (delimit $titleParts " – ") -}}
@@ -138,7 +138,7 @@
           {{- $items = $items | append (dict
               "id" (printf "%s--session-%d" $baseID $sIdx) "group" $slug "subgroup" $sub
               "type" "range" "className" (printf "pt-session pt--%s" $status)
-              "content" "" "title" $title "status" ($status | replace "_" " " | title) "start" $sStart "end" $sEnd
+              "content" "" "title" $title "status" (replace $status "_" " " | title) "start" $sStart "end" $sEnd
             )
           -}}
         {{- end -}}
@@ -146,7 +146,7 @@
         {{- $items = $items | append (dict
             "id" $baseID "group" $slug "subgroup" $sub
             "type" "range" "className" (printf "pt pt--%s" $status)
-            "content" "" "title" $title "status" ($status | replace "_" " " | title) "permalink" $permalink
+            "content" "" "title" $title "status" (replace $status "_" " " | title) "permalink" $permalink
             "start" $start "end" $end
           )
         -}}

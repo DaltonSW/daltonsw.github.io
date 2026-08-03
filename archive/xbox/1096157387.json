@@ -1,0 +1,208 @@
+{
+ "provider": "xbox",
+ "title": "Modern Warfare® 3",
+ "updated": "2026-08-02",
+ "id": "1096157387",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 5,
+ "total": 76,
+ "first": "2011-12-17",
+ "last": "2012-01-22",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-12-26",
+ "achievements": [
+  {
+   "key": "120",
+   "name": "Back in the Fight",
+   "description": "Start the Single Player Campaign on any difficulty.",
+   "unlocked": true,
+   "points": 5
+  },
+  {
+   "key": "183",
+   "name": "I Live",
+   "description": "Survive 1 wave in a Special Ops Survival game.",
+   "unlocked": true,
+   "date": "2011-12-17T14:18:44-06:00",
+   "points": 10
+  },
+  {
+   "key": "176",
+   "name": "Serrated Edge",
+   "description": "Finish a Juggernaut with a knife in Special Ops.",
+   "unlocked": true,
+   "date": "2011-12-17T14:53:33-06:00",
+   "points": 15
+  },
+  {
+   "key": "187",
+   "name": "Brag Rags",
+   "description": "Earn 1 star in Special Ops Mission Mode.",
+   "unlocked": true,
+   "date": "2011-12-25T15:37:02-06:00",
+   "points": 10
+  },
+  {
+   "key": "148",
+   "name": "Jack the Ripper",
+   "description": "Melee 5 enemies in a row in Single Player or Special Ops.",
+   "unlocked": true,
+   "date": "2011-12-25T15:50:04-06:00",
+   "points": 20
+  },
+  {
+   "key": "175",
+   "name": "Birdie",
+   "description": "Kill 2 enemy helicopters without getting hit in a Special Ops Survival game.",
+   "unlocked": true,
+   "date": "2012-01-22T11:58:18-06:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 175,
+     "titleId": 1096157387,
+     "name": "Birdie",
+     "sequence": 4,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 117,
+     "description": "Kill 2 enemy helicopters without getting hit in a Special Ops Survival game.",
+     "lockedDescription": "Kill 2 enemy helicopters without getting hit in a Special Ops Survival game.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-22T17:58:18.1270000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 33.21
+     }
+    },
+    {
+     "id": 148,
+     "titleId": 1096157387,
+     "name": "Jack the Ripper",
+     "sequence": 3,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 134,
+     "description": "Melee 5 enemies in a row in Single Player or Special Ops.",
+     "lockedDescription": "Melee 5 enemies in a row in Single Player or Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-25T21:50:04.7770000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 39.89
+     }
+    },
+    {
+     "id": 187,
+     "titleId": 1096157387,
+     "name": "Brag Rags",
+     "sequence": 2,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 118,
+     "description": "Earn 1 star in Special Ops Mission Mode.",
+     "lockedDescription": "Earn 1 star in Special Ops Mission Mode.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-25T21:37:02.1570000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 43.74
+     }
+    },
+    {
+     "id": 120,
+     "titleId": 1096157387,
+     "name": "Back in the Fight",
+     "sequence": 1,
+     "flags": 1179662,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 170,
+     "description": "Start the Single Player Campaign on any difficulty.",
+     "lockedDescription": "Start the Single Player Campaign on any difficulty.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 61.71
+     }
+    },
+    {
+     "id": 176,
+     "titleId": 1096157387,
+     "name": "Serrated Edge",
+     "sequence": 52,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 149,
+     "description": "Finish a Juggernaut with a knife in Special Ops.",
+     "lockedDescription": "Finish a Juggernaut with a knife in Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-17T20:53:33.1400000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 18.78
+     }
+    },
+    {
+     "id": 183,
+     "titleId": 1096157387,
+     "name": "I Live",
+     "sequence": 51,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 173,
+     "description": "Survive 1 wave in a Special Ops Survival game.",
+     "lockedDescription": "Survive 1 wave in a Special Ops Survival game.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-17T20:18:44.0570000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 61.14
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 6
+   }
+  },
+  "code": 200
+ }
+}

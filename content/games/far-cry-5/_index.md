@@ -1,17 +1,18 @@
 ---
-title: "Far Cry 5"
-platform: "PC"
-retroachievements_id:
+title: Far Cry 5
+platform: PC
+retroachievements_id: null
 steam_appid: 552520
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2023-09-01"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["far-cry-5"]
+    games:
+      - far-cry-5
+cover: null
 ---
 
 

@@ -1,17 +1,18 @@
 ---
-title: "Celeste"
-platform: "PC"
-retroachievements_id:
+title: Celeste
+platform: PC
+retroachievements_id: null
 steam_appid: 504230
-status: "finished"
-started:
+status: paused
+started: ""
 finished: "2025-01-03"
-rating:
-cover:
-draft: true
+rating: 10
+draft: false
 cascade:
   params:
-    games: ["celeste"]
+    games:
+      - celeste
+cover: null
 ---
 
 

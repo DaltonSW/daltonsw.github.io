@@ -36,6 +36,8 @@
   {{- range $entries }}{{ $platforms = $platforms | append (.platform | default "") }}{{ end }}
   {{- $showPlatform := gt (len (uniq $platforms)) 1 }}
 
+  {{- partial "game-achievements.html" . }}
+
   {{- with sort $entries "started" "desc" }}
   <h2>Playthroughs</h2>
   <ul class="entry-list">

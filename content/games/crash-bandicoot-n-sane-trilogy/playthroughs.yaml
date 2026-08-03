@@ -4,15 +4,13 @@ playthroughs:
   - started: "2019-08-06"
     finished: "2019-08-08"
     status: finished
-    subgame: "Crash Bandicoot"
+    subgame: Crash Bandicoot
   - started: "2019-08-08"
     finished: "2019-08-08"
     status: finished
-    subgame: "Cortex Strikes Back"
-  - started: "2019-08-08"
-    finished: "2019-08-14"
-    status: finished
-    subgame: "Warped"
-  - started: "2022-05-14"
-    finished: "2022-05-14"
-    status: finished
+    subgame: Cortex Strikes Back
+  - status: finished
+    sessions:
+      - started: "2019-08-08"
+        finished: "2019-08-11"
+    subgame: Warped

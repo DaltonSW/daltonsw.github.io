@@ -1,17 +1,18 @@
 ---
-title: "Monaco"
-platform: "PC"
-retroachievements_id:
+title: Monaco
+platform: PC
+retroachievements_id: null
 steam_appid: 113020
-status: "multiplayer"
-started:
-finished:
-rating:
-cover:
-draft: true
+status: multiplayer
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["monaco"]
+    games:
+      - monaco
+cover: null
 ---
 
 

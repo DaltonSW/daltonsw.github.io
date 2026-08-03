@@ -1,6 +1,6 @@
 ---
 title: Super Mario World
-platform: SNES/Super Famicom
+platform: SNES
 retroachievements_id: 228
 steam_appid: null
 status: finished

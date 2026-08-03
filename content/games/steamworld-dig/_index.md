@@ -1,17 +1,18 @@
 ---
-title: "SteamWorld Dig"
-platform: "PC"
-retroachievements_id:
+title: SteamWorld Dig
+platform: PC
+retroachievements_id: null
 steam_appid: 252410
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2014-01-13"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["steamworld-dig"]
+    games:
+      - steamworld-dig
+cover: null
 ---
 
 

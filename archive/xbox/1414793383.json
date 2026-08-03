@@ -1,0 +1,59 @@
+{
+ "provider": "xbox",
+ "title": "Grand Theft Auto V Legacy",
+ "updated": "2026-08-02",
+ "id": "1414793383",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 1,
+ "total": 58,
+ "first": "2013-12-15",
+ "last": "2013-12-15",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2014-02-08",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "Welcome to Los Santos",
+   "description": "You repo'd a car and raced it through the heart of a sun-soaked metropolis.",
+   "unlocked": true,
+   "date": "2013-12-15T18:58:28-06:00",
+   "points": 10
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 1,
+     "titleId": 1414793383,
+     "name": "Welcome to Los Santos",
+     "sequence": 50,
+     "flags": 1245190,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 1,
+     "description": "You repo'd a car and raced it through the heart of a sun-soaked metropolis.",
+     "lockedDescription": "Complete Franklin and Lamar",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2013-12-16T00:58:28.2900000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 77.17
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 1
+   }
+  },
+  "code": 200
+ }
+}

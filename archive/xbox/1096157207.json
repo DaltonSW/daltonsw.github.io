@@ -1,0 +1,386 @@
+{
+ "provider": "xbox",
+ "title": "Modern Warfare® 2",
+ "updated": "2026-08-02",
+ "id": "1096157207",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 9,
+ "total": 50,
+ "first": "2012-04-01",
+ "last": "2012-07-18",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-09-01",
+ "achievements": [
+  {
+   "key": "124",
+   "name": "The Harder They Fall",
+   "description": "Kill 2 rappelling enemies in a row before they land on their feet in Single Player or Special Ops.",
+   "unlocked": true,
+   "points": 10
+  },
+  {
+   "key": "125",
+   "name": "Desperado",
+   "description": "Kill 5 enemies in a row using 5 different weapons or attachments in Single Player or Special Ops.",
+   "unlocked": true,
+   "points": 10
+  },
+  {
+   "key": "79",
+   "name": "Royale with Cheese",
+   "description": "Defend Burger Town.",
+   "unlocked": true,
+   "points": 15
+  },
+  {
+   "key": "75",
+   "name": "Back in the Saddle",
+   "description": "Help train the local militia.",
+   "unlocked": true,
+   "date": "2012-04-01T10:54:10-05:00",
+   "points": 15
+  },
+  {
+   "key": "128",
+   "name": "Three-some",
+   "description": "Kill at least 3 enemies with a single shot from a grenade launcher in Single Player or Special Ops.",
+   "unlocked": true,
+   "date": "2012-04-01T10:57:55-05:00",
+   "points": 10
+  },
+  {
+   "key": "120",
+   "name": "Two Birds with One Stone",
+   "description": "Kill 2 enemies with a single bullet in Single Player or Special Ops.",
+   "unlocked": true,
+   "date": "2012-04-01T11:03:30-05:00",
+   "points": 10
+  },
+  {
+   "key": "76",
+   "name": "Danger Close",
+   "description": "Get hand picked for Shepherd's elite squad.",
+   "unlocked": true,
+   "date": "2012-04-01T11:07:40-05:00",
+   "points": 15
+  },
+  {
+   "key": "99",
+   "name": "Gold Star",
+   "description": "Earn 1 star in Special Ops.",
+   "unlocked": true,
+   "date": "2012-04-20T20:25:28-05:00",
+   "points": 20
+  },
+  {
+   "key": "100",
+   "name": "Hotel Bravo",
+   "description": "Earn 4 stars in Special Ops.",
+   "unlocked": true,
+   "date": "2012-04-20T20:33:02-05:00",
+   "points": 20
+  },
+  {
+   "key": "77",
+   "name": "Cold Shoulder",
+   "description": "Infiltrate the snowy mountain side base.",
+   "unlocked": true,
+   "date": "2012-05-13T13:21:43-05:00",
+   "points": 15
+  },
+  {
+   "key": "78",
+   "name": "Tag 'em and bag 'em",
+   "description": "Find Rojas in the Favelas.",
+   "unlocked": true,
+   "date": "2012-07-18T13:01:19-05:00",
+   "points": 15
+  },
+  {
+   "key": "115",
+   "name": "Ten plus foot-mobiles",
+   "description": "Kill at least 10 enemies with one Predator missile in Single Player or Special Ops.",
+   "unlocked": true,
+   "date": "2012-07-18T13:19:26-05:00",
+   "points": 10
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 124,
+     "titleId": 1096157207,
+     "name": "The Harder They Fall",
+     "sequence": 12,
+     "flags": 1179660,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 44,
+     "description": "Kill 2 rappelling enemies in a row before they land on their feet in Single Player or Special Ops.",
+     "lockedDescription": "Kill 2 rappelling enemies in a row before they land on their feet in Single Player or Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 36.58
+     }
+    },
+    {
+     "id": 125,
+     "titleId": 1096157207,
+     "name": "Desperado",
+     "sequence": 11,
+     "flags": 1179660,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 11,
+     "description": "Kill 5 enemies in a row using 5 different weapons or attachments in Single Player or Special Ops.",
+     "lockedDescription": "Kill 5 enemies in a row using 5 different weapons or attachments in Single Player or Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 24.68
+     }
+    },
+    {
+     "id": 79,
+     "titleId": 1096157207,
+     "name": "Royale with Cheese",
+     "sequence": 10,
+     "flags": 1179662,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 38,
+     "description": "Defend Burger Town.",
+     "lockedDescription": "Defend Burger Town.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 44.16
+     }
+    },
+    {
+     "id": 115,
+     "titleId": 1096157207,
+     "name": "Ten plus foot-mobiles",
+     "sequence": 9,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 3,
+     "description": "Kill at least 10 enemies with one Predator missile in Single Player or Special Ops.",
+     "lockedDescription": "Kill at least 10 enemies with one Predator missile in Single Player or Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-07-18T18:19:26.6330000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 48.44
+     }
+    },
+    {
+     "id": 78,
+     "titleId": 1096157207,
+     "name": "Tag 'em and bag 'em",
+     "sequence": 8,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 43,
+     "description": "Find Rojas in the Favelas.",
+     "lockedDescription": "Find Rojas in the Favelas.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-07-18T18:01:19.6900000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 46.55
+     }
+    },
+    {
+     "id": 77,
+     "titleId": 1096157207,
+     "name": "Cold Shoulder",
+     "sequence": 7,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 8,
+     "description": "Infiltrate the snowy mountain side base.",
+     "lockedDescription": "Infiltrate the snowy mountain side base.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-05-13T18:21:43.3270000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 51.81
+     }
+    },
+    {
+     "id": 100,
+     "titleId": 1096157207,
+     "name": "Hotel Bravo",
+     "sequence": 6,
+     "flags": 1245195,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 22,
+     "description": "Earn 4 stars in Special Ops.",
+     "lockedDescription": "Earn 4 stars in Special Ops.",
+     "type": 3,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-21T01:33:02.8230000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 42.8
+     }
+    },
+    {
+     "id": 99,
+     "titleId": 1096157207,
+     "name": "Gold Star",
+     "sequence": 5,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 19,
+     "description": "Earn 1 star in Special Ops.",
+     "lockedDescription": "Earn 1 star in Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-21T01:25:28.5370000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 55.27
+     }
+    },
+    {
+     "id": 76,
+     "titleId": 1096157207,
+     "name": "Danger Close",
+     "sequence": 4,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 10,
+     "description": "Get hand picked for Shepherd's elite squad.",
+     "lockedDescription": "Get hand picked for Shepherd's elite squad.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-01T16:07:40.3330000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 54.67
+     }
+    },
+    {
+     "id": 120,
+     "titleId": 1096157207,
+     "name": "Two Birds with One Stone",
+     "sequence": 3,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 50,
+     "description": "Kill 2 enemies with a single bullet in Single Player or Special Ops.",
+     "lockedDescription": "Kill 2 enemies with a single bullet in Single Player or Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-01T16:03:30.8500000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 61.89
+     }
+    },
+    {
+     "id": 128,
+     "titleId": 1096157207,
+     "name": "Three-some",
+     "sequence": 2,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 48,
+     "description": "Kill at least 3 enemies with a single shot from a grenade launcher in Single Player or Special Ops.",
+     "lockedDescription": "Kill at least 3 enemies with a single shot from a grenade launcher in Single Player or Special Ops.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-01T15:57:55.3170000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 57.27
+     }
+    },
+    {
+     "id": 75,
+     "titleId": 1096157207,
+     "name": "Back in the Saddle",
+     "sequence": 1,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 4,
+     "description": "Help train the local militia.",
+     "lockedDescription": "Help train the local militia.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-01T15:54:10.0900000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 58.38
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 12
+   }
+  },
+  "code": 200
+ }
+}

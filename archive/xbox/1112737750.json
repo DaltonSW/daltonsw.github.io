@@ -1,0 +1,118 @@
+{
+ "provider": "xbox",
+ "title": "Fallout 3 - Game of the Year Edition",
+ "updated": "2026-08-02",
+ "id": "1112737750",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 2,
+ "total": 72,
+ "first": "2013-08-19",
+ "last": "2013-08-19",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2013-08-24",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "Vault 101 Citizenship Award",
+   "description": "Got the Pip-Boy 3000",
+   "unlocked": true,
+   "points": 10
+  },
+  {
+   "key": "2",
+   "name": "The G.O.A.T. Whisperer",
+   "description": "Took the G.O.A.T.",
+   "unlocked": true,
+   "date": "2013-08-19T20:11:15-05:00",
+   "points": 10
+  },
+  {
+   "key": "3",
+   "name": "Escape!",
+   "description": "Completed \"Escape!\"",
+   "unlocked": true,
+   "date": "2013-08-19T20:24:05-05:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 3,
+     "titleId": 1112737750,
+     "name": "Escape!",
+     "sequence": 4294967295,
+     "flags": 2293769,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 2,
+     "gamerscore": 20,
+     "imageId": 53,
+     "description": "Completed \"Escape!\"",
+     "lockedDescription": "Completed \"Escape!\"",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-08-20T01:24:05.2970000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 25.31
+     }
+    },
+    {
+     "id": 2,
+     "titleId": 1112737750,
+     "name": "The G.O.A.T. Whisperer",
+     "sequence": 4294967295,
+     "flags": 2293769,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 2,
+     "gamerscore": 10,
+     "imageId": 51,
+     "description": "Took the G.O.A.T.",
+     "lockedDescription": "Took the G.O.A.T.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-08-20T01:11:15.1970000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 23.98
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1112737750,
+     "name": "Vault 101 Citizenship Award",
+     "sequence": 4294967295,
+     "flags": 2228233,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 2,
+     "gamerscore": 10,
+     "imageId": 52,
+     "description": "Got the Pip-Boy 3000",
+     "lockedDescription": "Got the Pip-Boy 3000",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 28.66
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 3
+   }
+  },
+  "code": 200
+ }
+}

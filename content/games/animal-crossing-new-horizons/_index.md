@@ -1,6 +1,6 @@
 ---
 title: 'Animal Crossing: New Horizons'
-platform: Switch 2, Switch
+platform: Switch
 retroachievements_id: null
 steam_appid: null
 status: ongoing

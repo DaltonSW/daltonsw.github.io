@@ -1,0 +1,89 @@
+{
+ "provider": "xbox",
+ "title": "Peggle",
+ "updated": "2026-08-02",
+ "id": "1480657033",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 2,
+ "total": 15,
+ "first": "2011-12-22",
+ "last": "2011-12-22",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2011-12-29",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "Catch the Fever",
+   "description": "Cured the need for fever with an Extreme Fever.",
+   "unlocked": true,
+   "date": "2011-12-22T14:02:43-06:00",
+   "points": 5
+  },
+  {
+   "key": "2",
+   "name": "Go ULTRA!",
+   "description": "Ultra extremely cleared all the pegs in a level.",
+   "unlocked": true,
+   "date": "2011-12-22T14:09:54-06:00",
+   "points": 15
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 2,
+     "titleId": 1480657033,
+     "name": "Go ULTRA!",
+     "sequence": 17,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 14,
+     "description": "Ultra extremely cleared all the pegs in a level.",
+     "lockedDescription": "Clear all the pegs in a level.  It's pretty extreme, but you look up to it. (Except Duel)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-22T20:09:54.0270000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 13.82
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1480657033,
+     "name": "Catch the Fever",
+     "sequence": 16,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 6,
+     "description": "Cured the need for fever with an Extreme Fever.",
+     "lockedDescription": "Cure your need for fever with an Extreme Fever. (Except Duel)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-22T20:02:43.5630000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 49.14
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 2
+   }
+  },
+  "code": 200
+ }
+}

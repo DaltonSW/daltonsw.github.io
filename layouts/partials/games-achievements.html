@@ -9,7 +9,8 @@
 {{- $trackedCount := 0 -}}
 {{- $masteredCount := 0 -}}
 {{- $gamerscore := 0 -}}
-{{- $byProvider := dict "retroachievements" 0 "steam" 0 "psn" 0 -}}
+{{- $xboxGamerscore := 0 -}}
+{{- $byProvider := dict "retroachievements" 0 "steam" 0 "psn" 0 "xbox" 0 -}}
 
 {{- range .Pages -}}
   {{- $page := . -}}
@@ -30,6 +31,8 @@
       {{- $earned = $earned | append (merge $entry (dict "page" $page "year" $year)) -}}
       {{- if eq $entry.provider "retroachievements" -}}
         {{- $gamerscore = add $gamerscore ($entry.points | default 0) -}}
+      {{- else if eq $entry.provider "xbox" -}}
+        {{- $xboxGamerscore = add $xboxGamerscore ($entry.points | default 0) -}}
       {{- end -}}
       {{- if isset $byProvider $entry.provider -}}
         {{- $byProvider = merge $byProvider (dict $entry.provider (add (index $byProvider $entry.provider) 1)) -}}
@@ -63,11 +66,16 @@
       <span class="ach-stat__value">{{ $gamerscore }}</span>
       <span class="ach-stat__label">RA gamerscore</span>
     </div>
+    <div class="ach-stat">
+      <span class="ach-stat__value">{{ $xboxGamerscore }}</span>
+      <span class="ach-stat__label">Xbox gamerscore</span>
+    </div>
     <div class="ach-stat ach-stat--breakdown">
       <span class="ach-stat__label">by provider</span>
       <ul class="ach-provider-list">
         <li><span class="ach-provider-list__name">RetroAchievements</span><span class="ach-provider-list__count">{{ index $byProvider "retroachievements" }}</span></li>
         <li><span class="ach-provider-list__name">Steam</span><span class="ach-provider-list__count">{{ index $byProvider "steam" }}</span></li>
+        <li><span class="ach-provider-list__name">Xbox</span><span class="ach-provider-list__count">{{ index $byProvider "xbox" }}</span></li>
         <li><span class="ach-provider-list__name">PSN</span><span class="ach-provider-list__count">{{ index $byProvider "psn" }}</span></li>
       </ul>
     </div>
@@ -116,7 +124,8 @@
             <div class="ach-row__meta">
               <a class="ach-row__game" href="{{ $row.page.RelPermalink }}">{{ $row.page.Title }}</a>
               {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
-              <span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
+              {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
+              {{- else }}<span class="ach-row__date ach-row__date--unknown">Date unknown</span>{{ end }}
             </div>
           </div>
         </div>

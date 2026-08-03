@@ -1,0 +1,329 @@
+{
+ "provider": "xbox",
+ "title": "Assassin's Creed® III",
+ "updated": "2026-08-02",
+ "id": "1431505070",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 10,
+ "total": 64,
+ "first": "2012-12-25",
+ "last": "2013-01-12",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2014-06-10",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "Rude Awakening",
+   "description": "Re-Enter the Animus.",
+   "unlocked": true,
+   "date": "2012-12-25T09:14:55-06:00",
+   "points": 10
+  },
+  {
+   "key": "6",
+   "name": "Mystery Guest",
+   "description": "Complete Sequence 1 \u0026 2.",
+   "unlocked": true,
+   "date": "2012-12-25T16:14:49-06:00",
+   "points": 20
+  },
+  {
+   "key": "7",
+   "name": "How D'ya Like Them Apples",
+   "description": "Complete Sequence 3.",
+   "unlocked": true,
+   "date": "2012-12-26T14:56:58-06:00",
+   "points": 20
+  },
+  {
+   "key": "8",
+   "name": "Heroes are Born",
+   "description": "Complete Sequence 4.",
+   "unlocked": true,
+   "date": "2012-12-27T11:21:02-06:00",
+   "points": 20
+  },
+  {
+   "key": "28",
+   "name": "By Invitation Only",
+   "description": "Be invited to join a Club.",
+   "unlocked": true,
+   "date": "2012-12-27T11:24:37-06:00",
+   "points": 20
+  },
+  {
+   "key": "20",
+   "name": "House Party",
+   "description": "Recruit any of the Artisans and see them settled on the Homestead.",
+   "unlocked": true,
+   "date": "2012-12-27T15:38:45-06:00",
+   "points": 10
+  },
+  {
+   "key": "9",
+   "name": "The Day the Templars Cried",
+   "description": "Complete Sequence 5.",
+   "unlocked": true,
+   "date": "2013-01-06T14:53:47-06:00",
+   "points": 20
+  },
+  {
+   "key": "3",
+   "name": "Criss Cross",
+   "description": "Complete Present - Skyscraper.",
+   "unlocked": true,
+   "date": "2013-01-06T15:04:31-06:00",
+   "points": 20
+  },
+  {
+   "key": "40",
+   "name": "Whit's fur ye'll no go by ye!",
+   "description": "Block a firing line 5 times by using a human shield.",
+   "unlocked": true,
+   "date": "2013-01-06T16:09:02-06:00",
+   "points": 10
+  },
+  {
+   "key": "10",
+   "name": "Tea is for Englishmen",
+   "description": "Complete Sequence 6.",
+   "unlocked": true,
+   "date": "2013-01-12T14:09:54-06:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 10,
+     "titleId": 1431505070,
+     "name": "Tea is for Englishmen",
+     "sequence": 60,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 18,
+     "description": "Complete Sequence 6.",
+     "lockedDescription": "Complete Sequence 6.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-01-12T20:09:54.4300000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 47.56
+     }
+    },
+    {
+     "id": 40,
+     "titleId": 1431505070,
+     "name": "Whit's fur ye'll no go by ye!",
+     "sequence": 59,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 49,
+     "description": "Block a firing line 5 times by using a human shield.",
+     "lockedDescription": "Block a firing line 5 times by using a human shield.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-01-06T22:09:02.5870000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 35.44
+     }
+    },
+    {
+     "id": 3,
+     "titleId": 1431505070,
+     "name": "Criss Cross",
+     "sequence": 58,
+     "flags": 1245185,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 11,
+     "description": "Complete Present - Skyscraper.",
+     "lockedDescription": "Complete Present - Skyscraper.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-01-06T21:04:31.3870000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 52.2
+     }
+    },
+    {
+     "id": 9,
+     "titleId": 1431505070,
+     "name": "The Day the Templars Cried",
+     "sequence": 57,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 17,
+     "description": "Complete Sequence 5.",
+     "lockedDescription": "Complete Sequence 5.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-01-06T20:53:47.4600000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 52.4
+     }
+    },
+    {
+     "id": 20,
+     "titleId": 1431505070,
+     "name": "House Party",
+     "sequence": 56,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 29,
+     "description": "Recruit any of the Artisans and see them settled on the Homestead.",
+     "lockedDescription": "Recruit any of the Artisans and see them settled on the Homestead.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-27T21:38:45.8000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 43.25
+     }
+    },
+    {
+     "id": 28,
+     "titleId": 1431505070,
+     "name": "By Invitation Only",
+     "sequence": 55,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 37,
+     "description": "Be invited to join a Club.",
+     "lockedDescription": "Be invited to join a Club.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-27T17:24:37.6400000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 55.22
+     }
+    },
+    {
+     "id": 8,
+     "titleId": 1431505070,
+     "name": "Heroes are Born",
+     "sequence": 54,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 16,
+     "description": "Complete Sequence 4.",
+     "lockedDescription": "Complete Sequence 4.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-27T17:21:02.1930000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 55.53
+     }
+    },
+    {
+     "id": 7,
+     "titleId": 1431505070,
+     "name": "How D'ya Like Them Apples",
+     "sequence": 53,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 15,
+     "description": "Complete Sequence 3.",
+     "lockedDescription": "Complete Sequence 3.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-26T20:56:58.5130000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 57.01
+     }
+    },
+    {
+     "id": 6,
+     "titleId": 1431505070,
+     "name": "Mystery Guest",
+     "sequence": 52,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 14,
+     "description": "Complete Sequence 1 \u0026 2.",
+     "lockedDescription": "Complete Sequence 1 \u0026 2.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-25T22:14:49.4000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 63.54
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1431505070,
+     "name": "Rude Awakening",
+     "sequence": 51,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 9,
+     "description": "Re-Enter the Animus.",
+     "lockedDescription": "Re-Enter the Animus.",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-25T15:14:55.7230000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 84.5
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 10
+   }
+  },
+  "code": 200
+ }
+}

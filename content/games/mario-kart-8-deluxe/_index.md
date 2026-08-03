@@ -1,18 +1,19 @@
 ---
-title: "Mario Kart 8 Deluxe"
-platform: "Switch"
-retroachievements_id:
-steam_appid:
-nintendo_id: "0100152000022000"
-status: "multiplayer"
-started:
-finished:
-rating:
-cover:
-draft: true
+title: Mario Kart 8 Deluxe
+platform: Switch
+retroachievements_id: null
+steam_appid: null
+status: multiplayer
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["mario-kart-8-deluxe"]
+    games:
+      - mario-kart-8-deluxe
+cover: null
+nintendo_id: "0100152000022000"
 ---
 Imported from Exophase (nintendo).
 

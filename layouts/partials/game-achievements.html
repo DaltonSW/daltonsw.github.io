@@ -1,0 +1,76 @@
+{{/* Achievements section for a single game's term page (layouts/games/term.html).
+     Reads the same achievement-summary.yaml resource games-achievements.html
+     flattens across every game, but scoped to just this one — so it reuses
+     that partial's row markup (.ach-row) minus the per-row game link, which
+     would only ever point back at the page it's already on. */}}
+{{- $summary := "" -}}
+{{- with .Resources.Get "achievement-summary.yaml" -}}
+  {{- $summary = . | transform.Unmarshal -}}
+{{- end -}}
+
+{{- if and $summary (gt ($summary.total | default 0) 0) -}}
+{{- $providers := $summary.providers | default slice -}}
+{{- $earned := sort ($summary.earned | default slice) "date" "desc" -}}
+<section class="game-achievements" aria-label="Achievements">
+  <h2>Achievements</h2>
+
+  <div class="ach-overview">
+    {{- partial "achievement-meter.html" (dict "unlocked" $summary.unlocked "total" $summary.total) }}
+    {{- with $summary.playtime_mins }}<span class="ach-overview__stat">{{ printf "%.1fh" (div . 60.0) }} played</span>{{ end }}
+    {{- with $summary.last_played }}<span class="ach-overview__stat">last played {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+  </div>
+
+  {{- if gt (len $providers) 1 }}
+  <ul class="ach-provider-breakdown">
+    {{- range $providers }}
+    <li>
+      <span class="ach-provider-breakdown__name">{{ .platform | default .provider }}</span>
+      {{- partial "achievement-meter.html" (dict "unlocked" .unlocked "total" .total) }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{- with $earned }}
+  <details class="year-group" open>
+    <summary class="year-group__heading">
+      <span class="year-group__caret" aria-hidden="true"></span>
+      <span class="year-group__year">Earned</span>
+      <span class="year-group__count">{{ len . }} achievement{{ if ne (len .) 1 }}s{{ end }}</span>
+    </summary>
+    <div class="ach-rows">
+      {{- range . }}
+      {{- $row := . }}
+      <div class="ach-row">
+        {{- $iconSrc := "" }}
+        {{- if $row.icon }}
+          {{- if eq $row.provider "retroachievements" }}
+            {{- $iconSrc = printf "https://media.retroachievements.org/Badge/%s.png" $row.icon }}
+          {{- else }}
+            {{- $iconSrc = $row.icon }}
+          {{- end }}
+        {{- end }}
+        {{- if $iconSrc }}
+        <img class="ach-row__icon" src="{{ $iconSrc }}" alt="" loading="lazy" width="32" height="32">
+        {{- else }}
+        <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
+        {{- end }}
+        <div class="ach-row__body">
+          <div class="ach-row__title-line">
+            <span class="ach-row__name">{{ $row.name }}</span>
+            {{- with $row.points }}<span class="ach-row__points">{{ . }} pt{{ if ne . 1 }}s{{ end }}{{ if $row.hardcore }} · HC{{ end }}</span>{{ end }}
+          </div>
+          {{- with $row.description }}<p class="ach-row__desc">{{ . }}</p>{{ end }}
+          <div class="ach-row__meta">
+            {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
+            {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
+            {{- else }}<span class="ach-row__date ach-row__date--unknown">Date unknown</span>{{ end }}
+          </div>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </details>
+  {{- end }}
+</section>
+{{- end -}}

@@ -1,17 +1,18 @@
 ---
-title: "Going Under"
-platform: "PC"
-retroachievements_id:
+title: Going Under
+platform: PC
+retroachievements_id: null
 steam_appid: 1154810
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2021-02-08"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["going-under"]
+    games:
+      - going-under
+cover: null
 ---
 
 

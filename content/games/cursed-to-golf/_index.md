@@ -1,17 +1,18 @@
 ---
-title: "Cursed to Golf"
-platform: "PC"
-retroachievements_id:
+title: Cursed to Golf
+platform: PC
+retroachievements_id: null
 steam_appid: 1726120
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2022-10-04"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["cursed-to-golf"]
+    games:
+      - cursed-to-golf
+cover: null
 ---
 
 

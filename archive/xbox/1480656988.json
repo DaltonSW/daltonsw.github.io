@@ -1,0 +1,89 @@
+{
+ "provider": "xbox",
+ "title": "N+",
+ "updated": "2026-08-02",
+ "id": "1480656988",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 2,
+ "total": 12,
+ "first": "2012-02-19",
+ "last": "2012-02-19",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-06-01",
+ "achievements": [
+  {
+   "key": "9",
+   "name": "Disciple",
+   "description": "Complete one tutorial episode.",
+   "unlocked": true,
+   "date": "2012-02-19T11:54:45-06:00",
+   "points": 5
+  },
+  {
+   "key": "11",
+   "name": "Treasure Hunter",
+   "description": "Complete an episode and obtain every gold piece in Single Player mode.",
+   "unlocked": true,
+   "date": "2012-02-19T12:00:58-06:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 11,
+     "titleId": 1480656988,
+     "name": "Treasure Hunter",
+     "sequence": 14,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 12,
+     "description": "Complete an episode and obtain every gold piece in Single Player mode.",
+     "lockedDescription": "Complete an episode and obtain every gold piece in Single Player mode.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-02-19T18:00:58.2600000Z",
+     "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 5.12
+     }
+    },
+    {
+     "id": 9,
+     "titleId": 1480656988,
+     "name": "Disciple",
+     "sequence": 13,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 10,
+     "description": "Complete one tutorial episode.",
+     "lockedDescription": "Complete one tutorial episode.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-02-19T17:54:45.7070000Z",
+     "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 8.7
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 2
+   }
+  },
+  "code": 200
+ }
+}

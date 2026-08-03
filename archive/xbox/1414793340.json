@@ -1,0 +1,269 @@
+{
+ "provider": "xbox",
+ "title": "Borderlands 2",
+ "updated": "2026-08-02",
+ "id": "1414793340",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 8,
+ "total": 69,
+ "first": "2012-12-24",
+ "last": "2013-07-13",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2013-07-14",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "First One's Free",
+   "description": "Completed the mission \"My First Gun\"",
+   "unlocked": true,
+   "date": "2012-12-24T13:26:01-06:00",
+   "points": 10
+  },
+  {
+   "key": "20",
+   "name": "Not Quite Dead",
+   "description": "Reached level 5",
+   "unlocked": true,
+   "date": "2012-12-24T14:17:12-06:00",
+   "points": 5
+  },
+  {
+   "key": "2",
+   "name": "Dragon Slayer",
+   "description": "Completed the mission \"Best Minion Ever\"",
+   "unlocked": true,
+   "date": "2012-12-28T14:34:51-06:00",
+   "points": 20
+  },
+  {
+   "key": "3",
+   "name": "A Road Less Traveled",
+   "description": "Completed the mission \"The Road To Sanctuary\"",
+   "unlocked": true,
+   "date": "2012-12-29T13:26:36-06:00",
+   "points": 20
+  },
+  {
+   "key": "21",
+   "name": "Better Than You Were",
+   "description": "Reached level 10",
+   "unlocked": true,
+   "date": "2012-12-29T13:59:17-06:00",
+   "points": 10
+  },
+  {
+   "key": "4",
+   "name": "New In Town",
+   "description": "Completed the mission \"Plan B\"",
+   "unlocked": true,
+   "date": "2012-12-29T14:43:50-06:00",
+   "points": 20
+  },
+  {
+   "key": "5",
+   "name": "An Old Flame",
+   "description": "Completed the mission \"Hunting The Firehawk\"",
+   "unlocked": true,
+   "date": "2012-12-29T15:06:33-06:00",
+   "points": 20
+  },
+  {
+   "key": "38",
+   "name": "Token Gesture",
+   "description": "Redeemed 25 tokens",
+   "unlocked": true,
+   "date": "2013-07-13T23:14:38-05:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 38,
+     "titleId": 1414793340,
+     "name": "Token Gesture",
+     "sequence": 67,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 49,
+     "description": "Redeemed 25 tokens",
+     "lockedDescription": "Redeem 25 tokens",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2013-07-14T04:14:38.6070000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 46.64
+     }
+    },
+    {
+     "id": 5,
+     "titleId": 1414793340,
+     "name": "An Old Flame",
+     "sequence": 63,
+     "flags": 1245185,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 16,
+     "description": "Completed the mission \"Hunting The Firehawk\"",
+     "lockedDescription": "",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-29T21:06:33.4030000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 55.31
+     }
+    },
+    {
+     "id": 4,
+     "titleId": 1414793340,
+     "name": "New In Town",
+     "sequence": 62,
+     "flags": 1245185,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 15,
+     "description": "Completed the mission \"Plan B\"",
+     "lockedDescription": "",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-29T20:43:50.2400000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 59.76
+     }
+    },
+    {
+     "id": 21,
+     "titleId": 1414793340,
+     "name": "Better Than You Were",
+     "sequence": 61,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 32,
+     "description": "Reached level 10",
+     "lockedDescription": "Reach level 10",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-29T19:59:17.7030000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 60.31
+     }
+    },
+    {
+     "id": 3,
+     "titleId": 1414793340,
+     "name": "A Road Less Traveled",
+     "sequence": 60,
+     "flags": 1245185,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 14,
+     "description": "Completed the mission \"The Road To Sanctuary\"",
+     "lockedDescription": "",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-29T19:26:36.7270000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 61.38
+     }
+    },
+    {
+     "id": 2,
+     "titleId": 1414793340,
+     "name": "Dragon Slayer",
+     "sequence": 59,
+     "flags": 1245185,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 13,
+     "description": "Completed the mission \"Best Minion Ever\"",
+     "lockedDescription": "",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-28T20:34:51.5170000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 66.33
+     }
+    },
+    {
+     "id": 20,
+     "titleId": 1414793340,
+     "name": "Not Quite Dead",
+     "sequence": 58,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 31,
+     "description": "Reached level 5",
+     "lockedDescription": "Reach level 5",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-24T20:17:12.1600000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 76.91
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1414793340,
+     "name": "First One's Free",
+     "sequence": 57,
+     "flags": 1245185,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": true,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 12,
+     "description": "Completed the mission \"My First Gun\"",
+     "lockedDescription": "",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-12-24T19:26:01.9430000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 87.12
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 8
+   }
+  },
+  "code": 200
+ }
+}

@@ -1,17 +1,18 @@
 ---
-title: "Turmoil"
-platform: "PC"
-retroachievements_id:
+title: Turmoil
+platform: PC
+retroachievements_id: null
 steam_appid: 361280
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2018-05-12"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["turmoil"]
+    games:
+      - turmoil
+cover: null
 ---
 
 

@@ -1,0 +1,507 @@
+{
+ "provider": "ubisoft",
+ "title": "Trackmania",
+ "updated": "2026-08-02",
+ "id": "5d20614c-234d-4cc8-934d-11ff07c2de69",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 21,
+ "total": 30,
+ "first": "2023-03-24",
+ "last": "2023-07-27",
+ "platform": "Ubisoft",
+ "completion": "70%",
+ "source": "exophase",
+ "last_played": "2026-05-23",
+ "achievements": [
+  {
+   "key": "player-of-the-month",
+   "name": "player-of-the-month",
+   "unlocked": true,
+   "date": "2023-03-24T17:43:35-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/dgjj8544.png"
+  },
+  {
+   "key": "campaign-explorer",
+   "name": "campaign-explorer",
+   "unlocked": true,
+   "date": "2023-03-24T17:43:35-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/gj007eg7.png"
+  },
+  {
+   "key": "silver-series-dailies",
+   "name": "silver-series-dailies",
+   "unlocked": true,
+   "date": "2023-03-24T17:47:17-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/6d00g6e5.png"
+  },
+  {
+   "key": "bronze-series-dailies",
+   "name": "bronze-series-dailies",
+   "unlocked": true,
+   "date": "2023-03-24T17:47:17-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/405563je.png"
+  },
+  {
+   "key": "gold-series-dailies",
+   "name": "gold-series-dailies",
+   "unlocked": true,
+   "date": "2023-03-30T17:30:37-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/b87730b4.png"
+  },
+  {
+   "key": "gold-series-campaigns",
+   "name": "gold-series-campaigns",
+   "unlocked": true,
+   "date": "2023-04-01T21:14:33-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/00771gb4.png"
+  },
+  {
+   "key": "silver-series-campaigns",
+   "name": "silver-series-campaigns",
+   "unlocked": true,
+   "date": "2023-04-01T21:14:33-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/55eeb46j.png"
+  },
+  {
+   "key": "bronze-series-campaigns",
+   "name": "bronze-series-campaigns",
+   "unlocked": true,
+   "date": "2023-04-01T21:14:33-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/77jjdeg1.png"
+  },
+  {
+   "key": "how-was-the-trip",
+   "name": "how-was-the-trip",
+   "unlocked": true,
+   "date": "2023-04-01T21:22:44-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/35334ej8.png"
+  },
+  {
+   "key": "gate-passenger",
+   "name": "gate-passenger",
+   "unlocked": true,
+   "date": "2023-04-02T16:42:54-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/4055634e.png"
+  },
+  {
+   "key": "kangaroo-wannabe",
+   "name": "kangaroo-wannabe",
+   "unlocked": true,
+   "date": "2023-04-02T19:44:32-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/55eeb41j.png"
+  },
+  {
+   "key": "lost-your-license",
+   "name": "lost-your-license",
+   "unlocked": true,
+   "date": "2023-04-03T17:31:31-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/6d00g6b5.png"
+  },
+  {
+   "key": "jump-around",
+   "name": "jump-around",
+   "unlocked": true,
+   "date": "2023-04-04T16:06:53-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/00771g64.png"
+  },
+  {
+   "key": "fly-little-car-fly",
+   "name": "fly-little-car-fly",
+   "unlocked": true,
+   "date": "2023-04-20T16:33:08-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/b87730e4.png"
+  },
+  {
+   "key": "medal-completionist",
+   "name": "medal-completionist",
+   "unlocked": true,
+   "date": "2023-04-29T15:54:24-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/j0b61876.png"
+  },
+  {
+   "key": "silver-series-completed",
+   "name": "silver-series-completed",
+   "unlocked": true,
+   "date": "2023-04-29T15:54:24-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/b87g3b1d.png"
+  },
+  {
+   "key": "bronze-series-completed",
+   "name": "bronze-series-completed",
+   "unlocked": true,
+   "date": "2023-04-29T15:54:24-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/6d07ge11.png"
+  },
+  {
+   "key": "gold-series-completed",
+   "name": "gold-series-completed",
+   "unlocked": true,
+   "date": "2023-05-01T16:10:00-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/gj0178b0.png"
+  },
+  {
+   "key": "great-finisher",
+   "name": "great-finisher",
+   "unlocked": true,
+   "date": "2023-05-30T16:54:46-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/35334e48.png"
+  },
+  {
+   "key": "author-series-campaigns",
+   "name": "author-series-campaigns",
+   "unlocked": true,
+   "date": "2023-07-02T09:41:56-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/8j114gb1.png"
+  },
+  {
+   "key": "climbing-the-ranks",
+   "name": "climbing-the-ranks",
+   "unlocked": true,
+   "date": "2023-07-27T20:52:37-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/13551ded.png"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 4839245,
+    "awardid": 4839245,
+    "earned": "July 28, 2023, 1:52 am (UTC+0)",
+    "slug": "climbing-the-ranks",
+    "canonical_id": "f0dcf5a8-910c-4fbb-a4aa-fd2df6579674",
+    "endpoint": "\/challenge\/trackmania-uplay\/8322-climbing-the-ranks",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/13551ded.png",
+     "m": "\/uplay\/awards\/m\/13551ded.png",
+     "l": "\/uplay\/awards\/l\/13551ded.png",
+     "o": "\/uplay\/awards\/o\/13551ded.png",
+     "t": "\/uplay\/awards\/t\/13551ded.png"
+    },
+    "timestamp": 1690509157
+   },
+   {
+    "masterAwardId": 4839237,
+    "awardid": 4839237,
+    "earned": "July 2, 2023, 2:41 pm (UTC+0)",
+    "slug": "author-series-campaigns",
+    "canonical_id": "91a9c2da-5686-40c5-9f12-ba737c8e540e",
+    "endpoint": "\/challenge\/trackmania-uplay\/8314-author-series-campaigns",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/8j114gb1.png",
+     "m": "\/uplay\/awards\/m\/8j114gb1.png",
+     "l": "\/uplay\/awards\/l\/8j114gb1.png",
+     "o": "\/uplay\/awards\/o\/8j114gb1.png",
+     "t": "\/uplay\/awards\/t\/8j114gb1.png"
+    },
+    "timestamp": 1688308916
+   },
+   {
+    "masterAwardId": 4839220,
+    "awardid": 4839220,
+    "earned": "May 30, 2023, 9:54 pm (UTC+0)",
+    "slug": "great-finisher",
+    "canonical_id": "b92618b6-6d88-4c8b-a120-5c9adde6b2aa",
+    "endpoint": "\/challenge\/trackmania-uplay\/8297-great-finisher",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/35334e48.png",
+     "m": "\/uplay\/awards\/m\/35334e48.png",
+     "l": "\/uplay\/awards\/l\/35334e48.png",
+     "o": "\/uplay\/awards\/o\/35334e48.png",
+     "t": "\/uplay\/awards\/t\/35334e48.png"
+    },
+    "timestamp": 1685483686
+   },
+   {
+    "masterAwardId": 4896255,
+    "awardid": 4896255,
+    "earned": "May 1, 2023, 9:10 pm (UTC+0)",
+    "slug": "gold-series-completed",
+    "canonical_id": "43aa3dad-ca22-45ef-956c-df8dd0175d3b",
+    "endpoint": "\/challenge\/trackmania-uplay\/8329-gold-series-completed",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/gj0178b0.png",
+     "m": "\/uplay\/awards\/m\/gj0178b0.png",
+     "l": "\/uplay\/awards\/l\/gj0178b0.png",
+     "o": "\/uplay\/awards\/o\/gj0178b0.png",
+     "t": "\/uplay\/awards\/t\/gj0178b0.png"
+    },
+    "timestamp": 1682975400
+   },
+   {
+    "masterAwardId": 4896253,
+    "awardid": 4896253,
+    "earned": "April 29, 2023, 8:54 pm (UTC+0)",
+    "slug": "bronze-series-completed",
+    "canonical_id": "75d6f0a7-adf0-4f89-8e0f-7f9652c6ffb8",
+    "endpoint": "\/challenge\/trackmania-uplay\/8327-bronze-series-completed",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/6d07ge11.png",
+     "m": "\/uplay\/awards\/m\/6d07ge11.png",
+     "l": "\/uplay\/awards\/l\/6d07ge11.png",
+     "o": "\/uplay\/awards\/o\/6d07ge11.png",
+     "t": "\/uplay\/awards\/t\/6d07ge11.png"
+    },
+    "timestamp": 1682801664
+   },
+   {
+    "masterAwardId": 4896254,
+    "awardid": 4896254,
+    "earned": "April 29, 2023, 8:54 pm (UTC+0)",
+    "slug": "silver-series-completed",
+    "canonical_id": "9d737c23-4e21-46d3-a083-b5ed87af1806",
+    "endpoint": "\/challenge\/trackmania-uplay\/8328-silver-series-completed",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/b87g3b1d.png",
+     "m": "\/uplay\/awards\/m\/b87g3b1d.png",
+     "l": "\/uplay\/awards\/l\/b87g3b1d.png",
+     "o": "\/uplay\/awards\/o\/b87g3b1d.png",
+     "t": "\/uplay\/awards\/t\/b87g3b1d.png"
+    },
+    "timestamp": 1682801664
+   },
+   {
+    "masterAwardId": 4896257,
+    "awardid": 4896257,
+    "earned": "April 29, 2023, 8:54 pm (UTC+0)",
+    "slug": "medal-completionist",
+    "canonical_id": "ab04e19f-5fc4-4af4-afce-0ac329673060",
+    "endpoint": "\/challenge\/trackmania-uplay\/8331-medal-completionist",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/j0b61876.png",
+     "m": "\/uplay\/awards\/m\/j0b61876.png",
+     "l": "\/uplay\/awards\/l\/j0b61876.png",
+     "o": "\/uplay\/awards\/o\/j0b61876.png",
+     "t": "\/uplay\/awards\/t\/j0b61876.png"
+    },
+    "timestamp": 1682801664
+   },
+   {
+    "masterAwardId": 4839228,
+    "awardid": 4839228,
+    "earned": "April 20, 2023, 9:33 pm (UTC+0)",
+    "slug": "fly-little-car-fly",
+    "canonical_id": "afaba372-e204-4183-ad3d-9f64a549bd09",
+    "endpoint": "\/challenge\/trackmania-uplay\/8305-fly-little-car-fly",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/b87730e4.png",
+     "m": "\/uplay\/awards\/m\/b87730e4.png",
+     "l": "\/uplay\/awards\/l\/b87730e4.png",
+     "o": "\/uplay\/awards\/o\/b87730e4.png",
+     "t": "\/uplay\/awards\/t\/b87730e4.png"
+    },
+    "timestamp": 1682026388
+   },
+   {
+    "masterAwardId": 4839249,
+    "awardid": 4839249,
+    "earned": "April 4, 2023, 9:06 pm (UTC+0)",
+    "slug": "jump-around",
+    "canonical_id": "2e3e5b84-902e-4fd3-b2c8-26d98bf54795",
+    "endpoint": "\/challenge\/trackmania-uplay\/8326-jump-around",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/00771g64.png",
+     "m": "\/uplay\/awards\/m\/00771g64.png",
+     "l": "\/uplay\/awards\/l\/00771g64.png",
+     "o": "\/uplay\/awards\/o\/00771g64.png",
+     "t": "\/uplay\/awards\/t\/00771g64.png"
+    },
+    "timestamp": 1680642413
+   },
+   {
+    "masterAwardId": 4839227,
+    "awardid": 4839227,
+    "earned": "April 3, 2023, 10:31 pm (UTC+0)",
+    "slug": "lost-your-license",
+    "canonical_id": "77ff6e16-2567-4069-bc26-b0badd2d248e",
+    "endpoint": "\/challenge\/trackmania-uplay\/8304-lost-your-license",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/6d00g6b5.png",
+     "m": "\/uplay\/awards\/m\/6d00g6b5.png",
+     "l": "\/uplay\/awards\/l\/6d00g6b5.png",
+     "o": "\/uplay\/awards\/o\/6d00g6b5.png",
+     "t": "\/uplay\/awards\/t\/6d00g6b5.png"
+    },
+    "timestamp": 1680561091
+   },
+   {
+    "masterAwardId": 4839248,
+    "awardid": 4839248,
+    "earned": "April 3, 2023, 12:44 am (UTC+0)",
+    "slug": "kangaroo-wannabe",
+    "canonical_id": "88c0578d-7dbd-4dd7-9895-1576a0297550",
+    "endpoint": "\/challenge\/trackmania-uplay\/8325-kangaroo-wannabe",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/55eeb41j.png",
+     "m": "\/uplay\/awards\/m\/55eeb41j.png",
+     "l": "\/uplay\/awards\/l\/55eeb41j.png",
+     "o": "\/uplay\/awards\/o\/55eeb41j.png",
+     "t": "\/uplay\/awards\/t\/55eeb41j.png"
+    },
+    "timestamp": 1680482672
+   },
+   {
+    "masterAwardId": 4839226,
+    "awardid": 4839226,
+    "earned": "April 2, 2023, 9:42 pm (UTC+0)",
+    "slug": "gate-passenger",
+    "canonical_id": "f5019c61-f805-4878-bcf7-306749989ce4",
+    "endpoint": "\/challenge\/trackmania-uplay\/8303-gate-passenger",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/4055634e.png",
+     "m": "\/uplay\/awards\/m\/4055634e.png",
+     "l": "\/uplay\/awards\/l\/4055634e.png",
+     "o": "\/uplay\/awards\/o\/4055634e.png",
+     "t": "\/uplay\/awards\/t\/4055634e.png"
+    },
+    "timestamp": 1680471774
+   },
+   {
+    "masterAwardId": 4839233,
+    "awardid": 4839233,
+    "earned": "April 2, 2023, 2:22 am (UTC+0)",
+    "slug": "how-was-the-trip",
+    "canonical_id": "6388d901-ecf0-4d84-bdb7-3eca7a59b5a7",
+    "endpoint": "\/challenge\/trackmania-uplay\/8310-how-was-the-trip",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/35334ej8.png",
+     "m": "\/uplay\/awards\/m\/35334ej8.png",
+     "l": "\/uplay\/awards\/l\/35334ej8.png",
+     "o": "\/uplay\/awards\/o\/35334ej8.png",
+     "t": "\/uplay\/awards\/t\/35334ej8.png"
+    },
+    "timestamp": 1680402164
+   },
+   {
+    "masterAwardId": 4839234,
+    "awardid": 4839234,
+    "earned": "April 2, 2023, 2:14 am (UTC+0)",
+    "slug": "bronze-series-campaigns",
+    "canonical_id": "2d8ad692-c3ba-492e-bf7b-077d5a7d84f9",
+    "endpoint": "\/challenge\/trackmania-uplay\/8311-bronze-series-campaigns",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/77jjdeg1.png",
+     "m": "\/uplay\/awards\/m\/77jjdeg1.png",
+     "l": "\/uplay\/awards\/l\/77jjdeg1.png",
+     "o": "\/uplay\/awards\/o\/77jjdeg1.png",
+     "t": "\/uplay\/awards\/t\/77jjdeg1.png"
+    },
+    "timestamp": 1680401673
+   },
+   {
+    "masterAwardId": 4839235,
+    "awardid": 4839235,
+    "earned": "April 2, 2023, 2:14 am (UTC+0)",
+    "slug": "silver-series-campaigns",
+    "canonical_id": "e90efc6f-8a4a-4d1f-bbe1-a4ab9acd5c0d",
+    "endpoint": "\/challenge\/trackmania-uplay\/8312-silver-series-campaigns",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/55eeb46j.png",
+     "m": "\/uplay\/awards\/m\/55eeb46j.png",
+     "l": "\/uplay\/awards\/l\/55eeb46j.png",
+     "o": "\/uplay\/awards\/o\/55eeb46j.png",
+     "t": "\/uplay\/awards\/t\/55eeb46j.png"
+    },
+    "timestamp": 1680401673
+   },
+   {
+    "masterAwardId": 4839236,
+    "awardid": 4839236,
+    "earned": "April 2, 2023, 2:14 am (UTC+0)",
+    "slug": "gold-series-campaigns",
+    "canonical_id": "022bbbc4-4f42-4ab9-9b3a-8b8b16808446",
+    "endpoint": "\/challenge\/trackmania-uplay\/8313-gold-series-campaigns",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/00771gb4.png",
+     "m": "\/uplay\/awards\/m\/00771gb4.png",
+     "l": "\/uplay\/awards\/l\/00771gb4.png",
+     "o": "\/uplay\/awards\/o\/00771gb4.png",
+     "t": "\/uplay\/awards\/t\/00771gb4.png"
+    },
+    "timestamp": 1680401673
+   },
+   {
+    "masterAwardId": 4839241,
+    "awardid": 4839241,
+    "earned": "March 30, 2023, 10:30 pm (UTC+0)",
+    "slug": "gold-series-dailies",
+    "canonical_id": "c618e65e-754e-45f1-b6f3-dbbd318fd5ee",
+    "endpoint": "\/challenge\/trackmania-uplay\/8318-gold-series-dailies",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/b87730b4.png",
+     "m": "\/uplay\/awards\/m\/b87730b4.png",
+     "l": "\/uplay\/awards\/l\/b87730b4.png",
+     "o": "\/uplay\/awards\/o\/b87730b4.png",
+     "t": "\/uplay\/awards\/t\/b87730b4.png"
+    },
+    "timestamp": 1680215437
+   },
+   {
+    "masterAwardId": 4839239,
+    "awardid": 4839239,
+    "earned": "March 24, 2023, 10:47 pm (UTC+0)",
+    "slug": "bronze-series-dailies",
+    "canonical_id": "1e2e8ae4-0db3-4140-8f78-38928ffc7b26",
+    "endpoint": "\/challenge\/trackmania-uplay\/8316-bronze-series-dailies",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/405563je.png",
+     "m": "\/uplay\/awards\/m\/405563je.png",
+     "l": "\/uplay\/awards\/l\/405563je.png",
+     "o": "\/uplay\/awards\/o\/405563je.png",
+     "t": "\/uplay\/awards\/t\/405563je.png"
+    },
+    "timestamp": 1679698037
+   },
+   {
+    "masterAwardId": 4839240,
+    "awardid": 4839240,
+    "earned": "March 24, 2023, 10:47 pm (UTC+0)",
+    "slug": "silver-series-dailies",
+    "canonical_id": "12ed24b3-e8df-42bd-8c7c-725aa5913c65",
+    "endpoint": "\/challenge\/trackmania-uplay\/8317-silver-series-dailies",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/6d00g6e5.png",
+     "m": "\/uplay\/awards\/m\/6d00g6e5.png",
+     "l": "\/uplay\/awards\/l\/6d00g6e5.png",
+     "o": "\/uplay\/awards\/o\/6d00g6e5.png",
+     "t": "\/uplay\/awards\/t\/6d00g6e5.png"
+    },
+    "timestamp": 1679698037
+   },
+   {
+    "masterAwardId": 4839229,
+    "awardid": 4839229,
+    "earned": "March 24, 2023, 10:43 pm (UTC+0)",
+    "slug": "campaign-explorer",
+    "canonical_id": "4f61f3cb-afd3-4953-90de-334de01e62c2",
+    "endpoint": "\/challenge\/trackmania-uplay\/8306-campaign-explorer",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/gj007eg7.png",
+     "m": "\/uplay\/awards\/m\/gj007eg7.png",
+     "l": "\/uplay\/awards\/l\/gj007eg7.png",
+     "o": "\/uplay\/awards\/o\/gj007eg7.png",
+     "t": "\/uplay\/awards\/t\/gj007eg7.png"
+    },
+    "timestamp": 1679697815
+   },
+   {
+    "masterAwardId": 4839230,
+    "awardid": 4839230,
+    "earned": "March 24, 2023, 10:43 pm (UTC+0)",
+    "slug": "player-of-the-month",
+    "canonical_id": "04c17ac1-cd78-4b6a-9130-53aab0f4583d",
+    "endpoint": "\/challenge\/trackmania-uplay\/8307-player-of-the-month",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/dgjj8544.png",
+     "m": "\/uplay\/awards\/m\/dgjj8544.png",
+     "l": "\/uplay\/awards\/l\/dgjj8544.png",
+     "o": "\/uplay\/awards\/o\/dgjj8544.png",
+     "t": "\/uplay\/awards\/t\/dgjj8544.png"
+    },
+    "timestamp": 1679697815
+   }
+  ],
+  "master_gameid": "513901",
+  "success": true
+ }
+}

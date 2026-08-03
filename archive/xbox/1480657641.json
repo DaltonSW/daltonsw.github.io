@@ -1,0 +1,209 @@
+{
+ "provider": "xbox",
+ "title": "Happy Wars",
+ "updated": "2026-08-02",
+ "id": "1480657641",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 6,
+ "total": 36,
+ "first": "2012-10-14",
+ "last": "2012-11-09",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-11-10",
+ "achievements": [
+  {
+   "key": "1",
+   "name": "First Victory",
+   "description": "Get 1 victory in any game session",
+   "unlocked": true,
+   "date": "2012-10-14T14:50:14-05:00",
+   "points": 10
+  },
+  {
+   "key": "11",
+   "name": "Nobody Calls Me Noob",
+   "description": "Complete all of the tutorials",
+   "unlocked": true,
+   "date": "2012-10-14T14:58:50-05:00",
+   "points": 20
+  },
+  {
+   "key": "3",
+   "name": "Hello World",
+   "description": "Use a talk or order commands 4 times in a Quick Match or Co-op mode",
+   "unlocked": true,
+   "date": "2012-10-14T15:22:50-05:00",
+   "points": 10
+  },
+  {
+   "key": "5",
+   "name": "The Legend Begins",
+   "description": "Receive mention in Hero Pop-up in a Quick Match or Co-op mode",
+   "unlocked": true,
+   "date": "2012-10-14T15:52:05-05:00",
+   "points": 10
+  },
+  {
+   "key": "4",
+   "name": "All Rounder",
+   "description": "Use Warrior, Cleric, and Mage 2 times each in a Quick Match or Co-op mode",
+   "unlocked": true,
+   "date": "2012-10-14T16:10:19-05:00",
+   "points": 10
+  },
+  {
+   "key": "10",
+   "name": "Card-Happy",
+   "description": "Play Happy Cards Lite",
+   "unlocked": true,
+   "date": "2012-11-09T20:39:00-06:00",
+   "points": 10
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 10,
+     "titleId": 1480657641,
+     "name": "Card-Happy",
+     "sequence": 26,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 11,
+     "description": "Play Happy Cards Lite",
+     "lockedDescription": "Play Happy Cards Lite",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-11-10T02:39:00.7600000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 39.37
+     }
+    },
+    {
+     "id": 4,
+     "titleId": 1480657641,
+     "name": "All Rounder",
+     "sequence": 25,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 5,
+     "description": "Use Warrior, Cleric, and Mage 2 times each in a Quick Match or Co-op mode",
+     "lockedDescription": "Use Warrior, Cleric, and Mage 2 times each in a Quick Match or Co-op mode",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-10-14T21:10:19.2530000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 22.29
+     }
+    },
+    {
+     "id": 5,
+     "titleId": 1480657641,
+     "name": "The Legend Begins",
+     "sequence": 24,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 6,
+     "description": "Receive mention in Hero Pop-up in a Quick Match or Co-op mode",
+     "lockedDescription": "Receive mention in Hero Pop-up in a Quick Match or Co-op mode",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-10-14T20:52:05.5100000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 34.45
+     }
+    },
+    {
+     "id": 3,
+     "titleId": 1480657641,
+     "name": "Hello World",
+     "sequence": 23,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 4,
+     "description": "Use a talk or order commands 4 times in a Quick Match or Co-op mode",
+     "lockedDescription": "Use a talk or order commands 4 times in a Quick Match or Co-op mode",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-10-14T20:22:50.3400000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 29.98
+     }
+    },
+    {
+     "id": 11,
+     "titleId": 1480657641,
+     "name": "Nobody Calls Me Noob",
+     "sequence": 22,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 12,
+     "description": "Complete all of the tutorials",
+     "lockedDescription": "Complete all of the tutorials",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-10-14T19:58:50.7370000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 32.4
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1480657641,
+     "name": "First Victory",
+     "sequence": 21,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 2,
+     "description": "Get 1 victory in any game session",
+     "lockedDescription": "Get 1 victory in any game session",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-10-14T19:50:14.6200000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 66.69
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 6
+   }
+  },
+  "code": 200
+ }
+}

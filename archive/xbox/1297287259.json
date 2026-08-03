@@ -1,0 +1,448 @@
+{
+ "provider": "xbox",
+ "title": "Halo: Reach",
+ "updated": "2026-08-02",
+ "id": "1297287259",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 13,
+ "total": 69,
+ "first": "2011-12-16",
+ "last": "2011-12-22",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-08-24",
+ "achievements": [
+  {
+   "key": "67",
+   "name": "Doctor, Doctor",
+   "description": "Used a Health Pack to replenish life after taking body damage.",
+   "unlocked": true,
+   "points": 5
+  },
+  {
+   "key": "77",
+   "name": "That's a Knife",
+   "description": "Performed an Assassination on an enemy.",
+   "unlocked": true,
+   "date": "2011-12-16T19:43:57-06:00",
+   "points": 10
+  },
+  {
+   "key": "73",
+   "name": "Two Corpses in One Grave",
+   "description": "Killed 2 vehicles at once with the Target Locator during the 3rd mission.",
+   "unlocked": true,
+   "date": "2011-12-17T09:11:46-06:00",
+   "points": 25
+  },
+  {
+   "key": "76",
+   "name": "Protocol Dictates Action",
+   "description": "Completed the 3rd mission on Normal or harder.",
+   "unlocked": true,
+   "date": "2011-12-17T09:47:18-06:00",
+   "points": 10
+  },
+  {
+   "key": "85",
+   "name": "The Start of Something",
+   "description": "Reached the rank of Corporal in the UNSC.",
+   "unlocked": true,
+   "date": "2011-12-17T11:24:45-06:00",
+   "points": 15
+  },
+  {
+   "key": "98",
+   "name": "Yes, Sensei",
+   "description": "Earned a First Strike Medal in a Matchmaking game.",
+   "unlocked": true,
+   "date": "2011-12-19T17:11:41-06:00",
+   "points": 10
+  },
+  {
+   "key": "79",
+   "name": "Your Heresy Will Stay Your Feet",
+   "description": "Killed the Elite Zealot before he escaped during the 5th mission.",
+   "unlocked": true,
+   "date": "2011-12-20T21:02:03-06:00",
+   "points": 25
+  },
+  {
+   "key": "78",
+   "name": "I Need a Weapon",
+   "description": "Completed the 4th mission on Normal or harder.",
+   "unlocked": true,
+   "date": "2011-12-21T16:51:26-06:00",
+   "points": 10
+  },
+  {
+   "key": "71",
+   "name": "An Elegant Weapon...",
+   "description": "Killed 10 enemies in a Firefight or Campaign session with the DMR.",
+   "unlocked": true,
+   "date": "2011-12-21T17:04:01-06:00",
+   "points": 10
+  },
+  {
+   "key": "80",
+   "name": "To War",
+   "description": "Completed the 5th mission on Normal or harder.",
+   "unlocked": true,
+   "date": "2011-12-21T17:37:07-06:00",
+   "points": 10
+  },
+  {
+   "key": "74",
+   "name": "Swap Meet",
+   "description": "Traded weapons with an AI ally in Campaign.",
+   "unlocked": true,
+   "date": "2011-12-21T18:18:09-06:00",
+   "points": 10
+  },
+  {
+   "key": "68",
+   "name": "I See You Favor a .45",
+   "description": "Killed 10 enemies in a Firefight or Campaign session with the M6G pistol.",
+   "unlocked": true,
+   "date": "2011-12-21T18:26:07-06:00",
+   "points": 10
+  },
+  {
+   "key": "82",
+   "name": "You Flew Pretty Good",
+   "description": "Completed the 6th mission on Normal or harder.",
+   "unlocked": true,
+   "date": "2011-12-21T18:29:57-06:00",
+   "points": 10
+  },
+  {
+   "key": "84",
+   "name": "Into the Howling Dark",
+   "description": "Completed the 7th mission on Normal or harder.",
+   "unlocked": true,
+   "date": "2011-12-22T18:45:17-06:00",
+   "points": 10
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 84,
+     "titleId": 1297287259,
+     "name": "Into the Howling Dark",
+     "sequence": 73,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 13,
+     "description": "Completed the 7th mission on Normal or harder.",
+     "lockedDescription": "Complete the 7th mission on Normal or harder.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-23T00:45:17.0270000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 30.18
+     }
+    },
+    {
+     "id": 82,
+     "titleId": 1297287259,
+     "name": "You Flew Pretty Good",
+     "sequence": 72,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 12,
+     "description": "Completed the 6th mission on Normal or harder.",
+     "lockedDescription": "Complete the 6th mission on Normal or harder.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-22T00:29:57.4670000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 31.89
+     }
+    },
+    {
+     "id": 68,
+     "titleId": 1297287259,
+     "name": "I See You Favor a .45",
+     "sequence": 71,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 41,
+     "description": "Killed 10 enemies in a Firefight or Campaign session with the M6G pistol.",
+     "lockedDescription": "Kill 10 Enemies in a Firefight or Campaign session with the M6G pistol.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-22T00:26:07.4870000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 36.01
+     }
+    },
+    {
+     "id": 74,
+     "titleId": 1297287259,
+     "name": "Swap Meet",
+     "sequence": 70,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 53,
+     "description": "Traded weapons with an AI ally in Campaign.",
+     "lockedDescription": "Trade weapons with an AI ally in Campaign.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-22T00:18:09.0600000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 48.15
+     }
+    },
+    {
+     "id": 80,
+     "titleId": 1297287259,
+     "name": "To War",
+     "sequence": 69,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 11,
+     "description": "Completed the 5th mission on Normal or harder.",
+     "lockedDescription": "Complete the 5th mission on Normal or harder.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-21T23:37:07.3000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 33.84
+     }
+    },
+    {
+     "id": 71,
+     "titleId": 1297287259,
+     "name": "An Elegant Weapon...",
+     "sequence": 68,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 24,
+     "description": "Killed 10 enemies in a Firefight or Campaign session with the DMR.",
+     "lockedDescription": "Kill 10 enemies in a Firefight or Campaign session with the DMR.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-21T23:04:01.2500000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 47.21
+     }
+    },
+    {
+     "id": 78,
+     "titleId": 1297287259,
+     "name": "I Need a Weapon",
+     "sequence": 67,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 10,
+     "description": "Completed the 4th mission on Normal or harder.",
+     "lockedDescription": "Complete the 4th mission on Normal or harder.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-21T22:51:26.8470000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 36.4
+     }
+    },
+    {
+     "id": 79,
+     "titleId": 1297287259,
+     "name": "Your Heresy Will Stay Your Feet",
+     "sequence": 66,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 25,
+     "imageId": 34,
+     "description": "Killed the Elite Zealot before he escaped during the 5th mission.",
+     "lockedDescription": "Kill the Elite Zealot before he can escape during the 5th mission.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-21T03:02:03.5630000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 32.23
+     }
+    },
+    {
+     "id": 98,
+     "titleId": 1297287259,
+     "name": "Yes, Sensei",
+     "sequence": 65,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 26,
+     "description": "Earned a First Strike Medal in a Matchmaking game.",
+     "lockedDescription": "Earn a First Strike Medal in a Matchmaking game.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-19T23:11:41.6870000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 36.42
+     }
+    },
+    {
+     "id": 85,
+     "titleId": 1297287259,
+     "name": "The Start of Something",
+     "sequence": 64,
+     "flags": 1245194,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 15,
+     "imageId": 42,
+     "description": "Reached the rank of Corporal in the UNSC.",
+     "lockedDescription": "Reach the rank of Corporal in the UNSC.",
+     "type": 2,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-17T17:24:45.6870000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 58.9
+     }
+    },
+    {
+     "id": 76,
+     "titleId": 1297287259,
+     "name": "Protocol Dictates Action",
+     "sequence": 63,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 9,
+     "description": "Completed the 3rd mission on Normal or harder.",
+     "lockedDescription": "Complete the 3rd mission on Normal or harder.",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-17T15:47:18.9070000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 41.75
+     }
+    },
+    {
+     "id": 73,
+     "titleId": 1297287259,
+     "name": "Two Corpses in One Grave",
+     "sequence": 62,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 25,
+     "imageId": 33,
+     "description": "Killed 2 vehicles at once with the Target Locator during the 3rd mission.",
+     "lockedDescription": "Kill 2 vehicles at once with the Target Locator during the 3rd mission.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-17T15:11:46.5070000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 22.22
+     }
+    },
+    {
+     "id": 67,
+     "titleId": 1297287259,
+     "name": "Doctor, Doctor",
+     "sequence": 61,
+     "flags": 1179660,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 5,
+     "imageId": 27,
+     "description": "Used a Health Pack to replenish life after taking body damage.",
+     "lockedDescription": "Use a Health Pack to recover life after taking body damage.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 64.91
+     }
+    },
+    {
+     "id": 77,
+     "titleId": 1297287259,
+     "name": "That's a Knife",
+     "sequence": 60,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 6,
+     "description": "Performed an Assassination on an enemy.",
+     "lockedDescription": "Perform an Assassination on an enemy.",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-17T01:43:57.7170000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 57.44
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 14
+   }
+  },
+  "code": 200
+ }
+}

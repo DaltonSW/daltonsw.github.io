@@ -7,7 +7,7 @@ status: ongoing
 started: ""
 finished: ""
 rating: null
-draft: true
+draft: false
 cascade:
   params:
     games:

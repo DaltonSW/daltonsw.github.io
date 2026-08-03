@@ -1,18 +1,1218 @@
 {
  "provider": "psn",
  "title": "Beyond: Two Souls",
- "updated": "2026-07-27",
+ "updated": "2026-08-02",
  "id": "NPWR06302_00",
- "fetched": "2026-07-27",
- "last_attempt": "2026-07-27",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
  "unlocked": 0,
  "total": 46,
  "platform": "PS4",
+ "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/C583904ACC3E3BF5734BECBACE7FBC7BDC256F1C.PNG",
  "completion": "0%",
- "source": "exophase",
  "last_played": "2022-04-24",
- "achievements": null,
+ "achievements": [
+  {
+   "key": "0",
+   "name": "BEYOND: TWO SOULS™ MASTER",
+   "description": "Collected all trophies!",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/11770D65E3BD0450B352C1447B006D60D9D979A4.PNG",
+   "tier": "platinum"
+  },
+  {
+   "key": "1",
+   "name": "Somebody Else?",
+   "description": "Played as Aiden for the first time.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/8487E9437537C5FF7521A03116177EA9FCB98BA2.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "10",
+   "name": "Portal Shutdown",
+   "description": "Successfully shut down the condenser portal.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/985C4C31CCEC6037D921999DBCE9F98D5CE8B577.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "11",
+   "name": "Channeling Master",
+   "description": "Channeled all dead bodies in the condenser compound.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/4FD9610B425312DF3308859463AAF782145CE57A.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "12",
+   "name": "Perfect Soldier",
+   "description": "Completed most of the physical training successfully.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/198909C84F7668A835134A4CA94B6FDEC4CF5E7D.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "13",
+   "name": "Fight Apprentice",
+   "description": "Won every fight whilst taking less than 5 hits.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/80AF0D149B36A4CE9EFAE7F41CAA2D555555110F.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "14",
+   "name": "Stealth Apprentice",
+   "description": "Completed all stealth training without being spotted.\n",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/BE79E6666FE9A5DC5E4ABA80B91C9209DC6024F4.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "15",
+   "name": "Clean Job",
+   "description": "Shut down the monitor and finished the mission using only Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/5FA26EA71283E6C1CE28F3FF50601F6A9EE8C896.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "16",
+   "name": "Possessive Spy",
+   "description": "Finished the mission using only the Sheik.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/862CEFDD332488FDE3A0ABC3F55922D4503F3B0F.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "17",
+   "name": "Perfect Lover",
+   "description": "Cooked a meal, cleaned the apartment, took a shower, wore the elegant dress and put on some music.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/3E43D05C908A7C7A65192906029F63CA04145ECA.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "18",
+   "name": "Casual Girl",
+   "description": "Ordered a pizza, watched some TV and wore something casual.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/F856E53C2A145D4C5B7127B270A451CC07B10D0D.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "19",
+   "name": "In Love with Ryan",
+   "description": "Slept with Ryan.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/C9C351120C2347F05FED3BC561119D6B5C929BE3.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "2",
+   "name": "Obedience",
+   "description": "Stopped the experiment voluntarily.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/9A11EAE9E699CABBF3E16E44579893EE64E122E9.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "20",
+   "name": "Stealth Master",
+   "description": "Made it to the cathedral without being spotted.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/7E7D94F03BAEC20D8E11FFB19CE822175C6B5934.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "21",
+   "name": "Catch Me if You Can",
+   "description": "Escaped the train without being arrested.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/611F5B0CB9871338746533957F67346F856E1DCB.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "22",
+   "name": "Aiden's Apocalypse",
+   "description": "Destroyed the gas station, the church, the gun store and the helicopter.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/781754881A4851B69A359696CD0237F7F98E1678.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "23",
+   "name": "Houdini",
+   "description": "Got arrested three times and escaped each time.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/89B2AC51BFFE5933C46133ABD1C70FC1E6BF9B98.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "24",
+   "name": "Money to Eat",
+   "description": "Earned enough money to have some chocolate during dinner.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/5F2F2472327A89880EB9E4307F679B054019A340.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "25",
+   "name": "Smart Thief",
+   "description": "Deactivated the supermarket's camera.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/7E6ECBFAEC85AA8769776CEF9242C7C1E7887C9C.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "26",
+   "name": "Miracles",
+   "description": "Looked after Tuesday's baby, healed Jimmy and channeled Stan.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/3126641A08702DF16477C4F74FECB891A47A6C7B.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "27",
+   "name": "Medicine Girl",
+   "description": "Successfully performed the entire ritual.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B76FF426F2D2874698CDEF3730401BB5401D5184.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "28",
+   "name": "Not Just Sand",
+   "description": "Ran from the sandstorm and took less than 3 hits.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/127A12518DDF6758DF8D3FD4AE655CDC4CE3795B.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "29",
+   "name": "Eye for an Eye",
+   "description": "Didn't speak during the interrogation.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B6CA7012480E1E2D774C76E6094F2FD52140E1C9.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "3",
+   "name": "Teammates",
+   "description": "Did 3 mischievous things with Jodie and Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/E7E9898CC70929564753AD89AE483B5ED33F547F.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "30",
+   "name": "Agent 894732",
+   "description": "Told the truth during the interrogation.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/03C2FD85956E91264C57BB415A6477F6A14F7049.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "31",
+   "name": "Almost Too Easy",
+   "description": "Went to the containment shield with the General.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/57A3C7A898F304744BCEABE26B194DFD62C46AA8.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "32",
+   "name": "Chose Afterlife",
+   "description": "Entered the Infraworld.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/00C0D37AE1D7F289A0DAEF8A857145A59CB9728F.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "33",
+   "name": "Chose Life",
+   "description": "Stayed in reality.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/9AEA5C824FF0E5D6EDF965D996540D427E84573A.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "34",
+   "name": "Convince Dawkins",
+   "description": "Helped Dawkins see the truth.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/CDE4B4D4DFD3C87FC8E933E6F3533D67DADB2AE5.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "35",
+   "name": "Black Sun Down",
+   "description": "Deactivated the Black Sun.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/D6B015A43D7182C18BB32E09469A25CDF9504CF5.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "36",
+   "name": "Two Souls",
+   "description": "Launched a scene in Duo mode.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B9507F17007BDEA567109EBD835F8E45A88DDD01.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "37",
+   "name": "The End",
+   "description": "One possible reality has been uncovered...",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/A4C3A73C47C3A553622755FBC7A3231ECD183E90.PNG",
+   "tier": "silver"
+  },
+  {
+   "key": "38",
+   "name": "Uncontrollable",
+   "description": "Took every opportunity to be evil as Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/DFC3D7ED5448443C541AC00A81D8D9E64EA9CF3E.PNG",
+   "tier": "silver"
+  },
+  {
+   "key": "39",
+   "name": "Never Alone",
+   "description": "Started at least one romance.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/76B9AA3FBCE5E9F2244E62421FB5CDD300E21E58.PNG",
+   "tier": "silver"
+  },
+  {
+   "key": "4",
+   "name": "Entities Apprentice",
+   "description": "Vanquished the entities with Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/70E3EEF3DC824F0B924C048924D24C0490BD64AE.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "40",
+   "name": "Entities Master",
+   "description": "Was victorious in every battle with the evil entities.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/183ABABFE95D6AB975789E858C4A3AC460F63BB3.PNG",
+   "tier": "silver"
+  },
+  {
+   "key": "41",
+   "name": "A Better World",
+   "description": "Let every possible character die and chose to go with them to the Infraworld.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/1557D0AAEDACCC488C06EC0176B4BE59B5453447.PNG",
+   "tier": "silver"
+  },
+  {
+   "key": "42",
+   "name": "Explorer",
+   "description": "Found all the bonuses.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/4A9CE048264B852FF49E82471456791E0CBF68CC.PNG",
+   "tier": "silver"
+  },
+  {
+   "key": "43",
+   "name": "Together Till the End",
+   "description": "Finished the game in Duo mode.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/2B696B4FEC10C9AE778EAADCB8F8163A1A02743D.PNG",
+   "tier": "gold"
+  },
+  {
+   "key": "44",
+   "name": "All Endings...",
+   "description": "Saw all endings.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/7BA4838611DAA367744F173E437842A54EA5CAF2.PNG",
+   "tier": "gold"
+  },
+  {
+   "key": "45",
+   "name": "Saved All",
+   "description": "Saved every character that could be saved.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/677C106B357BEEE4A814D013D34D442520820673.PNG",
+   "tier": "gold"
+  },
+  {
+   "key": "5",
+   "name": "Sorry",
+   "description": "Forgave Jodie's father.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/858F4BFD8BEBFF5E79768C614EBE055AA0D0AAB6.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "6",
+   "name": "Not My Father",
+   "description": "Choked Philip with Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B2EBD4327D64D4B8F759CA4E9E50CD2B198F2ABF.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "7",
+   "name": "Revenge",
+   "description": "Taught 3 or more of the teens a lesson, or started the house fire, with Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/D895209888A5645A5F4BEF8C4AC21F7A07CCECB4.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "8",
+   "name": "Cold Blood",
+   "description": "Did not impress or scare the teens with Aiden.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/97C855D07FDFDABB8D43F28881174EE7A3662642.PNG",
+   "tier": "bronze"
+  },
+  {
+   "key": "9",
+   "name": "Together Forever",
+   "description": "Protected Jodie from her attackers.",
+   "unlocked": false,
+   "icon": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/C25D9491BA16657CAD4F1A0034BBE40216AE024E.PNG",
+   "tier": "bronze"
+  }
+ ],
  "raw": {
-  "success": false
+  "definitions": [
+   {
+    "trophyId": 0,
+    "trophyHidden": false,
+    "trophyType": "platinum",
+    "trophyName": "BEYOND: TWO SOULS™ MASTER",
+    "trophyDetail": "Collected all trophies!",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/11770D65E3BD0450B352C1447B006D60D9D979A4.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 1,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Somebody Else?",
+    "trophyDetail": "Played as Aiden for the first time.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/8487E9437537C5FF7521A03116177EA9FCB98BA2.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 2,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Obedience",
+    "trophyDetail": "Stopped the experiment voluntarily.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/9A11EAE9E699CABBF3E16E44579893EE64E122E9.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 3,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Teammates",
+    "trophyDetail": "Did 3 mischievous things with Jodie and Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/E7E9898CC70929564753AD89AE483B5ED33F547F.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 4,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Entities Apprentice",
+    "trophyDetail": "Vanquished the entities with Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/70E3EEF3DC824F0B924C048924D24C0490BD64AE.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 5,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Sorry",
+    "trophyDetail": "Forgave Jodie's father.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/858F4BFD8BEBFF5E79768C614EBE055AA0D0AAB6.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 6,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Not My Father",
+    "trophyDetail": "Choked Philip with Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B2EBD4327D64D4B8F759CA4E9E50CD2B198F2ABF.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 7,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Revenge",
+    "trophyDetail": "Taught 3 or more of the teens a lesson, or started the house fire, with Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/D895209888A5645A5F4BEF8C4AC21F7A07CCECB4.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 8,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Cold Blood",
+    "trophyDetail": "Did not impress or scare the teens with Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/97C855D07FDFDABB8D43F28881174EE7A3662642.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 9,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Together Forever",
+    "trophyDetail": "Protected Jodie from her attackers.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/C25D9491BA16657CAD4F1A0034BBE40216AE024E.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 10,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Portal Shutdown",
+    "trophyDetail": "Successfully shut down the condenser portal.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/985C4C31CCEC6037D921999DBCE9F98D5CE8B577.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 11,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Channeling Master",
+    "trophyDetail": "Channeled all dead bodies in the condenser compound.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/4FD9610B425312DF3308859463AAF782145CE57A.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 12,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Perfect Soldier",
+    "trophyDetail": "Completed most of the physical training successfully.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/198909C84F7668A835134A4CA94B6FDEC4CF5E7D.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 13,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Fight Apprentice",
+    "trophyDetail": "Won every fight whilst taking less than 5 hits.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/80AF0D149B36A4CE9EFAE7F41CAA2D555555110F.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 14,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Stealth Apprentice",
+    "trophyDetail": "Completed all stealth training without being spotted.\n",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/BE79E6666FE9A5DC5E4ABA80B91C9209DC6024F4.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 15,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Clean Job",
+    "trophyDetail": "Shut down the monitor and finished the mission using only Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/5FA26EA71283E6C1CE28F3FF50601F6A9EE8C896.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 16,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Possessive Spy",
+    "trophyDetail": "Finished the mission using only the Sheik.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/862CEFDD332488FDE3A0ABC3F55922D4503F3B0F.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 17,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Perfect Lover",
+    "trophyDetail": "Cooked a meal, cleaned the apartment, took a shower, wore the elegant dress and put on some music.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/3E43D05C908A7C7A65192906029F63CA04145ECA.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 18,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Casual Girl",
+    "trophyDetail": "Ordered a pizza, watched some TV and wore something casual.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/F856E53C2A145D4C5B7127B270A451CC07B10D0D.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 19,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "In Love with Ryan",
+    "trophyDetail": "Slept with Ryan.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/C9C351120C2347F05FED3BC561119D6B5C929BE3.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 20,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Stealth Master",
+    "trophyDetail": "Made it to the cathedral without being spotted.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/7E7D94F03BAEC20D8E11FFB19CE822175C6B5934.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 21,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Catch Me if You Can",
+    "trophyDetail": "Escaped the train without being arrested.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/611F5B0CB9871338746533957F67346F856E1DCB.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 22,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Aiden's Apocalypse",
+    "trophyDetail": "Destroyed the gas station, the church, the gun store and the helicopter.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/781754881A4851B69A359696CD0237F7F98E1678.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 23,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Houdini",
+    "trophyDetail": "Got arrested three times and escaped each time.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/89B2AC51BFFE5933C46133ABD1C70FC1E6BF9B98.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 24,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Money to Eat",
+    "trophyDetail": "Earned enough money to have some chocolate during dinner.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/5F2F2472327A89880EB9E4307F679B054019A340.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 25,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Smart Thief",
+    "trophyDetail": "Deactivated the supermarket's camera.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/7E6ECBFAEC85AA8769776CEF9242C7C1E7887C9C.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 26,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Miracles",
+    "trophyDetail": "Looked after Tuesday's baby, healed Jimmy and channeled Stan.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/3126641A08702DF16477C4F74FECB891A47A6C7B.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 27,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Medicine Girl",
+    "trophyDetail": "Successfully performed the entire ritual.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B76FF426F2D2874698CDEF3730401BB5401D5184.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 28,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Not Just Sand",
+    "trophyDetail": "Ran from the sandstorm and took less than 3 hits.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/127A12518DDF6758DF8D3FD4AE655CDC4CE3795B.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 29,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Eye for an Eye",
+    "trophyDetail": "Didn't speak during the interrogation.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B6CA7012480E1E2D774C76E6094F2FD52140E1C9.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 30,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Agent 894732",
+    "trophyDetail": "Told the truth during the interrogation.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/03C2FD85956E91264C57BB415A6477F6A14F7049.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 31,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Almost Too Easy",
+    "trophyDetail": "Went to the containment shield with the General.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/57A3C7A898F304744BCEABE26B194DFD62C46AA8.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 32,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Chose Afterlife",
+    "trophyDetail": "Entered the Infraworld.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/00C0D37AE1D7F289A0DAEF8A857145A59CB9728F.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 33,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Chose Life",
+    "trophyDetail": "Stayed in reality.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/9AEA5C824FF0E5D6EDF965D996540D427E84573A.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 34,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Convince Dawkins",
+    "trophyDetail": "Helped Dawkins see the truth.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/CDE4B4D4DFD3C87FC8E933E6F3533D67DADB2AE5.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 35,
+    "trophyHidden": true,
+    "trophyType": "bronze",
+    "trophyName": "Black Sun Down",
+    "trophyDetail": "Deactivated the Black Sun.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/D6B015A43D7182C18BB32E09469A25CDF9504CF5.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 36,
+    "trophyHidden": false,
+    "trophyType": "bronze",
+    "trophyName": "Two Souls",
+    "trophyDetail": "Launched a scene in Duo mode.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/B9507F17007BDEA567109EBD835F8E45A88DDD01.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 37,
+    "trophyHidden": true,
+    "trophyType": "silver",
+    "trophyName": "The End",
+    "trophyDetail": "One possible reality has been uncovered...",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/A4C3A73C47C3A553622755FBC7A3231ECD183E90.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 38,
+    "trophyHidden": true,
+    "trophyType": "silver",
+    "trophyName": "Uncontrollable",
+    "trophyDetail": "Took every opportunity to be evil as Aiden.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/DFC3D7ED5448443C541AC00A81D8D9E64EA9CF3E.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 39,
+    "trophyHidden": true,
+    "trophyType": "silver",
+    "trophyName": "Never Alone",
+    "trophyDetail": "Started at least one romance.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/76B9AA3FBCE5E9F2244E62421FB5CDD300E21E58.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 40,
+    "trophyHidden": true,
+    "trophyType": "silver",
+    "trophyName": "Entities Master",
+    "trophyDetail": "Was victorious in every battle with the evil entities.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/183ABABFE95D6AB975789E858C4A3AC460F63BB3.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 41,
+    "trophyHidden": true,
+    "trophyType": "silver",
+    "trophyName": "A Better World",
+    "trophyDetail": "Let every possible character die and chose to go with them to the Infraworld.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/1557D0AAEDACCC488C06EC0176B4BE59B5453447.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 42,
+    "trophyHidden": true,
+    "trophyType": "silver",
+    "trophyName": "Explorer",
+    "trophyDetail": "Found all the bonuses.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/4A9CE048264B852FF49E82471456791E0CBF68CC.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 43,
+    "trophyHidden": true,
+    "trophyType": "gold",
+    "trophyName": "Together Till the End",
+    "trophyDetail": "Finished the game in Duo mode.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/2B696B4FEC10C9AE778EAADCB8F8163A1A02743D.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 44,
+    "trophyHidden": false,
+    "trophyType": "gold",
+    "trophyName": "All Endings...",
+    "trophyDetail": "Saw all endings.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/7BA4838611DAA367744F173E437842A54EA5CAF2.PNG",
+    "trophyGroupId": "default"
+   },
+   {
+    "trophyId": 45,
+    "trophyHidden": true,
+    "trophyType": "gold",
+    "trophyName": "Saved All",
+    "trophyDetail": "Saved every character that could be saved.",
+    "trophyIconUrl": "https://image.api.playstation.com/trophy/np/NPWR06302_00_000FD67BBE3B3A789A3FCBB8271D46A9D7B8A1F32B/677C106B357BEEE4A814D013D34D442520820673.PNG",
+    "trophyGroupId": "default"
+   }
+  ],
+  "earned": [
+   {
+    "trophyId": 0,
+    "trophyHidden": false,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "platinum",
+    "trophyRare": 0,
+    "trophyEarnedRate": "0.7"
+   },
+   {
+    "trophyId": 1,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 3,
+    "trophyEarnedRate": "85.6"
+   },
+   {
+    "trophyId": 2,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 3,
+    "trophyEarnedRate": "62.0"
+   },
+   {
+    "trophyId": 3,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "15.8"
+   },
+   {
+    "trophyId": 4,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "41.1"
+   },
+   {
+    "trophyId": 5,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "18.0"
+   },
+   {
+    "trophyId": 6,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "28.9"
+   },
+   {
+    "trophyId": 7,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "37.8"
+   },
+   {
+    "trophyId": 8,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "14.5"
+   },
+   {
+    "trophyId": 9,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "27.1"
+   },
+   {
+    "trophyId": 10,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "38.3"
+   },
+   {
+    "trophyId": 11,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "12.5"
+   },
+   {
+    "trophyId": 12,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "47.3"
+   },
+   {
+    "trophyId": 13,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "48.4"
+   },
+   {
+    "trophyId": 14,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "34.7"
+   },
+   {
+    "trophyId": 15,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "42.5"
+   },
+   {
+    "trophyId": 16,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "6.4"
+   },
+   {
+    "trophyId": 17,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "5.9"
+   },
+   {
+    "trophyId": 18,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 0,
+    "trophyEarnedRate": "2.2"
+   },
+   {
+    "trophyId": 19,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "8.5"
+   },
+   {
+    "trophyId": 20,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "14.6"
+   },
+   {
+    "trophyId": 21,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "46.6"
+   },
+   {
+    "trophyId": 22,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 0,
+    "trophyEarnedRate": "1.3"
+   },
+   {
+    "trophyId": 23,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 0,
+    "trophyEarnedRate": "3.2"
+   },
+   {
+    "trophyId": 24,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "37.1"
+   },
+   {
+    "trophyId": 25,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "27.6"
+   },
+   {
+    "trophyId": 26,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "14.5"
+   },
+   {
+    "trophyId": 27,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "32.4"
+   },
+   {
+    "trophyId": 28,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "19.2"
+   },
+   {
+    "trophyId": 29,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 1,
+    "trophyEarnedRate": "13.8"
+   },
+   {
+    "trophyId": 30,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "18.2"
+   },
+   {
+    "trophyId": 31,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "17.9"
+   },
+   {
+    "trophyId": 32,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 0,
+    "trophyEarnedRate": "4.2"
+   },
+   {
+    "trophyId": 33,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "20.7"
+   },
+   {
+    "trophyId": 34,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "19.4"
+   },
+   {
+    "trophyId": 35,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "22.9"
+   },
+   {
+    "trophyId": 36,
+    "trophyHidden": false,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "bronze",
+    "trophyRare": 2,
+    "trophyEarnedRate": "15.5"
+   },
+   {
+    "trophyId": 37,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "silver",
+    "trophyRare": 2,
+    "trophyEarnedRate": "22.4"
+   },
+   {
+    "trophyId": 38,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "silver",
+    "trophyRare": 0,
+    "trophyEarnedRate": "0.9"
+   },
+   {
+    "trophyId": 39,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "silver",
+    "trophyRare": 2,
+    "trophyEarnedRate": "33.3"
+   },
+   {
+    "trophyId": 40,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "silver",
+    "trophyRare": 2,
+    "trophyEarnedRate": "26.7"
+   },
+   {
+    "trophyId": 41,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "silver",
+    "trophyRare": 0,
+    "trophyEarnedRate": "0.9"
+   },
+   {
+    "trophyId": 42,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "silver",
+    "trophyRare": 0,
+    "trophyEarnedRate": "0.9"
+   },
+   {
+    "trophyId": 43,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "gold",
+    "trophyRare": 0,
+    "trophyEarnedRate": "1.9"
+   },
+   {
+    "trophyId": 44,
+    "trophyHidden": false,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "gold",
+    "trophyRare": 0,
+    "trophyEarnedRate": "0.7"
+   },
+   {
+    "trophyId": 45,
+    "trophyHidden": true,
+    "earned": false,
+    "earnedDateTime": "",
+    "trophyType": "gold",
+    "trophyRare": 0,
+    "trophyEarnedRate": "2.1"
+   }
+  ]
  }
 }

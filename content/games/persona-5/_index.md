@@ -1,18 +1,19 @@
 ---
-title: "Persona 5"
-platform: "PS4, PS3"
-retroachievements_id:
-steam_appid:
-psn_id: "NPWR11866_00"
+title: Persona 5
+platform: PS4, PS3
+retroachievements_id: null
+steam_appid: null
+psn_id: NPWR11866_00
 status: ""
-started:
-finished:
-rating:
-cover:
-draft: true
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["persona-5"]
+    games:
+      - persona-5
+cover: null
 ---
 Imported from Exophase (psn).
 

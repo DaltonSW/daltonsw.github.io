@@ -1,17 +1,18 @@
 ---
-title: "Dishonored"
-platform: "PC"
-retroachievements_id:
+title: Dishonored
+platform: PC
+retroachievements_id: null
 steam_appid: 205100
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2021-05-18"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dishonored"]
+    games:
+      - dishonored
+cover: null
 ---
 
 

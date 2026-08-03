@@ -1,0 +1,503 @@
+{
+ "provider": "xbox",
+ "title": "Modern Warfare®",
+ "updated": "2026-08-02",
+ "id": "1096157158",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 10,
+ "total": 37,
+ "first": "2011-12-27",
+ "last": "2012-01-21",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-02-24",
+ "achievements": [
+  {
+   "key": "3",
+   "name": "Win the War",
+   "description": "Complete the game on any difficulty",
+   "unlocked": true,
+   "points": 40
+  },
+  {
+   "key": "27",
+   "name": "Desperate Measures",
+   "description": "Corner Zakhaev's Son",
+   "unlocked": true,
+   "points": 20
+  },
+  {
+   "key": "39",
+   "name": "No Rest for the Weary",
+   "description": "Stab an injured crawling enemy",
+   "unlocked": true,
+   "points": 10
+  },
+  {
+   "key": "30",
+   "name": "Down Boy Down",
+   "description": "Survive a dog attack",
+   "unlocked": true,
+   "points": 20
+  },
+  {
+   "key": "62",
+   "name": "Three of a Kind",
+   "description": "Kill 3 enemies in a row with your knife in the single player campaign\r\n",
+   "unlocked": true,
+   "points": 10
+  },
+  {
+   "key": "26",
+   "name": "Piggyback Ride",
+   "description": "Carry Cpt. MacMillian to safety",
+   "unlocked": true,
+   "points": 20
+  },
+  {
+   "key": "2",
+   "name": "Earn a Winged Dagger",
+   "description": "Complete 'F.N.G.'",
+   "unlocked": true,
+   "date": "2011-12-27T14:09:44-06:00",
+   "points": 20
+  },
+  {
+   "key": "1",
+   "name": "Make the Jump",
+   "description": "Infiltrate a cargo ship",
+   "unlocked": true,
+   "date": "2011-12-27T14:19:09-06:00",
+   "points": 20
+  },
+  {
+   "key": "4",
+   "name": "Dancing in the Dark",
+   "description": "Kill the power",
+   "unlocked": true,
+   "date": "2011-12-27T14:44:06-06:00",
+   "points": 20
+  },
+  {
+   "key": "32",
+   "name": "Rescue Roycewicz",
+   "description": "Save Pvt. Roycewicz on the stairs",
+   "unlocked": true,
+   "date": "2011-12-27T15:07:02-06:00",
+   "points": 20
+  },
+  {
+   "key": "5",
+   "name": "Save the Bacon",
+   "description": "Protect 'War Pig', the Abrams tank",
+   "unlocked": true,
+   "date": "2011-12-27T15:20:59-06:00",
+   "points": 20
+  },
+  {
+   "key": "53",
+   "name": "Daredevil",
+   "description": "Kill an enemy while blinded by a flashbang in the single player campaign",
+   "unlocked": true,
+   "date": "2011-12-29T17:21:42-06:00",
+   "points": 10
+  },
+  {
+   "key": "35",
+   "name": "Straight Flush",
+   "description": "Kill 5 enemies with one shot while in the AC-130 gunship",
+   "unlocked": true,
+   "date": "2012-01-21T11:14:21-06:00",
+   "points": 20
+  },
+  {
+   "key": "55",
+   "name": "Roadkill",
+   "description": "Kill 2 enemies by blowing up a car in the single player campaign\r\n",
+   "unlocked": true,
+   "date": "2012-01-21T11:27:00-06:00",
+   "points": 10
+  },
+  {
+   "key": "24",
+   "name": "Death From Above",
+   "description": "Operate an AC-130 gun ship",
+   "unlocked": true,
+   "date": "2012-01-21T11:30:38-06:00",
+   "points": 20
+  },
+  {
+   "key": "25",
+   "name": "Wrong Number",
+   "description": "Find Al-Asad's safehouse",
+   "unlocked": true,
+   "date": "2012-01-21T12:22:56-06:00",
+   "points": 20
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 3,
+     "titleId": 1096157158,
+     "name": "Win the War",
+     "sequence": 53,
+     "flags": 1179657,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 40,
+     "imageId": 8,
+     "description": "Complete the game on any difficulty",
+     "lockedDescription": "Complete the game on any difficulty",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 37.28
+     }
+    },
+    {
+     "id": 27,
+     "titleId": 1096157158,
+     "name": "Desperate Measures",
+     "sequence": 52,
+     "flags": 1179662,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 27,
+     "description": "Corner Zakhaev's Son",
+     "lockedDescription": "Corner Zakhaev's Son",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 39.27
+     }
+    },
+    {
+     "id": 39,
+     "titleId": 1096157158,
+     "name": "No Rest for the Weary",
+     "sequence": 51,
+     "flags": 1179660,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 26,
+     "description": "Stab an injured crawling enemy",
+     "lockedDescription": "Stab an injured crawling enemy",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 35.32
+     }
+    },
+    {
+     "id": 30,
+     "titleId": 1096157158,
+     "name": "Down Boy Down",
+     "sequence": 50,
+     "flags": 1179660,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 2,
+     "description": "Survive a dog attack",
+     "lockedDescription": "Survive a dog attack",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 38.82
+     }
+    },
+    {
+     "id": 62,
+     "titleId": 1096157158,
+     "name": "Three of a Kind",
+     "sequence": 49,
+     "flags": 1179660,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 36,
+     "description": "Kill 3 enemies in a row with your knife in the single player campaign\r\n",
+     "lockedDescription": "Kill 3 enemies in a row with your knife in the single player campaign\r\n",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 20.9
+     }
+    },
+    {
+     "id": 26,
+     "titleId": 1096157158,
+     "name": "Piggyback Ride",
+     "sequence": 48,
+     "flags": 1179662,
+     "unlockedOnline": false,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 28,
+     "description": "Carry Cpt. MacMillian to safety",
+     "lockedDescription": "Carry Cpt. MacMillian to safety",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 40.82
+     }
+    },
+    {
+     "id": 25,
+     "titleId": 1096157158,
+     "name": "Wrong Number",
+     "sequence": 47,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 29,
+     "description": "Find Al-Asad's safehouse",
+     "lockedDescription": "Find Al-Asad's safehouse",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-21T18:22:56.6430000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 43.08
+     }
+    },
+    {
+     "id": 24,
+     "titleId": 1096157158,
+     "name": "Death From Above",
+     "sequence": 46,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 1,
+     "description": "Operate an AC-130 gun ship",
+     "lockedDescription": "Operate an AC-130 gun ship",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-21T17:30:38.7900000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 46.86
+     }
+    },
+    {
+     "id": 55,
+     "titleId": 1096157158,
+     "name": "Roadkill",
+     "sequence": 45,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 6,
+     "description": "Kill 2 enemies by blowing up a car in the single player campaign\r\n",
+     "lockedDescription": "Kill 2 enemies by blowing up a car in the single player campaign\r\n",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-21T17:27:00.8570000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 45.67
+     }
+    },
+    {
+     "id": 35,
+     "titleId": 1096157158,
+     "name": "Straight Flush",
+     "sequence": 44,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 25,
+     "description": "Kill 5 enemies with one shot while in the AC-130 gunship",
+     "lockedDescription": "Kill 5 enemies with one shot while in the AC-130 gunship",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-21T17:14:21.8670000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 43.24
+     }
+    },
+    {
+     "id": 53,
+     "titleId": 1096157158,
+     "name": "Daredevil",
+     "sequence": 43,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 11,
+     "description": "Kill an enemy while blinded by a flashbang in the single player campaign",
+     "lockedDescription": "Kill an enemy while blinded by a flashbang in the single player campaign",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-29T23:21:42.8070000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 47.35
+     }
+    },
+    {
+     "id": 5,
+     "titleId": 1096157158,
+     "name": "Save the Bacon",
+     "sequence": 42,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 7,
+     "description": "Protect 'War Pig', the Abrams tank",
+     "lockedDescription": "Protect 'War Pig', the Abrams tank",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-27T21:20:59.2570000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 50.1
+     }
+    },
+    {
+     "id": 32,
+     "titleId": 1096157158,
+     "name": "Rescue Roycewicz",
+     "sequence": 41,
+     "flags": 1245196,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 23,
+     "description": "Save Pvt. Roycewicz on the stairs",
+     "lockedDescription": "Save Pvt. Roycewicz on the stairs",
+     "type": 4,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-27T21:07:02.8370000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 47.14
+     }
+    },
+    {
+     "id": 4,
+     "titleId": 1096157158,
+     "name": "Dancing in the Dark",
+     "sequence": 40,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 31,
+     "description": "Kill the power",
+     "lockedDescription": "Kill the power",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-27T20:44:06.9800000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 58.15
+     }
+    },
+    {
+     "id": 1,
+     "titleId": 1096157158,
+     "name": "Make the Jump",
+     "sequence": 39,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 4,
+     "description": "Infiltrate a cargo ship",
+     "lockedDescription": "Infiltrate a cargo ship",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-27T20:19:09.0000000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 62.28
+     }
+    },
+    {
+     "id": 2,
+     "titleId": 1096157158,
+     "name": "Earn a Winged Dagger",
+     "sequence": 38,
+     "flags": 1245198,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 9,
+     "description": "Complete 'F.N.G.'",
+     "lockedDescription": "Complete 'F.N.G.'",
+     "type": 6,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-27T20:09:44.6700000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 65.92
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 16
+   }
+  },
+  "code": 200
+ }
+}

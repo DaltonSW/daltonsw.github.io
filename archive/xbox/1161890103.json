@@ -1,0 +1,299 @@
+{
+ "provider": "xbox",
+ "title": "Madden NFL 12",
+ "updated": "2026-08-02",
+ "id": "1161890103",
+ "fetched": "2026-08-02",
+ "last_attempt": "2026-08-02",
+ "unlocked": 9,
+ "total": 36,
+ "first": "2011-12-27",
+ "last": "2012-04-14",
+ "platform": "Xbox 360",
+ "source": "openxbl",
+ "last_played": "2012-04-15",
+ "achievements": [
+  {
+   "key": "192",
+   "name": "We're Talking About Practice",
+   "description": "Complete a practice in Superstar mode",
+   "unlocked": true,
+   "date": "2011-12-27T16:16:10-06:00",
+   "points": 10
+  },
+  {
+   "key": "151",
+   "name": "Adrian Peterson Award",
+   "description": "Score on an 80+ yard TD run (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2011-12-29T14:37:29-06:00",
+   "points": 25
+  },
+  {
+   "key": "181",
+   "name": "Happy 20th EA SPORTS!",
+   "description": "Score 20 points in a game and celebrate 20 years of EA Sports! (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2011-12-29T15:11:08-06:00",
+   "points": 20
+  },
+  {
+   "key": "176",
+   "name": "Santonio Holmes Award",
+   "description": "Catch a game winning TD pass in OT (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2011-12-29T16:38:07-06:00",
+   "points": 25
+  },
+  {
+   "key": "147",
+   "name": "Put Da Team On My Back",
+   "description": "Catch a 99 yard TD pass with Greg Jennings (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2012-01-02T13:51:12-06:00",
+   "points": 50
+  },
+  {
+   "key": "148",
+   "name": "Mario Manningham Award",
+   "description": "Catch a 92+ yard TD pass (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2012-01-02T13:51:12-06:00",
+   "points": 25
+  },
+  {
+   "key": "172",
+   "name": "Michael Vick Award",
+   "description": "Rush for 130+ yards with your QB (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2012-01-02T14:45:19-06:00",
+   "points": 30
+  },
+  {
+   "key": "166",
+   "name": "Kenny Britt Award",
+   "description": "Gain 225+ yards receiving with one player (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2012-01-02T14:45:19-06:00",
+   "points": 25
+  },
+  {
+   "key": "183",
+   "name": "David Bowens Award",
+   "description": "Have 2 pick 6's in the same game (No OTP or co-op)",
+   "unlocked": true,
+   "date": "2012-04-14T21:43:18-05:00",
+   "points": 50
+  }
+ ],
+ "raw": {
+  "content": {
+   "achievements": [
+    {
+     "id": 183,
+     "titleId": 1161890103,
+     "name": "David Bowens Award",
+     "sequence": 45,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 50,
+     "imageId": 17,
+     "description": "Have 2 pick 6's in the same game (No OTP or co-op)",
+     "lockedDescription": "Have 2 pick 6's in the same game (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-04-15T02:43:18.1900000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 24.66
+     }
+    },
+    {
+     "id": 172,
+     "titleId": 1161890103,
+     "name": "Michael Vick Award",
+     "sequence": 44,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 30,
+     "imageId": 33,
+     "description": "Rush for 130+ yards with your QB (No OTP or co-op)",
+     "lockedDescription": "Rush for 130+ yards with your QB (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-02T20:45:19.2630000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 10.24
+     }
+    },
+    {
+     "id": 166,
+     "titleId": 1161890103,
+     "name": "Kenny Britt Award",
+     "sequence": 43,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 25,
+     "imageId": 26,
+     "description": "Gain 225+ yards receiving with one player (No OTP or co-op)",
+     "lockedDescription": "Gain 225+ yards receiving with one player (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-02T20:45:19.0970000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 29.37
+     }
+    },
+    {
+     "id": 147,
+     "titleId": 1161890103,
+     "name": "Put Da Team On My Back",
+     "sequence": 42,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 50,
+     "imageId": 42,
+     "description": "Catch a 99 yard TD pass with Greg Jennings (No OTP or co-op)",
+     "lockedDescription": "Catch a 99 yard TD pass with Greg Jennings (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-02T19:51:12.7200000Z",
+     "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 2.32
+     }
+    },
+    {
+     "id": 148,
+     "titleId": 1161890103,
+     "name": "Mario Manningham Award",
+     "sequence": 41,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 25,
+     "imageId": 30,
+     "description": "Catch a 92+ yard TD pass (No OTP or co-op)",
+     "lockedDescription": "Catch a 92+ yard TD pass (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2012-01-02T19:51:12.5200000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 22.18
+     }
+    },
+    {
+     "id": 176,
+     "titleId": 1161890103,
+     "name": "Santonio Holmes Award",
+     "sequence": 40,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 25,
+     "imageId": 46,
+     "description": "Catch a game winning TD pass in OT (No OTP or co-op)",
+     "lockedDescription": "Catch a game winning TD pass in OT (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-29T22:38:07.1430000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 12.1
+     }
+    },
+    {
+     "id": 181,
+     "titleId": 1161890103,
+     "name": "Happy 20th EA SPORTS!",
+     "sequence": 39,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 20,
+     "imageId": 21,
+     "description": "Score 20 points in a game and celebrate 20 years of EA Sports! (No OTP or co-op)",
+     "lockedDescription": "Score 20 points in a game and celebrate 20 years of EA Sports! (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-29T21:11:08.9630000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 70.96
+     }
+    },
+    {
+     "id": 151,
+     "titleId": 1161890103,
+     "name": "Adrian Peterson Award",
+     "sequence": 38,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 25,
+     "imageId": 9,
+     "description": "Score on an 80+ yard TD run (No OTP or co-op)",
+     "lockedDescription": "Score on an 80+ yard TD run (No OTP or co-op)",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-29T20:37:29.4270000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 44.44
+     }
+    },
+    {
+     "id": 192,
+     "titleId": 1161890103,
+     "name": "We're Talking About Practice",
+     "sequence": 37,
+     "flags": 1245193,
+     "unlockedOnline": true,
+     "unlocked": true,
+     "isSecret": false,
+     "platform": 1,
+     "gamerscore": 10,
+     "imageId": 47,
+     "description": "Complete a practice in Superstar mode",
+     "lockedDescription": "Complete a practice in Superstar mode",
+     "type": 1,
+     "isRevoked": false,
+     "timeUnlocked": "2011-12-27T22:16:10.6370000Z",
+     "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 35.61
+     }
+    }
+   ],
+   "version": "0001-01-01T00:00:00.0000000Z",
+   "pagingInfo": {
+    "continuationToken": null,
+    "totalRecords": 9
+   }
+  },
+  "code": 200
+ }
+}
