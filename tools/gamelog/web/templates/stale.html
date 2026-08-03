@@ -1,0 +1,25 @@
+{{define "content"}}
+<h1>Stale</h1>
+<form method="get" action="/stale" class="row">
+  <label for="days">Quiet threshold (days)</label>
+  <input type="number" id="days" name="days" value="{{.Days}}" style="max-width: 8rem;">
+  <button type="submit">Refresh</button>
+</form>
+<p class="lead">{{len .Games}} game(s) gone quiet for {{.Days}}+ days.</p>
+{{range .Games}}
+<div class="tui">
+  <span class="tui__title">{{.C.Game.Title}} · suggest {{.C.SuggestedStatus}}</span>
+  <pre>{{.Card}}</pre>
+  <form method="post" action="/stale/{{.C.Game.Slug}}" class="btn-row">
+    <input type="hidden" name="days" value="{{$.Days}}">
+    <button name="action" value="accept" type="submit" class="btn--primary">Correct — mark {{.C.SuggestedStatus}}</button>
+    {{range .OtherStatuses}}
+    <button name="action" value="mark_{{.}}" type="submit">Mark {{.}} instead</button>
+    {{end}}
+    <a class="btn" href="/games/{{.C.Game.Slug}}">Edit before applying</a>
+  </form>
+</div>
+{{else}}
+<p class="empty">Nothing has gone quiet.</p>
+{{end}}
+{{end}}

@@ -3,7 +3,7 @@ title: Infinitode 2
 platform: PC
 retroachievements_id: null
 steam_appid: 937310
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

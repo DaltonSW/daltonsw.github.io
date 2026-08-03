@@ -3,7 +3,7 @@ title: Sunless Skies
 platform: PC
 retroachievements_id: null
 steam_appid: 596970
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

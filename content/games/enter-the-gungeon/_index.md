@@ -3,7 +3,7 @@ title: Enter the Gungeon
 platform: PC
 retroachievements_id: null
 steam_appid: 311690
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

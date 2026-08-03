@@ -1,0 +1,23 @@
+{{define "content"}}
+<h1>Achievements</h1>
+<p class="lead">Per-game refresh lives on each game's own page. These two act across the whole library.</p>
+
+<div class="tui">
+  <span class="tui__title">refresh all</span>
+  <p>Fetches every linked game's unlock history from RetroAchievements/Steam. RA throttles to
+     ~1.2s/request, so with 200+ linked games this can take several minutes — runs as a background
+     job you can watch progress on.</p>
+  <form method="post" action="/achievements/all">
+    <button type="submit" class="btn--primary">Refresh all</button>
+  </form>
+</div>
+
+<div class="tui">
+  <span class="tui__title">regenerate summaries</span>
+  <p>Rebuilds every game's achievement-summary.yaml from what's already archived on disk. No API
+     calls — safe and fast to re-run any time.</p>
+  <form method="post" action="/project">
+    <button type="submit">Regenerate</button>
+  </form>
+</div>
+{{end}}

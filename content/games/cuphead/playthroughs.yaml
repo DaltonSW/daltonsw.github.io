@@ -1,10 +1,12 @@
 # Written by tools/gamelog. Safe to edit by hand, but comments are not
 # preserved: the tool rewrites this file whole. Prose belongs in _index.md.
 playthroughs:
+  - started: "2021-07-02"
+    finished: "2021-07-08"
+    status: mastered
   - status: mastered
+    notes: "The 2022-01-14 session likely coincides with a DLC release."
     sessions:
-      - started: "2021-07-02"
-        finished: "2021-07-08"
       - started: "2022-01-14"
         finished: "2022-01-14"
       - started: "2022-07-31"

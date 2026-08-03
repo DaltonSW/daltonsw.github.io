@@ -3,7 +3,7 @@ title: 'The Binding of Isaac: Rebirth'
 platform: PC
 retroachievements_id: null
 steam_appid: 250900
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

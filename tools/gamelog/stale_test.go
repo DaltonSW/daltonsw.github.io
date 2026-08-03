@@ -13,7 +13,7 @@ func daysAgo(n int) string {
 // A game qualifies once it's marked "playing", linked to Steam, and quiet
 // past the threshold — draft status doesn't exclude it (stale is meant to
 // help pre-classify the draft backlog too), but every other state has
-// nothing to suggest, including session-based games, which are supposed to
+// nothing to suggest, including ongoing games, which are supposed to
 // stay "playing" indefinitely by design.
 func TestFindStaleCandidates_FiltersToEligibleGames(t *testing.T) {
 	archiveDir := t.TempDir()
@@ -27,7 +27,7 @@ func TestFindStaleCandidates_FiltersToEligibleGames(t *testing.T) {
 		{Slug: "quiet", Title: "Quiet Game", Status: "playing", SteamAppID: "1"},
 		{Slug: "draft-game", Title: "Draft Game", Status: "playing", SteamAppID: "1", Draft: true},
 		{Slug: "finished-game", Title: "Finished Game", Status: "finished", SteamAppID: "1"},
-		{Slug: "session-game", Title: "Session Game", Status: "session-based", SteamAppID: "1"},
+		{Slug: "session-game", Title: "Session Game", Status: "ongoing", SteamAppID: "1"},
 		{Slug: "ra-only", Title: "RA Only Game", Status: "playing", RAGameID: "4650"},
 	}
 

@@ -4,7 +4,7 @@ platform: "Switch 2, Switch"
 retroachievements_id:
 steam_appid:
 nintendo_id: "01006F8002326000"
-status: "session-based"
+status: "ongoing"
 started:
 finished:
 rating:

@@ -3,7 +3,7 @@ title: 'Cities: Skylines'
 platform: PC
 retroachievements_id: null
 steam_appid: 255710
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

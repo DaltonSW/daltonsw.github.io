@@ -1,13 +1,15 @@
 # Written by tools/gamelog. Safe to edit by hand, but comments are not
 # preserved: the tool rewrites this file whole. Prose belongs in _index.md.
 playthroughs:
-  - status: playing
-    sessions:
-      - started: "2015-03-10"
-        finished: "2015-03-11"
-      - started: "2018-11-21"
-        finished: "2018-11-21"
-      - started: "2019-01-21"
-        finished: "2019-02-02"
-      - started: "2019-06-28"
-        finished: "2019-06-29"
+  - started: "2015-03-10"
+    finished: "2015-03-11"
+    status: playing
+  - started: "2018-11-21"
+    finished: "2018-11-21"
+    status: playing
+  - started: "2019-01-21"
+    finished: "2019-02-02"
+    status: playing
+  - started: "2019-06-28"
+    finished: "2019-06-29"
+    status: playing

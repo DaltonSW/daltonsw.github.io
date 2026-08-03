@@ -3,7 +3,7 @@ title: "60 Parsecs!"
 platform: "PC"
 retroachievements_id:
 steam_appid: 646270
-status: "session-based"
+status: "ongoing"
 started:
 finished:
 rating:

@@ -3,7 +3,7 @@ title: Hammerwatch
 platform: PC
 retroachievements_id: null
 steam_appid: 239070
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

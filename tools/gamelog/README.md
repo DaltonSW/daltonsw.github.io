@@ -143,9 +143,9 @@ mean to come back to it eventually. Setting it never writes a finished date, sin
 finished; `gamelog stale` in particular offers it as a one-click correction on a quiet game it
 otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
 
-`session-based`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
+`ongoing`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
 no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
-ends play. They're separate statuses because the *reason* differs: `session-based` is a replay-loop
+ends play. They're separate statuses because the *reason* differs: `ongoing` is a replay-loop
 design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `software` isn't a game at
 all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
 through the same `gamelog scan` and need somewhere to go that isn't a completion state.
@@ -164,6 +164,57 @@ compares equal to its own game.
 
 Note that the entry's own status stays `playing` — these three exist only in the game-level
 vocabulary, so anything reading entry status (the timeline, notably) has to special-case them.
+
+`status: backlog` is the game-level marker for "not played yet" — a game with this status and no
+`playthroughs.yaml` at all. It's excluded from the games list's year-grouped table and shown
+instead in the Games page's own "Backlog" section (`layouts/partials/games-backlog.html`).
+
+## Planned replays
+
+A `status: planned` entry in `playthroughs.yaml` is a dateless placeholder — "I intend to (re)play
+this," with no `started` yet:
+
+```yaml
+playthroughs:
+  - started: "2021-05-01"
+    finished: "2021-05-15"
+    status: finished
+  - status: planned
+    platform: PC
+    notes: Try NG+ mode this time
+```
+
+"Add a planned replay" (always offered in the interactive flow) creates one; it refuses a second
+placeholder for the same effective platform, the same "don't fragment into two bookmarks for one
+intent" reasoning as the one-shot statuses' per-platform cap, though `planned` isn't itself part of
+that family (`isOneShot` returns `false` for it, and it's deliberately absent from
+`playthroughStatuses` — see below).
+
+Because a blank `started` is what every date-based partial (`games-timeline.html`,
+`game-year-rows.html`) already guards on before turning an entry into a row or a timeline bar, a
+planned entry is automatically invisible to both — no template change was needed to keep it out of
+the timeline. `games-backlog.html` surfaces it explicitly instead, alongside `status: backlog`
+games. `layouts/games/term.html`'s generic per-entry rendering also needed no change: it already
+renders any entry's `status` as a plain pill and leaves a blank meta row when dates are empty.
+
+"Manage a planned playthrough" (offered once at least one planned entry exists) either graduates it
+— `GraduatePlannedPlaythrough` fills in `Started`/`Finished`/`Status`/etc. **in place**, at the same
+array index, rather than replacing the entry — or edits its platform/notes without touching status
+or dates. Graduating in place matters for the loss-check: every field it sets was previously empty,
+so `checkNoFieldLoss` sees a pure addition and no `allowedRemovals` declaration is needed.
+
+`planned` is deliberately **not** in `playthroughStatuses` (`forms.go`) — that list feeds the
+status `Select` in `PlaythroughForm` (new playthrough, which requires a `Started` date),
+`UpdateForm`, and `SplitStatusForm`, none of which should ever produce or accept a dateless entry.
+The only two code paths that can set or clear `planned` are `doAddPlannedReplay` and
+`GraduatePlannedPlaythrough`.
+
+There is deliberately no "delete a planned entry" action. Removing an entry from `playthroughs[]`
+by index would shift every later entry down, and `SplitPlaythrough` (above) always appends its new
+entry at the true end of the slice specifically so no existing entry's index — and therefore no
+path into a later entry's own nested `sessions:` — ever moves. A stale planned placeholder can be
+deleted by hand; `playthroughs.yaml`'s own generated banner already says the file is safe to edit
+that way.
 
 The same two safeguards as `playthroughs.yaml` apply: an `Extra map[string]any` inline field
 catches `cover`, `cascade`, and anything else the struct doesn't model, so it round-trips instead
@@ -294,7 +345,7 @@ ever written automatically; you choose:
   still `playing` and still stale, the next `gamelog stale` run will surface it again.
 - **Quit** — stops the loop.
 
-None of the one-shot statuses (`session-based`, `multiplayer`, `software`) ever shows up here —
+None of the one-shot statuses (`ongoing`, `multiplayer`, `software`) ever shows up here —
 they aren't `status: playing` by definition (see above), and something used in indefinite session
 bursts has no "done" to detect from staleness alone. Same reasoning `gamelog scan` already applies to Steam elsewhere: a completion signal comes
 from achievements or an explicit human decision, never from playtime or silence by itself.
@@ -358,7 +409,7 @@ only feeds a game's `last_played` sort key. Refreshing a game's achievements can
 archive fully up to date while the timeline shows nothing new — the fix isn't a rebuild, it's that
 nobody logged a session for the activity that just got captured.
 
-For the one-shot statuses (`session-based`/`multiplayer`/`software` — see above), where the whole
+For the one-shot statuses (`ongoing`/`multiplayer`/`software` — see above), where the whole
 playthrough record *is* its `sessions:` list, the single-slug `gamelog achievements <slug>` closes
 that gap itself: if the refresh pulled in playtime or an unlock date past what's already logged, it
 offers to log a session right then, prefilled with the activity date the provider reported (that's

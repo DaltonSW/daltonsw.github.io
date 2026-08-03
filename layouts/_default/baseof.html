@@ -4,7 +4,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   {{ partial "header.html" . }}
-  <main class="site-main" id="main">
+  <main class="site-main{{ if eq .Kind "taxonomy" }} site-main--tight{{ end }}" id="main">
     <div class="wrap{{ if eq .Kind "taxonomy" }} wrap--wide{{ end }}">
       {{ block "main" . }}{{ end }}
     </div>

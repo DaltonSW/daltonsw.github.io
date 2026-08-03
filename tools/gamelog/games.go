@@ -119,14 +119,25 @@ func ListGames(gamesDir string) ([]GameSummary, error) {
 			fmt.Fprintf(os.Stderr, "gamelog: skipping %s: %v\n", PlaythroughsPath(filepath.Dir(path)), err)
 			pf = &PlaythroughsFile{}
 		}
+		// The real per-run dates live in playthroughs.yaml, not front matter —
+		// see gameDateRange. Front matter's own started/finished is only a
+		// fallback, for a game with nothing logged yet.
+		started, finished := gameDateRange(pf.Views())
+		if started == "" {
+			started = doc.FM.Started
+		}
+		if finished == "" {
+			finished = doc.FM.Finished
+		}
+
 		out = append(out, GameSummary{
 			Slug:            e.Name(),
 			Path:            path,
 			Title:           doc.FM.Title,
 			Status:          doc.FM.Status,
 			Draft:           doc.FM.Draft,
-			Started:         doc.FM.Started,
-			Finished:        doc.FM.Finished,
+			Started:         started,
+			Finished:        finished,
 			NumPlaythroughs: len(pf.Playthroughs),
 			RAGameID:        raID,
 			SteamAppID:      steamAppID,

@@ -3,6 +3,71 @@
 53 sessions span 45+ days. 49 of them are wrong — an import artifact, not a real sitting. Below
 is the proposed session list for each of those 49 games; the other 4 are listed at the bottom.
 
+## New findings — 2026-07-28
+
+You asked for a check on overlapping sessions and playthroughs with playtime landing suspiciously
+long after the last real one. Same `last_played`-as-`finished` bug as the 2026-07-27 pass, but two
+more games have it — they were missed the first time because that pass only walked entries shaped
+like a `sessions:` list. A playthrough with exactly one session gets written collapsed
+(`started`/`finished` directly on the entry, no `sessions:` wrapper at all), and neither game below
+was screened against that shape until now.
+
+**Both games below are also the only two overlaps in the whole corpus.** Each one is a second
+platform entry (a PS4 replay alongside an existing PC one) whose bogus multi-year tail stretches
+far enough to swallow dates the PC entry already owns. Trimming the tail to what the archive
+actually supports removes the overlap as a side effect — there's no separate overlap fix needed.
+
+### Sekiro™: Shadows Die Twice (PS4 entry)
+`sekiro-shadows-die-twice` · PS4 entry: 15.1h · 28/34 · (no `status:` set)
+
+```
+2021-12-24..2021-12-24   # was ..2025-04-16
+2025-04-12..2025-04-16   # new
+```
+
+Eight unlocks land on 2021-12-24 (early bosses — Gyoubu, Genichiro, Guardian Ape) and then nothing
+for 1205 days. The remaining 20 unlock across 2025-04-12 → 2025-04-16, ending with `Isshin, Sword
+Saint` and `Shura` — a real return trip that finished the game. `last_played` on the PSN record is
+`2025-04-16`, exactly the old `finished:` date, so this is the identical bug: a relaunch date
+stretched a single-day first attempt into a 1209-day session. This entry also has no `status:` —
+worth setting to `mastered` while this is open, since the PC entry above it already carries that.
+
+This PS4 session, unfixed, is what made it look like it overlapped the PC entry's 2024-07-13
+session — a 1209-day span will always swallow something. There's nothing to do about the overlap
+beyond this fix.
+
+### Spelunky 2 (PS4 entry)
+`spelunky-2` · PS4 entry: 14.0h · 14/32 · playing
+
+```
+2020-11-17..2020-12-03   # was ..2021-08-11
+```
+
+Every PSN unlock lands between 2020-11-17 and 2020-12-03 (gaps under 10 days throughout), then
+nothing. `2021-08-11` is PSN's `last_played` — a relaunch 8 months after the last real unlock, not
+a continuation. This one doesn't split into two sessions since there's no second cluster of
+activity to date it against; it just needs the tail cut back to where the evidence stops. Same
+overlap story as Sekiro: the bogus tail is what made this PS4 session look like it overlapped both
+of the PC entry's late-2020/early-2021 sessions.
+
+**Still open from last time, unchanged:** FTL and Jackbox 3 are still held — both fail the
+playtime check against their archived unlock window and need a real date from memory, not the
+archive. Not re-proposing anything for them here.
+
+**Out of scope for both docs, worth naming so it doesn't look missed:** the games you asked
+about by name — TUNIC, DARK SOULS III, DARK SOULS: REMASTERED, Portal — all check out in
+`playthroughs.yaml`. DARK SOULS III and TUNIC were already split in the 2026-07-27 pass; DARK
+SOULS: REMASTERED and Portal were never broken — their late 2026 sessions are real replays with
+achievement unlocks spread across every day claimed. What's still "wrong" is only `_index.md`'s
+`finished:` field, which mirrors whichever session ended last rather than when the game was first
+completed — the same **separate pass**, flagged and deferred on 2026-07-27, that this doc still
+hasn't touched. `finished:` is genuinely stale (not just late) for **Braid** (`2025-03-23` vs. a
+playthrough that ended in 2013), **Danganronpa: Trigger Happy Havoc** (`2022-11-05` vs. 2017), and
+**The Witness** (`2024-04-07` vs. 2016) — those three drifted from `playthroughs.yaml` itself
+during the last pass, since only `playthroughs.yaml` got rewritten. TUNIC/DS3/DSR/Portal's
+`finished:` dates match their (correct) last session exactly, so there's no drift to fix there —
+just the open question of whether `finished:` should mean "completed" or "last touched."
+
 ## Applied 2026-07-27
 
 **47 of 49 applied** as edited below. Skyrim split into 4 playthroughs and Divinity into 2, per

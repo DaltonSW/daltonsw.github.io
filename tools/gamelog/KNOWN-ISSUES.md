@@ -28,7 +28,7 @@ losing captured data is the worst thing that can happen.**
   |---|---|
   | finished | 81 |
   | mastered | 47 |
-  | session-based | 41 |
+  | ongoing | 41 |
   | dropped | 21 |
   | multiplayer | 16 |
   | playing | 4 |
@@ -38,17 +38,33 @@ losing captured data is the worst thing that can happen.**
   `backlog` is the only `gameStatuses` value now unused. The four `playing` entries are genuinely
   active — anything quiet for 30+ days has been triaged.
 - **The vocabulary is split in two, on purpose:** `gameStatuses` (front matter, 9 values) and
-  `playthroughStatuses` (entries in `playthroughs.yaml`, 5 values). `session-based`,
-  `multiplayer`, and `software` are game-level only — those entries keep a single playthrough
-  whose status stays `playing` while its `sessions:` list accumulates, which is what `isOneShot`
-  in `forms.go` gates on. Two consequences worth knowing before touching either list:
-  - `gamelog stale` only considers `status == "playing"`, so all three are excluded from
-    finished/dropped triage automatically. That's correct: none of them has a finish line.
-  - `layouts/partials/games-timeline.html` colours bars from the **entry** status, which for these
-    three is always `playing`. It special-cases them and lets the game-level status win, or an
-    endless sandbox would render identically to an active playthrough. **Adding a fourth
-    one-shot status means updating that list too** — `isOneShot`, the timeline's slice, and the
-    `.pill--`/`.entry--`/`.pt--` rules in `main.scss` all have to move together.
+  `playthroughStatuses` (entries in `playthroughs.yaml`, now 7 values — `ongoing` and
+  `multiplayer` joined the original 5 so a game with genuinely distinct modes, e.g. Hitman's
+  story campaign, its Freelancer roguelike, and its multiplayer contracts, can have one entry per
+  mode instead of the game being forced into a single label). `software` stays game-level only —
+  it describes the whole record ("this isn't a game"), not a mode a game can have alongside
+  others, so there's no per-entry equivalent.
+  - Every `ongoing`/`multiplayer` game written before this still has its sole entry's own
+    `status` as `playing`, relying entirely on the game-level status for its real meaning — that
+    convention still works and doesn't need migrating. `effectiveOneShotStatus` in `main.go`
+    resolves it so the one-shot guard still recognizes those old-style entries.
+  - `isOneShot` in `forms.go` now gates **per entry-status, per platform**, not per game
+    (`oneShotConflict` in `main.go`): at most one entry of a given one-shot status per platform,
+    since none of the three has a save file or finish line and a second one on the same platform
+    would be fragmentation — but a *different*-status entry (a `mastered` campaign next to an
+    `ongoing` sandbox mode) is a real second mode, not fragmentation, and is allowed.
+  - `gamelog stale` only considers `status == "playing"` **at the game level**, so a game whose
+    front-matter status is ongoing/multiplayer/software is still excluded from finished/dropped
+    triage regardless of what any individual entry's status says. Correct either way: the
+    game-level status is what `stale` and `SyncStatus` both key off, and neither was changed here.
+  - `layouts/partials/games-timeline.html` colours bars from the **entry** status directly, and
+    needed no change: its game-level override (forcing every entry to the game's own status) only
+    ever fires when the *game's* front-matter status is ongoing/multiplayer/software, so a mixed
+    game just needs its front-matter status set to something else (its "headline" mode) for
+    per-entry ongoing/multiplayer to render as authored. **Adding a fourth one-shot status still
+    means updating `isOneShot`, `playthroughStatuses` (only if it's a real per-entry mode),
+    `games-timeline.ts`'s `NO_CONNECTOR_CLASSES`, and the `.pill--`/`.entry--`/`.pt--` rules in
+    `main.scss` together.**
 - `software` marks an entry that isn't a game at all (currently just Aseprite). Steam sells tools
   alongside games and reports playtime for them identically, so they arrive through the same
   `gamelog scan`; the status says the completion vocabulary doesn't apply rather than forcing a
@@ -84,7 +100,7 @@ Nothing is broken. The schema already supports this — `playthroughs:` is a lis
 `AddSession` and "Start a new playthrough" exist. The historical data was simply never split.
 
 **Signal available for proposing splits:** 52 of 213 archived games show a 6+ month gap between
-consecutive achievement unlocks. Roughly half are already `session-based`, where the `sessions:`
+consecutive achievement unlocks. Roughly half are already `ongoing`, where the `sessions:`
 list is the correct representation and a split would be actively wrong. The real candidates are
 the narrative games — BG3, Dishonored, Celeste, DARK SOULS: REMASTERED, Fallout: New Vegas,
 Portal 2, Cuphead, Phoenix Wright, A Hat in Time, Super Meat Boy, Shovel Knight (~12 in total).
@@ -224,6 +240,15 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   **skipped, not guessed at**: mis-keying the archive is the exact failure the ID scheme prevents.
 - **Only the account page carries per-service player ids.** `/psn/user/<name>/` does not, and the
   per-service username differs from the account name (Nintendo's is an opaque hash).
+- **Nothing removes an entry from `playthroughs[]` by index.** `SplitPlaythrough` always appends
+  its new entry at the true end of the slice specifically so no existing entry's index — and
+  therefore no path into a later entry's nested `sessions[]` — ever moves. A delete-by-index
+  operation would shift everything after it, and `removeSessionAllowedPaths`'s pairwise-diff
+  approach only ever compared flat per-session scalar fields; it doesn't generalize to a shifted
+  entry's own nested sessions changing path identity. `GraduatePlannedPlaythrough` sidesteps this
+  by mutating in place instead of replacing an entry, and the "planned replay" feature has no
+  delete path at all — removing a stale `status: planned` placeholder is left to hand-editing
+  `playthroughs.yaml`, which the file's own generated banner already sanctions.
 
 ## Outstanding
 

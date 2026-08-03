@@ -4,7 +4,7 @@ platform: PC
 retroachievements_id: null
 steam_appid: 418530
 psn_id: "NPWR21664_00"
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

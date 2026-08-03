@@ -3,7 +3,7 @@ title: The Binding of Isaac
 platform: PC
 retroachievements_id: null
 steam_appid: 113200
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

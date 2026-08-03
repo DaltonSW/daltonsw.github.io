@@ -98,7 +98,7 @@ func runStale(args []string) error {
 
 // findStaleCandidates considers any currently-"playing" Steam-linked game,
 // draft or not — pre-classifying drafts before a `gamelog review` pass is
-// exactly what this is for. The one-shot statuses (session-based,
+// exactly what this is for. The one-shot statuses (ongoing,
 // multiplayer, software) are never "playing" by design, so they're naturally
 // excluded — a finished/dropped guess is meaningless for all three.
 func findStaleCandidates(archiveDir string, games []GameSummary, thresholdDays int) ([]StaleCandidate, error) {
@@ -181,18 +181,8 @@ func reviewStale(c StaleCandidate) (cont, did bool, err error) {
 	}
 
 	switch {
-	case action == staleAccept:
-		doc.FM.Status = c.SuggestedStatus
-		doc.FM.Finished = c.LastPlayed
-		return true, true, confirmAndWriteFrontMatter(doc, pf)
-	case strings.HasPrefix(action, staleMarkPrefix):
-		status := strings.TrimPrefix(action, staleMarkPrefix)
-		doc.FM.Status = status
-		// "paused" isn't a finish — the game's still meant to be played,
-		// just not right now, so it gets no finished date.
-		if status != "paused" {
-			doc.FM.Finished = c.LastPlayed
-		}
+	case action == staleAccept, strings.HasPrefix(action, staleMarkPrefix):
+		applyStaleAction(doc, c, action)
 		return true, true, confirmAndWriteFrontMatter(doc, pf)
 	case action == staleEdit:
 		doc.FM.Status = c.SuggestedStatus
@@ -210,6 +200,29 @@ func reviewStale(c StaleCandidate) (cont, did bool, err error) {
 		return false, false, nil
 	}
 	return true, false, nil
+}
+
+// applyStaleAction decides what a stale-action decision means for doc's
+// front matter — accepting the suggestion, or correcting it to a different
+// terminal status — and sets it. It does not write anything: the TUI still
+// wants its own confirm-and-write pass (confirmAndWriteFrontMatter, prompt
+// included) right after calling this, while the web UI's already-submitted
+// form is its confirmation, so it goes straight to the no-prompt
+// writeFrontMatter instead. "Edit before applying" isn't handled here: it
+// needs a whole extra form's worth of input first (see reviewStale and, for
+// the web UI, the regular game-info edit page instead of a stale-specific
+// one), and "skip"/"quit" change nothing.
+func applyStaleAction(doc *Doc, c StaleCandidate, action string) {
+	status := c.SuggestedStatus
+	if s, ok := strings.CutPrefix(action, staleMarkPrefix); ok {
+		status = s
+	}
+	doc.FM.Status = status
+	// "paused" isn't a finish — the game's still meant to be played, just
+	// not right now, so it gets no finished date.
+	if status != "paused" {
+		doc.FM.Finished = c.LastPlayed
+	}
 }
 
 func formatStaleCard(c StaleCandidate) string {

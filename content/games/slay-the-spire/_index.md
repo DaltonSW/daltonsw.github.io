@@ -3,7 +3,7 @@ title: Slay the Spire
 platform: PC
 retroachievements_id: null
 steam_appid: 646570
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

@@ -104,8 +104,8 @@ func reviewOne(gamesDir, archiveDir string, g GameSummary) (cont, acted bool, er
 	}
 
 	switch action {
-	case reviewPublish:
-		doc.FM.Draft = false
+	case reviewPublish, reviewDrop:
+		applyReviewAction(doc, action)
 		return true, true, confirmAndWriteFrontMatter(doc, pf)
 
 	case reviewEditPublish:
@@ -123,11 +123,6 @@ func reviewOne(gamesDir, archiveDir string, g GameSummary) (cont, acted bool, er
 			return false, false, err
 		}
 		doc.FM = updated
-		return true, true, confirmAndWriteFrontMatter(doc, pf)
-
-	case reviewDrop:
-		doc.FM.Status = "dropped"
-		doc.FM.Draft = false
 		return true, true, confirmAndWriteFrontMatter(doc, pf)
 
 	case reviewSkip:
@@ -153,6 +148,27 @@ func reviewOne(gamesDir, archiveDir string, g GameSummary) (cont, acted bool, er
 		return false, false, nil
 	}
 	return true, false, nil
+}
+
+// applyReviewAction decides what a review decision means for doc's front
+// matter — for the two actions that need no further input beyond the action
+// itself, publishing as-is or marking dropped-and-publishing — and sets it.
+// It does not write anything, the same split as applyStaleAction: the TUI
+// still runs confirmAndWriteFrontMatter (prompt included) right after
+// calling this, while a web handler goes straight to the no-prompt
+// writeFrontMatter since the submitted form is already its confirmation.
+// "Edit, then publish"/"Edit without publishing" aren't handled here — they
+// need a whole extra form's worth of input first (see reviewOne and, for the
+// web UI, the regular game-info edit page); "skip"/"delete"/"quit" aren't
+// front-matter edits at all.
+func applyReviewAction(doc *Doc, action string) {
+	switch action {
+	case reviewPublish:
+		doc.FM.Draft = false
+	case reviewDrop:
+		doc.FM.Status = "dropped"
+		doc.FM.Draft = false
+	}
 }
 
 // deleteGameStub removes a game's whole content directory. Re-checks
@@ -203,9 +219,9 @@ func formatReviewCard(g GameSummary, fm FrontMatter, pf *PlaythroughsFile) strin
 	}
 
 	s := fmt.Sprintf("%s  [%s]\n", g.Title, linkStr)
-	s += fmt.Sprintf("  platform: %s\n", orDash(fm.Platform))
+	s += fmt.Sprintf("  platform: %s\n", orNone(fm.Platform))
 	s += fmt.Sprintf("  status: %s · started: %s · finished: %s\n",
-		orDash(fm.Status), orDash(fm.Started), orDash(fm.Finished))
+		orNone(fm.Status), orNone(fm.Started), orDash(fm.Finished))
 
 	views := pf.Views()
 	if len(views) == 0 {

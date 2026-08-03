@@ -2,16 +2,27 @@
 <h1>{{ .Title }}</h1>
 {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
-{{ partial "games-timeline.html" . }}
+{{/* Tab buttons start hidden, revealed by tabs.ts — no dead controls if JS fails. */}}
+<div class="tabs" data-tabs>
+  <div class="tabs__list" role="tablist" aria-label="Games view" hidden>
+    <button type="button" class="tabs__tab" id="games-tab-timeline" role="tab"
+      aria-selected="true" aria-controls="games-panel-timeline">Timeline</button>
+    <button type="button" class="tabs__tab" id="games-tab-list" role="tab"
+      aria-selected="false" tabindex="-1" aria-controls="games-panel-list">Game list</button>
+    <button type="button" class="tabs__tab" id="games-tab-backlog" role="tab"
+      aria-selected="false" tabindex="-1" aria-controls="games-panel-backlog">Backlog</button>
+  </div>
 
-{{/* Build one record per game *per year it was played in*, so a game played
-     twice years apart appears under both — the list is the archive's answer to
-     "what was I playing in year X", and that question is about playthroughs, not
-     games. game-year-rows.html does the year expansion and merges a game's
-     several runs within one year into a single row; it walks every playthrough
-     entry, so it's called once per game here rather than once per use below. */}}
+  {{/* data-self-sized: the timeline chart sizes/scrolls itself; tabs.ts and main.scss key off this. */}}
+  <div class="tabs__panel" id="games-panel-timeline" role="tabpanel" aria-labelledby="games-tab-timeline" data-self-sized>
+    {{ partial "games-timeline.html" . }}
+  </div>
+
+  <div class="tabs__panel" id="games-panel-list" role="tabpanel" aria-labelledby="games-tab-list">
+  <section aria-label="Game list">
+  {{/* One record per game per year played (game-year-rows.html expands it); backlog games excluded since games-backlog.html above already lists them. */}}
 {{- $rows := slice }}
-{{- range .Pages }}
+{{- range (where .Pages "Params.status" "ne" "backlog") }}
   {{- $page := . }}
   {{- $achievements := "" }}
   {{- with .Resources.Get "achievement-summary.yaml" }}
@@ -27,8 +38,7 @@
   {{- end }}
 {{- end }}
 
-{{/* Newest year first. "Undated" is held out of the sort and pinned last rather
-     than sorted with the rest, where it would land above the years. */}}
+{{/* Newest year first; "Undated" is pinned last instead of sorted with the rest. */}}
 {{- $years := slice }}
 {{- range $rows }}
   {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}
@@ -40,8 +50,7 @@
 {{- range $years }}
 {{- $year := . }}
 {{- $inYear := sort (where $rows "year" "eq" $year) "end" "desc" }}
-{{/* Only the newest year starts expanded — with 200+ games, everything open at
-     once buries the timeline and the recent entries under a wall of cards. */}}
+{{/* Only the newest year starts expanded — 200+ games open at once is a wall. */}}
 <details class="year-group"{{ if eq $year (index $years 0) }} open{{ end }}>
   <summary class="year-group__heading">
     <span class="year-group__caret" aria-hidden="true"></span>
@@ -61,14 +70,7 @@
     {{- $row := . }}
     {{- $page := .page }}
     {{- $achievements := .achievements }}
-    {{/* Achievement sets and playtime don't combine across platforms:
-         Persona 5 Royal is 53/53 on PS4 and 53/53 on Steam, and "106/106"
-         describes a set that doesn't exist. Now that a row belongs to one
-         playthrough on one platform, attribute the figures to that
-         platform's provider instead of fanning every provider out onto
-         every row. A single scored provider is unambiguous whatever the
-         platform string says; with several and no match, say nothing
-         rather than something wrong. */}}
+    {{/* Achievement sets/playtime don't combine across platforms — attribute to the row's own platform provider, not all of them. */}}
     {{- $source := "" }}
     {{- with $achievements }}
       {{- $providers := .providers | default slice }}
@@ -90,9 +92,7 @@
       </span>
       <span class="ps-row__platform" role="cell">{{ $row.platform }}</span>
       <span class="ps-row__played" role="cell">
-        {{/* Dates are clipped to this year by game-year-rows.html, so a row says
-             what happened in the year it's filed under rather than repeating a
-             multi-year span under each one. */}}
+        {{/* Dates are clipped to this year by game-year-rows.html. */}}
         {{- $start := "" }}{{ with $row.start }}{{ $start = . | time.Format "Jan 2006" }}{{ end }}
         {{- $end := "" }}{{ with $row.end }}{{ $end = . | time.Format "Jan 2006" }}{{ end }}
         {{- if and $start $end (ne $start $end) }}
@@ -120,4 +120,20 @@
   <div class="ps-row" role="row"><span class="ps-row__game" role="cell">No games logged yet.</span></div>
 </div>
 {{- end }}
+  </section>
+  </div>
+
+  <div class="tabs__panel" id="games-panel-backlog" role="tabpanel" aria-labelledby="games-tab-backlog">
+    {{ partial "games-backlog.html" . }}
+  </div>
+</div>
+
+{{- $jsOpts := dict
+    "targetPath" "js/tabs.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $tabsJS := resources.Get "js/tabs.ts" | js.Build $jsOpts | fingerprint -}}
+<script src="{{ $tabsJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $tabsJS.Data.Integrity }}"{{ end }} defer></script>
 {{ end }}

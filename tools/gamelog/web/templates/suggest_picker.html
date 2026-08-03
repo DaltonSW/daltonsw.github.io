@@ -1,0 +1,13 @@
+{{define "content"}}
+<h1>Suggest</h1>
+<p class="lead">Read-only — prints suggested started/finished dates from RetroAchievements/Steam. Never writes.</p>
+<div class="table-wrap">
+<table>
+  <tbody>
+  {{range .Games}}
+    <tr><td><a href="/suggest/{{.Slug}}">{{.SuggestLabel}}</a></td></tr>
+  {{end}}
+  </tbody>
+</table>
+</div>
+{{end}}

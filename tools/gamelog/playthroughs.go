@@ -72,7 +72,7 @@ type PlaythroughEntry struct {
 type PlaythroughFields struct {
 	Started  string
 	Finished string
-	Status   string // playing|finished|dropped|paused
+	Status   string // playing|finished|mastered|dropped|paused|ongoing|multiplayer
 	Platform string // blank means "same as the game's front matter"
 	Rating   string // 1-10 or ""
 	Notes    string
@@ -198,6 +198,7 @@ type Session struct {
 	Index    int
 	Started  string
 	Finished string
+	Title    string
 }
 
 // Playthrough is a read-only view of one entry with every field as text,
@@ -237,6 +238,44 @@ func (p Playthrough) IsOpen() bool {
 	return p.Finished == ""
 }
 
+// EarliestDate is the first date this playthrough is known to have started —
+// the minimum of every session's Started once it has any, since sessions
+// aren't guaranteed to be logged in chronological order, or the entry's own
+// Started for one that predates sessions entirely.
+func (p Playthrough) EarliestDate() string {
+	if !p.HasSessions() {
+		return p.Started
+	}
+	earliest := ""
+	for _, s := range p.Sessions {
+		if s.Started != "" && (earliest == "" || s.Started < earliest) {
+			earliest = s.Started
+		}
+	}
+	return earliest
+}
+
+// gameDateRange folds EarliestDate/LatestDate across every playthrough a
+// game has logged, mirroring layouts/partials/game-first-played.html and
+// game-last-played.html — the site itself never reads a game's front-matter
+// started/finished once anything is logged in playthroughs.yaml, since that's
+// where the real per-run dates live (front matter's own started/finished is
+// largely a vestige of games created before playthroughs.yaml existed, or of
+// gamelog scan, which only ever fills in Finished, never Started). Returns
+// "", "" when nothing is logged, so the caller can fall back to front matter
+// the same way those partials do.
+func gameDateRange(views []Playthrough) (earliest, latest string) {
+	for _, p := range views {
+		if d := p.EarliestDate(); d != "" && (earliest == "" || d < earliest) {
+			earliest = d
+		}
+		if d := p.LatestDate(); d != "" && d > latest {
+			latest = d
+		}
+	}
+	return earliest, latest
+}
+
 // Views renders every entry in the form the TUI consumes.
 func (f *PlaythroughsFile) Views() []Playthrough {
 	out := make([]Playthrough, 0, len(f.Playthroughs))
@@ -251,7 +290,7 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 			Notes:    e.Notes,
 		}
 		for j, s := range e.Sessions {
-			p.Sessions = append(p.Sessions, Session{Index: j, Started: s.Started, Finished: s.Finished})
+			p.Sessions = append(p.Sessions, Session{Index: j, Started: s.Started, Finished: s.Finished, Title: s.Title})
 		}
 		out = append(out, p)
 	}
@@ -293,6 +332,154 @@ func (f *PlaythroughsFile) AddSession(idx int, started, finished, title string) 
 	}
 	e.Sessions = append(e.Sessions, SessionEntry{Started: started, Finished: finished, Title: title})
 	return nil
+}
+
+// RemoveSession deletes session j from playthrough idx, shifting later
+// sessions down. Refuses to leave zero sessions — there is no flat
+// started/finished to fall back to once an entry has been converted.
+func (f *PlaythroughsFile) RemoveSession(idx, j int) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to remove a session from", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if j < 0 || j >= len(e.Sessions) {
+		return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
+	}
+	if len(e.Sessions) < 2 {
+		return fmt.Errorf("playthrough %d has only one session — delete the playthrough instead", idx+1)
+	}
+	e.Sessions = append(e.Sessions[:j], e.Sessions[j+1:]...)
+	return nil
+}
+
+// EditSession applies edited started/finished/title to session j in place.
+func (f *PlaythroughsFile) EditSession(idx, j int, started, finished, title string) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to edit a session on", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if j < 0 || j >= len(e.Sessions) {
+		return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
+	}
+	e.Sessions[j].Started = started
+	e.Sessions[j].Finished = finished
+	e.Sessions[j].Title = title
+	return nil
+}
+
+// SplitPlaythrough moves sessions[j:] out of playthrough idx into a new
+// entry appended to the file. append always lands the new entry at the true
+// end of f.Playthroughs, so no other entry's index is ever disturbed. The
+// new entry inherits idx's Platform; Notes/Rating start blank; newStatus is
+// required, never copied from the source. j must be >0.
+func (f *PlaythroughsFile) SplitPlaythrough(idx, j int, newStatus string) (int, error) {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return 0, fmt.Errorf("no playthrough %d to split", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if j <= 0 || j >= len(e.Sessions) {
+		return 0, fmt.Errorf("no session %d to split playthrough %d at", j+1, idx+1)
+	}
+
+	moved := append([]SessionEntry(nil), e.Sessions[j:]...)
+	e.Sessions = e.Sessions[:j]
+
+	f.Playthroughs = append(f.Playthroughs, PlaythroughEntry{
+		Status:   newStatus,
+		Platform: e.Platform,
+		Sessions: moved,
+	})
+	return len(f.Playthroughs) - 1, nil
+}
+
+// GraduatePlannedPlaythrough turns a bare "planned" placeholder into a real
+// entry, in place — idx must not yet have a Started date, so every field
+// this sets was previously empty. That makes it a pure addition as far as
+// the loss-check is concerned, unlike removing a playthrough entirely (which
+// this file deliberately has no operation for — see the package comment on
+// why reindexing playthroughs[] is avoided).
+func (f *PlaythroughsFile) GraduatePlannedPlaythrough(idx int, pf PlaythroughFields) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to start", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if e.Status != "planned" || e.Started != "" {
+		return fmt.Errorf("playthrough %d is not a planned placeholder", idx+1)
+	}
+	e.Started = pf.Started
+	e.Finished = pf.Finished
+	e.Status = pf.Status
+	e.Platform = pf.Platform
+	e.SetRating(pf.Rating)
+	e.Notes = pf.Notes
+	return nil
+}
+
+// EditPlanned updates a planned-replay placeholder's platform/notes in
+// place. Status and dates are untouched here — those only ever change via
+// GraduatePlannedPlaythrough, which is the one path that turns "planned"
+// into something else.
+func (f *PlaythroughsFile) EditPlanned(idx int, platform, notes string) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to edit", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if e.Status != "planned" {
+		return fmt.Errorf("playthrough %d is not a planned placeholder", idx+1)
+	}
+	e.Platform = platform
+	e.Notes = notes
+	return nil
+}
+
+// sessionFieldNames returns the yaml field names one SessionEntry encodes on
+// its own: started/finished always, title/extra keys only when present.
+func sessionFieldNames(s SessionEntry) map[string]bool {
+	names := map[string]bool{"started": true, "finished": true}
+	if s.Title != "" {
+		names["title"] = true
+	}
+	for k := range s.Extra {
+		names[k] = true
+	}
+	return names
+}
+
+// removeSessionAllowedPaths returns the paths that legitimately vanish
+// deleting session j from a pre-mutation slice: a field the shifted-in
+// session doesn't share with the one it replaced disappears from that path,
+// and the old tail slot is gone entirely.
+func removeSessionAllowedPaths(idx int, sessions []SessionEntry, j int) []string {
+	n := len(sessions)
+	var paths []string
+	for p := j; p <= n-2; p++ {
+		cur, next := sessionFieldNames(sessions[p]), sessionFieldNames(sessions[p+1])
+		for name := range cur {
+			if !next[name] {
+				paths = append(paths, sessionPath(idx, p, name))
+			}
+		}
+	}
+	for name := range sessionFieldNames(sessions[n-1]) {
+		paths = append(paths, sessionPath(idx, n-1, name))
+	}
+	return paths
+}
+
+// truncateSessionAllowedPaths returns the paths that vanish from playthrough
+// idx when sessions[from:] is cut away entirely (the split case).
+func truncateSessionAllowedPaths(idx int, sessions []SessionEntry, from int) []string {
+	var paths []string
+	for p := from; p < len(sessions); p++ {
+		for name := range sessionFieldNames(sessions[p]) {
+			paths = append(paths, sessionPath(idx, p, name))
+		}
+	}
+	return paths
+}
+
+func sessionPath(idx, j int, field string) string {
+	return fmt.Sprintf("playthroughs[%d].sessions[%d].%s", idx, j, field)
 }
 
 // SyncStatus keeps a game's sole playthrough entry in step with a

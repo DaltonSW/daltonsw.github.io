@@ -108,27 +108,37 @@ func SelectCandidates(candidates []Candidate) ([]int, error) {
 	return chosen, err
 }
 
-// "session-based", "multiplayer", and "software" all mark an entry that
+// "ongoing", "multiplayer", and "software" all mark an entry that
 // doesn't have a meaningful start/finish narrative — it's used in an
 // open-ended series of sessions with no state that ends play — for three
-// different reasons: session-based is a replay-loop design
+// different reasons: ongoing is a replay-loop design
 // (roguelike/sandbox/idle), multiplayer is inherently social, and software
 // isn't a game at all. Steam sells tools alongside games and reports playtime
 // for them identically, so they arrive through the same scan; "software" says
 // the completion vocabulary simply doesn't apply rather than forcing a
 // finished/dropped answer to a question that was never asked.
 //
-// All three get exactly one playthrough entry, ever; see isOneShot and the
-// gating in logForGame.
-var gameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "session-based", "multiplayer", "software"}
+// ongoing and multiplayer can also be set on an individual playthrough entry
+// (see playthroughStatuses) — a game with distinct modes (Hitman's story
+// campaign, its Freelancer roguelike, and its multiplayer contracts) is one
+// game with several differently-shaped entries, not one status forced onto
+// all of them. "software" stays game-level only: it describes the whole
+// record, not a mode a game can also have alongside others.
+//
+// Each one-shot status still gets at most one entry per platform — see
+// isOneShot and oneShotConflict — since none of the three has a save file or
+// finish line, a second entry of the *same* one-shot status on the same
+// platform would be fragmentation, not a second mode.
+var gameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "ongoing", "multiplayer", "software"}
 
-// isOneShot reports whether a game-level status forbids a second playthrough
-// entry. Keep this in step with the three statuses documented above.
+// isOneShot reports whether a status (game-level or entry-level) forbids a
+// second playthrough entry of that same status on the same platform. Keep
+// this in step with the statuses documented above.
 func isOneShot(status string) bool {
-	return status == "session-based" || status == "multiplayer" || status == "software"
+	return status == "ongoing" || status == "multiplayer" || status == "software"
 }
 
-var playthroughStatuses = []string{"playing", "finished", "mastered", "dropped", "paused"}
+var playthroughStatuses = []string{"playing", "finished", "mastered", "dropped", "paused", "ongoing", "multiplayer"}
 
 func selectOptions(values []string) []huh.Option[string] {
 	opts := make([]huh.Option[string], len(values))
@@ -312,9 +322,14 @@ func SelectStaleAction(suggested string) (string, error) {
 // default so the common single-platform case stays one keystroke. Leaving it
 // blank is meaningful: the entry then inherits the game's platform rather than
 // pinning a copy of it, so correcting the game later corrects the run too.
-func PlaythroughForm(gamePlatform string) (PlaythroughFields, error) {
+//
+// defaultStatus prefills the status select — doNewPlaythrough passes the
+// game's own front-matter status when that's a one-shot status (ongoing/
+// multiplayer/software), so the common case of a single-mode game's one
+// entry stays a one-keystroke confirm, same as before this field existed.
+func PlaythroughForm(gamePlatform, defaultStatus string) (PlaythroughFields, error) {
 	f := PlaythroughFields{
-		Status:  "playing",
+		Status:  defaultStatus,
 		Started: today(),
 	}
 	title := "Platform (blank = same as game)"
@@ -347,10 +362,15 @@ func SelectPlaythrough(playthroughs []Playthrough) (int, error) {
 		if p.HasSessions() {
 			last := p.Sessions[len(p.Sessions)-1]
 			label += fmt.Sprintf(" (%d sessions, last %s→%s)", len(p.Sessions), last.Started, orDash(last.Finished))
+		} else if p.Started == "" {
+			// orDash's "ongoing" already means something else in this
+			// codebase (in progress, not finished) — a blank Started with no
+			// sessions is a planned placeholder that hasn't begun at all.
+			label += " (not started)"
 		} else {
 			label += fmt.Sprintf(" (%s→%s)", p.Started, orDash(p.Finished))
 		}
-		options[i] = huh.NewOption(label, i)
+		options[i] = huh.NewOption(label, p.Index)
 	}
 	var idx int
 	err := huh.NewForm(
@@ -361,9 +381,94 @@ func SelectPlaythrough(playthroughs []Playthrough) (int, error) {
 	return idx, err
 }
 
+// SelectSession prompts to pick one session within an already-chosen
+// playthrough — framed as "last session to keep in the original," the same
+// picker split reuses as its split point.
+func SelectSession(sessions []Session) (int, error) {
+	options := make([]huh.Option[int], len(sessions))
+	for i, s := range sessions {
+		label := fmt.Sprintf("#%d %s→%s", i+1, s.Started, orDash(s.Finished))
+		if s.Title != "" {
+			label += "  " + s.Title
+		}
+		options[i] = huh.NewOption(label, s.Index)
+	}
+	var idx int
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[int]().Title("Which session?").Options(options...).Value(&idx),
+		),
+	).Run()
+	return idx, err
+}
+
+const (
+	sessionActionEdit   = "session_edit"
+	sessionActionDelete = "session_delete"
+	sessionActionSplit  = "session_split"
+)
+
+// SelectSessionAction prompts for what to do with the selected session.
+// canDelete gates on RemoveSession's minimum-session rule; canSplit gates on
+// there being a later session to move into a new entry.
+func SelectSessionAction(canDelete, canSplit bool) (string, error) {
+	options := []huh.Option[string]{huh.NewOption("Edit dates/title", sessionActionEdit)}
+	if canDelete {
+		options = append(options, huh.NewOption("Delete this session", sessionActionDelete))
+	}
+	if canSplit {
+		options = append(options, huh.NewOption("Split everything after this into a new playthrough", sessionActionSplit))
+	}
+	var action string
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[string]().Title("What next?").Options(options...).Value(&action),
+		),
+	).Run()
+	return action, err
+}
+
+// EditSessionForm prompts to edit one session's dates/title, prefilled with
+// its current values.
+func EditSessionForm(s Session) (started, finished, title string, err error) {
+	started, finished, title = s.Started, s.Finished, s.Title
+	err = huh.NewForm(
+		huh.NewGroup(
+			huh.NewInput().Title("Session started (YYYY-MM-DD)").Value(&started).Validate(validateDate(true)),
+			huh.NewInput().Title("Session finished (YYYY-MM-DD, blank if still ongoing)").Value(&finished).Validate(validateDate(false)),
+			huh.NewInput().Title("Session title (optional)").Value(&title),
+		),
+	).Run()
+	return started, finished, title, err
+}
+
+// SplitStatusForm prompts for the new split-off entry's status, defaulting
+// to the source entry's current status but editable.
+func SplitStatusForm(defaultStatus string) (string, error) {
+	status := defaultStatus
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[string]().Title("Status for the new playthrough").Options(selectOptions(playthroughStatuses)...).Value(&status),
+		),
+	).Run()
+	return status, err
+}
+
 func orDash(s string) string {
 	if s == "" {
 		return "ongoing"
+	}
+	return s
+}
+
+// orNone is orDash's counterpart for fields where a blank value doesn't mean
+// "ongoing" — a start date, a status, a platform. orDash's "ongoing" only
+// reads correctly next to a *finish* date (blank there genuinely means still
+// being played); reusing it for these would print nonsense like
+// "started: ongoing" or "platform: ongoing".
+func orNone(s string) string {
+	if s == "" {
+		return "-"
 	}
 	return s
 }
@@ -385,6 +490,47 @@ func SessionForm(defaultStarted, defaultFinished string) (started, finished, tit
 		),
 	).Run()
 	return started, finished, title, err
+}
+
+// PlannedReplayForm prompts for the two fields a planned-replay placeholder
+// carries: which platform (blank = same as the game) and an optional note
+// about what's planned (a mode to try, DLC to catch up on). No dates, no
+// status select — the entry this feeds stays status: planned until it's
+// graduated into a real playthrough. platform/notes are also the prefill, so
+// the same form serves both creating a placeholder and editing one in place.
+func PlannedReplayForm(gamePlatform, platform, notes string) (string, string, error) {
+	title := "Platform (blank = same as game)"
+	if gamePlatform != "" {
+		title = fmt.Sprintf("Platform (blank = %s)", gamePlatform)
+	}
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewInput().Title(title).Value(&platform),
+			huh.NewText().Title("Notes (optional)").Value(&notes),
+		),
+	).Run()
+	return platform, notes, err
+}
+
+const (
+	plannedActionStart = "planned_start"
+	plannedActionEdit  = "planned_edit"
+)
+
+// SelectPlannedAction prompts for what to do with a chosen planned-replay
+// placeholder. There is deliberately no "remove" option here — see the
+// no-delete-mutator note on PlaythroughsFile.GraduatePlannedPlaythrough.
+func SelectPlannedAction() (string, error) {
+	var action string
+	err := huh.NewForm(
+		huh.NewGroup(
+			huh.NewSelect[string]().Title("What next?").Options(
+				huh.NewOption("Start this playthrough now", plannedActionStart),
+				huh.NewOption("Edit platform/notes", plannedActionEdit),
+			).Value(&action),
+		),
+	).Run()
+	return action, err
 }
 
 // UpdateForm prompts to edit an existing playthrough's finished date,

@@ -497,10 +497,399 @@ func TestSyncStatus_SkipsWhenAmbiguousOrIrrelevant(t *testing.T) {
 	}
 }
 
-// A one-shot game (session-based/multiplayer/software) is capped at one entry
+// A one-shot game (ongoing/multiplayer/software) is capped at one entry
 // per platform, not one entry outright. Saves don't cross consoles, so a
 // second platform is a genuinely separate record — but a second entry on the
 // same platform is the fragmentation the cap exists to prevent.
+const threeSessionsFixture = `playthroughs:
+  - status: playing
+    sessions:
+      - started: "2024-01-01"
+        finished: "2024-01-05"
+        title: prologue
+      - started: "2024-02-01"
+        finished: "2024-02-10"
+      - started: "2024-03-01"
+        finished: "2024-03-15"
+        mood: grindy
+`
+
+func TestRemoveSession_LeavesEarlierSessionsUntouched(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if err := pf.RemoveSession(0, 1); err != nil {
+		t.Fatal(err)
+	}
+	got := saveAndReload(t, pf).Playthroughs[0]
+	if got.Sessions[0].Title != "prologue" || got.Sessions[0].Started != "2024-01-01" {
+		t.Errorf("earlier session disturbed: %+v", got.Sessions[0])
+	}
+}
+
+func TestRemoveSession_ShiftsLaterSessionsCorrectly(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if err := pf.RemoveSession(0, 1); err != nil {
+		t.Fatal(err)
+	}
+	got := saveAndReload(t, pf).Playthroughs[0]
+	if len(got.Sessions) != 2 {
+		t.Fatalf("expected 2 sessions, got %d", len(got.Sessions))
+	}
+	if got.Sessions[1].Started != "2024-03-01" || got.Sessions[1].Extra["mood"] != "grindy" {
+		t.Errorf("shifted session lost its own data: %+v", got.Sessions[1])
+	}
+}
+
+func TestRemoveSession_RefusesToLeaveZeroSessions(t *testing.T) {
+	pf := loadFixture(t, "playthroughs:\n  - status: playing\n    sessions:\n      - started: \"2024-01-01\"\n")
+	if err := pf.RemoveSession(0, 0); err == nil {
+		t.Fatal("expected an error rather than an entry with zero sessions")
+	}
+	if len(pf.Playthroughs[0].Sessions) != 1 {
+		t.Error("the rejected removal must not have mutated anything")
+	}
+}
+
+// The direct shift-corruption repro: the deleted session has a title the
+// session sliding into its slot lacks, so that title has to be declared or
+// checkNoFieldLoss must catch it.
+func TestRemoveSession_TitleThatDoesNotCarryOverIsCaughtCorrectly(t *testing.T) {
+	fixture := `playthroughs:
+  - status: playing
+    sessions:
+      - started: "2024-01-01"
+        finished: "2024-01-05"
+      - started: "2024-02-01"
+        finished: "2024-02-10"
+        title: raid night
+      - started: "2024-03-01"
+        finished: "2024-03-15"
+`
+	pf := loadFixture(t, fixture)
+	before, err := collectYAMLFields(pf.Raw())
+	if err != nil {
+		t.Fatal(err)
+	}
+	beforeSessions := append([]SessionEntry(nil), pf.Playthroughs[0].Sessions...)
+
+	if err := pf.RemoveSession(0, 1); err != nil {
+		t.Fatal(err)
+	}
+	encoded, err := pf.Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	after, err := collectYAMLFields(encoded)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	allowed := removeSessionAllowedPaths(0, beforeSessions, 1)
+	if err := checkNoFieldLoss(before, after, allowed); err != nil {
+		t.Fatalf("removal lost something it did not declare: %v", err)
+	}
+
+	err = checkNoFieldLoss(before, after, nil)
+	if err == nil || !strings.Contains(err.Error(), "sessions[1].title") {
+		t.Fatalf("expected sessions[1].title reported when undeclared, got: %v", err)
+	}
+}
+
+// The allowlist must be exact: declaring it passes, and without it the
+// error names precisely those paths and nothing else.
+func TestRemoveSessionAllowedPaths_MatchesWhatActuallyVanishes(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	before, err := collectYAMLFields(pf.Raw())
+	if err != nil {
+		t.Fatal(err)
+	}
+	beforeSessions := append([]SessionEntry(nil), pf.Playthroughs[0].Sessions...)
+
+	if err := pf.RemoveSession(0, 0); err != nil {
+		t.Fatal(err)
+	}
+	encoded, err := pf.Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	after, err := collectYAMLFields(encoded)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	allowed := removeSessionAllowedPaths(0, beforeSessions, 0)
+	if err := checkNoFieldLoss(before, after, allowed); err != nil {
+		t.Fatalf("declared allowlist should pass: %v", err)
+	}
+
+	err = checkNoFieldLoss(before, after, nil)
+	if err == nil {
+		t.Fatal("expected the vanished paths to be reported when undeclared")
+	}
+	for _, want := range []string{"sessions[0].title", "sessions[2].started", "sessions[2].finished", "sessions[2].mood"} {
+		if !strings.Contains(err.Error(), want) {
+			t.Errorf("error should name %q, got: %v", want, err)
+		}
+	}
+	if strings.Contains(err.Error(), "sessions[1]") {
+		t.Errorf("session 1 should be untouched, got: %v", err)
+	}
+}
+
+func TestTruncateSessionAllowedPaths_MatchesWhatActuallyVanishes(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	before, err := collectYAMLFields(pf.Raw())
+	if err != nil {
+		t.Fatal(err)
+	}
+	beforeSessions := append([]SessionEntry(nil), pf.Playthroughs[0].Sessions...)
+
+	pf.Playthroughs[0].Sessions = pf.Playthroughs[0].Sessions[:1]
+	encoded, err := pf.Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	after, err := collectYAMLFields(encoded)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	allowed := truncateSessionAllowedPaths(0, beforeSessions, 1)
+	if err := checkNoFieldLoss(before, after, allowed); err != nil {
+		t.Fatalf("declared allowlist should pass: %v", err)
+	}
+
+	err = checkNoFieldLoss(before, after, nil)
+	if err == nil {
+		t.Fatal("expected the truncated paths to be reported when undeclared")
+	}
+	for _, want := range []string{"sessions[1].started", "sessions[1].finished", "sessions[2].started", "sessions[2].finished", "sessions[2].mood"} {
+		if !strings.Contains(err.Error(), want) {
+			t.Errorf("error should name %q, got: %v", want, err)
+		}
+	}
+}
+
+func TestSplitPlaythrough_MovesTrailingSessionsToANewEntry(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	newIdx, err := pf.SplitPlaythrough(0, 1, "finished")
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := saveAndReload(t, pf)
+
+	if len(got.Playthroughs[0].Sessions) != 1 || got.Playthroughs[0].Sessions[0].Title != "prologue" {
+		t.Errorf("source entry should keep only session 0: %+v", got.Playthroughs[0].Sessions)
+	}
+	newEntry := got.Playthroughs[newIdx]
+	if len(newEntry.Sessions) != 2 {
+		t.Fatalf("expected 2 sessions moved, got %d", len(newEntry.Sessions))
+	}
+	if newEntry.Sessions[0].Started != "2024-02-01" || newEntry.Sessions[1].Extra["mood"] != "grindy" {
+		t.Errorf("moved sessions lost data: %+v", newEntry.Sessions)
+	}
+}
+
+func TestSplitPlaythrough_InheritsPlatformNotStatusOrNotesOrRating(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: dropped
+    platform: Switch
+    rating: 7
+    notes: speedrun practice
+    sessions:
+      - started: "2024-01-01"
+        finished: "2024-01-05"
+      - started: "2024-02-01"
+        finished: "2024-02-10"
+`)
+	newIdx, err := pf.SplitPlaythrough(0, 1, "finished")
+	if err != nil {
+		t.Fatal(err)
+	}
+	newEntry := pf.Playthroughs[newIdx]
+	if newEntry.Platform != "Switch" {
+		t.Errorf("platform = %q, want inherited Switch", newEntry.Platform)
+	}
+	if newEntry.Status != "finished" {
+		t.Errorf("status = %q, want finished, not copied from source", newEntry.Status)
+	}
+	if newEntry.Notes != "" || newEntry.RatingString() != "" {
+		t.Errorf("notes/rating should start blank, got notes=%q rating=%q", newEntry.Notes, newEntry.RatingString())
+	}
+}
+
+func TestSplitPlaythrough_RejectsSplittingAtIndexZero(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if _, err := pf.SplitPlaythrough(0, 0, "finished"); err == nil {
+		t.Fatal("expected an error — the source entry must keep at least session 0")
+	}
+	if len(pf.Playthroughs) != 1 || len(pf.Playthroughs[0].Sessions) != 3 {
+		t.Error("the rejected split must not have mutated anything")
+	}
+}
+
+func TestSplitPlaythrough_AppendsAfterExistingLaterEntries(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: playing
+    platform: PC
+    sessions:
+      - started: "2024-01-01"
+        finished: "2024-01-05"
+      - started: "2024-02-01"
+        finished: "2024-02-10"
+  - started: "2020-01-01"
+    finished: "2020-02-01"
+    status: finished
+    platform: Switch
+`)
+	newIdx, err := pf.SplitPlaythrough(0, 1, "finished")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if newIdx != 2 {
+		t.Fatalf("expected the new entry at index 2, got %d", newIdx)
+	}
+	middle := pf.Playthroughs[1]
+	if middle.Started != "2020-01-01" || middle.Platform != "Switch" {
+		t.Errorf("the entry after idx must be undisturbed: %+v", middle)
+	}
+}
+
+func TestEditSession_UpdatesInPlaceWithoutDisturbingSiblings(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if err := pf.EditSession(0, 1, "2024-02-02", "2024-02-12", "patched"); err != nil {
+		t.Fatal(err)
+	}
+	got := saveAndReload(t, pf).Playthroughs[0]
+	if got.Sessions[0].Title != "prologue" {
+		t.Error("editing session 1 must not disturb session 0")
+	}
+	if got.Sessions[1].Started != "2024-02-02" || got.Sessions[1].Finished != "2024-02-12" || got.Sessions[1].Title != "patched" {
+		t.Errorf("edit not applied: %+v", got.Sessions[1])
+	}
+	if got.Sessions[2].Extra["mood"] != "grindy" {
+		t.Error("editing session 1 must not disturb session 2")
+	}
+}
+
+func TestEditSession_ClearingTitleDropsTheKey(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if err := pf.EditSession(0, 0, "2024-01-01", "2024-01-05", ""); err != nil {
+		t.Fatal(err)
+	}
+	out, err := pf.Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if strings.Contains(string(out), "title: prologue") {
+		t.Errorf("cleared title should not be written:\n%s", out)
+	}
+}
+
+func TestViewsIncludeSessionTitle(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	views := pf.Views()
+	if views[0].Sessions[0].Title != "prologue" {
+		t.Errorf("session title = %q, want prologue", views[0].Sessions[0].Title)
+	}
+}
+
+func TestGraduatePlannedPlaythrough_FillsFieldsInPlace(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: finished
+    started: "2021-05-01"
+    finished: "2021-05-15"
+  - status: planned
+    platform: PC
+    notes: try NG+
+`)
+	err := pf.GraduatePlannedPlaythrough(1, PlaythroughFields{
+		Started:  "2026-07-28",
+		Finished: "",
+		Status:   "playing",
+		Platform: "PC",
+		Rating:   "",
+		Notes:    "try NG+",
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(pf.Playthroughs) != 2 {
+		t.Fatalf("graduate must not add or remove entries, got %d", len(pf.Playthroughs))
+	}
+	e := pf.Playthroughs[1]
+	if e.Status != "playing" || e.Started != "2026-07-28" || e.Platform != "PC" || e.Notes != "try NG+" {
+		t.Errorf("unexpected entry after graduate: %+v", e)
+	}
+
+	out := saveAndReload(t, pf)
+	if out.Playthroughs[1].Status != "playing" || out.Playthroughs[1].Started != "2026-07-28" {
+		t.Errorf("graduated fields did not survive a round trip: %+v", out.Playthroughs[1])
+	}
+	// The original "finished" entry at index 0 must be untouched — graduate
+	// only ever mutates the one index it's given.
+	if out.Playthroughs[0].Status != "finished" || out.Playthroughs[0].Started != "2021-05-01" {
+		t.Errorf("graduate must not disturb other entries: %+v", out.Playthroughs[0])
+	}
+}
+
+func TestGraduatePlannedPlaythrough_RejectsNonPlannedStatus(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: finished
+    started: "2021-05-01"
+    finished: "2021-05-15"
+`)
+	if err := pf.GraduatePlannedPlaythrough(0, PlaythroughFields{Started: "2026-07-28", Status: "playing"}); err == nil {
+		t.Fatal("expected an error — index 0 is not a planned placeholder")
+	}
+}
+
+func TestGraduatePlannedPlaythrough_RejectsAlreadyStartedPlanned(t *testing.T) {
+	// An entry can't be status "planned" with a Started date under normal
+	// use, but the guard should hold regardless of how it got there — this
+	// is the invariant that keeps graduate a pure addition for the loss-check.
+	pf := loadFixture(t, `playthroughs:
+  - status: planned
+    started: "2026-01-01"
+`)
+	if err := pf.GraduatePlannedPlaythrough(0, PlaythroughFields{Started: "2026-07-28", Status: "playing"}); err == nil {
+		t.Fatal("expected an error — a planned entry with a Started date is not a bare placeholder")
+	}
+}
+
+func TestGraduatePlannedPlaythrough_RejectsOutOfRangeIndex(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: planned
+`)
+	if err := pf.GraduatePlannedPlaythrough(5, PlaythroughFields{Started: "2026-07-28"}); err == nil {
+		t.Fatal("expected an error for an out-of-range index")
+	}
+}
+
+func TestEditPlanned_UpdatesPlatformAndNotes(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: planned
+    platform: PC
+    notes: try NG+
+`)
+	if err := pf.EditPlanned(0, "Switch", "try the DLC instead"); err != nil {
+		t.Fatal(err)
+	}
+	e := pf.Playthroughs[0]
+	if e.Platform != "Switch" || e.Notes != "try the DLC instead" || e.Status != "planned" {
+		t.Errorf("unexpected entry after edit: %+v", e)
+	}
+}
+
+func TestEditPlanned_RejectsNonPlannedStatus(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: finished
+    started: "2021-05-01"
+`)
+	if err := pf.EditPlanned(0, "PC", "notes"); err == nil {
+		t.Fatal("expected an error — index 0 is not a planned placeholder")
+	}
+}
+
 func TestEffectivePlatformTreatsBlankAsTheGames(t *testing.T) {
 	for _, tc := range []struct {
 		entry, game, want string

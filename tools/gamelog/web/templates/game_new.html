@@ -1,0 +1,54 @@
+{{define "content"}}
+<h1>New game</h1>
+
+<form method="post" action="/games/new" class="tui">
+  <span class="tui__title">new game</span>
+
+  <div class="field">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required value="{{.Title}}">
+  </div>
+  <div class="field">
+    <label for="platform">Platform</label>
+    <input type="text" id="platform" name="platform" value="{{.Platform}}">
+  </div>
+  <div class="field">
+    <label for="ra_id">RetroAchievements game ID or URL</label>
+    <input type="text" id="ra_id" name="ra_id" value="{{.RetroAchievementsID}}">
+    <p class="hint">blank if none</p>
+  </div>
+  <div class="field">
+    <label for="steam_id">Steam appid or store URL</label>
+    <input type="text" id="steam_id" name="steam_id" value="{{.SteamAppID}}">
+    <p class="hint">blank if none</p>
+  </div>
+  <div class="field">
+    <label for="status">Status</label>
+    <select id="status" name="status">
+      {{$cur := .Status}}
+      {{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}
+    </select>
+  </div>
+  <div class="field">
+    <label for="started">Started (YYYY-MM-DD)</label>
+    <input type="text" id="started" name="started" value="{{.Started}}">
+  </div>
+  <div class="field">
+    <label for="finished">Finished (YYYY-MM-DD, blank if ongoing)</label>
+    <input type="text" id="finished" name="finished" value="{{.Finished}}">
+  </div>
+  <div class="field">
+    <label for="rating">Rating (1-10, blank if none)</label>
+    <input type="text" id="rating" name="rating" value="{{.Rating}}">
+  </div>
+  <div class="field">
+    <label for="overview">Overview</label>
+    <textarea id="overview" name="overview">{{.Overview}}</textarea>
+  </div>
+
+  <div class="btn-row">
+    <button type="submit" class="btn--primary">Create</button>
+    <a class="btn" href="/">Cancel</a>
+  </div>
+</form>
+{{end}}

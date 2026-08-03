@@ -1,0 +1,28 @@
+{{define "content"}}
+<h1>Scan</h1>
+<p class="lead">Finds games on RetroAchievements/Steam that aren't logged yet.</p>
+
+<form method="get" action="/scan" class="row">
+  <label for="min_hours">Min Steam hours</label>
+  <input type="number" step="0.5" id="min_hours" name="min_hours" value="{{.MinHours}}" style="max-width: 8rem;">
+  <button type="submit">Re-scan</button>
+</form>
+
+<pre>{{.Report}}</pre>
+
+{{if .Candidates}}
+<form method="post" action="/scan" class="tui">
+  <span class="tui__title">create entries</span>
+  <input type="hidden" name="min_hours" value="{{.MinHours}}">
+  <div class="stack">
+  {{range $i, $c := .Candidates}}
+    <div class="checkbox-row">
+      <input type="checkbox" id="c{{$i}}" name="candidate" value="{{$i}}">
+      <label for="c{{$i}}">{{$c.Title}} [{{$c.Provider}}]{{if $c.Finished}} · finished{{end}}{{if gt $c.PlaytimeMins 0}} · {{formatHoursFunc $c.PlaytimeMins}}{{end}}</label>
+    </div>
+  {{end}}
+  </div>
+  <div class="btn-row"><button type="submit" class="btn--primary">Create selected (draft)</button></div>
+</form>
+{{end}}
+{{end}}

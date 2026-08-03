@@ -28,7 +28,7 @@ type OpenEntry struct {
 // This is deliberately not part of `gamelog stale`, which asks a different
 // question: stale looks at games still marked "playing" and guesses a terminal
 // status (finished/dropped/mastered) from achievement completion. The
-// open-ended entries this handles are mostly session-based/multiplayer/software
+// open-ended entries this handles are mostly ongoing/multiplayer/software
 // games whose status is already correct and must not change — the only thing
 // wrong with them is a trailing `finished: ""` that renders as "ongoing"
 // forever. Closing a date and picking a status are separate decisions, so they
@@ -181,7 +181,7 @@ func archiveLastPlayed(archiveDir string, g GameSummary) string {
 // closeEntry writes the closing date onto one entry's trailing session, or
 // onto the entry itself when it has no sessions. Status is left alone — an
 // entry going from open to closed says when play stopped, not that the game
-// was completed, and for the session-based/multiplayer/software games this
+// was completed, and for the ongoing/multiplayer/software games this
 // mostly targets there is no completion to claim.
 func closeEntry(e OpenEntry) (bool, error) {
 	pf, err := LoadPlaythroughs(filepath.Dir(e.Game.Path))

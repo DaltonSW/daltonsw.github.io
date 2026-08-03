@@ -164,14 +164,14 @@
   {{- end -}}
 {{- end -}}
 
-{{/* session-based, multiplayer, and software exist only in the game-level
+{{/* ongoing, multiplayer, and software exist only in the game-level
      vocabulary — those games keep a single playthrough whose status stays
      "playing" while its sessions accumulate (see tools/gamelog KNOWN-ISSUES).
      Letting the entry status win would pill an endless sandbox — or a paint
      program — identically to an active playthrough, and would disagree with the
      bar colour the timeline gives it. */}}
 {{- $gameStatus := $game.Params.status -}}
-{{- $override := in (slice "session-based" "multiplayer" "software") $gameStatus -}}
+{{- $override := in (slice "ongoing" "multiplayer" "software") $gameStatus -}}
 
 {{- $out := slice -}}
 {{- range $year, $row := $rows -}}

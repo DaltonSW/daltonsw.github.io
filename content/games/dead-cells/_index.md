@@ -3,7 +3,7 @@ title: Dead Cells
 platform: PC
 retroachievements_id: null
 steam_appid: 588650
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

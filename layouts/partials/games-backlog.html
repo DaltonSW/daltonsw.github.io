@@ -1,0 +1,59 @@
+{{/* Self-contained backlog section: games not yet played (status: backlog in
+     front matter, no playthroughs.yaml at all) and games with a
+     planned-replay placeholder (a dateless status: planned entry in
+     playthroughs.yaml). Deliberately independent of taxonomy.html's
+     $rows/$years/.ps-table build below — this queries .Pages itself and
+     renders with .entry-list, the same component term.html already uses for
+     a game's own playthrough list, so this section can move to its own page
+     or a sidebar later without disentangling any shared state.
+
+     Included from layouts/games/taxonomy.html; context is the games
+     taxonomy page. */}}
+{{- $notYetPlayed := sort (where .Pages "Params.status" "eq" "backlog") "Title" -}}
+
+{{- $plannedReplays := slice -}}
+{{- range .Pages -}}
+  {{- $game := . -}}
+  {{- range partial "playthrough-entries.html" $game -}}
+    {{- if eq .status "planned" -}}
+      {{- $plannedReplays = $plannedReplays | append (dict "title" $game.Title "game" $game "entry" .) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $plannedReplays = sort $plannedReplays "title" -}}
+
+{{- if or (gt (len $notYetPlayed) 0) (gt (len $plannedReplays) 0) -}}
+<section class="games-backlog" aria-label="Backlog">
+  <h2>Backlog</h2>
+
+  {{- with $notYetPlayed }}
+  <h3>Not yet played</h3>
+  <ul class="entry-list">
+    {{- range . }}
+    <li class="entry entry--backlog">
+      <a class="entry__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- with .Params.platform }}<span class="entry__meta">{{ . }}</span>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{- with $plannedReplays }}
+  <h3>Planned replays</h3>
+  <ul class="entry-list">
+    {{- range . }}
+    {{- $game := .game }}
+    {{- $entry := .entry }}
+    <li class="entry entry--planned">
+      <a class="entry__title" href="{{ $game.RelPermalink }}">{{ $game.Title }}</a>
+      <span class="pill pill--planned">planned</span>
+      {{- with ($entry.platform | default $game.Params.platform) }}<span class="entry__meta">{{ . }}</span>{{ end }}
+      {{- with $entry.notes }}
+      <div class="entry__notes prose">{{ . | markdownify }}</div>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</section>
+{{- end -}}

@@ -1,0 +1,20 @@
+{{define "content"}}
+<h1>Review drafts</h1>
+<p class="lead">{{len .Games}} draft game(s).</p>
+{{range .Games}}
+<div class="tui">
+  <span class="tui__title">{{.Game.Title}}</span>
+  <pre>{{.Card}}</pre>
+  <form method="post" action="/review/{{.Game.Slug}}" class="btn-row">
+    <button name="action" value="publish" type="submit" class="btn--primary">Publish as-is</button>
+    <button name="action" value="drop" type="submit">Mark dropped &amp; publish</button>
+    <a class="btn" href="/games/{{.Game.Slug}}">Edit</a>
+    {{if .CanDelete}}
+    <button name="action" value="delete" type="submit" class="btn--danger" onclick="return confirm('Permanently delete this stub? It has no captured data.')">Delete stub</button>
+    {{end}}
+  </form>
+</div>
+{{else}}
+<p class="empty">No draft games to review.</p>
+{{end}}
+{{end}}

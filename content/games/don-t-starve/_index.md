@@ -3,7 +3,7 @@ title: Don't Starve
 platform: PC
 retroachievements_id: null
 steam_appid: 219740
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

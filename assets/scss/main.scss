@@ -3,9 +3,12 @@
 
 /* ── Reset / base ───────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overscroll-behavior-y: none; }
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   color: var(--fg);
   font-family: $font-body;
@@ -13,6 +16,7 @@ body {
   line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
 }
 img { max-width: 100%; height: auto; }
 a {
@@ -68,11 +72,12 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
-// the games taxonomy page carries a timeline chart + a name/date/stat list —
-// both want real horizontal room, not prose measure, so it fills the screen
-// instead of being capped at $content-width.
+// Games taxonomy page: timeline + stat list want real width, not prose measure.
 .wrap--wide { max-width: none; }
-.site-main { padding-block: 2.5rem 4rem; }
+// flex: 1 0 auto pins .site-footer to the viewport bottom on short pages.
+.site-main { padding-block: 2.5rem 4rem; flex: 1 0 auto; }
+// Taxonomy pages: title sits right under the sticky header, needs less padding.
+.site-main--tight { padding-top: 1.25rem; padding-bottom: 1.5rem; }
 
 /* ── Header: shell prompt ───────────────────────────────────────────────── */
 .site-header {
@@ -152,10 +157,7 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 }
 
 /* ── Status pills ───────────────────────────────────────────────────────── */
-// Single source of truth for status → color, consumed here and by the
-// .entry--* (Games / projects lists section) and .games-timeline
-// .vis-item.pt--* (timeline section) rules below, so a new status is one
-// map entry instead of three hand-edited spots.
+// Single source of truth for status → color, shared with .entry--* and .vis-item.pt--*.
 $status-colors: (
   playing:       var(--warn),
   finished:      var(--ok),
@@ -163,12 +165,12 @@ $status-colors: (
   dropped:       var(--stop),
   backlog:       var(--dim),
   paused:        var(--pause),
-  session-based: var(--session),
+  ongoing:       var(--ongoing),
   multiplayer:   var(--multi),
   software:      var(--software),
+  planned:       var(--accent),
 );
-// Project-only aliases: these status values appear on .pill via project
-// front matter (e.g. status: "wip"), never on .entry or the timeline.
+// Project-only aliases: appear on .pill via project front matter, never .entry/timeline.
 $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 
 .pill {
@@ -188,6 +190,10 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .prose { max-width: $measure; }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose li { margin: 0.25em 0; }
+// wrap--wide (taxonomy pages only): title is the first element, not mid-prose.
+.wrap--wide > h1:first-child { margin-top: 0.2em; }
+.wrap--wide > .prose:first-of-type { margin-bottom: 0.75rem; }
+.wrap--wide > .prose:first-of-type p { margin: 0; }
 .lead { color: var(--dim); font-size: 1.08rem; }
 
 /* ── Homepage ───────────────────────────────────────────────────────────── */
@@ -221,8 +227,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .entry__dates b { color: var(--fg); font-weight: 500; }
 .entry__dates--none { font-style: italic; }
 
-/* Year groupings on the games list — the heading is the anchor for a run of
-   games last played that year, so it reads as a divider rather than a title. */
+/* Year groupings on the games list read as a divider, not a title. */
 .year-group { margin-top: 2rem; }
 .year-group:first-of-type { margin-top: 1rem; }
 .year-group__heading {
@@ -234,10 +239,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .year-group__heading::-webkit-details-marker { display: none; } /* Safari */
 .year-group__heading:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .year-group__heading:hover { color: var(--accent); }
-/* Terminal section rule: "2026 ────────── 6 games", a dash-fill sitting
-   between the year and the count rather than a plain bottom-border, echoing
-   the ps-table's shell framing above it. order places it between the two
-   real children without changing their document order. */
+/* Dash-fill between year and count: "2026 ────────── 6 games". */
 .year-group__year  { order: 1; }
 .year-group__heading::after {
   content: ""; order: 2; flex: 1 1 auto; align-self: center;
@@ -246,8 +248,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .year-group__count { order: 3; }
 .year-group__heading:hover::after { border-bottom-color: var(--accent); }
 .year-group__caret {
-  /* inline-block matters: transform is a no-op on inline boxes, so the caret
-     would never rotate on open. */
+  /* inline-block: transform is a no-op on inline boxes. */
   display: inline-block; width: 0; height: 0;
   border-left: 0.4em solid currentColor;
   border-top: 0.3em solid transparent; border-bottom: 0.3em solid transparent;
@@ -260,9 +261,37 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .entry__notes { width: 100%; margin: 0.4rem 0 0; font-size: 0.9rem; color: var(--fg); }
 .entry__notes p:last-child { margin-bottom: 0; }
 
-/* ── Games process table (ps-style) — scoped to the games taxonomy page only;
-   deliberately does not touch .entry/.entry-list/.pill above, which the
-   Projects page and single game/term pages also use. ──────────────────── */
+.games-backlog { margin: 2rem 0; }
+.games-backlog h3 { margin-top: 1.2rem; }
+.games-backlog .entry-list { margin-top: 0.7rem; }
+
+/* ── Tabs (games taxonomy page: Timeline / Game list / Backlog) ─────────── */
+/* Underline style, matching the site's own .nav treatment, not the toolbar's bracket buttons. */
+.tabs__list { display: flex; gap: 0.2rem; border-bottom: 1px solid var(--stroke); margin-bottom: 1.5rem; }
+// max-height is set inline by tabs.ts; this makes it scroll instead of clip.
+.tabs__panel {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding-right: 0.75rem;
+}
+// Self-sized panels (timeline) manage their own scrolling — no gutter doubling up.
+.tabs__panel[data-self-sized] {
+  overflow: hidden;
+  padding-right: 0;
+}
+.tabs__tab {
+  font-family: $font-ui; font-size: 0.9rem; font-weight: 500; color: var(--dim);
+  background: none; border: none; border-bottom: 2px solid transparent;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: -1px; padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.tabs__tab:hover { color: var(--fg); background: var(--panel-2); }
+.tabs__tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.tabs__tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* ── Games process table (ps-style) — scoped to the games taxonomy page only ── */
 .ps-table {
   display: grid; gap: 0.35rem;
   margin: 0.9rem 0 0;
@@ -270,13 +299,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .ps-row {
   display: grid;
-  /* Each row is its own grid container (there's no single real <table>), so
-     intrinsic sizing like max-content is computed per-row and never lines up
-     across rows or with the header. STATUS and PLAYTIME use fixed ch widths
-     instead — exact in a monospace font — sized to the longer of the widest
-     data value ("[finished]"/"[mastered]"/"[software]", "142.5h"-style
-     playtime) and the header word itself ("PLAYTIME" is 8 characters), so
-     every row — including the header — resolves to the same column tracks. */
+  /* Each row is its own grid, so columns use fixed ch widths to line up across rows. */
   grid-template-columns: 10ch minmax(10ch, 1.6fr) minmax(6ch, 0.8fr) minmax(9ch, 1fr) 9ch minmax(7.5rem, 1fr);
   align-items: baseline; column-gap: 0.9rem;
   padding: 0.5rem 0.8rem;
@@ -287,11 +310,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ps-row--head {
   background: none; border-color: transparent;
   padding-bottom: 0.15rem;
-  /* Same font-size as body rows deliberately — .ps-row's grid-template-columns
-     uses ch units on two columns, and ch resolves relative to the row's own
-     font-size, so a smaller header font-size here would size those columns
-     differently than every body row and break alignment. Get the "smaller,
-     dimmer" header look from color/letter-spacing/case instead. */
+  /* Same font-size as body rows deliberately — ch-unit columns need it to stay aligned. */
   color: var(--dim); letter-spacing: 0.04em; text-transform: uppercase;
 }
 .ps-status { font-weight: 600; white-space: nowrap; }
@@ -303,9 +322,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ps-row__played--none { font-style: italic; }
 .ps-row__achievements { color: var(--dim); font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 0.5rem; }
 
-/* Retro completion meter — real elements, not literal glyph text. The track's
-   notches are a repeating background so it reads as a chunky segmented gauge
-   rather than a smooth progress bar. */
+/* Retro completion meter — real elements, not literal glyph text. */
 .ps-meter { display: inline-flex; align-items: center; gap: 0.4rem; }
 .ps-meter__track {
   position: relative; display: inline-block;
@@ -327,9 +344,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 @media (prefers-reduced-motion: reduce) { .ps-meter__fill { transition: none; } }
 .ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; }
 
-/* Tablet: still the 6-column layout, just tighter — the 640px breakpoint
-   below switches to a stacked layout instead, so this only covers the gap
-   between full desktop width and that switch. */
+/* Tablet: still 6 columns, just tighter (640px below switches to stacked). */
 @media (max-width: 768px) {
   .ps-row {
     grid-template-columns: 9ch minmax(8ch, 1.3fr) minmax(5ch, 0.7fr) minmax(7ch, 0.9fr) 8ch minmax(6rem, 0.9fr);
@@ -373,6 +388,8 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   );
 }
 .games-timeline__fallback { color: var(--dim); padding: 1rem; margin: 0; }
+// Anchors the fade overlays below (vis-timeline also sets this inline once it mounts).
+.games-timeline__root { position: relative; }
 
 .games-timeline__toolbar { display: flex; justify-content: flex-end; gap: 0.4rem; margin-bottom: 0.5rem; }
 .games-timeline__toolbar-btn {
@@ -384,16 +401,39 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .games-timeline__toolbar-btn::after  { content: "]"; color: var(--stroke); }
 .games-timeline__toolbar-btn:hover { color: var(--accent); border-color: var(--accent); }
 
-/* vis-timeline ships its own stylesheet; these overrides are scoped under
-   .games-timeline so they win regardless of link order, and reuse the same
-   custom properties as the pill/entry styles above so the widget matches
-   the rest of the site instead of vis-timeline's default blue theme. */
+// "More content" cue — vis-timeline's own scrollbar is thin and easy to miss. Toggled by games-timeline.ts.
+.games-timeline__fade {
+  position: absolute;
+  left: 0; right: 0;
+  height: 28px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.games-timeline__fade--top {
+  top: var(--games-timeline-axis-height, 0px);
+  background: linear-gradient(to bottom, var(--panel), transparent);
+}
+.games-timeline__fade--bottom {
+  bottom: 0;
+  background: linear-gradient(to top, var(--panel), transparent);
+}
+.games-timeline__root--can-scroll-up .games-timeline__fade--top,
+.games-timeline__root--can-scroll-down .games-timeline__fade--bottom {
+  opacity: 1;
+}
+
+/* Overrides for vis-timeline's own stylesheet, scoped under .games-timeline to win. */
 .games-timeline .vis-timeline { font-family: $font-ui; font-size: 0.8rem; border: none; }
 .games-timeline .vis-panel.vis-center,
 .games-timeline .vis-panel.vis-left,
 .games-timeline .vis-panel.vis-right,
 .games-timeline .vis-panel.vis-top,
 .games-timeline .vis-panel.vis-bottom { border-color: var(--stroke); }
+
+// Belt-and-suspenders alongside the manual wheel-scroll clamp in games-timeline.ts.
+.games-timeline .vis-panel.vis-left,
+.games-timeline .vis-panel.vis-right { overscroll-behavior-y: contain; }
 
 .games-timeline .vis-labelset .vis-label {
   color: var(--fg); border-bottom-color: var(--stroke); background: var(--panel);
@@ -412,11 +452,24 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .games-timeline .vis-item {
   border-width: 1px; border-radius: 3px;
   background: var(--dim); border-color: var(--dim);
+  // Force uniform height — vis-timeline otherwise sizes bars from their own content.
+  height: 22px !important;
 }
 @each $status, $color in $status-colors {
   .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
 }
 .games-timeline .vis-item.pt-connector { opacity: 0.35; }
+.games-timeline .vis-item .vis-item-overflow {
+  display: flex;
+  align-items: center;
+}
+.games-timeline .vis-item .vis-item-content {
+  color: var(--item-label-color);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .games-timeline .vis-item.vis-selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 .games-timeline .vis-item[class*="pt"] { cursor: pointer; }
 

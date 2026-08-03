@@ -3,7 +3,7 @@ title: Streets of Rogue
 platform: PC
 retroachievements_id: null
 steam_appid: 512900
-status: session-based
+status: ongoing
 started: ""
 finished: ""
 rating: null

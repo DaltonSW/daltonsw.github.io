@@ -348,11 +348,27 @@ func offerToCreate(gamesDir string, candidates []Candidate) error {
 		return nil
 	}
 
+	createdList, skipped := createFromCandidates(gamesDir, candidates, chosen)
+	fmt.Printf("\n%d created, %d skipped. Review them, then flip `draft: false` to publish.\n", len(createdList), skipped)
+	return nil
+}
+
+// CreatedGame is one game createFromCandidates made, for a caller (the web
+// UI) that wants to report more than a bare count.
+type CreatedGame struct {
+	Title, Path string
+}
+
+// createFromCandidates is offerToCreate's no-prompt half: given a set of
+// already-chosen indexes into candidates, create each one's game file and
+// capture its unlock history into the archive. Split out so a web handler
+// can reuse it with a selection that came from a submitted checkbox form
+// instead of SelectCandidates' huh multi-select.
+func createFromCandidates(gamesDir string, candidates []Candidate, chosen []int) (createdList []CreatedGame, skipped int) {
 	creds := loadCredentials()
 	ctx := context.Background()
 	archiveDir := findArchiveDir(gamesDir)
 
-	var created, skipped int
 	for _, i := range chosen {
 		c := candidates[i]
 		path, err := CreateGameFile(gamesDir, Slugify(c.Title), c.NewGameFields())
@@ -362,7 +378,7 @@ func offerToCreate(gamesDir string, candidates []Candidate) error {
 			continue
 		}
 		fmt.Printf("  created %s\n", path)
-		created++
+		createdList = append(createdList, CreatedGame{Title: c.Title, Path: path})
 
 		// Capture the unlock history into the archive. A failure here costs
 		// the history, not the game, so it's reported and stepped over —
@@ -378,7 +394,5 @@ func offerToCreate(gamesDir string, candidates []Candidate) error {
 			fmt.Fprintf(os.Stderr, "    (achievement summary not written: %v)\n", err)
 		}
 	}
-
-	fmt.Printf("\n%d created, %d skipped. Review them, then flip `draft: false` to publish.\n", created, skipped)
-	return nil
+	return createdList, skipped
 }

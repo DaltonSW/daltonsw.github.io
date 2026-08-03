@@ -3,7 +3,7 @@ title: "Sid Meier's Civilization V"
 platform: "PC"
 retroachievements_id:
 steam_appid: 8930
-status: "session-based"
+status: "ongoing"
 started:
 finished:
 rating:

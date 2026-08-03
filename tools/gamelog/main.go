@@ -14,6 +14,9 @@ const (
 	actionNewPlaythrough = "new_playthrough"
 	actionNewSession     = "new_session"
 	actionUpdate         = "update"
+	actionManageSessions = "manage_sessions"
+	actionAddPlanned     = "add_planned"
+	actionManagePlanned  = "manage_planned"
 )
 
 const usage = `gamelog — maintain this site's game log in content/games/ and archive/.
@@ -42,6 +45,9 @@ Usage:
                              the last day they were played; statuses unchanged
                                --days N        quiet threshold (default 30)
                                --all           include "playing" games too
+  gamelog serve [flags]       serve a local web UI over content/games, as an
+                             alternative to the interactive terminal flow
+                               --port N        port to listen on (default 8080)
   gamelog help               show this message
 
 Environment (or a .env beside this tool; real env vars take precedence):
@@ -98,6 +104,8 @@ func main() {
 		err = runStale(args[1:])
 	case args[0] == "close":
 		err = runClose(args[1:])
+	case args[0] == "serve":
+		err = runServe(args[1:])
 	default:
 		// Previously any unknown argument silently opened the interactive
 		// form, which made a typo look like the tool ignoring you.
@@ -186,25 +194,24 @@ func logForGame(g GameSummary) error {
 
 	playthroughs := pf.Views()
 
-	// A session-based, multiplayer, or software entry (no start/finish
-	// narrative — see gameStatuses) gets exactly one playthrough entry
-	// *per platform*. The cap exists so an open-ended game can't fragment
-	// into a series of bogus discrete playthroughs — but a second platform
-	// isn't fragmentation. Saves don't cross consoles, so playing it on PS4
-	// and on PC really is two separate records with two separate achievement
-	// sets. doNewPlaythrough enforces the per-platform half, which can only
-	// be checked once the form has collected the platform.
-	oneShot := isOneShot(doc.FM.Status)
+	fmt.Print(formatReviewCard(g, doc.FM, pf))
 
 	options := []huh.Option[string]{
 		huh.NewOption("Edit game info (title/platform/status/dates/rating/draft)", actionEditInfo),
 	}
 	options = append(options, huh.NewOption("Start a new playthrough", actionNewPlaythrough))
+	options = append(options, huh.NewOption("Add a planned replay", actionAddPlanned))
+	if hasPlannedEntry(playthroughs) {
+		options = append(options, huh.NewOption("Manage a planned playthrough", actionManagePlanned))
+	}
 	if len(playthroughs) > 0 {
 		options = append(options,
 			huh.NewOption("Log a new session", actionNewSession),
 			huh.NewOption("Update a playthrough (finish/status/rating/notes)", actionUpdate),
 		)
+		if hasManageableSessions(playthroughs) {
+			options = append(options, huh.NewOption("Manage sessions (edit/delete/split)", actionManageSessions))
+		}
 	}
 
 	var action string
@@ -220,34 +227,137 @@ func logForGame(g GameSummary) error {
 	case actionEditInfo:
 		return doEditGameInfo(doc, pf)
 	case actionNewPlaythrough:
-		return doNewPlaythrough(pf, doc, oneShot)
+		return doNewPlaythrough(pf, doc)
 	case actionNewSession:
 		return doNewSession(pf, playthroughs)
 	case actionUpdate:
 		return doUpdate(pf, playthroughs, doc.FM.Platform)
+	case actionManageSessions:
+		return doManageSessions(pf, playthroughs)
+	case actionAddPlanned:
+		return doAddPlannedReplay(pf, doc)
+	case actionManagePlanned:
+		return doManagePlanned(pf, playthroughs, doc.FM.Platform)
 	}
 	return nil
 }
 
-func doNewPlaythrough(pf *PlaythroughsFile, doc *Doc, oneShot bool) error {
-	f, err := PlaythroughForm(doc.FM.Platform)
+// hasManageableSessions reports whether at least one playthrough has been
+// converted to a sessions list — entries still on flat started/finished have
+// nothing "Manage sessions" can act on.
+func hasManageableSessions(playthroughs []Playthrough) bool {
+	for _, p := range playthroughs {
+		if p.HasSessions() {
+			return true
+		}
+	}
+	return false
+}
+
+// hasPlannedEntry reports whether any playthrough is a planned-replay
+// placeholder — gates the "Manage a planned playthrough" menu option, same
+// shape as hasManageableSessions above.
+func hasPlannedEntry(playthroughs []Playthrough) bool {
+	for _, p := range playthroughs {
+		if p.Status == "planned" {
+			return true
+		}
+	}
+	return false
+}
+
+// doAddPlannedReplay logs a dateless "planned" placeholder — intent to play
+// (or replay) this game, with no start date yet. Guards against a duplicate
+// bookmark for the same effective platform the same way oneShotConflict
+// guards ongoing/multiplayer, but planned isn't part of that family: it has
+// no save file to fragment, it would just be two bookmarks for one intent.
+func doAddPlannedReplay(pf *PlaythroughsFile, doc *Doc) error {
+	platform, notes, err := PlannedReplayForm(doc.FM.Platform, "", "")
 	if err != nil {
 		return err
 	}
-	// The one-shot cap is per platform: a second entry is only meaningful
-	// when it's a second platform, since that's a separate save and a
-	// separate achievement set. Same platform means "log a session" instead.
-	if oneShot {
-		want := effectivePlatform(f.Platform, doc.FM.Platform)
-		for _, e := range pf.Playthroughs {
-			if effectivePlatform(e.Platform, doc.FM.Platform) == want {
-				return fmt.Errorf("%s is %s and already has a playthrough on %s — log a new session instead",
-					doc.FM.Title, doc.FM.Status, orDash(want))
-			}
+	if hasPlannedFor(pf.Playthroughs, platform, doc.FM.Platform) {
+		want := effectivePlatform(platform, doc.FM.Platform)
+		return fmt.Errorf("%s already has a planned replay on %s", doc.FM.Title, orDash(want))
+	}
+	pf.AddPlaythrough(PlaythroughFields{Status: "planned", Platform: platform, Notes: notes})
+	return confirmAndWrite(pf, len(pf.Playthroughs)-1)
+}
+
+// hasPlannedFor reports whether playthroughs already has a planned-replay
+// placeholder for the given effective platform.
+func hasPlannedFor(playthroughs []PlaythroughEntry, entryPlatform, gamePlatform string) bool {
+	want := effectivePlatform(entryPlatform, gamePlatform)
+	for _, e := range playthroughs {
+		if e.Status == "planned" && effectivePlatform(e.Platform, gamePlatform) == want {
+			return true
 		}
+	}
+	return false
+}
+
+func doNewPlaythrough(pf *PlaythroughsFile, doc *Doc) error {
+	// Prefill the status with the game's own front-matter status when that's
+	// a status an entry can actually carry (ongoing/multiplayer) — keeps the
+	// common single-mode case (this game's one-and-only entry) a one-
+	// keystroke confirm, same as before per-entry ongoing/multiplayer
+	// existed. "software" isn't in playthroughStatuses (it describes the
+	// whole record, not a mode), so it falls through to "playing".
+	defaultStatus := "playing"
+	if doc.FM.Status == "ongoing" || doc.FM.Status == "multiplayer" {
+		defaultStatus = doc.FM.Status
+	}
+	f, err := PlaythroughForm(doc.FM.Platform, defaultStatus)
+	if err != nil {
+		return err
+	}
+	if conflict := oneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, doc.FM.Status); conflict != nil {
+		want := effectivePlatform(f.Platform, doc.FM.Platform)
+		return fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
+			doc.FM.Title, f.Status, orDash(want))
 	}
 	pf.AddPlaythrough(f)
 	return confirmAndWrite(pf, len(pf.Playthroughs)-1)
+}
+
+// oneShotConflict reports the existing entry that already covers a one-shot
+// status (ongoing/multiplayer) on the given platform, if any — that's the
+// case doNewPlaythrough refuses. None of the one-shot statuses has a save
+// file or finish line, so a *second* entry of the same one-shot status on
+// the same platform would be fragmentation, not a distinct mode; a
+// differently-statused entry (a finished campaign alongside an ongoing
+// sandbox mode, say) is a real second mode and is allowed to coexist. A
+// second platform is never a conflict either way — saves don't cross
+// consoles, so that's a genuinely separate record.
+//
+// gameStatus resolves entries written before per-entry ongoing/multiplayer
+// existed — see effectiveOneShotStatus.
+func oneShotConflict(playthroughs []PlaythroughEntry, status, entryPlatform, gamePlatform, gameStatus string) *PlaythroughEntry {
+	if !isOneShot(status) {
+		return nil
+	}
+	want := effectivePlatform(entryPlatform, gamePlatform)
+	for i, e := range playthroughs {
+		if effectiveOneShotStatus(e.Status, gameStatus) == status && effectivePlatform(e.Platform, gamePlatform) == want {
+			return &playthroughs[i]
+		}
+	}
+	return nil
+}
+
+// effectiveOneShotStatus resolves what one-shot status, if any, an existing
+// entry really represents. Every ongoing/multiplayer/software game written
+// before per-entry ongoing/multiplayer support kept its sole entry's own
+// status as "playing" and relied entirely on the game's front-matter status
+// for its real meaning (games-timeline.html's override still does this for
+// display). Without this, a new literal "ongoing" entry wouldn't be seen as
+// conflicting with that old-style "playing" entry, silently dropping the
+// fragmentation guard for every game written the old way.
+func effectiveOneShotStatus(entryStatus, gameStatus string) string {
+	if entryStatus == "playing" && isOneShot(gameStatus) {
+		return gameStatus
+	}
+	return entryStatus
 }
 
 // doEditGameInfo edits a game's front-matter fields (title/platform/status/
@@ -305,6 +415,19 @@ func confirmAndWriteFrontMatter(doc *Doc, pf *PlaythroughsFile, allowedRemovals 
 	if !ok {
 		fmt.Println("Discarded.")
 		return nil
+	}
+
+	return writeFrontMatter(doc, pf, syncing, allowedRemovals...)
+}
+
+// writeFrontMatter is confirmAndWriteFrontMatter's no-prompt tail — see
+// writeEntry. syncing must match what the caller already decided (whether
+// pf's status was brought in line with doc.FM.Status), since that's what
+// decides whether pf needs its own loss-check and save alongside doc's.
+func writeFrontMatter(doc *Doc, pf *PlaythroughsFile, syncing bool, allowedRemovals ...string) error {
+	fm, err := doc.encodeFM()
+	if err != nil {
+		return err
 	}
 
 	oldFields, err := collectYAMLFields(doc.fmRaw)
@@ -373,7 +496,18 @@ func addSessionAndWrite(pf *PlaythroughsFile, idx int, hadSessions bool, started
 }
 
 func doUpdate(pf *PlaythroughsFile, playthroughs []Playthrough, gamePlatform string) error {
-	idx, err := SelectPlaythrough(playthroughs)
+	// A planned placeholder isn't a real playthrough yet — UpdateForm's
+	// status select is built from playthroughStatuses, which deliberately
+	// excludes "planned", so one reaching this picker would show a status
+	// not among its own options. Route those through "Manage a planned
+	// playthrough" instead.
+	var selectable []Playthrough
+	for _, p := range playthroughs {
+		if p.Status != "planned" {
+			selectable = append(selectable, p)
+		}
+	}
+	idx, err := SelectPlaythrough(selectable)
 	if err != nil {
 		return err
 	}
@@ -425,6 +559,165 @@ func doUpdate(pf *PlaythroughsFile, playthroughs []Playthrough, gamePlatform str
 	return confirmAndWrite(pf, idx, allowed...)
 }
 
+// doManagePlanned lets the user pick a planned-replay placeholder and either
+// graduate it into a real playthrough or edit its platform/notes in place.
+func doManagePlanned(pf *PlaythroughsFile, playthroughs []Playthrough, gamePlatform string) error {
+	var planned []Playthrough
+	for _, p := range playthroughs {
+		if p.Status == "planned" {
+			planned = append(planned, p)
+		}
+	}
+	idx, err := SelectPlaythrough(planned)
+	if err != nil {
+		return err
+	}
+	var p Playthrough
+	for _, cand := range planned {
+		if cand.Index == idx {
+			p = cand
+			break
+		}
+	}
+
+	action, err := SelectPlannedAction()
+	if err != nil {
+		return err
+	}
+	switch action {
+	case plannedActionStart:
+		return doStartPlanned(pf, idx, gamePlatform)
+	case plannedActionEdit:
+		return doEditPlanned(pf, idx, gamePlatform, p)
+	}
+	return nil
+}
+
+func doStartPlanned(pf *PlaythroughsFile, idx int, gamePlatform string) error {
+	f, err := PlaythroughForm(gamePlatform, "playing")
+	if err != nil {
+		return err
+	}
+	if err := pf.GraduatePlannedPlaythrough(idx, f); err != nil {
+		return err
+	}
+	return confirmAndWrite(pf, idx)
+}
+
+func doEditPlanned(pf *PlaythroughsFile, idx int, gamePlatform string, p Playthrough) error {
+	platform, notes, err := PlannedReplayForm(gamePlatform, p.Platform, p.Notes)
+	if err != nil {
+		return err
+	}
+	if platform == p.Platform && notes == p.Notes {
+		fmt.Println("No changes.")
+		return nil
+	}
+	if err := pf.EditPlanned(idx, platform, notes); err != nil {
+		return err
+	}
+
+	var allowed []string
+	base := fmt.Sprintf("playthroughs[%d]", idx)
+	if strings.TrimSpace(platform) == "" {
+		allowed = append(allowed, base+".platform")
+	}
+	if strings.TrimSpace(notes) == "" {
+		allowed = append(allowed, base+".notes")
+	}
+	return confirmAndWrite(pf, idx, allowed...)
+}
+
+// doManageSessions lets the user pick a playthrough already converted to
+// sessions, pick one of its sessions, then edit/delete/split it.
+func doManageSessions(pf *PlaythroughsFile, playthroughs []Playthrough) error {
+	var withSessions []Playthrough
+	for _, p := range playthroughs {
+		if p.HasSessions() {
+			withSessions = append(withSessions, p)
+		}
+	}
+	idx, err := SelectPlaythrough(withSessions)
+	if err != nil {
+		return err
+	}
+	var p Playthrough
+	for _, cand := range withSessions {
+		if cand.Index == idx {
+			p = cand
+			break
+		}
+	}
+
+	sIdx, err := SelectSession(p.Sessions)
+	if err != nil {
+		return err
+	}
+
+	n := len(p.Sessions)
+	action, err := SelectSessionAction(n >= 2, sIdx < n-1)
+	if err != nil {
+		return err
+	}
+
+	switch action {
+	case sessionActionEdit:
+		return doEditSession(pf, idx, sIdx, p.Sessions[sIdx])
+	case sessionActionDelete:
+		return doRemoveSession(pf, idx, sIdx)
+	case sessionActionSplit:
+		return doSplitPlaythrough(pf, idx, sIdx, p.Status)
+	}
+	return nil
+}
+
+func doEditSession(pf *PlaythroughsFile, idx, j int, s Session) error {
+	started, finished, title, err := EditSessionForm(s)
+	if err != nil {
+		return err
+	}
+	if started == s.Started && finished == s.Finished && title == s.Title {
+		fmt.Println("No changes.")
+		return nil
+	}
+	if err := pf.EditSession(idx, j, started, finished, title); err != nil {
+		return err
+	}
+
+	// Clearing a title drops its key, same as doUpdate's field-clearing cases.
+	var allowed []string
+	if strings.TrimSpace(title) == "" && s.Title != "" {
+		allowed = append(allowed, sessionPath(idx, j, "title"))
+	}
+	return confirmAndWrite(pf, idx, allowed...)
+}
+
+func doRemoveSession(pf *PlaythroughsFile, idx, j int) error {
+	before := append([]SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
+	if err := pf.RemoveSession(idx, j); err != nil {
+		return err
+	}
+	return confirmAndWrite(pf, idx, removeSessionAllowedPaths(idx, before, j)...)
+}
+
+// doSplitPlaythrough splits playthrough idx after session keepLast — the
+// session the user picked as the last one to stay in the original — moving
+// everything after it into a new entry.
+func doSplitPlaythrough(pf *PlaythroughsFile, idx, keepLast int, defaultStatus string) error {
+	newStatus, err := SplitStatusForm(defaultStatus)
+	if err != nil {
+		return err
+	}
+	before := append([]SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
+	splitFrom := keepLast + 1
+	newIdx, err := pf.SplitPlaythrough(idx, splitFrom, newStatus)
+	if err != nil {
+		return err
+	}
+	allowed := truncateSessionAllowedPaths(idx, before, splitFrom)
+	return confirmAndWriteSplit(pf, idx, newIdx, allowed...)
+}
+
 // confirmAndWrite previews the affected entry, and on confirmation proves the
 // rewrite loses nothing before letting it reach disk. allowedRemovals names
 // the paths this particular operation means to drop; every other field
@@ -446,6 +739,52 @@ func confirmAndWrite(pf *PlaythroughsFile, focus int, allowedRemovals ...string)
 		return nil
 	}
 
+	return writeEntry(pf, allowedRemovals...)
+}
+
+// writeEntry is confirmAndWrite's no-prompt tail: verify-no-loss, save,
+// report. Split out so a caller that has already gotten its confirmation some
+// other way — a submitted web form, say — can reach the same safety net
+// without going through a terminal prompt.
+func writeEntry(pf *PlaythroughsFile, allowedRemovals ...string) error {
+	if err := verifyNoLoss(pf, allowedRemovals); err != nil {
+		return err
+	}
+	if err := pf.Save(); err != nil {
+		return err
+	}
+	fmt.Printf("Saved %s\n", pf.Path)
+	return nil
+}
+
+// confirmAndWriteSplit is confirmAndWrite's two-entry analog: previews both
+// the shrunk source entry and the new split-off entry, confirms once, then
+// writes.
+func confirmAndWriteSplit(pf *PlaythroughsFile, srcIdx, newIdx int, allowedRemovals ...string) error {
+	srcPreview, err := previewEntry(pf, srcIdx)
+	if err != nil {
+		return err
+	}
+	newPreview, err := previewEntry(pf, newIdx)
+	if err != nil {
+		return err
+	}
+	preview := append(append(append([]string{}, srcPreview...), "", "new playthrough:"), newPreview...)
+
+	ok, err := ConfirmWrite(pf.Path, preview)
+	if err != nil {
+		return err
+	}
+	if !ok {
+		fmt.Println("Discarded.")
+		return nil
+	}
+
+	return writeSplit(pf, allowedRemovals...)
+}
+
+// writeSplit is confirmAndWriteSplit's no-prompt tail — see writeEntry.
+func writeSplit(pf *PlaythroughsFile, allowedRemovals ...string) error {
 	if err := verifyNoLoss(pf, allowedRemovals); err != nil {
 		return err
 	}
