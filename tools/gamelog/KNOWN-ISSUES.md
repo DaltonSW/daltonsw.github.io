@@ -46,10 +46,10 @@ losing captured data is the worst thing that can happen.**
   others, so there's no per-entry equivalent.
   - Every `ongoing`/`multiplayer` game written before this still has its sole entry's own
     `status` as `playing`, relying entirely on the game-level status for its real meaning — that
-    convention still works and doesn't need migrating. `effectiveOneShotStatus` in `main.go`
+    convention still works and doesn't need migrating. `mutate.EffectiveOneShotStatus`
     resolves it so the one-shot guard still recognizes those old-style entries.
-  - `isOneShot` in `forms.go` now gates **per entry-status, per platform**, not per game
-    (`oneShotConflict` in `main.go`): at most one entry of a given one-shot status per platform,
+  - `forms.IsOneShot` now gates **per entry-status, per platform**, not per game
+    (`mutate.OneShotConflict`): at most one entry of a given one-shot status per platform,
     since none of the three has a save file or finish line and a second one on the same platform
     would be fragmentation — but a *different*-status entry (a `mastered` campaign next to an
     `ongoing` sandbox mode) is a real second mode, not fragmentation, and is allowed.
@@ -208,17 +208,17 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   request. `curl` does not reproduce the failure.
 - **`a=1` is required** on `API_GetGameInfoAndUserProgress.php` or award fields come back null.
 - **Award dates are RFC3339; per-achievement dates are zoneless SQL datetimes.** Two parsers on
-  purpose (`parseRAAwardDate` vs `parseRADate`).
+  purpose (`retroachievements.ParseRAAwardDate` vs `retroachievements.ParseRADate`).
 - **An unknown RA game ID returns HTTP 200 with `[]`**, not a 404.
 - **RA's `UserTotalPlaytime` (added to `GetGameInfoAndUserProgress` in late 2025) is in seconds**,
-  unlike everything else in the archive which stores minutes — `FetchRARecord` divides by 60.
-  Client-tracked (RetroArch/RAIntegration), so games played before that rollout, or on an
-  unsupported emulator, legitimately have none.
+  unlike everything else in the archive which stores minutes — `retroachievements.FetchRecord`
+  divides by 60. Client-tracked (RetroArch/RAIntegration), so games played before that rollout, or
+  on an unsupported emulator, legitimately have none.
 - **Steam puts useful JSON in 400/403 bodies** — read the body, don't bail on status.
-- **Steam needs a SteamID64**, not a vanity name; `resolveSteamID` handles both.
+- **Steam needs a SteamID64**, not a vanity name; `SteamClient.resolveSteamID` handles both.
 - **RA rate-limits sustained bursts with 429** — `RAClient` throttles to ~1.2s and retries.
 - **Achievement refreshes merge, never overwrite.** An unlock recorded once must never be
-  retractable. Regression tests in `achievements_test.go` cover this; keep them.
+  retractable. Regression tests in `internal/model/archive_test.go` cover this; keep them.
 - **`Extra map[string]any` with `yaml:",inline"` is load-bearing**, on both `PlaythroughEntry`
   and `SessionEntry`. It is the only thing keeping a hand-added field from being deleted by the
   next whole-file rewrite. Removing it produces exactly the class of silent loss issues 1 and 2

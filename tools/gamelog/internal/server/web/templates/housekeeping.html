@@ -1,0 +1,120 @@
+{{define "content"}}
+<h1>Housekeeping</h1>
+
+<h2>Scan</h2>
+<p class="lead">Finds games on RetroAchievements/Steam that aren't logged yet.</p>
+
+<form method="get" action="/housekeeping" class="row">
+  <label for="min_hours">Min Steam hours</label>
+  <input type="number" step="0.5" id="min_hours" name="min_hours" value="{{.MinHours}}" style="max-width: 8rem;">
+  <input type="hidden" name="stale_days" value="{{.StaleDays}}">
+  <input type="hidden" name="close_days" value="{{.CloseDays}}">
+  {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <button type="submit">Re-scan</button>
+</form>
+
+{{with .ScanError}}<div class="flash flash--error">{{.}}</div>{{end}}
+<pre>{{.ScanReport}}</pre>
+
+{{if .ScanCandidates}}
+<form method="post" action="/scan" class="tui">
+  <span class="tui__title">create entries</span>
+  <input type="hidden" name="min_hours" value="{{.MinHours}}">
+  <div class="stack">
+  {{range $i, $c := .ScanCandidates}}
+    <div class="checkbox-row">
+      <input type="checkbox" id="c{{$i}}" name="candidate" value="{{$i}}">
+      <label for="c{{$i}}">{{$c.Title}} [{{$c.Provider}}]{{if $c.Finished}} · finished{{end}}{{if gt $c.PlaytimeMins 0}} · {{formatHoursFunc $c.PlaytimeMins}}{{end}}</label>
+    </div>
+  {{end}}
+  </div>
+  <div class="btn-row"><button type="submit" class="btn--primary">Create selected (draft)</button></div>
+</form>
+{{end}}
+
+<h2>Stale</h2>
+<form method="get" action="/housekeeping" class="row">
+  <label for="stale_days">Quiet threshold (days)</label>
+  <input type="number" id="stale_days" name="stale_days" value="{{.StaleDays}}" style="max-width: 8rem;">
+  <input type="hidden" name="min_hours" value="{{.MinHours}}">
+  <input type="hidden" name="close_days" value="{{.CloseDays}}">
+  {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <button type="submit">Refresh</button>
+</form>
+<p class="lead">{{len .StaleGames}} game(s) gone quiet for {{.StaleDays}}+ days.</p>
+{{range .StaleGames}}
+<div class="tui">
+  <span class="tui__title">{{.C.Game.Title}} · suggest {{.C.SuggestedStatus}}</span>
+  <pre>{{.Card}}</pre>
+  <form method="post" action="/stale/{{.C.Game.Slug}}" class="btn-row">
+    <input type="hidden" name="stale_days" value="{{$.StaleDays}}">
+    <button name="action" value="accept" type="submit" class="btn--primary">Correct — mark {{.C.SuggestedStatus}}</button>
+    {{range .OtherStatuses}}
+    <button name="action" value="mark_{{.}}" type="submit">Mark {{.}} instead</button>
+    {{end}}
+    <a class="btn" href="/games/{{.C.Game.Slug}}">Edit before applying</a>
+  </form>
+</div>
+{{else}}
+<p class="empty">Nothing has gone quiet.</p>
+{{end}}
+
+<h2>Close</h2>
+<form method="get" action="/housekeeping" class="row">
+  <label for="close_days">Quiet threshold (days)</label>
+  <input type="number" id="close_days" name="close_days" value="{{.CloseDays}}" style="max-width: 8rem;">
+  <div class="checkbox-row"><input type="checkbox" id="close_all" name="close_all" value="1"{{if .CloseAll}} checked{{end}}><label for="close_all">include "playing" games</label></div>
+  <input type="hidden" name="min_hours" value="{{.MinHours}}">
+  <input type="hidden" name="stale_days" value="{{.StaleDays}}">
+  <button type="submit">Refresh</button>
+</form>
+<p class="lead">{{len .CloseEntries}} playthrough(s) left open for {{.CloseDays}}+ days.</p>
+
+{{if .CloseEntries}}
+<form method="post" action="/close">
+  <input type="hidden" name="close_days" value="{{.CloseDays}}">
+  {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th></th><th>Game</th><th>Close on</th><th>Source</th><th>Quiet for</th></tr></thead>
+    <tbody>
+    {{range $i, $e := .CloseEntries}}
+    <tr>
+      <td><input type="checkbox" name="entry" value="{{$i}}" checked></td>
+      <td><a href="/games/{{$e.Game.Slug}}">{{$e.Game.Title}}</a></td>
+      <td>{{$e.CloseOn}}</td>
+      <td class="dim">{{$e.Source}}</td>
+      <td class="dim">{{$e.DaysSince}}d</td>
+    </tr>
+    {{end}}
+    </tbody>
+  </table>
+  </div>
+  <div class="btn-row"><button type="submit" class="btn--primary">Close selected</button></div>
+</form>
+{{else}}
+<p class="empty">Nothing left open.</p>
+{{end}}
+
+<h2>Achievements</h2>
+<p class="lead">Per-game refresh lives on each game's own page. These two act across the whole library.</p>
+
+<div class="tui">
+  <span class="tui__title">refresh all</span>
+  <p>Fetches every linked game's unlock history from RetroAchievements/Steam. RA throttles to
+     ~1.2s/request, so with 200+ linked games this can take several minutes — runs as a background
+     job you can watch progress on.</p>
+  <form method="post" action="/achievements/all">
+    <button type="submit" class="btn--primary">Refresh all</button>
+  </form>
+</div>
+
+<div class="tui">
+  <span class="tui__title">regenerate summaries</span>
+  <p>Rebuilds every game's achievement-summary.yaml from what's already archived on disk. No API
+     calls — safe and fast to re-run any time.</p>
+  <form method="post" action="/project">
+    <button type="submit">Regenerate</button>
+  </form>
+</div>
+{{end}}

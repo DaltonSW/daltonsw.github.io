@@ -1,4 +1,4 @@
-module daltonsw.github.io/tools/gamelog
+module go.dalton.dog/gamelog
 
 go 1.26.3
 

@@ -1,0 +1,36 @@
+{{define "layout"}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}} · gamelog</title>
+  <link rel="stylesheet" href="/static/gamelog.css">
+  <script src="/static/htmx.min.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="/">
+        <span class="brand__prompt">gamelog@localhost</span><span>:~$</span><span class="brand__cursor" aria-hidden="true"></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/"{{if eq .Nav "games"}} aria-current="page"{{end}}>games</a>
+        <a href="/housekeeping"{{if eq .Nav "housekeeping"}} aria-current="page"{{end}}>housekeeping</a>
+        <a href="/suggest"{{if eq .Nav "suggest"}} aria-current="page"{{end}}>suggest</a>
+      </nav>
+    </div>
+  </header>
+  <main class="site-main">
+    <div class="wrap wrap--narrow">
+      {{with .Flash.OK}}<div class="flash flash--ok">{{.}}</div>{{end}}
+      {{with .Flash.Error}}<div class="flash flash--error">{{.}}</div>{{end}}
+      {{template "content" .}}
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">gamelog serve — a local alternative to the TUI, editing the same content/games tree.</div>
+  </footer>
+</body>
+</html>
+{{end}}

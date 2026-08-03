@@ -1,0 +1,23 @@
+{{define "content"}}
+<h1>Games</h1>
+<p class="lead">{{len .Games}} logged.</p>
+<p class="hint">Started/Finished are the game's own dates; a greyed-out date is known from a playthrough instead — edit that from the game's own page.</p>
+
+<form method="get" action="/" class="row">
+  <input type="search" name="q" placeholder="filter by title..." value="{{.Query}}" style="max-width: 22rem;">
+  <div class="checkbox-row"><input type="checkbox" id="drafts" name="drafts" value="1"{{if .DraftsOnly}} checked{{end}}><label for="drafts">drafts only</label></div>
+  <button type="submit">Filter</button>
+  <a class="btn btn--primary" href="/games/new">+ New game</a>
+</form>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Title</th><th>Status</th><th>Draft?</th><th>Started</th><th>Finished</th><th>Platform</th><th>Rating</th><th>Playthroughs</th><th></th></tr></thead>
+  <tbody>
+    {{range .Games}}{{template "game_row" .}}{{else}}
+    <tr><td colspan="9" class="empty">No games match.</td></tr>
+    {{end}}
+  </tbody>
+</table>
+</div>
+{{end}}

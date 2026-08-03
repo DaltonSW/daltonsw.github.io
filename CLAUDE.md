@@ -35,9 +35,9 @@ Consequences that should drive design decisions:
   never change and kept outside `content/` so a rename or delete can't destroy it — and so Hugo
   never parses or publishes it.
 - **`tools/gamelog/KNOWN-ISSUES.md` lists what's outstanding and, just as importantly, the
-  invariants not to undo.** Read it before editing `playthroughs.go` or `achievements.go` — the
-  inline `Extra` catch-all, the string-typed dates, and the pre-write loss check each prevent a
-  specific silent data loss that has already happened once.
+  invariants not to undo.** Read it before editing `internal/model/playthroughs.go` or
+  `internal/model/archive.go` — the inline `Extra` catch-all, the string-typed dates, and the
+  pre-write loss check each prevent a specific silent data loss that has already happened once.
 - Credentials live in `tools/gamelog/.env` (gitignored). `.env.example` is the template.
 
 ## Working style

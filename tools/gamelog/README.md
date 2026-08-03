@@ -8,10 +8,33 @@ rating, notes). It loops — "Do another?" after each action — so a sitting ca
 games without relaunching.
 
 ```
-go run .          # interactive
-go run . review   # walk through draft games one at a time
-go run . help     # usage summary
+go run ./cmd/gamelog          # interactive
+go run ./cmd/gamelog review   # walk through draft games one at a time
+go run ./cmd/gamelog help     # usage summary
 ```
+
+## Code layout
+
+Standard `cmd/` + `internal/` Go layout. `cmd/gamelog/main.go` is just flag dispatch; everything
+else lives under `internal/`, one package per concern:
+
+```
+internal/model         domain types + storage: front matter, playthroughs.yaml, the archive
+internal/forms         huh-based prompts and the shared validation/status vocabulary
+internal/mutate        confirm-preview-and-write-with-loss-check, shared by the TUI, the web
+                        server, and the achievements command's own-session nudge
+internal/providers/*   one package per API client (steam, retroachievements, exophase)
+internal/dotenv        the tool's own minimal .env reader
+internal/externalid    parses a pasted RA/Steam ID or URL into a bare ID
+internal/commands      scan/suggest/stale/close/review/achievements — genuinely
+                        interdependent (see the package doc comments), kept together
+internal/server        the local web UI (`gamelog serve`)
+internal/interactive   the terminal REPL (`gamelog` with no args)
+```
+
+`interactive` and `server` are two frontends over the same `model`/`forms`/`mutate` layer;
+`commands` is the six flag-driven subcommands, which call into each other enough that splitting
+them further would mean breaking a real (not accidental) dependency cycle between them.
 
 ## Where things live
 
@@ -56,7 +79,7 @@ model. Three things prevent that, and all three matter:
 - **`Extra map[string]any` with `yaml:",inline"`** on both the entry and session structs captures
   unrecognised keys and re-emits them. Without it, a hand-added `mood: obsessive` disappears on
   the next write.
-- **`confirmAndWrite` re-encodes the pending result and diffs it against the bytes on disk.**
+- **`mutate.ConfirmAndWrite` re-encodes the pending result and diffs it against the bytes on disk.**
   Anything present beforehand that would vanish aborts the write:
 
   ```
@@ -143,6 +166,13 @@ mean to come back to it eventually. Setting it never writes a finished date, sin
 finished; `gamelog stale` in particular offers it as a one-click correction on a quiet game it
 otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
 
+`status: misc_launch` (entry-level only, not a `gameStatuses` value) covers a playthrough entry
+that isn't a real attempt at all — booted up just to check dates, or a launch that never got past a
+broken platform port (e.g. a Linux build that wouldn't run) — as distinct from `dropped`, which
+implies play was actually attempted and abandoned. Unlike the one-shot statuses below, a second
+`misc_launch` entry on the same platform is *not* fragmentation — each launch is its own unrelated
+occasion — so it's excluded from `isOneShot` and can repeat freely.
+
 `ongoing`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
 no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
 ends play. They're separate statuses because the *reason* differs: `ongoing` is a replay-loop
@@ -156,10 +186,10 @@ playthrough on the same platform later. The cap is per-platform rather than abso
 saves don't cross consoles: Spelunky 2 on PS4 and on Steam is two separate records with two
 separate achievement sets, which is not the fragmentation the cap exists to prevent.
 
-`isOneShot` in `forms.go` is the predicate for the status; `doNewPlaythrough` enforces the
+`forms.IsOneShot` is the predicate for the status; `interactive`'s `doNewPlaythrough` enforces the
 per-platform half, which can only be checked once the form has collected the platform — so a
 same-platform second entry is refused after the form rather than hidden from the menu.
-`effectivePlatform` resolves blank to the game's platform, so an entry predating the field still
+`model.EffectivePlatform` resolves blank to the game's platform, so an entry predating the field still
 compares equal to its own game.
 
 Note that the entry's own status stays `playing` — these three exist only in the game-level
@@ -187,8 +217,8 @@ playthroughs:
 "Add a planned replay" (always offered in the interactive flow) creates one; it refuses a second
 placeholder for the same effective platform, the same "don't fragment into two bookmarks for one
 intent" reasoning as the one-shot statuses' per-platform cap, though `planned` isn't itself part of
-that family (`isOneShot` returns `false` for it, and it's deliberately absent from
-`playthroughStatuses` — see below).
+that family (`forms.IsOneShot` returns `false` for it, and it's deliberately absent from
+`forms.PlaythroughStatuses` — see below).
 
 Because a blank `started` is what every date-based partial (`games-timeline.html`,
 `game-year-rows.html`) already guards on before turning an entry into a row or a timeline bar, a
@@ -201,12 +231,12 @@ renders any entry's `status` as a plain pill and leaves a blank meta row when da
 — `GraduatePlannedPlaythrough` fills in `Started`/`Finished`/`Status`/etc. **in place**, at the same
 array index, rather than replacing the entry — or edits its platform/notes without touching status
 or dates. Graduating in place matters for the loss-check: every field it sets was previously empty,
-so `checkNoFieldLoss` sees a pure addition and no `allowedRemovals` declaration is needed.
+so `model.CheckNoFieldLoss` sees a pure addition and no `allowedRemovals` declaration is needed.
 
-`planned` is deliberately **not** in `playthroughStatuses` (`forms.go`) — that list feeds the
+`planned` is deliberately **not** in `forms.PlaythroughStatuses` — that list feeds the
 status `Select` in `PlaythroughForm` (new playthrough, which requires a `Started` date),
 `UpdateForm`, and `SplitStatusForm`, none of which should ever produce or accept a dateless entry.
-The only two code paths that can set or clear `planned` are `doAddPlannedReplay` and
+The only two code paths that can set or clear `planned` are `interactive`'s `doAddPlannedReplay` and
 `GraduatePlannedPlaythrough`.
 
 There is deliberately no "delete a planned entry" action. Removing an entry from `playthroughs[]`
@@ -237,8 +267,8 @@ field *presence*, not text, and the same tradeoff is already accepted for `playt
 suggestion, then enter the dates yourself through the normal interactive flow above.
 
 ```
-go run . suggest okami        # direct, by slug
-go run . suggest              # interactive game picker
+go run ./cmd/gamelog suggest okami        # direct, by slug
+go run ./cmd/gamelog suggest              # interactive game picker
 ```
 
 RetroAchievements achievement-unlock dates are close to ground truth (RA is achievement-first).
@@ -268,8 +298,8 @@ the report says so — cross-reference manually before entering a date.
 `content/games`, then offers a multi-select to create entries for the ones you pick.
 
 ```
-go run . scan                    # Steam games with >=5h playtime
-go run . scan --min-hours 20     # narrower
+go run ./cmd/gamelog scan                    # Steam games with >=5h playtime
+go run ./cmd/gamelog scan --min-hours 20     # narrower
 ```
 
 Matching is by external ID where one is set, falling back to a normalised title — so a game
@@ -295,7 +325,7 @@ just the ones needed to beat it — is suggested as `status: mastered` instead o
 them: it walks every draft game one at a time and asks what to do with it.
 
 ```
-go run . review
+go run ./cmd/gamelog review
 ```
 
 Each game shows a summary card — title, provider links, current status/dates, and its logged
@@ -325,8 +355,8 @@ achievement completion before doing a full `gamelog review` pass on it; cards fo
 tagged `[draft]` so it's clear accepting one doesn't publish it.
 
 ```
-go run . stale                # 30+ days since last played
-go run . stale --days 60      # narrower
+go run ./cmd/gamelog stale                # 30+ days since last played
+go run ./cmd/gamelog stale --days 60      # narrower
 ```
 
 For each one it computes a guess — **mastered** at 100% achievement completion, **finished** at
@@ -392,8 +422,8 @@ building the list and confirming it is left alone rather than overwritten.
 run the command directly to refresh a game or backfill one that predates it.
 
 ```
-go run . achievements spelunky
-go run . achievements --all    # refresh every game with a provider link
+go run ./cmd/gamelog achievements spelunky
+go run ./cmd/gamelog achievements --all    # refresh every game with a provider link
 ```
 
 `--all` is the same fetch-and-merge call as the single-slug path, just looped over every game
@@ -542,7 +572,7 @@ same number either way.
 
 Copy `.env.example` to `.env` (gitignored) and fill it in. `suggest` finds that file whether
 it's run from this directory or the repo root. Real environment variables always take
-precedence, so `RA_API_KEY=... go run . suggest x` still overrides the file.
+precedence, so `RA_API_KEY=... go run ./cmd/gamelog suggest x` still overrides the file.
 
 | Variable | What it is |
 |---|---|
@@ -567,7 +597,7 @@ wrong or missing output before it was found by running against live data:
 - `API_GetGameInfoAndUserProgress` omits `HighestAwardKind`/`HighestAwardDate` unless **`a=1`**
   is passed — without it every suggestion silently degrades to medium confidence.
 - That award date is **RFC3339**, while the per-achievement `DateEarned` fields are zoneless
-  SQL datetimes. They need separate parsers (`parseRAAwardDate` vs `parseRADate`).
+  SQL datetimes. They need separate parsers (`retroachievements.ParseRAAwardDate` vs `retroachievements.ParseRADate`).
 - An unknown RA game ID returns **HTTP 200 with a bare `[]`**, not a 404.
 - Steam returns **400/401/403 with a useful JSON body** for its expected "no data" cases, so
   the body matters more than the status.
@@ -592,7 +622,7 @@ none), and writes the result to `content/games/<slug>/achievement-summary.yaml` 
 no `raw`, no per-achievement list, just the numbers the games list actually displays.
 
 ```
-go run . project
+go run ./cmd/gamelog project
 ```
 
 It only ever reads what's already in `archive/` — **no API calls**, so it's safe and fast to
