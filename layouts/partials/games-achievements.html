@@ -5,12 +5,28 @@
      (layouts/games/taxonomy.html) — plus a small sidebar of aggregate stats.
      Included from layouts/games/taxonomy.html; context is the games
      taxonomy page. */}}
+{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" -}}
+{{- $providerNames := dict
+    "retroachievements" "RetroAchievements"
+    "steam"             "Steam"
+    "xbox"              "Xbox"
+    "psn"               "PSN"
+    "ubisoft"           "Ubisoft"
+-}}
+{{/* Only RA and Xbox achievements carry a points value (their "gamerscore") —
+     Steam/PSN/Ubisoft achievements don't, so their cards never grow a points
+     line. See EarnedAchievement.Points in tools/gamelog/internal/model/archive.go. */}}
+{{- $providerPointLabels := dict "retroachievements" "gamerscore" "xbox" "gamerscore" -}}
+
 {{- $earned := slice -}}
 {{- $trackedCount := 0 -}}
 {{- $masteredCount := 0 -}}
-{{- $gamerscore := 0 -}}
-{{- $xboxGamerscore := 0 -}}
-{{- $byProvider := dict "retroachievements" 0 "steam" 0 "psn" 0 "xbox" 0 -}}
+{{- $byProvider := dict -}}
+{{- $pointsByProvider := dict -}}
+{{- range $providerOrder -}}
+  {{- $byProvider = merge $byProvider (dict . 0) -}}
+  {{- $pointsByProvider = merge $pointsByProvider (dict . 0) -}}
+{{- end -}}
 
 {{- range .Pages -}}
   {{- $page := . -}}
@@ -29,13 +45,9 @@
       {{- $year := "Undated" -}}
       {{- with $entry.date -}}{{- $year = . | time.Format "2006" -}}{{- end -}}
       {{- $earned = $earned | append (merge $entry (dict "page" $page "year" $year)) -}}
-      {{- if eq $entry.provider "retroachievements" -}}
-        {{- $gamerscore = add $gamerscore ($entry.points | default 0) -}}
-      {{- else if eq $entry.provider "xbox" -}}
-        {{- $xboxGamerscore = add $xboxGamerscore ($entry.points | default 0) -}}
-      {{- end -}}
       {{- if isset $byProvider $entry.provider -}}
         {{- $byProvider = merge $byProvider (dict $entry.provider (add (index $byProvider $entry.provider) 1)) -}}
+        {{- $pointsByProvider = merge $pointsByProvider (dict $entry.provider (add (index $pointsByProvider $entry.provider) ($entry.points | default 0))) -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
@@ -66,23 +78,20 @@
       <span class="ach-stat__value">{{ $masteredCount }}</span>
       <span class="ach-stat__label">{{ if $trackedCount }}of {{ $trackedCount }} {{ end }}games mastered</span>
     </div>
-    <div class="ach-stat">
-      <span class="ach-stat__value">{{ $gamerscore }}</span>
-      <span class="ach-stat__label">RA gamerscore</span>
+    {{- range $providerOrder }}
+    {{- $provider := . }}
+    {{- $count := index $byProvider $provider }}
+    {{- $points := index $pointsByProvider $provider }}
+    <div class="ach-provider-card">
+      <span class="ach-provider-card__name">{{ index $providerNames $provider }}</span>
+      <div class="ach-provider-card__stats">
+        <span class="ach-provider-card__count">{{ $count }} earned</span>
+        {{- if gt $points 0 }}
+        <span class="ach-provider-card__points">{{ $points }} {{ index $providerPointLabels $provider }}</span>
+        {{- end }}
+      </div>
     </div>
-    <div class="ach-stat">
-      <span class="ach-stat__value">{{ $xboxGamerscore }}</span>
-      <span class="ach-stat__label">Xbox gamerscore</span>
-    </div>
-    <div class="ach-stat ach-stat--breakdown">
-      <span class="ach-stat__label">by provider</span>
-      <ul class="ach-provider-list">
-        <li><span class="ach-provider-list__name">RetroAchievements</span><span class="ach-provider-list__count">{{ index $byProvider "retroachievements" }}</span></li>
-        <li><span class="ach-provider-list__name">Steam</span><span class="ach-provider-list__count">{{ index $byProvider "steam" }}</span></li>
-        <li><span class="ach-provider-list__name">Xbox</span><span class="ach-provider-list__count">{{ index $byProvider "xbox" }}</span></li>
-        <li><span class="ach-provider-list__name">PSN</span><span class="ach-provider-list__count">{{ index $byProvider "psn" }}</span></li>
-      </ul>
-    </div>
+    {{- end }}
   </aside>
 
   <section class="ach-list" aria-label="Achievements Obtained">

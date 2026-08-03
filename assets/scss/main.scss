@@ -390,10 +390,14 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .ach-stat__value { font-size: 1.4rem; font-weight: 600; color: var(--fg); font-variant-numeric: tabular-nums; }
 .ach-stat__label { font-size: 0.75rem; color: var(--dim); letter-spacing: 0.02em; }
-.ach-stat--breakdown .ach-stat__label { margin-bottom: 0.3rem; }
-.ach-provider-list { list-style: none; margin: 0; padding: 0; font-size: 0.8rem; }
-.ach-provider-list li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.1rem 0; color: var(--fg); }
-.ach-provider-list__count { color: var(--dim); font-variant-numeric: tabular-nums; }
+.ach-provider-card {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+  background: var(--panel);
+  display: flex; flex-direction: column; gap: 0.25rem;
+}
+.ach-provider-card__name { font-size: 0.8rem; font-weight: 500; color: var(--fg); }
+.ach-provider-card__stats { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; color: var(--dim); font-variant-numeric: tabular-nums; }
 
 .ach-list { flex: 1; min-width: 0; }
 .ach-empty { color: var(--dim); }
@@ -469,7 +473,7 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
     flex-direction: row; flex-wrap: wrap;
     width: 100%;
   }
-  .ach-stat { flex: 1 1 8rem; }
+  .ach-stat, .ach-provider-card { flex: 1 1 8rem; }
 }
 
 /* ── Achievements section on a single game's page ───────────────────────── */
