@@ -33,9 +33,17 @@ type GameSummary struct {
 	Platform        string
 	Rating          string
 	NumPlaythroughs int
-	RAGameID        string
-	SteamAppID      string
-	PSNID           string
+	// StartedEditable/FinishedEditable report whether editing the
+	// front-matter field would have any effect on what the site displays.
+	// SyncStatus (playthroughs.go) never writes Started, so it's live only
+	// with zero playthroughs; it does backfill Finished, but only for a
+	// single still-open playthrough, so that's the one case beyond zero
+	// playthroughs where editing Finished isn't a silent no-op.
+	StartedEditable  bool
+	FinishedEditable bool
+	RAGameID         string
+	SteamAppID       string
+	PSNID            string
 }
 
 // ProviderLinks returns every provider this game is linked to, in
@@ -117,22 +125,31 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		finished = doc.FM.Finished
 	}
 
+	numPlaythroughs := len(pf.Playthroughs)
+	finishedEditable := numPlaythroughs == 0
+	if numPlaythroughs == 1 {
+		views := pf.Views()
+		finishedEditable = views[0].IsOpen()
+	}
+
 	return GameSummary{
-		Slug:            slug,
-		Path:            path,
-		Title:           doc.FM.Title,
-		Status:          doc.FM.Status,
-		Draft:           doc.FM.Draft,
-		Started:         started,
-		Finished:        finished,
-		FMStarted:       doc.FM.Started,
-		FMFinished:      doc.FM.Finished,
-		Platform:        doc.FM.Platform,
-		Rating:          doc.FM.RatingString(),
-		NumPlaythroughs: len(pf.Playthroughs),
-		RAGameID:        raID,
-		SteamAppID:      steamAppID,
-		PSNID:           psnID,
+		Slug:             slug,
+		Path:             path,
+		Title:            doc.FM.Title,
+		Status:           doc.FM.Status,
+		Draft:            doc.FM.Draft,
+		Started:          started,
+		Finished:         finished,
+		FMStarted:        doc.FM.Started,
+		FMFinished:       doc.FM.Finished,
+		Platform:         doc.FM.Platform,
+		Rating:           doc.FM.RatingString(),
+		NumPlaythroughs:  numPlaythroughs,
+		StartedEditable:  numPlaythroughs == 0,
+		FinishedEditable: finishedEditable,
+		RAGameID:         raID,
+		SteamAppID:       steamAppID,
+		PSNID:            psnID,
 	}
 }
 

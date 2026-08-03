@@ -1,0 +1,99 @@
+{{/* Fragment templates for the game-detail page's playthroughs section.
+Each is swapped in on its own by htmx, scoped to exactly what its handler can
+change — see internal/server/server_games.go's pthUpdateView/sessionRowView/
+playthroughsSectionView and the handlers that render these. */}}
+
+{{define "playthrough_header"}}
+<div id="pth-{{.Index}}" class="{{if .Saved}}row--saved{{else if .Error}}row--error{{end}}">
+  <details{{if or .Saved .Error}} open{{end}}>
+    <summary class="tui__title">#{{add1 .Index}} · {{.Status}}{{with .Platform}} · {{.}}{{end}}{{with .DisplayFinished}} · finished {{.}}{{end}}{{with .Rating}} · {{.}}/10{{end}}</summary>
+    {{if .Error}}<p class="error-text">{{.Error}}</p>{{end}}
+    <form hx-post="/games/{{.Slug}}/playthroughs/{{.Index}}" hx-target="#pth-{{.Index}}" hx-swap="outerHTML" class="row">
+      <input type="text" name="finished" placeholder="finished" value="{{.DisplayFinished}}">
+      <select name="status">{{$s := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $s}} selected{{end}}>{{.}}</option>{{end}}</select>
+      <input type="text" name="platform" placeholder="platform (blank = {{dash .GamePlatform}})" value="{{.Platform}}">
+      <input type="text" name="rating" placeholder="rating 1-10" value="{{.Rating}}">
+      <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
+      <button type="submit">Update</button>
+    </form>
+  </details>
+</div>
+{{end}}
+
+{{define "session_row"}}
+<tr id="sess-{{.PthIndex}}-{{.Index}}"{{if .Saved}} class="row--saved"{{else if .Error}} class="row--error"{{end}}>
+  <td>{{add1 .Index}}</td>
+  <td><input type="text" name="started" value="{{.Started}}"></td>
+  <td><input type="text" name="finished" value="{{.Finished}}"></td>
+  <td><input type="text" name="title" value="{{.Title}}"></td>
+  <td class="row row--nowrap">
+    {{if gt .Index 0}}
+    <button type="button" class="btn--icon" title="Move up"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/move-up"
+      hx-target="#sessions-{{.PthIndex}}"
+      hx-swap="outerHTML">&uarr;</button>
+    {{end}}
+    {{if lt (add1 .Index) .NumSessions}}
+    <button type="button" class="btn--icon" title="Move down"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/move-down"
+      hx-target="#sessions-{{.PthIndex}}"
+      hx-swap="outerHTML">&darr;</button>
+    {{end}}
+    <button type="button"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}"
+      hx-include="closest tr"
+      hx-target="#sess-{{.PthIndex}}-{{.Index}}"
+      hx-swap="outerHTML">Save</button>
+    {{if gt .NumSessions 1}}
+    <button type="button" class="btn--danger"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/delete"
+      hx-target="#sessions-{{.PthIndex}}"
+      hx-swap="outerHTML"
+      hx-confirm="Delete this session?">Delete</button>
+    {{end}}
+    {{if lt (add1 .Index) .NumSessions}}
+    <input type="hidden" name="keep_last" value="{{.Index}}">
+    <select name="new_status">{{range pthStatuses}}<option value="{{.}}">{{.}}</option>{{end}}</select>
+    <button type="button"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/split"
+      hx-include="closest tr"
+      hx-target="#playthroughs-section"
+      hx-swap="outerHTML">Split after here</button>
+    {{end}}
+  </td>
+</tr>
+{{if .Error}}
+<tr class="row-error"><td colspan="5">{{.Error}}</td></tr>
+{{end}}
+{{end}}
+
+{{define "sessions_table"}}
+<table id="sessions-{{.Index}}">
+  <thead><tr><th>#</th><th>Started</th><th>Finished</th><th>Title</th><th></th></tr></thead>
+  <tbody>
+  {{if .Error}}<tr class="row-error"><td colspan="5">{{.Error}}</td></tr>{{end}}
+  {{range .SessionRows}}{{template "session_row" .}}{{end}}
+  </tbody>
+</table>
+{{end}}
+
+{{define "playthroughs_section"}}
+<section id="playthroughs-section">
+<h2>Playthroughs</h2>
+{{if .Error}}<p class="error-text">{{.Error}}</p>{{end}}
+{{range .Playthroughs}}
+<div class="tui">
+  {{template "playthrough_header" .}}
+  {{if .SessionRows}}{{template "sessions_table" .}}{{end}}
+  <form method="post" action="/games/{{.Slug}}/playthroughs/{{.Index}}/sessions" class="row">
+    <input type="text" name="started" placeholder="session started" required>
+    <input type="text" name="finished" placeholder="session finished (blank if ongoing)">
+    <input type="text" name="title" placeholder="session title (optional)">
+    <button type="submit">Log a session</button>
+  </form>
+</div>
+{{else}}
+<p class="empty">None logged yet.</p>
+{{end}}
+</section>
+{{end}}

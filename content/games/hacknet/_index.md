@@ -1,17 +1,18 @@
 ---
-title: "Hacknet"
-platform: "PC"
-retroachievements_id:
+title: Hacknet
+platform: PC
+retroachievements_id: null
 steam_appid: 365450
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2018-02-11"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["hacknet"]
+    games:
+      - hacknet
+cover: null
 ---
 
 

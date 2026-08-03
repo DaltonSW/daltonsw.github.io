@@ -5,7 +5,7 @@
 
 <form method="get" action="/" class="row">
   <input type="search" name="q" placeholder="filter by title..." value="{{.Query}}" style="max-width: 22rem;">
-  <div class="checkbox-row"><input type="checkbox" id="drafts" name="drafts" value="1"{{if .DraftsOnly}} checked{{end}}><label for="drafts">drafts only</label></div>
+  <div class="checkbox-row"><input type="checkbox" id="drafts" name="drafts" value="1"{{if .DraftsOnly}} checked{{end}} onchange="this.form.submit()"><label for="drafts">drafts only</label></div>
   <button type="submit">Filter</button>
   <a class="btn btn--primary" href="/games/new">+ New game</a>
 </form>

@@ -1,17 +1,18 @@
 ---
-title: "XCOM 2"
-platform: "PC"
-retroachievements_id:
+title: XCOM 2
+platform: PC
+retroachievements_id: null
 steam_appid: 268500
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2018-10-15"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["xcom-2"]
+    games:
+      - xcom-2
+cover: null
 ---
 
 

@@ -635,6 +635,82 @@ func TestRemoveSessionAllowedPaths_MatchesWhatActuallyVanishes(t *testing.T) {
 	}
 }
 
+func TestMoveSession_SwapsAdjacentSessions(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if err := pf.MoveSession(0, 1); err != nil {
+		t.Fatal(err)
+	}
+	got := saveAndReload(t, pf).Playthroughs[0]
+	if len(got.Sessions) != 3 {
+		t.Fatalf("expected 3 sessions, got %d", len(got.Sessions))
+	}
+	if got.Sessions[1].Started != "2024-03-01" || got.Sessions[1].Extra["mood"] != "grindy" {
+		t.Errorf("session that moved up lost its own data: %+v", got.Sessions[1])
+	}
+	if got.Sessions[2].Started != "2024-02-01" || got.Sessions[2].Title != "" {
+		t.Errorf("session that moved down lost its own data: %+v", got.Sessions[2])
+	}
+	if got.Sessions[0].Title != "prologue" {
+		t.Errorf("session not part of the swap was disturbed: %+v", got.Sessions[0])
+	}
+}
+
+func TestMoveSession_RefusesOutOfRange(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	if err := pf.MoveSession(0, -1); err == nil {
+		t.Fatal("expected an error moving session 0 up past the start")
+	}
+	if err := pf.MoveSession(0, 2); err == nil {
+		t.Fatal("expected an error moving the last session down past the end")
+	}
+	got := pf.Playthroughs[0]
+	if got.Sessions[0].Title != "prologue" || got.Sessions[2].Extra["mood"] != "grindy" {
+		t.Error("a rejected move must not have mutated anything")
+	}
+}
+
+// Same shape of proof as TestRemoveSessionAllowedPaths_MatchesWhatActuallyVanishes:
+// the swap moves title/Extra fields to a different index, so the path that
+// used to hold them has to be declared or CheckNoFieldLoss must catch it.
+func TestMoveSessionAllowedPaths_MatchesWhatActuallyVanishes(t *testing.T) {
+	pf := loadFixture(t, threeSessionsFixture)
+	before, err := CollectYAMLFields(pf.Raw())
+	if err != nil {
+		t.Fatal(err)
+	}
+	beforeSessions := append([]SessionEntry(nil), pf.Playthroughs[0].Sessions...)
+
+	if err := pf.MoveSession(0, 1); err != nil {
+		t.Fatal(err)
+	}
+	encoded, err := pf.Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	after, err := CollectYAMLFields(encoded)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	allowed := MoveSessionAllowedPaths(0, beforeSessions, 1)
+	if err := CheckNoFieldLoss(before, after, allowed); err != nil {
+		t.Fatalf("declared allowlist should pass: %v", err)
+	}
+
+	err = CheckNoFieldLoss(before, after, nil)
+	if err == nil {
+		t.Fatal("expected the vanished paths to be reported when undeclared")
+	}
+	for _, want := range []string{"sessions[2].mood"} {
+		if !strings.Contains(err.Error(), want) {
+			t.Errorf("error should name %q, got: %v", want, err)
+		}
+	}
+	if strings.Contains(err.Error(), "sessions[0]") {
+		t.Errorf("session 0 should be untouched, got: %v", err)
+	}
+}
+
 func TestTruncateSessionAllowedPaths_MatchesWhatActuallyVanishes(t *testing.T) {
 	pf := loadFixture(t, threeSessionsFixture)
 	before, err := CollectYAMLFields(pf.Raw())
@@ -768,6 +844,44 @@ func TestEditSession_UpdatesInPlaceWithoutDisturbingSiblings(t *testing.T) {
 	}
 	if got.Sessions[2].Extra["mood"] != "grindy" {
 		t.Error("editing session 1 must not disturb session 2")
+	}
+}
+
+// EditSession on session 0 of an entry with no sessions: list yet must
+// convert the flat started/finished pair in place — this is what lets the
+// web UI's implicit "session 1" row (server_games.go's buildSessionRows) be
+// edited before an explicit session has ever been logged.
+func TestEditSession_ConvertsFlatPairWithoutDisturbingSiblingFields(t *testing.T) {
+	pf := loadFixture(t, flatWithFieldsBetween)
+	if err := pf.EditSession(0, 0, "2026-01-10", "2026-02-20", "retitled"); err != nil {
+		t.Fatal(err)
+	}
+	got := saveAndReload(t, pf).Playthroughs[0]
+
+	if got.Status != "playing" {
+		t.Errorf("status lost: %q", got.Status)
+	}
+	if got.RatingString() != "7" {
+		t.Errorf("rating lost: %q", got.RatingString())
+	}
+	if got.Extra["mood"] != "obsessive" {
+		t.Errorf("unknown field lost: %v", got.Extra)
+	}
+	if len(got.Sessions) != 1 {
+		t.Fatalf("expected 1 session, got %d", len(got.Sessions))
+	}
+	if got.Sessions[0].Started != "2026-01-10" || got.Sessions[0].Finished != "2026-02-20" || got.Sessions[0].Title != "retitled" {
+		t.Errorf("edit not applied: %+v", got.Sessions[0])
+	}
+	if got.Started != "" || got.Finished != "" {
+		t.Errorf("flat dates should have moved, not been copied: %q/%q", got.Started, got.Finished)
+	}
+}
+
+func TestEditSession_OnFlatEntryWithNoStartDateFails(t *testing.T) {
+	pf := loadFixture(t, "playthroughs:\n  - status: backlog\n")
+	if err := pf.EditSession(0, 0, "2026-05-19", "", ""); err == nil {
+		t.Fatal("expected an error rather than a session with no origin")
 	}
 }
 

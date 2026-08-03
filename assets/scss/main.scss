@@ -169,6 +169,7 @@ $status-colors: (
   multiplayer:   var(--multi),
   software:      var(--software),
   misc_launch:   var(--misc-launch),
+  unplayed:      var(--unplayed),
   planned:       var(--accent),
 );
 // Project-only aliases: appear on .pill via project front matter, never .entry/timeline.

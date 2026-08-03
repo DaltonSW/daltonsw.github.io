@@ -8,7 +8,7 @@ started:
 finished:
 rating:
 cover:
-draft: true
+draft: false
 cascade:
   params:
     games: ["sid-meier-s-civilization-vi"]

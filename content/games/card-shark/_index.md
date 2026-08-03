@@ -1,17 +1,18 @@
 ---
-title: "Card Shark"
-platform: "PC"
-retroachievements_id:
+title: Card Shark
+platform: PC
+retroachievements_id: null
 steam_appid: 1371720
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2022-11-19"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["card-shark"]
+    games:
+      - card-shark
+cover: null
 ---
 
 

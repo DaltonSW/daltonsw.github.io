@@ -4,12 +4,12 @@ platform: "Switch"
 retroachievements_id:
 steam_appid:
 nintendo_id: "0100563010E0C000"
-status: ""
+status: "finished"
 started:
 finished:
 rating:
 cover:
-draft: true
+draft: false
 cascade:
   params:
     games: ["warioware-get-it-together"]

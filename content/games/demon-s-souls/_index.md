@@ -1,18 +1,19 @@
 ---
-title: "Demon's Souls"
-platform: "PS5"
-retroachievements_id:
-steam_appid:
-psn_id: "NPWR20277_00"
+title: Demon's Souls
+platform: PS5
+retroachievements_id: null
+steam_appid: null
+psn_id: NPWR20277_00
 status: ""
-started:
-finished:
-rating:
-cover:
-draft: true
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["demon-s-souls"]
+    games:
+      - demon-s-souls
+cover: null
 ---
 Imported from Exophase (psn).
 

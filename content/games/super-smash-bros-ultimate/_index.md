@@ -9,7 +9,7 @@ started:
 finished:
 rating:
 cover:
-draft: true
+draft: false
 cascade:
   params:
     games: ["super-smash-bros-ultimate"]

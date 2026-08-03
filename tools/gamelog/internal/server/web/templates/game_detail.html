@@ -10,14 +10,22 @@
 
 <div class="tui">
   <span class="tui__title">edit game info</span>
-  <form method="post" action="/games/{{.Slug}}/info">
+  <form method="post" action="/games/{{.Slug}}/info" class="field-grid">
     <div class="field"><label>Title</label><input type="text" name="title" value="{{.FM.Title}}" required></div>
     <div class="field"><label>Platform</label><input type="text" name="platform" value="{{.FM.Platform}}"></div>
     <div class="field"><label>Status</label>
       <select name="status">{{$cur := .FM.Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>
     </div>
+    {{if .StartedEditable}}
     <div class="field"><label>Started</label><input type="text" name="started" value="{{.FM.Started}}"></div>
+    {{else}}
+    <div class="field field--wide dim">Started: {{.Started}} — governed by playthroughs.yaml, edit in the Playthroughs section below.</div>
+    {{end}}
+    {{if .FinishedEditable}}
     <div class="field"><label>Finished</label><input type="text" name="finished" value="{{.FM.Finished}}"></div>
+    {{else}}
+    <div class="field field--wide dim">Finished: {{.Finished}} — governed by playthroughs.yaml, edit in the Playthroughs section below.</div>
+    {{end}}
     <div class="field"><label>Rating (1-10)</label><input type="text" name="rating" value="{{.RatingStr}}"></div>
     <div class="checkbox-row field"><input type="checkbox" id="draft" name="draft" value="1"{{if .FM.Draft}} checked{{end}}><label for="draft">Draft (unpublished)</label></div>
     <div class="btn-row"><button type="submit" class="btn--primary">Save</button></div>
@@ -32,8 +40,8 @@
 
 <h2>Planned replays</h2>
 {{range .Planned}}
-<div class="tui">
-  <span class="tui__title">planned{{with .Platform}} · {{.}}{{end}}</span>
+<details class="tui">
+  <summary class="tui__title">planned{{with .Platform}} · {{.}}{{end}}</summary>
   <p>{{with .Notes}}{{.}}{{else}}<span class="dim">no notes</span>{{end}}</p>
   <form method="post" action="/games/{{$.Slug}}/planned/{{.Index}}/edit" class="row">
     <input type="text" name="platform" placeholder="platform (blank = {{dash $.FM.Platform}})" value="{{.Platform}}">
@@ -49,85 +57,24 @@
     <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
     <button type="submit" class="btn--primary">Start now</button>
   </form>
-</div>
+</details>
 {{else}}
 <p class="empty">None.</p>
 {{end}}
 
-<div class="tui">
-  <span class="tui__title">add a planned replay</span>
+<details class="tui">
+  <summary class="tui__title">add a planned replay</summary>
   <form method="post" action="/games/{{.Slug}}/planned" class="row">
     <input type="text" name="platform" placeholder="platform (blank = {{dash .FM.Platform}})">
     <input type="text" name="notes" placeholder="notes">
     <button type="submit">Add</button>
   </form>
-</div>
+</details>
 
-<h2>Playthroughs</h2>
-{{range .Playthroughs}}
-<div class="tui">
-  <span class="tui__title">#{{add1 .Index}} · {{.Status}}{{with .Platform}} · {{.}}{{end}}</span>
+{{template "playthroughs_section" .Playthroughs}}
 
-  <form method="post" action="/games/{{$.Slug}}/playthroughs/{{.Index}}" class="row">
-    <input type="text" name="finished" placeholder="finished" value="{{.DisplayFinished}}">
-    <select name="status">{{$s := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $s}} selected{{end}}>{{.}}</option>{{end}}</select>
-    <input type="text" name="platform" placeholder="platform (blank = {{dash $.FM.Platform}})" value="{{.Platform}}">
-    <input type="text" name="rating" placeholder="rating 1-10" value="{{.Rating}}">
-    <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
-    <button type="submit">Update</button>
-  </form>
-
-  {{if .HasSessions}}
-  {{$idx := .Index}}
-  {{$n := len .Sessions}}
-  {{$slug := $.Slug}}
-  {{range .Sessions}}
-  <form id="sess-{{$idx}}-{{.Index}}" method="post" action="/games/{{$slug}}/playthroughs/{{$idx}}/sessions/{{.Index}}"></form>
-  {{end}}
-  <table>
-    <thead><tr><th>#</th><th>Started</th><th>Finished</th><th>Title</th><th></th></tr></thead>
-    <tbody>
-    {{range .Sessions}}
-    {{$fid := printf "sess-%d-%d" $idx .Index}}
-    <tr>
-      <td>{{add1 .Index}}</td>
-      <td><input type="text" form="{{$fid}}" name="started" value="{{.Started}}"></td>
-      <td><input type="text" form="{{$fid}}" name="finished" value="{{.Finished}}"></td>
-      <td><input type="text" form="{{$fid}}" name="title" value="{{.Title}}"></td>
-      <td class="row">
-        <button type="submit" form="{{$fid}}">Save</button>
-        {{if gt $n 1}}
-        <form method="post" action="/games/{{$slug}}/playthroughs/{{$idx}}/sessions/{{.Index}}/delete" style="display:inline">
-          <button type="submit" class="btn--danger" onclick="return confirm('Delete this session?')">Delete</button>
-        </form>
-        {{end}}
-        {{if lt (add1 .Index) $n}}
-        <form method="post" action="/games/{{$slug}}/playthroughs/{{$idx}}/split" style="display:inline">
-          <input type="hidden" name="keep_last" value="{{.Index}}">
-          <select name="new_status">{{range pthStatuses}}<option value="{{.}}">{{.}}</option>{{end}}</select>
-          <button type="submit">Split after here</button>
-        </form>
-        {{end}}
-      </td>
-    </tr>
-    {{end}}
-    </tbody>
-  </table>
-  {{end}}
-
-  <form method="post" action="/games/{{$.Slug}}/playthroughs/{{.Index}}/sessions" class="row">
-    <input type="text" name="started" placeholder="session started" required>
-    <input type="text" name="finished" placeholder="session finished (blank if ongoing)">
-    <input type="text" name="title" placeholder="session title (optional)">
-    <button type="submit">Log a session</button>
-  </form>
-</div>
-{{else}}
-<p class="empty">None logged yet.</p>
-{{end}}
-
-<div class="tui">
-  <span class="tui__title">start a new playthrough</span>
+<details class="tui">
+  <summary class="tui__title">start a new playthrough</summary>
   <form method="post" action="/games/{{.Slug}}/playthroughs" class="row">
     <input type="text" name="started" placeholder="started (YYYY-MM-DD)" required value="{{.Today}}">
     <select name="status">{{$def := .DefaultPthStatus}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $def}} selected{{end}}>{{.}}</option>{{end}}</select>
@@ -137,7 +84,7 @@
     <input type="text" name="notes" placeholder="notes">
     <button type="submit" class="btn--primary">Start</button>
   </form>
-</div>
+</details>
 
 <h2>Danger zone</h2>
 {{if .CanDelete}}

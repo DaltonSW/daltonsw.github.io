@@ -1,17 +1,18 @@
 ---
-title: "Nine Sols"
-platform: "PC"
-retroachievements_id:
+title: Nine Sols
+platform: PC
+retroachievements_id: null
 steam_appid: 1809540
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2026-02-22"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["nine-sols"]
+    games:
+      - nine-sols
+cover: null
 ---
 
 

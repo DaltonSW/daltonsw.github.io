@@ -1,17 +1,18 @@
 ---
-title: "Neon White"
-platform: "PC"
-retroachievements_id:
+title: Neon White
+platform: PC
+retroachievements_id: null
 steam_appid: 1533420
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2023-04-01"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["neon-white"]
+    games:
+      - neon-white
+cover: null
 ---
 
 

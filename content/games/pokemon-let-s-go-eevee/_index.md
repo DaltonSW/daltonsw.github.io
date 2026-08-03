@@ -1,18 +1,19 @@
 ---
-title: "Pokémon: Let’s Go, Eevee!"
-platform: "Switch"
-retroachievements_id:
-steam_appid:
-nintendo_id: "0100187003A36000"
-status: ""
-started:
-finished:
-rating:
-cover:
+title: 'Pokémon: Let’s Go, Eevee!'
+platform: Switch
+retroachievements_id: null
+steam_appid: null
+status: unplayed
+started: ""
+finished: ""
+rating: null
 draft: true
 cascade:
   params:
-    games: ["pokemon-let-s-go-eevee"]
+    games:
+      - pokemon-let-s-go-eevee
+cover: null
+nintendo_id: 0100187003A36000
 ---
 Imported from Exophase (nintendo).
 

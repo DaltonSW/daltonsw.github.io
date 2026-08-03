@@ -7,7 +7,7 @@ status: mastered
 started: ""
 finished: ""
 rating: null
-draft: true
+draft: false
 cascade:
   params:
     games:

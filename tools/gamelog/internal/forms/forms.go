@@ -103,7 +103,13 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 // IsOneShot and oneShotConflict — since none of the three has a save file or
 // finish line, a second entry of the *same* one-shot status on the same
 // platform would be fragmentation, not a second mode.
-var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "ongoing", "multiplayer", "software"}
+//
+// "unplayed" is game-level only: it's for a game that was launched or
+// touched somehow (booting a Switch title solely for a cross-save/gift
+// unlock, say) but never actually played, and — unlike "backlog" — makes no
+// claim about intending to play it eventually. "backlog" says "haven't
+// gotten to it yet"; "unplayed" says "don't know if I ever will."
+var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "ongoing", "multiplayer", "software", "unplayed"}
 
 // IsOneShot reports whether a status (game-level or entry-level) forbids a
 // second playthrough entry of that same status on the same platform. Keep

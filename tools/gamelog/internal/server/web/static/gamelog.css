@@ -131,8 +131,8 @@ pre {
 hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 
 /* ── Layout shell ──────────────────────────────────────────────────────── */
-.wrap { width: 100%; max-width: 1400px; margin-inline: auto; padding-inline: 1.5rem; }
-.wrap--narrow { max-width: 1400px; }
+.wrap { width: 100%; max-width: 1800px; margin-inline: auto; padding-inline: 1.5rem; }
+.wrap--narrow { max-width: 1800px; }
 .site-main { padding-block: 2rem 4rem; flex: 1 0 auto; }
 
 .site-header {
@@ -202,7 +202,13 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace;
   font-size: 0.8rem; font-weight: 500;
   letter-spacing: 0.04em; color: var(--accent);
+  max-width: calc(100% - 2rem);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
+/* A <summary> standing in for .tui__title on a collapsible panel — same
+   floating-on-the-border look, plus the disclosure affordance. */
+summary.tui__title { cursor: pointer; user-select: none; list-style: revert; }
+summary.tui__title::marker { color: var(--accent); font-size: 0.7em; }
 
 /* ── Status pills ──────────────────────────────────────────────────────── */
 .pill {
@@ -231,8 +237,21 @@ label:first-child { margin-top: 0; }
 .field:last-child { margin-bottom: 0; }
 .hint { color: var(--dim); font-size: 0.8rem; margin: 0.25rem 0 0; }
 
+/* Multi-field forms laid out in columns instead of one full-width field per
+   row — used for the game-info edit form, the densest static form on the
+   game-detail page. */
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0 1.4rem;
+}
+.field-grid .field--wide, .field-grid .checkbox-row, .field-grid .btn-row {
+  grid-column: 1 / -1;
+}
+
 input[type="text"], input[type="date"], input[type="number"], input[type="search"],
 select, textarea {
+  min-width: 100px;
   width: 100%;
   font-family: "SauceCode", ui-monospace, "SFMono-Regular", monospace;
   font-size: 0.95rem;
@@ -264,9 +283,11 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); width
   color: var(--accent); border-color: var(--accent); text-decoration: none;
 }
 .btn--primary, button[type="submit"], input[type="submit"] { color: var(--accent); border-color: var(--accent); }
+.btn--icon { padding: 0.45rem 0.6rem; }
 .btn--danger { color: var(--stop); border-color: var(--stop); }
 .btn--danger:hover { color: var(--stop); border-color: var(--stop); filter: brightness(1.2); }
 .btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.1rem; }
+.btn-details { min-width: 150px; margin-bottom: 1px; }
 
 /* ── Tables ────────────────────────────────────────────────────────────── */
 table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
@@ -292,6 +313,8 @@ tr:hover td { background: var(--panel-2); }
 }
 tr.row--saved td { animation: row-saved-flash 1.1s ease-out; }
 tr.row-error td { color: var(--stop); font-size: 0.85rem; }
+div.row--saved { animation: row-saved-flash 1.1s ease-out; }
+.error-text { color: var(--stop); font-size: 0.85rem; }
 
 /* ── Misc ──────────────────────────────────────────────────────────────── */
 .dim { color: var(--dim); }
@@ -299,6 +322,21 @@ tr.row-error td { color: var(--stop); font-size: 0.85rem; }
 .row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
 .row--between { justify-content: space-between; }
 .row--nowrap { flex-wrap: nowrap; }
+
+/* Inline forms (.row) hold several fields on one line — inputs default to
+   width:100% for the vertical .field forms, which inside a flex row just
+   forces each one onto its own full-width line. Give them a sane basis
+   instead, sized per field by name so the wider ones (notes/title) actually
+   get more room than short ones (dates/rating). */
+.row input[type="text"], .row input[type="number"], .row select {
+  width: auto;
+  flex: 1 1 150px;
+}
+.row input[name="started"], .row input[name="finished"] { flex: 1 1 120px; }
+.row input[name="platform"] { flex: 1 1 120px; }
+.row input[name="rating"] { flex: 0 1 90px; }
+.row input[name="notes"], .row input[name="title"] { flex: 2 1 200px; }
+.row select[name="status"], .row select[name="new_status"] { flex: 1 1 130px; }
 .flash { border-radius: var(--radius); padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.92rem; }
 .flash--error { border: 1px solid var(--stop); color: var(--stop); }
 .flash--ok { border: 1px solid var(--ok); color: var(--ok); }

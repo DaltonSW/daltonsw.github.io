@@ -1,17 +1,18 @@
 ---
-title: "DREDGE"
-platform: "PC"
-retroachievements_id:
+title: DREDGE
+platform: PC
+retroachievements_id: null
 steam_appid: 1562430
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2023-04-18"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dredge"]
+    games:
+      - dredge
+cover: null
 ---
 
 

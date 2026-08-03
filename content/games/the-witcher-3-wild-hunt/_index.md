@@ -1,17 +1,18 @@
 ---
-title: "The Witcher 3: Wild Hunt"
-platform: "PC"
-retroachievements_id:
+title: 'The Witcher 3: Wild Hunt'
+platform: PC
+retroachievements_id: null
 steam_appid: 292030
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2017-08-08"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-witcher-3-wild-hunt"]
+    games:
+      - the-witcher-3-wild-hunt
+cover: null
 ---
 
 

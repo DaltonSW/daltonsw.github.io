@@ -1,17 +1,18 @@
 ---
-title: "Halo: The Master Chief Collection"
-platform: "PC"
-retroachievements_id:
+title: 'Halo: The Master Chief Collection'
+platform: PC
+retroachievements_id: null
 steam_appid: 976730
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2019-12-12"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["halo-the-master-chief-collection"]
+    games:
+      - halo-the-master-chief-collection
+cover: null
 ---
 
 

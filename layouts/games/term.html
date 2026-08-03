@@ -2,10 +2,21 @@
 <article>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
 
+  {{/* Started/Finished go through the same partials games-timeline.html and
+       game-year-rows.html derive from — reading .Params.started/.finished
+       directly here let this header disagree with what the rest of the site
+       shows for the same game. Finished is gated to non-open-ended statuses
+       because game-last-played.html returns "last known activity" (which can
+       be a still-open entry's own started date) for use as a sort key
+       elsewhere; showing that under a "Finished:" label on an ongoing game
+       would be a fabricated completion date. */}}
+  {{- $openEndedStatuses := slice "playing" "ongoing" "multiplayer" "software" }}
   <div class="meta-row">
     {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
-    {{- with .Params.started }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
-    {{- with .Params.finished }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with (partial "game-first-played.html" .) }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- if not (in $openEndedStatuses .Params.status) }}
+      {{- with (partial "game-last-played.html" .) }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- end }}
     {{- with .Params.rating }}<span><b>Rating:</b> {{ . }}/10</span>{{ end }}
   </div>
 

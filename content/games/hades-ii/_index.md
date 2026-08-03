@@ -3,11 +3,11 @@ title: Hades II
 platform: PC
 retroachievements_id: null
 steam_appid: 1145350
-status: ongoing
+status: mastered
 started: ""
 finished: ""
 rating: null
-draft: true
+draft: false
 cascade:
   params:
     games:

@@ -1,17 +1,18 @@
 ---
-title: "Hyper Light Drifter"
-platform: "PC"
-retroachievements_id:
+title: Hyper Light Drifter
+platform: PC
+retroachievements_id: null
 steam_appid: 257850
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2018-07-15"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["hyper-light-drifter"]
+    games:
+      - hyper-light-drifter
+cover: null
 ---
 
 

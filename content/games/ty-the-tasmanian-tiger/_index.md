@@ -1,17 +1,18 @@
 ---
-title: "TY the Tasmanian Tiger"
-platform: "PC"
-retroachievements_id:
+title: TY the Tasmanian Tiger
+platform: PC
+retroachievements_id: null
 steam_appid: 411960
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2025-07-21"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["ty-the-tasmanian-tiger"]
+    games:
+      - ty-the-tasmanian-tiger
+cover: null
 ---
 
 

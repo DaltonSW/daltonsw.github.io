@@ -1,17 +1,18 @@
 ---
-title: "DEATHLOOP"
-platform: "PC"
-retroachievements_id:
+title: DEATHLOOP
+platform: PC
+retroachievements_id: null
 steam_appid: 1252330
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2021-12-21"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["deathloop"]
+    games:
+      - deathloop
+cover: null
 ---
 
 

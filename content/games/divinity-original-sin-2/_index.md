@@ -1,17 +1,18 @@
 ---
-title: "Divinity: Original Sin 2"
-platform: "PC"
-retroachievements_id:
+title: 'Divinity: Original Sin 2'
+platform: PC
+retroachievements_id: null
 steam_appid: 435150
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2023-08-09"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["divinity-original-sin-2"]
+    games:
+      - divinity-original-sin-2
+cover: null
 ---
 
 

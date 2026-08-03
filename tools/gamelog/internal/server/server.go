@@ -45,6 +45,7 @@ var staticFS fs.FS
 
 var pageTemplatesCache map[string]*template.Template
 var rowTemplateCache *template.Template
+var playthroughFragmentsCache *template.Template
 
 func init() {
 	if info, err := os.Stat(devWebRoot + "/web/templates"); err == nil && info.IsDir() {
@@ -65,6 +66,8 @@ func init() {
 		}
 		rowTemplateCache = template.Must(template.New("game_row.html").Funcs(funcMap).
 			ParseFS(templatesFS, "web/templates/game_row.html"))
+		playthroughFragmentsCache = template.Must(template.New("playthrough_fragments.html").Funcs(funcMap).
+			ParseFS(templatesFS, "web/templates/playthrough_fragments.html"))
 	}
 }
 
@@ -123,12 +126,15 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /games/{slug}/delete", s.handleDeleteGame)
 	mux.HandleFunc("POST /games/{slug}/info", s.handleEditInfo)
 	mux.HandleFunc("POST /games/{slug}/quickedit", s.handleQuickEditGame)
+	mux.HandleFunc("POST /games/{slug}/undraft", s.handleUndraftGame)
 	mux.HandleFunc("POST /games/{slug}/playthroughs", s.handleNewPlaythrough)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}", s.handleUpdatePlaythrough)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/split", s.handleSplitPlaythrough)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions", s.handleAddSession)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}", s.handleEditSession)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/delete", s.handleDeleteSession)
+	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/move-up", s.handleMoveSessionUp)
+	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/move-down", s.handleMoveSessionDown)
 	mux.HandleFunc("POST /games/{slug}/planned", s.handleAddPlanned)
 	mux.HandleFunc("POST /games/{slug}/planned/{idx}/start", s.handleStartPlanned)
 	mux.HandleFunc("POST /games/{slug}/planned/{idx}/edit", s.handleEditPlanned)
@@ -213,7 +219,7 @@ var pageSpecs = map[string]struct {
 }{
 	"index":          {"index.html", []string{"web/templates/game_row.html"}},
 	"game_new":       {"game_new.html", nil},
-	"game_detail":    {"game_detail.html", nil},
+	"game_detail":    {"game_detail.html", []string{"web/templates/playthrough_fragments.html"}},
 	"housekeeping":   {"housekeeping.html", nil},
 	"suggest_picker": {"suggest_picker.html", nil},
 	"suggest_report": {"suggest_report.html", nil},
@@ -235,6 +241,30 @@ func (s *server) renderRow(w http.ResponseWriter, view gameRowView) {
 	}
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	if err := tmpl.ExecuteTemplate(w, "game_row", view); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+// renderPlaythroughFragment renders one named template out of
+// playthrough_fragments.html on its own — the htmx swap target for a
+// playthrough/session edit on the game-detail page, as opposed to the full
+// page reload that page used before. One file holds four related fragment
+// templates (playthrough_header, sessions_table, session_row,
+// playthroughs_section, each calling into the others), so this is
+// parameterized by name rather than one bespoke method per fragment.
+func (s *server) renderPlaythroughFragment(w http.ResponseWriter, name string, data any) {
+	tmpl := playthroughFragmentsCache
+	if devMode {
+		var err error
+		tmpl, err = template.New("playthrough_fragments.html").Funcs(funcMap).
+			ParseFS(templatesFS, "web/templates/playthrough_fragments.html")
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	if err := tmpl.ExecuteTemplate(w, name, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }

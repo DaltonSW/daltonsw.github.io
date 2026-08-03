@@ -4,12 +4,12 @@ platform: "Switch"
 retroachievements_id:
 steam_appid:
 nintendo_id: "010049900F546000"
-status: ""
+status: "finished"
 started:
 finished:
 rating:
 cover:
-draft: true
+draft: false
 cascade:
   params:
     games: ["super-mario-3d-all-stars"]

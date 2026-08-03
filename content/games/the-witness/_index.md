@@ -1,17 +1,18 @@
 ---
-title: "The Witness"
-platform: "PC"
-retroachievements_id:
+title: The Witness
+platform: PC
+retroachievements_id: null
 steam_appid: 210970
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2024-04-07"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-witness"]
+    games:
+      - the-witness
+cover: null
 ---
 
 

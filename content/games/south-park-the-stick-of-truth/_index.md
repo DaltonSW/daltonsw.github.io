@@ -1,17 +1,18 @@
 ---
-title: "South Park™: The Stick of Truth™"
-platform: "PC"
-retroachievements_id:
+title: 'South Park™: The Stick of Truth™'
+platform: PC
+retroachievements_id: null
 steam_appid: 213670
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2023-02-15"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["south-park-the-stick-of-truth"]
+    games:
+      - south-park-the-stick-of-truth
+cover: null
 ---
 
 

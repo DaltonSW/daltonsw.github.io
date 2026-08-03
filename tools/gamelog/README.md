@@ -173,6 +173,11 @@ implies play was actually attempted and abandoned. Unlike the one-shot statuses 
 `misc_launch` entry on the same platform is *not* fragmentation — each launch is its own unrelated
 occasion — so it's excluded from `isOneShot` and can repeat freely.
 
+`status: unplayed` (game-level only) is for a game that was launched or touched somehow but never
+actually played — booting a Switch title solely for a cross-save/gift unlock is the case that
+prompted it — and, unlike `backlog`, makes no claim about ever getting to it. `backlog` says
+"haven't gotten to it yet"; `unplayed` says "no plan either way."
+
 `ongoing`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
 no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
 ends play. They're separate statuses because the *reason* differs: `ongoing` is a replay-loop

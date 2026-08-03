@@ -352,12 +352,41 @@ func (f *PlaythroughsFile) RemoveSession(idx, j int) error {
 	return nil
 }
 
+// MoveSession swaps sessions[p] and sessions[p+1] within playthrough idx —
+// the only way to reorder sessions once logged, since there's otherwise no
+// way to insert a session between two others already on record short of
+// deleting and re-adding (which would lose whichever fields Extra was
+// carrying). p is the earlier of the pair; p+1 must also be in range.
+func (f *PlaythroughsFile) MoveSession(idx, p int) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to reorder sessions on", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if p < 0 || p+1 >= len(e.Sessions) {
+		return fmt.Errorf("no adjacent session to swap with on playthrough %d", idx+1)
+	}
+	e.Sessions[p], e.Sessions[p+1] = e.Sessions[p+1], e.Sessions[p]
+	return nil
+}
+
 // EditSession applies edited started/finished/title to session j in place.
+// Editing session 0 of an entry that has never been converted (still a flat
+// started/finished pair) performs that conversion in place — the UI shows
+// that pair as an implicit session 1 before any explicit sessions: list
+// exists, so saving edits to it needs to land the same way AddSession's
+// first-time conversion does.
 func (f *PlaythroughsFile) EditSession(idx, j int, started, finished, title string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to edit a session on", idx+1)
 	}
 	e := &f.Playthroughs[idx]
+	if j == 0 && len(e.Sessions) == 0 {
+		if e.Started == "" {
+			return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
+		}
+		e.Sessions = []SessionEntry{{}}
+		e.Started, e.Finished = "", ""
+	}
 	if j < 0 || j >= len(e.Sessions) {
 		return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
 	}
@@ -466,6 +495,27 @@ func RemoveSessionAllowedPaths(idx int, sessions []SessionEntry, j int) []string
 	return paths
 }
 
+// MoveSessionAllowedPaths returns the paths that legitimately vanish when
+// sessions[p] and sessions[p+1] swap places: a field one side had and the
+// other didn't (title, or an Extra key) moves to the other index along with
+// the rest of its session, so the path that used to hold it goes quiet
+// rather than keeping its old meaning.
+func MoveSessionAllowedPaths(idx int, before []SessionEntry, p int) []string {
+	a, b := sessionFieldNames(before[p]), sessionFieldNames(before[p+1])
+	var paths []string
+	for name := range a {
+		if !b[name] {
+			paths = append(paths, SessionPath(idx, p, name))
+		}
+	}
+	for name := range b {
+		if !a[name] {
+			paths = append(paths, SessionPath(idx, p+1, name))
+		}
+	}
+	return paths
+}
+
 // TruncateSessionAllowedPaths returns the paths that vanish from playthrough
 // idx when sessions[from:] is cut away entirely (the split case).
 func TruncateSessionAllowedPaths(idx int, sessions []SessionEntry, from int) []string {
@@ -491,6 +541,15 @@ func SessionPath(idx, j int, field string) string {
 // playthrough" instead). Never overwrites an already-set finished date, and
 // a blank closedOn (as "paused" should always pass) only syncs the status,
 // leaving dates untouched. Safe to call unconditionally.
+//
+// The web game-info form (server_games.go's handleEditInfo/handleQuickEditGame)
+// now gates whether it even reads a Finished value from the request behind
+// GameSummary.FinishedEditable, which requires this same "exactly one
+// playthrough, still open" condition to be true. So at those two call sites,
+// closedOn is only ever non-blank when this method would've backfilled it
+// anyway; the meaningful callers of the backfill behavior are
+// server_bulk.go's handleStaleAction and the CLI paths through mutate.go,
+// not the web form.
 func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
 	switch status {
 	case "finished", "dropped", "mastered", "paused":

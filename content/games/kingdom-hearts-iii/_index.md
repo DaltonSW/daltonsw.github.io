@@ -1,18 +1,19 @@
 ---
-title: "KINGDOM HEARTS III"
-platform: "PS4"
-retroachievements_id:
-steam_appid:
-psn_id: "NPWR16532_00"
-status: "finished"
-started:
-finished:
-rating:
-cover:
-draft: true
+title: KINGDOM HEARTS III
+platform: PS4
+retroachievements_id: null
+steam_appid: null
+psn_id: NPWR16532_00
+status: mastered
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["kingdom-hearts-iii"]
+    games:
+      - kingdom-hearts-iii
+cover: null
 ---
 Imported from Exophase (psn).
 

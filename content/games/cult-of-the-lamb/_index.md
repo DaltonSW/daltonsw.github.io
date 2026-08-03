@@ -1,17 +1,18 @@
 ---
-title: "Cult of the Lamb"
-platform: "PC"
-retroachievements_id:
+title: Cult of the Lamb
+platform: PC
+retroachievements_id: null
 steam_appid: 1313140
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2022-08-19"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["cult-of-the-lamb"]
+    games:
+      - cult-of-the-lamb
+cover: null
 ---
 
 

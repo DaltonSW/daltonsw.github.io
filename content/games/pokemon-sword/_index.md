@@ -4,12 +4,12 @@ platform: "Switch"
 retroachievements_id:
 steam_appid:
 nintendo_id: "0100ABF008968000"
-status: ""
+status: "finished"
 started:
 finished:
 rating:
 cover:
-draft: true
+draft: false
 cascade:
   params:
     games: ["pokemon-sword"]

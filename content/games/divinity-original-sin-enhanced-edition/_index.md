@@ -1,17 +1,18 @@
 ---
-title: "Divinity: Original Sin Enhanced Edition"
-platform: "PC"
-retroachievements_id:
+title: 'Divinity: Original Sin Enhanced Edition'
+platform: PC
+retroachievements_id: null
 steam_appid: 373420
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2021-02-20"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["divinity-original-sin-enhanced-edition"]
+    games:
+      - divinity-original-sin-enhanced-edition
+cover: null
 ---
 
 

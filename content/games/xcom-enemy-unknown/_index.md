@@ -1,17 +1,18 @@
 ---
-title: "XCOM: Enemy Unknown"
-platform: "PC"
-retroachievements_id:
+title: 'XCOM: Enemy Unknown'
+platform: PC
+retroachievements_id: null
 steam_appid: 200510
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2018-10-13"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["xcom-enemy-unknown"]
+    games:
+      - xcom-enemy-unknown
+cover: null
 ---
 
 

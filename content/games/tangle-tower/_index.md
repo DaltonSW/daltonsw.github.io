@@ -1,17 +1,18 @@
 ---
-title: "Tangle Tower"
-platform: "PC"
-retroachievements_id:
+title: Tangle Tower
+platform: PC
+retroachievements_id: null
 steam_appid: 359510
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2021-05-18"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["tangle-tower"]
+    games:
+      - tangle-tower
+cover: null
 ---
 
 

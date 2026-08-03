@@ -1,17 +1,18 @@
 ---
-title: "Life is Strange™"
-platform: "PC"
-retroachievements_id:
+title: Life is Strange™
+platform: PC
+retroachievements_id: null
 steam_appid: 319630
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2015-12-23"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["life-is-strange"]
+    games:
+      - life-is-strange
+cover: null
 ---
 
 

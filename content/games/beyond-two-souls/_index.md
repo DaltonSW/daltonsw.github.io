@@ -1,18 +1,19 @@
 ---
-title: "Beyond: Two Souls"
-platform: "PC"
-retroachievements_id:
+title: 'Beyond: Two Souls'
+platform: PC
+retroachievements_id: null
 steam_appid: 960990
-psn_id: "NPWR06302_00"
-status: "finished"
-started:
+psn_id: NPWR06302_00
+status: finished
+started: ""
 finished: "2022-04-30"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["beyond-two-souls"]
+    games:
+      - beyond-two-souls
+cover: null
 ---
 
 

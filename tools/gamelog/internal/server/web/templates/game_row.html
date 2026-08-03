@@ -4,9 +4,16 @@
   <td>
     <select name="status">{{$cur := .Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>
   </td>
-  <td>{{if .Draft}}<span class="pill pill--draft">draft</span>{{else}}<span class="dim">no</span>{{end}}</td>
-  <td><input type="text" name="started" value="{{.FMStarted}}" placeholder="{{.Started}}"></td>
-  <td><input type="text" name="finished" value="{{.FMFinished}}" placeholder="{{.Finished}}"></td>
+  <td>{{if .Draft}}
+    <!-- <span class="pill pill--draft">draft</span> -->
+    <button type="button" class="btn"
+      hx-post="/games/{{.Slug}}/undraft"
+      hx-include="#drafts"
+      hx-target="#row-{{.Slug}}"
+      hx-swap="outerHTML">Undraft</button>
+  {{else}}<span class="dim">no</span>{{end}}</td>
+  <td>{{if .StartedEditable}}<input type="text" name="started" value="{{.FMStarted}}" placeholder="{{.Started}}">{{else}}<input type="text" value="{{.Started}}" disabled title="Governed by playthroughs.yaml — edit on the game's own page.">{{end}}</td>
+  <td>{{if .FinishedEditable}}<input type="text" name="finished" value="{{.FMFinished}}" placeholder="{{.Finished}}">{{else}}<input type="text" value="{{.Finished}}" disabled title="Governed by playthroughs.yaml — edit on the game's own page.">{{end}}</td>
   <td><input type="text" name="platform" value="{{.Platform}}"></td>
   <td><input type="text" name="rating" value="{{.Rating}}" style="max-width: 4rem;"></td>
   <td class="dim">{{.NumPlaythroughs}}</td>
@@ -16,7 +23,7 @@
       hx-include="closest tr"
       hx-target="#row-{{.Slug}}"
       hx-swap="outerHTML">Save</button>
-    <a class="btn" href="/games/{{.Slug}}">Details &rarr;</a>
+    <a class="btn btn-details" href="/games/{{.Slug}}">Details &rarr; </a>
   </td>
 </tr>
 {{if .Error}}

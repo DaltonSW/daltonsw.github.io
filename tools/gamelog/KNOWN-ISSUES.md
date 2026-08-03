@@ -249,6 +249,11 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   by mutating in place instead of replacing an entry, and the "planned replay" feature has no
   delete path at all — removing a stale `status: planned` placeholder is left to hand-editing
   `playthroughs.yaml`, which the file's own generated banner already sanctions.
+- **`achievement-summary.yaml`'s `last_played` being maxed against logged playthroughs** in
+  `layouts/partials/game-last-played.html`/`games-timeline.html`/`game-year-rows.html` is
+  intentional, not drift. A refreshed archive can legitimately be more recent than a logged
+  session (see `README.md`'s notes on the two staying independently useful). Don't "fix" it into
+  agreeing with `playthroughs.yaml` — that would hide real, more-recent activity.
 
 ## Outstanding
 
@@ -260,5 +265,21 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 - **Nintendo and Ubisoft are captured on the Exophase profile but not archived.** Switch has no
   achievements at all (playtime and last-played only), so it needs a record shape that doesn't
   pretend otherwise before `providerNintendo` is worth adding.
+- **`games-timeline.html` and `game-year-rows.html` each independently reimplement the same
+  "fold across playthroughs, max against achievement-summary" algorithm** that
+  `layouts/partials/game-first-played.html`/`game-last-played.html` also implement (now wired into
+  `layouts/games/term.html`/`single.html` — see the fix for the drift between a game's own page
+  and everywhere else it's listed). That's three Hugo-side copies of one algorithm, kept in sync
+  only by comment cross-reference ("mirrors game-last-played.html"), not shared code. Deliberately
+  deferred: those two views need much richer per-item data (colors, statuses, year-clipped spans)
+  than the two partials' bare-string return, so consolidating them is a bigger refactor than a
+  template swap — not forgotten, just scoped out.
+- **`forms.EditGameForm` (the CLI's shared game-info edit prompt — `gamelog review`, `gamelog
+  stale`'s edit action, the interactive TUI) has the same Started/Finished silent-no-op issue the
+  web UI just got fixed for.** It freely edits front-matter Started/Finished with no
+  playthrough-count awareness, so on a game already governed by `playthroughs.yaml`, editing
+  either field there does nothing the site will ever show. Not fixed here — this pass was scoped
+  to the web UI. Same fix shape applies: skip/disable those two prompts using
+  `GameSummary.StartedEditable`/`FinishedEditable`, which now exist for exactly this purpose.
 
 `tools/gamelog/README.md` documents all of the above in more detail.

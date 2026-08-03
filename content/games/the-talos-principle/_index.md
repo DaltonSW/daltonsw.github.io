@@ -1,17 +1,18 @@
 ---
-title: "The Talos Principle"
-platform: "PC"
-retroachievements_id:
+title: The Talos Principle
+platform: PC
+retroachievements_id: null
 steam_appid: 257510
-status: "dropped"
-started:
+status: dropped
+started: ""
 finished: "2023-06-19"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-talos-principle"]
+    games:
+      - the-talos-principle
+cover: null
 ---
 
 

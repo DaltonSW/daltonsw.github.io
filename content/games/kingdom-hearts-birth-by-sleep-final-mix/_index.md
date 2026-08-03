@@ -1,18 +1,19 @@
 ---
-title: "KINGDOM HEARTS Birth by Sleep FINAL MIX"
-platform: "PS4"
-retroachievements_id:
-steam_appid:
-psn_id: "NPWR12349_00"
-status: "mastered"
-started:
-finished:
-rating:
-cover:
-draft: true
+title: KINGDOM HEARTS Birth by Sleep FINAL MIX
+platform: PS4
+retroachievements_id: null
+steam_appid: null
+psn_id: NPWR12349_00
+status: mastered
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["kingdom-hearts-birth-by-sleep-final-mix"]
+    games:
+      - kingdom-hearts-birth-by-sleep-final-mix
+cover: null
 ---
 Imported from Exophase (psn).
 

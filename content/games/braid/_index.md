@@ -1,17 +1,18 @@
 ---
-title: "Braid"
-platform: "PC"
-retroachievements_id:
+title: Braid
+platform: PC
+retroachievements_id: null
 steam_appid: 26800
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2025-03-23"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["braid"]
+    games:
+      - braid
+cover: null
 ---
 
 

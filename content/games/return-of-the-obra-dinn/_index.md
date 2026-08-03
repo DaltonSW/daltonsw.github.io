@@ -6,8 +6,8 @@ steam_appid: 653530
 status: mastered
 started: ""
 finished: ""
-rating: null
-draft: true
+rating: 10
+draft: false
 cascade:
   params:
     games:

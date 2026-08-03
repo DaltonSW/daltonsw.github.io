@@ -8,7 +8,7 @@ started:
 finished: "2022-07-19"
 rating:
 cover:
-draft: true
+draft: false
 cascade:
   params:
     games: ["octopath-traveler"]

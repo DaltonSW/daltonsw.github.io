@@ -1,5 +1,8 @@
 # Written by tools/gamelog. Safe to edit by hand, but comments are not
 # preserved: the tool rewrites this file whole. Prose belongs in _index.md.
 playthroughs:
-  - started: "2025-10-23"
-    status: paused
+  - status: paused
+    sessions:
+      - started: "2025-10-23"
+        finished: "2025-11-09"
+        title: TGAA 1-5, TGAA2 Case 1

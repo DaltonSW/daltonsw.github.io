@@ -169,12 +169,86 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 
 // ── Game detail ─────────────────────────────────────────────────────────────
 
-// ptView adds the one derived field the update form needs — the finished
-// date to display/edit, which lives on the trailing session once a
-// playthrough has been converted to sessions (see doUpdate in main.go).
-type ptView struct {
+// pthUpdateView is what playthrough_header/sessions_table render: a
+// Playthrough view plus the context those fragments need (Slug/GamePlatform
+// aren't on model.Playthrough itself) and the Error/Saved pair gameRowView
+// established for inline feedback without reverting the user's typed values.
+type pthUpdateView struct {
 	model.Playthrough
 	DisplayFinished string
+	Slug            string
+	GamePlatform    string
+	SessionRows     []sessionRowView
+	Error           string
+	Saved           bool
+}
+
+// sessionRowView is one row of a playthrough's sessions table.
+type sessionRowView struct {
+	model.Session
+	Slug        string
+	PthIndex    int
+	NumSessions int
+	Error       string
+	Saved       bool
+}
+
+// playthroughsSectionView is the whole "Playthroughs" section — the fragment
+// handleSplitPlaythrough re-renders, since splitting changes the entry count
+// and so can't stay scoped to one playthrough's own fragment.
+type playthroughsSectionView struct {
+	Slug         string
+	Playthroughs []pthUpdateView
+	Error        string
+}
+
+// buildSessionRows renders a playthrough's sessions table rows. An entry
+// that predates sessions entirely (a flat started/finished pair, never
+// converted) is shown as an implicit session 1 rather than an empty table —
+// EditSession and sessionIndices know how to convert it in place if that row
+// is ever saved.
+func buildSessionRows(slug string, p model.Playthrough) []sessionRowView {
+	if !p.HasSessions() {
+		if p.Started == "" {
+			return nil
+		}
+		return []sessionRowView{{
+			Session:     model.Session{Started: p.Started, Finished: p.Finished},
+			Slug:        slug,
+			PthIndex:    p.Index,
+			NumSessions: 1,
+		}}
+	}
+	rows := make([]sessionRowView, len(p.Sessions))
+	for i, sess := range p.Sessions {
+		rows[i] = sessionRowView{Session: sess, Slug: slug, PthIndex: p.Index, NumSessions: len(p.Sessions)}
+	}
+	return rows
+}
+
+func buildPthUpdateView(slug, gamePlatform string, p model.Playthrough) pthUpdateView {
+	displayFinished := p.Finished
+	if p.HasSessions() {
+		displayFinished = p.Sessions[len(p.Sessions)-1].Finished
+	}
+	return pthUpdateView{
+		Playthrough:     p,
+		DisplayFinished: displayFinished,
+		Slug:            slug,
+		GamePlatform:    gamePlatform,
+		SessionRows:     buildSessionRows(slug, p),
+	}
+}
+
+func buildPlaythroughsSectionView(slug, gamePlatform string, pf *model.PlaythroughsFile) playthroughsSectionView {
+	var played []pthUpdateView
+	for _, p := range pf.Views() {
+		if p.Status == "planned" {
+			continue
+		}
+		played = append(played, buildPthUpdateView(slug, gamePlatform, p))
+	}
+	return playthroughsSectionView{Slug: slug, Playthroughs: played}
 }
 
 type gameDetailData struct {
@@ -184,26 +258,26 @@ type gameDetailData struct {
 	RatingStr        string
 	HasProviderLink  bool
 	Planned          []model.Playthrough
-	Playthroughs     []ptView
+	Playthroughs     playthroughsSectionView
 	Today            string
 	DefaultPthStatus string
 	CanDelete        bool
+	// Started/Finished are the fallback-aware display values (playthroughs
+	// first, front matter only if nothing's logged); StartedEditable/
+	// FinishedEditable gate whether editing the raw front-matter field below
+	// would have any effect — see model.GameSummary's doc comment.
+	Started          string
+	Finished         string
+	StartedEditable  bool
+	FinishedEditable bool
 }
 
 func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, pf *model.PlaythroughsFile) gameDetailData {
-	views := pf.Views()
 	var planned []model.Playthrough
-	var played []ptView
-	for _, p := range views {
+	for _, p := range pf.Views() {
 		if p.Status == "planned" {
 			planned = append(planned, p)
-			continue
 		}
-		v := ptView{Playthrough: p, DisplayFinished: p.Finished}
-		if p.HasSessions() {
-			v.DisplayFinished = p.Sessions[len(p.Sessions)-1].Finished
-		}
-		played = append(played, v)
 	}
 
 	defaultStatus := "playing"
@@ -224,10 +298,14 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		RatingStr:        doc.FM.RatingString(),
 		HasProviderLink:  len(doc.ProviderLinks()) > 0,
 		Planned:          planned,
-		Playthroughs:     played,
+		Playthroughs:     buildPlaythroughsSectionView(slug, doc.FM.Platform, pf),
 		Today:            forms.Today(),
 		DefaultPthStatus: defaultStatus,
 		CanDelete:        canDelete,
+		Started:          g.Started,
+		Finished:         g.Finished,
+		StartedEditable:  g.StartedEditable,
+		FinishedEditable: g.FinishedEditable,
 	}
 }
 
@@ -277,15 +355,29 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), fmt.Errorf("title is required"))
 		return
 	}
-	started, finished, rating := r.FormValue("started"), r.FormValue("finished"), r.FormValue("rating")
-	if err := forms.ValidateDate(false)(started); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
-		return
+
+	// Started/Finished are only genuinely editable here when the game's
+	// GameSummary says so — otherwise playthroughs.yaml already governs
+	// them and a value typed here would silently never be displayed. This
+	// is the load-bearing check: the template hides/disables these inputs,
+	// but a stale page or a hand-crafted POST must still be rejected here.
+	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
+	started, finished := doc.FM.Started, doc.FM.Finished
+	if g.StartedEditable {
+		started = r.FormValue("started")
+		if err := forms.ValidateDate(false)(started); err != nil {
+			redirectErr(w, r, gamePath(slug), err)
+			return
+		}
 	}
-	if err := forms.ValidateDate(false)(finished); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
-		return
+	if g.FinishedEditable {
+		finished = r.FormValue("finished")
+		if err := forms.ValidateDate(false)(finished); err != nil {
+			redirectErr(w, r, gamePath(slug), err)
+			return
+		}
 	}
+	rating := r.FormValue("rating")
 	if err := forms.ValidateRating(rating); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
@@ -336,8 +428,15 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
 	status := r.FormValue("status")
-	started, finished := r.FormValue("started"), r.FormValue("finished")
+	started, finished := doc.FM.Started, doc.FM.Finished
+	if g.StartedEditable {
+		started = r.FormValue("started")
+	}
+	if g.FinishedEditable {
+		finished = r.FormValue("finished")
+	}
 	platform, rating := r.FormValue("platform"), r.FormValue("rating")
 
 	fail := func(err error) {
@@ -346,13 +445,17 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 		s.renderRow(w, gameRowView{GameSummary: row, Error: err.Error()})
 	}
 
-	if err := forms.ValidateDate(false)(started); err != nil {
-		fail(fmt.Errorf("started: %w", err))
-		return
+	if g.StartedEditable {
+		if err := forms.ValidateDate(false)(started); err != nil {
+			fail(fmt.Errorf("started: %w", err))
+			return
+		}
 	}
-	if err := forms.ValidateDate(false)(finished); err != nil {
-		fail(fmt.Errorf("finished: %w", err))
-		return
+	if g.FinishedEditable {
+		if err := forms.ValidateDate(false)(finished); err != nil {
+			fail(fmt.Errorf("finished: %w", err))
+			return
+		}
 	}
 	if err := forms.ValidateRating(rating); err != nil {
 		fail(fmt.Errorf("rating: %w", err))
@@ -379,6 +482,43 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
+}
+
+// handleUndraftGame is the games-index row's Undraft button — a one-field
+// version of handleEditInfo's draft checkbox, for clearing the flag without
+// opening the game's own page. Only ever clears the flag; there's no
+// corresponding "mark as draft" action here since drafts are set at
+// creation, not reinstated.
+//
+// The row's button includes the index page's "drafts only" checkbox
+// (hx-include="#drafts" in game_row.html) so this handler knows whether the
+// row it just undrafted still belongs in the list it was clicked from. Under
+// that filter, an empty response tells htmx to remove the row outright
+// instead of swapping in the updated (now driftless) one — otherwise
+// undrafting would leave the game sitting in a "drafts only" view.
+func (s *server) handleUndraftGame(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	doc, pf, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	if err := r.ParseForm(); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	draftsOnly := r.FormValue("drafts") == "1"
+	if doc.FM.Draft {
+		doc.FM.Draft = false
+		if err := mutate.WriteFrontMatter(doc, pf, pf.SyncStatus(doc.FM.Status, doc.FM.Finished)); err != nil {
+			s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Error: err.Error()})
+			return
+		}
+	}
+	if draftsOnly {
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		return
+	}
 	s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
 }
 
@@ -437,19 +577,24 @@ func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 	redirectOK(w, r, gamePath(slug), "Playthrough started.")
 }
 
+// handleUpdatePlaythrough answers with the playthrough_header fragment
+// (htmx-swapped by the form's own hx-target) instead of redirecting, so
+// updating one playthrough doesn't reload the whole game-detail page and
+// discard in-progress edits elsewhere on it — see the "playthrough_header"
+// template in playthrough_fragments.html.
 func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
-	_, pf, ok := s.gameOr404(w, r, slug)
+	doc, pf, ok := s.gameOr404(w, r, slug)
 	if !ok {
 		return
 	}
 	idx, err := strconv.Atoi(r.PathValue("idx"))
 	if err != nil || idx < 0 || idx >= len(pf.Playthroughs) {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no such playthrough"))
+		http.Error(w, "no such playthrough", http.StatusNotFound)
 		return
 	}
 	if err := r.ParseForm(); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 	p := pf.Views()[idx]
@@ -460,22 +605,30 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 
 	finished, status := r.FormValue("finished"), r.FormValue("status")
 	platform, rating, notes := r.FormValue("platform"), r.FormValue("rating"), r.FormValue("notes")
+
+	fail := func(err error) {
+		view := buildPthUpdateView(slug, doc.FM.Platform, p)
+		view.DisplayFinished, view.Status, view.Platform, view.Rating, view.Notes = finished, status, platform, rating, notes
+		view.Error = err.Error()
+		s.renderPlaythroughFragment(w, "playthrough_header", view)
+	}
+
 	if err := forms.ValidateDate(false)(finished); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 	if err := forms.ValidateRating(rating); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 	if finished == displayFinished && status == p.Status && platform == p.Platform &&
 		rating == p.Rating && notes == p.Notes {
-		redirectOK(w, r, gamePath(slug), "No changes.")
+		s.renderPlaythroughFragment(w, "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, p))
 		return
 	}
 
 	if err := pf.UpdatePlaythrough(idx, finished, status, platform, rating, notes); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 
@@ -499,48 +652,62 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 			fmt.Sprintf("%s.sessions[%d].finished", base, len(p.Sessions)-1))
 	}
 	if err := mutate.WriteEntry(pf, allowed...); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
-	redirectOK(w, r, gamePath(slug), "Updated.")
+
+	view := buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx])
+	view.Saved = true
+	s.renderPlaythroughFragment(w, "playthrough_header", view)
 }
 
+// handleSplitPlaythrough answers with the whole playthroughs_section fragment
+// rather than one playthrough's own — a split changes the total playthrough
+// count, which no single playthrough's fragment can represent — so it's the
+// one action in this file that still discards unsaved edits elsewhere in the
+// playthroughs section (though not the game-info form or planned-replays
+// list above it, unlike the old full-page reload).
 func (s *server) handleSplitPlaythrough(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
-	_, pf, ok := s.gameOr404(w, r, slug)
+	doc, pf, ok := s.gameOr404(w, r, slug)
 	if !ok {
 		return
 	}
 	idx, err := strconv.Atoi(r.PathValue("idx"))
 	if err != nil || idx < 0 || idx >= len(pf.Playthroughs) {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no such playthrough"))
+		http.Error(w, "no such playthrough", http.StatusNotFound)
 		return
 	}
 	if err := r.ParseForm(); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+
+	fail := func(err error) {
+		view := buildPlaythroughsSectionView(slug, doc.FM.Platform, pf)
+		view.Error = err.Error()
+		s.renderPlaythroughFragment(w, "playthroughs_section", view)
+	}
+
 	keepLast, err := strconv.Atoi(r.FormValue("keep_last"))
 	if err != nil {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("invalid session to split at"))
+		fail(fmt.Errorf("invalid session to split at"))
 		return
 	}
 	newStatus := r.FormValue("new_status")
 
 	before := append([]model.SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
 	splitFrom := keepLast + 1
-	newIdx, err := pf.SplitPlaythrough(idx, splitFrom, newStatus)
-	if err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+	if _, err := pf.SplitPlaythrough(idx, splitFrom, newStatus); err != nil {
+		fail(err)
 		return
 	}
 	allowed := model.TruncateSessionAllowedPaths(idx, before, splitFrom)
 	if err := mutate.WriteSplit(pf, allowed...); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
-	_ = newIdx
-	redirectOK(w, r, gamePath(slug), "Split into a new playthrough.")
+	s.renderPlaythroughFragment(w, "playthroughs_section", buildPlaythroughsSectionView(slug, doc.FM.Platform, pf))
 }
 
 // ── Sessions ─────────────────────────────────────────────────────────────
@@ -589,6 +756,8 @@ func (s *server) handleAddSession(w http.ResponseWriter, r *http.Request) {
 	redirectOK(w, r, gamePath(slug), "Session logged.")
 }
 
+// handleEditSession answers with just the one session_row fragment it
+// changed — same reasoning as handleUpdatePlaythrough above.
 func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
 	_, pf, ok := s.gameOr404(w, r, slug)
@@ -597,63 +766,164 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 	}
 	idx, j, ok := s.sessionIndices(r, pf)
 	if !ok {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no such session"))
+		http.Error(w, "no such session", http.StatusNotFound)
 		return
 	}
 	if err := r.ParseForm(); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	orig := pf.Playthroughs[idx].Sessions[j]
+	e := pf.Playthroughs[idx]
+	hadSessions := len(e.Sessions) > 0
+	var orig model.SessionEntry
+	numSessions := len(e.Sessions)
+	if hadSessions {
+		orig = e.Sessions[j]
+	} else {
+		// The flat started/finished pair shown as an implicit session 1 —
+		// see EditSession and sessionIndices.
+		orig = model.SessionEntry{Started: e.Started, Finished: e.Finished}
+		numSessions = 1
+	}
 	started, finished, title := r.FormValue("started"), r.FormValue("finished"), r.FormValue("title")
+
+	fail := func(err error) {
+		s.renderPlaythroughFragment(w, "session_row", sessionRowView{
+			Session:     model.Session{Index: j, Started: started, Finished: finished, Title: title},
+			Slug:        slug,
+			PthIndex:    idx,
+			NumSessions: numSessions,
+			Error:       err.Error(),
+		})
+	}
+
 	if err := forms.ValidateDate(true)(started); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 	if err := forms.ValidateDate(false)(finished); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 	if started == orig.Started && finished == orig.Finished && title == orig.Title {
-		redirectOK(w, r, gamePath(slug), "No changes.")
+		s.renderPlaythroughFragment(w, "session_row", sessionRowView{
+			Session:     model.Session{Index: j, Started: started, Finished: finished, Title: title},
+			Slug:        slug,
+			PthIndex:    idx,
+			NumSessions: numSessions,
+		})
 		return
 	}
 	if err := pf.EditSession(idx, j, started, finished, title); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 	var allowed []string
+	if !hadSessions {
+		// Converting the flat pair to sessions[0] moves those two paths
+		// rather than dropping them — same allowance as AddSession's own
+		// first-time conversion in handleAddSession.
+		allowed = append(allowed,
+			fmt.Sprintf("playthroughs[%d].started", idx),
+			fmt.Sprintf("playthroughs[%d].finished", idx))
+	}
 	if strings.TrimSpace(title) == "" && orig.Title != "" {
 		allowed = append(allowed, model.SessionPath(idx, j, "title"))
 	}
 	if err := mutate.WriteEntry(pf, allowed...); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
-	redirectOK(w, r, gamePath(slug), "Session updated.")
+	s.renderPlaythroughFragment(w, "session_row", sessionRowView{
+		Session:     pf.Views()[idx].Sessions[j],
+		Slug:        slug,
+		PthIndex:    idx,
+		NumSessions: numSessions,
+		Saved:       true,
+	})
 }
 
+// handleDeleteSession answers with the whole sessions_table fragment for
+// that one playthrough — RemoveSession shifts every later session's index
+// down (model.PlaythroughsFile.RemoveSession), which changes the URL every
+// subsequent row is bound to, so a single-row fragment can't represent the
+// result. Still scoped to just this playthrough's table, not the whole page.
 func (s *server) handleDeleteSession(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
-	_, pf, ok := s.gameOr404(w, r, slug)
+	doc, pf, ok := s.gameOr404(w, r, slug)
 	if !ok {
 		return
 	}
 	idx, j, ok := s.sessionIndices(r, pf)
 	if !ok {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no such session"))
+		http.Error(w, "no such session", http.StatusNotFound)
 		return
 	}
 	before := append([]model.SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
+
+	fail := func(err error) {
+		view := buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx])
+		view.Error = err.Error()
+		s.renderPlaythroughFragment(w, "sessions_table", view)
+	}
+
 	if err := pf.RemoveSession(idx, j); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
 	if err := mutate.WriteEntry(pf, model.RemoveSessionAllowedPaths(idx, before, j)...); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
+		fail(err)
 		return
 	}
-	redirectOK(w, r, gamePath(slug), "Session deleted.")
+	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx]))
+}
+
+func (s *server) handleMoveSessionUp(w http.ResponseWriter, r *http.Request) {
+	s.moveSession(w, r, -1)
+}
+
+func (s *server) handleMoveSessionDown(w http.ResponseWriter, r *http.Request) {
+	s.moveSession(w, r, 1)
+}
+
+// moveSession swaps session j with its neighbor in the given direction
+// (-1 up, +1 down) — the only way to reorder sessions once logged, so a
+// session entered out of order can be walked into its right place instead
+// of being deleted and re-added (which would drop anything Extra was
+// carrying). Answers with the whole sessions_table fragment, same as
+// delete: the swap changes which URL every row's buttons are bound to.
+func (s *server) moveSession(w http.ResponseWriter, r *http.Request, delta int) {
+	slug := r.PathValue("slug")
+	doc, pf, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	idx, j, ok := s.sessionIndices(r, pf)
+	if !ok {
+		http.Error(w, "no such session", http.StatusNotFound)
+		return
+	}
+
+	fail := func(err error) {
+		view := buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx])
+		view.Error = err.Error()
+		s.renderPlaythroughFragment(w, "sessions_table", view)
+	}
+
+	p := j
+	if delta < 0 {
+		p = j - 1
+	}
+	before := append([]model.SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
+	if err := pf.MoveSession(idx, p); err != nil {
+		fail(err)
+		return
+	}
+	if err := mutate.WriteEntry(pf, model.MoveSessionAllowedPaths(idx, before, p)...); err != nil {
+		fail(err)
+		return
+	}
+	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx]))
 }
 
 // sessionIndices parses and bounds-checks the idx/j path values together,
@@ -664,10 +934,19 @@ func (s *server) sessionIndices(r *http.Request, pf *model.PlaythroughsFile) (id
 		return 0, 0, false
 	}
 	j, err = strconv.Atoi(r.PathValue("j"))
-	if err != nil || j < 0 || j >= len(pf.Playthroughs[idx].Sessions) {
+	if err != nil || j < 0 {
 		return 0, 0, false
 	}
-	return idx, j, true
+	e := pf.Playthroughs[idx]
+	if j < len(e.Sessions) {
+		return idx, j, true
+	}
+	// j==0 on an entry with no sessions: yet is the flat started/finished
+	// pair the UI shows as an implicit session 1 — see EditSession.
+	if j == 0 && len(e.Sessions) == 0 && e.Started != "" {
+		return idx, j, true
+	}
+	return 0, 0, false
 }
 
 // ── Planned replays ──────────────────────────────────────────────────────

@@ -1,17 +1,18 @@
 ---
-title: "Far Cry 6"
-platform: "PC"
-retroachievements_id:
+title: Far Cry 6
+platform: PC
+retroachievements_id: null
 steam_appid: 2369390
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2023-10-14"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["far-cry-6"]
+    games:
+      - far-cry-6
+cover: null
 ---
 
 

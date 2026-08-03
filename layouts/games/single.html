@@ -2,15 +2,26 @@
 <article>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
 
-  <div class="meta-row">
-    {{- with .Params.games }}
-      {{- with site.GetPage (printf "/games/%s" (index . 0)) }}
-      <span><b>Game:</b> <a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
-      {{- end }}
+  {{/* This page IS one playthrough-entries.html entry (the "written": true
+       branch, matched by permalink) — read started/finished back out of that
+       same shared derivation instead of this page's own .Params, so this
+       header can't disagree with the game's own playthrough list below it. */}}
+  {{- $game := "" }}
+  {{- with .Params.games }}{{ $game = site.GetPage (printf "/games/%s" (index . 0)) }}{{ end }}
+  {{- $mine := "" }}
+  {{- with $game }}
+    {{- range partial "playthrough-entries.html" . }}
+      {{- if eq .permalink $.RelPermalink }}{{ $mine = . }}{{ end }}
     {{- end }}
+  {{- end }}
+
+  <div class="meta-row">
+    {{- with $game }}<span><b>Game:</b> <a href="{{ .RelPermalink }}">{{ .Title }}</a></span>{{ end }}
     {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
-    {{- with .Params.started }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
-    {{- with .Params.finished }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with $mine }}
+      {{- with .started }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+      {{- with .finished }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- end }}
     {{- with .Params.rating }}<span><b>Rating:</b> {{ . }}/10</span>{{ end }}
   </div>
 

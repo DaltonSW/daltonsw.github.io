@@ -1,17 +1,18 @@
 ---
-title: "Strange Antiquities"
-platform: "PC"
-retroachievements_id:
+title: Strange Antiquities
+platform: PC
+retroachievements_id: null
 steam_appid: 2885870
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2026-04-19"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["strange-antiquities"]
+    games:
+      - strange-antiquities
+cover: null
 ---
 
 

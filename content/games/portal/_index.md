@@ -1,17 +1,18 @@
 ---
-title: "Portal"
-platform: "PC"
-retroachievements_id:
+title: Portal
+platform: PC
+retroachievements_id: null
 steam_appid: 400
-status: "finished"
-started:
+status: finished
+started: ""
 finished: "2026-01-10"
-rating:
-cover:
-draft: true
+rating: null
+draft: false
 cascade:
   params:
-    games: ["portal"]
+    games:
+      - portal
+cover: null
 ---
 
 

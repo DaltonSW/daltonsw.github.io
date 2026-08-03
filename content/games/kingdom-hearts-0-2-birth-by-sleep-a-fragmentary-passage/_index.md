@@ -1,18 +1,19 @@
 ---
-title: "KINGDOM HEARTS 0.2 Birth by Sleep - A fragmentary passage -"
-platform: "PS4"
-retroachievements_id:
-steam_appid:
-psn_id: "NPWR11499_00"
-status: ""
-started:
-finished:
-rating:
-cover:
-draft: true
+title: KINGDOM HEARTS 0.2 Birth by Sleep - A fragmentary passage -
+platform: PS4
+retroachievements_id: null
+steam_appid: null
+psn_id: NPWR11499_00
+status: finished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["kingdom-hearts-0-2-birth-by-sleep-a-fragmentary-passage"]
+    games:
+      - kingdom-hearts-0-2-birth-by-sleep-a-fragmentary-passage
+cover: null
 ---
 Imported from Exophase (psn).
 

@@ -66,6 +66,9 @@ $content-width: 1100px;
   // entirely, so it should read as muted next to the saturated game states.
   --software: #8b94aa;  // software — a tool, not a game (lightened for AA text contrast)
   --misc-launch: #c2a878;  // misc_launch — a launch that wasn't a real attempt, not a completion state
+  // Deliberately a different hue+desaturation from --dim (backlog): backlog implies
+  // intent to eventually play it, unplayed makes no such claim either way.
+  --unplayed: #a888a0;  // unplayed — touched but never really played, no stated intent to
 
   --radius: 8px;
 
@@ -95,6 +98,7 @@ $content-width: 1100px;
     --multi:   #b03a70;
     --software:#5b6478;
     --misc-launch: #8a6d2f;
+    --unplayed: #7a5570;
 
     --item-label-color: #ffffff;
   }
