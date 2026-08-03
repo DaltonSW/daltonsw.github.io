@@ -30,6 +30,10 @@
     </select>
   </div>
   <div class="field">
+    <label for="subgames">Subgames (one per line, optional — marks this as a compilation)</label>
+    <textarea id="subgames" name="subgames" rows="3">{{joinLines .Subgames}}</textarea>
+  </div>
+  <div class="field">
     <label for="started">Started (YYYY-MM-DD)</label>
     <input type="text" id="started" name="started" value="{{.Started}}">
   </div>

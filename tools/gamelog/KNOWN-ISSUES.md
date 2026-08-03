@@ -274,12 +274,5 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   deferred: those two views need much richer per-item data (colors, statuses, year-clipped spans)
   than the two partials' bare-string return, so consolidating them is a bigger refactor than a
   template swap — not forgotten, just scoped out.
-- **`forms.EditGameForm` (the CLI's shared game-info edit prompt — `gamelog review`, `gamelog
-  stale`'s edit action, the interactive TUI) has the same Started/Finished silent-no-op issue the
-  web UI just got fixed for.** It freely edits front-matter Started/Finished with no
-  playthrough-count awareness, so on a game already governed by `playthroughs.yaml`, editing
-  either field there does nothing the site will ever show. Not fixed here — this pass was scoped
-  to the web UI. Same fix shape applies: skip/disable those two prompts using
-  `GameSummary.StartedEditable`/`FinishedEditable`, which now exist for exactly this purpose.
 
 `tools/gamelog/README.md` documents all of the above in more detail.

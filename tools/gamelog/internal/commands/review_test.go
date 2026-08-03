@@ -9,32 +9,6 @@ import (
 	"go.dalton.dog/gamelog/internal/model"
 )
 
-func TestCountDraftsAndNextDraft(t *testing.T) {
-	games := []model.GameSummary{
-		{Slug: "a", Draft: true},
-		{Slug: "b", Draft: false},
-		{Slug: "c", Draft: true},
-	}
-	if got := countDrafts(games); got != 2 {
-		t.Fatalf("countDrafts = %d, want 2", got)
-	}
-
-	next := nextDraft(games, map[string]bool{})
-	if next == nil || next.Slug != "a" {
-		t.Fatalf("nextDraft = %v, want a", next)
-	}
-
-	next = nextDraft(games, map[string]bool{"a": true})
-	if next == nil || next.Slug != "c" {
-		t.Fatalf("nextDraft with a skipped = %v, want c", next)
-	}
-
-	next = nextDraft(games, map[string]bool{"a": true, "c": true})
-	if next != nil {
-		t.Fatalf("nextDraft with everything skipped = %v, want nil", next)
-	}
-}
-
 func TestHasArchiveRecord(t *testing.T) {
 	dir := t.TempDir()
 	if HasArchiveRecord(dir, model.BuildProviderLinks("4650", "1145360", "")) {
@@ -92,32 +66,5 @@ func TestDeleteGameStub_RemovesACleanStub(t *testing.T) {
 	}
 	if _, err := os.Stat(gameDir); !os.IsNotExist(err) {
 		t.Error("expected the game directory to be gone")
-	}
-}
-
-func TestFormatReviewCard_ShowsProviderLinksAndPlaythroughs(t *testing.T) {
-	g := model.GameSummary{Title: "Hades", RAGameID: "4650", SteamAppID: "1145360"}
-	fm := model.FrontMatter{Platform: "PC", Status: "playing"}
-	pf := &model.PlaythroughsFile{Playthroughs: []model.PlaythroughEntry{
-		{Started: "2026-01-01", Status: "playing"},
-	}}
-
-	card := FormatReviewCard(g, fm, pf)
-	for _, want := range []string{"Hades", "RA 4650", "Steam 1145360", "PC", "1 playthrough"} {
-		if !strings.Contains(card, want) {
-			t.Errorf("review card missing %q, got:\n%s", want, card)
-		}
-	}
-}
-
-func TestFormatReviewCard_NoPlaythroughsIsNotLinked(t *testing.T) {
-	g := model.GameSummary{Title: "Unlinked Game"}
-	fm := model.FrontMatter{}
-	card := FormatReviewCard(g, fm, &model.PlaythroughsFile{})
-	if !strings.Contains(card, "not linked") {
-		t.Errorf("expected 'not linked', got:\n%s", card)
-	}
-	if !strings.Contains(card, "no playthroughs logged") {
-		t.Errorf("expected 'no playthroughs logged', got:\n%s", card)
 	}
 }

@@ -1,17 +1,13 @@
 package commands
 
 import (
-	"flag"
 	"fmt"
-	"os"
-	"path/filepath"
 	"sort"
 	"strings"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
-	"go.dalton.dog/gamelog/internal/mutate"
 )
 
 // DefaultStaleDays is how long since a Steam game's last recorded session
@@ -37,67 +33,6 @@ type StaleCandidate struct {
 	PlaytimeMins    int
 	SuggestedStatus string // "mastered" | "finished" | "dropped"
 	Confidence      string // "medium" | "low"
-}
-
-// runStale walks through every currently-"playing" Steam game that hasn't
-// been touched in a while — draft or published — offering a computed
-// finished/mastered/dropped guess to accept, adjust, or skip — mirroring
-// gamelog suggest's own rule that a guess is reported, never applied, until
-// a human says so.
-func RunStale(args []string) error {
-	fs := flag.NewFlagSet("stale", flag.ContinueOnError)
-	fs.SetOutput(os.Stderr)
-	days := fs.Int("days", DefaultStaleDays, "days since last played before a game is worth asking about")
-	fs.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: gamelog stale [flags]\n\nWalks through Steam games marked \"playing\" that have gone quiet, suggesting\nfinished/dropped for you to accept, adjust, or skip.\n\nFlags:\n")
-		fs.PrintDefaults()
-	}
-	if err := fs.Parse(args); err != nil {
-		return err
-	}
-
-	gamesDir, err := model.FindGamesDir()
-	if err != nil {
-		return err
-	}
-	archiveDir := model.FindArchiveDir(gamesDir)
-
-	games, err := model.ListGames(gamesDir)
-	if err != nil {
-		return err
-	}
-	candidates, err := FindStaleCandidates(archiveDir, games, *days)
-	if err != nil {
-		return err
-	}
-	if len(candidates) == 0 {
-		fmt.Printf("No games have gone quiet for %d+ days.\n", *days)
-		return nil
-	}
-
-	skipped := map[string]bool{}
-	acted := 0
-	for {
-		next := nextStale(candidates, skipped)
-		if next == nil {
-			fmt.Printf("\nDone — %d updated, %d left as-is.\n", acted, len(skipped))
-			return nil
-		}
-		fmt.Printf("\n--- %d of %d ---\n", acted+len(skipped)+1, len(candidates))
-		cont, did, err := reviewStale(*next)
-		if err != nil {
-			return err
-		}
-		if did {
-			acted++
-		} else {
-			skipped[next.Game.Slug] = true
-		}
-		if !cont {
-			fmt.Printf("Stopping — %d updated this run.\n", acted)
-			return nil
-		}
-	}
 }
 
 // FindStaleCandidates considers any currently-"playing" Steam-linked game,
@@ -153,57 +88,6 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 	}
 	sort.Slice(out, func(i, j int) bool { return out[i].DaysSince > out[j].DaysSince })
 	return out, nil
-}
-
-func nextStale(candidates []StaleCandidate, skipped map[string]bool) *StaleCandidate {
-	for i := range candidates {
-		if !skipped[candidates[i].Game.Slug] {
-			return &candidates[i]
-		}
-	}
-	return nil
-}
-
-// reviewStale handles one candidate: shows its card, asks what to do, and
-// applies it. cont reports whether the loop should continue; did reports
-// whether this game was resolved (vs. skipped, which just leaves it
-// "playing" — it'll show up again next run if it's still stale then).
-func reviewStale(c StaleCandidate) (cont, did bool, err error) {
-	doc, err := model.LoadDoc(c.Game.Path)
-	if err != nil {
-		return false, false, err
-	}
-	pf, err := model.LoadPlaythroughs(filepath.Dir(c.Game.Path))
-	if err != nil {
-		return false, false, err
-	}
-
-	fmt.Print(FormatStaleCard(c))
-	action, err := forms.SelectStaleAction(c.SuggestedStatus)
-	if err != nil {
-		return false, false, err
-	}
-
-	switch {
-	case action == forms.StaleAccept, strings.HasPrefix(action, forms.StaleMarkPrefix):
-		ApplyStaleAction(doc, c, action)
-		return true, true, mutate.ConfirmAndWriteFrontMatter(doc, pf)
-	case action == forms.StaleEdit:
-		doc.FM.Status = c.SuggestedStatus
-		doc.FM.Finished = c.LastPlayed
-		updated, err := forms.EditGameForm(doc.FM)
-		if err != nil {
-			return false, false, err
-		}
-		doc.FM = updated
-		return true, true, mutate.ConfirmAndWriteFrontMatter(doc, pf)
-	case action == forms.StaleSkip:
-		fmt.Println("Left as-is — will show again next run if still quiet.")
-		return true, false, nil
-	case action == forms.StaleQuit:
-		return false, false, nil
-	}
-	return true, false, nil
 }
 
 // ApplyStaleAction decides what a stale-action decision means for doc's

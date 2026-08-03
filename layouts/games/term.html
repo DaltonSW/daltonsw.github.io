@@ -47,6 +47,7 @@
       <span class="entry__title entry__title--bare">Playthrough</span>
       {{- end }}
       {{- with .status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+      {{- with .subgame }}<span class="entry__meta">{{ . }}</span>{{ end }}
       <span class="entry__meta">
         {{- with .started }}{{ . | time.Format "Jan 2006" }}{{ end }}
         {{- with .finished }} – {{ . | time.Format "Jan 2006" }}{{ end }}
@@ -56,6 +57,28 @@
       {{- with .notes }}
       <div class="entry__notes prose">{{ . | markdownify }}</div>
       {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{/* subgames: declares a compilation's roster (Shovel Knight: Treasure
+       Trove's four campaigns, a Spyro/Crash trilogy's individual games).
+       Cross-referencing it against which .subgame labels actually show up
+       among $entries surfaces a roster member with no logged playthrough at
+       all, which a free-text label could never do — there'd be nothing to
+       enumerate against. */}}
+  {{- $playedSubgames := slice }}
+  {{- range $entries }}{{ with .subgame }}{{ $playedSubgames = $playedSubgames | append . }}{{ end }}{{ end }}
+  {{- $unplayedSubgames := slice }}
+  {{- range .Params.subgames }}{{ if not (in $playedSubgames .) }}{{ $unplayedSubgames = $unplayedSubgames | append . }}{{ end }}{{ end }}
+  {{- with $unplayedSubgames }}
+  <h3>Also in this collection</h3>
+  <ul class="entry-list">
+    {{- range . }}
+    <li class="entry entry--backlog">
+      <span class="entry__title entry__title--bare">{{ . }}</span>
+      <span class="entry__meta">not yet played</span>
     </li>
     {{- end }}
   </ul>

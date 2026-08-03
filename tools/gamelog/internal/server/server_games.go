@@ -117,6 +117,7 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 		Title:    strings.TrimSpace(r.FormValue("title")),
 		Platform: r.FormValue("platform"),
 		Status:   r.FormValue("status"),
+		Subgames: forms.ParseSubgames(r.FormValue("subgames")),
 		Started:  r.FormValue("started"),
 		Finished: r.FormValue("finished"),
 		Rating:   r.FormValue("rating"),
@@ -178,6 +179,7 @@ type pthUpdateView struct {
 	DisplayFinished string
 	Slug            string
 	GamePlatform    string
+	GameSubgames    []string
 	SessionRows     []sessionRowView
 	Error           string
 	Saved           bool
@@ -226,7 +228,7 @@ func buildSessionRows(slug string, p model.Playthrough) []sessionRowView {
 	return rows
 }
 
-func buildPthUpdateView(slug, gamePlatform string, p model.Playthrough) pthUpdateView {
+func buildPthUpdateView(slug, gamePlatform string, gameSubgames []string, p model.Playthrough) pthUpdateView {
 	displayFinished := p.Finished
 	if p.HasSessions() {
 		displayFinished = p.Sessions[len(p.Sessions)-1].Finished
@@ -236,17 +238,18 @@ func buildPthUpdateView(slug, gamePlatform string, p model.Playthrough) pthUpdat
 		DisplayFinished: displayFinished,
 		Slug:            slug,
 		GamePlatform:    gamePlatform,
+		GameSubgames:    gameSubgames,
 		SessionRows:     buildSessionRows(slug, p),
 	}
 }
 
-func buildPlaythroughsSectionView(slug, gamePlatform string, pf *model.PlaythroughsFile) playthroughsSectionView {
+func buildPlaythroughsSectionView(slug, gamePlatform string, gameSubgames []string, pf *model.PlaythroughsFile) playthroughsSectionView {
 	var played []pthUpdateView
 	for _, p := range pf.Views() {
 		if p.Status == "planned" {
 			continue
 		}
-		played = append(played, buildPthUpdateView(slug, gamePlatform, p))
+		played = append(played, buildPthUpdateView(slug, gamePlatform, gameSubgames, p))
 	}
 	return playthroughsSectionView{Slug: slug, Playthroughs: played}
 }
@@ -298,7 +301,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		RatingStr:        doc.FM.RatingString(),
 		HasProviderLink:  len(doc.ProviderLinks()) > 0,
 		Planned:          planned,
-		Playthroughs:     buildPlaythroughsSectionView(slug, doc.FM.Platform, pf),
+		Playthroughs:     buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf),
 		Today:            forms.Today(),
 		DefaultPthStatus: defaultStatus,
 		CanDelete:        canDelete,
@@ -387,6 +390,7 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	updated.Title = title
 	updated.Platform = r.FormValue("platform")
 	updated.Status = r.FormValue("status")
+	updated.Subgames = forms.ParseSubgames(r.FormValue("subgames"))
 	updated.Started = started
 	updated.Finished = finished
 	updated.SetRating(rating)
@@ -530,6 +534,7 @@ func parsePlaythroughFields(r *http.Request) model.PlaythroughFields {
 		Finished: r.FormValue("finished"),
 		Status:   r.FormValue("status"),
 		Platform: r.FormValue("platform"),
+		Subgame:  r.FormValue("subgame"),
 		Rating:   r.FormValue("rating"),
 		Notes:    r.FormValue("notes"),
 	}
@@ -563,7 +568,7 @@ func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, doc.FM.Status); conflict != nil {
+	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, doc.FM.Status, f.Subgame); conflict != nil {
 		want := model.EffectivePlatform(f.Platform, doc.FM.Platform)
 		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
 			doc.FM.Title, f.Status, forms.OrDash(want)))
@@ -604,11 +609,11 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	}
 
 	finished, status := r.FormValue("finished"), r.FormValue("status")
-	platform, rating, notes := r.FormValue("platform"), r.FormValue("rating"), r.FormValue("notes")
+	platform, subgame, rating, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("rating"), r.FormValue("notes")
 
 	fail := func(err error) {
-		view := buildPthUpdateView(slug, doc.FM.Platform, p)
-		view.DisplayFinished, view.Status, view.Platform, view.Rating, view.Notes = finished, status, platform, rating, notes
+		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p)
+		view.DisplayFinished, view.Status, view.Platform, view.Subgame, view.Rating, view.Notes = finished, status, platform, subgame, rating, notes
 		view.Error = err.Error()
 		s.renderPlaythroughFragment(w, "playthrough_header", view)
 	}
@@ -622,12 +627,12 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	if finished == displayFinished && status == p.Status && platform == p.Platform &&
-		rating == p.Rating && notes == p.Notes {
-		s.renderPlaythroughFragment(w, "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, p))
+		subgame == p.Subgame && rating == p.Rating && notes == p.Notes {
+		s.renderPlaythroughFragment(w, "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p))
 		return
 	}
 
-	if err := pf.UpdatePlaythrough(idx, finished, status, platform, rating, notes); err != nil {
+	if err := pf.UpdatePlaythrough(idx, finished, status, platform, subgame, rating, notes); err != nil {
 		fail(err)
 		return
 	}
@@ -647,6 +652,9 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	if strings.TrimSpace(platform) == "" {
 		allowed = append(allowed, base+".platform")
 	}
+	if strings.TrimSpace(subgame) == "" {
+		allowed = append(allowed, base+".subgame")
+	}
 	if strings.TrimSpace(finished) == "" {
 		allowed = append(allowed, base+".finished",
 			fmt.Sprintf("%s.sessions[%d].finished", base, len(p.Sessions)-1))
@@ -656,7 +664,7 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	view := buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx])
+	view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 	view.Saved = true
 	s.renderPlaythroughFragment(w, "playthrough_header", view)
 }
@@ -684,7 +692,7 @@ func (s *server) handleSplitPlaythrough(w http.ResponseWriter, r *http.Request) 
 	}
 
 	fail := func(err error) {
-		view := buildPlaythroughsSectionView(slug, doc.FM.Platform, pf)
+		view := buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf)
 		view.Error = err.Error()
 		s.renderPlaythroughFragment(w, "playthroughs_section", view)
 	}
@@ -707,7 +715,7 @@ func (s *server) handleSplitPlaythrough(w http.ResponseWriter, r *http.Request) 
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "playthroughs_section", buildPlaythroughsSectionView(slug, doc.FM.Platform, pf))
+	s.renderPlaythroughFragment(w, "playthroughs_section", buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf))
 }
 
 // ── Sessions ─────────────────────────────────────────────────────────────
@@ -862,7 +870,7 @@ func (s *server) handleDeleteSession(w http.ResponseWriter, r *http.Request) {
 	before := append([]model.SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
 
 	fail := func(err error) {
-		view := buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx])
+		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 		view.Error = err.Error()
 		s.renderPlaythroughFragment(w, "sessions_table", view)
 	}
@@ -875,7 +883,7 @@ func (s *server) handleDeleteSession(w http.ResponseWriter, r *http.Request) {
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx]))
+	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
 }
 
 func (s *server) handleMoveSessionUp(w http.ResponseWriter, r *http.Request) {
@@ -905,7 +913,7 @@ func (s *server) moveSession(w http.ResponseWriter, r *http.Request, delta int) 
 	}
 
 	fail := func(err error) {
-		view := buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx])
+		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 		view.Error = err.Error()
 		s.renderPlaythroughFragment(w, "sessions_table", view)
 	}
@@ -923,7 +931,7 @@ func (s *server) moveSession(w http.ResponseWriter, r *http.Request, delta int) 
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, pf.Views()[idx]))
+	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
 }
 
 // sessionIndices parses and bounds-checks the idx/j path values together,
@@ -961,13 +969,13 @@ func (s *server) handleAddPlanned(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	platform, notes := r.FormValue("platform"), r.FormValue("notes")
-	if mutate.HasPlannedFor(pf.Playthroughs, platform, doc.FM.Platform) {
+	platform, subgame, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("notes")
+	if mutate.HasPlannedFor(pf.Playthroughs, platform, doc.FM.Platform, subgame) {
 		want := model.EffectivePlatform(platform, doc.FM.Platform)
 		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s already has a planned replay on %s", doc.FM.Title, forms.OrDash(want)))
 		return
 	}
-	pf.AddPlaythrough(model.PlaythroughFields{Status: "planned", Platform: platform, Notes: notes})
+	pf.AddPlaythrough(model.PlaythroughFields{Status: "planned", Platform: platform, Subgame: subgame, Notes: notes})
 	if err := mutate.WriteEntry(pf); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
@@ -1025,12 +1033,12 @@ func (s *server) handleEditPlanned(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	p := pf.Views()[idx]
-	platform, notes := r.FormValue("platform"), r.FormValue("notes")
-	if platform == p.Platform && notes == p.Notes {
+	platform, subgame, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("notes")
+	if platform == p.Platform && subgame == p.Subgame && notes == p.Notes {
 		redirectOK(w, r, gamePath(slug), "No changes.")
 		return
 	}
-	if err := pf.EditPlanned(idx, platform, notes); err != nil {
+	if err := pf.EditPlanned(idx, platform, subgame, notes); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
@@ -1038,6 +1046,9 @@ func (s *server) handleEditPlanned(w http.ResponseWriter, r *http.Request) {
 	base := fmt.Sprintf("playthroughs[%d]", idx)
 	if strings.TrimSpace(platform) == "" {
 		allowed = append(allowed, base+".platform")
+	}
+	if strings.TrimSpace(subgame) == "" {
+		allowed = append(allowed, base+".subgame")
 	}
 	if strings.TrimSpace(notes) == "" {
 		allowed = append(allowed, base+".notes")

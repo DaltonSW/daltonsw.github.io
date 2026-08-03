@@ -111,6 +111,7 @@
       {{- end -}}
       {{- with $entry.rating -}}{{- $titleParts = $titleParts | append (printf "%v/10" .) -}}{{- end -}}
       {{- $statusLabel := ($status | replace "_" " ") | title -}}
+      {{- with $entry.subgame -}}{{- $statusLabel = printf "%s — %s" . $statusLabel -}}{{- end -}}
       {{- with $entry.platform -}}{{- $statusLabel = printf "%s (%s)" $statusLabel . -}}{{- end -}}
       {{- $title := printf "%s · %s" $statusLabel (delimit $titleParts " – ") -}}
       {{- with $entry.notes -}}

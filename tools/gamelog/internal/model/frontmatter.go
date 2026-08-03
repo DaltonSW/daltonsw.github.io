@@ -29,6 +29,14 @@ type FrontMatter struct {
 
 	Status string `yaml:"status"`
 
+	// Subgames is the declared roster of a compilation's parts — e.g. Shovel
+	// Knight: Treasure Trove's four campaigns, or a Spyro/Crash trilogy's
+	// individual games. Empty/absent means this game isn't a compilation,
+	// which is true for nearly every game. Order is meaningful (display
+	// order), so it's a slice, not a set. A playthroughs.yaml entry's own
+	// `subgame:` names which roster member it covers — see PlaythroughEntry.
+	Subgames []string `yaml:"subgames,omitempty"`
+
 	// Dates are typed as strings on purpose. YAML resolves an unquoted
 	// 2026-01-04 to a timestamp, and decoding that into `any` yields a
 	// time.Time whose text form is no longer what the file says.

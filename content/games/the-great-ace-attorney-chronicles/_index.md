@@ -8,6 +8,9 @@ started: ""
 finished: ""
 rating: null
 draft: false
+subgames:
+  - "The Great Ace Attorney: Adventures"
+  - "The Great Ace Attorney 2: Resolve"
 cascade:
   params:
     games:

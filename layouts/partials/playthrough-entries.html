@@ -35,6 +35,7 @@
       "finished" $finished
       "status"   .status
       "platform" $platform
+      "subgame"  .subgame
       "rating"   .rating
       "notes"    .notes
       "sessions" (.sessions | default slice)
@@ -51,6 +52,7 @@
       "finished"  .Params.finished
       "status"    .Params.status
       "platform"  (.Params.platform | default $.Params.platform)
+      "subgame"   .Params.subgame
       "rating"    .Params.rating
       "sessions"  slice
     )

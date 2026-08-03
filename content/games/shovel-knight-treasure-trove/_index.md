@@ -3,12 +3,17 @@ title: "Shovel Knight: Treasure Trove"
 platform: "PC"
 retroachievements_id:
 steam_appid: 250760
-status: "finished"
+status: "paused"
 started:
-finished: "2024-10-05"
+finished:
 rating:
 cover:
 draft: true
+subgames:
+  - "Shovel of Hope"
+  - "Plague of Shadows"
+  - "Specter of Torment"
+  - "King of Crowns"
 cascade:
   params:
     games: ["shovel-knight-treasure-trove"]

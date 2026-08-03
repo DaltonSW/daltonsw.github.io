@@ -16,6 +16,10 @@
     <div class="field"><label>Status</label>
       <select name="status">{{$cur := .FM.Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>
     </div>
+    <div class="field field--wide">
+      <label>Subgames (one per line, optional — marks this as a compilation)</label>
+      <textarea name="subgames" rows="3">{{joinLines .FM.Subgames}}</textarea>
+    </div>
     {{if .StartedEditable}}
     <div class="field"><label>Started</label><input type="text" name="started" value="{{.FM.Started}}"></div>
     {{else}}
@@ -41,10 +45,13 @@
 <h2>Planned replays</h2>
 {{range .Planned}}
 <details class="tui">
-  <summary class="tui__title">planned{{with .Platform}} · {{.}}{{end}}</summary>
+  <summary class="tui__title">planned{{with .Subgame}} · {{.}}{{end}}{{with .Platform}} · {{.}}{{end}}</summary>
   <p>{{with .Notes}}{{.}}{{else}}<span class="dim">no notes</span>{{end}}</p>
   <form method="post" action="/games/{{$.Slug}}/planned/{{.Index}}/edit" class="row">
     <input type="text" name="platform" placeholder="platform (blank = {{dash $.FM.Platform}})" value="{{.Platform}}">
+    {{if $.FM.Subgames}}
+    <select name="subgame"><option value="">(none — whole game)</option>{{$sg := .Subgame}}{{range $.FM.Subgames}}<option value="{{.}}"{{if eq . $sg}} selected{{end}}>{{.}}</option>{{end}}</select>
+    {{end}}
     <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
     <button type="submit">Save</button>
   </form>
@@ -53,6 +60,9 @@
     <select name="status">{{range pthStatuses}}<option value="{{.}}">{{.}}</option>{{end}}</select>
     <input type="text" name="finished" placeholder="finished (blank if ongoing)">
     <input type="text" name="platform" placeholder="platform (blank = {{dash $.FM.Platform}})" value="{{.Platform}}">
+    {{if $.FM.Subgames}}
+    <select name="subgame"><option value="">(none — whole game)</option>{{$sg := .Subgame}}{{range $.FM.Subgames}}<option value="{{.}}"{{if eq . $sg}} selected{{end}}>{{.}}</option>{{end}}</select>
+    {{end}}
     <input type="text" name="rating" placeholder="rating 1-10">
     <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
     <button type="submit" class="btn--primary">Start now</button>
@@ -66,6 +76,9 @@
   <summary class="tui__title">add a planned replay</summary>
   <form method="post" action="/games/{{.Slug}}/planned" class="row">
     <input type="text" name="platform" placeholder="platform (blank = {{dash .FM.Platform}})">
+    {{if .FM.Subgames}}
+    <select name="subgame"><option value="">(none — whole game)</option>{{range .FM.Subgames}}<option value="{{.}}">{{.}}</option>{{end}}</select>
+    {{end}}
     <input type="text" name="notes" placeholder="notes">
     <button type="submit">Add</button>
   </form>
@@ -80,6 +93,9 @@
     <select name="status">{{$def := .DefaultPthStatus}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $def}} selected{{end}}>{{.}}</option>{{end}}</select>
     <input type="text" name="finished" placeholder="finished (blank if ongoing)">
     <input type="text" name="platform" placeholder="platform (blank = {{dash .FM.Platform}})">
+    {{if .FM.Subgames}}
+    <select name="subgame"><option value="">(none — whole game)</option>{{range .FM.Subgames}}<option value="{{.}}">{{.}}</option>{{end}}</select>
+    {{end}}
     <input type="text" name="rating" placeholder="rating 1-10">
     <input type="text" name="notes" placeholder="notes">
     <button type="submit" class="btn--primary">Start</button>

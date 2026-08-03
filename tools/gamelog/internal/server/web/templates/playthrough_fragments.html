@@ -6,12 +6,15 @@ playthroughsSectionView and the handlers that render these. */}}
 {{define "playthrough_header"}}
 <div id="pth-{{.Index}}" class="{{if .Saved}}row--saved{{else if .Error}}row--error{{end}}">
   <details{{if or .Saved .Error}} open{{end}}>
-    <summary class="tui__title">#{{add1 .Index}} · {{.Status}}{{with .Platform}} · {{.}}{{end}}{{with .DisplayFinished}} · finished {{.}}{{end}}{{with .Rating}} · {{.}}/10{{end}}</summary>
+    <summary class="tui__title">#{{add1 .Index}} · {{.Status}}{{with .Subgame}} · {{.}}{{end}}{{with .Platform}} · {{.}}{{end}}{{with .DisplayFinished}} · finished {{.}}{{end}}{{with .Rating}} · {{.}}/10{{end}}</summary>
     {{if .Error}}<p class="error-text">{{.Error}}</p>{{end}}
     <form hx-post="/games/{{.Slug}}/playthroughs/{{.Index}}" hx-target="#pth-{{.Index}}" hx-swap="outerHTML" class="row">
       <input type="text" name="finished" placeholder="finished" value="{{.DisplayFinished}}">
       <select name="status">{{$s := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $s}} selected{{end}}>{{.}}</option>{{end}}</select>
       <input type="text" name="platform" placeholder="platform (blank = {{dash .GamePlatform}})" value="{{.Platform}}">
+      {{if .GameSubgames}}
+      <select name="subgame"><option value="">(none — whole game)</option>{{$sg := .Subgame}}{{range .GameSubgames}}<option value="{{.}}"{{if eq . $sg}} selected{{end}}>{{.}}</option>{{end}}</select>
+      {{end}}
       <input type="text" name="rating" placeholder="rating 1-10" value="{{.Rating}}">
       <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
       <button type="submit">Update</button>

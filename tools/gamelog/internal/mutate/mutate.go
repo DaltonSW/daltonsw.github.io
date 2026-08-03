@@ -1,6 +1,7 @@
 // Package mutate is the confirm/write/loss-check layer for playthrough and
-// front-matter edits, shared by the terminal interactive flow, the local web
-// server, and the commands that fold a provider refresh into a session log.
+// front-matter edits, shared by the local web server and the achievements
+// command's own-session nudge (the only remaining CLI caller of the
+// confirm-prompting path).
 package mutate
 
 import (
@@ -12,11 +13,14 @@ import (
 )
 
 // hasPlannedFor reports whether playthroughs already has a planned-replay
-// placeholder for the given effective platform.
-func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePlatform string) bool {
+// placeholder for the given effective platform and subgame. Two different
+// subgames each wanting their own planned replay on the same platform are
+// two real intents, not fragmentation of one bookmark — so subgame must also
+// match, not just platform.
+func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePlatform, subgame string) bool {
 	want := model.EffectivePlatform(entryPlatform, gamePlatform)
 	for _, e := range playthroughs {
-		if e.Status == "planned" && model.EffectivePlatform(e.Platform, gamePlatform) == want {
+		if e.Status == "planned" && model.EffectivePlatform(e.Platform, gamePlatform) == want && e.Subgame == subgame {
 			return true
 		}
 	}
@@ -24,24 +28,26 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 }
 
 // oneShotConflict reports the existing entry that already covers a one-shot
-// status (ongoing/multiplayer) on the given platform, if any — that's the
-// case doNewPlaythrough refuses. None of the one-shot statuses has a save
-// file or finish line, so a *second* entry of the same one-shot status on
-// the same platform would be fragmentation, not a distinct mode; a
-// differently-statused entry (a finished campaign alongside an ongoing
-// sandbox mode, say) is a real second mode and is allowed to coexist. A
-// second platform is never a conflict either way — saves don't cross
-// consoles, so that's a genuinely separate record.
+// status (ongoing/multiplayer) on the given platform and subgame, if any —
+// that's the case doNewPlaythrough refuses. None of the one-shot statuses has
+// a save file or finish line, so a *second* entry of the same one-shot
+// status on the same platform *and subgame* would be fragmentation, not a
+// distinct mode; a differently-statused entry (a finished campaign alongside
+// an ongoing sandbox mode, say) is a real second mode and is allowed to
+// coexist. A second platform is never a conflict either way — saves don't
+// cross consoles, so that's a genuinely separate record. Likewise a second
+// subgame: two compilation entries each with their own ongoing mode on the
+// same platform are two real modes, not fragmentation of one.
 //
 // gameStatus resolves entries written before per-entry ongoing/multiplayer
 // existed — see effectiveOneShotStatus.
-func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, gameStatus string) *model.PlaythroughEntry {
+func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, gameStatus, subgame string) *model.PlaythroughEntry {
 	if !forms.IsOneShot(status) {
 		return nil
 	}
 	want := model.EffectivePlatform(entryPlatform, gamePlatform)
 	for i, e := range playthroughs {
-		if EffectiveOneShotStatus(e.Status, gameStatus) == status && model.EffectivePlatform(e.Platform, gamePlatform) == want {
+		if EffectiveOneShotStatus(e.Status, gameStatus) == status && model.EffectivePlatform(e.Platform, gamePlatform) == want && e.Subgame == subgame {
 			return &playthroughs[i]
 		}
 	}
@@ -66,44 +72,26 @@ func EffectiveOneShotStatus(entryStatus, gameStatus string) string {
 func SameGameInfo(a, b model.FrontMatter) bool {
 	return a.Title == b.Title && a.Platform == b.Platform && a.Status == b.Status &&
 		a.Started == b.Started && a.Finished == b.Finished && a.Draft == b.Draft &&
-		a.RatingString() == b.RatingString()
+		a.RatingString() == b.RatingString() && sameSubgames(a.Subgames, b.Subgames)
 }
 
-// confirmAndWriteFrontMatter is confirmAndWrite's front-matter analog:
-// preview, confirm, prove the rewrite loses nothing, then write. When pf is
-// non-nil, it also syncs and writes the playthrough via SyncStatus under the
-// same confirmation, so status and the timeline never drift apart again.
-func ConfirmAndWriteFrontMatter(doc *model.Doc, pf *model.PlaythroughsFile, allowedRemovals ...string) error {
-	fm, err := doc.EncodeFM()
-	if err != nil {
-		return err
+func sameSubgames(a, b []string) bool {
+	if len(a) != len(b) {
+		return false
 	}
-	preview := strings.Split(strings.TrimRight(string(fm), "\n"), "\n")
-
-	syncing := pf != nil && pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
-	if syncing {
-		entryPreview, err := PreviewEntry(pf, 0)
-		if err != nil {
-			return err
+	for i := range a {
+		if a[i] != b[i] {
+			return false
 		}
-		preview = append(preview, "", "playthroughs.yaml:")
-		preview = append(preview, entryPreview...)
 	}
-
-	ok, err := forms.ConfirmWrite(doc.Path, preview)
-	if err != nil {
-		return err
-	}
-	if !ok {
-		fmt.Println("Discarded.")
-		return nil
-	}
-
-	return WriteFrontMatter(doc, pf, syncing, allowedRemovals...)
+	return true
 }
 
-// writeFrontMatter is confirmAndWriteFrontMatter's no-prompt tail — see
-// writeEntry. syncing must match what the caller already decided (whether
+// WriteFrontMatter previews nothing and prompts nothing — the caller (a
+// submitted web form) is already its own confirmation. When pf is non-nil,
+// it also syncs and writes the playthrough via SyncStatus under the same
+// loss-check, so status and the timeline never drift apart. syncing must
+// match what the caller already decided (whether
 // pf's status was brought in line with doc.FM.Status), since that's what
 // decides whether pf needs its own loss-check and save alongside doc's.
 func WriteFrontMatter(doc *model.Doc, pf *model.PlaythroughsFile, syncing bool, allowedRemovals ...string) error {
@@ -204,33 +192,8 @@ func WriteEntry(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
 	return nil
 }
 
-// confirmAndWriteSplit is confirmAndWrite's two-entry analog: previews both
-// the shrunk source entry and the new split-off entry, confirms once, then
-// writes.
-func ConfirmAndWriteSplit(pf *model.PlaythroughsFile, srcIdx, newIdx int, allowedRemovals ...string) error {
-	srcPreview, err := PreviewEntry(pf, srcIdx)
-	if err != nil {
-		return err
-	}
-	newPreview, err := PreviewEntry(pf, newIdx)
-	if err != nil {
-		return err
-	}
-	preview := append(append(append([]string{}, srcPreview...), "", "new playthrough:"), newPreview...)
-
-	ok, err := forms.ConfirmWrite(pf.Path, preview)
-	if err != nil {
-		return err
-	}
-	if !ok {
-		fmt.Println("Discarded.")
-		return nil
-	}
-
-	return WriteSplit(pf, allowedRemovals...)
-}
-
-// writeSplit is confirmAndWriteSplit's no-prompt tail — see writeEntry.
+// WriteSplit previews and prompts nothing — the caller (a submitted web
+// form) is already its own confirmation. See WriteEntry.
 func WriteSplit(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
 	if err := VerifyNoLoss(pf, allowedRemovals); err != nil {
 		return err

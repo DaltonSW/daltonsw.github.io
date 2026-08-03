@@ -149,7 +149,7 @@ func TestUnknownFieldsSurviveARewrite(t *testing.T) {
         finished: 2026-01-09
         device: deck
 `)
-	if err := pf.UpdatePlaythrough(0, "2026-02-12", "finished", "Switch", "8", "done"); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2026-02-12", "finished", "Switch", "", "8", "done"); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
@@ -269,7 +269,7 @@ func TestPlaythroughsCarrySeparatePlatforms(t *testing.T) {
 // game later silently fail to correct its runs.
 func TestBlankPlatformIsOmitted(t *testing.T) {
 	pf := loadFixture(t, "playthroughs:\n  - started: 2026-01-04\n    status: playing\n")
-	if err := pf.UpdatePlaythrough(0, "", "playing", "", "", ""); err != nil {
+	if err := pf.UpdatePlaythrough(0, "", "playing", "", "", "", ""); err != nil {
 		t.Fatal(err)
 	}
 	out, err := pf.Encode()
@@ -290,7 +290,7 @@ func TestUpdateWritesFinishedToTheLastSession(t *testing.T) {
       - started: 2026-04-02
         finished:
 `)
-	if err := pf.UpdatePlaythrough(0, "2026-04-09", "finished", "", "", ""); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2026-04-09", "finished", "", "", "", ""); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
@@ -985,7 +985,7 @@ func TestEditPlanned_UpdatesPlatformAndNotes(t *testing.T) {
     platform: PC
     notes: try NG+
 `)
-	if err := pf.EditPlanned(0, "Switch", "try the DLC instead"); err != nil {
+	if err := pf.EditPlanned(0, "Switch", "", "try the DLC instead"); err != nil {
 		t.Fatal(err)
 	}
 	e := pf.Playthroughs[0]
@@ -999,7 +999,7 @@ func TestEditPlanned_RejectsNonPlannedStatus(t *testing.T) {
   - status: finished
     started: "2021-05-01"
 `)
-	if err := pf.EditPlanned(0, "PC", "notes"); err == nil {
+	if err := pf.EditPlanned(0, "PC", "", "notes"); err == nil {
 		t.Fatal("expected an error — index 0 is not a planned placeholder")
 	}
 }

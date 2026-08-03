@@ -64,6 +64,13 @@ type PlaythroughEntry struct {
 	Notes    string         `yaml:"notes,omitempty"`
 	Sessions []SessionEntry `yaml:"sessions,omitempty"`
 
+	// Subgame names which member of the game's front-matter `subgames:`
+	// roster this run covers — e.g. "Plague of Shadows" on a Shovel Knight:
+	// Treasure Trove entry. Blank means "the whole game," not "unknown":
+	// unlike Platform there is no EffectivePlatform-style fallback, since a
+	// game with no declared roster has nothing to inherit from.
+	Subgame string `yaml:"subgame,omitempty"`
+
 	Extra map[string]any `yaml:",inline"`
 }
 
@@ -74,6 +81,7 @@ type PlaythroughFields struct {
 	Finished string
 	Status   string // playing|finished|mastered|dropped|paused|ongoing|multiplayer
 	Platform string // blank means "same as the game's front matter"
+	Subgame  string // blank means "the whole game"; otherwise a member of the game's subgames: roster
 	Rating   string // 1-10 or ""
 	Notes    string
 }
@@ -209,6 +217,7 @@ type Playthrough struct {
 	Finished string
 	Status   string
 	Platform string
+	Subgame  string
 	Rating   string
 	Notes    string
 	Sessions []Session
@@ -286,6 +295,7 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 			Finished: e.Finished,
 			Status:   e.Status,
 			Platform: e.Platform,
+			Subgame:  e.Subgame,
 			Rating:   e.RatingString(),
 			Notes:    e.Notes,
 		}
@@ -304,6 +314,7 @@ func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 		Finished: pf.Finished,
 		Status:   pf.Status,
 		Platform: pf.Platform,
+		Subgame:  pf.Subgame,
 		Notes:    pf.Notes,
 	}
 	e.SetRating(pf.Rating)
@@ -399,8 +410,9 @@ func (f *PlaythroughsFile) EditSession(idx, j int, started, finished, title stri
 // SplitPlaythrough moves sessions[j:] out of playthrough idx into a new
 // entry appended to the file. append always lands the new entry at the true
 // end of f.Playthroughs, so no other entry's index is ever disturbed. The
-// new entry inherits idx's Platform; Notes/Rating start blank; newStatus is
-// required, never copied from the source. j must be >0.
+// new entry inherits idx's Platform and Subgame — a status split over time
+// is still the same run of the same subgame; Notes/Rating start blank;
+// newStatus is required, never copied from the source. j must be >0.
 func (f *PlaythroughsFile) SplitPlaythrough(idx, j int, newStatus string) (int, error) {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return 0, fmt.Errorf("no playthrough %d to split", idx+1)
@@ -416,6 +428,7 @@ func (f *PlaythroughsFile) SplitPlaythrough(idx, j int, newStatus string) (int, 
 	f.Playthroughs = append(f.Playthroughs, PlaythroughEntry{
 		Status:   newStatus,
 		Platform: e.Platform,
+		Subgame:  e.Subgame,
 		Sessions: moved,
 	})
 	return len(f.Playthroughs) - 1, nil
@@ -439,16 +452,17 @@ func (f *PlaythroughsFile) GraduatePlannedPlaythrough(idx int, pf PlaythroughFie
 	e.Finished = pf.Finished
 	e.Status = pf.Status
 	e.Platform = pf.Platform
+	e.Subgame = pf.Subgame
 	e.SetRating(pf.Rating)
 	e.Notes = pf.Notes
 	return nil
 }
 
-// EditPlanned updates a planned-replay placeholder's platform/notes in
-// place. Status and dates are untouched here — those only ever change via
+// EditPlanned updates a planned-replay placeholder's platform/subgame/notes
+// in place. Status and dates are untouched here — those only ever change via
 // GraduatePlannedPlaythrough, which is the one path that turns "planned"
 // into something else.
-func (f *PlaythroughsFile) EditPlanned(idx int, platform, notes string) error {
+func (f *PlaythroughsFile) EditPlanned(idx int, platform, subgame, notes string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to edit", idx+1)
 	}
@@ -457,6 +471,7 @@ func (f *PlaythroughsFile) EditPlanned(idx int, platform, notes string) error {
 		return fmt.Errorf("playthrough %d is not a planned placeholder", idx+1)
 	}
 	e.Platform = platform
+	e.Subgame = subgame
 	e.Notes = notes
 	return nil
 }
@@ -584,7 +599,7 @@ func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
 // UpdatePlaythrough applies edited field values. The finished date belongs to
 // the last session once an entry has sessions, matching where the TUI showed
 // it.
-func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform, rating, notes string) error {
+func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform, subgame, rating, notes string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to update", idx+1)
 	}
@@ -597,6 +612,7 @@ func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform
 	}
 	e.Status = status
 	e.Platform = platform
+	e.Subgame = subgame
 	e.SetRating(rating)
 	e.Notes = notes
 	return nil

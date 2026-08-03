@@ -268,17 +268,20 @@ type NewGameFields struct {
 	SteamAppID          string
 	PSNID               string
 	Status              string // backlog|playing|finished|dropped
-	Started             string
-	Finished            string
-	Rating              string
-	Overview            string
+	// Subgames is the declared roster of a compilation's parts (see
+	// FrontMatter.Subgames). Empty means this isn't a compilation.
+	Subgames []string
+	Started  string
+	Finished string
+	Rating   string
+	Overview string
 	// Draft keeps a generated entry off the built site until it's been
 	// reviewed. Only `scan` sets it; the interactive form never does.
 	Draft bool
 }
 
 func formatNewGameFile(f NewGameFields, slug string) string {
-	lines := trimTrailingBlanks([]string{
+	lines := []string{
 		"---",
 		fmt.Sprintf("title: %q", f.Title),
 		fmt.Sprintf("platform: %q", f.Platform),
@@ -286,9 +289,15 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		"steam_appid: " + f.SteamAppID,
 		"psn_id: " + f.PSNID,
 		fmt.Sprintf("status: %q", f.Status),
-		"started: " + f.Started,
-		"finished: " + f.Finished,
-		"rating: " + f.Rating,
+		"subgames:",
+	}
+	for _, sg := range f.Subgames {
+		lines = append(lines, fmt.Sprintf("  - %q", sg))
+	}
+	lines = append(lines,
+		"started: "+f.Started,
+		"finished: "+f.Finished,
+		"rating: "+f.Rating,
 		"cover:",
 		fmt.Sprintf("draft: %t", f.Draft),
 		"cascade:",
@@ -296,7 +305,8 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		fmt.Sprintf("    games: [%q]", slug),
 		"---",
 		"",
-	})
+	)
+	lines = trimTrailingBlanks(lines)
 	body := strings.TrimRight(f.Overview, "\n")
 	return strings.Join(lines, "\n") + "\n" + body + "\n"
 }

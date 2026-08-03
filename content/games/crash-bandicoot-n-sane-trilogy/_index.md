@@ -9,6 +9,10 @@ finished: "2022-05-14"
 rating:
 cover:
 draft: true
+subgames:
+  - "Crash Bandicoot"
+  - "Cortex Strikes Back"
+  - "Warped"
 cascade:
   params:
     games: ["crash-bandicoot-n-sane-trilogy"]

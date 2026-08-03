@@ -10,6 +10,9 @@ finished:
 rating:
 cover:
 draft: false
+subgames:
+  - "Super Mario 3D World"
+  - "Bowser's Fury"
 cascade:
   params:
     games: ["super-mario-3d-world-bowser-s-fury"]

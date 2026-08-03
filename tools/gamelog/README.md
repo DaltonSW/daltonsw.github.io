@@ -1,40 +1,41 @@
 # gamelog
 
-A terminal tool for maintaining this site's `content/games/<slug>/_index.md` playthrough log.
+A CLI + local web UI for maintaining this site's `content/games/<slug>/_index.md` playthrough log.
 
-Run with no arguments for the interactive flow: pick or create a game, edit its info, log a new
-playthrough, log a new session, or update an existing playthrough (finish date, status,
-rating, notes). It loops — "Do another?" after each action — so a sitting can cover several
-games without relaunching.
+Run with no arguments (or `gamelog serve`) to serve the local web UI over `content/games`: pick or
+create a game, edit its info, log a new playthrough or session, update an existing one, or run
+housekeeping (scan for unlogged games, flag stale ones, bulk-close open playthroughs, refresh
+achievements). Everything that touches the log is done there now — the rest of the CLI is a
+handful of read-only/scriptable commands (see `gamelog help`).
 
 ```
-go run ./cmd/gamelog          # interactive
-go run ./cmd/gamelog review   # walk through draft games one at a time
+go run ./cmd/gamelog          # serve the web UI (default port 8080)
 go run ./cmd/gamelog help     # usage summary
 ```
 
 ## Code layout
 
-Standard `cmd/` + `internal/` Go layout. `cmd/gamelog/main.go` is just flag dispatch; everything
-else lives under `internal/`, one package per concern:
+Standard `cmd/` + `internal/` Go layout. `cmd/main.go` is just flag dispatch; everything else
+lives under `internal/`, one package per concern:
 
 ```
 internal/model         domain types + storage: front matter, playthroughs.yaml, the archive
-internal/forms         huh-based prompts and the shared validation/status vocabulary
-internal/mutate        confirm-preview-and-write-with-loss-check, shared by the TUI, the web
-                        server, and the achievements command's own-session nudge
+internal/forms         the shared validation/status vocabulary, plus the couple of huh prompts
+                        gamelog suggest and gamelog achievements still use
+internal/mutate        confirm-preview-and-write-with-loss-check, shared by the web server and
+                        the achievements command's own-session nudge
 internal/providers/*   one package per API client (steam, retroachievements, exophase)
 internal/dotenv        the tool's own minimal .env reader
 internal/externalid    parses a pasted RA/Steam ID or URL into a bare ID
-internal/commands      scan/suggest/stale/close/review/achievements — genuinely
-                        interdependent (see the package doc comments), kept together
-internal/server        the local web UI (`gamelog serve`)
-internal/interactive   the terminal REPL (`gamelog` with no args)
+internal/commands      suggest/achievements/project, plus the scan/stale/close library
+                        functions internal/server calls (see the package doc comments)
+internal/server        the local web UI (`gamelog serve`, also what bare `gamelog` runs)
 ```
 
-`interactive` and `server` are two frontends over the same `model`/`forms`/`mutate` layer;
-`commands` is the six flag-driven subcommands, which call into each other enough that splitting
-them further would mean breaking a real (not accidental) dependency cycle between them.
+`server` is the maintained frontend over the `model`/`forms`/`mutate` layer. `commands` used to
+also hold interactive CLI walkthroughs for scan/stale/close/review; those were sunset once the
+web UI covered the same ground, but their underlying report/apply functions stayed — `server`
+still imports and calls them directly.
 
 ## Where things live
 
@@ -152,10 +153,9 @@ onward (the markdown body) are kept exactly as read, and only the front-matter b
 delimiters is replaced. A hand-written overview paragraph below the front matter is never at risk,
 because it's never reconstructed — only ever copied verbatim from the original file.
 
-Title, platform, status, dates, rating, and `draft` are editable, through "Edit game info" in the
-interactive flow or via `gamelog review`. `retroachievements_id`/`steam_appid` are deliberately
-not — relinking a provider ID is a more consequential action than a date fix, and isn't
-implemented yet.
+Title, platform, status, dates, rating, and `draft` are editable, through a game's edit page in
+`gamelog serve`. `retroachievements_id`/`steam_appid` are deliberately not — relinking a provider
+ID is a more consequential action than a date fix, and isn't implemented yet.
 
 `status: mastered` is `finished`'s stronger sibling — the game was beaten *and* every achievement
 was earned, not just the ones that come from beating it. It's a distinct value rather than a flag
@@ -219,9 +219,10 @@ playthroughs:
     notes: Try NG+ mode this time
 ```
 
-"Add a planned replay" (always offered in the interactive flow) creates one; it refuses a second
-placeholder for the same effective platform, the same "don't fragment into two bookmarks for one
-intent" reasoning as the one-shot statuses' per-platform cap, though `planned` isn't itself part of
+"Add a planned replay" (always offered on a game's page in `gamelog serve`) creates one; it
+refuses a second placeholder for the same effective platform, the same "don't fragment into two
+bookmarks for one intent" reasoning as the one-shot statuses' per-platform cap, though `planned`
+isn't itself part of
 that family (`forms.IsOneShot` returns `false` for it, and it's deliberately absent from
 `forms.PlaythroughStatuses` — see below).
 
@@ -269,7 +270,7 @@ field *presence*, not text, and the same tradeoff is already accepted for `playt
 
 `gamelog suggest [slug]` queries RetroAchievements and Steam for a game and prints suggested
 `started`/`finished` dates to the terminal. **It never writes to any file.** Review the
-suggestion, then enter the dates yourself through the normal interactive flow above.
+suggestion, then enter the dates yourself through `gamelog serve`.
 
 ```
 go run ./cmd/gamelog suggest okami        # direct, by slug
@@ -297,127 +298,72 @@ Because RA/Steam only expose one achievement history per game, a suggestion refl
 *entire* history, not any single logged playthrough. If a game has more than one playthrough,
 the report says so — cross-reference manually before entering a date.
 
-## `gamelog scan` — find games you haven't logged
+## `gamelog serve` — the web UI, and its Housekeeping page
 
-`gamelog scan` lists games on RetroAchievements and Steam that have no entry in
-`content/games`, then offers a multi-select to create entries for the ones you pick.
+`gamelog serve` (also what bare `gamelog` runs) serves a local web UI over `content/games`:
+create/edit/delete games, log playthroughs and sessions, manage planned replays, and reorder or
+split sessions. Its **Housekeeping** page is where the bulk maintenance flows live — scan, stale,
+close, and achievement refresh-all — described below by what each one does; on the page itself
+these are filter fields, checkboxes, and buttons rather than CLI flags.
 
-```
-go run ./cmd/gamelog scan                    # Steam games with >=5h playtime
-go run ./cmd/gamelog scan --min-hours 20     # narrower
-```
+**Scan** lists games on RetroAchievements and Steam that have no entry in `content/games` (a
+`min_hours` field narrows the Steam side, default 5), then lets you check which ones to create
+entries for. Matching is by external ID where one is set, falling back to a normalised title — so
+a game logged before those fields existed is still recognised, and casing or a trailing `®`
+doesn't produce a duplicate (`elden-ring` matches `ELDEN RING`). Anything created is written with
+`draft: true`, because every field is inferred — review it and flip the flag to publish. Scanning
+uses only the two bulk endpoints (one request each), so it's fast and can't be rate-limited, but
+those endpoints carry no start dates; create the entry, then run `gamelog suggest <slug>` for the
+precise range. A RetroAchievements game counts as finished when it carries a real award — the
+report names which one, since `12/189 achievements → finished` only makes sense once you can see
+it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award — every
+achievement, not just the ones needed to beat it — is suggested as `status: mastered` instead of
+`finished`. **Steam games are never auto-marked finished**: playtime alone says nothing about
+completion.
 
-Matching is by external ID where one is set, falling back to a normalised title — so a game
-logged before those fields existed is still recognised, and casing or a trailing `®` doesn't
-produce a duplicate (`elden-ring` matches `ELDEN RING`).
+Scan-created games land as `draft: true`; the games list index has a drafts-only filter with a
+**Draft?** column, and each one's page has Publish/Undraft, Edit, and Delete — the latter only
+offered when the game has no logged playthroughs *and* no archive record for either linked
+provider ID, since once either exists it isn't a plausible false-positive scan match anymore and
+deleting it would risk real data.
 
-Anything created is written with `draft: true`, because every field is inferred. Review it and
-flip the flag to publish. Nothing is written without an explicit selection.
+**Stale** uses Steam's `GetOwnedGames rtime_last_played` (captured into every Steam archive record
+as `last_played`) to find games you've probably stopped playing but never marked as such —
+currently `status: playing`, Steam-linked, and untouched for a while (`stale_days` field, default
+30) — draft or published; draft ones are tagged `[draft]` so accepting a suggestion is clearly not
+the same as publishing. For each one it computes a guess — **mastered** at 100% achievement
+completion, **finished** at ≥90%, **dropped** otherwise, or **dropped at low confidence** when the
+game has no achievements to go on at all (playtime alone doesn't prove completion, so "dropped" is
+the safer default, not a claim) — alongside the last-played date, achievement count, and playtime.
+Nothing is ever written automatically: accept the guess, pick one of the other statuses it might
+have guessed instead, open the full edit form prefilled with the guess, or leave it and it'll
+surface again next time it's still `playing` and still quiet. None of the one-shot statuses
+(`ongoing`, `multiplayer`, `software`) ever shows up here — they aren't `status: playing` by
+definition (see above), and something used in indefinite session bursts has no "done" to detect
+from staleness alone.
 
-Scanning uses only the two bulk endpoints (one request each), so it's fast and can't be
-rate-limited, but those endpoints carry no start dates. Create the entry, then run
-`gamelog suggest <slug>` for the precise range.
+**Close** finds every playthrough whose trailing date is blank and offers to cap it at the last
+day it was actually played — **never changing a status**, only writing a date. This is a different
+question from what Stale asks: Stale looks at games still marked `playing` and guesses a
+*terminal status* from achievement completion; the entries Close targets are mostly one-shot games
+whose status is already correct, where the only thing wrong is a trailing `finished: ""` that
+renders as "ongoing" forever. A sandbox last touched in 2017 isn't mid-playthrough, but it isn't
+"finished" either — closing the date and picking a status are separate decisions. The whole list
+is presented pre-selected (`close_days` field, default 30; `close_all` checkbox to include
+`playing` games too — `paused` games are excluded either way, since that status means on hold, not
+abandoned, and an open-ended bar is the honest render for something meant to be resumed), so the
+cheap interaction is deselecting the exceptions rather than confirming each one. The closing date
+comes from the archive's `last_played` when there is one, falling back to the open session's own
+`started` date — the fallback is the right answer more often than it looks, since a party game
+played on one evening has a start date and nothing else, and that evening *is* when it stopped.
+Each row shows which source it used, so a wrong date is visible before confirming. Anything with
+no date anywhere is left alone; inventing one would be worse than leaving it open. Writes go
+through the same pre-write proof as every other playthrough write: the pending rewrite is diffed
+against what's on disk and refused if a field would vanish, and an entry closed between building
+the list and confirming it is left alone rather than overwritten.
 
-A RetroAchievements game counts as finished when it carries a real award — the report names
-which one, since `12/189 achievements → finished` only makes sense once you can see it was
-`beaten-hardcore` rather than a mastery. A `mastered`/`completed` award — every achievement, not
-just the ones needed to beat it — is suggested as `status: mastered` instead of `finished`.
-**Steam games are never auto-marked finished**: playtime alone says nothing about completion.
-
-## `gamelog review` — triage the draft backlog
-
-`scan` always writes new entries with `draft: true`. `gamelog review` is how you work through
-them: it walks every draft game one at a time and asks what to do with it.
-
-```
-go run ./cmd/gamelog review
-```
-
-Each game shows a summary card — title, provider links, current status/dates, and its logged
-playthroughs — followed by a choice:
-
-- **Publish as-is** — flips `draft: false`, nothing else changes.
-- **Edit, then publish** — opens the same form as "Edit game info," then publishes regardless of
-  what its own `draft` toggle was left at.
-- **Edit without publishing** — same form, but `draft` stays whatever the form set it to, for
-  partial progress you'll come back to.
-- **Mark dropped & publish** — sets `status: dropped` and publishes.
-- **Skip** — leaves it draft and moves on; it's excluded for the rest of *this* run, but
-  `gamelog review` re-filters `draft: true` fresh every time you run it, so nothing skipped is
-  lost — it just shows up again next time.
-- **Delete this stub** — only offered when the game has no logged playthroughs *and* no archive
-  record for either linked provider ID. Once either exists, this isn't a plausible false-positive
-  scan match anymore, so the option disappears rather than risking real data.
-- **Quit** — stops the loop; everything not yet acted on stays `draft: true`.
-
-## `gamelog stale` — nudge for games that have gone quiet
-
-Steam's `GetOwnedGames` reports `rtime_last_played` per game, captured into every Steam archive
-record as `last_played`. `gamelog stale` uses it to find games you've probably stopped playing but
-never marked as such: currently `status: playing`, Steam-linked, and untouched for a while — draft
-or published. That makes it a fast way to pre-classify the `scan`-created draft backlog by
-achievement completion before doing a full `gamelog review` pass on it; cards for draft games are
-tagged `[draft]` so it's clear accepting one doesn't publish it.
-
-```
-go run ./cmd/gamelog stale                # 30+ days since last played
-go run ./cmd/gamelog stale --days 60      # narrower
-```
-
-For each one it computes a guess — **mastered** at 100% achievement completion, **finished** at
-≥90%, **dropped** otherwise, or **dropped at low confidence** when the game has no achievements to
-go on at all (playtime alone doesn't prove completion, so "dropped" is the safer default, not a
-claim) — and shows it alongside the last-played date, achievement count, and playtime. Nothing is
-ever written automatically; you choose:
-
-- **Correct — mark _status_** — applies the suggested status as-is.
-- **Nope — mark _status_ instead** — one for each of the other statuses `stale` might have
-  guessed (mastered/finished/dropped), so correcting a wrong guess doesn't require opening the
-  full edit form just to change one field.
-- **Edit before applying** — opens "Edit game info," prefilled with the suggested status, so you
-  can change it, add a finish date, or adjust anything else before confirming.
-- **Still playing / skip for now** — leaves it untouched. There's no persistent dismissal — if it's
-  still `playing` and still stale, the next `gamelog stale` run will surface it again.
-- **Quit** — stops the loop.
-
-None of the one-shot statuses (`ongoing`, `multiplayer`, `software`) ever shows up here —
-they aren't `status: playing` by definition (see above), and something used in indefinite session
-bursts has no "done" to detect from staleness alone. Same reasoning `gamelog scan` already applies to Steam elsewhere: a completion signal comes
-from achievements or an explicit human decision, never from playtime or silence by itself.
-
-## `gamelog close` — cap playthroughs left open
-
-`gamelog close` finds every playthrough whose trailing date is blank and offers to cap it at the
-last day it was actually played. **It never changes a status** — the only thing it writes is a
-date.
-
-This is a different question from the one `gamelog stale` asks, which is why it's a different
-command. `stale` looks at games still marked `playing` and guesses a *terminal status* from
-achievement completion. The entries `close` targets are mostly one-shot games whose status is
-already correct; the only thing wrong with them is a trailing `finished: ""` that renders as
-"ongoing" forever. A sandbox you last touched in 2017 isn't mid-playthrough, but it isn't
-"finished" either. Closing the date and picking a status are separate decisions.
-
-The whole list is presented as **one pre-selected multi-select**, not a game-at-a-time loop:
-"cap it at the last day I played" is right for most of them, so the cheap interaction is
-accepting in bulk and deselecting the exceptions. It's filterable — type to narrow the list.
-
-The closing date comes from the archive's `last_played` when there is one, falling back to the
-open session's own `started` date. The fallback is the right answer more often than it looks: a
-party game played on one evening has a start date and nothing else, and that evening *is* when it
-stopped. Each row shows which source it used, so a wrong date is visible before you confirm.
-
-Excluded by default:
-
-- **`playing` games** — an open date is correct there. `--all` includes them.
-- **`paused` games, always** — `--all` does not reach these. Paused means on hold, not abandoned;
-  it's the one status `gamelog stale` deliberately refuses to date-stamp, and an open-ended bar is
-  the honest render for something you intend to resume.
-- **Anything with no date anywhere.** Inventing one would be worse than leaving it open.
-
-Writes go through the same pre-write proof as every other playthrough write: the pending rewrite is
-diffed against what's on disk and refused if a field would vanish. An entry that was closed between
-building the list and confirming it is left alone rather than overwritten.
+**Refresh all** runs the achievements fetch-and-merge (below) across every game with a provider
+link, in the background — the page redirects to a job status view while it runs.
 
 ## `gamelog achievements` — full unlock history
 

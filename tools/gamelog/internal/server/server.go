@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"os"
 	"strconv"
+	"strings"
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/forms"
@@ -181,6 +182,7 @@ var funcMap = template.FuncMap{
 		return "pill pill--" + status
 	},
 	"dash":            forms.OrDash,
+	"joinLines":       func(ss []string) string { return strings.Join(ss, "\n") },
 	"gameStatuses":    func() []string { return forms.GameStatuses },
 	"pthStatuses":     func() []string { return forms.PlaythroughStatuses },
 	"staleQuick":      func() []string { return forms.StaleQuickStatuses },

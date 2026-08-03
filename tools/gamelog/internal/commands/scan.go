@@ -2,7 +2,6 @@ package commands
 
 import (
 	"context"
-	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -11,8 +10,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
-	"github.com/charmbracelet/huh"
 
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/providers/retroachievements"
@@ -80,67 +77,6 @@ func (c Candidate) NewGameFields() model.NewGameFields {
 
 type ScanOptions struct {
 	MinHours float64
-}
-
-func RunScan(args []string) error {
-	fs := flag.NewFlagSet("scan", flag.ContinueOnError)
-	fs.SetOutput(os.Stderr)
-	minHours := fs.Float64("min-hours", DefaultMinHours, "minimum Steam playtime, in hours, for a game to be suggested")
-	fs.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: gamelog scan [flags]\n\nFinds games on RetroAchievements/Steam that aren't in content/games yet.\n\nFlags:\n")
-		fs.PrintDefaults()
-	}
-	if err := fs.Parse(args); err != nil {
-		return err
-	}
-
-	gamesDir, err := model.FindGamesDir()
-	if err != nil {
-		return err
-	}
-	existing, err := model.ListGames(gamesDir)
-	if err != nil {
-		return err
-	}
-	creds := LoadCredentials()
-
-	if !creds.RAConfigured() && !creds.SteamConfigured() {
-		return fmt.Errorf("no credentials configured; see tools/gamelog/README.md")
-	}
-
-	ctx := context.Background()
-	opts := ScanOptions{MinHours: *minHours}
-	index := NewLoggedIndex(existing)
-
-	var candidates []Candidate
-	if creds.RAConfigured() {
-		found, err := ScanRA(ctx, creds, index)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "gamelog: RetroAchievements scan failed: %v\n", err)
-		} else {
-			candidates = append(candidates, found...)
-		}
-	} else {
-		fmt.Fprintln(os.Stderr, "gamelog: skipping RetroAchievements (RA_USERNAME/RA_API_KEY not set)")
-	}
-
-	if creds.SteamConfigured() {
-		found, err := ScanSteam(ctx, creds, index, opts)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "gamelog: Steam scan failed: %v\n", err)
-		} else {
-			candidates = append(candidates, found...)
-		}
-	} else {
-		fmt.Fprintln(os.Stderr, "gamelog: skipping Steam (STEAM_API_KEY/STEAM_ID not set)")
-	}
-
-	SortCandidates(candidates)
-	fmt.Print(FormatScanReport(candidates, len(existing), opts))
-	if len(candidates) == 0 {
-		return nil
-	}
-	return offerToCreate(gamesDir, candidates)
 }
 
 // loggedIndex answers "is this game already in content/games?". External IDs
@@ -339,53 +275,6 @@ func plural(n int) string {
 		return ""
 	}
 	return "s"
-}
-
-// SelectCandidates asks which discovered games to create, returning indices
-// into candidates. Nothing is preselected — creating content files is opt-in
-// per game.
-func SelectCandidates(candidates []Candidate) ([]int, error) {
-	options := make([]huh.Option[int], len(candidates))
-	for i, c := range candidates {
-		label := fmt.Sprintf("%s  [%s]", c.Title, c.Provider)
-		if c.Finished {
-			label += " finished"
-		}
-		if c.PlaytimeMins > 0 {
-			label += " " + FormatHours(c.PlaytimeMins)
-		}
-		options[i] = huh.NewOption(label, i)
-	}
-
-	var chosen []int
-	err := huh.NewForm(
-		huh.NewGroup(
-			huh.NewMultiSelect[int]().
-				Title("Create entries for which games?").
-				Description("space to toggle, enter to confirm — none selected creates nothing").
-				Options(options...).
-				Value(&chosen),
-		),
-	).Run()
-	return chosen, err
-}
-
-// offerToCreate lets the user pick which discovered games to write out. This
-// is the only part of scan that touches the filesystem, and it always asks
-// first.
-func offerToCreate(gamesDir string, candidates []Candidate) error {
-	chosen, err := SelectCandidates(candidates)
-	if err != nil {
-		return err
-	}
-	if len(chosen) == 0 {
-		fmt.Println("Nothing created.")
-		return nil
-	}
-
-	createdList, skipped := CreateFromCandidates(gamesDir, candidates, chosen)
-	fmt.Printf("\n%d created, %d skipped. Review them, then flip `draft: false` to publish.\n", len(createdList), skipped)
-	return nil
 }
 
 // CreatedGame is one game CreateFromCandidates made, for a caller (the web

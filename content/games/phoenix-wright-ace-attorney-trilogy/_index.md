@@ -8,6 +8,10 @@ started: ""
 finished: ""
 rating: null
 draft: false
+subgames:
+  - "Phoenix Wright: Ace Attorney"
+  - Justice for All
+  - Trials and Tribulations
 cascade:
   params:
     games:

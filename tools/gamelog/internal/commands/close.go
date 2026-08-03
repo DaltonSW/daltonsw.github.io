@@ -1,14 +1,10 @@
 package commands
 
 import (
-	"flag"
 	"fmt"
-	"os"
 	"path/filepath"
 	"sort"
 	"time"
-
-	"github.com/charmbracelet/huh"
 
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
@@ -23,79 +19,6 @@ type OpenEntry struct {
 	Source    string // where CloseOn came from, shown so a wrong date is obvious
 	LastKnown string // last activity, for the quiet-time display
 	DaysSince int
-}
-
-// runClose walks every playthrough left open past the quiet threshold and
-// offers to cap it at the last day it was actually played.
-//
-// This is deliberately not part of `gamelog stale`, which asks a different
-// question: stale looks at games still marked "playing" and guesses a terminal
-// status (finished/dropped/mastered) from achievement completion. The
-// open-ended entries this handles are mostly ongoing/multiplayer/software
-// games whose status is already correct and must not change — the only thing
-// wrong with them is a trailing `finished: ""` that renders as "ongoing"
-// forever. Closing a date and picking a status are separate decisions, so they
-// get separate commands.
-//
-// The whole list is presented as one pre-selected multi-select rather than a
-// game-at-a-time loop: "cap it at the last day I played" is right for most of
-// them, so the cheap interaction should be accepting them in bulk and
-// deselecting the exceptions, not confirming each one.
-func RunClose(args []string) error {
-	fs := flag.NewFlagSet("close", flag.ContinueOnError)
-	fs.SetOutput(os.Stderr)
-	days := fs.Int("days", DefaultStaleDays, "days since last played before an open entry is worth asking about")
-	all := fs.Bool("all", false, "include entries still marked \"playing\" at the game level")
-	fs.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: gamelog close [flags]\n\nFinds playthroughs left without a closing date and offers to cap each one at\nthe last day it was actually played. Statuses are never changed.\n\nFlags:\n")
-		fs.PrintDefaults()
-	}
-	if err := fs.Parse(args); err != nil {
-		return err
-	}
-
-	gamesDir, err := model.FindGamesDir()
-	if err != nil {
-		return err
-	}
-	archiveDir := model.FindArchiveDir(gamesDir)
-
-	games, err := model.ListGames(gamesDir)
-	if err != nil {
-		return err
-	}
-	open, err := FindOpenEntries(archiveDir, gamesDir, games, *days, *all)
-	if err != nil {
-		return err
-	}
-	if len(open) == 0 {
-		fmt.Printf("No playthroughs have been left open for %d+ days.\n", *days)
-		return nil
-	}
-
-	chosen, err := SelectEntriesToClose(open)
-	if err != nil {
-		return err
-	}
-	if len(chosen) == 0 {
-		fmt.Println("Nothing selected — no changes made.")
-		return nil
-	}
-
-	closed := 0
-	for _, i := range chosen {
-		e := open[i]
-		did, err := CloseEntry(e)
-		if err != nil {
-			return fmt.Errorf("%s: %w", e.Game.Slug, err)
-		}
-		if did {
-			fmt.Printf("  %s → %s\n", e.Game.Title, e.CloseOn)
-			closed++
-		}
-	}
-	fmt.Printf("\nClosed %d of %d.\n", closed, len(open))
-	return nil
 }
 
 // FindOpenEntries collects every playthrough whose trailing date is blank and
@@ -216,46 +139,4 @@ func CloseEntry(e OpenEntry) (bool, error) {
 		return false, err
 	}
 	return true, pf.Save()
-}
-
-// SelectEntriesToClose shows every open entry pre-selected, since capping at
-// the last day played is the expected answer; deselect the ones that are
-// genuinely still in progress.
-func SelectEntriesToClose(open []OpenEntry) ([]int, error) {
-	options := make([]huh.Option[int], len(open))
-	for i, e := range open {
-		label := fmt.Sprintf("%-42s %-14s close %s  (%s, quiet %s)",
-			truncate(e.Game.Title, 42), e.Game.Status, e.CloseOn, e.Source, quietFor(e.DaysSince))
-		options[i] = huh.NewOption(label, i).Selected(true)
-	}
-	chosen := make([]int, 0, len(open))
-	err := huh.NewForm(
-		huh.NewGroup(
-			huh.NewMultiSelect[int]().
-				Title(fmt.Sprintf("Close %d open playthrough(s)?", len(open))).
-				Description("all pre-selected — space to deselect anything still in progress, enter to confirm.\nstatuses are not changed; only the trailing date is filled in.").
-				Options(options...).
-				Filterable(true).
-				Height(20).
-				Value(&chosen),
-		),
-	).Run()
-	return chosen, err
-}
-
-func quietFor(days int) string {
-	if days >= 365 {
-		return fmt.Sprintf("%.1fy", float64(days)/365)
-	}
-	return fmt.Sprintf("%dd", days)
-}
-
-func truncate(s string, n int) string {
-	if len(s) <= n {
-		return s
-	}
-	if n <= 1 {
-		return s[:n]
-	}
-	return s[:n-1] + "…"
 }
