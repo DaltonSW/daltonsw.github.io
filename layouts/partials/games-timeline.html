@@ -46,6 +46,7 @@
   {{- $subgroupStack := dict -}}
   {{- $hasItems := false -}}
   {{- $groupLast := "" -}}
+  {{- $groupHasOpen := false -}}
 
   {{- range $idx, $entry := $entries -}}
     {{- if $entry.started -}}
@@ -82,13 +83,30 @@
            game-last-played.html so chart rows and the list below stay in
            the same order. */}}
       {{- $activityEnd := $entry.started -}}
+      {{- $entryOpen := false -}}
       {{- if gt (len $entry.sessions) 0 -}}
         {{- $lastSession := index (sort $entry.sessions "started" "asc") (sub (len $entry.sessions) 1) -}}
         {{- $activityEnd = $lastSession.started -}}
-        {{- with $lastSession.finished -}}{{- $activityEnd = . -}}{{- end -}}
+        {{- if $lastSession.finished -}}
+          {{- $activityEnd = $lastSession.finished -}}
+        {{- else -}}
+          {{- $entryOpen = true -}}
+        {{- end -}}
       {{- else -}}
-        {{- with $entry.finished -}}{{- $activityEnd = . -}}{{- end -}}
+        {{- if $entry.finished -}}
+          {{- $activityEnd = $entry.finished -}}
+        {{- else -}}
+          {{- $entryOpen = true -}}
+        {{- end -}}
       {{- end -}}
+      {{/* True open session: the latest session (or the entry itself, if it
+           has none) genuinely has no finished date yet — not just an entry
+           whose status happens to carry one of the open-ended labels
+           (sandbox/multiplayer titles like Rocket League or Stardew Valley
+           keep "ongoing"/"multiplayer" permanently per KNOWN-ISSUES even
+           though every logged session is closed). Only a real open session
+           floats a game to the top of the list below. */}}
+      {{- if and $entryOpen (in $openEndedStatuses $status) -}}{{- $groupHasOpen = true -}}{{- end -}}
       {{- if or (eq $groupLast "") (gt $activityEnd $groupLast) -}}
         {{- $groupLast = $activityEnd -}}
       {{- end -}}
@@ -156,24 +174,25 @@
   {{- end -}}
 
   {{- if $hasItems -}}
-    {{/* A refreshed archive (achievements/playtime) can be more recent than
-         any logged session — see game-last-played.html. */}}
-    {{- with $game.Resources.Get "achievement-summary.yaml" -}}
-      {{- with (. | transform.Unmarshal).last_played -}}
-        {{- if gt . $groupLast -}}{{- $groupLast = . -}}{{- end -}}
-      {{- end -}}
-    {{- end -}}
+    {{/* Games with a genuinely open session (see $groupHasOpen above) float
+         above everything else — "1" outranks "0" as the leading character —
+         since a currently-open playthrough belongs at the top regardless of
+         when it was last touched. Within each tier, most-recently-logged-
+         session date orders the rest. */}}
+    {{- $tier := "0" -}}
+    {{- if $groupHasOpen -}}{{- $tier = "1" -}}{{- end -}}
     {{- $groupCandidates = $groupCandidates | append (dict
         "id" $slug
         "content" (printf "<a href=%q>%s</a>" $game.RelPermalink $game.Title)
         "subgroupStack" $subgroupStack
-        "sortKey" $groupLast
+        "sortKey" (printf "%s-%s" $tier $groupLast)
       )
     -}}
   {{- end -}}
 {{- end -}}
 
-{{/* Row order matches the list below: most-recently-played game at the top. */}}
+{{/* Row order matches the list below: games with an open session first,
+     then most-recently-played game at the top within each tier. */}}
 {{- $groups := slice -}}
 {{- range sort $groupCandidates "sortKey" "desc" -}}
   {{- $groups = $groups | append (dict "id" .id "content" .content "subgroupStack" .subgroupStack) -}}
