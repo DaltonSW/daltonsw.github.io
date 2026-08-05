@@ -1,0 +1,17 @@
+{{/* "Where does the info come from?" modal for the Games page: explains,
+     per provider, what's pulled automatically from that provider's API vs.
+     what's filled in by hand. Content lives in content/games-provenance.md,
+     a headless page (build.render/list: never) so it's editable prose, not
+     template code, without becoming a real URL. Triggered by
+     .games-subhead__provenance-btn via assets/js/provenance-modal.ts; native
+     <dialog> handles focus-trap, Esc-to-close, and the backdrop. */}}
+{{- $provPage := site.GetPage "games-provenance.md" -}}
+<dialog id="games-provenance-modal" class="provenance-modal" aria-labelledby="provenance-modal-title">
+  <div class="provenance-modal__head">
+    <h2 class="provenance-modal__title" id="provenance-modal-title">Where does the info come from?</h2>
+    <button type="button" class="provenance-modal__close" data-provenance-close autofocus>Close</button>
+  </div>
+  <div class="provenance-modal__body">
+    {{ with $provPage }}{{ .Content }}{{ end }}
+  </div>
+</dialog>
