@@ -397,6 +397,9 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   display: flex; flex-direction: column; gap: 0.25rem;
 }
 .ach-provider-card__name { font-size: 0.8rem; font-weight: 500; color: var(--fg); }
+.ach-provider-card__name a { color: inherit; }
+.ach-provider-card__name a:hover { color: var(--accent); text-decoration: underline; }
+.ach-provider-card__username { font-size: 0.72rem; color: var(--dim); }
 .ach-provider-card__stats { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; color: var(--dim); font-variant-numeric: tabular-nums; }
 
 .ach-list { flex: 1; min-width: 0; }
@@ -474,6 +477,76 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
     width: 100%;
   }
   .ach-stat, .ach-provider-card { flex: 1 1 8rem; }
+}
+
+/* ── Overview tab: library-wide summary cards ────────────────────────────── */
+// Same sidebar/main split as .ach-panel/.ach-sidebar (games-achievements.html)
+// — providers are a per-source breakdown, not a playthrough stat, so they get
+// their own column instead of competing with the stats/breakdowns for grid space.
+.overview-panel { display: flex; align-items: flex-start; gap: 1.5rem; font-family: $font-ui; }
+.overview-sidebar {
+  position: sticky; top: 0;
+  flex: 0 0 12rem;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.overview-sidebar__heading { font-size: 0.75rem; color: var(--dim); letter-spacing: 0.02em; }
+
+.overview-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1rem; }
+.overview-breakdowns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+// Two columns, each its own vertical stack: stats/Status/Platforms on the
+// left, recently-played/recent-achievements on the right. `align-items:
+// stretch` above makes both `.overview-stack`s match the row's height
+// (i.e. the taller, left column), which the right one then splits evenly.
+.overview-stack { display: flex; flex-direction: column; gap: 1rem; }
+// The right column's two cards get equal height and scroll their own
+// contents rather than growing past it — the heading stays put, only the
+// list beneath it scrolls.
+.overview-stack--split > .overview-recent,
+.overview-stack--split > .overview-recent-achievements {
+  flex: 1 1 0;
+  min-height: 0;
+}
+.overview-stack--split .overview-recent__list,
+.overview-stack--split .ach-rows {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.overview-stats { display: flex; flex-direction: column; gap: 1rem; }
+.overview-status-card, .overview-recent {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+  background: var(--panel);
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+.overview-status-card__name { font-size: 0.8rem; font-weight: 500; color: var(--fg); }
+.overview-status-card__rows, .overview-recent__list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.3rem;
+}
+.overview-status-row, .overview-recent__item {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+  font-size: 0.78rem; color: var(--dim); font-variant-numeric: tabular-nums;
+}
+.overview-status-row__label { color: var(--dim); }
+.overview-status-row__count { color: var(--fg); }
+.overview-recent__item { justify-content: flex-start; }
+.overview-recent__item .ach-row__game { flex: 1; min-width: 0; }
+.overview-recent__date { color: var(--dim); white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .overview-panel { flex-direction: column; }
+  .overview-sidebar {
+    position: static;
+    flex-direction: row; flex-wrap: wrap;
+    width: 100%;
+  }
+  .overview-sidebar .ach-provider-card { flex: 1 1 8rem; }
 }
 
 /* ── Achievements section on a single game's page ───────────────────────── */
@@ -631,6 +704,57 @@ $timeline-status-colors: (
   color: var(--fg); background-color: var(--panel-2);
   border: 1px solid var(--stroke);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Provenance modal (Games page: "Where does the info come from?") ────── */
+.games-subhead { display: flex; justify-content: flex-end; margin: -0.75rem 0 0.5rem; }
+
+.games-subhead__provenance-btn {
+  font-family: $font-ui; font-size: 0.8rem; color: var(--dim);
+  background: none; border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.2rem 0.6rem; cursor: pointer;
+}
+.games-subhead__provenance-btn::before { content: "["; color: var(--stroke); }
+.games-subhead__provenance-btn::after  { content: "]"; color: var(--stroke); }
+.games-subhead__provenance-btn:hover,
+.games-subhead__provenance-btn:focus-visible { color: var(--accent); border-color: var(--accent); }
+
+.provenance-modal {
+  background: var(--panel); color: var(--fg);
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+  padding: 1.6rem 1.8rem;
+  max-width: 640px; width: min(90vw, 640px); max-height: 85vh;
+  overflow-y: auto;
+  font-family: $font-ui;
+}
+.provenance-modal::backdrop { background: rgba(0, 0, 0, 0.55); }
+
+.provenance-modal__head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; margin-bottom: 0.25rem;
+}
+.provenance-modal__title { color: var(--accent); font-size: 1.1rem; margin: 0; }
+.provenance-modal__close {
+  font-family: $font-ui; font-size: 0.8rem; color: var(--dim);
+  background: none; border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.15rem 0.55rem; cursor: pointer; flex: none;
+}
+.provenance-modal__close::before { content: "["; color: var(--stroke); }
+.provenance-modal__close::after  { content: "]"; color: var(--stroke); }
+.provenance-modal__close:hover,
+.provenance-modal__close:focus-visible { color: var(--accent); border-color: var(--accent); }
+
+.provenance-modal__body { font-size: 0.85rem; color: var(--dim); line-height: 1.5; }
+.provenance-modal__body > *:first-child { margin-top: 0; }
+.provenance-modal__body > *:last-child { margin-bottom: 0; }
+.provenance-modal__body p { margin: 0 0 1.25rem; }
+.provenance-modal__body h3 { font-size: 0.95rem; font-weight: 500; color: var(--fg); margin: 0 0 0.4rem; }
+.provenance-modal__body ul { margin: 0 0 1.4rem; padding-left: 1.1rem; }
+.provenance-modal__body li + li { margin-top: 0.3rem; }
+.provenance-modal__body strong { color: var(--fg); font-weight: 500; }
+.provenance-modal__body hr {
+  border: none; border-top: 1px solid var(--stroke);
+  margin: 1.1rem 0 1.2rem;
 }
 
 .card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); margin: 1.5rem 0; }

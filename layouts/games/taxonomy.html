@@ -2,17 +2,32 @@
 <h1>{{ .Title }}</h1>
 {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
+{{/* Trigger starts hidden, revealed by provenance-modal.ts — no dead controls if JS fails. */}}
+<div class="games-subhead">
+  <button type="button" class="games-subhead__provenance-btn" data-provenance-open hidden
+    aria-haspopup="dialog" aria-controls="games-provenance-modal">
+    Where does the info come from?
+  </button>
+</div>
+{{ partial "games-provenance-modal.html" . }}
+
 {{/* Tab buttons start hidden, revealed by tabs.ts — no dead controls if JS fails. */}}
 <div class="tabs" data-tabs>
   <div class="tabs__list" role="tablist" aria-label="Games view" hidden>
+    <button type="button" class="tabs__tab" id="games-tab-overview" role="tab"
+      aria-selected="true" aria-controls="games-panel-overview">Overview</button>
     <button type="button" class="tabs__tab" id="games-tab-timeline" role="tab"
-      aria-selected="true" aria-controls="games-panel-timeline">Timeline</button>
+      aria-selected="false" tabindex="-1" aria-controls="games-panel-timeline">Timeline</button>
     <button type="button" class="tabs__tab" id="games-tab-list" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-list">Game list</button>
     <button type="button" class="tabs__tab" id="games-tab-backlog" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-backlog">Backlog</button>
     <button type="button" class="tabs__tab" id="games-tab-achievements" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-achievements">Achievements</button>
+  </div>
+
+  <div class="tabs__panel" id="games-panel-overview" role="tabpanel" aria-labelledby="games-tab-overview">
+    {{ partial "games-overview.html" . }}
   </div>
 
   {{/* data-self-sized: the timeline chart sizes/scrolls itself; tabs.ts and main.scss key off this. */}}
@@ -157,4 +172,13 @@
 -}}
 {{- $achJS := resources.Get "js/achievements.ts" | js.Build $achJSOpts | fingerprint -}}
 <script src="{{ $achJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $achJS.Data.Integrity }}"{{ end }} defer></script>
+
+{{- $provJSOpts := dict
+    "targetPath" "js/provenance-modal.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $provJS := resources.Get "js/provenance-modal.ts" | js.Build $provJSOpts | fingerprint -}}
+<script src="{{ $provJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $provJS.Data.Integrity }}"{{ end }} defer></script>
 {{ end }}

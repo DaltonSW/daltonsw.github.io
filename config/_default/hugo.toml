@@ -33,6 +33,27 @@ timezone = "America/Chicago"
 [markup.goldmark.renderer]
     unsafe = true
 
+# Public handles shown/linked on the Overview tab's provider cards
+# (layouts/partials/games-overview.html). These are public profile identifiers,
+# not secrets — real credentials (API keys, tokens) stay in tools/gamelog/.env,
+# which Hugo never reads. Leave a provider's fields blank to show the card
+# without a username/link, same as today.
+[params.providers.retroachievements]
+    username = "DaltonSW"
+    profile_url = "https://retroachievements.org/user/DaltonSW"
+[params.providers.steam]
+    username = "DaltonSW"
+    profile_url = "https://steamcommunity.com/id/daltonsw/"
+[params.providers.xbox]
+    username = ""
+    profile_url = ""
+[params.providers.psn]
+    username = "DaltonSW"
+    profile_url = ""
+[params.providers.ubisoft]
+    username = "DaltonSTW"
+    profile_url = ""
+
 # Vendors vis-timeline's base stylesheet from node_modules so it's addressable
 # via resources.Get, same as any other asset.
 [[module.mounts]]

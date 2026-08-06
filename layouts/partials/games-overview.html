@@ -1,0 +1,235 @@
+{{/* Overview tab: library-wide summary cards (not achievement-scoped) —
+     total games/hours/achievements, status mix, provider mix, platform mix,
+     and recently-played. Default-open tab, first sibling of Timeline/Game
+     list/Backlog/Achievements. Included from layouts/games/taxonomy.html;
+     context is the games taxonomy page. */}}
+{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" -}}
+{{- $providerNames := dict
+    "retroachievements" "RetroAchievements"
+    "steam"             "Steam"
+    "xbox"              "Xbox"
+    "psn"               "PSN"
+    "ubisoft"           "Ubisoft"
+-}}
+
+{{- $totalGames := len .Pages -}}
+{{- $playtimeMins := 0 -}}
+{{- $unlocked := 0 -}}
+{{- $total := 0 -}}
+{{- $statusCounts := dict -}}
+{{- $platformCounts := dict -}}
+{{- $providerCounts := dict -}}
+{{- range $providerOrder -}}{{- $providerCounts = merge $providerCounts (dict . 0) -}}{{- end -}}
+{{- $recent := slice -}}
+{{- $recentAchievements := slice -}}
+
+{{- range .Pages -}}
+  {{- $page := . -}}
+
+  {{- with .Params.status -}}
+    {{- $statusCounts = merge $statusCounts (dict . (add ((index $statusCounts .) | default 0) 1)) -}}
+  {{- end -}}
+
+  {{/* Multi-platform games store a comma-joined string, e.g. "PC, Xbox 360" — see the
+       identical split in layouts/games/taxonomy.html's Game list tab. */}}
+  {{- with .Params.platform -}}
+    {{- range (split . ", ") -}}
+      {{- $platformCounts = merge $platformCounts (dict . (add ((index $platformCounts .) | default 0) 1)) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with .Resources.Get "achievement-summary.yaml" -}}
+    {{- $summary := . | transform.Unmarshal -}}
+    {{- $playtimeMins = add $playtimeMins ($summary.playtime_mins | default 0) -}}
+    {{- $unlocked = add $unlocked ($summary.unlocked | default 0) -}}
+    {{- $total = add $total ($summary.total | default 0) -}}
+    {{- range ($summary.providers | default slice) -}}
+      {{- if isset $providerCounts .provider -}}
+        {{- $providerCounts = merge $providerCounts (dict .provider (add (index $providerCounts .provider) 1)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{/* Same $earned flattening as games-achievements.html, just capped to the
+         newest few instead of the whole grouped-by-year feed. */}}
+    {{- range ($summary.earned | default slice) -}}
+      {{- if .date -}}
+        {{- $recentAchievements = $recentAchievements | append (merge . (dict "page" $page)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $lastPlayed := partial "game-last-played.html" $page -}}
+  {{- with $lastPlayed -}}
+    {{- $recent = $recent | append (dict "page" $page "date" .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Not capped to what fits on screen — each card scrolls internally
+     (see .overview-stack--split in main.scss), so this just bounds how much
+     ends up in the DOM. */}}
+{{- $recent = first 30 (sort $recent "date" "desc") -}}
+{{- $recentAchievements = first 30 (sort $recentAchievements "date" "desc") -}}
+
+{{/* Lifecycle order, not alphabetical — same sequence $status-colors defines in
+     main.scss, so this card reads "active → done → shelved" like the rest of
+     the site's status vocabulary. Any status outside that list (shouldn't
+     happen, but cheap to guard) is appended alphabetically at the end. */}}
+{{- $statusOrder := slice "playing" "ongoing" "multiplayer" "paused"
+    "finished" "mastered" "software" "misc_launch"
+    "dropped" "backlog" "unplayed" "planned" -}}
+{{- $statuses := slice -}}
+{{- range $statusOrder -}}
+  {{- if isset $statusCounts . -}}{{- $statuses = $statuses | append . -}}{{- end -}}
+{{- end -}}
+{{- range $status, $count := $statusCounts -}}
+  {{- if not (in $statuses $status) -}}{{- $statuses = $statuses | append $status -}}{{- end -}}
+{{- end -}}
+
+{{/* Most-played platforms first — count matters more than alphabetizing here. */}}
+{{- $platforms := slice -}}
+{{- range $platform, $count := $platformCounts -}}{{- $platforms = $platforms | append $platform -}}{{- end -}}
+{{- $platforms = sort $platforms "value" "asc" -}}
+{{- $platformRows := slice -}}
+{{- range $platforms -}}{{- $platformRows = $platformRows | append (dict "platform" . "count" (index $platformCounts .)) -}}{{- end -}}
+{{- $platformRows = sort $platformRows "count" "desc" -}}
+
+{{/* Mirrors games-achievements.html's .ach-panel/.ach-sidebar split: providers
+     (a per-source breakdown, not a playthrough stat) live in a left column,
+     same as the Achievements tab, so the two tabs read as one family. */}}
+<div class="overview-panel">
+  <aside class="overview-sidebar" aria-label="Providers">
+    <span class="overview-sidebar__heading">Providers</span>
+    {{/* Username/profile link come from [params.providers.<slug>] in
+         hugo.toml — public handles, blank by default. */}}
+    {{- $providerParams := site.Params.providers | default dict }}
+    {{- range $providerOrder }}
+    {{- $provider := . }}
+    {{- $count := index $providerCounts $provider }}
+    {{- if gt $count 0 }}
+    {{- $cfg := index $providerParams $provider | default dict }}
+    {{- $username := $cfg.username | default "" }}
+    {{- $profileURL := $cfg.profile_url | default "" }}
+    <div class="ach-provider-card">
+      <span class="ach-provider-card__name">
+        {{- if $profileURL }}<a href="{{ $profileURL }}" target="_blank" rel="noopener">{{ index $providerNames $provider }}</a>
+        {{- else }}{{ index $providerNames $provider }}
+        {{- end }}
+      </span>
+      {{- with $username }}<span class="ach-provider-card__username">{{ . }}</span>{{ end }}
+      <div class="ach-provider-card__stats">
+        <span class="ach-provider-card__count">{{ $count }} game{{ if ne $count 1 }}s{{ end }}</span>
+      </div>
+    </div>
+    {{- end }}
+    {{- end }}
+  </aside>
+
+  <div class="overview-main">
+    <div class="overview-breakdowns">
+      {{/* Stats, Status, and Platforms stack into one column. */}}
+      <div class="overview-stack">
+        <div class="overview-stats">
+          <div class="ach-stat">
+            <span class="ach-stat__value">{{ $totalGames }}</span>
+            <span class="ach-stat__label">games logged</span>
+          </div>
+          <div class="ach-stat">
+            <span class="ach-stat__value">{{ printf "%.0fh" (div $playtimeMins 60.0) }}</span>
+            <span class="ach-stat__label">played</span>
+          </div>
+          <div class="ach-stat">
+            <span class="ach-stat__value">{{ $unlocked }}{{ if gt $total 0 }}/{{ $total }}{{ end }}</span>
+            <span class="ach-stat__label">achievements</span>
+          </div>
+        </div>
+
+        <div class="overview-status-card">
+          <span class="overview-status-card__name">Status</span>
+          <ul class="overview-status-card__rows">
+            {{- range $statuses }}
+            {{- $status := . }}
+            <li class="overview-status-row">
+              {{ partial "game-status-tag.html" $status }}
+              <span class="overview-status-row__count">{{ index $statusCounts $status }}</span>
+            </li>
+            {{- end }}
+          </ul>
+        </div>
+
+        <div class="overview-status-card">
+          <span class="overview-status-card__name">Platforms</span>
+          <ul class="overview-status-card__rows">
+            {{- range $platformRows }}
+            <li class="overview-status-row">
+              <span class="overview-status-row__label">{{ .platform }}</span>
+              <span class="overview-status-row__count">{{ .count }}</span>
+            </li>
+            {{- end }}
+          </ul>
+        </div>
+      </div>
+
+      {{/* Recently played and recent achievements split the column's height
+           evenly and each scroll internally past whatever fits. */}}
+      <div class="overview-stack overview-stack--split" data-ach-root>
+        <div class="overview-recent">
+          <span class="overview-status-card__name">Recently played</span>
+          {{- if eq (len $recent) 0 }}
+          <p class="ach-empty">No activity logged yet.</p>
+          {{- else }}
+          <ul class="overview-recent__list">
+            {{- range $recent }}
+            <li class="overview-recent__item">
+              <a class="ach-row__game" href="{{ .page.RelPermalink }}">{{ .page.Title }}</a>
+              <span class="overview-recent__date">{{ .date | time.Format "Jan 2, 2006" }}</span>
+            </li>
+            {{- end }}
+          </ul>
+          {{- end }}
+        </div>
+
+        <div class="overview-status-card overview-recent-achievements">
+          <span class="overview-status-card__name">Recent achievements</span>
+          {{- if eq (len $recentAchievements) 0 }}
+          <p class="ach-empty">No achievements logged yet.</p>
+          {{- else }}
+          <div class="ach-rows">
+            {{- range $recentAchievements }}
+            {{- $row := . }}
+            {{- $hidden := $row.hidden | default false }}
+            <div class="ach-row{{ if $hidden }} ach-row--hidden{{ end }}"{{ if $hidden }} data-hidden tabindex="0" role="button" aria-pressed="false" aria-label="Hidden achievement — click to reveal" title="Hidden achievement — click to reveal"{{ end }}>
+              {{/* Same icon-URL handling as games-achievements.html: RA's icon
+                   is a bare badge id, everything else is already a full URL. */}}
+              {{- $iconSrc := "" }}
+              {{- if $row.icon }}
+                {{- if eq $row.provider "retroachievements" }}
+                  {{- $iconSrc = printf "https://media.retroachievements.org/Badge/%s.png" $row.icon }}
+                {{- else }}
+                  {{- $iconSrc = $row.icon }}
+                {{- end }}
+              {{- end }}
+              {{- if $iconSrc }}
+              <img class="ach-row__icon" src="{{ $iconSrc }}" alt="" loading="lazy" width="32" height="32">
+              {{- else }}
+              <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
+              {{- end }}
+              <div class="ach-row__body">
+                <div class="ach-row__blur-content">
+                  <div class="ach-row__title-line">
+                    <span class="ach-row__name">{{ $row.name }}</span>
+                  </div>
+                  {{- if $hidden }}<span class="ach-row__hidden-tag" aria-hidden="true">hidden — click to reveal</span>{{ end }}
+                </div>
+                <div class="ach-row__meta">
+                  <a class="ach-row__game" href="{{ $row.page.RelPermalink }}">{{ $row.page.Title }}</a>
+                  <span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
+                </div>
+              </div>
+            </div>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
