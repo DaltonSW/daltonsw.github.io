@@ -10,6 +10,8 @@
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
+  {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
   <button type="submit">Re-scan</button>
 </form>
 
@@ -32,6 +34,70 @@
 </form>
 {{end}}
 
+<h2>Backlog</h2>
+<p class="lead">The other side of the same threshold: games you own on Steam but have played for
+   less than {{.MinHours}}h and never logged. Creating one writes a <code>status: backlog</code>
+   draft with no playthroughs.yaml. Adjust the threshold in the Scan section above — the two
+   lists split the library at the same line, so nothing appears in both.</p>
+
+{{with .BacklogError}}<div class="flash flash--error">{{.}}</div>{{end}}
+<pre>{{.BacklogReport}}</pre>
+
+{{if .BacklogCandidates}}
+<form method="post" action="/backlog" class="tui">
+  <span class="tui__title">create backlog entries</span>
+  <input type="hidden" name="min_hours" value="{{.MinHours}}">
+  <div class="stack">
+  {{range $i, $c := .BacklogCandidates}}
+    <div class="checkbox-row">
+      <input type="checkbox" id="b{{$i}}" name="candidate" value="{{$i}}">
+      <label for="b{{$i}}">{{$c.Title}}{{if gt $c.PlaytimeMins 0}} · {{formatHoursFunc $c.PlaytimeMins}}{{else}} · never launched{{end}}</label>
+    </div>
+  {{end}}
+  </div>
+  <div class="btn-row"><button type="submit" class="btn--primary">Create selected (backlog draft)</button></div>
+</form>
+{{end}}
+
+<h2>Unfinished</h2>
+<p class="lead">Logged games with achievements left to earn, closest to done first. Read from the
+   archive on disk — no API calls, nothing written. One row per provider, since each has its own
+   denominator.</p>
+<form method="get" action="/housekeeping" class="row">
+  <label for="unfinished_pct">Min completion %</label>
+  <input type="number" step="5" id="unfinished_pct" name="unfinished_pct" value="{{.UnfinishedPct}}" style="max-width: 8rem;">
+  <div class="checkbox-row"><input type="checkbox" id="unfinished_all" name="unfinished_all" value="1"{{if .UnfinishedAll}} checked{{end}}><label for="unfinished_all">include finished/dropped/mastered</label></div>
+  <input type="hidden" name="min_hours" value="{{.MinHours}}">
+  <input type="hidden" name="stale_days" value="{{.StaleDays}}">
+  <input type="hidden" name="close_days" value="{{.CloseDays}}">
+  {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <button type="submit">Refresh</button>
+</form>
+<p class="lead">{{len .Unfinished}} game/provider pair(s) at {{.UnfinishedPct}}%+ with achievements outstanding.</p>
+
+{{if .Unfinished}}
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Game</th><th>Status</th><th>Provider</th><th>Progress</th><th>Left</th><th>Last played</th><th>Playtime</th></tr></thead>
+  <tbody>
+  {{range .Unfinished}}
+  <tr>
+    <td><a href="/games/{{.Game.Slug}}">{{.Game.Title}}</a>{{if .Game.Draft}} <span class="dim">[draft]</span>{{end}}</td>
+    <td class="dim">{{.Game.Status}}</td>
+    <td class="dim">{{.Provider}}</td>
+    <td>{{.Unlocked}}/{{.Total}} ({{printf "%.0f" .Pct}}%)</td>
+    <td>{{.Remaining}}</td>
+    <td class="dim">{{if .LastPlayed}}{{.LastPlayed}} ({{.DaysSince}}d){{else}}—{{end}}</td>
+    <td class="dim">{{if gt .PlaytimeMins 0}}{{formatHoursFunc .PlaytimeMins}}{{else}}—{{end}}</td>
+  </tr>
+  {{end}}
+  </tbody>
+</table>
+</div>
+{{else}}
+<p class="empty">Nothing outstanding above that threshold.</p>
+{{end}}
+
 <h2>Stale</h2>
 <form method="get" action="/housekeeping" class="row">
   <label for="stale_days">Quiet threshold (days)</label>
@@ -39,6 +105,8 @@
   <input type="hidden" name="min_hours" value="{{.MinHours}}">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
+  {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
   <button type="submit">Refresh</button>
 </form>
 <p class="lead">{{len .StaleGames}} game(s) gone quiet for {{.StaleDays}}+ days.</p>
@@ -66,6 +134,8 @@
   <div class="checkbox-row"><input type="checkbox" id="close_all" name="close_all" value="1"{{if .CloseAll}} checked{{end}}><label for="close_all">include "playing" games</label></div>
   <input type="hidden" name="min_hours" value="{{.MinHours}}">
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
+  <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
+  {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
   <button type="submit">Refresh</button>
 </form>
 <p class="lead">{{len .CloseEntries}} playthrough(s) left open for {{.CloseDays}}+ days.</p>

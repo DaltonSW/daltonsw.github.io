@@ -75,8 +75,34 @@ func (c Candidate) NewGameFields() model.NewGameFields {
 	return f
 }
 
+// ScanMode selects which half of the Steam library a scan is interested in.
+// The two modes partition the library on the same MinHours boundary, so a
+// game can never show up under both — there's one threshold to reason about,
+// not two that can drift out of step.
+type ScanMode int
+
+const (
+	// ScanModePlayed keeps games at or above MinHours: things there's
+	// plausibly something to say about. The zero value, so an unset Mode
+	// means the original scan behaviour.
+	ScanModePlayed ScanMode = iota
+	// ScanModeBacklog keeps everything below MinHours: owned, effectively
+	// untouched, and therefore backlog rather than history.
+	ScanModeBacklog
+)
+
 type ScanOptions struct {
 	MinHours float64
+	Mode     ScanMode
+}
+
+// keeps reports whether a game with this much recorded playtime belongs to
+// the half of the library these options select. The threshold itself counts
+// as played, so the two modes are a strict partition — no game is dropped by
+// both, none is offered by both.
+func (o ScanOptions) keeps(playtimeMins int) bool {
+	below := playtimeMins < int(o.MinHours*60)
+	return below == (o.Mode == ScanModeBacklog)
 }
 
 // loggedIndex answers "is this game already in content/games?". External IDs
@@ -174,10 +200,10 @@ func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts S
 		return nil, err
 	}
 
-	minMinutes := int(opts.MinHours * 60)
+	backlog := opts.Mode == ScanModeBacklog
 	var out []Candidate
 	for _, g := range owned {
-		if g.PlaytimeMins < minMinutes {
+		if !opts.keeps(g.PlaytimeMins) {
 			continue
 		}
 		id := strconv.Itoa(g.AppID)
@@ -193,6 +219,11 @@ func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts S
 			// Steam has no completion signal, so a scanned Steam game is
 			// never marked finished on the strength of playtime alone.
 			Status: "playing",
+		}
+		if backlog {
+			// Owned but not really played: that's the backlog, and there's
+			// no finish signal to guess from either way.
+			c.Status = "backlog"
 		}
 		if g.LastPlayed > 0 {
 			c.LastActivity = day(time.Unix(g.LastPlayed, 0))

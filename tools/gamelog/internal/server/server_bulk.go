@@ -18,25 +18,36 @@ import (
 // calls. Both GET and POST need this (POST re-derives it to map submitted
 // checkbox indices back to real candidates) — cheap and safe to call twice,
 // per README: "two bulk endpoints ... fast, can't be rate-limited."
-func (s *server) scanCandidates(minHours float64) ([]commands.Candidate, int, error) {
+//
+// mode picks which half of the Steam library is wanted, and the backlog half
+// skips RetroAchievements entirely: RA has no notion of ownership, and
+// GetUserCompletionProgress only returns games with at least one achievement
+// already earned, so nothing it reports could belong in a backlog list.
+func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) ([]commands.Candidate, int, error) {
 	existing, err := model.ListGames(s.gamesDir)
 	if err != nil {
 		return nil, 0, err
 	}
 	creds := commands.LoadCredentials()
-	if !creds.RAConfigured() && !creds.SteamConfigured() {
+	backlog := mode == commands.ScanModeBacklog
+	if backlog {
+		if !creds.SteamConfigured() {
+			return nil, len(existing), fmt.Errorf("Steam credentials not configured; see tools/gamelog/README.md")
+		}
+	} else if !creds.RAConfigured() && !creds.SteamConfigured() {
 		return nil, len(existing), fmt.Errorf("no credentials configured; see tools/gamelog/README.md")
 	}
 	ctx := context.Background()
 	index := commands.NewLoggedIndex(existing)
 	var candidates []commands.Candidate
-	if creds.RAConfigured() {
+	if creds.RAConfigured() && !backlog {
 		if found, err := commands.ScanRA(ctx, creds, index); err == nil {
 			candidates = append(candidates, found...)
 		}
 	}
 	if creds.SteamConfigured() {
-		if found, err := commands.ScanSteam(ctx, creds, index, commands.ScanOptions{MinHours: minHours}); err == nil {
+		opts := commands.ScanOptions{MinHours: minHours, Mode: mode}
+		if found, err := commands.ScanSteam(ctx, creds, index, opts); err == nil {
 			candidates = append(candidates, found...)
 		}
 	}
@@ -45,12 +56,24 @@ func (s *server) scanCandidates(minHours float64) ([]commands.Candidate, int, er
 }
 
 func (s *server) handleScanCreate(w http.ResponseWriter, r *http.Request) {
+	s.createFromScan(w, r, commands.ScanModePlayed)
+}
+
+func (s *server) handleBacklogCreate(w http.ResponseWriter, r *http.Request) {
+	s.createFromScan(w, r, commands.ScanModeBacklog)
+}
+
+// createFromScan backs both create buttons. The submitted checkbox values are
+// indices into a list the browser never held, so the scan has to be re-derived
+// with the same min_hours *and* the same mode — a mismatch on either would map
+// the indices onto different games.
+func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode commands.ScanMode) {
 	if err := r.ParseForm(); err != nil {
 		redirectErr(w, r, "/housekeeping", err)
 		return
 	}
 	minHours := atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours)
-	candidates, _, err := s.scanCandidates(minHours)
+	candidates, _, err := s.scanCandidates(minHours, mode)
 	if err != nil {
 		redirectErr(w, r, "/housekeeping", err)
 		return
@@ -66,7 +89,11 @@ func (s *server) handleScanCreate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	created, skipped := commands.CreateFromCandidates(s.gamesDir, candidates, chosen)
-	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d created, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), skipped))
+	kind := "created"
+	if mode == commands.ScanModeBacklog {
+		kind = "created as backlog"
+	}
+	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
 }
 
 func atoiFloatOr(s string, def float64) float64 {
@@ -100,11 +127,20 @@ type housekeepingData struct {
 	ScanCandidates []commands.Candidate
 	ScanError      string
 	MinHours       float64
-	StaleGames     []staleRow
-	StaleDays      int
-	CloseEntries   []commands.OpenEntry
-	CloseDays      int
-	CloseAll       bool
+	// Backlog* is the same scan against the other side of MinHours. It
+	// shares min_hours on purpose — one boundary, two complementary lists,
+	// so nothing can appear in both.
+	BacklogReport     string
+	BacklogCandidates []commands.Candidate
+	BacklogError      string
+	Unfinished        []commands.UnfinishedCandidate
+	UnfinishedPct     float64
+	UnfinishedAll     bool
+	StaleGames        []staleRow
+	StaleDays         int
+	CloseEntries      []commands.OpenEntry
+	CloseDays         int
+	CloseAll          bool
 }
 
 func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
@@ -118,16 +154,25 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	staleDays := atoiOr(q.Get("stale_days"), commands.DefaultStaleDays)
 	closeDays := atoiOr(q.Get("close_days"), commands.DefaultStaleDays)
 	closeAll := q.Get("close_all") == "1"
+	unfinishedPct := float64(commands.DefaultUnfinishedPct)
+	if v := q.Get("unfinished_pct"); v != "" {
+		if f, err := strconv.ParseFloat(v, 64); err == nil {
+			unfinishedPct = f
+		}
+	}
+	unfinishedAll := q.Get("unfinished_all") == "1"
 
 	data := housekeepingData{
-		Page:      newPage(r, "Housekeeping", "housekeeping"),
-		MinHours:  minHours,
-		StaleDays: staleDays,
-		CloseDays: closeDays,
-		CloseAll:  closeAll,
+		Page:          newPage(r, "Housekeeping", "housekeeping"),
+		MinHours:      minHours,
+		UnfinishedPct: unfinishedPct,
+		UnfinishedAll: unfinishedAll,
+		StaleDays:     staleDays,
+		CloseDays:     closeDays,
+		CloseAll:      closeAll,
 	}
 
-	candidates, numExisting, err := s.scanCandidates(minHours)
+	candidates, numExisting, err := s.scanCandidates(minHours, commands.ScanModePlayed)
 	if err != nil {
 		// Kept separate from Page.Flash, which is reserved for the
 		// redirect-landing confirmation from a stale/close/scan-create
@@ -139,11 +184,32 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		data.ScanReport = commands.FormatScanReport(candidates, numExisting, commands.ScanOptions{MinHours: minHours})
 	}
 
+	backlogOpts := commands.ScanOptions{MinHours: minHours, Mode: commands.ScanModeBacklog}
+	backlog, numExisting, err := s.scanCandidates(minHours, commands.ScanModeBacklog)
+	if err != nil {
+		data.BacklogError = err.Error()
+	} else {
+		data.BacklogCandidates = backlog
+		data.BacklogReport = commands.FormatBacklogReport(backlog, numExisting, backlogOpts)
+	}
+
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
+	// Reads the archive on disk only — no provider calls, so this section
+	// renders even with no credentials configured at all.
+	unfinished, err := commands.FindUnfinished(model.FindArchiveDir(s.gamesDir), games, commands.UnfinishedOptions{
+		MinPct:      unfinishedPct,
+		IncludeDone: unfinishedAll,
+	})
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	data.Unfinished = unfinished
 
 	staleCandidates, err := commands.FindStaleCandidates(model.FindArchiveDir(s.gamesDir), games, staleDays)
 	if err != nil {

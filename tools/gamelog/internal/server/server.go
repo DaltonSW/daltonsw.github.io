@@ -144,6 +144,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 
 	mux.HandleFunc("GET /housekeeping", s.handleHousekeeping)
 	mux.HandleFunc("POST /scan", s.handleScanCreate)
+	mux.HandleFunc("POST /backlog", s.handleBacklogCreate)
 	mux.HandleFunc("POST /stale/{slug}", s.handleStaleAction)
 	mux.HandleFunc("POST /close", s.handleCloseSelected)
 	mux.HandleFunc("POST /achievements/all", s.handleAchievementsAll)
