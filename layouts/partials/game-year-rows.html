@@ -40,48 +40,6 @@
   {{- end -}}
 {{- end -}}
 
-{{/* Whichever of started/finished/last-session-date is the most recent known
-     activity implied by $entries alone — same rule the main loop below
-     applies per entry, computed once here for comparison against the
-     archive. */}}
-{{- $latestDated := "" -}}
-{{- range $entries -}}
-  {{- $candidate := "" -}}
-  {{- if gt (len .sessions) 0 -}}
-    {{- $sorted := sort .sessions "started" "asc" -}}
-    {{- $last := index $sorted (sub (len $sorted) 1) -}}
-    {{- $candidate = $last.started -}}
-    {{- with $last.finished -}}{{- $candidate = . -}}{{- end -}}
-  {{- else -}}
-    {{- $candidate = .started -}}
-    {{- with .finished -}}{{- $candidate = . -}}{{- end -}}
-  {{- end -}}
-  {{- if and $candidate (or (eq $latestDated "") (gt $candidate $latestDated)) -}}
-    {{- $latestDated = $candidate -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* A refreshed achievement summary can be more recent than any logged
-     session — see game-last-played.html, which already takes this max
-     unconditionally. Append (not replace) so this covers both "nothing
-     logged at all" and "logged sessions exist but stop before the archive's
-     last-played date" — without this, an actively-played game whose latest
-     session hasn't been logged yet would show a stale "played" date. */}}
-{{- with $game.Resources.Get "achievement-summary.yaml" -}}
-  {{- with (. | transform.Unmarshal).last_played -}}
-    {{- if or (eq $latestDated "") (gt . $latestDated) -}}
-      {{- $entries = $entries | append (dict
-          "started"  .
-          "finished" .
-          "status"   $game.Params.status
-          "platform" $game.Params.platform
-          "sessions" slice
-        )
-      -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
 {{- $rows := dict -}}
 
 {{- range $entries -}}
