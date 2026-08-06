@@ -1,21 +1,21 @@
 {
  "provider": "steam",
  "title": "Lies of P",
- "updated": "2026-08-03",
+ "updated": "2026-08-06",
  "id": "1627720",
- "fetched": "2026-08-03",
- "last_attempt": "2026-08-03",
- "unlocked": 35,
+ "fetched": "2026-08-06",
+ "last_attempt": "2026-08-06",
+ "unlocked": 37,
  "total": 53,
  "first": "2026-07-18",
- "last": "2026-08-02",
+ "last": "2026-08-05",
  "platform": "PC",
  "icon": "978b39341282c22c22264141f9618c36094b4214",
- "playtime_mins": 2688,
+ "playtime_mins": 3102,
  "playtime": {
-  "linux": 2688
+  "linux": 3102
  },
- "last_played": "2026-08-02",
+ "last_played": "2026-08-06",
  "achievements": [
   {
    "key": "LOP_122",
@@ -298,6 +298,22 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/059be932c20fa1264ff9d00b68ba30f6cafc9dbc.jpg"
   },
   {
+   "key": "LOP_151",
+   "name": "Puppeteer of Death",
+   "unlocked": true,
+   "date": "2026-08-03T20:53:22-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/c8468c0178f471a9db757c54c97f9960ab192b88.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LOP_147",
+   "name": "Beyond Limitless Potential",
+   "description": "Further upgrade the abilities of the P-Organ.",
+   "unlocked": true,
+   "date": "2026-08-05T16:54:14-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/d83523c6ab1e2e47f819d159b4025f26aafa044e.jpg"
+  },
+  {
    "key": "LOP_102",
    "name": "Real boy : They all lived happily ever after",
    "unlocked": false,
@@ -368,13 +384,6 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/240ec35bdcbda64c27a75bf69272446e2e707c5a.jpg"
   },
   {
-   "key": "LOP_147",
-   "name": "Beyond Limitless Potential",
-   "description": "Further upgrade the abilities of the P-Organ.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/d83523c6ab1e2e47f819d159b4025f26aafa044e.jpg"
-  },
-  {
    "key": "LOP_148",
    "name": "Memory's Melody",
    "description": "Collect and listen to all records from the Forgotten Time.",
@@ -394,13 +403,6 @@
    "description": "Decrypt all clues hidden inside the cipher machines and claim the rewards.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/6cf9301f2329efb08407bd5354b807215c9d8cb9.jpg"
-  },
-  {
-   "key": "LOP_151",
-   "name": "Puppeteer of Death",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/c8468c0178f471a9db757c54c97f9960ab192b88.jpg",
-   "hidden": true
   },
   {
    "key": "LOP_152",
@@ -746,8 +748,8 @@
     },
     {
      "apiname": "LOP_147",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1785966854,
      "name": "Beyond Limitless Potential",
      "description": "Further upgrade the abilities of the P-Organ."
     },
@@ -774,8 +776,8 @@
     },
     {
      "apiname": "LOP_151",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1785808402,
      "name": "Puppeteer of Death",
      "description": ""
     },

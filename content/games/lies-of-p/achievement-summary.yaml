@@ -1,14 +1,14 @@
-unlocked: 35
+unlocked: 37
 total: 53
-playtime_mins: 2688
-last_played: "2026-08-02"
+playtime_mins: 3102
+last_played: "2026-08-06"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 35
+      unlocked: 37
       total: 53
-      playtime_mins: 2688
-      last_played: "2026-08-02"
+      playtime_mins: 3102
+      last_played: "2026-08-06"
 earned:
     - name: Fatal Blow
       description: Deliver a successful Fatal Attack.
@@ -218,5 +218,17 @@ earned:
       description: Find out about the last story of Sophia.
       date: "2026-08-02T11:42:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/059be932c20fa1264ff9d00b68ba30f6cafc9dbc.jpg
+      provider: steam
+      platform: PC
+    - name: Puppeteer of Death
+      date: "2026-08-03T20:53:22-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/c8468c0178f471a9db757c54c97f9960ab192b88.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Beyond Limitless Potential
+      description: Further upgrade the abilities of the P-Organ.
+      date: "2026-08-05T16:54:14-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/d83523c6ab1e2e47f819d159b4025f26aafa044e.jpg
       provider: steam
       platform: PC

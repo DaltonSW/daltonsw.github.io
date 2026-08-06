@@ -1,14 +1,14 @@
-unlocked: 12
+unlocked: 13
 total: 40
-playtime_mins: 1218
-last_played: "2026-07-27"
+playtime_mins: 1260
+last_played: "2026-08-04"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 12
+      unlocked: 13
       total: 40
-      playtime_mins: 1218
-      last_played: "2026-07-27"
+      playtime_mins: 1260
+      last_played: "2026-08-04"
 earned:
     - name: The Fog of Misthallery
       description: Finish Chapter 1.
@@ -104,5 +104,13 @@ earned:
       points: 10
       hardcore: true
       icon: "151067"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Debris of the Spectre
+      description: Collect all 24 Collectibles.
+      date: "2026-08-03T22:07:03-05:00"
+      points: 10
+      hardcore: true
+      icon: "151130"
       provider: retroachievements
       platform: Nintendo DS
