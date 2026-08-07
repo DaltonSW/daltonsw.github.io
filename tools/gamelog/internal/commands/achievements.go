@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"sync"
 
 	"github.com/charmbracelet/huh"
 
@@ -18,6 +19,38 @@ import (
 	"go.dalton.dog/gamelog/internal/providers/steam"
 	"go.dalton.dog/gamelog/internal/providers/xbox"
 )
+
+// raRecentCache memoizes the user-level GetUserRecentlyPlayedGames list for
+// the process — at RA's ~1.2s throttle, re-walking its pages per game would
+// dominate an `--all` run.
+var raRecentCache = struct {
+	sync.Mutex
+	byUser map[string]map[string]*retroachievements.RARecentGame
+}{byUser: map[string]map[string]*retroachievements.RARecentGame{}}
+
+// raRecentlyPlayed returns last-played dates keyed by RA game id, fetching
+// them on first use. A failure isn't fatal: last_played just falls back to the
+// newest unlock, as it did before this existed.
+func raRecentlyPlayed(ctx context.Context, client *retroachievements.RAClient, username string) map[string]*retroachievements.RARecentGame {
+	raRecentCache.Lock()
+	defer raRecentCache.Unlock()
+	if byID, ok := raRecentCache.byUser[username]; ok {
+		return byID
+	}
+
+	games, err := client.GetRecentlyPlayed(ctx)
+	if err != nil {
+		// Cached anyway, so this warns once per run rather than per game.
+		fmt.Fprintf(os.Stderr, "  (retroachievements last-played unavailable: %v)\n", err)
+	}
+	byID := map[string]*retroachievements.RARecentGame{}
+	for i := range games {
+		g := games[i]
+		byID[g.ID()] = &g
+	}
+	raRecentCache.byUser[username] = byID
+	return byID
+}
 
 // savedRecord is one provider's outcome from a fetch-and-archive run.
 type savedRecord struct {
@@ -43,7 +76,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 
 	if raID != "" && creds.RAConfigured() {
 		client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
-		rec, err := retroachievements.FetchRecord(ctx, client, raID)
+		rec, err := retroachievements.FetchRecord(ctx, client, raID, raRecentlyPlayed(ctx, client, creds.RAUsername)[raID])
 		if err != nil {
 			return nil, err
 		}

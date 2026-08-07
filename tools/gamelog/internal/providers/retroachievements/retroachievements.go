@@ -18,9 +18,14 @@ import (
 // Endpoint base. A var rather than a const so tests can point it at a local
 // server; never reassigned in production code.
 var (
-	raGameProgressURL = "https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php"
-	raCompletionURL   = "https://retroachievements.org/API/API_GetUserCompletionProgress.php"
+	raGameProgressURL   = "https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php"
+	raCompletionURL     = "https://retroachievements.org/API/API_GetUserCompletionProgress.php"
+	raRecentlyPlayedURL = "https://retroachievements.org/API/API_GetUserRecentlyPlayedGames.php"
 )
+
+// raRecentPageSize is the most GetUserRecentlyPlayedGames returns per request;
+// it silently caps a larger `c`, so pages must be walked with `o`.
+const raRecentPageSize = 50
 
 // RetroAchievements rejects Go's default "Go-http-client/1.1" User-Agent with
 // a 403; their API policy asks for a descriptive one identifying the client.
@@ -150,6 +155,55 @@ type RAProgress struct {
 
 	// Raw is the verbatim response body; see SteamAchievementsResult.Raw.
 	Raw json.RawMessage `json:"-"`
+}
+
+// RARecentGame is one entry in a GetUserRecentlyPlayedGames response — the
+// only RA endpoint reporting when a game was actually played, as opposed to
+// when it last unlocked something. LastPlayed is a zoneless SQL datetime,
+// like DateEarned.
+type RARecentGame struct {
+	GameID      int    `json:"GameID"`
+	Title       string `json:"Title"`
+	ConsoleName string `json:"ConsoleName"`
+	LastPlayed  string `json:"LastPlayed"`
+}
+
+// ID is the game id as the archive keys it.
+func (g RARecentGame) ID() string { return strconv.Itoa(g.GameID) }
+
+// GetRecentlyPlayed lists every game the user has played, most recent first.
+// Despite the name it returns the whole client-tracked history, so it works as
+// a lookup table for the entire library.
+func (c *RAClient) GetRecentlyPlayed(ctx context.Context) ([]RARecentGame, error) {
+	var all []RARecentGame
+	for offset := 0; ; offset += raRecentPageSize {
+		q := url.Values{}
+		q.Set("z", c.Username)
+		q.Set("y", c.APIKey)
+		q.Set("u", c.Username)
+		q.Set("c", strconv.Itoa(raRecentPageSize))
+		q.Set("o", strconv.Itoa(offset))
+
+		body, status, err := c.do(ctx, raRecentlyPlayedURL+"?"+q.Encode())
+		if err != nil {
+			return all, fmt.Errorf("retroachievements: recently played request: %w", err)
+		}
+		if status != http.StatusOK {
+			if msg := raErrorMessage(body); msg != "" {
+				return all, fmt.Errorf("retroachievements: recently played: %s (status %d)", msg, status)
+			}
+			return all, fmt.Errorf("retroachievements: recently played: unexpected status %d", status)
+		}
+
+		var page []RARecentGame
+		if err := json.Unmarshal(body, &page); err != nil {
+			return all, fmt.Errorf("retroachievements: decoding recently played response: %w", err)
+		}
+		all = append(all, page...)
+		if len(page) < raRecentPageSize {
+			return all, nil
+		}
+	}
 }
 
 // GetGameProgress fetches a user's achievement progress for one game.
@@ -358,9 +412,17 @@ func stamp(t time.Time) string {
 	return t.In(model.SiteLocation).Format(time.RFC3339)
 }
 
-// FetchRecord builds a provider record from RetroAchievements.
-func FetchRecord(ctx context.Context, client *RAClient, gameID string) (*model.ProviderRecord, error) {
+// FetchRecord builds a provider record from RetroAchievements. recent is this
+// game's RARecentGame entry, fetched once per run by the caller; it may be
+// nil, in which case the record has no last_played and the summary falls back
+// to the newest unlock.
+func FetchRecord(ctx context.Context, client *RAClient, gameID string, recent *RARecentGame) (*model.ProviderRecord, error) {
 	rec := &model.ProviderRecord{ID: gameID, LastAttempt: today()}
+	if recent != nil {
+		if t, err := ParseRADate(recent.LastPlayed); err == nil {
+			rec.LastPlayed = day(t)
+		}
+	}
 
 	progress, err := client.GetGameProgress(ctx, gameID)
 	if err != nil {

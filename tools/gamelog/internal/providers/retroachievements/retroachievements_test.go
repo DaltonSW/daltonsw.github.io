@@ -296,7 +296,7 @@ func TestFetchRARecord_CapturesLockedAndRaw(t *testing.T) {
 	})
 
 	client := &RAClient{Username: "u", APIKey: "k", Throttle: time.Nanosecond}
-	rec, err := FetchRecord(context.Background(), client, "104")
+	rec, err := FetchRecord(context.Background(), client, "104", nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -351,5 +351,71 @@ func TestStamp_IsParseableRFC3339InSiteZone(t *testing.T) {
 	}
 	if winter[19:] == summer[19:] {
 		t.Errorf("expected different UTC offsets across DST, both were %q", winter[19:])
+	}
+}
+
+func raRecentStub(t *testing.T, handler http.HandlerFunc) {
+	t.Helper()
+	srv := httptest.NewServer(handler)
+	t.Cleanup(srv.Close)
+
+	old := raRecentlyPlayedURL
+	raRecentlyPlayedURL = srv.URL
+	t.Cleanup(func() { raRecentlyPlayedURL = old })
+}
+
+// The API caps `c` at 50, so anything past the newest 50 games is only
+// reachable through `o` paging.
+func TestGetRecentlyPlayed_WalksPages(t *testing.T) {
+	var offsets []string
+	raRecentStub(t, func(w http.ResponseWriter, r *http.Request) {
+		offsets = append(offsets, r.URL.Query().Get("o"))
+		if r.URL.Query().Get("o") == "0" {
+			games := make([]RARecentGame, raRecentPageSize)
+			for i := range games {
+				games[i] = RARecentGame{GameID: i + 1, LastPlayed: "2026-08-05 03:38:56"}
+			}
+			json.NewEncoder(w).Encode(games)
+			return
+		}
+		json.NewEncoder(w).Encode([]RARecentGame{{GameID: 7601, LastPlayed: "2026-01-02 10:00:00"}})
+	})
+
+	client := &RAClient{Username: "u", APIKey: "k", Throttle: time.Nanosecond}
+	games, err := client.GetRecentlyPlayed(context.Background())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(games) != raRecentPageSize+1 {
+		t.Fatalf("got %d games, want %d across two pages", len(games), raRecentPageSize+1)
+	}
+	if want := []string{"0", "50"}; strings.Join(offsets, ",") != strings.Join(want, ",") {
+		t.Errorf("offsets requested = %v, want %v", offsets, want)
+	}
+	if got := games[len(games)-1].ID(); got != "7601" {
+		t.Errorf("second page not appended, last id = %q", got)
+	}
+}
+
+// The progress endpoint has no last-played field, so without this a session
+// that unlocked nothing leaves the record stuck at the newest unlock.
+func TestFetchRARecord_LastPlayedComesFromRecentlyPlayed(t *testing.T) {
+	raStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{"Title":"Layton","ConsoleName":"Nintendo DS","NumAchievements":2,
+		  "Achievements":{"1":{"ID":1,"Title":"First","DateEarnedHardcore":"2026-07-27 02:40:24"}}}`))
+	})
+
+	client := &RAClient{Username: "u", APIKey: "k", Throttle: time.Nanosecond}
+	// Zoneless, like DateEarned: parsed as UTC, reported in the site's zone.
+	recent := &RARecentGame{GameID: 7601, LastPlayed: "2026-08-05 14:38:56"}
+	rec, err := FetchRecord(context.Background(), client, "7601", recent)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastPlayed != "2026-08-05" {
+		t.Errorf("last_played = %q, want the played date 2026-08-05, not the unlock date", rec.LastPlayed)
+	}
+	if rec.Last != "2026-07-26" {
+		t.Errorf("last unlock = %q, want the unlock date left alone", rec.Last)
 	}
 }
