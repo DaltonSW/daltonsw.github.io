@@ -423,6 +423,12 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ach-row__game { color: var(--accent); }
 .ach-row__game:hover { text-decoration: underline; }
 .ach-row__date--unknown { font-style: italic; }
+/* Which RetroAchievements subset an unlock came from. Bracketed rather than
+   coloured, so it reads as a qualifier on the game name beside it rather than
+   as a second link. */
+.ach-row__subset { white-space: nowrap; }
+.ach-row__subset::before { content: "["; color: var(--stroke); }
+.ach-row__subset::after  { content: "]"; color: var(--stroke); }
 
 /* Spoiler blur for secret achievements — click (or the section's "Unhide
    everything" toggle) reveals. Only the name/description text blurs, inside
@@ -563,6 +569,28 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .ach-provider-breakdown li { display: flex; align-items: center; gap: 0.6rem; }
 .ach-provider-breakdown__name { flex: 0 0 6rem; color: var(--fg); }
+
+/* RetroAchievements subsets: same row shape as the provider breakdown, with a
+   rule and a label above it. It needs the label because a subset's meter is
+   measuring a different set from the one at the top of the section, which the
+   provider breakdown — all of it the same game — never is. */
+.ach-subsets {
+  list-style: none; margin: 0.7rem 0 0; padding: 0.6rem 0 0;
+  border-top: 1px solid var(--stroke);
+  display: flex; flex-direction: column; gap: 0.3rem;
+  font-family: $font-ui; font-size: 0.8rem;
+}
+.ach-subsets::before {
+  content: "Subsets";
+  color: var(--dim); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.ach-subsets li { display: flex; align-items: center; gap: 0.6rem; }
+.ach-subsets__name { flex: 0 0 10rem; color: var(--fg); }
+
+@media (max-width: 480px) {
+  .ach-subsets li { flex-wrap: wrap; }
+  .ach-subsets__name { flex: 1 1 100%; }
+}
 .game-achievements .ach-rows { margin-top: 0.9rem; }
 
 /* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
