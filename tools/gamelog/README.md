@@ -327,12 +327,18 @@ about completion.
 
 **Every guessed row follows the same three-part shape as the Stale section**, which is the
 paradigm to keep reaching for here: the guess as the primary button (*Correct — create finished*),
-each other plausible answer one click beside it (*Create as dropped instead*, and `software` for
+the other plausible answers beside it as *Create as* + a dropdown (which includes `software`, for
 the tools Steam reports playtime for identically), and a way out that isn't "create it and fix it
-later" (*Never log this*). Overriding to a status that doesn't assert the game is over drops the
-inferred finish date with it — the date only existed to justify the guess, and keeping it under
-`status: playing` would write a self-contradicting entry. A submitted status is validated against
-`forms.GameStatuses` before it reaches front matter.
+later" (*Never log this*). The alternatives are a dropdown rather than a button each — unlike
+Stale, which shows a handful of cards, this is a row per unlogged game, and five buttons apiece
+was most of the page. **The dropdown only counts when its own button was clicked**: a `<select>`
+submits its value whichever button sent the form, so the primary button would otherwise create
+whatever the dropdown was left showing — hence the `use_status` flag its button carries.
+
+Overriding to a status that doesn't assert the game is over drops the inferred finish date with it
+— the date only existed to justify the guess, and keeping it under `status: playing` would write a
+self-contradicting entry. A submitted status is validated against `forms.GameStatuses` before it
+reaches front matter.
 
 Scan-created games land as `draft: true`; the games list index has a drafts-only filter with a
 **Draft?** column, and each one's page has Publish/Undraft, Edit, and Delete — the latter only
