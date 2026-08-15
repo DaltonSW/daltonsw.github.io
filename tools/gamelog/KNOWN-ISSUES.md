@@ -214,6 +214,14 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   unlike everything else in the archive which stores minutes — `retroachievements.FetchRecord`
   divides by 60. Client-tracked (RetroArch/RAIntegration), so games played before that rollout, or
   on an unsupported emulator, legitimately have none.
+- **An RA record's `last_played` comes from a second endpoint on purpose.**
+  `GetGameInfoAndUserProgress` has no last-played field at all, so `last_played` is filled from
+  `API_GetUserRecentlyPlayedGames`, fetched once per process and cached by `raRecentlyPlayed` in
+  `internal/commands/achievements.go`. Don't collapse it back into the per-game fetch (RA's 1.2s
+  throttle makes that ~2 extra requests × every game), and don't drop it as redundant with the
+  newest unlock date — that equivalence is exactly the bug it fixed: a game played for weeks
+  without unlocking anything read as last played on the day of its last achievement. Its `c`
+  parameter is capped at 50 server-side, so the paging loop is required, not defensive.
 - **Steam puts useful JSON in 400/403 bodies** — read the body, don't bail on status.
 - **Steam needs a SteamID64**, not a vanity name; `SteamClient.resolveSteamID` handles both.
 - **RA rate-limits sustained bursts with 429** — `RAClient` throttles to ~1.2s and retries.

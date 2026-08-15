@@ -443,6 +443,16 @@ Unlocked achievements sort first in date order, locked ones last. Dates are RFC3
 site's UTC offset (DST-correct), which is what Hugo's `time` function expects — no conversion
 needed in templates.
 
+`last_played` is a *played* date, not an unlock date, and every provider that can report one does:
+Steam's `rtime_last_played`, PSN's, and — since it needs a second endpoint —
+RetroAchievements' `API_GetUserRecentlyPlayedGames`. RA's progress endpoint has no such field, so
+before that list was walked an RA game's most recent date was whatever it last unlocked, which
+sits still for as long as a playthrough is stuck on one achievement. That list is user-level, not
+per game, so it's fetched **once per process** and cached (`raRecentlyPlayed` in
+`internal/commands/achievements.go`) — at RA's ~1 request/1.2s throttle, re-walking its pages for
+each of 200 games would cost more than the refresh itself. A failure to fetch it is warned about
+and ignored: `last_played` falls back to the newest unlock, same as before.
+
 This is why history is kept per-achievement rather than collapsed to a start/finish pair: a game
 returned to over years (Spelunky's unlocks run 2013 → 2020 with multi-year gaps) has a shape two
 dates can't express. It's also why both providers are kept — the two records genuinely differ,
@@ -632,6 +642,10 @@ produced wrong or missing output before it was found by running against live dat
 - That award date is **RFC3339**, while the per-achievement `DateEarned` fields are zoneless
   SQL datetimes. They need separate parsers (`retroachievements.ParseRAAwardDate` vs `retroachievements.ParseRADate`).
 - An unknown RA game ID returns **HTTP 200 with a bare `[]`**, not a 404.
+- `API_GetUserRecentlyPlayedGames` **caps `c` at 50** whatever you ask for, so a library with more
+  than 50 played games needs `o` paging — without it the last-played lookup silently truncates to
+  the 50 most recent. Despite the name it returns the user's whole client-tracked history, so a
+  game absent from it was never seen by an RA client at all.
 - Steam returns **400/401/403 with a useful JSON body** for its expected "no data" cases, so
   the body matters more than the status.
 - Steam's API only accepts a 17-digit SteamID64; a vanity name must go through
