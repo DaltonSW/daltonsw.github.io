@@ -1,14 +1,14 @@
-unlocked: 37
+unlocked: 45
 total: 53
-playtime_mins: 3102
-last_played: "2026-08-06"
+playtime_mins: 3944
+last_played: "2026-08-15"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 37
+      unlocked: 45
       total: 53
-      playtime_mins: 3102
-      last_played: "2026-08-06"
+      playtime_mins: 3944
+      last_played: "2026-08-15"
 earned:
     - name: Fatal Blow
       description: Deliver a successful Fatal Attack.
@@ -232,3 +232,51 @@ earned:
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/d83523c6ab1e2e47f819d159b4025f26aafa044e.jpg
       provider: steam
       platform: PC
+    - name: Anguished Guardian
+      date: "2026-08-06T20:22:53-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/2b2ee507888c6e62719b2e4f5339ba2a2216ff9f.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Honor and Revenge
+      date: "2026-08-08T11:49:03-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/a6697f96d11e941ee1e7b9a405c8c72a16d81d81.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Tracker of Dark Secrets
+      description: Decrypt all clues hidden inside the cipher machines and claim the rewards.
+      date: "2026-08-08T14:03:22-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/6cf9301f2329efb08407bd5354b807215c9d8cb9.jpg
+      provider: steam
+      platform: PC
+    - name: To Be Human
+      description: Learn all gestures from the Forgotten Time.
+      date: "2026-08-08T18:02:46-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/45acadbd2599ac140e620a1959e06133d5b2e55b.jpg
+      provider: steam
+      platform: PC
+    - name: The Blood Artist
+      date: "2026-08-15T15:01:06-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/5253c68e3249bf534b7e44f9dd42a180e790baa5.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: The Rose's Memory
+      date: "2026-08-15T15:03:56-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/cbf211002c4d463af0a3cf3ce7690bb6ac33e63c.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: True Combat Gear Collector
+      description: Collect all weapons and Legion Arms in the Forgotten Time.
+      date: "2026-08-15T15:07:54-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/240ec35bdcbda64c27a75bf69272446e2e707c5a.jpg
+      provider: steam
+      platform: PC
+    - name: Enduring Resolve
+      date: "2026-08-15T15:18:45-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/cebab10844a39608bb2a857f2437f4d1fd4803bb.jpg
+      provider: steam
+      platform: PC
+      hidden: true

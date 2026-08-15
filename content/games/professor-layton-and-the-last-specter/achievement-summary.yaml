@@ -1,14 +1,14 @@
-unlocked: 13
+unlocked: 16
 total: 40
-playtime_mins: 1260
-last_played: "2026-08-04"
+playtime_mins: 1449
+last_played: "2026-08-14"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 13
+      unlocked: 16
       total: 40
-      playtime_mins: 1260
-      last_played: "2026-08-04"
+      playtime_mins: 1449
+      last_played: "2026-08-14"
 earned:
     - name: The Fog of Misthallery
       description: Finish Chapter 1.
@@ -112,5 +112,29 @@ earned:
       points: 10
       hardcore: true
       icon: "151130"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Extraordinary Eternal Voice
+      description: Discover all References to the Eternal Diva.
+      date: "2026-08-10T20:55:15-05:00"
+      points: 5
+      hardcore: true
+      icon: "327804"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Fish 'n Riddle
+      description: Complete all Fish Tank Challenges.
+      date: "2026-08-10T20:58:49-05:00"
+      points: 10
+      hardcore: true
+      icon: "151184"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Acting like a Gentleman
+      description: Complete all three Puppet Theatre Plays.
+      date: "2026-08-14T22:41:00-05:00"
+      points: 10
+      hardcore: true
+      icon: "151186"
       provider: retroachievements
       platform: Nintendo DS

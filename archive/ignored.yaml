@@ -1,0 +1,7 @@
+# Games deliberately excluded from the scan and backlog lists.
+# Nothing is deleted by being here — remove an entry and it comes back.
+games:
+    - provider: steam
+      id: "433850"
+      title: Z1 Battle Royale
+      ignored_on: "2026-08-15"

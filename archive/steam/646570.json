@@ -1,22 +1,22 @@
 {
  "provider": "steam",
  "title": "Slay the Spire",
- "updated": "2026-08-06",
+ "updated": "2026-08-15",
  "id": "646570",
- "fetched": "2026-08-06",
- "last_attempt": "2026-08-06",
- "unlocked": 25,
+ "fetched": "2026-08-15",
+ "last_attempt": "2026-08-15",
+ "unlocked": 26,
  "total": 46,
  "first": "2017-12-12",
- "last": "2025-09-03",
+ "last": "2026-08-13",
  "platform": "PC",
  "icon": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
- "playtime_mins": 6532,
+ "playtime_mins": 6795,
  "playtime": {
-  "linux": 395,
+  "linux": 658,
   "windows": 1397
  },
- "last_played": "2026-08-02",
+ "last_played": "2026-08-15",
  "achievements": [
   {
    "key": "GUARDIAN",
@@ -219,6 +219,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/96dde519ff925312a9e2bd564e6a89efcea00130.jpg"
   },
   {
+   "key": "SAPPHIRE_PLUS",
+   "name": "Sapphire+",
+   "unlocked": true,
+   "date": "2026-08-13T21:06:15-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/fbadf0310b59be3804493b1f29817dec55a58aa7.jpg",
+   "hidden": true
+  },
+  {
    "key": "AMETHYST_PLUS",
    "name": "Amethyst+",
    "description": "Complete the Ending with the Watcher.",
@@ -328,13 +336,6 @@
    "name": "Ruby+",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/72f6f4f9a7a34f6705e64b448c6f9d32329dcb3c.jpg",
-   "hidden": true
-  },
-  {
-   "key": "SAPPHIRE_PLUS",
-   "name": "Sapphire+",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/fbadf0310b59be3804493b1f29817dec55a58aa7.jpg",
    "hidden": true
   },
   {
@@ -660,8 +661,8 @@
     },
     {
      "apiname": "SAPPHIRE_PLUS",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1786673175,
      "name": "Sapphire+",
      "description": ""
     },

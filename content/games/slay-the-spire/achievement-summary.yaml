@@ -1,14 +1,14 @@
-unlocked: 25
+unlocked: 26
 total: 46
-playtime_mins: 6532
-last_played: "2026-08-02"
+playtime_mins: 6795
+last_played: "2026-08-15"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 25
+      unlocked: 26
       total: 46
-      playtime_mins: 6532
-      last_played: "2026-08-02"
+      playtime_mins: 6795
+      last_played: "2026-08-15"
 earned:
     - name: The Guardian
       date: "2017-12-12T01:37:18-06:00"
@@ -160,3 +160,9 @@ earned:
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/96dde519ff925312a9e2bd564e6a89efcea00130.jpg
       provider: steam
       platform: PC
+    - name: Sapphire+
+      date: "2026-08-13T21:06:15-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/fbadf0310b59be3804493b1f29817dec55a58aa7.jpg
+      provider: steam
+      platform: PC
+      hidden: true
