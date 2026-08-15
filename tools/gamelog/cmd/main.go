@@ -4,34 +4,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/spf13/cobra"
+
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/server"
 )
 
-const usage = `gamelog — maintain this site's game log in content/games/ and archive/.
-
-Usage:
-  gamelog                    same as "gamelog serve" — serve the local web UI
-                             over content/games (default port 8080)
-  gamelog suggest [slug]     print suggested playthrough dates from
-                             RetroAchievements/Steam (read-only, never writes)
-  gamelog achievements [slug]
-                             capture the full unlock history into
-                             archive/<provider>/<id>.json (re-run to refresh)
-  gamelog achievements --all refresh every game that has a provider link,
-                             instead of one slug at a time
-  gamelog project             regenerate every game's achievement-summary.yaml
-                             from the archive already on disk (no API calls)
-  gamelog exophase list ubisoft
-                             print every game on your Exophase profile next to
-                             its canonical ID, for filling in ubisoft_id
-  gamelog psn list           print every PSN trophy title on your account next
-                             to its npCommunicationId, for filling in psn_id
-  gamelog serve [flags]       serve a local web UI over content/games
-                               --port N        port to listen on (default 8080)
-  gamelog help               show this message
-
-Environment (or a .env beside this tool; real env vars take precedence):
+const envHelp = `Environment (or a .env beside this tool; real env vars take precedence):
   RA_USERNAME, RA_API_KEY    https://retroachievements.org/settings
   STEAM_API_KEY              https://steamcommunity.com/dev/apikey
   STEAM_ID                   SteamID64 or profile vanity name
@@ -45,62 +24,134 @@ Environment (or a .env beside this tool; real env vars take precedence):
 
 See tools/gamelog/README.md for details.`
 
-func isHelpFlag(s string) bool {
-	switch s {
-	case "help", "-h", "--help":
-		return true
+func newRootCmd() *cobra.Command {
+	root := &cobra.Command{
+		Use:   "gamelog",
+		Short: "Maintain this site's game log in content/games/ and archive/",
+		Long: "gamelog — maintain this site's game log in content/games/ and archive/.\n\n" +
+			"Run with no subcommand to serve the local web UI (same as \"gamelog serve\").\n\n" +
+			envHelp,
+		Args:          cobra.NoArgs,
+		SilenceUsage:  true,
+		SilenceErrors: true,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return server.Run(server.DefaultPort)
+		},
 	}
-	return false
+	root.CompletionOptions.DisableDefaultCmd = true
+
+	root.AddCommand(
+		newSuggestCmd(),
+		newAchievementsCmd(),
+		newProjectCmd(),
+		newExophaseCmd(),
+		newPSNCmd(),
+		newServeCmd(),
+	)
+	return root
+}
+
+func newSuggestCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "suggest [slug]",
+		Short: "Print suggested playthrough dates from RetroAchievements/Steam",
+		Long: "Print suggested playthrough dates from RetroAchievements/Steam for one game.\n" +
+			"Read-only: never writes anything. With no slug, prompts to pick a game.",
+		Args: cobra.MaximumNArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunSuggest(args)
+		},
+	}
+}
+
+func newAchievementsCmd() *cobra.Command {
+	var all bool
+	c := &cobra.Command{
+		Use:   "achievements [slug]",
+		Short: "Capture unlock history into archive/<provider>/<id>.json",
+		Long: "Capture the full unlock history for one game into\n" +
+			"archive/<provider>/<id>.json. Re-run to refresh.",
+		Args: cobra.MaximumNArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			if all {
+				if len(args) > 0 {
+					return fmt.Errorf("cannot combine --all with a slug argument")
+				}
+				return commands.RunAchievements([]string{"--all"})
+			}
+			return commands.RunAchievements(args)
+		},
+	}
+	c.Flags().BoolVar(&all, "all", false, "refresh every game that has a provider link, instead of one slug at a time")
+	return c
+}
+
+func newProjectCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "project",
+		Short: "Regenerate every game's achievement-summary.yaml from the archive on disk",
+		Long: "Regenerate every game's achievement-summary.yaml from the archive already\n" +
+			"on disk. Makes no API calls.",
+		Args: cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunProject(nil)
+		},
+	}
+}
+
+func newExophaseCmd() *cobra.Command {
+	exophase := &cobra.Command{
+		Use:   "exophase",
+		Short: "Look up IDs from your Exophase profile",
+	}
+	exophase.AddCommand(&cobra.Command{
+		Use:   "list ubisoft",
+		Short: "Print every game on your Exophase profile next to its canonical ID",
+		Long: "Print every game on your Exophase profile next to its canonical ID,\n" +
+			"for filling in ubisoft_id.",
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunExophase(append([]string{"list"}, args...))
+		},
+	})
+	return exophase
+}
+
+func newPSNCmd() *cobra.Command {
+	psn := &cobra.Command{
+		Use:   "psn",
+		Short: "Look up IDs from your PSN account",
+	}
+	psn.AddCommand(&cobra.Command{
+		Use:   "list",
+		Short: "Print every PSN trophy title on your account next to its npCommunicationId",
+		Long: "Print every PSN trophy title on your account next to its\n" +
+			"npCommunicationId, for filling in psn_id.",
+		Args: cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunPSN([]string{"list"})
+		},
+	})
+	return psn
+}
+
+func newServeCmd() *cobra.Command {
+	var port int
+	c := &cobra.Command{
+		Use:   "serve",
+		Short: "Serve a local web UI over content/games",
+		Args:  cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return server.Run(port)
+		},
+	}
+	c.Flags().IntVar(&port, "port", server.DefaultPort, "port to listen on (127.0.0.1 only)")
+	return c
 }
 
 func Exec() {
-	args := os.Args[1:]
-
-	if len(args) > 0 && isHelpFlag(args[0]) {
-		fmt.Println(usage)
-		return
-	}
-
-	var err error
-	switch {
-	case len(args) == 0:
-		err = server.Run(nil)
-	case args[0] == "suggest":
-		if len(args) > 1 && isHelpFlag(args[1]) {
-			fmt.Println(usage)
-			return
-		}
-		err = commands.RunSuggest(args[1:])
-	case args[0] == "achievements":
-		if len(args) > 1 && isHelpFlag(args[1]) {
-			fmt.Println(usage)
-			return
-		}
-		err = commands.RunAchievements(args[1:])
-	case args[0] == "project":
-		err = commands.RunProject(args[1:])
-	case args[0] == "exophase":
-		if len(args) > 1 && isHelpFlag(args[1]) {
-			fmt.Println(usage)
-			return
-		}
-		err = commands.RunExophase(args[1:])
-	case args[0] == "psn":
-		if len(args) > 1 && isHelpFlag(args[1]) {
-			fmt.Println(usage)
-			return
-		}
-		err = commands.RunPSN(args[1:])
-	case args[0] == "serve":
-		err = server.Run(args[1:])
-	default:
-		// Previously any unknown argument silently opened the interactive
-		// form, which made a typo look like the tool ignoring you.
-		fmt.Fprintf(os.Stderr, "gamelog: unknown command %q\n\n%s\n", args[0], usage)
-		os.Exit(2)
-	}
-
-	if err != nil {
+	root := newRootCmd()
+	if err := root.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, "gamelog:", err)
 		os.Exit(1)
 	}

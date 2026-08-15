@@ -2,7 +2,6 @@ package server
 
 import (
 	"embed"
-	"flag"
 	"fmt"
 	"html/template"
 	"io/fs"
@@ -23,7 +22,9 @@ var templateFiles embed.FS
 //go:embed web/static
 var staticFiles embed.FS
 
-const defaultServePort = 8080
+// DefaultPort is the port `gamelog serve` binds when no --port is given, and
+// what bare `gamelog` (no subcommand) serves on.
+const DefaultPort = 8080
 
 // devMode is true when internal/server/web/templates exists on disk relative
 // to the working directory the process started in — true for
@@ -77,18 +78,7 @@ func init() {
 // the same never-lose-data safety net — see README.md/KNOWN-ISSUES.md) that
 // the TUI does. Binds to 127.0.0.1 only; this is a personal local tool, never
 // meant to be reachable off the machine it runs on.
-func Run(args []string) error {
-	fs := flag.NewFlagSet("serve", flag.ContinueOnError)
-	fs.SetOutput(os.Stderr)
-	port := fs.Int("port", defaultServePort, "port to listen on (127.0.0.1 only)")
-	fs.Usage = func() {
-		fmt.Fprintf(os.Stderr, "Usage: gamelog serve [flags]\n\nServes a local web UI over the same content/games tree the TUI edits.\n\nFlags:\n")
-		fs.PrintDefaults()
-	}
-	if err := fs.Parse(args); err != nil {
-		return err
-	}
-
+func Run(port int) error {
 	gamesDir, err := model.FindGamesDir()
 	if err != nil {
 		return err
@@ -98,7 +88,7 @@ func Run(args []string) error {
 	mux := http.NewServeMux()
 	s.registerRoutes(mux)
 
-	addr := fmt.Sprintf("127.0.0.1:%d", *port)
+	addr := fmt.Sprintf("127.0.0.1:%d", port)
 	fmt.Printf("gamelog serve — http://%s  (Ctrl+C to stop)\n", addr)
 	if devMode {
 		fmt.Println("dev mode: web/templates and web/static served live from disk — refresh to see edits")
