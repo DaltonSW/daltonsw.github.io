@@ -9,6 +9,15 @@ providers:
       total: 40
       playtime_mins: 1449
       last_played: "2026-08-14"
+subsets:
+    - name: Mouse Alley
+      provider: retroachievements
+      id: "25709"
+      platform: Nintendo DS
+      unlocked: 6
+      total: 52
+      playtime_mins: 202
+      last_played: "2026-07-25"
 earned:
     - name: The Fog of Misthallery
       description: Finish Chapter 1.
@@ -66,6 +75,51 @@ earned:
       icon: "150768"
       provider: retroachievements
       platform: Nintendo DS
+    - name: Initiate Grabber
+      description: Get a Total Score of 10 Points in Mouse Alley.
+      date: "2026-07-12T22:05:31-05:00"
+      points: 1
+      hardcore: true
+      icon: "400426"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Early Bird
+      description: Get a Total Score of 500 Points in Mouse Alley.
+      date: "2026-07-12T22:05:32-05:00"
+      points: 1
+      hardcore: true
+      icon: "400428"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Common Chaser
+      description: Get a Total Score of 100 Points in Mouse Alley.
+      date: "2026-07-12T22:05:32-05:00"
+      points: 1
+      hardcore: true
+      icon: "400427"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Nary a Mouse
+      description: Get a Total Score of 1.000 Points in Mouse Alley.
+      date: "2026-07-12T22:06:43-05:00"
+      points: 1
+      hardcore: true
+      icon: "400429"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Moustable
+      description: Get a Total Score of 5.000 Points in Mouse Alley.
+      date: "2026-07-13T22:16:35-05:00"
+      points: 2
+      hardcore: true
+      icon: "400430"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
     - name: Face-to-Face with the Spectre
       description: Finish Chapter 8.
       date: "2026-07-15T18:23:16-05:00"
@@ -74,6 +128,15 @@ earned:
       icon: "150833"
       provider: retroachievements
       platform: Nintendo DS
+    - name: Pagerat
+      description: Get a Total Score of 10.000 Points in Mouse Alley.
+      date: "2026-07-18T20:11:23-05:00"
+      points: 2
+      hardcore: true
+      icon: "400431"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
     - name: Waters of Venice
       description: Unlock all of Bucky's Piers.
       date: "2026-07-22T22:01:08-05:00"

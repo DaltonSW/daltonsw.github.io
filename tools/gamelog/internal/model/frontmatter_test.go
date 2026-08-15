@@ -142,3 +142,78 @@ func TestFrontMatterClearingAnOptionalFieldIsNeverALoss(t *testing.T) {
 		t.Errorf("clearing an optional field should never be reported as loss: %v", err)
 	}
 }
+
+// The subset list is written by the tool but read like everything else in
+// front matter, so it has to survive both forms a hand-edited file can use:
+// a bare number (which YAML decodes as an int) and a quoted string.
+func TestRASubsetIDs_AcceptsBareAndQuotedIDs(t *testing.T) {
+	path := writeIndexFixture(t, `---
+title: "Professor Layton and the Last Specter"
+platform: "Nintendo DS"
+retroachievements_id: 7601
+retroachievements_subsets:
+  - 25709
+  - "25710"
+status: "playing"
+---
+
+Prose.
+`)
+	doc, err := LoadDoc(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := doc.RASubsetIDs()
+	if len(got) != 2 || got[0] != "25709" || got[1] != "25710" {
+		t.Fatalf("RASubsetIDs() = %q, want [25709 25710]", got)
+	}
+
+	links := doc.ProviderLinks()
+	if len(links) != 3 || !links[1].Subset || !links[2].Subset || links[0].Subset {
+		t.Errorf("ProviderLinks() = %+v, want the base set then two subsets", links)
+	}
+}
+
+// Attaching is offered from a page that re-derives its rows, so the same
+// button is easy to click twice — the second time must be a no-op, not a
+// duplicate link that would archive and count the set twice.
+func TestAddRASubset_IsIdempotentAndRoundTrips(t *testing.T) {
+	path := writeIndexFixture(t, sampleIndexMD)
+	doc, err := LoadDoc(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !doc.AddRASubset("25709") {
+		t.Fatal("first attach should report it added the id")
+	}
+	if doc.AddRASubset("25709") {
+		t.Error("attaching the same subset twice must be a no-op")
+	}
+	if doc.AddRASubset("  ") {
+		t.Error("a blank id must not be added")
+	}
+	if err := doc.Save(); err != nil {
+		t.Fatal(err)
+	}
+
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(string(raw), "retroachievements_subsets:") {
+		t.Errorf("saved file lost the subset list:\n%s", raw)
+	}
+	// The hand-written prose below the front matter is spliced, never
+	// reconstructed — same guarantee every other front-matter edit has.
+	if !strings.Contains(string(raw), "Some hand-written prose about this game.") {
+		t.Errorf("saved file lost the markdown body:\n%s", raw)
+	}
+
+	reloaded, err := LoadDoc(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := reloaded.RASubsetIDs(); len(got) != 1 || got[0] != "25709" {
+		t.Errorf("after a save/load round trip, RASubsetIDs() = %q, want [25709]", got)
+	}
+}

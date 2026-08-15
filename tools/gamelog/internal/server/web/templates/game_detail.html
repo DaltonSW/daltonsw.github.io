@@ -127,6 +127,17 @@
       <div class="field"><label>Xbox title ID</label><input type="text" name="xbox_id" value="{{.XboxID}}"></div>
       <div class="btn-row"><button type="submit" class="btn--primary">Save</button></div>
     </form>
+    {{/* Read-only: a subset is attached from Housekeeping, where the parent
+         link can be checked against RetroAchievements before it's written.
+         Shown here so a game's page still says what's hanging off it. */}}
+    {{with .Subsets}}
+    <div class="subset-list">
+      <span class="subset-list__label">RetroAchievements subsets</span>
+      {{range .}}
+      <div class="subset-list__item">{{.Name}} <span class="dim">· {{.ID}} · {{.Unlocked}}/{{.Total}}</span></div>
+      {{end}}
+    </div>
+    {{end}}
   </div>
 
   <div class="tui achv-panel">
@@ -136,7 +147,7 @@
       {{range .Achievements}}
       <div class="achv-item">
         <div class="achv-item__meta">
-          <span title="{{.Date}}">{{dateOnly .Date}}</span> · {{.Provider}}{{with .Platform}} · {{.}}{{end}}
+          <span title="{{.Date}}">{{dateOnly .Date}}</span> · {{.Provider}}{{with .Platform}} · {{.}}{{end}}{{with .Subset}} · {{.}}{{end}}
         </div>
         <div class="achv-item__name">{{.Name}}</div>
         {{with .Description}}<div class="achv-item__desc dim">{{.}}</div>{{end}}

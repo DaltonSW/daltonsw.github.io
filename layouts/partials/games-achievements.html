@@ -145,6 +145,10 @@
             <div class="ach-row__meta">
               <a class="ach-row__game" href="{{ $row.page.RelPermalink }}">{{ $row.page.Title }}</a>
               {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
+              {{/* A RetroAchievements subset's unlocks belong in this feed —
+                   they were earned — but they arrive under the base game's
+                   title, so the set they came from has to name itself. */}}
+              {{- with $row.subset }}<span class="ach-row__subset">{{ . }}</span>{{ end }}
               {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
               {{- else }}<span class="ach-row__date ach-row__date--unknown">Date unknown</span>{{ end }}
             </div>

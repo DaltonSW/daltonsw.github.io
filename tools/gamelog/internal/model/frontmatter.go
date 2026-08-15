@@ -19,7 +19,19 @@ type FrontMatter struct {
 	Title               string `yaml:"title"`
 	Platform            string `yaml:"platform"`
 	RetroAchievementsID any    `yaml:"retroachievements_id"`
-	SteamAppID          any    `yaml:"steam_appid"`
+
+	// RASubsets are RetroAchievements *subset* game ids belonging to this
+	// game — RA models a bonus achievement set (Professor Layton and the Last
+	// Specter's "Mouse Alley") as a separate game id with its own title
+	// suffix, and there's no other way to link one to its base game.
+	//
+	// Typed []any, not []string, for the same reason the scalar id fields are
+	// `any`: a hand-written `- 25709` decodes as an int, and []string would
+	// fail the whole document's parse rather than that one line. Order is
+	// preserved as written; nothing depends on it.
+	RASubsets []any `yaml:"retroachievements_subsets,omitempty"`
+
+	SteamAppID any `yaml:"steam_appid"`
 
 	// PSNID is the game's NPWR… trophy-set id. PlayStation has no public API,
 	// so the archive fills this from a public Exophase profile — but the ID
@@ -220,6 +232,30 @@ func (d *Doc) ExternalIDs() (raID, steamAppID string) {
 	return scalarString(d.FM.RetroAchievementsID), scalarString(d.FM.SteamAppID)
 }
 
+// RASubsetIDs returns the game's RetroAchievements subset ids as text,
+// dropping blanks — see FrontMatter.RASubsets for why they're stored as `any`.
+func (d *Doc) RASubsetIDs() []string {
+	return scalarStrings(d.FM.RASubsets)
+}
+
+// AddRASubset links a RetroAchievements subset id to this game, reporting
+// whether it was actually added. Attaching one twice is a no-op rather than an
+// error: the scan re-derives its rows, so the same button can be clicked twice
+// on a stale page.
+func (d *Doc) AddRASubset(id string) bool {
+	id = strings.TrimSpace(id)
+	if id == "" {
+		return false
+	}
+	for _, existing := range d.RASubsetIDs() {
+		if existing == id {
+			return false
+		}
+	}
+	d.FM.RASubsets = append(d.FM.RASubsets, ScalarFromInput(id))
+	return true
+}
+
 // ProviderLinks returns every provider this game is linked to, in
 // ProviderOrder, skipping the ones with no ID set.
 func (d *Doc) ProviderLinks() []ProviderLink {
@@ -229,17 +265,32 @@ func (d *Doc) ProviderLinks() []ProviderLink {
 		scalarString(d.FM.PSNID),
 		scalarString(d.FM.UbisoftID),
 		scalarString(d.FM.XboxID),
+		d.RASubsetIDs()...,
 	)
 }
 
 // BuildProviderLinks is shared by Doc and GameSummary so the two can't drift
 // on which providers exist or what order they come in.
-func BuildProviderLinks(raID, steamAppID, psnID, ubisoftID, xboxID string) []ProviderLink {
+//
+// raSubsets is variadic because a subset is the one case where a game has more
+// than one id on a single provider (see FrontMatter.RASubsets). Each becomes
+// its own link with Subset set, immediately after the base RA link, so
+// everything that walks a game's archive picks subsets up for free — and
+// anything that must treat them differently (the summary's headline totals,
+// chiefly) has a flag to key off rather than a title to guess from.
+func BuildProviderLinks(raID, steamAppID, psnID, ubisoftID, xboxID string, raSubsets ...string) []ProviderLink {
 	all := map[string]string{ProviderRA: raID, ProviderSteam: steamAppID, ProviderPSN: psnID, ProviderUbisoft: ubisoftID, ProviderXbox: xboxID}
 	var out []ProviderLink
 	for _, p := range ProviderOrder {
 		if all[p] != "" {
 			out = append(out, ProviderLink{Provider: p, ID: all[p]})
+		}
+		if p == ProviderRA {
+			for _, id := range raSubsets {
+				if id != "" && id != raID {
+					out = append(out, ProviderLink{Provider: ProviderRA, ID: id, Subset: true})
+				}
+			}
 		}
 	}
 	return out
@@ -266,6 +317,20 @@ func scalarString(v any) string {
 	default:
 		return fmt.Sprint(t)
 	}
+}
+
+// scalarStrings renders a decoded YAML sequence of scalars as text, dropping
+// blanks. A bare `- 25709` decodes as an int and a quoted one as a string;
+// both mean the same id, and nothing downstream should have to care which the
+// file happened to use.
+func scalarStrings(vs []any) []string {
+	var out []string
+	for _, v := range vs {
+		if s := strings.TrimSpace(scalarString(v)); s != "" {
+			out = append(out, s)
+		}
+	}
+	return out
 }
 
 // CheckNoFieldLoss reports every path present in before but gone from after.

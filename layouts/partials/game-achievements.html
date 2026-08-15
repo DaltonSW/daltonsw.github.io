@@ -35,6 +35,24 @@
   </ul>
   {{- end }}
 
+  {{/* RetroAchievements subsets: bonus achievement sets RA publishes under
+       their own game id (see AchievementSummary.Subsets in
+       tools/gamelog/internal/model/archive.go). Their own section rather than
+       another provider-breakdown row, because a subset is not another place
+       the game was played — and it's listed even when there's only one, unlike
+       the provider breakdown above, since a lone subset is the whole point of
+       the section rather than a redundant restatement of the meter. */}}
+  {{- with $summary.subsets }}
+  <ul class="ach-subsets">
+    {{- range . }}
+    <li>
+      <span class="ach-subsets__name">{{ .name }}</span>
+      {{- partial "achievement-meter.html" (dict "unlocked" .unlocked "total" .total) }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
   {{- with $earned }}
   <details class="year-group" open>
     <summary class="year-group__heading">
@@ -75,6 +93,7 @@
           </div>
           <div class="ach-row__meta">
             {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
+            {{- with $row.subset }}<span class="ach-row__subset">{{ . }}</span>{{ end }}
             {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
             {{- else }}<span class="ach-row__date ach-row__date--unknown">Date unknown</span>{{ end }}
           </div>

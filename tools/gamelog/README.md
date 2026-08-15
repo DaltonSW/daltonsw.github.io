@@ -67,7 +67,9 @@ captured API response publicly.
 
 A game on several services gets one archive file each. Nothing in the archive links them —
 `retroachievements_id`, `steam_appid`, `psn_id`, `ubisoft_id` and `xbox_id` in front matter do, which is the
-right place for a judgement a human made rather than something any provider reported.
+right place for a judgement a human made rather than something any provider reported. The same
+holds for `retroachievements_subsets`, which is how one game ends up with more than one file
+under `retroachievements/` — see "RetroAchievements subsets" below.
 
 ## How playthroughs are written
 
@@ -316,8 +318,10 @@ the entry it would create. Matching is by external ID where one is set, falling 
 normalised title — so a game logged before those fields existed is still recognised, and casing or
 a trailing `®` doesn't produce a duplicate (`elden-ring` matches `ELDEN RING`). Anything created
 is written with `draft: true`, because every field is inferred — review it and flip the flag to
-publish. Scanning uses only the two bulk endpoints (one request each), so it's fast and can't be
-rate-limited, but those endpoints carry no start dates; create the entry, then run `gamelog
+publish. Scanning is essentially the two bulk endpoints (one request each), so it's fast and can't
+be rate-limited — the one exception is a **RetroAchievements subset row**, which costs one
+per-game request to resolve its parent, memoized for the process (see "RetroAchievements subsets"
+below). The bulk endpoints carry no start dates; create the entry, then run `gamelog
 suggest <slug>` for the precise range. A RetroAchievements game counts as finished when it carries
 a real award — the row names which one, since `12/189 achievements → finished` only makes sense
 once you can see it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award —
@@ -339,6 +343,11 @@ Overriding to a status that doesn't assert the game is over drops the inferred f
 — the date only existed to justify the guess, and keeping it under `status: playing` would write a
 self-contradicting entry. A submitted status is validated against `forms.GameStatuses` before it
 reaches front matter.
+
+**A RetroAchievements subset gets a different primary button** — *Attach to \<base game\>* rather
+than *create* — because creating it would make a second entry for a game that already has one.
+See "RetroAchievements subsets" below for what attaching writes and how the parent link is
+verified; the row is otherwise identical, alternatives dropdown and *Never log this* included.
 
 Scan-created games land as `draft: true`; the games list index has a drafts-only filter with a
 **Draft?** column, and each one's page has Publish/Undraft, Edit, and Delete — the latter only
@@ -378,7 +387,9 @@ written — so it renders with no credentials configured at all, and it's a read
 than an action queue: each row links to the game's own page. A `min_pct` field (default 50) hides
 games that were opened once rather than nearly finished; those belong in Backlog above. One row
 per provider, not per game: a game linked to both Steam and RetroAchievements has two unrelated
-denominators, and merging them would invent a number that's true of neither. The one-shot
+denominators, and merging them would invent a number that's true of neither. A RetroAchievements
+subset is another such denominator, so it gets its own row too, named (`retroachievements · Mouse
+Alley`) rather than repeating the bare provider on two rows with different numbers. The one-shot
 statuses (`ongoing`, `multiplayer`, `software`) never appear — there's no completion for them to
 be short of — and `finished`/`dropped`/`mastered` games are opt-in via a checkbox, since leaving
 achievements on a game you've called finished is a decision, not an oversight. `paused` and
@@ -534,6 +545,79 @@ Everything that walks a game's archive takes `[]providerLink` (from `Doc.Provide
 `GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, so a fourth
 provider is a client file plus one entry in `providerOrder` — not an edit to every signature
 that touches the archive.
+
+### RetroAchievements subsets
+
+RetroAchievements publishes a bonus achievement set as a **separate game id**, titled
+`<base game> [Subset - <name>]` — Professor Layton and the Last Specter's "Mouse Alley" is one.
+Left alone every subset shows up in Scan as an unlogged game, and creating it makes a second
+entry for a game that already has one. So a subset is *attached* to the game it belongs to
+instead, as a second RA id on that game:
+
+```yaml
+retroachievements_id: 7601
+retroachievements_subsets:
+  - 25709                       # Professor Layton … [Subset - Mouse Alley]
+```
+
+That's the only place in the schema where one game has two ids on one provider.
+`BuildProviderLinks` emits each subset as its own `ProviderLink` with `Subset: true`,
+immediately behind the base RA link, so **capture, refresh and projection all pick subsets up
+for free** — `gamelog achievements <slug>` fetches and merges each set into its own
+`archive/retroachievements/<id>.json`, and `--all` inherits that without knowing subsets exist.
+The archive needed no change at all: a subset was always just another game id to it.
+
+**Only the counts are kept apart.** `achievement-summary.yaml` puts a subset on its own
+`subsets:` line and leaves it out of the headline `unlocked`/`total` and the `providers:`
+breakdown:
+
+```yaml
+unlocked: 16          # the game's own set — not 22
+total: 40             # not 92
+providers:
+  - provider: retroachievements
+    platform: Nintendo DS
+    unlocked: 16
+    total: 40
+subsets:
+  - name: Mouse Alley
+    provider: retroachievements
+    id: "25709"
+    platform: Nintendo DS
+    unlocked: 6
+    total: 52
+    playtime_mins: 202
+```
+
+A subset is a bonus set for the same game, not a second copy of it: adding Mouse Alley's 52 to
+Last Specter's 40 would restate a 40%-complete game as 24% complete and describe a 92-achievement
+set that exists nowhere. Playtime is kept on the subset's line for the same reason — RA reports it
+per game id, and the same hours would otherwise be counted twice. `last_played` *is* folded in,
+because playing the bonus set is playing the game.
+
+The unlocks themselves stay in the one flat `earned:` list, each tagged `subset: Mouse Alley` —
+they were genuinely earned, and the site-wide achievement feed would otherwise silently drop
+them. `layouts/partials/game-achievements.html` renders a **Subsets** section under the game's
+meter, and both achievement feeds label a tagged row.
+
+**The link is never inferred from the title.** The bulk endpoint Scan runs on carries no parent
+field at all, so the `[Subset - …]` convention is only used to *spot* a candidate; the per-game
+endpoint's `ParentGameID` is what actually links one, and `commands.AttachSubset` re-checks it
+against the target game's own `retroachievements_id` before writing anything — a submitted form
+value must not be able to put another game's achievements on this game's page. That costs one
+extra RA request per subset row, memoized per process (`raParentCache`), since Housekeeping
+re-derives its scan on every render and RA throttles to ~1.2s a call.
+
+On the Housekeeping page a subset row keeps the usual three parts but swaps the primary button:
+**Attach to \<base game\>** when the base game is logged, **Create \<base game\> + attach** when it
+isn't (which creates the base game from RA's own report of *it*, as a draft, like everything else
+Scan creates), and an ordinary *Correct — create …* only when the parent couldn't be resolved at
+all. *Create as* and *Never log this* stay put either way. Attaching a subset also takes it out
+of future scans, and the game's page in `gamelog serve` lists what's attached to it.
+
+Subsets are display-and-capture only: nothing about them touches `playthroughs.yaml`. They're
+deliberately *not* wired into the `subgames:` roster either — a subset is a second achievement
+set for one game, not a distinct campaign that could carry its own playthrough.
 
 ### PlayStation, via Sony's own trophy API
 
@@ -697,6 +781,10 @@ produced wrong or missing output before it was found by running against live dat
 - That award date is **RFC3339**, while the per-achievement `DateEarned` fields are zoneless
   SQL datetimes. They need separate parsers (`retroachievements.ParseRAAwardDate` vs `retroachievements.ParseRADate`).
 - An unknown RA game ID returns **HTTP 200 with a bare `[]`**, not a 404.
+- **`ParentGameID` — the only real link from a subset to its base game — exists on
+  `API_GetGameInfoAndUserProgress` and on no bulk endpoint.** `API_GetUserCompletionProgress`
+  reports a subset exactly like any other game, distinguishable only by its
+  `[Subset - …]` title. A base game answers with an explicit `null` there, which decodes as 0.
 - `API_GetUserRecentlyPlayedGames` **caps `c` at 50** whatever you ask for, so a library with more
   than 50 played games needs `o` paging — without it the last-played lookup silently truncates to
   the 50 most recent. Despite the name it returns the user's whole client-tracked history, so a

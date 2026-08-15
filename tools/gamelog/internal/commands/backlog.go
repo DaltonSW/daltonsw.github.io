@@ -23,16 +23,32 @@ import (
 // UnfinishedCandidate is one game/provider pair with achievements left to
 // earn. One row per provider rather than per game: a game linked to both
 // Steam and RetroAchievements has two unrelated denominators, and merging
-// them would invent a number that isn't true of either service.
+// them would invent a number that isn't true of either service. A
+// RetroAchievements subset is a third such denominator on the same game, so
+// it gets its own row too — see ProviderLabel.
 type UnfinishedCandidate struct {
-	Game            model.GameSummary
-	Provider        string
+	Game     model.GameSummary
+	Provider string
+	// Subset names the RetroAchievements subset this row is about, blank for
+	// a game's own set. Two rows reading "retroachievements" with different
+	// numbers would otherwise look like a bug.
+	Subset          string
 	Unlocked, Total int
 	Remaining       int
 	Pct             float64 // 0-100
 	LastPlayed      string
 	DaysSince       int // 0 when LastPlayed is empty or unparseable
 	PlaytimeMins    int
+}
+
+// ProviderLabel names the achievement set this row is about, which is the
+// provider alone until a game has subsets and two rows would otherwise carry
+// the same label with different numbers.
+func (c UnfinishedCandidate) ProviderLabel() string {
+	if c.Subset == "" {
+		return c.Provider
+	}
+	return c.Provider + " · " + c.Subset
 }
 
 // DefaultUnfinishedPct hides games barely started. Something at 4% isn't a
@@ -85,9 +101,18 @@ func FindUnfinished(archiveDir string, games []model.GameSummary, opts Unfinishe
 			if pct < opts.MinPct {
 				continue
 			}
+			subset := ""
+			if link.Subset {
+				if _, name, ok := model.SplitRASubsetTitle(rec.Title); ok {
+					subset = name
+				} else {
+					subset = link.ID
+				}
+			}
 			c := UnfinishedCandidate{
 				Game:         g,
 				Provider:     link.Provider,
+				Subset:       subset,
 				Unlocked:     rec.Unlocked,
 				Total:        rec.Total,
 				Remaining:    rec.Total - rec.Unlocked,

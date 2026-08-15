@@ -18,7 +18,7 @@ import (
 // Endpoint base. A var rather than a const so tests can point it at a local
 // server; never reassigned in production code.
 var (
-	raGameProgressURL   = "https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php"
+	GameProgressURL     = "https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php"
 	raCompletionURL     = "https://retroachievements.org/API/API_GetUserCompletionProgress.php"
 	raRecentlyPlayedURL = "https://retroachievements.org/API/API_GetUserRecentlyPlayedGames.php"
 )
@@ -153,6 +153,13 @@ type RAProgress struct {
 	HighestAwardKind  string                   `json:"HighestAwardKind"`
 	HighestAwardDate  string                   `json:"HighestAwardDate"`
 
+	// ParentGameID points a subset back at the game it belongs to — RA
+	// publishes a bonus achievement set ("… [Subset - Mouse Alley]") as its
+	// own game id, and this is the only authoritative link between the two.
+	// The bulk endpoints don't carry it, and a normal game answers with an
+	// explicit null, which decodes as 0.
+	ParentGameID int `json:"ParentGameID"`
+
 	// Raw is the verbatim response body; see SteamAchievementsResult.Raw.
 	Raw json.RawMessage `json:"-"`
 }
@@ -218,7 +225,7 @@ func (c *RAClient) GetGameProgress(ctx context.Context, gameID string) (RAProgre
 	// distinguishes a finished game from one still in progress.
 	q.Set("a", "1")
 
-	body, status, err := c.do(ctx, raGameProgressURL+"?"+q.Encode())
+	body, status, err := c.do(ctx, GameProgressURL+"?"+q.Encode())
 	if err != nil {
 		return RAProgress{}, fmt.Errorf("retroachievements: request for game %s: %w", gameID, err)
 	}
@@ -431,6 +438,7 @@ func FetchRecord(ctx context.Context, client *RAClient, gameID string, recent *R
 	}
 
 	rec.Fetched = today()
+	rec.ProviderTitle = progress.Title
 	rec.Platform = progress.ConsoleName
 	rec.Icon = progress.ImageIcon
 	rec.Completion = progress.UserCompletion

@@ -282,6 +282,11 @@ type gameDetailData struct {
 	PSNID      string
 	UbisoftID  string
 	XboxID     string
+	// Subsets are the RetroAchievements subsets attached to this game, with
+	// the counts the summary keeps separate from the game's own. Read-only
+	// here: attaching one is Housekeeping's job, because it needs the parent
+	// check only the provider can answer (see commands.AttachSubset).
+	Subsets []model.SubsetBreakdown
 }
 
 func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, pf *model.PlaythroughsFile) gameDetailData {
@@ -304,7 +309,9 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 	canDelete := g.NumPlaythroughs == 0 && !commands.HasArchiveRecord(model.FindArchiveDir(s.gamesDir), g.ProviderLinks())
 
 	var achievements []model.EarnedAchievement
+	var subsets []model.SubsetBreakdown
 	if summary, err := model.LoadAchievementSummary(doc.GameDir()); err == nil && summary != nil {
+		subsets = summary.Subsets
 		// Display newest-first; the stored file is oldest-first (see
 		// AchievementSummary.Earned's doc comment) since display order is a
 		// reader's choice, not the archive's.
@@ -335,6 +342,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		PSNID:            g.PSNID,
 		UbisoftID:        g.UbisoftID,
 		XboxID:           g.XboxID,
+		Subsets:          subsets,
 	}
 }
 
@@ -1170,9 +1178,9 @@ func (s *server) handleRefreshAchievements(w http.ResponseWriter, r *http.Reques
 	for _, sv := range saved {
 		p := sv.Record
 		if p.LastError != "" {
-			parts = append(parts, fmt.Sprintf("%s: %s (existing data kept)", sv.Provider, p.LastError))
+			parts = append(parts, fmt.Sprintf("%s: %s (existing data kept)", sv.Label(), p.LastError))
 		} else {
-			parts = append(parts, fmt.Sprintf("%s: %d/%d unlocked", sv.Provider, p.Unlocked, p.Total))
+			parts = append(parts, fmt.Sprintf("%s: %d/%d unlocked", sv.Label(), p.Unlocked, p.Total))
 		}
 	}
 	sort.Strings(parts)

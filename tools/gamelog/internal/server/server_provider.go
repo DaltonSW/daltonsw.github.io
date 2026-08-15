@@ -126,9 +126,9 @@ func (s *server) runAchievementsAllJob(j *job) {
 		for _, sv := range saved {
 			p := sv.Record
 			if p.LastError != "" {
-				j.log("  %s: %s (existing data kept)", sv.Provider, p.LastError)
+				j.log("  %s: %s (existing data kept)", sv.Label(), p.LastError)
 			} else {
-				j.log("  %s: %d/%d unlocked, %s to %s", sv.Provider, p.Unlocked, p.Total, p.First, p.Last)
+				j.log("  %s: %d/%d unlocked, %s to %s", sv.Label(), p.Unlocked, p.Total, p.First, p.Last)
 			}
 		}
 		if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {

@@ -45,7 +45,16 @@ type Candidate struct {
 	PlaytimeMins  int
 	AchievementsA int // earned
 	AchievementsB int // total
+
+	// Subset is set when this candidate is a RetroAchievements subset rather
+	// than a game of its own — nil for everything else, which is nearly
+	// everything. See SubsetInfo and ResolveSubsets.
+	Subset *SubsetInfo
 }
+
+// IsSubset reports whether this candidate belongs under an existing game
+// rather than becoming one.
+func (c Candidate) IsSubset() bool { return c.Subset != nil }
 
 // SortKey orders candidates so the ones most likely worth logging come first:
 // finished games, then by how much evidence there is.
@@ -144,6 +153,12 @@ type loggedIndex struct {
 	steamIDs map[string]bool
 	titles   map[string]bool
 
+	// raGames maps a game's *own* RetroAchievements id to it, so a subset can
+	// be traced to the base game it belongs under. Subset ids are deliberately
+	// not keys here (they are in raIDs, which is the "already covered?"
+	// question): a subset is not a game a further subset could hang off.
+	raGames map[string]model.GameSummary
+
 	// ignored is matched on provider ID only. Every entry is created from a
 	// candidate that had one, so unlike logged games there's no legacy case
 	// needing the title fallback — and matching titles here would risk
@@ -156,10 +171,18 @@ func NewLoggedIndex(games []model.GameSummary) loggedIndex {
 		raIDs:    map[string]bool{},
 		steamIDs: map[string]bool{},
 		titles:   map[string]bool{},
+		raGames:  map[string]model.GameSummary{},
 	}
 	for _, g := range games {
 		if g.RAGameID != "" {
 			idx.raIDs[g.RAGameID] = true
+			idx.raGames[g.RAGameID] = g
+		}
+		// An attached subset is covered by the game it hangs off, so the scan
+		// must stop offering it as an unlogged game of its own — the whole
+		// point of attaching it.
+		for _, id := range g.RASubsets {
+			idx.raIDs[id] = true
 		}
 		if g.SteamAppID != "" {
 			idx.steamIDs[g.SteamAppID] = true
@@ -223,6 +246,13 @@ func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 			c.Status = statusForAward(c.AwardKind)
 		} else {
 			c.Status = "playing"
+		}
+		// The title convention is all this endpoint carries — see
+		// model.SplitRASubsetTitle. ResolveSubsets turns it into a real
+		// parent id; until then BaseTitle is a guess, good for a label and
+		// nothing else.
+		if base, name, ok := model.SplitRASubsetTitle(g.Title); ok {
+			c.Subset = &SubsetInfo{Name: name, BaseTitle: base}
 		}
 		out = append(out, c)
 	}
@@ -359,8 +389,12 @@ type CreatedGame struct {
 // the "create as X instead" correction. Blank keeps each candidate's own
 // guess. Callers must have validated it (forms.IsGameStatus): it goes
 // straight into front matter.
-func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int, status string) (createdList []CreatedGame, skipped int) {
-	creds := LoadCredentials()
+//
+// creds is passed in rather than loaded here so a caller that already has them
+// doesn't re-read .env mid-operation — and so a test can hand over empty ones
+// and get a local, offline run instead of silently reaching the live APIs
+// through whatever .env happens to be above the working directory.
+func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int, status string, creds Credentials) (createdList []CreatedGame, skipped int) {
 	ctx := context.Background()
 	archiveDir := model.FindArchiveDir(gamesDir)
 
