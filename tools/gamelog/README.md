@@ -15,8 +15,8 @@ go run ./cmd/gamelog help     # usage summary
 
 ## Code layout
 
-Standard `cmd/` + `internal/` Go layout. `cmd/main.go` is just flag dispatch; everything else
-lives under `internal/`, one package per concern:
+Standard `cmd/` + `internal/` Go layout. `cmd/main.go` is just command dispatch (spf13/cobra);
+everything else lives under `internal/`, one package per concern:
 
 ```
 internal/model         domain types + storage: front matter, playthroughs.yaml, the archive
@@ -54,6 +54,8 @@ archive/
   psn/NPWR16532_00.json            PlayStation, mirrored via Exophase (see below).
   ubisoft/12345.json                Ubisoft Connect, mirrored via Exophase too.
   xbox/1480657033.json              Xbox 360, via OpenXBL (see below).
+  ignored.yaml                     games you've decided never to log, so Scan and
+                                   Backlog stop offering them. Rewritten whole.
 ```
 
 **The archive is keyed by provider ID, not by slug, and lives outside `content/`.** A slug is a
@@ -304,30 +306,77 @@ the report says so — cross-reference manually before entering a date.
 
 `gamelog serve` (also what bare `gamelog` runs) serves a local web UI over `content/games`:
 create/edit/delete games, log playthroughs and sessions, manage planned replays, and reorder or
-split sessions. Its **Housekeeping** page is where the bulk maintenance flows live — scan, stale,
-close, and achievement refresh-all — described below by what each one does; on the page itself
-these are filter fields, checkboxes, and buttons rather than CLI flags.
+split sessions. Its **Housekeeping** page is where the bulk maintenance flows live — scan,
+backlog, unfinished, stale, close, and achievement refresh-all — described below by what each one
+does; on the page itself these are filter fields, checkboxes, and buttons rather than CLI flags.
 
 **Scan** lists games on RetroAchievements and Steam that have no entry in `content/games` (a
-`min_hours` field narrows the Steam side, default 5), then lets you check which ones to create
-entries for. Matching is by external ID where one is set, falling back to a normalised title — so
-a game logged before those fields existed is still recognised, and casing or a trailing `®`
-doesn't produce a duplicate (`elden-ring` matches `ELDEN RING`). Anything created is written with
-`draft: true`, because every field is inferred — review it and flip the flag to publish. Scanning
-uses only the two bulk endpoints (one request each), so it's fast and can't be rate-limited, but
-those endpoints carry no start dates; create the entry, then run `gamelog suggest <slug>` for the
-precise range. A RetroAchievements game counts as finished when it carries a real award — the
-report names which one, since `12/189 achievements → finished` only makes sense once you can see
-it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award — every
-achievement, not just the ones needed to beat it — is suggested as `status: mastered` instead of
-`finished`. **Steam games are never auto-marked finished**: playtime alone says nothing about
-completion.
+`min_hours` field narrows the Steam side, default 5), one row each with the evidence behind it and
+the entry it would create. Matching is by external ID where one is set, falling back to a
+normalised title — so a game logged before those fields existed is still recognised, and casing or
+a trailing `®` doesn't produce a duplicate (`elden-ring` matches `ELDEN RING`). Anything created
+is written with `draft: true`, because every field is inferred — review it and flip the flag to
+publish. Scanning uses only the two bulk endpoints (one request each), so it's fast and can't be
+rate-limited, but those endpoints carry no start dates; create the entry, then run `gamelog
+suggest <slug>` for the precise range. A RetroAchievements game counts as finished when it carries
+a real award — the row names which one, since `12/189 achievements → finished` only makes sense
+once you can see it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award —
+every achievement, not just the ones needed to beat it — is suggested as `status: mastered`
+instead of `finished`. **Steam games are never auto-marked finished**: playtime alone says nothing
+about completion.
+
+**Every guessed row follows the same three-part shape as the Stale section**, which is the
+paradigm to keep reaching for here: the guess as the primary button (*Correct — create finished*),
+each other plausible answer one click beside it (*Create as dropped instead*, and `software` for
+the tools Steam reports playtime for identically), and a way out that isn't "create it and fix it
+later" (*Never log this*). Overriding to a status that doesn't assert the game is over drops the
+inferred finish date with it — the date only existed to justify the guess, and keeping it under
+`status: playing` would write a self-contradicting entry. A submitted status is validated against
+`forms.GameStatuses` before it reaches front matter.
 
 Scan-created games land as `draft: true`; the games list index has a drafts-only filter with a
 **Draft?** column, and each one's page has Publish/Undraft, Edit, and Delete — the latter only
 offered when the game has no logged playthroughs *and* no archive record for either linked
 provider ID, since once either exists it isn't a plausible false-positive scan match anymore and
 deleting it would risk real data.
+
+**Backlog** is the same Steam scan against the other side of `min_hours`: games you own but have
+played for less than that and never logged. Scan and Backlog partition the library at one shared
+line — the threshold itself counts as played — so a game is always in exactly one of the two
+lists, and moving the field moves games between them rather than duplicating them. Creating one
+writes `status: backlog` (see above: the game-level marker for "not played yet") with no
+`finished` date and, by definition, no `playthroughs.yaml`; it's still a draft like everything
+scan creates. RetroAchievements is skipped here entirely — it has no concept of ownership, and
+`GetUserCompletionProgress` only returns games with at least one achievement already earned, so
+nothing it reports could be backlog. Each creation also captures the game's achievement list (0
+of N — the denominator is the point), which is one Steam request per game, so work through these
+in batches rather than the whole library at once. Its alternatives are a deliberately smaller set
+than Scan's — everything in this list is under the playtime threshold, so any status claiming real
+history would be contradicted by the evidence that put it here; `unplayed` against `backlog`
+("don't know if I ever will" versus "haven't gotten to it") is the distinction worth one click.
+
+**Ignored** is the escape hatch for games you're never going to log — a demo, a bundle leftover, a
+tool that registers as a game. It's the escape hatch on every Scan and Backlog row — **Never log
+this** — and writes an entry to `archive/ignored.yaml` that both lists skip from then on. The list is keyed by provider ID only (never by title, unlike the already-logged check — a
+title match there recovers pre-ID entries, but here it could silently hide a *different* game that
+happens to share a name), so the same game can be ignored on Steam and still offered on
+RetroAchievements. Nothing is deleted or hidden anywhere else: an ignored game keeps whatever
+archive records it has, and the Ignored section lists every entry with an **Un-ignore** button
+that puts it straight back in the next scan. The Ignore buttons post the provider and ID rather
+than a row index, so an ignore doesn't depend on the re-run scan coming back identical the way the
+Create buttons do.
+
+**Unfinished** ranks logged games by how close they are to having every achievement, closest
+first. It reads only what's already in `archive/<provider>/<id>.json` — no API calls, nothing
+written — so it renders with no credentials configured at all, and it's a reading list rather
+than an action queue: each row links to the game's own page. A `min_pct` field (default 50) hides
+games that were opened once rather than nearly finished; those belong in Backlog above. One row
+per provider, not per game: a game linked to both Steam and RetroAchievements has two unrelated
+denominators, and merging them would invent a number that's true of neither. The one-shot
+statuses (`ongoing`, `multiplayer`, `software`) never appear — there's no completion for them to
+be short of — and `finished`/`dropped`/`mastered` games are opt-in via a checkbox, since leaving
+achievements on a game you've called finished is a decision, not an oversight. `paused` and
+`backlog` games *are* listed: both mean "not now", not "not ever".
 
 **Stale** uses Steam's `GetOwnedGames rtime_last_played` (captured into every Steam archive record
 as `last_played`) to find games you've probably stopped playing but never marked as such —

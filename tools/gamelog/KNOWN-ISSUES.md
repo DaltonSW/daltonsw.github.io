@@ -35,8 +35,10 @@ losing captured data is the worst thing that can happen.**
   | paused | 2 |
   | software | 1 |
 
-  `backlog` is the only `gameStatuses` value now unused. The four `playing` entries are genuinely
-  active — anything quiet for 30+ days has been triaged.
+  `backlog` is unused in the counts above but no longer unwritable: Housekeeping's Backlog
+  section creates entries with it from the owned-but-unplayed half of the Steam library. Every
+  `gameStatuses` value now has something that produces it. The four `playing` entries are
+  genuinely active — anything quiet for 30+ days has been triaged.
 - **The vocabulary is split in two, on purpose:** `gameStatuses` (front matter, 9 values) and
   `playthroughStatuses` (entries in `playthroughs.yaml`, now 7 values — `ongoing` and
   `multiplayer` joined the original 5 so a game with genuinely distinct modes, e.g. Hitman's
