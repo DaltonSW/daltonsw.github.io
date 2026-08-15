@@ -426,3 +426,111 @@ func TestSummaryKeepsPerProviderBreakdown(t *testing.T) {
 		t.Errorf("combined = %d/%d, want 106/106", got.Unlocked, got.Total)
 	}
 }
+
+func TestSplitRASubsetTitle(t *testing.T) {
+	cases := []struct{ title, base, subset string }{
+		{"Professor Layton and the Last Specter [Subset - Mouse Alley]", "Professor Layton and the Last Specter", "Mouse Alley"},
+		{"Some Game [Subset - Bonus Set]", "Some Game", "Bonus Set"},
+	}
+	for _, tc := range cases {
+		base, subset, ok := SplitRASubsetTitle(tc.title)
+		if !ok || base != tc.base || subset != tc.subset {
+			t.Errorf("SplitRASubsetTitle(%q) = %q/%q/%v, want %q/%q/true", tc.title, base, subset, ok, tc.base, tc.subset)
+		}
+	}
+	for _, title := range []string{
+		"Hades II",
+		"Sonic & Knuckles [Bonus]",
+		"Mega Man (Subset - X)",
+		"",
+	} {
+		if _, _, ok := SplitRASubsetTitle(title); ok {
+			t.Errorf("SplitRASubsetTitle(%q) matched, want no match", title)
+		}
+	}
+}
+
+// A subset is a bonus achievement set for the same game, not a second copy of
+// it: folding Mouse Alley's 52 into Last Specter's 40 would restate the game
+// as 24%% complete when the game itself is 40%% complete, and describe a set of
+// 92 achievements that exists nowhere.
+func TestWriteAchievementSummary_KeepsSubsetsOutOfTheHeadlineTotals(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+
+	if _, err := SaveRecord(archiveDir, ProviderRA, "7601", "Professor Layton and the Last Specter",
+		&ProviderRecord{Total: 40, Platform: "Nintendo DS", PlaytimeMins: 1449, Achievements: nUnlocked("base", 16)}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := SaveRecord(archiveDir, ProviderRA, "25709", "Professor Layton and the Last Specter [Subset - Mouse Alley]",
+		&ProviderRecord{Total: 52, Platform: "Nintendo DS", PlaytimeMins: 202, Achievements: nUnlocked("sub", 6)}); err != nil {
+		t.Fatal(err)
+	}
+
+	links := BuildProviderLinks("7601", "", "", "", "", "25709")
+	if _, err := WriteAchievementSummary(archiveDir, gameDir, links); err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+
+	if got.Unlocked != 16 || got.Total != 40 {
+		t.Errorf("headline = %d/%d, want the base set's 16/40:\n%s", got.Unlocked, got.Total, raw)
+	}
+	if len(got.Providers) != 1 {
+		t.Errorf("got %d provider breakdowns, want 1 — a subset is not a second place it was played", len(got.Providers))
+	}
+	// Per-id playtime would double-count the same hours if summed.
+	if got.PlaytimeMins != 1449 {
+		t.Errorf("playtime_mins = %d, want the base set's 1449", got.PlaytimeMins)
+	}
+	if len(got.Subsets) != 1 {
+		t.Fatalf("got %d subsets, want 1:\n%s", len(got.Subsets), raw)
+	}
+	sub := got.Subsets[0]
+	if sub.Name != "Mouse Alley" || sub.ID != "25709" || sub.Unlocked != 6 || sub.Total != 52 || sub.PlaytimeMins != 202 {
+		t.Errorf("subset = %+v, want Mouse Alley 25709 6/52 202m", sub)
+	}
+
+	// The unlocks themselves are still earned achievements, so they stay in
+	// the one flat feed — tagged, so a view can group or label them.
+	var tagged int
+	for _, e := range got.Earned {
+		if e.Subset == "Mouse Alley" {
+			tagged++
+		}
+	}
+	if len(got.Earned) != 22 || tagged != 6 {
+		t.Errorf("earned = %d entries (%d tagged), want 22 (6 tagged)", len(got.Earned), tagged)
+	}
+}
+
+func TestBuildProviderLinks_PutsSubsetsBehindTheirBaseSet(t *testing.T) {
+	links := BuildProviderLinks("7601", "1145360", "", "", "", "25709", "25710")
+	want := []ProviderLink{
+		{Provider: ProviderRA, ID: "7601"},
+		{Provider: ProviderRA, ID: "25709", Subset: true},
+		{Provider: ProviderRA, ID: "25710", Subset: true},
+		{Provider: ProviderSteam, ID: "1145360"},
+	}
+	if len(links) != len(want) {
+		t.Fatalf("got %+v, want %+v", links, want)
+	}
+	for i := range want {
+		if links[i] != want[i] {
+			t.Errorf("link %d = %+v, want %+v", i, links[i], want[i])
+		}
+	}
+
+	// A subset id that duplicates the base set would archive the same record
+	// twice and count it twice in the summary.
+	if got := BuildProviderLinks("7601", "", "", "", "", "7601"); len(got) != 1 {
+		t.Errorf("got %+v, want the base link only", got)
+	}
+}

@@ -46,12 +46,17 @@ type GameSummary struct {
 	PSNID            string
 	UbisoftID        string
 	XboxID           string
+	// RASubsets are the RetroAchievements subset ids attached to this game
+	// (see FrontMatter.RASubsets). They matter to the scan as well as to the
+	// archive: a subset already attached here must stop being offered as an
+	// unlogged game of its own.
+	RASubsets []string
 }
 
 // ProviderLinks returns every provider this game is linked to, in
 // ProviderOrder, skipping the ones with no ID set.
 func (g GameSummary) ProviderLinks() []ProviderLink {
-	return BuildProviderLinks(g.RAGameID, g.SteamAppID, g.PSNID, g.UbisoftID, g.XboxID)
+	return BuildProviderLinks(g.RAGameID, g.SteamAppID, g.PSNID, g.UbisoftID, g.XboxID, g.RASubsets...)
 }
 
 func (g GameSummary) Label() string {
@@ -162,6 +167,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		PSNID:            psnID,
 		UbisoftID:        ubisoftID,
 		XboxID:           xboxID,
+		RASubsets:        doc.RASubsetIDs(),
 	}
 }
 

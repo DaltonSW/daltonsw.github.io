@@ -5,7 +5,9 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
+	"strings"
 	"time"
 
 	"gopkg.in/yaml.v3"
@@ -70,11 +72,38 @@ const (
 type ProviderLink struct {
 	Provider string
 	ID       string
+
+	// Subset marks a RetroAchievements subset — a bonus achievement set RA
+	// publishes as its own game id under the base game's roof (see
+	// FrontMatter.RASubsets). It's still a normal archive record fetched the
+	// normal way; the flag exists so the achievement summary can keep a
+	// subset's 52 achievements out of the base game's headline denominator
+	// while still capturing them.
+	Subset bool
 }
 
 // ProviderOrder fixes the order records are written and reported in, so
 // output and tests don't depend on map iteration.
 var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox}
+
+// raSubsetTitle matches RetroAchievements' subset naming convention, which is
+// the *only* thing distinguishing a subset in the bulk endpoints — e.g.
+// "Professor Layton and the Last Specter [Subset - Mouse Alley]". The
+// per-game endpoint reports a real ParentGameID; this is what lets the scan
+// know which of its rows are worth spending that request on.
+var raSubsetTitle = regexp.MustCompile(`(?i)^(.*?)\s*\[Subset\s*-\s*(.+?)\]\s*$`)
+
+// SplitRASubsetTitle splits a RetroAchievements subset title into the base
+// game's name and the subset's own, reporting whether it was one at all.
+// Matching on the title alone is a heuristic, so it is never used to *link* a
+// subset — only to spot a candidate and to label one already linked by id.
+func SplitRASubsetTitle(title string) (base, subset string, ok bool) {
+	m := raSubsetTitle.FindStringSubmatch(strings.TrimSpace(title))
+	if m == nil {
+		return "", "", false
+	}
+	return strings.TrimSpace(m[1]), strings.TrimSpace(m[2]), true
+}
 
 // ArchivedAchievement is one achievement as recorded. Locked ones are kept
 // too: they carry the denominator, and knowing an achievement exists but is
@@ -117,6 +146,13 @@ type ProviderRecord struct {
 	Platform   string `json:"platform,omitempty"`
 	Icon       string `json:"icon,omitempty"`
 	Completion string `json:"completion,omitempty"`
+
+	// ProviderTitle is the provider's own name for what was just fetched. Not
+	// persisted here — ArchiveRecord.Title is where a title lands — it only
+	// carries the name from a fetch to SaveRecord, for the one case where the
+	// caller doesn't have it: a RetroAchievements subset, whose name ("Mouse
+	// Alley") exists nowhere in this repo except the record itself.
+	ProviderTitle string `json:"-"`
 
 	// Source names where the data came from when that isn't the provider's
 	// own API — "exophase" for the PlayStation mirror. Without it a later run
@@ -392,6 +428,14 @@ type AchievementSummary struct {
 	// is a display decision.
 	Providers []ProviderBreakdown `yaml:"providers,omitempty"`
 
+	// Subsets is every RetroAchievements subset linked to this game, each with
+	// its own counts, kept out of the totals above on purpose. A subset is a
+	// bonus achievement set for the same game, not a second copy of it: adding
+	// Mouse Alley's 52 to Last Specter's 40 would restate the game as 24%
+	// complete when the game itself is 40% complete, and there is no set
+	// anywhere that has 92 achievements in it.
+	Subsets []SubsetBreakdown `yaml:"subsets,omitempty"`
+
 	// Earned is every unlocked achievement across every linked provider, kept
 	// here (rather than read from archive/ directly) for the same reason the
 	// rest of this projection exists: Hugo never reads archive/ or its `raw`
@@ -414,6 +458,36 @@ type EarnedAchievement struct {
 	Provider    string `yaml:"provider"`
 	Platform    string `yaml:"platform,omitempty"`
 	Hidden      bool   `yaml:"hidden,omitempty"`
+
+	// Subset names the RetroAchievements subset this one came from, blank for
+	// the base set. Subset unlocks stay in this one flat list rather than
+	// hiding inside SubsetBreakdown: they were genuinely earned, and the
+	// site-wide achievement list would otherwise silently omit them. The tag
+	// is what lets a view group or label them without a second source.
+	Subset string `yaml:"subset,omitempty"`
+}
+
+// SubsetBreakdown is one RetroAchievements subset's contribution to a game —
+// deliberately not a ProviderBreakdown, because it is not a second place the
+// game was played and must not be summed with one.
+type SubsetBreakdown struct {
+	// Name is the subset's own half of RA's "Base [Subset - Name]" title,
+	// falling back to the whole title if it doesn't follow the convention.
+	// It's derived from the archived record rather than stored in front
+	// matter, for the same reason ArchiveRecord.Title is the provider's own
+	// name for a game: the provider owns what its set is called.
+	Name     string `yaml:"name"`
+	Provider string `yaml:"provider"`
+	ID       string `yaml:"id"`
+	Platform string `yaml:"platform,omitempty"`
+	Unlocked int    `yaml:"unlocked"`
+	Total    int    `yaml:"total"`
+	// PlaytimeMins is reported per RA game id, and a subset is the same game
+	// played again under a different id — so it is kept here and deliberately
+	// left out of the game's total, which would otherwise double-count the
+	// same hours.
+	PlaytimeMins int    `yaml:"playtime_mins,omitempty"`
+	LastPlayed   string `yaml:"last_played,omitempty"`
 }
 
 // ProviderBreakdown is one provider's contribution to a game's summary.
@@ -440,6 +514,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 	var unlocked, total, playtimeMins int
 	var lastPlayed string
 	var breakdown []ProviderBreakdown
+	var subsets []SubsetBreakdown
 	var earned []EarnedAchievement
 	for _, link := range links {
 		provider, id := link.Provider, link.ID
@@ -453,17 +528,41 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 		if rec == nil {
 			continue
 		}
-		breakdown = append(breakdown, ProviderBreakdown{
-			Provider:     provider,
-			Platform:     rec.Platform,
-			Unlocked:     rec.Unlocked,
-			Total:        rec.Total,
-			PlaytimeMins: rec.PlaytimeMins,
-			LastPlayed:   FirstNonEmpty(rec.LastPlayed, rec.Last),
-		})
-		unlocked += rec.Unlocked
-		total += rec.Total
-		playtimeMins += rec.PlaytimeMins
+		subsetName := ""
+		if link.Subset {
+			// A subset gets its own line and contributes nothing to the
+			// headline counts or the provider breakdown — see
+			// AchievementSummary.Subsets for why summing them is wrong.
+			// RA's own title for the set, reduced to just the subset's half.
+			// A record captured before its title was known falls back to the
+			// id, so the line still identifies which set it is.
+			subsetName = FirstNonEmpty(rec.Title, id)
+			if _, name, ok := SplitRASubsetTitle(rec.Title); ok {
+				subsetName = name
+			}
+			subsets = append(subsets, SubsetBreakdown{
+				Name:         subsetName,
+				Provider:     provider,
+				ID:           id,
+				Platform:     rec.Platform,
+				Unlocked:     rec.Unlocked,
+				Total:        rec.Total,
+				PlaytimeMins: rec.PlaytimeMins,
+				LastPlayed:   FirstNonEmpty(rec.LastPlayed, rec.Last),
+			})
+		} else {
+			breakdown = append(breakdown, ProviderBreakdown{
+				Provider:     provider,
+				Platform:     rec.Platform,
+				Unlocked:     rec.Unlocked,
+				Total:        rec.Total,
+				PlaytimeMins: rec.PlaytimeMins,
+				LastPlayed:   FirstNonEmpty(rec.LastPlayed, rec.Last),
+			})
+			unlocked += rec.Unlocked
+			total += rec.Total
+			playtimeMins += rec.PlaytimeMins
+		}
 		for _, a := range rec.Achievements {
 			if !a.Unlocked {
 				continue
@@ -478,8 +577,13 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				Provider:    provider,
 				Platform:    rec.Platform,
 				Hidden:      a.Hidden,
+				Subset:      subsetName,
 			})
 		}
+		// A subset's dates are folded in with everything else: playing the
+		// bonus set is playing the game, and hiding that would make the site's
+		// "last active" older than the archive knows it to be.
+		//
 		// RetroAchievements has no "last played" signal — the closest proxy
 		// is the most recent achievement unlock, already tracked as Last.
 		// Steam's LastPlayed (rtime_last_played) and PSN's are the real
@@ -493,7 +597,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 	}
 
 	path := achievementSummaryPath(gameDir)
-	if total == 0 && playtimeMins == 0 && lastPlayed == "" {
+	if total == 0 && playtimeMins == 0 && lastPlayed == "" && len(subsets) == 0 {
 		if err := os.Remove(path); err != nil && !os.IsNotExist(err) {
 			return false, err
 		}
@@ -504,7 +608,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 
 	out, err := yaml.Marshal(AchievementSummary{
 		Unlocked: unlocked, Total: total, PlaytimeMins: playtimeMins, LastPlayed: lastPlayed,
-		Providers: breakdown, Earned: earned,
+		Providers: breakdown, Subsets: subsets, Earned: earned,
 	})
 	if err != nil {
 		return false, err
