@@ -138,6 +138,8 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /housekeeping", s.handleHousekeeping)
 	mux.HandleFunc("POST /scan", s.handleScanCreate)
 	mux.HandleFunc("POST /backlog", s.handleBacklogCreate)
+	mux.HandleFunc("POST /subset/attach", s.handleSubsetAttach)
+	mux.HandleFunc("POST /subset/create-base", s.handleSubsetCreateBase)
 	mux.HandleFunc("POST /ignore", s.handleIgnore)
 	mux.HandleFunc("POST /unignore", s.handleUnignore)
 	mux.HandleFunc("POST /stale/{slug}", s.handleStaleAction)

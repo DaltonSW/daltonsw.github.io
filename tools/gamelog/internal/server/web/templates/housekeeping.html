@@ -19,9 +19,19 @@
 
      Takes a scanRow. Ignore posts the provider/id rather than a row index, so
      unlike the create buttons it doesn't depend on the scan re-deriving
-     identically — and that pair also makes a page-unique id for the row. */}}
+     identically — and that pair also makes a page-unique id for the row.
+
+     A RetroAchievements *subset* row keeps the same three parts but swaps the
+     primary: creating it would make a second entry for a game that already
+     has one, so the guess becomes "attach it to that game" (or, when the base
+     game isn't logged either, "create the base game and attach"). The
+     subset's own forms post ids rather than a row index, for the same reason
+     ignore does — see handleSubsetAttach. A subset whose parent couldn't be
+     resolved falls back to an ordinary row: the title convention alone is
+     never enough to link one. */}}
 {{define "create_actions"}}
 {{$row := printf "%s-%s" .C.ProviderKey .C.ID}}
+{{$sub := .C.Subset}}
 <div class="cell-stack">
   <form method="post" action="{{.Action}}" id="create-{{$row}}" class="cell-actions">
     <input type="hidden" name="min_hours" value="{{.MinHours}}">
@@ -36,8 +46,23 @@
     <input type="hidden" name="id" value="{{.C.ID}}">
     <input type="hidden" name="title" value="{{.C.Title}}">
   </form>
+  {{if and $sub $sub.ParentID}}
+  <form method="post" action="{{if $sub.Attachable}}/subset/attach{{else}}/subset/create-base{{end}}" id="subset-{{$row}}" class="form--hidden">
+    <input type="hidden" name="id" value="{{.C.ID}}">
+    <input type="hidden" name="slug" value="{{$sub.BaseSlug}}">
+    <input type="hidden" name="title" value="{{.C.Title}}">
+  </form>
+  {{end}}
   <div class="cell-actions">
+    {{if and $sub $sub.ParentID}}
+      {{if $sub.Attachable}}
+      <button type="submit" form="subset-{{$row}}" class="btn--primary">Attach to {{$sub.BaseTitle}}</button>
+      {{else}}
+      <button type="submit" form="subset-{{$row}}" class="btn--primary">Create {{$sub.BaseTitle}} + attach</button>
+      {{end}}
+    {{else}}
     <button type="submit" form="create-{{$row}}" class="btn--primary">Correct — create {{.C.Status}}</button>
+    {{end}}
     <button type="submit" form="ignore-{{$row}}">Never log this</button>
   </div>
 </div>
@@ -73,10 +98,25 @@
   <tbody>
   {{range .ScanCandidates}}
   <tr>
-    <td>{{.C.Title}}</td>
+    <td>{{.C.Title}}
+      {{- with .C.Subset}}
+      <span class="row-note">
+        {{- if .Attachable}}subset of {{.BaseSlug}}
+        {{- else if .ParentID}}subset of RA {{.ParentID}} — not logged yet
+        {{- else}}looks like a subset, but its parent could not be resolved{{with .Err}} ({{.}}){{end}}
+        {{- end -}}
+      </span>
+      {{- end}}
+    </td>
     <td class="dim">{{.C.Provider}} {{.C.ID}} · {{.C.Platform}}</td>
     <td class="dim">{{with .C.Evidence}}{{.}}{{else}}—{{end}}</td>
-    <td class="dim">{{with .C.Outcome}}{{.}}{{else}}{{.C.Status}}{{end}}</td>
+    <td class="dim">
+      {{- if .C.IsSubset -}}
+        {{- if .C.Subset.ParentID}}attach to {{.C.Subset.BaseTitle}}{{else}}—{{end -}}
+      {{- else -}}
+        {{- with .C.Outcome}}{{.}}{{else}}{{.C.Status}}{{end -}}
+      {{- end -}}
+    </td>
     <td>{{template "create_actions" .}}</td>
   </tr>
   {{end}}
@@ -153,7 +193,7 @@
 <h2>Unfinished</h2>
 <p class="lead">Logged games with achievements left to earn, closest to done first. Read from the
    archive on disk — no API calls, nothing written. One row per provider, since each has its own
-   denominator.</p>
+   denominator — and a RetroAchievements subset is another one, so it gets a row of its own too.</p>
 <form method="get" action="/housekeeping" class="row">
   <label for="unfinished_pct">Min completion %</label>
   <input type="number" step="5" id="unfinished_pct" name="unfinished_pct" value="{{.UnfinishedPct}}" style="max-width: 8rem;">
@@ -175,7 +215,7 @@
   <tr>
     <td><a href="/games/{{.Game.Slug}}">{{.Game.Title}}</a>{{if .Game.Draft}} <span class="dim">[draft]</span>{{end}}</td>
     <td class="dim">{{.Game.Status}}</td>
-    <td class="dim">{{.Provider}}</td>
+    <td class="dim">{{.ProviderLabel}}</td>
     <td>{{.Unlocked}}/{{.Total}} ({{printf "%.0f" .Pct}}%)</td>
     <td>{{.Remaining}}</td>
     <td class="dim">{{if .LastPlayed}}{{.LastPlayed}} ({{.DaysSince}}d){{else}}—{{end}}</td>

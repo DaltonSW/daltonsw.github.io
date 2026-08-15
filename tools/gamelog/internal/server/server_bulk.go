@@ -46,7 +46,11 @@ func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) ([]com
 	var candidates []commands.Candidate
 	if creds.RAConfigured() && !backlog {
 		if found, err := commands.ScanRA(ctx, creds, index); err == nil {
-			candidates = append(candidates, found...)
+			// Resolves which base game each subset row belongs to, at one
+			// per-game request per subset never seen this process. The bulk
+			// endpoints carry no parent link, so this is the only way a subset
+			// row can offer to attach rather than to duplicate a game.
+			candidates = append(candidates, commands.ResolveSubsets(ctx, commands.RAClientFor(creds), found, index)...)
 		}
 	}
 	if creds.SteamConfigured() {
@@ -108,7 +112,7 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		}
 	}
 
-	created, skipped := commands.CreateFromCandidates(s.gamesDir, candidates, chosen, status)
+	created, skipped := commands.CreateFromCandidates(s.gamesDir, candidates, chosen, status, commands.LoadCredentials())
 	kind := "created"
 	if status != "" {
 		kind = "created as " + status
@@ -116,6 +120,59 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		kind = "created as backlog"
 	}
 	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
+}
+
+// handleSubsetAttach links a RetroAchievements subset to the game it belongs
+// to, instead of creating a second entry for a game that already has one.
+//
+// Like handleIgnore — and unlike the create buttons — it posts ids rather than
+// a row index: attaching is a durable decision keyed by ids that never change,
+// so it shouldn't depend on the scan re-deriving identically. commands
+// re-checks the parent link against the target game before writing anything,
+// so a stale or hand-edited form can't attach a subset to the wrong game.
+func (s *server) handleSubsetAttach(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	subsetID, slug := r.FormValue("id"), r.FormValue("slug")
+	if subsetID == "" || slug == "" {
+		redirectErr(w, r, "/housekeeping", fmt.Errorf("attaching a subset needs an id and a game"))
+		return
+	}
+	creds := commands.LoadCredentials()
+	title, err := commands.AttachSubset(r.Context(), s.gamesDir, slug, subsetID, commands.RAClientFor(creds), creds)
+	name := model.FirstNonEmpty(title, r.FormValue("title"), subsetID)
+	switch {
+	case commands.IsAlreadyAttached(err):
+		redirectOK(w, r, "/housekeeping", fmt.Sprintf("%s was already attached to %s.", name, slug))
+	case err != nil:
+		redirectErr(w, r, "/housekeeping", err)
+	default:
+		redirectOK(w, r, "/housekeeping", fmt.Sprintf("%s attached to %s — its achievements now show on that game's page.", name, slug))
+	}
+}
+
+// handleSubsetCreateBase is the same action for a subset whose base game isn't
+// logged at all: create the base game from what RetroAchievements reports
+// about it (a draft, like everything the scan creates), then attach.
+func (s *server) handleSubsetCreateBase(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	subsetID := r.FormValue("id")
+	if subsetID == "" {
+		redirectErr(w, r, "/housekeeping", fmt.Errorf("creating a base game needs the subset's id"))
+		return
+	}
+	creds := commands.LoadCredentials()
+	slug, baseTitle, err := commands.CreateBaseAndAttach(r.Context(), s.gamesDir, subsetID, commands.RAClientFor(creds), creds)
+	if err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	redirectOK(w, r, "/housekeeping", fmt.Sprintf("Created %s as a draft (%s) with its subset attached. Review it via the games list's \"drafts only\" filter.", baseTitle, slug))
 }
 
 // handleIgnore takes a scan candidate off the list for good. Unlike the

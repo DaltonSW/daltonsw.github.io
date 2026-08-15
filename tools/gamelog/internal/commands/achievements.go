@@ -56,93 +56,125 @@ func raRecentlyPlayed(ctx context.Context, client *retroachievements.RAClient, u
 type savedRecord struct {
 	Provider string
 	ID       string
+	Subset   bool
 	Path     string
 	Record   *model.ArchiveRecord
 }
 
+// Label names the record in a progress line. Every link on a game reports the
+// same provider name until subsets exist, at which point "retroachievements"
+// three times over says nothing about which set moved.
+func (s savedRecord) Label() string {
+	if !s.Subset {
+		return s.Provider
+	}
+	name := s.ID
+	if s.Record != nil {
+		if _, sub, ok := model.SplitRASubsetTitle(s.Record.Title); ok {
+			name = sub
+		}
+	}
+	return s.Provider + " subset " + name
+}
+
 // saveAchievements fetches from every configured provider the game is linked
 // to — not just the first — and merges each result into its own archive file.
+//
+// It walks links in order rather than folding them into one id per provider,
+// because a RetroAchievements subset is a second RA id on the same game (see
+// model.FrontMatter.RASubsets). Order is BuildProviderLinks' order, which is
+// ProviderOrder with each game's subsets behind its base RA set.
+//
+// An error aborts the rest of the walk with whatever was already written left
+// in place. That's safe, and better than discarding it: every write is a merge
+// that can only add (see model.mergeProvider), so a half-finished refresh is
+// simply a refresh of fewer sets.
 func SaveAchievements(ctx context.Context, archiveDir, title string, links []model.ProviderLink, creds Credentials) ([]savedRecord, error) {
-	fresh := map[string]*model.ProviderRecord{}
-	ids := map[string]string{}
+	var (
+		raClient    *retroachievements.RAClient
+		steamClient *steam.SteamClient
+		steamOwned  []steam.SteamOwnedGame
+		saved       []savedRecord
+	)
 
-	byProvider := map[string]string{}
-	for _, l := range links {
-		if l.ID != "" {
-			byProvider[l.Provider] = l.ID
+	for _, link := range links {
+		if link.ID == "" {
+			continue
 		}
-	}
-	raID, steamAppID, psnID, ubisoftID, xboxID := byProvider[model.ProviderRA], byProvider[model.ProviderSteam], byProvider[model.ProviderPSN], byProvider[model.ProviderUbisoft], byProvider[model.ProviderXbox]
-
-	if raID != "" && creds.RAConfigured() {
-		client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
-		rec, err := retroachievements.FetchRecord(ctx, client, raID, raRecentlyPlayed(ctx, client, creds.RAUsername)[raID])
-		if err != nil {
-			return nil, err
-		}
-		fresh[model.ProviderRA], ids[model.ProviderRA] = rec, raID
-	}
-	if steamAppID != "" && creds.SteamConfigured() {
-		client := &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
-		var owned *steam.SteamOwnedGame
-		if games, err := client.GetOwnedGames(ctx); err == nil {
-			for i := range games {
-				if strconv.Itoa(games[i].AppID) == steamAppID {
-					owned = &games[i]
+		var (
+			rec *model.ProviderRecord
+			err error
+		)
+		switch link.Provider {
+		case model.ProviderRA:
+			if !creds.RAConfigured() {
+				continue
+			}
+			if raClient == nil {
+				raClient = &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
+			}
+			rec, err = retroachievements.FetchRecord(ctx, raClient, link.ID,
+				raRecentlyPlayed(ctx, raClient, creds.RAUsername)[link.ID])
+		case model.ProviderSteam:
+			if !creds.SteamConfigured() {
+				continue
+			}
+			if steamClient == nil {
+				steamClient = &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
+				steamOwned, _ = steamClient.GetOwnedGames(ctx)
+			}
+			var owned *steam.SteamOwnedGame
+			for i := range steamOwned {
+				if strconv.Itoa(steamOwned[i].AppID) == link.ID {
+					owned = &steamOwned[i]
 					break
 				}
 			}
-		}
-		rec, err := steam.FetchRecord(ctx, client, steamAppID, owned)
-		if err != nil {
-			return nil, err
-		}
-		fresh[model.ProviderSteam], ids[model.ProviderSteam] = rec, steamAppID
-	}
-	if psnID != "" && creds.PSNConfigured() {
-		client := &psn.PSNClient{Npsso: creds.PSNNpsso}
-		rec, err := psn.FetchRecord(ctx, client, psnID)
-		if err != nil {
-			return nil, err
-		}
-		fresh[model.ProviderPSN], ids[model.ProviderPSN] = rec, psnID
-	}
-	if ubisoftID != "" && creds.ExophaseConfigured() {
-		client := &exophase.ExophaseClient{User: creds.ExophaseUser}
-		rec, err := exophase.FetchUbisoftRecord(ctx, client, ubisoftID)
-		if err != nil {
-			return nil, err
-		}
-		fresh[model.ProviderUbisoft], ids[model.ProviderUbisoft] = rec, ubisoftID
-	}
-	if xboxID != "" && creds.XBLConfigured() {
-		client := &xbox.XBLClient{APIKey: creds.XBLAPIKey}
-		rec, err := xbox.FetchRecord(ctx, client, xboxID)
-		if err != nil {
-			return nil, err
-		}
-		fresh[model.ProviderXbox], ids[model.ProviderXbox] = rec, xboxID
-	}
-
-	if len(fresh) == 0 {
-		return nil, fmt.Errorf("no configured provider for this game")
-	}
-
-	var saved []savedRecord
-	for _, provider := range model.ProviderOrder {
-		rec, ok := fresh[provider]
-		if !ok {
+			rec, err = steam.FetchRecord(ctx, steamClient, link.ID, owned)
+		case model.ProviderPSN:
+			if !creds.PSNConfigured() {
+				continue
+			}
+			rec, err = psn.FetchRecord(ctx, &psn.PSNClient{Npsso: creds.PSNNpsso}, link.ID)
+		case model.ProviderUbisoft:
+			if !creds.ExophaseConfigured() {
+				continue
+			}
+			rec, err = exophase.FetchUbisoftRecord(ctx, &exophase.ExophaseClient{User: creds.ExophaseUser}, link.ID)
+		case model.ProviderXbox:
+			if !creds.XBLConfigured() {
+				continue
+			}
+			rec, err = xbox.FetchRecord(ctx, &xbox.XBLClient{APIKey: creds.XBLAPIKey}, link.ID)
+		default:
 			continue
 		}
-		path, err := model.SaveRecord(archiveDir, provider, ids[provider], title, rec)
 		if err != nil {
 			return nil, err
 		}
-		stored, err := model.LoadRecord(archiveDir, provider, ids[provider])
+
+		// A subset's record is titled by RetroAchievements, not by the site.
+		// The game's own title names the *base* set, so writing it here would
+		// erase the only place "Mouse Alley" is recorded — and a refresh of
+		// the game runs through this same loop for every set it has. Blank
+		// (a failed fetch) leaves whatever SaveRecord already had.
+		recordTitle := title
+		if link.Subset {
+			recordTitle = rec.ProviderTitle
+		}
+		path, err := model.SaveRecord(archiveDir, link.Provider, link.ID, recordTitle, rec)
 		if err != nil {
 			return nil, err
 		}
-		saved = append(saved, savedRecord{Provider: provider, ID: ids[provider], Path: path, Record: stored})
+		stored, err := model.LoadRecord(archiveDir, link.Provider, link.ID)
+		if err != nil {
+			return nil, err
+		}
+		saved = append(saved, savedRecord{Provider: link.Provider, ID: link.ID, Subset: link.Subset, Path: path, Record: stored})
+	}
+
+	if len(saved) == 0 {
+		return nil, fmt.Errorf("no configured provider for this game")
 	}
 	return saved, nil
 }
@@ -198,9 +230,9 @@ func RunAchievements(args []string) error {
 	for _, s := range saved {
 		p := s.Record
 		if p.LastError != "" {
-			fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Provider, p.LastError)
+			fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Label(), p.LastError)
 		} else {
-			fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Provider, p.Unlocked, p.Total, p.First, p.Last)
+			fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Label(), p.Unlocked, p.Total, p.First, p.Last)
 		}
 		fmt.Printf("Saved %s\n", s.Path)
 	}
@@ -310,9 +342,9 @@ func runAchievementsAll() error {
 		for _, s := range saved {
 			p := s.Record
 			if p.LastError != "" {
-				fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Provider, p.LastError)
+				fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Label(), p.LastError)
 			} else {
-				fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Provider, p.Unlocked, p.Total, p.First, p.Last)
+				fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Label(), p.Unlocked, p.Total, p.First, p.Last)
 			}
 		}
 		if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {

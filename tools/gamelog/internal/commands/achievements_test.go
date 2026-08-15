@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	"go.dalton.dog/gamelog/internal/model"
+	"go.dalton.dog/gamelog/internal/providers/retroachievements"
 	"go.dalton.dog/gamelog/internal/providers/steam"
 )
 
@@ -74,4 +75,30 @@ func TestSaveAchievements_PrivateProfileKeepsExistingData(t *testing.T) {
 // steamLink is the common single-provider case in these tests.
 func steamLink(id string) []model.ProviderLink {
 	return []model.ProviderLink{{Provider: model.ProviderSteam, ID: id}}
+}
+
+// raStubProgress points the RetroAchievements per-game endpoint at a canned
+// response for one test. saveAchievements builds its own client, so the URL is
+// the only seam — same shape as steamStub above.
+func raStubProgress(t *testing.T, body string) {
+	t.Helper()
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(body))
+	}))
+	t.Cleanup(srv.Close)
+
+	old := retroachievements.GameProgressURL
+	retroachievements.GameProgressURL = srv.URL
+	t.Cleanup(func() { retroachievements.GameProgressURL = old })
+
+	// Pre-seed the user-level last-played memo so the fetch doesn't reach for
+	// the live recently-played endpoint, which has no stub of its own.
+	raRecentCache.Lock()
+	raRecentCache.byUser["u"] = map[string]*retroachievements.RARecentGame{}
+	raRecentCache.Unlock()
+	t.Cleanup(func() {
+		raRecentCache.Lock()
+		delete(raRecentCache.byUser, "u")
+		raRecentCache.Unlock()
+	})
 }

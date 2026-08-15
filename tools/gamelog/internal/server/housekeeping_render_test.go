@@ -68,3 +68,69 @@ func TestHousekeepingRenders(t *testing.T) {
 		}
 	}
 }
+
+// A RetroAchievements subset row swaps its primary button for "attach to the
+// game this belongs to" — creating it would make a second entry for a game
+// that already has one. The other two parts of the row (create-as, never log
+// this) stay, since the guess can still be wrong.
+func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
+	tmpl, err := parsePage(pageSpecs["housekeeping"].name, pageSpecs["housekeeping"].partials...)
+	if err != nil {
+		t.Fatal(err)
+	}
+	data := housekeepingData{
+		MinHours: 5,
+		ScanCandidates: scanRows([]commands.Candidate{
+			{
+				Provider: "RetroAchievements", Title: "Professor Layton and the Last Specter [Subset - Mouse Alley]",
+				ID: "25709", Status: "playing", AchievementsA: 6, AchievementsB: 52,
+				Subset: &commands.SubsetInfo{
+					Name: "Mouse Alley", ParentID: "7601",
+					BaseTitle: "Professor Layton and the Last Specter",
+					BaseSlug:  "professor-layton-and-the-last-specter",
+				},
+			},
+			// Same thing, base game not logged: the primary offers to create it.
+			{
+				Provider: "RetroAchievements", Title: "Some Game [Subset - Bonus]", ID: "99",
+				Status: "playing",
+				Subset: &commands.SubsetInfo{Name: "Bonus", ParentID: "12", BaseTitle: "Some Game"},
+			},
+			// Unresolvable parent: falls back to an ordinary row, because the
+			// title convention alone is never enough to link one.
+			{
+				Provider: "RetroAchievements", Title: "Mystery [Subset - Huh]", ID: "77", Status: "playing",
+				Subset: &commands.SubsetInfo{Name: "Huh", BaseTitle: "Mystery", Err: "no parent game"},
+			},
+		}, forms.ScanQuickStatuses, "/scan", 5),
+	}
+	var buf bytes.Buffer
+	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
+		t.Fatal(err)
+	}
+	out := buf.String()
+
+	for _, want := range []string{
+		`action="/subset/attach"`,
+		`id="subset-retroachievements-25709"`,
+		`form="subset-retroachievements-25709"`,
+		`value="professor-layton-and-the-last-specter"`,
+		"Attach to Professor Layton and the Last Specter",
+		"subset of professor-layton-and-the-last-specter",
+		`action="/subset/create-base"`,
+		"Create Some Game + attach",
+		"Never log this",
+		// The unresolved one keeps the ordinary primary button.
+		"Correct — create playing",
+		"its parent could not be resolved",
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("page missing %q", want)
+		}
+	}
+	// Only the unresolved row keeps the create-it-as-a-game primary; the two
+	// resolved subsets must not offer to duplicate a game as well as attach.
+	if n := strings.Count(out, "Correct — create"); n != 1 {
+		t.Errorf("create-as-a-game primary appears %d times, want 1 (the unresolvable row only)", n)
+	}
+}
