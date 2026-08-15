@@ -1,4 +1,31 @@
 {{define "content"}}
-<h1>Achievements — refresh all</h1>
-{{template "job_progress" .}}
+<div class="job">
+  <div class="job__head">
+    <h1>Achievements — refresh all</h1>
+    <a class="btn" href="/housekeeping">Back to housekeeping</a>
+  </div>
+  {{template "job_progress" .}}
+</div>
+{{/* The poll swaps the whole progress block every two seconds, which resets
+     the log pane's scroll position. Remember whether the reader was parked at
+     the bottom (following the job) and restore that after each swap; if they
+     scrolled up to read something, leave them where they were. Listening on
+     document in the capture phase because the element itself is replaced on
+     every swap, so a listener bound to it wouldn't survive. */}}
+<script>
+  (function () {
+    var follow = true;
+    function pane() { return document.getElementById("job-log"); }
+    function atBottom(el) { return el.scrollHeight - el.scrollTop - el.clientHeight < 24; }
+    document.addEventListener("scroll", function (e) {
+      if (e.target && e.target.id === "job-log") { follow = atBottom(e.target); }
+    }, true);
+    document.body.addEventListener("htmx:afterSwap", function () {
+      var el = pane();
+      if (el && follow) { el.scrollTop = el.scrollHeight; }
+    });
+    var el = pane();
+    if (el) { el.scrollTop = el.scrollHeight; }
+  })();
+</script>
 {{end}}

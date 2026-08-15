@@ -1,26 +1,45 @@
 {{/* One scan/backlog row's actions, in the same shape the Stale section uses:
-     the guess as the primary button, each other plausible status one click
-     beside it, and a way out that isn't "create it and fix it later".
+     the guess as the primary button, the other plausible statuses beside it,
+     and a way out that isn't "create it and fix it later". The alternatives
+     are one button plus a dropdown rather than a button each — with five
+     statuses per row and a row per unlogged game, a button apiece is most of
+     the page.
+
+     Two lines: "Create as" + its dropdown, then the two one-click buttons.
+     The buttons reach their forms by `form=` id rather than by nesting, since
+     they belong to two different forms (create and ignore) but read as one
+     row — nesting would force a line each. Ignore's form is markup-only, so
+     `.form--hidden` takes it out of the stack's layout entirely.
+
+     The select is only consulted when its own button was the one clicked
+     (see use_status in createFromScan): a <select> submits its value whatever
+     button sent the form, so the primary button would otherwise pick up
+     whatever the dropdown happened to be showing. Only the clicked button's
+     own name/value is submitted, which is what makes that flag reliable.
 
      Takes a scanRow. Ignore posts the provider/id rather than a row index, so
      unlike the create buttons it doesn't depend on the scan re-deriving
-     identically. */}}
+     identically — and that pair also makes a page-unique id for the row. */}}
 {{define "create_actions"}}
-<div class="cell-actions">
-  <form method="post" action="{{.Action}}" class="cell-actions">
+{{$row := printf "%s-%s" .C.ProviderKey .C.ID}}
+<div class="cell-stack">
+  <form method="post" action="{{.Action}}" id="create-{{$row}}" class="cell-actions">
     <input type="hidden" name="min_hours" value="{{.MinHours}}">
     <input type="hidden" name="candidate" value="{{.I}}">
-    <button type="submit" class="btn--primary">Correct — create {{.C.Status}}</button>
-    {{range .OtherStatuses}}
-    <button name="status" value="{{.}}" type="submit">Create as {{.}} instead</button>
-    {{end}}
+    <button type="submit" name="use_status" value="1">Create as</button>
+    <select name="status" aria-label="Status to create {{.C.Title}} as">
+      {{range .OtherStatuses}}<option value="{{.}}">{{.}}</option>{{end}}
+    </select>
   </form>
-  <form method="post" action="/ignore">
+  <form method="post" action="/ignore" id="ignore-{{$row}}" class="form--hidden">
     <input type="hidden" name="provider" value="{{.C.ProviderKey}}">
     <input type="hidden" name="id" value="{{.C.ID}}">
     <input type="hidden" name="title" value="{{.C.Title}}">
-    <button type="submit">Never log this</button>
   </form>
+  <div class="cell-actions">
+    <button type="submit" form="create-{{$row}}" class="btn--primary">Correct — create {{.C.Status}}</button>
+    <button type="submit" form="ignore-{{$row}}">Never log this</button>
+  </div>
 </div>
 {{end}}
 

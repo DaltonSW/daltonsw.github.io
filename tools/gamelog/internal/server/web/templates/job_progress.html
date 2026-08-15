@@ -1,16 +1,38 @@
+{{/* The live half of the job monitor: a fixed status strip on top and a log
+     pane that takes whatever height is left over and scrolls inside itself.
+     The whole block is what the htmx poll replaces, so anything that must
+     survive a swap (the scroll-follow script) lives in job.html instead. */}}
 {{define "job_progress"}}
-<div id="job-progress"{{if eq .Status "running"}} hx-get="/jobs/{{.ID}}/progress" hx-trigger="every 2s" hx-swap="outerHTML"{{end}}>
-{{if eq .Status "running"}}
-<p class="lead">Running…{{with .CurrentItem}} {{.}}{{end}} ({{.Current}}/{{.Total}})</p>
-<div class="progress" role="progressbar" aria-valuenow="{{percent .Current .Total}}" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress__bar" style="width: {{percent .Current .Total}}%"></div>
-</div>
-{{else if eq .Status "error"}}
-<p class="flash flash--error">{{.Err}}</p>
-{{else}}
-<p class="flash flash--ok">Done.</p>
-{{end}}
-<pre>{{range .Lines}}{{.}}
-{{end}}</pre>
+<div id="job-progress" class="job__body"{{if eq .Status "running"}} hx-get="/jobs/{{.ID}}/progress" hx-trigger="every 2s" hx-swap="outerHTML"{{end}}>
+  <div class="job__status">
+    <div class="job__stat">
+      <span class="job__stat-label">status</span>
+      {{if eq .Status "running"}}<span class="job__stat-value job__stat-value--running">running</span>
+      {{else if eq .Status "error"}}<span class="job__stat-value job__stat-value--error">failed</span>
+      {{else}}<span class="job__stat-value job__stat-value--done">done</span>{{end}}
+    </div>
+    <div class="job__stat">
+      <span class="job__stat-label">progress</span>
+      <span class="job__stat-value">{{percent .Current .Total}}%</span>
+    </div>
+    <div class="job__stat">
+      <span class="job__stat-label">games</span>
+      <span class="job__stat-value">{{.Current}}<span class="dim">/{{.Total}}</span></span>
+    </div>
+    <div class="job__stat job__stat--wide">
+      <span class="job__stat-label">{{if eq .Status "running"}}fetching{{else}}last{{end}}</span>
+      <span class="job__stat-value job__stat-value--item">{{with .CurrentItem}}{{.}}{{else}}—{{end}}</span>
+    </div>
+  </div>
+
+  <div class="progress" role="progressbar" aria-valuenow="{{percent .Current .Total}}" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress__bar{{if eq .Status "error"}} progress__bar--error{{end}}" style="width: {{percent .Current .Total}}%"></div>
+  </div>
+
+  {{if eq .Status "error"}}<p class="flash flash--error">{{.Err}}</p>{{end}}
+
+  <div class="job__log" id="job-log" tabindex="0" role="log" aria-label="Refresh log">
+    {{range .Lines}}<div class="{{logLineClass .}}">{{.}}</div>{{else}}<p class="empty">Waiting for the first game…</p>{{end}}
+  </div>
 </div>
 {{end}}

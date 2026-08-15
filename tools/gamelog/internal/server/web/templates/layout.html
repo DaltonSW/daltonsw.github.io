@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/static/gamelog.css">
   <script src="/static/htmx.min.js" defer></script>
 </head>
-<body>
+<body{{with .BodyClass}} class="{{.}}"{{end}}>
   <header class="site-header">
     <div class="wrap site-header__bar">
       <a class="brand" href="/">

@@ -161,8 +161,12 @@ func (s *server) handleJobStatus(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	status, lines, errMsg, current, total, currentItem := j.snapshot()
+	// The job monitor is a console, not a document: it claims the viewport
+	// and scrolls its log inside itself, so the page must not scroll too.
+	page := newPage(r, "Achievements — refresh all", "housekeeping")
+	page.BodyClass = "body--fixed"
 	s.render(w, "job", jobData{
-		Page: newPage(r, "Achievements — refresh all", "housekeeping"),
+		Page: page,
 		ID:   id, Status: status, Lines: lines, Err: errMsg,
 		Current: current, Total: total, CurrentItem: currentItem,
 	})

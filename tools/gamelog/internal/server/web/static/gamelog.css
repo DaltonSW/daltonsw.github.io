@@ -288,8 +288,17 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); width
 .btn--danger:hover { color: var(--stop); border-color: var(--stop); filter: brightness(1.2); }
 .btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.1rem; }
 /* Same idea inside a table cell, where btn-row's top margin would push the
-   buttons out of line with the row's other columns. */
+   buttons out of line with the row's other columns. The width override is for
+   the "Create as [status]" dropdown: inputs default to width:100% so a form
+   field fills its column, which in a row of buttons is wrong twice over. */
 .cell-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.cell-actions select { width: auto; min-width: 0; }
+/* Two stacked rows of controls in one cell — the "Create as [status]" pair
+   above, the one-click buttons below. */
+.cell-stack { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+/* A form that exists only to carry hidden inputs for a button elsewhere in
+   the stack: it must not occupy a row or draw the stack's gap. */
+.form--hidden { display: contents; }
 .btn-details { min-width: 150px; margin-bottom: 1px; }
 
 /* ── Tables ────────────────────────────────────────────────────────────── */
@@ -348,6 +357,71 @@ div.row--saved { animation: row-saved-flash 1.1s ease-out; }
 }
 .achv-item__name { font-weight: 500; margin-top: 0.15rem; }
 .achv-item__desc { font-size: 0.82rem; margin-top: 0.1rem; }
+
+/* ── Full-height pages ────────────────────────────────────────────────────
+   Opt-in via <body class="body--fixed"> (Page.BodyClass). The page stops
+   being a document that grows downward: body owns exactly the viewport, and
+   whichever pane inside says so takes the leftover height and scrolls itself.
+   min-height:0 on every flex ancestor is what actually lets that pane shrink
+   — without it a flex item refuses to go below its content's height and the
+   overflow escapes to the window again. */
+body.body--fixed { height: 100vh; overflow: hidden; }
+body.body--fixed .site-main { flex: 1 1 auto; min-height: 0; padding-block: 1.25rem; display: flex; }
+body.body--fixed .site-main > .wrap { display: flex; flex-direction: column; min-height: 0; }
+body.body--fixed .site-footer { display: none; }
+
+/* ── Job monitor ──────────────────────────────────────────────────────────
+   The refresh-all page: a console, not a document. Heading and status strip
+   stay put, the log scrolls under them. */
+.job { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; gap: 0.9rem; }
+.job__head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.job__head h1 { margin: 0; }
+.job__body { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; gap: 0.75rem; }
+/* Everything above the log keeps its natural height — only the log absorbs
+   the leftover. Without this the 0.6rem progress bar is the first thing flex
+   squeezes when the log is long. */
+.job__body > :not(.job__log) { flex: 0 0 auto; }
+
+/* Status strip: the numbers worth watching, on one line across the full
+   width rather than a sentence. The item name gets the elastic column since
+   it's the only one whose length varies. */
+.job__status {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 2rem;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+  background: var(--panel); padding: 0.7rem 1.1rem;
+}
+.job__stat { display: flex; align-items: baseline; gap: 0.6rem; min-width: 0; }
+.job__stat--wide { flex: 1 1 14rem; }
+.job__stat-label {
+  font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace;
+  font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dim);
+}
+.job__stat-value {
+  font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace;
+  font-size: 1.05rem; font-weight: 500;
+}
+.job__stat-value--item { font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.job__stat-value--running { color: var(--warn); }
+.job__stat-value--done    { color: var(--ok); }
+.job__stat-value--error   { color: var(--stop); }
+.progress__bar--error { background: var(--stop); }
+
+/* The log itself. One element per line instead of one <pre> for the lot, so
+   a game's heading and its per-provider detail lines can be told apart (see
+   logLineClass) — which is the whole reason this reads as a list and not a
+   wall. */
+.job__log {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--panel); border: 1px solid var(--stroke); border-radius: var(--radius);
+  padding: 0.75rem 1.1rem;
+  font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace;
+  font-size: 0.82rem; line-height: 1.55;
+}
+.job__line { white-space: pre-wrap; word-break: break-word; }
+.job__line--head { color: var(--fg); font-weight: 500; margin-top: 0.35rem; }
+.job__line--head:first-child { margin-top: 0; }
+.job__line--sub { color: var(--dim); padding-left: 2ch; }
+.job__line--gap { height: 0.9rem; }
 
 /* ── Misc ──────────────────────────────────────────────────────────────── */
 .dim { color: var(--dim); }

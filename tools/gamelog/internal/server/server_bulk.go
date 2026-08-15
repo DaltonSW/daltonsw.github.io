@@ -93,13 +93,19 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		return
 	}
 
-	// Blank means "use the guess". Anything else is the "create as X
-	// instead" correction and has to be a real status — it's written
-	// straight into front matter.
-	status := r.FormValue("status")
-	if status != "" && !forms.IsGameStatus(status) {
-		redirectErr(w, r, "/housekeeping", fmt.Errorf("unknown status %q", status))
-		return
+	// The status dropdown submits its value whichever button sent the form,
+	// so it only counts when its own "Create as" button was the one clicked.
+	// Without that check the primary button — "create the status I guessed" —
+	// would silently create whatever the dropdown was left showing.
+	var status string
+	if r.FormValue("use_status") != "" {
+		status = r.FormValue("status")
+		// Validated because it goes straight into front matter, and a
+		// submitted form value is not a trusted one.
+		if !forms.IsGameStatus(status) {
+			redirectErr(w, r, "/housekeeping", fmt.Errorf("unknown status %q", status))
+			return
+		}
 	}
 
 	created, skipped := commands.CreateFromCandidates(s.gamesDir, candidates, chosen, status)

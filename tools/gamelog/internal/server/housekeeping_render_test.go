@@ -36,9 +36,10 @@ func TestHousekeepingRenders(t *testing.T) {
 	out := buf.String()
 	for _, want := range []string{
 		"Correct — create finished",
-		"Create as mastered instead",
+		`<option value="mastered">`,
 		"Correct — create backlog",
-		"Create as unplayed instead",
+		`<option value="unplayed">`,
+		`name="use_status"`,
 		"Never log this",
 		"12/189 achievements",
 		"finished 2026-01-02 (beaten-hardcore)",
@@ -47,7 +48,23 @@ func TestHousekeepingRenders(t *testing.T) {
 			t.Errorf("page missing %q", want)
 		}
 	}
-	if strings.Contains(out, "Create as finished instead") {
-		t.Error("the guess must not also appear as an alternative")
+	if strings.Contains(out, `<option value="finished">`) {
+		t.Error("the guess must not also appear in its own alternatives dropdown")
+	}
+
+	// The two one-click buttons sit in a row of their own and reach their
+	// forms by id, so a typo in either half leaves a button that submits
+	// nothing. Check both ends actually match up.
+	for _, want := range []string{
+		`id="create-retroachievements-10210"`,
+		`form="create-retroachievements-10210"`,
+		`id="ignore-retroachievements-10210"`,
+		`form="ignore-retroachievements-10210"`,
+		`id="create-steam-553420"`,
+		`form="ignore-steam-553420"`,
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("page missing %q", want)
+		}
 	}
 }

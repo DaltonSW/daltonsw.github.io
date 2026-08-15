@@ -160,6 +160,10 @@ type Page struct {
 	Title string
 	Nav   string
 	Flash Flash
+	// BodyClass goes on <body>. Empty for the ordinary document-shaped pages;
+	// set to "body--fixed" by pages that fill the viewport and scroll inside
+	// their own panes instead of growing the page (see the job monitor).
+	BodyClass string
 }
 
 type Flash struct {
@@ -196,6 +200,20 @@ var funcMap = template.FuncMap{
 		return 100
 	},
 	"formatHoursFunc": commands.FormatHours,
+	// A job's log is a flat []string that the writers indent by two spaces
+	// for a game's per-provider detail lines (see runAchievementsAllJob), so
+	// the shape is recoverable here rather than needing a structured record
+	// per line: un-indented lines are the game headings, indented ones its
+	// results, and the blank line before the summary is a spacer.
+	"logLineClass": func(line string) string {
+		switch {
+		case strings.TrimSpace(line) == "":
+			return "job__line job__line--gap"
+		case strings.HasPrefix(line, "  "):
+			return "job__line job__line--sub"
+		}
+		return "job__line job__line--head"
+	},
 	// dateOnly trims an RFC3339 achievement-unlock timestamp down to its date
 	// for compact sidebar display; the full timestamp stays available via the
 	// element's title attribute for anyone who needs the time too.
