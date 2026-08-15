@@ -2,6 +2,7 @@ package forms
 
 import (
 	"fmt"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
@@ -136,6 +137,29 @@ const StaleMarkPrefix = "mark_"
 // from "dropped" is exactly what a quiet game with no completion signal
 // can't tell you on its own.
 var StaleQuickStatuses = []string{"finished", "mastered", "dropped", "paused"}
+
+// ScanQuickStatuses are the same idea for a scan candidate: the guess is
+// offered as the primary button and the rest as "create as X instead", so a
+// wrong guess costs one click rather than a create-then-edit round trip.
+//
+// "software" is in the set because Steam sells tools alongside games and
+// reports playtime for them identically — the scan can't tell them apart, and
+// the person reading the row can.
+var ScanQuickStatuses = []string{"playing", "finished", "mastered", "dropped", "software"}
+
+// BacklogQuickStatuses is the backlog half's set. Deliberately smaller:
+// these are games under the playtime threshold, so any status claiming real
+// history would be contradicted by the evidence that put them in this list.
+// "unplayed" against "backlog" is the distinction worth one click —
+// "haven't gotten to it" versus "don't know if I ever will".
+var BacklogQuickStatuses = []string{"backlog", "unplayed", "software"}
+
+// IsGameStatus reports whether s is a status a game may actually be created
+// or set to. Used to check values arriving from a submitted form, which must
+// never be written to front matter unvalidated.
+func IsGameStatus(s string) bool {
+	return slices.Contains(GameStatuses, s)
+}
 
 func OrDash(s string) string {
 	if s == "" {
