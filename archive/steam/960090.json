@@ -1,23 +1,23 @@
 {
  "provider": "steam",
  "title": "Bloons TD 6",
- "updated": "2026-08-06",
+ "updated": "2026-08-15",
  "id": "960090",
- "fetched": "2026-08-06",
- "last_attempt": "2026-08-06",
- "unlocked": 99,
+ "fetched": "2026-08-15",
+ "last_attempt": "2026-08-15",
+ "unlocked": 100,
  "total": 156,
  "first": "2022-07-15",
- "last": "2026-07-19",
+ "last": "2026-08-15",
  "platform": "PC",
  "icon": "c5f0b67c8beeb6be99abe2ad8db2cada5d5ccff0",
- "playtime_mins": 24502,
+ "playtime_mins": 24881,
  "playtime": {
   "disconnected": 1,
-  "linux": 12245,
+  "linux": 12624,
   "windows": 12256
  },
- "last_played": "2026-08-06",
+ "last_played": "2026-08-15",
  "achievements": [
   {
    "key": "7",
@@ -812,6 +812,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/cba3b7394eb0e5b91cb06b843e86261273221bb8.jpg"
   },
   {
+   "key": "152",
+   "name": "25 to Life",
+   "description": "Defeat 5 unique Bosses at Tier 5 (Can be in Boss Event or Challenge Mode)",
+   "unlocked": true,
+   "date": "2026-08-15T13:18:37-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/576a51ba7ae5030af1e9a08e06d7f6f6fc0d652c.jpg"
+  },
+  {
    "key": "105",
    "name": "Freaky Friday",
    "description": "Use the Alchemist's Transforming Tonic abilities 100 times",
@@ -985,13 +993,6 @@
    "description": "Capture 1 of each: Boss, Time Attack, Least Tiers and Least Cash tiles",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/b893e2338101f30cb86b103fba84b34a6b1f40a6.jpg"
-  },
-  {
-   "key": "152",
-   "name": "25 to Life",
-   "description": "Defeat 5 unique Bosses at Tier 5 (Can be in Boss Event or Challenge Mode)",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/576a51ba7ae5030af1e9a08e06d7f6f6fc0d652c.jpg"
   },
   {
    "key": "153",
@@ -2254,8 +2255,8 @@
     },
     {
      "apiname": "152",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1786817917,
      "name": "25 to Life",
      "description": "Defeat 5 unique Bosses at Tier 5 (Can be in Boss Event or Challenge Mode)"
     },

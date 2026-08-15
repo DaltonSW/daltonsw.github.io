@@ -1,14 +1,14 @@
-unlocked: 99
+unlocked: 100
 total: 156
-playtime_mins: 24502
-last_played: "2026-08-06"
+playtime_mins: 24881
+last_played: "2026-08-15"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 99
+      unlocked: 100
       total: 156
-      playtime_mins: 24502
-      last_played: "2026-08-06"
+      playtime_mins: 24881
+      last_played: "2026-08-15"
 earned:
     - name: First Win
       description: 1 Non-Tutorial Beginner map Win
@@ -602,5 +602,11 @@ earned:
       description: Give 50,000 Cash in Co-op mode
       date: "2026-07-19T08:19:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/cba3b7394eb0e5b91cb06b843e86261273221bb8.jpg
+      provider: steam
+      platform: PC
+    - name: 25 to Life
+      description: Defeat 5 unique Bosses at Tier 5 (Can be in Boss Event or Challenge Mode)
+      date: "2026-08-15T13:18:37-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/576a51ba7ae5030af1e9a08e06d7f6f6fc0d652c.jpg
       provider: steam
       platform: PC
