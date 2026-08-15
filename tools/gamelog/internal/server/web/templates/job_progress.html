@@ -1,0 +1,16 @@
+{{define "job_progress"}}
+<div id="job-progress"{{if eq .Status "running"}} hx-get="/jobs/{{.ID}}/progress" hx-trigger="every 2s" hx-swap="outerHTML"{{end}}>
+{{if eq .Status "running"}}
+<p class="lead">Running…{{with .CurrentItem}} {{.}}{{end}} ({{.Current}}/{{.Total}})</p>
+<div class="progress" role="progressbar" aria-valuenow="{{percent .Current .Total}}" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress__bar" style="width: {{percent .Current .Total}}%"></div>
+</div>
+{{else if eq .Status "error"}}
+<p class="flash flash--error">{{.Err}}</p>
+{{else}}
+<p class="flash flash--ok">Done.</p>
+{{end}}
+<pre>{{range .Lines}}{{.}}
+{{end}}</pre>
+</div>
+{{end}}

@@ -12,16 +12,27 @@ import (
 // run inside a single HTTP request. In-memory only: this is a single-user
 // local tool, so a job doesn't need to survive a restart of `gamelog serve`.
 type job struct {
-	mu     sync.Mutex
-	Status string // "running" | "done" | "error"
-	Lines  []string
-	Err    string
+	mu          sync.Mutex
+	Status      string // "running" | "done" | "error"
+	Lines       []string
+	Err         string
+	Current     int    // 1-based index of the item currently in flight (== Total when done)
+	Total       int    // number of items this job will process
+	CurrentItem string // title of the item currently in flight; "" once finished
 }
 
 func (j *job) log(format string, args ...any) {
 	j.mu.Lock()
 	defer j.mu.Unlock()
 	j.Lines = append(j.Lines, fmt.Sprintf(format, args...))
+}
+
+// progress records structured position (for a progress bar), independent of
+// the free-text log lines log appends.
+func (j *job) progress(current, total int, item string) {
+	j.mu.Lock()
+	defer j.mu.Unlock()
+	j.Current, j.Total, j.CurrentItem = current, total, item
 }
 
 func (j *job) finish(err error) {
@@ -37,10 +48,10 @@ func (j *job) finish(err error) {
 
 // snapshot copies out what a status page needs, so the HTTP handler never
 // holds the lock while rendering a template.
-func (j *job) snapshot() (status string, lines []string, errMsg string) {
+func (j *job) snapshot() (status string, lines []string, errMsg string, current, total int, currentItem string) {
 	j.mu.Lock()
 	defer j.mu.Unlock()
-	return j.Status, append([]string(nil), j.Lines...), j.Err
+	return j.Status, append([]string(nil), j.Lines...), j.Err, j.Current, j.Total, j.CurrentItem
 }
 
 type jobRegistry struct {

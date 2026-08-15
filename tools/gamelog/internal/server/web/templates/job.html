@@ -1,13 +1,4 @@
 {{define "content"}}
 <h1>Achievements — refresh all</h1>
-{{if eq .Status "running"}}
-<meta http-equiv="refresh" content="2">
-<p class="lead">Running…</p>
-{{else if eq .Status "error"}}
-<p class="flash flash--error">{{.Err}}</p>
-{{else}}
-<p class="flash flash--ok">Done.</p>
-{{end}}
-<pre>{{range .Lines}}{{.}}
-{{end}}</pre>
+{{template "job_progress" .}}
 {{end}}

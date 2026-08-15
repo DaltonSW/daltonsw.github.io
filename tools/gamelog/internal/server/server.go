@@ -48,6 +48,7 @@ var staticFS fs.FS
 var pageTemplatesCache map[string]*template.Template
 var rowTemplateCache *template.Template
 var playthroughFragmentsCache *template.Template
+var jobProgressCache *template.Template
 
 func init() {
 	if info, err := os.Stat(devWebRoot + "/web/templates"); err == nil && info.IsDir() {
@@ -70,6 +71,8 @@ func init() {
 			ParseFS(templatesFS, "web/templates/game_row.html"))
 		playthroughFragmentsCache = template.Must(template.New("playthrough_fragments.html").Funcs(funcMap).
 			ParseFS(templatesFS, "web/templates/playthrough_fragments.html"))
+		jobProgressCache = template.Must(template.New("job_progress.html").Funcs(funcMap).
+			ParseFS(templatesFS, "web/templates/job_progress.html"))
 	}
 }
 
@@ -139,6 +142,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /close", s.handleCloseSelected)
 	mux.HandleFunc("POST /achievements/all", s.handleAchievementsAll)
 	mux.HandleFunc("GET /jobs/{id}", s.handleJobStatus)
+	mux.HandleFunc("GET /jobs/{id}/progress", s.handleJobProgress)
 
 	mux.HandleFunc("GET /suggest", s.handleSuggestPicker)
 	mux.HandleFunc("GET /suggest/{slug}", s.handleSuggestReport)
@@ -173,13 +177,22 @@ var funcMap = template.FuncMap{
 		}
 		return "pill pill--" + status
 	},
-	"dash":            forms.OrDash,
-	"joinLines":       func(ss []string) string { return strings.Join(ss, "\n") },
-	"gameStatuses":    func() []string { return forms.GameStatuses },
-	"pthStatuses":     func() []string { return forms.PlaythroughStatuses },
-	"staleQuick":      func() []string { return forms.StaleQuickStatuses },
-	"add1":            func(i int) int { return i + 1 },
-	"itoa":            strconv.Itoa,
+	"dash":         forms.OrDash,
+	"joinLines":    func(ss []string) string { return strings.Join(ss, "\n") },
+	"gameStatuses": func() []string { return forms.GameStatuses },
+	"pthStatuses":  func() []string { return forms.PlaythroughStatuses },
+	"staleQuick":   func() []string { return forms.StaleQuickStatuses },
+	"add1":         func(i int) int { return i + 1 },
+	"itoa":         strconv.Itoa,
+	"percent": func(current, total int) int {
+		if total <= 0 {
+			return 0
+		}
+		if p := current * 100 / total; p <= 100 {
+			return p
+		}
+		return 100
+	},
 	"formatHoursFunc": commands.FormatHours,
 	// dateOnly trims an RFC3339 achievement-unlock timestamp down to its date
 	// for compact sidebar display; the full timestamp stays available via the
@@ -226,7 +239,7 @@ var pageSpecs = map[string]struct {
 	"housekeeping":   {"housekeeping.html", nil},
 	"suggest_picker": {"suggest_picker.html", nil},
 	"suggest_report": {"suggest_report.html", nil},
-	"job":            {"job.html", nil},
+	"job":            {"job.html", []string{"web/templates/job_progress.html"}},
 }
 
 // renderRow renders game_row.html on its own — the fragment
@@ -268,6 +281,26 @@ func (s *server) renderPlaythroughFragment(w http.ResponseWriter, name string, d
 	}
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	if err := tmpl.ExecuteTemplate(w, name, data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+// renderJobProgress renders job_progress.html's "job_progress" block on its
+// own — the htmx poll target /jobs/{id}/progress swaps into the job status
+// page, as opposed to the full "layout" page handleJobStatus renders.
+func (s *server) renderJobProgress(w http.ResponseWriter, data jobData) {
+	tmpl := jobProgressCache
+	if devMode {
+		var err error
+		tmpl, err = template.New("job_progress.html").Funcs(funcMap).
+			ParseFS(templatesFS, "web/templates/job_progress.html")
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	if err := tmpl.ExecuteTemplate(w, "job_progress", data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }

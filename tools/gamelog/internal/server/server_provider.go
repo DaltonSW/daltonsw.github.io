@@ -104,13 +104,18 @@ func (s *server) runAchievementsAllJob(j *job) {
 	archiveDir := model.FindArchiveDir(s.gamesDir)
 	creds := commands.LoadCredentials()
 
-	var refreshed, skipped, failed int
+	var withLinks []model.GameSummary
 	for _, g := range games {
-		links := g.ProviderLinks()
-		if len(links) == 0 {
-			skipped++
-			continue
+		if len(g.ProviderLinks()) > 0 {
+			withLinks = append(withLinks, g)
 		}
+	}
+	skipped, total := len(games)-len(withLinks), len(withLinks)
+
+	var refreshed, failed int
+	for i, g := range withLinks {
+		links := g.ProviderLinks()
+		j.progress(i+1, total, g.Title)
 		j.log("%s", g.Title)
 		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, links, creds)
 		if err != nil {
@@ -131,6 +136,7 @@ func (s *server) runAchievementsAllJob(j *job) {
 		}
 		refreshed++
 	}
+	j.progress(total, total, "")
 	j.log("")
 	j.log("%d refreshed, %d with no provider link, %d failed", refreshed, skipped, failed)
 	j.finish(nil)
@@ -138,21 +144,45 @@ func (s *server) runAchievementsAllJob(j *job) {
 
 type jobData struct {
 	Page
-	Status string
-	Lines  []string
-	Err    string
+	ID          string
+	Status      string
+	Lines       []string
+	Err         string
+	Current     int
+	Total       int
+	CurrentItem string
 }
 
 func (s *server) handleJobStatus(w http.ResponseWriter, r *http.Request) {
-	j := s.jobs.get(r.PathValue("id"))
+	id := r.PathValue("id")
+	j := s.jobs.get(id)
 	if j == nil {
 		http.NotFound(w, r)
 		return
 	}
-	status, lines, errMsg := j.snapshot()
+	status, lines, errMsg, current, total, currentItem := j.snapshot()
 	s.render(w, "job", jobData{
-		Page:   newPage(r, "Achievements — refresh all", "housekeeping"),
-		Status: status, Lines: lines, Err: errMsg,
+		Page: newPage(r, "Achievements — refresh all", "housekeeping"),
+		ID:   id, Status: status, Lines: lines, Err: errMsg,
+		Current: current, Total: total, CurrentItem: currentItem,
+	})
+}
+
+// handleJobProgress renders just the #job-progress fragment (see
+// job_progress.html) — the htmx poll target handleJobStatus's page swaps in
+// place every few seconds while the job runs, instead of the full-page
+// reload the status page used to require.
+func (s *server) handleJobProgress(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	j := s.jobs.get(id)
+	if j == nil {
+		http.NotFound(w, r)
+		return
+	}
+	status, lines, errMsg, current, total, currentItem := j.snapshot()
+	s.renderJobProgress(w, jobData{
+		ID: id, Status: status, Lines: lines, Err: errMsg,
+		Current: current, Total: total, CurrentItem: currentItem,
 	})
 }
 
