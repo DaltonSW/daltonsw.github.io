@@ -18,9 +18,9 @@ func raStub(t *testing.T, handler http.HandlerFunc) {
 	srv := httptest.NewServer(handler)
 	t.Cleanup(srv.Close)
 
-	old := raGameProgressURL
-	raGameProgressURL = srv.URL
-	t.Cleanup(func() { raGameProgressURL = old })
+	old := GameProgressURL
+	GameProgressURL = srv.URL
+	t.Cleanup(func() { GameProgressURL = old })
 }
 
 // Without a=1 the API omits the award fields entirely, which silently
@@ -126,6 +126,39 @@ func TestRAProgress_DecodesSampleResponse(t *testing.T) {
 	}
 	if !got.Started.Equal(mustParseRADate(t, "2026-01-05 10:03:41")) {
 		t.Fatalf("unexpected started: %v", got.Started)
+	}
+}
+
+// A subset is a separate game id whose only link back to the game it belongs
+// to is ParentGameID — the bulk endpoints carry nothing but the title. A base
+// game answers with an explicit null there, which must read as "no parent"
+// rather than as game 0.
+func TestRAProgress_DecodesSubsetParentGameID(t *testing.T) {
+	raw, err := os.ReadFile("testdata/ra_progress_subset.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var p RAProgress
+	if err := json.Unmarshal(raw, &p); err != nil {
+		t.Fatalf("decoding subset sample: %v", err)
+	}
+	if p.ParentGameID != 7601 {
+		t.Errorf("ParentGameID = %d, want 7601", p.ParentGameID)
+	}
+	if p.Title != "Professor Layton and the Last Specter [Subset - Mouse Alley]" {
+		t.Errorf("unexpected title %q", p.Title)
+	}
+
+	base, err := os.ReadFile("testdata/ra_progress_sample.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var b RAProgress
+	if err := json.Unmarshal(base, &b); err != nil {
+		t.Fatalf("decoding base sample: %v", err)
+	}
+	if b.ParentGameID != 0 {
+		t.Errorf("a null ParentGameID must decode as 0, got %d", b.ParentGameID)
 	}
 }
 
