@@ -61,6 +61,26 @@ func TestLoggedIndex_MatchesByExternalID(t *testing.T) {
 	}
 }
 
+func TestLoggedIndex_SkipsIgnoredGames(t *testing.T) {
+	idx := NewLoggedIndex(nil).WithIgnored(model.IgnoredList{Games: []model.IgnoredGame{
+		{Provider: model.ProviderSteam, ID: "440"},
+		{Provider: model.ProviderRA, ID: "104"},
+	}})
+
+	if !idx.hasSteam("440", "Team Fortress 2") {
+		t.Error("ignored Steam game should be filtered out of the scan")
+	}
+	if !idx.hasRA("104", "Kirby's Return to Dream Land") {
+		t.Error("ignored RA game should be filtered out of the scan")
+	}
+	if idx.hasSteam("104", "Some Steam Game") {
+		t.Error("an ignore is per-provider: an RA ID must not hide a Steam appid")
+	}
+	if idx.hasSteam("999", "Not Ignored") {
+		t.Error("unrelated game should still be offered")
+	}
+}
+
 func TestSortCandidates_FinishedFirstThenPlaytime(t *testing.T) {
 	candidates := []Candidate{
 		{Provider: "Steam", Title: "Small", PlaytimeMins: 300},

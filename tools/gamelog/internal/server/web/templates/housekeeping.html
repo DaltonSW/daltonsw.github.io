@@ -2,7 +2,9 @@
      the guess as the primary button, each other plausible status one click
      beside it, and a way out that isn't "create it and fix it later".
 
-     Takes a scanRow. */}}
+     Takes a scanRow. Ignore posts the provider/id rather than a row index, so
+     unlike the create buttons it doesn't depend on the scan re-deriving
+     identically. */}}
 {{define "create_actions"}}
 <div class="cell-actions">
   <form method="post" action="{{.Action}}" class="cell-actions">
@@ -12,6 +14,12 @@
     {{range .OtherStatuses}}
     <button name="status" value="{{.}}" type="submit">Create as {{.}} instead</button>
     {{end}}
+  </form>
+  <form method="post" action="/ignore">
+    <input type="hidden" name="provider" value="{{.C.ProviderKey}}">
+    <input type="hidden" name="id" value="{{.C.ID}}">
+    <input type="hidden" name="title" value="{{.C.Title}}">
+    <button type="submit">Never log this</button>
   </form>
 </div>
 {{end}}
@@ -89,6 +97,38 @@
 </div>
 {{else}}
 <p class="empty">Nothing owned-but-unplayed below that threshold.</p>
+{{end}}
+
+<h2>Ignored</h2>
+<p class="lead">Games you've decided never to log. They're skipped by both lists above and nothing
+   else — no captured history is touched, and removing one here puts it straight back in the next
+   scan.</p>
+
+{{if .Ignored}}
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Game</th><th>Provider</th><th>Ignored</th><th></th></tr></thead>
+  <tbody>
+  {{range .Ignored}}
+  <tr>
+    <td>{{if .Title}}{{.Title}}{{else}}<span class="dim">(untitled)</span>{{end}}</td>
+    <td class="dim">{{.Provider}} {{.ID}}</td>
+    <td class="dim">{{if .IgnoredOn}}{{.IgnoredOn}}{{else}}—{{end}}</td>
+    <td>
+      <form method="post" action="/unignore">
+        <input type="hidden" name="provider" value="{{.Provider}}">
+        <input type="hidden" name="id" value="{{.ID}}">
+        <input type="hidden" name="title" value="{{.Title}}">
+        <button type="submit">Un-ignore</button>
+      </form>
+    </td>
+  </tr>
+  {{end}}
+  </tbody>
+</table>
+</div>
+{{else}}
+<p class="empty">Nothing ignored yet.</p>
 {{end}}
 
 <h2>Unfinished</h2>

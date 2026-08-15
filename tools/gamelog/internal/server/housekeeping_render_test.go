@@ -7,6 +7,7 @@ import (
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/forms"
+	"go.dalton.dog/gamelog/internal/model"
 )
 
 // The scan and backlog rows follow the stale section's paradigm — the guess
@@ -26,6 +27,7 @@ func TestHousekeepingRenders(t *testing.T) {
 		BacklogCandidates: scanRows([]commands.Candidate{
 			{Provider: "Steam", Title: "Tunic", ID: "553420", Status: "backlog"},
 		}, forms.BacklogQuickStatuses, "/backlog", 5),
+		Ignored: []model.IgnoredGame{{Provider: "steam", ID: "440", Title: "X", IgnoredOn: "2026-08-15"}},
 	}
 	var buf bytes.Buffer
 	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
@@ -37,6 +39,7 @@ func TestHousekeepingRenders(t *testing.T) {
 		"Create as mastered instead",
 		"Correct — create backlog",
 		"Create as unplayed instead",
+		"Never log this",
 		"12/189 achievements",
 		"finished 2026-01-02 (beaten-hardcore)",
 	} {

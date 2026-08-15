@@ -38,7 +38,11 @@ func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) ([]com
 		return nil, len(existing), fmt.Errorf("no credentials configured; see tools/gamelog/README.md")
 	}
 	ctx := context.Background()
-	index := commands.NewLoggedIndex(existing)
+	ignored, err := model.LoadIgnored(model.FindArchiveDir(s.gamesDir))
+	if err != nil {
+		return nil, len(existing), err
+	}
+	index := commands.NewLoggedIndex(existing).WithIgnored(ignored)
 	var candidates []commands.Candidate
 	if creds.RAConfigured() && !backlog {
 		if found, err := commands.ScanRA(ctx, creds, index); err == nil {
@@ -106,6 +110,58 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		kind = "created as backlog"
 	}
 	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
+}
+
+// handleIgnore takes a scan candidate off the list for good. Unlike the
+// create handlers this posts provider/id/title directly rather than an index
+// into a re-derived scan: an ignore is a durable decision keyed by an ID that
+// never changes, so it shouldn't depend on the scan coming back identical.
+func (s *server) handleIgnore(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	g := model.IgnoredGame{
+		Provider: r.FormValue("provider"),
+		ID:       r.FormValue("id"),
+		Title:    r.FormValue("title"),
+		Reason:   r.FormValue("reason"),
+	}
+	if g.Provider == "" || g.ID == "" {
+		redirectErr(w, r, "/housekeeping", fmt.Errorf("ignore needs a provider and an id"))
+		return
+	}
+	added, err := model.AddIgnored(model.FindArchiveDir(s.gamesDir), g)
+	if err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	name := model.FirstNonEmpty(g.Title, g.Provider+" "+g.ID)
+	if !added {
+		redirectOK(w, r, "/housekeeping", name+" was already ignored.")
+		return
+	}
+	redirectOK(w, r, "/housekeeping", name+" ignored — it won't show up in scans again.")
+}
+
+// handleUnignore is the undo. Nothing was destroyed by ignoring, so this just
+// puts the game back in front of the next scan.
+func (s *server) handleUnignore(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	provider, id := r.FormValue("provider"), r.FormValue("id")
+	removed, err := model.RemoveIgnored(model.FindArchiveDir(s.gamesDir), provider, id)
+	if err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	if !removed {
+		redirectOK(w, r, "/housekeeping", "Nothing to un-ignore.")
+		return
+	}
+	redirectOK(w, r, "/housekeeping", model.FirstNonEmpty(r.FormValue("title"), id)+" is back in the scan list.")
 }
 
 func atoiFloatOr(s string, def float64) float64 {
@@ -186,6 +242,10 @@ type housekeepingData struct {
 	CloseEntries      []commands.OpenEntry
 	CloseDays         int
 	CloseAll          bool
+	// Ignored are the games deliberately kept out of the two lists above.
+	// Shown so the decision stays visible and reversible from the same page
+	// it was made on.
+	Ignored []model.IgnoredGame
 }
 
 func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
@@ -234,6 +294,10 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		data.BacklogError = err.Error()
 	} else {
 		data.BacklogCandidates = scanRows(backlog, forms.BacklogQuickStatuses, "/backlog", minHours)
+	}
+
+	if ignored, err := model.LoadIgnored(model.FindArchiveDir(s.gamesDir)); err == nil {
+		data.Ignored = ignored.Games
 	}
 
 	games, err := model.ListGames(s.gamesDir)

@@ -135,13 +135,20 @@ func (o ScanOptions) keeps(playtimeMins int) bool {
 	return below == (o.Mode == ScanModeBacklog)
 }
 
-// loggedIndex answers "is this game already in content/games?". External IDs
-// are the reliable signal, but existing entries predate those fields, so a
-// normalised title is the fallback.
+// loggedIndex answers "should this game stay out of the scan list?" — either
+// because it's already in content/games, or because it's been explicitly
+// ignored. External IDs are the reliable signal, but existing entries predate
+// those fields, so a normalised title is the fallback.
 type loggedIndex struct {
 	raIDs    map[string]bool
 	steamIDs map[string]bool
 	titles   map[string]bool
+
+	// ignored is matched on provider ID only. Every entry is created from a
+	// candidate that had one, so unlike logged games there's no legacy case
+	// needing the title fallback — and matching titles here would risk
+	// silently hiding a different game that happens to share a name.
+	ignored model.IgnoredList
 }
 
 func NewLoggedIndex(games []model.GameSummary) loggedIndex {
@@ -163,12 +170,20 @@ func NewLoggedIndex(games []model.GameSummary) loggedIndex {
 	return idx
 }
 
+// WithIgnored returns the index with an ignore list applied. Separate from
+// NewLoggedIndex so callers that don't have an archive directory to hand
+// (tests, chiefly) keep the plain behaviour.
+func (i loggedIndex) WithIgnored(list model.IgnoredList) loggedIndex {
+	i.ignored = list
+	return i
+}
+
 func (i loggedIndex) hasRA(id, title string) bool {
-	return i.raIDs[id] || i.titles[normalizeTitle(title)]
+	return i.raIDs[id] || i.titles[normalizeTitle(title)] || i.ignored.Has(model.ProviderRA, id)
 }
 
 func (i loggedIndex) hasSteam(id, title string) bool {
-	return i.steamIDs[id] || i.titles[normalizeTitle(title)]
+	return i.steamIDs[id] || i.titles[normalizeTitle(title)] || i.ignored.Has(model.ProviderSteam, id)
 }
 
 var titleNoise = regexp.MustCompile(`[^a-z0-9]+`)
