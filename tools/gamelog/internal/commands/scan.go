@@ -56,6 +56,36 @@ func (c Candidate) sortWeight() int {
 	return 1
 }
 
+// ProviderKey is Provider as the archive spells it — Candidate.Provider is a
+// display string ("RetroAchievements"), and anything keyed by provider on
+// disk uses model's lowercase constants.
+func (c Candidate) ProviderKey() string {
+	if c.Provider == "Steam" {
+		return model.ProviderSteam
+	}
+	return model.ProviderRA
+}
+
+// WithStatus is the "create as X instead" correction: the same candidate as
+// it would be created under a status chosen by hand rather than guessed.
+//
+// Overriding to a status that doesn't assert the game is over drops the
+// inferred finish date with it. The date came from the award that justified
+// the guess; keeping it under `status: playing` would write a self-
+// contradicting entry — exactly the kind of inferred-then-forgotten field
+// the draft flag exists to catch.
+func (c Candidate) WithStatus(status string) Candidate {
+	if status == "" || status == c.Status {
+		return c
+	}
+	c.Status = status
+	if !doneStatuses[status] {
+		c.Finished = false
+		c.FinishedOn = ""
+	}
+	return c
+}
+
 // NewGameFields maps a discovered game onto a new content file. Always a
 // draft: everything here is inferred, so it stays off the built site until
 // it's been looked at.
@@ -259,53 +289,43 @@ func SortCandidates(candidates []Candidate) {
 	})
 }
 
-func FormatScanReport(candidates []Candidate, numLogged int, opts ScanOptions) string {
-	var b strings.Builder
-
-	if len(candidates) == 0 {
-		fmt.Fprintf(&b, "No unlogged games found (%d already logged).\n", numLogged)
-		return b.String()
+// Evidence is what's known about a candidate from the bulk endpoints, as one
+// line for the scan table: achievements, playtime, last activity. Empty when
+// the provider offered none of the three.
+//
+// This is the row's whole justification for existing, so it's built here
+// rather than assembled in the template — the "· " joining is conditional in
+// a way template `if` chains get unreadable about.
+func (c Candidate) Evidence() string {
+	var facts []string
+	if c.AchievementsB > 0 {
+		facts = append(facts, fmt.Sprintf("%d/%d achievements", c.AchievementsA, c.AchievementsB))
 	}
-
-	fmt.Fprintf(&b, "Found %d game%s not in content/games (%d already logged, Steam filtered to >=%gh)\n\n",
-		len(candidates), plural(len(candidates)), numLogged, opts.MinHours)
-
-	for _, c := range candidates {
-		fmt.Fprintf(&b, "  %s\n", c.Title)
-		fmt.Fprintf(&b, "    %s %s · %s\n", c.Provider, c.ID, c.Platform)
-
-		var facts []string
-		if c.AchievementsB > 0 {
-			facts = append(facts, fmt.Sprintf("%d/%d achievements", c.AchievementsA, c.AchievementsB))
-		}
-		if c.PlaytimeMins > 0 {
-			facts = append(facts, FormatHours(c.PlaytimeMins))
-		}
-		if c.LastActivity != "" {
-			facts = append(facts, "last active "+c.LastActivity)
-		}
-		if len(facts) > 0 {
-			fmt.Fprintf(&b, "    %s\n", strings.Join(facts, " · "))
-		}
-
-		if c.Finished {
-			fmt.Fprintf(&b, "    -> %s %s (%s)\n", c.Status, c.FinishedOn, c.AwardKind)
-		}
-		b.WriteString("\n")
+	if c.PlaytimeMins > 0 {
+		facts = append(facts, FormatHours(c.PlaytimeMins))
 	}
-
-	b.WriteString("Scanning uses bulk data only, so there are no start dates here — create an\n")
-	b.WriteString("entry, then run `gamelog suggest <slug>` for its precise range.\n\n")
-	b.WriteString("The dates and statuses above are guesses. Anything created is marked\n")
-	b.WriteString("`draft: true`, so nothing publishes until you've reviewed it.\n\n")
-	return b.String()
+	if c.LastActivity != "" {
+		facts = append(facts, "last active "+c.LastActivity)
+	}
+	return strings.Join(facts, " · ")
 }
 
-func plural(n int) string {
-	if n == 1 {
+// Outcome is the finish this candidate would be created with, or "" when
+// there isn't one. The award kind is named because "12/189 achievements ->
+// finished" only makes sense once you can see it was `beaten-hardcore`
+// rather than a mastery.
+func (c Candidate) Outcome() string {
+	if !c.Finished {
 		return ""
 	}
-	return "s"
+	out := c.Status
+	if c.FinishedOn != "" {
+		out += " " + c.FinishedOn
+	}
+	if c.AwardKind != "" {
+		out += " (" + c.AwardKind + ")"
+	}
+	return out
 }
 
 // CreatedGame is one game CreateFromCandidates made, for a caller (the web
@@ -319,13 +339,18 @@ type CreatedGame struct {
 // capture its unlock history into the archive. Split out so a web handler
 // can reuse it with a selection that came from a submitted checkbox form
 // instead of SelectCandidates' huh multi-select.
-func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int) (createdList []CreatedGame, skipped int) {
+//
+// status overrides the guessed status for every game created in this call —
+// the "create as X instead" correction. Blank keeps each candidate's own
+// guess. Callers must have validated it (forms.IsGameStatus): it goes
+// straight into front matter.
+func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int, status string) (createdList []CreatedGame, skipped int) {
 	creds := LoadCredentials()
 	ctx := context.Background()
 	archiveDir := model.FindArchiveDir(gamesDir)
 
 	for _, i := range chosen {
-		c := candidates[i]
+		c := candidates[i].WithStatus(status)
 		path, err := model.CreateGameFile(gamesDir, model.Slugify(c.Title), c.NewGameFields())
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "  skipped %s: %v\n", c.Title, err)
@@ -338,11 +363,7 @@ func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int)
 		// Capture the unlock history into the archive. A failure here costs
 		// the history, not the game, so it's reported and stepped over —
 		// `gamelog achievements <slug>` can retry later.
-		provider := model.ProviderRA
-		if c.Provider == "Steam" {
-			provider = model.ProviderSteam
-		}
-		links := []model.ProviderLink{{Provider: provider, ID: c.ID}}
+		links := []model.ProviderLink{{Provider: c.ProviderKey(), ID: c.ID}}
 		if _, err := SaveAchievements(ctx, archiveDir, c.Title, links, creds); err != nil {
 			fmt.Fprintf(os.Stderr, "    (no achievements saved: %v)\n", err)
 		} else if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(path), links); err != nil {

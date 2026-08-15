@@ -287,6 +287,9 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); width
 .btn--danger { color: var(--stop); border-color: var(--stop); }
 .btn--danger:hover { color: var(--stop); border-color: var(--stop); filter: brightness(1.2); }
 .btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.1rem; }
+/* Same idea inside a table cell, where btn-row's top margin would push the
+   buttons out of line with the row's other columns. */
+.cell-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
 .btn-details { min-width: 150px; margin-bottom: 1px; }
 
 /* ── Tables ────────────────────────────────────────────────────────────── */
@@ -298,6 +301,7 @@ th {
 }
 tr:hover td { background: var(--panel-2); }
 .table-wrap { overflow-x: auto; }
+.table-wrap--scroll { max-height: 24rem; overflow-y: auto; }
 
 /* Editable index rows: compact controls so a full row of status/dates/
    platform/rating/actions stays scannable rather than each cell blowing up

@@ -63,29 +63,6 @@ func TestBacklogCandidate_CreatesBacklogDraft(t *testing.T) {
 	}
 }
 
-func TestFormatBacklogReport_DistinguishesNeverLaunched(t *testing.T) {
-	out := FormatBacklogReport([]Candidate{
-		{Provider: "Steam", Title: "Outer Wilds", Platform: "PC", ID: "753640", Status: "backlog"},
-		{Provider: "Steam", Title: "Tunic", Platform: "PC", ID: "553420", Status: "backlog", PlaytimeMins: 42},
-	}, 3, ScanOptions{MinHours: 5, Mode: ScanModeBacklog})
-
-	for _, want := range []string{"Outer Wilds", "never launched", "0.7h", "status: backlog", "-> backlog"} {
-		if !strings.Contains(out, want) {
-			t.Errorf("report missing %q\n---\n%s", want, out)
-		}
-	}
-}
-
-func TestFormatBacklogReport_NoCandidates(t *testing.T) {
-	out := FormatBacklogReport(nil, 3, ScanOptions{MinHours: 5, Mode: ScanModeBacklog})
-	if !strings.Contains(out, "No unlogged games under 5h") {
-		t.Errorf("unexpected empty report: %s", out)
-	}
-	if strings.Contains(out, "status: backlog") {
-		t.Error("should not describe creation when there's nothing to create")
-	}
-}
-
 // Only records with a real denominator and something left to earn qualify,
 // and only games whose status doesn't already say they're over.
 func TestFindUnfinished_FiltersToGamesWithSomethingLeft(t *testing.T) {

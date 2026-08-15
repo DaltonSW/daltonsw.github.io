@@ -1,7 +1,6 @@
 package commands
 
 import (
-	"strings"
 	"testing"
 
 	"go.dalton.dog/gamelog/internal/model"
@@ -79,41 +78,94 @@ func TestSortCandidates_FinishedFirstThenPlaytime(t *testing.T) {
 	}
 }
 
-func TestFormatScanReport_NamesTheAward(t *testing.T) {
-	out := FormatScanReport([]Candidate{{
+// A partial achievement count next to "finished" is only coherent when the
+// award kind explains it, so Outcome has to name the award.
+func TestCandidateOutcome_NamesTheAward(t *testing.T) {
+	c := Candidate{
 		Provider: "RetroAchievements", Title: "Animal Crossing: City Folk",
 		Platform: "Wii", ID: "34566",
 		Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-05-02",
 		Status:        "finished",
 		AchievementsA: 12, AchievementsB: 189,
-	}}, 3, ScanOptions{MinHours: 5})
+	}
 
-	// A partial achievement count next to "finished" is only coherent when
-	// the award kind explains it.
-	for _, want := range []string{
-		"12/189 achievements",
-		"-> finished 2026-05-02 (beaten-hardcore)",
-		"draft: true",
-	} {
-		if !strings.Contains(out, want) {
-			t.Errorf("report missing %q\n---\n%s", want, out)
-		}
+	if got, want := c.Outcome(), "finished 2026-05-02 (beaten-hardcore)"; got != want {
+		t.Errorf("Outcome() = %q, want %q", got, want)
+	}
+	if got, want := c.Evidence(), "12/189 achievements"; got != want {
+		t.Errorf("Evidence() = %q, want %q", got, want)
 	}
 }
 
 // A "mastered"/"completed" award is a stronger signal than a plain beaten
-// award, so the report — and the status it suggests — should say so.
-func TestFormatScanReport_NamesMasteredSeparatelyFromFinished(t *testing.T) {
-	out := FormatScanReport([]Candidate{{
+// award, so the row — and the status it suggests — should say so.
+func TestCandidateOutcome_NamesMasteredSeparatelyFromFinished(t *testing.T) {
+	c := Candidate{
 		Provider: "RetroAchievements", Title: "Earthbound",
 		Platform: "SNES", ID: "264",
 		Finished: true, AwardKind: "mastered", FinishedOn: "2026-05-02",
 		Status:        "mastered",
 		AchievementsA: 79, AchievementsB: 79,
-	}}, 3, ScanOptions{MinHours: 5})
+	}
 
-	if !strings.Contains(out, "-> mastered 2026-05-02 (mastered)") {
-		t.Errorf("report should name the mastered award, got:\n%s", out)
+	if got, want := c.Outcome(), "mastered 2026-05-02 (mastered)"; got != want {
+		t.Errorf("Outcome() = %q, want %q", got, want)
+	}
+}
+
+// An unfinished candidate has no outcome to claim — the template falls back
+// to the suggested status rather than printing a half-built phrase.
+func TestCandidateOutcome_EmptyWhenUnfinished(t *testing.T) {
+	c := Candidate{Provider: "Steam", Title: "Hades", ID: "1145360", Status: "playing", PlaytimeMins: 90, LastActivity: "2026-05-02"}
+	if got := c.Outcome(); got != "" {
+		t.Errorf("Outcome() = %q, want empty for an unfinished candidate", got)
+	}
+	if got, want := c.Evidence(), "1.5h · last active 2026-05-02"; got != want {
+		t.Errorf("Evidence() = %q, want %q", got, want)
+	}
+}
+
+// Nothing known means nothing shown — Evidence must not render a bare
+// separator or a stray "0h".
+func TestCandidateEvidence_EmptyWhenProviderOfferedNothing(t *testing.T) {
+	c := Candidate{Provider: "Steam", Title: "Never Launched", ID: "1", Status: "backlog"}
+	if got := c.Evidence(); got != "" {
+		t.Errorf("Evidence() = %q, want empty", got)
+	}
+}
+
+// "Create as playing instead" on a game the scan thought was finished has to
+// drop the inferred finish date too — the date only existed to justify the
+// guess being overridden, and keeping it would write a contradiction.
+func TestCandidateWithStatus_DropsTheFinishWhenOverriddenToOpenStatus(t *testing.T) {
+	c := Candidate{
+		Provider: "RetroAchievements", Title: "Banjo-Kazooie", ID: "10210",
+		Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2024-12-04",
+		Status: "finished",
+	}
+
+	playing := c.WithStatus("playing")
+	if playing.FinishedOn != "" || playing.Finished {
+		t.Errorf("overriding to playing should drop the finish, got finished=%v on %q", playing.Finished, playing.FinishedOn)
+	}
+	if got := playing.NewGameFields().Finished; got != "" {
+		t.Errorf("front matter finished = %q, want empty", got)
+	}
+
+	// mastered still asserts the game is over, so the date it was earned on
+	// survives the correction.
+	mastered := c.WithStatus("mastered")
+	if mastered.FinishedOn != "2024-12-04" || !mastered.Finished {
+		t.Errorf("mastered should keep the finish, got %q", mastered.FinishedOn)
+	}
+
+	// The original must be untouched: rows are re-derived per request, but a
+	// value receiver that mutated shared state would still be a trap.
+	if c.Status != "finished" || c.FinishedOn != "2024-12-04" {
+		t.Error("WithStatus must not mutate the candidate it was called on")
+	}
+	if blank := c.WithStatus(""); blank.Status != "finished" {
+		t.Errorf("a blank status means keep the guess, got %q", blank.Status)
 	}
 }
 
@@ -128,16 +180,6 @@ func TestStatusForAward(t *testing.T) {
 		if got := statusForAward(kind); got != want {
 			t.Errorf("statusForAward(%q) = %q, want %q", kind, got, want)
 		}
-	}
-}
-
-func TestFormatScanReport_NoCandidates(t *testing.T) {
-	out := FormatScanReport(nil, 3, ScanOptions{MinHours: 5})
-	if !strings.Contains(out, "No unlogged games found") {
-		t.Errorf("unexpected empty report: %s", out)
-	}
-	if strings.Contains(out, "draft: true") {
-		t.Error("should not mention creation when there's nothing to create")
 	}
 }
 

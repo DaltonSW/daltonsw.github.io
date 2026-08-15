@@ -1,8 +1,29 @@
+{{/* One scan/backlog row's actions, in the same shape the Stale section uses:
+     the guess as the primary button, each other plausible status one click
+     beside it, and a way out that isn't "create it and fix it later".
+
+     Takes a scanRow. */}}
+{{define "create_actions"}}
+<div class="cell-actions">
+  <form method="post" action="{{.Action}}" class="cell-actions">
+    <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="candidate" value="{{.I}}">
+    <button type="submit" class="btn--primary">Correct — create {{.C.Status}}</button>
+    {{range .OtherStatuses}}
+    <button name="status" value="{{.}}" type="submit">Create as {{.}} instead</button>
+    {{end}}
+  </form>
+</div>
+{{end}}
+
 {{define "content"}}
 <h1>Housekeeping</h1>
 
 <h2>Scan</h2>
-<p class="lead">Finds games on RetroAchievements/Steam that aren't logged yet.</p>
+<p class="lead">Games on RetroAchievements/Steam with no entry in <code>content/games</code>. Everything
+   created here is a <code>draft: true</code> guess — bulk data carries no start dates, so create
+   the entry, then run <code>gamelog suggest &lt;slug&gt;</code> for its real range. Steam games are
+   never marked finished: playtime says nothing about completion.</p>
 
 <form method="get" action="/housekeeping" class="row">
   <label for="min_hours">Min Steam hours</label>
@@ -16,47 +37,58 @@
 </form>
 
 {{with .ScanError}}<div class="flash flash--error">{{.}}</div>{{end}}
-<pre>{{.ScanReport}}</pre>
+<p class="lead">{{len .ScanCandidates}} unlogged game(s), Steam filtered to {{.MinHours}}h+ ({{.NumLogged}} already logged).</p>
 
 {{if .ScanCandidates}}
-<form method="post" action="/scan" class="tui">
-  <span class="tui__title">create entries</span>
-  <input type="hidden" name="min_hours" value="{{.MinHours}}">
-  <div class="stack">
-  {{range $i, $c := .ScanCandidates}}
-    <div class="checkbox-row">
-      <input type="checkbox" id="c{{$i}}" name="candidate" value="{{$i}}">
-      <label for="c{{$i}}">{{$c.Title}} [{{$c.Provider}}]{{if $c.Finished}} · finished{{end}}{{if gt $c.PlaytimeMins 0}} · {{formatHoursFunc $c.PlaytimeMins}}{{end}}</label>
-    </div>
+<div class="table-wrap table-wrap--scroll">
+<table>
+  <thead><tr><th>Game</th><th>Provider</th><th>Evidence</th><th>Would create</th><th></th></tr></thead>
+  <tbody>
+  {{range .ScanCandidates}}
+  <tr>
+    <td>{{.C.Title}}</td>
+    <td class="dim">{{.C.Provider}} {{.C.ID}} · {{.C.Platform}}</td>
+    <td class="dim">{{with .C.Evidence}}{{.}}{{else}}—{{end}}</td>
+    <td class="dim">{{with .C.Outcome}}{{.}}{{else}}{{.C.Status}}{{end}}</td>
+    <td>{{template "create_actions" .}}</td>
+  </tr>
   {{end}}
-  </div>
-  <div class="btn-row"><button type="submit" class="btn--primary">Create selected (draft)</button></div>
-</form>
+  </tbody>
+</table>
+</div>
+{{else}}
+<p class="empty">Nothing unlogged above that threshold.</p>
 {{end}}
 
 <h2>Backlog</h2>
 <p class="lead">The other side of the same threshold: games you own on Steam but have played for
    less than {{.MinHours}}h and never logged. Creating one writes a <code>status: backlog</code>
-   draft with no playthroughs.yaml. Adjust the threshold in the Scan section above — the two
-   lists split the library at the same line, so nothing appears in both.</p>
+   draft with no playthroughs.yaml, and captures its achievement list (0 of N — the denominator is
+   the point) at one Steam request apiece, so work through these in batches. Adjust the threshold
+   in the Scan section above — the two lists split the library at the same line, so nothing appears
+   in both.</p>
 
 {{with .BacklogError}}<div class="flash flash--error">{{.}}</div>{{end}}
-<pre>{{.BacklogReport}}</pre>
+<p class="lead">{{len .BacklogCandidates}} owned Steam game(s) under {{.MinHours}}h with no entry.</p>
 
 {{if .BacklogCandidates}}
-<form method="post" action="/backlog" class="tui">
-  <span class="tui__title">create backlog entries</span>
-  <input type="hidden" name="min_hours" value="{{.MinHours}}">
-  <div class="stack">
-  {{range $i, $c := .BacklogCandidates}}
-    <div class="checkbox-row">
-      <input type="checkbox" id="b{{$i}}" name="candidate" value="{{$i}}">
-      <label for="b{{$i}}">{{$c.Title}}{{if gt $c.PlaytimeMins 0}} · {{formatHoursFunc $c.PlaytimeMins}}{{else}} · never launched{{end}}</label>
-    </div>
+<div class="table-wrap table-wrap--scroll">
+<table>
+  <thead><tr><th>Game</th><th>Playtime</th><th>Last active</th><th></th></tr></thead>
+  <tbody>
+  {{range .BacklogCandidates}}
+  <tr>
+    <td>{{.C.Title}}</td>
+    <td class="dim">{{if gt .C.PlaytimeMins 0}}{{formatHoursFunc .C.PlaytimeMins}}{{else}}never launched{{end}}</td>
+    <td class="dim">{{with .C.LastActivity}}{{.}}{{else}}—{{end}}</td>
+    <td>{{template "create_actions" .}}</td>
+  </tr>
   {{end}}
-  </div>
-  <div class="btn-row"><button type="submit" class="btn--primary">Create selected (backlog draft)</button></div>
-</form>
+  </tbody>
+</table>
+</div>
+{{else}}
+<p class="empty">Nothing owned-but-unplayed below that threshold.</p>
 {{end}}
 
 <h2>Unfinished</h2>

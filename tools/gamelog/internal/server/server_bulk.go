@@ -88,9 +88,21 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		redirectOK(w, r, "/housekeeping", "Nothing created.")
 		return
 	}
-	created, skipped := commands.CreateFromCandidates(s.gamesDir, candidates, chosen)
+
+	// Blank means "use the guess". Anything else is the "create as X
+	// instead" correction and has to be a real status — it's written
+	// straight into front matter.
+	status := r.FormValue("status")
+	if status != "" && !forms.IsGameStatus(status) {
+		redirectErr(w, r, "/housekeeping", fmt.Errorf("unknown status %q", status))
+		return
+	}
+
+	created, skipped := commands.CreateFromCandidates(s.gamesDir, candidates, chosen, status)
 	kind := "created"
-	if mode == commands.ScanModeBacklog {
+	if status != "" {
+		kind = "created as " + status
+	} else if mode == commands.ScanModeBacklog {
 		kind = "created as backlog"
 	}
 	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
@@ -121,17 +133,50 @@ type staleRow struct {
 	OtherStatuses []string
 }
 
+// scanRow is staleRow's counterpart for a scan/backlog candidate, and follows
+// the same rule the stale section established: the guess is the primary
+// button, every other plausible answer is one click beside it, and nothing
+// forces a create-then-edit round trip to fix a wrong guess.
+type scanRow struct {
+	I             int // index into the scan this row came from
+	C             commands.Candidate
+	OtherStatuses []string
+
+	// Action and MinHours are carried per row rather than read off the page
+	// data, because the button block is a nested template: inside a
+	// {{define}} the enclosing page's dot isn't reachable.
+	Action   string
+	MinHours float64
+}
+
+// scanRows pairs each candidate with the alternatives to its guessed status.
+// quick is the mode's plausible set — see forms.ScanQuickStatuses.
+func scanRows(candidates []commands.Candidate, quick []string, action string, minHours float64) []scanRow {
+	rows := make([]scanRow, len(candidates))
+	for i, c := range candidates {
+		var others []string
+		for _, st := range quick {
+			if st != c.Status {
+				others = append(others, st)
+			}
+		}
+		rows[i] = scanRow{I: i, C: c, OtherStatuses: others, Action: action, MinHours: minHours}
+	}
+	return rows
+}
+
 type housekeepingData struct {
 	Page
-	ScanReport     string
-	ScanCandidates []commands.Candidate
+	ScanCandidates []scanRow
 	ScanError      string
 	MinHours       float64
+	// NumLogged is how many games are already in content/games — the
+	// denominator that makes a candidate count mean something.
+	NumLogged int
 	// Backlog* is the same scan against the other side of MinHours. It
 	// shares min_hours on purpose — one boundary, two complementary lists,
 	// so nothing can appear in both.
-	BacklogReport     string
-	BacklogCandidates []commands.Candidate
+	BacklogCandidates []scanRow
 	BacklogError      string
 	Unfinished        []commands.UnfinishedCandidate
 	UnfinishedPct     float64
@@ -180,17 +225,15 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		// silently clobber that on every load.
 		data.ScanError = err.Error()
 	} else {
-		data.ScanCandidates = candidates
-		data.ScanReport = commands.FormatScanReport(candidates, numExisting, commands.ScanOptions{MinHours: minHours})
+		data.ScanCandidates = scanRows(candidates, forms.ScanQuickStatuses, "/scan", minHours)
+		data.NumLogged = numExisting
 	}
 
-	backlogOpts := commands.ScanOptions{MinHours: minHours, Mode: commands.ScanModeBacklog}
-	backlog, numExisting, err := s.scanCandidates(minHours, commands.ScanModeBacklog)
+	backlog, _, err := s.scanCandidates(minHours, commands.ScanModeBacklog)
 	if err != nil {
 		data.BacklogError = err.Error()
 	} else {
-		data.BacklogCandidates = backlog
-		data.BacklogReport = commands.FormatBacklogReport(backlog, numExisting, backlogOpts)
+		data.BacklogCandidates = scanRows(backlog, forms.BacklogQuickStatuses, "/backlog", minHours)
 	}
 
 	games, err := model.ListGames(s.gamesDir)
