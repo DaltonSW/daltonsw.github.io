@@ -227,6 +227,25 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 - **Steam puts useful JSON in 400/403 bodies** — read the body, don't bail on status.
 - **Steam needs a SteamID64**, not a vanity name; `SteamClient.resolveSteamID` handles both.
 - **RA rate-limits sustained bursts with 429** — `RAClient` throttles to ~1.2s and retries.
+- **A RetroAchievements subset is linked by `ParentGameID`, never by its title.** The
+  `<base> [Subset - <name>]` convention is the only signal the bulk scan endpoint carries, and
+  it's used to *spot* a candidate, nothing more; `commands.AttachSubset` re-fetches the per-game
+  endpoint and refuses to write unless the reported parent matches the target game's own
+  `retroachievements_id`. Don't "simplify" that away — a form value that attaches another game's
+  achievements to this game would look entirely plausible on the rendered page. See
+  `internal/commands/subsets.go` and README.md's "RetroAchievements subsets".
+- **Subset counts are deliberately kept out of a game's headline `unlocked`/`total`.** They live
+  under `subsets:` in `achievement-summary.yaml` instead, because a subset is a bonus set for the
+  same game rather than a second copy of it: 16/40 + 6/52 = 22/92 describes a set that exists
+  nowhere and restates a 40%-complete game as 24% complete. Subset *playtime* is left out for a
+  related reason — RA reports it per game id, so summing double-counts the same hours — while
+  `last_played` **is** folded in, since playing the bonus set is playing the game.
+- **`SaveAchievements` walks links in order rather than one id per provider.** A subset is a
+  second RetroAchievements id on one game, which is the only case in the schema where a game has
+  two ids on one provider; collapsing links back into a `map[provider]id` would silently drop
+  every subset but the last. It also passes a **blank title** for a subset record so a refresh
+  can't overwrite RA's own name for the set with the game's — that name is the only place
+  "Mouse Alley" is recorded.
 - **Achievement refreshes merge, never overwrite.** An unlock recorded once must never be
   retractable. Regression tests in `internal/model/archive_test.go` cover this; keep them.
 - **`Extra map[string]any` with `yaml:",inline"` is load-bearing**, on both `PlaythroughEntry`
@@ -286,6 +305,15 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 
 ## Outstanding
 
+- **A subset's parent lookup is memoized per process, not persisted.** `raParentCache` in
+  `internal/commands/subsets.go` keeps Housekeeping from re-asking RetroAchievements (~1.2s a
+  call) on every render, but a restart of `gamelog serve` pays for it again — one request per
+  unattached subset row. That's fine at today's count (one subset in the whole library) and would
+  want a real cache well before it wasn't.
+- **Nothing detaches a subset from the tool.** Attaching is a Housekeeping button; undoing it
+  means deleting the id from `retroachievements_subsets:` by hand. Deliberate for now, and the
+  same call made for planned-replay placeholders: the archive record is keyed by provider id and
+  survives either way, so nothing is lost by the edit being manual.
 - **The Exophase canonical-ID map only covers the first 50 games per service.** The embedded
   profile payload isn't paginated the way the JSON API is, so a service with more than 50 games
   would silently resolve IDs for only the first page. Now Ubisoft-only (PSN moved to Sony's own
