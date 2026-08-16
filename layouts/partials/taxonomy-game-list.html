@@ -1,0 +1,32 @@
+{{/* Context: a taxonomy term Page (Kind "term") whose .Pages are game term-pages
+     (content/games/<slug>/_index.md — see hugo.toml's [taxonomies] comment).
+     Renders each as a compact row: status pill, title, platform, and the
+     played date range, newest activity first. Shared by layouts/platform/term.html
+     and layouts/status/term.html so the two stay identical in shape. */}}
+{{- $rows := slice }}
+{{- range .Pages }}
+  {{- $rows = $rows | append (dict
+      "page" .
+      "last" (partial "game-last-played.html" .)
+    )
+  }}
+{{- end }}
+{{- $rows = sort $rows "last" "desc" }}
+<ul class="entry-list">
+  {{- range $rows }}
+  {{- $page := .page }}
+  {{- $start := partial "game-first-played.html" $page }}
+  {{- $end := .last }}
+  <li class="entry{{ with $page.Params.status }} entry--{{ . }}{{ end }}">
+    <a class="entry__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    {{- with $page.Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+    <span class="entry__meta">
+      {{- with $page.Params.platform }}{{ . }}{{ end }}
+      {{- with $start }}{{ if $page.Params.platform }} · {{ end }}{{ . | time.Format "Jan 2006" }}{{ end }}
+      {{- if and $end (ne $start $end) }} – {{ $end | time.Format "Jan 2006" }}{{ end }}
+    </span>
+  </li>
+  {{- else }}
+  <li class="entry"><span class="entry__sub">No games logged yet.</span></li>
+  {{- end }}
+</ul>

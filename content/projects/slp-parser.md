@@ -1,7 +1,7 @@
 ---
 title: slp-parser
 tagline: "A Go module for parsing Slippi replay files (.slp)."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/slp-parser
 links:
   - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/slp" }

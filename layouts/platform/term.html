@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{/* .Title falls back to Hugo's title-cased term slug ("Pc", "Ps4"), which is
+     wrong for the acronyms most platform values are — .Data.Term is the raw,
+     as-authored front-matter value ("PC", "PS4"). */}}
+<h1>{{ .Data.Term }}</h1>
+{{ partial "taxonomy-game-list.html" . }}
+{{ end }}

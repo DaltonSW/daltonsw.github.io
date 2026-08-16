@@ -1,7 +1,7 @@
 ---
 title: slpmeup
 tagline: "Browse Super Smash Bros. Melee tournament replays, with video rendering and downloads."
-status: stable
+dev_status: stable
 links:
   - { label: "Website", url: "https://slpmeup.xyz" }
 category: setcount

@@ -84,6 +84,22 @@
   {{- if not (in $statuses $status) -}}{{- $statuses = $statuses | append $status -}}{{- end -}}
 {{- end -}}
 
+{{/* Status/platform rows below link out to /status/<term>/ and /platform/<term>/,
+     same term pages the Game list tab's rows link to (layouts/games/taxonomy.html) —
+     built once here from the taxonomies themselves rather than guessing a URL via
+     urlize, so a row only links when a real term page exists. Platform is keyed by
+     Page.Data.Term (the raw, as-authored value, e.g. "PC") rather than Hugo's
+     lower-cased .Term, since $platformCounts above is keyed the same way. Status
+     values are already lowercase as authored, so .Term matches directly. */}}
+{{- $statusTermPages := dict -}}
+{{- with site.Taxonomies.status -}}
+  {{- range .Alphabetical -}}{{- $statusTermPages = merge $statusTermPages (dict .Term .Page) -}}{{- end -}}
+{{- end -}}
+{{- $platformTermPages := dict -}}
+{{- with site.Taxonomies.platform -}}
+  {{- range .Alphabetical -}}{{- $platformTermPages = merge $platformTermPages (dict .Page.Data.Term .Page) -}}{{- end -}}
+{{- end -}}
+
 {{/* Most-played platforms first — count matters more than alphabetizing here. */}}
 {{- $platforms := slice -}}
 {{- range $platform, $count := $platformCounts -}}{{- $platforms = $platforms | append $platform -}}{{- end -}}
@@ -148,7 +164,11 @@
             {{- range $statuses }}
             {{- $status := . }}
             <li class="overview-status-row">
+              {{- with index $statusTermPages $status }}
+              <a href="{{ .RelPermalink }}">{{ partial "game-status-tag.html" $status }}</a>
+              {{- else }}
               {{ partial "game-status-tag.html" $status }}
+              {{- end }}
               <span class="overview-status-row__count">{{ index $statusCounts $status }}</span>
             </li>
             {{- end }}
@@ -159,8 +179,13 @@
           <span class="overview-status-card__name">Platforms</span>
           <ul class="overview-status-card__rows">
             {{- range $platformRows }}
+            {{- $platform := .platform }}
             <li class="overview-status-row">
-              <span class="overview-status-row__label">{{ .platform }}</span>
+              {{- with index $platformTermPages $platform }}
+              <a class="overview-status-row__label" href="{{ .RelPermalink }}">{{ $platform }}</a>
+              {{- else }}
+              <span class="overview-status-row__label">{{ $platform }}</span>
+              {{- end }}
               <span class="overview-status-row__count">{{ .count }}</span>
             </li>
             {{- end }}

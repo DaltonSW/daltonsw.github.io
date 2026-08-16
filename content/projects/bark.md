@@ -1,7 +1,7 @@
 ---
 title: bark
 tagline: "A minimalistic logging module focused on short-term execution contexts."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/bark
 links:
   - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/bark" }

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul class="entry-list">
+  {{/* .Term is Hugo's lower-cased taxonomy key ("pc", "ps4") — .Page.Data.Term is the
+       raw, as-authored value ("PC", "PS4"), same as term.html's own H1 uses. */}}
+  {{- range .Data.Terms.Alphabetical }}
+  <li class="entry">
+    <a class="entry__title" href="{{ .Page.RelPermalink }}">{{ .Page.Data.Term }}</a>
+    <span class="entry__meta">{{ .Count }} game{{ if ne .Count 1 }}s{{ end }}</span>
+  </li>
+  {{- else }}
+  <li class="entry"><span class="entry__sub">No games logged yet.</span></li>
+  {{- end }}
+</ul>
+{{ end }}

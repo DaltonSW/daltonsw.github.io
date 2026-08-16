@@ -1,7 +1,7 @@
 ---
 title: PokeTerm
 tagline: "A fast, no-bloat terminal PokéDex."
-status: stable
+dev_status: stable
 category: main
 repo: https://github.com/DaltonSW/poketerm
 links:

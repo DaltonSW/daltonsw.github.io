@@ -1,7 +1,7 @@
 ---
 title: headline
 tagline: "CLI tool to make headers from simple config files."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/headline
 category: main
 weight: 50

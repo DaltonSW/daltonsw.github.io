@@ -1,7 +1,7 @@
 ---
 title: Metroidvania Month 23
 tagline: "A metroidvania built for Metroidvania Month 23, in C# and Godot 4.0."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/MVM23
 category: jam
 weight: 50

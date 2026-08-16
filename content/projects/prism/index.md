@@ -1,7 +1,7 @@
 ---
 title: prism
 tagline: "Make your unit testing a bit easier on the eyes."
-status: stable
+dev_status: stable
 category: main
 date: 2025-09-27
 repo: https://github.com/DaltonSW/prism

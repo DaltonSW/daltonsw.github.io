@@ -1,7 +1,7 @@
 ---
 title: StreamFighter
 tagline: "Slimmed down, customizable stream running tool for fighting games."
-status: stable
+dev_status: stable
 repo: https://github.com/SetCount/StreamFighter
 category: setcount
 weight: 40

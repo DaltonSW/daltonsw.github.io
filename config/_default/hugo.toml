@@ -14,8 +14,18 @@ timezone = "America/Chicago"
 # then nest under that game's directory and inherit the tag via `cascade`, with
 # no per-page front matter needed. Defining [taxonomies] replaces Hugo's
 # implicit tag/category defaults — unused here, so no loss.
+#
+# `platform` and `status` reuse the existing front-matter fields of the same
+# name (every game bundle's _index.md already sets them) — singular equals
+# plural here specifically so Hugo reads that field directly instead of
+# needing a second, tool-maintained field. That means the handful of games
+# with a comma-joined platform string (e.g. "PC, Xbox 360") become one
+# composite term rather than two separate ones; accepted rather than
+# reshaping the platform field, since only ~4 games are affected.
 [taxonomies]
     game = "games"
+    platform = "platform"
+    status = "status"
 
 # Games track real dates in `started`/`finished`; projects use `date`. Wire both
 # into Hugo's canonical dates so feeds, sitemap <lastmod>, and .Date are accurate

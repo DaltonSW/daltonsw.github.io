@@ -1,6 +1,6 @@
 ---
 title: EarthBound
-platform: SNES/Super Famicom
+platform: SNES
 retroachievements_id: 264
 steam_appid: null
 status: dropped

@@ -1,7 +1,7 @@
 ---
 title: My First Game Jam - Winter 2022
 tagline: "My first-ever game jam submission."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/MyFirstGameJam-Winter2022
 category: jam
 weight: 20

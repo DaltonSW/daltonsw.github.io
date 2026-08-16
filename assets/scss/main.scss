@@ -334,6 +334,17 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ps-row:hover .ps-row__title { color: var(--accent); }
 .ps-row__rating { color: var(--dim); font-size: 0.8rem; flex: none; }
 .ps-row__platform, .ps-row__played, .ps-row__playtime { color: var(--dim); }
+// Platform/status cells link out to /platform/<term>/ and /status/<term>/ — inherit the
+// row's muted color rather than the default link accent (a wall of accent-colored text
+// in a dense table reads as noise), but keep a standing underline so they still read as
+// clickable at rest, not just on hover.
+.ps-row__platform a, .ps-row__status a {
+  color: inherit; text-decoration: underline; text-decoration-color: var(--stroke);
+  text-underline-offset: 2px;
+}
+.ps-row__platform a:hover, .ps-row__status a:hover {
+  color: var(--accent); text-decoration-color: currentColor;
+}
 .ps-row__played--none { font-style: italic; }
 .ps-row__achievements { color: var(--dim); font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 0.5rem; }
 
@@ -556,6 +567,15 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .overview-status-row__label { color: var(--dim); }
 .overview-status-row__count { color: var(--fg); }
+// Status/platform rows link out to /status/<term>/ and /platform/<term>/ when a term
+// page exists — a standing underline marks them as clickable at rest (not just on
+// hover), same treatment as .ps-row__platform/.ps-row__status.
+a.overview-status-row__label, .overview-status-row a {
+  text-decoration: underline; text-decoration-color: var(--stroke); text-underline-offset: 2px;
+}
+a.overview-status-row__label:hover, .overview-status-row a:hover {
+  color: var(--accent); text-decoration-color: currentColor;
+}
 .overview-recent__item { justify-content: flex-start; }
 .overview-recent__item .ach-row__game { flex: 1; min-width: 0; }
 .overview-recent__date { color: var(--dim); white-space: nowrap; }

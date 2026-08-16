@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<ul class="entry-list">
+  {{/* Status values are already lowercase as authored, so .Term (Hugo's normalized
+       taxonomy key) and the raw value agree here — no .Page.Data.Term needed, unlike
+       platform's mixed-case acronyms. */}}
+  {{- range .Data.Terms.Alphabetical }}
+  <li class="entry entry--{{ .Term }}">
+    <a class="entry__title" href="{{ .Page.RelPermalink }}">{{ .Term }}</a>
+    <span class="pill pill--{{ .Term }}">{{ .Term }}</span>
+    <span class="entry__meta">{{ .Count }} game{{ if ne .Count 1 }}s{{ end }}</span>
+  </li>
+  {{- else }}
+  <li class="entry"><span class="entry__sub">No games logged yet.</span></li>
+  {{- end }}
+</ul>
+{{ end }}

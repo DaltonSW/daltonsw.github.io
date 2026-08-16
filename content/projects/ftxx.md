@@ -1,7 +1,7 @@
 ---
 title: FTXX
 tagline: "Lightweight 'First to X' score tracker for streams and locals."
-status: stable
+dev_status: stable
 links:
   - { label: "Windows", url: "https://setcount.xyz/stuff/ftxx.exe" }
   - { label: "Linux", url: "https://setcount.xyz/stuff/ftxx.tar.xz" }

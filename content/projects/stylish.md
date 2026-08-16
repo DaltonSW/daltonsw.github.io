@@ -1,7 +1,7 @@
 ---
 title: stylish
 tagline: "Create and apply stylish $LS_COLORS themes without the pain."
-status: stable
+dev_status: stable
 category: main
 date: 2025-01-18
 repo: https://github.com/DaltonSW/stylish

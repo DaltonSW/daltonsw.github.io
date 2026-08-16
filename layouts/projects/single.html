@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article>
-  <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
+  <h1>{{ .Title }}{{ with .Params.dev_status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
   {{- with .Params.tagline }}<p class="lead">{{ . }}</p>{{ end }}
 
   {{- $links := .Params.links | default slice }}

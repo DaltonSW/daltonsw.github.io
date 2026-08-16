@@ -1,7 +1,7 @@
 ---
 title: BubbleUp
 tagline: "Floats your alerts to the front of your BubbleTea application."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/BubbleUp
 links:
   - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/bubbleup" }

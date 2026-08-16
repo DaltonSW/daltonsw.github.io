@@ -1,0 +1,4 @@
+{{ define "main" }}
+<h1>{{ .Data.Term }} <span class="pill pill--{{ .Data.Term }}">{{ .Data.Term }}</span></h1>
+{{ partial "taxonomy-game-list.html" . }}
+{{ end }}

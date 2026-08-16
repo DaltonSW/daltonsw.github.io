@@ -112,13 +112,30 @@
         {{- $source = $achievements }}
       {{- end }}
     {{- end }}
+    {{/* Links point at the game's own classification (its front-matter status/platform),
+         not necessarily $row's — a row can show a per-year/per-entry override (e.g. a
+         mixed-status game's headline status, or a playthrough-specific platform) that has
+         no term page of its own. Falling back to plain text when the page carries no term
+         (e.g. an empty status) keeps this from ever linking to a page that doesn't exist. */}}
+    {{- $statusTerm := "" }}
+    {{- with $page.GetTerms "status" }}{{ $statusTerm = index . 0 }}{{ end }}
+    {{- $platformTerm := "" }}
+    {{- with $page.GetTerms "platform" }}{{ $platformTerm = index . 0 }}{{ end }}
     <div class="ps-row{{ with $row.status }} ps-row--{{ . }}{{ end }}" role="row">
-      <span class="ps-row__status" role="cell">{{ with $row.status }}{{ partial "game-status-tag.html" . }}{{ end }}</span>
+      <span class="ps-row__status" role="cell">
+        {{- with $row.status }}
+          {{- if $statusTerm }}<a href="{{ $statusTerm.RelPermalink }}">{{ partial "game-status-tag.html" . }}</a>
+          {{- else }}{{ partial "game-status-tag.html" . }}{{ end }}
+        {{- end }}
+      </span>
       <span class="ps-row__game" role="cell">
         <a class="ps-row__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
         {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
       </span>
-      <span class="ps-row__platform" role="cell">{{ $row.platform }}</span>
+      <span class="ps-row__platform" role="cell">
+        {{- if $platformTerm }}<a href="{{ $platformTerm.RelPermalink }}">{{ $row.platform }}</a>
+        {{- else }}{{ $row.platform }}{{ end }}
+      </span>
       <span class="ps-row__played" role="cell">
         {{/* Dates are clipped to this year by game-year-rows.html. */}}
         {{- $start := "" }}{{ with $row.start }}{{ $start = . | time.Format "Jan 2006" }}{{ end }}

@@ -1,7 +1,7 @@
 ---
 title: ReSwiss
 tagline: "Run Swiss-format brackets with automatic pairings, tiebreakers, and no rematches."
-status: stable
+dev_status: stable
 links:
   - { label: "Website", url: "https://swiss.slpmeup.xyz" }
 category: setcount

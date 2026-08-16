@@ -1,7 +1,7 @@
 ---
 title: spruce
 tagline: "Update all your system- or user-level packages in one pretty place."
-status: stable
+dev_status: stable
 repo: https://github.com/DaltonSW/spruce
 links:
   - { label: "Go Package", url: "https://pkg.go.dev/go.dalton.dog/spruce" }
