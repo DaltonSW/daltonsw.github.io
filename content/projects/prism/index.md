@@ -1,16 +1,19 @@
 ---
-title: Introducing prism 🔥🪵
-showDate: false
+title: prism
+tagline: "Make your unit testing a bit easier on the eyes."
+status: stable
+category: main
 date: 2025-09-27
-url: /prism
-customCSS: gamejams.css
-# TODO: Make this not game-jam-specific
+repo: https://github.com/DaltonSW/prism
+weight: 60
+draft: false
 ---
 {{< card >}}
 
-## Welcome! 
+## Welcome!
 
-Make your unit testing a bit easier on the eyes.
+`prism` makes your unit testing a bit easier on the eyes. Anywhere you'd run `go test`, use
+`prism` instead.
 
 {{</ card >}}
 
@@ -18,7 +21,7 @@ Make your unit testing a bit easier on the eyes.
 
 ## Installation
 
-### Github Releases 🐙
+### GitHub Releases
 
 - Go to the `Releases` tab of the repo [here](https://github.com/DaltonSW/prism/releases)
 - Download the latest archive for your OS/architecture
@@ -30,19 +33,17 @@ chmod +x prism # Make file executable
 mv prism [somewhere on your $PATH] # Move the file to somewhere on your path for easy execution
 ```
 
-### Homebrew 🍺 
+### Homebrew
 
-- Have `brew` installed ([brew.sh](https://brew.sh))
-- Run the following:
+Ensure you have `brew` [installed](https://brew.sh). Then, run the following:
 ```sh
 brew install --cask daltonsw/tap/prism
 ```
 
-### Go 🖥️ 
+### Go
 
-- Have `Go` 
-- Have your `Go` install location on your `$PATH`
-- Run the following: 
+Ensure you have `Go` [installed](https://go.dev/doc/install), and your `Go` install location on
+your `$PATH`. Then, run the following:
 ```sh
 go install go.dalton.dog/prism@latest
 ```
@@ -53,7 +54,7 @@ go install go.dalton.dog/prism@latest
 
 ## Usage
 
-Just run `prism` in your module directory. Anywhere you'd run `go test`, use `prism` instead. That's it!
+Just run `prism` in your module directory. Anywhere you'd run `go test`, use `prism` instead.
+That's it!
 
 {{</ card >}}
-
