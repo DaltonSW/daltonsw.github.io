@@ -60,7 +60,7 @@ pre {
 pre code { background: none; padding: 0; }
 blockquote {
   margin: 1.2em 0; padding: 0.2em 1em;
-  border-left: 3px solid var(--accent);
+  border-left: 2px solid var(--stroke);
   color: var(--dim);
 }
 hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
@@ -352,9 +352,11 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   overflow: hidden;
 }
 .ps-meter__fill {
-  display: block; height: 100%;
+  display: block; position: absolute; inset: 0;
+  height: 100%; width: 100%;
   background: var(--ok);
-  transition: width 0.2s ease;
+  transform-origin: left; transform: scaleX(var(--pct, 0));
+  transition: transform 0.2s ease;
 }
 @media (prefers-reduced-motion: reduce) { .ps-meter__fill { transition: none; } }
 .ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; }
