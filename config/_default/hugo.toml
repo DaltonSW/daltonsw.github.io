@@ -43,6 +43,17 @@ timezone = "America/Chicago"
 [markup.goldmark.renderer]
     unsafe = true
 
+# Header search reads this at /search-index.json — every game and project page,
+# built once at site render so the client never has to crawl pages itself.
+[outputFormats.searchindex]
+    mediaType = "application/json"
+    baseName = "search-index"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+    home = ["HTML", "RSS", "searchindex"]
+
 # Public handles shown/linked on the Overview tab's provider cards
 # (layouts/partials/games-overview.html). These are public profile identifiers,
 # not secrets — real credentials (API keys, tokens) stay in tools/gamelog/.env,

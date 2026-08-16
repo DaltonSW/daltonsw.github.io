@@ -1,0 +1,30 @@
+{{- /* Flat index of every game and project page, read by the header search
+   box (assets/js/site-search.ts). Rebuilt on every Hugo run — nothing here
+   is hand-maintained. */ -}}
+{{- $entries := slice -}}
+
+{{- with site.Taxonomies.games -}}
+  {{- range . -}}
+    {{- with .Page -}}
+      {{- $entries = $entries | append (dict
+          "title" .Title
+          "url" .RelPermalink
+          "kind" "game"
+          "meta" (.Params.platform | default "")
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with site.GetPage "projects" -}}
+  {{- range .Pages -}}
+    {{- $entries = $entries | append (dict
+        "title" .Title
+        "url" .RelPermalink
+        "kind" "project"
+        "meta" (.Params.tagline | default "")
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- jsonify $entries -}}

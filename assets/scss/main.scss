@@ -86,9 +86,12 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   position: sticky; top: 0; z-index: 10;
   backdrop-filter: blur(6px);
 }
+// Wider than $content-width: the header's a controls row, not prose, so it
+// should keep brand/nav/search/social on one line further into wide viewports.
 .site-header__bar {
   display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem;
   padding-block: 0.85rem;
+  max-width: 1500px;
 }
 .brand {
   font-family: $font-ui;
@@ -125,6 +128,37 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 .social a::before { content: "["; color: var(--stroke); }
 .social a::after  { content: "]"; color: var(--stroke); }
 .social a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+/* Header search: typeahead across every game/project page, backed by
+   /search-index.json (layouts/index.searchindex.json). */
+.site-search { position: relative; flex: 1 1 12rem; max-width: 20rem; }
+.site-search__input {
+  width: 100%; box-sizing: border-box;
+  font-family: $font-ui; font-size: 0.85rem; color: var(--fg);
+  background: var(--panel-2); border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+}
+.site-search__input::placeholder { color: var(--dim); }
+.site-search__input:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.site-search__results {
+  position: absolute; top: calc(100% + 0.35rem); left: 0; right: 0; z-index: 20;
+  margin: 0; padding: 0.3rem; list-style: none;
+  background: var(--panel); border: 1px solid var(--stroke); border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  max-height: 60vh; overflow-y: auto;
+}
+.site-search__result-link {
+  display: flex; flex-direction: column; gap: 0.1rem;
+  padding: 0.35rem 0.5rem; border-radius: 4px;
+  color: var(--fg); text-decoration: none;
+}
+.site-search__result-link:hover,
+.site-search__result-link.is-active { background: var(--panel-2); color: var(--accent); }
+.site-search__result-title { font-family: $font-ui; font-size: 0.88rem; }
+.site-search__result-kind {
+  font-family: $font-ui; font-size: 0.72rem; color: var(--dim);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
 
 /* ── Panels / cards (lipgloss-style bordered boxes) ─────────────────────── */
 .card, .panel {

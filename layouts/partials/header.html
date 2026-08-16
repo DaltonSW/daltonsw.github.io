@@ -11,6 +11,12 @@
       {{- end -}}
     </nav>
 
+    <div class="site-search" data-site-search data-site-search-index="{{ "search-index.json" | relURL }}">
+      <input type="search" class="site-search__input" placeholder="Search games & projects…"
+        aria-label="Search games and projects" autocomplete="off" data-site-search-input>
+      <ul class="site-search__results" hidden data-site-search-results></ul>
+    </div>
+
     {{- with site.Menus.icons }}
     <div class="social" aria-label="Elsewhere">
       {{- range . -}}
@@ -20,3 +26,12 @@
     {{- end }}
   </div>
 </header>
+
+{{- $siteSearchJSOpts := dict
+    "targetPath" "js/site-search.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $siteSearchJS := resources.Get "js/site-search.ts" | js.Build $siteSearchJSOpts | fingerprint -}}
+<script src="{{ $siteSearchJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $siteSearchJS.Data.Integrity }}"{{ end }} defer></script>
