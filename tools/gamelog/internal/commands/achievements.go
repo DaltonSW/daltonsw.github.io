@@ -371,13 +371,29 @@ func RunProject(args []string) error {
 	}
 	archiveDir := model.FindArchiveDir(gamesDir)
 
-	var written, empty, failed int
+	var written, empty, failed, campaigns int
 	for _, g := range games {
+		gameDir := filepath.Dir(g.Path)
+
+		// Trackmania's campaign history is a separate projection with its own
+		// source record, so it's rebuilt alongside rather than inside the
+		// achievement summary — see model.WriteCampaignSummary.
+		if g.NadeoAccountID != "" {
+			wrote, err := model.WriteCampaignSummary(archiveDir, gameDir, g.NadeoAccountID)
+			switch {
+			case err != nil:
+				fmt.Fprintf(os.Stderr, "  %s: campaigns: %v\n", g.Slug, err)
+				failed++
+			case wrote:
+				campaigns++
+			}
+		}
+
 		links := g.ProviderLinks()
 		if len(links) == 0 {
 			continue
 		}
-		wrote, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links)
+		wrote, err := model.WriteAchievementSummary(archiveDir, gameDir, links)
 		switch {
 		case err != nil:
 			fmt.Fprintf(os.Stderr, "  %s: %v\n", g.Slug, err)
@@ -389,5 +405,8 @@ func RunProject(args []string) error {
 		}
 	}
 	fmt.Printf("%d summaries written, %d with nothing archived yet, %d failed\n", written, empty, failed)
+	if campaigns > 0 {
+		fmt.Printf("%d campaign summaries written\n", campaigns)
+	}
 	return nil
 }

@@ -748,6 +748,104 @@ written straight to `archive/`, not through `SaveRecord`. Refreshing one of thos
 a key configured) fetches real per-achievement data and merges normally from then on, the same as
 any other provider.
 
+### Trackmania, via Nadeo's own web services
+
+**This is the one provider that doesn't record achievements.** Trackmania's real history is a
+personal best time on every track of every official campaign — ~450 tracks across 18+ seasons —
+and there is no way to express that as unlocked/total. So it has its own record type
+(`model.NadeoRecord`), its own merge, its own projection (`campaigns.yaml`), and it is deliberately
+**not** part of `ProviderLinks`/`ProviderOrder`. Folding it in would restate Trackmania's headline
+meter as 433/480 of an achievement set that doesn't exist.
+
+`gamelog nadeo whoami` prints the account id for `nadeo_account_id`; `gamelog nadeo seasons` lists
+every campaign next to what's archived; `gamelog nadeo fetch` captures.
+
+The API is documented (unofficially, by the community) at <https://webservices.openplanet.dev>.
+Things worth knowing before touching `providers/nadeo`:
+
+- **Auth is the service-account flow** — a login/password created at trackmania.com, exchanged at
+  `/v2/authentication/token/basic` via HTTP basic auth. The older Ubisoft-ticket flow stopped
+  working in April 2026; don't implement it. The login is the *service account's*, which is a
+  different string from the Ubisoft username.
+- **A service account inherits the Ubisoft account it was created on**, and it must be created on
+  the account whose times you want. Both record endpoints return the *authenticated account's*
+  data; a throwaway account returns an empty archive.
+
+  Openplanet's docs generally recommend *against* binding to a primary account, since a ban would
+  affect play — but they carve out an explicit exception for "when your use case requires one
+  specific player's authentication information to access their own data", which is this. The
+  alternative (`/v2/mapRecords/by-account/`, which reads any account with any token) accepts only
+  **one map per request**, so avoiding the binding would mean ~450 requests per capture instead of
+  ~2, and a separate account is no protection against an IP ban anyway.
+
+  Because the credentials are a real player's, `nadeoMinInterval` is 500ms and `fetch` defaults to
+  the current season only. A full backfill across all 25 official campaigns is ~15 requests and is
+  meant to be rare.
+- **There are two audiences and their tokens are not interchangeable.** The Live API (campaigns,
+  leaderboards) needs `NadeoLiveServices`; the Core API (map metadata, medal times) needs
+  `NadeoServices`. Both are fetched and cached separately, in memory only — never persisted, the
+  same standing decision as PSN.
+- **The account id comes out of the JWT payload**, not a separate call.
+- **`mapUid` and `mapId` are different identifiers and are not interchangeable.** The UID is
+  generated when a map is saved in the editor, the ID when it's uploaded. Leaderboard calls take
+  UIDs; the Core record endpoints take IDs. Both are captured, and the map-metadata call is what
+  translates between them — which is why it runs before records on either path.
+- **Times are captured at two scopes, and neither can be derived from the other.** A record is
+  filed under one leaderboard or another:
+  - `scopeType: "Season"` — the best time set *while that campaign was open*. Frozen when the
+    season closes. Fetched with `seasonIdList`, one request for every season at once. This is
+    what matches the hand-written notes in `playthroughs.yaml`.
+  - `scopeType: "PersonalBest"` — the all-time best on the map, which keeps moving when an old
+    track is revisited to clean up a medal. Fetched with `mapIdList`, ~150 maps per request. This
+    is what the game itself shows, and what the campaign grids display.
+
+  They must be two passes: `mapIdList` and `seasonIdList` both filter every result, so sending
+  them together intersects rather than unions. **The response must also be filtered on
+  `scopeType`** — a `mapIdList` request carries no season filter, so season-scoped entries come
+  back alongside the all-time ones and would otherwise be mistaken for them.
+
+  The gap between the two is the record of having gone back to a track;
+  `NadeoTrack.ImprovedSinceSeason` reports when the *medal* (not merely the time) got better, and
+  the grid marks those cells.
+
+- **The Live `leaderboard/group/map` is the fallback for the season pass only.** It needs a
+  request per 50 maps and reports no dates, but does return zone rankings, which the Core endpoint
+  omits. There is no fallback for the all-time pass — the Live leaderboard is season-scoped by
+  construction — so if that pass fails the season figure stands in for display and the archive
+  keeps whatever all-time value it already had.
+  - The Core endpoint works **only for the authenticated account** — others get a 403 — which is
+    also why it can't be used from a throwaway service account.
+  - `mapIdList` and `seasonIdList` must not both be sent: both filter every result, so together
+    they intersect rather than union.
+  - It returns at most the **1,000 most recent records**, and that's a ceiling, not a page. Fine
+    against ~450 campaign tracks; worth remembering if TOTDs are ever added.
+  - `gameMode` is documented as recommended but the client omits it — no filter returns
+    everything, which is harmless since results are indexed by `mapId`. Campaign Race maps come
+    back as `"TimeAttack"`, confirmed live, if it's ever needed.
+  - `medal` is Nadeo's own grade: 0 none, 1 bronze, 2 silver, 3 gold, 4 author. On the first live
+    capture it agreed with the medal derived from the map's thresholds on all 25 tracks, which is
+    what licenses `NadeoTrack.Medal()` computing it rather than trusting the integer.
+- **A `recordScore.time` of `4294967295` is a sentinel, not a time.** It's `math.MaxUint32`, used
+  when a map author has set a secret threshold score. `AccountRecord.Usable` filters it, along
+  with `removed` entries.
+- **The leaderboard endpoint hard-caps at 50 maps per request and silently truncates past that** —
+  exceeding it loses data rather than erroring.
+- **The map-info endpoint has no item cap but 414s at a request URI of 8220 characters** (~300
+  UIDs). Batches are 150.
+- **Responses are not 1:1 with requests.** An invalid or unknown `(mapUid, groupUid)` pair is
+  omitted from the response rather than returned empty, so results are matched by id — never
+  zipped with the request by position.
+- **The leaderboard endpoint intermittently returns `[]` for valid parameters.** `recordBatch`
+  retries once before concluding a batch has no times.
+- Medal thresholds (`authorScore`/`goldScore`/`silverScore`/`bronzeScore`) come from the *map*,
+  not the player, which is what lets `NadeoTrack.Medal()` score a time without a second fetch.
+  They're captured for undriven tracks too.
+- `seasonUid` and `groupUid` are the same identifier for official campaigns. They are not for
+  club campaigns, which this doesn't capture.
+
+`--dump-raw <dir>` writes every verbatim response body to disk. That's how `testdata/` fixtures
+are produced: run one scoped season, not a backfill.
+
 ### Credentials
 
 Copy `.env.example` to `.env` (gitignored) and fill it in. `suggest` finds that file whether
@@ -763,6 +861,7 @@ precedence, so `RA_API_KEY=... go run ./cmd/gamelog suggest x` still overrides t
 | `EXOPHASE_USER` | Your Exophase profile name, for Ubisoft Connect achievements. **Not a secret** — it's a public profile, which just has to be public. `EXOPHASE_PSN_USER` is accepted as an alias, from when this also covered PSN. |
 | `PSN_NPSSO` | npsso session value, for PSN trophies via Sony's own trophy API. **This is a real secret**, and it expires after ~2 months — see "PlayStation, via Sony's own trophy API" above for how to get one. |
 | `XBLIO_API_KEY` | Personal API key from xbl.io/console, for Xbox 360 achievements. **This one is a real secret** — it's scoped to your own Microsoft account, unlike `EXOPHASE_USER` above. |
+| `NADEO_SERVICE_LOGIN`, `NADEO_SERVICE_PASSWORD` | Trackmania service account, from trackmania.com's service account page, for campaign times. **Both are real secrets**, and the password is shown exactly once at creation. Must be created on the Ubisoft account you actually play on — see "Trackmania, via Nadeo's own web services" above for why. |
 
 Steam's achievement/playtime endpoints only return data for a public profile, or your own
 profile when the key you're using belongs to that account. Note that per-game achievement

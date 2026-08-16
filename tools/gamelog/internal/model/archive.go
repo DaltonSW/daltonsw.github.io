@@ -84,6 +84,11 @@ type ProviderLink struct {
 
 // ProviderOrder fixes the order records are written and reported in, so
 // output and tests don't depend on map iteration.
+//
+// ProviderNadeo is absent on purpose — it records lap times, not achievements,
+// and everything driven by this list assumes an Unlocked/Total pair it can sum.
+// Adding it here would fold ~450 Trackmania campaign tracks into that game's
+// achievement denominator. See the ProviderNadeo doc comment in nadeo.go.
 var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox}
 
 // raSubsetTitle matches RetroAchievements' subset naming convention, which is

@@ -297,6 +297,67 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
   by mutating in place instead of replacing an entry, and the "planned replay" feature has no
   delete path at all — removing a stale `status: planned` placeholder is left to hand-editing
   `playthroughs.yaml`, which the file's own generated banner already sanctions.
+- **Trackmania/Nadeo is deliberately outside the achievement path.** `ProviderNadeo` is *not* in
+  `ProviderOrder` and *not* produced by `BuildProviderLinks`, and `nadeo_account_id` has its own
+  accessor rather than joining `Doc.ProviderLinks()`. That isn't an oversight to tidy up: a Nadeo
+  record holds lap times, and everything walking `ProviderLinks` sums an `unlocked`/`total` pair.
+  Adding it would fold ~450 campaign tracks into Trackmania's achievement denominator and restate
+  a 21/30 game as 433/480. This is the same call `Outstanding` records for Nintendo — a provider
+  whose data isn't achievements needs a record shape that doesn't pretend otherwise.
+- **A Trackmania personal best merges by *minimum*, which is inverted from every other numeric
+  field in the archive.** `mergeProvider` takes the larger of two values (`if fresh.Total >
+  merged.Total`) because more achievements is more history; a lap time is better when it's
+  smaller. `mergeNadeoTrack` therefore keeps the faster of old and fresh, and keeps the archived
+  one when a fetch reports no time at all. Taking the max here would silently replace every record
+  with the worst time ever seen. `WorldRank` moves only when the time does, since a rank belongs
+  to the run that set it. Regression tests in `internal/model/nadeo_test.go` cover this; keep them.
+- **A `nadeo fetch --season` covers one campaign, and the merge is the only thing making that
+  safe.** `mergeNadeoRecord` unions campaigns by `SeasonUID` and tracks by `MapUID`, so a
+  single-season fetch leaves the other seventeen untouched rather than replacing them — the same
+  property that makes a rate-limited or partial response harmless. Without the union, `--season`
+  would be a data-loss bug rather than a convenience.
+- **`fetch` defaults to the current season, and `nadeoMinInterval` is 500ms, because the
+  credentials belong to a real player.** A Nadeo service account inherits the Ubisoft account it
+  was created on — which is *why* the personal-records endpoint returns the right person's times,
+  and also why a rate-limit violation lands on an account someone plays games on. `--all` is ~40
+  requests and is meant to be a deliberate, rare choice.
+- **Trackmania times are captured at two scopes, and neither is redundant.** `season_best_ms` is
+  what was achieved while a campaign was open (frozen when it closes); `personal_best_ms` is the
+  all-time best, which moves whenever an old track is revisited to clean up a medal. The grid
+  shows the all-time medal and marks the cells that only got there afterwards. They are two
+  requests because `mapIdList` and `seasonIdList` both filter every result and intersect if sent
+  together — and **the response must be filtered on `scopeType` regardless**, since a `mapIdList`
+  request has no season filter and returns season-scoped entries alongside the all-time ones.
+  Don't "simplify" that to one call.
+- **Trackmania records have two fetch paths on purpose, and they report different halves of a
+  run.** The Core `/v2/accounts/{id}/mapRecords` endpoint carries the run's `timestamp`, `medal`
+  and replay but no zone rankings; the Live `leaderboard/group/map` fallback knows the rank but no
+  date. `mergeNadeoTrack` therefore treats an *identical* time as the same lap seen twice and
+  backfills the missing half, while an *improved* time replaces every run-scoped field wholesale —
+  blanks included, because attributing the superseded lap's date or replay to a new record would
+  be a false statement rather than preserved history. This is the one place in the archive where
+  clearing a field is correct.
+- **A `recordScore.time` of `4294967295` is `math.MaxUint32`, not a 49-day lap.** It's the
+  sentinel for a map with a secret threshold score. `AccountRecord.Usable` filters it; recording
+  it would put an absurd time in the archive that the minimum-wins merge could never displace.
+- **Nadeo batch responses are matched by `mapUid`+`groupUid`, never by position.** An invalid or
+  unknown pair is *omitted* from the response rather than returned empty, so responses aren't 1:1
+  with requests; zipping them would assign one track's time to another. The 50-map cap on that
+  endpoint is also a silent truncation, not an error.
+- **The Nadeo leaderboard endpoint intermittently returns `[]` for valid parameters.**
+  `recordBatch` retries once before concluding a batch has no times. Two empty responses in a row
+  are taken at face value — there's no unbounded retry.
+- **A Nadeo record's `raw` reflects the most recent fetch's scope, not the whole archive**, and is
+  replaced wholesale — the same rule `mergeProvider` applies to `ArchiveRecord.Raw`. It is stored
+  once per record rather than per campaign on purpose: map metadata and records are batched
+  *across* season boundaries, so no verbatim slice of a response belongs to a single campaign, and
+  attaching each batch to every campaign it touched stored the same ~500KB payload once per season
+  (25× on a full backfill — this was a real bug, caught by the file size). Nothing decoded is lost
+  when a `--season` run narrows `raw`; the merge guarantees that separately, and `raw` is only a
+  safety net for a field this tool doesn't model yet.
+- **Nadeo tokens are held in memory only, per audience, and never persisted** — the same standing
+  decision as PSN's npsso exchange. The two audiences (`NadeoServices` for Core, `NadeoLiveServices`
+  for Live) are separate tokens and are not interchangeable.
 - **`achievement-summary.yaml`'s `last_played` being maxed against logged playthroughs** in
   `layouts/partials/game-last-played.html`/`games-timeline.html`/`game-year-rows.html` is
   intentional, not drift. A refreshed archive can legitimately be more recent than a logged
@@ -305,6 +366,9 @@ fixed because slugs become permanent URLs. `TestSlugify` pins the `™`/`®` cas
 
 ## Outstanding
 
+- **Only Summer 2020 is archived so far**; the other 24 official campaigns need
+  `gamelog nadeo fetch --all` (~15 requests). Everything the grids render is already driven by
+  whatever is in the archive, so this is a data gap rather than a code one.
 - **A subset's parent lookup is memoized per process, not persisted.** `raParentCache` in
   `internal/commands/subsets.go` keeps Housekeeping from re-asking RetroAchievements (~1.2s a
   call) on every render, but a restart of `gamelog serve` pays for it again — one request per

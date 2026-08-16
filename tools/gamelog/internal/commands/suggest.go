@@ -42,6 +42,17 @@ type Credentials struct {
 	// ExophaseUser: it's exchanged for a bearer token good for Sony's own
 	// trophy API, not a public profile name.
 	PSNNpsso string
+
+	// NadeoLogin/NadeoPassword are a Trackmania *service account*, created at
+	// trackmania.com and bound to a real Ubisoft account whose permissions it
+	// inherits. The password is a real secret and is shown exactly once at
+	// creation.
+	//
+	// Because it acts as that player, misusing it risks restrictions on an
+	// account someone actually plays on — which is why the nadeo client throttles
+	// harder than the others and why `nadeo fetch` defaults to one season.
+	NadeoLogin    string
+	NadeoPassword string
 }
 
 func LoadCredentials() Credentials {
@@ -56,9 +67,11 @@ func LoadCredentials() Credentials {
 		SteamID: model.FirstNonEmpty(os.Getenv("STEAM_ID"), os.Getenv("STEAM_USER_ID")),
 		// EXOPHASE_PSN_USER is accepted as an alias, from when this only
 		// covered PSN.
-		ExophaseUser: model.FirstNonEmpty(os.Getenv("EXOPHASE_USER"), os.Getenv("EXOPHASE_PSN_USER")),
-		XBLAPIKey:    os.Getenv("XBLIO_API_KEY"),
-		PSNNpsso:     os.Getenv("PSN_NPSSO"),
+		ExophaseUser:  model.FirstNonEmpty(os.Getenv("EXOPHASE_USER"), os.Getenv("EXOPHASE_PSN_USER")),
+		XBLAPIKey:     os.Getenv("XBLIO_API_KEY"),
+		PSNNpsso:      os.Getenv("PSN_NPSSO"),
+		NadeoLogin:    os.Getenv("NADEO_SERVICE_LOGIN"),
+		NadeoPassword: os.Getenv("NADEO_SERVICE_PASSWORD"),
 	}
 }
 
@@ -79,6 +92,10 @@ func (c Credentials) XBLConfigured() bool { return c.XBLAPIKey != "" }
 // PSNConfigured needs only the npsso value — the OAuth exchange happens at
 // request time in the psn client.
 func (c Credentials) PSNConfigured() bool { return c.PSNNpsso != "" }
+
+// NadeoConfigured needs both halves of the service account; the token exchange
+// happens at request time in the nadeo client.
+func (c Credentials) NadeoConfigured() bool { return c.NadeoLogin != "" && c.NadeoPassword != "" }
 
 // ProviderResult is one provider's outcome for a suggestion report: either
 // a usable suggestion, or a reason it was skipped/failed. A skipped or

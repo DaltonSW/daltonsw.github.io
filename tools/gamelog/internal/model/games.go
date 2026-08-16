@@ -46,6 +46,9 @@ type GameSummary struct {
 	PSNID            string
 	UbisoftID        string
 	XboxID           string
+	// NadeoAccountID links this game to a Trackmania campaign archive. It is
+	// not part of ProviderLinks — see FrontMatter.NadeoAccountID.
+	NadeoAccountID string
 	// RASubsets are the RetroAchievements subset ids attached to this game
 	// (see FrontMatter.RASubsets). They matter to the scan as well as to the
 	// archive: a subset already attached here must stop being offered as an
@@ -92,6 +95,9 @@ func (g GameSummary) SuggestLabel() string {
 	if g.XboxID != "" {
 		linked = append(linked, "Xbox")
 	}
+	// NadeoAccountID is deliberately absent: this label exists to stop the
+	// picker offering a game that can't produce a date suggestion, and a
+	// campaign archive produces none.
 	if len(linked) == 0 {
 		return g.Label() + "  [not linked]"
 	}
@@ -167,6 +173,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		PSNID:            psnID,
 		UbisoftID:        ubisoftID,
 		XboxID:           xboxID,
+		NadeoAccountID:   doc.NadeoAccountIDString(),
 		RASubsets:        doc.RASubsetIDs(),
 	}
 }

@@ -50,6 +50,16 @@ type FrontMatter struct {
 	// shaped differently from every other provider's.
 	XboxID any `yaml:"xbox_id,omitempty"`
 
+	// NadeoAccountID is the Trackmania account whose campaign history belongs
+	// to this game — an account id, not a game id, because Nadeo's API covers
+	// exactly one game and has no identifier for it.
+	//
+	// Unlike every other id here it is *not* part of ProviderLinks: Nadeo
+	// records lap times rather than achievements, and the achievement path
+	// would fold ~450 campaign tracks into this game's unlock denominator. See
+	// the ProviderNadeo doc comment in nadeo.go.
+	NadeoAccountID any `yaml:"nadeo_account_id,omitempty"`
+
 	Status string `yaml:"status"`
 
 	// Subgames is the declared roster of a compilation's parts — e.g. Shovel
@@ -268,6 +278,11 @@ func (d *Doc) ProviderLinks() []ProviderLink {
 		d.RASubsetIDs()...,
 	)
 }
+
+// NadeoAccountIDString is the Trackmania account id this game is linked to, if
+// any. Deliberately its own accessor rather than a ProviderLinks entry — see
+// FrontMatter.NadeoAccountID.
+func (d *Doc) NadeoAccountIDString() string { return scalarString(d.FM.NadeoAccountID) }
 
 // BuildProviderLinks is shared by Doc and GameSummary so the two can't drift
 // on which providers exist or what order they come in.

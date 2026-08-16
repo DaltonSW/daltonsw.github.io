@@ -21,6 +21,10 @@ const envHelp = `Environment (or a .env beside this tool; real env vars take pre
                              https://ca.account.sony.com/api/v1/ssocookie
                              after logging into store.playstation.com
   XBLIO_API_KEY              personal key from https://xbl.io, for Xbox
+  NADEO_SERVICE_LOGIN,       Trackmania service account from
+  NADEO_SERVICE_PASSWORD     https://trackmania.com, for campaign times.
+                             Must be created on the Ubisoft account you
+                             actually play on.
 
 See tools/gamelog/README.md for details.`
 
@@ -46,6 +50,7 @@ func newRootCmd() *cobra.Command {
 		newProjectCmd(),
 		newExophaseCmd(),
 		newPSNCmd(),
+		newNadeoCmd(),
 		newServeCmd(),
 	)
 	return root
@@ -133,6 +138,68 @@ func newPSNCmd() *cobra.Command {
 		},
 	})
 	return psn
+}
+
+func newNadeoCmd() *cobra.Command {
+	nadeo := &cobra.Command{
+		Use:   "nadeo",
+		Short: "Capture Trackmania campaign times from Nadeo's web services",
+	}
+
+	nadeo.AddCommand(&cobra.Command{
+		Use:   "whoami",
+		Short: "Print the service account's Trackmania account ID",
+		Long: "Print the Trackmania account ID the configured service account acts as,\n" +
+			"for filling in nadeo_account_id. Makes one request.",
+		Args: cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunNadeoWhoami()
+		},
+	})
+
+	nadeo.AddCommand(&cobra.Command{
+		Use:   "seasons",
+		Short: "List every official campaign and what's already archived",
+		Long: "List every official campaign next to how much of it is already captured,\n" +
+			"so a fetch can be aimed at one season. Read-only.",
+		Args: cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunNadeoSeasons()
+		},
+	})
+
+	var opts commands.NadeoFetchOptions
+	fetch := &cobra.Command{
+		Use:   "fetch",
+		Short: "Capture campaign times into archive/nadeo/<accountId>.json",
+		Long: "Capture personal bests and track metadata into\n" +
+			"archive/nadeo/<accountId>.json, then rebuild campaigns.yaml.\n\n" +
+			"Defaults to the current season only — that's the only one whose times\n" +
+			"still change, and every request here is made against a real player's\n" +
+			"account. Use --all for the full backfill (~15 requests).\n\n" +
+			"Fetching one season never discards the others: records merge by season\n" +
+			"and map, and a personal best only ever moves faster.",
+		Args: cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			if opts.All && (len(opts.Seasons) > 0 || opts.Since > 0) {
+				return fmt.Errorf("cannot combine --all with --season or --since")
+			}
+			if len(opts.Seasons) > 0 && opts.Since > 0 {
+				return fmt.Errorf("cannot combine --season with --since")
+			}
+			return commands.RunNadeoFetch(opts)
+		},
+	}
+	fetch.Flags().StringArrayVar(&opts.Seasons, "season", nil,
+		`campaign to fetch, by name ("Fall 2024") or season UID; repeatable`)
+	fetch.Flags().BoolVar(&opts.All, "all", false, "fetch every official campaign")
+	fetch.Flags().IntVar(&opts.Since, "since", 0, "fetch every campaign starting in this year or later")
+	fetch.Flags().StringVar(&opts.DumpRaw, "dump-raw", "",
+		"also write every verbatim API response into this directory, for building test fixtures")
+	fetch.Flags().BoolVar(&opts.Plain, "plain", false, "plain line output instead of the progress display")
+	nadeo.AddCommand(fetch)
+
+	return nadeo
 }
 
 func newServeCmd() *cobra.Command {
