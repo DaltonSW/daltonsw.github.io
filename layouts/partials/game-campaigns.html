@@ -1,0 +1,118 @@
+{{/* Trackmania campaign grids for a single game's term page.
+
+     Reads campaigns.yaml, the raw-free projection written by
+     model.WriteCampaignSummary (tools/gamelog/internal/model/nadeo.go) — the
+     same arrangement as achievement-summary.yaml, and for the same reason: Hugo
+     never reads archive/ or its `raw` payloads at build time.
+
+     Guarded on the resource existing, so this is a no-op for the ~200 games
+     that aren't Trackmania. */}}
+{{- $campaigns := "" -}}
+{{- with .Resources.Get "campaigns.yaml" -}}
+  {{- $campaigns = . | transform.Unmarshal -}}
+{{- end -}}
+
+{{- if and $campaigns (gt (len ($campaigns.seasons | default slice)) 0) -}}
+{{/* Newest season first — that's the one currently being played. The projection
+     stores them chronologically because the archive does; which end to read
+     from is a display decision. */}}
+{{- $seasons := sort $campaigns.seasons "started" "desc" -}}
+<section class="tm-campaigns" aria-labelledby="tm-campaigns-heading">
+  <h2 id="tm-campaigns-heading">Campaigns</h2>
+
+  <div class="tm-campaigns__overview">
+    {{- partial "achievement-meter.html" (dict "unlocked" $campaigns.tracks_driven "total" $campaigns.tracks_total) }}
+    <span class="tm-campaigns__stat">{{ $campaigns.tracks_driven }}/{{ $campaigns.tracks_total }} tracks driven</span>
+    <span class="tm-campaigns__stat">{{ len $seasons }} season{{ if ne (len $seasons) 1 }}s{{ end }}</span>
+    {{- partial "tm-medals.html" (dict "medals" $campaigns.medals) }}
+  </div>
+
+  <div class="tm-campaigns__body">
+    <div class="tm-campaigns__seasons">
+      {{- range $seasons }}
+      {{- $season := . }}
+      {{- $anchor := printf "season-%s" (anchorize (.name | default .uid)) }}
+      {{/* A season with no times gets a single line rather than 25 dashes. It
+           stays listed — an untouched campaign is part of the history, and the
+           table of contents still counts it — but a grid of nothing shouldn't
+           compete for space with the seasons that were actually played. */}}
+      {{- if eq (.driven | default 0) 0 }}
+      <section class="tm-season tm-season--empty" id="{{ $anchor }}" aria-labelledby="{{ $anchor }}-heading">
+        <div class="tm-season__head">
+          <h3 class="tm-season__name" id="{{ $anchor }}-heading">{{ .name | default .uid }}</h3>
+          <span class="tm-season__count">not played</span>
+        </div>
+      </section>
+      {{- else }}
+      <section class="tm-season" id="{{ $anchor }}" aria-labelledby="{{ $anchor }}-heading">
+        <div class="tm-season__head">
+          <h3 class="tm-season__name" id="{{ $anchor }}-heading">{{ .name | default .uid }}</h3>
+          <span class="tm-season__count">{{ .driven }}/{{ .total }}</span>
+          {{- partial "tm-medals.html" (dict "medals" .medals) }}
+        </div>
+
+        {{/* The five columns are the game's own difficulty tiers, which is why
+             tracks read 01–05 down the first column rather than across: white
+             is the gentlest set, black the hardest. Only drawn for a standard
+             25-track season, so an off-shape campaign degrades to a plain grid
+             rather than a mislabelled one. */}}
+        {{- if eq .total 25 }}
+        <div class="tm-tiers" aria-hidden="true">
+          {{- range slice "white" "green" "blue" "red" "black" }}
+          <span class="tm-tiers__bar tm-tiers__bar--{{ . }}" title="{{ title . }} series"></span>
+          {{- end }}
+        </div>
+        {{- end }}
+
+        {{/* Column-major: the CSS lays a position-ordered list out in columns of
+             five, which reproduces the in-game campaign screen for free. */}}
+        <div class="tm-grid">
+          {{- range .tracks }}
+          {{/* Nadeo map names carry in-game formatting codes ($i, $a1b, $o…).
+               They're stored verbatim in the archive — stripping is display's
+               job — so strip them here for the tooltip. */}}
+          {{- $name := replaceRE `\$([0-9a-fA-F]{3}|[a-zA-Z<>$])` "" (.name | default "") }}
+          {{- $time := partial "tm-time.html" (dict "ms" .personal_best_ms) }}
+          {{- $medal := .medal | default "" }}
+          {{/* The medal shown is the all-time one, since a track revisited
+               years later really is a better medal now. The season-scoped
+               figures stay in campaigns.yaml either way — display is a
+               separate concern from what's captured. */}}
+          {{- $label := printf "Track %s%s%s" .number
+                (cond (ne $name "") (printf ": %s" $name) "")
+                (cond (ne $time "") (printf " — %s" $time) "") }}
+          <div class="tm-cell{{ if $medal }} tm-cell--{{ $medal }}{{ else }} tm-cell--undriven{{ end }}"
+               title="{{ $label }}">
+            <span class="tm-cell__num">{{ .number }}</span>
+            {{- partial "tm-medal.html" (dict "medal" $medal) }}
+            {{- if $time }}
+            <span class="tm-cell__time">{{ $time }}</span>
+            {{- else }}
+            <span class="tm-cell__time tm-cell__time--none" aria-label="no time set">—</span>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </section>
+      {{- end }}
+      {{- end }}
+    </div>
+
+    {{/* Always visible rather than a jump-to-top link: with 18+ grids stacked,
+         knowing which seasons exist is most of the navigation. */}}
+    <nav class="tm-toc" aria-label="Campaign seasons">
+      <ol class="tm-toc__list">
+        {{- range $seasons }}
+        <li class="tm-toc__item">
+          <a class="tm-toc__link{{ if eq (.driven | default 0) 0 }} tm-toc__link--empty{{ end }}"
+             href="#season-{{ anchorize (.name | default .uid) }}">
+            <span class="tm-toc__name">{{ .name | default .uid }}</span>
+            <span class="tm-toc__count">{{ .driven }}/{{ .total }}</span>
+          </a>
+        </li>
+        {{- end }}
+      </ol>
+    </nav>
+  </div>
+</section>
+{{- end -}}

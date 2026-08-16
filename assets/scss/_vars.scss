@@ -70,6 +70,23 @@ $content-width: 1100px;
   // intent to eventually play it, unplayed makes no such claim either way.
   --unplayed: #a888a0;  // unplayed — touched but never really played, no stated intent to
 
+  // Trackmania medal tiers, fastest first. Author is green in game rather than
+  // a metal, and that's the point of it: it isn't "better gold", it's matching
+  // the person who built the track.
+  --tm-author: #4cc38a;
+  --tm-gold:   #e0b341;
+  --tm-silver: #b9c0c8;
+  --tm-bronze: #c2814e;
+
+  // Difficulty series, in the game's own order. These are the five columns of a
+  // campaign screen, not decoration — white is the gentlest set, black the
+  // hardest.
+  --tm-white: #e8e8e8;
+  --tm-green: #4cc38a;
+  --tm-blue:  #5b8dd9;
+  --tm-red:   #d95b5b;
+  --tm-black: #56585d;  // lifted off true black so it stays visible on --bg
+
   --radius: 8px;
 
   // timeline item labels sit on top of $status-colors fills, which are light
@@ -99,6 +116,20 @@ $content-width: 1100px;
     --software:#5b6478;
     --misc-launch: #8a6d2f;
     --unplayed: #7a5570;
+
+    // Medal discs carry a dark rim on light backgrounds, so the faces only need
+    // enough darkening to stay distinguishable from white panel — except
+    // silver and white, which vanish against it entirely.
+    --tm-author: #1f9e63;
+    --tm-gold:   #b8860b;
+    --tm-silver: #8b939c;
+    --tm-bronze: #a2653a;
+
+    --tm-white: #b9bcc2;  // "white" tier has to read as a color on a white panel
+    --tm-green: #1f9e63;
+    --tm-blue:  #3f6fbd;
+    --tm-red:   #c23b3b;
+    --tm-black: #3a3c40;
 
     --item-label-color: #ffffff;
   }

@@ -1,0 +1,22 @@
+{{/* Renders a Trackmania time from milliseconds, the way the game shows it:
+     0:19.976 over a minute's worth, 19.976 under it.
+
+     The projection stores milliseconds rather than a formatted string on
+     purpose (campaigns.yaml is shaped for querying, not for one layout), so the
+     formatting lives here — the one place that cares.
+
+     Context: (dict "ms" 19976). Returns "" for a missing or zero time, which is
+     how an undriven track is represented.
+
+     Note the int casts: math.Floor returns a float64, and %d won't take one. */}}
+{{- $ms := int (.ms | default 0) -}}
+{{- if gt $ms 0 -}}
+  {{- $minutes := int (math.Floor (div $ms 60000)) -}}
+  {{- $seconds := int (math.Floor (div (mod $ms 60000) 1000)) -}}
+  {{- $millis := int (mod $ms 1000) -}}
+  {{- if gt $minutes 0 -}}
+    {{- printf "%d:%02d.%03d" $minutes $seconds $millis -}}
+  {{- else -}}
+    {{- printf "%d.%03d" $seconds $millis -}}
+  {{- end -}}
+{{- end -}}

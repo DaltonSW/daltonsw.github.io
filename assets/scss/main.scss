@@ -593,6 +593,166 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .game-achievements .ach-rows { margin-top: 0.9rem; }
 
+/* ── Trackmania campaigns on a single game's page ───────────────────────── */
+/* One 5x5 grid per season, laid out column-major so tracks read 01–05 down the
+   first column — that's the in-game campaign screen, where each column is a
+   difficulty series. Reflowing it into rows would break the numbering that
+   makes the shape recognisable, so narrow viewports scroll it instead. */
+.tm-campaigns { margin: 2rem 0 1.5rem; }
+.tm-campaigns__overview {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem 1.1rem;
+  font-family: $font-ui; font-size: 0.85rem; color: var(--dim);
+}
+.tm-campaigns__stat { white-space: nowrap; }
+
+.tm-campaigns__body {
+  display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: 1.5rem;
+  margin-top: 1.2rem; align-items: start;
+}
+.tm-campaigns__seasons { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
+
+.tm-season { min-width: 0; scroll-margin-top: 5rem; }
+/* A campaign with no times: one dimmed line, not a grid of nothing. */
+.tm-season--empty .tm-season__name { font-weight: 400; color: var(--dim); }
+.tm-season--empty .tm-season__head { margin-bottom: 0; }
+/* Consecutive unplayed seasons pull together into a list. The container's
+   1.75rem gap is spacing between *grids*; run eleven one-line rows at it and
+   the page reads as a long stretch of nothing. Negative margin because a flex
+   gap can't vary per pair. */
+.tm-season--empty + .tm-season--empty { margin-top: -1.2rem; }
+.tm-toc__link--empty { color: var(--dim); }
+.tm-season__head {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.3rem 0.8rem;
+  margin-bottom: 0.35rem;
+}
+.tm-season__name { margin: 0; font-size: 1rem; font-family: $font-ui; }
+.tm-season__count {
+  font-family: $font-ui; font-size: 0.8rem; color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The five difficulty series, sitting directly over the columns they label. */
+.tm-tiers {
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.35rem; margin-bottom: 0.35rem;
+}
+.tm-tiers__bar { height: 4px; border-radius: 2px; }
+.tm-tiers__bar--white { background: var(--tm-white); }
+.tm-tiers__bar--green { background: var(--tm-green); }
+.tm-tiers__bar--blue  { background: var(--tm-blue); }
+.tm-tiers__bar--red   { background: var(--tm-red); }
+.tm-tiers__bar--black { background: var(--tm-black); }
+
+.tm-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 0.25rem;
+}
+
+/* One line per track: number, medal, time. A track is three short facts, and
+   stacking them doubled every grid's height for no added clarity. */
+.tm-cell {
+  display: flex; align-items: center; gap: 0.35rem;
+  padding: 0.25rem 0.4rem;
+  background: var(--panel); border: 1px solid var(--stroke); border-radius: var(--radius);
+  font-family: $font-ui; font-size: 0.75rem;
+}
+.tm-cell__num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.tm-cell__time {
+  /* Pushed right so times line up as a column within each grid column, which
+     is what makes a wall of them scannable. */
+  margin-left: auto;
+  color: var(--dim); font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.tm-cell__time--none { opacity: 0.6; }
+
+/* The medal tints the whole outline rather than one edge. */
+.tm-cell--author { border-color: var(--tm-author); }
+.tm-cell--gold   { border-color: var(--tm-gold); }
+.tm-cell--silver { border-color: var(--tm-silver); }
+.tm-cell--bronze { border-color: var(--tm-bronze); }
+.tm-cell--none   { border-color: var(--dim); }
+/* Never driven: the same greyed-out treatment the game gives a locked track. */
+.tm-cell--undriven {
+  background: transparent; border-style: dashed;
+  color: var(--dim);
+}
+
+/* Medal glyphs. Two tones per disc so the tiers stay apart at 14px, where a
+   flat circle in silver and one in white are the same shape. */
+.tm-medal { flex: none; }
+.tm-medal--author { --tm-medal-face: var(--tm-author); --tm-medal-rim: color-mix(in srgb, var(--tm-author) 55%, #000); }
+.tm-medal--gold   { --tm-medal-face: var(--tm-gold);   --tm-medal-rim: color-mix(in srgb, var(--tm-gold) 55%, #000); }
+.tm-medal--silver { --tm-medal-face: var(--tm-silver); --tm-medal-rim: color-mix(in srgb, var(--tm-silver) 55%, #000); }
+.tm-medal--bronze { --tm-medal-face: var(--tm-bronze); --tm-medal-rim: color-mix(in srgb, var(--tm-bronze) 55%, #000); }
+.tm-medal--none   { color: var(--dim); }
+
+.tm-tally {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  font-family: $font-ui; font-size: 0.78rem;
+}
+.tm-tally__item { display: inline-flex; align-items: center; gap: 0.2rem; }
+.tm-tally__count { font-variant-numeric: tabular-nums; color: var(--dim); }
+
+/* Always-visible season index. Sticky rather than collapsible: with 18+ grids
+   stacked, knowing which seasons exist is most of the navigation. */
+.tm-toc {
+  position: sticky; top: 5rem;
+  font-family: $font-ui; font-size: 0.78rem;
+  border-left: 1px solid var(--stroke); padding-left: 0.8rem;
+  max-height: calc(100vh - 7rem); overflow-y: auto;
+}
+.tm-toc::before {
+  content: "Seasons";
+  display: block; margin-bottom: 0.45rem;
+  color: var(--dim); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.tm-toc__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+.tm-toc__link {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem;
+  padding: 0.15rem 0; color: var(--fg); text-decoration: none;
+}
+.tm-toc__link:hover, .tm-toc__link:focus-visible { color: var(--accent); }
+.tm-toc__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tm-toc__count { color: var(--dim); font-variant-numeric: tabular-nums; flex: none; }
+
+@media (max-width: 900px) {
+  /* The index moves above the grids and lies flat; a sticky rail costs more
+     width here than it returns. It scrolls sideways as a single strip rather
+     than wrapping: 18 seasons wrapped is nine rows of chrome before the reader
+     reaches the first grid. */
+  .tm-campaigns__body { grid-template-columns: minmax(0, 1fr); }
+  .tm-toc {
+    position: static; order: -1; max-height: none;
+    border-left: 0; border-bottom: 1px solid var(--stroke);
+    padding: 0 0 0.6rem;
+  }
+  .tm-toc__list {
+    flex-direction: row; flex-wrap: nowrap; gap: 0.9rem;
+    overflow-x: auto; padding-bottom: 0.3rem;
+  }
+  .tm-toc__item { flex: none; }
+  .tm-toc__link { gap: 0.35rem; white-space: nowrap; }
+  .tm-toc__name { overflow: visible; }
+}
+
+@media (max-width: 620px) {
+  /* Scroll the grid rather than reflowing it — see the note at the top of this
+     section. min-width keeps the five columns legible instead of crushed.
+     The cell stacks again here: one line needs roughly twice the width, and a
+     40rem scroll is worse than two short lines. */
+  .tm-grid, .tm-tiers { min-width: 28rem; }
+  .tm-season { overflow-x: auto; padding-bottom: 0.3rem; }
+  .tm-cell {
+    display: grid; grid-template-columns: auto 1fr; align-items: center;
+    column-gap: 0.3rem; row-gap: 0;
+  }
+  .tm-cell__time { grid-column: 1 / -1; margin-left: 0; }
+}
+
 /* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
 .games-timeline {
   margin: 1.5rem 0 2rem;

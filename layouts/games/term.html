@@ -36,7 +36,10 @@
   {{- range $entries }}{{ $platforms = $platforms | append (.platform | default "") }}{{ end }}
   {{- $showPlatform := gt (len (uniq $platforms)) 1 }}
 
-  {{- partial "game-achievements.html" . }}
+  {{/* Trackmania's real record is per-track campaign times rather than
+       achievements, so it gets its own section from its own projection. No-ops
+       for every game without a campaigns.yaml. */}}
+  {{- partial "game-campaigns.html" . }}
 
   {{- with sort $entries "started" "desc" }}
   <h2>Playthroughs</h2>
@@ -85,6 +88,11 @@
     {{- end }}
   </ul>
   {{- end }}
+
+  {{/* Last on the page: the full earned list runs to hundreds of rows on a
+       well-played game, and burying the playthroughs behind it made the
+       narrative parts of the page the hardest to reach. */}}
+  {{- partial "game-achievements.html" . }}
 </article>
 
 {{- $achJSOpts := dict
