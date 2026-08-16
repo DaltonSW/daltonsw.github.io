@@ -3,7 +3,7 @@ title: Oxygen Not Included
 platform: PC
 retroachievements_id: null
 steam_appid: 457140
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

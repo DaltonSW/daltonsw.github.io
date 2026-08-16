@@ -3,7 +3,7 @@ title: Peglin
 platform: PC
 retroachievements_id: null
 steam_appid: 1296610
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

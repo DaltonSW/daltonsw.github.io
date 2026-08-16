@@ -82,7 +82,7 @@ func FindUnfinished(archiveDir string, games []model.GameSummary, opts Unfinishe
 	now := time.Now().In(model.SiteLocation)
 	var out []UnfinishedCandidate
 	for _, g := range games {
-		// ongoing/multiplayer/software have no completion to be short of.
+		// endless/multiplayer/software have no completion to be short of.
 		if forms.IsOneShot(g.Status) {
 			continue
 		}

@@ -3,7 +3,7 @@ title: Risk of Rain 2
 platform: PC
 retroachievements_id: null
 steam_appid: 632360
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

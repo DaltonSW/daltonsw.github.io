@@ -3,7 +3,7 @@ title: Bitburner
 platform: PC
 retroachievements_id: null
 steam_appid: 1812820
-status: ongoing
+status: endless
 rating: null
 draft: false
 cascade:

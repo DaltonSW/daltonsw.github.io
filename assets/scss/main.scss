@@ -165,7 +165,7 @@ $status-colors: (
   dropped:       var(--stop),
   backlog:       var(--dim),
   paused:        var(--pause),
-  ongoing:       var(--ongoing),
+  endless:       var(--endless),
   multiplayer:   var(--multi),
   software:      var(--software),
   misc_launch:   var(--misc-launch),
@@ -863,13 +863,13 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 // Timeline bar colors: 11 statuses collapsed into 3-4 calmer families so the chart
 // reads as active / complete / stopped / structural rather than a hue free-for-all.
-// Active (playing, ongoing, multiplayer) — desaturated from their pill versions.
+// Active (playing, endless, multiplayer) — desaturated from their pill versions.
 // Complete (finished, mastered) — harmonized green family, different luminance.
 // Stopped (dropped, paused) — kept distinct (abandoned vs on-hold).
 // Structural (software, misc_launch, unplayed) — muted to recede.
 $timeline-status-colors: (
   playing:       color-mix(in srgb, var(--warn) 65%, var(--dim)),
-  ongoing:       color-mix(in srgb, var(--ongoing) 65%, var(--dim)),
+  endless:       color-mix(in srgb, var(--endless) 65%, var(--dim)),
   multiplayer:   color-mix(in srgb, var(--multi) 65%, var(--dim)),
   finished:      var(--ok),
   mastered:      var(--mastered),

@@ -3,7 +3,7 @@ title: Stardew Valley
 platform: PC
 retroachievements_id: null
 steam_appid: 413150
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

@@ -8,9 +8,9 @@
        shows for the same game. Finished is gated to non-open-ended statuses
        because game-last-played.html returns "last known activity" (which can
        be a still-open entry's own started date) for use as a sort key
-       elsewhere; showing that under a "Finished:" label on an ongoing game
+       elsewhere; showing that under a "Finished:" label on an endless game
        would be a fabricated completion date. */}}
-  {{- $openEndedStatuses := slice "playing" "ongoing" "multiplayer" "software" }}
+  {{- $openEndedStatuses := slice "playing" "endless" "multiplayer" "software" }}
   <div class="meta-row">
     {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
     {{- with (partial "game-first-played.html" .) }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}

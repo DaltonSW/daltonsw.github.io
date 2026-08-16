@@ -3,7 +3,7 @@ title: 'Animal Crossing: New Leaf'
 platform: Nintendo 3DS
 retroachievements_id: null
 steam_appid: null
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

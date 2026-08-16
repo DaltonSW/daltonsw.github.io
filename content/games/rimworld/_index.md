@@ -3,7 +3,7 @@ title: RimWorld
 platform: PC
 retroachievements_id: null
 steam_appid: 294100
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

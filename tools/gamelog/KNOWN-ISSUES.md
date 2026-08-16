@@ -28,7 +28,7 @@ losing captured data is the worst thing that can happen.**
   |---|---|
   | finished | 81 |
   | mastered | 47 |
-  | ongoing | 41 |
+  | endless | 41 |
   | dropped | 21 |
   | multiplayer | 16 |
   | playing | 4 |
@@ -40,13 +40,13 @@ losing captured data is the worst thing that can happen.**
   `gameStatuses` value now has something that produces it. The four `playing` entries are
   genuinely active — anything quiet for 30+ days has been triaged.
 - **The vocabulary is split in two, on purpose:** `gameStatuses` (front matter, 9 values) and
-  `playthroughStatuses` (entries in `playthroughs.yaml`, now 7 values — `ongoing` and
+  `playthroughStatuses` (entries in `playthroughs.yaml`, now 7 values — `endless` and
   `multiplayer` joined the original 5 so a game with genuinely distinct modes, e.g. Hitman's
   story campaign, its Freelancer roguelike, and its multiplayer contracts, can have one entry per
   mode instead of the game being forced into a single label). `software` stays game-level only —
   it describes the whole record ("this isn't a game"), not a mode a game can have alongside
   others, so there's no per-entry equivalent.
-  - Every `ongoing`/`multiplayer` game written before this still has its sole entry's own
+  - Every `endless`/`multiplayer` game written before this still has its sole entry's own
     `status` as `playing`, relying entirely on the game-level status for its real meaning — that
     convention still works and doesn't need migrating. `mutate.EffectiveOneShotStatus`
     resolves it so the one-shot guard still recognizes those old-style entries.
@@ -54,16 +54,16 @@ losing captured data is the worst thing that can happen.**
     (`mutate.OneShotConflict`): at most one entry of a given one-shot status per platform,
     since none of the three has a save file or finish line and a second one on the same platform
     would be fragmentation — but a *different*-status entry (a `mastered` campaign next to an
-    `ongoing` sandbox mode) is a real second mode, not fragmentation, and is allowed.
+    `endless` sandbox mode) is a real second mode, not fragmentation, and is allowed.
   - `gamelog stale` only considers `status == "playing"` **at the game level**, so a game whose
-    front-matter status is ongoing/multiplayer/software is still excluded from finished/dropped
+    front-matter status is endless/multiplayer/software is still excluded from finished/dropped
     triage regardless of what any individual entry's status says. Correct either way: the
     game-level status is what `stale` and `SyncStatus` both key off, and neither was changed here.
   - `layouts/partials/games-timeline.html` colours bars from the **entry** status directly, and
     needed no change: its game-level override (forcing every entry to the game's own status) only
-    ever fires when the *game's* front-matter status is ongoing/multiplayer/software, so a mixed
+    ever fires when the *game's* front-matter status is endless/multiplayer/software, so a mixed
     game just needs its front-matter status set to something else (its "headline" mode) for
-    per-entry ongoing/multiplayer to render as authored. **Adding a fourth one-shot status still
+    per-entry endless/multiplayer to render as authored. **Adding a fourth one-shot status still
     means updating `isOneShot`, `playthroughStatuses` (only if it's a real per-entry mode),
     `games-timeline.ts`'s `NO_CONNECTOR_CLASSES`, and the `.pill--`/`.entry--`/`.pt--` rules in
     `main.scss` together.**
@@ -102,7 +102,7 @@ Nothing is broken. The schema already supports this — `playthroughs:` is a lis
 `AddSession` and "Start a new playthrough" exist. The historical data was simply never split.
 
 **Signal available for proposing splits:** 52 of 213 archived games show a 6+ month gap between
-consecutive achievement unlocks. Roughly half are already `ongoing`, where the `sessions:`
+consecutive achievement unlocks. Roughly half are already `endless`, where the `sessions:`
 list is the correct representation and a split would be actively wrong. The real candidates are
 the narrative games — BG3, Dishonored, Celeste, DARK SOULS: REMASTERED, Fallout: New Vegas,
 Portal 2, Cuphead, Phoenix Wright, A Hat in Time, Super Meat Boy, Shovel Knight (~12 in total).

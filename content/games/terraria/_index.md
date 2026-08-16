@@ -3,7 +3,7 @@ title: Terraria
 platform: PC
 retroachievements_id: null
 steam_appid: 105600
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

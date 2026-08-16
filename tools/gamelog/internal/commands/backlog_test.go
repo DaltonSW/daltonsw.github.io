@@ -78,7 +78,7 @@ func TestFindUnfinished_FiltersToGamesWithSomethingLeft(t *testing.T) {
 	save("1", "Partial", 10, 6)
 	save("2", "Complete", 10, 10)
 	save("3", "No Achievements", 0, 0)
-	save("4", "Ongoing", 10, 6)
+	save("4", "Endless", 10, 6)
 	save("5", "Finished", 10, 6)
 	save("6", "Paused", 10, 6)
 
@@ -86,7 +86,7 @@ func TestFindUnfinished_FiltersToGamesWithSomethingLeft(t *testing.T) {
 		{Slug: "partial", Title: "Partial", Status: "playing", SteamAppID: "1"},
 		{Slug: "complete", Title: "Complete", Status: "playing", SteamAppID: "2"},
 		{Slug: "none", Title: "No Achievements", Status: "playing", SteamAppID: "3"},
-		{Slug: "ongoing", Title: "Ongoing", Status: "ongoing", SteamAppID: "4"},
+		{Slug: "endless", Title: "Endless", Status: "endless", SteamAppID: "4"},
 		{Slug: "finished", Title: "Finished", Status: "finished", SteamAppID: "5"},
 		{Slug: "paused", Title: "Paused", Status: "paused", SteamAppID: "6"},
 		{Slug: "unarchived", Title: "Unarchived", Status: "playing", SteamAppID: "999"},

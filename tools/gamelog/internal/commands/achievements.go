@@ -252,7 +252,7 @@ func RunAchievements(args []string) error {
 // maybePromptNewSession closes the gap this command otherwise leaves open:
 // the timeline's visible bars come only from playthroughs.yaml, which
 // refreshing provider data never touches on its own, so a burst of new play
-// on a one-shot game (ongoing/multiplayer/software — the statuses
+// on a one-shot game (endless/multiplayer/software — the statuses
 // whose entire record *is* its sessions list) can sit invisible until
 // someone remembers to log a session by hand. If this refresh pulled in
 // activity past what's already logged, offer to log it right now instead.

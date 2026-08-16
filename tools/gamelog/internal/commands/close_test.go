@@ -48,7 +48,7 @@ const openFlatYAML = `playthroughs:
 // entry has a sessions list — that's where the timeline reads "ongoing" from.
 func TestCloseEntry_ClosesTrailingSession(t *testing.T) {
 	dir := t.TempDir()
-	g := writeGameWithPlaythroughs(t, dir, "sandbox", "ongoing", openSessionsYAML)
+	g := writeGameWithPlaythroughs(t, dir, "sandbox", "endless", openSessionsYAML)
 
 	did, err := CloseEntry(OpenEntry{Game: g, Index: 0, CloseOn: "2022-02-23"})
 	if err != nil {
@@ -72,7 +72,7 @@ func TestCloseEntry_ClosesTrailingSession(t *testing.T) {
 		t.Errorf("earlier session was disturbed: %+v", sessions[0])
 	}
 	// Closing a date says when play stopped, never that the game was
-	// completed; for a ongoing game there is no completion to claim.
+	// completed; for an endless game there is no completion to claim.
 	if pf.Playthroughs[0].Status != "playing" {
 		t.Errorf("status changed to %q, want it left alone", pf.Playthroughs[0].Status)
 	}
@@ -101,7 +101,7 @@ func TestCloseEntry_ClosesFlatEntry(t *testing.T) {
 // as it is — a stale selection must never overwrite a real date.
 func TestCloseEntry_NeverOverwritesAnExistingDate(t *testing.T) {
 	dir := t.TempDir()
-	g := writeGameWithPlaythroughs(t, dir, "already", "ongoing", `playthroughs:
+	g := writeGameWithPlaythroughs(t, dir, "already", "endless", `playthroughs:
   - started: "2019-03-02"
     finished: "2019-04-01"
     status: playing
@@ -127,7 +127,7 @@ func TestCloseEntry_NeverOverwritesAnExistingDate(t *testing.T) {
 // encode like every other playthrough write.
 func TestCloseEntry_PreservesUnknownFields(t *testing.T) {
 	dir := t.TempDir()
-	g := writeGameWithPlaythroughs(t, dir, "extra", "ongoing", `playthroughs:
+	g := writeGameWithPlaythroughs(t, dir, "extra", "endless", `playthroughs:
   - started: "2019-03-02"
     finished: ""
     status: playing
@@ -153,17 +153,17 @@ func TestFindOpenEntries_FiltersToEligibleGames(t *testing.T) {
 	archiveDir := t.TempDir()
 
 	games := []model.GameSummary{
-		writeGameWithPlaythroughs(t, dir, "quiet", "ongoing", openFlatYAML),
+		writeGameWithPlaythroughs(t, dir, "quiet", "endless", openFlatYAML),
 		writeGameWithPlaythroughs(t, dir, "playing-now", "playing", openFlatYAML),
 		writeGameWithPlaythroughs(t, dir, "on-hold", "paused", openFlatYAML),
 		writeGameWithPlaythroughs(t, dir, "planned", "planned", openFlatYAML),
-		writeGameWithPlaythroughs(t, dir, "closed", "ongoing", `playthroughs:
+		writeGameWithPlaythroughs(t, dir, "closed", "endless", `playthroughs:
   - started: "2019-03-02"
     finished: "2019-04-01"
     status: playing
 `),
-		writeGameWithPlaythroughs(t, dir, "no-file", "ongoing", ""),
-		writeGameWithPlaythroughs(t, dir, "recent", "ongoing", `playthroughs:
+		writeGameWithPlaythroughs(t, dir, "no-file", "endless", ""),
+		writeGameWithPlaythroughs(t, dir, "recent", "endless", `playthroughs:
   - started: "`+daysAgo(5)+`"
     finished: ""
     status: playing
@@ -213,7 +213,7 @@ func TestFindOpenEntries_PrefersTheLaterOfArchiveAndLoggedStart(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	g := writeGameWithPlaythroughs(t, dir, "sandbox", "ongoing", openSessionsYAML)
+	g := writeGameWithPlaythroughs(t, dir, "sandbox", "endless", openSessionsYAML)
 	g.SteamAppID = "7"
 	got, err := FindOpenEntries(archiveDir, dir, []model.GameSummary{g}, 30, false)
 	if err != nil {

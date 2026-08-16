@@ -3,7 +3,7 @@ title: Hades
 platform: PC
 retroachievements_id: null
 steam_appid: 1145360
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

@@ -57,10 +57,10 @@ $content-width: 1100px;
   --stop:     #e57373;  // dropped / unfinished
   --pause:    #7aa6da;  // paused — on hold, distinct from --dim (never started)
   --mastered: #e8a33d;  // mastered — trophy gold, a step above finished
-  // ongoing and multiplayer are game-level states with no finish line,
+  // endless and multiplayer are game-level states with no finish line,
   // so they must not share a color with --pause (temporarily stopped) or
   // --warn (an active playthrough). Both are permanent, not in-progress.
-  --ongoing:  #5ec8c8;  // ongoing — endless/cyclical, replay-loop design
+  --endless:  #5ec8c8;  // endless — cyclical, replay-loop design
   --multi:    #f0a0c4;  // multiplayer — played with other people
   // Deliberately desaturated: software sits off the completion spectrum
   // entirely, so it should read as muted next to the saturated game states.
@@ -111,7 +111,7 @@ $content-width: 1100px;
     --stop:    #da3939;  // darkened: was 2.99:1 on white
     --mastered:#a46a13;  // darkened: was 2.16:1 on white
     --pause:   #3f74ad;
-    --ongoing: #1f7f7f;
+    --endless: #1f7f7f;
     --multi:   #b03a70;
     --software:#5b6478;
     --misc-launch: #8a6d2f;

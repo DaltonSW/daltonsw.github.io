@@ -3,7 +3,7 @@ title: Risk of Rain Returns
 platform: PC
 retroachievements_id: null
 steam_appid: 1337520
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

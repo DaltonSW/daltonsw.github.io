@@ -3,7 +3,7 @@ title: Into the Breach
 platform: PC
 retroachievements_id: null
 steam_appid: 590380
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

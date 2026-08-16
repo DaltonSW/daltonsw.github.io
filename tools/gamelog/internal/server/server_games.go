@@ -298,7 +298,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 	}
 
 	defaultStatus := "playing"
-	if doc.FM.Status == "ongoing" || doc.FM.Status == "multiplayer" {
+	if doc.FM.Status == "endless" || doc.FM.Status == "multiplayer" {
 		defaultStatus = doc.FM.Status
 	}
 

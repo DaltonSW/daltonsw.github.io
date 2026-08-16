@@ -497,7 +497,7 @@ func TestSyncStatus_SkipsWhenAmbiguousOrIrrelevant(t *testing.T) {
 	}
 }
 
-// A one-shot game (ongoing/multiplayer/software) is capped at one entry
+// A one-shot game (endless/multiplayer/software) is capped at one entry
 // per platform, not one entry outright. Saves don't cross consoles, so a
 // second platform is a genuinely separate record — but a second entry on the
 // same platform is the fragmentation the cap exists to prevent.

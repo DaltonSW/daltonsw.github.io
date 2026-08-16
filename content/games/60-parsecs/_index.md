@@ -3,7 +3,7 @@ title: 60 Parsecs!
 platform: PC
 retroachievements_id: null
 steam_appid: 646270
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

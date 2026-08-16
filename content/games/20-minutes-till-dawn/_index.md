@@ -3,7 +3,7 @@ title: 20 Minutes Till Dawn
 platform: PC
 retroachievements_id: null
 steam_appid: 1966900
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

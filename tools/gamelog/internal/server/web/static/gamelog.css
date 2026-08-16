@@ -57,7 +57,7 @@
   --stop:     #e57373;
   --pause:    #7aa6da;
   --mastered: #e8a33d;
-  --ongoing:  #5ec8c8;
+  --endless:  #5ec8c8;
   --multi:    #f0a0c4;
   --software: #8b94aa;
   --misc-launch: #c2a878;
@@ -80,7 +80,7 @@
     --stop:    #da3939;
     --mastered:#a46a13;
     --pause:   #3f74ad;
-    --ongoing: #1f7f7f;
+    --endless: #1f7f7f;
     --multi:   #b03a70;
     --software:#5b6478;
     --misc-launch: #8a6d2f;
@@ -223,7 +223,7 @@ summary.tui__title::marker { color: var(--accent); font-size: 0.7em; }
 .pill--dropped     { color: var(--stop); }
 .pill--backlog     { color: var(--dim); }
 .pill--paused      { color: var(--pause); }
-.pill--ongoing     { color: var(--ongoing); }
+.pill--endless     { color: var(--endless); }
 .pill--multiplayer { color: var(--multi); }
 .pill--software    { color: var(--software); }
 .pill--misc_launch { color: var(--misc-launch); }

@@ -112,7 +112,7 @@ func archiveLastPlayed(archiveDir string, g model.GameSummary) string {
 // CloseEntry writes the closing date onto one entry's trailing session, or
 // onto the entry itself when it has no sessions. Status is left alone — an
 // entry going from open to closed says when play stopped, not that the game
-// was completed, and for the ongoing/multiplayer/software games this
+// was completed, and for the endless/multiplayer/software games this
 // mostly targets there is no completion to claim.
 func CloseEntry(e OpenEntry) (bool, error) {
 	pf, err := model.LoadPlaythroughs(filepath.Dir(e.Game.Path))

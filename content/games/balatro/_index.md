@@ -3,7 +3,7 @@ title: Balatro
 platform: PC
 retroachievements_id: null
 steam_appid: 2379780
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

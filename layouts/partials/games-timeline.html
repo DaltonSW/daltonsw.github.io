@@ -11,7 +11,7 @@
      stretching to "today" — everything else (paused, dropped, backlog,
      finished, mastered) gets capped at its real last-known activity instead,
      so a paused game's bar stops implying it's still being played. */}}
-{{- $openEndedStatuses := slice "playing" "ongoing" "multiplayer" "software" -}}
+{{- $openEndedStatuses := slice "playing" "endless" "multiplayer" "software" -}}
 {{- $groupCandidates := slice -}}
 {{- $items := slice -}}
 {{- $earliestStart := "" -}}
@@ -59,13 +59,13 @@
            game-year-rows.html's fallback for the same blank-status case. */}}
       {{- $gameStatus := $game.Params.status -}}
       {{- $status := $entry.status | default $gameStatus -}}
-      {{/* ongoing, multiplayer, and software exist only in the
+      {{/* endless, multiplayer, and software exist only in the
            game-level vocabulary — those entries keep a single playthrough
            whose status stays "playing" while its sessions accumulate (see
            tools/gamelog KNOWN-ISSUES). Colouring the bar from the entry would
            render an endless sandbox — or a paint program — identically to an
            active playthrough, so the game's own status wins for these three. */}}
-      {{- if in (slice "ongoing" "multiplayer" "software") $gameStatus -}}
+      {{- if in (slice "endless" "multiplayer" "software") $gameStatus -}}
         {{- $status = $gameStatus -}}
       {{- end -}}
 
@@ -103,7 +103,7 @@
            has none) genuinely has no finished date yet — not just an entry
            whose status happens to carry one of the open-ended labels
            (sandbox/multiplayer titles like Rocket League or Stardew Valley
-           keep "ongoing"/"multiplayer" permanently per KNOWN-ISSUES even
+           keep "endless"/"multiplayer" permanently per KNOWN-ISSUES even
            though every logged session is closed). Only a real open session
            floats a game to the top of the list below. */}}
       {{- if and $entryOpen (in $openEndedStatuses $status) -}}{{- $groupHasOpen = true -}}{{- end -}}

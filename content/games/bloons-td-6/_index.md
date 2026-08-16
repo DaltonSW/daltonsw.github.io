@@ -3,7 +3,7 @@ title: Bloons TD 6
 platform: PC
 retroachievements_id: null
 steam_appid: 960090
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

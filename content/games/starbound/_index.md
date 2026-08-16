@@ -3,7 +3,7 @@ title: Starbound
 platform: PC
 retroachievements_id: null
 steam_appid: 211820
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

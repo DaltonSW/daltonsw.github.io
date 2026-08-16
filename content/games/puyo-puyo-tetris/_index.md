@@ -3,7 +3,7 @@ title: Puyo Puyo Tetris
 platform: Switch
 retroachievements_id: null
 steam_appid: null
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

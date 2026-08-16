@@ -3,7 +3,7 @@ title: Cookie Clicker
 platform: PC
 retroachievements_id: null
 steam_appid: 1454400
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

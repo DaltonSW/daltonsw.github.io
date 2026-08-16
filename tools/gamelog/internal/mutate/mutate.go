@@ -28,18 +28,18 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 }
 
 // oneShotConflict reports the existing entry that already covers a one-shot
-// status (ongoing/multiplayer) on the given platform and subgame, if any —
+// status (endless/multiplayer) on the given platform and subgame, if any —
 // that's the case doNewPlaythrough refuses. None of the one-shot statuses has
 // a save file or finish line, so a *second* entry of the same one-shot
 // status on the same platform *and subgame* would be fragmentation, not a
 // distinct mode; a differently-statused entry (a finished campaign alongside
-// an ongoing sandbox mode, say) is a real second mode and is allowed to
+// an endless sandbox mode, say) is a real second mode and is allowed to
 // coexist. A second platform is never a conflict either way — saves don't
 // cross consoles, so that's a genuinely separate record. Likewise a second
-// subgame: two compilation entries each with their own ongoing mode on the
+// subgame: two compilation entries each with their own endless mode on the
 // same platform are two real modes, not fragmentation of one.
 //
-// gameStatus resolves entries written before per-entry ongoing/multiplayer
+// gameStatus resolves entries written before per-entry endless/multiplayer
 // existed — see effectiveOneShotStatus.
 func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, gameStatus, subgame string) *model.PlaythroughEntry {
 	if !forms.IsOneShot(status) {
@@ -55,11 +55,11 @@ func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatfor
 }
 
 // effectiveOneShotStatus resolves what one-shot status, if any, an existing
-// entry really represents. Every ongoing/multiplayer/software game written
-// before per-entry ongoing/multiplayer support kept its sole entry's own
+// entry really represents. Every endless/multiplayer/software game written
+// before per-entry endless/multiplayer support kept its sole entry's own
 // status as "playing" and relied entirely on the game's front-matter status
 // for its real meaning (games-timeline.html's override still does this for
-// display). Without this, a new literal "ongoing" entry wouldn't be seen as
+// display). Without this, a new literal "endless" entry wouldn't be seen as
 // conflicting with that old-style "playing" entry, silently dropping the
 // fragmentation guard for every game written the old way.
 func EffectiveOneShotStatus(entryStatus, gameStatus string) string {

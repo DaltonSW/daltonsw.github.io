@@ -184,9 +184,9 @@ actually played — booting a Switch title solely for a cross-save/gift unlock i
 prompted it — and, unlike `backlog`, makes no claim about ever getting to it. `backlog` says
 "haven't gotten to it yet"; `unplayed` says "no plan either way."
 
-`ongoing`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
+`endless`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
 no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
-ends play. They're separate statuses because the *reason* differs: `ongoing` is a replay-loop
+ends play. They're separate statuses because the *reason* differs: `endless` is a replay-loop
 design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `software` isn't a game at
 all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
 through the same `gamelog scan` and need somewhere to go that isn't a completion state.
@@ -390,7 +390,7 @@ per provider, not per game: a game linked to both Steam and RetroAchievements ha
 denominators, and merging them would invent a number that's true of neither. A RetroAchievements
 subset is another such denominator, so it gets its own row too, named (`retroachievements · Mouse
 Alley`) rather than repeating the bare provider on two rows with different numbers. The one-shot
-statuses (`ongoing`, `multiplayer`, `software`) never appear — there's no completion for them to
+statuses (`endless`, `multiplayer`, `software`) never appear — there's no completion for them to
 be short of — and `finished`/`dropped`/`mastered` games are opt-in via a checkbox, since leaving
 achievements on a game you've called finished is a decision, not an oversight. `paused` and
 `backlog` games *are* listed: both mean "not now", not "not ever".
@@ -406,7 +406,7 @@ the safer default, not a claim) — alongside the last-played date, achievement 
 Nothing is ever written automatically: accept the guess, pick one of the other statuses it might
 have guessed instead, open the full edit form prefilled with the guess, or leave it and it'll
 surface again next time it's still `playing` and still quiet. None of the one-shot statuses
-(`ongoing`, `multiplayer`, `software`) ever shows up here — they aren't `status: playing` by
+(`endless`, `multiplayer`, `software`) ever shows up here — they aren't `status: playing` by
 definition (see above), and something used in indefinite session bursts has no "done" to detect
 from staleness alone.
 
@@ -458,7 +458,7 @@ only feeds a game's `last_played` sort key. Refreshing a game's achievements can
 archive fully up to date while the timeline shows nothing new — the fix isn't a rebuild, it's that
 nobody logged a session for the activity that just got captured.
 
-For the one-shot statuses (`ongoing`/`multiplayer`/`software` — see above), where the whole
+For the one-shot statuses (`endless`/`multiplayer`/`software` — see above), where the whole
 playthrough record *is* its `sessions:` list, the single-slug `gamelog achievements <slug>` closes
 that gap itself: if the refresh pulled in playtime or an unlock date past what's already logged, it
 offers to log a session right then, prefilled with the activity date the provider reported (that's

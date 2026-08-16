@@ -4,7 +4,7 @@ platform: Xbox 360
 retroachievements_id: null
 steam_appid: null
 xbox_id: 1480656988
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

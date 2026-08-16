@@ -79,7 +79,7 @@ type PlaythroughEntry struct {
 type PlaythroughFields struct {
 	Started  string
 	Finished string
-	Status   string // playing|finished|mastered|dropped|paused|ongoing|multiplayer
+	Status   string // playing|finished|mastered|dropped|paused|endless|multiplayer
 	Platform string // blank means "same as the game's front matter"
 	Subgame  string // blank means "the whole game"; otherwise a member of the game's subgames: roster
 	Rating   string // 1-10 or ""

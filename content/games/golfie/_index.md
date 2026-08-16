@@ -3,7 +3,7 @@ title: Golfie
 platform: PC
 retroachievements_id: null
 steam_appid: 1579020
-status: ongoing
+status: endless
 started: ""
 finished: ""
 rating: null

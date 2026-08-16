@@ -64,17 +64,17 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 	return slug, err
 }
 
-// "ongoing", "multiplayer", and "software" all mark an entry that
+// "endless", "multiplayer", and "software" all mark an entry that
 // doesn't have a meaningful start/finish narrative — it's used in an
 // open-ended series of sessions with no state that ends play — for three
-// different reasons: ongoing is a replay-loop design
+// different reasons: endless is a replay-loop design
 // (roguelike/sandbox/idle), multiplayer is inherently social, and software
 // isn't a game at all. Steam sells tools alongside games and reports playtime
 // for them identically, so they arrive through the same scan; "software" says
 // the completion vocabulary simply doesn't apply rather than forcing a
 // finished/dropped answer to a question that was never asked.
 //
-// ongoing and multiplayer can also be set on an individual playthrough entry
+// endless and multiplayer can also be set on an individual playthrough entry
 // (see PlaythroughStatuses) — a game with distinct modes (Hitman's story
 // campaign, its Freelancer roguelike, and its multiplayer contracts) is one
 // game with several differently-shaped entries, not one status forced onto
@@ -91,23 +91,23 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 // unlock, say) but never actually played, and — unlike "backlog" — makes no
 // claim about intending to play it eventually. "backlog" says "haven't
 // gotten to it yet"; "unplayed" says "don't know if I ever will."
-var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "ongoing", "multiplayer", "software", "unplayed"}
+var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "endless", "multiplayer", "software", "unplayed"}
 
 // IsOneShot reports whether a status (game-level or entry-level) forbids a
 // second playthrough entry of that same status on the same platform. Keep
 // this in step with the statuses documented above.
 func IsOneShot(status string) bool {
-	return status == "ongoing" || status == "multiplayer" || status == "software"
+	return status == "endless" || status == "multiplayer" || status == "software"
 }
 
 // "misc_launch" covers an entry that isn't a real attempt at all — booted up
 // just to check dates, or a launch that never got past a broken platform
 // port (e.g. a Linux build that wouldn't run) — as distinct from "dropped",
 // which implies play was actually attempted and abandoned. Unlike
-// ongoing/multiplayer, a second misc_launch entry on the same platform isn't
+// endless/multiplayer, a second misc_launch entry on the same platform isn't
 // fragmentation: each launch is its own unrelated occasion, so it's not
 // one-shot (see IsOneShot).
-var PlaythroughStatuses = []string{"playing", "finished", "mastered", "dropped", "paused", "ongoing", "multiplayer", "misc_launch"}
+var PlaythroughStatuses = []string{"playing", "finished", "mastered", "dropped", "paused", "endless", "multiplayer", "misc_launch"}
 
 // ParseSubgames splits a newline-separated "Subgames" text field into a
 // roster, trimming each line and dropping blanks, so a game with no roster
