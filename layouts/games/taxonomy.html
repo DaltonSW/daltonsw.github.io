@@ -37,6 +37,11 @@
 
   <div class="tabs__panel" id="games-panel-list" role="tabpanel" aria-labelledby="games-tab-list">
   <section aria-label="Game list">
+  <div class="games-search">
+    <input type="search" class="games-search__input" placeholder="Search games…"
+      aria-label="Search games" data-games-search>
+    <p class="games-search__empty" hidden data-games-search-empty>No games match “<span data-games-search-query></span>”.</p>
+  </div>
   {{/* One record per game per year played (game-year-rows.html expands it); backlog games excluded since games-backlog.html above already lists them. */}}
 {{- $rows := slice }}
 {{- range (where .Pages "Params.status" "ne" "backlog") }}
@@ -181,4 +186,13 @@
 -}}
 {{- $provJS := resources.Get "js/provenance-modal.ts" | js.Build $provJSOpts | fingerprint -}}
 <script src="{{ $provJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $provJS.Data.Integrity }}"{{ end }} defer></script>
+
+{{- $searchJSOpts := dict
+    "targetPath" "js/games-search.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $searchJS := resources.Get "js/games-search.ts" | js.Build $searchJSOpts | fingerprint -}}
+<script src="{{ $searchJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $searchJS.Data.Integrity }}"{{ end }} defer></script>
 {{ end }}
