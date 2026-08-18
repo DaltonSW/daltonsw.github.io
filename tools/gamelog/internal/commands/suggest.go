@@ -53,6 +53,13 @@ type Credentials struct {
 	// harder than the others and why `nadeo fetch` defaults to one season.
 	NadeoLogin    string
 	NadeoPassword string
+
+	// NinjaKiwiOAK is an "OAK" save-export token for Ninja Kiwi's data API
+	// (data.ninjakiwi.com), obtained in-game (BTD6: Settings → Data → Export
+	// Save) and bound to one player's save. A real secret, and short-lived —
+	// it expires roughly every 90 days and has to be re-exported and pasted
+	// back into .env by hand.
+	NinjaKiwiOAK string
 }
 
 func LoadCredentials() Credentials {
@@ -72,6 +79,7 @@ func LoadCredentials() Credentials {
 		PSNNpsso:      os.Getenv("PSN_NPSSO"),
 		NadeoLogin:    os.Getenv("NADEO_SERVICE_LOGIN"),
 		NadeoPassword: os.Getenv("NADEO_SERVICE_PASSWORD"),
+		NinjaKiwiOAK:  os.Getenv("NINJA_KIWI_OAK"),
 	}
 }
 
@@ -96,6 +104,10 @@ func (c Credentials) PSNConfigured() bool { return c.PSNNpsso != "" }
 // NadeoConfigured needs both halves of the service account; the token exchange
 // happens at request time in the nadeo client.
 func (c Credentials) NadeoConfigured() bool { return c.NadeoLogin != "" && c.NadeoPassword != "" }
+
+// OAKConfigured needs just the token — it's self-contained, unlike Nadeo's
+// login/password exchange.
+func (c Credentials) OAKConfigured() bool { return c.NinjaKiwiOAK != "" }
 
 // ProviderResult is one provider's outcome for a suggestion report: either
 // a usable suggestion, or a reason it was skipped/failed. A skipped or

@@ -25,6 +25,8 @@ const envHelp = `Environment (or a .env beside this tool; real env vars take pre
   NADEO_SERVICE_PASSWORD     https://trackmania.com, for campaign times.
                              Must be created on the Ubisoft account you
                              actually play on.
+  NINJA_KIWI_OAK             BTD6 save export token, from in-game Settings >
+                             Data > Export Save. Expires ~90 days.
 
 See tools/gamelog/README.md for details.`
 
@@ -51,6 +53,7 @@ func newRootCmd() *cobra.Command {
 		newExophaseCmd(),
 		newPSNCmd(),
 		newNadeoCmd(),
+		newNinjaKiwiCmd(),
 		newServeCmd(),
 	)
 	return root
@@ -200,6 +203,30 @@ func newNadeoCmd() *cobra.Command {
 	nadeo.AddCommand(fetch)
 
 	return nadeo
+}
+
+func newNinjaKiwiCmd() *cobra.Command {
+	nk := &cobra.Command{
+		Use:   "ninjakiwi",
+		Short: "Capture a BTD6 save from Ninja Kiwi's data API",
+	}
+
+	nk.AddCommand(&cobra.Command{
+		Use:   "fetch",
+		Short: "Capture the BTD6 save into archive/ninjakiwi/<userId>.json",
+		Long: "Capture the BTD6 save state named by NINJA_KIWI_OAK into\n" +
+			"archive/ninjakiwi/<userId>.json, then rebuild btd6-summary.yaml.\n\n" +
+			"One request. Every field is a snapshot, not an event log, so a refresh\n" +
+			"can only move progress forward — see the BTD6 section of README.md for\n" +
+			"exactly which fields are point-in-time (money, current trophies,\n" +
+			"insta-monkeys) versus cumulative.",
+		Args: cobra.NoArgs,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return commands.RunNinjaKiwiFetch()
+		},
+	})
+
+	return nk
 }
 
 func newServeCmd() *cobra.Command {

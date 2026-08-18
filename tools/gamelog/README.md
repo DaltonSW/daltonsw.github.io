@@ -846,6 +846,37 @@ Things worth knowing before touching `providers/nadeo`:
 `--dump-raw <dir>` writes every verbatim response body to disk. That's how `testdata/` fixtures
 are produced: run one scoped season, not a backfill.
 
+### BTD6, via Ninja Kiwi's data API
+
+Another provider that doesn't record achievements — BTD6's Steam achievement pair already exists
+in `achievement-summary.yaml` via `steam_appid`, so this captures the rest of the save instead:
+XP/rank, trophies, tower mastery, hero unlocks, map completion across every difficulty and mode,
+insta-monkey inventory, knowledge, skins, and claimed achievements (kept for completeness, not
+folded into the Steam count — they're a different namespace). It has its own record type
+(`model.BTD6Record`), its own merge, its own projection (`btd6-summary.yaml`), and is deliberately
+**not** part of `ProviderLinks`/`ProviderOrder`, for the same reason Nadeo isn't.
+
+The API is `https://data.ninjakiwi.com/btd6/save/<oak>` — an unauthenticated GET, keyed entirely by
+the OAK token in the URL. There's no discovery call: the stable id this tool keys the archive on
+(`ninjakiwi_user_id` in front matter) is a Ninja Kiwi player id obtained separately, not derived
+from the OAK token itself — the token is a rotating credential, not an identifier.
+
+`gamelog ninjakiwi fetch` captures. Things worth knowing:
+
+- **Almost every field is a full snapshot, not an event log.** One response is the player's entire
+  current save state, which is why the merge is per-field rather than a union of new entries the
+  way achievements or campaign tracks are.
+- **Field semantics vary, and blindly taking the max is wrong for some of them.** Cumulative
+  counters (XP, lifetime trophies, highest round seen, games played, tracked totals) only grow, so
+  those merge by max. But `monkeyMoney` and current `trophies` are spendable/losable, and insta-monkey
+  and power quantities are consumable inventory — all of those are point-in-time and take the fresh
+  value whenever a fetch succeeds, the same "check field semantics case by case" lesson Nadeo's lap
+  times taught (see `mergeNinjaKiwiRecord`'s doc comment).
+- **Boolean unlock maps merge by OR** — a tower/hero/upgrade/skin/map-mode once unlocked stays
+  unlocked even if a fetch's response is somehow missing it.
+- The full response body is also kept verbatim (`Raw`), same reasoning as `NadeoRaw` — this payload
+  has far more fields than are modeled/displayed yet.
+
 ### Credentials
 
 Copy `.env.example` to `.env` (gitignored) and fill it in. `suggest` finds that file whether
@@ -862,6 +893,7 @@ precedence, so `RA_API_KEY=... go run ./cmd/gamelog suggest x` still overrides t
 | `PSN_NPSSO` | npsso session value, for PSN trophies via Sony's own trophy API. **This is a real secret**, and it expires after ~2 months — see "PlayStation, via Sony's own trophy API" above for how to get one. |
 | `XBLIO_API_KEY` | Personal API key from xbl.io/console, for Xbox 360 achievements. **This one is a real secret** — it's scoped to your own Microsoft account, unlike `EXOPHASE_USER` above. |
 | `NADEO_SERVICE_LOGIN`, `NADEO_SERVICE_PASSWORD` | Trackmania service account, from trackmania.com's service account page, for campaign times. **Both are real secrets**, and the password is shown exactly once at creation. Must be created on the Ubisoft account you actually play on — see "Trackmania, via Nadeo's own web services" above for why. |
+| `NINJA_KIWI_OAK` | BTD6 save export token, from in-game Settings > Data > Export Save. **A real secret**, and expires roughly every 90 days — see "BTD6, via Ninja Kiwi's data API" above. |
 
 Steam's achievement/playtime endpoints only return data for a public profile, or your own
 profile when the key you're using belongs to that account. Note that per-game achievement

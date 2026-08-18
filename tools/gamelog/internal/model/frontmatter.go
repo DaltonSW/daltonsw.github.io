@@ -60,6 +60,16 @@ type FrontMatter struct {
 	// the ProviderNadeo doc comment in nadeo.go.
 	NadeoAccountID any `yaml:"nadeo_account_id,omitempty"`
 
+	// NinjaKiwiUserID is the Ninja Kiwi player id whose BTD6 save belongs to
+	// this game — a stable player id, not the OAK token used to fetch it
+	// (which rotates roughly every 90 days and can't be the archive key).
+	//
+	// Unlike every other id here it is *not* part of ProviderLinks — BTD6's
+	// Steam achievement pair already covers this game's achievement summary;
+	// this is a full save snapshot, not achievements. See the ProviderNinjaKiwi
+	// doc comment in ninjakiwi.go.
+	NinjaKiwiUserID any `yaml:"ninjakiwi_user_id,omitempty"`
+
 	Status string `yaml:"status"`
 
 	// Subgames is the declared roster of a compilation's parts — e.g. Shovel
@@ -283,6 +293,11 @@ func (d *Doc) ProviderLinks() []ProviderLink {
 // any. Deliberately its own accessor rather than a ProviderLinks entry — see
 // FrontMatter.NadeoAccountID.
 func (d *Doc) NadeoAccountIDString() string { return scalarString(d.FM.NadeoAccountID) }
+
+// NinjaKiwiUserIDString is the Ninja Kiwi player id this game is linked to,
+// if any. Deliberately its own accessor rather than a ProviderLinks entry —
+// see FrontMatter.NinjaKiwiUserID.
+func (d *Doc) NinjaKiwiUserIDString() string { return scalarString(d.FM.NinjaKiwiUserID) }
 
 // BuildProviderLinks is shared by Doc and GameSummary so the two can't drift
 // on which providers exist or what order they come in.

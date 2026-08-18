@@ -49,6 +49,9 @@ type GameSummary struct {
 	// NadeoAccountID links this game to a Trackmania campaign archive. It is
 	// not part of ProviderLinks — see FrontMatter.NadeoAccountID.
 	NadeoAccountID string
+	// NinjaKiwiUserID links this game to a BTD6 save archive. It is not part
+	// of ProviderLinks — see FrontMatter.NinjaKiwiUserID.
+	NinjaKiwiUserID string
 	// RASubsets are the RetroAchievements subset ids attached to this game
 	// (see FrontMatter.RASubsets). They matter to the scan as well as to the
 	// archive: a subset already attached here must stop being offered as an
@@ -174,6 +177,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		UbisoftID:        ubisoftID,
 		XboxID:           xboxID,
 		NadeoAccountID:   doc.NadeoAccountIDString(),
+		NinjaKiwiUserID:  doc.NinjaKiwiUserIDString(),
 		RASubsets:        doc.RASubsetIDs(),
 	}
 }
