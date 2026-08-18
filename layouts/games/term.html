@@ -108,4 +108,13 @@
 -}}
 {{- $achJS := resources.Get "js/achievements.ts" | js.Build $achJSOpts | fingerprint -}}
 <script src="{{ $achJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $achJS.Data.Integrity }}"{{ end }} defer></script>
+
+{{- $tooltipJSOpts := dict
+    "targetPath" "js/tooltip.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $tooltipJS := resources.Get "js/tooltip.ts" | js.Build $tooltipJSOpts | fingerprint -}}
+<script src="{{ $tooltipJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $tooltipJS.Data.Integrity }}"{{ end }} defer></script>
 {{ end }}

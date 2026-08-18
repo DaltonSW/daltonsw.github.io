@@ -232,6 +232,23 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .wrap--wide > .prose:first-of-type p { margin: 0; }
 .lead { color: var(--dim); font-size: 1.08rem; }
 
+/* ── Custom tooltip (assets/js/tooltip.ts) ───────────────────────────────── */
+// One reused element for every [data-tooltip] trigger site-wide, styled like
+// the vis-timeline tooltip below rather than the unstyleable native `title`.
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  max-width: 24rem;
+  padding: 0.45rem 0.7rem;
+  background: var(--panel-2);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  color: var(--fg);
+  font-family: $font-ui; font-size: 0.92rem; line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
 /* ── Homepage ───────────────────────────────────────────────────────────── */
 .hero { padding-block: 1rem 0.5rem; }
 .hero h1 { margin-top: 0.3rem; font-size: 2rem; }
