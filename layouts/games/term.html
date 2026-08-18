@@ -41,6 +41,11 @@
        for every game without a campaigns.yaml. */}}
   {{- partial "game-campaigns.html" . }}
 
+  {{/* BTD6's real record is a full save snapshot rather than achievements, so
+       it gets its own section from its own projection too. No-op for every
+       game without a btd6-summary.yaml. */}}
+  {{- partial "game-ninjakiwi.html" . }}
+
   {{- with sort $entries "started" "desc" }}
   <h2>Playthroughs</h2>
   <ul class="entry-list">

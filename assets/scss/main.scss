@@ -822,6 +822,192 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
   .tm-cell__time { grid-column: 1 / -1; margin-left: 0; }
 }
 
+/* ── BTD6 save on a single game's page ───────────────────────────────────── */
+.nk-btd6 { margin: 2rem 0 1.5rem; }
+
+.nk-stats {
+  display: flex; flex-wrap: wrap; gap: 0.9rem 1.4rem;
+  margin-top: 0.8rem;
+}
+.nk-stat {
+  display: flex; flex-direction: column; gap: 0.1rem;
+  font-family: $font-ui;
+}
+.nk-stat__value { font-size: 1.3rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.nk-stat__label { font-size: 0.85rem; color: var(--dim); letter-spacing: 0.03em; text-transform: uppercase; }
+.nk-stat--muted { justify-content: flex-end; }
+.nk-stat--muted .nk-stat__value { display: none; }
+.nk-stat--muted .nk-stat__label { font-size: 0.9rem; text-transform: none; letter-spacing: 0; }
+
+.nk-subsection { margin-top: 1.6rem; }
+.nk-subsection__head {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem 0.9rem;
+  margin-bottom: 0.7rem;
+}
+.nk-subsection__head h3 { margin: 0; font-size: 1.2rem; font-family: $font-ui; }
+.nk-subsection__stat { font-family: $font-ui; font-size: 0.92rem; color: var(--dim); }
+
+/* Tower/hero unlocks: a wrapped strip of chips rather than a grid — the count
+   varies per game and a fixed column grid would leave ragged trailing gaps. */
+.nk-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.nk-chip {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--panel); border: 1px solid var(--stroke); border-radius: var(--radius);
+  font-family: $font-ui; font-size: 0.9rem;
+}
+.nk-chip--locked { color: var(--dim); border-style: dashed; }
+.nk-chip--primary { border-color: var(--accent); color: var(--accent); }
+.nk-chip__meta { color: var(--dim); font-variant-numeric: tabular-nums; }
+.nk-chip--primary .nk-chip__meta { color: inherit; opacity: 0.8; }
+
+/* Map completion: one row per map, one column per difficulty/mode badge —
+   same breakout-and-scroll treatment as the insta-monkey table below, since
+   this is wide for the same reason (a lot of columns, each only as wide as
+   it needs to be). Badge columns are grouped and colored by difficulty. */
+.nk-map-table-breakout {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  display: flex; justify-content: center;
+  overflow-x: auto;
+}
+.nk-map-table-wrap {
+  flex: none;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+}
+.nk-map-table {
+  border-collapse: collapse;
+  font-family: $font-ui; font-size: 1.05rem;
+  white-space: nowrap;
+}
+.nk-map-table th,
+.nk-map-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--stroke);
+  text-align: center;
+}
+.nk-map-table thead th {
+  position: sticky; top: 0;
+  background: var(--panel);
+  font-weight: 400;
+}
+.nk-map-table thead tr:first-child th {
+  font-family: $font-ui; font-size: 0.95rem;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  border-bottom: 1px solid var(--stroke);
+}
+.nk-map-table__icon {
+  width: 1.85rem; height: 1.85rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.nk-map-table__map {
+  position: sticky; left: 0; z-index: 2;
+  background: var(--panel);
+  text-align: left;
+  font-weight: 400;
+  overflow: hidden; text-overflow: ellipsis; max-width: 15rem;
+}
+tbody .nk-map-table__map { color: var(--fg); }
+.nk-map-table__row--complete .nk-map-table__map { color: var(--ok); }
+.nk-map-table__yes { font-size: 1.25rem; line-height: 1; }
+.nk-map-table__no { color: var(--dim); }
+.nk-map-table__chimps .nk-map-table__icon { width: 1.5rem; height: 1.5rem; }
+.nk-map-table__chimps--red { opacity: 0.85; }
+
+// Beginner/Intermediate/Advanced/Expert row-group headers — same treatment
+// as the insta-monkey table's tower-category rows.
+.nk-map-table__group th {
+  position: sticky; left: 0;
+  background: var(--panel-2);
+  text-align: left;
+  font-family: $font-ui; font-size: 0.95rem; color: var(--dim);
+  letter-spacing: 0.03em; text-transform: uppercase;
+}
+
+// Difficulty ladder for map badges, in the game's own Easy/Medium/Hard order
+// and colors (green/yellow/red) — Medium borrows --tm-gold since there's no
+// dedicated yellow token in the palette.
+.nk-badge-easy   { color: var(--tm-green); }
+.nk-badge-medium { color: var(--tm-gold); }
+.nk-badge-hard   { color: var(--tm-red); }
+
+// Icon-only header cells carry no colored text, so the difficulty ladder
+// shows as an accent border instead.
+.nk-map-table thead tr:last-child th.nk-badge-easy   { box-shadow: inset 0 -3px 0 var(--tm-green); }
+.nk-map-table thead tr:last-child th.nk-badge-medium { box-shadow: inset 0 -3px 0 var(--tm-gold); }
+.nk-map-table thead tr:last-child th.nk-badge-hard    { box-shadow: inset 0 -3px 0 var(--tm-red); }
+
+/* Insta-monkey inventory: one row per tower (grouped into the game's own
+   Primary/Military/Magic/Support categories), one column per path-level combo
+   seen anywhere in the inventory, a checkmark/dash per cell. Wide by nature —
+   49+ columns — so headers stack their three digits instead of running them
+   inline, keeping each column no wider than it needs to be. */
+// Breaks the table out of .wrap's content-width cap so it can use the empty
+// margins on wide viewports instead of side-scrolling a table that would
+// otherwise fit — the table itself still only takes the width it needs
+// (centered), it's just no longer capped at $content-width to get there.
+.nk-insta-table-breakout {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  display: flex; justify-content: center;
+  overflow-x: auto;
+}
+.nk-insta-table-wrap {
+  flex: none;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+}
+.nk-insta-table {
+  border-collapse: collapse;
+  font-family: $font-ui; font-size: 1.05rem;
+  white-space: nowrap;
+}
+.nk-insta-table th,
+.nk-insta-table td {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--stroke);
+  text-align: center;
+}
+.nk-insta-table thead th {
+  position: sticky; top: 0;
+  background: var(--panel);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+.nk-insta-table__tower {
+  position: sticky; left: 0; z-index: 1;
+  background: var(--panel);
+  color: var(--dim);
+}
+.nk-insta-table tbody th[scope="row"] {
+  position: sticky; left: 0;
+  background: var(--panel);
+  text-align: left;
+  font-weight: 400;
+}
+.nk-insta-table__group th {
+  position: sticky; left: 0;
+  background: var(--panel-2);
+  text-align: left;
+  font-family: $font-ui; font-size: 0.95rem; color: var(--dim);
+  letter-spacing: 0.03em; text-transform: uppercase;
+}
+.nk-insta-table__yes,
+.nk-insta-table__no {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.nk-insta-table__no { color: var(--dim); }
+
+// Insta-Monkey rarity ladder (tier 1–5, keyed off a combo's highest path
+// level): white/green/blue/purple/gold, same colors the game itself uses.
+.nk-rarity-white { color: var(--dim); }
+.nk-rarity-green { color: var(--ok); }
+.nk-rarity-blue { color: var(--tm-blue); }
+.nk-rarity-purple { color: var(--warn); }
+.nk-rarity-gold { color: var(--tm-gold); }
+
 /* ── Gameplay history timeline (vis-timeline) ───────────────────────────── */
 .games-timeline {
   margin: 1.5rem 0 2rem;

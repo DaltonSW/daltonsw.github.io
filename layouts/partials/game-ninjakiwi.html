@@ -1,0 +1,342 @@
+{{/* BTD6 save section for a single game's term page.
+
+     Reads btd6-summary.yaml, the raw-free projection written by
+     model.WriteBTD6Summary (tools/gamelog/internal/model/ninjakiwi.go) — the
+     same arrangement as achievement-summary.yaml/campaigns.yaml, and for the
+     same reason: Hugo never reads archive/ or its `raw` payloads at build
+     time.
+
+     Guarded on the resource existing, so this is a no-op for every game that
+     isn't linked to a BTD6 save. */}}
+{{- $btd6 := "" -}}
+{{- with .Resources.Get "btd6-summary.yaml" -}}
+  {{- $btd6 = . | transform.Unmarshal -}}
+{{- end -}}
+
+{{- if and $btd6 (gt ($btd6.xp | default 0) 0) -}}
+{{- $towers := $btd6.towers | default slice -}}
+{{- $heroes := $btd6.heroes | default slice -}}
+{{- $maps := $btd6.maps | default slice -}}
+{{- $insta := $btd6.insta_monkeys | default slice -}}
+
+{{- $towersUnlocked := len (where $towers "unlocked" true) -}}
+{{- $heroesUnlocked := len (where $heroes "unlocked" true) -}}
+
+<section class="nk-btd6" aria-labelledby="btd6-heading">
+  <h2 id="btd6-heading">BTD6 Save</h2>
+
+  <div class="nk-stats">
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.xp }}</span><span class="nk-stat__label">XP</span></span>
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.rank }}</span><span class="nk-stat__label">rank</span></span>
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.highest_seen_round }}</span><span class="nk-stat__label">highest round</span></span>
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.lifetime_trophies }}</span><span class="nk-stat__label">lifetime trophies</span></span>
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.games_played }}</span><span class="nk-stat__label">games played</span></span>
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.total_odysseys }}</span><span class="nk-stat__label">odysseys</span></span>
+    {{- with $btd6.knowledge_points }}
+    <span class="nk-stat"><span class="nk-stat__value">{{ . }}</span><span class="nk-stat__label">knowledge points</span></span>
+    {{- end }}
+    <span class="nk-stat"><span class="nk-stat__value">{{ $btd6.achievements_count }}</span><span class="nk-stat__label">achievements claimed</span></span>
+    {{- with $btd6.fetched }}
+    <span class="nk-stat nk-stat--muted">captured {{ . | time.Format "Jan 2, 2006" }}</span>
+    {{- end }}
+  </div>
+
+  {{- if gt (len $towers) 0 }}
+  <div class="nk-subsection">
+    <div class="nk-subsection__head">
+      <h3>Towers</h3>
+      {{- partial "achievement-meter.html" (dict "unlocked" $towersUnlocked "total" (len $towers)) }}
+    </div>
+    <div class="nk-chips">
+      {{- range $towers }}
+      {{- $label := partial "humanize-name.html" .name }}
+      <span class="nk-chip{{ if not .unlocked }} nk-chip--locked{{ end }}" data-tooltip="{{ $label }}{{ if .unlocked }} — {{ .xp }} XP{{ else }} — locked{{ end }}">
+        {{ $label }}
+        {{- if .unlocked }}<span class="nk-chip__meta">{{ .xp }} XP</span>{{ end }}
+      </span>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+
+  {{- if gt (len $heroes) 0 }}
+  <div class="nk-subsection">
+    <div class="nk-subsection__head">
+      <h3>Heroes</h3>
+      {{- partial "achievement-meter.html" (dict "unlocked" $heroesUnlocked "total" (len $heroes)) }}
+    </div>
+    <div class="nk-chips">
+      {{- range $heroes }}
+      {{- $label := partial "humanize-name.html" .name }}
+      <span class="nk-chip{{ if not .unlocked }} nk-chip--locked{{ end }}{{ if .primary }} nk-chip--primary{{ end }}" data-tooltip="{{ $label }}{{ if .primary }} — primary hero{{ end }}{{ if not .unlocked }} — locked{{ end }}">
+        {{ $label }}
+        {{- if .primary }}<span class="nk-chip__meta">primary</span>{{ end }}
+      </span>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+
+  {{- if gt (len $maps) 0 }}
+  {{/* Rows are maps, in the order the API returns them. Columns are every
+       difficulty/mode badge seen anywhere across the maps (Sandbox excluded —
+       it has no win condition, so it isn't a badge), grouped by difficulty
+       (Easy/Medium/Hard) in the game's own menu order within each group —
+       not alphabetical. Icons and their filenames are the game's own medal
+       art (bloonswiki.com/Medal#Bloons_TD_6), mirrored locally rather than
+       hotlinked. Not every map supports every combo (Expert maps skip
+       Easy/Medium, for instance), so a missing combo renders distinctly from
+       an unearned one.
+
+       The API's "SuperChimps" mode entries are dropped entirely — it's
+       unclear what they actually track, and they don't line up with the
+       game's real CHIMPS badge. The Hard difficulty's "Clicks" entry is used
+       for that badge instead, with completed_without_loading_save
+       distinguishing the red medal (beaten, but a save was loaded mid-run)
+       from the black one (beaten in one sitting, no save/quit). */}}
+  {{- $badgeOrder := slice
+      (dict "difficulty" "Easy" "mode" "Standard" "label" "Standard" "icon" "easy-standard.png")
+      (dict "difficulty" "Easy" "mode" "PrimaryOnly" "label" "Primary Only" "icon" "easy-primaryonly.png")
+      (dict "difficulty" "Easy" "mode" "Deflation" "label" "Deflation" "icon" "easy-deflation.png")
+      (dict "difficulty" "Medium" "mode" "Standard" "label" "Standard" "icon" "medium-standard.png")
+      (dict "difficulty" "Medium" "mode" "MilitaryOnly" "label" "Military Only" "icon" "medium-militaryonly.png")
+      (dict "difficulty" "Medium" "mode" "Apopalypse" "label" "Apopalypse" "icon" "medium-apopalypse.png")
+      (dict "difficulty" "Medium" "mode" "Reverse" "label" "Reverse" "icon" "medium-reverse.png")
+      (dict "difficulty" "Hard" "mode" "Standard" "label" "Standard" "icon" "hard-standard.png")
+      (dict "difficulty" "Hard" "mode" "MagicOnly" "label" "Magic Monkeys Only" "icon" "hard-magiconly.png")
+      (dict "difficulty" "Hard" "mode" "AlternateBloonsRounds" "label" "Alternate Bloons Rounds" "icon" "hard-alternatebloonsrounds.png")
+      (dict "difficulty" "Hard" "mode" "DoubleMoabHealth" "label" "Double HP MOABs" "icon" "hard-doublemoabhealth.png")
+      (dict "difficulty" "Hard" "mode" "HalfCash" "label" "Half Cash" "icon" "hard-halfcash.png")
+      (dict "difficulty" "Hard" "mode" "Impoppable" "label" "Impoppable" "icon" "hard-impoppable.png")
+      (dict "difficulty" "Hard" "mode" "Clicks" "label" "CHIMPS" "icon" "chimps-black.png")
+  -}}
+  {{- $seen := slice }}
+  {{- range $maps }}
+    {{- range .modes }}
+      {{- $key := printf "%s|%s" .difficulty .mode }}
+      {{- if not (in $seen $key) }}
+        {{- $seen = $seen | append $key }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  {{- $badgeCombos := slice }}
+  {{- range $badgeOrder }}
+    {{- if in $seen (printf "%s|%s" .difficulty .mode) }}
+      {{- $badgeCombos = $badgeCombos | append . }}
+    {{- end }}
+  {{- end }}
+  {{- $diffOrder := slice "Easy" "Medium" "Hard" }}
+
+  {{/* Row grouping: the game's own Beginner/Intermediate/Advanced/Expert
+       map-select tiers, in the game's own per-tier order — sourced from the
+       {{BTD6_map_nav}} template on bloonswiki.com/Map, which is maintained
+       in game order rather than alphabetical (unlike the wiki's map
+       galleries). Maps the game has added since this list was compiled fall
+       back to an "Other" group at the end, alphabetically, so a refresh
+       can't make a newer map vanish from the table. */}}
+  {{- $mapCategoryOrder := slice
+      (dict "category" "Beginner" "names" (slice "Tutorial" "InTheLoop" "SkullTweak" "ThreeMinesAround" "SpaPits" "Tinkerton" "TreeStump" "TownCentre" "MiddleOfTheRoad" "OneTwoTree" "Scrapyard" "TheCabin" "Resort" "Skates" "LotusIsland" "CandyFalls" "WinterPark" "Carved" "ParkPath" "AlpineRun" "FrozenOver" "Cubism" "FourCircles" "Hedge" "EndOfTheRoad" "Logs"))
+      (dict "category" "Intermediate" "names" (slice "LuminousCove" "SulfurSprings" "WaterPark" "Polyphemus" "CoveredGarden" "Quarry" "QuietStreet" "BloonariusPrime" "Balance" "Encrypted" "Bazaar" "AdorasTemple" "SpringSpring" "KartsNDarts" "MoonLanding" "Haunted" "Downstream" "FiringRange" "Cracked" "Streambed" "Chutes" "Rake" "SpiceIslands"))
+      (dict "category" "Advanced" "names" (slice "MushroomGrotto" "PartyParade" "SunsetGulch" "EnchantedGlade" "CastleRevenge" "DarkPath" "SunkenColumns" "XFactor" "Geared" "PatsPond" "Peninsula" "HighFinance" "AnotherBrick" "OffTheCoast" "Cornfield" "Underground"))
+      (dict "category" "Expert" "names" (slice "Ravine"))
+  -}}
+  {{- $mapSortKey := dict }}
+  {{- $mapCategoryOf := dict }}
+  {{- range $ci, $cat := $mapCategoryOrder }}
+    {{- range $ni, $name := $cat.names }}
+      {{- $mapSortKey = merge $mapSortKey (dict $name (printf "%d-%03d" $ci $ni)) }}
+      {{- $mapCategoryOf = merge $mapCategoryOf (dict $name $cat.category) }}
+    {{- end }}
+  {{- end }}
+  {{/* The API's own "complete" flag on a map doesn't reflect the badges
+       shown here (it's unclear what it's actually tracking), so it's
+       ignored — completeness is instead recomputed as "every badge column
+       that applies to this map is earned."
+
+       Every difficulty/mode combo is legal on every map — BTD6 doesn't
+       actually restrict which difficulties a map supports — but the save
+       data only creates a progress record for a combo once it's been loaded
+       at least once. A map that's had one Hard/Standard run and nothing
+       else has exactly one mode entry, not eight false ones. So a missing
+       entry here means "never attempted," not "not available," and has to
+       count against completeness the same as an explicit completed:false —
+       otherwise a barely-touched map reads as 100% done because nothing on
+       it disagrees. */}}
+  {{- $orderedMaps := slice }}
+  {{- $mapsComplete := 0 }}
+  {{- range $maps }}
+    {{- $sortKey := index $mapSortKey .name }}
+    {{- $category := index $mapCategoryOf .name }}
+    {{- if not $sortKey }}{{ $sortKey = printf "9-%s" .name }}{{ end }}
+    {{- if not $category }}{{ $category = "Other" }}{{ end }}
+    {{- $modes := .modes | default slice }}
+    {{- $complete := true }}
+    {{- range $badgeCombos }}
+      {{- $matches := where (where $modes "difficulty" .difficulty) "mode" .mode }}
+      {{- if eq (len $matches) 0 }}
+        {{- $complete = false }}
+      {{- else if not (index $matches 0).completed }}
+        {{- $complete = false }}
+      {{- end }}
+    {{- end }}
+    {{- if $complete }}{{ $mapsComplete = add $mapsComplete 1 }}{{ end }}
+    {{- $orderedMaps = $orderedMaps | append (merge . (dict "sortKey" $sortKey "category" $category "complete" $complete)) }}
+  {{- end }}
+  {{- $orderedMaps = sort $orderedMaps "sortKey" }}
+
+  <div class="nk-subsection">
+    <div class="nk-subsection__head">
+      <h3>Maps</h3>
+      {{- partial "achievement-meter.html" (dict "unlocked" $mapsComplete "total" (len $maps)) }}
+    </div>
+    <div class="nk-map-table-breakout">
+    <div class="nk-map-table-wrap">
+      <table class="nk-map-table">
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2" class="nk-map-table__map">Map</th>
+            {{- range $diffOrder }}
+            {{- $diff := . }}
+            {{- $count := len (where $badgeCombos "difficulty" $diff) }}
+            {{- if gt $count 0 }}
+            <th scope="colgroup" colspan="{{ $count }}" class="nk-badge-{{ lower $diff }}">{{ $diff }}</th>
+            {{- end }}
+            {{- end }}
+          </tr>
+          <tr>
+            {{- range $badgeCombos }}
+            <th scope="col" class="nk-badge-{{ lower .difficulty }}" data-tooltip="{{ .difficulty }} — {{ .label }}">
+              <img src="/images/btd6-medals/{{ .icon }}" alt="{{ .difficulty }} {{ .label }}" class="nk-map-table__icon" loading="lazy">
+            </th>
+            {{- end }}
+          </tr>
+        </thead>
+        <tbody>
+          {{- $lastCategory := "" }}
+          {{- range $orderedMaps }}
+          {{- if ne .category $lastCategory }}
+          {{- $lastCategory = .category }}
+          <tr class="nk-map-table__group">
+            <th colspan="{{ add (len $badgeCombos) 1 }}" scope="colgroup">{{ .category }}</th>
+          </tr>
+          {{- end }}
+          {{- $modes := .modes | default slice }}
+          <tr{{ if .complete }} class="nk-map-table__row--complete"{{ end }}>
+            {{- $mapName := partial "humanize-name.html" .name }}
+            <th scope="row" class="nk-map-table__map">{{ $mapName }}</th>
+            {{- range $badgeCombos }}
+            {{- $col := . }}
+            {{- $isChimps := eq $col.mode "Clicks" }}
+            {{- $matches := where (where $modes "difficulty" $col.difficulty) "mode" $col.mode }}
+            {{- $match := "" }}
+            {{- if gt (len $matches) 0 }}{{ $match = index $matches 0 }}{{ end }}
+            {{- if and $match $match.completed }}
+            {{- if $isChimps }}
+            {{- $noSave := $match.completed_without_loading_save }}
+            <td class="nk-map-table__yes nk-map-table__chimps{{ if $noSave }} nk-map-table__chimps--black{{ else }} nk-map-table__chimps--red{{ end }}" data-tooltip="{{ $mapName }} — Hard CHIMPS — {{ if $noSave }}beaten without loading a save{{ else }}beaten (save loaded mid-run){{ end }}{{ with $match.best_round }}, best round {{ . }}{{ end }}{{ with $match.times_completed }}, completed {{ . }}×{{ end }}">
+              <img src="/images/btd6-medals/{{ if $noSave }}chimps-black.png{{ else }}chimps-red.png{{ end }}" alt="{{ if $noSave }}black{{ else }}red{{ end }} CHIMPS medal" class="nk-map-table__icon">
+            </td>
+            {{- else }}
+            <td class="nk-map-table__yes nk-badge-{{ lower $col.difficulty }}" data-tooltip="{{ $mapName }} — {{ $col.difficulty }} {{ $col.label }} — beaten{{ with $match.best_round }}, best round {{ . }}{{ end }}{{ with $match.times_completed }}, completed {{ . }}×{{ end }}">✓</td>
+            {{- end }}
+            {{- else }}
+            <td class="nk-map-table__no" data-tooltip="{{ $mapName }} — {{ $col.difficulty }} {{ $col.label }} — not beaten">–</td>
+            {{- end }}
+            {{- end }}
+          </tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+  {{- end }}
+
+  {{- if gt (len $insta) 0 }}
+  {{/* Rows are towers, grouped and ordered to match the game's own
+       Primary/Military/Magic/Support monkey-selection menu (not the
+       alphabetical order the towers/insta_monkeys arrays are stored in).
+       Columns are every path-level combo seen anywhere in the inventory
+       (e.g. "302" = path 1 tier 3, path 2 tier 0, path 3 tier 2, 0-indexed).
+       Cells drop the owned quantity in favor of a plain obtained checkbox —
+       the tier-by-tier counts stay in btd6-summary.yaml for anyone who wants
+       them, just not rendered here. */}}
+  {{- $instaCategories := slice
+      (dict "name" "Primary" "monkeys" (slice "DartMonkey" "BoomerangMonkey" "BombShooter" "TackShooter" "IceMonkey" "GlueGunner" "Desperado"))
+      (dict "name" "Military" "monkeys" (slice "SniperMonkey" "MonkeySub" "MonkeyBuccaneer" "MonkeyAce" "HeliPilot" "MortarMonkey" "DartlingGunner"))
+      (dict "name" "Magic" "monkeys" (slice "WizardMonkey" "SuperMonkey" "NinjaMonkey" "Alchemist" "Druid" "Mermonkey"))
+      (dict "name" "Support" "monkeys" (slice "BananaFarm" "SpikeFactory" "MonkeyVillage" "EngineerMonkey" "BeastHandler"))
+  -}}
+  {{- $allTierStrings := slice }}
+  {{- range $insta }}{{ range .tiers }}{{ $allTierStrings = $allTierStrings | append .tier }}{{ end }}{{ end }}
+  {{- $allTierStrings = $allTierStrings | uniq }}
+
+  {{/* Columns are ordered — and colored — by the game's own Insta-Monkey
+       rarity ladder: white/green/blue/purple/gold for tier 1 through 5,
+       keyed off the highest single path level in the combo (e.g. "042" tops
+       out at path-tier 5, so it's gold even though the other two paths are
+       untouched). Within a rarity, combos sort by their own digits so path 1
+       upgrades lead, then path 2, then path 3 — the same left-to-right order
+       the three paths are shown in the game's upgrade screen. */}}
+  {{- $rarityNames := slice "white" "green" "blue" "purple" "gold" }}
+  {{- $tierCols := slice }}
+  {{- range $allTierStrings }}
+    {{- $d0 := slicestr . 0 1 | int }}
+    {{- $d1 := slicestr . 1 2 | int }}
+    {{- $d2 := slicestr . 2 3 | int }}
+    {{- $max := $d0 }}
+    {{- if gt $d1 $max }}{{ $max = $d1 }}{{ end }}
+    {{- if gt $d2 $max }}{{ $max = $d2 }}{{ end }}
+    {{/* Clamp: the API has produced at least one digit of 5 in the wild
+         (SpikeFactory "015") past the normal 0–4 range — treat anything
+         that high as gold rather than indexing off the end of the list. */}}
+    {{- if gt $max (sub (len $rarityNames) 1) }}{{ $max = sub (len $rarityNames) 1 }}{{ end }}
+    {{- $tierCols = $tierCols | append (dict "tier" . "rarity" (index $rarityNames $max) "sortKey" (printf "%d%s" $max .)) }}
+  {{- end }}
+  {{- $tierCols = sort $tierCols "sortKey" }}
+
+  <div class="nk-subsection">
+    <div class="nk-subsection__head">
+      <h3>Insta-Monkeys</h3>
+      <span class="nk-subsection__stat">{{ $btd6.insta_monkeys_total }} in inventory</span>
+    </div>
+    <div class="nk-insta-table-breakout">
+    <div class="nk-insta-table-wrap">
+      <table class="nk-insta-table">
+        <thead>
+          <tr>
+            <th scope="col" class="nk-insta-table__tower">Tower</th>
+            {{- range $tierCols }}
+            <th scope="col" class="nk-rarity-{{ .rarity }}" data-tooltip="{{ .tier }}">{{ slicestr .tier 0 1 }}<br>{{ slicestr .tier 1 2 }}<br>{{ slicestr .tier 2 3 }}</th>
+            {{- end }}
+          </tr>
+        </thead>
+        <tbody>
+          {{- range $instaCategories }}
+          <tr class="nk-insta-table__group">
+            <th colspan="{{ add (len $tierCols) 1 }}" scope="colgroup">{{ .name }}</th>
+          </tr>
+          {{- range .monkeys }}
+          {{- $towerName := . }}
+          {{- $towerLabel := partial "humanize-name.html" $towerName }}
+          {{- $ownedTiers := slice }}
+          {{- with index (where $insta "tower" $towerName) 0 }}
+            {{- range .tiers }}{{ $ownedTiers = $ownedTiers | append .tier }}{{ end }}
+          {{- end }}
+          <tr>
+            <th scope="row">{{ $towerLabel }}</th>
+            {{- range $tierCols }}
+            {{- $owned := in $ownedTiers .tier }}
+            <td class="{{ if $owned }}nk-insta-table__yes nk-rarity-{{ .rarity }}{{ else }}nk-insta-table__no{{ end }}" data-tooltip="{{ $towerLabel }} {{ .tier }}{{ if $owned }} — obtained{{ else }} — not obtained{{ end }}">{{ if $owned }}✓{{ else }}–{{ end }}</td>
+            {{- end }}
+          </tr>
+          {{- end }}
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+  {{- end }}
+</section>
+{{- end -}}
