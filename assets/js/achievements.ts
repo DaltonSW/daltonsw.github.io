@@ -1,7 +1,5 @@
-// Click-to-reveal for hidden/secret achievements (.ach-row--hidden), plus a
-// per-section "Unhide everything" toggle. Rows render blurred and clickable
-// without JS; this only adds the interaction, and un-hides the toggle button
-// itself so there's no dead control if JS fails to load.
+// Click-to-reveal for hidden achievements, plus a per-section "Unhide everything"
+// toggle. Rows render blurred and clickable without JS.
 
 function initAchievementReveal(root: HTMLElement): void {
   const rows = Array.from(root.querySelectorAll<HTMLElement>(".ach-row--hidden"));
@@ -31,9 +29,7 @@ function initAchievementReveal(root: HTMLElement): void {
     toggle.classList.toggle("ach-reveal-toggle--active", active);
     toggle.textContent = active ? "Hide spoilers again" : "Unhide everything";
 
-    // Reveal-all overrides each row's own state visually without changing it
-    // (a row's individual click still toggles independently underneath), so
-    // sync every row's tooltip to what's actually on screen right now.
+    // reveal-all is visual only — sync each row's tooltip to what's on screen
     for (const row of rows) {
       const revealed = active || row.classList.contains("ach-row--revealed");
       const label = revealed ? "Click to hide again" : "Hidden achievement — click to reveal";

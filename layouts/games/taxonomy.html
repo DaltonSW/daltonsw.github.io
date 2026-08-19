@@ -2,7 +2,6 @@
 <h1>{{ .Title }}</h1>
 {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
 
-{{/* Trigger starts hidden, revealed by provenance-modal.ts — no dead controls if JS fails. */}}
 <div class="games-subhead">
   <button type="button" class="games-subhead__provenance-btn" data-provenance-open hidden
     aria-haspopup="dialog" aria-controls="games-provenance-modal">
@@ -11,7 +10,6 @@
 </div>
 {{ partial "games-provenance-modal.html" . }}
 
-{{/* Tab buttons start hidden, revealed by tabs.ts — no dead controls if JS fails. */}}
 <div class="tabs" data-tabs>
   <div class="tabs__list" role="tablist" aria-label="Games view" hidden>
     <button type="button" class="tabs__tab" id="games-tab-overview" role="tab"
@@ -30,7 +28,6 @@
     {{ partial "games-overview.html" . }}
   </div>
 
-  {{/* data-self-sized: the timeline chart sizes/scrolls itself; tabs.ts and main.scss key off this. */}}
   <div class="tabs__panel" id="games-panel-timeline" role="tabpanel" aria-labelledby="games-tab-timeline" data-self-sized>
     {{ partial "games-timeline.html" . }}
   </div>
@@ -42,7 +39,7 @@
       aria-label="Search games" data-games-search>
     <p class="games-search__empty" hidden data-games-search-empty>No games match “<span data-games-search-query></span>”.</p>
   </div>
-  {{/* One record per game per year played (game-year-rows.html expands it); backlog games excluded since games-backlog.html above already lists them. */}}
+  {{/* one record per game per year played; backlog games excluded (games-backlog.html lists them) */}}
 {{- $rows := slice }}
 {{- range (where .Pages "Params.status" "ne" "backlog") }}
   {{- $page := . }}
@@ -60,7 +57,6 @@
   {{- end }}
 {{- end }}
 
-{{/* Newest year first; "Undated" is pinned last instead of sorted with the rest. */}}
 {{- $years := slice }}
 {{- range $rows }}
   {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}
@@ -72,7 +68,6 @@
 {{- range $years }}
 {{- $year := . }}
 {{- $inYear := sort (where $rows "year" "eq" $year) "end" "desc" }}
-{{/* Only the newest year starts expanded — 200+ games open at once is a wall. */}}
 <details class="year-group"{{ if eq $year (index $years 0) }} open{{ end }}>
   <summary class="year-group__heading">
     <span class="year-group__caret" aria-hidden="true"></span>
@@ -92,7 +87,7 @@
     {{- $row := . }}
     {{- $page := .page }}
     {{- $achievements := .achievements }}
-    {{/* Achievement sets/playtime don't combine across platforms — attribute to the row's own platform provider, not all of them. */}}
+    {{/* achievement sets/playtime don't combine across platforms — attribute to the row's own provider */}}
     {{- $source := "" }}
     {{- with $achievements }}
       {{- $providers := .providers | default slice }}
@@ -105,10 +100,8 @@
         {{/* older summaries predate the per-provider breakdown */}}
         {{- $source = $achievements }}
       {{- else if gt (len (split $row.platform ", ")) 1 }}
-        {{/* $row.platform is itself a comma-joined list — the game-level front-matter fallback
-             a playthrough entry gets when it doesn't set its own platform (see
-             playthrough-entries.html). That can't be attributed to one provider, so show the
-             combined total rather than nothing. */}}
+        {{/* $row.platform is itself a comma-joined list (see playthrough-entries.html);
+             can't attribute to one provider, so show the combined total */}}
         {{- $source = $achievements }}
       {{- end }}
     {{- end }}
@@ -137,7 +130,6 @@
         {{- else }}{{ $row.platform }}{{ end }}
       </span>
       <span class="ps-row__played" role="cell">
-        {{/* Dates are clipped to this year by game-year-rows.html. */}}
         {{- $start := "" }}{{ with $row.start }}{{ $start = . | time.Format "Jan 2006" }}{{ end }}
         {{- $end := "" }}{{ with $row.end }}{{ $end = . | time.Format "Jan 2006" }}{{ end }}
         {{- if and $start $end (ne $start $end) }}

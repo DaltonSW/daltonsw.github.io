@@ -22,29 +22,17 @@ function toTime(value: string | number | Date): number {
 
 const daySpan = 1000 * 60 * 60 * 24;
 
-// Buffer around a window for counting a game as "near" it, as a fraction of the window's span.
 const NEARBY_PADDING_RATIO = 0.5;
-
-// Cap on the ratio-based padding so zooming out to years of history doesn't pull in far-off groups.
-const MAX_PADDING_DAYS = 60;
-
-// Initial view width; without a default it'd fit the entire multi-year history at once.
+const MAX_PADDING_DAYS = 60; // cap on the ratio-based padding when zoomed way out
 const DEFAULT_WINDOW_DAYS = 180;
-
-// Trailing delay before re-filtering rows, so a pan gesture never reflows mid-swipe.
-const REGROUP_DELAY_MS = 200;
-
-// Gap beyond which two sessions of the same playthrough no longer bridge into one bar.
-const CONNECTOR_GAP_DAYS = 180;
-
-// These have no save file or arc to bridge, so sessions never chain into one bar.
-const NO_CONNECTOR_CLASSES = ["pt--ongoing", "pt--multiplayer", "pt--software"];
+const REGROUP_DELAY_MS = 200; // trailing delay so a pan gesture never reflows mid-swipe
+const CONNECTOR_GAP_DAYS = 180; // gap beyond which sessions no longer bridge into one bar
+const NO_CONNECTOR_CLASSES = ["pt--endless", "pt--multiplayer", "pt--software"];
 
 function formatMonthYear(value: string | number | Date): string {
   return new Date(value).toLocaleDateString("en-US", { month: "short", year: "numeric" });
 }
 
-// Derives dim bridging bars between sessions client-side, split per group+subgroup at gaps > CONNECTOR_GAP_DAYS.
 function buildConnectors(items: GameItem[], groupNames: Map<string, string>): GameItem[] {
   const bySubgroup = new Map<string, GameItem[]>();
   for (const item of items) {
@@ -112,19 +100,12 @@ function visibleGroupIds(
   return ids;
 }
 
-// Breathing room below the chart; generous since font-metric rounding can otherwise
-// leave a stray page scrollbar with nothing to scroll.
 const HEIGHT_GAP = 32;
-
-// Floor so the chart doesn't collapse to nothing on very short viewports.
 const MIN_ROOT_HEIGHT = 240;
 
-// Bounds the chart to the remaining (measured, not hardcoded) viewport space below
-// it, so vis-timeline scrolls internally instead of growing the page.
 function applyRootHeight(root: HTMLElement): void {
   const top = root.getBoundingClientRect().top;
 
-  // .games-timeline's own margin/border between root and whatever's below it.
   const box = root.closest<HTMLElement>(".games-timeline");
   const boxStyle = box ? getComputedStyle(box) : null;
   const belowBox = boxStyle
@@ -148,8 +129,7 @@ function main(): void {
   const items = readJSON<GameItem[]>("games-timeline-items");
   if (!root || !groups || !items || items.length === 0) return;
 
-  // Deferred a frame so tabs.ts has already revealed the tab strip (it runs later
-  // in document order); otherwise root's measured position lands too high.
+  // deferred a frame so tabs.ts has already revealed the tab strip
   requestAnimationFrame(() => renderTimeline(root, groups, items));
 }
 
@@ -174,11 +154,10 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
   root.replaceChildren();
   applyRootHeight(root);
 
-  // Must be set via options.start/end — a post-construction setWindow() gets overridden by vis-timeline's initial auto-fit.
+  // must be set via options.start/end — a post-construction setWindow() gets overridden by vis-timeline's initial auto-fit
   const initialEnd = domainEnd;
   const initialStart = Math.max(domainStart, initialEnd - daySpan * DEFAULT_WINDOW_DAYS);
 
-  // Clamp panning to the data range, with a two-week buffer so "today" isn't flush against the edge.
   const minDate = new Date(domainStart - daySpan * 14);
   const maxDate = new Date(Date.now() + daySpan * 14);
 
@@ -193,17 +172,11 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     end: initialEnd,
     min: minDate,
     max: maxDate,
-    // Fills root's fixed height; group rows then scroll internally, axis pinned.
     height: "100%",
-    // Defaults to false — without it, overflow content just clips with no scroll.
     verticalScroll: true,
-    // Let vis-timeline handle horizontal trackpad/mousewheel panning natively.
-    // With zoomable: false, deltaX can't be misrouted into zoom.
     horizontalScroll: true,
     locale: "en",
-    // item: "top" is load-bearing: the default "bottom" makes vis-timeline shift its own
-    // scrollTop by the height delta on every row-set change, which is most of the
-    // vertical jumping when panning.
+    // item: "top" avoids vis-timeline shifting its own scrollTop on every row-set change
     orientation: { axis: "top", item: "top" },
     tooltip: {
       followMouse: true,
@@ -213,14 +186,11 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
       item.className?.includes("pt-connector") ? "" : (item.status ?? ""),
   });
 
-  // vis-timeline's own scrollbar is a thin bar flush against the row labels — fade
-  // the top/bottom edges in when there's more to scroll to. .vis-panel.vis-left is
-  // the panel vis-timeline gives a real scrollbar (.vis-center just mirrors it).
+  // fade top/bottom edges in when there's more to scroll; .vis-panel.vis-left is the
+  // panel vis-timeline gives a real scrollbar (.vis-center just mirrors it)
   const scrollPanel = root.querySelector<HTMLElement>(".vis-panel.vis-left");
   const axisPanel = root.querySelector<HTMLElement>(".vis-panel.vis-top");
 
-  // Panning changes which groups are visible, which changes the scrollable height —
-  // refreshFades gets called after that too, not just on scroll.
   let refreshFades = (): void => {};
   if (scrollPanel) {
     const fadeTop = document.createElement("div");
@@ -244,21 +214,15 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     refreshFades = (): void => requestAnimationFrame(updateFades);
   }
 
-  // Group ids currently drawn, in render order — .vis-label and .vis-group children
-  // line up with this, which is how a row's on-screen position gets measured.
   let appliedOrder: unknown[] = [];
   let hoveredGroupId: unknown = null;
   let rowsLocked = false;
 
-  // Label column and chart lane for one row — same index into both, since
-  // vis-timeline renders each in group order.
   const rowsAt = (index: number): HTMLElement[] =>
     [".vis-labelset > .vis-label", ".vis-foreground > .vis-group"]
       .map((selector) => root.querySelectorAll<HTMLElement>(selector)[index])
       .filter((element): element is HTMLElement => Boolean(element));
 
-  // Highlighting the label and the lane together is what makes one game readable
-  // straight across the chart.
   function paintHoveredRow(): void {
     for (const stale of root.querySelectorAll(".games-timeline-row--hover")) {
       stale.classList.remove("games-timeline-row--hover");
@@ -268,8 +232,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     for (const row of rowsAt(index)) row.classList.add("games-timeline-row--hover");
   }
 
-  // setGroups can otherwise leave the chart scrolled to the bottom on first render
-  // (including from vis-timeline's own rangechanged firing right after construction).
+  // avoids setGroups leaving the chart scrolled to the bottom on first render
   let isInitial = true;
   function applyVisibleGroups(range: { start: Date; end: Date }): void {
     if (rowsLocked) return;
@@ -279,8 +242,6 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     });
 
     const nextOrder = groups.map((group) => group.id).filter((id) => ids.has(id));
-    // Panning within a stretch where the same games are active changes nothing —
-    // skip the re-render rather than tearing the chart down and rebuilding it.
     if (
       nextOrder.length === appliedOrder.length &&
       nextOrder.every((id, index) => id === appliedOrder[index])
@@ -292,8 +253,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
       groups.map((group) => ({ ...group, visible: ids.has(group.id) })),
     );
     appliedOrder = nextOrder;
-    // Forces the layout synchronously; vis-timeline would otherwise redraw a frame later.
-    timeline.redraw();
+    timeline.redraw(); // forces layout synchronously instead of a frame later
     paintHoveredRow();
     if (isInitial && scrollPanel) {
       isInitial = false;
@@ -308,8 +268,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
 
   applyVisibleGroups({ start: new Date(initialStart), end: new Date(initialEnd) });
 
-  // Every pan emits rangechanged, so filtering on it directly reflowed rows dozens
-  // of times per swipe. Trailing-only, so the set settles once panning stops.
+  // trailing-only so the set settles once panning stops, not on every rangechanged
   let regroupTimer: number | undefined;
   timeline.on("rangechanged", () => {
     window.clearTimeout(regroupTimer);
@@ -319,9 +278,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     );
   });
 
-  // Fallback for browsers that route horizontal wheel into a zoom path despite
-  // zoomable:false — catches deltaX and pans manually. Only deltaX: deltaY is left
-  // for vis-timeline's native vertical scroll.
+  // fallback for browsers that route horizontal wheel into a zoom path despite zoomable:false
   root.addEventListener(
     "wheel",
     (event: WheelEvent) => {
@@ -329,8 +286,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
       event.preventDefault();
       const { start, end } = timeline.getWindow();
       const span = end.getTime() - start.getTime();
-      // Same divisor vis-timeline uses internally for its own horizontalScroll.
-      const diff = (event.deltaX * span) / 2400;
+      const diff = (event.deltaX * span) / 2400; // same divisor vis-timeline uses internally
       timeline.setWindow(
         new Date(start.getTime() + diff),
         new Date(end.getTime() + diff),
@@ -340,7 +296,6 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     { passive: false },
   );
 
-  // Keyboard panning: left/right arrows move the window, up/down scroll rows.
   root.addEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       event.preventDefault();
@@ -355,9 +310,8 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     }
   });
 
-  // mousemove, not vis-timeline's mouseOver: mouseOver also fires when a regroup slides
-  // a different row under a stationary cursor, which kept re-pointing the hover target
-  // at whatever had just moved underneath. A drag-pan moves no pointer, so this holds.
+  // mousemove, not vis-timeline's mouseOver: mouseOver also fires on regroup, re-pointing
+  // the hover target at whatever slid under a stationary cursor
   root.addEventListener("mousemove", (event: MouseEvent) => {
     const group = timeline.getEventProperties(event).group ?? null;
     if (group !== hoveredGroupId) {
@@ -366,7 +320,6 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     }
   });
 
-  // Anything vis-timeline redraws — panning, zooming, a regroup — can move rows.
   timeline.on("changed", refreshFades);
   root.addEventListener("mouseleave", () => {
     hoveredGroupId = null;
@@ -419,8 +372,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     }
   });
 
-  // Tabbing into the timeline focuses root so keyboard panning works.
-  root.tabIndex = 0;
+  root.tabIndex = 0; // so tabbing in enables keyboard panning
 
   let resizeTimer: number | undefined;
   window.addEventListener("resize", () => {

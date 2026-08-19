@@ -1,12 +1,5 @@
-{{/* One medal glyph for a campaign track.
-
-     Drawn here rather than pulled from Nadeo: their medal art lives on an
-     external host (this site inlines its assets) and is their artwork. A filled
-     disc tinted per tier reads at 14px, which the real coins do not.
-
-     Context: (dict "medal" "gold" "label" true). Medal is one of
-     author/gold/silver/bronze/none, or "" for a track never driven — which
-     renders nothing, since an empty cell is already the signal. */}}
+{{/* One medal glyph, drawn here rather than pulled from Nadeo (external host,
+     their artwork). Context: (dict "medal" "gold"). "" (never driven) renders nothing. */}}
 {{- $medal := .medal | default "" -}}
 {{- if $medal -}}
   {{- $title := cond (eq $medal "none") "No medal" (printf "%s medal" (title $medal)) -}}
@@ -14,8 +7,6 @@
        role="img" aria-label="{{ $title }}" focusable="false">
     <title>{{ $title }}</title>
     {{- if eq $medal "none" }}
-    {{/* Driven but beat no threshold: an empty ring, distinct both from a
-         medal and from the blank of a track never attempted. */}}
     <circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.55"/>
     {{- else }}
     <circle cx="8" cy="8" r="6.5" fill="var(--tm-medal-rim)"/>

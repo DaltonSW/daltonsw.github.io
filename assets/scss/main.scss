@@ -72,11 +72,8 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
-// Games taxonomy page: timeline + stat list want real width, not prose measure.
 .wrap--wide { max-width: none; }
-// flex: 1 0 auto pins .site-footer to the viewport bottom on short pages.
 .site-main { padding-block: 2.5rem 4rem; flex: 1 0 auto; }
-// Taxonomy pages: title sits right under the sticky header, needs less padding.
 .site-main--tight { padding-top: 1.25rem; padding-bottom: 1.5rem; }
 
 /* ── Header: shell prompt ───────────────────────────────────────────────── */
@@ -175,7 +172,6 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
   font-size: 1.15rem;
 }
 
-/* Inset-title panel: title label sits on the top border, TUI-style */
 .tui {
   position: relative;
   border: 1px solid var(--stroke);
@@ -191,7 +187,7 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 }
 
 /* ── Status pills ───────────────────────────────────────────────────────── */
-// Single source of truth for status → color, shared with .entry--* and .vis-item.pt--*.
+// shared with .entry--* and .vis-item.pt--*
 $status-colors: (
   playing:       var(--warn),
   finished:      var(--ok),
@@ -206,7 +202,6 @@ $status-colors: (
   unplayed:      var(--unplayed),
   planned:       var(--accent),
 );
-// Project-only aliases: appear on .pill via project front matter, never .entry/timeline.
 $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 
 .pill {
@@ -226,15 +221,12 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .prose { max-width: $measure; }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose li { margin: 0.25em 0; }
-// wrap--wide (taxonomy pages only): title is the first element, not mid-prose.
 .wrap--wide > h1:first-child { margin-top: 0.2em; }
 .wrap--wide > .prose:first-of-type { margin-bottom: 0.75rem; }
 .wrap--wide > .prose:first-of-type p { margin: 0; }
 .lead { color: var(--dim); font-size: 1.08rem; }
 
 /* ── Custom tooltip (assets/js/tooltip.ts) ───────────────────────────────── */
-// One reused element for every [data-tooltip] trigger site-wide, styled like
-// the vis-timeline tooltip below rather than the unstyleable native `title`.
 .tooltip {
   position: absolute;
   z-index: 1000;
@@ -280,7 +272,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .entry__dates b { color: var(--fg); font-weight: 500; }
 .entry__dates--none { font-style: italic; }
 
-/* Search box above the Game list tab's year groups. */
 .games-search { margin: 0 0 1rem; }
 .games-search__input {
   width: 100%; box-sizing: border-box;
@@ -292,7 +283,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .games-search__input:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .games-search__empty { color: var(--dim); font-family: $font-ui; font-size: 0.9rem; margin: 0.75rem 0 0; }
 
-/* Year groupings on the games list read as a divider, not a title. */
 .year-group { margin-top: 2rem; }
 .year-group:first-of-type { margin-top: 1rem; }
 .year-group__heading {
@@ -301,10 +291,9 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   padding-bottom: 0.4rem; border-bottom: none;
   cursor: pointer; list-style: none; user-select: none;
 }
-.year-group__heading::-webkit-details-marker { display: none; } /* Safari */
+.year-group__heading::-webkit-details-marker { display: none; }
 .year-group__heading:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .year-group__heading:hover { color: var(--accent); }
-/* Dash-fill between year and count: "2026 ────────── 6 games". */
 .year-group__year  { order: 1; }
 .year-group__heading::after {
   content: ""; order: 2; flex: 1 1 auto; align-self: center;
@@ -313,7 +302,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .year-group__count { order: 3; }
 .year-group__heading:hover::after { border-bottom-color: var(--accent); }
 .year-group__caret {
-  /* inline-block: transform is a no-op on inline boxes. */
   display: inline-block; width: 0; height: 0;
   border-left: 0.4em solid currentColor;
   border-top: 0.3em solid transparent; border-bottom: 0.3em solid transparent;
@@ -331,16 +319,14 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .games-backlog .entry-list { margin-top: 0.7rem; }
 
 /* ── Tabs (games taxonomy page: Timeline / Game list / Backlog) ─────────── */
-/* Underline style, matching the site's own .nav treatment, not the toolbar's bracket buttons. */
 .tabs__list { display: flex; gap: 0.2rem; border-bottom: 1px solid var(--stroke); margin-bottom: 1.5rem; }
-// max-height is set inline by tabs.ts; this makes it scroll instead of clip.
+// max-height set inline by tabs.ts
 .tabs__panel {
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
   padding-right: 0.75rem;
 }
-// Self-sized panels (timeline) manage their own scrolling — no gutter doubling up.
 .tabs__panel[data-self-sized] {
   overflow: hidden;
   padding-right: 0;
@@ -365,7 +351,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ps-row[hidden] { display: none; }
 .ps-row {
   display: grid;
-  /* Each row is its own grid, so columns use fixed ch widths to line up across rows. */
   grid-template-columns: 10ch minmax(10ch, 1.6fr) minmax(6ch, 0.8fr) minmax(9ch, 1fr) 9ch minmax(7.5rem, 1fr);
   align-items: baseline; column-gap: 0.9rem;
   padding: 0.5rem 0.8rem;
@@ -376,7 +361,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ps-row--head {
   background: none; border-color: transparent;
   padding-bottom: 0.15rem;
-  /* Same font-size as body rows deliberately — ch-unit columns need it to stay aligned. */
   color: var(--dim); letter-spacing: 0.04em; text-transform: uppercase;
 }
 .ps-status { font-weight: 600; white-space: nowrap; }
@@ -399,7 +383,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ps-row__played--none { font-style: italic; }
 .ps-row__achievements { color: var(--dim); font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 0.5rem; }
 
-/* Retro completion meter — real elements, not literal glyph text. */
 .ps-meter { display: inline-flex; align-items: center; gap: 0.4rem; }
 .ps-meter__track {
   position: relative; display: inline-block;
@@ -423,7 +406,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 @media (prefers-reduced-motion: reduce) { .ps-meter__fill { transition: none; } }
 .ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; }
 
-/* Tablet: still 6 columns, just tighter (640px below switches to stacked). */
 @media (max-width: 768px) {
   .ps-row {
     grid-template-columns: 9ch minmax(8ch, 1.3fr) minmax(5ch, 0.7fr) minmax(7ch, 0.9fr) 8ch minmax(6rem, 0.9fr);
@@ -500,17 +482,11 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 .ach-row__game { color: var(--accent); }
 .ach-row__game:hover { text-decoration: underline; }
 .ach-row__date--unknown { font-style: italic; }
-/* Which RetroAchievements subset an unlock came from. Bracketed rather than
-   coloured, so it reads as a qualifier on the game name beside it rather than
-   as a second link. */
 .ach-row__subset { white-space: nowrap; }
 .ach-row__subset::before { content: "["; color: var(--stroke); }
 .ach-row__subset::after  { content: "]"; color: var(--stroke); }
 
-/* Spoiler blur for secret achievements — click (or the section's "Unhide
-   everything" toggle) reveals. Only the name/description text blurs, inside
-   .ach-row__blur-content; the icon and .ach-row__meta (game, platform, date)
-   stay sharp, so a hidden entry in the big feed is still identifiable. */
+// Spoiler blur for secret achievements — icon/meta stay sharp, only name/desc blur
 .ach-row--hidden { position: relative; cursor: pointer; }
 .ach-row--hidden:hover { border-color: var(--accent); }
 .ach-row--hidden:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -563,9 +539,6 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 
 /* ── Overview tab: library-wide summary cards ────────────────────────────── */
-// Same sidebar/main split as .ach-panel/.ach-sidebar (games-achievements.html)
-// — providers are a per-source breakdown, not a playthrough stat, so they get
-// their own column instead of competing with the stats/breakdowns for grid space.
 .overview-panel { display: flex; align-items: flex-start; gap: 1.5rem; font-family: $font-ui; }
 .overview-sidebar {
   position: sticky; top: 0;
@@ -581,14 +554,8 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
   gap: 1rem;
   align-items: stretch;
 }
-// Two columns, each its own vertical stack: stats/Status/Platforms on the
-// left, recently-played/recent-achievements on the right. `align-items:
-// stretch` above makes both `.overview-stack`s match the row's height
-// (i.e. the taller, left column), which the right one then splits evenly.
 .overview-stack { display: flex; flex-direction: column; gap: 1rem; }
-// The right column's two cards get equal height and scroll their own
-// contents rather than growing past it — the heading stays put, only the
-// list beneath it scrolls.
+// Right column's two cards scroll their own contents instead of growing
 .overview-stack--split > .overview-recent,
 .overview-stack--split > .overview-recent-achievements {
   flex: 1 1 0;
@@ -614,7 +581,14 @@ $status-aliases: (wip: playing, stable: finished, unfinished: dropped);
 }
 .overview-status-row, .overview-recent__item {
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
   font-size: 0.78rem; color: var(--dim); font-variant-numeric: tabular-nums;
+}
+// Zebra striping so the eye can track a row across the gap that
+// justify-content: space-between opens up on wide cards.
+.overview-status-row:nth-child(even), .overview-recent__item:nth-child(even) {
+  background: var(--panel-2);
 }
 .overview-status-row__label { color: var(--dim); }
 .overview-status-row__count { color: var(--fg); }
@@ -656,10 +630,6 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .ach-provider-breakdown li { display: flex; align-items: center; gap: 0.6rem; }
 .ach-provider-breakdown__name { flex: 0 0 6rem; color: var(--fg); }
 
-/* RetroAchievements subsets: same row shape as the provider breakdown, with a
-   rule and a label above it. It needs the label because a subset's meter is
-   measuring a different set from the one at the top of the section, which the
-   provider breakdown — all of it the same game — never is. */
 .ach-subsets {
   list-style: none; margin: 0.7rem 0 0; padding: 0.6rem 0 0;
   border-top: 1px solid var(--stroke);
@@ -680,10 +650,7 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .game-achievements .ach-rows { margin-top: 0.9rem; }
 
 /* ── Trackmania campaigns on a single game's page ───────────────────────── */
-/* One 5x5 grid per season, laid out column-major so tracks read 01–05 down the
-   first column — that's the in-game campaign screen, where each column is a
-   difficulty series. Reflowing it into rows would break the numbering that
-   makes the shape recognisable, so narrow viewports scroll it instead. */
+// column-major so tracks read 01-05 down the column, matching the in-game campaign screen
 .tm-campaigns { margin: 2rem 0 1.5rem; }
 .tm-campaigns__overview {
   display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem 1.1rem;
@@ -698,13 +665,9 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .tm-campaigns__seasons { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 
 .tm-season { min-width: 0; scroll-margin-top: 5rem; }
-/* A campaign with no times: one dimmed line, not a grid of nothing. */
 .tm-season--empty .tm-season__name { font-weight: 400; color: var(--dim); }
 .tm-season--empty .tm-season__head { margin-bottom: 0; }
-/* Consecutive unplayed seasons pull together into a list. The container's
-   1.75rem gap is spacing between *grids*; run eleven one-line rows at it and
-   the page reads as a long stretch of nothing. Negative margin because a flex
-   gap can't vary per pair. */
+// pull consecutive empty seasons together — flex gap can't vary per pair
 .tm-season--empty + .tm-season--empty { margin-top: -1.2rem; }
 .tm-toc__link--empty { color: var(--dim); }
 .tm-season__head {
@@ -717,7 +680,6 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
   font-variant-numeric: tabular-nums;
 }
 
-/* The five difficulty series, sitting directly over the columns they label. */
 .tm-tiers {
   display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.35rem; margin-bottom: 0.35rem;
@@ -737,8 +699,6 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
   gap: 0.25rem;
 }
 
-/* One line per track: number, medal, time. A track is three short facts, and
-   stacking them doubled every grid's height for no added clarity. */
 .tm-cell {
   display: flex; align-items: center; gap: 0.35rem;
   padding: 0.25rem 0.4rem;
@@ -747,28 +707,22 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 }
 .tm-cell__num { font-weight: 700; font-variant-numeric: tabular-nums; }
 .tm-cell__time {
-  /* Pushed right so times line up as a column within each grid column, which
-     is what makes a wall of them scannable. */
   margin-left: auto;
   color: var(--dim); font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
 }
 .tm-cell__time--none { opacity: 0.6; }
 
-/* The medal tints the whole outline rather than one edge. */
 .tm-cell--author { border-color: var(--tm-author); }
 .tm-cell--gold   { border-color: var(--tm-gold); }
 .tm-cell--silver { border-color: var(--tm-silver); }
 .tm-cell--bronze { border-color: var(--tm-bronze); }
 .tm-cell--none   { border-color: var(--dim); }
-/* Never driven: the same greyed-out treatment the game gives a locked track. */
 .tm-cell--undriven {
   background: transparent; border-style: dashed;
   color: var(--dim);
 }
 
-/* Medal glyphs. Two tones per disc so the tiers stay apart at 14px, where a
-   flat circle in silver and one in white are the same shape. */
 .tm-medal { flex: none; }
 .tm-medal--author { --tm-medal-face: var(--tm-author); --tm-medal-rim: color-mix(in srgb, var(--tm-author) 55%, #000); }
 .tm-medal--gold   { --tm-medal-face: var(--tm-gold);   --tm-medal-rim: color-mix(in srgb, var(--tm-gold) 55%, #000); }
@@ -783,8 +737,6 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .tm-tally__item { display: inline-flex; align-items: center; gap: 0.2rem; }
 .tm-tally__count { font-variant-numeric: tabular-nums; color: var(--dim); }
 
-/* Always-visible season index. Sticky rather than collapsible: with 18+ grids
-   stacked, knowing which seasons exist is most of the navigation. */
 .tm-toc {
   position: sticky; top: 5rem;
   font-family: $font-ui; font-size: 0.78rem;
@@ -806,10 +758,7 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .tm-toc__count { color: var(--dim); font-variant-numeric: tabular-nums; flex: none; }
 
 @media (max-width: 900px) {
-  /* The index moves above the grids and lies flat; a sticky rail costs more
-     width here than it returns. It scrolls sideways as a single strip rather
-     than wrapping: 18 seasons wrapped is nine rows of chrome before the reader
-     reaches the first grid. */
+  // index moves above the grids, scrolls as a single strip instead of wrapping
   .tm-campaigns__body { grid-template-columns: minmax(0, 1fr); }
   .tm-toc {
     position: static; order: -1; max-height: none;
@@ -826,10 +775,6 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 }
 
 @media (max-width: 620px) {
-  /* Scroll the grid rather than reflowing it — see the note at the top of this
-     section. min-width keeps the five columns legible instead of crushed.
-     The cell stacks again here: one line needs roughly twice the width, and a
-     40rem scroll is worse than two short lines. */
   .tm-grid, .tm-tiers { min-width: 28rem; }
   .tm-season { overflow-x: auto; padding-bottom: 0.3rem; }
   .tm-cell {
@@ -863,9 +808,8 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 }
 .nk-subsection__head h3 { margin: 0; font-size: 1.2rem; font-family: $font-ui; }
 .nk-subsection__stat { font-family: $font-ui; font-size: 0.92rem; color: var(--dim); }
+.nk-subsection__stat--black { color: var(--tm-gold); }
 
-/* Tower/hero unlocks: a wrapped strip of chips rather than a grid — the count
-   varies per game and a fixed column grid would leave ragged trailing gaps. */
 .nk-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .nk-chip {
   display: inline-flex; align-items: center; gap: 0.35rem;
@@ -878,10 +822,39 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .nk-chip__meta { color: var(--dim); font-variant-numeric: tabular-nums; }
 .nk-chip--primary .nk-chip__meta { color: inherit; opacity: 0.8; }
 
-/* Map completion: one row per map, one column per difficulty/mode badge —
-   same breakout-and-scroll treatment as the insta-monkey table below, since
-   this is wide for the same reason (a lot of columns, each only as wide as
-   it needs to be). Badge columns are grouped and colored by difficulty. */
+// Category tablist: radio inputs + :has(), no JS bundle needed. Inputs are
+// visually hidden but stay in the tab order; their labels are the visible tabs.
+.nk-diff-tabs__radio {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.nk-diff-tabs__list {
+  display: flex; gap: 0.2rem;
+  border-bottom: 1px solid var(--stroke);
+  margin-bottom: 1rem;
+}
+.nk-diff-tabs__tab {
+  cursor: pointer; user-select: none;
+  padding: 0.4rem 1rem;
+  font-family: $font-ui; font-size: 0.9rem;
+  color: var(--dim);
+  border-bottom: 2px solid transparent;
+}
+.nk-diff-tabs__tab:hover { color: var(--fg); background: var(--panel-2); }
+.nk-diff-tabs__radio:checked + .nk-diff-tabs__tab { color: var(--fg); border-bottom-color: var(--accent); }
+.nk-diff-tabs__radio:focus-visible + .nk-diff-tabs__tab { outline: 2px solid var(--accent); outline-offset: -2px; }
+.nk-diff-tabs__panel { display: none; }
+.nk-diff-tabs:has(#nk-cat-beginner:checked)     .nk-diff-tabs__panel[data-panel="beginner"]     { display: block; }
+.nk-diff-tabs:has(#nk-cat-intermediate:checked) .nk-diff-tabs__panel[data-panel="intermediate"] { display: block; }
+.nk-diff-tabs:has(#nk-cat-advanced:checked)     .nk-diff-tabs__panel[data-panel="advanced"]     { display: block; }
+.nk-diff-tabs:has(#nk-cat-expert:checked)       .nk-diff-tabs__panel[data-panel="expert"]       { display: block; }
+.nk-diff-tabs:has(#nk-cat-other:checked)        .nk-diff-tabs__panel[data-panel="other"]        { display: block; }
+
 .nk-map-table-breakout {
   width: 100vw;
   margin-inline: calc(50% - 50vw);
@@ -926,14 +899,30 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
   overflow: hidden; text-overflow: ellipsis; max-width: 15rem;
 }
 tbody .nk-map-table__map { color: var(--fg); }
-.nk-map-table__row--complete .nk-map-table__map { color: var(--ok); }
+
+// box-shadow, not border-image: border-collapse: collapse ignores border-image
+.nk-map-table__map--bronze { box-shadow: inset 0 0 0 3px var(--tm-bronze); }
+.nk-map-table__map--silver { box-shadow: inset 0 0 0 3px var(--tm-silver); }
+.nk-map-table__map--gold   { box-shadow: inset 0 0 0 3px var(--tm-gold); }
+
+// --tm-black is near-invisible on --panel, so the ring pulses black/white instead.
+// Plain box-shadow color animation, not a gradient/mask — those rendered unclipped.
+.nk-map-table__map--black {
+  box-shadow: inset 0 0 0 3px var(--tm-black);
+  animation: nk-medal-pulse 6s ease-in-out infinite;
+}
+@keyframes nk-medal-pulse {
+  0%, 40%, 100% { box-shadow: inset 0 0 0 3px var(--tm-black); }
+  70%           { box-shadow: inset 0 0 0 3px #fff; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nk-map-table__map--black { animation: none; }
+}
 .nk-map-table__yes { font-size: 1.25rem; line-height: 1; }
 .nk-map-table__no { color: var(--dim); }
 .nk-map-table__chimps .nk-map-table__icon { width: 1.5rem; height: 1.5rem; }
 .nk-map-table__chimps--red { opacity: 0.85; }
 
-// Beginner/Intermediate/Advanced/Expert row-group headers — same treatment
-// as the insta-monkey table's tower-category rows.
 .nk-map-table__group th {
   position: sticky; left: 0;
   background: var(--panel-2);
@@ -942,28 +931,16 @@ tbody .nk-map-table__map { color: var(--fg); }
   letter-spacing: 0.03em; text-transform: uppercase;
 }
 
-// Difficulty ladder for map badges, in the game's own Easy/Medium/Hard order
-// and colors (green/yellow/red) — Medium borrows --tm-gold since there's no
-// dedicated yellow token in the palette.
+// Medium borrows --tm-gold — no dedicated yellow token
 .nk-badge-easy   { color: var(--tm-green); }
 .nk-badge-medium { color: var(--tm-gold); }
 .nk-badge-hard   { color: var(--tm-red); }
 
-// Icon-only header cells carry no colored text, so the difficulty ladder
-// shows as an accent border instead.
 .nk-map-table thead tr:last-child th.nk-badge-easy   { box-shadow: inset 0 -3px 0 var(--tm-green); }
 .nk-map-table thead tr:last-child th.nk-badge-medium { box-shadow: inset 0 -3px 0 var(--tm-gold); }
 .nk-map-table thead tr:last-child th.nk-badge-hard    { box-shadow: inset 0 -3px 0 var(--tm-red); }
 
-/* Insta-monkey inventory: one row per tower (grouped into the game's own
-   Primary/Military/Magic/Support categories), one column per path-level combo
-   seen anywhere in the inventory, a checkmark/dash per cell. Wide by nature —
-   49+ columns — so headers stack their three digits instead of running them
-   inline, keeping each column no wider than it needs to be. */
-// Breaks the table out of .wrap's content-width cap so it can use the empty
-// margins on wide viewports instead of side-scrolling a table that would
-// otherwise fit — the table itself still only takes the width it needs
-// (centered), it's just no longer capped at $content-width to get there.
+// Breaks out of .wrap's content-width cap so wide viewports use the empty margins
 .nk-insta-table-breakout {
   width: 100vw;
   margin-inline: calc(50% - 50vw);
@@ -1017,8 +994,6 @@ tbody .nk-map-table__map { color: var(--fg); }
 }
 .nk-insta-table__no { color: var(--dim); }
 
-// Insta-Monkey rarity ladder (tier 1–5, keyed off a combo's highest path
-// level): white/green/blue/purple/gold, same colors the game itself uses.
 .nk-rarity-white { color: var(--dim); }
 .nk-rarity-green { color: var(--ok); }
 .nk-rarity-blue { color: var(--tm-blue); }
@@ -1030,7 +1005,6 @@ tbody .nk-map-table__map { color: var(--fg); }
   margin: 1.5rem 0 2rem;
 }
 .games-timeline__fallback { color: var(--dim); padding: 1rem; margin: 0; }
-// Anchors the fade overlays below (vis-timeline also sets this inline once it mounts).
 .games-timeline__root { position: relative; }
 
 .games-timeline__toolbar { display: flex; justify-content: flex-end; gap: 0.4rem; margin-bottom: 0.5rem; }
@@ -1047,7 +1021,7 @@ tbody .nk-map-table__map { color: var(--fg); }
   background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
-// "More content" cue — vis-timeline's own scrollbar is thin and easy to miss. Toggled by games-timeline.ts.
+// "more content" cue, toggled by games-timeline.ts
 .games-timeline__fade {
   position: absolute;
   left: 0; right: 0;
@@ -1069,7 +1043,7 @@ tbody .nk-map-table__map { color: var(--fg); }
   opacity: 1;
 }
 
-/* Overrides for vis-timeline's own stylesheet, scoped under .games-timeline to win. */
+// overrides for vis-timeline's own stylesheet
 .games-timeline .vis-timeline { font-family: $font-ui; font-size: 0.8rem; border: none; }
 .games-timeline .vis-panel.vis-center,
 .games-timeline .vis-panel.vis-left,
@@ -1077,7 +1051,6 @@ tbody .nk-map-table__map { color: var(--fg); }
 .games-timeline .vis-panel.vis-top,
 .games-timeline .vis-panel.vis-bottom { border-color: var(--stroke); }
 
-// Belt-and-suspenders alongside the manual wheel-scroll clamp in games-timeline.ts.
 .games-timeline .vis-panel.vis-left,
 .games-timeline .vis-panel.vis-right { overscroll-behavior-y: contain; }
 
@@ -1087,19 +1060,15 @@ tbody .nk-map-table__map { color: var(--fg); }
 .games-timeline .vis-labelset .vis-label a { color: var(--fg); }
 .games-timeline .vis-labelset .vis-label a:hover { color: var(--accent); }
 
-// Zebra + hover band: following one game straight across the chart is the whole point
-// of this view, so a row has to read as one continuous band from label to lane. Both
-// selectors must use the same parity or the two columns stripe out of step.
+// both selectors must share parity or the two columns stripe out of step
 .games-timeline .vis-labelset > .vis-label:nth-child(even),
 .games-timeline .vis-foreground > .vis-group:nth-child(even) {
   background: color-mix(in srgb, var(--fg) 5%, var(--bg));
 }
-// Toggled from games-timeline.ts, which resolves the hovered group on both sides.
 .games-timeline .vis-labelset > .vis-label.games-timeline-row--hover,
 .games-timeline .vis-foreground > .vis-group.games-timeline-row--hover {
   background: color-mix(in srgb, var(--accent) 14%, var(--bg));
 }
-// Inset rather than a real border so the label text doesn't shift on hover.
 .games-timeline .vis-labelset > .vis-label.games-timeline-row--hover {
   box-shadow: inset 2px 0 0 var(--accent);
 }
@@ -1115,15 +1084,9 @@ tbody .nk-map-table__map { color: var(--fg); }
 .games-timeline .vis-item {
   border-width: 1px; border-radius: 3px;
   background: var(--dim); border-color: var(--dim);
-  // Force uniform height — vis-timeline otherwise sizes bars from their own content.
-  height: 22px !important;
+  height: 22px !important; // vis-timeline otherwise sizes bars from content
 }
-// Timeline bar colors: 11 statuses collapsed into 3-4 calmer families so the chart
-// reads as active / complete / stopped / structural rather than a hue free-for-all.
-// Active (playing, endless, multiplayer) — desaturated from their pill versions.
-// Complete (finished, mastered) — harmonized green family, different luminance.
-// Stopped (dropped, paused) — kept distinct (abandoned vs on-hold).
-// Structural (software, misc_launch, unplayed) — muted to recede.
+// 11 statuses collapsed into active/complete/stopped/structural families
 $timeline-status-colors: (
   playing:       color-mix(in srgb, var(--warn) 65%, var(--dim)),
   endless:       color-mix(in srgb, var(--endless) 65%, var(--dim)),
@@ -1141,9 +1104,7 @@ $timeline-status-colors: (
 @each $status, $color in $timeline-status-colors {
   .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
 }
-// Connectors span a whole session cluster, not just the gaps between sessions, so
-// they geometrically overlap every real session bar in the same subgroup/lane —
-// without this they'd paint on top (DOM order) and veil the session's own color/text.
+// connectors overlap real session bars — keep them behind so they don't veil color/text
 .games-timeline .vis-item.pt-connector { opacity: 0.35; z-index: 0; }
 .games-timeline .vis-item .vis-item-overflow {
   display: flex;

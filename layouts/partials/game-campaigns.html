@@ -1,21 +1,13 @@
-{{/* Trackmania campaign grids for a single game's term page.
-
-     Reads campaigns.yaml, the raw-free projection written by
-     model.WriteCampaignSummary (tools/gamelog/internal/model/nadeo.go) — the
-     same arrangement as achievement-summary.yaml, and for the same reason: Hugo
-     never reads archive/ or its `raw` payloads at build time.
-
-     Guarded on the resource existing, so this is a no-op for the ~200 games
-     that aren't Trackmania. */}}
+{{/* Trackmania campaign grids for a single game's term page. Reads campaigns.yaml,
+     written by model.WriteCampaignSummary (tools/gamelog/internal/model/nadeo.go);
+     no-op for games without one. */}}
 {{- $campaigns := "" -}}
 {{- with .Resources.Get "campaigns.yaml" -}}
   {{- $campaigns = . | transform.Unmarshal -}}
 {{- end -}}
 
 {{- if and $campaigns (gt (len ($campaigns.seasons | default slice)) 0) -}}
-{{/* Newest season first — that's the one currently being played. The projection
-     stores them chronologically because the archive does; which end to read
-     from is a display decision. */}}
+{{/* newest season first (the projection stores them chronologically) */}}
 {{- $seasons := sort $campaigns.seasons "started" "desc" -}}
 <section class="tm-campaigns" aria-labelledby="tm-campaigns-heading">
   <h2 id="tm-campaigns-heading">Campaigns</h2>
@@ -32,10 +24,7 @@
       {{- range $seasons }}
       {{- $season := . }}
       {{- $anchor := printf "season-%s" (anchorize (.name | default .uid)) }}
-      {{/* A season with no times gets a single line rather than 25 dashes. It
-           stays listed — an untouched campaign is part of the history, and the
-           table of contents still counts it — but a grid of nothing shouldn't
-           compete for space with the seasons that were actually played. */}}
+      {{/* a season with no times gets a single line rather than 25 dashes */}}
       {{- if eq (.driven | default 0) 0 }}
       <section class="tm-season tm-season--empty" id="{{ $anchor }}" aria-labelledby="{{ $anchor }}-heading">
         <div class="tm-season__head">
@@ -51,11 +40,7 @@
           {{- partial "tm-medals.html" (dict "medals" .medals) }}
         </div>
 
-        {{/* The five columns are the game's own difficulty tiers, which is why
-             tracks read 01–05 down the first column rather than across: white
-             is the gentlest set, black the hardest. Only drawn for a standard
-             25-track season, so an off-shape campaign degrades to a plain grid
-             rather than a mislabelled one. */}}
+        {{/* only drawn for a standard 25-track season; off-shape campaigns get a plain grid */}}
         {{- if eq .total 25 }}
         <div class="tm-tiers" aria-hidden="true">
           {{- range slice "white" "green" "blue" "red" "black" }}
@@ -64,20 +49,12 @@
         </div>
         {{- end }}
 
-        {{/* Column-major: the CSS lays a position-ordered list out in columns of
-             five, which reproduces the in-game campaign screen for free. */}}
         <div class="tm-grid">
           {{- range .tracks }}
-          {{/* Nadeo map names carry in-game formatting codes ($i, $a1b, $o…).
-               They're stored verbatim in the archive — stripping is display's
-               job — so strip them here for the tooltip. */}}
+          {{/* strip Nadeo's in-game formatting codes ($i, $a1b, $o…) for the tooltip */}}
           {{- $name := replaceRE `\$([0-9a-fA-F]{3}|[a-zA-Z<>$])` "" (.name | default "") }}
           {{- $time := partial "tm-time.html" (dict "ms" .personal_best_ms) }}
           {{- $medal := .medal | default "" }}
-          {{/* The medal shown is the all-time one, since a track revisited
-               years later really is a better medal now. The season-scoped
-               figures stay in campaigns.yaml either way — display is a
-               separate concern from what's captured. */}}
           {{- $label := printf "Track %s%s%s" .number
                 (cond (ne $name "") (printf ": %s" $name) "")
                 (cond (ne $time "") (printf " — %s" $time) "") }}
@@ -98,8 +75,6 @@
       {{- end }}
     </div>
 
-    {{/* Always visible rather than a jump-to-top link: with 18+ grids stacked,
-         knowing which seasons exist is most of the navigation. */}}
     <nav class="tm-toc" aria-label="Campaign seasons">
       <ol class="tm-toc__list">
         {{- range $seasons }}

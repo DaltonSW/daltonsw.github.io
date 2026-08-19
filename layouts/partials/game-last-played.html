@@ -1,22 +1,8 @@
-{{/* Context: a game's term Page. Returns the most recent known activity date
-     as a string, the max of:
-       - every entry's finished date once it has one, otherwise the started
-         date of whatever's still open (its last session if it has any, else
-         the entry itself) — an ongoing entry's last known touch-point.
-       - achievement-summary.yaml's last_played, when present: Steam's real
-         last-played timestamp, or RetroAchievements' last-unlock date as its
-         only available proxy (RA has no playtime/launch tracking at all) —
-         see writeAchievementSummary in tools/gamelog. This can be more
-         recent than any logged playthrough when a session hasn't been
-         logged yet but achievements/playtime have been refreshed.
-     Falls back to front-matter Params.finished/started only for games with
-     nothing logged and no archived activity at all.
-
-     hugo.toml's [frontmatter] config wires started/finished as .Date/.Lastmod
-     sources, so Hugo hands back a time.Time instead of a string for whichever
-     page actually uses one that way — piping through time.Format normalizes
-     both to a plain "2006-01-02" string so the comparisons below never
-     compare across mismatched types. */}}
+{{/* Context: a game's term Page. Returns the most recent known activity date as a
+     "2006-01-02" string: the max of each entry's last known touch-point and
+     achievement-summary.yaml's last_played (Steam's real timestamp, or RA's
+     last-unlock date as its only proxy — see writeAchievementSummary in
+     tools/gamelog). Falls back to front-matter only when nothing else exists. */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $latest := "" -}}
 {{- range $entries -}}

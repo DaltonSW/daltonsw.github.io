@@ -1,8 +1,5 @@
-{{/* Overview tab: library-wide summary cards (not achievement-scoped) —
-     total games/hours/achievements, status mix, provider mix, platform mix,
-     and recently-played. Default-open tab, first sibling of Timeline/Game
-     list/Backlog/Achievements. Included from layouts/games/taxonomy.html;
-     context is the games taxonomy page. */}}
+{{/* Overview tab: library-wide summary cards — totals, status/provider/platform
+     mix, recently-played. Included from layouts/games/taxonomy.html. */}}
 {{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" -}}
 {{- $providerNames := dict
     "retroachievements" "RetroAchievements"
@@ -30,8 +27,7 @@
     {{- $statusCounts = merge $statusCounts (dict . (add ((index $statusCounts .) | default 0) 1)) -}}
   {{- end -}}
 
-  {{/* Multi-platform games store a comma-joined string, e.g. "PC, Xbox 360" — see the
-       identical split in layouts/games/taxonomy.html's Game list tab. */}}
+  {{/* comma-joined multi-platform string, e.g. "PC, Xbox 360" */}}
   {{- with .Params.platform -}}
     {{- range (split . ", ") -}}
       {{- $platformCounts = merge $platformCounts (dict . (add ((index $platformCounts .) | default 0) 1)) -}}
@@ -48,8 +44,6 @@
         {{- $providerCounts = merge $providerCounts (dict .provider (add (index $providerCounts .provider) 1)) -}}
       {{- end -}}
     {{- end -}}
-    {{/* Same $earned flattening as games-achievements.html, just capped to the
-         newest few instead of the whole grouped-by-year feed. */}}
     {{- range ($summary.earned | default slice) -}}
       {{- if .date -}}
         {{- $recentAchievements = $recentAchievements | append (merge . (dict "page" $page)) -}}
@@ -63,16 +57,11 @@
   {{- end -}}
 {{- end -}}
 
-{{/* Not capped to what fits on screen — each card scrolls internally
-     (see .overview-stack--split in main.scss), so this just bounds how much
-     ends up in the DOM. */}}
+{{/* each card scrolls internally (.overview-stack--split); this just bounds the DOM */}}
 {{- $recent = first 30 (sort $recent "date" "desc") -}}
 {{- $recentAchievements = first 30 (sort $recentAchievements "date" "desc") -}}
 
-{{/* Lifecycle order, not alphabetical — same sequence $status-colors defines in
-     main.scss, so this card reads "active → done → shelved" like the rest of
-     the site's status vocabulary. Any status outside that list (shouldn't
-     happen, but cheap to guard) is appended alphabetically at the end. */}}
+{{/* lifecycle order, matching $status-colors in main.scss; unlisted statuses append at the end */}}
 {{- $statusOrder := slice "playing" "endless" "multiplayer" "paused"
     "finished" "mastered" "software" "misc_launch"
     "dropped" "backlog" "unplayed" "planned" -}}
@@ -84,13 +73,10 @@
   {{- if not (in $statuses $status) -}}{{- $statuses = $statuses | append $status -}}{{- end -}}
 {{- end -}}
 
-{{/* Status/platform rows below link out to /status/<term>/ and /platform/<term>/,
-     same term pages the Game list tab's rows link to (layouts/games/taxonomy.html) —
-     built once here from the taxonomies themselves rather than guessing a URL via
-     urlize, so a row only links when a real term page exists. Platform is keyed by
-     Page.Data.Term (the raw, as-authored value, e.g. "PC") rather than Hugo's
-     lower-cased .Term, since $platformCounts above is keyed the same way. Status
-     values are already lowercase as authored, so .Term matches directly. */}}
+{{/* Status/platform rows link out to /status/<term>/ and /platform/<term>/, built
+     from the taxonomies themselves so a row only links when a real term page
+     exists. Platform is keyed by Page.Data.Term (raw, as-authored) since
+     $platformCounts above is keyed the same way. */}}
 {{- $statusTermPages := dict -}}
 {{- with site.Taxonomies.status -}}
   {{- range .Alphabetical -}}{{- $statusTermPages = merge $statusTermPages (dict .Term .Page) -}}{{- end -}}
@@ -100,7 +86,6 @@
   {{- range .Alphabetical -}}{{- $platformTermPages = merge $platformTermPages (dict .Page.Data.Term .Page) -}}{{- end -}}
 {{- end -}}
 
-{{/* Most-played platforms first — count matters more than alphabetizing here. */}}
 {{- $platforms := slice -}}
 {{- range $platform, $count := $platformCounts -}}{{- $platforms = $platforms | append $platform -}}{{- end -}}
 {{- $platforms = sort $platforms "value" "asc" -}}
@@ -108,14 +93,11 @@
 {{- range $platforms -}}{{- $platformRows = $platformRows | append (dict "platform" . "count" (index $platformCounts .)) -}}{{- end -}}
 {{- $platformRows = sort $platformRows "count" "desc" -}}
 
-{{/* Mirrors games-achievements.html's .ach-panel/.ach-sidebar split: providers
-     (a per-source breakdown, not a playthrough stat) live in a left column,
-     same as the Achievements tab, so the two tabs read as one family. */}}
+{{/* mirrors games-achievements.html's .ach-panel/.ach-sidebar split */}}
 <div class="overview-panel">
   <aside class="overview-sidebar" aria-label="Providers">
     <span class="overview-sidebar__heading">Providers</span>
-    {{/* Username/profile link come from [params.providers.<slug>] in
-         hugo.toml — public handles, blank by default. */}}
+    {{/* username/profile link come from [params.providers.<slug>] in hugo.toml */}}
     {{- $providerParams := site.Params.providers | default dict }}
     {{- range $providerOrder }}
     {{- $provider := . }}
@@ -141,7 +123,6 @@
 
   <div class="overview-main">
     <div class="overview-breakdowns">
-      {{/* Stats, Status, and Platforms stack into one column. */}}
       <div class="overview-stack">
         <div class="overview-stats">
           <div class="ach-stat">
@@ -193,8 +174,6 @@
         </div>
       </div>
 
-      {{/* Recently played and recent achievements split the column's height
-           evenly and each scroll internally past whatever fits. */}}
       <div class="overview-stack overview-stack--split" data-ach-root>
         <div class="overview-recent">
           <span class="overview-status-card__name">Recently played</span>
@@ -222,8 +201,6 @@
             {{- $row := . }}
             {{- $hidden := $row.hidden | default false }}
             <div class="ach-row{{ if $hidden }} ach-row--hidden{{ end }}"{{ if $hidden }} data-hidden tabindex="0" role="button" aria-pressed="false" aria-label="Hidden achievement — click to reveal" title="Hidden achievement — click to reveal"{{ end }}>
-              {{/* Same icon-URL handling as games-achievements.html: RA's icon
-                   is a bare badge id, everything else is already a full URL. */}}
               {{- $iconSrc := "" }}
               {{- if $row.icon }}
                 {{- if eq $row.provider "retroachievements" }}

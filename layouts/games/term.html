@@ -2,14 +2,8 @@
 <article>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
 
-  {{/* Started/Finished go through the same partials games-timeline.html and
-       game-year-rows.html derive from — reading .Params.started/.finished
-       directly here let this header disagree with what the rest of the site
-       shows for the same game. Finished is gated to non-open-ended statuses
-       because game-last-played.html returns "last known activity" (which can
-       be a still-open entry's own started date) for use as a sort key
-       elsewhere; showing that under a "Finished:" label on an endless game
-       would be a fabricated completion date. */}}
+  {{/* Finished is gated to non-open-ended statuses because game-last-played.html
+       returns "last known activity", not a real completion date, for open entries. */}}
   {{- $openEndedStatuses := slice "playing" "endless" "multiplayer" "software" }}
   <div class="meta-row">
     {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
@@ -28,22 +22,12 @@
 
   {{- $entries := partial "playthrough-entries.html" . }}
 
-  {{/* Label each run's platform only when they actually differ — a game played
-       on one platform would otherwise repeat the same word on every row, and
-       labelling just the odd one out leaves the reader to infer what the
-       unlabelled rows were. */}}
+  {{/* label each run's platform only when they actually differ */}}
   {{- $platforms := slice }}
   {{- range $entries }}{{ $platforms = $platforms | append (.platform | default "") }}{{ end }}
   {{- $showPlatform := gt (len (uniq $platforms)) 1 }}
 
-  {{/* Trackmania's real record is per-track campaign times rather than
-       achievements, so it gets its own section from its own projection. No-ops
-       for every game without a campaigns.yaml. */}}
   {{- partial "game-campaigns.html" . }}
-
-  {{/* BTD6's real record is a full save snapshot rather than achievements, so
-       it gets its own section from its own projection too. No-op for every
-       game without a btd6-summary.yaml. */}}
   {{- partial "game-ninjakiwi.html" . }}
 
   {{- with sort $entries "started" "desc" }}
@@ -72,12 +56,8 @@
   </ul>
   {{- end }}
 
-  {{/* subgames: declares a compilation's roster (Shovel Knight: Treasure
-       Trove's four campaigns, a Spyro/Crash trilogy's individual games).
-       Cross-referencing it against which .subgame labels actually show up
-       among $entries surfaces a roster member with no logged playthrough at
-       all, which a free-text label could never do — there'd be nothing to
-       enumerate against. */}}
+  {{/* subgames declares a compilation's roster; cross-referencing against $entries
+       surfaces a roster member with no logged playthrough yet. */}}
   {{- $playedSubgames := slice }}
   {{- range $entries }}{{ with .subgame }}{{ $playedSubgames = $playedSubgames | append . }}{{ end }}{{ end }}
   {{- $unplayedSubgames := slice }}
@@ -94,9 +74,6 @@
   </ul>
   {{- end }}
 
-  {{/* Last on the page: the full earned list runs to hundreds of rows on a
-       well-played game, and burying the playthroughs behind it made the
-       narrative parts of the page the hardest to reach. */}}
   {{- partial "game-achievements.html" . }}
 </article>
 

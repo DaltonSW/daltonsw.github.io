@@ -1,13 +1,10 @@
 // ── Type ────────────────────────────────────────────────────────────────
-// Everything is monospace on purpose: the whole site is styled like a
-// terminal, which is where Dalton's projects live.
 $font-ui:   "MartianMono", ui-monospace, "SFMono-Regular", monospace;
 $font-body: "SauceCode", ui-monospace, "SFMono-Regular", monospace;
 
 $measure: 76ch; // readable line length
 $content-width: 1100px;
 
-// Font faces are declared here so both roles are available everywhere.
 @font-face {
   font-family: "MartianMono";
   src: url("/fonts/MartianMono-Regular.woff2") format("woff2");
@@ -40,7 +37,7 @@ $content-width: 1100px;
 }
 
 // ── Color ───────────────────────────────────────────────────────────────
-// Sourced from data/colors.yml. Dark by default; light via prefers-color-scheme.
+// Dark by default; light via prefers-color-scheme below.
 :root {
   --bg:      #242629;
   --panel:   #2b2d31;
@@ -48,39 +45,28 @@ $content-width: 1100px;
   --fg:      #ececec;
   --dim:     #a6a6a6;
   --stroke:  #4f4f4f;
-  --accent:  #e06ea2;   // pink prompt/accent, from the existing palette (lightened for AA text contrast)
+  --accent:  #e06ea2;
   --accent-2:#f0a0c4;
 
   // semantic status colors (used for game/project state pills)
   --ok:       #7bd88f;  // finished / stable
   --warn:     #c9a0f5;  // playing / wip
   --stop:     #e57373;  // dropped / unfinished
-  --pause:    #7aa6da;  // paused — on hold, distinct from --dim (never started)
-  --mastered: #e8a33d;  // mastered — trophy gold, a step above finished
-  // endless and multiplayer are game-level states with no finish line,
-  // so they must not share a color with --pause (temporarily stopped) or
-  // --warn (an active playthrough). Both are permanent, not in-progress.
-  --endless:  #5ec8c8;  // endless — cyclical, replay-loop design
-  --multi:    #f0a0c4;  // multiplayer — played with other people
-  // Deliberately desaturated: software sits off the completion spectrum
-  // entirely, so it should read as muted next to the saturated game states.
-  --software: #8b94aa;  // software — a tool, not a game (lightened for AA text contrast)
-  --misc-launch: #c2a878;  // misc_launch — a launch that wasn't a real attempt, not a completion state
-  // Deliberately a different hue+desaturation from --dim (backlog): backlog implies
-  // intent to eventually play it, unplayed makes no such claim either way.
-  --unplayed: #a888a0;  // unplayed — touched but never really played, no stated intent to
+  --pause:    #7aa6da;  // paused (on hold)
+  --mastered: #e8a33d;  // trophy gold, a step above finished
+  --endless:  #5ec8c8;  // cyclical, replay-loop design
+  --multi:    #f0a0c4;  // multiplayer
+  --software: #8b94aa;  // a tool, not a game
+  --misc-launch: #c2a878;  // a launch that wasn't a real attempt
+  --unplayed: #a888a0;  // touched but never really played
 
-  // Trackmania medal tiers, fastest first. Author is green in game rather than
-  // a metal, and that's the point of it: it isn't "better gold", it's matching
-  // the person who built the track.
+  // Trackmania medal tiers, fastest first. Author is green in-game, not a metal.
   --tm-author: #4cc38a;
   --tm-gold:   #e0b341;
   --tm-silver: #b9c0c8;
   --tm-bronze: #c2814e;
 
-  // Difficulty series, in the game's own order. These are the five columns of a
-  // campaign screen, not decoration — white is the gentlest set, black the
-  // hardest.
+  // Difficulty series, in the game's own order: white gentlest, black hardest.
   --tm-white: #e8e8e8;
   --tm-green: #4cc38a;
   --tm-blue:  #5b8dd9;
@@ -89,10 +75,8 @@ $content-width: 1100px;
 
   --radius: 8px;
 
-  // timeline item labels sit on top of $status-colors fills, which are light
-  // pastels in dark mode (they're tuned as *text* colors, not fill colors) —
-  // so in-bar text needs to go dark here and flips to light in the
-  // light-mode override below, where those same fills are darkened.
+  // timeline item labels sit on light $status-colors fills in dark mode, so
+  // text goes dark here and flips light below where those fills are darkened.
   --item-label-color: #1a1a1a;
 }
 
@@ -117,15 +101,12 @@ $content-width: 1100px;
     --misc-launch: #8a6d2f;
     --unplayed: #7a5570;
 
-    // Medal discs carry a dark rim on light backgrounds, so the faces only need
-    // enough darkening to stay distinguishable from white panel — except
-    // silver and white, which vanish against it entirely.
     --tm-author: #1f9e63;
     --tm-gold:   #b8860b;
     --tm-silver: #8b939c;
     --tm-bronze: #a2653a;
 
-    --tm-white: #b9bcc2;  // "white" tier has to read as a color on a white panel
+    --tm-white: #b9bcc2;  // has to read as a color on a white panel
     --tm-green: #1f9e63;
     --tm-blue:  #3f6fbd;
     --tm-red:   #c23b3b;

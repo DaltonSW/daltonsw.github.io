@@ -1,10 +1,7 @@
-{{/* Achievements Obtained tab: flattens every unlocked achievement out of
-     every game's achievement-summary.yaml (the `earned` field written by
-     tools/gamelog's writeAchievementSummary) into one feed, newest first and
-     grouped by year — same grouping convention as the Game List tab
-     (layouts/games/taxonomy.html) — plus a small sidebar of aggregate stats.
-     Included from layouts/games/taxonomy.html; context is the games
-     taxonomy page. */}}
+{{/* Achievements Obtained tab: flattens every unlocked achievement out of every
+     game's achievement-summary.yaml (`earned`, written by tools/gamelog's
+     writeAchievementSummary) into one feed, newest first and grouped by year,
+     plus a sidebar of aggregate stats. Included from layouts/games/taxonomy.html. */}}
 {{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" -}}
 {{- $providerNames := dict
     "retroachievements" "RetroAchievements"
@@ -13,9 +10,7 @@
     "psn"               "PSN"
     "ubisoft"           "Ubisoft"
 -}}
-{{/* Only RA and Xbox achievements carry a points value (their "gamerscore") —
-     Steam/PSN/Ubisoft achievements don't, so their cards never grow a points
-     line. See EarnedAchievement.Points in tools/gamelog/internal/model/archive.go. */}}
+{{/* only RA and Xbox achievements carry a points value ("gamerscore") */}}
 {{- $providerPointLabels := dict "retroachievements" "gamerscore" "xbox" "gamerscore" -}}
 
 {{- $earned := slice -}}
@@ -56,7 +51,6 @@
 {{- $earned = sort $earned "date" "desc" -}}
 {{- $hasHidden := gt (len (where $earned "hidden" "eq" true)) 0 -}}
 
-{{/* Distinct years, newest first, "Undated" pinned last — mirrors the Game List tab. */}}
 {{- $years := slice -}}
 {{- range $earned -}}
   {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end -}}
@@ -112,10 +106,7 @@
         {{- $row := . }}
         {{- $hidden := $row.hidden | default false }}
         <div class="ach-row{{ if $hidden }} ach-row--hidden{{ end }}"{{ if $hidden }} data-hidden tabindex="0" role="button" aria-pressed="false" aria-label="Hidden achievement — click to reveal" title="Hidden achievement — click to reveal"{{ end }}>
-          {{/* RA's icon is a bare badge id needing a URL built for it; Steam's
-               (from the game's schema, not the player-achievements endpoint)
-               is already a full CDN URL. PSN has no per-achievement icon
-               captured yet, so it falls through to the placeholder. */}}
+          {{/* RA's icon is a bare badge id; other providers already give a full URL */}}
           {{- $iconSrc := "" }}
           {{- if $row.icon }}
             {{- if eq $row.provider "retroachievements" }}
@@ -130,10 +121,7 @@
           <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
           {{- end }}
           <div class="ach-row__body">
-            {{/* Only the name/description text is spoiler-bearing, so only
-                 that gets blurred — icon and meta (game, platform, date) stay
-                 legible even on a hidden row, so a reader browsing this big
-                 feed can still tell which game a hidden entry belongs to. */}}
+            {{/* only name/description are spoiler-bearing; icon/meta stay legible */}}
             <div class="ach-row__blur-content">
               <div class="ach-row__title-line">
                 <span class="ach-row__name">{{ $row.name }}</span>
@@ -145,9 +133,7 @@
             <div class="ach-row__meta">
               <a class="ach-row__game" href="{{ $row.page.RelPermalink }}">{{ $row.page.Title }}</a>
               {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
-              {{/* A RetroAchievements subset's unlocks belong in this feed —
-                   they were earned — but they arrive under the base game's
-                   title, so the set they came from has to name itself. */}}
+              {{/* RA subset unlocks arrive under the base game's title, so the subset names itself */}}
               {{- with $row.subset }}<span class="ach-row__subset">{{ . }}</span>{{ end }}
               {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
               {{- else }}<span class="ach-row__date ach-row__date--unknown">Date unknown</span>{{ end }}

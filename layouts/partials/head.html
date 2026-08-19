@@ -17,15 +17,11 @@
 
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{/* Styles: SCSS compiled with Dart Sass, fingerprinted for cache-busting */}}
   {{- $opts := dict "transpiler" "dartsass" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) -}}
   {{- $css := resources.Get "scss/main.scss" | css.Sass $opts | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $css.Data.Integrity }}"{{ end }}>
 
-  {{/* The games taxonomy page renders the vis-timeline widget (see
-       games-timeline.html); its vendored stylesheet is loaded here instead of
-       inline in the page body so it's discovered with the rest of the head-level
-       CSS instead of loading late and flashing an unstyled timeline. */}}
+  {{/* loaded in head, not the page body, so the timeline doesn't flash unstyled */}}
   {{- if eq .Kind "taxonomy" -}}
     {{- $visCSS := resources.Get "vendor/vis-timeline-styles/vis-timeline-graph2d.min.css" | fingerprint -}}
     <link rel="stylesheet" href="{{ $visCSS.RelPermalink }}">

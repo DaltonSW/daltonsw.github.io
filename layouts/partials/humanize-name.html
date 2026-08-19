@@ -1,8 +1,5 @@
-{{/* Splits a PascalCase API name ("DartMonkey", "AdorasTemple",
-     "KartsNDarts") into space-separated words for display. Two passes:
-     lower/digit → upper (the common case), then a lone upper letter →
-     upper+lower (catches single-letter words like the "N" in "KartsNDarts",
-     which the first pass alone leaves glued to the following word). Takes
-     the raw name as the partial's context, returns the humanized string. */}}
+{{/* Splits a PascalCase API name into space-separated words. Two passes: the
+     second catches single-letter words the first leaves glued on (e.g. the "N"
+     in "KartsNDarts"). */}}
 {{- $s := replaceRE `([a-z0-9])([A-Z])` `$1 $2` . -}}
 {{- replaceRE `([A-Z])([A-Z][a-z])` `$1 $2` $s -}}

@@ -1,8 +1,5 @@
-{{/* Achievements section for a single game's term page (layouts/games/term.html).
-     Reads the same achievement-summary.yaml resource games-achievements.html
-     flattens across every game, but scoped to just this one — so it reuses
-     that partial's row markup (.ach-row) minus the per-row game link, which
-     would only ever point back at the page it's already on. */}}
+{{/* Achievements section for a single game's term page; reuses games-achievements.html's
+     .ach-row markup, minus the per-row game link. */}}
 {{- $summary := "" -}}
 {{- with .Resources.Get "achievement-summary.yaml" -}}
   {{- $summary = . | transform.Unmarshal -}}
@@ -35,13 +32,8 @@
   </ul>
   {{- end }}
 
-  {{/* RetroAchievements subsets: bonus achievement sets RA publishes under
-       their own game id (see AchievementSummary.Subsets in
-       tools/gamelog/internal/model/archive.go). Their own section rather than
-       another provider-breakdown row, because a subset is not another place
-       the game was played — and it's listed even when there's only one, unlike
-       the provider breakdown above, since a lone subset is the whole point of
-       the section rather than a redundant restatement of the meter. */}}
+  {{/* RA subsets (AchievementSummary.Subsets): shown even when there's only one, unlike
+       the provider breakdown above, since a lone subset is the point of the section. */}}
   {{- with $summary.subsets }}
   <ul class="ach-subsets">
     {{- range . }}
@@ -79,10 +71,7 @@
         <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
         {{- end }}
         <div class="ach-row__body">
-          {{/* Only the name/description text is spoiler-bearing, so only that
-               gets blurred — icon and meta (platform, date) stay legible even
-               on a hidden row, so a reader browsing the big achievement list
-               can still tell which game a hidden entry belongs to. */}}
+          {{/* only name/description are spoiler-bearing; icon/meta stay legible */}}
           <div class="ach-row__blur-content">
             <div class="ach-row__title-line">
               <span class="ach-row__name">{{ $row.name }}</span>

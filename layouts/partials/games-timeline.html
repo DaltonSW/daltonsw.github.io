@@ -1,16 +1,9 @@
-{{/* Aggregate gameplay history timeline. Builds vis-timeline `groups` (one per
-     game) and `items` (one per playthrough entry — a solid range item, or for
-     sessions-bearing entries a low-opacity connector plus one item per
-     session sharing a subgroup so they overlap instead of stacking) from
-     every game's merged entries (see playthrough-entries.html), then renders
-     the container, JSON islands, and the js.Build + vendored-CSS pipeline.
-     Included from layouts/games/taxonomy.html; context is the games
-     taxonomy page. */}}
+{{/* Aggregate gameplay history timeline. Builds vis-timeline `groups` (one per game)
+     and `items` (one per playthrough entry, or per-session items sharing a subgroup)
+     from every game's merged entries (see playthrough-entries.html). Included from
+     layouts/games/taxonomy.html. */}}
 {{- $fmt := "2006-01-02" -}}
-{{/* Statuses that legitimately have no finish line yet and should keep
-     stretching to "today" — everything else (paused, dropped, backlog,
-     finished, mastered) gets capped at its real last-known activity instead,
-     so a paused game's bar stops implying it's still being played. */}}
+{{/* statuses with no finish line that keep stretching to "today" */}}
 {{- $openEndedStatuses := slice "playing" "endless" "multiplayer" "software" -}}
 {{- $groupCandidates := slice -}}
 {{- $items := slice -}}
@@ -22,11 +15,7 @@
   {{- $entries := partial "playthrough-entries.html" $game -}}
 
   {{- if eq (len $entries) 0 -}}
-    {{/* hugo.toml's [frontmatter] config wires started/finished as
-         .Date/.Lastmod sources, so Hugo hands back a time.Time instead of a
-         string for whichever page actually uses one that way — normalize
-         through time.Format so later string comparisons never compare
-         across mismatched types. */}}
+    {{/* normalize possible time.Time (from hugo.toml [frontmatter] wiring) to a string */}}
     {{- with $game.Params.started -}}
       {{- $finished := "" -}}
       {{- with $game.Params.finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
@@ -52,36 +41,19 @@
     {{- if $entry.started -}}
       {{- $sub := printf "pt-%d" $idx -}}
       {{- $baseID := printf "%s--%s" $slug $sub -}}
-      {{/* Fall back to the game's own overall status, not a bare "backlog" —
-           an entry with real dates but a blank status (a data gap, e.g. a
-           split-off entry that never got one filled in) is still a real
-           playthrough and shouldn't read as "never played." Mirrors
-           game-year-rows.html's fallback for the same blank-status case. */}}
+      {{/* fall back to the game's own status; mirrors game-year-rows.html's fallback */}}
       {{- $gameStatus := $game.Params.status -}}
       {{- $status := $entry.status | default $gameStatus -}}
-      {{/* endless, multiplayer, and software exist only in the
-           game-level vocabulary — those entries keep a single playthrough
-           whose status stays "playing" while its sessions accumulate (see
-           tools/gamelog KNOWN-ISSUES). Colouring the bar from the entry would
-           render an endless sandbox — or a paint program — identically to an
-           active playthrough, so the game's own status wins for these three. */}}
+      {{/* endless/multiplayer/software are game-level statuses; the game's own status wins
+           (see tools/gamelog KNOWN-ISSUES) */}}
       {{- if in (slice "endless" "multiplayer" "software") $gameStatus -}}
         {{- $status = $gameStatus -}}
       {{- end -}}
 
-      {{/* A dated entry can still resolve to "backlog" by hand-editing
-           status: backlog directly onto a playthroughs.yaml entry (nothing
-           in the CLI ever produces this — see tools/gamelog/KNOWN-ISSUES).
-           "This is on the backlog from 2 years ago" doesn't make sense on a
-           timeline of when things were actually played, so it's excluded
-           entirely rather than drawn with backlog's dim colour. */}}
+      {{/* a hand-edited status: backlog entry with real dates is excluded rather than drawn dim */}}
       {{- if ne $status "backlog" -}}
       {{- $hasItems = true -}}
-      {{/* Last known activity: an entry's finished date once it has one,
-           otherwise the started date of whatever's still open — its last
-           session if it has any, else the entry itself. Mirrors
-           game-last-played.html so chart rows and the list below stay in
-           the same order. */}}
+      {{/* same last-activity rule as game-last-played.html, so rows stay in the same order */}}
       {{- $activityEnd := $entry.started -}}
       {{- $entryOpen := false -}}
       {{- if gt (len $entry.sessions) 0 -}}
@@ -99,13 +71,7 @@
           {{- $entryOpen = true -}}
         {{- end -}}
       {{- end -}}
-      {{/* True open session: the latest session (or the entry itself, if it
-           has none) genuinely has no finished date yet — not just an entry
-           whose status happens to carry one of the open-ended labels
-           (sandbox/multiplayer titles like Rocket League or Stardew Valley
-           keep "endless"/"multiplayer" permanently per KNOWN-ISSUES even
-           though every logged session is closed). Only a real open session
-           floats a game to the top of the list below. */}}
+      {{/* only a genuinely open session (not just an open-ended status label) floats a game up */}}
       {{- if and $entryOpen (in $openEndedStatuses $status) -}}{{- $groupHasOpen = true -}}{{- end -}}
       {{- if or (eq $groupLast "") (gt $activityEnd $groupLast) -}}
         {{- $groupLast = $activityEnd -}}
@@ -131,7 +97,6 @@
       {{- with $entry.subgame -}}{{- $statusLabel = printf "%s — %s" . $statusLabel -}}{{- end -}}
       {{- $titleParts = $titleParts | append $statusLabel -}}
       {{- with $entry.platform -}}{{- $titleParts = $titleParts | append $entry.platform -}}{{- end -}}
-      {{/* Playtime from achievement-summary.yaml, matched to this entry's platform. */}}
       {{- with $game.Resources.Get "achievement-summary.yaml" -}}
         {{- $summary := . | transform.Unmarshal -}}
         {{- with $summary.providers -}}
@@ -165,11 +130,7 @@
 
       {{- if gt (len $entry.sessions) 0 -}}
         {{- $subgroupStack = merge $subgroupStack (dict $sub false) -}}
-        {{/* No connector item emitted here: games-timeline.ts synthesizes
-             connector bridges itself, splitting wherever the gap between
-             sessions exceeds CONNECTOR_GAP_DAYS, so a years-long dormant
-             stretch inside one long-running entry (Jackbox, Tabletop
-             Simulator) doesn't get painted as one continuous dim bar. */}}
+        {{/* connector bridges are synthesized client-side by games-timeline.ts */}}
         {{- range $sIdx, $session := (sort $entry.sessions "started" "asc") -}}
           {{- $sStart := $session.started | time.Format $fmt -}}
           {{- $sEnd := "" -}}
@@ -177,7 +138,6 @@
           {{- if and (eq $sEnd "") (not (in $openEndedStatuses $status)) -}}
             {{- $sEnd = $sStart -}}
           {{- end -}}
-          {{/* Per-session tooltip: dates + session title (if any) + platform. */}}
           {{- $sTitleParts := slice ($session.started | time.Format "Jan 2, 2006") -}}
           {{- with $session.finished -}}{{- $sTitleParts = $sTitleParts | append ($session.finished | time.Format "Jan 2, 2006") -}}{{- else -}}{{- $sTitleParts = $sTitleParts | append "ongoing" -}}{{- end -}}
           {{- with $session.title -}}{{- $sTitleParts = $sTitleParts | append . -}}{{- end -}}
@@ -204,11 +164,7 @@
   {{- end -}}
 
   {{- if $hasItems -}}
-    {{/* Games with a genuinely open session (see $groupHasOpen above) float
-         above everything else — "1" outranks "0" as the leading character —
-         since a currently-open playthrough belongs at the top regardless of
-         when it was last touched. Within each tier, most-recently-logged-
-         session date orders the rest. */}}
+    {{/* games with a genuinely open session float to the top ("1" outranks "0") */}}
     {{- $tier := "0" -}}
     {{- if $groupHasOpen -}}{{- $tier = "1" -}}{{- end -}}
     {{- $groupCandidates = $groupCandidates | append (dict
@@ -221,8 +177,6 @@
   {{- end -}}
 {{- end -}}
 
-{{/* Row order matches the list below: games with an open session first,
-     then most-recently-played game at the top within each tier. */}}
 {{- $groups := slice -}}
 {{- range sort $groupCandidates "sortKey" "desc" -}}
   {{- $groups = $groups | append (dict "id" .id "content" .content "subgroupStack" .subgroupStack) -}}
@@ -233,7 +187,6 @@
     <button type="button" id="games-timeline-zoom-out" class="games-timeline__toolbar-btn" hidden>−</button>
     <button type="button" id="games-timeline-zoom-in" class="games-timeline__toolbar-btn" hidden>+</button>
     <button type="button" id="games-timeline-today" class="games-timeline__toolbar-btn" hidden>today</button>
-    {{/* Freezes the row set so panning can't add or drop rows — see games-timeline.ts. */}}
     <button type="button" id="games-timeline-lock" class="games-timeline__toolbar-btn" aria-pressed="false" hidden>lock rows</button>
   </div>
   <div id="games-timeline-root" class="games-timeline__root">
@@ -244,7 +197,6 @@
 <script type="application/json" id="games-timeline-groups">{{ $groups | jsonify | safeJS }}</script>
 <script type="application/json" id="games-timeline-items">{{ $items | jsonify | safeJS }}</script>
 
-{{/* Vendor stylesheet is loaded from head.html instead (see there for why). */}}
 {{- $jsOpts := dict
     "targetPath" "js/games-timeline.js"
     "format"     "iife"

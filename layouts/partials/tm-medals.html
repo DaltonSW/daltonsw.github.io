@@ -1,11 +1,5 @@
-{{/* A medal tally — "▲4 ◆15 ◇3" as glyph + count pairs.
-
-     Used in three places (the section overview, each season heading, and the
-     table of contents), which is why it's a partial rather than inline markup
-     repeated three times.
-
-     Context: (dict "medals" $season.medals). Tiers with a zero count are
-     omitted: a row of zeroes says nothing and crowds out the counts that do. */}}
+{{/* A medal tally — glyph + count pairs. Context: (dict "medals" $season.medals).
+     Zero-count tiers are omitted. */}}
 {{- $m := .medals -}}
 {{- with $m }}
 <span class="tm-tally">

@@ -1,7 +1,5 @@
-// Custom tooltip for [data-tooltip] elements — replaces the native `title`
-// attribute tooltip (unstyleable, inconsistent across browsers, slow to
-// appear) with one styled to match the site. A single tooltip element is
-// reused for every trigger rather than one per element.
+// Custom tooltip for [data-tooltip] elements, replacing native `title`. A single
+// element is reused for every trigger.
 
 const SHOW_DELAY = 200;
 const VIEWPORT_MARGIN = 8;
@@ -20,8 +18,6 @@ function ensureTip(): HTMLDivElement {
   return tip;
 }
 
-// Centered above the trigger, flipping below when there isn't room, and
-// clamped horizontally so it never runs off the viewport edge.
 function position(target: HTMLElement, el: HTMLDivElement): void {
   const rect = target.getBoundingClientRect();
   const tipRect = el.getBoundingClientRect();
@@ -64,8 +60,7 @@ function bind(el: HTMLElement): void {
 
 document.querySelectorAll<HTMLElement>("[data-tooltip]").forEach(bind);
 
-// Reposition (rather than hide) on scroll so the tooltip tracks a cell in a
-// scrolling table instead of visibly detaching from it.
+// reposition rather than hide on scroll so it tracks a cell in a scrolling table
 window.addEventListener(
   "scroll",
   () => {

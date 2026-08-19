@@ -2,10 +2,8 @@
 <article>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
 
-  {{/* This page IS one playthrough-entries.html entry (the "written": true
-       branch, matched by permalink) — read started/finished back out of that
-       same shared derivation instead of this page's own .Params, so this
-       header can't disagree with the game's own playthrough list below it. */}}
+  {{/* read started/finished from playthrough-entries.html instead of .Params so this
+       header can't disagree with the game's playthrough list below it */}}
   {{- $game := "" }}
   {{- with .Params.games }}{{ $game = site.GetPage (printf "/games/%s" (index . 0)) }}{{ end }}
   {{- $mine := "" }}

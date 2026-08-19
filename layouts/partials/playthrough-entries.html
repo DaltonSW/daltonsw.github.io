@@ -1,14 +1,6 @@
-{{/* Context: a game's term Page (Kind "term"). Returns a slice of entries merging
-     the game's logged playthroughs with its nested written playthrough pages,
-     normalizing both into a common shape. Extracted from
-     layouts/games/term.html so the aggregate timeline can reuse the same
-     sessions-derived date-range logic without duplicating it.
-
-     Playthroughs live in the bundle's playthroughs.yaml rather than in front
-     matter: the tool rewrites that file whole with a real encoder, which is
-     what retired the line-splice editing of front matter. A game with none
-     simply has no file. Dates come back as strings, which time.Format
-     accepts. */}}
+{{/* Context: a game's term Page. Returns entries merging the game's logged
+     playthroughs (playthroughs.yaml, rewritten whole by the tool) with its nested
+     written playthrough pages, normalized into a common shape. */}}
 {{- $entries := slice -}}
 {{- $logged := slice -}}
 {{- with .Resources.Get "playthroughs.yaml" -}}
@@ -25,9 +17,7 @@
     {{- $started = (index $sorted 0).started }}
     {{- $finished = (index $sorted (sub (len $sorted) 1)).finished }}
   {{- end }}
-  {{/* platform is per-playthrough because the same game gets played on more
-       than one — falling back to the game's own platform keeps every entry
-       written before the field existed meaning what it did. */}}
+  {{/* falls back to the game's own platform for entries written before this field existed */}}
   {{- $platform := .platform | default $.Params.platform }}
   {{- $entries = $entries | append (dict
       "written"  false

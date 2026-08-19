@@ -1,16 +1,9 @@
-// Generic tablist controller for [data-tabs] containers, e.g. the games taxonomy page.
-// Panels render visible and stacked without JS (see taxonomy.html); this is what turns
-// them into real tabs, so the tablist itself starts `hidden` and is revealed here.
+// Generic tablist controller for [data-tabs] containers. Panels render visible and
+// stacked without JS; the tablist starts `hidden` and is revealed here.
 
-// Breathing room below the panel; generous since font-metric rounding can otherwise
-// leave a stray page scrollbar with nothing to scroll.
 const PANEL_GAP = 32;
-
-// Floor so a panel doesn't collapse to nothing on very short viewports.
 const MIN_PANEL_HEIGHT = 320;
 
-// Caps each panel to the viewport space below the tab strip so it scrolls
-// internally instead of stretching the page.
 function applyPanelHeights(list: HTMLElement, panels: Map<string, HTMLElement>): void {
   const top = list.getBoundingClientRect().bottom;
 
@@ -24,8 +17,7 @@ function applyPanelHeights(list: HTMLElement, panels: Map<string, HTMLElement>):
     MIN_PANEL_HEIGHT,
   );
   for (const panel of panels.values()) {
-    // Self-sized panels (the timeline) manage their own height and scrolling.
-    if (panel.hasAttribute("data-self-sized")) continue;
+    if (panel.hasAttribute("data-self-sized")) continue; // manages its own scrolling
     panel.style.maxHeight = `${height}px`;
   }
 }

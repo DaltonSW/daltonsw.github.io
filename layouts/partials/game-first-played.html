@@ -1,14 +1,6 @@
-{{/* Context: a game's term Page. Returns the earliest known "started" date as
-     a string: the true first-played date from playthroughs.yaml/written
-     playthroughs when any exist, falling back to front-matter Params.started
-     only for games with nothing logged yet — same fallback games-timeline.html
-     uses, so sort order matches what the chart shows.
-
-     hugo.toml's [frontmatter] config wires started/finished as .Date/.Lastmod
-     sources, so Hugo hands back a time.Time instead of a string for whichever
-     page actually uses one that way — piping through time.Format normalizes
-     both to a plain "2006-01-02" string so later string comparisons (lt/gt,
-     sort) never compare across mismatched types. */}}
+{{/* Context: a game's term Page. Returns the earliest known "started" date as a
+     "2006-01-02" string, falling back to front-matter Params.started (same
+     fallback games-timeline.html uses) only when nothing's logged yet. */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $earliest := "" -}}
 {{- range $entries -}}

@@ -1,14 +1,6 @@
-{{/* Self-contained backlog section: games not yet played (status: backlog in
-     front matter, no playthroughs.yaml at all) and games with a
-     planned-replay placeholder (a dateless status: planned entry in
-     playthroughs.yaml). Deliberately independent of taxonomy.html's
-     $rows/$years/.ps-table build below — this queries .Pages itself and
-     renders with .entry-list, the same component term.html already uses for
-     a game's own playthrough list, so this section can move to its own page
-     or a sidebar later without disentangling any shared state.
-
-     Included from layouts/games/taxonomy.html; context is the games
-     taxonomy page. */}}
+{{/* Self-contained backlog section (games not yet played, plus planned replays);
+     deliberately independent of taxonomy.html's $rows/$years/.ps-table build below.
+     Included from layouts/games/taxonomy.html. */}}
 {{- $notYetPlayed := sort (where .Pages "Params.status" "eq" "backlog") "Title" -}}
 
 {{- $plannedReplays := slice -}}
