@@ -35,38 +35,107 @@
   </div>
 
   {{- if gt (len $towers) 0 }}
+  {{/* XP is the closest thing to a "how much is this tower actually played"
+       signal the API gives (towers have no locked/unlocked distinction worth
+       showing — nearly the whole roster is unlocked from the start). Bars are
+       scaled relative to the single most-invested tower, and grouped by the
+       game's own Primary/Military/Magic/Support menu order, so the shape of
+       play stands out instead of 25 same-size chips. */}}
+  {{- $towerCategories := slice
+      (dict "name" "Primary" "monkeys" (slice "DartMonkey" "BoomerangMonkey" "BombShooter" "TackShooter" "IceMonkey" "GlueGunner" "Desperado"))
+      (dict "name" "Military" "monkeys" (slice "SniperMonkey" "MonkeySub" "MonkeyBuccaneer" "MonkeyAce" "HeliPilot" "MortarMonkey" "DartlingGunner"))
+      (dict "name" "Magic" "monkeys" (slice "WizardMonkey" "SuperMonkey" "NinjaMonkey" "Alchemist" "Druid" "Mermonkey" "Skywarden"))
+      (dict "name" "Support" "monkeys" (slice "BananaFarm" "SpikeFactory" "MonkeyVillage" "EngineerMonkey" "BeastHandler"))
+  -}}
+  {{- $towersByName := dict }}
+  {{- range $towers }}{{ $towersByName = merge $towersByName (dict .name .) }}{{ end }}
+  {{- $maxTowerXP := 1 }}
+  {{- range $towers }}{{ if gt (.xp | default 0) $maxTowerXP }}{{ $maxTowerXP = .xp }}{{ end }}{{ end }}
+
+  {{/* Safety net: a tower the API adds after this list was written (new
+       content update) still shows up here instead of quietly vanishing. */}}
+  {{- $categorizedTowers := slice }}
+  {{- range $towerCategories }}{{ range .monkeys }}{{ $categorizedTowers = $categorizedTowers | append . }}{{ end }}{{ end }}
+  {{- $uncategorizedTowers := slice }}
+  {{- range $towers }}{{ if not (in $categorizedTowers .name) }}{{ $uncategorizedTowers = $uncategorizedTowers | append .name }}{{ end }}{{ end }}
+  {{- if gt (len $uncategorizedTowers) 0 }}
+  {{- $towerCategories = $towerCategories | append (dict "name" "Other" "monkeys" $uncategorizedTowers) }}
+  {{- end }}
+
   <div class="nk-subsection">
     <div class="nk-subsection__head">
       <h3>Towers</h3>
       {{- partial "achievement-meter.html" (dict "unlocked" $towersUnlocked "total" (len $towers)) }}
     </div>
-    <div class="nk-chips">
-      {{- range $towers }}
-      {{- $label := partial "humanize-name.html" .name }}
-      <span class="nk-chip{{ if not .unlocked }} nk-chip--locked{{ end }}" data-tooltip="{{ $label }}{{ if .unlocked }} — {{ .xp }} XP{{ else }} — locked{{ end }}">
-        {{ $label }}
-        {{- if .unlocked }}<span class="nk-chip__meta">{{ .xp }} XP</span>{{ end }}
-      </span>
+    <div class="nk-tower-groups">
+      {{- range $towerCategories }}
+      {{- $rows := slice }}
+      {{- range .monkeys }}
+        {{- with index $towersByName . }}{{ $rows = $rows | append . }}{{ end }}
+      {{- end }}
+      {{- if gt (len $rows) 0 }}
+      {{- $rows = sort $rows "xp" "desc" }}
+      <div class="nk-tower-group">
+        <h4 class="nk-tower-group__label">{{ .name }}</h4>
+        <ul class="nk-tower-bars">
+          {{- range $rows }}
+          {{- $label := partial "humanize-name.html" .name }}
+          {{- $xp := .xp | default 0 }}
+          {{- $pct := div (float $xp) $maxTowerXP }}
+          <li class="nk-tower-bar{{ if not .unlocked }} nk-tower-bar--locked{{ end }}" data-tooltip="{{ $label }}{{ if .unlocked }} — {{ partial "format-number.html" $xp }} XP{{ else }} — locked{{ end }}">
+            <span class="nk-tower-bar__label">{{ $label }}</span>
+            <span class="nk-tower-bar__track"><span class="nk-tower-bar__fill" style="--pct: {{ $pct }}"></span></span>
+            <span class="nk-tower-bar__value">{{ if .unlocked }}{{ partial "format-number.html" $xp }}{{ else }}—{{ end }}</span>
+          </li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
       {{- end }}
     </div>
   </div>
   {{- end }}
 
   {{- if gt (len $heroes) 0 }}
+  {{/* Heroes only carry unlocked/primary flags — no XP like towers — so the
+       roster is organized by story rather than a number: the primary hero
+       called out first, the rest of the active roster next, and whatever's
+       still locked kept visibly separate as "not yet unlocked". */}}
+  {{- $primaryHero := "" }}
+  {{- range $heroes }}{{ if .primary }}{{ $primaryHero = . }}{{ end }}{{ end }}
+  {{- $activeHeroes := sort (where (where $heroes "unlocked" true) "primary" "ne" true) "name" }}
+  {{- $lockedHeroes := sort (where $heroes "unlocked" false) "name" }}
   <div class="nk-subsection">
     <div class="nk-subsection__head">
       <h3>Heroes</h3>
       {{- partial "achievement-meter.html" (dict "unlocked" $heroesUnlocked "total" (len $heroes)) }}
     </div>
+    {{- with $primaryHero }}
+    {{- $label := partial "humanize-name.html" .name }}
+    <div class="nk-hero-primary" data-tooltip="{{ $label }} — primary hero">
+      <span class="nk-hero-primary__badge">Primary</span>
+      <span class="nk-hero-primary__name">{{ $label }}</span>
+    </div>
+    {{- end }}
+    {{- if gt (len $activeHeroes) 0 }}
     <div class="nk-chips">
-      {{- range $heroes }}
+      {{- range $activeHeroes }}
       {{- $label := partial "humanize-name.html" .name }}
-      <span class="nk-chip{{ if not .unlocked }} nk-chip--locked{{ end }}{{ if .primary }} nk-chip--primary{{ end }}" data-tooltip="{{ $label }}{{ if .primary }} — primary hero{{ end }}{{ if not .unlocked }} — locked{{ end }}">
-        {{ $label }}
-        {{- if .primary }}<span class="nk-chip__meta">primary</span>{{ end }}
-      </span>
+      <span class="nk-chip" data-tooltip="{{ $label }}">{{ $label }}</span>
       {{- end }}
     </div>
+    {{- end }}
+    {{- if gt (len $lockedHeroes) 0 }}
+    <div class="nk-hero-locked">
+      <span class="nk-hero-locked__label">Not yet unlocked</span>
+      <div class="nk-chips">
+        {{- range $lockedHeroes }}
+        {{- $label := partial "humanize-name.html" .name }}
+        <span class="nk-chip nk-chip--locked" data-tooltip="{{ $label }} — locked">{{ $label }}</span>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
   </div>
   {{- end }}
 
@@ -286,9 +355,19 @@
   {{- $instaCategories := slice
       (dict "name" "Primary" "monkeys" (slice "DartMonkey" "BoomerangMonkey" "BombShooter" "TackShooter" "IceMonkey" "GlueGunner" "Desperado"))
       (dict "name" "Military" "monkeys" (slice "SniperMonkey" "MonkeySub" "MonkeyBuccaneer" "MonkeyAce" "HeliPilot" "MortarMonkey" "DartlingGunner"))
-      (dict "name" "Magic" "monkeys" (slice "WizardMonkey" "SuperMonkey" "NinjaMonkey" "Alchemist" "Druid" "Mermonkey"))
+      (dict "name" "Magic" "monkeys" (slice "WizardMonkey" "SuperMonkey" "NinjaMonkey" "Alchemist" "Druid" "Mermonkey" "Skywarden"))
       (dict "name" "Support" "monkeys" (slice "BananaFarm" "SpikeFactory" "MonkeyVillage" "EngineerMonkey" "BeastHandler"))
   -}}
+  {{/* Safety net: a tower the API adds after this list was written (new
+       content update) still shows up here instead of quietly vanishing. */}}
+  {{- $categorizedInstaTowers := slice }}
+  {{- range $instaCategories }}{{ range .monkeys }}{{ $categorizedInstaTowers = $categorizedInstaTowers | append . }}{{ end }}{{ end }}
+  {{- $uncategorizedInstaTowers := slice }}
+  {{- range $insta }}{{ if not (in $categorizedInstaTowers .tower) }}{{ $uncategorizedInstaTowers = $uncategorizedInstaTowers | append .tower }}{{ end }}{{ end }}
+  {{- $uncategorizedInstaTowers = $uncategorizedInstaTowers | uniq }}
+  {{- if gt (len $uncategorizedInstaTowers) 0 }}
+  {{- $instaCategories = $instaCategories | append (dict "name" "Other" "monkeys" $uncategorizedInstaTowers) }}
+  {{- end }}
   {{- $allTierStrings := slice }}
   {{- range $insta }}{{ range .tiers }}{{ $allTierStrings = $allTierStrings | append .tier }}{{ end }}{{ end }}
   {{- $allTierStrings = $allTierStrings | uniq }}

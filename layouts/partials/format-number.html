@@ -1,0 +1,14 @@
+{{/* Comma-groups an integer (e.g. 7016442 -> "7,016,442"). Hugo's lang.NumFmt
+     isn't available in this build, and RE2 (Hugo's regex engine) has no
+     lookaround to do this with a single replaceRE, hence the manual loop. */}}
+{{- $n := . | default 0 -}}
+{{- $s := printf "%d" $n -}}
+{{- $len := len $s -}}
+{{- $out := "" -}}
+{{- range $i := seq 0 (sub $len 1) -}}
+  {{- $ch := slicestr $s $i (add $i 1) -}}
+  {{- $fromRight := sub $len $i -}}
+  {{- if and (gt $i 0) (eq (mod $fromRight 3) 0) -}}{{- $out = printf "%s," $out -}}{{- end -}}
+  {{- $out = printf "%s%s" $out $ch -}}
+{{- end -}}
+{{- $out -}}

@@ -822,6 +822,55 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 .nk-chip__meta { color: var(--dim); font-variant-numeric: tabular-nums; }
 .nk-chip--primary .nk-chip__meta { color: inherit; opacity: 0.8; }
 
+.nk-tower-groups { display: flex; flex-direction: column; gap: 1.1rem; }
+.nk-tower-group__label {
+  margin: 0 0 0.4rem; font-size: 0.85rem; font-family: $font-ui;
+  color: var(--dim); letter-spacing: 0.03em; text-transform: uppercase;
+}
+.nk-tower-bars { display: flex; flex-direction: column; gap: 0.3rem; }
+.nk-tower-bar {
+  display: grid; grid-template-columns: 9rem 1fr 4.5rem; align-items: center;
+  gap: 0.6rem; font-family: $font-ui; font-size: 0.9rem;
+}
+.nk-tower-bar__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nk-tower-bar__track {
+  position: relative; height: 0.6rem;
+  border: 1px solid var(--stroke); border-radius: 2px;
+  background: var(--panel-2); overflow: hidden;
+}
+.nk-tower-bar__fill {
+  display: block; position: absolute; inset: 0;
+  height: 100%; width: 100%;
+  background: var(--accent);
+  transform-origin: left; transform: scaleX(var(--pct, 0));
+}
+.nk-tower-bar__value { text-align: right; color: var(--dim); font-variant-numeric: tabular-nums; }
+.nk-tower-bar--locked { color: var(--dim); }
+.nk-tower-bar--locked .nk-tower-bar__track { border-style: dashed; }
+
+@media (max-width: 560px) {
+  .nk-tower-bar { grid-template-columns: 6rem 1fr 3.5rem; gap: 0.4rem; font-size: 0.82rem; }
+}
+
+.nk-hero-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-family: $font-ui;
+}
+.nk-hero-primary__badge {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--accent); border-radius: var(--radius);
+  color: var(--accent); font-size: 0.75rem; letter-spacing: 0.03em; text-transform: uppercase;
+}
+.nk-hero-primary__name { font-size: 1.1rem; font-weight: 700; }
+
+.nk-hero-locked { margin-top: 0.6rem; }
+.nk-hero-locked__label {
+  display: block; margin-bottom: 0.35rem;
+  font-family: $font-ui; font-size: 0.85rem; color: var(--dim);
+  letter-spacing: 0.03em; text-transform: uppercase;
+}
+
 // Category tablist: radio inputs + :has(), no JS bundle needed. Inputs are
 // visually hidden but stay in the tab order; their labels are the visible tabs.
 .nk-diff-tabs__radio {
