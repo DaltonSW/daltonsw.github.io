@@ -1,21 +1,21 @@
 user_id: UULVSLFDA
-fetched: "2026-08-17"
-xp: 106017770
+fetched: "2026-08-18"
+xp: 106400725
 rank: 147
-trophies: 360
-lifetime_trophies: 1285
+trophies: 410
+lifetime_trophies: 1335
 knowledge_points: 0
 highest_seen_round: 163
 games_played: 1498
-total_odysseys: 25
+total_odysseys: 26
 achievements_count: 100
 primary_hero: Sauda
 towers:
     - name: Alchemist
-      xp: 7016442
+      xp: 7110355
       unlocked: true
     - name: BananaFarm
-      xp: 2682021
+      xp: 2705909
       unlocked: true
     - name: BeastHandler
       xp: 1101308
@@ -27,7 +27,7 @@ towers:
       xp: 1077941
       unlocked: true
     - name: DartMonkey
-      xp: 4138531
+      xp: 4172849
       unlocked: true
     - name: DartlingGunner
       xp: 651746
@@ -45,22 +45,22 @@ towers:
       xp: 3627032
       unlocked: true
     - name: HeliPilot
-      xp: 2010570
+      xp: 2018991
       unlocked: true
     - name: IceMonkey
       xp: 774066
       unlocked: true
     - name: Mermonkey
-      xp: 2710211
+      xp: 2828204
       unlocked: true
     - name: MonkeyAce
       xp: 3641439
       unlocked: true
     - name: MonkeyBuccaneer
-      xp: 9793931
+      xp: 9796998
       unlocked: true
     - name: MonkeySub
-      xp: 4432378
+      xp: 4442458
       unlocked: true
     - name: MonkeyVillage
       xp: 4265104
@@ -69,10 +69,13 @@ towers:
       xp: 124408
       unlocked: true
     - name: NinjaMonkey
-      xp: 2998125
+      xp: 3028104
+      unlocked: true
+    - name: Skywarden
+      xp: 0
       unlocked: true
     - name: SniperMonkey
-      xp: 12299484
+      xp: 12394368
       unlocked: true
     - name: SpikeFactory
       xp: 3276907
@@ -3940,7 +3943,7 @@ maps:
           completed: true
           completed_without_loading_save: true
           best_round: 50
-          times_completed: 5
+          times_completed: 6
         - difficulty: Easy
           mode: SuperChimps
           completed: false
@@ -4859,7 +4862,7 @@ insta_monkeys:
         - tier: "401"
           quantity: 1
     - tower: DartMonkey
-      total: 32
+      total: 33
       tiers:
         - tier: "000"
           quantity: 1
@@ -4904,6 +4907,8 @@ insta_monkeys:
         - tier: "310"
           quantity: 1
         - tier: "320"
+          quantity: 1
+        - tier: "402"
           quantity: 1
     - tower: DartlingGunner
       total: 32
@@ -5532,9 +5537,11 @@ insta_monkeys:
         - tier: "410"
           quantity: 2
     - tower: SuperMonkey
-      total: 22
+      total: 23
       tiers:
         - tier: "011"
+          quantity: 1
+        - tier: "012"
           quantity: 1
         - tier: "013"
           quantity: 1
@@ -5648,4 +5655,4 @@ insta_monkeys:
           quantity: 2
         - tier: "402"
           quantity: 1
-insta_monkeys_total: 610
+insta_monkeys_total: 612
