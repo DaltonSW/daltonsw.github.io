@@ -35,6 +35,7 @@
 <div class="cell-stack">
   <form method="post" action="{{.Action}}" id="create-{{$row}}" class="cell-actions">
     <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="tab" value="{{.Tab}}">
     <input type="hidden" name="candidate" value="{{.I}}">
     <button type="submit" name="use_status" value="1">Create as</button>
     <select name="status" aria-label="Status to create {{.C.Title}} as">
@@ -45,12 +46,16 @@
     <input type="hidden" name="provider" value="{{.C.ProviderKey}}">
     <input type="hidden" name="id" value="{{.C.ID}}">
     <input type="hidden" name="title" value="{{.C.Title}}">
+    <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="tab" value="{{.Tab}}">
   </form>
   {{if and $sub $sub.ParentID}}
   <form method="post" action="{{if $sub.Attachable}}/subset/attach{{else}}/subset/create-base{{end}}" id="subset-{{$row}}" class="form--hidden">
     <input type="hidden" name="id" value="{{.C.ID}}">
     <input type="hidden" name="slug" value="{{$sub.BaseSlug}}">
     <input type="hidden" name="title" value="{{.C.Title}}">
+    <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="tab" value="{{.Tab}}">
   </form>
   {{end}}
   <div class="cell-actions">
@@ -71,28 +76,51 @@
 {{define "content"}}
 <h1>Housekeeping</h1>
 
-<h2>Scan</h2>
-<p class="lead">Games on RetroAchievements/Steam with no entry in <code>content/games</code>. Everything
-   created here is a <code>draft: true</code> guess — bulk data carries no start dates, so create
-   the entry, then run <code>gamelog suggest &lt;slug&gt;</code> for its real range. Steam games are
-   never marked finished: playtime says nothing about completion.</p>
+{{/* Radio-driven CSS tabs (no JS): every section of the page is one panel,
+     switched by the inputs at the top of .tabs so the ~ combinator can reach
+     both the nav labels and the panels below, regardless of the nav div
+     sitting between them in the markup. */}}
+<div class="tabs">
+  <input type="radio" name="housekeeping-tab" id="tab-scan" class="tabs__input"{{if eq .ActiveTab "scan"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-backlog" class="tabs__input"{{if eq .ActiveTab "backlog"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-ignored" class="tabs__input"{{if eq .ActiveTab "ignored"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-unfinished" class="tabs__input"{{if eq .ActiveTab "unfinished"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-stale" class="tabs__input"{{if eq .ActiveTab "stale"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-close" class="tabs__input"{{if eq .ActiveTab "close"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-achievements" class="tabs__input"{{if eq .ActiveTab "achievements"}} checked{{end}}>
+  <div class="tabs__nav">
+    <label for="tab-scan" class="tabs__label">Scan</label>
+    <label for="tab-backlog" class="tabs__label">Backlog</label>
+    <label for="tab-ignored" class="tabs__label">Ignored</label>
+    <label for="tab-unfinished" class="tabs__label">Unfinished</label>
+    <label for="tab-stale" class="tabs__label">Stale</label>
+    <label for="tab-close" class="tabs__label">Close</label>
+    <label for="tab-achievements" class="tabs__label">Achievements</label>
+  </div>
 
-<form method="get" action="/housekeeping" class="row">
-  <label for="min_hours">Min Steam hours</label>
-  <input type="number" step="0.5" id="min_hours" name="min_hours" value="{{.MinHours}}" style="max-width: 8rem;">
-  <input type="hidden" name="stale_days" value="{{.StaleDays}}">
-  <input type="hidden" name="close_days" value="{{.CloseDays}}">
-  {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
-  <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
-  {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
-  <button type="submit">Re-scan</button>
-</form>
+  <section class="tabs__panel tabs__panel--scan">
+  <p class="lead">Games on RetroAchievements/Steam with no entry in <code>content/games</code>. Everything
+     created here is a <code>draft: true</code> guess — bulk data carries no start dates, so create
+     the entry, then run <code>gamelog suggest &lt;slug&gt;</code> for its real range. Steam games are
+     never marked finished: playtime says nothing about completion.</p>
 
-{{with .ScanError}}<div class="flash flash--error">{{.}}</div>{{end}}
-<p class="lead">{{len .ScanCandidates}} unlogged game(s), Steam filtered to {{.MinHours}}h+ ({{.NumLogged}} already logged).</p>
+  <form method="get" action="/housekeeping" class="row">
+    <label for="min_hours">Min Steam hours</label>
+    <input type="number" step="0.5" id="min_hours" name="min_hours" value="{{.MinHours}}" style="max-width: 8rem;">
+    <input type="hidden" name="stale_days" value="{{.StaleDays}}">
+    <input type="hidden" name="close_days" value="{{.CloseDays}}">
+    {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+    <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
+    {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
+    <input type="hidden" name="tab" value="scan">
+    <button type="submit">Re-scan</button>
+  </form>
 
-{{if .ScanCandidates}}
-<div class="table-wrap table-wrap--scroll">
+  {{with .ScanError}}<div class="flash flash--error">{{.}}</div>{{end}}
+  <p class="lead">{{len .ScanCandidates}} unlogged game(s), Steam filtered to {{.MinHours}}h+ ({{.NumLogged}} already logged).</p>
+
+  {{if .ScanCandidates}}
+<div class="table-wrap">
 <table>
   <thead><tr><th>Game</th><th>Provider</th><th>Evidence</th><th>Would create</th><th></th></tr></thead>
   <tbody>
@@ -126,20 +154,20 @@
 {{else}}
 <p class="empty">Nothing unlogged above that threshold.</p>
 {{end}}
+  </section>
 
-<h2>Backlog</h2>
-<p class="lead">The other side of the same threshold: games you own on Steam but have played for
-   less than {{.MinHours}}h and never logged. Creating one writes a <code>status: backlog</code>
-   draft with no playthroughs.yaml, and captures its achievement list (0 of N — the denominator is
-   the point) at one Steam request apiece, so work through these in batches. Adjust the threshold
-   in the Scan section above — the two lists split the library at the same line, so nothing appears
-   in both.</p>
+  <section class="tabs__panel tabs__panel--backlog">
+  <p class="lead">The other side of the same threshold: games you own on Steam but have played for
+     less than {{.MinHours}}h and never logged. Creating one writes a <code>status: backlog</code>
+     draft with no playthroughs.yaml, and captures its achievement list (0 of N — the denominator is
+     the point) at one Steam request apiece, so work through these in batches. Adjust the threshold
+     in the Scan tab — the two lists split the library at the same line, so nothing appears in both.</p>
 
-{{with .BacklogError}}<div class="flash flash--error">{{.}}</div>{{end}}
-<p class="lead">{{len .BacklogCandidates}} owned Steam game(s) under {{.MinHours}}h with no entry.</p>
+  {{with .BacklogError}}<div class="flash flash--error">{{.}}</div>{{end}}
+  <p class="lead">{{len .BacklogCandidates}} owned Steam game(s) under {{.MinHours}}h with no entry.</p>
 
-{{if .BacklogCandidates}}
-<div class="table-wrap table-wrap--scroll">
+  {{if .BacklogCandidates}}
+<div class="table-wrap">
 <table>
   <thead><tr><th>Game</th><th>Playtime</th><th>Last active</th><th></th></tr></thead>
   <tbody>
@@ -154,16 +182,17 @@
   </tbody>
 </table>
 </div>
-{{else}}
-<p class="empty">Nothing owned-but-unplayed below that threshold.</p>
-{{end}}
+  {{else}}
+  <p class="empty">Nothing owned-but-unplayed below that threshold.</p>
+  {{end}}
+  </section>
 
-<h2>Ignored</h2>
-<p class="lead">Games you've decided never to log. They're skipped by both lists above and nothing
-   else — no captured history is touched, and removing one here puts it straight back in the next
-   scan.</p>
+  <section class="tabs__panel tabs__panel--ignored">
+  <p class="lead">Games you've decided never to log. They're skipped by both lists above and nothing
+     else — no captured history is touched, and removing one here puts it straight back in the next
+     scan.</p>
 
-{{if .Ignored}}
+  {{if .Ignored}}
 <div class="table-wrap">
 <table>
   <thead><tr><th>Game</th><th>Provider</th><th>Ignored</th><th></th></tr></thead>
@@ -178,6 +207,7 @@
         <input type="hidden" name="provider" value="{{.Provider}}">
         <input type="hidden" name="id" value="{{.ID}}">
         <input type="hidden" name="title" value="{{.Title}}">
+        <input type="hidden" name="tab" value="ignored">
         <button type="submit">Un-ignore</button>
       </form>
     </td>
@@ -189,11 +219,12 @@
 {{else}}
 <p class="empty">Nothing ignored yet.</p>
 {{end}}
+  </section>
 
-<h2>Unfinished</h2>
-<p class="lead">Logged games with achievements left to earn, closest to done first. Read from the
-   archive on disk — no API calls, nothing written. One row per provider, since each has its own
-   denominator — and a RetroAchievements subset is another one, so it gets a row of its own too.</p>
+  <section class="tabs__panel tabs__panel--unfinished">
+  <p class="lead">Logged games with achievements left to earn, closest to done first. Read from the
+     archive on disk — no API calls, nothing written. One row per provider, since each has its own
+     denominator — and a RetroAchievements subset is another one, so it gets a row of its own too.</p>
 <form method="get" action="/housekeeping" class="row">
   <label for="unfinished_pct">Min completion %</label>
   <input type="number" step="5" id="unfinished_pct" name="unfinished_pct" value="{{.UnfinishedPct}}" style="max-width: 8rem;">
@@ -202,6 +233,7 @@
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <input type="hidden" name="tab" value="unfinished">
   <button type="submit">Refresh</button>
 </form>
 <p class="lead">{{len .Unfinished}} game/provider pair(s) at {{.UnfinishedPct}}%+ with achievements outstanding.</p>
@@ -228,8 +260,9 @@
 {{else}}
 <p class="empty">Nothing outstanding above that threshold.</p>
 {{end}}
+  </section>
 
-<h2>Stale</h2>
+  <section class="tabs__panel tabs__panel--stale">
 <form method="get" action="/housekeeping" class="row">
   <label for="stale_days">Quiet threshold (days)</label>
   <input type="number" id="stale_days" name="stale_days" value="{{.StaleDays}}" style="max-width: 8rem;">
@@ -238,6 +271,7 @@
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
   <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
   {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
+  <input type="hidden" name="tab" value="stale">
   <button type="submit">Refresh</button>
 </form>
 <p class="lead">{{len .StaleGames}} game(s) gone quiet for {{.StaleDays}}+ days.</p>
@@ -247,6 +281,7 @@
   <pre>{{.Card}}</pre>
   <form method="post" action="/stale/{{.C.Game.Slug}}" class="btn-row">
     <input type="hidden" name="stale_days" value="{{$.StaleDays}}">
+    <input type="hidden" name="tab" value="stale">
     <button name="action" value="accept" type="submit" class="btn--primary">Correct — mark {{.C.SuggestedStatus}}</button>
     {{range .OtherStatuses}}
     <button name="action" value="mark_{{.}}" type="submit">Mark {{.}} instead</button>
@@ -257,8 +292,9 @@
 {{else}}
 <p class="empty">Nothing has gone quiet.</p>
 {{end}}
+  </section>
 
-<h2>Close</h2>
+  <section class="tabs__panel tabs__panel--close">
 <form method="get" action="/housekeeping" class="row">
   <label for="close_days">Quiet threshold (days)</label>
   <input type="number" id="close_days" name="close_days" value="{{.CloseDays}}" style="max-width: 8rem;">
@@ -267,6 +303,7 @@
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
   <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
   {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
+  <input type="hidden" name="tab" value="close">
   <button type="submit">Refresh</button>
 </form>
 <p class="lead">{{len .CloseEntries}} playthrough(s) left open for {{.CloseDays}}+ days.</p>
@@ -275,6 +312,7 @@
 <form method="post" action="/close">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+  <input type="hidden" name="tab" value="close">
   <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>Game</th><th>Close on</th><th>Source</th><th>Quiet for</th></tr></thead>
@@ -296,8 +334,9 @@
 {{else}}
 <p class="empty">Nothing left open.</p>
 {{end}}
+  </section>
 
-<h2>Achievements</h2>
+  <section class="tabs__panel tabs__panel--achievements">
 <p class="lead">Per-game refresh lives on each game's own page. These two act across the whole library.</p>
 
 <div class="tui">
@@ -315,7 +354,10 @@
   <p>Rebuilds every game's achievement-summary.yaml from what's already archived on disk. No API
      calls — safe and fast to re-run any time.</p>
   <form method="post" action="/project">
+    <input type="hidden" name="tab" value="achievements">
     <button type="submit">Regenerate</button>
   </form>
+</div>
+  </section>
 </div>
 {{end}}

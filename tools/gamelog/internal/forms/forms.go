@@ -144,8 +144,11 @@ var StaleQuickStatuses = []string{"finished", "mastered", "dropped", "paused"}
 //
 // "software" is in the set because Steam sells tools alongside games and
 // reports playtime for them identically — the scan can't tell them apart, and
-// the person reading the row can.
-var ScanQuickStatuses = []string{"playing", "finished", "mastered", "dropped", "software"}
+// the person reading the row can. "endless" and "multiplayer" are here for
+// the same reason: a scan candidate's evidence is just playtime/achievements,
+// which looks identical whether the game has a finish line or not — that
+// call is the person reading the row's to make.
+var ScanQuickStatuses = []string{"playing", "finished", "mastered", "dropped", "software", "endless", "multiplayer"}
 
 // BacklogQuickStatuses is the backlog half's set. Deliberately smaller:
 // these are games under the playtime threshold, so any status claiming real

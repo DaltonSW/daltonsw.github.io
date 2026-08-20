@@ -23,10 +23,10 @@ func TestHousekeepingRenders(t *testing.T) {
 		MinHours: 5,
 		ScanCandidates: scanRows([]commands.Candidate{
 			{Provider: "RetroAchievements", Title: "Banjo", ID: "10210", Status: "finished", Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-01-02", AchievementsA: 12, AchievementsB: 189},
-		}, forms.ScanQuickStatuses, "/scan", 5),
+		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
 		BacklogCandidates: scanRows([]commands.Candidate{
 			{Provider: "Steam", Title: "Tunic", ID: "553420", Status: "backlog"},
-		}, forms.BacklogQuickStatuses, "/backlog", 5),
+		}, forms.BacklogQuickStatuses, "/backlog", 5, "backlog"),
 		Ignored: []model.IgnoredGame{{Provider: "steam", ID: "440", Title: "X", IgnoredOn: "2026-08-15"}},
 	}
 	var buf bytes.Buffer
@@ -102,7 +102,7 @@ func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
 				Provider: "RetroAchievements", Title: "Mystery [Subset - Huh]", ID: "77", Status: "playing",
 				Subset: &commands.SubsetInfo{Name: "Huh", BaseTitle: "Mystery", Err: "no parent game"},
 			},
-		}, forms.ScanQuickStatuses, "/scan", 5),
+		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
 	}
 	var buf bytes.Buffer
 	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {

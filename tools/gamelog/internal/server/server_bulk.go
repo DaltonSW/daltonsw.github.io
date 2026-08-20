@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"net/url"
+	"slices"
 	"strconv"
 
 	"go.dalton.dog/gamelog/internal/commands"
@@ -11,6 +13,25 @@ import (
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
 )
+
+// housekeepingReturnTo rebuilds the /housekeeping URL from whichever filter
+// fields — and which tab — the posting form carried as hidden inputs, so a
+// housekeeping action's redirect lands back on the same view the user was
+// looking at rather than the page's bare defaults (see forms in
+// housekeeping.html: every POST form there carries these alongside its own
+// fields for exactly this reason).
+func housekeepingReturnTo(r *http.Request) string {
+	v := url.Values{}
+	for _, key := range []string{"min_hours", "stale_days", "close_days", "close_all", "unfinished_pct", "unfinished_all", "tab"} {
+		if val := r.FormValue(key); val != "" {
+			v.Set(key, val)
+		}
+	}
+	if len(v) == 0 {
+		return "/housekeeping"
+	}
+	return "/housekeeping?" + v.Encode()
+}
 
 // ── Scan (lives on the Housekeeping page — see below) ─────────────────────
 
@@ -80,10 +101,11 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		redirectErr(w, r, "/housekeeping", err)
 		return
 	}
+	backTo := housekeepingReturnTo(r)
 	minHours := atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours)
 	candidates, _, err := s.scanCandidates(minHours, mode)
 	if err != nil {
-		redirectErr(w, r, "/housekeeping", err)
+		redirectErr(w, r, backTo, err)
 		return
 	}
 	var chosen []int
@@ -93,7 +115,7 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		}
 	}
 	if len(chosen) == 0 {
-		redirectOK(w, r, "/housekeeping", "Nothing created.")
+		redirectOK(w, r, backTo, "Nothing created.")
 		return
 	}
 
@@ -107,7 +129,7 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		// Validated because it goes straight into front matter, and a
 		// submitted form value is not a trusted one.
 		if !forms.IsGameStatus(status) {
-			redirectErr(w, r, "/housekeeping", fmt.Errorf("unknown status %q", status))
+			redirectErr(w, r, backTo, fmt.Errorf("unknown status %q", status))
 			return
 		}
 	}
@@ -119,7 +141,7 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 	} else if mode == commands.ScanModeBacklog {
 		kind = "created as backlog"
 	}
-	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
+	redirectOK(w, r, backTo, fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
 }
 
 // handleSubsetAttach links a RetroAchievements subset to the game it belongs
@@ -135,9 +157,10 @@ func (s *server) handleSubsetAttach(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, "/housekeeping", err)
 		return
 	}
+	backTo := housekeepingReturnTo(r)
 	subsetID, slug := r.FormValue("id"), r.FormValue("slug")
 	if subsetID == "" || slug == "" {
-		redirectErr(w, r, "/housekeeping", fmt.Errorf("attaching a subset needs an id and a game"))
+		redirectErr(w, r, backTo, fmt.Errorf("attaching a subset needs an id and a game"))
 		return
 	}
 	creds := commands.LoadCredentials()
@@ -145,11 +168,11 @@ func (s *server) handleSubsetAttach(w http.ResponseWriter, r *http.Request) {
 	name := model.FirstNonEmpty(title, r.FormValue("title"), subsetID)
 	switch {
 	case commands.IsAlreadyAttached(err):
-		redirectOK(w, r, "/housekeeping", fmt.Sprintf("%s was already attached to %s.", name, slug))
+		redirectOK(w, r, backTo, fmt.Sprintf("%s was already attached to %s.", name, slug))
 	case err != nil:
-		redirectErr(w, r, "/housekeeping", err)
+		redirectErr(w, r, backTo, err)
 	default:
-		redirectOK(w, r, "/housekeeping", fmt.Sprintf("%s attached to %s — its achievements now show on that game's page.", name, slug))
+		redirectOK(w, r, backTo, fmt.Sprintf("%s attached to %s — its achievements now show on that game's page.", name, slug))
 	}
 }
 
@@ -161,18 +184,19 @@ func (s *server) handleSubsetCreateBase(w http.ResponseWriter, r *http.Request) 
 		redirectErr(w, r, "/housekeeping", err)
 		return
 	}
+	backTo := housekeepingReturnTo(r)
 	subsetID := r.FormValue("id")
 	if subsetID == "" {
-		redirectErr(w, r, "/housekeeping", fmt.Errorf("creating a base game needs the subset's id"))
+		redirectErr(w, r, backTo, fmt.Errorf("creating a base game needs the subset's id"))
 		return
 	}
 	creds := commands.LoadCredentials()
 	slug, baseTitle, err := commands.CreateBaseAndAttach(r.Context(), s.gamesDir, subsetID, commands.RAClientFor(creds), creds)
 	if err != nil {
-		redirectErr(w, r, "/housekeeping", err)
+		redirectErr(w, r, backTo, err)
 		return
 	}
-	redirectOK(w, r, "/housekeeping", fmt.Sprintf("Created %s as a draft (%s) with its subset attached. Review it via the games list's \"drafts only\" filter.", baseTitle, slug))
+	redirectOK(w, r, backTo, fmt.Sprintf("Created %s as a draft (%s) with its subset attached. Review it via the games list's \"drafts only\" filter.", baseTitle, slug))
 }
 
 // handleIgnore takes a scan candidate off the list for good. Unlike the
@@ -184,6 +208,7 @@ func (s *server) handleIgnore(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, "/housekeeping", err)
 		return
 	}
+	backTo := housekeepingReturnTo(r)
 	g := model.IgnoredGame{
 		Provider: r.FormValue("provider"),
 		ID:       r.FormValue("id"),
@@ -191,20 +216,20 @@ func (s *server) handleIgnore(w http.ResponseWriter, r *http.Request) {
 		Reason:   r.FormValue("reason"),
 	}
 	if g.Provider == "" || g.ID == "" {
-		redirectErr(w, r, "/housekeeping", fmt.Errorf("ignore needs a provider and an id"))
+		redirectErr(w, r, backTo, fmt.Errorf("ignore needs a provider and an id"))
 		return
 	}
 	added, err := model.AddIgnored(model.FindArchiveDir(s.gamesDir), g)
 	if err != nil {
-		redirectErr(w, r, "/housekeeping", err)
+		redirectErr(w, r, backTo, err)
 		return
 	}
 	name := model.FirstNonEmpty(g.Title, g.Provider+" "+g.ID)
 	if !added {
-		redirectOK(w, r, "/housekeeping", name+" was already ignored.")
+		redirectOK(w, r, backTo, name+" was already ignored.")
 		return
 	}
-	redirectOK(w, r, "/housekeeping", name+" ignored — it won't show up in scans again.")
+	redirectOK(w, r, backTo, name+" ignored — it won't show up in scans again.")
 }
 
 // handleUnignore is the undo. Nothing was destroyed by ignoring, so this just
@@ -214,17 +239,18 @@ func (s *server) handleUnignore(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, "/housekeeping", err)
 		return
 	}
+	backTo := housekeepingReturnTo(r)
 	provider, id := r.FormValue("provider"), r.FormValue("id")
 	removed, err := model.RemoveIgnored(model.FindArchiveDir(s.gamesDir), provider, id)
 	if err != nil {
-		redirectErr(w, r, "/housekeeping", err)
+		redirectErr(w, r, backTo, err)
 		return
 	}
 	if !removed {
-		redirectOK(w, r, "/housekeeping", "Nothing to un-ignore.")
+		redirectOK(w, r, backTo, "Nothing to un-ignore.")
 		return
 	}
-	redirectOK(w, r, "/housekeeping", model.FirstNonEmpty(r.FormValue("title"), id)+" is back in the scan list.")
+	redirectOK(w, r, backTo, model.FirstNonEmpty(r.FormValue("title"), id)+" is back in the scan list.")
 }
 
 func atoiFloatOr(s string, def float64) float64 {
@@ -261,16 +287,18 @@ type scanRow struct {
 	C             commands.Candidate
 	OtherStatuses []string
 
-	// Action and MinHours are carried per row rather than read off the page
-	// data, because the button block is a nested template: inside a
-	// {{define}} the enclosing page's dot isn't reachable.
+	// Action, MinHours, and Tab are carried per row rather than read off the
+	// page data, because the button block is a nested template: inside a
+	// {{define}} the enclosing page's dot isn't reachable. Tab is which panel
+	// this row's form should redirect back into (see housekeepingReturnTo).
 	Action   string
 	MinHours float64
+	Tab      string
 }
 
 // scanRows pairs each candidate with the alternatives to its guessed status.
 // quick is the mode's plausible set — see forms.ScanQuickStatuses.
-func scanRows(candidates []commands.Candidate, quick []string, action string, minHours float64) []scanRow {
+func scanRows(candidates []commands.Candidate, quick []string, action string, minHours float64, tab string) []scanRow {
 	rows := make([]scanRow, len(candidates))
 	for i, c := range candidates {
 		var others []string
@@ -279,7 +307,7 @@ func scanRows(candidates []commands.Candidate, quick []string, action string, mi
 				others = append(others, st)
 			}
 		}
-		rows[i] = scanRow{I: i, C: c, OtherStatuses: others, Action: action, MinHours: minHours}
+		rows[i] = scanRow{I: i, C: c, OtherStatuses: others, Action: action, MinHours: minHours, Tab: tab}
 	}
 	return rows
 }
@@ -309,7 +337,16 @@ type housekeepingData struct {
 	// Shown so the decision stays visible and reversible from the same page
 	// it was made on.
 	Ignored []model.IgnoredGame
+	// ActiveTab is which of the page's radio-driven tabs should render
+	// checked, so a redirect back from a POST action (see
+	// housekeepingReturnTo) reopens on the tab the user was on rather than
+	// always snapping back to Scan.
+	ActiveTab string
 }
+
+// housekeepingTabs are the valid values for the "tab" query/form param —
+// the ids on housekeeping.html's tab radios, minus their "tab-" prefix.
+var housekeepingTabs = []string{"scan", "backlog", "ignored", "unfinished", "stale", "close", "achievements"}
 
 func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
@@ -329,6 +366,10 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	unfinishedAll := q.Get("unfinished_all") == "1"
+	activeTab := "scan"
+	if v := q.Get("tab"); slices.Contains(housekeepingTabs, v) {
+		activeTab = v
+	}
 
 	data := housekeepingData{
 		Page:          newPage(r, "Housekeeping", "housekeeping"),
@@ -338,6 +379,7 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		StaleDays:     staleDays,
 		CloseDays:     closeDays,
 		CloseAll:      closeAll,
+		ActiveTab:     activeTab,
 	}
 
 	candidates, numExisting, err := s.scanCandidates(minHours, commands.ScanModePlayed)
@@ -348,7 +390,7 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		// silently clobber that on every load.
 		data.ScanError = err.Error()
 	} else {
-		data.ScanCandidates = scanRows(candidates, forms.ScanQuickStatuses, "/scan", minHours)
+		data.ScanCandidates = scanRows(candidates, forms.ScanQuickStatuses, "/scan", minHours, "scan")
 		data.NumLogged = numExisting
 	}
 
@@ -356,7 +398,7 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		data.BacklogError = err.Error()
 	} else {
-		data.BacklogCandidates = scanRows(backlog, forms.BacklogQuickStatuses, "/backlog", minHours)
+		data.BacklogCandidates = scanRows(backlog, forms.BacklogQuickStatuses, "/backlog", minHours, "backlog")
 	}
 
 	if ignored, err := model.LoadIgnored(model.FindArchiveDir(s.gamesDir)); err == nil {
@@ -411,7 +453,7 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
 	days := atoiOr(r.FormValue("stale_days"), commands.DefaultStaleDays)
-	backTo := fmt.Sprintf("/housekeeping?stale_days=%d", days)
+	backTo := housekeepingReturnTo(r)
 
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
@@ -464,10 +506,7 @@ func (s *server) handleCloseSelected(w http.ResponseWriter, r *http.Request) {
 	}
 	days := atoiOr(r.FormValue("close_days"), commands.DefaultStaleDays)
 	all := r.FormValue("close_all") == "1"
-	backTo := fmt.Sprintf("/housekeeping?close_days=%d", days)
-	if all {
-		backTo += "&close_all=1"
-	}
+	backTo := housekeepingReturnTo(r)
 
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {

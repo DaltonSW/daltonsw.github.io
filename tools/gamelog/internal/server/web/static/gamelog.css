@@ -301,6 +301,41 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); width
 .form--hidden { display: contents; }
 .btn-details { min-width: 150px; margin-bottom: 1px; }
 
+/* ── Tabs ──────────────────────────────────────────────────────────────── */
+/* CSS-only, radio-driven: no JS. The inputs sit at the top of .tabs so the
+   ~ combinator reaches both .tabs__nav's labels and the panels below it,
+   even though the nav div sits between input and panel in the markup. */
+.tabs { position: relative; }
+.tabs__input { position: absolute; opacity: 0; pointer-events: none; }
+.tabs__nav { display: flex; flex-wrap: wrap; gap: 0.25rem; border-bottom: 1px solid var(--stroke); margin: 1rem 0 0; }
+.tabs__label {
+  display: block; margin: 0; padding: 0.5rem 1rem; cursor: pointer;
+  font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace;
+  font-size: 0.85rem; color: var(--dim);
+  border: 1px solid transparent; border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+.tabs__label:hover { color: var(--fg); background: var(--panel-2); }
+.tabs__panel { display: none; }
+#tab-scan:checked ~ .tabs__nav .tabs__label[for="tab-scan"],
+#tab-backlog:checked ~ .tabs__nav .tabs__label[for="tab-backlog"],
+#tab-ignored:checked ~ .tabs__nav .tabs__label[for="tab-ignored"],
+#tab-unfinished:checked ~ .tabs__nav .tabs__label[for="tab-unfinished"],
+#tab-stale:checked ~ .tabs__nav .tabs__label[for="tab-stale"],
+#tab-close:checked ~ .tabs__nav .tabs__label[for="tab-close"],
+#tab-achievements:checked ~ .tabs__nav .tabs__label[for="tab-achievements"] {
+  color: var(--accent); background: var(--panel);
+  border-color: var(--stroke); border-bottom-color: var(--panel);
+  margin-bottom: -1px;
+}
+#tab-scan:checked ~ .tabs__panel--scan,
+#tab-backlog:checked ~ .tabs__panel--backlog,
+#tab-ignored:checked ~ .tabs__panel--ignored,
+#tab-unfinished:checked ~ .tabs__panel--unfinished,
+#tab-stale:checked ~ .tabs__panel--stale,
+#tab-close:checked ~ .tabs__panel--close,
+#tab-achievements:checked ~ .tabs__panel--achievements { display: block; }
+
 /* ── Tables ────────────────────────────────────────────────────────────── */
 table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
 th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--stroke); }

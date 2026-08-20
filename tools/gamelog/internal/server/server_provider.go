@@ -197,9 +197,10 @@ func (s *server) handleJobProgress(w http.ResponseWriter, r *http.Request) {
 // achievements.go), so unlike achievements/all this is fast enough to run
 // synchronously.
 func (s *server) handleProject(w http.ResponseWriter, r *http.Request) {
+	backTo := housekeepingReturnTo(r)
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
-		redirectErr(w, r, "/housekeeping", err)
+		redirectErr(w, r, backTo, err)
 		return
 	}
 	archiveDir := model.FindArchiveDir(s.gamesDir)
@@ -220,5 +221,5 @@ func (s *server) handleProject(w http.ResponseWriter, r *http.Request) {
 			empty++
 		}
 	}
-	redirectOK(w, r, "/housekeeping", fmt.Sprintf("%d summaries written, %d with nothing archived yet, %d failed", written, empty, failed))
+	redirectOK(w, r, backTo, fmt.Sprintf("%d summaries written, %d with nothing archived yet, %d failed", written, empty, failed))
 }
