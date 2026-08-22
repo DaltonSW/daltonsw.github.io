@@ -1,0 +1,42 @@
+unlocked: 5
+total: 30
+playtime_mins: 118
+last_played: "2014-12-22"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 5
+      total: 30
+      playtime_mins: 118
+      last_played: "2014-12-22"
+earned:
+    - name: Cast Member
+      description: Complete the story's opening sequence in any mode.
+      date: "2014-06-25T22:10:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/900ef7665e7a2b49f68bb285360256f2843847d4.jpg
+      provider: steam
+      platform: PC
+    - name: Black Marketeer
+      description: Get yourself a cool new weapon.
+      date: "2014-06-25T22:53:06-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/5e0cebd31226034fe9cad057a320b9d2873a8acd.jpg
+      provider: steam
+      platform: PC
+    - name: Nail File Cake
+      description: Free a fellow prisoner.
+      date: "2014-06-25T22:53:32-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/d1af4f9cc11d0a007b9e79a8ba353b484999e10b.jpg
+      provider: steam
+      platform: PC
+    - name: Secret Finder
+      date: "2014-12-21T23:31:37-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/f7b1c544152c5a71ddd6ed83ba4a64af2572a2e4.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Prison Food
+      date: "2014-12-21T23:43:09-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/47a1d8a22a0e20952cb587d76c1e36c2a01d4ce9.jpg
+      provider: steam
+      platform: PC
+      hidden: true

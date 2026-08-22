@@ -1,0 +1,1701 @@
+{
+ "provider": "steam",
+ "title": "Torchlight II",
+ "updated": "2026-08-19",
+ "id": "200710",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 8,
+ "total": 119,
+ "first": "2013-01-02",
+ "last": "2013-11-27",
+ "platform": "PC",
+ "icon": "40776762bb63c4eded37d1a2b4431a90aa57ea84",
+ "playtime_mins": 263,
+ "last_played": "2013-11-27",
+ "achievements": [
+  {
+   "key": "FRIENDSLIST_0",
+   "name": "Friendly",
+   "description": "Add a friend",
+   "unlocked": true,
+   "date": "2013-01-02T20:22:13-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/ce78e64eac4a59fb94b551dfaf284a03df083898.jpg"
+  },
+  {
+   "key": "MULTIPLAYER_JOIN",
+   "name": "In Your World",
+   "description": "Join a multiplayer game",
+   "unlocked": true,
+   "date": "2013-01-02T20:24:04-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/c0681b2289765d47ca1016961ba03374b853a30f.jpg"
+  },
+  {
+   "key": "TRADEITEM",
+   "name": "Trader",
+   "description": "Trade an item with another player",
+   "unlocked": true,
+   "date": "2013-01-02T20:35:07-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/6f8f3d8697327b4cd838bf654c87ce417bcc5190.jpg"
+  },
+  {
+   "key": "SOCKETING_0",
+   "name": "Socketeer",
+   "description": "Socket a gem into an item",
+   "unlocked": true,
+   "date": "2013-01-02T20:40:43-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/c3031dfc31755f7cf340ddcad09da86329b7ac40.jpg"
+  },
+  {
+   "key": "SENDPETTOTOWN",
+   "name": "Fetch A Fair Price",
+   "description": "Send your pet to town",
+   "unlocked": true,
+   "date": "2013-01-02T21:25:23-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/c2d3738f0e458db4d98e83a68a322d264d8b42a1.jpg"
+  },
+  {
+   "key": "BOSS_FALLENGUARDIAN",
+   "name": "The Felled Guardian",
+   "unlocked": true,
+   "date": "2013-01-02T21:37:53-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/7b4bc13e0a24929b8552a7717521f2c41dfa8967.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SPELLS_PET_0",
+   "name": "A New Trick",
+   "description": "Teach a pet a spell",
+   "unlocked": true,
+   "date": "2013-01-02T22:24:56-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a1c029c154cffbfef348cdd4c276f2749124dd63.jpg"
+  },
+  {
+   "key": "OPENCHESTS_0",
+   "name": "Treasure Hunter",
+   "description": "Open 20 chests",
+   "unlocked": true,
+   "date": "2013-11-27T23:34:27-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/e276926b7cc5110639e64ef5a2dcec01e87dab9d.jpg"
+  },
+  {
+   "key": "BOSS_ARTIFICER",
+   "name": "Revolt Against Artifice",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/d69f111c2f7f747e879abb69c415f366e6d5800f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_BLOATFANG",
+   "name": "Flyswatter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/5c0c450ad05bb2d6902c62936325129750ce18d9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_BOLETUSREX",
+   "name": "Mushroom Picking",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/1b0c665d758d7e887524d2bddf4497aff27d3b03.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_CACKLESPIT",
+   "name": "Ding Dong",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/4296099026a66560cdc4afe9aaf8e918ee9b71a9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_CHILLHOOF",
+   "name": "The Big Chillhoof",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3c6f521bec0e3bd22b519fc075f7eb66828dbe26.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_DARKALCHEMIST",
+   "name": "Mission Accomplished",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/644c70fd4415bc0103daf68d0fb9d0df621f4742.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_DRAGON",
+   "name": "Dragon Slayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/7c2dce06816e6c896df284155d5f62ac965d8eff.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_DRAGON_SPIRIT",
+   "name": "Ghost Buster",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3905054e2f4d1456d8ca1fd78eb04353ade848a2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_EZREKKHAN",
+   "name": "Ezrek Gone",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a1884ef19ff14b034ffad515d5071dadc780f88e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_GRANDREGENT",
+   "name": "Grand Regicide",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b2f7e5896d70cf782e9096bdd28fda08f0adac36.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_GRELL",
+   "name": "When Grell Fell",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/f6f50393a9fbf5cd699fbb65d754bbc568f1f2f9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_GRIZZLEDALPHA",
+   "name": "The Fall of the Wild",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/35fdbf33900c98f7f5b76b51e9165d74c1e34ea0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_KIDRIK",
+   "name": "Emancipator",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/ef8e68b10ee239a85e0b578002fa396769cd5069.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_KILLBOT",
+   "name": "Killbot… Killed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/1138e66d1d84e8c3014b16883191e2fb9674ca22.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_KINGINMASKS",
+   "name": "Unmasked",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/2046a841a3d23a9643157f3242452dc4b3dc73d4.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_MANTICORE",
+   "name": "Manticore",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/ffe2d4845f6ffce313cf9af114cf6e3c963f15e1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_MANTICOREMATE",
+   "name": "Who's Your Friend",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/48adee10ea638cb0743c3b28c580594c2fe44744.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_MORDROX",
+   "name": "From The Pit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9c4af4e4ea1c68a109bee5989beeeecb5b1a0626.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING",
+   "name": "The King is Dead",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/45eb5aa70fd783409db67f6c4ebe798d6dba741c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_ALLCLASSES",
+   "name": "Classist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/1595bfd12cf2c46ef0306e63a7e66b23226a5afc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_BERSERKER",
+   "name": "True Berserker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3d017ad243ebba9c83af84cbe53f9565bdfec8c8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_DIF_CASUAL",
+   "name": "Casuality",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/5d9a3194ef397a6b71c31bedef237c5ff2151d1e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_DIF_ELITE",
+   "name": "Elitist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/4cbebcca7e95ea858413c3976575605a9cdae216.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_DIF_NORMAL",
+   "name": "Normalized",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9bef043fd70f3d40321d457a86e7a5a7fdcf8225.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_DIF_VETERAN",
+   "name": "Veterenated",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/0247bd5a67f6d16d8ff47a3cb311c003fd407571.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_EMBERMAGE",
+   "name": "True Embermage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3b279292f124ede2959204c87ce6115213de0c17.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_ENGINEER",
+   "name": "True Engineer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/961689958ef1a036d20c1849e7e7cbc2322b02a8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_HC_CASUAL",
+   "name": "Casually Hardcore",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/ce0b23c86d3ffcd27ad06a40c132c155b4a0d57f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_HC_ELITE",
+   "name": "Unstoppable",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/8fa49ea5e22684a3f63137109960dc6352c91118.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_HC_NORMAL",
+   "name": "Normally Hardcore",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/36201999c9b4f6abf744f267d186a845f44a4205.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_HC_VETERAN",
+   "name": "Hardcore Veteran",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/99d68cc5387661d3460458bbd2c113211a7fa8c3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_NETHERKING_OUTLANDER",
+   "name": "True Outlander",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/c096652284d81273c746d1c5f8071ae713f73c8a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_ONEEYEDWILLY",
+   "name": "DEAD THINGS!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/dda5859025d629cdf66a58c61630b74746af810a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_POGG",
+   "name": "Pogg Slammed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3aa03c64e3ae4a916b715e3747eea347a38f4c56.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_SIEGEGUARDIAN",
+   "name": "Siege Breaker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9dda39162edfc7cc642b262bf77a4b8d9b314124.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_THREESISTERS_ALEERA",
+   "name": "De-Aleera-ious",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/c862200b5a6acee7d21fe97d3cef267bd608f224.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_THREESISTERS_MARISHKA",
+   "name": "Marishkabob",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/df363ed461cb88c326afa5d73a5485af95dbc4e2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_THREESISTERS_VERONA",
+   "name": "Fair Verona",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b86714c1ff9871d18b4262ea24a505456bccd82e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_TUTARA",
+   "name": "Lizard Breaker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9b6e899a2275e32d6597dcdaadc065b1b038a0d3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_WINTERWIDOW",
+   "name": "Arachnothanatology",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/5cd29d174f2dbfb79bce9b81da589c55a7d3e57e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BOSS_WRAITHLORD",
+   "name": "Pinned to the Mist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9060dbb38614ab630635e53cddccb1c778e7f7b0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BREAKOBJECTS_0",
+   "name": "Breaker",
+   "description": "Break 100 breakables",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/fe29427fbecc49cf4de5c4c103990278ed0d2a95.jpg"
+  },
+  {
+   "key": "BREAKOBJECTS_1",
+   "name": "Destructor",
+   "description": "Break 1,000 breakables",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a0eccc1e97b66fd2d27af70a68c276edfac57431.jpg"
+  },
+  {
+   "key": "BREAKOBJECTS_2",
+   "name": "Bull In A China Shop",
+   "description": "Break 10,000 breakables",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b7c127cafa4ccf4c6a8fbe8eee6ee50e0e22e3f8.jpg"
+  },
+  {
+   "key": "CRITCOUNT_0",
+   "name": "Thinking Critically",
+   "description": "Deal 1,000 critical strikes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/8c92c4284b05c1204b32e6b35971c186b5e00499.jpg"
+  },
+  {
+   "key": "CRITCOUNT_1",
+   "name": "Massive Crits",
+   "description": "Deal 10,000 critical strikes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/287ec572d8b477b0a56528e3ed1a99ce1c492cb9.jpg"
+  },
+  {
+   "key": "CRITCOUNT_2",
+   "name": "Hypercritical",
+   "description": "Deal 100,000 critical strikes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/1e3fbcf35c5963ca0d55f887058f62c5415ac7b0.jpg"
+  },
+  {
+   "key": "DYNAMITEFISHING",
+   "name": "Having A Blast",
+   "description": "Fish using dynamite",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/420209171ad1e03cc32bd9c17f48bbcd08aaf949.jpg"
+  },
+  {
+   "key": "ENCHANTING_0",
+   "name": "Enchanted",
+   "description": "Use an enchanter 10 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/347be0538dc31196af1d2c44600d91daab87f671.jpg"
+  },
+  {
+   "key": "ENCHANTING_1",
+   "name": "Self Improvement",
+   "description": "Use an enchanter 50 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a0458fc6746fe019b4b18e5055f50448b2ac4585.jpg"
+  },
+  {
+   "key": "ENCHANTING_2",
+   "name": "Performance Enhancer",
+   "description": "Use an enchanter 500 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/68681421d1808764420fbefa12cb47fb40e84461.jpg"
+  },
+  {
+   "key": "EXPLODEENEMIES_0",
+   "name": "Gibster",
+   "description": "Explode 100 enemies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/cb95ab06b461edcd4349251e8a7b0630730257d1.jpg"
+  },
+  {
+   "key": "EXPLODEENEMIES_1",
+   "name": "Gib Aficionado",
+   "description": "Explode 1,000 enemies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b55a90a324c07bbb6a05474d32a37b10d5529971.jpg"
+  },
+  {
+   "key": "EXPLODEENEMIES_2",
+   "name": "Gib Tycoon",
+   "description": "Explode 10,000 enemies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/4bbef7dacdea33a14185b360486affd5692f06c5.jpg"
+  },
+  {
+   "key": "FINDLEGENDARYITEM",
+   "name": "Spectacular Find",
+   "description": "Find a legendary item",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/cdc18aec8bfe8c37a32c841e3ad3b869bf2040a4.jpg"
+  },
+  {
+   "key": "FISHING_0",
+   "name": "Apprentice Baiter",
+   "description": "Fish 10 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/c843875223c56ab9022be015cdd9cc97dafeb89f.jpg"
+  },
+  {
+   "key": "FISHING_1",
+   "name": "Journeyman Fisher",
+   "description": "Fish 100 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/32889294f7e1c64bbf06810bf636e0b599d49a69.jpg"
+  },
+  {
+   "key": "FISHING_2",
+   "name": "Master Angler",
+   "description": "Fish 1,000 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/98a235f81b6c0412e93740064459038134a474a2.jpg"
+  },
+  {
+   "key": "FRIENDSLIST_1",
+   "name": "Socializer",
+   "description": "Have 10 friends",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/f12e1873a969083e0ff939eb9f15bb4e47c2904d.jpg"
+  },
+  {
+   "key": "FRIENDSLIST_2",
+   "name": "Butterfly",
+   "description": "Have 50 friends",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/90d9c4e7abc9ebcda7bb1fe5989c6c3044b3356b.jpg"
+  },
+  {
+   "key": "FULLARMORSET",
+   "name": "Well Dressed",
+   "description": "Wear a completed armor set",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/5c5ef95ed1b0dc6e9fd6c34dac65f6ad70f203b7.jpg"
+  },
+  {
+   "key": "GAMBLING_0",
+   "name": "Gambling Enthusiast",
+   "description": "Purchase 20 items from the gambler",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/93abe770c2dbd7af5823343b21839987992b1831.jpg"
+  },
+  {
+   "key": "GAMBLING_1",
+   "name": "Gambling Professional",
+   "description": "Purchase 50 items from the gambler",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b061eb33d6e4b8e2224600d311ddd5c722a03e87.jpg"
+  },
+  {
+   "key": "GAMBLING_2",
+   "name": "Gambling Fiend",
+   "description": "Purchase 100 items from the gambler",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3b3e6da24f18d117798a0e9f7532497bf90d9fed.jpg"
+  },
+  {
+   "key": "HARDCOREDEATH_0",
+   "name": "Goodbye Cruel World",
+   "description": "Die with a hardcore character",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/5cfac5e5c8ea1d03ca07d59da2f1d212a658c5b8.jpg"
+  },
+  {
+   "key": "HARDCOREPLAYER_CREATE",
+   "name": "Hardcore",
+   "description": "Start a hardcore character",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b33a9f1022cf2cd0a1898b5efed78ed1d4425c3a.jpg"
+  },
+  {
+   "key": "INVENTORYGOLD_0",
+   "name": "For A Rainy Day",
+   "description": "Have 100,000 gold",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/31bdf94506e16aa9ba763661011376a0756c5e13.jpg"
+  },
+  {
+   "key": "INVENTORYGOLD_1",
+   "name": "Nest Egg",
+   "description": "Have 1,000,000 gold",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/caea35c15c241ed167da172afc8ac3c961b827cf.jpg"
+  },
+  {
+   "key": "INVENTORYGOLD_2",
+   "name": "The One Percent",
+   "description": "Have 10,000,000 gold",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/7e54ea5a717f711ab48a468383731705ef5e8f40.jpg"
+  },
+  {
+   "key": "KILLCHAMPS_0",
+   "name": "Champ Battler",
+   "description": "Defeat 25 champions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/7c81104d716b82ba856954df367aa5a2bf3a2d42.jpg"
+  },
+  {
+   "key": "KILLCHAMPS_1",
+   "name": "Champ Master",
+   "description": "Defeat 100 champions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/0b5f499bd26d86703a17a9ebfea4952551b4742b.jpg"
+  },
+  {
+   "key": "KILLCHAMPS_2",
+   "name": "Champ Overlord",
+   "description": "Defeat 500 champions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9bcade9ef12729d083674e79f8b4103d0d3c0267.jpg"
+  },
+  {
+   "key": "LEVELCAP",
+   "name": "Century Mark",
+   "description": "Reach level 100",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/08b3a2a60ee296dfb3a6e0d618c5ed3de47556b4.jpg"
+  },
+  {
+   "key": "MAXDAMAGE",
+   "name": "Overpower",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9e45841a714932b97f6e7e9691b7c015db43840c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "MULTIPLAYER_CREATE",
+   "name": "Get This Party Started",
+   "description": "Start a multiplayer game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b8abf1e183d89a6381afed5cad9ed193d3d95a84.jpg"
+  },
+  {
+   "key": "NEWGAMEPLUS",
+   "name": "From The Top",
+   "description": "Begin new game plus",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/e923b35441ea7bf7250dd2ee24606a2d8dcae9cf.jpg"
+  },
+  {
+   "key": "OPENCHESTS_1",
+   "name": "Plunderer",
+   "description": "Open 100 chests",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3033c7164b7cfd70442ade85414c55458413ffbc.jpg"
+  },
+  {
+   "key": "OPENCHESTS_2",
+   "name": "Chest Nut",
+   "description": "Open 500 chests",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/f36ece52cd76858be4a96399044eed876a40deef.jpg"
+  },
+  {
+   "key": "PLAYERSTEPS_0",
+   "name": "Stepping Out",
+   "description": "Take 10,000 steps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b23ce7c9961efe5549676b7147ad56c2088ac0a4.jpg"
+  },
+  {
+   "key": "PLAYERSTEPS_1",
+   "name": "Wanderer",
+   "description": "Take 50,000 steps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/8903a28b6fe765c9db7bfc44c42ddb0064f140f0.jpg"
+  },
+  {
+   "key": "PLAYERSTEPS_2",
+   "name": "Globe-trotter",
+   "description": "Take 100,000 steps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/6e5a981d21fc8ebbdf6fa66d9dbceac8a4b97638.jpg"
+  },
+  {
+   "key": "RECOVERGEM_0",
+   "name": "Gem Recovery",
+   "description": "Recover a gem from an item",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a83be031209d8b12333f50f15a32a6fcbaf66d5e.jpg"
+  },
+  {
+   "key": "RECOVERGEM_1",
+   "name": "Gem Preservation",
+   "description": "Recover 10 gems from items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/f363435639ea9cda979a4b288813f59484dde7f8.jpg"
+  },
+  {
+   "key": "RECOVERGEM_2",
+   "name": "Gem Hoarding",
+   "description": "Recover 100 gems from items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/12eaee0ca49876533a471276bd12eb907ec3fb32.jpg"
+  },
+  {
+   "key": "RECOVERITEM_0",
+   "name": "Stone Smasher",
+   "description": "Destroy a socketed gem",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/78cd5034a3d4653e19d59a10dc02f02b26c7b91c.jpg"
+  },
+  {
+   "key": "RECOVERITEM_1",
+   "name": "Rock Crusher",
+   "description": "Destroy 10 socketed gems",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/37fbea0a64d25cc5ad1f75cdf3edfc1f382ef465.jpg"
+  },
+  {
+   "key": "RECOVERITEM_2",
+   "name": "Ice Breaker",
+   "description": "Destroy 100 socketed gems",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/2f2891e3b8d4b37db6e36e45d01e1de00a492d6d.jpg"
+  },
+  {
+   "key": "SECRETROOMS_0",
+   "name": "I Know a Secret",
+   "description": "Find a secret room",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/83f0b4b4e12073c90516ec8c92c9f69cf221795d.jpg"
+  },
+  {
+   "key": "SECRETROOMS_1",
+   "name": "In Service of Secrets",
+   "description": "Find 10 secret rooms",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a48441f6eace097f4835c6eedb25315ea2c3b329.jpg"
+  },
+  {
+   "key": "SECRETROOMS_2",
+   "name": "No More Secrets",
+   "description": "Find 100 secret rooms",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/fa8702c718f904b4bd1d58a35ca1aed1286c1d48.jpg"
+  },
+  {
+   "key": "SELLITEMS_0",
+   "name": "Peddler",
+   "description": "Sell 500 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/edf3540bfd673f6c0a78c666ad854cb7f3e76263.jpg"
+  },
+  {
+   "key": "SELLITEMS_1",
+   "name": "Vendor",
+   "description": "Sell 5,000 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3cf4f96c41a50efe282e9cdd803c1aae34cf21ce.jpg"
+  },
+  {
+   "key": "SELLITEMS_2",
+   "name": "Trash Magnate",
+   "description": "Sell 50,000 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/9d40f2c84bb40ac36ab13b97d7a2ce851d571442.jpg"
+  },
+  {
+   "key": "SKILLTIERS_0",
+   "name": "Skill Enthusiast",
+   "description": "Obtain a tier 1 skill bonus",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/134787e8d936ba852d282e52835d19e1fdb37266.jpg"
+  },
+  {
+   "key": "SKILLTIERS_1",
+   "name": "Skill Devotee",
+   "description": "Obtain a tier 2 skill bonus",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/123161e70c7833c51317ff83ff5414c0e3180943.jpg"
+  },
+  {
+   "key": "SKILLTIERS_2",
+   "name": "Skill Master",
+   "description": "Obtain a tier 3 skill bonus",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/22682bdacada270de0bdd56d5992f6b522056a0d.jpg"
+  },
+  {
+   "key": "SOCKETING_1",
+   "name": "Twinkle Twinkle Bobba",
+   "description": "Socket 50 gems into items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/8f28c122f0e08db562e28d44b62a00468299969e.jpg"
+  },
+  {
+   "key": "SOCKETING_2",
+   "name": "The Blingbearer",
+   "description": "Socket 500 gems into items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b2c5325409e87723b26b6e2aa74e3b7e7374aaf2.jpg"
+  },
+  {
+   "key": "SPELLS_PET_1",
+   "name": "Pet Savant",
+   "description": "Teach a pet 4 spells",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/8e3800a9819a103b06db39f3ed34a0f77a27725d.jpg"
+  },
+  {
+   "key": "SPELLS_PLAYER_0",
+   "name": "Spellcaster",
+   "description": "Learn a spell",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/ad7a21f512d5b116004ed9d46125bdf5a92be4d1.jpg"
+  },
+  {
+   "key": "SPELLS_PLAYER_1",
+   "name": "Continuing Education",
+   "description": "Learn 4 spells",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/26838d32901b3a6ebe06201408c7f42b58336b9b.jpg"
+  },
+  {
+   "key": "SQUISH_0",
+   "name": "Gooey Soles",
+   "description": "Squish 100 critters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/75360aa6b517a62de03dcd026ff65ed3937e7ff8.jpg"
+  },
+  {
+   "key": "SQUISH_1",
+   "name": "Squish Gallop",
+   "description": "Squish 500 critters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/013b9074e400e91220d53cc271bf6c7b6a38befd.jpg"
+  },
+  {
+   "key": "SQUISH_2",
+   "name": "Critter Crusher",
+   "description": "Squish 1000 critters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/37258d12c667d6c8d540c7a83d490dfb12797dd6.jpg"
+  },
+  {
+   "key": "TRILLBOTASSEMBLED",
+   "name": "The Band Played On",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/cd47b86309f59442bf11d5ab991b21f10fbd7c9c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "USEMAPS_0",
+   "name": "X Marks The Spot",
+   "description": "Use a map",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/5410e83d1d8a67f32593d8a0116bd369b4feed61.jpg"
+  },
+  {
+   "key": "USEMAPS_1",
+   "name": "Map Enthusiast",
+   "description": "Use 10 maps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/b3ffc35ab67c979d61e2bfd78d804ccba7871c08.jpg"
+  },
+  {
+   "key": "USEMAPS_2",
+   "name": "Cartophile",
+   "description": "Use 100 maps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/a6c25a02b4509ca9df693536f809ff703c4b1c51.jpg"
+  },
+  {
+   "key": "USEPOTIONS_0",
+   "name": "Quaffer",
+   "description": "Use 50 potions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/3e0c1aaae12e156fb361fa0c2cedc5dc2f48382d.jpg"
+  },
+  {
+   "key": "USEPOTIONS_1",
+   "name": "Tippler",
+   "description": "Use 500 potions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/be2d745d016f7f4c4d6a0cd04eedb3ca0b59d798.jpg"
+  },
+  {
+   "key": "USEPOTIONS_2",
+   "name": "Guzzler",
+   "description": "Use 5,000 potions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/60af3654b989c36d5abf1360eba7425be7ec6348.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Torchlight II",
+   "achievements": [
+    {
+     "apiname": "BOSS_TUTARA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lizard Breaker",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_ARTIFICER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Revolt Against Artifice",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_BLOATFANG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flyswatter",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_CACKLESPIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ding Dong",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_CHILLHOOF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Big Chillhoof",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_DARKALCHEMIST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mission Accomplished",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_ALLCLASSES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Classist",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_BERSERKER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Berserker",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_DIF_CASUAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Casuality",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_DIF_ELITE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elitist",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_DIF_NORMAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Normalized",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_DIF_VETERAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Veterenated",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_EMBERMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Embermage",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_ENGINEER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Engineer",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_HC_CASUAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Casually Hardcore",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_HC_ELITE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unstoppable",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_HC_NORMAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Normally Hardcore",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_HC_VETERAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hardcore Veteran",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING_OUTLANDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Outlander",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_DRAGON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dragon Slayer",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_EZREKKHAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ezrek Gone",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_FALLENGUARDIAN",
+     "achieved": 1,
+     "unlocktime": 1357184273,
+     "name": "The Felled Guardian",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_GRANDREGENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grand Regicide",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_GRELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "When Grell Fell",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_GRIZZLEDALPHA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Fall of the Wild",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_KIDRIK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Emancipator",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_KILLBOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Killbot… Killed",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_MANTICORE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Manticore",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_MANTICOREMATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who's Your Friend",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_MORDROX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From The Pit",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_NETHERKING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The King is Dead",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_ONEEYEDWILLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "DEAD THINGS!",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_POGG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pogg Slammed",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_SIEGEGUARDIAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Siege Breaker",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_WINTERWIDOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arachnothanatology",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_WRAITHLORD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pinned to the Mist",
+     "description": ""
+    },
+    {
+     "apiname": "BREAKOBJECTS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Breaker",
+     "description": "Break 100 breakables"
+    },
+    {
+     "apiname": "BREAKOBJECTS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Destructor",
+     "description": "Break 1,000 breakables"
+    },
+    {
+     "apiname": "BREAKOBJECTS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bull In A China Shop",
+     "description": "Break 10,000 breakables"
+    },
+    {
+     "apiname": "CRITCOUNT_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thinking Critically",
+     "description": "Deal 1,000 critical strikes"
+    },
+    {
+     "apiname": "CRITCOUNT_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Massive Crits",
+     "description": "Deal 10,000 critical strikes"
+    },
+    {
+     "apiname": "CRITCOUNT_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hypercritical",
+     "description": "Deal 100,000 critical strikes"
+    },
+    {
+     "apiname": "DYNAMITEFISHING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Having A Blast",
+     "description": "Fish using dynamite"
+    },
+    {
+     "apiname": "ENCHANTING_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enchanted",
+     "description": "Use an enchanter 10 times"
+    },
+    {
+     "apiname": "ENCHANTING_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Self Improvement",
+     "description": "Use an enchanter 50 times"
+    },
+    {
+     "apiname": "ENCHANTING_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Performance Enhancer",
+     "description": "Use an enchanter 500 times"
+    },
+    {
+     "apiname": "EXPLODEENEMIES_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gibster",
+     "description": "Explode 100 enemies"
+    },
+    {
+     "apiname": "EXPLODEENEMIES_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gib Aficionado",
+     "description": "Explode 1,000 enemies"
+    },
+    {
+     "apiname": "EXPLODEENEMIES_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gib Tycoon",
+     "description": "Explode 10,000 enemies"
+    },
+    {
+     "apiname": "FISHING_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Apprentice Baiter",
+     "description": "Fish 10 times"
+    },
+    {
+     "apiname": "FISHING_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Journeyman Fisher",
+     "description": "Fish 100 times"
+    },
+    {
+     "apiname": "FISHING_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Angler",
+     "description": "Fish 1,000 times"
+    },
+    {
+     "apiname": "FRIENDSLIST_0",
+     "achieved": 1,
+     "unlocktime": 1357179733,
+     "name": "Friendly",
+     "description": "Add a friend"
+    },
+    {
+     "apiname": "FRIENDSLIST_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Socializer",
+     "description": "Have 10 friends"
+    },
+    {
+     "apiname": "FRIENDSLIST_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Butterfly",
+     "description": "Have 50 friends"
+    },
+    {
+     "apiname": "GAMBLING_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gambling Enthusiast",
+     "description": "Purchase 20 items from the gambler"
+    },
+    {
+     "apiname": "GAMBLING_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gambling Professional",
+     "description": "Purchase 50 items from the gambler"
+    },
+    {
+     "apiname": "GAMBLING_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gambling Fiend",
+     "description": "Purchase 100 items from the gambler"
+    },
+    {
+     "apiname": "HARDCOREDEATH_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Goodbye Cruel World",
+     "description": "Die with a hardcore character"
+    },
+    {
+     "apiname": "HARDCOREPLAYER_CREATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hardcore",
+     "description": "Start a hardcore character"
+    },
+    {
+     "apiname": "INVENTORYGOLD_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "For A Rainy Day",
+     "description": "Have 100,000 gold"
+    },
+    {
+     "apiname": "INVENTORYGOLD_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nest Egg",
+     "description": "Have 1,000,000 gold"
+    },
+    {
+     "apiname": "INVENTORYGOLD_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The One Percent",
+     "description": "Have 10,000,000 gold"
+    },
+    {
+     "apiname": "KILLCHAMPS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champ Battler",
+     "description": "Defeat 25 champions"
+    },
+    {
+     "apiname": "KILLCHAMPS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champ Master",
+     "description": "Defeat 100 champions"
+    },
+    {
+     "apiname": "KILLCHAMPS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champ Overlord",
+     "description": "Defeat 500 champions"
+    },
+    {
+     "apiname": "MAXDAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overpower",
+     "description": ""
+    },
+    {
+     "apiname": "MULTIPLAYER_CREATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get This Party Started",
+     "description": "Start a multiplayer game"
+    },
+    {
+     "apiname": "MULTIPLAYER_JOIN",
+     "achieved": 1,
+     "unlocktime": 1357179844,
+     "name": "In Your World",
+     "description": "Join a multiplayer game"
+    },
+    {
+     "apiname": "NEWGAMEPLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From The Top",
+     "description": "Begin new game plus"
+    },
+    {
+     "apiname": "OPENCHESTS_0",
+     "achieved": 1,
+     "unlocktime": 1385616867,
+     "name": "Treasure Hunter",
+     "description": "Open 20 chests"
+    },
+    {
+     "apiname": "OPENCHESTS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Plunderer",
+     "description": "Open 100 chests"
+    },
+    {
+     "apiname": "OPENCHESTS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chest Nut",
+     "description": "Open 500 chests"
+    },
+    {
+     "apiname": "PLAYERSTEPS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stepping Out",
+     "description": "Take 10,000 steps"
+    },
+    {
+     "apiname": "PLAYERSTEPS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wanderer",
+     "description": "Take 50,000 steps"
+    },
+    {
+     "apiname": "PLAYERSTEPS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Globe-trotter",
+     "description": "Take 100,000 steps"
+    },
+    {
+     "apiname": "RECOVERGEM_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gem Recovery",
+     "description": "Recover a gem from an item"
+    },
+    {
+     "apiname": "RECOVERGEM_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gem Preservation",
+     "description": "Recover 10 gems from items"
+    },
+    {
+     "apiname": "RECOVERGEM_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gem Hoarding",
+     "description": "Recover 100 gems from items"
+    },
+    {
+     "apiname": "RECOVERITEM_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stone Smasher",
+     "description": "Destroy a socketed gem"
+    },
+    {
+     "apiname": "RECOVERITEM_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rock Crusher",
+     "description": "Destroy 10 socketed gems"
+    },
+    {
+     "apiname": "RECOVERITEM_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ice Breaker",
+     "description": "Destroy 100 socketed gems"
+    },
+    {
+     "apiname": "SECRETROOMS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Know a Secret",
+     "description": "Find a secret room"
+    },
+    {
+     "apiname": "SECRETROOMS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In Service of Secrets",
+     "description": "Find 10 secret rooms"
+    },
+    {
+     "apiname": "SECRETROOMS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No More Secrets",
+     "description": "Find 100 secret rooms"
+    },
+    {
+     "apiname": "SELLITEMS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peddler",
+     "description": "Sell 500 items"
+    },
+    {
+     "apiname": "SELLITEMS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vendor",
+     "description": "Sell 5,000 items"
+    },
+    {
+     "apiname": "SELLITEMS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trash Magnate",
+     "description": "Sell 50,000 items"
+    },
+    {
+     "apiname": "SENDPETTOTOWN",
+     "achieved": 1,
+     "unlocktime": 1357183523,
+     "name": "Fetch A Fair Price",
+     "description": "Send your pet to town"
+    },
+    {
+     "apiname": "SKILLTIERS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skill Enthusiast",
+     "description": "Obtain a tier 1 skill bonus"
+    },
+    {
+     "apiname": "SKILLTIERS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skill Devotee",
+     "description": "Obtain a tier 2 skill bonus"
+    },
+    {
+     "apiname": "SKILLTIERS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skill Master",
+     "description": "Obtain a tier 3 skill bonus"
+    },
+    {
+     "apiname": "SOCKETING_0",
+     "achieved": 1,
+     "unlocktime": 1357180843,
+     "name": "Socketeer",
+     "description": "Socket a gem into an item"
+    },
+    {
+     "apiname": "SOCKETING_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Twinkle Twinkle Bobba",
+     "description": "Socket 50 gems into items"
+    },
+    {
+     "apiname": "SOCKETING_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Blingbearer",
+     "description": "Socket 500 gems into items"
+    },
+    {
+     "apiname": "SPELLS_PET_0",
+     "achieved": 1,
+     "unlocktime": 1357187096,
+     "name": "A New Trick",
+     "description": "Teach a pet a spell"
+    },
+    {
+     "apiname": "SPELLS_PET_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pet Savant",
+     "description": "Teach a pet 4 spells"
+    },
+    {
+     "apiname": "SPELLS_PLAYER_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spellcaster",
+     "description": "Learn a spell"
+    },
+    {
+     "apiname": "SPELLS_PLAYER_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Continuing Education",
+     "description": "Learn 4 spells"
+    },
+    {
+     "apiname": "TRADEITEM",
+     "achieved": 1,
+     "unlocktime": 1357180507,
+     "name": "Trader",
+     "description": "Trade an item with another player"
+    },
+    {
+     "apiname": "USEMAPS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "X Marks The Spot",
+     "description": "Use a map"
+    },
+    {
+     "apiname": "USEMAPS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Map Enthusiast",
+     "description": "Use 10 maps"
+    },
+    {
+     "apiname": "USEMAPS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cartophile",
+     "description": "Use 100 maps"
+    },
+    {
+     "apiname": "USEPOTIONS_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quaffer",
+     "description": "Use 50 potions"
+    },
+    {
+     "apiname": "USEPOTIONS_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tippler",
+     "description": "Use 500 potions"
+    },
+    {
+     "apiname": "USEPOTIONS_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guzzler",
+     "description": "Use 5,000 potions"
+    },
+    {
+     "apiname": "TRILLBOTASSEMBLED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Band Played On",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_DRAGON_SPIRIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ghost Buster",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_KINGINMASKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unmasked",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_THREESISTERS_ALEERA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "De-Aleera-ious",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_BOLETUSREX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mushroom Picking",
+     "description": ""
+    },
+    {
+     "apiname": "FULLARMORSET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well Dressed",
+     "description": "Wear a completed armor set"
+    },
+    {
+     "apiname": "SQUISH_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gooey Soles",
+     "description": "Squish 100 critters"
+    },
+    {
+     "apiname": "SQUISH_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squish Gallop",
+     "description": "Squish 500 critters"
+    },
+    {
+     "apiname": "SQUISH_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Critter Crusher",
+     "description": "Squish 1000 critters"
+    },
+    {
+     "apiname": "BOSS_THREESISTERS_MARISHKA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Marishkabob",
+     "description": ""
+    },
+    {
+     "apiname": "BOSS_THREESISTERS_VERONA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fair Verona",
+     "description": ""
+    },
+    {
+     "apiname": "FINDLEGENDARYITEM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spectacular Find",
+     "description": "Find a legendary item"
+    },
+    {
+     "apiname": "LEVELCAP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Century Mark",
+     "description": "Reach level 100"
+    }
+   ],
+   "success": true
+  }
+ }
+}

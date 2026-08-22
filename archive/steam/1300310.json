@@ -1,0 +1,384 @@
+{
+ "provider": "steam",
+ "title": "Move Code Lines",
+ "updated": "2026-08-19",
+ "id": "1300310",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 4,
+ "total": 25,
+ "first": "2023-08-27",
+ "last": "2025-02-15",
+ "platform": "PC",
+ "icon": "7a04074beccd2c794d2f9e0aa72c18375a9a9d26",
+ "playtime_mins": 180,
+ "playtime": {
+  "windows": 180
+ },
+ "last_played": "2025-02-15",
+ "achievements": [
+  {
+   "key": "ACH_1",
+   "name": "print (\"Hello, world!\")",
+   "description": "Complete 1st Chapter",
+   "unlocked": true,
+   "date": "2023-08-27T21:38:20-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/a9f6dcabc2966a151189e311fcdd84501f5588a6.jpg"
+  },
+  {
+   "key": "ACH_3",
+   "name": "return",
+   "description": "Complete 3rd Chapter",
+   "unlocked": true,
+   "date": "2023-09-11T21:33:01-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/1aa8a0d66bcf1c26c2f2e8f43561e5a4d1dad1cf.jpg"
+  },
+  {
+   "key": "ACH_2",
+   "name": "def f () { }",
+   "description": "Complete 2nd Chapter",
+   "unlocked": true,
+   "date": "2025-02-15T11:52:04-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/175451f5022e58993fe729dfde7701555b45d1a8.jpg"
+  },
+  {
+   "key": "ACH_4",
+   "name": "get_int ()",
+   "description": "Complete 4th Chapter",
+   "unlocked": true,
+   "date": "2025-02-15T12:01:30-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/6b48ec6b72b7802dcb6fd56289edfffb98040f53.jpg"
+  },
+  {
+   "key": "ACH_10",
+   "name": "var v = [1, 2, 3]",
+   "description": "Complete 10th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/eae1dc4855afd688cbe94dafea53d791617b6bcf.jpg"
+  },
+  {
+   "key": "ACH_100",
+   "name": "100%",
+   "description": "Complete All Chapters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/4b03a2914e2a7d484b1260faa0858064989f90dc.jpg"
+  },
+  {
+   "key": "ACH_11",
+   "name": "var m = [[1, 2], [3, 4]]",
+   "description": "Complete 11th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/55fe3a130840c6df4c702cccacf09dcef4e0e74a.jpg"
+  },
+  {
+   "key": "ACH_12",
+   "name": "extra",
+   "description": "Complete 12th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/5333be9c82a0218bf89a6e6102b69fb36f8ec3d2.jpg"
+  },
+  {
+   "key": "ACH_13",
+   "name": "impossible",
+   "description": "Complete 13th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/64a3f569d9b7e9f373d2bcaff62cb6bb050777aa.jpg"
+  },
+  {
+   "key": "ACH_5",
+   "name": "if (true) { }",
+   "description": "Complete 5th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/a4f24060bd90d84a9b3fd51908fead7cd866a0e8.jpg"
+  },
+  {
+   "key": "ACH_6",
+   "name": "while (true) { }",
+   "description": "Complete 6th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/436d04cfb0f9ffba512af6ba84f489bc1c2ea6d6.jpg"
+  },
+  {
+   "key": "ACH_7",
+   "name": "for (var i = 0; i \u003c n; ++i) { }",
+   "description": "Complete 7th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/4b742d4387353d5fb2d3383a1b666e780b9d4399.jpg"
+  },
+  {
+   "key": "ACH_8",
+   "name": "break",
+   "description": "Complete 8th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/91b7655876c981012bceea3feec5456dc1ec1718.jpg"
+  },
+  {
+   "key": "ACH_9",
+   "name": "def f () { f () }",
+   "description": "Complete 9th Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/3866975a7100fdef288621a2296a7cfae987f435.jpg"
+  },
+  {
+   "key": "ACH_ANY",
+   "name": "any %",
+   "description": "Open All Chapters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/2722326733aef3ab3bdef2975fd31bc0b4644d66.jpg"
+  },
+  {
+   "key": "PY_1",
+   "name": "print('py')",
+   "description": "Complete 1st Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/846ea9e8c3f595e4a7d5b28ca8a4cecdbe5e4121.jpg"
+  },
+  {
+   "key": "PY_100",
+   "name": "py = 100",
+   "description": "Complete All Python Chapters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/3eea56d279cc0de262e1b78caf2a8473aea392b4.jpg"
+  },
+  {
+   "key": "PY_2",
+   "name": "def py():",
+   "description": "Complete 2nd Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/ca9151a1f198c116ed5faadda0d6b11b5da76dcd.jpg"
+  },
+  {
+   "key": "PY_3",
+   "name": "return py",
+   "description": "Complete 3rd Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/6ebbdddd81b1396f9e976d2b9ef02fe7be567ffb.jpg"
+  },
+  {
+   "key": "PY_4",
+   "name": "py = input()",
+   "description": "Complete 4th Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/bb5dc1c83b1e828e582ebd5d17be203ac51c74d8.jpg"
+  },
+  {
+   "key": "PY_5",
+   "name": "if py:",
+   "description": "Complete 5th Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/9a18627452916898a54808d35b113c8db6cb8683.jpg"
+  },
+  {
+   "key": "PY_6",
+   "name": "while py:",
+   "description": "Complete 6th Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/a89159b2620f278dc4547c7df29588ab16876b52.jpg"
+  },
+  {
+   "key": "PY_7",
+   "name": "for x in py:",
+   "description": "Complete 7th Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/547e281c2bb9ec2a9a61a9a49096e347502ccd78.jpg"
+  },
+  {
+   "key": "PY_8",
+   "name": "py = []",
+   "description": "Complete 8th Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/c881b08536879ca5cd6db240a3dcab545e1a2375.jpg"
+  },
+  {
+   "key": "PY_9",
+   "name": "py = {}",
+   "description": "Complete 9th Python Chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1300310/e5584eee71947863077758eec37554cb1949cb5c.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Move Code Lines",
+   "achievements": [
+    {
+     "apiname": "ACH_1",
+     "achieved": 1,
+     "unlocktime": 1693190300,
+     "name": "print (\"Hello, world!\")",
+     "description": "Complete 1st Chapter"
+    },
+    {
+     "apiname": "ACH_2",
+     "achieved": 1,
+     "unlocktime": 1739641924,
+     "name": "def f () { }",
+     "description": "Complete 2nd Chapter"
+    },
+    {
+     "apiname": "ACH_3",
+     "achieved": 1,
+     "unlocktime": 1694485981,
+     "name": "return",
+     "description": "Complete 3rd Chapter"
+    },
+    {
+     "apiname": "ACH_4",
+     "achieved": 1,
+     "unlocktime": 1739642490,
+     "name": "get_int ()",
+     "description": "Complete 4th Chapter"
+    },
+    {
+     "apiname": "ACH_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "if (true) { }",
+     "description": "Complete 5th Chapter"
+    },
+    {
+     "apiname": "ACH_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "while (true) { }",
+     "description": "Complete 6th Chapter"
+    },
+    {
+     "apiname": "ACH_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "for (var i = 0; i \u003c n; ++i) { }",
+     "description": "Complete 7th Chapter"
+    },
+    {
+     "apiname": "ACH_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "break",
+     "description": "Complete 8th Chapter"
+    },
+    {
+     "apiname": "ACH_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "def f () { f () }",
+     "description": "Complete 9th Chapter"
+    },
+    {
+     "apiname": "ACH_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "var v = [1, 2, 3]",
+     "description": "Complete 10th Chapter"
+    },
+    {
+     "apiname": "ACH_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "var m = [[1, 2], [3, 4]]",
+     "description": "Complete 11th Chapter"
+    },
+    {
+     "apiname": "ACH_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "extra",
+     "description": "Complete 12th Chapter"
+    },
+    {
+     "apiname": "ACH_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "impossible",
+     "description": "Complete 13th Chapter"
+    },
+    {
+     "apiname": "ACH_ANY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "any %",
+     "description": "Open All Chapters"
+    },
+    {
+     "apiname": "ACH_100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "100%",
+     "description": "Complete All Chapters"
+    },
+    {
+     "apiname": "PY_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "print('py')",
+     "description": "Complete 1st Python Chapter"
+    },
+    {
+     "apiname": "PY_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "def py():",
+     "description": "Complete 2nd Python Chapter"
+    },
+    {
+     "apiname": "PY_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "return py",
+     "description": "Complete 3rd Python Chapter"
+    },
+    {
+     "apiname": "PY_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "py = input()",
+     "description": "Complete 4th Python Chapter"
+    },
+    {
+     "apiname": "PY_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "if py:",
+     "description": "Complete 5th Python Chapter"
+    },
+    {
+     "apiname": "PY_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "while py:",
+     "description": "Complete 6th Python Chapter"
+    },
+    {
+     "apiname": "PY_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "for x in py:",
+     "description": "Complete 7th Python Chapter"
+    },
+    {
+     "apiname": "PY_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "py = []",
+     "description": "Complete 8th Python Chapter"
+    },
+    {
+     "apiname": "PY_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "py = {}",
+     "description": "Complete 9th Python Chapter"
+    },
+    {
+     "apiname": "PY_100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "py = 100",
+     "description": "Complete All Python Chapters"
+    }
+   ],
+   "success": true
+  }
+ }
+}

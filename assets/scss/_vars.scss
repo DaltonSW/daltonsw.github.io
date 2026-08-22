@@ -51,8 +51,9 @@ $content-width: 1100px;
   // semantic status colors (used for game/project state pills)
   --ok:       #7bd88f;  // finished / stable
   --warn:     #c9a0f5;  // playing / wip
-  --stop:     #e57373;  // dropped / unfinished
+  --stop:     #e57373;  // dropped
   --pause:    #7aa6da;  // paused (on hold)
+  --unfinished: #d38a52;  // stopped, no stated intent — between dropped and paused
   --mastered: #e8a33d;  // trophy gold, a step above finished
   --endless:  #5ec8c8;  // cyclical, replay-loop design
   --multi:    #f0a0c4;  // multiplayer
@@ -95,6 +96,7 @@ $content-width: 1100px;
     --stop:    #da3939;  // darkened: was 2.99:1 on white
     --mastered:#a46a13;  // darkened: was 2.16:1 on white
     --pause:   #3f74ad;
+    --unfinished: #9c5f24;  // darkened from the dark value, same treatment as --mastered
     --endless: #1f7f7f;
     --multi:   #b03a70;
     --software:#5b6478;

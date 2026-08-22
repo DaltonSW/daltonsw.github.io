@@ -1,0 +1,792 @@
+{
+ "provider": "steam",
+ "title": "Overcooked! 2",
+ "updated": "2026-08-19",
+ "id": "728880",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 6,
+ "total": 54,
+ "first": "2021-07-11",
+ "last": "2021-07-11",
+ "platform": "PC",
+ "icon": "bac36f471109038ae0b40619de4109d475f86a54",
+ "playtime_mins": 130,
+ "playtime": {
+  "windows": 120
+ },
+ "last_played": "2021-07-11",
+ "achievements": [
+  {
+   "key": "Extinguish a burning kitchen",
+   "name": "If You Can't Stand the Heat",
+   "description": "Extinguish a burning kitchen",
+   "unlocked": true,
+   "date": "2021-07-11T17:17:47-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/2e0752ed0d4be81af276b81a3537bbcbdae95c68.jpg"
+  },
+  {
+   "key": "Complete the tutorial level",
+   "name": "And Suet Begins",
+   "description": "Complete the tutorial level",
+   "unlocked": true,
+   "date": "2021-07-11T17:23:26-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/13c764b1e39ad535cee02e4f4d41a490e890707c.jpg"
+  },
+  {
+   "key": "Complete a level in recipe order",
+   "name": "Clockwork Kitchen",
+   "description": "Complete a level by doing all the recipes in order",
+   "unlocked": true,
+   "date": "2021-07-11T17:54:13-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/c659d9d72b49fcee6e1ba459986b16e81596d919.jpg"
+  },
+  {
+   "key": "Complete world 1 with 3 stars",
+   "name": "Kitchen Porter",
+   "description": "Get 3 stars on every level in World 1",
+   "unlocked": true,
+   "date": "2021-07-11T18:19:28-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/3a7995ee896a7ea6525a9d23fc07007cb19664d6.jpg"
+  },
+  {
+   "key": "Use all emotes",
+   "name": "It's Bean Emotional",
+   "description": "Use every emote",
+   "unlocked": true,
+   "date": "2021-07-11T19:21:04-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/91b8a258c7699a736179be40334a8e2ee0dbc586.jpg"
+  },
+  {
+   "key": "Complete world 2 with 3 stars",
+   "name": "Commis Chef",
+   "description": "Get 3 stars on every level in World 2",
+   "unlocked": true,
+   "date": "2021-07-11T19:39:38-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/42d558565814b0834e6e615f65b8fa652a457cc1.jpg"
+  },
+  {
+   "key": "Catch X items",
+   "name": "I Ain't No Butterfingers",
+   "description": "Catch 250 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/143aa48e0861358a4b6f1b74fc2c2b33d2a9a31f.jpg"
+  },
+  {
+   "key": "Chop X ingredients",
+   "name": "Get To The Chopper",
+   "description": "Chop 800 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/87f33667bb2daea548a177f867cfd25f074cda35.jpg"
+  },
+  {
+   "key": "Clean X dirty plates or glasses with the water gun",
+   "name": "Soaker Cola",
+   "description": "Wash 150 dirty plates or glasses with the water gun",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/82e184a854cfb26b167d6873adb1b4308efb365d.jpg"
+  },
+  {
+   "key": "Complete DLC World 1",
+   "name": "Smoothie Criminal",
+   "description": "Get 3 stars on every level in Surf 'n' Turf World 1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/ed6059701faabc015d21dd3aa106396df3455f26.jpg"
+  },
+  {
+   "key": "Complete DLC World 2",
+   "name": "Skewer Rat",
+   "description": "Get 3 stars on every level in Surf 'n' Turf World 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/cab5aef774f7ee6ba1bab7d76b5f50f70d8ecab9.jpg"
+  },
+  {
+   "key": "Complete DLC World 3",
+   "name": "Carte Blanched",
+   "description": "Get 3 stars on every level in Surf 'n' Turf World 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/72afba42175bf311d516ecdf2221dcf492bd2bbe.jpg"
+  },
+  {
+   "key": "Complete all DLC levels 3 star",
+   "name": "Surf 'n' Turf",
+   "description": "Get 3 stars on all Surf 'n' Turf levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/0c7d865eb59e6edfe3082e277b5e50adb7b46a80.jpg"
+  },
+  {
+   "key": "Complete all hidden levels with 3 stars",
+   "name": "The Secret Ingredient",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/7bc5ee57cba094b4ab9964e4bf486009c2860e60.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Complete the game",
+   "name": "The Unbread",
+   "description": "Complete the main story campaign",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/0dcc214fe52144fa2d13ccfe44c61671b73a014d.jpg"
+  },
+  {
+   "key": "Complete world 3 with 3 stars",
+   "name": "Chef de Partie",
+   "description": "Get 3 stars on every level in World 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/697a4e7f10ba292723b217e282bb6ad586914879.jpg"
+  },
+  {
+   "key": "Complete world 4 with 3 stars",
+   "name": "Sous Chef",
+   "description": "Get 3 stars on every level in World 4",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/fe5d1426d5512abe2bcbe81e6292e91eacba6082.jpg"
+  },
+  {
+   "key": "Complete world 5 with 3 stars",
+   "name": "Head Chef",
+   "description": "Get 3 stars on every level in World 5",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/12f5b71674c3df381641bc941a1a46c1754c1010.jpg"
+  },
+  {
+   "key": "Complete world 6 with 3 stars",
+   "name": "Executive Chef",
+   "description": "Get 3 stars on every level in World 6",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/64c1899e490561e963a29871f94f30106835c887.jpg"
+  },
+  {
+   "key": "DLC05 3 star all levels",
+   "name": "Cooked Off!",
+   "description": "Get 3 stars on all Campfire Cook Off levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/fcdd81a3283f9ea5179fabf0caa0a81d7b62341c.jpg"
+  },
+  {
+   "key": "DLC05 Burn X pieces of wood",
+   "name": "Tree Hater",
+   "description": "Burn 300 pieces of wood",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/b6cff62b845ca8bde55f7fe67e332de0f6cf8940.jpg"
+  },
+  {
+   "key": "DLC05 Complete World 1",
+   "name": "S'more Than a Feeling",
+   "description": "Get 3 stars on every level in Campfire Cook Off World 1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/fa25c15096f4dea54aadc0b05bb0053e79fade0c.jpg"
+  },
+  {
+   "key": "DLC05 Complete World 2",
+   "name": "The Greasy Spoon",
+   "description": "Get 3 stars on every level in Campfire Cook Off World 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/3521fa9e816bc37658a396fbf800cacb2b2e10bc.jpg"
+  },
+  {
+   "key": "DLC05 Complete World 3",
+   "name": "Specials Board",
+   "description": "Get 3 stars on every level in Campfire Cook Off World 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/3268e38d94d26ed781045b2b3a6e5abf6de421bf.jpg"
+  },
+  {
+   "key": "DLC05 Deliver all recipes",
+   "name": "Full Mashings",
+   "description": "Deliver every type of meal in Campfire Cook Off",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/28c54bfc4b9965d43bb3f2f1ebb1f48bae1e7bb1.jpg"
+  },
+  {
+   "key": "DLC05 Take X items from backpack",
+   "name": "Backpack Hijack",
+   "description": "Take 500 items from a backpack",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/b51b3eea8952f788f7ffc87f3aa7ec1c03c9d4ac.jpg"
+  },
+  {
+   "key": "DLC07 3 star all levels",
+   "name": "Star Braiser",
+   "description": "Get 3 stars on all Night of the Hangry Horde levels with a star rating",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/e6113ed88241a3cc3e54a2d943070a70d10c9917.jpg"
+  },
+  {
+   "key": "DLC07 Burn X pieces of coal",
+   "name": "Coal of Duty",
+   "description": "Burn 300 buckets of coal in the furnace",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/0062cb4c29f957c1f81fd82750fe9deef90877e4.jpg"
+  },
+  {
+   "key": "DLC07 Chop X items with guillotine",
+   "name": "Heads Will Roll",
+   "description": "Chop 500 ingredients using the guillotine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/93aa39734ebda820b1466f5deb529186caf58feb.jpg"
+  },
+  {
+   "key": "DLC07 Complete World 1",
+   "name": "Get Roasted",
+   "description": "Get 3 stars on every level in Night of the Hangry Horde World 1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/47aff934eee12e750e4c0c22abadb143f38ebda2.jpg"
+  },
+  {
+   "key": "DLC07 Complete World 2",
+   "name": "Pie Me a River",
+   "description": "Get 3 stars on every level in Night of the Hangry Horde World 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/b4014220d75fa6719cb37a5c91b12ec017e78afa.jpg"
+  },
+  {
+   "key": "DLC07 Complete World 3",
+   "name": "Wrap Artist",
+   "description": "Get 3 stars on every level in Night of the Hangry Horde World 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/51335475c80fa21d7b6342e48ec29f9a0f1ff4af.jpg"
+  },
+  {
+   "key": "DLC07 Perfect all Horde stages",
+   "name": "You Shallot Pass!",
+   "description": "Survive all horde stages in Night of the Hangry Horde with full kitchen health",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/1c49495576b5b1f941a28a44074ff007689b1f2b.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 01",
+   "name": "Carnival of Chaos",
+   "description": "Get 3 stars on all Carnival of Chaos levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/208d7ef450378095d82f5256346ef381d559be7d.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 02",
+   "name": "Fast Foodie",
+   "description": "Deliver every type of meal in Carnival of Chaos",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/8acf4b89f621bd564304b41ae6df4c287109f6d5.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 03",
+   "name": "Mealer Dealer",
+   "description": "Get 3 stars on every level in Carnival of Chaos World 1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/1841ae4904cc11503a2ab8e22b4d82cc0889b942.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 04",
+   "name": "The Breaded Lady",
+   "description": "Get 3 stars on every level in Carnival of Chaos World 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/ca713eb0fde6601f9c0a05f8e65fd9efe1f590d5.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 05",
+   "name": "Big Topping",
+   "description": "Get 3 stars on every level in Carnival of Chaos World 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/8d50a9c8e7fc768a1422d53060f11dfdee52e675.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 06",
+   "name": "Cannoned Goods",
+   "description": "Fire a Chef from a Cannon 100 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/b5bb3bb022a00d318246fa368c8b60ae3f0ea5fc.jpg"
+  },
+  {
+   "key": "DLC08 Achievement 07",
+   "name": "Condiment Connoisseur",
+   "description": "Add mustard or ketchup to a recipe 100 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/7190dd5c90898889eabcd219dd540eb493cf10ea.jpg"
+  },
+  {
+   "key": "Deliver X recipes",
+   "name": "A Grand Dining Experience",
+   "description": "Deliver 1000 Meals",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/81f7b843c6145eea47df3d81920fc9becd76c29e.jpg"
+  },
+  {
+   "key": "Deliver all individual recipes in the DLC",
+   "name": "You Got Served",
+   "description": "Deliver every type of meal in Surf 'n' Turf",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/5bd73e309db22ae0febf06cf576a4f1bcec9303e.jpg"
+  },
+  {
+   "key": "Deliver each recipe in the game",
+   "name": "The Spice of Life",
+   "description": "Deliver every type of meal in the game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/739c5b1894e6a034ba463382a1c86ee92f6bd998.jpg"
+  },
+  {
+   "key": "Go through X portals",
+   "name": "Jelly-Porter",
+   "description": "Go through portals 75 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/ff64f0964251d0eccc37cb8db3fb57b56e627b2e.jpg"
+  },
+  {
+   "key": "Heat up X BBQs with the bellows",
+   "name": "Heat and Greet",
+   "description": "Use the Bellows on BBQs 500 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/fdb275f9342f443fa4a395ba58e915e0c3fdcfe1.jpg"
+  },
+  {
+   "key": "Hit all switches on the world map",
+   "name": "Switch It Up",
+   "description": "Hit all the switches on the world map",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/caaa94730ec706ff2a4b706ff198dc14efe4a715.jpg"
+  },
+  {
+   "key": "Land X ingredients in pots",
+   "name": "Hot Pot Shot",
+   "description": "Throw 100 ingredients into a cooking pot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/1dea9865ef5fe94605cc884a9992b2fd10cbe823.jpg"
+  },
+  {
+   "key": "Play X party games",
+   "name": "Dinner Party Posse",
+   "description": "Finish 15 Arcade games",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/fd32d3c2ab4529c57e2bd5cde152e274c1af7c63.jpg"
+  },
+  {
+   "key": "Play X versus games",
+   "name": "It's A Cook-Off!",
+   "description": "Finish 15 versus games",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/27595bfca6623650131c991cc03160858855fba1.jpg"
+  },
+  {
+   "key": "Throw X items",
+   "name": "Toss Lightly",
+   "description": "Throw 500 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/d9877386dad9dbcbc9911fd8e687af5ecea8d584.jpg"
+  },
+  {
+   "key": "Unlock all chefs",
+   "name": "Too Many Cooks",
+   "description": "Unlock all the chefs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/85dc0d23d80be2fc071e842c64d3a3a56f4e316a.jpg"
+  },
+  {
+   "key": "Wash X plates",
+   "name": "Dishwasher",
+   "description": "Wash 300 plates",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/0a07035f27a164e7bd69e76606429138aee29567.jpg"
+  },
+  {
+   "key": "Win X versus games",
+   "name": "Battered!",
+   "description": "Win 10 games in versus mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/df3a8409e83bfe634e9f55503fb1c862fb17a372.jpg"
+  },
+  {
+   "key": "X food binned",
+   "name": "Bangers And Trash",
+   "description": "Put 99 items in the bin",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/728880/218222432d3d83235b25346a003d3fc92c7ffe4e.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Overcooked! 2",
+   "achievements": [
+    {
+     "apiname": "Complete the game",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Unbread",
+     "description": "Complete the main story campaign"
+    },
+    {
+     "apiname": "Complete all hidden levels with 3 stars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Secret Ingredient",
+     "description": ""
+    },
+    {
+     "apiname": "Deliver X recipes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Grand Dining Experience",
+     "description": "Deliver 1000 Meals"
+    },
+    {
+     "apiname": "Complete world 4 with 3 stars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sous Chef",
+     "description": "Get 3 stars on every level in World 4"
+    },
+    {
+     "apiname": "Complete world 5 with 3 stars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Head Chef",
+     "description": "Get 3 stars on every level in World 5"
+    },
+    {
+     "apiname": "Complete world 6 with 3 stars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Executive Chef",
+     "description": "Get 3 stars on every level in World 6"
+    },
+    {
+     "apiname": "Deliver each recipe in the game",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Spice of Life",
+     "description": "Deliver every type of meal in the game"
+    },
+    {
+     "apiname": "Complete a level in recipe order",
+     "achieved": 1,
+     "unlocktime": 1626044053,
+     "name": "Clockwork Kitchen",
+     "description": "Complete a level by doing all the recipes in order"
+    },
+    {
+     "apiname": "Land X ingredients in pots",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot Pot Shot",
+     "description": "Throw 100 ingredients into a cooking pot"
+    },
+    {
+     "apiname": "Win X versus games",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Battered!",
+     "description": "Win 10 games in versus mode"
+    },
+    {
+     "apiname": "Complete world 1 with 3 stars",
+     "achieved": 1,
+     "unlocktime": 1626045568,
+     "name": "Kitchen Porter",
+     "description": "Get 3 stars on every level in World 1"
+    },
+    {
+     "apiname": "Complete world 2 with 3 stars",
+     "achieved": 1,
+     "unlocktime": 1626050378,
+     "name": "Commis Chef",
+     "description": "Get 3 stars on every level in World 2"
+    },
+    {
+     "apiname": "Complete world 3 with 3 stars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chef de Partie",
+     "description": "Get 3 stars on every level in World 3"
+    },
+    {
+     "apiname": "Unlock all chefs",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Too Many Cooks",
+     "description": "Unlock all the chefs"
+    },
+    {
+     "apiname": "Extinguish a burning kitchen",
+     "achieved": 1,
+     "unlocktime": 1626041867,
+     "name": "If You Can't Stand the Heat",
+     "description": "Extinguish a burning kitchen"
+    },
+    {
+     "apiname": "Complete the tutorial level",
+     "achieved": 1,
+     "unlocktime": 1626042206,
+     "name": "And Suet Begins",
+     "description": "Complete the tutorial level"
+    },
+    {
+     "apiname": "Play X party games",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dinner Party Posse",
+     "description": "Finish 15 Arcade games"
+    },
+    {
+     "apiname": "Play X versus games",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's A Cook-Off!",
+     "description": "Finish 15 versus games"
+    },
+    {
+     "apiname": "Throw X items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toss Lightly",
+     "description": "Throw 500 items"
+    },
+    {
+     "apiname": "Catch X items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Ain't No Butterfingers",
+     "description": "Catch 250 items"
+    },
+    {
+     "apiname": "X food binned",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bangers And Trash",
+     "description": "Put 99 items in the bin"
+    },
+    {
+     "apiname": "Wash X plates",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dishwasher",
+     "description": "Wash 300 plates"
+    },
+    {
+     "apiname": "Use all emotes",
+     "achieved": 1,
+     "unlocktime": 1626049264,
+     "name": "It's Bean Emotional",
+     "description": "Use every emote"
+    },
+    {
+     "apiname": "Go through X portals",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jelly-Porter",
+     "description": "Go through portals 75 times"
+    },
+    {
+     "apiname": "Chop X ingredients",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get To The Chopper",
+     "description": "Chop 800 items"
+    },
+    {
+     "apiname": "Hit all switches on the world map",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Switch It Up",
+     "description": "Hit all the switches on the world map"
+    },
+    {
+     "apiname": "Complete all DLC levels 3 star",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Surf 'n' Turf",
+     "description": "Get 3 stars on all Surf 'n' Turf levels"
+    },
+    {
+     "apiname": "Deliver all individual recipes in the DLC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Got Served",
+     "description": "Deliver every type of meal in Surf 'n' Turf"
+    },
+    {
+     "apiname": "Complete DLC World 1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Smoothie Criminal",
+     "description": "Get 3 stars on every level in Surf 'n' Turf World 1"
+    },
+    {
+     "apiname": "Complete DLC World 2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skewer Rat",
+     "description": "Get 3 stars on every level in Surf 'n' Turf World 2"
+    },
+    {
+     "apiname": "Complete DLC World 3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Carte Blanched",
+     "description": "Get 3 stars on every level in Surf 'n' Turf World 3"
+    },
+    {
+     "apiname": "Clean X dirty plates or glasses with the water gun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soaker Cola",
+     "description": "Wash 150 dirty plates or glasses with the water gun"
+    },
+    {
+     "apiname": "Heat up X BBQs with the bellows",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heat and Greet",
+     "description": "Use the Bellows on BBQs 500 times"
+    },
+    {
+     "apiname": "DLC05 3 star all levels",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cooked Off!",
+     "description": "Get 3 stars on all Campfire Cook Off levels"
+    },
+    {
+     "apiname": "DLC05 Deliver all recipes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Mashings",
+     "description": "Deliver every type of meal in Campfire Cook Off"
+    },
+    {
+     "apiname": "DLC05 Complete World 1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "S'more Than a Feeling",
+     "description": "Get 3 stars on every level in Campfire Cook Off World 1"
+    },
+    {
+     "apiname": "DLC05 Complete World 2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Greasy Spoon",
+     "description": "Get 3 stars on every level in Campfire Cook Off World 2"
+    },
+    {
+     "apiname": "DLC05 Complete World 3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Specials Board",
+     "description": "Get 3 stars on every level in Campfire Cook Off World 3"
+    },
+    {
+     "apiname": "DLC05 Burn X pieces of wood",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tree Hater",
+     "description": "Burn 300 pieces of wood"
+    },
+    {
+     "apiname": "DLC05 Take X items from backpack",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Backpack Hijack",
+     "description": "Take 500 items from a backpack"
+    },
+    {
+     "apiname": "DLC07 Perfect all Horde stages",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Shallot Pass!",
+     "description": "Survive all horde stages in Night of the Hangry Horde with full kitchen health"
+    },
+    {
+     "apiname": "DLC07 3 star all levels",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star Braiser",
+     "description": "Get 3 stars on all Night of the Hangry Horde levels with a star rating"
+    },
+    {
+     "apiname": "DLC07 Complete World 1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get Roasted",
+     "description": "Get 3 stars on every level in Night of the Hangry Horde World 1"
+    },
+    {
+     "apiname": "DLC07 Complete World 2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pie Me a River",
+     "description": "Get 3 stars on every level in Night of the Hangry Horde World 2"
+    },
+    {
+     "apiname": "DLC07 Complete World 3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wrap Artist",
+     "description": "Get 3 stars on every level in Night of the Hangry Horde World 3"
+    },
+    {
+     "apiname": "DLC07 Burn X pieces of coal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coal of Duty",
+     "description": "Burn 300 buckets of coal in the furnace"
+    },
+    {
+     "apiname": "DLC07 Chop X items with guillotine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heads Will Roll",
+     "description": "Chop 500 ingredients using the guillotine"
+    },
+    {
+     "apiname": "DLC08 Achievement 01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Carnival of Chaos",
+     "description": "Get 3 stars on all Carnival of Chaos levels"
+    },
+    {
+     "apiname": "DLC08 Achievement 02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fast Foodie",
+     "description": "Deliver every type of meal in Carnival of Chaos"
+    },
+    {
+     "apiname": "DLC08 Achievement 03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mealer Dealer",
+     "description": "Get 3 stars on every level in Carnival of Chaos World 1"
+    },
+    {
+     "apiname": "DLC08 Achievement 04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Breaded Lady",
+     "description": "Get 3 stars on every level in Carnival of Chaos World 2"
+    },
+    {
+     "apiname": "DLC08 Achievement 05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Big Topping",
+     "description": "Get 3 stars on every level in Carnival of Chaos World 3"
+    },
+    {
+     "apiname": "DLC08 Achievement 06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cannoned Goods",
+     "description": "Fire a Chef from a Cannon 100 times"
+    },
+    {
+     "apiname": "DLC08 Achievement 07",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Condiment Connoisseur",
+     "description": "Add mustard or ketchup to a recipe 100 times"
+    }
+   ],
+   "success": true
+  }
+ }
+}

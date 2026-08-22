@@ -1,0 +1,452 @@
+{
+ "provider": "steam",
+ "title": "BattleBlock Theater",
+ "updated": "2026-08-19",
+ "id": "238460",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 5,
+ "total": 30,
+ "first": "2014-06-25",
+ "last": "2014-12-21",
+ "platform": "PC",
+ "icon": "2f258aaff583d797812cdcf24830d5992f48733b",
+ "playtime_mins": 118,
+ "last_played": "2014-12-22",
+ "achievements": [
+  {
+   "key": "ACH01_CAST_MEMBER",
+   "name": "Cast Member",
+   "description": "Complete the story's opening sequence in any mode.",
+   "unlocked": true,
+   "date": "2014-06-25T22:10:29-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/900ef7665e7a2b49f68bb285360256f2843847d4.jpg"
+  },
+  {
+   "key": "ACH15_BLACK_MARKETEER",
+   "name": "Black Marketeer",
+   "description": "Get yourself a cool new weapon.",
+   "unlocked": true,
+   "date": "2014-06-25T22:53:06-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/5e0cebd31226034fe9cad057a320b9d2873a8acd.jpg"
+  },
+  {
+   "key": "ACH14_NAIL_FILE_CAKE",
+   "name": "Nail File Cake",
+   "description": "Free a fellow prisoner.",
+   "unlocked": true,
+   "date": "2014-06-25T22:53:32-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/d1af4f9cc11d0a007b9e79a8ba353b484999e10b.jpg"
+  },
+  {
+   "key": "ACH13_SECRET_FINDER",
+   "name": "Secret Finder",
+   "unlocked": true,
+   "date": "2014-12-21T23:31:37-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/f7b1c544152c5a71ddd6ed83ba4a64af2572a2e4.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH28_PRISON_FOOD",
+   "name": "Prison Food",
+   "unlocked": true,
+   "date": "2014-12-21T23:43:09-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/47a1d8a22a0e20952cb587d76c1e36c2a01d4ce9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH02_SEASONED_PERFORMER",
+   "name": "Seasoned Performer",
+   "description": "Complete the first four finales in any mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/65b958e738d87987d2d2ae9930e314a6f435f218.jpg"
+  },
+  {
+   "key": "ACH03_VIRTUOSO",
+   "name": "Virtuoso",
+   "description": "Get an A++ in 10 levels.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/e58dce944c210d025b2e2f5d300e94dc13c9b5b1.jpg"
+  },
+  {
+   "key": "ACH04_SOLO_STAR",
+   "name": "Solo Star",
+   "description": "Get a letter grade in every level (except Encores) in Normal Solo Story Mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/8a70125f6b8d8582dd86c3dd3b629eabd9a472db.jpg"
+  },
+  {
+   "key": "ACH05_COOP_STAR",
+   "name": "Coop Star",
+   "description": "Get a letter grade in every level (except Encores) in Normal Co-op Story Mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/02033dc91eaebf65e82dfdb0ce4b365e4f455bb9.jpg"
+  },
+  {
+   "key": "ACH06_INSANE_SOLO_STAR",
+   "name": "Insane Solo Star",
+   "description": "Get a letter grade  in every level (except Encores) in insane solo story mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/eff79809bac238b6377a72fd0bc254040bbc5e60.jpg"
+  },
+  {
+   "key": "ACH07_INSANE_COOP_STAR",
+   "name": "Insane Coop Star",
+   "description": "Get a letter grade in every level (except Encores) in insane co-op story mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/56e65a6e6cafc5149e6f9268ffbd0e54ec418c9d.jpg"
+  },
+  {
+   "key": "ACH08_CROWD_PLEASER",
+   "name": "Crowd Pleaser",
+   "description": "Complete all the Encores in any mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/f35fd326a35a53fa582932e2467d8d89cf69f8c5.jpg"
+  },
+  {
+   "key": "ACH09_SECRET_HAT_HUNTER",
+   "name": "Secret Hat Hunter",
+   "description": "Collect 10 Golden Hats.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/fafa18fcac71d98a869051e85f726b4d163090ac.jpg"
+  },
+  {
+   "key": "ACH10_HATS_OFF",
+   "name": "Hats Off",
+   "description": "Get a letter grade in all eight finales in any mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/2f96ed0c83cdc2eef004b30e0331cb934a97546e.jpg"
+  },
+  {
+   "key": "ACH11_THE_PROFESSIONAL",
+   "name": "The Professional",
+   "description": "Be on the winning team in 100 arena matches.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/8a95da27f9a060df462a3bf77ce0558950ee508c.jpg"
+  },
+  {
+   "key": "ACH12_ALL_AROUND_JOE",
+   "name": "All Around Joe",
+   "description": "Be on the winning team in one arena match of every mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/ed48d5eb8efd48d6e12379f929dce991c5f7bc75.jpg"
+  },
+  {
+   "key": "ACH16_JAIL_BREAKER",
+   "name": "Jail Breaker",
+   "description": "Free 50 prisoners in the Gift Shop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/e6edf5147f25560f1f88f32f8030b3aa2cefa0e4.jpg"
+  },
+  {
+   "key": "ACH17_SOCIAL_BUTTERFLY",
+   "name": "Social Butterfly",
+   "description": "Collect all the prisoners of one head shape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/e0ae895d04fa01520c25ab9f4319e7916db5a5a9.jpg"
+  },
+  {
+   "key": "ACH18_FREEDOM_HERO",
+   "name": "Freedom Hero",
+   "description": "Free all the prisoners in the Gift Shop by unlocking or trading.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/e0826075ff618c2e3620962ad108f7eb243ce966.jpg"
+  },
+  {
+   "key": "ACH19_ARMED_AND_DANGEROUS",
+   "name": "Armed and Dangerous",
+   "description": "Collect all the weapons in the Gift Shop by unlocking or trading.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/2fbda0a827a46f18ef75854e0b92517d72fc6b7e.jpg"
+  },
+  {
+   "key": "ACH20_FIRST_TIME_TRADER",
+   "name": "First Time Trader",
+   "description": "Make a trade with someone.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/1b71376aab844e8611434b2f3d5a72882c1a4525.jpg"
+  },
+  {
+   "key": "ACH21_TAKE_A_BOW",
+   "name": "Take A Bow",
+   "description": "Complete an encore level in Story Mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/aa003d3d3ac721d9f0e9c34d49382523f8cc0c94.jpg"
+  },
+  {
+   "key": "ACH22_TRAITOR",
+   "name": "Traitor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/b65bb50a85c32f0b9592c9d240b7977806fcbede.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH23_DEADLY_PERFORMER",
+   "name": "Deadly Performer",
+   "description": "Get 100 kills.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/5c75a1d40b55f027162da1892f9fb35630c5174b.jpg"
+  },
+  {
+   "key": "ACH24_CHICKEN_TOUCHER",
+   "name": "Chicken Toucher",
+   "description": "Play with the Behemoth or someone with this achievement in an online game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/5f98c1457f0ce2aeb72ba23ddc6e8c56235ade74.jpg"
+  },
+  {
+   "key": "ACH25_MELEE_MASTER",
+   "name": "Melee Master",
+   "description": "Successfully use every melee attack move.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/1f0dd1cc4dff56eb95d95dda56bd7d6c4f01be1c.jpg"
+  },
+  {
+   "key": "ACH26_WEAPONS_MASTER",
+   "name": "Weapons Master",
+   "description": "Use each weapon successfully.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/71e8e339efbc3773e7a52c9e8967e8f72ee5789d.jpg"
+  },
+  {
+   "key": "ACH27_CONSOLATION_PRIZE",
+   "name": "Consolation Prize",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/fd86126b45309118e123ac00d46dfaa81d621761.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH29_THEATER_CRITIC",
+   "name": "Theater Critic",
+   "description": "Complete 10 user-created levels in a single Featured Story playlist.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/06c4e75c757485cc27b1276dddc19295dfc00143.jpg"
+  },
+  {
+   "key": "ACH30_THEATER_MANAGER",
+   "name": "Theater Manager",
+   "description": "Download and host a game of user-created levels.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/238460/18253f22af43914117c1537dc9c034f292e3c423.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "BattleBlock Theater",
+   "achievements": [
+    {
+     "apiname": "ACH01_CAST_MEMBER",
+     "achieved": 1,
+     "unlocktime": 1403752229,
+     "name": "Cast Member",
+     "description": "Complete the story's opening sequence in any mode."
+    },
+    {
+     "apiname": "ACH02_SEASONED_PERFORMER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seasoned Performer",
+     "description": "Complete the first four finales in any mode."
+    },
+    {
+     "apiname": "ACH03_VIRTUOSO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Virtuoso",
+     "description": "Get an A++ in 10 levels."
+    },
+    {
+     "apiname": "ACH04_SOLO_STAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Solo Star",
+     "description": "Get a letter grade in every level (except Encores) in Normal Solo Story Mode."
+    },
+    {
+     "apiname": "ACH05_COOP_STAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coop Star",
+     "description": "Get a letter grade in every level (except Encores) in Normal Co-op Story Mode."
+    },
+    {
+     "apiname": "ACH06_INSANE_SOLO_STAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Insane Solo Star",
+     "description": "Get a letter grade  in every level (except Encores) in insane solo story mode."
+    },
+    {
+     "apiname": "ACH07_INSANE_COOP_STAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Insane Coop Star",
+     "description": "Get a letter grade in every level (except Encores) in insane co-op story mode."
+    },
+    {
+     "apiname": "ACH08_CROWD_PLEASER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crowd Pleaser",
+     "description": "Complete all the Encores in any mode."
+    },
+    {
+     "apiname": "ACH09_SECRET_HAT_HUNTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Secret Hat Hunter",
+     "description": "Collect 10 Golden Hats."
+    },
+    {
+     "apiname": "ACH10_HATS_OFF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hats Off",
+     "description": "Get a letter grade in all eight finales in any mode."
+    },
+    {
+     "apiname": "ACH11_THE_PROFESSIONAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Professional",
+     "description": "Be on the winning team in 100 arena matches."
+    },
+    {
+     "apiname": "ACH12_ALL_AROUND_JOE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Around Joe",
+     "description": "Be on the winning team in one arena match of every mode."
+    },
+    {
+     "apiname": "ACH13_SECRET_FINDER",
+     "achieved": 1,
+     "unlocktime": 1419226297,
+     "name": "Secret Finder",
+     "description": ""
+    },
+    {
+     "apiname": "ACH14_NAIL_FILE_CAKE",
+     "achieved": 1,
+     "unlocktime": 1403754812,
+     "name": "Nail File Cake",
+     "description": "Free a fellow prisoner."
+    },
+    {
+     "apiname": "ACH15_BLACK_MARKETEER",
+     "achieved": 1,
+     "unlocktime": 1403754786,
+     "name": "Black Marketeer",
+     "description": "Get yourself a cool new weapon."
+    },
+    {
+     "apiname": "ACH16_JAIL_BREAKER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jail Breaker",
+     "description": "Free 50 prisoners in the Gift Shop."
+    },
+    {
+     "apiname": "ACH17_SOCIAL_BUTTERFLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Social Butterfly",
+     "description": "Collect all the prisoners of one head shape."
+    },
+    {
+     "apiname": "ACH18_FREEDOM_HERO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Freedom Hero",
+     "description": "Free all the prisoners in the Gift Shop by unlocking or trading."
+    },
+    {
+     "apiname": "ACH19_ARMED_AND_DANGEROUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Armed and Dangerous",
+     "description": "Collect all the weapons in the Gift Shop by unlocking or trading."
+    },
+    {
+     "apiname": "ACH20_FIRST_TIME_TRADER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Time Trader",
+     "description": "Make a trade with someone."
+    },
+    {
+     "apiname": "ACH21_TAKE_A_BOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take A Bow",
+     "description": "Complete an encore level in Story Mode."
+    },
+    {
+     "apiname": "ACH22_TRAITOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Traitor",
+     "description": ""
+    },
+    {
+     "apiname": "ACH23_DEADLY_PERFORMER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deadly Performer",
+     "description": "Get 100 kills."
+    },
+    {
+     "apiname": "ACH24_CHICKEN_TOUCHER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chicken Toucher",
+     "description": "Play with the Behemoth or someone with this achievement in an online game."
+    },
+    {
+     "apiname": "ACH25_MELEE_MASTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Melee Master",
+     "description": "Successfully use every melee attack move."
+    },
+    {
+     "apiname": "ACH26_WEAPONS_MASTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapons Master",
+     "description": "Use each weapon successfully."
+    },
+    {
+     "apiname": "ACH27_CONSOLATION_PRIZE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Consolation Prize",
+     "description": ""
+    },
+    {
+     "apiname": "ACH28_PRISON_FOOD",
+     "achieved": 1,
+     "unlocktime": 1419226989,
+     "name": "Prison Food",
+     "description": ""
+    },
+    {
+     "apiname": "ACH29_THEATER_CRITIC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Theater Critic",
+     "description": "Complete 10 user-created levels in a single Featured Story playlist."
+    },
+    {
+     "apiname": "ACH30_THEATER_MANAGER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Theater Manager",
+     "description": "Download and host a game of user-created levels."
+    }
+   ],
+   "success": true
+  }
+ }
+}

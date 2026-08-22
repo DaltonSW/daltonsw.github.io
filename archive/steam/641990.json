@@ -1,0 +1,854 @@
+{
+ "provider": "steam",
+ "title": "The Escapists 2",
+ "updated": "2026-08-19",
+ "id": "641990",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 12,
+ "total": 58,
+ "first": "2020-07-06",
+ "last": "2020-07-07",
+ "platform": "PC",
+ "icon": "c1d2bb67884d14088b7befc3d442df6eb801cd13",
+ "playtime_mins": 171,
+ "playtime": {
+  "windows": 171
+ },
+ "last_played": "2020-09-30",
+ "achievements": [
+  {
+   "key": "OpenPrison",
+   "name": "Open Prison",
+   "description": "Play a Classic Game Online.",
+   "unlocked": true,
+   "date": "2020-07-06T20:24:04-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/7830f3f7f97e525efd05c1931a53ebc61d353988.jpg"
+  },
+  {
+   "key": "AllModCons",
+   "name": "All Mod Cons",
+   "description": "Use a customised character in-game.",
+   "unlocked": true,
+   "date": "2020-07-06T20:24:05-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/2587ad935610aa9aba89b51c651747ca5acde0f0.jpg"
+  },
+  {
+   "key": "TheOlympian",
+   "name": "The Olympian",
+   "description": "Max out the Fitness statistic.",
+   "unlocked": true,
+   "date": "2020-07-06T20:39:36-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/852757a092902302f59d12e876222e0fa4c5ddfe.jpg"
+  },
+  {
+   "key": "RippedOnTheInside",
+   "name": "Ripped on the Inside",
+   "description": "Max out the Strength statistic.",
+   "unlocked": true,
+   "date": "2020-07-06T20:47:06-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/5764dbe0ef0580f7a48cad556d9bdb7888ea3e81.jpg"
+  },
+  {
+   "key": "MansWorstFriend",
+   "name": "Man's Worst Friend",
+   "description": "Get mauled by a guard dog.",
+   "unlocked": true,
+   "date": "2020-07-06T20:58:35-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/097a628be6bbdf705a5efb1522e5e9a939204550.jpg"
+  },
+  {
+   "key": "DrLove",
+   "name": "Dr. Love",
+   "description": "Get whisked away by a hunky medic.",
+   "unlocked": true,
+   "date": "2020-07-06T20:58:56-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/abe1349d436ea989b5856310ef0befe376f5fde1.jpg"
+  },
+  {
+   "key": "ArtfulDodger",
+   "name": "Artful Dodger",
+   "description": "Craft an item.",
+   "unlocked": true,
+   "date": "2020-07-06T21:00:49-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/b62ed4f44bfd8a7be72a3bc6ccf10cbb445f6ef3.jpg"
+  },
+  {
+   "key": "CriminalMastermind",
+   "name": "Criminal Mastermind",
+   "description": "Max out the Intellect statistic.",
+   "unlocked": true,
+   "date": "2020-07-06T21:01:49-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/2551bb894fc4a5ed5725b336f89f55467eecdd4a.jpg"
+  },
+  {
+   "key": "Statistician",
+   "name": "Statistician",
+   "description": "Max out all 3 character statistics.",
+   "unlocked": true,
+   "date": "2020-07-06T21:01:49-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/33a6d5b7ec9db7c3a3f2a3e4a662ce2086ad3ce1.jpg"
+  },
+  {
+   "key": "HolidayBlues",
+   "name": "Holiday Blues",
+   "description": "Escape the Centre Perks 2.0 prison.",
+   "unlocked": true,
+   "date": "2020-07-06T21:45:05-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/f12ca903474da981c186d688701b4d644d9e812c.jpg"
+  },
+  {
+   "key": "ToMeToYou",
+   "name": "To Me, To You",
+   "description": "Enter a multiplayer only area.",
+   "unlocked": true,
+   "date": "2020-07-07T20:39:32-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/c3e23036c3e355d80690f3ea74ad01a56bcd3dc5.jpg"
+  },
+  {
+   "key": "EscapingIsMyForte",
+   "name": "Escaping Is My Forte",
+   "description": "Escape the Rattlesnake Springs prison.",
+   "unlocked": true,
+   "date": "2020-07-07T20:46:11-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/948b9e7763613fec423cc364d85a013a20355d25.jpg"
+  },
+  {
+   "key": "00005B",
+   "name": "To Antiquity And Beyond",
+   "description": "Complete the ‘Eternally Grateful’ Quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/3c53fa9867aa85c8fef6ca52049c2dffcbf709aa.jpg"
+  },
+  {
+   "key": "00005D",
+   "name": "Siege The Day ",
+   "description": "Complete the unique multiplayer escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/36a2451debf860660e253f47ef530334de920e65.jpg"
+  },
+  {
+   "key": "00005E",
+   "name": "Yo Dawg, I heard you like Exhibits",
+   "description": "Complete the ‘It Belongs In A Museum’ quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/35ea1f4acc3103e62eecf78c2a83c54d2f690efd.jpg"
+  },
+  {
+   "key": "00005F",
+   "name": "Royal Flush",
+   "description": "Use the Royal throne.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/2d9519e814fc12156f565fca158381528b9098e2.jpg"
+  },
+  {
+   "key": "00005K",
+   "name": "Oh What A Knight!",
+   "description": "Escape Dungeons and Duct Tape by any means.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/23abc63774f85f87e8fb7c8261aee6cf7ee678c9.jpg"
+  },
+  {
+   "key": "00005S",
+   "name": "‘Tis But A Scratch",
+   "description": "Complete the unique single player escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/b498b548617e86cc496a11383a2a65638444def0.jpg"
+  },
+  {
+   "key": "ACampDeparture",
+   "name": "A Camp Departure",
+   "description": "Escape the K.A.P.O.W Camp prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/ce1337aacc596d4c8a3a54734315deaaa798926f.jpg"
+  },
+  {
+   "key": "AintAfraidOfNoGhostDLC02",
+   "name": "I ain’t afraid of no Ghost ",
+   "description": "Witness the ghost perform an otherworldly feat…",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/038f78f54cfa2f437f9b8caa95da5d3e8193ca3b.jpg"
+  },
+  {
+   "key": "AreYouLonesomeTonight",
+   "name": "Are You Lonesome Tonight?",
+   "description": "Spend 3 days total time in solitary over multiple prisons/sessions.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/36da45e78f869fa963afd3b2b3e621b45779da71.jpg"
+  },
+  {
+   "key": "Bad Intentions2",
+   "name": "Bad Intentions Part 2",
+   "description": "Knock out 50 guards.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/ab7cab24baa11c5571bcabe7fe4622cc116a8254.jpg"
+  },
+  {
+   "key": "BadIntentions",
+   "name": "Bad Intentions",
+   "description": "Knock out 100 inmates.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/ff867f080295abbd0753634b3f70269033686359.jpg"
+  },
+  {
+   "key": "BumpInTheNightDLC02",
+   "name": "Almost Haunted",
+   "description": "Complete the ‘Bump in the night’ quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/325041988bc64f47c523bbfd4788b4c8bd8a9ecf.jpg"
+  },
+  {
+   "key": "CallOfSnooty",
+   "name": "Call Of Snooty",
+   "description": "Escape H.M.P. Offshore on Snooty the Dolphin.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/f7a0c49be48d55bd56cdcadb77b5317eca3b86c9.jpg"
+  },
+  {
+   "key": "ChilledOut",
+   "name": "Chilled Out",
+   "description": "Escape the Fort Tundra prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/51d024ca7a948a15a0befb0e79fac14d9cf0268c.jpg"
+  },
+  {
+   "key": "ClowningAroundDLC04",
+   "name": "Clowning Around",
+   "description": "Complete the ‘No Laughing Matter’ quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/6d33aff48fbc1349d0603290ffc30775e34117b8.jpg"
+  },
+  {
+   "key": "CrookOfAllTrades",
+   "name": "Crook Of All Trades",
+   "description": "Complete the quota once for each of the jobs over multiple prisons/sessions.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/4e7e36209920aea42146f55e2ddeefe172addb03.jpg"
+  },
+  {
+   "key": "DryingOut",
+   "name": "Drying Out",
+   "description": "Escape the H.M.P Offshore prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/984013772f138249b86d52c7afea5f903166a257.jpg"
+  },
+  {
+   "key": "EscapeDLC02",
+   "name": "Scared Stiff",
+   "description": "Escape Wicked Ward by any means.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/ddfa5bb1d24763bb7cd4d8130140300f3bda24e5.jpg"
+  },
+  {
+   "key": "GoodIntentions",
+   "name": "Good Intentions",
+   "description": "Go 3 consecutive days without raising your Guard Heat above 0 in a single session.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/59de212e32999702b19cd9e2898a207a51570070.jpg"
+  },
+  {
+   "key": "IAmYourFather",
+   "name": "I Am Your Father...",
+   "description": "Fight another player in the U.S.S Anomaly, when you are both armed with energy swords.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/35e720e0fa472979f9136d9f9f9e227df6f42663.jpg"
+  },
+  {
+   "key": "IWantToBelieve",
+   "name": "I want to Believe",
+   "description": "Escape the Area 17 prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/f1500cce928db409ce73f065f68a55c9aff9ebd0.jpg"
+  },
+  {
+   "key": "IllusionNotTrickDLC04",
+   "name": "It’s An Illusion, Not A Trick",
+   "description": "Complete the ‘Smoke and Mirrors’ Quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/9d1827a8692fb445e5cb8c9388ee961a2bfb92dd.jpg"
+  },
+  {
+   "key": "ImTheDaddy",
+   "name": "I'm The Daddy",
+   "description": "Knock out every inmate at least once in a single prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/1a611481060083cddcf6a6705186822b91d728f7.jpg"
+  },
+  {
+   "key": "IveGotACunningPlan",
+   "name": "I've Got A Cunning Plan",
+   "description": "Perform 7 unique escapes across the Classic prisons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/8a7fe1f552dffd1bedd11493292bbfd610ddaaed.jpg"
+  },
+  {
+   "key": "KeepItClean",
+   "name": "Keep It Clean!",
+   "description": "Tag 200 places throughout any prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/885059f2030babe53f3d6b1d939339ec001b8ac6.jpg"
+  },
+  {
+   "key": "LetsCraft",
+   "name": "Artisan",
+   "description": "Craft 50 unique items.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/07c34c9c0431a8e3d9d166d6a0519d7a8668aaf8.jpg"
+  },
+  {
+   "key": "LongShotDLC04",
+   "name": "It’s A Long Shot",
+   "description": "Complete the unique single player escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/8416a3476013a64c0fef95270c34f24c2cdd79f1.jpg"
+  },
+  {
+   "key": "MansBestFriend",
+   "name": "Man's Best Friend",
+   "description": "Gain a high enough opinion from a dog.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/2ed95229d7b9f3c6a5b246b555bef10c9c47a10a.jpg"
+  },
+  {
+   "key": "MultiplayerEscapeDLC02",
+   "name": "Monster Mash ",
+   "description": "Complete the unique multiplayer escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/2ded32649a636a6030d9fca2ecbfd1601ba38c9f.jpg"
+  },
+  {
+   "key": "MusicMaestro",
+   "name": "Music Maestro",
+   "description": "Play on the instruments for 1 hour of in-game time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/34e0af44d6d63cd29461fdc408f4654551852c9b.jpg"
+  },
+  {
+   "key": "NakedLunch",
+   "name": "Naked Lunch",
+   "description": "Attend dinner whilst being naked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/e263d8bd50448440b12e48906538eb6f6cc21f26.jpg"
+  },
+  {
+   "key": "NotEntertainedDLC04",
+   "name": "Are You Not Entertained?!",
+   "description": "Escape Big Top Breakout by any means.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/287b4fefece2f710b87bb577c3f142ebed6021f5.jpg"
+  },
+  {
+   "key": "OnePixellatedStep",
+   "name": "One Pixellated Step...",
+   "description": "Escape the U.S.S Anomaly prison.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/116576234d0570823b1f9357b91696f44505215e.jpg"
+  },
+  {
+   "key": "OnlineEnforcer",
+   "name": "Online Enforcer",
+   "description": "Win 10 Online Versus Games.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/856d3b190f1b851b421b92465360ef26c74d6550.jpg"
+  },
+  {
+   "key": "PourUsABrew",
+   "name": "Pour Us A Brew Will Yer, Love?",
+   "description": "Make a cup of tea and gift it to another inmate or guard.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/3253f30d28be02a807efbd45f4e18af69c2dce26.jpg"
+  },
+  {
+   "key": "RiotAct",
+   "name": "Riot Act",
+   "description": "Play a Versus Game Online.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/8c0a6cde425c08645fa2acadcbce2d091ed6b9d4.jpg"
+  },
+  {
+   "key": "SingleEscapeDLC02",
+   "name": "A Grave Affair",
+   "description": "Complete the unique single player escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/e907fd11d23096b48f86b09ef9545d002bb96019.jpg"
+  },
+  {
+   "key": "SoapOnARope",
+   "name": "Soap On A Rope",
+   "description": "Spend 3 days total time in the showers over multiple prisons/sessions.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/2ff21fa299ea0c7ae2fe0060841a9da8f2f58d50.jpg"
+  },
+  {
+   "key": "StageFrightDLC04",
+   "name": "Stage Fright",
+   "description": "Avoid going to the Show Time routine for 3 days in a row.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/402d611151394698e4a5f3274585ca43c245df3d.jpg"
+  },
+  {
+   "key": "TellMeWhatsYourFavour",
+   "name": "Tell Me What's Your Favour",
+   "description": "Complete 100 favours.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/20d652a94b3c263776a31361fcce04cbd40d510a.jpg"
+  },
+  {
+   "key": "TheCakeIsALie",
+   "name": "The Cake Is A Lie?",
+   "description": "Attack a guard with a cake.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/b043c23417c7d64de9574851ab3b7a9d3dadaac8.jpg"
+  },
+  {
+   "key": "TheGreatEscape",
+   "name": "The Great Escape",
+   "description": "Escape all Classic prisons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/c46b887e687231d2a021bc15fd1ba945060755cd.jpg"
+  },
+  {
+   "key": "TheMobileEscapist",
+   "name": "The Mobile Escapist",
+   "description": "Escape from all 3 of the base game transport prisons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/d7767384b48893601822f9871419ec4e0f4f2c98.jpg"
+  },
+  {
+   "key": "TheNakedChef",
+   "name": "The Naked Chef",
+   "description": "Complete a quota of the Kitchen job whilst being naked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/eeefbd1fa4664a80608493af4133aa1b9a9acf16.jpg"
+  },
+  {
+   "key": "WhatItDoesInTheShadowsDLC02",
+   "name": "Coffin Dodger",
+   "description": "Complete the ‘What it does in the shadows…’ quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/0bb147035babcc417d2805dc4f29c2d615b4e663.jpg"
+  },
+  {
+   "key": "WindUpMerchantDLC04",
+   "name": "Wind Up Merchant",
+   "description": "Complete the unique multiplayer escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/641990/0e28bb499b049895d85f7ce3932fe677b76d509c.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Escapists 2",
+   "achievements": [
+    {
+     "apiname": "RippedOnTheInside",
+     "achieved": 1,
+     "unlocktime": 1594086426,
+     "name": "Ripped on the Inside",
+     "description": "Max out the Strength statistic."
+    },
+    {
+     "apiname": "CriminalMastermind",
+     "achieved": 1,
+     "unlocktime": 1594087309,
+     "name": "Criminal Mastermind",
+     "description": "Max out the Intellect statistic."
+    },
+    {
+     "apiname": "TheOlympian",
+     "achieved": 1,
+     "unlocktime": 1594085976,
+     "name": "The Olympian",
+     "description": "Max out the Fitness statistic."
+    },
+    {
+     "apiname": "Statistician",
+     "achieved": 1,
+     "unlocktime": 1594087309,
+     "name": "Statistician",
+     "description": "Max out all 3 character statistics."
+    },
+    {
+     "apiname": "BadIntentions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bad Intentions",
+     "description": "Knock out 100 inmates."
+    },
+    {
+     "apiname": "Bad Intentions2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bad Intentions Part 2",
+     "description": "Knock out 50 guards."
+    },
+    {
+     "apiname": "DrLove",
+     "achieved": 1,
+     "unlocktime": 1594087136,
+     "name": "Dr. Love",
+     "description": "Get whisked away by a hunky medic."
+    },
+    {
+     "apiname": "ArtfulDodger",
+     "achieved": 1,
+     "unlocktime": 1594087249,
+     "name": "Artful Dodger",
+     "description": "Craft an item."
+    },
+    {
+     "apiname": "TheGreatEscape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Great Escape",
+     "description": "Escape all Classic prisons."
+    },
+    {
+     "apiname": "LetsCraft",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Artisan",
+     "description": "Craft 50 unique items."
+    },
+    {
+     "apiname": "IveGotACunningPlan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I've Got A Cunning Plan",
+     "description": "Perform 7 unique escapes across the Classic prisons."
+    },
+    {
+     "apiname": "ImTheDaddy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm The Daddy",
+     "description": "Knock out every inmate at least once in a single prison."
+    },
+    {
+     "apiname": "TheMobileEscapist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Mobile Escapist",
+     "description": "Escape from all 3 of the base game transport prisons"
+    },
+    {
+     "apiname": "OnlineEnforcer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Online Enforcer",
+     "description": "Win 10 Online Versus Games."
+    },
+    {
+     "apiname": "DryingOut",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drying Out",
+     "description": "Escape the H.M.P Offshore prison."
+    },
+    {
+     "apiname": "HolidayBlues",
+     "achieved": 1,
+     "unlocktime": 1594089905,
+     "name": "Holiday Blues",
+     "description": "Escape the Centre Perks 2.0 prison."
+    },
+    {
+     "apiname": "OnePixellatedStep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Pixellated Step...",
+     "description": "Escape the U.S.S Anomaly prison."
+    },
+    {
+     "apiname": "EscapingIsMyForte",
+     "achieved": 1,
+     "unlocktime": 1594172771,
+     "name": "Escaping Is My Forte",
+     "description": "Escape the Rattlesnake Springs prison."
+    },
+    {
+     "apiname": "ACampDeparture",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Camp Departure",
+     "description": "Escape the K.A.P.O.W Camp prison."
+    },
+    {
+     "apiname": "ChilledOut",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chilled Out",
+     "description": "Escape the Fort Tundra prison."
+    },
+    {
+     "apiname": "MusicMaestro",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Music Maestro",
+     "description": "Play on the instruments for 1 hour of in-game time."
+    },
+    {
+     "apiname": "ToMeToYou",
+     "achieved": 1,
+     "unlocktime": 1594172372,
+     "name": "To Me, To You",
+     "description": "Enter a multiplayer only area."
+    },
+    {
+     "apiname": "TellMeWhatsYourFavour",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tell Me What's Your Favour",
+     "description": "Complete 100 favours."
+    },
+    {
+     "apiname": "GoodIntentions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Intentions",
+     "description": "Go 3 consecutive days without raising your Guard Heat above 0 in a single session."
+    },
+    {
+     "apiname": "RiotAct",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Riot Act",
+     "description": "Play a Versus Game Online."
+    },
+    {
+     "apiname": "OpenPrison",
+     "achieved": 1,
+     "unlocktime": 1594085044,
+     "name": "Open Prison",
+     "description": "Play a Classic Game Online."
+    },
+    {
+     "apiname": "CrookOfAllTrades",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crook Of All Trades",
+     "description": "Complete the quota once for each of the jobs over multiple prisons/sessions."
+    },
+    {
+     "apiname": "MansWorstFriend",
+     "achieved": 1,
+     "unlocktime": 1594087115,
+     "name": "Man's Worst Friend",
+     "description": "Get mauled by a guard dog."
+    },
+    {
+     "apiname": "MansBestFriend",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Man's Best Friend",
+     "description": "Gain a high enough opinion from a dog."
+    },
+    {
+     "apiname": "AreYouLonesomeTonight",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Are You Lonesome Tonight?",
+     "description": "Spend 3 days total time in solitary over multiple prisons/sessions."
+    },
+    {
+     "apiname": "TheCakeIsALie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Cake Is A Lie?",
+     "description": "Attack a guard with a cake."
+    },
+    {
+     "apiname": "PourUsABrew",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pour Us A Brew Will Yer, Love?",
+     "description": "Make a cup of tea and gift it to another inmate or guard."
+    },
+    {
+     "apiname": "IAmYourFather",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Am Your Father...",
+     "description": "Fight another player in the U.S.S Anomaly, when you are both armed with energy swords."
+    },
+    {
+     "apiname": "AllModCons",
+     "achieved": 1,
+     "unlocktime": 1594085045,
+     "name": "All Mod Cons",
+     "description": "Use a customised character in-game."
+    },
+    {
+     "apiname": "SoapOnARope",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soap On A Rope",
+     "description": "Spend 3 days total time in the showers over multiple prisons/sessions."
+    },
+    {
+     "apiname": "CallOfSnooty",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Call Of Snooty",
+     "description": "Escape H.M.P. Offshore on Snooty the Dolphin."
+    },
+    {
+     "apiname": "NakedLunch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Naked Lunch",
+     "description": "Attend dinner whilst being naked."
+    },
+    {
+     "apiname": "TheNakedChef",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Naked Chef",
+     "description": "Complete a quota of the Kitchen job whilst being naked."
+    },
+    {
+     "apiname": "KeepItClean",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Keep It Clean!",
+     "description": "Tag 200 places throughout any prison."
+    },
+    {
+     "apiname": "IWantToBelieve",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I want to Believe",
+     "description": "Escape the Area 17 prison."
+    },
+    {
+     "apiname": "EscapeDLC02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scared Stiff",
+     "description": "Escape Wicked Ward by any means."
+    },
+    {
+     "apiname": "SingleEscapeDLC02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Grave Affair",
+     "description": "Complete the unique single player escape."
+    },
+    {
+     "apiname": "MultiplayerEscapeDLC02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monster Mash ",
+     "description": "Complete the unique multiplayer escape."
+    },
+    {
+     "apiname": "WhatItDoesInTheShadowsDLC02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffin Dodger",
+     "description": "Complete the ‘What it does in the shadows…’ quest."
+    },
+    {
+     "apiname": "BumpInTheNightDLC02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Almost Haunted",
+     "description": "Complete the ‘Bump in the night’ quest."
+    },
+    {
+     "apiname": "AintAfraidOfNoGhostDLC02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I ain’t afraid of no Ghost ",
+     "description": "Witness the ghost perform an otherworldly feat…"
+    },
+    {
+     "apiname": "NotEntertainedDLC04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Are You Not Entertained?!",
+     "description": "Escape Big Top Breakout by any means."
+    },
+    {
+     "apiname": "LongShotDLC04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It’s A Long Shot",
+     "description": "Complete the unique single player escape."
+    },
+    {
+     "apiname": "WindUpMerchantDLC04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wind Up Merchant",
+     "description": "Complete the unique multiplayer escape."
+    },
+    {
+     "apiname": "ClowningAroundDLC04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clowning Around",
+     "description": "Complete the ‘No Laughing Matter’ quest."
+    },
+    {
+     "apiname": "IllusionNotTrickDLC04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It’s An Illusion, Not A Trick",
+     "description": "Complete the ‘Smoke and Mirrors’ Quest."
+    },
+    {
+     "apiname": "StageFrightDLC04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stage Fright",
+     "description": "Avoid going to the Show Time routine for 3 days in a row."
+    },
+    {
+     "apiname": "00005K",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oh What A Knight!",
+     "description": "Escape Dungeons and Duct Tape by any means."
+    },
+    {
+     "apiname": "00005S",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "‘Tis But A Scratch",
+     "description": "Complete the unique single player escape."
+    },
+    {
+     "apiname": "00005D",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Siege The Day ",
+     "description": "Complete the unique multiplayer escape."
+    },
+    {
+     "apiname": "00005E",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yo Dawg, I heard you like Exhibits",
+     "description": "Complete the ‘It Belongs In A Museum’ quest."
+    },
+    {
+     "apiname": "00005B",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "To Antiquity And Beyond",
+     "description": "Complete the ‘Eternally Grateful’ Quest."
+    },
+    {
+     "apiname": "00005F",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Royal Flush",
+     "description": "Use the Royal throne."
+    }
+   ],
+   "success": true
+  }
+ }
+}

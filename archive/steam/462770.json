@@ -1,0 +1,748 @@
+{
+ "provider": "steam",
+ "title": "Pyre",
+ "updated": "2026-08-19",
+ "id": "462770",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 4,
+ "total": 51,
+ "first": "2020-12-03",
+ "last": "2020-12-03",
+ "platform": "PC",
+ "icon": "75ed6f3b5fe1413ff42c21d2493a0e99c704ef2e",
+ "playtime_mins": 134,
+ "playtime": {
+  "windows": 134
+ },
+ "last_played": "2020-12-03",
+ "achievements": [
+  {
+   "key": "AchReader",
+   "name": "The Reader",
+   "description": "Begin your quest for freedom (Campaign)",
+   "unlocked": true,
+   "date": "2020-12-03T09:02:50-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/d2e85c2b83900ee77d6dced6291bdd85d49344c2.jpg"
+  },
+  {
+   "key": "AchBallKill",
+   "name": "Star Struck",
+   "description": "During a Rite, fling the Orb at an adversary, then banish them within two sec. (Campaign)",
+   "unlocked": true,
+   "date": "2020-12-03T09:12:35-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/d685431bf0becc0e0a7e4dcb4693e7a615192c3f.jpg"
+  },
+  {
+   "key": "AchPerfectWin",
+   "name": "Untouched Flame",
+   "description": "Prevail in a Rite without your Pyre taking damage (Campaign)",
+   "unlocked": true,
+   "date": "2020-12-03T09:15:01-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/2251bdb57727a0578f86be194b171935d2139510.jpg"
+  },
+  {
+   "key": "AchJodiDamage",
+   "name": "The Fallen Soldier",
+   "description": "Using Jodariel, deal 200 Pyre Damage (Campaign)",
+   "unlocked": true,
+   "date": "2020-12-03T10:41:42-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/aed16774352ffb8a2be05efc9380ffddccf27023.jpg"
+  },
+  {
+   "key": "AchAscend3",
+   "name": "Returned to Glory",
+   "description": "Liberate any three exiles from your party (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/51b8dc3758336277eefe9d625f0faf36ac412426.jpg"
+  },
+  {
+   "key": "AchAscensionFail",
+   "name": "Mercy Shown",
+   "description": "Suffer defeat in a Liberation Rite  (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/5e3935c0723cbce4b233230e1b83350075a4b12e.jpg"
+  },
+  {
+   "key": "AchAscensionWin",
+   "name": "Home Free",
+   "description": "Prevail in a Liberation Rite  (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/eeab2e3d23fb6ef57270085f1213f5524c4491b0.jpg"
+  },
+  {
+   "key": "AchBertrudeDamage",
+   "name": "The Serpent Queen",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/2b5b964c09be88199d14f19de37b586169081cce.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchChallenges2",
+   "name": "Sandra's Disciple",
+   "description": "Complete two Scribe Trials in the Beyonder Crystal (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/dcc30ca642575bf1891dbb3d92408ef2cffd5645.jpg"
+  },
+  {
+   "key": "AchChallenges5",
+   "name": "Sandra's Favorite",
+   "description": "Complete five Scribe Trials in the Beyonder Crystal (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/8baf929739e43400f7f11bbf27e06528508d3060.jpg"
+  },
+  {
+   "key": "AchConstellations3",
+   "name": "Scribes' Chosen",
+   "description": "Prevail in a Rite with three or more Titan Stars active (Campaign, standard difficulty or greater)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/9c4f20a22549efad65592f49c8c3858c761c27b5.jpg"
+  },
+  {
+   "key": "AchConstellations6",
+   "name": "Scribes' Guardian",
+   "description": "Prevail in a Rite with six or more Titan Stars active (Campaign, standard difficulty or greater)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/2c46b79685a8daae19509a29e4d0219547cc2e16.jpg"
+  },
+  {
+   "key": "AchConstellationsAll",
+   "name": "Scribes' Champion",
+   "description": "Prevail in a Rite with 12 Titan Stars active (Campaign, standard difficulty or greater)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/aca2d324c71d06c3a16d23c56f10bf75feaa6324.jpg"
+  },
+  {
+   "key": "AchConversations20",
+   "name": "There For Them",
+   "description": "Initiate 20 different conversations in the blackwagon (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/01cf6a51a34444aaa90c7a70fd84f5ced658fc20.jpg"
+  },
+  {
+   "key": "AchEnding",
+   "name": "True Freedom",
+   "description": "Complete your quest for freedom (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/7ec78426e24280c5ba459099fe3010ad2070518c.jpg"
+  },
+  {
+   "key": "AchEndingTitan",
+   "name": "True Nightwing",
+   "description": "Complete your quest for freedom (Campaign, True Nightwing difficulty)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/d44ab07165a25f251da09ee5c56cc12f0eac50e3.jpg"
+  },
+  {
+   "key": "AchFullRoster",
+   "name": "Gather the Band",
+   "description": "Find an exile for each of the different masks (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/4adb4ce245d5dae47f73c9c97be9ec0cba58112a.jpg"
+  },
+  {
+   "key": "AchGilmanDamage",
+   "name": "The Honor Seeker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/b0c587d7b30780254e62c408547844f337047977.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchGuideBook50",
+   "name": "Book Worm",
+   "description": "Check 50 different pages in the Book of Rites (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/232f281eb4412005d9928b3143ad90a6a2e81932.jpg"
+  },
+  {
+   "key": "AchGuideBookAll",
+   "name": "Cover to Cover",
+   "description": "Unlock every chapter in the Book of Rites (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/13228aa4de2908bf3da6b986ab9abce8b3b91cfb.jpg"
+  },
+  {
+   "key": "AchHedwynDamage",
+   "name": "The Free Spirit",
+   "description": "Using Hedwyn, deal 200 Pyre Damage (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/b895fdeaf1b55c3ce6647278c43102bd2b8ce07b.jpg"
+  },
+  {
+   "key": "AchJodiPamithaWin",
+   "name": "New Alliance",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/0ca85fc55cb8fe77a26597e623ea3ed7a1f1625f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchMaeDamage",
+   "name": "The Faithful Drifter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/d67de459a334b3ecddae1d0188218d800256c92f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchMatchSitesWinAll",
+   "name": "Downside Pilgrim",
+   "description": "Prevail in a Rite at each of the Celestial Landmarks (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/3ce627635f514b975d8ced892d8597d85f191021.jpg"
+  },
+  {
+   "key": "AchMusicPlayer",
+   "name": "The White Lute",
+   "description": "Use the White Lute to play a tune (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/c7b525610b073b5b4bd6b6ae2b2c336fed81249f.jpg"
+  },
+  {
+   "key": "AchPamithaDamage",
+   "name": "The Guilty Sister",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/9b92714fa7dce372b6109b695d3e9ac6fede5a58.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchPointsOfInterest10",
+   "name": "Sky Explorer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/2152ead77ba1c49283aeee1ff04800ecf8e6b1d1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchPracticeMatch",
+   "name": "Mystic Training",
+   "description": "Complete a Practice Rite in the Beyonder Crystal (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/5c10d6dcd29e28de917c4cd85cb448f8399db699.jpg"
+  },
+  {
+   "key": "AchQuests5",
+   "name": "Crowd Pleaser",
+   "description": "Complete three Feats of Glory (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/7e44b89730e27d7e4ee5a49c64f560098eb96b03.jpg"
+  },
+  {
+   "key": "AchRank5",
+   "name": "Master of the Rites",
+   "description": "Achieve Rank 5 with any exile (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/f835d3e1a39daada274e4708c18fc9bc9401ed14.jpg"
+  },
+  {
+   "key": "AchRespec",
+   "name": "First Whiff",
+   "description": "Use Scribe Snuff to reset an exile's Masteries (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/7223b3b7f08e452bb7065c1881cf6b01106efbc8.jpg"
+  },
+  {
+   "key": "AchRivalCaravans5",
+   "name": "Scourge of the Skies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/9abf57d404e022c922b82402ea481f6dd06802ad.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchRivalsWinsAll",
+   "name": "Favored to Prevail",
+   "description": "Prevail in a Rite against each of the other triumvirates (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/e55a9f683c14d2d8d7012ce75c7f4fc9a86f4287.jpg"
+  },
+  {
+   "key": "AchRukeyDamage",
+   "name": "The Fast Talker",
+   "description": "Using Rukey, deal 200 Pyre Damage (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/7c7dfb84ec4b013a613006a9484dff151f8e3fe0.jpg"
+  },
+  {
+   "key": "AchShopSpend",
+   "name": "Big Spender",
+   "description": "Spend 1,000 Sol in the Slugmarket (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/c886228909845ecfd41428532071acd031fbe6b3.jpg"
+  },
+  {
+   "key": "AchSingleScore40",
+   "name": "Fear Not the Flame",
+   "description": "During a Rite, douse the adversary's Pyre by 40 health or more (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/31c67de9c20bd2a2a081a3e794615934b3ef1446.jpg"
+  },
+  {
+   "key": "AchTalismansMax3",
+   "name": "Start Duster",
+   "description": "Upgrade a Talisman to Rank 20 (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/78881cf76266576a43f21121769cf3326f3d90f1.jpg"
+  },
+  {
+   "key": "AchTizoDamage",
+   "name": "The Little Watcher",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/276d271dcca4dfa51a7d2de9951f88591dc671a4.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchTripleCastKill",
+   "name": "Banished One and All",
+   "description": "During a Rite, banish three adversaries with a single Aura Cast (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/e58d4661ddc82f160a56a2dc4077ada20a0548e1.jpg"
+  },
+  {
+   "key": "AchVersusAI",
+   "name": "The Will of the Scribes",
+   "description": "Complete a Rite against a CPU opponent (Versus Mode)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/14f383533ede3f81a99c2ebf3e2afb3a8faeba5c.jpg"
+  },
+  {
+   "key": "AchVersusBrutalTitan",
+   "name": "Master Conductor",
+   "description": "Prevail against a Master CPU opponent with six or more Titan Stars active (Versus Mode with default Masteries, Talismans, Pyre Health)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/dcf097a842d0069ef433eec8fdfdcd1ad7488e6c.jpg"
+  },
+  {
+   "key": "AchVersusBrutalWin",
+   "name": "Enlightened",
+   "description": "Prevail in a Rite against a Master-level CPU opponent (Versus Mode, default Talismans and Masteries)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/408ec956d699bb2d93ddfd80e9410dbb067a3f15.jpg"
+  },
+  {
+   "key": "AchVersusCurs",
+   "name": "Sons of Jomuer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/6b5d85d2b38c595a0030de48b876f3380eafa220.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchVersusHuman",
+   "name": "First Ceremony",
+   "description": "Complete a Rite against another mortal (Versus Mode)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/8e3afceaed0e1e7ee773eae7fead6c6bec754695.jpg"
+  },
+  {
+   "key": "AchVersusImps",
+   "name": "Home-field Heroes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/a4331407544c6d103a670f8a74b729fc5fe63b24.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchVersusTrueNW",
+   "name": "Classic Nightwings",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/146076665471e05576ea29e60466bf48cb529858.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchVersusWinAll",
+   "name": "Lick of Flame",
+   "description": "Prevail in a Rite against a CPU opponent while you have less than 10 Pyre Health (Versus Mode with default Masteries, Talismans, Pyre Health)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/c8a8d0b2978202cfc0a6805fff5e4e093b044df9.jpg"
+  },
+  {
+   "key": "AchVersusWitches",
+   "name": "Dames of the Downside",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/bc3e2b06a6085d89890b053b23a78c14a19e7ad0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchVocations10",
+   "name": "Found Your Calling",
+   "description": "Do Vocations 10 times (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/9ff3cf4a1d9f2f41834869550b8fc2ea86564177.jpg"
+  },
+  {
+   "key": "AchVolfredDamage",
+   "name": "The Plan Maker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/0c22d61261a324435e5a520c009aa5561ba87669.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchWinScores3",
+   "name": "Flame Quencher",
+   "description": "Prevail in a Rite in no more than three dousings (Campaign)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/462770/2cb614e11825b8da4b3d69f52e983ba1ecd53677.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Pyre",
+   "achievements": [
+    {
+     "apiname": "AchReader",
+     "achieved": 1,
+     "unlocktime": 1607007770,
+     "name": "The Reader",
+     "description": "Begin your quest for freedom (Campaign)"
+    },
+    {
+     "apiname": "AchRukeyDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Fast Talker",
+     "description": "Using Rukey, deal 200 Pyre Damage (Campaign)"
+    },
+    {
+     "apiname": "AchHedwynDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Free Spirit",
+     "description": "Using Hedwyn, deal 200 Pyre Damage (Campaign)"
+    },
+    {
+     "apiname": "AchJodiDamage",
+     "achieved": 1,
+     "unlocktime": 1607013702,
+     "name": "The Fallen Soldier",
+     "description": "Using Jodariel, deal 200 Pyre Damage (Campaign)"
+    },
+    {
+     "apiname": "AchMaeDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Faithful Drifter",
+     "description": ""
+    },
+    {
+     "apiname": "AchTizoDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Little Watcher",
+     "description": ""
+    },
+    {
+     "apiname": "AchGilmanDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Honor Seeker",
+     "description": ""
+    },
+    {
+     "apiname": "AchPamithaDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Guilty Sister",
+     "description": ""
+    },
+    {
+     "apiname": "AchBertrudeDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Serpent Queen",
+     "description": ""
+    },
+    {
+     "apiname": "AchVolfredDamage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Plan Maker",
+     "description": ""
+    },
+    {
+     "apiname": "AchFullRoster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gather the Band",
+     "description": "Find an exile for each of the different masks (Campaign)"
+    },
+    {
+     "apiname": "AchAscensionWin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Home Free",
+     "description": "Prevail in a Liberation Rite  (Campaign)"
+    },
+    {
+     "apiname": "AchAscensionFail",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mercy Shown",
+     "description": "Suffer defeat in a Liberation Rite  (Campaign)"
+    },
+    {
+     "apiname": "AchRank5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of the Rites",
+     "description": "Achieve Rank 5 with any exile (Campaign)"
+    },
+    {
+     "apiname": "AchGuideBookAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cover to Cover",
+     "description": "Unlock every chapter in the Book of Rites (Campaign)"
+    },
+    {
+     "apiname": "AchGuideBook50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Book Worm",
+     "description": "Check 50 different pages in the Book of Rites (Campaign)"
+    },
+    {
+     "apiname": "AchVocations10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Found Your Calling",
+     "description": "Do Vocations 10 times (Campaign)"
+    },
+    {
+     "apiname": "AchTalismansMax3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Start Duster",
+     "description": "Upgrade a Talisman to Rank 20 (Campaign)"
+    },
+    {
+     "apiname": "AchQuests5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crowd Pleaser",
+     "description": "Complete three Feats of Glory (Campaign)"
+    },
+    {
+     "apiname": "AchConstellations3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scribes' Chosen",
+     "description": "Prevail in a Rite with three or more Titan Stars active (Campaign, standard difficulty or greater)"
+    },
+    {
+     "apiname": "AchConstellations6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scribes' Guardian",
+     "description": "Prevail in a Rite with six or more Titan Stars active (Campaign, standard difficulty or greater)"
+    },
+    {
+     "apiname": "AchConstellationsAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scribes' Champion",
+     "description": "Prevail in a Rite with 12 Titan Stars active (Campaign, standard difficulty or greater)"
+    },
+    {
+     "apiname": "AchChallenges2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sandra's Disciple",
+     "description": "Complete two Scribe Trials in the Beyonder Crystal (Campaign)"
+    },
+    {
+     "apiname": "AchChallenges5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sandra's Favorite",
+     "description": "Complete five Scribe Trials in the Beyonder Crystal (Campaign)"
+    },
+    {
+     "apiname": "AchPracticeMatch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mystic Training",
+     "description": "Complete a Practice Rite in the Beyonder Crystal (Campaign)"
+    },
+    {
+     "apiname": "AchConversations20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "There For Them",
+     "description": "Initiate 20 different conversations in the blackwagon (Campaign)"
+    },
+    {
+     "apiname": "AchEnding",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Freedom",
+     "description": "Complete your quest for freedom (Campaign)"
+    },
+    {
+     "apiname": "AchJodiPamithaWin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New Alliance",
+     "description": ""
+    },
+    {
+     "apiname": "AchShopSpend",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Big Spender",
+     "description": "Spend 1,000 Sol in the Slugmarket (Campaign)"
+    },
+    {
+     "apiname": "AchAscend3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Returned to Glory",
+     "description": "Liberate any three exiles from your party (Campaign)"
+    },
+    {
+     "apiname": "AchVersusHuman",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Ceremony",
+     "description": "Complete a Rite against another mortal (Versus Mode)"
+    },
+    {
+     "apiname": "AchVersusAI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Will of the Scribes",
+     "description": "Complete a Rite against a CPU opponent (Versus Mode)"
+    },
+    {
+     "apiname": "AchVersusWinAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lick of Flame",
+     "description": "Prevail in a Rite against a CPU opponent while you have less than 10 Pyre Health (Versus Mode with default Masteries, Talismans, Pyre Health)"
+    },
+    {
+     "apiname": "AchRespec",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Whiff",
+     "description": "Use Scribe Snuff to reset an exile's Masteries (Campaign)"
+    },
+    {
+     "apiname": "AchPointsOfInterest10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sky Explorer",
+     "description": ""
+    },
+    {
+     "apiname": "AchRivalCaravans5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scourge of the Skies",
+     "description": ""
+    },
+    {
+     "apiname": "AchMusicPlayer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The White Lute",
+     "description": "Use the White Lute to play a tune (Campaign)"
+    },
+    {
+     "apiname": "AchMatchSitesWinAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Downside Pilgrim",
+     "description": "Prevail in a Rite at each of the Celestial Landmarks (Campaign)"
+    },
+    {
+     "apiname": "AchRivalsWinsAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Favored to Prevail",
+     "description": "Prevail in a Rite against each of the other triumvirates (Campaign)"
+    },
+    {
+     "apiname": "AchPerfectWin",
+     "achieved": 1,
+     "unlocktime": 1607008501,
+     "name": "Untouched Flame",
+     "description": "Prevail in a Rite without your Pyre taking damage (Campaign)"
+    },
+    {
+     "apiname": "AchVersusBrutalWin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enlightened",
+     "description": "Prevail in a Rite against a Master-level CPU opponent (Versus Mode, default Talismans and Masteries)"
+    },
+    {
+     "apiname": "AchTripleCastKill",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banished One and All",
+     "description": "During a Rite, banish three adversaries with a single Aura Cast (Campaign)"
+    },
+    {
+     "apiname": "AchWinScores3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flame Quencher",
+     "description": "Prevail in a Rite in no more than three dousings (Campaign)"
+    },
+    {
+     "apiname": "AchSingleScore40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fear Not the Flame",
+     "description": "During a Rite, douse the adversary's Pyre by 40 health or more (Campaign)"
+    },
+    {
+     "apiname": "AchBallKill",
+     "achieved": 1,
+     "unlocktime": 1607008355,
+     "name": "Star Struck",
+     "description": "During a Rite, fling the Orb at an adversary, then banish them within two sec. (Campaign)"
+    },
+    {
+     "apiname": "AchVersusImps",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Home-field Heroes",
+     "description": ""
+    },
+    {
+     "apiname": "AchVersusTrueNW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Classic Nightwings",
+     "description": ""
+    },
+    {
+     "apiname": "AchVersusCurs",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sons of Jomuer",
+     "description": ""
+    },
+    {
+     "apiname": "AchVersusWitches",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dames of the Downside",
+     "description": ""
+    },
+    {
+     "apiname": "AchVersusBrutalTitan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Conductor",
+     "description": "Prevail against a Master CPU opponent with six or more Titan Stars active (Versus Mode with default Masteries, Talismans, Pyre Health)"
+    },
+    {
+     "apiname": "AchEndingTitan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Nightwing",
+     "description": "Complete your quest for freedom (Campaign, True Nightwing difficulty)"
+    }
+   ],
+   "success": true
+  }
+ }
+}

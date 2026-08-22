@@ -1,0 +1,668 @@
+{
+ "provider": "steam",
+ "title": "Night Call",
+ "updated": "2026-08-19",
+ "id": "680380",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 8,
+ "total": 45,
+ "first": "2020-02-29",
+ "last": "2020-02-29",
+ "platform": "PC",
+ "icon": "9f11f8936f8cb7e87a6c77d2b718d57bc955b1ad",
+ "playtime_mins": 268,
+ "playtime": {
+  "windows": 268
+ },
+ "last_played": "2020-02-29",
+ "achievements": [
+  {
+   "key": "000_01",
+   "name": "Une étoile",
+   "description": "You have discovered 2% of the Passidex (base game).",
+   "unlocked": true,
+   "date": "2020-02-29T09:23:05-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/4894c48b432929a74304baf958d1b9e91ed3123d.jpg"
+  },
+  {
+   "key": "040_01",
+   "name": "Le Chat",
+   "unlocked": true,
+   "date": "2020-02-29T09:26:28-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/aa5af169b056c2edf502aad525059b623000d9e1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "028_01",
+   "name": "La Vieille dame au flingue",
+   "unlocked": true,
+   "date": "2020-02-29T09:42:44-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/62b09601facc114213c52c1adda6eedbfd444579.jpg",
+   "hidden": true
+  },
+  {
+   "key": "034_01",
+   "name": "Le Pick-Up Artist",
+   "unlocked": true,
+   "date": "2020-02-29T10:55:23-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/c7525b0f8226d6ee945850547a53866250c15684.jpg",
+   "hidden": true
+  },
+  {
+   "key": "012_01",
+   "name": "Le Prêtre",
+   "unlocked": true,
+   "date": "2020-02-29T13:17:18-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/cefcaf16eaf426e655b68e1088f3b8e9cddfe5ee.jpg",
+   "hidden": true
+  },
+  {
+   "key": "000_02",
+   "name": "Deux étoiles",
+   "description": "You have discovered 10% of the Passidex (base game).",
+   "unlocked": true,
+   "date": "2020-02-29T13:17:18-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/85e7eeb6a3afa611238266ed92b6e05fa1c21360.jpg"
+  },
+  {
+   "key": "999_01",
+   "name": "Le Juge",
+   "description": "You discovered the Judge's identity.",
+   "unlocked": true,
+   "date": "2020-02-29T15:05:50-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/80bf1bc4d81b04efd548b40d75211d95617510ef.jpg"
+  },
+  {
+   "key": "019_01",
+   "name": "Le Sans-abri",
+   "unlocked": true,
+   "date": "2020-02-29T15:11:32-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/abc80732ecf5976eaf31bbcf37c744303cf1ad6a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "000_03",
+   "name": "Trois étoiles",
+   "description": "You have discovered 25% of the Passidex (base game).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/b2169bc2216ae8f99d9e0fc44c77985d8692433e.jpg"
+  },
+  {
+   "key": "000_04",
+   "name": "Quatre étoiles",
+   "description": "You have discovered 50% of the Passidex (base game).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/85bb009323562238000b8f224a437c1215f501e3.jpg"
+  },
+  {
+   "key": "000_05",
+   "name": "Cinq étoiles",
+   "description": "You have discovered 75% of the Passidex (base game).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/66938c38bea330a262c4704a3738e1ddaae1a5f0.jpg"
+  },
+  {
+   "key": "000_06",
+   "name": "Le Chauffeur",
+   "description": "You have discovered 98% of the Passidex (base game).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/1d03a209aa49e3bf30c7ffa287e1a5935c0f8780.jpg"
+  },
+  {
+   "key": "000_11",
+   "name": "Un pour tous…",
+   "description": "You have met all the passengers (base game only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/5e91aeef9bafbae36e284c5909f065b3b16613af.jpg"
+  },
+  {
+   "key": "000_12",
+   "name": "Sous les verrous…",
+   "description": "You have arrested all the killers (base game only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/dac20bb15d4930916758ab57e53249664fd12a1b.jpg"
+  },
+  {
+   "key": "007_01",
+   "name": "L'Avocat",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/f04ce796bdc67055ccd664d486b109d0deec2f05.jpg",
+   "hidden": true
+  },
+  {
+   "key": "008_01",
+   "name": "Le Politicien",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/5610e72d637d7763768844e66cfa3de9ab2ffc82.jpg",
+   "hidden": true
+  },
+  {
+   "key": "009_02",
+   "name": "Le Fantôme",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/faad3534a0e88630f764245221e235684417e326.jpg",
+   "hidden": true
+  },
+  {
+   "key": "013_01",
+   "name": "La Critique",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/5298418db165fc9dcddb6e86d4cba0734c174508.jpg",
+   "hidden": true
+  },
+  {
+   "key": "014_01",
+   "name": "L'Inspecteur",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/59490eb765957c1671c836875968464bb2fbbb82.jpg",
+   "hidden": true
+  },
+  {
+   "key": "015_01",
+   "name": "La Poètesse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/1cb069e84fe47d90df89b3729ae61a8ee01558f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "016_03",
+   "name": "L'Homme libre",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/995bfe962c6486a03f2daeeb2571dafd44f5c3f1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "018_01",
+   "name": "L'Éditorialiste",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/eafbad5954ff3ce5361a7cf166be7e0b1f16c892.jpg",
+   "hidden": true
+  },
+  {
+   "key": "021_03",
+   "name": "Le Père",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/3eb6cded069a0c68e9a0a60fd10a5a65b3a9b4b3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "024_02",
+   "name": "Le Loup-Garou🐺",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/fbcbef1b2a76ea07862d02f56d7f7d7437578a3e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "027_04",
+   "name": "Le Couple",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/5c79acb4b5907def774a4a5bff05ae4b49622e11.jpg",
+   "hidden": true
+  },
+  {
+   "key": "029_04",
+   "name": "Le Pierre Richard",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/17f99e9a29987167bf5536fac759ed8ce1d50a25.jpg",
+   "hidden": true
+  },
+  {
+   "key": "031_03",
+   "name": "La Patronne",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/0749393b85af4c272e4b1540a5c6e643ce2dc47f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "043_02",
+   "name": "Le Hacker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/be6c5395ad4b8627ed2c84c0819a85d27372307d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "046_02",
+   "name": "La Mathématicienne",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/1bced260018fcb04eda1e904f4c7ea2d31146c27.jpg",
+   "hidden": true
+  },
+  {
+   "key": "047_03",
+   "name": "La Réalisatrice",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/662d67326028c21278bce0d0bf530d9886d74be6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "051_07",
+   "name": "La Thésarde",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/1ca934775de72601e36374cbd2a20bd473daeb60.jpg",
+   "hidden": true
+  },
+  {
+   "key": "052_01",
+   "name": "Le Chevalier",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/fb5a372af6d3d3653a845f0265cebf13fe7eff69.jpg",
+   "hidden": true
+  },
+  {
+   "key": "055_01",
+   "name": "Le Lanceur d'alerte",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/feff31281b1b500c6774088f47eb8a16d86fc495.jpg",
+   "hidden": true
+  },
+  {
+   "key": "056_03",
+   "name": "Le Liseur",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/6369d0a130a4c1d6ab7db9e1a0f68f0d2d5ddf18.jpg",
+   "hidden": true
+  },
+  {
+   "key": "059_03",
+   "name": "Le Flic",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/aa1042994ec3ce85d61f240c4dc91d7dae0e11c7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "063_01",
+   "name": "La Journaliste",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/8231573d80076c3c91d54bf1d3e6956c217e82e9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "064_08",
+   "name": "La Voix du futur",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/9c879d1dbe98c5eefd947b9ebb4d1abb361caa83.jpg",
+   "hidden": true
+  },
+  {
+   "key": "066_03",
+   "name": "Les Rôlistes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/e94984e16e67815a509cef03ba1d88c279d3ec42.jpg",
+   "hidden": true
+  },
+  {
+   "key": "070_05",
+   "name": "Le Multi-millionnaire",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/34df777b8813a854c66dccfea0f284d2a65577e9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "072_08",
+   "name": "La Cheffe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/5e1fe2a644cc8d0163474cd5cb9c474e46fde2f6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "074_02",
+   "name": "L'Étudiante en vétérinaire",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/82c715bdd1cff16f74217d66216924ea5969e3b9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "076_01",
+   "name": "La Charretière",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/cdc5beeec5ebf21fe1bd631df19b2912ecbaa62f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "099_03",
+   "name": "Le Boss",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/71756536990ac60098b41ac44ccc1e5042e64e6d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "997_01",
+   "name": "L'Ange de la Mort",
+   "description": "You discovered the Angel of Death's identity.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/87b11fa0105bf1aabfcd8e0ffd37845f8d86f7b2.jpg"
+  },
+  {
+   "key": "998_01",
+   "name": "Le Marchand de Sable",
+   "description": "You discovered the Sandman's identity.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/eb306fe6c8e5459bb4f31e48a4f9a5e1007b6f5b.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Night Call",
+   "achievements": [
+    {
+     "apiname": "000_01",
+     "achieved": 1,
+     "unlocktime": 1582989785,
+     "name": "Une étoile",
+     "description": "You have discovered 2% of the Passidex (base game)."
+    },
+    {
+     "apiname": "000_02",
+     "achieved": 1,
+     "unlocktime": 1583003838,
+     "name": "Deux étoiles",
+     "description": "You have discovered 10% of the Passidex (base game)."
+    },
+    {
+     "apiname": "000_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trois étoiles",
+     "description": "You have discovered 25% of the Passidex (base game)."
+    },
+    {
+     "apiname": "000_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quatre étoiles",
+     "description": "You have discovered 50% of the Passidex (base game)."
+    },
+    {
+     "apiname": "000_05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cinq étoiles",
+     "description": "You have discovered 75% of the Passidex (base game)."
+    },
+    {
+     "apiname": "000_06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Chauffeur",
+     "description": "You have discovered 98% of the Passidex (base game)."
+    },
+    {
+     "apiname": "000_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Un pour tous…",
+     "description": "You have met all the passengers (base game only)."
+    },
+    {
+     "apiname": "000_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sous les verrous…",
+     "description": "You have arrested all the killers (base game only)."
+    },
+    {
+     "apiname": "007_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "L'Avocat",
+     "description": ""
+    },
+    {
+     "apiname": "008_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Politicien",
+     "description": ""
+    },
+    {
+     "apiname": "009_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Fantôme",
+     "description": ""
+    },
+    {
+     "apiname": "012_01",
+     "achieved": 1,
+     "unlocktime": 1583003838,
+     "name": "Le Prêtre",
+     "description": ""
+    },
+    {
+     "apiname": "013_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Critique",
+     "description": ""
+    },
+    {
+     "apiname": "014_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "L'Inspecteur",
+     "description": ""
+    },
+    {
+     "apiname": "015_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Poètesse",
+     "description": ""
+    },
+    {
+     "apiname": "016_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "L'Homme libre",
+     "description": ""
+    },
+    {
+     "apiname": "018_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "L'Éditorialiste",
+     "description": ""
+    },
+    {
+     "apiname": "019_01",
+     "achieved": 1,
+     "unlocktime": 1583010692,
+     "name": "Le Sans-abri",
+     "description": ""
+    },
+    {
+     "apiname": "021_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Père",
+     "description": ""
+    },
+    {
+     "apiname": "024_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Loup-Garou🐺",
+     "description": ""
+    },
+    {
+     "apiname": "027_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Couple",
+     "description": ""
+    },
+    {
+     "apiname": "028_01",
+     "achieved": 1,
+     "unlocktime": 1582990964,
+     "name": "La Vieille dame au flingue",
+     "description": ""
+    },
+    {
+     "apiname": "029_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Pierre Richard",
+     "description": ""
+    },
+    {
+     "apiname": "031_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Patronne",
+     "description": ""
+    },
+    {
+     "apiname": "034_01",
+     "achieved": 1,
+     "unlocktime": 1582995323,
+     "name": "Le Pick-Up Artist",
+     "description": ""
+    },
+    {
+     "apiname": "040_01",
+     "achieved": 1,
+     "unlocktime": 1582989988,
+     "name": "Le Chat",
+     "description": ""
+    },
+    {
+     "apiname": "043_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Hacker",
+     "description": ""
+    },
+    {
+     "apiname": "046_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Mathématicienne",
+     "description": ""
+    },
+    {
+     "apiname": "047_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Réalisatrice",
+     "description": ""
+    },
+    {
+     "apiname": "051_07",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Thésarde",
+     "description": ""
+    },
+    {
+     "apiname": "052_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Chevalier",
+     "description": ""
+    },
+    {
+     "apiname": "055_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Lanceur d'alerte",
+     "description": ""
+    },
+    {
+     "apiname": "056_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Liseur",
+     "description": ""
+    },
+    {
+     "apiname": "059_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Flic",
+     "description": ""
+    },
+    {
+     "apiname": "063_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Journaliste",
+     "description": ""
+    },
+    {
+     "apiname": "064_08",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Voix du futur",
+     "description": ""
+    },
+    {
+     "apiname": "066_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Les Rôlistes",
+     "description": ""
+    },
+    {
+     "apiname": "070_05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Multi-millionnaire",
+     "description": ""
+    },
+    {
+     "apiname": "072_08",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Cheffe",
+     "description": ""
+    },
+    {
+     "apiname": "074_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "L'Étudiante en vétérinaire",
+     "description": ""
+    },
+    {
+     "apiname": "076_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Charretière",
+     "description": ""
+    },
+    {
+     "apiname": "099_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Boss",
+     "description": ""
+    },
+    {
+     "apiname": "997_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "L'Ange de la Mort",
+     "description": "You discovered the Angel of Death's identity."
+    },
+    {
+     "apiname": "998_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Le Marchand de Sable",
+     "description": "You discovered the Sandman's identity."
+    },
+    {
+     "apiname": "999_01",
+     "achieved": 1,
+     "unlocktime": 1583010350,
+     "name": "Le Juge",
+     "description": "You discovered the Judge's identity."
+    }
+   ],
+   "success": true
+  }
+ }
+}

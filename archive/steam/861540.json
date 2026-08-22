@@ -1,0 +1,775 @@
+{
+ "provider": "steam",
+ "title": "Dicey Dungeons",
+ "updated": "2026-08-19",
+ "id": "861540",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 3,
+ "total": 53,
+ "first": "2020-01-01",
+ "last": "2023-09-02",
+ "platform": "PC",
+ "icon": "5a07e59d3eb120e2d7a2f38e480d78c4d0aa4843",
+ "playtime_mins": 235,
+ "playtime": {
+  "windows": 235
+ },
+ "last_played": "2023-09-03",
+ "achievements": [
+  {
+   "key": "challenge_tenonesinarow",
+   "name": "10 ones in a row",
+   "description": "Roll 10 ones in a row.",
+   "unlocked": true,
+   "date": "2020-01-01T22:04:59-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/e3e2886a7a457fe57bfa773c7dffe27f9a711ccc.jpg"
+  },
+  {
+   "key": "challenges",
+   "name": "Unlock episodes",
+   "description": "Unlock episodes.",
+   "unlocked": true,
+   "date": "2020-01-02T23:14:53-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/ffb9213a9d27f1eedbb6da47f62adb45692d4a60.jpg"
+  },
+  {
+   "key": "challenge_firstturn",
+   "name": "Win on your first turn",
+   "description": "Defeat an enemy on your first turn.",
+   "unlocked": true,
+   "date": "2023-09-02T18:52:26-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/04e0fdbc9b5d7935242b22f7c7553fe329920074.jpg"
+  },
+  {
+   "key": "challenge_40damage",
+   "name": "40 damage in a one attack",
+   "description": "Do more than 40 damage in a single attack.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/dfc88dd462d1d720fffa25e48e994f0d03d0f940.jpg"
+  },
+  {
+   "key": "challenge_battleaxes",
+   "name": "Defeat a boss with 4 Battle Axes",
+   "description": "Defeat a boss with four or more battle axes equipped.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/6e3528a53433ee6f888c3fd442c9b98937df0cb4.jpg"
+  },
+  {
+   "key": "challenge_bear",
+   "name": "Furry Dice",
+   "description": "Become a furry dice.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/53c4f5b80f6c0299a45790b5e18b3405381c863a.jpg"
+  },
+  {
+   "key": "challenge_dagger",
+   "name": "20 damage with Dagger",
+   "description": "Do more than 20 damage in one turn with Dagger.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/d1a1ad0808cf8b50c296371d55d747ed78a76004.jpg"
+  },
+  {
+   "key": "challenge_defeatladyluck",
+   "name": "Defeat Lady Luck",
+   "description": "Defeat Lady Luck.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/cc71b74ba8f5f548fde92e2bea07bcd8fcb9e4b2.jpg"
+  },
+  {
+   "key": "challenge_dragontooth",
+   "name": "Use Dragon's Tooth",
+   "description": "Use the Dragon's Tooth.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/0074d06c3228ffe273e656352c0ea0da86691ef7.jpg"
+  },
+  {
+   "key": "challenge_hatchegg",
+   "name": "E G G",
+   "description": "Hatch an egg.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/3fd3df60f9f6848b1d664f42dd4d540f815f4af8.jpg"
+  },
+  {
+   "key": "challenge_inflictfire5",
+   "name": "Inflict 5 Burn",
+   "description": "Inflict 5 or more Burn in a single turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/5505c6eb57abab333db755a4755b061f33d63fca.jpg"
+  },
+  {
+   "key": "challenge_inflictice5",
+   "name": "Inflict 5 Freeze",
+   "description": "Inflict 5 or more Freeze in a single turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/82ece4941505b5a6b26495de264c692004fdaaa8.jpg"
+  },
+  {
+   "key": "challenge_inflictlockall",
+   "name": "Lock all dice",
+   "description": "Lock all enemy dice.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/8f7b094b57b004cebba61b02e7f2146648ac8867.jpg"
+  },
+  {
+   "key": "challenge_inflictpoison10",
+   "name": "Inflict 10 Poison",
+   "description": "Stack 10 or more total Poison on an enemy at once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/2fb4411f2e027490561b1b98a1c02f0b5613a73e.jpg"
+  },
+  {
+   "key": "challenge_inflictpoison30",
+   "name": "Inflict 30 Poison",
+   "description": "Stack 30 or more total Poison on an enemy at once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/6985678b966b896be6978ce8c0e9fb12edffdb3d.jpg"
+  },
+  {
+   "key": "challenge_inflictshock5",
+   "name": "Inflict 5 Shock",
+   "description": "Inflict 5 or more Shock in a single turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/f4e1bd2f66b931610c338a0263f70e5152582423.jpg"
+  },
+  {
+   "key": "challenge_limitbreak",
+   "name": "Use limit break twice",
+   "description": "Use your limit break twice in one turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/fdc85850c1accc7161aa2a4d0f80f007b3b7ba14.jpg"
+  },
+  {
+   "key": "challenge_maxhealth64",
+   "name": "64 Max HP",
+   "description": "Have max health of 64 or higher.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/f296d609e4e9f24ba43fd38ff8e6e4e08c9c3924.jpg"
+  },
+  {
+   "key": "challenge_perfectwin",
+   "name": "Defeat a boss with full health",
+   "description": "Defeat a boss with full health.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/0da7cd45e5092bee9f416d7ccf5aae9b2bec4c7d.jpg"
+  },
+  {
+   "key": "challenge_preparedspells",
+   "name": "Four Prepared Slots",
+   "description": "Complete an episode as Witch with four prepared slots.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/995bca5e4e4bf9edffda8e9bbf74620ec657e6a6.jpg"
+  },
+  {
+   "key": "challenge_throwdice",
+   "name": "Do 12 damage with thrown dice",
+   "description": "Do 12 or more damage in one turn by throwing dice.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/7d863eee84c1402cd6849492a2456665e8a1e959.jpg"
+  },
+  {
+   "key": "challenge_triplegadget",
+   "name": "Triple Gadget",
+   "description": "Use the same gadget three times in one turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/f4ee87c47f2f9e5a38ab6970c8522f15df58cbf8.jpg"
+  },
+  {
+   "key": "challenge_usefinalecard",
+   "name": "Use a Finale card",
+   "description": "Use a Finale card.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/ba1f0c42e793ef28b630ffdd806e5cd2fead2078.jpg"
+  },
+  {
+   "key": "episode12",
+   "name": "12 episodes",
+   "description": "Complete any 12 episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/0c03247ce586fd6804b9b77290dbfca1ad847a47.jpg"
+  },
+  {
+   "key": "episode36",
+   "name": "Complete all 36 episodes",
+   "description": "Complete all 36 regular episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/3ef232f7d9b30380d569d5026de361012e39b6b9.jpg"
+  },
+  {
+   "key": "episode6",
+   "name": "6 episodes",
+   "description": "Complete any 6 episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/b2e597e4d8bd6cd7d59f0379faa154a3620779ad.jpg"
+  },
+  {
+   "key": "episode9",
+   "name": "9 episodes",
+   "description": "Complete any 9 episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/088651ff28c88283bb97b00fe009ccae6999d56f.jpg"
+  },
+  {
+   "key": "episode_allbonus",
+   "name": "All six bonus rounds",
+   "description": "Complete all six bonus round episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/cf9a4a4e08105bc18a00201ff282173776740a15.jpg"
+  },
+  {
+   "key": "episode_bonushardmode1",
+   "name": "Hard Mode Bonus Round 1",
+   "description": "Complete any bonus round episode in hard mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/92ee96d9865c46dd221d65a68ab3b1050c35a6e5.jpg"
+  },
+  {
+   "key": "episode_bonushardmode2",
+   "name": "Hard Mode Bonus Round 2",
+   "description": "Complete any two bonus round episodes in hard mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/ab3b4b1940ab811ba53d36bb3ecb6d9dc8da1796.jpg"
+  },
+  {
+   "key": "episode_bonushardmode3",
+   "name": "Hard Mode Bonus Round 3",
+   "description": "Complete any three bonus round episodes in hard mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/c6afa7d784c452d369673db4e1c882d98f726bb8.jpg"
+  },
+  {
+   "key": "episode_bonushardmode4",
+   "name": "Hard Mode Bonus Round 4",
+   "description": "Complete any four bonus round episodes in hard mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/b2fe55ba1a8f098520c53d127e9dbd051f3c5545.jpg"
+  },
+  {
+   "key": "episode_bonushardmode5",
+   "name": "Hard Mode Bonus Round 5",
+   "description": "Complete any five bonus round episodes in hard mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/d05e98b505b993ab99ed0743fc0f133a7392c896.jpg"
+  },
+  {
+   "key": "episode_bonushardmode6",
+   "name": "Hard Mode Bonus Round 6",
+   "description": "Complete all six bonus round episodes in hard mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/573c6d31ba53775d94d581ca9e8eb401e7fa2d05.jpg"
+  },
+  {
+   "key": "episode_countdown",
+   "name": "Countdown",
+   "description": "Complete the episode named \"Countdown\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/a4314976020c9ff3f29c9a153edbef44798477bf.jpg"
+  },
+  {
+   "key": "episode_curseofgreed",
+   "name": "Curse of Greed",
+   "description": "Complete the episode named \"Curse of Greed\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/39ca5c15df23073338405fba6a358356d29e2748.jpg"
+  },
+  {
+   "key": "episode_elimination1",
+   "name": "Elimination Round 1",
+   "description": "Complete any elimination round episode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/b4a40afe517c6a3538f86eed739d38c3d0d04e6f.jpg"
+  },
+  {
+   "key": "episode_elimination2",
+   "name": "Elimination Round 2",
+   "description": "Complete any two elimination round episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/cce4af9f81ca66bf994134f50b0c40e16207c8c2.jpg"
+  },
+  {
+   "key": "episode_elimination3",
+   "name": "Elimination Round 3",
+   "description": "Complete any three elimination round episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/6034b5534de527ffcddf7ba4b3500be49bad191e.jpg"
+  },
+  {
+   "key": "episode_elimination4",
+   "name": "Elimination Round 4",
+   "description": "Complete any four elimination round episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/d382aa56baa8d49a88cb67b2feffaacd9ce4bcd2.jpg"
+  },
+  {
+   "key": "episode_elimination5",
+   "name": "Elimination Round 5",
+   "description": "Complete any five elimination round episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/609d53981cbae79301974629873f3dd6e7700ff3.jpg"
+  },
+  {
+   "key": "episode_elimination6",
+   "name": "Elimination Round 6",
+   "description": "Complete all six elimination round episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/9d0dd7e3193606ab1baea3e716fc335dbab6a981.jpg"
+  },
+  {
+   "key": "episode_finderskeepers",
+   "name": "Finders Keepers",
+   "description": "Complete the episode named \"Finders Keepers\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/d987369dc1f2e8e38ec96fbba870ac47c314b8b2.jpg"
+  },
+  {
+   "key": "episode_losersweepers",
+   "name": "Losers, Weepers",
+   "description": "Complete the episode named \"Losers, Weepers\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/41f9547456c20ab8752ef095543d624746f888ca.jpg"
+  },
+  {
+   "key": "episode_parallel1",
+   "name": "Parallel Universe 1",
+   "description": "Complete any parallel universe episode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/9af4e1d525b21f5f5b478ce5ec042dcab8e5b73b.jpg"
+  },
+  {
+   "key": "episode_parallel2",
+   "name": "Parallel Universe 2",
+   "description": "Complete any two parallel universe episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/847f3362fe79b62aa734c660b03d80a05784c24a.jpg"
+  },
+  {
+   "key": "episode_parallel3",
+   "name": "Parallel Universe 3",
+   "description": "Complete any three parallel universe episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/e6decef65fe2d732609cc883be615cc2c51b513d.jpg"
+  },
+  {
+   "key": "episode_parallel4",
+   "name": "Parallel Universe 4",
+   "description": "Complete any four parallel universe episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/5cb14060fdf30e1de0f56ddf3f80ca7cc85c5112.jpg"
+  },
+  {
+   "key": "episode_parallel5",
+   "name": "Parallel Universe 5",
+   "description": "Complete any five parallel universe episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/d6fc7b5249037182e6ad683ed49f534e9a484235.jpg"
+  },
+  {
+   "key": "episode_parallel6",
+   "name": "Parallel Universe 6",
+   "description": "Complete all six parallel universe episodes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/78b1cf3d3258cb23cdcf2f9d847d4a16243b6425.jpg"
+  },
+  {
+   "key": "episode_rust",
+   "name": "The Inevitability of Rust",
+   "description": "Complete the episode named \"The Inevitability of Rust\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/66d877ad6b54c3bc8e7fc6d2b603bf5852107302.jpg"
+  },
+  {
+   "key": "episode_youchooseyoulose",
+   "name": "You Choose, You Lose",
+   "description": "Complete the episode named \"You Choose, You Lose\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/9965fed543f77814177edf1d10dc578823711c7b.jpg"
+  },
+  {
+   "key": "episodeall6",
+   "name": "All episodes for one contestant",
+   "description": "Complete all six episodes for any one contestant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/a575329193feb4475adc9795acf9a78f2535c0bb.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Dicey Dungeons",
+   "achievements": [
+    {
+     "apiname": "challenges",
+     "achieved": 1,
+     "unlocktime": 1578028493,
+     "name": "Unlock episodes",
+     "description": "Unlock episodes."
+    },
+    {
+     "apiname": "episode6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "6 episodes",
+     "description": "Complete any 6 episodes."
+    },
+    {
+     "apiname": "episode9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "9 episodes",
+     "description": "Complete any 9 episodes."
+    },
+    {
+     "apiname": "episode12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "12 episodes",
+     "description": "Complete any 12 episodes."
+    },
+    {
+     "apiname": "episodeall6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All episodes for one contestant",
+     "description": "Complete all six episodes for any one contestant."
+    },
+    {
+     "apiname": "episode_curseofgreed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Curse of Greed",
+     "description": "Complete the episode named \"Curse of Greed\"."
+    },
+    {
+     "apiname": "episode_finderskeepers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finders Keepers",
+     "description": "Complete the episode named \"Finders Keepers\"."
+    },
+    {
+     "apiname": "episode_youchooseyoulose",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Choose, You Lose",
+     "description": "Complete the episode named \"You Choose, You Lose\"."
+    },
+    {
+     "apiname": "episode_rust",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Inevitability of Rust",
+     "description": "Complete the episode named \"The Inevitability of Rust\"."
+    },
+    {
+     "apiname": "episode_countdown",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Countdown",
+     "description": "Complete the episode named \"Countdown\"."
+    },
+    {
+     "apiname": "episode_losersweepers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Losers, Weepers",
+     "description": "Complete the episode named \"Losers, Weepers\"."
+    },
+    {
+     "apiname": "episode_elimination1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elimination Round 1",
+     "description": "Complete any elimination round episode."
+    },
+    {
+     "apiname": "episode_elimination2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elimination Round 2",
+     "description": "Complete any two elimination round episodes."
+    },
+    {
+     "apiname": "episode_elimination3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elimination Round 3",
+     "description": "Complete any three elimination round episodes."
+    },
+    {
+     "apiname": "episode_elimination4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elimination Round 4",
+     "description": "Complete any four elimination round episodes."
+    },
+    {
+     "apiname": "episode_elimination5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elimination Round 5",
+     "description": "Complete any five elimination round episodes."
+    },
+    {
+     "apiname": "episode_elimination6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elimination Round 6",
+     "description": "Complete all six elimination round episodes."
+    },
+    {
+     "apiname": "episode_parallel1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallel Universe 1",
+     "description": "Complete any parallel universe episode."
+    },
+    {
+     "apiname": "episode_parallel2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallel Universe 2",
+     "description": "Complete any two parallel universe episodes."
+    },
+    {
+     "apiname": "episode_parallel3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallel Universe 3",
+     "description": "Complete any three parallel universe episodes."
+    },
+    {
+     "apiname": "episode_parallel4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallel Universe 4",
+     "description": "Complete any four parallel universe episodes."
+    },
+    {
+     "apiname": "episode_parallel5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallel Universe 5",
+     "description": "Complete any five parallel universe episodes."
+    },
+    {
+     "apiname": "episode_parallel6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Parallel Universe 6",
+     "description": "Complete all six parallel universe episodes."
+    },
+    {
+     "apiname": "episode_allbonus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All six bonus rounds",
+     "description": "Complete all six bonus round episodes."
+    },
+    {
+     "apiname": "episode_bonushardmode1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Mode Bonus Round 1",
+     "description": "Complete any bonus round episode in hard mode."
+    },
+    {
+     "apiname": "episode_bonushardmode2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Mode Bonus Round 2",
+     "description": "Complete any two bonus round episodes in hard mode."
+    },
+    {
+     "apiname": "episode_bonushardmode3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Mode Bonus Round 3",
+     "description": "Complete any three bonus round episodes in hard mode."
+    },
+    {
+     "apiname": "episode_bonushardmode4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Mode Bonus Round 4",
+     "description": "Complete any four bonus round episodes in hard mode."
+    },
+    {
+     "apiname": "episode_bonushardmode5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Mode Bonus Round 5",
+     "description": "Complete any five bonus round episodes in hard mode."
+    },
+    {
+     "apiname": "episode_bonushardmode6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Mode Bonus Round 6",
+     "description": "Complete all six bonus round episodes in hard mode."
+    },
+    {
+     "apiname": "challenge_battleaxes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defeat a boss with 4 Battle Axes",
+     "description": "Defeat a boss with four or more battle axes equipped."
+    },
+    {
+     "apiname": "challenge_usefinalecard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Use a Finale card",
+     "description": "Use a Finale card."
+    },
+    {
+     "apiname": "challenge_throwdice",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Do 12 damage with thrown dice",
+     "description": "Do 12 or more damage in one turn by throwing dice."
+    },
+    {
+     "apiname": "challenge_preparedspells",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Four Prepared Slots",
+     "description": "Complete an episode as Witch with four prepared slots."
+    },
+    {
+     "apiname": "challenge_tenonesinarow",
+     "achieved": 1,
+     "unlocktime": 1577937899,
+     "name": "10 ones in a row",
+     "description": "Roll 10 ones in a row."
+    },
+    {
+     "apiname": "challenge_firstturn",
+     "achieved": 1,
+     "unlocktime": 1693698746,
+     "name": "Win on your first turn",
+     "description": "Defeat an enemy on your first turn."
+    },
+    {
+     "apiname": "challenge_perfectwin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defeat a boss with full health",
+     "description": "Defeat a boss with full health."
+    },
+    {
+     "apiname": "challenge_limitbreak",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Use limit break twice",
+     "description": "Use your limit break twice in one turn."
+    },
+    {
+     "apiname": "challenge_dagger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "20 damage with Dagger",
+     "description": "Do more than 20 damage in one turn with Dagger."
+    },
+    {
+     "apiname": "challenge_40damage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "40 damage in a one attack",
+     "description": "Do more than 40 damage in a single attack."
+    },
+    {
+     "apiname": "challenge_inflictfire5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inflict 5 Burn",
+     "description": "Inflict 5 or more Burn in a single turn."
+    },
+    {
+     "apiname": "challenge_inflictice5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inflict 5 Freeze",
+     "description": "Inflict 5 or more Freeze in a single turn."
+    },
+    {
+     "apiname": "challenge_inflictshock5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inflict 5 Shock",
+     "description": "Inflict 5 or more Shock in a single turn."
+    },
+    {
+     "apiname": "challenge_inflictpoison10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inflict 10 Poison",
+     "description": "Stack 10 or more total Poison on an enemy at once."
+    },
+    {
+     "apiname": "challenge_inflictpoison30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inflict 30 Poison",
+     "description": "Stack 30 or more total Poison on an enemy at once."
+    },
+    {
+     "apiname": "challenge_inflictlockall",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lock all dice",
+     "description": "Lock all enemy dice."
+    },
+    {
+     "apiname": "challenge_triplegadget",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Triple Gadget",
+     "description": "Use the same gadget three times in one turn."
+    },
+    {
+     "apiname": "challenge_hatchegg",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "E G G",
+     "description": "Hatch an egg."
+    },
+    {
+     "apiname": "challenge_maxhealth64",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "64 Max HP",
+     "description": "Have max health of 64 or higher."
+    },
+    {
+     "apiname": "challenge_dragontooth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Use Dragon's Tooth",
+     "description": "Use the Dragon's Tooth."
+    },
+    {
+     "apiname": "challenge_bear",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Furry Dice",
+     "description": "Become a furry dice."
+    },
+    {
+     "apiname": "episode36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Complete all 36 episodes",
+     "description": "Complete all 36 regular episodes."
+    },
+    {
+     "apiname": "challenge_defeatladyluck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defeat Lady Luck",
+     "description": "Defeat Lady Luck."
+    }
+   ],
+   "success": true
+  }
+ }
+}

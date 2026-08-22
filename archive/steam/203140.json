@@ -1,0 +1,695 @@
+{
+ "provider": "steam",
+ "title": "Hitman: Absolution",
+ "updated": "2026-08-19",
+ "id": "203140",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 10,
+ "total": 47,
+ "first": "2016-04-23",
+ "last": "2016-04-23",
+ "platform": "PC",
+ "icon": "fe5e36ac1548793eb48b6b25b701b37d86fb94a3",
+ "playtime_mins": 154,
+ "last_played": "2016-04-23",
+ "achievements": [
+  {
+   "key": "NEW_ACHIEVEMENT_4_14",
+   "name": "Take me to the geek",
+   "description": "You ran the benchmark mode to see how well your hardware performs",
+   "unlocked": true,
+   "date": "2016-04-23T17:24:01-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/a1fda9a33d50f436a4682f81d8120efb959d9351.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_4",
+   "name": "Heavy Burden ",
+   "unlocked": true,
+   "date": "2016-04-23T17:57:24-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/dcdc4f89f02c99e4eed6a49ae0888fa4970114a3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_29",
+   "name": "Damage Control ",
+   "description": "You contained a situation gone bad ",
+   "unlocked": true,
+   "date": "2016-04-23T18:39:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/32ae3fcd26bcfb78173efa520209887a16527595.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_6",
+   "name": "One With the Shadows ",
+   "description": "You escaped the attention of an enemy ",
+   "unlocked": true,
+   "date": "2016-04-23T18:40:26-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/49050879884aaca666281c05cfc949133dfc187a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_5",
+   "name": "Kingslayer ",
+   "unlocked": true,
+   "date": "2016-04-23T18:43:38-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/37219a9083b5e2a33a7e9f1c67166387c662a073.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_10",
+   "name": "One of the Guys ",
+   "description": "You blended in and fooled someone ",
+   "unlocked": true,
+   "date": "2016-04-23T18:51:06-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/b1f3ed4d8f27b3cf478e48979fa88992029f4b53.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_12",
+   "name": "Under Wraps ",
+   "description": "You hid a body ",
+   "unlocked": true,
+   "date": "2016-04-23T18:57:31-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/5e5dcbb38791ce344a6840d66b62a8f545dff1e3.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_8",
+   "name": "Inconspicuous ",
+   "description": "You remained undetected throughout a checkpoint ",
+   "unlocked": true,
+   "date": "2016-04-23T18:59:42-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/191283b460903c8cc117c1b2ff718da5a6767c49.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_7",
+   "name": "Silent Assassin ",
+   "description": "You achieved Silent Assassin ",
+   "unlocked": true,
+   "date": "2016-04-23T18:59:42-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/6c697720b788390b76597ee1004cc5132e3e7109.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_2",
+   "name": "True Potential ",
+   "description": "You unlocked a technique ",
+   "unlocked": true,
+   "date": "2016-04-23T18:59:42-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/99eb2534cfb4f7b4ef325bf8aac46cf3b062823f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_0",
+   "name": "Grand Master ",
+   "description": "You completed 100 challenges ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/a37e9a3f4200d07759d39a287b3fb46653587931.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_1",
+   "name": "Reach for the Stars ",
+   "description": "You completed 50 challenges ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/9af047399de69539e59b69b24bbd9b290ca18800.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_10",
+   "name": "The Bartender Always Knows ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/1f2f6c20a9a57f714e03c99b33cb5c63a0e7351d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_11",
+   "name": "Signature Weapons ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/de1c9e637306b486842f6a2c715dc0e30fb2eb9d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_12",
+   "name": "Like Stealing Candy From a Baby ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/fa2ac4e3382d914c8655cad14ffba9cfb925fb78.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_13",
+   "name": "Not Worth It ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/9e3e8faf442cfe5186a258fc2b7d8c032ba1fa08.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_14",
+   "name": "Step Into the Light ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/2620cf956a992cf685b365f720c479d4125a645c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_15",
+   "name": "A Heavy Blow ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/c1283c1f285789a3bb3ec88aa836289050c55b4d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_16",
+   "name": "Faith Can Move Mountains ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/e7d0c46278153cafda05ea015da351f0c69c6e53.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_17",
+   "name": "The Killing Fields ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/06e4e6432b1ef588c92b74df002565fc48c15889.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_18",
+   "name": "Jailbird ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/7cb0e9867d1ca044f6459cb26f8653f4a3125b65.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_19",
+   "name": "Hour of Reckoning ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/319181e3d8ad4a2ff0017e8336813790d047d414.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_2",
+   "name": "The Russian Hare ",
+   "description": "You performed 47 headshots using a sniper rifle ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/f01ddf7a69977d1c71f64100afd455f49af2ff2c.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_20",
+   "name": "True Form ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/0b15bc1cef7d8731d04980021b4afc3a1df17b50.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_21",
+   "name": "Destroying Something Beautiful ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/0ad9c46193ea29b90f0f600852581d67f7589097.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_22",
+   "name": "The Final Countdown ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/ea40afd1be7827174b411b697752b8b8d92fbb80.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_23",
+   "name": "A Personal Contract ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/42ae32e2956022302f09c42d152dd181f8eae69c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_24",
+   "name": "Absolution ",
+   "description": "You completed Hitman: Absolution™ as a professional ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/4f979febed7b18001059b409a7a8d6bdc3e4b5f3.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_25",
+   "name": "Jack of All Trades ",
+   "description": "You collected all 20 play styles ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/03aabf72aac32ca77d76fde08fac87aab53002c7.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_26",
+   "name": "It's All in the Wrist ",
+   "description": "You successfully performed a lethal throw ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/625bf9065acd515ee3d14e8de23e1818c566bc81.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_27",
+   "name": "Information is Power ",
+   "description": "You collected all evidence ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/2a0c8cae17c6cbe56d466a06bd0268cd49a55893.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_28",
+   "name": "Thumbs Up ",
+   "description": "You liked a contract ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/d5e9655c2ffd96429795baae991c8f35d849782a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_3",
+   "name": "A Taste for the Game ",
+   "description": "You completed 10 challenges ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/25cdaa3d057b002b3959cf6a7c80bd8eba3a0358.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_30",
+   "name": "Set for Life ",
+   "description": "You earned 1 million contracts dollars ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/18d15564e5f68b53dd7aa60d0f500bfe1cdae7af.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_31",
+   "name": "Self-improvement ",
+   "description": "You bought an upgrade for a weapon ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/d10745c445b4185e05e19e752c501f17f580fa5f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_6",
+   "name": "Chamber of Secrets ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/3f2df6ea018f4a45fd0705a4fe0f0c349cdf9265.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_7",
+   "name": "Catch a Ride ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/d38bca676b5eb4e45af2854855d169218f1ce13b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_8",
+   "name": "Forepost ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/5a88ad0c94a8ade2102039ed75a2c77328b256ca.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_9",
+   "name": "All Bark and no Bite ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/e545695d77ae1ac2c2a3c3c8e55ffff114d275be.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_0",
+   "name": "First Contract ",
+   "description": "You completed the Creating Contracts Tutorial ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/c313b22ef38d8408a28dab0adf9b66f4750df3e1.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_1",
+   "name": "Blood Money ",
+   "description": "You completed the Contract Basics Tutorial ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/25635b1421592979b42dc36fe2592b78e5887b1f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_11",
+   "name": "Rocksteady ",
+   "description": "You executed a point shooting with at least 3 kills ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/c5c3b925dc6371898b6f19077e32962591af8555.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_13",
+   "name": "Sandman ",
+   "description": "You subdued a person ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/9269472339acd540cf1befa344ff9321aa58e6b5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_3",
+   "name": "Partners in Crime ",
+   "description": "You played a contract made by a friend ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/76d621b0026a096c1b7166d36417dd1f5300741e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_4",
+   "name": "Competitive Spirit ",
+   "description": "You created a contract competition ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/bc45f2527b6bbefc9712cf7a21c64a7d8ea722e5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_5",
+   "name": "Contender ",
+   "description": "You participated in a contract competition ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/9bc0b9d169b08e7da98092e065d1d2db719cecfa.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_4_9",
+   "name": "Whoops ",
+   "description": "You made a kill look like an accident ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203140/d9289b3363cf112e5833f84c29a3e3f1ba4afe8e.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Hitman: Absolution",
+   "achievements": [
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grand Master ",
+     "description": "You completed 100 challenges "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reach for the Stars ",
+     "description": "You completed 50 challenges "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Russian Hare ",
+     "description": "You performed 47 headshots using a sniper rifle "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Taste for the Game ",
+     "description": "You completed 10 challenges "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_4",
+     "achieved": 1,
+     "unlocktime": 1461452244,
+     "name": "Heavy Burden ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_5",
+     "achieved": 1,
+     "unlocktime": 1461455018,
+     "name": "Kingslayer ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chamber of Secrets ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Catch a Ride ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forepost ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Bark and no Bite ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bartender Always Knows ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Signature Weapons ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Like Stealing Candy From a Baby ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not Worth It ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Step Into the Light ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Heavy Blow ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Faith Can Move Mountains ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Killing Fields ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jailbird ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hour of Reckoning ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Form ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Destroying Something Beautiful ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Final Countdown ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Personal Contract ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Absolution ",
+     "description": "You completed Hitman: Absolution™ as a professional "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jack of All Trades ",
+     "description": "You collected all 20 play styles "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's All in the Wrist ",
+     "description": "You successfully performed a lethal throw "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Information is Power ",
+     "description": "You collected all evidence "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thumbs Up ",
+     "description": "You liked a contract "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_29",
+     "achieved": 1,
+     "unlocktime": 1461454798,
+     "name": "Damage Control ",
+     "description": "You contained a situation gone bad "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Set for Life ",
+     "description": "You earned 1 million contracts dollars "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Self-improvement ",
+     "description": "You bought an upgrade for a weapon "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Contract ",
+     "description": "You completed the Creating Contracts Tutorial "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blood Money ",
+     "description": "You completed the Contract Basics Tutorial "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_2",
+     "achieved": 1,
+     "unlocktime": 1461455982,
+     "name": "True Potential ",
+     "description": "You unlocked a technique "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Partners in Crime ",
+     "description": "You played a contract made by a friend "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Competitive Spirit ",
+     "description": "You created a contract competition "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Contender ",
+     "description": "You participated in a contract competition "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_6",
+     "achieved": 1,
+     "unlocktime": 1461454826,
+     "name": "One With the Shadows ",
+     "description": "You escaped the attention of an enemy "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_7",
+     "achieved": 1,
+     "unlocktime": 1461455982,
+     "name": "Silent Assassin ",
+     "description": "You achieved Silent Assassin "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_8",
+     "achieved": 1,
+     "unlocktime": 1461455982,
+     "name": "Inconspicuous ",
+     "description": "You remained undetected throughout a checkpoint "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Whoops ",
+     "description": "You made a kill look like an accident "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_10",
+     "achieved": 1,
+     "unlocktime": 1461455466,
+     "name": "One of the Guys ",
+     "description": "You blended in and fooled someone "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rocksteady ",
+     "description": "You executed a point shooting with at least 3 kills "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_12",
+     "achieved": 1,
+     "unlocktime": 1461455851,
+     "name": "Under Wraps ",
+     "description": "You hid a body "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sandman ",
+     "description": "You subdued a person "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_4_14",
+     "achieved": 1,
+     "unlocktime": 1461450241,
+     "name": "Take me to the geek",
+     "description": "You ran the benchmark mode to see how well your hardware performs"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,543 @@
+{
+ "provider": "steam",
+ "title": "The Escapists",
+ "updated": "2026-08-19",
+ "id": "298630",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 0,
+ "total": 37,
+ "platform": "PC",
+ "icon": "bd0870a5fb2b51f11699c9b77d1bc7e7ba688c74",
+ "playtime_mins": 168,
+ "last_played": "2015-01-27",
+ "achievements": [
+  {
+   "key": "ButterFingers",
+   "name": "Butter Fingers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/2afce178f411f6ff6e0ef06f1c4d41f4d87f1c3d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "CagesBuddy",
+   "name": "Cage's Buddy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/2419b0880d11a5b3e9580803e524e4021f89a18a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "CleanGetaway",
+   "name": "Clean Getaway",
+   "description": "Escape a prison with 0% average heat",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/013ad133e1032c6d4f9af63221c3c24ab659973b.jpg"
+  },
+  {
+   "key": "DayOne",
+   "name": "Day One",
+   "description": "Escape a prison on the first day",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/adb8e4eecc41db17d90d3dcfa59ab6eab9486e25.jpg"
+  },
+  {
+   "key": "DiggingIt",
+   "name": "Digging It!",
+   "description": "Cleared a total of 50 tiles",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/a67f2b602c2d5a6fe3b578d4e8e5e2aa4108194d.jpg"
+  },
+  {
+   "key": "DisMyAuthority",
+   "name": "Disrespect My Authority",
+   "description": "Knocked out 50 guards",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/7a6a01e7aeb8c328c8076abcba357dd243395ae0.jpg"
+  },
+  {
+   "key": "FavourFave",
+   "name": "Favour Fave",
+   "description": "Complete 100 favours",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/65d74fcbca2c7bf3789109db8a77a7310d4450f2.jpg"
+  },
+  {
+   "key": "FingerBlame",
+   "name": "Finger of Blame",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/dd5e4b12ac1348452b0d24b6ff598087f2d1f03a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HandsDirty",
+   "name": "Getting Your Hands Dirty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/ee8834792074a4ecde4a2baca03a2e9bb6f18bfb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Int",
+   "name": "Grey Matters",
+   "description": "Reach 100 intellect",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/1ee3cec30318a09ed7f51495be85092216a396aa.jpg"
+  },
+  {
+   "key": "Jobsworth",
+   "name": "Jobsworth",
+   "description": "Complete quota on every job",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/69961627d7b1ad613cb9260226f6597a51a75b07.jpg"
+  },
+  {
+   "key": "KeySuccess",
+   "name": "The Key to Success",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/f971e30bcbff67dcb1e466778522db457c02678f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LadiesMan",
+   "name": "Ladies' Man",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/bd070c12cbd2d1cfb6e35b6b0555fbc8fe35d865.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LovedUp",
+   "name": "Loved Up",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/5e7abd62a7ab385509efd3bc6e2c3cb0b8ebf331.jpg",
+   "hidden": true
+  },
+  {
+   "key": "MasterCraftsman",
+   "name": "Master Craftsman",
+   "description": "Fill 13 or more pages in your crafting journal",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/c259c5cdfbb615cf17b11ab8d2fc1d011d2df528.jpg"
+  },
+  {
+   "key": "MonopolyGuy",
+   "name": "The Monopoly Guy",
+   "description": "Have $1000 or over on hand",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/9844856a8b4c6f7593dedb4c1c4b8fd64dbe8baa.jpg"
+  },
+  {
+   "key": "MyGiftsToYou",
+   "name": "My Gifts To You",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/824182ef199a02c98a6727c85e40239eb6ddc15e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NeverBeAlone",
+   "name": "Never Be Alone Again",
+   "description": "Attended 50 prison visits",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/09085b0fdabd504244f10249babdd5fadf6ec8bd.jpg"
+  },
+  {
+   "key": "NorthernLights",
+   "name": "Northern Lights",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/abbc3c8561d756c32074322c8c46c75731eb8fe3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Noticed",
+   "name": "Getting Noticed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/becce7b414231573d3efc712fa7f0f73933f9d7e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Present",
+   "name": "I Present To You",
+   "description": "Give away 50 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/1b8a7d1a76d78413dadd8788f1c7057ba918a545.jpg"
+  },
+  {
+   "key": "PunchDrunk",
+   "name": "Punch Drunk",
+   "description": "Knocked out 50 inmates",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/5e4f1768c13d47669e6932facfb9ef2dbca86763.jpg"
+  },
+  {
+   "key": "SantasLap",
+   "name": "Santa's Lap",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/46482e88670e36ffa3df69ff2416e2495a1cb829.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SoldiersOfFortune",
+   "name": "Soldiers Of Fortune",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/a2bab490188b03d4c639b64480c7bce34ec9203b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SpyHard",
+   "name": "Spy Hard",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/f18161b2057b365e9b46058fd6f10a5856b33f2c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "StripSearch",
+   "name": "Strip Searched",
+   "description": "Strip 50 outfits from floored opponents",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/72f8c85ba22c69cfb54aa52980196de9a3393018.jpg"
+  },
+  {
+   "key": "TankedUp",
+   "name": "Tanked Up",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/de567658afffb5f13e86559b0db9303de6361b02.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TheMadMan",
+   "name": "The Mad Man",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/426943596dd6ba80a78f8c7abfacfd2a4c1a0aec.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ThugLife",
+   "name": "Thug Life",
+   "description": "Recruit 5+ buddies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/6b3007bf5bf4f1cd6759e1b4a0095c3fa74803c8.jpg"
+  },
+  {
+   "key": "TinselTown",
+   "name": "Tinsel Town",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/4d23b38cb95104180db92677dbb4ff402782df3c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TopWorld",
+   "name": "On Top of the World",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/97ed00de5d0551f0d0cbb3ea48c6dcedb6c60d3c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "VoiceReason",
+   "name": "The Voice of Reason",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/f6d448adeb3799e1c34a00e6045b6feb24e91903.jpg",
+   "hidden": true
+  },
+  {
+   "key": "WayDragon",
+   "name": "Way of the Dragon",
+   "description": "Initiate a prison takeover using nunchuks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/07b2be37c3e3c77b968225bac19905b74c33902e.jpg"
+  },
+  {
+   "key": "WetBandit",
+   "name": "The Wet Bandit",
+   "description": "Flood 30 toilets",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/0325e993ebaf3bb8d996d0f21ea96f11a818b975.jpg"
+  },
+  {
+   "key": "WrappedUp",
+   "name": "Wrapped Up",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/300302ef75a19f339d7f80b34e63a4829e5ff711.jpg",
+   "hidden": true
+  },
+  {
+   "key": "escapist",
+   "name": "The Great Escapist!",
+   "description": "Successfully escaped from all six prisons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/2c69734f9fe837bb9a6f132b0a6c355009fa7c68.jpg"
+  },
+  {
+   "key": "physical",
+   "name": "Let's Get Physical",
+   "description": "Get your Strength and Speed stat to 100",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298630/47b6851dfc5669d97c0a6c47ebb3143b0a4a362d.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Escapists",
+   "achievements": [
+    {
+     "apiname": "physical",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let's Get Physical",
+     "description": "Get your Strength and Speed stat to 100"
+    },
+    {
+     "apiname": "WetBandit",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Wet Bandit",
+     "description": "Flood 30 toilets"
+    },
+    {
+     "apiname": "MonopolyGuy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Monopoly Guy",
+     "description": "Have $1000 or over on hand"
+    },
+    {
+     "apiname": "FavourFave",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Favour Fave",
+     "description": "Complete 100 favours"
+    },
+    {
+     "apiname": "NeverBeAlone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Never Be Alone Again",
+     "description": "Attended 50 prison visits"
+    },
+    {
+     "apiname": "Present",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Present To You",
+     "description": "Give away 50 items"
+    },
+    {
+     "apiname": "Int",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grey Matters",
+     "description": "Reach 100 intellect"
+    },
+    {
+     "apiname": "PunchDrunk",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Punch Drunk",
+     "description": "Knocked out 50 inmates"
+    },
+    {
+     "apiname": "DisMyAuthority",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Disrespect My Authority",
+     "description": "Knocked out 50 guards"
+    },
+    {
+     "apiname": "DiggingIt",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Digging It!",
+     "description": "Cleared a total of 50 tiles"
+    },
+    {
+     "apiname": "escapist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Great Escapist!",
+     "description": "Successfully escaped from all six prisons"
+    },
+    {
+     "apiname": "Jobsworth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jobsworth",
+     "description": "Complete quota on every job"
+    },
+    {
+     "apiname": "ThugLife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thug Life",
+     "description": "Recruit 5+ buddies"
+    },
+    {
+     "apiname": "ButterFingers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Butter Fingers",
+     "description": ""
+    },
+    {
+     "apiname": "StripSearch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strip Searched",
+     "description": "Strip 50 outfits from floored opponents"
+    },
+    {
+     "apiname": "WayDragon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Way of the Dragon",
+     "description": "Initiate a prison takeover using nunchuks"
+    },
+    {
+     "apiname": "CleanGetaway",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clean Getaway",
+     "description": "Escape a prison with 0% average heat"
+    },
+    {
+     "apiname": "DayOne",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Day One",
+     "description": "Escape a prison on the first day"
+    },
+    {
+     "apiname": "MasterCraftsman",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Craftsman",
+     "description": "Fill 13 or more pages in your crafting journal"
+    },
+    {
+     "apiname": "CagesBuddy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cage's Buddy",
+     "description": ""
+    },
+    {
+     "apiname": "LadiesMan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ladies' Man",
+     "description": ""
+    },
+    {
+     "apiname": "TheMadMan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Mad Man",
+     "description": ""
+    },
+    {
+     "apiname": "TankedUp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tanked Up",
+     "description": ""
+    },
+    {
+     "apiname": "SoldiersOfFortune",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soldiers Of Fortune",
+     "description": ""
+    },
+    {
+     "apiname": "LovedUp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Loved Up",
+     "description": ""
+    },
+    {
+     "apiname": "VoiceReason",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Voice of Reason",
+     "description": ""
+    },
+    {
+     "apiname": "KeySuccess",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Key to Success",
+     "description": ""
+    },
+    {
+     "apiname": "FingerBlame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finger of Blame",
+     "description": ""
+    },
+    {
+     "apiname": "Noticed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Getting Noticed",
+     "description": ""
+    },
+    {
+     "apiname": "TopWorld",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Top of the World",
+     "description": ""
+    },
+    {
+     "apiname": "SpyHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spy Hard",
+     "description": ""
+    },
+    {
+     "apiname": "MyGiftsToYou",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My Gifts To You",
+     "description": ""
+    },
+    {
+     "apiname": "TinselTown",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinsel Town",
+     "description": ""
+    },
+    {
+     "apiname": "WrappedUp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wrapped Up",
+     "description": ""
+    },
+    {
+     "apiname": "HandsDirty",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Getting Your Hands Dirty",
+     "description": ""
+    },
+    {
+     "apiname": "SantasLap",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Santa's Lap",
+     "description": ""
+    },
+    {
+     "apiname": "NorthernLights",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Northern Lights",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

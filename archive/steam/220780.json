@@ -1,0 +1,537 @@
+{
+ "provider": "steam",
+ "title": "Thomas Was Alone",
+ "updated": "2026-08-19",
+ "id": "220780",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 20,
+ "total": 35,
+ "first": "2012-12-22",
+ "last": "2013-01-27",
+ "platform": "PC",
+ "icon": "14a9056a76a256fbcfe833dd1420d01eeba14abc",
+ "playtime_mins": 116,
+ "last_played": "2013-01-28",
+ "achievements": [
+  {
+   "key": "startChap1",
+   "name": "Be There or Be...",
+   "unlocked": true,
+   "date": "2012-12-22T21:39:30-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/fd3fcbd9ec28cb616e567ec3b5be5d5ab7e6e24b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach1a",
+   "name": "Double Act",
+   "description": "Find the first achievement pickup in 'Array'.",
+   "unlocked": true,
+   "date": "2012-12-22T21:47:52-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/a1e83e1868b4c626c9fcfa59971c0d78a1bdf807.jpg"
+  },
+  {
+   "key": "ach1b",
+   "name": "They Seek It Here, They Seek It There...",
+   "description": "Find the second achievement pickup in 'Array'.",
+   "unlocked": true,
+   "date": "2012-12-22T21:54:50-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/c3862df799727ca0cb5ca5688d9c3ec4c490b1fb.jpg"
+  },
+  {
+   "key": "startChap2",
+   "name": "The Hero Thomas Needs",
+   "unlocked": true,
+   "date": "2012-12-22T21:58:03-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/f6f6efaf5845b5a1f191a97f17ed1357edb4d17a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach0a",
+   "name": "Achievement for One",
+   "description": "Find the first achievement pickup in 'Spawn'.",
+   "unlocked": true,
+   "date": "2012-12-22T21:59:04-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/957071c70c9f5548b4a5a12bfcf98aa3891c83cf.jpg"
+  },
+  {
+   "key": "ach0b",
+   "name": "Gamification",
+   "description": "Find the second achievement pickup in 'Spawn'.",
+   "unlocked": true,
+   "date": "2012-12-22T21:59:24-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/9841bcd38a8e6ea308d7bee59d69c25d6386aa5d.jpg"
+  },
+  {
+   "key": "ach2a",
+   "name": "Hidden Depths",
+   "description": "Find the first achievement pickup in 'Origin'.",
+   "unlocked": true,
+   "date": "2012-12-23T22:49:16-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/fec4d78ca253cf7ff4e4bf4fff5d6684929ffb05.jpg"
+  },
+  {
+   "key": "jump800",
+   "name": "On the Hop",
+   "description": "Jump 800 times.",
+   "unlocked": true,
+   "date": "2012-12-23T22:56:29-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/84046f55a9d4db33775b0fa225fa0ec4398cc925.jpg"
+  },
+  {
+   "key": "ach2b",
+   "name": "Not Exactly a Tesseract",
+   "description": "Find the second achievement pickup in 'Origin'.",
+   "unlocked": true,
+   "date": "2012-12-23T22:59:08-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/8d8ce695d2b26b2f49c171bea9e741503d5e1bd0.jpg"
+  },
+  {
+   "key": "startChap3",
+   "name": "I'm Rubber, You're Glue",
+   "unlocked": true,
+   "date": "2012-12-23T23:02:02-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/d710b29c18fe4e6892532a6c9401c9cf8a2c7b75.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach3a",
+   "name": "A Token of Love",
+   "description": "Find the first achievement pickup in 'Associations'.",
+   "unlocked": true,
+   "date": "2012-12-28T00:53:44-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/bb83cff2e7154e396b1f52a896b13bdeded82529.jpg"
+  },
+  {
+   "key": "bounce100",
+   "name": "Part of the Problem",
+   "description": "Bounce on Laura 100 times.",
+   "unlocked": true,
+   "date": "2012-12-28T00:59:04-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/01a6b9de5e777a927db5b6caa0c17883f4506caf.jpg"
+  },
+  {
+   "key": "ach3b",
+   "name": "Shared Hobby",
+   "description": "Find the second achievement pickup in 'Associations'.",
+   "unlocked": true,
+   "date": "2012-12-28T01:03:22-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/d5d7798fc00ee9c5d5ca0d2e9582baf982080369.jpg"
+  },
+  {
+   "key": "die100",
+   "name": "Huge Success",
+   "description": "Die 100 times.",
+   "unlocked": true,
+   "date": "2013-01-27T14:21:51-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/dd635dfaef4020d7d7801197d0e7db0122bf147f.jpg"
+  },
+  {
+   "key": "startChap4",
+   "name": "Derezzed",
+   "unlocked": true,
+   "date": "2013-01-27T14:30:56-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/089c0e7e3ef01f2561e757fce34f5637e8e0f88e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "jump1600",
+   "name": "Experienced Jumper",
+   "description": "Jump 1600 times.",
+   "unlocked": true,
+   "date": "2013-01-27T14:43:40-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/baa8b82fcc36ea1ac2d9376c2a9527dff9a7b76d.jpg"
+  },
+  {
+   "key": "ach4a",
+   "name": "Distractions",
+   "description": "Find the first achievement pickup in 'Purge'.",
+   "unlocked": true,
+   "date": "2013-01-27T14:44:17-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/6db3aaf1475abf1b7443503b203b004a74950772.jpg"
+  },
+  {
+   "key": "ach4b",
+   "name": "Dwindling Capacity",
+   "description": "Find the second achievement pickup in 'Purge'.",
+   "unlocked": true,
+   "date": "2013-01-27T14:54:58-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/54c8e47efa93597c63526b7b17f95b96f5edb41d.jpg"
+  },
+  {
+   "key": "startChap5",
+   "name": "Viridian",
+   "unlocked": true,
+   "date": "2013-01-27T15:02:25-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/6c9d00d9ba98d7d4bd29e26a97070813f39221f6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach5a",
+   "name": "The Last Place You Look",
+   "description": "Find the first achievement pickup in 'Invert'.",
+   "unlocked": true,
+   "date": "2013-01-27T15:04:19-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/4cfdda6ea87e37d4ffe8c3dc55a042d98b34c948.jpg"
+  },
+  {
+   "key": "ach5b",
+   "name": "Darwinian Collection",
+   "description": "Find the second achievement pickup in 'Invert'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/ce9508d06d224b955d49f993ae26a4262cdd4554.jpg"
+  },
+  {
+   "key": "ach6a",
+   "name": "And In the Darkness, Find Them",
+   "description": "Find the first achievement pickup in 'Itterate'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/c9cbe99073b685904a1f14fe205bf664e7be8da1.jpg"
+  },
+  {
+   "key": "ach6b",
+   "name": "Achievements, All the Way Down",
+   "description": "Find the second achievement pickup in 'Itterate'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/c09f52e834c33d53cdbf576af907ba262f41d153.jpg"
+  },
+  {
+   "key": "ach7a",
+   "name": "The Breakfast Club",
+   "description": "Find the first achievement pickup in 'Design'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/879d354e65cf40ded0b11e81d75346ca978e18b3.jpg"
+  },
+  {
+   "key": "ach7b",
+   "name": "A Selfless Act",
+   "description": "Find the second achievement pickup in 'Design'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/d9e3c59b4d7528b15167b568866d055318d517a3.jpg"
+  },
+  {
+   "key": "ach8a",
+   "name": "49 Shades of Grey",
+   "description": "Find the first achievement pickup in 'Generation'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/b4229cc6a4f95d0b4ba44ee426049bd6973f6b21.jpg"
+  },
+  {
+   "key": "ach8b",
+   "name": "Needs More Hats",
+   "description": "Find the second achievement pickup in 'Generation'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/1edcba91016e1297588219965734352b6d69a1c6.jpg"
+  },
+  {
+   "key": "ach9a",
+   "name": "That's What You Gets",
+   "description": "Find the first achievement pickup in 'Y+1, X+1'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/399bac1547f4b90693a22b7ff93b8360f9d32e91.jpg"
+  },
+  {
+   "key": "ach9b",
+   "name": "The Final MacGuffin",
+   "description": "Find the second achievement pickup in 'Y+1, X+1'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/62b8f6a6eb1500cfc2bfef5ca9f6a8778051e522.jpg"
+  },
+  {
+   "key": "finishGame",
+   "name": "Thomas Was Not Alone",
+   "description": "Finish the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/c0a6dc1b38ff959971355632077d853c7cd31034.jpg"
+  },
+  {
+   "key": "jump2400",
+   "name": "Mario",
+   "description": "Jump 2400 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/5fbf54f480926e36bd394cc2d6e19b49fafccc57.jpg"
+  },
+  {
+   "key": "startChap6",
+   "name": "Winter is Coming",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/a4690ecafd6a2f554408c4b75f70d3b1083d8354.jpg",
+   "hidden": true
+  },
+  {
+   "key": "startChap7",
+   "name": "Tighten Up the Graphics on Level 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/b68e8230922e882a037207b8a74fe8b990cfad2b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "startChap8",
+   "name": "Electric Boogaloo",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/7b631236aa0da648993c1919445ef0fdcf0d6e6a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "startChap9",
+   "name": "Up, and to the Right",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220780/1dd28520022fbafdebcdf9c007c8ed14b48fb5d0.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Thomas Was Alone",
+   "achievements": [
+    {
+     "apiname": "startChap1",
+     "achieved": 1,
+     "unlocktime": 1356233970,
+     "name": "Be There or Be...",
+     "description": ""
+    },
+    {
+     "apiname": "startChap2",
+     "achieved": 1,
+     "unlocktime": 1356235083,
+     "name": "The Hero Thomas Needs",
+     "description": ""
+    },
+    {
+     "apiname": "startChap3",
+     "achieved": 1,
+     "unlocktime": 1356325322,
+     "name": "I'm Rubber, You're Glue",
+     "description": ""
+    },
+    {
+     "apiname": "startChap4",
+     "achieved": 1,
+     "unlocktime": 1359318656,
+     "name": "Derezzed",
+     "description": ""
+    },
+    {
+     "apiname": "startChap5",
+     "achieved": 1,
+     "unlocktime": 1359320545,
+     "name": "Viridian",
+     "description": ""
+    },
+    {
+     "apiname": "startChap6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Winter is Coming",
+     "description": ""
+    },
+    {
+     "apiname": "startChap7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tighten Up the Graphics on Level 3",
+     "description": ""
+    },
+    {
+     "apiname": "startChap8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Electric Boogaloo",
+     "description": ""
+    },
+    {
+     "apiname": "startChap9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Up, and to the Right",
+     "description": ""
+    },
+    {
+     "apiname": "finishGame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thomas Was Not Alone",
+     "description": "Finish the game."
+    },
+    {
+     "apiname": "jump800",
+     "achieved": 1,
+     "unlocktime": 1356324989,
+     "name": "On the Hop",
+     "description": "Jump 800 times."
+    },
+    {
+     "apiname": "jump1600",
+     "achieved": 1,
+     "unlocktime": 1359319420,
+     "name": "Experienced Jumper",
+     "description": "Jump 1600 times."
+    },
+    {
+     "apiname": "jump2400",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mario",
+     "description": "Jump 2400 times."
+    },
+    {
+     "apiname": "ach0a",
+     "achieved": 1,
+     "unlocktime": 1356235144,
+     "name": "Achievement for One",
+     "description": "Find the first achievement pickup in 'Spawn'."
+    },
+    {
+     "apiname": "ach0b",
+     "achieved": 1,
+     "unlocktime": 1356235164,
+     "name": "Gamification",
+     "description": "Find the second achievement pickup in 'Spawn'."
+    },
+    {
+     "apiname": "ach1a",
+     "achieved": 1,
+     "unlocktime": 1356234472,
+     "name": "Double Act",
+     "description": "Find the first achievement pickup in 'Array'."
+    },
+    {
+     "apiname": "ach1b",
+     "achieved": 1,
+     "unlocktime": 1356234890,
+     "name": "They Seek It Here, They Seek It There...",
+     "description": "Find the second achievement pickup in 'Array'."
+    },
+    {
+     "apiname": "ach2a",
+     "achieved": 1,
+     "unlocktime": 1356324556,
+     "name": "Hidden Depths",
+     "description": "Find the first achievement pickup in 'Origin'."
+    },
+    {
+     "apiname": "ach2b",
+     "achieved": 1,
+     "unlocktime": 1356325148,
+     "name": "Not Exactly a Tesseract",
+     "description": "Find the second achievement pickup in 'Origin'."
+    },
+    {
+     "apiname": "ach3a",
+     "achieved": 1,
+     "unlocktime": 1356677624,
+     "name": "A Token of Love",
+     "description": "Find the first achievement pickup in 'Associations'."
+    },
+    {
+     "apiname": "ach3b",
+     "achieved": 1,
+     "unlocktime": 1356678202,
+     "name": "Shared Hobby",
+     "description": "Find the second achievement pickup in 'Associations'."
+    },
+    {
+     "apiname": "ach4a",
+     "achieved": 1,
+     "unlocktime": 1359319457,
+     "name": "Distractions",
+     "description": "Find the first achievement pickup in 'Purge'."
+    },
+    {
+     "apiname": "ach4b",
+     "achieved": 1,
+     "unlocktime": 1359320098,
+     "name": "Dwindling Capacity",
+     "description": "Find the second achievement pickup in 'Purge'."
+    },
+    {
+     "apiname": "ach5a",
+     "achieved": 1,
+     "unlocktime": 1359320659,
+     "name": "The Last Place You Look",
+     "description": "Find the first achievement pickup in 'Invert'."
+    },
+    {
+     "apiname": "ach5b",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Darwinian Collection",
+     "description": "Find the second achievement pickup in 'Invert'."
+    },
+    {
+     "apiname": "ach6a",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "And In the Darkness, Find Them",
+     "description": "Find the first achievement pickup in 'Itterate'."
+    },
+    {
+     "apiname": "ach6b",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Achievements, All the Way Down",
+     "description": "Find the second achievement pickup in 'Itterate'."
+    },
+    {
+     "apiname": "ach7a",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Breakfast Club",
+     "description": "Find the first achievement pickup in 'Design'."
+    },
+    {
+     "apiname": "ach7b",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Selfless Act",
+     "description": "Find the second achievement pickup in 'Design'."
+    },
+    {
+     "apiname": "ach8a",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "49 Shades of Grey",
+     "description": "Find the first achievement pickup in 'Generation'."
+    },
+    {
+     "apiname": "ach8b",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Needs More Hats",
+     "description": "Find the second achievement pickup in 'Generation'."
+    },
+    {
+     "apiname": "ach9a",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That's What You Gets",
+     "description": "Find the first achievement pickup in 'Y+1, X+1'."
+    },
+    {
+     "apiname": "ach9b",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Final MacGuffin",
+     "description": "Find the second achievement pickup in 'Y+1, X+1'."
+    },
+    {
+     "apiname": "die100",
+     "achieved": 1,
+     "unlocktime": 1359318111,
+     "name": "Huge Success",
+     "description": "Die 100 times."
+    },
+    {
+     "apiname": "bounce100",
+     "achieved": 1,
+     "unlocktime": 1356677944,
+     "name": "Part of the Problem",
+     "description": "Bounce on Laura 100 times."
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,36 @@
+unlocked: 4
+total: 50
+playtime_mins: 126
+last_played: "2022-11-04"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 4
+      total: 50
+      playtime_mins: 126
+      last_played: "2022-11-04"
+earned:
+    - name: New beginning
+      description: Embark on your first expedition
+      date: "2022-11-03T21:00:35-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1282730/fb6c068bc1f39b1bcbdd20ddb880b9f8a8d2c00b.jpg
+      provider: steam
+      platform: PC
+    - name: First blood
+      description: Kill 5 enemies
+      date: "2022-11-03T21:03:05-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1282730/a6d9697bd40e33c142d7f50c4d60210e80f2aa6c.jpg
+      provider: steam
+      platform: PC
+    - name: Foundation stone
+      description: Build the first camp structure
+      date: "2022-11-03T21:19:03-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1282730/9b33bb1e6c60187a1193a0a790e1f7c99efca1ac.jpg
+      provider: steam
+      platform: PC
+    - name: First time?
+      description: Die for the first time
+      date: "2022-11-04T18:22:17-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1282730/b9581ae55c649573d25e7bddc10e73bbe5423808.jpg
+      provider: steam
+      platform: PC

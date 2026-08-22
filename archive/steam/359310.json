@@ -1,0 +1,567 @@
+{
+ "provider": "steam",
+ "title": "Evoland 2",
+ "updated": "2026-08-19",
+ "id": "359310",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 8,
+ "total": 38,
+ "first": "2016-05-12",
+ "last": "2016-07-16",
+ "platform": "PC",
+ "icon": "d2f9687a00ccfa481db07eb17d0f927fb2d90ce7",
+ "playtime_mins": 203,
+ "last_played": "2016-09-30",
+ "achievements": [
+  {
+   "key": "trim",
+   "name": "Trimmer",
+   "description": "You have cut 10 bushes!",
+   "unlocked": true,
+   "date": "2016-05-12T17:02:02-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/6da47a0cbad2a6a9d21f98bc42a4ff068d3cbcc6.jpg"
+  },
+  {
+   "key": "worldmap",
+   "name": "World Map",
+   "description": "You feel like a true explorer",
+   "unlocked": true,
+   "date": "2016-05-12T17:02:09-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/8a421d28227d124f2753b5b8dab56bcce9001928.jpg"
+  },
+  {
+   "key": "fina",
+   "name": "A new friend",
+   "description": "Fina has joined your team!",
+   "unlocked": true,
+   "date": "2016-05-12T17:04:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/129a36542a60151a188776e09cd55ba6663ffbf8.jpg"
+  },
+  {
+   "key": "weed",
+   "name": "Weedkiller",
+   "description": "That's 100 bushes. You can stop now.",
+   "unlocked": true,
+   "date": "2016-05-12T17:12:29-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/003ebd345037592140a0e1ff04f8549355fbe80c.jpg"
+  },
+  {
+   "key": "mgs",
+   "name": "The Ear Pull",
+   "description": "You escaped the guards thanks to the cardbox",
+   "unlocked": true,
+   "date": "2016-05-15T22:11:19-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/f75edb1312dbb94ae59e4d75c608cd00516e4431.jpg"
+  },
+  {
+   "key": "menos",
+   "name": "Another friend",
+   "description": "Menos has joined your team!",
+   "unlocked": true,
+   "date": "2016-05-15T22:29:36-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/9fe55343735d16e3c1205cc260da94eba1099050.jpg"
+  },
+  {
+   "key": "chitchat",
+   "name": "Chit chat",
+   "description": "You talked to 50 different NPC",
+   "unlocked": true,
+   "date": "2016-05-15T22:45:07-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/8bd538868cc94c18dc4b94d3da02bd8e82933be4.jpg"
+  },
+  {
+   "key": "future",
+   "name": "To the future!",
+   "description": "No trails of fire this time",
+   "unlocked": true,
+   "date": "2016-07-16T22:35:51-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/c74e4120218fe5bfcbceaf4ab43cd5e2c36511ca.jpg"
+  },
+  {
+   "key": "antik",
+   "name": "Old Times",
+   "description": "You have travelled to the Ancient Times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/112f2715a5b58feb328ed8ae45233f480b7bd4ac.jpg"
+  },
+  {
+   "key": "battle",
+   "name": "Battle Master",
+   "description": "You have won the Campaign for Demonia",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/689cac7a01f8263f9f52c780ac819d7f10401ba0.jpg"
+  },
+  {
+   "key": "bioshock",
+   "name": "Bring us the girl and wipe away the debt",
+   "description": "You spoke to Elizabeth",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/21d669820594b5fd863c531f0ec79ceb5a3c4e14.jpg"
+  },
+  {
+   "key": "bridge",
+   "name": "You shall pass!",
+   "description": "You have re-opened the Mayenne Bridge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/9fe36f5b5ea9f42a2241dcfdd2d70c13b135fe8e.jpg"
+  },
+  {
+   "key": "cardgame",
+   "name": "Card Player",
+   "description": "You played your first game of cards",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/05f17b6dba5c3a3d9acf8e79893277ec40de32fe.jpg"
+  },
+  {
+   "key": "collector",
+   "name": "Collector",
+   "description": "You have found all the cards in Evoland 2!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/24bb612c7c9da7849288f3f3a63e78b0d12747a0.jpg"
+  },
+  {
+   "key": "creeper",
+   "name": "sssSSSSSss BOOM!",
+   "description": "You died to the Dreaded Creeper",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/7d008243e495b1a9e0dc877a894e99edfa1d22d6.jpg"
+  },
+  {
+   "key": "doubletap",
+   "name": "Double Tap",
+   "description": "You've killed 40 zombies in the Ghost Forest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/cf43c273bc987ec243996a5b84791e89e2f24bfa.jpg"
+  },
+  {
+   "key": "dragon",
+   "name": "Triple Dragon",
+   "description": "You have escaped the Pirate's Lair",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/a4b83714eaf5aede5851a9ea41ebcf77e3c090fc.jpg"
+  },
+  {
+   "key": "dual",
+   "name": "Dual personality",
+   "description": "I sense a troubling past... or is it a future?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/3f755af7d5d205cc5fb785b562bc9dad3152e09d.jpg"
+  },
+  {
+   "key": "finap",
+   "name": "Power of Nature",
+   "description": "You have unlocked the true power of Fina",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/0ebc82d3a17f67797c76d755fc4a123ac77ef5c0.jpg"
+  },
+  {
+   "key": "flyingm",
+   "name": "Flying Machine",
+   "description": "What could possibly go wrong?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/0ce34ed09f3a182cd68ced4d24cedaa9c1486773.jpg"
+  },
+  {
+   "key": "fragments",
+   "name": "The Key",
+   "description": "You have recovered the Key",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/8a58d01bd2c92de915dbf54d641fea8668853f99.jpg"
+  },
+  {
+   "key": "glitch",
+   "name": "Glitched",
+   "description": "You have discovered the Anomaly",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/318f064b5c7ad32dd30b7c3a4a5f468c38472c3b.jpg"
+  },
+  {
+   "key": "gold",
+   "name": "Over 9000!!!",
+   "description": "You got more than 9000 Gold",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/f2668e6ab8af80110d432a9ac8c29ee6b7dde5e1.jpg"
+  },
+  {
+   "key": "hero",
+   "name": "Like a true hero",
+   "description": "You have defeated Evil! Maybe.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/2e5b56fb4e9658616003995244b6e254a8c1dd73.jpg"
+  },
+  {
+   "key": "lostviking",
+   "name": "Lost Wiking",
+   "description": "You found the lost Wiking",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/30eef132192e650a4b18b086107ae19eaa9a1565.jpg"
+  },
+  {
+   "key": "lvl",
+   "name": "Powerlevel",
+   "description": "You have reached level 30",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/890fe78b8f552a9f7ce11eb63e92e74c0a0233ae.jpg"
+  },
+  {
+   "key": "match",
+   "name": "MatchMaker",
+   "description": "You have defeated J.Snow",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/4a162effad23dc72cc9222d4b15342c4ad576c96.jpg"
+  },
+  {
+   "key": "menosp",
+   "name": "Power of Fire and Earth",
+   "description": "You have unlocked the true power of Menos",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/2d5ff9b59a2f575d5d9072129acc86e3129f2a48.jpg"
+  },
+  {
+   "key": "mma",
+   "name": "MMA Champion",
+   "description": "You have defeated the Prophet",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/763b1d4722574dd9a1def95ae67e5577716680a4.jpg"
+  },
+  {
+   "key": "pokerface",
+   "name": "Poker Face",
+   "description": "You have won 50 card games!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/bfb62088fdc24c2b3b0a7435bc7b0d3ffcad4c48.jpg"
+  },
+  {
+   "key": "scholar",
+   "name": "Scholar",
+   "description": "You have solved all 8 puzzles in the library",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/b61e6f4042d070bc2a0c902008448060a2f3ab1f.jpg"
+  },
+  {
+   "key": "starp",
+   "name": "Star Player",
+   "description": "You have found all 30 stars!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/b125daead18e4d05364e55fe71e386c3cf56f91b.jpg"
+  },
+  {
+   "key": "sylves",
+   "name": "Mastermind",
+   "description": "You have escaped the Sylphs' Forest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/37ca5f1f55871ed6e66d2145152abb8b4366d14a.jpg"
+  },
+  {
+   "key": "sylves2",
+   "name": "Video Games Hall of Fame",
+   "description": "You spoke to each old hero",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/762c79a98dabd9be16dd6bc7e9cab32bd1a5d7a6.jpg"
+  },
+  {
+   "key": "tombr",
+   "name": "Tomb Raider",
+   "description": "You have found the hidden tomb",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/b3961a15aee090465bc63c26f4f3b1a3a6a8854f.jpg"
+  },
+  {
+   "key": "velvet",
+   "name": "This is getting crowded",
+   "description": "Velvet has joined your team!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/753c9252c432235dadfa86b05436bfad8a77128e.jpg"
+  },
+  {
+   "key": "velvetp",
+   "name": "Power of Ice",
+   "description": "You have unlocked the true power of Velvet",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/2da2cdd7c2b7a4fd14632b5bd74cbe417a3c50bb.jpg"
+  },
+  {
+   "key": "zelda",
+   "name": "Friend of beasts",
+   "description": "You survived the Cluckety Isle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/359310/32e5f18d02cb76c77a8f0b7278976be0b3507460.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Evoland 2",
+   "achievements": [
+    {
+     "apiname": "lvl",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Powerlevel",
+     "description": "You have reached level 30"
+    },
+    {
+     "apiname": "worldmap",
+     "achieved": 1,
+     "unlocktime": 1463090529,
+     "name": "World Map",
+     "description": "You feel like a true explorer"
+    },
+    {
+     "apiname": "cardgame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Card Player",
+     "description": "You played your first game of cards"
+    },
+    {
+     "apiname": "pokerface",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poker Face",
+     "description": "You have won 50 card games!"
+    },
+    {
+     "apiname": "collector",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collector",
+     "description": "You have found all the cards in Evoland 2!"
+    },
+    {
+     "apiname": "flyingm",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flying Machine",
+     "description": "What could possibly go wrong?"
+    },
+    {
+     "apiname": "fina",
+     "achieved": 1,
+     "unlocktime": 1463090698,
+     "name": "A new friend",
+     "description": "Fina has joined your team!"
+    },
+    {
+     "apiname": "menos",
+     "achieved": 1,
+     "unlocktime": 1463369376,
+     "name": "Another friend",
+     "description": "Menos has joined your team!"
+    },
+    {
+     "apiname": "velvet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is getting crowded",
+     "description": "Velvet has joined your team!"
+    },
+    {
+     "apiname": "finap",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Power of Nature",
+     "description": "You have unlocked the true power of Fina"
+    },
+    {
+     "apiname": "menosp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Power of Fire and Earth",
+     "description": "You have unlocked the true power of Menos"
+    },
+    {
+     "apiname": "velvetp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Power of Ice",
+     "description": "You have unlocked the true power of Velvet"
+    },
+    {
+     "apiname": "starp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star Player",
+     "description": "You have found all 30 stars!"
+    },
+    {
+     "apiname": "tombr",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tomb Raider",
+     "description": "You have found the hidden tomb"
+    },
+    {
+     "apiname": "scholar",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scholar",
+     "description": "You have solved all 8 puzzles in the library"
+    },
+    {
+     "apiname": "gold",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Over 9000!!!",
+     "description": "You got more than 9000 Gold"
+    },
+    {
+     "apiname": "future",
+     "achieved": 1,
+     "unlocktime": 1468726551,
+     "name": "To the future!",
+     "description": "No trails of fire this time"
+    },
+    {
+     "apiname": "dual",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dual personality",
+     "description": "I sense a troubling past... or is it a future?"
+    },
+    {
+     "apiname": "mma",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MMA Champion",
+     "description": "You have defeated the Prophet"
+    },
+    {
+     "apiname": "bridge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You shall pass!",
+     "description": "You have re-opened the Mayenne Bridge"
+    },
+    {
+     "apiname": "dragon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Triple Dragon",
+     "description": "You have escaped the Pirate's Lair"
+    },
+    {
+     "apiname": "sylves",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mastermind",
+     "description": "You have escaped the Sylphs' Forest"
+    },
+    {
+     "apiname": "battle",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Battle Master",
+     "description": "You have won the Campaign for Demonia"
+    },
+    {
+     "apiname": "antik",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Old Times",
+     "description": "You have travelled to the Ancient Times"
+    },
+    {
+     "apiname": "glitch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glitched",
+     "description": "You have discovered the Anomaly"
+    },
+    {
+     "apiname": "match",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MatchMaker",
+     "description": "You have defeated J.Snow"
+    },
+    {
+     "apiname": "fragments",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Key",
+     "description": "You have recovered the Key"
+    },
+    {
+     "apiname": "mgs",
+     "achieved": 1,
+     "unlocktime": 1463368279,
+     "name": "The Ear Pull",
+     "description": "You escaped the guards thanks to the cardbox"
+    },
+    {
+     "apiname": "hero",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Like a true hero",
+     "description": "You have defeated Evil! Maybe."
+    },
+    {
+     "apiname": "creeper",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "sssSSSSSss BOOM!",
+     "description": "You died to the Dreaded Creeper"
+    },
+    {
+     "apiname": "doubletap",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Double Tap",
+     "description": "You've killed 40 zombies in the Ghost Forest"
+    },
+    {
+     "apiname": "zelda",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Friend of beasts",
+     "description": "You survived the Cluckety Isle"
+    },
+    {
+     "apiname": "bioshock",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bring us the girl and wipe away the debt",
+     "description": "You spoke to Elizabeth"
+    },
+    {
+     "apiname": "sylves2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Video Games Hall of Fame",
+     "description": "You spoke to each old hero"
+    },
+    {
+     "apiname": "lostviking",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lost Wiking",
+     "description": "You found the lost Wiking"
+    },
+    {
+     "apiname": "chitchat",
+     "achieved": 1,
+     "unlocktime": 1463370307,
+     "name": "Chit chat",
+     "description": "You talked to 50 different NPC"
+    },
+    {
+     "apiname": "trim",
+     "achieved": 1,
+     "unlocktime": 1463090522,
+     "name": "Trimmer",
+     "description": "You have cut 10 bushes!"
+    },
+    {
+     "apiname": "weed",
+     "achieved": 1,
+     "unlocktime": 1463091149,
+     "name": "Weedkiller",
+     "description": "That's 100 bushes. You can stop now."
+    }
+   ],
+   "success": true
+  }
+ }
+}

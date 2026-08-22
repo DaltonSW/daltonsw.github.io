@@ -1,0 +1,945 @@
+{
+ "provider": "steam",
+ "title": "BioShock Remastered",
+ "updated": "2026-08-19",
+ "id": "409710",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 8,
+ "total": 65,
+ "first": "2019-02-16",
+ "last": "2019-02-16",
+ "platform": "PC",
+ "icon": "eb72262cd3ccc3219dd76392be3b60a4b6cbfd38",
+ "playtime_mins": 153,
+ "last_played": "2019-02-19",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_139",
+   "name": "Toaster in the Tub",
+   "description": "Shock an enemy in the water",
+   "unlocked": true,
+   "date": "2019-02-16T18:42:15-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/c7a071c803ebc9e6a122ba15b35d3407ae8d0038.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_7",
+   "name": "Completed Welcome to Rapture",
+   "description": "Successfully complete the Welcome To Rapture Level",
+   "unlocked": true,
+   "date": "2019-02-16T19:07:34-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/5f0fa6f71c73e5c8d73067be81eddce2d7deda32.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_118",
+   "name": "One Successful Hack",
+   "description": "Perform at least one successful hack",
+   "unlocked": true,
+   "date": "2019-02-16T19:12:15-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/d3ccfc2aafff586176eb582f6fe5b7048a807bae.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_119",
+   "name": "Hacked a Security Bot",
+   "description": "Successfully hack a security bot",
+   "unlocked": true,
+   "date": "2019-02-16T19:12:15-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/79d4d974569025a64a57ac5ad8f60f2ab028a63a.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_121",
+   "name": "Hacked a Turret",
+   "description": "Successfully hack a Turret",
+   "unlocked": true,
+   "date": "2019-02-16T19:17:53-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/b433ca00d314d776e5182cc8b239ca3a47063a86.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_123",
+   "name": "Hacked a Safe",
+   "description": "Successfully hack a safe",
+   "unlocked": true,
+   "date": "2019-02-16T20:25:28-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/7336db17a87b9ce87a6d3578e742ae360996a41a.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_20",
+   "name": "Defeated Dr. Steinman",
+   "unlocked": true,
+   "date": "2019-02-16T20:27:26-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/14266c1e3b03381b2f5a7861ce3c2770bc35615c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_96",
+   "name": "Bought One Slot",
+   "description": "Purchase a Plasmid Slot or Tonic Slot in any track",
+   "unlocked": true,
+   "date": "2019-02-16T21:28:16-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/e626df8bf726b047e716c7e1215d211288cca951.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_100",
+   "name": "Three Fully Upgraded Weapons",
+   "description": "Fully upgrade three weapons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/483a6f35e722d4e89d101a9bd6fa8cbbba2a32fa.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_101",
+   "name": "Four Fully Upgraded Weapons",
+   "description": "Fully upgrade four weapons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/34d9a1e7ab161a44261d611a59cfc02d96aea04c.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_102",
+   "name": "Five Fully Upgraded Weapons",
+   "description": "Fully upgrade five weapons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/e4834bda14731a432743da172672d640fef131fa.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_103",
+   "name": "Weapon Specialist",
+   "description": "Acquire all upgrades for all weapons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/941909f19a0f31d25dbb39ca29d4d78cc8039c3c.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_104",
+   "name": "Fully Researched a Thuggish Splicer",
+   "description": "Fully research the Thuggish Splicer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/a09104402a5f8e0b26db95574551b8a46fd33d5f.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_105",
+   "name": "Fully Researched a Leadhead Splicer",
+   "description": "Fully research the Leadhead Splicer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/ceef6434c8ab181f4b943a1e7dc26f0ae10c68af.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_106",
+   "name": "Fully Researched a Spider Splicer",
+   "description": "Fully research the Spider Splicer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/5eb0ab524f568a9791255bbdc0bc146cac2561a9.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_107",
+   "name": "Fully Researched a Houdini Splicer",
+   "description": "Fully research the Houdini Splicer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/03064cea680936e1b9d674d18a4422329e27d318.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_108",
+   "name": "Fully Researched a Nitro Splicer",
+   "description": "Fully research the Nitro Splicer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/e373d6b6aeb5759635a991e6ec521bf739e7665d.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_110",
+   "name": "Fully Researched a Rosie",
+   "description": "Fully research the Rosie",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/f3d0ff9b406e6b6ec83c40922f573627639baaf3.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_111",
+   "name": "Fully Researched a Bouncer",
+   "description": "Fully research the Bouncer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/8adad3763b49949141d897d520ded1d0d07e0cf3.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_113",
+   "name": "Fully Researched a Little Sister",
+   "description": "Fully research the Little Sister",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/0662bd6e714077001dd970b8f41975388b612947.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_114",
+   "name": "Prolific Photographer",
+   "description": "Take at least one photo in every research group",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/e425a348e5f0f16a94f43d346326639893c7e709.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_115",
+   "name": "Research PhD",
+   "description": "Max out all possible research",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/ee33c6e3ec5c45827e81ce8921a04398e3273b0a.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_116",
+   "name": "Quality Research Photo",
+   "description": "Take a Research Photo of the highest grade",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/f1dfd0403c569e20681d82e1f9a989d3dd35300e.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_117",
+   "name": "Researched a Splicer",
+   "description": "Take at least one Research Photo of a Splicer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/113392897e54b27914ac0bc86cf00300b13261a9.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_120",
+   "name": "Hacked a Security Camera",
+   "description": "Successfully hack a Security Camera",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/63cc31b8b603daedd2924a69ed4262ee035f8a6c.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_122",
+   "name": "Hacked a Vending Machine",
+   "description": "Successfully hack a Vending Machine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/3f8e539215223a3e6062d00eca9b143740855bda.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_124",
+   "name": "Skilled Hacker",
+   "description": "Successfully complete 50 hacks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/259d714bec6694d8e45c6ed702926b07ec2092b6.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_125",
+   "name": "Basic Inventer",
+   "description": "Invent at least one item",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/9eb8f5086a9395d86fe8096e53a88fa5086487f4.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_128",
+   "name": "Avid Inventor",
+   "description": "Successfully invent at least 100 items",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/9e0ad61537bfcb931f46d82422fb2824d084d361.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_129",
+   "name": "Ammo Inventor",
+   "description": "Invent all possible ammunication types",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/75724011fb40d8e15e32346e4bf7d95c7489764f.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_130",
+   "name": "Little Sister Savior",
+   "description": "Complete the game without harvesting any Little Sisters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/acd101c88619fe8e01cbd35bb46ad1d171205d71.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_131",
+   "name": "Tonic Collector",
+   "description": "Collect or Invent 53 Tonics in the Physical, Engineering and Combat tracks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/371a8efbc6ba5e16d7248c8f883270da42096bbf.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_132",
+   "name": "Historian",
+   "description": "Find every audio diary",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/c1a59c600ed9f1fe393e77794217653381b5e43d.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_133",
+   "name": "Seriously Good at This",
+   "description": "Complete the game on the hardest difficulty setting",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/435357bc07233f48116bcd798f4338da82c1a873.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_134",
+   "name": "Dealt with every Little Sister",
+   "description": "Either Harvest or Rescue every Little Sister in the game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/43a24e9f08ddc2abd3e37837825fe2d7d255ea11.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_135",
+   "name": "Became a Big Daddy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/64a05ba3ebf283e4475bf24e2333dae26e03efa2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_136",
+   "name": "Lucky Winner",
+   "description": "Hit the jackpot at a slot machine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/239cec9b61d5cefaae4324bc6d8c73ac00e24731.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_137",
+   "name": "Irony",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/7618e755c3ab4cef35429eb0c51e6a1b6222535c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_138",
+   "name": "Found Cohen's Room",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/5e3a226001cc5f9c682b18bf2e88978ea1bb5147.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_141",
+   "name": "Brass Balls",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/12a1557c65439006deeffe6a5649c13a87440dfe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_142",
+   "name": "I Chose the Impossible",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/32ebb1df025592fab78eebff8d92a12eb8a09166.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_143",
+   "name": "“The ‘I’ in Team” - Rescuer",
+   "description": "Rescued the Little Sister in “The ‘I’ in Team”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/df6986fa4cc7f3fbbc611092637e9f671d84b8a0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_144",
+   "name": "“The ‘I’ in Team” – Expert",
+   "description": "Rescued the Little Sister in “The ‘I’ in Team” in under 3:00",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/19bd94a525af5f8f7fa65c9d0697b1c8b7f8ae47.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_145",
+   "name": "“The ‘I’ in Team” – Collector",
+   "description": "Found all collectable Roses in “The ‘I’ in Team”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/4e1bf42441b865cee61db61cada55e959e174938.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_146",
+   "name": "“The ‘I’ in Team” – Pacifist",
+   "description": "Rescued the Little Sister in “The ‘I’ in Team” without destroying any Machine Gun Turrets",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/ed0039200cdf64de65460f59113799df28baa4eb.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_147",
+   "name": "\"A Shocking Turn of Events\" - Rescuer",
+   "description": "Rescued the Little Sister in “A Shocking Turn of Events”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/4e5402afa64a0effca63fbe1e566c1d7d8355e2a.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_148",
+   "name": "“A Shocking Turn of Events” – Expert",
+   "description": "The player has rescued the Little Sister in “A Shocking Turn of Events” in under 4:00",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/34f57e4204ffa5bc086553f420d316267f36fa88.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_149",
+   "name": "“A Shocking Turn of Events” – Collector",
+   "description": "Found all collectable Roses in “A Shocking Turn of Events”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/a4248f84024904f6fd801ea8a9bbfe25d0ae6113.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_150",
+   "name": "“A Shocking Turn of Events” – Master Electrician",
+   "description": "Charged up the Ferris Wheel 9 different times in “A Shocking Turn of Events”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/98ce33db5fc41480d8e9299d5ea18e5ca3bcbdb6.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_151",
+   "name": "“Worlds of Hurt” - Rescuer",
+   "description": "Rescued the Little Sister in “Worlds of Hurt”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/5256bcac62f5083bc7e4ccc5db15df3990b85d02.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_152",
+   "name": "“Worlds of Hurt” – Expert",
+   "description": "Rescued the Little Sister in “Worlds of Hurt” in under 15:00, on Medium or higher difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/bc2f56cde7f9fb72dd4f1b67dc0ddacd9c6e8d1b.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_153",
+   "name": "“Worlds of Hurt” – Collector",
+   "description": "Found all collectable Roses in “Worlds of Hurt”",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/0acf263ccaf1e198c0350aea0638d679f69e5f78.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_154",
+   "name": "“Worlds of Hurt” – Tough Guy",
+   "description": "Rescued the Little Sister in “Worlds of Hurt” using only plasmids, tonics, the wrench, and the research camera, on Medium or higher difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/807379f40dccb6925549e613110ca7d13ad8ae6e.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_200",
+   "name": "A Man Chooses",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/0b4683fd2baf7833bc9fa6b0a3839ec511312f76.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_22",
+   "name": "Defeated Peach Wilkins",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/087ad085a9caee4820205b2a1ce5d8a6acf4d87a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_24",
+   "name": "Restored the Forest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/8d3b41305e82132eb71a1eb8d4329853ce98af36.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_26",
+   "name": "Completed Cohen's Masterpiece",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/10aa51c91c431e07234bc63cca46214267887577.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_28",
+   "name": "Defeated Andrew Ryan",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/027c4e31e28bc53dc498fd2f84dfcf42eaf94e6b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_30",
+   "name": "Broke Fontaine's Mind Control",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/30261b53fe843fcf573d81c540cf4a520733da7a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_55",
+   "name": "Defeated Atlas",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/46e9221f87eb4131044b6ca8263bbe58a395c609.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_72",
+   "name": "Maxed One Track",
+   "description": "Purchased every slot in one of the Plasmid or Tonic tracks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/a6e489f3aba829d5b7077508a1df905b7adf6222.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_94",
+   "name": "Maxed All Tracks",
+   "description": "Purchase every slot in all four Plasmid and Tonic tracks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/d9afcf48d93891cac1b44405b0f275f41c839180.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_97",
+   "name": "Upgraded a Weapon",
+   "description": "Acquire at least one weapon upgrade",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/11b9658bdaedcc06cb3f819e31769f08c44800f2.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_98",
+   "name": "One Fully Upgraded Weapon",
+   "description": "Fully upgrade one weapon",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/a4448d76f93b84d43a3e8895249b247c541c4e95.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_99",
+   "name": "Two Fully Upgraded Weapons",
+   "description": "Fully upgrade two weapons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/409710/973c19f23157555b6c75f5a15d6ec236ea4e509c.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "BioShock Remastered",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_7",
+     "achieved": 1,
+     "unlocktime": 1550365654,
+     "name": "Completed Welcome to Rapture",
+     "description": "Successfully complete the Welcome To Rapture Level"
+    },
+    {
+     "apiname": "ACHIEVEMENT_20",
+     "achieved": 1,
+     "unlocktime": 1550370446,
+     "name": "Defeated Dr. Steinman",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defeated Peach Wilkins",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defeated Atlas",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Restored the Forest",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Completed Cohen's Masterpiece",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defeated Andrew Ryan",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_103",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapon Specialist",
+     "description": "Acquire all upgrades for all weapons"
+    },
+    {
+     "apiname": "ACHIEVEMENT_97",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Upgraded a Weapon",
+     "description": "Acquire at least one weapon upgrade"
+    },
+    {
+     "apiname": "ACHIEVEMENT_111",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Bouncer",
+     "description": "Fully research the Bouncer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_114",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prolific Photographer",
+     "description": "Take at least one photo in every research group"
+    },
+    {
+     "apiname": "ACHIEVEMENT_118",
+     "achieved": 1,
+     "unlocktime": 1550365935,
+     "name": "One Successful Hack",
+     "description": "Perform at least one successful hack"
+    },
+    {
+     "apiname": "ACHIEVEMENT_104",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Thuggish Splicer",
+     "description": "Fully research the Thuggish Splicer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_106",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Spider Splicer",
+     "description": "Fully research the Spider Splicer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_107",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Houdini Splicer",
+     "description": "Fully research the Houdini Splicer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_105",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Leadhead Splicer",
+     "description": "Fully research the Leadhead Splicer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_108",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Nitro Splicer",
+     "description": "Fully research the Nitro Splicer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_110",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Rosie",
+     "description": "Fully research the Rosie"
+    },
+    {
+     "apiname": "ACHIEVEMENT_113",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Researched a Little Sister",
+     "description": "Fully research the Little Sister"
+    },
+    {
+     "apiname": "ACHIEVEMENT_116",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quality Research Photo",
+     "description": "Take a Research Photo of the highest grade"
+    },
+    {
+     "apiname": "ACHIEVEMENT_119",
+     "achieved": 1,
+     "unlocktime": 1550365935,
+     "name": "Hacked a Security Bot",
+     "description": "Successfully hack a security bot"
+    },
+    {
+     "apiname": "ACHIEVEMENT_121",
+     "achieved": 1,
+     "unlocktime": 1550366273,
+     "name": "Hacked a Turret",
+     "description": "Successfully hack a Turret"
+    },
+    {
+     "apiname": "ACHIEVEMENT_120",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hacked a Security Camera",
+     "description": "Successfully hack a Security Camera"
+    },
+    {
+     "apiname": "ACHIEVEMENT_122",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hacked a Vending Machine",
+     "description": "Successfully hack a Vending Machine"
+    },
+    {
+     "apiname": "ACHIEVEMENT_123",
+     "achieved": 1,
+     "unlocktime": 1550370328,
+     "name": "Hacked a Safe",
+     "description": "Successfully hack a safe"
+    },
+    {
+     "apiname": "ACHIEVEMENT_129",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ammo Inventor",
+     "description": "Invent all possible ammunication types"
+    },
+    {
+     "apiname": "ACHIEVEMENT_133",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seriously Good at This",
+     "description": "Complete the game on the hardest difficulty setting"
+    },
+    {
+     "apiname": "ACHIEVEMENT_125",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Basic Inventer",
+     "description": "Invent at least one item"
+    },
+    {
+     "apiname": "ACHIEVEMENT_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Broke Fontaine's Mind Control",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_96",
+     "achieved": 1,
+     "unlocktime": 1550374096,
+     "name": "Bought One Slot",
+     "description": "Purchase a Plasmid Slot or Tonic Slot in any track"
+    },
+    {
+     "apiname": "ACHIEVEMENT_117",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Researched a Splicer",
+     "description": "Take at least one Research Photo of a Splicer"
+    },
+    {
+     "apiname": "ACHIEVEMENT_134",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dealt with every Little Sister",
+     "description": "Either Harvest or Rescue every Little Sister in the game"
+    },
+    {
+     "apiname": "ACHIEVEMENT_72",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maxed One Track",
+     "description": "Purchased every slot in one of the Plasmid or Tonic tracks"
+    },
+    {
+     "apiname": "ACHIEVEMENT_94",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maxed All Tracks",
+     "description": "Purchase every slot in all four Plasmid and Tonic tracks"
+    },
+    {
+     "apiname": "ACHIEVEMENT_98",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Fully Upgraded Weapon",
+     "description": "Fully upgrade one weapon"
+    },
+    {
+     "apiname": "ACHIEVEMENT_99",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Two Fully Upgraded Weapons",
+     "description": "Fully upgrade two weapons"
+    },
+    {
+     "apiname": "ACHIEVEMENT_100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Three Fully Upgraded Weapons",
+     "description": "Fully upgrade three weapons"
+    },
+    {
+     "apiname": "ACHIEVEMENT_101",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Four Fully Upgraded Weapons",
+     "description": "Fully upgrade four weapons"
+    },
+    {
+     "apiname": "ACHIEVEMENT_102",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Five Fully Upgraded Weapons",
+     "description": "Fully upgrade five weapons"
+    },
+    {
+     "apiname": "ACHIEVEMENT_135",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Became a Big Daddy",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_136",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucky Winner",
+     "description": "Hit the jackpot at a slot machine"
+    },
+    {
+     "apiname": "ACHIEVEMENT_137",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Irony",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_138",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Found Cohen's Room",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_139",
+     "achieved": 1,
+     "unlocktime": 1550364135,
+     "name": "Toaster in the Tub",
+     "description": "Shock an enemy in the water"
+    },
+    {
+     "apiname": "ACHIEVEMENT_132",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Historian",
+     "description": "Find every audio diary"
+    },
+    {
+     "apiname": "ACHIEVEMENT_124",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skilled Hacker",
+     "description": "Successfully complete 50 hacks"
+    },
+    {
+     "apiname": "ACHIEVEMENT_130",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Little Sister Savior",
+     "description": "Complete the game without harvesting any Little Sisters"
+    },
+    {
+     "apiname": "ACHIEVEMENT_128",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Avid Inventor",
+     "description": "Successfully invent at least 100 items"
+    },
+    {
+     "apiname": "ACHIEVEMENT_131",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tonic Collector",
+     "description": "Collect or Invent 53 Tonics in the Physical, Engineering and Combat tracks"
+    },
+    {
+     "apiname": "ACHIEVEMENT_115",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Research PhD",
+     "description": "Max out all possible research"
+    },
+    {
+     "apiname": "ACHIEVEMENT_141",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brass Balls",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_142",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Chose the Impossible",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_143",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“The ‘I’ in Team” - Rescuer",
+     "description": "Rescued the Little Sister in “The ‘I’ in Team”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_144",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“The ‘I’ in Team” – Expert",
+     "description": "Rescued the Little Sister in “The ‘I’ in Team” in under 3:00"
+    },
+    {
+     "apiname": "ACHIEVEMENT_145",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“The ‘I’ in Team” – Collector",
+     "description": "Found all collectable Roses in “The ‘I’ in Team”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_146",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“The ‘I’ in Team” – Pacifist",
+     "description": "Rescued the Little Sister in “The ‘I’ in Team” without destroying any Machine Gun Turrets"
+    },
+    {
+     "apiname": "ACHIEVEMENT_147",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "\"A Shocking Turn of Events\" - Rescuer",
+     "description": "Rescued the Little Sister in “A Shocking Turn of Events”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_148",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“A Shocking Turn of Events” – Expert",
+     "description": "The player has rescued the Little Sister in “A Shocking Turn of Events” in under 4:00"
+    },
+    {
+     "apiname": "ACHIEVEMENT_149",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“A Shocking Turn of Events” – Collector",
+     "description": "Found all collectable Roses in “A Shocking Turn of Events”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_150",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“A Shocking Turn of Events” – Master Electrician",
+     "description": "Charged up the Ferris Wheel 9 different times in “A Shocking Turn of Events”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_151",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“Worlds of Hurt” - Rescuer",
+     "description": "Rescued the Little Sister in “Worlds of Hurt”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_152",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“Worlds of Hurt” – Expert",
+     "description": "Rescued the Little Sister in “Worlds of Hurt” in under 15:00, on Medium or higher difficulty"
+    },
+    {
+     "apiname": "ACHIEVEMENT_153",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“Worlds of Hurt” – Collector",
+     "description": "Found all collectable Roses in “Worlds of Hurt”"
+    },
+    {
+     "apiname": "ACHIEVEMENT_154",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "“Worlds of Hurt” – Tough Guy",
+     "description": "Rescued the Little Sister in “Worlds of Hurt” using only plasmids, tonics, the wrench, and the research camera, on Medium or higher difficulty"
+    },
+    {
+     "apiname": "ACHIEVEMENT_200",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Man Chooses",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

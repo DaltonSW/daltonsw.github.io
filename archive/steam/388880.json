@@ -1,0 +1,216 @@
+{
+ "provider": "steam",
+ "title": "Oxenfree",
+ "updated": "2026-08-19",
+ "id": "388880",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 4,
+ "total": 13,
+ "first": "2022-01-03",
+ "last": "2022-01-03",
+ "platform": "PC",
+ "icon": "ebd4e04badb440be4f2ceca1a9b25efd1054c70e",
+ "playtime_mins": 277,
+ "playtime": {
+  "windows": 277
+ },
+ "last_played": "2022-01-03",
+ "achievements": [
+  {
+   "key": "JUMP_CHASM",
+   "name": "It's A Me",
+   "description": "Jump the crazy chasm in the woods.",
+   "unlocked": true,
+   "date": "2022-01-03T16:19:06-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/2bdeafbe6877d9a941608666b9acf9ff8ce2ba82.jpg"
+  },
+  {
+   "key": "REN_NONA_ALONE",
+   "name": "You'd just end up hating each other.",
+   "unlocked": true,
+   "date": "2022-01-03T21:50:26-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/9a071bf9f39fb3690550becacaf01da4afb92dea.jpg",
+   "hidden": true
+  },
+  {
+   "key": "JONAS_BROTHER",
+   "name": "New Beginnings",
+   "unlocked": true,
+   "date": "2022-01-03T21:51:17-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/b6db10315ff72de9ee811efd9c005b8f0a1eda94.jpg",
+   "hidden": true
+  },
+  {
+   "key": "STORY_COMPLETE",
+   "name": "\"This House is Clear\"",
+   "description": "Complete the story.",
+   "unlocked": true,
+   "date": "2022-01-03T21:52:32-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/0968daef81491af1066b490ebcd50f9d6b01db67.jpg"
+  },
+  {
+   "key": "ADLER_PART1",
+   "name": "Adler Letters, Pt. 1",
+   "description": "Collect 4 of Maggie's letters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/cdd63638da0555e76354f467a483879574037ab6.jpg"
+  },
+  {
+   "key": "ADLER_PART2",
+   "name": "Adler Letters, Pt. 2",
+   "description": "Collect 8 of Maggie's letters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/080d061e4a60a848f12033864b49a19820f915ea.jpg"
+  },
+  {
+   "key": "ADLER_PART3",
+   "name": "Adler Letters, Pt. 3",
+   "description": "Collect all of Maggie's letters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/c0fd8394789ca2c0e384f64952564ca280076817.jpg"
+  },
+  {
+   "key": "FRIENDS_HATE",
+   "name": "I'm the Firestarter",
+   "description": "Make enemies with all of your friends.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/3e84053f4855505d3623926dc31ecb31671f2410.jpg"
+  },
+  {
+   "key": "GHOST_STORIES",
+   "name": "Ghost Stories",
+   "description": "Find all hidden frequencies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/097cb86df8d6d237134f5044cb48ec697bb1b645.jpg"
+  },
+  {
+   "key": "MICHAEL_SAVED",
+   "name": "Thicker than Water",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/c8a16eb39823d7ec4731ad94a5f1920d5a1a619e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NO_DIALOGUE",
+   "name": "The Strong, Silent Type",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/1643bc36ae1ff9bb5e53a92857e9453a1edc4cf7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "REN_NONA_TOGETHER",
+   "name": "Matchmaker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/da3e71c12b613125e024f1d0f575329923db6bb0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SLAP_REN",
+   "name": "Renjamin Spanklin",
+   "description": "Slap Ren in the face.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/7676152082ed3f982d961cf06806c436538be023.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Oxenfree",
+   "achievements": [
+    {
+     "apiname": "NO_DIALOGUE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Strong, Silent Type",
+     "description": ""
+    },
+    {
+     "apiname": "STORY_COMPLETE",
+     "achieved": 1,
+     "unlocktime": 1641268352,
+     "name": "\"This House is Clear\"",
+     "description": "Complete the story."
+    },
+    {
+     "apiname": "MICHAEL_SAVED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thicker than Water",
+     "description": ""
+    },
+    {
+     "apiname": "JONAS_BROTHER",
+     "achieved": 1,
+     "unlocktime": 1641268277,
+     "name": "New Beginnings",
+     "description": ""
+    },
+    {
+     "apiname": "ADLER_PART1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adler Letters, Pt. 1",
+     "description": "Collect 4 of Maggie's letters."
+    },
+    {
+     "apiname": "ADLER_PART2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adler Letters, Pt. 2",
+     "description": "Collect 8 of Maggie's letters."
+    },
+    {
+     "apiname": "ADLER_PART3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adler Letters, Pt. 3",
+     "description": "Collect all of Maggie's letters."
+    },
+    {
+     "apiname": "GHOST_STORIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ghost Stories",
+     "description": "Find all hidden frequencies."
+    },
+    {
+     "apiname": "FRIENDS_HATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm the Firestarter",
+     "description": "Make enemies with all of your friends."
+    },
+    {
+     "apiname": "SLAP_REN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Renjamin Spanklin",
+     "description": "Slap Ren in the face."
+    },
+    {
+     "apiname": "JUMP_CHASM",
+     "achieved": 1,
+     "unlocktime": 1641248346,
+     "name": "It's A Me",
+     "description": "Jump the crazy chasm in the woods."
+    },
+    {
+     "apiname": "REN_NONA_TOGETHER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Matchmaker",
+     "description": ""
+    },
+    {
+     "apiname": "REN_NONA_ALONE",
+     "achieved": 1,
+     "unlocktime": 1641268226,
+     "name": "You'd just end up hating each other.",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

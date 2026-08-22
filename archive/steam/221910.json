@@ -1,0 +1,175 @@
+{
+ "provider": "steam",
+ "title": "The Stanley Parable",
+ "updated": "2026-08-19",
+ "id": "221910",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 8,
+ "total": 10,
+ "first": "2014-05-17",
+ "last": "2015-12-22",
+ "platform": "PC",
+ "icon": "d4958966dbc02d7a282c52552f71ce6910957b63",
+ "playtime_mins": 124,
+ "last_played": "2015-12-22",
+ "achievements": [
+  {
+   "key": "TSP_ACHIEVEMENT",
+   "name": "Achievement",
+   "description": "This is an achievement.",
+   "unlocked": true,
+   "date": "2014-05-17T23:05:14-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/869785c4a506b25fa1046d11312a4173d83af532.jpg"
+  },
+  {
+   "key": "TSP_WELCOMEBACK",
+   "name": "Welcome back!",
+   "description": "Quit the game and then start it again.",
+   "unlocked": true,
+   "date": "2014-05-26T17:59:20-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/1b7b2e830e735067bdcb4e228838758e866f8fbf.jpg"
+  },
+  {
+   "key": "TSP_BEATTHEGAME",
+   "name": "Beat the game",
+   "description": "Complete The Stanley Parable.",
+   "unlocked": true,
+   "date": "2014-05-26T18:19:53-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/93b5b396a93f4b74743b807c40da9b326bd64957.jpg"
+  },
+  {
+   "key": "TSP_JUMPING",
+   "name": "You can't jump",
+   "description": "No seriously, we disabled it.",
+   "unlocked": true,
+   "date": "2014-05-26T18:21:54-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/ecc74b4e6ea307d9c249666a1333b555dd1af7bd.jpg"
+  },
+  {
+   "key": "TSP_430",
+   "name": "Click on door 430 five times.",
+   "description": "Click on door 430 five times.",
+   "unlocked": true,
+   "date": "2014-05-26T18:25:21-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/7e267b6468a3165fe1a0240f087972aa4930c028.jpg"
+  },
+  {
+   "key": "TSP_GOOUTSIDE",
+   "name": "Go outside",
+   "description": "Don't play The Stanley Parable for five years.",
+   "unlocked": true,
+   "date": "2015-12-22T17:16:19-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/8c2f3838eb21336aff83cfaf16510091d35f791b.jpg"
+  },
+  {
+   "key": "TSP_UNACHIEVABLE",
+   "name": "Unachievable",
+   "description": "It is impossible to get this achievement.",
+   "unlocked": true,
+   "date": "2015-12-22T17:24:49-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/817d5dd9975a0db299a653dcb7de51d6fa3ca5ae.jpg"
+  },
+  {
+   "key": "TSP_888",
+   "name": "8888888888888888",
+   "description": "888888888888888888888888888888888888888888888888",
+   "unlocked": true,
+   "date": "2015-12-22T17:29:20-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/749ccc24c4ea3872be31aefc0fad7233be075aba.jpg"
+  },
+  {
+   "key": "TSP_COMMITMENT",
+   "name": "Commitment",
+   "description": "Play The Stanley Parable for the entire duration of a Tuesday.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/9c38ae54c45fd3ccf6331104698979efcb19e1ec.jpg"
+  },
+  {
+   "key": "TSP_SPEED",
+   "name": "Speed run",
+   "description": "Complete The Stanley Parable in under 4 minutes 22 seconds (not including load times)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/671256af6348e71800a3b1a512cfe49bcc99b592.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "The Stanley Parable",
+   "achievements": [
+    {
+     "apiname": "TSP_888",
+     "achieved": 1,
+     "unlocktime": 1450826960,
+     "name": "8888888888888888",
+     "description": "888888888888888888888888888888888888888888888888"
+    },
+    {
+     "apiname": "TSP_430",
+     "achieved": 1,
+     "unlocktime": 1401146721,
+     "name": "Click on door 430 five times.",
+     "description": "Click on door 430 five times."
+    },
+    {
+     "apiname": "TSP_ACHIEVEMENT",
+     "achieved": 1,
+     "unlocktime": 1400385914,
+     "name": "Achievement",
+     "description": "This is an achievement."
+    },
+    {
+     "apiname": "TSP_COMMITMENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Commitment",
+     "description": "Play The Stanley Parable for the entire duration of a Tuesday."
+    },
+    {
+     "apiname": "TSP_WELCOMEBACK",
+     "achieved": 1,
+     "unlocktime": 1401145160,
+     "name": "Welcome back!",
+     "description": "Quit the game and then start it again."
+    },
+    {
+     "apiname": "TSP_SPEED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed run",
+     "description": "Complete The Stanley Parable in under 4 minutes 22 seconds (not including load times)"
+    },
+    {
+     "apiname": "TSP_JUMPING",
+     "achieved": 1,
+     "unlocktime": 1401146514,
+     "name": "You can't jump",
+     "description": "No seriously, we disabled it."
+    },
+    {
+     "apiname": "TSP_GOOUTSIDE",
+     "achieved": 1,
+     "unlocktime": 1450826179,
+     "name": "Go outside",
+     "description": "Don't play The Stanley Parable for five years."
+    },
+    {
+     "apiname": "TSP_BEATTHEGAME",
+     "achieved": 1,
+     "unlocktime": 1401146393,
+     "name": "Beat the game",
+     "description": "Complete The Stanley Parable."
+    },
+    {
+     "apiname": "TSP_UNACHIEVABLE",
+     "achieved": 1,
+     "unlocktime": 1450826689,
+     "name": "Unachievable",
+     "description": "It is impossible to get this achievement."
+    }
+   ],
+   "success": true
+  }
+ }
+}

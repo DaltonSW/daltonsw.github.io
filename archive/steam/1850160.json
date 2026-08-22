@@ -1,0 +1,430 @@
+{
+ "provider": "steam",
+ "title": "Poly Bridge 3",
+ "updated": "2026-08-19",
+ "id": "1850160",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 8,
+ "total": 28,
+ "first": "2023-06-13",
+ "last": "2023-06-17",
+ "platform": "PC",
+ "icon": "aef1f667e42556da48ca58620f5d7e5c0a1e6b7a",
+ "playtime_mins": 254,
+ "playtime": {
+  "windows": 254
+ },
+ "last_played": "2023-08-02",
+ "achievements": [
+  {
+   "key": "Fun_FirstTry",
+   "name": "First Try",
+   "description": "Beat a level without failing.",
+   "unlocked": true,
+   "date": "2023-06-13T19:18:49-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/7e8b16a0cbde65141694d7bb58bf05a829eb3f58.jpg"
+  },
+  {
+   "key": "Fun_TisButAScratch",
+   "name": "Tis But A Scratch",
+   "description": "Complete a level with only one piece that breaks.",
+   "unlocked": true,
+   "date": "2023-06-13T19:53:23-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/f9324a03a7d537464861f84bca94896d62edd933.jpg"
+  },
+  {
+   "key": "BeatWorld_CR",
+   "name": "Classic Rock Complete",
+   "description": "Beat Classic Rock.",
+   "unlocked": true,
+   "date": "2023-06-13T20:00:22-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/3b4c05729f9e262f01a6710e604f68fe3997f10b.jpg"
+  },
+  {
+   "key": "Unlock_2Sheep",
+   "name": "Two Sheep",
+   "description": "Unlock 2 Sheep Difficulty Worlds.",
+   "unlocked": true,
+   "date": "2023-06-13T20:19:50-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/b2a8cc2cef8ed95e5e7e2a08db7155e758700f4d.jpg"
+  },
+  {
+   "key": "BeatWorld_MM",
+   "name": "Miner Mountains Complete",
+   "description": "Beat Miner Mountains.",
+   "unlocked": true,
+   "date": "2023-06-14T20:27:44-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/9f0fec22909a8899c4188f57ed935dd0201650d5.jpg"
+  },
+  {
+   "key": "Fun_NeverGoingToGiveYouUp",
+   "name": "Never going to give you up",
+   "description": "Encounter 20 failures on a specific level (unique attempts).",
+   "unlocked": true,
+   "date": "2023-06-16T21:24:45-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/c36b70d87b20b0374ee103a2ab7e45954a7fb167.jpg"
+  },
+  {
+   "key": "Unlock_3Sheep",
+   "name": "Three Sheep",
+   "description": "Unlock 3 Sheep Difficulty Worlds.",
+   "unlocked": true,
+   "date": "2023-06-17T19:57:25-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/90bb3b160179bb8408453d5a40d537e834a1f70c.jpg"
+  },
+  {
+   "key": "BeatWorld_LL",
+   "name": "Lava Lagoon Complete",
+   "description": "Beat Lava Lagoon.",
+   "unlocked": true,
+   "date": "2023-06-17T20:08:30-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/118d1ffde71c5636159a1ecfd5bbbd693705c795.jpg"
+  },
+  {
+   "key": "BeatWorld_AT",
+   "name": "Arctic Tundra Complete",
+   "description": "Beat Arctic Tundra.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/0e91dcdb8daea35e6a677ee9cf08f230cf790ad7.jpg"
+  },
+  {
+   "key": "BeatWorld_BB",
+   "name": "Bifrost Bend Complete",
+   "description": "Beat Bifrost Bend.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/4dad7511e5844cd2dd3383646e8e8cd1cf25e553.jpg"
+  },
+  {
+   "key": "BeatWorld_CW",
+   "name": "Faulty Drive Complete",
+   "description": "Beat Faulty Drive.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/1a256fa9a7005295f507ce249afb88626621c16b.jpg"
+  },
+  {
+   "key": "BeatWorld_DS",
+   "name": "Desert Springs Complete",
+   "description": "Beat Desert Springs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/cc600269f7bc497744db77d37d3044b098696731.jpg"
+  },
+  {
+   "key": "BeatWorld_FR",
+   "name": "Forgotten Realm Complete",
+   "description": "Beat Forgotten Realm.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/e7be875d7c60471e6e8e14d06a1ed0633ba66edd.jpg"
+  },
+  {
+   "key": "BeatWorld_MB",
+   "name": "Serene Cyclades Complete",
+   "description": "Beat Serene Cyclades.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/0e91aa6d3b1fe8524341b8ad2d3fbc4caee5f163.jpg"
+  },
+  {
+   "key": "BeatWorld_RB",
+   "name": "Rustic Barrens Complete",
+   "description": "Beat Rustic Barrens.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/f80034d96a085752c12a9ee7a4d4a2967d63b290.jpg"
+  },
+  {
+   "key": "BeatWorld_RMT",
+   "name": "Radical Melt-Town Complete",
+   "description": "Beat Radical Melt-Town.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/8045ca5cdb98501794c1da58552e0bd0dda0b8c1.jpg"
+  },
+  {
+   "key": "BeatWorld_RTA",
+   "name": "Roll Top Avenue Complete",
+   "description": "Beat Roll Top Avenue.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/70f24165337a7f08dde559e548291b133fd04719.jpg"
+  },
+  {
+   "key": "BeatWorld_TT",
+   "name": "Twisted Turnpike Complete",
+   "description": "Beat Twisted Turnpike.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/eedf2904d8e3d010f9e8d3d8c3409a287af7979b.jpg"
+  },
+  {
+   "key": "BeatWorld_VT",
+   "name": "Vaulty Towers Complete",
+   "description": "Beat Vaulty Towers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/0196d741b740a205b5b482f44803881258984bca.jpg"
+  },
+  {
+   "key": "Fun_Hydrophobic",
+   "name": "Hydrophobic",
+   "description": "Beat a hydraulic level without using hydraulics.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/60aae12bf14ba85af0b911cc6b60478d28269346.jpg"
+  },
+  {
+   "key": "Fun_Inflexable",
+   "name": "Inflexible ",
+   "description": "Beat a level in Desert Springs without using springs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/3328f2fda5d2bcc2b32dff4a38fee9d90a9b1c1b.jpg"
+  },
+  {
+   "key": "Fun_MeantToDoThat",
+   "name": "I meant to do that",
+   "description": "Car ends up upside down after collecting flag.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/aefc28ce2188204a3c44d1c78e5d882c9e501994.jpg"
+  },
+  {
+   "key": "Fun_SpeedRunner",
+   "name": "Speedrunner",
+   "description": "Complete Classic Rock in five minutes or less.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/ff632b803ceb5dcbb03df3cbfed8a536c3e333cc.jpg"
+  },
+  {
+   "key": "UI_ExtraFlavor",
+   "name": "Extra Flavour",
+   "description": "Install a Mod.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/90ee858fbe7c66a75514476b67f3b41d3d2d3a5f.jpg"
+  },
+  {
+   "key": "UI_SharingIsCaring",
+   "name": "Sharing is Caring",
+   "description": "Share a replay to Gallery.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/7e15550788a7bbb5b7d904fbc4a58fca2fb87f04.jpg"
+  },
+  {
+   "key": "UI_WorkShopping",
+   "name": "Workshopping",
+   "description": "Play a Workshop level.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/9ffb0ed5baa2b2fee119ffe104a0254881b64e46.jpg"
+  },
+  {
+   "key": "Unlock_4Sheep",
+   "name": "Four Sheep",
+   "description": "Unlock 4 Sheep Difficulty Worlds.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/7afcf685dd829bfc671e0999e67e54de2e82560f.jpg"
+  },
+  {
+   "key": "Unlock_5Sheep",
+   "name": "Secret Sheep",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1850160/d248a9b5b00d6aff766c33c442132ed811df7490.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Poly Bridge 3",
+   "achievements": [
+    {
+     "apiname": "BeatWorld_CR",
+     "achieved": 1,
+     "unlocktime": 1686704422,
+     "name": "Classic Rock Complete",
+     "description": "Beat Classic Rock."
+    },
+    {
+     "apiname": "BeatWorld_MM",
+     "achieved": 1,
+     "unlocktime": 1686792464,
+     "name": "Miner Mountains Complete",
+     "description": "Beat Miner Mountains."
+    },
+    {
+     "apiname": "BeatWorld_RB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rustic Barrens Complete",
+     "description": "Beat Rustic Barrens."
+    },
+    {
+     "apiname": "BeatWorld_BB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bifrost Bend Complete",
+     "description": "Beat Bifrost Bend."
+    },
+    {
+     "apiname": "BeatWorld_LL",
+     "achieved": 1,
+     "unlocktime": 1687050510,
+     "name": "Lava Lagoon Complete",
+     "description": "Beat Lava Lagoon."
+    },
+    {
+     "apiname": "BeatWorld_VT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vaulty Towers Complete",
+     "description": "Beat Vaulty Towers."
+    },
+    {
+     "apiname": "BeatWorld_MB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Serene Cyclades Complete",
+     "description": "Beat Serene Cyclades."
+    },
+    {
+     "apiname": "BeatWorld_DS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Desert Springs Complete",
+     "description": "Beat Desert Springs."
+    },
+    {
+     "apiname": "BeatWorld_RMT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Radical Melt-Town Complete",
+     "description": "Beat Radical Melt-Town."
+    },
+    {
+     "apiname": "BeatWorld_AT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arctic Tundra Complete",
+     "description": "Beat Arctic Tundra."
+    },
+    {
+     "apiname": "BeatWorld_TT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Twisted Turnpike Complete",
+     "description": "Beat Twisted Turnpike."
+    },
+    {
+     "apiname": "BeatWorld_FR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forgotten Realm Complete",
+     "description": "Beat Forgotten Realm."
+    },
+    {
+     "apiname": "Unlock_2Sheep",
+     "achieved": 1,
+     "unlocktime": 1686705590,
+     "name": "Two Sheep",
+     "description": "Unlock 2 Sheep Difficulty Worlds."
+    },
+    {
+     "apiname": "Unlock_3Sheep",
+     "achieved": 1,
+     "unlocktime": 1687049845,
+     "name": "Three Sheep",
+     "description": "Unlock 3 Sheep Difficulty Worlds."
+    },
+    {
+     "apiname": "Unlock_4Sheep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Four Sheep",
+     "description": "Unlock 4 Sheep Difficulty Worlds."
+    },
+    {
+     "apiname": "Unlock_5Sheep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Secret Sheep",
+     "description": ""
+    },
+    {
+     "apiname": "UI_SharingIsCaring",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sharing is Caring",
+     "description": "Share a replay to Gallery."
+    },
+    {
+     "apiname": "UI_WorkShopping",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Workshopping",
+     "description": "Play a Workshop level."
+    },
+    {
+     "apiname": "UI_ExtraFlavor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extra Flavour",
+     "description": "Install a Mod."
+    },
+    {
+     "apiname": "Fun_SpeedRunner",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedrunner",
+     "description": "Complete Classic Rock in five minutes or less."
+    },
+    {
+     "apiname": "Fun_NeverGoingToGiveYouUp",
+     "achieved": 1,
+     "unlocktime": 1686968685,
+     "name": "Never going to give you up",
+     "description": "Encounter 20 failures on a specific level (unique attempts)."
+    },
+    {
+     "apiname": "Fun_TisButAScratch",
+     "achieved": 1,
+     "unlocktime": 1686704003,
+     "name": "Tis But A Scratch",
+     "description": "Complete a level with only one piece that breaks."
+    },
+    {
+     "apiname": "Fun_FirstTry",
+     "achieved": 1,
+     "unlocktime": 1686701929,
+     "name": "First Try",
+     "description": "Beat a level without failing."
+    },
+    {
+     "apiname": "Fun_MeantToDoThat",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I meant to do that",
+     "description": "Car ends up upside down after collecting flag."
+    },
+    {
+     "apiname": "Fun_Hydrophobic",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hydrophobic",
+     "description": "Beat a hydraulic level without using hydraulics."
+    },
+    {
+     "apiname": "Fun_Inflexable",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inflexible ",
+     "description": "Beat a level in Desert Springs without using springs."
+    },
+    {
+     "apiname": "BeatWorld_RTA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Roll Top Avenue Complete",
+     "description": "Beat Roll Top Avenue."
+    },
+    {
+     "apiname": "BeatWorld_CW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Faulty Drive Complete",
+     "description": "Beat Faulty Drive."
+    }
+   ],
+   "success": true
+  }
+ }
+}

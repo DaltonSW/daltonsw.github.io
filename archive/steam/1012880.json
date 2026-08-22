@@ -1,0 +1,880 @@
+{
+ "provider": "steam",
+ "title": "60 Seconds! Reatomized",
+ "updated": "2026-08-19",
+ "id": "1012880",
+ "fetched": "2026-08-19",
+ "last_attempt": "2026-08-19",
+ "unlocked": 10,
+ "total": 60,
+ "first": "2020-01-24",
+ "last": "2020-01-25",
+ "platform": "PC",
+ "icon": "e008d567f867241727ef6b65003cb0b40d6b0da9",
+ "playtime_mins": 159,
+ "playtime": {
+  "windows": 159
+ },
+ "last_played": "2020-01-25",
+ "achievements": [
+  {
+   "key": "ACH_MADE_IT",
+   "name": "Home, sweet home",
+   "description": "Get to the shelter before the bomb hits.",
+   "unlocked": true,
+   "date": "2020-01-24T21:23:43-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/d9d08e67573323e9fb302b08e582aa177b4e6ccb.jpg"
+  },
+  {
+   "key": "ACH_FAMILY_GUY",
+   "name": "Family guy",
+   "description": "Rescue the whole family.",
+   "unlocked": true,
+   "date": "2020-01-24T21:23:56-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/c1158fd60ca3fa156edf0bc4894bd8938ae54801.jpg"
+  },
+  {
+   "key": "ACH_SURVIVE_5_DAYS",
+   "name": "Prepper",
+   "description": "Survive 5 days in your fallout shelter.",
+   "unlocked": true,
+   "date": "2020-01-24T21:26:43-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/f69d452417b80e57ea9a58ab5f2e9bc7e359a07a.jpg"
+  },
+  {
+   "key": "ACH_BROKEN",
+   "name": "All thumbs",
+   "description": "Break or use something in your fallout shelter.",
+   "unlocked": true,
+   "date": "2020-01-24T21:28:31-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/5aa98a96acfc38973c716860a552f78677ccc46c.jpg"
+  },
+  {
+   "key": "ACH_SURVIVE_10_DAYS",
+   "name": "I will survive!",
+   "description": "Last for 10 days in your fallout shelter.",
+   "unlocked": true,
+   "date": "2020-01-24T21:29:35-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/144ee4ed3541a20fd98e553788ab94a7440b40dd.jpg"
+  },
+  {
+   "key": "ACH_SURVIVE_20_DAYS",
+   "name": "Survivalist",
+   "description": "Stay in your fallout shelter for 20 days.",
+   "unlocked": true,
+   "date": "2020-01-24T21:35:32-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/40d9d2e979a9dc63aede8aaafe4505c08c2ad093.jpg"
+  },
+  {
+   "key": "ACH_DEAD",
+   "name": "One way ticket",
+   "description": "Die in your fallout shelter.",
+   "unlocked": true,
+   "date": "2020-01-24T21:41:29-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/40ae14f63aba8a027048b66477d633c8dde0a204.jpg"
+  },
+  {
+   "key": "ACH_ATOMIC_DRILL",
+   "name": "Atomic drill",
+   "description": "Complete the government endorsed fallout drill.",
+   "unlocked": true,
+   "date": "2020-01-24T21:56:38-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/03eb7e66ebb6a484d40710282841b1de8d2db951.jpg"
+  },
+  {
+   "key": "ACH_CHALLENGER",
+   "name": "Challenger",
+   "description": "Complete one scavenge challenge.",
+   "unlocked": true,
+   "date": "2020-01-24T21:59:15-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/5ca3fd73832d114209c0b45f9cf40f8004bfb6dc.jpg"
+  },
+  {
+   "key": "ACH_ROGUE",
+   "name": "Rogue One",
+   "description": "Complete one survival challenge.",
+   "unlocked": true,
+   "date": "2020-01-25T21:13:05-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/f03e790c095a4043d140c8b6571f0bbbaa797388.jpg"
+  },
+  {
+   "key": "ACH_10_SOUP",
+   "name": "Souper!",
+   "description": "Collect 10 soup cans from your house.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/e2a8bd90c2be13cfe8d429ad5c3e7b5727d29eac.jpg"
+  },
+  {
+   "key": "ACH_10_WATER",
+   "name": "2-1-6",
+   "description": "Collect 10 water bottles from your house.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/eebe9c2b95cffcec18b4d0fdfd6f6bb13e763227.jpg"
+  },
+  {
+   "key": "ACH_ALL_BROKEN",
+   "name": "Danger zone",
+   "description": "Break or use everything possible in your shelter.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/57d319a243e55ad187d0b8bce02ec2211fd8bd2c.jpg"
+  },
+  {
+   "key": "ACH_ALL_CRAZY",
+   "name": "Cuckoo's nest",
+   "description": "Turn your fallout shelter into a madhouse.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/d76d50cfa5275e19eb839abffe55299db4a2fccd.jpg"
+  },
+  {
+   "key": "ACH_ALL_ITEMS",
+   "name": "Gotta get 'em all",
+   "description": "Scavenge each item at least once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/fa78150209d365eb763ecb59abbbb5cf8142addd.jpg"
+  },
+  {
+   "key": "ACH_BAD_ENDING",
+   "name": "This is the end",
+   "description": "It's all over.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/bf5a10d0b1f42220a4e3bc67e1d76297ce036828.jpg"
+  },
+  {
+   "key": "ACH_BE_PREPARED",
+   "name": "Be Prepared",
+   "description": "Don't forget to stock your shelter.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/d0cbb1f21dabed11c5c41d65ab7cb854b7a26714.jpg"
+  },
+  {
+   "key": "ACH_BLUE_HARVEST",
+   "name": "A New Hope",
+   "description": "Ally with other wastelanders.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/f76f357281b7267551e760cf1d57327681156baf.jpg"
+  },
+  {
+   "key": "ACH_BUG_KILLER",
+   "name": " Bughunter",
+   "description": "Show those mutant roaches who is in charge.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/224c65293b27c81199c56a715151cec7bc3f1ba4.jpg"
+  },
+  {
+   "key": "ACH_CAT",
+   "name": "Out of the Bag",
+   "description": "Find a new companion.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/a71bd96f7c2d090f3638b80cc9668da37ed31bd4.jpg"
+  },
+  {
+   "key": "ACH_CATDOM",
+   "name": "Feline Domination",
+   "description": "Look at me. I'm the captain, meow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/7b60dbe9826c011e17cc05392e6a24f50add9c09.jpg"
+  },
+  {
+   "key": "ACH_CATLADY",
+   "name": "Cat Lady",
+   "description": "Learn to serve and obey the new masters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/f1a770c68a684d2383beb15f6cf7a7740f88e5a8.jpg"
+  },
+  {
+   "key": "ACH_CATVSDOG",
+   "name": "Raining Cats and Dogs",
+   "description": "There can only be one.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/188fafc67fc1b7aa0877d1f8e8517c501a70a329.jpg"
+  },
+  {
+   "key": "ACH_DEEDEE",
+   "name": "Dawkins Residence",
+   "description": "Find Deedee's apartment.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/d66fd173886e42a151a9ccfb31115065e6c8a918.jpg"
+  },
+  {
+   "key": "ACH_DEFEND",
+   "name": "Pacifist",
+   "description": "Defend yourself without a weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/a8b7cc9ddc41c943fcb206591733ad05fd41fb1f.jpg"
+  },
+  {
+   "key": "ACH_DEFEND_THREE",
+   "name": "Unbreakable",
+   "description": "Defeat three bandit attacks in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/d5ed8c5edfd90d8d901967ef7aa0acbdeb61a537.jpg"
+  },
+  {
+   "key": "ACH_DISCO",
+   "name": "Disco Roach",
+   "description": "Make them dance.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/5d2e091de6fe5164f2dd7b7c48634f573133c2a9.jpg"
+  },
+  {
+   "key": "ACH_DOCEND",
+   "name": "Soup Can into Space",
+   "description": "Reach for the stars.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/b76c0e4b9465d83376d0655fa48c964f41206f12.jpg"
+  },
+  {
+   "key": "ACH_DOGE",
+   "name": "Friend in need",
+   "description": "Find a new friend.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/84ce8b147b6c38ad454f56e9aa4066928121e28d.jpg"
+  },
+  {
+   "key": "ACH_DOLORES",
+   "name": "Girl Power",
+   "description": "Live through the nuclear blast as Dolores.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/b502e0c3eb4718e0d8c41b7129af42d5860d0907.jpg"
+  },
+  {
+   "key": "ACH_EASY",
+   "name": "Enola Gay",
+   "description": "Win a game in every mode on Little Boy difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/afe2894fdb4714d86025e5a145f096494fd2ee03.jpg"
+  },
+  {
+   "key": "ACH_ENIGMA",
+   "name": "Enigma",
+   "description": "Reconnect with old friends.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/c31c8bb2a41ea860cb35ee867acfedef480dd079.jpg"
+  },
+  {
+   "key": "ACH_EXPLORE_SHELTER",
+   "name": "No stone unturned",
+   "description": "Fully explore your shelter.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/733dd4ba5cd45b738eb789846dee5cacd30921f1.jpg"
+  },
+  {
+   "key": "ACH_FIRE_POLICE",
+   "name": "New order",
+   "description": "Meet the local 'law-enforcement'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/c7a57ea602e6d83cc0f4096634ff301174265537.jpg"
+  },
+  {
+   "key": "ACH_FLY",
+   "name": "Take that, Brundlefly!",
+   "description": "Swat it real good.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/0fdecd2beccac866a015e5168fbc665cbf8d6227.jpg"
+  },
+  {
+   "key": "ACH_FROSTY",
+   "name": "Stay frosty",
+   "description": "A cool escape.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/eb47f21bdba77d8b4e2694190b9e10fbe5e1fd26.jpg"
+  },
+  {
+   "key": "ACH_GOOD_ENDING",
+   "name": "Rescue time!",
+   "description": "Get rescued by the military.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/de8a62655437ac342084a247d952fd0b45d94af2.jpg"
+  },
+  {
+   "key": "ACH_HARD",
+   "name": "Dead Hand",
+   "description": "Win a game in every mode on Tsar Bomba difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/6d195cbe5dd9d24730480177124882f2114b4df1.jpg"
+  },
+  {
+   "key": "ACH_HELP",
+   "name": "What goes around...",
+   "description": "Give and get back.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/5700764500d1bf3ed322280a77f39db679c7d272.jpg"
+  },
+  {
+   "key": "ACH_HOLIDAYS",
+   "name": "Holidays!",
+   "description": "Complete the Holidays! scavenge challenge.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/1a5152a257130597588e5823835bdaea68a05481.jpg"
+  },
+  {
+   "key": "ACH_KAMIKAZE",
+   "name": "Tora! Tora! Tora!",
+   "description": "Ram 1337 obstacles in your house.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/053ba958413830ab23890eeadc7cf35db7cf5949.jpg"
+  },
+  {
+   "key": "ACH_LUMBERSEXUAL",
+   "name": "Lumbersexual",
+   "description": "Trim Ted's beard the trendy way.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/431affea8b63e35bc8768bb0e42f8c5208255e46.jpg"
+  },
+  {
+   "key": "ACH_MADHATTER",
+   "name": "Mad Hatter",
+   "description": "Put on a stylish hat.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/34ebc7fde10961e0c2d23086cdfaeb3fdf9e70b4.jpg"
+  },
+  {
+   "key": "ACH_MIB",
+   "name": "Men in Black",
+   "description": "Find your way into the VIP bunker.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/90b199d38f8ce6b66725cad12b79369246215be5.jpg"
+  },
+  {
+   "key": "ACH_MUTANT",
+   "name": "New species",
+   "description": "Mutant!!!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/12a6df4bf2712988da57f16a76500c142f56f135.jpg"
+  },
+  {
+   "key": "ACH_NAYSAYER",
+   "name": "Naysayer",
+   "description": "Always say NO and win.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/7cff861edc4840017a494661932fa05ff5964784.jpg"
+  },
+  {
+   "key": "ACH_NORMAL",
+   "name": "Manhattan Project",
+   "description": "Win a game in every mode on Fat Man difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/fc043f33beb3c0eb99e936d5038e294a390b5773.jpg"
+  },
+  {
+   "key": "ACH_NOT_MADE_IT",
+   "name": "Duck and cover!",
+   "description": "Survival is overrated. Stay to see the fireworks!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/fec70db93b17a13917b7ba93d5873a7189a517c0.jpg"
+  },
+  {
+   "key": "ACH_PANZER",
+   "name": "Panzer",
+   "description": "Okay: three, two, one, let's jam!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/8f5e8144e1bb3c6bc07c21c5603afe476f1b7e24.jpg"
+  },
+  {
+   "key": "ACH_PAN_KROWA",
+   "name": "Miracle",
+   "description": "Listen to the voices from beyond.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/2a3cde90deb652f6a8c31a3727bf6bdfbd3ef3f2.jpg"
+  },
+  {
+   "key": "ACH_PRESENT",
+   "name": "A gift",
+   "description": "Receive a gift.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/b272a767a23f1ae80e2c32d5661f14c39c3370a1.jpg"
+  },
+  {
+   "key": "ACH_PRO_GAMER",
+   "name": "Pro gamer",
+   "description": "In Apocalypse mode grab only what a real gamer needs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/9fa8ba4248267de3b582d4335896608cd4b2f5a5.jpg"
+  },
+  {
+   "key": "ACH_RESCUE",
+   "name": "Liberation",
+   "description": "Rescue someone from the bandits.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/bf5ebc9527c088203e6741fa69a4fd41b9b21093.jpg"
+  },
+  {
+   "key": "ACH_RICK",
+   "name": "Not Alone",
+   "description": "If you play it, they will come.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/a2dd723e06bf580ad965e5cac52acc95ec0ba41b.jpg"
+  },
+  {
+   "key": "ACH_ROBBERY",
+   "name": "The Dark Side",
+   "description": "Show your evil self.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/a1ea8a63c371624af2978dffc678afb9946bccc9.jpg"
+  },
+  {
+   "key": "ACH_SURVIVE_111_DAYS",
+   "name": "Konrad style!",
+   "description": "Beat the fallout shelter survival record.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/4c1c8a02ad87bf1e1494408df0ec611441ae95d1.jpg"
+  },
+  {
+   "key": "ACH_SURVIVE_40_DAYS",
+   "name": "Last man standing",
+   "description": "Stay alive in your fallout shelter for 40 days.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/889fa79cb2469709ce6294dd41ab2f9d44007192.jpg"
+  },
+  {
+   "key": "ACH_TOILET_BUSTER",
+   "name": "Unplugged",
+   "description": "Ram a toilet.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/af65771615aba14154809e2908f3d490953793e9.jpg"
+  },
+  {
+   "key": "ACH_TRADER",
+   "name": "Fair Exchange",
+   "description": "Perform 30 successful trades.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/dd00642eb524ecfc41bc7a1b375a3fc8f23ef639.jpg"
+  },
+  {
+   "key": "ACH_YESMAN",
+   "name": "Yes Man",
+   "description": "Always say YES and win.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/437683049630635a3605ae42f5f4c991366e6b4d.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "60 Seconds! Reatomized",
+   "achievements": [
+    {
+     "apiname": "ACH_SURVIVE_5_DAYS",
+     "achieved": 1,
+     "unlocktime": 1579922803,
+     "name": "Prepper",
+     "description": "Survive 5 days in your fallout shelter."
+    },
+    {
+     "apiname": "ACH_SURVIVE_10_DAYS",
+     "achieved": 1,
+     "unlocktime": 1579922975,
+     "name": "I will survive!",
+     "description": "Last for 10 days in your fallout shelter."
+    },
+    {
+     "apiname": "ACH_SURVIVE_20_DAYS",
+     "achieved": 1,
+     "unlocktime": 1579923332,
+     "name": "Survivalist",
+     "description": "Stay in your fallout shelter for 20 days."
+    },
+    {
+     "apiname": "ACH_SURVIVE_40_DAYS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last man standing",
+     "description": "Stay alive in your fallout shelter for 40 days."
+    },
+    {
+     "apiname": "ACH_SURVIVE_111_DAYS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Konrad style!",
+     "description": "Beat the fallout shelter survival record."
+    },
+    {
+     "apiname": "ACH_10_SOUP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Souper!",
+     "description": "Collect 10 soup cans from your house."
+    },
+    {
+     "apiname": "ACH_10_WATER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "2-1-6",
+     "description": "Collect 10 water bottles from your house."
+    },
+    {
+     "apiname": "ACH_ALL_BROKEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Danger zone",
+     "description": "Break or use everything possible in your shelter."
+    },
+    {
+     "apiname": "ACH_BROKEN",
+     "achieved": 1,
+     "unlocktime": 1579922911,
+     "name": "All thumbs",
+     "description": "Break or use something in your fallout shelter."
+    },
+    {
+     "apiname": "ACH_ALL_CRAZY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cuckoo's nest",
+     "description": "Turn your fallout shelter into a madhouse."
+    },
+    {
+     "apiname": "ACH_ALL_ITEMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gotta get 'em all",
+     "description": "Scavenge each item at least once."
+    },
+    {
+     "apiname": "ACH_ATOMIC_DRILL",
+     "achieved": 1,
+     "unlocktime": 1579924598,
+     "name": "Atomic drill",
+     "description": "Complete the government endorsed fallout drill."
+    },
+    {
+     "apiname": "ACH_BAD_ENDING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is the end",
+     "description": "It's all over."
+    },
+    {
+     "apiname": "ACH_GOOD_ENDING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rescue time!",
+     "description": "Get rescued by the military."
+    },
+    {
+     "apiname": "ACH_BUG_KILLER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": " Bughunter",
+     "description": "Show those mutant roaches who is in charge."
+    },
+    {
+     "apiname": "ACH_DEAD",
+     "achieved": 1,
+     "unlocktime": 1579923689,
+     "name": "One way ticket",
+     "description": "Die in your fallout shelter."
+    },
+    {
+     "apiname": "ACH_DOGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Friend in need",
+     "description": "Find a new friend."
+    },
+    {
+     "apiname": "ACH_FAMILY_GUY",
+     "achieved": 1,
+     "unlocktime": 1579922636,
+     "name": "Family guy",
+     "description": "Rescue the whole family."
+    },
+    {
+     "apiname": "ACH_KAMIKAZE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tora! Tora! Tora!",
+     "description": "Ram 1337 obstacles in your house."
+    },
+    {
+     "apiname": "ACH_LUMBERSEXUAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lumbersexual",
+     "description": "Trim Ted's beard the trendy way."
+    },
+    {
+     "apiname": "ACH_MADE_IT",
+     "achieved": 1,
+     "unlocktime": 1579922623,
+     "name": "Home, sweet home",
+     "description": "Get to the shelter before the bomb hits."
+    },
+    {
+     "apiname": "ACH_MUTANT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New species",
+     "description": "Mutant!!!"
+    },
+    {
+     "apiname": "ACH_NOT_MADE_IT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Duck and cover!",
+     "description": "Survival is overrated. Stay to see the fireworks!"
+    },
+    {
+     "apiname": "ACH_PAN_KROWA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Miracle",
+     "description": "Listen to the voices from beyond."
+    },
+    {
+     "apiname": "ACH_FIRE_POLICE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New order",
+     "description": "Meet the local 'law-enforcement'."
+    },
+    {
+     "apiname": "ACH_PRO_GAMER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pro gamer",
+     "description": "In Apocalypse mode grab only what a real gamer needs."
+    },
+    {
+     "apiname": "ACH_TOILET_BUSTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unplugged",
+     "description": "Ram a toilet."
+    },
+    {
+     "apiname": "ACH_EASY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enola Gay",
+     "description": "Win a game in every mode on Little Boy difficulty."
+    },
+    {
+     "apiname": "ACH_NORMAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Manhattan Project",
+     "description": "Win a game in every mode on Fat Man difficulty."
+    },
+    {
+     "apiname": "ACH_HARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dead Hand",
+     "description": "Win a game in every mode on Tsar Bomba difficulty."
+    },
+    {
+     "apiname": "ACH_BE_PREPARED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Be Prepared",
+     "description": "Don't forget to stock your shelter."
+    },
+    {
+     "apiname": "ACH_BLUE_HARVEST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A New Hope",
+     "description": "Ally with other wastelanders."
+    },
+    {
+     "apiname": "ACH_DEFEND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pacifist",
+     "description": "Defend yourself without a weapon."
+    },
+    {
+     "apiname": "ACH_DEFEND_THREE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unbreakable",
+     "description": "Defeat three bandit attacks in one game."
+    },
+    {
+     "apiname": "ACH_EXPLORE_SHELTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No stone unturned",
+     "description": "Fully explore your shelter."
+    },
+    {
+     "apiname": "ACH_HELP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What goes around...",
+     "description": "Give and get back."
+    },
+    {
+     "apiname": "ACH_NAYSAYER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Naysayer",
+     "description": "Always say NO and win."
+    },
+    {
+     "apiname": "ACH_YESMAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yes Man",
+     "description": "Always say YES and win."
+    },
+    {
+     "apiname": "ACH_PRESENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A gift",
+     "description": "Receive a gift."
+    },
+    {
+     "apiname": "ACH_RESCUE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Liberation",
+     "description": "Rescue someone from the bandits."
+    },
+    {
+     "apiname": "ACH_ROBBERY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Dark Side",
+     "description": "Show your evil self."
+    },
+    {
+     "apiname": "ACH_TRADER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fair Exchange",
+     "description": "Perform 30 successful trades."
+    },
+    {
+     "apiname": "ACH_HOLIDAYS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Holidays!",
+     "description": "Complete the Holidays! scavenge challenge."
+    },
+    {
+     "apiname": "ACH_CHALLENGER",
+     "achieved": 1,
+     "unlocktime": 1579924755,
+     "name": "Challenger",
+     "description": "Complete one scavenge challenge."
+    },
+    {
+     "apiname": "ACH_MADHATTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mad Hatter",
+     "description": "Put on a stylish hat."
+    },
+    {
+     "apiname": "ACH_CAT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Out of the Bag",
+     "description": "Find a new companion."
+    },
+    {
+     "apiname": "ACH_CATVSDOG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Raining Cats and Dogs",
+     "description": "There can only be one."
+    },
+    {
+     "apiname": "ACH_DOCEND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soup Can into Space",
+     "description": "Reach for the stars."
+    },
+    {
+     "apiname": "ACH_MIB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Men in Black",
+     "description": "Find your way into the VIP bunker."
+    },
+    {
+     "apiname": "ACH_CATLADY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cat Lady",
+     "description": "Learn to serve and obey the new masters."
+    },
+    {
+     "apiname": "ACH_CATDOM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feline Domination",
+     "description": "Look at me. I'm the captain, meow."
+    },
+    {
+     "apiname": "ACH_DOLORES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Girl Power",
+     "description": "Live through the nuclear blast as Dolores."
+    },
+    {
+     "apiname": "ACH_DISCO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Disco Roach",
+     "description": "Make them dance."
+    },
+    {
+     "apiname": "ACH_ENIGMA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enigma",
+     "description": "Reconnect with old friends."
+    },
+    {
+     "apiname": "ACH_DEEDEE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dawkins Residence",
+     "description": "Find Deedee's apartment."
+    },
+    {
+     "apiname": "ACH_RICK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not Alone",
+     "description": "If you play it, they will come."
+    },
+    {
+     "apiname": "ACH_FLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take that, Brundlefly!",
+     "description": "Swat it real good."
+    },
+    {
+     "apiname": "ACH_ROGUE",
+     "achieved": 1,
+     "unlocktime": 1580008385,
+     "name": "Rogue One",
+     "description": "Complete one survival challenge."
+    },
+    {
+     "apiname": "ACH_PANZER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Panzer",
+     "description": "Okay: three, two, one, let's jam!"
+    },
+    {
+     "apiname": "ACH_FROSTY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stay frosty",
+     "description": "A cool escape."
+    }
+   ],
+   "success": true
+  }
+ }
+}

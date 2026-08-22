@@ -1,0 +1,30 @@
+unlocked: 3
+total: 53
+playtime_mins: 235
+last_played: "2023-09-03"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 3
+      total: 53
+      playtime_mins: 235
+      last_played: "2023-09-03"
+earned:
+    - name: 10 ones in a row
+      description: Roll 10 ones in a row.
+      date: "2020-01-01T22:04:59-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/e3e2886a7a457fe57bfa773c7dffe27f9a711ccc.jpg
+      provider: steam
+      platform: PC
+    - name: Unlock episodes
+      description: Unlock episodes.
+      date: "2020-01-02T23:14:53-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/ffb9213a9d27f1eedbb6da47f62adb45692d4a60.jpg
+      provider: steam
+      platform: PC
+    - name: Win on your first turn
+      description: Defeat an enemy on your first turn.
+      date: "2023-09-02T18:52:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/861540/04e0fdbc9b5d7935242b22f7c7553fe329920074.jpg
+      provider: steam
+      platform: PC

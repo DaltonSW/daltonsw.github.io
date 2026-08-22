@@ -193,6 +193,7 @@ $status-colors: (
   finished:      var(--ok),
   mastered:      var(--mastered),
   dropped:       var(--stop),
+  unfinished:    var(--unfinished),
   backlog:       var(--dim),
   paused:        var(--pause),
   endless:       var(--endless),
@@ -202,7 +203,7 @@ $status-colors: (
   unplayed:      var(--unplayed),
   planned:       var(--accent),
 );
-$status-aliases: (wip: playing, stable: finished, unfinished: dropped);
+$status-aliases: (wip: playing, stable: finished);
 
 .pill {
   display: inline-block; font-family: $font-ui; font-size: 0.72rem;
@@ -1143,6 +1144,7 @@ $timeline-status-colors: (
   finished:      var(--ok),
   mastered:      var(--mastered),
   dropped:       var(--stop),
+  unfinished:    var(--unfinished),
   paused:        var(--pause),
   software:      color-mix(in srgb, var(--software) 70%, var(--dim)),
   misc_launch:   color-mix(in srgb, var(--misc-launch) 70%, var(--dim)),

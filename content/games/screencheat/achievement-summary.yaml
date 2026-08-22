@@ -1,0 +1,36 @@
+unlocked: 4
+total: 34
+playtime_mins: 108
+last_played: "2015-08-17"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 4
+      total: 34
+      playtime_mins: 108
+      last_played: "2015-08-17"
+earned:
+    - name: Just Getting Started
+      description: Reach level 5
+      date: "2015-08-03T21:25:32-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/301970/bcf337d68072f714d2147b589787b3f998145d3b.jpg
+      provider: steam
+      platform: PC
+    - name: Patience
+      description: Win a round without ever missing a shot on Temple
+      date: "2015-08-03T21:25:32-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/301970/907237e212fe4ed11333981408db9a3ff8b5f268.jpg
+      provider: steam
+      platform: PC
+    - name: Bombardment
+      description: Fire 50 grenades in Hill Campers and win
+      date: "2015-08-09T19:04:41-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/301970/9c188d54fc07c1958c4d7e63db2fc4637d6f6608.jpg
+      provider: steam
+      platform: PC
+    - name: Flanking Maneuver
+      description: Kill 3 opponents from behind with the Candelabra
+      date: "2015-08-17T18:59:57-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/301970/6bc2867fa281fcb9ee6b36faf1c4f901342d213b.jpg
+      provider: steam
+      platform: PC
