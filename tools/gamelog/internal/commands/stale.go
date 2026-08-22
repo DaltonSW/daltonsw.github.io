@@ -31,7 +31,7 @@ type StaleCandidate struct {
 	DaysSince       int
 	Unlocked, Total int
 	PlaytimeMins    int
-	SuggestedStatus string // "mastered" | "finished" | "dropped"
+	SuggestedStatus string // "mastered" | "finished" | "dropped" | "unfinished"
 	Confidence      string // "medium" | "low"
 }
 
@@ -79,10 +79,11 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 			}
 		} else {
 			// No achievement signal at all — playtime alone doesn't prove
-			// completion, so "dropped" is the safer default guess; low
-			// confidence says as much.
+			// completion, and with nothing to go on there's no basis to guess
+			// "dropped" over "paused" either, so "unfinished" is the honest
+			// default guess; low confidence says as much.
 			c.Confidence = "low"
-			c.SuggestedStatus = "dropped"
+			c.SuggestedStatus = "unfinished"
 		}
 		out = append(out, c)
 	}

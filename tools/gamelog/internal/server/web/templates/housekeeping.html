@@ -84,7 +84,7 @@
   <input type="radio" name="housekeeping-tab" id="tab-scan" class="tabs__input"{{if eq .ActiveTab "scan"}} checked{{end}}>
   <input type="radio" name="housekeeping-tab" id="tab-backlog" class="tabs__input"{{if eq .ActiveTab "backlog"}} checked{{end}}>
   <input type="radio" name="housekeeping-tab" id="tab-ignored" class="tabs__input"{{if eq .ActiveTab "ignored"}} checked{{end}}>
-  <input type="radio" name="housekeeping-tab" id="tab-unfinished" class="tabs__input"{{if eq .ActiveTab "unfinished"}} checked{{end}}>
+  <input type="radio" name="housekeeping-tab" id="tab-incomplete" class="tabs__input"{{if eq .ActiveTab "incomplete"}} checked{{end}}>
   <input type="radio" name="housekeeping-tab" id="tab-stale" class="tabs__input"{{if eq .ActiveTab "stale"}} checked{{end}}>
   <input type="radio" name="housekeeping-tab" id="tab-close" class="tabs__input"{{if eq .ActiveTab "close"}} checked{{end}}>
   <input type="radio" name="housekeeping-tab" id="tab-achievements" class="tabs__input"{{if eq .ActiveTab "achievements"}} checked{{end}}>
@@ -92,7 +92,7 @@
     <label for="tab-scan" class="tabs__label">Scan</label>
     <label for="tab-backlog" class="tabs__label">Backlog</label>
     <label for="tab-ignored" class="tabs__label">Ignored</label>
-    <label for="tab-unfinished" class="tabs__label">Unfinished</label>
+    <label for="tab-incomplete" class="tabs__label">Incomplete</label>
     <label for="tab-stale" class="tabs__label">Stale</label>
     <label for="tab-close" class="tabs__label">Close</label>
     <label for="tab-achievements" class="tabs__label">Achievements</label>
@@ -110,8 +110,8 @@
     <input type="hidden" name="stale_days" value="{{.StaleDays}}">
     <input type="hidden" name="close_days" value="{{.CloseDays}}">
     {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
-    <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
-    {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
+    <input type="hidden" name="incomplete_pct" value="{{.IncompletePct}}">
+    {{if .IncompleteAll}}<input type="hidden" name="incomplete_all" value="1">{{end}}
     <input type="hidden" name="tab" value="scan">
     <button type="submit">Re-scan</button>
   </form>
@@ -221,29 +221,29 @@
 {{end}}
   </section>
 
-  <section class="tabs__panel tabs__panel--unfinished">
+  <section class="tabs__panel tabs__panel--incomplete">
   <p class="lead">Logged games with achievements left to earn, closest to done first. Read from the
      archive on disk — no API calls, nothing written. One row per provider, since each has its own
      denominator — and a RetroAchievements subset is another one, so it gets a row of its own too.</p>
 <form method="get" action="/housekeeping" class="row">
-  <label for="unfinished_pct">Min completion %</label>
-  <input type="number" step="5" id="unfinished_pct" name="unfinished_pct" value="{{.UnfinishedPct}}" style="max-width: 8rem;">
-  <div class="checkbox-row"><input type="checkbox" id="unfinished_all" name="unfinished_all" value="1"{{if .UnfinishedAll}} checked{{end}}><label for="unfinished_all">include finished/dropped/mastered</label></div>
+  <label for="incomplete_pct">Min completion %</label>
+  <input type="number" step="5" id="incomplete_pct" name="incomplete_pct" value="{{.IncompletePct}}" style="max-width: 8rem;">
+  <div class="checkbox-row"><input type="checkbox" id="incomplete_all" name="incomplete_all" value="1"{{if .IncompleteAll}} checked{{end}}><label for="incomplete_all">include finished/dropped/mastered/unfinished</label></div>
   <input type="hidden" name="min_hours" value="{{.MinHours}}">
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
-  <input type="hidden" name="tab" value="unfinished">
+  <input type="hidden" name="tab" value="incomplete">
   <button type="submit">Refresh</button>
 </form>
-<p class="lead">{{len .Unfinished}} game/provider pair(s) at {{.UnfinishedPct}}%+ with achievements outstanding.</p>
+<p class="lead">{{len .Incomplete}} game/provider pair(s) at {{.IncompletePct}}%+ with achievements outstanding.</p>
 
-{{if .Unfinished}}
+{{if .Incomplete}}
 <div class="table-wrap">
 <table>
   <thead><tr><th>Game</th><th>Status</th><th>Provider</th><th>Progress</th><th>Left</th><th>Last played</th><th>Playtime</th></tr></thead>
   <tbody>
-  {{range .Unfinished}}
+  {{range .Incomplete}}
   <tr>
     <td><a href="/games/{{.Game.Slug}}">{{.Game.Title}}</a>{{if .Game.Draft}} <span class="dim">[draft]</span>{{end}}</td>
     <td class="dim">{{.Game.Status}}</td>
@@ -269,8 +269,8 @@
   <input type="hidden" name="min_hours" value="{{.MinHours}}">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">
   {{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
-  <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
-  {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
+  <input type="hidden" name="incomplete_pct" value="{{.IncompletePct}}">
+  {{if .IncompleteAll}}<input type="hidden" name="incomplete_all" value="1">{{end}}
   <input type="hidden" name="tab" value="stale">
   <button type="submit">Refresh</button>
 </form>
@@ -301,8 +301,8 @@
   <div class="checkbox-row"><input type="checkbox" id="close_all" name="close_all" value="1"{{if .CloseAll}} checked{{end}}><label for="close_all">include "playing" games</label></div>
   <input type="hidden" name="min_hours" value="{{.MinHours}}">
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
-  <input type="hidden" name="unfinished_pct" value="{{.UnfinishedPct}}">
-  {{if .UnfinishedAll}}<input type="hidden" name="unfinished_all" value="1">{{end}}
+  <input type="hidden" name="incomplete_pct" value="{{.IncompletePct}}">
+  {{if .IncompleteAll}}<input type="hidden" name="incomplete_all" value="1">{{end}}
   <input type="hidden" name="tab" value="close">
   <button type="submit">Refresh</button>
 </form>

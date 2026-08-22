@@ -79,7 +79,7 @@ type PlaythroughEntry struct {
 type PlaythroughFields struct {
 	Started  string
 	Finished string
-	Status   string // playing|finished|mastered|dropped|paused|endless|multiplayer
+	Status   string // playing|finished|mastered|dropped|unfinished|paused|endless|multiplayer
 	Platform string // blank means "same as the game's front matter"
 	Subgame  string // blank means "the whole game"; otherwise a member of the game's subgames: roster
 	Rating   string // 1-10 or ""
@@ -548,7 +548,7 @@ func SessionPath(idx, j int, field string) string {
 }
 
 // SyncStatus keeps a game's sole playthrough entry in step with a
-// front-matter status change to finished/dropped/mastered/paused —
+// front-matter status change to finished/dropped/mastered/unfinished/paused —
 // playthroughs.yaml is what actually renders once any playthrough exists,
 // and "ongoing" comes from the entry's finished date, not status text, so
 // front matter alone can't fix it. Only acts on exactly one playthrough
@@ -567,7 +567,7 @@ func SessionPath(idx, j int, field string) string {
 // not the web form.
 func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
 	switch status {
-	case "finished", "dropped", "mastered", "paused":
+	case "finished", "dropped", "mastered", "unfinished", "paused":
 	default:
 		return false
 	}

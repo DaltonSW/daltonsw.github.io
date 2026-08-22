@@ -22,7 +22,7 @@ import (
 // fields for exactly this reason).
 func housekeepingReturnTo(r *http.Request) string {
 	v := url.Values{}
-	for _, key := range []string{"min_hours", "stale_days", "close_days", "close_all", "unfinished_pct", "unfinished_all", "tab"} {
+	for _, key := range []string{"min_hours", "stale_days", "close_days", "close_all", "incomplete_pct", "incomplete_all", "tab"} {
 		if val := r.FormValue(key); val != "" {
 			v.Set(key, val)
 		}
@@ -325,9 +325,9 @@ type housekeepingData struct {
 	// so nothing can appear in both.
 	BacklogCandidates []scanRow
 	BacklogError      string
-	Unfinished        []commands.UnfinishedCandidate
-	UnfinishedPct     float64
-	UnfinishedAll     bool
+	Incomplete        []commands.IncompleteCandidate
+	IncompletePct     float64
+	IncompleteAll     bool
 	StaleGames        []staleRow
 	StaleDays         int
 	CloseEntries      []commands.OpenEntry
@@ -346,7 +346,7 @@ type housekeepingData struct {
 
 // housekeepingTabs are the valid values for the "tab" query/form param —
 // the ids on housekeeping.html's tab radios, minus their "tab-" prefix.
-var housekeepingTabs = []string{"scan", "backlog", "ignored", "unfinished", "stale", "close", "achievements"}
+var housekeepingTabs = []string{"scan", "backlog", "ignored", "incomplete", "stale", "close", "achievements"}
 
 func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
@@ -359,13 +359,13 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	staleDays := atoiOr(q.Get("stale_days"), commands.DefaultStaleDays)
 	closeDays := atoiOr(q.Get("close_days"), commands.DefaultStaleDays)
 	closeAll := q.Get("close_all") == "1"
-	unfinishedPct := float64(commands.DefaultUnfinishedPct)
-	if v := q.Get("unfinished_pct"); v != "" {
+	incompletePct := float64(commands.DefaultIncompletePct)
+	if v := q.Get("incomplete_pct"); v != "" {
 		if f, err := strconv.ParseFloat(v, 64); err == nil {
-			unfinishedPct = f
+			incompletePct = f
 		}
 	}
-	unfinishedAll := q.Get("unfinished_all") == "1"
+	incompleteAll := q.Get("incomplete_all") == "1"
 	activeTab := "scan"
 	if v := q.Get("tab"); slices.Contains(housekeepingTabs, v) {
 		activeTab = v
@@ -374,8 +374,8 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	data := housekeepingData{
 		Page:          newPage(r, "Housekeeping", "housekeeping"),
 		MinHours:      minHours,
-		UnfinishedPct: unfinishedPct,
-		UnfinishedAll: unfinishedAll,
+		IncompletePct: incompletePct,
+		IncompleteAll: incompleteAll,
 		StaleDays:     staleDays,
 		CloseDays:     closeDays,
 		CloseAll:      closeAll,
@@ -413,15 +413,15 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 
 	// Reads the archive on disk only — no provider calls, so this section
 	// renders even with no credentials configured at all.
-	unfinished, err := commands.FindUnfinished(model.FindArchiveDir(s.gamesDir), games, commands.UnfinishedOptions{
-		MinPct:      unfinishedPct,
-		IncludeDone: unfinishedAll,
+	incomplete, err := commands.FindIncomplete(model.FindArchiveDir(s.gamesDir), games, commands.IncompleteOptions{
+		MinPct:      incompletePct,
+		IncludeDone: incompleteAll,
 	})
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	data.Unfinished = unfinished
+	data.Incomplete = incomplete
 
 	staleCandidates, err := commands.FindStaleCandidates(model.FindArchiveDir(s.gamesDir), games, staleDays)
 	if err != nil {

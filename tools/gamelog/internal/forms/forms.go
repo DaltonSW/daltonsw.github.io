@@ -91,7 +91,14 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 // unlock, say) but never actually played, and — unlike "backlog" — makes no
 // claim about intending to play it eventually. "backlog" says "haven't
 // gotten to it yet"; "unplayed" says "don't know if I ever will."
-var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "paused", "endless", "multiplayer", "software", "unplayed"}
+// "unfinished" sits between "dropped" and "paused": play has actually
+// stopped, same as dropped, but it doesn't claim to know whether that's
+// permanent. "dropped" asserts you won't come back; "paused" asserts you
+// plan to. "unfinished" is for the common case in between — play just
+// trailed off with no stated intent either way. It closes like "dropped"
+// (gets a finished/closed date, counts as a done status), it just doesn't
+// share dropped's certainty.
+var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "unfinished", "paused", "endless", "multiplayer", "software", "unplayed"}
 
 // IsOneShot reports whether a status (game-level or entry-level) forbids a
 // second playthrough entry of that same status on the same platform. Keep
@@ -107,7 +114,7 @@ func IsOneShot(status string) bool {
 // endless/multiplayer, a second misc_launch entry on the same platform isn't
 // fragmentation: each launch is its own unrelated occasion, so it's not
 // one-shot (see IsOneShot).
-var PlaythroughStatuses = []string{"playing", "finished", "mastered", "dropped", "paused", "endless", "multiplayer", "misc_launch"}
+var PlaythroughStatuses = []string{"playing", "finished", "mastered", "dropped", "unfinished", "paused", "endless", "multiplayer", "misc_launch"}
 
 // ParseSubgames splits a newline-separated "Subgames" text field into a
 // roster, trimming each line and dropping blanks, so a game with no roster
@@ -132,11 +139,12 @@ const StaleMarkPrefix = "mark_"
 
 // StaleQuickStatuses are offered as one-click corrections alongside
 // whichever status `gamelog serve`'s Housekeeping page actually guessed.
-// "paused" is never itself a guess (there's no signal for "meant to keep
-// playing"), but it's always offered: distinguishing an intentional pause
-// from "dropped" is exactly what a quiet game with no completion signal
-// can't tell you on its own.
-var StaleQuickStatuses = []string{"finished", "mastered", "dropped", "paused"}
+// "paused" and "unfinished" are never themselves a guess (there's no signal
+// for "meant to keep playing" or "no idea"), but they're always offered:
+// distinguishing an intentional pause, or a genuinely unknown "it just
+// trailed off", from "dropped" is exactly what a quiet game with no
+// completion signal can't tell you on its own.
+var StaleQuickStatuses = []string{"finished", "mastered", "dropped", "unfinished", "paused"}
 
 // ScanQuickStatuses are the same idea for a scan candidate: the guess is
 // offered as the primary button and the rest as "create as X instead", so a
@@ -148,7 +156,7 @@ var StaleQuickStatuses = []string{"finished", "mastered", "dropped", "paused"}
 // the same reason: a scan candidate's evidence is just playtime/achievements,
 // which looks identical whether the game has a finish line or not — that
 // call is the person reading the row's to make.
-var ScanQuickStatuses = []string{"playing", "finished", "mastered", "dropped", "software", "endless", "multiplayer"}
+var ScanQuickStatuses = []string{"playing", "finished", "mastered", "dropped", "unfinished", "software", "endless", "multiplayer"}
 
 // BacklogQuickStatuses is the backlog half's set. Deliberately smaller:
 // these are games under the playtime threshold, so any status claiming real

@@ -99,7 +99,7 @@ func TestFindStaleCandidates_SuggestsByCompletion(t *testing.T) {
 		{"100% completion", 10, 10, "mastered", "medium"},
 		{"high but not full completion", 10, 9, "finished", "medium"},
 		{"partial completion", 10, 3, "dropped", "medium"},
-		{"no achievements tracked", 0, 0, "dropped", "low"},
+		{"no achievements tracked", 0, 0, "unfinished", "low"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {

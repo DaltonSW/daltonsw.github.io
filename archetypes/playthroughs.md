@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 platform: ""
-status: "playing"   # playing | finished | dropped | paused — no "backlog" for a logged run
+status: "playing"   # playing | finished | dropped | unfinished | paused — no "backlog" for a logged run
 started: {{ now.Format "2006-01-02" }}
 finished:
 rating:

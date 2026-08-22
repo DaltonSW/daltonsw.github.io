@@ -13,20 +13,20 @@ import (
 //   - what's owned but never played — ScanSteam in ScanModeBacklog, the half
 //     of the Steam library the ordinary scan throws away, turned into
 //     `status: backlog` drafts;
-//   - what's played but unfinished — FindUnfinished, computed entirely from
+//   - what's played but unfinished — FindIncomplete, computed entirely from
 //     the archive already on disk.
 //
 // The second half deliberately makes no API calls and writes nothing: it's a
 // reading list over data that's already captured, so it stays useful with no
 // credentials configured at all.
 
-// UnfinishedCandidate is one game/provider pair with achievements left to
+// IncompleteCandidate is one game/provider pair with achievements left to
 // earn. One row per provider rather than per game: a game linked to both
 // Steam and RetroAchievements has two unrelated denominators, and merging
 // them would invent a number that isn't true of either service. A
 // RetroAchievements subset is a third such denominator on the same game, so
 // it gets its own row too — see ProviderLabel.
-type UnfinishedCandidate struct {
+type IncompleteCandidate struct {
 	Game     model.GameSummary
 	Provider string
 	// Subset names the RetroAchievements subset this row is about, blank for
@@ -44,32 +44,35 @@ type UnfinishedCandidate struct {
 // ProviderLabel names the achievement set this row is about, which is the
 // provider alone until a game has subsets and two rows would otherwise carry
 // the same label with different numbers.
-func (c UnfinishedCandidate) ProviderLabel() string {
+func (c IncompleteCandidate) ProviderLabel() string {
 	if c.Subset == "" {
 		return c.Provider
 	}
 	return c.Provider + " · " + c.Subset
 }
 
-// DefaultUnfinishedPct hides games barely started. Something at 4% isn't a
+// DefaultIncompletePct hides games barely started. Something at 4% isn't a
 // game with a few achievements left, it's a game that was opened once — the
 // backlog scan above is the honest place for those.
-const DefaultUnfinishedPct = 50
+const DefaultIncompletePct = 50
 
-type UnfinishedOptions struct {
+type IncompleteOptions struct {
 	MinPct float64
 	// IncludeDone keeps games whose status already says they're over
-	// (finished/dropped/mastered). Off by default: a finished game with
-	// achievements left is a deliberate decision, not an oversight.
+	// (finished/dropped/mastered/unfinished). Off by default: a finished game
+	// with achievements left is a deliberate decision, not an oversight.
 	IncludeDone bool
 }
 
 // doneStatuses are the game-level statuses that assert the game is behind
 // you. `paused` and `backlog` are excluded from this set on purpose — both
-// mean "not now", not "not ever", so they belong in the list.
-var doneStatuses = map[string]bool{"finished": true, "dropped": true, "mastered": true}
+// mean "not now", not "not ever", so they don't belong in the list.
+// `unfinished` is included: like `dropped`, play has actually stopped and it
+// carries a closed date — it just doesn't claim to know whether that's
+// permanent.
+var doneStatuses = map[string]bool{"finished": true, "dropped": true, "mastered": true, "unfinished": true}
 
-// FindUnfinished ranks logged games by how close they are to having every
+// FindIncomplete ranks logged games by how close they are to having every
 // achievement. It reads only the archive on disk — no provider calls — so it
 // costs nothing to render and works with no credentials configured.
 //
@@ -78,9 +81,9 @@ var doneStatuses = map[string]bool{"finished": true, "dropped": true, "mastered"
 // and link for free, and naturally skips records whose content entry is gone
 // (which is exactly the case the archive living outside content/ exists to
 // survive — those records are kept, not surfaced).
-func FindUnfinished(archiveDir string, games []model.GameSummary, opts UnfinishedOptions) ([]UnfinishedCandidate, error) {
+func FindIncomplete(archiveDir string, games []model.GameSummary, opts IncompleteOptions) ([]IncompleteCandidate, error) {
 	now := time.Now().In(model.SiteLocation)
-	var out []UnfinishedCandidate
+	var out []IncompleteCandidate
 	for _, g := range games {
 		// endless/multiplayer/software have no completion to be short of.
 		if forms.IsOneShot(g.Status) {
@@ -109,7 +112,7 @@ func FindUnfinished(archiveDir string, games []model.GameSummary, opts Unfinishe
 					subset = link.ID
 				}
 			}
-			c := UnfinishedCandidate{
+			c := IncompleteCandidate{
 				Game:         g,
 				Provider:     link.Provider,
 				Subset:       subset,

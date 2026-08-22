@@ -3,7 +3,7 @@ title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 platform: ""
 retroachievements_id:  # numeric ID from the game's retroachievements.org URL, optional
 steam_appid:           # numeric appid from the game's Steam store URL, optional
-status: "playing"   # overall status: backlog | playing | finished | dropped
+status: "playing"   # overall status: backlog | playing | finished | dropped | unfinished
 started: {{ now.Format "2006-01-02" }}
 finished:
 rating:

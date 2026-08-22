@@ -298,7 +298,7 @@ type NewGameFields struct {
 	PSNID               string
 	UbisoftID           string
 	XboxID              string
-	Status              string // backlog|playing|finished|dropped
+	Status              string // backlog|playing|finished|dropped|unfinished
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
 	Subgames []string

@@ -172,6 +172,13 @@ mean to come back to it eventually. Setting it never writes a finished date, sin
 finished; `gamelog stale` in particular offers it as a one-click correction on a quiet game it
 otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
 
+`status: unfinished` sits between `dropped` and `paused`: like `dropped`, play has actually
+stopped and it gets a closed date; unlike `dropped`, it doesn't claim to know that's permanent.
+Use it for the common case where a game just trailed off with no stated intent either way — not a
+deliberate "I'm done with this" (`dropped`) and not a deliberate "I'll be back" (`paused`).
+`gamelog stale` offers it alongside `dropped`/`paused` as a one-click correction, and it's the
+default guess when there's no achievement signal at all to guess `dropped` from.
+
 `status: misc_launch` (entry-level only, not a `gameStatuses` value) covers a playthrough entry
 that isn't a real attempt at all — booted up just to check dates, or a launch that never got past a
 broken platform port (e.g. a Linux build that wouldn't run) — as distinct from `dropped`, which
@@ -309,7 +316,7 @@ the report says so — cross-reference manually before entering a date.
 `gamelog serve` (also what bare `gamelog` runs) serves a local web UI over `content/games`:
 create/edit/delete games, log playthroughs and sessions, manage planned replays, and reorder or
 split sessions. Its **Housekeeping** page is where the bulk maintenance flows live — scan,
-backlog, unfinished, stale, close, and achievement refresh-all — described below by what each one
+backlog, incomplete, stale, close, and achievement refresh-all — described below by what each one
 does; on the page itself these are filter fields, checkboxes, and buttons rather than CLI flags.
 
 **Scan** lists games on RetroAchievements and Steam that have no entry in `content/games` (a
@@ -381,28 +388,31 @@ that puts it straight back in the next scan. The Ignore buttons post the provide
 than a row index, so an ignore doesn't depend on the re-run scan coming back identical the way the
 Create buttons do.
 
-**Unfinished** ranks logged games by how close they are to having every achievement, closest
-first. It reads only what's already in `archive/<provider>/<id>.json` — no API calls, nothing
-written — so it renders with no credentials configured at all, and it's a reading list rather
-than an action queue: each row links to the game's own page. A `min_pct` field (default 50) hides
-games that were opened once rather than nearly finished; those belong in Backlog above. One row
-per provider, not per game: a game linked to both Steam and RetroAchievements has two unrelated
-denominators, and merging them would invent a number that's true of neither. A RetroAchievements
-subset is another such denominator, so it gets its own row too, named (`retroachievements · Mouse
-Alley`) rather than repeating the bare provider on two rows with different numbers. The one-shot
-statuses (`endless`, `multiplayer`, `software`) never appear — there's no completion for them to
-be short of — and `finished`/`dropped`/`mastered` games are opt-in via a checkbox, since leaving
-achievements on a game you've called finished is a decision, not an oversight. `paused` and
-`backlog` games *are* listed: both mean "not now", not "not ever".
+**Incomplete** ranks logged games by how close they are to having every achievement, closest
+first. (Not to be confused with `status: unfinished` above — this tab is about achievement
+completion, not play status.) It reads only what's already in `archive/<provider>/<id>.json` — no
+API calls, nothing written — so it renders with no credentials configured at all, and it's a
+reading list rather than an action queue: each row links to the game's own page. A `min_pct` field
+(default 50) hides games that were opened once rather than nearly finished; those belong in
+Backlog above. One row per provider, not per game: a game linked to both Steam and
+RetroAchievements has two unrelated denominators, and merging them would invent a number that's
+true of neither. A RetroAchievements subset is another such denominator, so it gets its own row
+too, named (`retroachievements · Mouse Alley`) rather than repeating the bare provider on two rows
+with different numbers. The one-shot statuses (`endless`, `multiplayer`, `software`) never appear
+— there's no completion for them to be short of — and `finished`/`dropped`/`mastered`/`unfinished`
+games are opt-in via a checkbox, since leaving achievements on a game you've called finished (or
+unfinished) is a decision, not an oversight. `paused` and `backlog` games *are* listed: both mean
+"not now", not "not ever".
 
 **Stale** uses Steam's `GetOwnedGames rtime_last_played` (captured into every Steam archive record
 as `last_played`) to find games you've probably stopped playing but never marked as such —
 currently `status: playing`, Steam-linked, and untouched for a while (`stale_days` field, default
 30) — draft or published; draft ones are tagged `[draft]` so accepting a suggestion is clearly not
 the same as publishing. For each one it computes a guess — **mastered** at 100% achievement
-completion, **finished** at ≥90%, **dropped** otherwise, or **dropped at low confidence** when the
-game has no achievements to go on at all (playtime alone doesn't prove completion, so "dropped" is
-the safer default, not a claim) — alongside the last-played date, achievement count, and playtime.
+completion, **finished** at ≥90%, **dropped** otherwise, or **unfinished at low confidence** when
+the game has no achievements to go on at all (playtime alone doesn't prove completion, and with
+nothing to go on there's no basis to guess `dropped` over `paused` either, so `unfinished` is the
+honest default, not a claim) — alongside the last-played date, achievement count, and playtime.
 Nothing is ever written automatically: accept the guess, pick one of the other statuses it might
 have guessed instead, open the full edit form prefilled with the guess, or leave it and it'll
 surface again next time it's still `playing` and still quiet. None of the one-shot statuses

@@ -65,7 +65,7 @@ func TestBacklogCandidate_CreatesBacklogDraft(t *testing.T) {
 
 // Only records with a real denominator and something left to earn qualify,
 // and only games whose status doesn't already say they're over.
-func TestFindUnfinished_FiltersToGamesWithSomethingLeft(t *testing.T) {
+func TestFindIncomplete_FiltersToGamesWithSomethingLeft(t *testing.T) {
 	archiveDir := t.TempDir()
 	save := func(id, title string, total, unlocked int) {
 		t.Helper()
@@ -92,7 +92,7 @@ func TestFindUnfinished_FiltersToGamesWithSomethingLeft(t *testing.T) {
 		{Slug: "unarchived", Title: "Unarchived", Status: "playing", SteamAppID: "999"},
 	}
 
-	got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{})
+	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -112,7 +112,7 @@ func TestFindUnfinished_FiltersToGamesWithSomethingLeft(t *testing.T) {
 }
 
 // "finished" is a decision, not an oversight, so those rows are opt-in.
-func TestFindUnfinished_IncludeDone(t *testing.T) {
+func TestFindIncomplete_IncludeDone(t *testing.T) {
 	archiveDir := t.TempDir()
 	if _, err := model.SaveRecord(archiveDir, model.ProviderSteam, "1", "Finished", &model.ProviderRecord{
 		Total: 10, Achievements: nUnlocked("a", 6),
@@ -121,10 +121,10 @@ func TestFindUnfinished_IncludeDone(t *testing.T) {
 	}
 	games := []model.GameSummary{{Slug: "finished", Title: "Finished", Status: "finished", SteamAppID: "1"}}
 
-	if got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{}); err != nil || len(got) != 0 {
+	if got, err := FindIncomplete(archiveDir, games, IncompleteOptions{}); err != nil || len(got) != 0 {
 		t.Fatalf("finished game should be excluded by default, got %+v (err %v)", got, err)
 	}
-	got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{IncludeDone: true})
+	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{IncludeDone: true})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -133,7 +133,7 @@ func TestFindUnfinished_IncludeDone(t *testing.T) {
 	}
 }
 
-func TestFindUnfinished_MinPct(t *testing.T) {
+func TestFindIncomplete_MinPct(t *testing.T) {
 	archiveDir := t.TempDir()
 	if _, err := model.SaveRecord(archiveDir, model.ProviderSteam, "1", "Barely Started", &model.ProviderRecord{
 		Total: 100, Achievements: nUnlocked("a", 4),
@@ -142,17 +142,17 @@ func TestFindUnfinished_MinPct(t *testing.T) {
 	}
 	games := []model.GameSummary{{Slug: "barely", Title: "Barely Started", Status: "playing", SteamAppID: "1"}}
 
-	if got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{MinPct: DefaultUnfinishedPct}); err != nil || len(got) != 0 {
+	if got, err := FindIncomplete(archiveDir, games, IncompleteOptions{MinPct: DefaultIncompletePct}); err != nil || len(got) != 0 {
 		t.Fatalf("4%% should fall below the default floor, got %+v (err %v)", got, err)
 	}
-	if got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{}); err != nil || len(got) != 1 {
+	if got, err := FindIncomplete(archiveDir, games, IncompleteOptions{}); err != nil || len(got) != 1 {
 		t.Fatalf("no floor should keep it, got %+v (err %v)", got, err)
 	}
 }
 
 // One row per provider: a game linked to two services has two independent
 // denominators, and each is worth reporting on its own terms.
-func TestFindUnfinished_RowPerProvider(t *testing.T) {
+func TestFindIncomplete_RowPerProvider(t *testing.T) {
 	archiveDir := t.TempDir()
 	if _, err := model.SaveRecord(archiveDir, model.ProviderSteam, "1", "Both", &model.ProviderRecord{
 		Total: 10, Achievements: nUnlocked("s", 6),
@@ -166,7 +166,7 @@ func TestFindUnfinished_RowPerProvider(t *testing.T) {
 	}
 	games := []model.GameSummary{{Slug: "both", Title: "Both", Status: "playing", SteamAppID: "1", RAGameID: "2"}}
 
-	got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{})
+	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -182,7 +182,7 @@ func TestFindUnfinished_RowPerProvider(t *testing.T) {
 	}
 }
 
-func TestFindUnfinished_SortsClosestToDoneFirst(t *testing.T) {
+func TestFindIncomplete_SortsClosestToDoneFirst(t *testing.T) {
 	archiveDir := t.TempDir()
 	for _, g := range []struct {
 		id              string
@@ -200,7 +200,7 @@ func TestFindUnfinished_SortsClosestToDoneFirst(t *testing.T) {
 		{Slug: "c", Title: "C", Status: "playing", SteamAppID: "3"},
 	}
 
-	got, err := FindUnfinished(archiveDir, games, UnfinishedOptions{})
+	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{})
 	if err != nil {
 		t.Fatal(err)
 	}
