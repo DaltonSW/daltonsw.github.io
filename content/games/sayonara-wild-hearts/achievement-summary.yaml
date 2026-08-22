@@ -1,0 +1,24 @@
+unlocked: 2
+total: 24
+playtime_mins: 69
+last_played: "2021-12-01"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 2
+      total: 24
+      playtime_mins: 69
+      last_played: "2021-12-01"
+earned:
+    - name: Taurus B
+      description: Solved the second Taurus riddle
+      date: "2021-12-01T17:59:49-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1122720/5c68b71bcda1033523a90f649bcd1deac6d7ddd6.jpg
+      provider: steam
+      platform: PC
+    - name: Pisces B
+      description: Solved the second Pisces riddle
+      date: "2021-12-01T18:59:38-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1122720/0159f4b4f62c6a8a075ed6f0447eb6d0fd0f03c3.jpg
+      provider: steam
+      platform: PC

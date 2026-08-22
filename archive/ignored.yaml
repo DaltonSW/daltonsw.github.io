@@ -2,13 +2,29 @@
 # Nothing is deleted by being here — remove an entry and it comes back.
 games:
     - provider: steam
+      id: "223850"
+      title: 3DMark
+      ignored_on: "2026-08-21"
+    - provider: steam
       id: "431730"
       title: Aseprite
       ignored_on: "2026-08-18"
     - provider: steam
+      id: "245550"
+      title: Free to Play
+      ignored_on: "2026-08-21"
+    - provider: steam
+      id: "2933700"
+      title: Hades II Technical Test
+      ignored_on: "2026-08-21"
+    - provider: steam
       id: "207080"
       title: 'Indie Game: The Movie'
       ignored_on: "2026-08-19"
+    - provider: steam
+      id: "431960"
+      title: Wallpaper Engine
+      ignored_on: "2026-08-21"
     - provider: steam
       id: "433850"
       title: Z1 Battle Royale

@@ -1,0 +1,536 @@
+{
+ "provider": "steam",
+ "title": "Snapshot",
+ "updated": "2026-08-21",
+ "id": "204220",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 5,
+ "total": 36,
+ "first": "2012-12-28",
+ "last": "2013-01-27",
+ "platform": "PC",
+ "icon": "322122b6f0560b73c5c36ff5009907d8087fd146",
+ "playtime_mins": 77,
+ "last_played": "2013-01-28",
+ "achievements": [
+  {
+   "key": "REACH_LOBBY_1",
+   "name": "Where am I?",
+   "description": "Reach the first lobby.",
+   "unlocked": true,
+   "date": "2012-12-28T23:11:20-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/0cf16a10100a3bc1f83e0309c72baa1ef4d5a64a.jpg"
+  },
+  {
+   "key": "FIRST_STARS_MEDAL",
+   "name": "Bling Bling",
+   "description": "Unlock your first Star Medal",
+   "unlocked": true,
+   "date": "2012-12-28T23:14:25-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/6a07118ced8afd099d50c1a74665a62cfcba4b41.jpg"
+  },
+  {
+   "key": "FIRST_GALLERY_MEDAL",
+   "name": "Gotta Catch 'em All",
+   "description": "Unlock your first Gallery Photo Medal",
+   "unlocked": true,
+   "date": "2012-12-28T23:14:25-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/d3193152cd7e830c353ca0e34a5b247a8d3393f8.jpg"
+  },
+  {
+   "key": "FIRST_STARCORE_MEDAL",
+   "name": "Just the Beginning",
+   "description": "Unlock your first Starcore medal",
+   "unlocked": true,
+   "date": "2012-12-28T23:14:25-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/2f238c40d21b34ac9e41b4452b3f49a17901671a.jpg"
+  },
+  {
+   "key": "DOUBLE_SPRING_JUMP",
+   "name": "Up and Up",
+   "description": "Double jump off of a spring in mid air",
+   "unlocked": true,
+   "date": "2013-01-27T14:06:31-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/f04e8e2e065d21461e6c398afc7dfe171ea9f0cc.jpg"
+  },
+  {
+   "key": "ALL_GALLERY_CH01",
+   "name": "Master Photographer Chapter 1",
+   "description": "Collect all of the gallery items in the first chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/f23e32343b1b76944a1d72bed12cfdbf381b04a8.jpg"
+  },
+  {
+   "key": "ALL_GALLERY_CH02",
+   "name": "Master Photographer Chapter 2",
+   "description": "Collect all of the gallery items in the second chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/d974dfd7b5fc942cce6248796f79d5cb70bda94c.jpg"
+  },
+  {
+   "key": "ALL_GALLERY_CH03",
+   "name": "Master Photographer Chapter 3",
+   "description": "Collect all of the gallery items in the third chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/a204689350da535cf9362558d19184c1c3f490f8.jpg"
+  },
+  {
+   "key": "ALL_GALLERY_CH04",
+   "name": "Master Photographer Chapter 4",
+   "description": "Collect all of the gallery items in the fourth chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/ccfeb528112b248261d8b18d0cd5d00a03d3a484.jpg"
+  },
+  {
+   "key": "ALL_PAR_TIMES_CH01",
+   "name": "Fast in the Forest",
+   "description": "Beat all the par times in the first chapter.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/f39ed88df71453ca1ba6e56e8463151bd866d844.jpg"
+  },
+  {
+   "key": "ALL_PAR_TIMES_CH02",
+   "name": "Cave Runner",
+   "description": "Beat all the par times in the second chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/b10811a7f91e757d97b281f7779e5a06bc671ce9.jpg"
+  },
+  {
+   "key": "ALL_PAR_TIMES_CH03",
+   "name": "Sky Diver",
+   "description": "Beat all the par times in the third chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/06b15be5456cec35e33b386613c196ca9aad1e7f.jpg"
+  },
+  {
+   "key": "ALL_PAR_TIMES_CH04",
+   "name": "Par for the course",
+   "description": "Beat all the par times in the fourth chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/a93cf69c9a43b24ac0fea830626e80d4ab94e3b7.jpg"
+  },
+  {
+   "key": "ALL_STARCORE_CH01",
+   "name": "Levels Complete Chapter 1",
+   "description": "Complete all of the levels in the first chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/48f1f9e54a06fe2d3a4666ccc08edeedf2782e97.jpg"
+  },
+  {
+   "key": "ALL_STARCORE_CH02",
+   "name": "Levels Complete Chapter 2",
+   "description": "Complete all of the levels in the second chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/f58fdce4fe20d16d70863d7c2721a4646fa3b97a.jpg"
+  },
+  {
+   "key": "ALL_STARCORE_CH03",
+   "name": "Levels Complete Chapter 3",
+   "description": "Complete all of the levels in the third chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/a5b67bfd983da8537b2c06f48de70e7f4a44232d.jpg"
+  },
+  {
+   "key": "ALL_STARCORE_CH04",
+   "name": "Levels Complete Chapter 4",
+   "description": "Complete all of the levels in the fourth chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/ae45383d4afaa653b7162999b8bfe12ab65b8592.jpg"
+  },
+  {
+   "key": "ALL_STARS_CH01",
+   "name": "Chapter 1 All Star",
+   "description": "Collect all the stars in the first chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/c5b0e4eae097ba4626aca4899f052c5dac9efc72.jpg"
+  },
+  {
+   "key": "ALL_STARS_CH02",
+   "name": "Chapter 2 All Star",
+   "description": "Collect all the stars in the second chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/3d7c025ac01b8d7caa16c73138efcd9346ba050b.jpg"
+  },
+  {
+   "key": "ALL_STARS_CH03",
+   "name": "Chapter 3 All Star",
+   "description": "Collect all the stars in the third chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/07975a2ce0cec53c7dc8b6b8198c61cae9fa3c74.jpg"
+  },
+  {
+   "key": "ALL_STARS_CH04",
+   "name": "Chapter 4 All Star",
+   "description": "Collect all the stars in the fourth chapter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/0f1adc94c8df31b7196423d18e4b7b64b2ebac66.jpg"
+  },
+  {
+   "key": "CAPTURE_FAST_OBJECT",
+   "name": "Woosh",
+   "description": "Capture a very fast moving object",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/6e74c5817827dca63b0c4b931a85dcd7b48c327a.jpg"
+  },
+  {
+   "key": "ENDING1",
+   "name": "25% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/fe8730b7b54ed66fe3e4cdef3f2121f5e62cb0bb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ENDING2",
+   "name": "35% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/e3997de79b94ec3f2a6b82e49dc230099da57f07.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ENDING3",
+   "name": "45% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/4f800fe3daefc561b2f2905c377a5c606c81d926.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ENDING4",
+   "name": "55% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/36c4d8334b2ce31a27d97f0bfe8d0779afc3d370.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ENDING5",
+   "name": "65% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/68f1c9c082e19bddd4031d529d3c80b1a682b962.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ENDING6",
+   "name": "75% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/45fc9a54b835c926c3d9c39e0402189a57f5f9b7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ENDING7",
+   "name": "100% Complete",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/b702c1e64d67c06e4295634ed35caaab991d9412.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FIRST_PAR_MEDAL",
+   "name": "Pick up the Pace",
+   "description": "Unlock your first Par Time Medal",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/675918815a8e7d14acd59e26f7e156c1edef43c6.jpg"
+  },
+  {
+   "key": "MOVE_FAST",
+   "name": "Need For Speed",
+   "description": "Move PIC at very high rate of speed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/96acaabc077bc8cdd0a7c1105b38d0c79da6900c.jpg"
+  },
+  {
+   "key": "TRIPLE_SPRING_JUMP",
+   "name": "Sky's the Limit",
+   "description": "Triple jump off of a spring in mid air",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/c826bfc3af2616463b56d568f2637e7dc64cf5ef.jpg"
+  },
+  {
+   "key": "UNLOCK_CHAPTER_2",
+   "name": "Unlock Chapter 2",
+   "description": "Unlock the second chapter of the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/f871f55b701f901a6d5f9ff788ca2cdef39b2556.jpg"
+  },
+  {
+   "key": "UNLOCK_CHAPTER_3",
+   "name": "Unlock Chapter 3",
+   "description": "Unlock the third chapter of the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/184f806bf9d0e1874442db9596ec39f708dd4104.jpg"
+  },
+  {
+   "key": "UNLOCK_CHAPTER_4",
+   "name": "Unlock Chapter 4",
+   "description": "Unlock the fourth chapter of the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/9fe9bee231449a1d2a382964e34029babfdcdf5e.jpg"
+  },
+  {
+   "key": "UNLOCK_FINAL_LOBBY",
+   "name": "Unlock the Ending",
+   "description": "Unlock the ending of the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/204220/9bc349082448947f0cbd8e4e7133a92bf5b57805.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Snapshot",
+   "achievements": [
+    {
+     "apiname": "REACH_LOBBY_1",
+     "achieved": 1,
+     "unlocktime": 1356757880,
+     "name": "Where am I?",
+     "description": "Reach the first lobby."
+    },
+    {
+     "apiname": "UNLOCK_CHAPTER_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unlock Chapter 2",
+     "description": "Unlock the second chapter of the game."
+    },
+    {
+     "apiname": "UNLOCK_CHAPTER_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unlock Chapter 3",
+     "description": "Unlock the third chapter of the game."
+    },
+    {
+     "apiname": "UNLOCK_CHAPTER_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unlock Chapter 4",
+     "description": "Unlock the fourth chapter of the game."
+    },
+    {
+     "apiname": "UNLOCK_FINAL_LOBBY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unlock the Ending",
+     "description": "Unlock the ending of the game."
+    },
+    {
+     "apiname": "ALL_PAR_TIMES_CH01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fast in the Forest",
+     "description": "Beat all the par times in the first chapter."
+    },
+    {
+     "apiname": "ALL_PAR_TIMES_CH02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cave Runner",
+     "description": "Beat all the par times in the second chapter"
+    },
+    {
+     "apiname": "ALL_PAR_TIMES_CH03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sky Diver",
+     "description": "Beat all the par times in the third chapter"
+    },
+    {
+     "apiname": "ALL_PAR_TIMES_CH04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Par for the course",
+     "description": "Beat all the par times in the fourth chapter"
+    },
+    {
+     "apiname": "ALL_STARS_CH01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chapter 1 All Star",
+     "description": "Collect all the stars in the first chapter"
+    },
+    {
+     "apiname": "ALL_STARS_CH02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chapter 2 All Star",
+     "description": "Collect all the stars in the second chapter"
+    },
+    {
+     "apiname": "ALL_STARS_CH03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chapter 3 All Star",
+     "description": "Collect all the stars in the third chapter"
+    },
+    {
+     "apiname": "ALL_STARS_CH04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chapter 4 All Star",
+     "description": "Collect all the stars in the fourth chapter"
+    },
+    {
+     "apiname": "ALL_GALLERY_CH01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Photographer Chapter 1",
+     "description": "Collect all of the gallery items in the first chapter"
+    },
+    {
+     "apiname": "ALL_GALLERY_CH02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Photographer Chapter 2",
+     "description": "Collect all of the gallery items in the second chapter"
+    },
+    {
+     "apiname": "ALL_GALLERY_CH03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Photographer Chapter 3",
+     "description": "Collect all of the gallery items in the third chapter"
+    },
+    {
+     "apiname": "ALL_GALLERY_CH04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Photographer Chapter 4",
+     "description": "Collect all of the gallery items in the fourth chapter"
+    },
+    {
+     "apiname": "ALL_STARCORE_CH01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Levels Complete Chapter 1",
+     "description": "Complete all of the levels in the first chapter"
+    },
+    {
+     "apiname": "ALL_STARCORE_CH02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Levels Complete Chapter 2",
+     "description": "Complete all of the levels in the second chapter"
+    },
+    {
+     "apiname": "ALL_STARCORE_CH03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Levels Complete Chapter 3",
+     "description": "Complete all of the levels in the third chapter"
+    },
+    {
+     "apiname": "ALL_STARCORE_CH04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Levels Complete Chapter 4",
+     "description": "Complete all of the levels in the fourth chapter"
+    },
+    {
+     "apiname": "ENDING1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "25% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "35% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "45% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "55% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "65% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "75% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "ENDING7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "100% Complete",
+     "description": ""
+    },
+    {
+     "apiname": "CAPTURE_FAST_OBJECT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Woosh",
+     "description": "Capture a very fast moving object"
+    },
+    {
+     "apiname": "MOVE_FAST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Need For Speed",
+     "description": "Move PIC at very high rate of speed"
+    },
+    {
+     "apiname": "DOUBLE_SPRING_JUMP",
+     "achieved": 1,
+     "unlocktime": 1359317191,
+     "name": "Up and Up",
+     "description": "Double jump off of a spring in mid air"
+    },
+    {
+     "apiname": "TRIPLE_SPRING_JUMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sky's the Limit",
+     "description": "Triple jump off of a spring in mid air"
+    },
+    {
+     "apiname": "FIRST_STARCORE_MEDAL",
+     "achieved": 1,
+     "unlocktime": 1356758065,
+     "name": "Just the Beginning",
+     "description": "Unlock your first Starcore medal"
+    },
+    {
+     "apiname": "FIRST_PAR_MEDAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pick up the Pace",
+     "description": "Unlock your first Par Time Medal"
+    },
+    {
+     "apiname": "FIRST_GALLERY_MEDAL",
+     "achieved": 1,
+     "unlocktime": 1356758065,
+     "name": "Gotta Catch 'em All",
+     "description": "Unlock your first Gallery Photo Medal"
+    },
+    {
+     "apiname": "FIRST_STARS_MEDAL",
+     "achieved": 1,
+     "unlocktime": 1356758065,
+     "name": "Bling Bling",
+     "description": "Unlock your first Star Medal"
+    }
+   ],
+   "success": true
+  }
+ }
+}

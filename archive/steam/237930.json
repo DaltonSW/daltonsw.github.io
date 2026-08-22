@@ -1,0 +1,494 @@
+{
+ "provider": "steam",
+ "title": "Transistor",
+ "updated": "2026-08-21",
+ "id": "237930",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 2,
+ "total": 33,
+ "first": "2020-06-09",
+ "last": "2020-06-09",
+ "platform": "PC",
+ "icon": "b45dc369d45afe945d379e75545959f845094f92",
+ "playtime_mins": 66,
+ "playtime": {
+  "windows": 66
+ },
+ "last_played": "2020-06-09",
+ "achievements": [
+  {
+   "key": "AchCompleteIntro",
+   "name": "Drive()",
+   "description": "Reach the Goldwalk District.",
+   "unlocked": true,
+   "date": "2020-06-09T19:10:48-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/615b34d738ae719a9a28453031f132e709a159d8.jpg"
+  },
+  {
+   "key": "AchDefeatSybil",
+   "name": "Reisz()",
+   "unlocked": true,
+   "date": "2020-06-09T19:55:24-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/b923e4588c6031de6b6b1b8a13245ceab51f8c4d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchCompleteNewGamePlus",
+   "name": "Goodbye()",
+   "description": "Recurse through the story.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/48ce5d35e748e8a2711d3b8bb62eb83b0d0db683.jpg"
+  },
+  {
+   "key": "AchCompleteStory",
+   "name": "Bye()",
+   "description": "Complete the story.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/6c6611c1c58300e02562dd52b92c20dc16412518.jpg"
+  },
+  {
+   "key": "AchDefeatAsherGrant",
+   "name": "Kendrell()",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/b374a69186a1939731110088c637e13d721fd6a7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchDefeatRoyce",
+   "name": "Bracket()",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/ff3228ca5b800c1db79ee32caacb113c1f94d650.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchDefeatSpine",
+   "name": "Spine()",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/1ae3d7c213ae7d3d710c2e1fc18a89ead4c78706.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchFightLimitersA",
+   "name": "Bet()",
+   "description": "Complete five encounters with one or more Limiters in use.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/69e0128e16b0fdfe9e9072a86a0710a14e0c15f6.jpg"
+  },
+  {
+   "key": "AchFightLimitersB",
+   "name": "Dare()",
+   "description": "Complete five encounters with five or more Limiters in use.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/0493294bec520a0f76085c8b491c4c3e16368765.jpg"
+  },
+  {
+   "key": "AchFightLimitersC",
+   "name": "Risk()",
+   "description": "Complete five encounters with all 10 Limiters in use.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/3e698abe7afcca24656f1f2438b9044dc3ffab18.jpg"
+  },
+  {
+   "key": "AchInspectFunctionsA",
+   "name": "Search()",
+   "description": "Inspect five completed Function Files.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/6bac5b411cce41da93aa139b0ef38611402914d0.jpg"
+  },
+  {
+   "key": "AchInspectFunctionsB",
+   "name": "Find()",
+   "description": "Inspect 10 completed Function Files.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/4daab2bef044235c62cc4cd761dbdef19c5a0079.jpg"
+  },
+  {
+   "key": "AchInspectFunctionsC",
+   "name": "Reveal()",
+   "description": "Inspect all completed Function Files.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/04866514cc13bcc896d30915e2036f4ca334e26b.jpg"
+  },
+  {
+   "key": "AchInspectLimiters",
+   "name": "Process()",
+   "description": "Inspect all completed Limiter Files.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/e79d1542c82e006ee58d8dfbada6390c6e291b22.jpg"
+  },
+  {
+   "key": "AchMaxFunctionSlot",
+   "name": "Stack()",
+   "description": "Create a Function combination requiring 12 MEM.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/8f856797386323fb1d1b670e309c4fbd10668b99.jpg"
+  },
+  {
+   "key": "AchSandboxAll",
+   "name": "Contest()",
+   "description": "Clear every Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/d532378aa72b76145c1253164c5c292bad62b613.jpg"
+  },
+  {
+   "key": "AchSandboxCheckmate",
+   "name": "Planning()",
+   "description": "Complete each Planning Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/9f8d290e0d78bac650934050bb4a6881dc23cbef.jpg"
+  },
+  {
+   "key": "AchSandboxEndless",
+   "name": "Performance()",
+   "description": "Complete each Performance Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/74af69fab400b4bbbbc93f1c47b6e8750023e915.jpg"
+  },
+  {
+   "key": "AchSandboxOneEach",
+   "name": "Sandbox()",
+   "description": "Clear one of each Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/f7cbe1ce5c238b48931e1d66ddc04700d8ec1402.jpg"
+  },
+  {
+   "key": "AchSandboxShowdown",
+   "name": "Agency()",
+   "description": "Complete each Agency Test",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/633e14bafbeed1f8291bdb052a2526a5c20b285a.jpg"
+  },
+  {
+   "key": "AchSandboxSurvival",
+   "name": "Stability()",
+   "description": "Complete each Stability Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/1d1eb50d9050053385aaebe6bdf7cf3aa9ca9171.jpg"
+  },
+  {
+   "key": "AchSandboxTimed",
+   "name": "Speed()",
+   "description": "Complete each Speed Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/13b6c7e40669ac7ac8152d4fc48d01e354569361.jpg"
+  },
+  {
+   "key": "AchSelfCombo",
+   "name": "Self()",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/ad3ab8d3ea8dc54ca358dd33658372725cb07fc0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchTerminalUse",
+   "name": "News()",
+   "description": "Use 10 different OVC Terminals.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/90ac3bbb476965e900cbd5a852818fd93bcf1825.jpg"
+  },
+  {
+   "key": "AchTurnDamageA",
+   "name": "Anything()",
+   "description": "Deal at least 1024 damage in one Turn() in the Practice Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/0ba1fe3c46fc583b75ed60f849e961e01cc53d19.jpg"
+  },
+  {
+   "key": "AchTurnDamageB",
+   "name": "Everything()",
+   "description": "Deal at least 2048 damage in one Turn() in the Practice Test.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/b7a2b27818f192dce347c65d056fb9da7f7384a1.jpg"
+  },
+  {
+   "key": "AchUnlockAllFunctions",
+   "name": "Function()",
+   "description": "Unlock every Transistor Function.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/e334e34326944232bd03a1ae494512e375a0ed16.jpg"
+  },
+  {
+   "key": "AchUnlockAllLimiters",
+   "name": "Limiter()",
+   "description": "Unlock every Process Limiter.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/f79ef4c02f194f01734feeae3fb5acf51d0cf672.jpg"
+  },
+  {
+   "key": "AchUnlockAllMem",
+   "name": "Memory()",
+   "description": "Unlock 32 MEM.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/46a29711b229d0ad228b4430e6c7fc46710565e5.jpg"
+  },
+  {
+   "key": "AchUnlockAllSlots",
+   "name": "User()",
+   "description": "Unlock every Upgrade Slot and Passive Slot.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/45097e7a8795daa72a00ff0013554bbf6e7cbf40.jpg"
+  },
+  {
+   "key": "AchUserLevelA",
+   "name": "Align()",
+   "description": "Achieve User Level 8.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/a51c86acb45a6219a3730d6ff9a43aa99b2c9978.jpg"
+  },
+  {
+   "key": "AchUserLevelB",
+   "name": "Focus()",
+   "description": "Achieve User Level 16.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/c7e0920e6209a0449eb216aad00963280db8fb73.jpg"
+  },
+  {
+   "key": "AchUserLevelC",
+   "name": "One()",
+   "description": "Achieve User Level 24.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/90198aa3a8f237e9f7ba303eee7a42bb002a7c58.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Transistor",
+   "achievements": [
+    {
+     "apiname": "AchCompleteIntro",
+     "achieved": 1,
+     "unlocktime": 1591747848,
+     "name": "Drive()",
+     "description": "Reach the Goldwalk District."
+    },
+    {
+     "apiname": "AchDefeatSybil",
+     "achieved": 1,
+     "unlocktime": 1591750524,
+     "name": "Reisz()",
+     "description": ""
+    },
+    {
+     "apiname": "AchDefeatSpine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spine()",
+     "description": ""
+    },
+    {
+     "apiname": "AchDefeatAsherGrant",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kendrell()",
+     "description": ""
+    },
+    {
+     "apiname": "AchDefeatRoyce",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bracket()",
+     "description": ""
+    },
+    {
+     "apiname": "AchSandboxOneEach",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sandbox()",
+     "description": "Clear one of each Test."
+    },
+    {
+     "apiname": "AchSandboxTimed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed()",
+     "description": "Complete each Speed Test."
+    },
+    {
+     "apiname": "AchSandboxSurvival",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stability()",
+     "description": "Complete each Stability Test."
+    },
+    {
+     "apiname": "AchSandboxCheckmate",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Planning()",
+     "description": "Complete each Planning Test."
+    },
+    {
+     "apiname": "AchSandboxEndless",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Performance()",
+     "description": "Complete each Performance Test."
+    },
+    {
+     "apiname": "AchSandboxShowdown",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Agency()",
+     "description": "Complete each Agency Test"
+    },
+    {
+     "apiname": "AchTurnDamageA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Anything()",
+     "description": "Deal at least 1024 damage in one Turn() in the Practice Test."
+    },
+    {
+     "apiname": "AchTurnDamageB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Everything()",
+     "description": "Deal at least 2048 damage in one Turn() in the Practice Test."
+    },
+    {
+     "apiname": "AchSandboxAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Contest()",
+     "description": "Clear every Test."
+    },
+    {
+     "apiname": "AchCompleteStory",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bye()",
+     "description": "Complete the story."
+    },
+    {
+     "apiname": "AchCompleteNewGamePlus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Goodbye()",
+     "description": "Recurse through the story."
+    },
+    {
+     "apiname": "AchFightLimitersA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bet()",
+     "description": "Complete five encounters with one or more Limiters in use."
+    },
+    {
+     "apiname": "AchFightLimitersB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dare()",
+     "description": "Complete five encounters with five or more Limiters in use."
+    },
+    {
+     "apiname": "AchFightLimitersC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Risk()",
+     "description": "Complete five encounters with all 10 Limiters in use."
+    },
+    {
+     "apiname": "AchInspectFunctionsA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Search()",
+     "description": "Inspect five completed Function Files."
+    },
+    {
+     "apiname": "AchInspectFunctionsB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Find()",
+     "description": "Inspect 10 completed Function Files."
+    },
+    {
+     "apiname": "AchInspectFunctionsC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reveal()",
+     "description": "Inspect all completed Function Files."
+    },
+    {
+     "apiname": "AchInspectLimiters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Process()",
+     "description": "Inspect all completed Limiter Files."
+    },
+    {
+     "apiname": "AchTerminalUse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "News()",
+     "description": "Use 10 different OVC Terminals."
+    },
+    {
+     "apiname": "AchUnlockAllFunctions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Function()",
+     "description": "Unlock every Transistor Function."
+    },
+    {
+     "apiname": "AchUnlockAllSlots",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "User()",
+     "description": "Unlock every Upgrade Slot and Passive Slot."
+    },
+    {
+     "apiname": "AchUnlockAllMem",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Memory()",
+     "description": "Unlock 32 MEM."
+    },
+    {
+     "apiname": "AchSelfCombo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Self()",
+     "description": ""
+    },
+    {
+     "apiname": "AchUserLevelA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Align()",
+     "description": "Achieve User Level 8."
+    },
+    {
+     "apiname": "AchUserLevelB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Focus()",
+     "description": "Achieve User Level 16."
+    },
+    {
+     "apiname": "AchUserLevelC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One()",
+     "description": "Achieve User Level 24."
+    },
+    {
+     "apiname": "AchUnlockAllLimiters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Limiter()",
+     "description": "Unlock every Process Limiter."
+    },
+    {
+     "apiname": "AchMaxFunctionSlot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stack()",
+     "description": "Create a Function combination requiring 12 MEM."
+    }
+   ],
+   "success": true
+  }
+ }
+}

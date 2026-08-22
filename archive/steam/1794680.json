@@ -1,0 +1,3437 @@
+{
+ "provider": "steam",
+ "title": "Vampire Survivors",
+ "updated": "2026-08-21",
+ "id": "1794680",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 5,
+ "total": 243,
+ "first": "2022-11-02",
+ "last": "2022-11-15",
+ "platform": "PC",
+ "icon": "3677cf1be3be1f4ea42261c62ce10519715ade58",
+ "playtime_mins": 32,
+ "playtime": {
+  "windows": 32
+ },
+ "last_played": "2022-11-15",
+ "achievements": [
+  {
+   "key": "Have6DifferentWeapons",
+   "name": "Empty Tome",
+   "description": "Hold 6 different weapons at once.",
+   "unlocked": true,
+   "date": "2022-11-02T21:10:59-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/4f32397e4700fa4a2d4cc2df44219c3ed9c7ea09.jpg"
+  },
+  {
+   "key": "ReachLV10",
+   "name": "Crown",
+   "description": "Reach Level 10.",
+   "unlocked": true,
+   "date": "2022-11-02T21:11:00-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f16b40537a1b8417c00c1b92fd1ae0347b5adb2e.jpg"
+  },
+  {
+   "key": "Survive1Minute",
+   "name": "Hollow Heart",
+   "description": "Survive 1 minute with any character.",
+   "unlocked": true,
+   "date": "2022-11-02T21:11:00-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/219e279c2fe7559d13aae15ac6117b56ed5a8eb9.jpg"
+  },
+  {
+   "key": "ReachLV5",
+   "name": "Wings",
+   "description": "Reach Level 5.",
+   "unlocked": true,
+   "date": "2022-11-02T21:11:00-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e3a90bb8e2cb0c4a81199ed0d174b11a01a426fe.jpg"
+  },
+  {
+   "key": "Destroy20Candles",
+   "name": "Fire Wand",
+   "description": "Destroy 20 light sources.",
+   "unlocked": true,
+   "date": "2022-11-15T20:46:55-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/161fad0684efffa364163715cb06382658e39bb7.jpg"
+  },
+  {
+   "key": "Banish10Items",
+   "name": "EXTRA: Seal I",
+   "description": "Banish 10 or more weapons in a single run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e1f1cd43f37f9a56ade8d05e71b5cd6206feb5d0.jpg"
+  },
+  {
+   "key": "Banish20Items",
+   "name": "EXTRA: Seal II",
+   "description": "Banish 20 or more weapons in a single run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e1f1cd43f37f9a56ade8d05e71b5cd6206feb5d0.jpg"
+  },
+  {
+   "key": "Banish40Items",
+   "name": "EXTRA: Seal III",
+   "description": "Banish 40 or more weapons in a single run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e1f1cd43f37f9a56ade8d05e71b5cd6206feb5d0.jpg"
+  },
+  {
+   "key": "Banish80Items",
+   "name": "EXTRA: Seal All",
+   "description": "Banish 80 or more weapons in a single run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1881076c4626749ae6fbb5db6573bd0dcd1d7680.jpg"
+  },
+  {
+   "key": "BuyGlassMask",
+   "name": "Glass Vizard",
+   "description": "Find and buy the Glass Vizard.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c95ebb91317dc571b97b2cbc8d0fb0f03bae0e0d.jpg"
+  },
+  {
+   "key": "CastForbiddenBox",
+   "name": "EXTRA: Room 1665",
+   "description": "Dare to cast the spell ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f194705073f8dfb84203e070928d99583adc0449.jpg"
+  },
+  {
+   "key": "CompleteAdv_AGarlicParadise",
+   "name": "EXTRA: A Garlic Paradise",
+   "description": "Complete once the adventure A Garlic Paradise.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5e18ff41438f38848d22c25c54669da3add3060c.jpg"
+  },
+  {
+   "key": "CompleteAdv_ToEndAnIceAge",
+   "name": "EXTRA: To End An Ice Age",
+   "description": "Complete once the adventure To End An Ice Age.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/63aa2d12cb811ed3285da6f54b761e4c9959e2dd.jpg"
+  },
+  {
+   "key": "CompleteAdv_WorldOfLightAndDark",
+   "name": "EXTRA: World of Light and Dark",
+   "description": "Complete once the adventure World of Light and Dark.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9377078d7fe6941b7b94043068113cfd5bca67f9.jpg"
+  },
+  {
+   "key": "CompleteCollection",
+   "name": "Queen Sigma",
+   "description": "Complete the Collection 1.0.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/bb8ba3e777b364fdd59bc9dc6f82f60ca6b1eec1.jpg"
+  },
+  {
+   "key": "Dark_01SpaceDude",
+   "name": "EXTRA: I - Sapphire Mist",
+   "description": "Reach a Cooldown bonus of -85% with Space Dude.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c4f921f50ef9e492ae9eda8927b43c3f84c8311f.jpg"
+  },
+  {
+   "key": "Dark_03Gazebo",
+   "name": "EXTRA: III - Hidden Anathema",
+   "description": "Eat as much as possible with Gazebo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7b2a65323852eacc6e881efe199eae5c4fb0d0bc.jpg"
+  },
+  {
+   "key": "Dark_05Appunta",
+   "name": "EXTRA: V - Pale Diamond Incursion",
+   "description": "Find 10 Treasure Chests from Zi'Appunta's ability in a single run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/99432d1a3b87f262dc06b27d4e39d4f0df2bb2c7.jpg"
+  },
+  {
+   "key": "Dark_06Darkasso",
+   "name": "EXTRA: VI - Moonlight Bolero",
+   "description": "Be embraced by the Darkasso.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0aebe35741d15319c3725e9a3d0b554642c1861c.jpg"
+  },
+  {
+   "key": "Dark_10Santa",
+   "name": "EXTRA: X - Hail from the Future",
+   "description": "Trigger a Weird Souls Purifier with Santa Ladonna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7e2560c47610e6e87b95dfc7919e4b8c23b5e3e3.jpg"
+  },
+  {
+   "key": "Dark_12Shemoon",
+   "name": "EXTRA: XII - Crystal Cries",
+   "description": "Trigger a Starry Heavens with She-Moon Eeta.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/356f45d8ab1db4979dcc638c2d7863fa739dd0a2.jpg"
+  },
+  {
+   "key": "Dark_13Chula",
+   "name": "EXTRA: XIII - Call of a Mad Moon",
+   "description": "Reach +999% Luck with Chula-Reh.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f0fbbe58fee08d4dcd8727cd6f57f94805eedfd2.jpg"
+  },
+  {
+   "key": "Dark_18Challenge",
+   "name": "EXTRA: XVIII - Victorian Horror",
+   "description": "Survive 30 minutes with no weapons in Inverse Green Acres.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/85c4e794037816ddceb19150bd37edf8f98d0e3e.jpg"
+  },
+  {
+   "key": "Dark_21Robert",
+   "name": "EXTRA: XXI - Wandering the Jet Black",
+   "description": "Reach 665 Max Health with Bat Robbert.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/85caed9526d010d249171d997d75d92870c6285d.jpg"
+  },
+  {
+   "key": "Defeat0EnemiesInCoop",
+   "name": "EXTRA: Gaze of Gaea",
+   "description": "Defeat 0 enemies in The Coop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/57effc430d77f1359a206bf760204fc4de76b4d2.jpg"
+  },
+  {
+   "key": "Defeat100KEnemies",
+   "name": "Krochi",
+   "description": "Defeat a total of 100000 enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e62bbbbf4c7c5441181240a988bded9cdc24f03f.jpg"
+  },
+  {
+   "key": "Defeat100kWithSigma",
+   "name": "Victory Sword",
+   "description": "Defeat 100000 enemies in a single run with Queen Sigma.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/cef7dfc3a16f2688ec49c1c10c927d0066374938.jpg"
+  },
+  {
+   "key": "Defeat3000Buers",
+   "name": "Yatta Cavallo",
+   "description": "Defeat a total of 3000 Lion Heads.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/21c80f7522e637e65bb627bf313cc54f3afc50a1.jpg"
+  },
+  {
+   "key": "Defeat3000Hydra",
+   "name": "O'Sole Meeo",
+   "description": "Defeat a total of 3000 Dragon Shrimps.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/cfc2ad5a7ebdc05517b420374de44210b795f9ed.jpg"
+  },
+  {
+   "key": "Defeat3000Milk",
+   "name": "Bianca Ramba",
+   "description": "Defeat a total of 3000 Milk Elementals.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fddd95af671e855959d23ab89d5b31a61dc2d1a0.jpg"
+  },
+  {
+   "key": "Defeat3000Skeletons",
+   "name": "Mortaccio",
+   "description": "Defeat a total of 3000 Skeletons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/aec972f2c23da7fa25616a0ab946c9ac3b91b908.jpg"
+  },
+  {
+   "key": "Defeat5000Enemies",
+   "name": "Lightning Ring",
+   "description": "Defeat a total of 5000 enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1955653c168b3aaf0bdb097431b967e5f113f321.jpg"
+  },
+  {
+   "key": "Defeat6000StageKillers",
+   "name": "Sir Ambrojoe",
+   "description": "Defeat a total of 6000 Stage Killers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b8179f291f89c35df5f112ec358425ffdb33fa9.jpg"
+  },
+  {
+   "key": "DefeatBossChapel",
+   "name": "Hyper Cappella Magna",
+   "description": "Defeat the Trinacria in the Cappella Magna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/2c5c2e6c697f7a373efc55a86331b5735501696a.jpg"
+  },
+  {
+   "key": "DefeatBossChapel2",
+   "name": "Game Killer",
+   "description": "Defeat the final enemy in the Cappella Magna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/76629099d587e8d5a64841c8bd85cbb9eb9e11b7.jpg"
+  },
+  {
+   "key": "DefeatBossLibrary",
+   "name": "Hyper Inlaid Library",
+   "description": "Defeat the Hag in the Inlaid Library.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e0d1a40adedd45f73097d9bfcba147f694b90f4f.jpg"
+  },
+  {
+   "key": "DefeatBossMadForest",
+   "name": "Hyper Mad Forest",
+   "description": "Defeat the giant Blue Venus in the Mad Forest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e252b70d5d00c956ab15e42087f615e95036e844.jpg"
+  },
+  {
+   "key": "DefeatBossPlant",
+   "name": "Hyper Dairy Plant",
+   "description": "Defeat the Sword Guardian in the Dairy Plant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5ec9cb7f6e4ac470d78e2289fd1e2f5dd9da93fd.jpg"
+  },
+  {
+   "key": "DefeatBossTower",
+   "name": "Hyper Gallo Tower",
+   "description": "Defeat the Giant Enemy Crab in Gallo Tower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/357f853968ad2600ee9092c108a8647740770453.jpg"
+  },
+  {
+   "key": "DefeatManyBats",
+   "name": "EXTRA: Pako Battiliar",
+   "description": "Defeat a total of 161616 bats.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/32fdd54908612fa96fd1e55aec63be21379cbf85.jpg"
+  },
+  {
+   "key": "DefeatShootingEnemies",
+   "name": "EXTRA: Ammo Appalate",
+   "description": "Defeat a total of 251096 Shooting Enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5102c017be6ec46940e28e53dc6a14ec44010332.jpg"
+  },
+  {
+   "key": "Earn5000CoinsInASingleRun",
+   "name": "Dommario",
+   "description": "Earn 5000 coins in a single run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7e666f31033cbdce5fd845fe3fc569f795d0b8d7.jpg"
+  },
+  {
+   "key": "Eat5PotRoast",
+   "name": "Garlic",
+   "description": "Find 5 Floor Chickens.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1b5eb79295086f2f55cc65ba5207107e0b205d47.jpg"
+  },
+  {
+   "key": "EvolveAll",
+   "name": "Candybox",
+   "description": "Discover every standard evolution and union.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/aac52237fd3b6954cbb1fb2d2fd6459220551f9c.jpg"
+  },
+  {
+   "key": "EvolveAmmoAppalate",
+   "name": "EXTRA: Zi'Appunta Belpaese",
+   "description": "Evolve the Ammo Appalate.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/81c6d85f35a37167764ec334ed02052897cbc6a4.jpg"
+  },
+  {
+   "key": "EvolveAxe",
+   "name": "Death Spiral",
+   "description": "Evolve the Axe.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c3ebd182eadb2124486aa7b4841e8aa53b359119.jpg"
+  },
+  {
+   "key": "EvolveBattilia",
+   "name": "EXTRA: Bat Robbert",
+   "description": "Evolve the Pako Battiliar.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5bfccad020b00283af723c6fb4e0158954624aae.jpg"
+  },
+  {
+   "key": "EvolveBracelet",
+   "name": "Tri-Bracelet",
+   "description": "Evolve the Bracelet and then the Bi-Bracelet.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c092ac101ddbe05b2ef6b11244e0e92b2c42e163.jpg"
+  },
+  {
+   "key": "EvolveCross",
+   "name": "Heaven Sword",
+   "description": "Evolve the Cross.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1d826a99c78fa4727d7f75d947f8e066d3ac2654.jpg"
+  },
+  {
+   "key": "EvolveFireWand",
+   "name": "Hellfire",
+   "description": "Evolve the Fire Wand.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e766d973a76a16b13ad8ccb6e3aa93687e92aa31.jpg"
+  },
+  {
+   "key": "EvolveGarlic",
+   "name": "Soul Eater",
+   "description": "Evolve the Garlic.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f094f9c3149fa045008f949ae38a434cc20cdef7.jpg"
+  },
+  {
+   "key": "EvolveGatti",
+   "name": "Vicious Hunger",
+   "description": "Evolve the Gatti Amari.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/2c33a44cb76e87bc35317540cfeed7ef2cce1419.jpg"
+  },
+  {
+   "key": "EvolveGlassFandango",
+   "name": "EXTRA: Celestial Voulge",
+   "description": "Evolve the Glass Fandango.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/55461be3b619bced8936bb9e9fe65ccd27829456.jpg"
+  },
+  {
+   "key": "EvolveGuns",
+   "name": "Phieraggi",
+   "description": "Evolve and unite Phiera Der Tuphello and Eight The Sparrow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/96fa4599830dd9cc1bc0d2432ed5081e18155466.jpg"
+  },
+  {
+   "key": "EvolveJavelin",
+   "name": "EXTRA: Seraphic Cry",
+   "description": "Evolve the Santa Javelin.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/35e928a7f51baa3aa5e36025a5bd1909962516dd.jpg"
+  },
+  {
+   "key": "EvolveKingBible",
+   "name": "Unholy Vespers",
+   "description": "Evolve the King Bible.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7482fc9fc2f211e3b71f8ceb7a83e24dbcfe188c.jpg"
+  },
+  {
+   "key": "EvolveKnife",
+   "name": "Thousand Edge",
+   "description": "Evolve the Knife.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/2c4f4a7385d0e62b3e0174f59dd8cca4043292ec.jpg"
+  },
+  {
+   "key": "EvolveLightning",
+   "name": "Thunder Loop",
+   "description": "Evolve the Lightning Ring.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b26d480e5e2c14a90eddfb3f1f9ee1d097b9f2f.jpg"
+  },
+  {
+   "key": "EvolveMagiStone",
+   "name": "EXTRA: Kyra-Stones",
+   "description": "Evolve the Magi-Stone.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/05553df3c157e3621d7c7e58982e72a02918ca08.jpg"
+  },
+  {
+   "key": "EvolveMagicWand",
+   "name": "Holy Wand",
+   "description": "Evolve the Magic Wand.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/deec45536b2c431992148c27d380d748c30f2f2c.jpg"
+  },
+  {
+   "key": "EvolveOfGaea",
+   "name": "EXTRA: Gazebo",
+   "description": "Survive 20 minutes in The Coop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/51211920ecb7dd071e33613dfe7152c1287944a2.jpg"
+  },
+  {
+   "key": "EvolveOfGaea_Fix",
+   "name": "EXTRA: Embrace of Gaea",
+   "description": "Evolve the Gaze of Gaea.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e2c09e49cb94d10345fe97bffdc0d9711b32ded5.jpg"
+  },
+  {
+   "key": "EvolvePentagram",
+   "name": "Gorgeous Moon",
+   "description": "Evolve the Pentagram.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/933d423962e90c2b2ab8aa38ccf77acd39736832.jpg"
+  },
+  {
+   "key": "EvolvePhas3r",
+   "name": "EXTRA: Evolve the Phas3r.",
+   "description": "Evolve the Phas3r.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f1cadafe7668a8268a8470ddc9a57e76dd1e496f.jpg"
+  },
+  {
+   "key": "EvolveRunetracer",
+   "name": "NO FUTURE",
+   "description": "Evolve the Runetracer.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7d9398d3920f89dd3d9a50cb1e71e51849b228e4.jpg"
+  },
+  {
+   "key": "EvolveSantaWater",
+   "name": "La Borra",
+   "description": "Evolve the Santa Water.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/465e842b5d960397f55d6d8b9523ed90e96b7c56.jpg"
+  },
+  {
+   "key": "EvolveShadow",
+   "name": "Valkyrie Turner",
+   "description": "Evolve the Shadow Pinion.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/68144affe18584365b4474506f077a0b6cc47243.jpg"
+  },
+  {
+   "key": "EvolveSongOfMana",
+   "name": "Mannajja",
+   "description": "Evolve the Song Of Mana.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/811794ea4b5037d0e5d4f0a7d473053bc9dc245a.jpg"
+  },
+  {
+   "key": "EvolveWhip",
+   "name": "Bloody Tear",
+   "description": "Evolve the Whip.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e61c61abd4596b4b3287b7b80e53bfaa84302478.jpg"
+  },
+  {
+   "key": "EvolveWind",
+   "name": "Fuwalafuwaloo",
+   "description": "Unite Vento Sacro and Bloody Tear.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/ee1191e047f05cc3291936ced717ec7187062b98.jpg"
+  },
+  {
+   "key": "FOSC01_FindCoffin",
+   "name": "Eleanor Uziron",
+   "description": "Find and open the coffin in Lake Foscari.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e9693cdb05f863b750af2930ea2d70803d88b91c.jpg"
+  },
+  {
+   "key": "FOSC02_Survive15Eleanor",
+   "name": "SpellString",
+   "description": "Survive 15 minutes with Eleanor Uziron.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/55e1b3e9d48f72efcb2bde4f55f596a407132256.jpg"
+  },
+  {
+   "key": "FOSC03_GetStreamToLevel6",
+   "name": "SpellStream",
+   "description": "Get SpellStream to Level 6.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8de76577ae91d5cb03556296e671c7bd5db4a47e.jpg"
+  },
+  {
+   "key": "FOSC04_GetStrikeToLevel6",
+   "name": "SpellStrike",
+   "description": "Get SpellStrike to Level 6.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e6d66bb08bc9707d43cedd7e0b0845c895608c32.jpg"
+  },
+  {
+   "key": "FOSC05_UniteSpells",
+   "name": "Maruto Cuts",
+   "description": "Unite SpellString, SpellStream, and SpellStrike.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/46ffa04b74df6cb973c165bfb6e73981988b5ccc.jpg"
+  },
+  {
+   "key": "FOSC06_Survive15Viktor",
+   "name": "Eskizzibur",
+   "description": "Survive 15 minutes with Maruto Cuts.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8fbbc47701da6470b8dc0709afbd4d8299939c35.jpg"
+  },
+  {
+   "key": "FOSC07_EvolveEskizzibur",
+   "name": "Keitha Muort",
+   "description": "Evolve the Eskizzibur.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/41f9dd69497e661dbec8f68819c74ed38c267711.jpg"
+  },
+  {
+   "key": "FOSC08_Survive15Keira",
+   "name": "Flash Arrow",
+   "description": "Survive 15 minutes with Keitha Muort.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/ac57249f0be244100bcfcaf10ed1d96004148eb5.jpg"
+  },
+  {
+   "key": "FOSC09_EvolveFlashArrow",
+   "name": "Millionaire",
+   "description": "Evolve the Flash Arrow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e4d237837ce7899b27033a178fb489b19d98dc9e.jpg"
+  },
+  {
+   "key": "FOSC10_BreakSeal1",
+   "name": "Abyss Foscari",
+   "description": "With Keitha, break the Seal of the Lake.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fe6305d9a0a8f00355a3acc78b91ebbefdf1add4.jpg"
+  },
+  {
+   "key": "FOSC11_BreakSeal2",
+   "name": "Luminaire Foscari",
+   "description": "With Maruto, break the Seal of the Abyss.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8cdb65f92d981d0454bb69c12779a57d9253b828.jpg"
+  },
+  {
+   "key": "FOSC12_BreakSeal3",
+   "name": "Genevieve Gruyère",
+   "description": "With Eleanor, break the Seal of the Banished.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/12d8eef8b0f787ae49d55f44bfb0b25601d6ae92.jpg"
+  },
+  {
+   "key": "FOSC13_Survive15Luminaire",
+   "name": "Prismatic Missile",
+   "description": "Survive 15 minutes with Luminaire Foscari.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0aabda54615b747568bdec3d5c1f8afeeda89bbf.jpg"
+  },
+  {
+   "key": "FOSC14_EvolvePrismatic",
+   "name": "Luminaire",
+   "description": "Evolve the Prismatic Missile.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/189aa68a2d6b531ea8f738c95a93d86449f700b2.jpg"
+  },
+  {
+   "key": "FOSC15_Survive15Genevieve",
+   "name": "Shadow Servant",
+   "description": "Survive 15 minutes with Genevieve Gruyère.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0385dc966fb924a537b48b10aa8eb67ac7211ca4.jpg"
+  },
+  {
+   "key": "FOSC16_EvolveShadow",
+   "name": "Ophion",
+   "description": "Evolve the Shadow Servant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6eda5fc64f207c081bbd9dc5b4800367b5903a5f.jpg"
+  },
+  {
+   "key": "FOSC17_Defeat100kGenevieve",
+   "name": "Je-Ne-Viv",
+   "description": "Defeat 100000 enemies in a single run with Genevieve Gruyère.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e1e2b09699b5452bb38f5fd1660dfa5462900a4a.jpg"
+  },
+  {
+   "key": "FOSC18_Defeat6kFairy",
+   "name": "Happy Birthday",
+   "description": "Defeat a total of 6000 Sammies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/285457de3fec12d225275d937048194d67bb4c98.jpg"
+  },
+  {
+   "key": "FOSC19_Defeat6kHorror",
+   "name": "Rottin'Ghoul",
+   "description": "Defeat a total of 6000 Rotting Ghouls.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/cba1bd09249f8dec51c5e20ada2bc0c351fb418f.jpg"
+  },
+  {
+   "key": "FOSC20_DefeatBossLake",
+   "name": "Hyper Lake Foscari",
+   "description": "Defeat the Avatar of Gaea in Lake Foscari.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/669e530c7abf9c5ff2e51ded89b1ee66e9d00939.jpg"
+  },
+  {
+   "key": "FOSC21_DefeatBossAbyss",
+   "name": "Hyper Abyss Foscari",
+   "description": "Defeat Je-Ne-Viv in Abyss Foscari.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/3fb52181d13c775ad747a65e294b4f7fff638cba.jpg"
+  },
+  {
+   "key": "FOSC22_FindMap_Foscari",
+   "name": "Lake Foscari Map",
+   "description": "Find the Lake Foscari Map.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/a834c1bb0541d68f01c0eeb834a34b8de5e3f8d1.jpg"
+  },
+  {
+   "key": "FindAClover",
+   "name": "Clover",
+   "description": "Find a Little Clover.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5f197cec2dc28f3696eec1b3edfc3ec155a201b0.jpg"
+  },
+  {
+   "key": "FindAParmAegis",
+   "name": "EXTRA: Parm Aegis",
+   "description": "Find a Parm Aegis in The Coop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/da613d05275adb9b414bb8d87b2d89805deba8f2.jpg"
+  },
+  {
+   "key": "FindARosary",
+   "name": "Cross",
+   "description": "Find a Rosary.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/979a387f456df9b43d7528d4eff6c077bd7dccaf.jpg"
+  },
+  {
+   "key": "FindAStoneMask",
+   "name": "Stone Mask",
+   "description": "Find a Stone Mask.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/17b3ef1d5ca5feae5e9f60c3937ad0795c0da71e.jpg"
+  },
+  {
+   "key": "FindAVacuum",
+   "name": "Magnet",
+   "description": "Find a Vacuum.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/555406736533d217e254442359f6b0b0318deecc.jpg"
+  },
+  {
+   "key": "FindAnArmaDio",
+   "name": "EXTRA: Arma Dio",
+   "description": "Find an Arma Dio.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/aecb4fe3e56c657576da21d410e9fc7f047250f2.jpg"
+  },
+  {
+   "key": "FindAnOrologion",
+   "name": "Clock Lancet",
+   "description": "Find an Orologion.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/bd9d11220d05ab2859dc767c03c5fde4285f45e0.jpg"
+  },
+  {
+   "key": "FindAntidote",
+   "name": "EXTRA: Antidote",
+   "description": "Find the Antidote in Whiteout.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/206de9422b06c6c3099273629c38590d00a6dcc1.jpg"
+  },
+  {
+   "key": "FindApoplexy",
+   "name": "EXTRA: Apoplexy",
+   "description": "Find the Apoplexy at minute 09:00 in Bat Country.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/43a467f85aff5e03f5f48eda6be59d30cda2233c.jpg"
+  },
+  {
+   "key": "FindAtlas",
+   "name": "EXTRA: Adventures",
+   "description": "Obtain the Atlas Gate in Boss Rash.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/806174356edbd284424c9dfe08d5a8f536b923ad.jpg"
+  },
+  {
+   "key": "FindBraveStory",
+   "name": "EXTRA: Brave Story",
+   "description": "Find the Brave Story at minute 18 in Space 54.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f69bccbe5802edc4c082ab57296006b63cd493b1.jpg"
+  },
+  {
+   "key": "FindChaosAltemanna",
+   "name": "EXTRA: Chaos Altemanna",
+   "description": "Find the Chaos Altemanna in Tiny Bridge.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/91fb46a9996167a5e1fb7c993ce2cc3e4b1b2cf4.jpg"
+  },
+  {
+   "key": "FindChaosLazulia",
+   "name": "EXTRA: Chaos Lazulia",
+   "description": "Find the Chaos Lazulia in Mazerella.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/865db4f837f5ca3f0e81707affea2e1e650c1de9.jpg"
+  },
+  {
+   "key": "FindChaosMalachite",
+   "name": "EXTRA: Chaos Malachite",
+   "description": "Find the Chaos Malachite at minute 18:00 in Bat Country.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7fa53c95c8cdcc5213aac64278bad91710aea42f.jpg"
+  },
+  {
+   "key": "FindChaosRosalia",
+   "name": "EXTRA: Chaos Rosalia",
+   "description": "Find the Chaos Rosalia in Astral Stair.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f1234aba23c5eab1016a9a401f2a9f77a555aecd.jpg"
+  },
+  {
+   "key": "FindChickenClock",
+   "name": "EXTRA: Game Speed Modifier",
+   "description": "Find the Roast chicken with a clock in the middle at the end of The Coop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/2334195ea65cb7c9af029f2758cebddd34eed0c7.jpg"
+  },
+  {
+   "key": "FindCoffinStage1",
+   "name": "Coffin: Mad Forest",
+   "description": "Find and open the coffin in the Mad Forest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b28f8b9ffe32ceaeb9779230d194242efcb1d1a.jpg"
+  },
+  {
+   "key": "FindCoffinStage2",
+   "name": "Coffin: Inlaid Library",
+   "description": "Find and open the coffin in the Inlaid Library.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b28f8b9ffe32ceaeb9779230d194242efcb1d1a.jpg"
+  },
+  {
+   "key": "FindCoffinStage3",
+   "name": "Coffin: Dairy Plant",
+   "description": "Find and open the coffin in the Dairy Plant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b28f8b9ffe32ceaeb9779230d194242efcb1d1a.jpg"
+  },
+  {
+   "key": "FindCoffinStage4",
+   "name": "Coffin: Gallo Tower",
+   "description": "Find and open the coffin in the Gallo Tower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b28f8b9ffe32ceaeb9779230d194242efcb1d1a.jpg"
+  },
+  {
+   "key": "FindCoffinStage5",
+   "name": "Coffin: Cappella Magna",
+   "description": "Find and open the coffin in the Cappella Magna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b28f8b9ffe32ceaeb9779230d194242efcb1d1a.jpg"
+  },
+  {
+   "key": "FindForbiddenScroll",
+   "name": "Forbidden Scrolls",
+   "description": "Find the Forbidden Scrolls of Morbane.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/38f8dd8c1a76120417ad3a1f53abcd41d38c2725.jpg"
+  },
+  {
+   "key": "FindGGospel",
+   "name": "Great Gospel",
+   "description": "Find the Great Gospel.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6dabe867940106d887dc87bee4654039fdefefa0.jpg"
+  },
+  {
+   "key": "FindGouda",
+   "name": "Ars Gouda",
+   "description": "Find the Ars Gouda.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9d2eab3adc672274d9b11a7d1e880ad8f89fe063.jpg"
+  },
+  {
+   "key": "FindGrimoire",
+   "name": "Grim Grimoire",
+   "description": "Find the Grim Grimoire.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/44b9d4eb7d770629d3e9eb56c246258ae0925618.jpg"
+  },
+  {
+   "key": "FindKaromasMana",
+   "name": "EXTRA: Karoma's Mana",
+   "description": "Find a Karoma's Mana in Westwoods.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/23626769e91f58aa04267b2510b5a3eea6e5022f.jpg"
+  },
+  {
+   "key": "FindMagicBanger",
+   "name": "Magic Banger",
+   "description": "Find the Magic Banger.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1ea8e065586ad54ea38d91440a849809e4d9cc8f.jpg"
+  },
+  {
+   "key": "FindManyChickens",
+   "name": "EXTRA: Hyper The Coop",
+   "description": "Find 500 Floor Chickens.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/52543f4b5d115e449cf216b49131f6fda1559c9d.jpg"
+  },
+  {
+   "key": "FindManyClovers",
+   "name": "EXTRA: Westwoods",
+   "description": "Find 23 Little Clovers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/207034c8c7567b079fd06e9e41b7643dcbd6372d.jpg"
+  },
+  {
+   "key": "FindManyGoldenFinger",
+   "name": "EXTRA: Space 54",
+   "description": "Find 5 Golden Fingers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/2c8451989aac0e94d3669e76f9bfd0d0397d639d.jpg"
+  },
+  {
+   "key": "FindManyOrologions",
+   "name": "EXTRA: Whiteout",
+   "description": "Find 20 Orologions.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7135d4e836f627563de412f4c011502e221753c8.jpg"
+  },
+  {
+   "key": "FindManyRosaries",
+   "name": "EXTRA: Laborratory",
+   "description": "Find 33 Rosaries.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/088a7def24fb7ac13a5f750cc25c0879b7b0c619.jpg"
+  },
+  {
+   "key": "FindMap_AstralStair",
+   "name": "EXTRA: Astral Stair Map",
+   "description": "Find the Astral Stair Map.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b8d52db707af4af26a0c346f7347d5ba6a7a3ff.jpg"
+  },
+  {
+   "key": "FindMasquerade",
+   "name": "EXTRA: Masquerade",
+   "description": "Find the Masquerade Relic in Westwoods.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/711f668a2f46a6ee9793b86e29cf90285dc6bc15.jpg"
+  },
+  {
+   "key": "FindMilkyWayMap",
+   "name": "Milky Way Map",
+   "description": "Find the Milky Way Map.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0573a94126ba06c31d86d710b60dee8b64ded14b.jpg"
+  },
+  {
+   "key": "FindRandomazzo",
+   "name": "Randomazzo",
+   "description": "Find the Randomazzo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fa47efbb3248a5208654fae2755656c076f14c4b.jpg"
+  },
+  {
+   "key": "FindRandomazzoT06",
+   "name": "VI - Sarabande of Healing",
+   "description": "Find the Randomazzo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/27c91a480c248b10c6219f89beffd7f77154bd6f.jpg"
+  },
+  {
+   "key": "FindRecycle",
+   "name": "EXTRA: Preserve",
+   "description": "Find the Wax Fetish in Mazerella.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/d90fdc3a13e3b4fb2f405ef4c04a813fb7f9351d.jpg"
+  },
+  {
+   "key": "FindSorceressTears",
+   "name": "Sorceress' Tears",
+   "description": "Find the Sorceress' Tears.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/100d9786746f7f9c1ea96e9e37cf4c5177060976.jpg"
+  },
+  {
+   "key": "FindTrisection",
+   "name": "EXTRA: Trisection",
+   "description": "Find the Trisection in Astral Stair.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/bbe850a557e54db29c6c7887fceb2d970370b68d.jpg"
+  },
+  {
+   "key": "FindYellowSign",
+   "name": "Yellow Sign",
+   "description": "Find the Yellow Sign.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/ed73c62056d86ad4d6e8a7ebcb9f9c9e9406bc34.jpg"
+  },
+  {
+   "key": "FindYellowSignS5",
+   "name": "Cappella Magna",
+   "description": "Reach Level 80 in the Gallo Tower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c614261c12107c68b1489948d4fe55d7f168dccf.jpg"
+  },
+  {
+   "key": "GalloDivano",
+   "name": "Bracelet",
+   "description": "Survive 30 minutes with either Gallo or Divano.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0323a4542ebb5d17802e2ca9c90e894d49c33be0.jpg"
+  },
+  {
+   "key": "GetFireWandToLevel4",
+   "name": "Arca",
+   "description": "Get Fire Wand to Level 4.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/cbad0ceb81d394d62b3e7fdf1153914426918c07.jpg"
+  },
+  {
+   "key": "GetGarlicToLevel7",
+   "name": "Poe Ratcho",
+   "description": "Get Garlic to Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/27a0fd6e03379a5014ffcb5d1218b3a2a0716259.jpg"
+  },
+  {
+   "key": "GetGlassFandangoToLevel7",
+   "name": "EXTRA: Glass Fandango",
+   "description": "Get Glass Fandango to Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/db149587aed732832cfd53a4a25dff9d08390af8.jpg"
+  },
+  {
+   "key": "GetHolyBookToLevel4",
+   "name": "Bracer",
+   "description": "Get King Bible to Level 4.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/577e617702cbb9b5e8c85acf30b2f87f36090985.jpg"
+  },
+  {
+   "key": "GetHolyWaterToLevel4",
+   "name": "Candelabrador",
+   "description": "Get Santa Water to Level 4.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c798092d39e7200f19323ee67d354c20355a0b05.jpg"
+  },
+  {
+   "key": "GetJavelinToLevel7",
+   "name": "EXTRA: Santa Javelin",
+   "description": "Get Santa Javelin to level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/480ba4549f1f3387ccc7146522c50c9739abe797.jpg"
+  },
+  {
+   "key": "GetLightningRingToLevel4",
+   "name": "Porta",
+   "description": "Get Lightning Ring to Level 4.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7f6b5da4c56f1f3240a139408f480ac3c94e3b2b.jpg"
+  },
+  {
+   "key": "GetMagiStoneToLevel7",
+   "name": "EXTRA: Magi-Stone",
+   "description": "Get Magi-Stone To Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/89268912034fe516855e610ad7afd92d4d458a21.jpg"
+  },
+  {
+   "key": "GetMagicMissileToLevel7",
+   "name": "Duplicator",
+   "description": "Get Magic Wand to Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/aab613221e2366c0b529cf5d28766e99c286dcfb.jpg"
+  },
+  {
+   "key": "GetPeachoneToLevel7",
+   "name": "Ebony Wings",
+   "description": "Get Peachone to Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fb312b37c80146fed0d3740ba4e1d84b76009a37.jpg"
+  },
+  {
+   "key": "GetPentagramToLevel7",
+   "name": "Christine",
+   "description": "Get Pentagram to Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c070c90e4ad753d5085b9c6f016f15f3bd78c59e.jpg"
+  },
+  {
+   "key": "GetPhas3rToLevel7",
+   "name": "EXTRA: Phas3r",
+   "description": "Get Phas3r to level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/679d0b6fe95c1d30e519e095a0a21bb8bff8dc8a.jpg"
+  },
+  {
+   "key": "GetRunetracerToLevel7",
+   "name": "Spellbinder",
+   "description": "Get Runetracer to Level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fd06b7eee7bf2cc9e40f186d0f4a48e21095a144.jpg"
+  },
+  {
+   "key": "GetTorroneToLevel9",
+   "name": "Omni",
+   "description": "Get Torrona's Box to Level 9.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/49704bb32058d363fea9f8be0a417928f531375a.jpg"
+  },
+  {
+   "key": "GreatestJubilee",
+   "name": "Greatest Jubilee",
+   "description": "See the final fireworks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/293cce033badad4a19bb25f6dfbbff4f20c76589.jpg"
+  },
+  {
+   "key": "Have6Evolutions",
+   "name": "Torrona's Box",
+   "description": "Hold 6 different weapon evolutions at once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c664aa73950d4490d56810846c808b8a2f28117e.jpg"
+  },
+  {
+   "key": "HitManyEnemiesWithTrain",
+   "name": "EXTRA: Carlo Cart",
+   "description": "Deal a total of 25120 damage with the Laborratory Train. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/d8402a4fcdfa51965c09627c053e0433dcd913f3.jpg"
+  },
+  {
+   "key": "MOON01_FindCoffin",
+   "name": "Miang",
+   "description": "Find and open the coffin in Mt.Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/bd5a261528833f808c805d2a192d41607956b9a1.jpg"
+  },
+  {
+   "key": "MOON02_Survive15Miang",
+   "name": "Silver Wind",
+   "description": "Survive 15 minutes with Miang Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c29c83885403883f192d0a33ceebedad4bb09f70.jpg"
+  },
+  {
+   "key": "MOON03_EvolveSilverWind",
+   "name": "Menya",
+   "description": "Evolve the Silver Wind.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9ee43d0d67aaab5ccce2da391e7661c1ebfc7fe7.jpg"
+  },
+  {
+   "key": "MOON04_Survive15Menya",
+   "name": "Four Seasons",
+   "description": "Survive 15 minutes with Menya Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8a2646c6ba23043d33be3f1d714557a0e5e76a9c.jpg"
+  },
+  {
+   "key": "MOON05_EvolveFourSeasons",
+   "name": "Syuuto",
+   "description": "Evolve the Four Seasons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f00c574bb949742d29752c66831b2046b379c342.jpg"
+  },
+  {
+   "key": "MOON06_Survive15Syuuto",
+   "name": "Summon Night",
+   "description": "Survive 15 minutes with Syuuto Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/18dcb5977044de043e172d12214e559082f85312.jpg"
+  },
+  {
+   "key": "MOON07_EvolveSummonNight",
+   "name": "Babi-Onna",
+   "description": "Evolve the Summon Night.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/94cfe673adbbb95a0a5371e6d736cdc22a819f9c.jpg"
+  },
+  {
+   "key": "MOON08_Survive15BabiOnna",
+   "name": "Mirage Robe",
+   "description": "Survive 15 minutes with Babi-Onna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/22dbee1e1ce0df4badc90c17753500374d20e138.jpg"
+  },
+  {
+   "key": "MOON09_EvolveMirageRobe",
+   "name": "McCoy-Oni",
+   "description": "Evolve the Mirage Robe.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/73d4c37a1e70a930ad1e8cb83f43370b67f1988b.jpg"
+  },
+  {
+   "key": "MOON10_Survive15McCoy",
+   "name": "108 Bocce",
+   "description": "Survive 15 minutes with McCoy-Oni.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/459f4fe68d156cac8562d92183804b0e24f8dd4e.jpg"
+  },
+  {
+   "key": "MOON11_Defeat100kVanya",
+   "name": "Megalo Menya",
+   "description": "Defeat 100000 enemies in a single run with Menya Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/dff433b3289af6ac48527b0be907d7a47b509302.jpg"
+  },
+  {
+   "key": "MOON12_Defeat100kVadjouel",
+   "name": "Megalo Syuuto",
+   "description": "Defeat 100000 enemies in a single run with Syuuto Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/949de4e6cc526f017ffec85894833d1d72c08a93.jpg"
+  },
+  {
+   "key": "MOON13_Defeat6kWater",
+   "name": "Gav'Et-Oni",
+   "description": "Defeat 6000 Kappa.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/3a4b82bc42317f9e6e37b966a8e5c407c5006f88.jpg"
+  },
+  {
+   "key": "MOON14_FindNightSword",
+   "name": "Night Sword",
+   "description": "Find a Night Sword.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/b8d9af309120f82a090c40065b065d5e67087401.jpg"
+  },
+  {
+   "key": "MOON15_EvolveNightSword",
+   "name": "Muramasa",
+   "description": "Evolve the Night Sword.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9a5da10fb6a938723934cbf53bb5758ef967351e.jpg"
+  },
+  {
+   "key": "MOON16_DefeatBossRuins",
+   "name": "Hyper Mt.Moonspell",
+   "description": "Defeat the Orochimario in Mt.Moonspell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/b9fdab3836358b611ecde34ae7650860ad790d4e.jpg"
+  },
+  {
+   "key": "MOON17_EvolveBubbles",
+   "name": "Boo Roo Boolle",
+   "description": "Evolve the Mille Bolle Blu.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5e404b0af39e8d40d73b07ea9a8761f29cd095cc.jpg"
+  },
+  {
+   "key": "MOON18_FindMap_Moonspell",
+   "name": "Mt.Moonspell Map",
+   "description": "Find the Mt.Moonspell Map.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/ed854e76d5e92bddf6eed87e7bad6afeec50393b.jpg"
+  },
+  {
+   "key": "ObtainAllRelics",
+   "name": "The Eudaimonia Machine",
+   "description": "Obtain all standard relics from all stages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/76e0dca24f42edd99b43446f12c086b33b303209.jpg"
+  },
+  {
+   "key": "ObtainDarkasso",
+   "name": "EXTRA: Darkasso",
+   "description": "Be embraced by the Darkasso.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/d9d984b53896132018c3053a7f0a1e24a988fac5.jpg"
+  },
+  {
+   "key": "ObtainGraciasMirror",
+   "name": "Gracia's Mirror",
+   "description": "Obtain Gracia's Mirror.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c2b157191e0157819bf2728b1481497ff425816f.jpg"
+  },
+  {
+   "key": "ObtainSeventhTrumpet",
+   "name": "Seventh Trumpet",
+   "description": "Obtain the Seventh Trumpet.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/b2c8f8bb4555ecce8a95e84b1e2b08c9863ee222.jpg"
+  },
+  {
+   "key": "ObtainTheCrimsonShroud",
+   "name": "Seeker of the Crimson Shroud",
+   "description": "Obtain the Crimson Shroud.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/60331cae47bb4475b0924784c6fcaeb8ac64463c.jpg"
+  },
+  {
+   "key": "ObtainTheInfiniteCorridor",
+   "name": "Seeker of the Infinite Corridor",
+   "description": "Obtain the Infinite Corridor.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/efa1ea73ebac8b796207d94337b2ea64fc3368e3.jpg"
+  },
+  {
+   "key": "ReachLV100WithAmbrojoe",
+   "name": "Reroll 5",
+   "description": "Reach Level 80 with Sir Ambrojoe.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/74a7aa68cfbfeedac319676aade4ec6ba9861b89.jpg"
+  },
+  {
+   "key": "ReachLV100WithCavallo",
+   "name": "Reroll 2",
+   "description": "Reach Level 80 with Yatta Cavallo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5c6fbf259dac874e08e6f9cf8a753200bf75cd49.jpg"
+  },
+  {
+   "key": "ReachLV100WithMortaccio",
+   "name": "Reroll 1",
+   "description": "Reach Level 80 with Mortaccio.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/74a7aa68cfbfeedac319676aade4ec6ba9861b89.jpg"
+  },
+  {
+   "key": "ReachLV100WithOsole",
+   "name": "Reroll 4",
+   "description": "Reach Level 80 with O'Sole Meeo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/5c6fbf259dac874e08e6f9cf8a753200bf75cd49.jpg"
+  },
+  {
+   "key": "ReachLV100WithRamba",
+   "name": "Reroll 3",
+   "description": "Reach Level 80 with Bianca Ramba.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/74a7aa68cfbfeedac319676aade4ec6ba9861b89.jpg"
+  },
+  {
+   "key": "ReachLV20InMadForest",
+   "name": "Inlaid Library",
+   "description": "Reach Level 20 in the Mad Forest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/b634ae3ceced993d49d5e4d02725330d35e7c79b.jpg"
+  },
+  {
+   "key": "ReachLV40InLibrary",
+   "name": "Dairy Plant",
+   "description": "Reach Level 40 in the Inlaid Library.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/d8018db1b5d48ca143dc8047d136fac7fd39455c.jpg"
+  },
+  {
+   "key": "ReachLV60InDairyPlant",
+   "name": "Gallo Tower",
+   "description": "Reach Level 60 in the Dairy Plant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/40b5ba2508735b1cf8072cd3880bec3a995960a8.jpg"
+  },
+  {
+   "key": "ReachLV80InverseForest",
+   "name": "EXTRA: Bat Country",
+   "description": "Reach Level 80 in Inverse Mad Forest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f99ed35d07378c6da26e85638685ad8c90ab8157.jpg"
+  },
+  {
+   "key": "ReachLV80InverseLibrary",
+   "name": "EXTRA: Astral Stair",
+   "description": "Reach Level 80 in Inverse Inlaid Library.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f2fa28bfc792b1f0b399d2b504b77248586e44ad.jpg"
+  },
+  {
+   "key": "ReachLV80InverseTower",
+   "name": "EXTRA: Tiny Bridge",
+   "description": "Reach Level 80 in Inverse Gallo Tower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/29f9809c5c52dd22806fc92659e603ad0236d80b.jpg"
+  },
+  {
+   "key": "ReachLV80InverseWarehouse",
+   "name": "EXTRA: Mazerella",
+   "description": "Reach Level 80 in Inverse Dairy Plant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0efce13c6b35d2db045a05190f615da00b7ee3f5.jpg"
+  },
+  {
+   "key": "ReachLV99WithAntonio",
+   "name": "X - Beginning",
+   "description": "Reach Level 50 with Antonio.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/eb1cd8a1fdacfe2a16299f3a52946a516fb2046e.jpg"
+  },
+  {
+   "key": "ReachLV99WithArca",
+   "name": "XIX - Heart of Fire",
+   "description": "Reach Level 50 with Arca.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/edcb9683e9190e155c538df3b581f72d2be26f79.jpg"
+  },
+  {
+   "key": "ReachLV99WithChristine",
+   "name": "XIII - Wicked Season",
+   "description": "Reach Level 50 with Christine.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6efcbc01c57fac4b31897023f12e41f7eb31fe76.jpg"
+  },
+  {
+   "key": "ReachLV99WithClerici",
+   "name": "IX - Divine Bloodline",
+   "description": "Reach Level 50 with Suor Clerici.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8d8822fda6ca219f392b7b592c1cb638a8aafe96.jpg"
+  },
+  {
+   "key": "ReachLV99WithConcetta",
+   "name": "XVIII - Boogaloo of Illusions",
+   "description": "Reach Level 50 with Concetta.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/3a265492485e1d4bbcbc0def8831bf3ee12bf9e5.jpg"
+  },
+  {
+   "key": "ReachLV99WithDommario",
+   "name": "II - Twilight Requiem",
+   "description": "Reach Level 50 with Dommario.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c67c0491b3f082a4229deec6516c9c2168dab332.jpg"
+  },
+  {
+   "key": "ReachLV99WithGennaro",
+   "name": "VII - Iron Blue Will",
+   "description": "Reach Level 50 with Gennaro.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6ced7c5f965985f71c042aaee337d77daeb4ee3f.jpg"
+  },
+  {
+   "key": "ReachLV99WithGiovanna",
+   "name": "V - Chaos in the Dark Night",
+   "description": "Reach Level 50 with Giovanna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/88ebb32db43a124d20c7f5389f304bef30fd77eb.jpg"
+  },
+  {
+   "key": "ReachLV99WithImelda",
+   "name": "XI - Waltz of Pearls",
+   "description": "Reach Level 50 with Imelda.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fefc9378fd861f3fc7ddaf900d692ab0152767fe.jpg"
+  },
+  {
+   "key": "ReachLV99WithKroci",
+   "name": "IV - Awake",
+   "description": "Reach Level 50 with Krochi.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e518fda5002377f193570bee672fa009470523a1.jpg"
+  },
+  {
+   "key": "ReachLV99WithLama",
+   "name": "XVI - Slash",
+   "description": "Reach Level 50 with Lama.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/d7a7ae743526bd5490fae52214747ea0382208d3.jpg"
+  },
+  {
+   "key": "ReachLV99WithPasqualina",
+   "name": "XIV - Jail of Crystal",
+   "description": "Reach Level 50 with Pasqualina.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/e4e25a8939ce5c9d874f2763f695c5eed1736b74.jpg"
+  },
+  {
+   "key": "ReachLV99WithPoe",
+   "name": "XXI - Blood Astronomia",
+   "description": "Reach Level 50 with Poe.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c32ddafc8c8275daea09d31e8b0d798e115e78dc.jpg"
+  },
+  {
+   "key": "ReachLV99WithPoppea",
+   "name": "XVII - Lost and Found Painting",
+   "description": "Reach Level 50 with Poppea.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/975eee86d6201514c25a45f54a1d9d58f8a3702a.jpg"
+  },
+  {
+   "key": "ReachLV99WithPorta",
+   "name": "III - Tragic Princess",
+   "description": "Reach Level 50 with Porta.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/f993e157021f223a3eefc40bba0eccc7f04d05ea.jpg"
+  },
+  {
+   "key": "ReachLV99WithPugnala",
+   "name": "I - Gemini",
+   "description": "Reach Level 50 with Pugnala.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/18e1418e3eb7c4a90a4e7c624a152857169bcd3c.jpg"
+  },
+  {
+   "key": "Recover1000HP",
+   "name": "Suor Clerici",
+   "description": "Recover a total of 1000 HP.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/0851f5a6df0c4168c412b9460af0b57f07a7f56b.jpg"
+  },
+  {
+   "key": "See100Items",
+   "name": "Banish 5",
+   "description": "Fill 100 entries in the Collection.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/a131df09c585243a92b8e4815a7d1ed8b5547dee.jpg"
+  },
+  {
+   "key": "See50Items",
+   "name": "Mindbender",
+   "description": "Fill 50 entries in the Collection.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/14214c12dd2bd65525914e894341684627605af4.jpg"
+  },
+  {
+   "key": "See60Items",
+   "name": "Banish 1",
+   "description": "Fill 60 entries in the Collection.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b6ae0d983680662c8aa8cbc8323c7a0cf83ad37.jpg"
+  },
+  {
+   "key": "See70Items",
+   "name": "Banish 2",
+   "description": "Fill 70 entries in the Collection.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b6ae0d983680662c8aa8cbc8323c7a0cf83ad37.jpg"
+  },
+  {
+   "key": "See80Items",
+   "name": "Banish 3",
+   "description": "Fill 80 entries in the Collection.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b6ae0d983680662c8aa8cbc8323c7a0cf83ad37.jpg"
+  },
+  {
+   "key": "See90Items",
+   "name": "Banish 4",
+   "description": "Fill 90 entries in the Collection.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/6b6ae0d983680662c8aa8cbc8323c7a0cf83ad37.jpg"
+  },
+  {
+   "key": "Survive10Minutes",
+   "name": "Peachone",
+   "description": "Survive 10 minutes with any character.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/89cf55e47ee17d08050ee298a495f176addc362c.jpg"
+  },
+  {
+   "key": "Survive10MinutesWithGuns",
+   "name": "Phiera Der Tuphello",
+   "description": "Survive 10 minutes with Pugnala.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8aec2a9bd765bfed5c7a4b047d57257ef87adc7d.jpg"
+  },
+  {
+   "key": "Survive15MinutesInBossRash",
+   "name": "Skip 5",
+   "description": "Survive 15 minutes in Boss Rash.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b5802c56103f060f65aafb51d20f470ada086fd.jpg"
+  },
+  {
+   "key": "Survive15MinutesInMolise",
+   "name": "Skip 1",
+   "description": "Survive 15 minutes in Molise.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b5802c56103f060f65aafb51d20f470ada086fd.jpg"
+  },
+  {
+   "key": "Survive15MinutesInMoongolow",
+   "name": "Skip 4",
+   "description": "Survive 15 minutes in Moongolow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b5802c56103f060f65aafb51d20f470ada086fd.jpg"
+  },
+  {
+   "key": "Survive15MinutesWithGatti",
+   "name": "Gatti Amari",
+   "description": "Survive 15 minutes with Giovanna.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/06e73a081d0d94815e18ac69949d5af2ca946101.jpg"
+  },
+  {
+   "key": "Survive15MinutesWithGuns",
+   "name": "Eight The Sparrow",
+   "description": "Survive 15 minutes with Pugnala.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/817b1f07ee745fb46aa713bee03924ea934798a7.jpg"
+  },
+  {
+   "key": "Survive15MinutesWithShadow",
+   "name": "Shadow Pinion",
+   "description": "Survive 15 minutes with Concetta.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9fcb005ba91d4ccaaaf73b4675c1371d85f0ec61.jpg"
+  },
+  {
+   "key": "Survive15MinutesWithSong",
+   "name": "Song of Mana",
+   "description": "Survive 15 minutes with Poppea.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/fee1c3d6ae5ff52631082f4f36d49cf25f239072.jpg"
+  },
+  {
+   "key": "Survive15MinutesWithWind",
+   "name": "Vento Sacro",
+   "description": "Survive 15 minutes with Zi'Assunta.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/143574e1370b3e9efc02407ab3bba670d03ddb4e.jpg"
+  },
+  {
+   "key": "Survive20Minutes",
+   "name": "Pentagram",
+   "description": "Survive 20 minutes with any character.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/53e9151a3e7824faac9b6f1f1b24ff37b13112d8.jpg"
+  },
+  {
+   "key": "Survive20MinutesInLaborratory",
+   "name": "EXTRA: Santa Ladonna",
+   "description": "Survive 20 minutes in Laborratory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c7c46bf059faac96e95b95ed8ff98ea13bdd55fe.jpg"
+  },
+  {
+   "key": "Survive20MinutesInSpace54",
+   "name": "EXTRA: Space Dude",
+   "description": "Survive 20 minutes in Space 54.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/4b86da65b87bab18b5a3ae1776391f209136446c.jpg"
+  },
+  {
+   "key": "Survive20MinutesWithCross",
+   "name": "Tiragisú",
+   "description": "Survive 20 minutes with Krochi.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/97ea633f0fde183a4f80dd9d6f5795beec22d2f6.jpg"
+  },
+  {
+   "key": "Survive20MinutesWithCurse",
+   "name": "Lama",
+   "description": "Survive 20 minutes with at least +10% Curse.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/29e5acd77ef5fdc86a12d94e13fcf34f288d4a75.jpg"
+  },
+  {
+   "key": "Survive20minutesInWestwoods",
+   "name": "EXTRA: Chula-Reh",
+   "description": "Survive 20 minutes in Westwoods. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9e43d3fb98651300dcf4c54ac7e4c9565d97461a.jpg"
+  },
+  {
+   "key": "Survive30MinutesInBoneZone",
+   "name": "Skip 3",
+   "description": "Survive 30 minutes in The Bone Zone.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b5802c56103f060f65aafb51d20f470ada086fd.jpg"
+  },
+  {
+   "key": "Survive30MinutesInGreenAcres",
+   "name": "Skip 2",
+   "description": "Survive 30 minutes in Green Acres.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9b5802c56103f060f65aafb51d20f470ada086fd.jpg"
+  },
+  {
+   "key": "Survive30MinutesWithAxe",
+   "name": "Skull O'Maniac",
+   "description": "Survive 30 minutes with Lama.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/37687b48ec895f03c713773b7f17e6d9a0658809.jpg"
+  },
+  {
+   "key": "Survive31MinutesInDairyPlant",
+   "name": "XX - Silent Old Sanctuary",
+   "description": "Reach minute 31 in the Dairy Plant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c287aa567776718281895b7332e48d910c46bb01.jpg"
+  },
+  {
+   "key": "Survive31MinutesInForest",
+   "name": "VIII - Mad Groove",
+   "description": "Reach minute 31 in the Mad Forest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/532ef0ca6234ed433c2e4561b0205d94a60722af.jpg"
+  },
+  {
+   "key": "Survive31MinutesInLibrary",
+   "name": "XV - Disco of Gold",
+   "description": "Reach minute 31 in the Inlaid Library.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1d77e7ff9d5dae8f3b24474517de737cf3f0a3d6.jpg"
+  },
+  {
+   "key": "Survive31MinutesInTower",
+   "name": "XII - Out of Bounds",
+   "description": "Reach minute 31 in the Gallo Tower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/3e5d9788072b3372aeed959e9ca43b97cb4ed982.jpg"
+  },
+  {
+   "key": "Survive5MinutesWithDiamond",
+   "name": "Runetracer",
+   "description": "Survive 5 minutes with Pasqualina.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/7b8919c85b4340e77d4f6b18b16c4c01c22347a3.jpg"
+  },
+  {
+   "key": "Survive5MinutesWithKnife",
+   "name": "Pummarola",
+   "description": "Survive 5 minutes with Gennaro.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/1e031c116e4560049cc50aa87faf744f973aa7eb.jpg"
+  },
+  {
+   "key": "SurviveUntilTheEndOfWhiteout",
+   "name": "EXTRA: She-Moon Eeta",
+   "description": "Survive 20 minutes in Whiteout.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/9ec905abeaee7115cf03c88e9577202eab9eb492.jpg"
+  },
+  {
+   "key": "UniteBirds",
+   "name": "Vandalier",
+   "description": "Unite Ebony Wings and Peachone.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/8de37bd6510712e95e6ac21af480b2898d5c8394.jpg"
+  },
+  {
+   "key": "Unlock2Hypers",
+   "name": "Green Acres",
+   "description": "Unlock Hyper mode for 2 normal stages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/96ab6a2d0ff6d0303d48aa91b8f57767f686634e.jpg"
+  },
+  {
+   "key": "Unlock3Hypers",
+   "name": "Il Molise",
+   "description": "Unlock Hyper mode for any normal stage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/c5aea0eb611ee2987edfa8980f56fc8d30fb7146.jpg"
+  },
+  {
+   "key": "Unlock3Hypers_Correct",
+   "name": "The Bone Zone",
+   "description": "Unlock Hyper mode for 3 normal stages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/41c2e9d32067f6eea738e2dd197d4ec31504c56a.jpg"
+  },
+  {
+   "key": "Unlock4Hypers",
+   "name": "Moongolow",
+   "description": "Unlock Hyper mode for 4 normal stages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/08b2672a3a5a1d25da1268be6c2d1c0ee359c080.jpg"
+  },
+  {
+   "key": "Unlock5Hypers",
+   "name": "Boss Rash",
+   "description": "Unlock Hyper mode for all 5 normal stages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/3733efd1ced3ac65f794098b5d1ebf6e196ce0f3.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Vampire Survivors",
+   "achievements": [
+    {
+     "apiname": "ReachLV5",
+     "achieved": 1,
+     "unlocktime": 1667441460,
+     "name": "Wings",
+     "description": "Reach Level 5."
+    },
+    {
+     "apiname": "ReachLV10",
+     "achieved": 1,
+     "unlocktime": 1667441460,
+     "name": "Crown",
+     "description": "Reach Level 10."
+    },
+    {
+     "apiname": "Survive1Minute",
+     "achieved": 1,
+     "unlocktime": 1667441460,
+     "name": "Hollow Heart",
+     "description": "Survive 1 minute with any character."
+    },
+    {
+     "apiname": "Survive5MinutesWithDiamond",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Runetracer",
+     "description": "Survive 5 minutes with Pasqualina."
+    },
+    {
+     "apiname": "Survive10Minutes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peachone",
+     "description": "Survive 10 minutes with any character."
+    },
+    {
+     "apiname": "GetFireWandToLevel4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arca",
+     "description": "Get Fire Wand to Level 4."
+    },
+    {
+     "apiname": "GetHolyBookToLevel4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bracer",
+     "description": "Get King Bible to Level 4."
+    },
+    {
+     "apiname": "GetHolyWaterToLevel4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Candelabrador",
+     "description": "Get Santa Water to Level 4."
+    },
+    {
+     "apiname": "GetLightningRingToLevel4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Porta",
+     "description": "Get Lightning Ring to Level 4."
+    },
+    {
+     "apiname": "GetMagicMissileToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Duplicator",
+     "description": "Get Magic Wand to Level 7."
+    },
+    {
+     "apiname": "GetPeachoneToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ebony Wings",
+     "description": "Get Peachone to Level 7."
+    },
+    {
+     "apiname": "GetRunetracerToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spellbinder",
+     "description": "Get Runetracer to Level 7."
+    },
+    {
+     "apiname": "Have6DifferentWeapons",
+     "achieved": 1,
+     "unlocktime": 1667441459,
+     "name": "Empty Tome",
+     "description": "Hold 6 different weapons at once."
+    },
+    {
+     "apiname": "Destroy20Candles",
+     "achieved": 1,
+     "unlocktime": 1668566815,
+     "name": "Fire Wand",
+     "description": "Destroy 20 light sources."
+    },
+    {
+     "apiname": "Eat5PotRoast",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Garlic",
+     "description": "Find 5 Floor Chickens."
+    },
+    {
+     "apiname": "FindAClover",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clover",
+     "description": "Find a Little Clover."
+    },
+    {
+     "apiname": "FindAVacuum",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magnet",
+     "description": "Find a Vacuum."
+    },
+    {
+     "apiname": "FindAnOrologion",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clock Lancet",
+     "description": "Find an Orologion."
+    },
+    {
+     "apiname": "FindARosary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cross",
+     "description": "Find a Rosary."
+    },
+    {
+     "apiname": "Defeat5000Enemies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lightning Ring",
+     "description": "Defeat a total of 5000 enemies."
+    },
+    {
+     "apiname": "Defeat3000Skeletons",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mortaccio",
+     "description": "Defeat a total of 3000 Skeletons."
+    },
+    {
+     "apiname": "Survive20Minutes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pentagram",
+     "description": "Survive 20 minutes with any character."
+    },
+    {
+     "apiname": "DefeatBossMadForest",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Mad Forest",
+     "description": "Defeat the giant Blue Venus in the Mad Forest."
+    },
+    {
+     "apiname": "DefeatBossLibrary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Inlaid Library",
+     "description": "Defeat the Hag in the Inlaid Library."
+    },
+    {
+     "apiname": "ReachLV20InMadForest",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inlaid Library",
+     "description": "Reach Level 20 in the Mad Forest."
+    },
+    {
+     "apiname": "Survive5MinutesWithKnife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pummarola",
+     "description": "Survive 5 minutes with Gennaro."
+    },
+    {
+     "apiname": "FindAStoneMask",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stone Mask",
+     "description": "Find a Stone Mask."
+    },
+    {
+     "apiname": "EvolveWhip",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bloody Tear",
+     "description": "Evolve the Whip."
+    },
+    {
+     "apiname": "EvolveMagicWand",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Holy Wand",
+     "description": "Evolve the Magic Wand."
+    },
+    {
+     "apiname": "EvolveKnife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thousand Edge",
+     "description": "Evolve the Knife."
+    },
+    {
+     "apiname": "EvolveAxe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death Spiral",
+     "description": "Evolve the Axe."
+    },
+    {
+     "apiname": "EvolveCross",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heaven Sword",
+     "description": "Evolve the Cross."
+    },
+    {
+     "apiname": "EvolveKingBible",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unholy Vespers",
+     "description": "Evolve the King Bible."
+    },
+    {
+     "apiname": "EvolveFireWand",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hellfire",
+     "description": "Evolve the Fire Wand."
+    },
+    {
+     "apiname": "GetGarlicToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poe Ratcho",
+     "description": "Get Garlic to Level 7."
+    },
+    {
+     "apiname": "EvolveGarlic",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soul Eater",
+     "description": "Evolve the Garlic."
+    },
+    {
+     "apiname": "UniteBirds",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vandalier",
+     "description": "Unite Ebony Wings and Peachone."
+    },
+    {
+     "apiname": "Unlock2Hypers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Green Acres",
+     "description": "Unlock Hyper mode for 2 normal stages."
+    },
+    {
+     "apiname": "Recover1000HP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Suor Clerici",
+     "description": "Recover a total of 1000 HP."
+    },
+    {
+     "apiname": "Earn5000CoinsInASingleRun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dommario",
+     "description": "Earn 5000 coins in a single run."
+    },
+    {
+     "apiname": "Defeat100KEnemies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Krochi",
+     "description": "Defeat a total of 100000 enemies."
+    },
+    {
+     "apiname": "Survive20MinutesWithCross",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tiragisú",
+     "description": "Survive 20 minutes with Krochi."
+    },
+    {
+     "apiname": "EvolveSantaWater",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La Borra",
+     "description": "Evolve the Santa Water."
+    },
+    {
+     "apiname": "EvolveLightning",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thunder Loop",
+     "description": "Evolve the Lightning Ring."
+    },
+    {
+     "apiname": "ReachLV100WithMortaccio",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reroll 1",
+     "description": "Reach Level 80 with Mortaccio."
+    },
+    {
+     "apiname": "Survive30MinutesInGreenAcres",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skip 2",
+     "description": "Survive 30 minutes in Green Acres."
+    },
+    {
+     "apiname": "ReachLV100WithCavallo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reroll 2",
+     "description": "Reach Level 80 with Yatta Cavallo."
+    },
+    {
+     "apiname": "Defeat3000Buers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yatta Cavallo",
+     "description": "Defeat a total of 3000 Lion Heads."
+    },
+    {
+     "apiname": "Survive20MinutesWithCurse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lama",
+     "description": "Survive 20 minutes with at least +10% Curse."
+    },
+    {
+     "apiname": "Survive30MinutesWithAxe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skull O'Maniac",
+     "description": "Survive 30 minutes with Lama."
+    },
+    {
+     "apiname": "ReachLV40InLibrary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dairy Plant",
+     "description": "Reach Level 40 in the Inlaid Library."
+    },
+    {
+     "apiname": "DefeatBossPlant",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Dairy Plant",
+     "description": "Defeat the Sword Guardian in the Dairy Plant."
+    },
+    {
+     "apiname": "FindMilkyWayMap",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Milky Way Map",
+     "description": "Find the Milky Way Map."
+    },
+    {
+     "apiname": "FindCoffinStage3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffin: Dairy Plant",
+     "description": "Find and open the coffin in the Dairy Plant."
+    },
+    {
+     "apiname": "Survive15MinutesWithSong",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Song of Mana",
+     "description": "Survive 15 minutes with Poppea."
+    },
+    {
+     "apiname": "EvolveSongOfMana",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mannajja",
+     "description": "Evolve the Song Of Mana."
+    },
+    {
+     "apiname": "GetPentagramToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Christine",
+     "description": "Get Pentagram to Level 7."
+    },
+    {
+     "apiname": "Unlock3Hypers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Il Molise",
+     "description": "Unlock Hyper mode for any normal stage."
+    },
+    {
+     "apiname": "Survive15MinutesInMolise",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skip 1",
+     "description": "Survive 15 minutes in Molise."
+    },
+    {
+     "apiname": "EvolvePentagram",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gorgeous Moon",
+     "description": "Evolve the Pentagram."
+    },
+    {
+     "apiname": "See50Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mindbender",
+     "description": "Fill 50 entries in the Collection."
+    },
+    {
+     "apiname": "FindCoffinStage1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffin: Mad Forest",
+     "description": "Find and open the coffin in the Mad Forest."
+    },
+    {
+     "apiname": "Survive10MinutesWithGuns",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Phiera Der Tuphello",
+     "description": "Survive 10 minutes with Pugnala."
+    },
+    {
+     "apiname": "Survive15MinutesWithGuns",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eight The Sparrow",
+     "description": "Survive 15 minutes with Pugnala."
+    },
+    {
+     "apiname": "EvolveGuns",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Phieraggi",
+     "description": "Evolve and unite Phiera Der Tuphello and Eight The Sparrow."
+    },
+    {
+     "apiname": "EvolveRunetracer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "NO FUTURE",
+     "description": "Evolve the Runetracer."
+    },
+    {
+     "apiname": "ReachLV100WithRamba",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reroll 3",
+     "description": "Reach Level 80 with Bianca Ramba."
+    },
+    {
+     "apiname": "See60Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banish 1",
+     "description": "Fill 60 entries in the Collection."
+    },
+    {
+     "apiname": "DefeatBossTower",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Gallo Tower",
+     "description": "Defeat the Giant Enemy Crab in Gallo Tower."
+    },
+    {
+     "apiname": "FindSorceressTears",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sorceress' Tears",
+     "description": "Find the Sorceress' Tears."
+    },
+    {
+     "apiname": "ReachLV60InDairyPlant",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gallo Tower",
+     "description": "Reach Level 60 in the Dairy Plant."
+    },
+    {
+     "apiname": "Defeat3000Milk",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bianca Ramba",
+     "description": "Defeat a total of 3000 Milk Elementals."
+    },
+    {
+     "apiname": "See70Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banish 2",
+     "description": "Fill 70 entries in the Collection."
+    },
+    {
+     "apiname": "FindRandomazzo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Randomazzo",
+     "description": "Find the Randomazzo."
+    },
+    {
+     "apiname": "Survive15MinutesWithGatti",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gatti Amari",
+     "description": "Survive 15 minutes with Giovanna."
+    },
+    {
+     "apiname": "FindCoffinStage2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffin: Inlaid Library",
+     "description": "Find and open the coffin in the Inlaid Library."
+    },
+    {
+     "apiname": "ReachLV99WithGiovanna",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "V - Chaos in the Dark Night",
+     "description": "Reach Level 50 with Giovanna."
+    },
+    {
+     "apiname": "ReachLV99WithKroci",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IV - Awake",
+     "description": "Reach Level 50 with Krochi."
+    },
+    {
+     "apiname": "FindRandomazzoT06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "VI - Sarabande of Healing",
+     "description": "Find the Randomazzo."
+    },
+    {
+     "apiname": "ReachLV99WithLama",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XVI - Slash",
+     "description": "Reach Level 50 with Lama."
+    },
+    {
+     "apiname": "ReachLV99WithPoppea",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XVII - Lost and Found Painting",
+     "description": "Reach Level 50 with Poppea."
+    },
+    {
+     "apiname": "ReachLV99WithArca",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XIX - Heart of Fire",
+     "description": "Reach Level 50 with Arca."
+    },
+    {
+     "apiname": "Defeat3000Hydra",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "O'Sole Meeo",
+     "description": "Defeat a total of 3000 Dragon Shrimps."
+    },
+    {
+     "apiname": "Unlock3Hypers_Correct",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bone Zone",
+     "description": "Unlock Hyper mode for 3 normal stages."
+    },
+    {
+     "apiname": "Survive30MinutesInBoneZone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skip 3",
+     "description": "Survive 30 minutes in The Bone Zone."
+    },
+    {
+     "apiname": "ReachLV100WithOsole",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reroll 4",
+     "description": "Reach Level 80 with O'Sole Meeo."
+    },
+    {
+     "apiname": "ReachLV99WithImelda",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XI - Waltz of Pearls",
+     "description": "Reach Level 50 with Imelda."
+    },
+    {
+     "apiname": "ReachLV99WithGennaro",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "VII - Iron Blue Will",
+     "description": "Reach Level 50 with Gennaro."
+    },
+    {
+     "apiname": "FindCoffinStage4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffin: Gallo Tower",
+     "description": "Find and open the coffin in the Gallo Tower."
+    },
+    {
+     "apiname": "ReachLV99WithConcetta",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XVIII - Boogaloo of Illusions",
+     "description": "Reach Level 50 with Concetta."
+    },
+    {
+     "apiname": "EvolveGatti",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vicious Hunger",
+     "description": "Evolve the Gatti Amari."
+    },
+    {
+     "apiname": "EvolveShadow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Valkyrie Turner",
+     "description": "Evolve the Shadow Pinion."
+    },
+    {
+     "apiname": "Survive31MinutesInLibrary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XV - Disco of Gold",
+     "description": "Reach minute 31 in the Inlaid Library."
+    },
+    {
+     "apiname": "See80Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banish 3",
+     "description": "Fill 80 entries in the Collection."
+    },
+    {
+     "apiname": "FindMagicBanger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magic Banger",
+     "description": "Find the Magic Banger."
+    },
+    {
+     "apiname": "Survive15MinutesWithShadow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Pinion",
+     "description": "Survive 15 minutes with Concetta."
+    },
+    {
+     "apiname": "Unlock4Hypers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moongolow",
+     "description": "Unlock Hyper mode for 4 normal stages."
+    },
+    {
+     "apiname": "Survive15MinutesInMoongolow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skip 4",
+     "description": "Survive 15 minutes in Moongolow."
+    },
+    {
+     "apiname": "BuyGlassMask",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glass Vizard",
+     "description": "Find and buy the Glass Vizard."
+    },
+    {
+     "apiname": "ReachLV99WithPasqualina",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XIV - Jail of Crystal",
+     "description": "Reach Level 50 with Pasqualina."
+    },
+    {
+     "apiname": "Survive31MinutesInTower",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XII - Out of Bounds",
+     "description": "Reach minute 31 in the Gallo Tower."
+    },
+    {
+     "apiname": "See90Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banish 4",
+     "description": "Fill 90 entries in the Collection."
+    },
+    {
+     "apiname": "FindYellowSign",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yellow Sign",
+     "description": "Find the Yellow Sign."
+    },
+    {
+     "apiname": "ObtainTheInfiniteCorridor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seeker of the Infinite Corridor",
+     "description": "Obtain the Infinite Corridor."
+    },
+    {
+     "apiname": "ObtainTheCrimsonShroud",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seeker of the Crimson Shroud",
+     "description": "Obtain the Crimson Shroud."
+    },
+    {
+     "apiname": "ReachLV99WithAntonio",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "X - Beginning",
+     "description": "Reach Level 50 with Antonio."
+    },
+    {
+     "apiname": "Survive31MinutesInForest",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "VIII - Mad Groove",
+     "description": "Reach minute 31 in the Mad Forest."
+    },
+    {
+     "apiname": "Have6Evolutions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Torrona's Box",
+     "description": "Hold 6 different weapon evolutions at once."
+    },
+    {
+     "apiname": "GetTorroneToLevel9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Omni",
+     "description": "Get Torrona's Box to Level 9."
+    },
+    {
+     "apiname": "FindYellowSignS5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cappella Magna",
+     "description": "Reach Level 80 in the Gallo Tower."
+    },
+    {
+     "apiname": "FindCoffinStage5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffin: Cappella Magna",
+     "description": "Find and open the coffin in the Cappella Magna."
+    },
+    {
+     "apiname": "Survive15MinutesWithWind",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vento Sacro",
+     "description": "Survive 15 minutes with Zi'Assunta."
+    },
+    {
+     "apiname": "EvolveWind",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fuwalafuwaloo",
+     "description": "Unite Vento Sacro and Bloody Tear."
+    },
+    {
+     "apiname": "DefeatBossChapel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Cappella Magna",
+     "description": "Defeat the Trinacria in the Cappella Magna."
+    },
+    {
+     "apiname": "Defeat6000StageKillers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sir Ambrojoe",
+     "description": "Defeat a total of 6000 Stage Killers."
+    },
+    {
+     "apiname": "ReachLV99WithPorta",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "III - Tragic Princess",
+     "description": "Reach Level 50 with Porta."
+    },
+    {
+     "apiname": "Survive31MinutesInDairyPlant",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XX - Silent Old Sanctuary",
+     "description": "Reach minute 31 in the Dairy Plant."
+    },
+    {
+     "apiname": "See100Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Banish 5",
+     "description": "Fill 100 entries in the Collection."
+    },
+    {
+     "apiname": "ReachLV100WithAmbrojoe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reroll 5",
+     "description": "Reach Level 80 with Sir Ambrojoe."
+    },
+    {
+     "apiname": "FindGrimoire",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grim Grimoire",
+     "description": "Find the Grim Grimoire."
+    },
+    {
+     "apiname": "FindGouda",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ars Gouda",
+     "description": "Find the Ars Gouda."
+    },
+    {
+     "apiname": "FindGGospel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Great Gospel",
+     "description": "Find the Great Gospel."
+    },
+    {
+     "apiname": "DefeatBossChapel2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Game Killer",
+     "description": "Defeat the final enemy in the Cappella Magna."
+    },
+    {
+     "apiname": "Unlock5Hypers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boss Rash",
+     "description": "Unlock Hyper mode for all 5 normal stages."
+    },
+    {
+     "apiname": "Survive15MinutesInBossRash",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skip 5",
+     "description": "Survive 15 minutes in Boss Rash."
+    },
+    {
+     "apiname": "ReachLV99WithDommario",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "II - Twilight Requiem",
+     "description": "Reach Level 50 with Dommario."
+    },
+    {
+     "apiname": "ReachLV99WithPugnala",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I - Gemini",
+     "description": "Reach Level 50 with Pugnala."
+    },
+    {
+     "apiname": "FindForbiddenScroll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forbidden Scrolls",
+     "description": "Find the Forbidden Scrolls of Morbane."
+    },
+    {
+     "apiname": "ReachLV99WithChristine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XIII - Wicked Season",
+     "description": "Reach Level 50 with Christine."
+    },
+    {
+     "apiname": "CompleteCollection",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Queen Sigma",
+     "description": "Complete the Collection 1.0."
+    },
+    {
+     "apiname": "Defeat100kWithSigma",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Victory Sword",
+     "description": "Defeat 100000 enemies in a single run with Queen Sigma."
+    },
+    {
+     "apiname": "ReachLV99WithClerici",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IX - Divine Bloodline",
+     "description": "Reach Level 50 with Suor Clerici."
+    },
+    {
+     "apiname": "ReachLV99WithPoe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "XXI - Blood Astronomia",
+     "description": "Reach Level 50 with Poe."
+    },
+    {
+     "apiname": "GalloDivano",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bracelet",
+     "description": "Survive 30 minutes with either Gallo or Divano."
+    },
+    {
+     "apiname": "EvolveBracelet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tri-Bracelet",
+     "description": "Evolve the Bracelet and then the Bi-Bracelet."
+    },
+    {
+     "apiname": "EvolveAll",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Candybox",
+     "description": "Discover every standard evolution and union."
+    },
+    {
+     "apiname": "ObtainAllRelics",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Eudaimonia Machine",
+     "description": "Obtain all standard relics from all stages."
+    },
+    {
+     "apiname": "ObtainGraciasMirror",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gracia's Mirror",
+     "description": "Obtain Gracia's Mirror."
+    },
+    {
+     "apiname": "ObtainSeventhTrumpet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seventh Trumpet",
+     "description": "Obtain the Seventh Trumpet."
+    },
+    {
+     "apiname": "GreatestJubilee",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Greatest Jubilee",
+     "description": "See the final fireworks."
+    },
+    {
+     "apiname": "Banish10Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Seal I",
+     "description": "Banish 10 or more weapons in a single run."
+    },
+    {
+     "apiname": "ReachLV80InverseTower",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Tiny Bridge",
+     "description": "Reach Level 80 in Inverse Gallo Tower."
+    },
+    {
+     "apiname": "MOON01_FindCoffin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Miang",
+     "description": "Find and open the coffin in Mt.Moonspell."
+    },
+    {
+     "apiname": "MOON02_Survive15Miang",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silver Wind",
+     "description": "Survive 15 minutes with Miang Moonspell."
+    },
+    {
+     "apiname": "MOON03_EvolveSilverWind",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Menya",
+     "description": "Evolve the Silver Wind."
+    },
+    {
+     "apiname": "MOON04_Survive15Menya",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Four Seasons",
+     "description": "Survive 15 minutes with Menya Moonspell."
+    },
+    {
+     "apiname": "MOON05_EvolveFourSeasons",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Syuuto",
+     "description": "Evolve the Four Seasons."
+    },
+    {
+     "apiname": "MOON06_Survive15Syuuto",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Summon Night",
+     "description": "Survive 15 minutes with Syuuto Moonspell."
+    },
+    {
+     "apiname": "MOON07_EvolveSummonNight",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Babi-Onna",
+     "description": "Evolve the Summon Night."
+    },
+    {
+     "apiname": "MOON08_Survive15BabiOnna",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mirage Robe",
+     "description": "Survive 15 minutes with Babi-Onna."
+    },
+    {
+     "apiname": "MOON09_EvolveMirageRobe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "McCoy-Oni",
+     "description": "Evolve the Mirage Robe."
+    },
+    {
+     "apiname": "MOON10_Survive15McCoy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "108 Bocce",
+     "description": "Survive 15 minutes with McCoy-Oni."
+    },
+    {
+     "apiname": "MOON11_Defeat100kVanya",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Megalo Menya",
+     "description": "Defeat 100000 enemies in a single run with Menya Moonspell."
+    },
+    {
+     "apiname": "MOON12_Defeat100kVadjouel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Megalo Syuuto",
+     "description": "Defeat 100000 enemies in a single run with Syuuto Moonspell."
+    },
+    {
+     "apiname": "MOON13_Defeat6kWater",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gav'Et-Oni",
+     "description": "Defeat 6000 Kappa."
+    },
+    {
+     "apiname": "MOON14_FindNightSword",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Night Sword",
+     "description": "Find a Night Sword."
+    },
+    {
+     "apiname": "MOON15_EvolveNightSword",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Muramasa",
+     "description": "Evolve the Night Sword."
+    },
+    {
+     "apiname": "MOON16_DefeatBossRuins",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Mt.Moonspell",
+     "description": "Defeat the Orochimario in Mt.Moonspell."
+    },
+    {
+     "apiname": "MOON17_EvolveBubbles",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boo Roo Boolle",
+     "description": "Evolve the Mille Bolle Blu."
+    },
+    {
+     "apiname": "ReachLV80InverseForest",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Bat Country",
+     "description": "Reach Level 80 in Inverse Mad Forest."
+    },
+    {
+     "apiname": "FindApoplexy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Apoplexy",
+     "description": "Find the Apoplexy at minute 09:00 in Bat Country."
+    },
+    {
+     "apiname": "FindChaosMalachite",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Chaos Malachite",
+     "description": "Find the Chaos Malachite at minute 18:00 in Bat Country."
+    },
+    {
+     "apiname": "Banish20Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Seal II",
+     "description": "Banish 20 or more weapons in a single run."
+    },
+    {
+     "apiname": "FOSC01_FindCoffin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eleanor Uziron",
+     "description": "Find and open the coffin in Lake Foscari."
+    },
+    {
+     "apiname": "FOSC02_Survive15Eleanor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SpellString",
+     "description": "Survive 15 minutes with Eleanor Uziron."
+    },
+    {
+     "apiname": "FOSC03_GetStreamToLevel6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SpellStream",
+     "description": "Get SpellStream to Level 6."
+    },
+    {
+     "apiname": "FOSC04_GetStrikeToLevel6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SpellStrike",
+     "description": "Get SpellStrike to Level 6."
+    },
+    {
+     "apiname": "FOSC05_UniteSpells",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maruto Cuts",
+     "description": "Unite SpellString, SpellStream, and SpellStrike."
+    },
+    {
+     "apiname": "FOSC06_Survive15Viktor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eskizzibur",
+     "description": "Survive 15 minutes with Maruto Cuts."
+    },
+    {
+     "apiname": "FOSC07_EvolveEskizzibur",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Keitha Muort",
+     "description": "Evolve the Eskizzibur."
+    },
+    {
+     "apiname": "FOSC08_Survive15Keira",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flash Arrow",
+     "description": "Survive 15 minutes with Keitha Muort."
+    },
+    {
+     "apiname": "FOSC09_EvolveFlashArrow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Millionaire",
+     "description": "Evolve the Flash Arrow."
+    },
+    {
+     "apiname": "FOSC10_BreakSeal1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Abyss Foscari",
+     "description": "With Keitha, break the Seal of the Lake."
+    },
+    {
+     "apiname": "FOSC11_BreakSeal2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Luminaire Foscari",
+     "description": "With Maruto, break the Seal of the Abyss."
+    },
+    {
+     "apiname": "FOSC12_BreakSeal3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Genevieve Gruyère",
+     "description": "With Eleanor, break the Seal of the Banished."
+    },
+    {
+     "apiname": "FOSC13_Survive15Luminaire",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prismatic Missile",
+     "description": "Survive 15 minutes with Luminaire Foscari."
+    },
+    {
+     "apiname": "FOSC14_EvolvePrismatic",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Luminaire",
+     "description": "Evolve the Prismatic Missile."
+    },
+    {
+     "apiname": "FOSC15_Survive15Genevieve",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Servant",
+     "description": "Survive 15 minutes with Genevieve Gruyère."
+    },
+    {
+     "apiname": "FOSC16_EvolveShadow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ophion",
+     "description": "Evolve the Shadow Servant."
+    },
+    {
+     "apiname": "FOSC17_Defeat100kGenevieve",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Je-Ne-Viv",
+     "description": "Defeat 100000 enemies in a single run with Genevieve Gruyère."
+    },
+    {
+     "apiname": "FOSC18_Defeat6kFairy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Happy Birthday",
+     "description": "Defeat a total of 6000 Sammies."
+    },
+    {
+     "apiname": "FOSC19_Defeat6kHorror",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rottin'Ghoul",
+     "description": "Defeat a total of 6000 Rotting Ghouls."
+    },
+    {
+     "apiname": "FOSC20_DefeatBossLake",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Lake Foscari",
+     "description": "Defeat the Avatar of Gaea in Lake Foscari."
+    },
+    {
+     "apiname": "FOSC21_DefeatBossAbyss",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hyper Abyss Foscari",
+     "description": "Defeat Je-Ne-Viv in Abyss Foscari."
+    },
+    {
+     "apiname": "ReachLV80InverseLibrary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Astral Stair",
+     "description": "Reach Level 80 in Inverse Inlaid Library."
+    },
+    {
+     "apiname": "FindChaosRosalia",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Chaos Rosalia",
+     "description": "Find the Chaos Rosalia in Astral Stair."
+    },
+    {
+     "apiname": "FindTrisection",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Trisection",
+     "description": "Find the Trisection in Astral Stair."
+    },
+    {
+     "apiname": "FindMap_AstralStair",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Astral Stair Map",
+     "description": "Find the Astral Stair Map."
+    },
+    {
+     "apiname": "MOON18_FindMap_Moonspell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mt.Moonspell Map",
+     "description": "Find the Mt.Moonspell Map."
+    },
+    {
+     "apiname": "FOSC22_FindMap_Foscari",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lake Foscari Map",
+     "description": "Find the Lake Foscari Map."
+    },
+    {
+     "apiname": "FindChaosAltemanna",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Chaos Altemanna",
+     "description": "Find the Chaos Altemanna in Tiny Bridge."
+    },
+    {
+     "apiname": "FindManyOrologions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Whiteout",
+     "description": "Find 20 Orologions."
+    },
+    {
+     "apiname": "GetGlassFandangoToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Glass Fandango",
+     "description": "Get Glass Fandango to Level 7."
+    },
+    {
+     "apiname": "EvolveGlassFandango",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Celestial Voulge",
+     "description": "Evolve the Glass Fandango."
+    },
+    {
+     "apiname": "SurviveUntilTheEndOfWhiteout",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: She-Moon Eeta",
+     "description": "Survive 20 minutes in Whiteout."
+    },
+    {
+     "apiname": "FindAntidote",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Antidote",
+     "description": "Find the Antidote in Whiteout."
+    },
+    {
+     "apiname": "FindAtlas",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Adventures",
+     "description": "Obtain the Atlas Gate in Boss Rash."
+    },
+    {
+     "apiname": "FindManyGoldenFinger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Space 54",
+     "description": "Find 5 Golden Fingers."
+    },
+    {
+     "apiname": "GetPhas3rToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Phas3r",
+     "description": "Get Phas3r to level 7."
+    },
+    {
+     "apiname": "EvolvePhas3r",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Evolve the Phas3r.",
+     "description": "Evolve the Phas3r."
+    },
+    {
+     "apiname": "Survive20MinutesInSpace54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Space Dude",
+     "description": "Survive 20 minutes in Space 54."
+    },
+    {
+     "apiname": "FindBraveStory",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Brave Story",
+     "description": "Find the Brave Story at minute 18 in Space 54."
+    },
+    {
+     "apiname": "DefeatManyBats",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Pako Battiliar",
+     "description": "Defeat a total of 161616 bats."
+    },
+    {
+     "apiname": "EvolveBattilia",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Bat Robbert",
+     "description": "Evolve the Pako Battiliar."
+    },
+    {
+     "apiname": "FindManyRosaries",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Laborratory",
+     "description": "Find 33 Rosaries."
+    },
+    {
+     "apiname": "GetJavelinToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Santa Javelin",
+     "description": "Get Santa Javelin to level 7."
+    },
+    {
+     "apiname": "EvolveJavelin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Seraphic Cry",
+     "description": "Evolve the Santa Javelin."
+    },
+    {
+     "apiname": "Survive20MinutesInLaborratory",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Santa Ladonna",
+     "description": "Survive 20 minutes in Laborratory."
+    },
+    {
+     "apiname": "FindAnArmaDio",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Arma Dio",
+     "description": "Find an Arma Dio."
+    },
+    {
+     "apiname": "HitManyEnemiesWithTrain",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Carlo Cart",
+     "description": "Deal a total of 25120 damage with the Laborratory Train. "
+    },
+    {
+     "apiname": "Banish40Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Seal III",
+     "description": "Banish 40 or more weapons in a single run."
+    },
+    {
+     "apiname": "CompleteAdv_AGarlicParadise",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: A Garlic Paradise",
+     "description": "Complete once the adventure A Garlic Paradise."
+    },
+    {
+     "apiname": "CompleteAdv_WorldOfLightAndDark",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: World of Light and Dark",
+     "description": "Complete once the adventure World of Light and Dark."
+    },
+    {
+     "apiname": "CastForbiddenBox",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Room 1665",
+     "description": "Dare to cast the spell "
+    },
+    {
+     "apiname": "ObtainDarkasso",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Darkasso",
+     "description": "Be embraced by the Darkasso."
+    },
+    {
+     "apiname": "Dark_06Darkasso",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: VI - Moonlight Bolero",
+     "description": "Be embraced by the Darkasso."
+    },
+    {
+     "apiname": "Dark_01SpaceDude",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: I - Sapphire Mist",
+     "description": "Reach a Cooldown bonus of -85% with Space Dude."
+    },
+    {
+     "apiname": "Dark_10Santa",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: X - Hail from the Future",
+     "description": "Trigger a Weird Souls Purifier with Santa Ladonna."
+    },
+    {
+     "apiname": "Dark_12Shemoon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: XII - Crystal Cries",
+     "description": "Trigger a Starry Heavens with She-Moon Eeta."
+    },
+    {
+     "apiname": "Dark_21Robert",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: XXI - Wandering the Jet Black",
+     "description": "Reach 665 Max Health with Bat Robbert."
+    },
+    {
+     "apiname": "FindManyChickens",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Hyper The Coop",
+     "description": "Find 500 Floor Chickens."
+    },
+    {
+     "apiname": "FindAParmAegis",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Parm Aegis",
+     "description": "Find a Parm Aegis in The Coop."
+    },
+    {
+     "apiname": "FindChickenClock",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Game Speed Modifier",
+     "description": "Find the Roast chicken with a clock in the middle at the end of The Coop."
+    },
+    {
+     "apiname": "Defeat0EnemiesInCoop",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Gaze of Gaea",
+     "description": "Defeat 0 enemies in The Coop."
+    },
+    {
+     "apiname": "EvolveOfGaea",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Gazebo",
+     "description": "Survive 20 minutes in The Coop."
+    },
+    {
+     "apiname": "Dark_03Gazebo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: III - Hidden Anathema",
+     "description": "Eat as much as possible with Gazebo."
+    },
+    {
+     "apiname": "Banish80Items",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Seal All",
+     "description": "Banish 80 or more weapons in a single run."
+    },
+    {
+     "apiname": "CompleteAdv_ToEndAnIceAge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: To End An Ice Age",
+     "description": "Complete once the adventure To End An Ice Age."
+    },
+    {
+     "apiname": "EvolveOfGaea_Fix",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Embrace of Gaea",
+     "description": "Evolve the Gaze of Gaea."
+    },
+    {
+     "apiname": "FindManyClovers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Westwoods",
+     "description": "Find 23 Little Clovers."
+    },
+    {
+     "apiname": "Survive20minutesInWestwoods",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Chula-Reh",
+     "description": "Survive 20 minutes in Westwoods. "
+    },
+    {
+     "apiname": "FindKaromasMana",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Karoma's Mana",
+     "description": "Find a Karoma's Mana in Westwoods."
+    },
+    {
+     "apiname": "FindMasquerade",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Masquerade",
+     "description": "Find the Masquerade Relic in Westwoods."
+    },
+    {
+     "apiname": "GetMagiStoneToLevel7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Magi-Stone",
+     "description": "Get Magi-Stone To Level 7."
+    },
+    {
+     "apiname": "EvolveMagiStone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Kyra-Stones",
+     "description": "Evolve the Magi-Stone."
+    },
+    {
+     "apiname": "Dark_13Chula",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: XIII - Call of a Mad Moon",
+     "description": "Reach +999% Luck with Chula-Reh."
+    },
+    {
+     "apiname": "ReachLV80InverseWarehouse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Mazerella",
+     "description": "Reach Level 80 in Inverse Dairy Plant."
+    },
+    {
+     "apiname": "FindChaosLazulia",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Chaos Lazulia",
+     "description": "Find the Chaos Lazulia in Mazerella."
+    },
+    {
+     "apiname": "FindRecycle",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Preserve",
+     "description": "Find the Wax Fetish in Mazerella."
+    },
+    {
+     "apiname": "DefeatShootingEnemies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Ammo Appalate",
+     "description": "Defeat a total of 251096 Shooting Enemies."
+    },
+    {
+     "apiname": "EvolveAmmoAppalate",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: Zi'Appunta Belpaese",
+     "description": "Evolve the Ammo Appalate."
+    },
+    {
+     "apiname": "Dark_05Appunta",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: V - Pale Diamond Incursion",
+     "description": "Find 10 Treasure Chests from Zi'Appunta's ability in a single run."
+    },
+    {
+     "apiname": "Dark_18Challenge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EXTRA: XVIII - Victorian Horror",
+     "description": "Survive 30 minutes with no weapons in Inverse Green Acres."
+    }
+   ],
+   "success": true
+  }
+ }
+}

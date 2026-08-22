@@ -1,0 +1,172 @@
+{
+ "provider": "steam",
+ "title": "Gone Home",
+ "updated": "2026-08-21",
+ "id": "232430",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 2,
+ "total": 10,
+ "first": "2023-02-09",
+ "last": "2023-02-09",
+ "platform": "PC",
+ "icon": "b2328725f61ca5bd5e0286f26e6c61185d1f27f5",
+ "playtime_mins": 85,
+ "playtime": {
+  "windows": 85
+ },
+ "last_played": "2023-02-09",
+ "achievements": [
+  {
+   "key": "Gone Home",
+   "name": "Gone Home",
+   "description": "Completed the game.",
+   "unlocked": true,
+   "date": "2023-02-09T20:45:57-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/5360525d9af2c5d9c54f031e09fc79ab74102ea3.jpg"
+  },
+  {
+   "key": "Homerunner",
+   "name": "Homerunner",
+   "description": "Completed the game in less than 1 minute with no Modifiers enabled.",
+   "unlocked": true,
+   "date": "2023-02-09T20:49:14-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/8c3e423a4e66ff20313d93b0a56cec011eb68bff.jpg"
+  },
+  {
+   "key": "Behind the Scenes",
+   "name": "Behind the Scenes",
+   "description": "Activated all Commentary Nodes with the Developer Commentary Modifier enabled.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/3a3c9369ab20f491367b0afff8373b75dd7f8b47.jpg"
+  },
+  {
+   "key": "Intuitive",
+   "name": "Intuitive",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/44626c7a94b8ade68732cd53ba52ade1b2be8f60.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Letters to Katie",
+   "name": "Letters to Katie",
+   "description": "Completed the game having found all 23 of Sam's journal entries.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/ebcb430e4de7ca1fdb374dcc37c4dfd737637d90.jpg"
+  },
+  {
+   "key": "Meow Meow Meow",
+   "name": "Meow Meow Meow",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/e75de42bfcb6ea20b0f1cfe17b98b5d15df4189c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Nesting Instinct",
+   "name": "Nesting Instinct",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/fa3898bd0f729f2a4d51093a9decaa1b3fbac022.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Speedreader",
+   "name": "Speedreader",
+   "description": "Completed the game having found all 24 journal entries, with no Modifiers enabled, in less than 10 minutes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/c99b0af8a97dcf3477132b8459763a32d6ee9e4c.jpg"
+  },
+  {
+   "key": "This Old House",
+   "name": "This Old House",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/87a662767a5c97a178a51b889d034a0510ad2e56.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Wet Bandit",
+   "name": "Wet Bandit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/232430/0bfc373ce9b2a1cef341c648beac33c17f2aa238.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Gone Home",
+   "achievements": [
+    {
+     "apiname": "Gone Home",
+     "achieved": 1,
+     "unlocktime": 1675997157,
+     "name": "Gone Home",
+     "description": "Completed the game."
+    },
+    {
+     "apiname": "Letters to Katie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Letters to Katie",
+     "description": "Completed the game having found all 23 of Sam's journal entries."
+    },
+    {
+     "apiname": "Meow Meow Meow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meow Meow Meow",
+     "description": ""
+    },
+    {
+     "apiname": "Homerunner",
+     "achieved": 1,
+     "unlocktime": 1675997354,
+     "name": "Homerunner",
+     "description": "Completed the game in less than 1 minute with no Modifiers enabled."
+    },
+    {
+     "apiname": "Speedreader",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedreader",
+     "description": "Completed the game having found all 24 journal entries, with no Modifiers enabled, in less than 10 minutes."
+    },
+    {
+     "apiname": "Behind the Scenes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Behind the Scenes",
+     "description": "Activated all Commentary Nodes with the Developer Commentary Modifier enabled."
+    },
+    {
+     "apiname": "Nesting Instinct",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nesting Instinct",
+     "description": ""
+    },
+    {
+     "apiname": "Wet Bandit",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wet Bandit",
+     "description": ""
+    },
+    {
+     "apiname": "Intuitive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Intuitive",
+     "description": ""
+    },
+    {
+     "apiname": "This Old House",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This Old House",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

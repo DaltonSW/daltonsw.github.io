@@ -1,0 +1,326 @@
+{
+ "provider": "steam",
+ "title": "Before the Echo",
+ "updated": "2026-08-21",
+ "id": "200910",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 5,
+ "total": 21,
+ "first": "2014-04-25",
+ "last": "2014-06-04",
+ "platform": "PC",
+ "icon": "7f35c4662470a8ff8a726ab4d8847049b1414bc8",
+ "playtime_mins": 90,
+ "last_played": "2014-06-04",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_SHARP",
+   "name": "Precision",
+   "description": "Complete a battle without failing a spell.",
+   "unlocked": true,
+   "date": "2014-04-25T23:19:41-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/1dd80e6dd2fd0a3ef913a2d44d7e424961ca50c3.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_WAY",
+   "name": "On Your Way",
+   "description": "Successfully defeat your first enemy.",
+   "unlocked": true,
+   "date": "2014-04-25T23:19:41-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/124f5e47769c1419787cd78c28c9c7bd58aa1838.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_WINTER",
+   "name": "Yet, I Love The Holidays",
+   "description": "Defeat the Holiday Whompa.",
+   "unlocked": true,
+   "date": "2014-04-25T23:30:37-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/f3d438b4d6d7f7d76bab277d9fec4a7a02569f4e.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_MANAFONT",
+   "name": "Manafont",
+   "description": "Recover over 150 mana in a single battle, and win.",
+   "unlocked": true,
+   "date": "2014-06-04T20:30:49-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/fbade1bacea43d3bbb0388c3e5e3b47bc3ab2af2.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_TRIPLE",
+   "name": "Triple Fortune",
+   "description": "Obtain all three droppable items from any single enemy.",
+   "unlocked": true,
+   "date": "2014-06-04T20:35:54-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/04083409e3e0086fdcfc00ab4efada8681886c41.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_AIL",
+   "name": "Ail For What Cures Ya",
+   "description": "Defeat an enemy using only poison spells.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/9e3677082432ea8e2a7006331e7c7ffbcf2ce4b6.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_ARCLIT",
+   "name": "Arclit",
+   "description": "Defeat an enemy on the seventh floor using only Arclight.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/7d74ed0d2aae6f32aff8ea7d828e8e2938cadeeb.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_BUZZER",
+   "name": "Buzzer Beater",
+   "description": "Defeat an enemy with less than one second remaining on the clock.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/a0bfbe49c3b105c45941fe3232beaa29336b7d4e.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_CASTLE",
+   "name": "Another Castle",
+   "description": "Get her back.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/b7406d47dbe66537b95cf9947eada9ee7285d147.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_CREATION",
+   "name": "A Little Too Into It",
+   "description": "Synthesize every recipe in the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/fbc48d38c650d7555b6a45b04bebe97fe4829ae7.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_DAWG",
+   "name": "Yo Dawg",
+   "description": "Trigger Boost a Trigger Boost.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/e2406c5206ba2a398484e1d2065592c1d032cdc9.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_ELEMENT",
+   "name": "Element 77",
+   "description": "Synthesize Iridium.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/f9d4538f4a1f5694306df81fe230767f7957e89b.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_ERUDITE",
+   "name": "Erudite",
+   "description": "Learn all spells.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/3b92c1439e8206888113253261a1481a4aa10cfa.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_HOARDER",
+   "name": "Presents Are Accounted For",
+   "description": "Obtain every droppable item in the game at least once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/98a7844b9b36bc1709316838118494d805047648.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_IRIS",
+   "name": "Iris",
+   "description": "Discover the name of she who controls fate.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/f7baff01ec10d4a9b4da8bfbd8bd6834fe7aefe3.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_LIES",
+   "name": "Lies Within Lies",
+   "description": "See the hidden ending.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/ee0284a816958a4356bbff8f26da7ab1c0761f7e.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_MEANT",
+   "name": "Meant For Each Other",
+   "description": "Beat the game on any difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/a29153dee6a64a39dcbd13cc810f967ffb994b67.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_PERFECT",
+   "name": "Perfect Run",
+   "description": "While learning a spell, achieve 100% accuracy for the entire song.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/6ef56e94c4380442f1ebac80f54037fcc786fbbc.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_QUARTER",
+   "name": "Quarter Quell",
+   "description": "Successfully complete a synthesis at 25% odds of success or lower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/a3d503f24b3eb32da34b41706c6571bff6439afd.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_QUEUE",
+   "name": "P's And Queue's",
+   "description": "Queue up five spells in a row.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/60d839ffb07ac1f2ee69b9173cde975764a5c2b7.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_STITCH",
+   "name": "Time Despair",
+   "description": "Defeat an enemy within eleven seconds.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200910/0936ae26756ffa7635e404b8095973e7831c7546.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Before the Echo",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_IRIS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Iris",
+     "description": "Discover the name of she who controls fate."
+    },
+    {
+     "apiname": "ACHIEVEMENT_WAY",
+     "achieved": 1,
+     "unlocktime": 1398485981,
+     "name": "On Your Way",
+     "description": "Successfully defeat your first enemy."
+    },
+    {
+     "apiname": "ACHIEVEMENT_CASTLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Another Castle",
+     "description": "Get her back."
+    },
+    {
+     "apiname": "ACHIEVEMENT_MEANT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meant For Each Other",
+     "description": "Beat the game on any difficulty."
+    },
+    {
+     "apiname": "ACHIEVEMENT_ELEMENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Element 77",
+     "description": "Synthesize Iridium."
+    },
+    {
+     "apiname": "ACHIEVEMENT_LIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lies Within Lies",
+     "description": "See the hidden ending."
+    },
+    {
+     "apiname": "ACHIEVEMENT_ERUDITE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Erudite",
+     "description": "Learn all spells."
+    },
+    {
+     "apiname": "ACHIEVEMENT_AIL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ail For What Cures Ya",
+     "description": "Defeat an enemy using only poison spells."
+    },
+    {
+     "apiname": "ACHIEVEMENT_ARCLIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arclit",
+     "description": "Defeat an enemy on the seventh floor using only Arclight."
+    },
+    {
+     "apiname": "ACHIEVEMENT_QUARTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quarter Quell",
+     "description": "Successfully complete a synthesis at 25% odds of success or lower."
+    },
+    {
+     "apiname": "ACHIEVEMENT_SHARP",
+     "achieved": 1,
+     "unlocktime": 1398485981,
+     "name": "Precision",
+     "description": "Complete a battle without failing a spell."
+    },
+    {
+     "apiname": "ACHIEVEMENT_BUZZER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Buzzer Beater",
+     "description": "Defeat an enemy with less than one second remaining on the clock."
+    },
+    {
+     "apiname": "ACHIEVEMENT_STITCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Time Despair",
+     "description": "Defeat an enemy within eleven seconds."
+    },
+    {
+     "apiname": "ACHIEVEMENT_MANAFONT",
+     "achieved": 1,
+     "unlocktime": 1401931849,
+     "name": "Manafont",
+     "description": "Recover over 150 mana in a single battle, and win."
+    },
+    {
+     "apiname": "ACHIEVEMENT_HOARDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Presents Are Accounted For",
+     "description": "Obtain every droppable item in the game at least once."
+    },
+    {
+     "apiname": "ACHIEVEMENT_TRIPLE",
+     "achieved": 1,
+     "unlocktime": 1401932154,
+     "name": "Triple Fortune",
+     "description": "Obtain all three droppable items from any single enemy."
+    },
+    {
+     "apiname": "ACHIEVEMENT_DAWG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yo Dawg",
+     "description": "Trigger Boost a Trigger Boost."
+    },
+    {
+     "apiname": "ACHIEVEMENT_QUEUE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "P's And Queue's",
+     "description": "Queue up five spells in a row."
+    },
+    {
+     "apiname": "ACHIEVEMENT_PERFECT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect Run",
+     "description": "While learning a spell, achieve 100% accuracy for the entire song."
+    },
+    {
+     "apiname": "ACHIEVEMENT_CREATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Little Too Into It",
+     "description": "Synthesize every recipe in the game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_WINTER",
+     "achieved": 1,
+     "unlocktime": 1398486637,
+     "name": "Yet, I Love The Holidays",
+     "description": "Defeat the Holiday Whompa."
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "provider": "steam",
+ "title": "rymdkapsel",
+ "updated": "2026-08-21",
+ "id": "253790",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 3,
+ "total": 10,
+ "first": "2014-02-01",
+ "last": "2014-02-02",
+ "platform": "PC",
+ "icon": "3d295bd1b436f897922849705ef13b8e7b219c57",
+ "playtime_mins": 104,
+ "last_played": "2014-02-02",
+ "achievements": [
+  {
+   "key": "researchAnyMonolith",
+   "name": "Research Any Monolith",
+   "description": "A journey of a thousand miles begins with a single step.",
+   "unlocked": true,
+   "date": "2014-02-01T11:15:05-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/d70141fec44b5ad228a3f96b5f00559d2f9c154a.jpg"
+  },
+  {
+   "key": "researchAllMonoliths",
+   "name": "Research All Monoliths",
+   "description": "The depths of space hides a secret. Unlock it.",
+   "unlocked": true,
+   "date": "2014-02-02T22:18:27-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/e456858fdd9abdfaeafa8000f8b3e43d7eac57cf.jpg"
+  },
+  {
+   "key": "researchAllMonolithsFast",
+   "name": "Research All Monoliths with Haste",
+   "description": "Can you reach wisdom before 45 minutes have passed?",
+   "unlocked": true,
+   "date": "2014-02-02T22:18:39-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/2409633e4130567ad7a1d8d4dfb3a0b88eb1a57e.jpg"
+  },
+  {
+   "key": "extractManyResources",
+   "name": "Extract Many Resources",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/7c8a7a210b201e0fc5a435bb826b7f0db0ff941d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "lastManyWaves",
+   "name": "Last Many Waves",
+   "description": "The onslaught is relentless. Can you hold on for 28 waves?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/5700240bd0e7d73fb114920ea1dedc1e63232a1a.jpg"
+  },
+  {
+   "key": "lastManyWavesNoBarracks",
+   "name": "Last Many Waves Without Quarters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/5be2398654efaef288c70532c3e9d6da98162d60.jpg",
+   "hidden": true
+  },
+  {
+   "key": "lastManyWavesNoUpgrade",
+   "name": "Point of Origin",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/853bfacc911ad3caaec6a52701634b9810f89b83.jpg",
+   "hidden": true
+  },
+  {
+   "key": "lastManyWavesPlus",
+   "name": "Last Many Waves (+)",
+   "description": "Different Yet the Same.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/5fe5da3583c979e2258777ffe2d77eae2f0d7272.jpg"
+  },
+  {
+   "key": "researchAllMonolithsFastPlus",
+   "name": "Research All Monoliths with Haste (+)",
+   "description": "The only true wisdom is in knowing you know nothing.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/4c521b760f488672047fe458b6dd5ad6316bd95f.jpg"
+  },
+  {
+   "key": "researchAllMonolithsPlus",
+   "name": "Research All Monoliths (+)",
+   "description": "And when you gaze long into an abyss the abyss also gazes into you.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/a98eec82a6808df371363905b532f3ba30340846.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "rymdkapsel",
+   "achievements": [
+    {
+     "apiname": "researchAnyMonolith",
+     "achieved": 1,
+     "unlocktime": 1391274905,
+     "name": "Research Any Monolith",
+     "description": "A journey of a thousand miles begins with a single step."
+    },
+    {
+     "apiname": "researchAllMonoliths",
+     "achieved": 1,
+     "unlocktime": 1391401107,
+     "name": "Research All Monoliths",
+     "description": "The depths of space hides a secret. Unlock it."
+    },
+    {
+     "apiname": "lastManyWaves",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last Many Waves",
+     "description": "The onslaught is relentless. Can you hold on for 28 waves?"
+    },
+    {
+     "apiname": "researchAllMonolithsFast",
+     "achieved": 1,
+     "unlocktime": 1391401119,
+     "name": "Research All Monoliths with Haste",
+     "description": "Can you reach wisdom before 45 minutes have passed?"
+    },
+    {
+     "apiname": "lastManyWavesNoUpgrade",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Point of Origin",
+     "description": ""
+    },
+    {
+     "apiname": "researchAllMonolithsPlus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Research All Monoliths (+)",
+     "description": "And when you gaze long into an abyss the abyss also gazes into you."
+    },
+    {
+     "apiname": "lastManyWavesPlus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last Many Waves (+)",
+     "description": "Different Yet the Same."
+    },
+    {
+     "apiname": "researchAllMonolithsFastPlus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Research All Monoliths with Haste (+)",
+     "description": "The only true wisdom is in knowing you know nothing."
+    },
+    {
+     "apiname": "extractManyResources",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extract Many Resources",
+     "description": ""
+    },
+    {
+     "apiname": "lastManyWavesNoBarracks",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last Many Waves Without Quarters",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

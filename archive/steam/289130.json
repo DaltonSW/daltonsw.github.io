@@ -1,0 +1,1975 @@
+{
+ "provider": "steam",
+ "title": "ENDLESS Legend™",
+ "updated": "2026-08-21",
+ "id": "289130",
+ "fetched": "2026-08-21",
+ "last_attempt": "2026-08-21",
+ "unlocked": 2,
+ "total": 139,
+ "first": "2015-12-22",
+ "last": "2015-12-22",
+ "platform": "PC",
+ "icon": "02277be6b9b09671b857948006316057974d7036",
+ "playtime_mins": 72,
+ "last_played": "2015-12-22",
+ "achievements": [
+  {
+   "key": "TURNS_PLAYED1",
+   "name": "Toe in the Water",
+   "description": "Play for 10 turns, across any number of playthroughs.",
+   "unlocked": true,
+   "date": "2015-12-22T14:38:21-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/b8470b529d4354da686987b9e8485730cea6c26e.jpg"
+  },
+  {
+   "key": "MULTIPLAYER_GAME",
+   "name": "Press the Flesh",
+   "description": "Play a game in multiplayer with at least one another human.",
+   "unlocked": true,
+   "date": "2015-12-22T14:38:21-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/19ada888e7a875a54af8ff1a82e9aeee9633e1d0.jpg"
+  },
+  {
+   "key": "ALL_COLOSSI",
+   "name": "Collect'em All",
+   "description": "Have the 5 different Guardians at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/d4a64a1647a9000a3c59f779abca7076542c16e0.jpg"
+  },
+  {
+   "key": "ALL_FINAL_QUEST_COMPLETER",
+   "name": "Know Thy Enemy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/00c7b09ab6083b86fb7570b538590ad17005f011.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ALL_FIS_BOOSTER_USED",
+   "name": "Squirreling Away",
+   "description": "Use a Food, a Science, and an Industry stockpile in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/7da9d56ae6c7d2f99bc330298f03dc3fe91891e9.jpg"
+  },
+  {
+   "key": "ALL_FORTRESSES",
+   "name": "Maritime Monopoly",
+   "description": "Control every Fortress in the world.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/d24081adc58fb078784584a7be77197602bf1937.jpg"
+  },
+  {
+   "key": "ALL_GEOMANCY_BUFFS",
+   "name": "Geomancer's Delight",
+   "description": "Possess a unit with all Geomancy buffs active simultaneously.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/895d7acce527661cfbd81fa8acea5475476d9cbb.jpg"
+  },
+  {
+   "key": "ALL_LUXURY_BOOSTER_USED",
+   "name": "Guinea Pig",
+   "description": "Use a booster of each luxury resource, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c53193d677df0f9c3596a975e3e1a8dcc23227f5.jpg"
+  },
+  {
+   "key": "ALL_MAP_BOOSTS_BUFFS",
+   "name": "A Total Eclipse Of The Art",
+   "description": "Possess an army with all Dust Eclipse map-based buffs active simultaneously.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/27ddda3e4aa9fd72638dfdb8c6b322f2851f7aba.jpg"
+  },
+  {
+   "key": "ALL_MEDALS",
+   "name": "Heedful, Deedful",
+   "description": "Complete all the Legendary Deeds, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c9da48319a4fd1dbdf55f9152a60c62a4085826f.jpg"
+  },
+  {
+   "key": "ALL_ORB_UNLOCKS",
+   "name": "Jeweller's Shop",
+   "description": "Unlock all Blessings of the Altar of Auriga in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c7c7e66ba6af9a3970872726f52e27c95d9998bc.jpg"
+  },
+  {
+   "key": "ALL_STRATEGIC_EXTRACTORS",
+   "name": "What's Mined is Mine",
+   "description": "Exploit each kind of strategic resource in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/461396d07c9b93af3b09ed23b9df8638e0c10621.jpg"
+  },
+  {
+   "key": "ALL_STRATEGIC_RESOURCES",
+   "name": "Just in Case",
+   "description": "Have 100 of each strategic resource.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/2ab5cde2ca6ba2491c97249b2f28440fa4aec1c6.jpg"
+  },
+  {
+   "key": "ALL_UNIQUE_FACILITIES",
+   "name": "Facility Completionist",
+   "description": "Control each of the unique facilities across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/7f25478d9968b0c99bd1f0c3484e9cc268e51c77.jpg"
+  },
+  {
+   "key": "ALL_WONDERS",
+   "name": "Marvelous",
+   "description": "Have the 5 Legendary Buildings at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/6e7daf0f5fec3d3441e3d5d783ea50b9f8c18c19.jpg"
+  },
+  {
+   "key": "ARDENT_MAGES_MANY_PILLARS",
+   "name": "Landscaping",
+   "description": "With the Ardent Mages, have 5 pillars at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1e044e3a296aeb5b75cd005a0427d05341bb0089.jpg"
+  },
+  {
+   "key": "ATTACK_ALLY_WITH_PRIVATEERS",
+   "name": "Who, Me?",
+   "description": "Attack a friendly army with privateers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/74e12e8d171f7beefc938f82d23db15d1e3515de.jpg"
+  },
+  {
+   "key": "ATTACK_LAND_WITH_SUBMERSIBLE",
+   "name": "It Came from the Depths",
+   "description": "Attack an army containing only land units with an army containing only submersible units.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3fcf76934475cd983a975979847f828f25137430.jpg"
+  },
+  {
+   "key": "BATTLE_FOMORIANS_VARIETY",
+   "name": "Full Deck",
+   "description": "Win a battle using an army containing each type of Fomorian warship.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a232d1946b4d121e36f710294596c1dd4957f365.jpg"
+  },
+  {
+   "key": "BATTLE_SHIFT_FORM_VARIETY",
+   "name": "Celebrate Diversity",
+   "description": "Fight with an army, reinforcements included, having both Light and Dark forms of each of the Allayi units (Seeker, Skyfin and Monk).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/bb970e1f890bac182953c14477d248ea75475518.jpg"
+  },
+  {
+   "key": "BEST_EMPIRE_PLAN",
+   "name": "Maxed Out",
+   "description": "Activate all the 4th levels in the Empire Plan.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/29bbda975189796130e3cc09c23f10d6d6b1147a.jpg"
+  },
+  {
+   "key": "BEST_SCORE_EARLY_DIFFICULTY3",
+   "name": "Fast Start",
+   "description": "Be the faction with the highest score at turn 25 playing on hard or higher difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/110cbe3baefd647fff7eff3f1e2ae525986aa31e.jpg"
+  },
+  {
+   "key": "BEST_SCORE_EARLY_DIFFICULTY6",
+   "name": "Quick Out of the Blocks",
+   "description": "Be the faction with the highest score at turn 25 playing on Endless difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8d4a09890ff500575c5b6ad47993586874075407.jpg"
+  },
+  {
+   "key": "BLACK_SPOT_USED",
+   "name": "Black Spot, Clean Hands",
+   "description": "As Morgawr, use a Black Spot to prompt the elimination of an empire by a third party.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/eedf1a8ad2a158f8876a4240866b2aac1b726c61.jpg"
+  },
+  {
+   "key": "BROKEN_LORDS_DISTRICT_DUST",
+   "name": "The Not So Broken Lords",
+   "description": "With the Broken Lords, have a district producing more than 10 Dust.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/bf0e2a06e6d3b6e536a4230fcc9ed63d3e4f7cc8.jpg"
+  },
+  {
+   "key": "BROKEN_LORDS_DUST_CONSUMER_OVERALL",
+   "name": "Pyromaniac",
+   "description": "Sacrifice 8000 total HP using Soul Burn over any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/f02c022f1123deecf2f637d946a5fce28bf4fa7a.jpg"
+  },
+  {
+   "key": "BUILDER",
+   "name": "Real Estate Mogul",
+   "description": "Build 100 improvements in your entire Empire in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/2caaf034a38dc9855e4c90028800d2ab8858e164.jpg"
+  },
+  {
+   "key": "CAPTURE_WONDER",
+   "name": "What's Yours is Mine",
+   "description": "Capture a city containing a Legendary Building.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8478683a811a0d0cc7bf31d78351d7d4f13e42a9.jpg"
+  },
+  {
+   "key": "CAST_VOTES_OVERALL",
+   "name": "Devotion",
+   "description": "Spend 1 000 prayers on Winter votes, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/85053b9d590e8839625aab052e3d2768d8c10a4b.jpg"
+  },
+  {
+   "key": "CATCH_AND_RELEASE",
+   "name": "Catch and Release",
+   "description": "Take control of an Urkan owned by another faction and set it free (in the same turn).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3098d96938fa5c4cb3d61d3fe243bd1130734542.jpg"
+  },
+  {
+   "key": "COLLECT_BIG_ORB",
+   "name": "Cultured Pearl",
+   "description": "Collect 1 Pearl Cluster with a value of at least 20.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a943274d74f35ebe440ebad81bb5c67288a4d124.jpg"
+  },
+  {
+   "key": "COLLECT_ORBS_OVERALL",
+   "name": "Pearl Addiction",
+   "description": "Collect 10 000 Pearls, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/b1f5d3830f620569faf7b3cb851adfe0c0e7355a.jpg"
+  },
+  {
+   "key": "COLLECT_ORBS_PLAYTHROUGH",
+   "name": "String of Pearls",
+   "description": "Collect 1 000 Pearls in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/cfe1700f196dc49883b736b20e97d29fc1898b7b.jpg"
+  },
+  {
+   "key": "COLOSSI_KILLER",
+   "name": "The Bigger They are...",
+   "description": "Kill a Guardian.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/0b71ad53a11402f6da4eaeb5f81b46df8f7aae31.jpg"
+  },
+  {
+   "key": "COOP_QUEST_CONTRIBUTOR",
+   "name": "Teamworker",
+   "description": "Contribute to a completed Co-operative Quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/31ff114e2b1ceab5d830c89b36f3e2e27204ea8c.jpg"
+  },
+  {
+   "key": "CREEPING_SPREE",
+   "name": "Blooming Marvelous",
+   "description": "Create 50 Fungal Blooms in a single game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/db62c94a6aa60042bbad117e69de01e034217fe3.jpg"
+  },
+  {
+   "key": "CULTISTS_MANY_CONVERTED_VILLAGES",
+   "name": "I \u003c3 Minions",
+   "description": "With the Cultists, have 20 converted villages at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/e0a786635aa23bcac7f0a81ef86ad9f5fae8d9c7.jpg"
+  },
+  {
+   "key": "CULTISTS_MINIONS_LEGION",
+   "name": "Machiavellian",
+   "description": "Win 8 battles with armies exclusively composed of minor faction units within a single turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a57665c08d7dd6bad9a6f63b3560ccb28dfea6bf.jpg"
+  },
+  {
+   "key": "DIFFICULTY0_VICTORY",
+   "name": "Cruise Control",
+   "description": "Win a game in Newbie or higher difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/74f0e9ab65aadd4d666de52131635b33c9ac68f9.jpg"
+  },
+  {
+   "key": "DIFFICULTY1_VICTORY",
+   "name": "Asleep at the Wheel",
+   "description": "Win a game in Easy or higher difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a519bb8576f0944666ccc1e25cac42950f1780cd.jpg"
+  },
+  {
+   "key": "DIFFICULTY2_VICTORY",
+   "name": "Just Warming Up",
+   "description": "Win a game in Normal or higher difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/d4f34e07a1ed0c95eb6391810ed7f9ae92b96cf8.jpg"
+  },
+  {
+   "key": "DIFFICULTY3_VICTORY",
+   "name": "Strove, Sought, Found, Did Not Yield",
+   "description": "Win a game in Hard or higher difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/5af6cefbe206464a0a1fdbb772db98e6c2d4cd49.jpg"
+  },
+  {
+   "key": "DIFFICULTY4_VICTORY",
+   "name": "Barely Broke a Sweat",
+   "description": "Win a game in Serious or higher difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1f83dbbf976d8c7cfe5fc66906545c777b88e219.jpg"
+  },
+  {
+   "key": "DIFFICULTY5_VICTORY",
+   "name": "Piece of (True) Cake",
+   "description": "Win a game in Impossible or higher difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/45fb5ac68e05aa655c5b10290ac2bb9ab7a9381d.jpg"
+  },
+  {
+   "key": "DIFFICULTY6_VICTORY",
+   "name": "The Learner Is Now the Master",
+   "description": "Win a game in \"Endless\" difficulty against AI.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/30233ba673ef87d89bfe98930e99ae1ccc200887.jpg"
+  },
+  {
+   "key": "DIPLOMACY_VICTORY",
+   "name": "Diplomanic",
+   "description": "Win a Diplomatic Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/f42f75673bcbe5f41ec2286f7e1daa6d9ec23290.jpg"
+  },
+  {
+   "key": "DRAKKENS_INSTANT_WORLD_PEACE",
+   "name": "Peace Talker",
+   "description": "Restore the peace with a least 3 empires within a single turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/d92a6489ad593552fb5d71a9115aaac39ef9bb18.jpg"
+  },
+  {
+   "key": "DRAKKENS_VICTORY_NO_WAR",
+   "name": "Fighting for Peace",
+   "description": "With the Drakken, win a game without having been in war.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/5dacd3fd15f0cd94921494574f66fb47e38849f8.jpg"
+  },
+  {
+   "key": "DRAKKEN_MANY_RUINS_EXPLOITED",
+   "name": "Dungeons \u0026 Drakken",
+   "description": "As the Drakken, exploit at least 5 ruins at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c72ea5cd42acea6b0cb615452f8872ddfeb830bb.jpg"
+  },
+  {
+   "key": "DROWN_ON_ICE",
+   "name": "Berezina",
+   "description": "Lose one army due to the thaw.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3398a94ec3b942afaf23cfc2b8fe01ff76f9839d.jpg"
+  },
+  {
+   "key": "DUST_STORM_AMBUSH",
+   "name": "Dustjacker",
+   "description": "Ambush an enemy army from a Dust Blizzard.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/ccb3e29a004ac3f0aa1844f05059a55ab2fc6b8a.jpg"
+  },
+  {
+   "key": "ECONOMY_VICTORY",
+   "name": "Maybe It Does Buy Happiness",
+   "description": "Win an Economic Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a97d5a53a1be3883428dc9dcd3d3853dd31477d2.jpg"
+  },
+  {
+   "key": "ENEMY_EXPLOITATION_TERRAFORMED",
+   "name": "Scorched Earth Policy",
+   "description": "Volcanoform an enemy city's entire exploited tiles.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1954db1b9ee4369d75e9f5d7b0089d3cc0acafc4.jpg"
+  },
+  {
+   "key": "EXPANSION_VICTORY",
+   "name": "Bigger Is Better",
+   "description": "Win an Expansion Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/4f51065a1fbb89baa3a3cb01eb3515be9fb40548.jpg"
+  },
+  {
+   "key": "FACTIONBROKENLORDS_VICTORY",
+   "name": "Un-Broken",
+   "description": "Win with the Broken Lords.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/36f7cc7de1ef8433a51b4da01e7f84a992cb715e.jpg"
+  },
+  {
+   "key": "FACTIONCULTISTS_VICTORY",
+   "name": "The End is Nigh",
+   "description": "Win with the Cultists of the Eternal End.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c219d1d4e7352895594ac8742ebb2ea4f1330b23.jpg"
+  },
+  {
+   "key": "FACTIONDRAKKENS_VICTORY",
+   "name": "Diplomeisters",
+   "description": "Win with the Drakken.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3664ff9fc1ab5b0d34b772118765bdb6667b8ffd.jpg"
+  },
+  {
+   "key": "FACTIONFLAMES_VICTORY",
+   "name": "Golems Rule!",
+   "description": "Achieve victory with the Kapaku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/98a813be013a8c29f716f38ec702756f857db7d1.jpg"
+  },
+  {
+   "key": "FACTIONMADFAIRIES_VICTORY",
+   "name": "Share This!",
+   "description": "Win with the Wild Walkers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/041559255344a623e56ff4471921aeb855d10768.jpg"
+  },
+  {
+   "key": "FACTIONMIMICS_VICTORY",
+   "name": "Mildew'd",
+   "description": "Win with the Mykara.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/4b193044b5d97d26e3e95b151c4f476dfd4204e1.jpg"
+  },
+  {
+   "key": "FACTIONNECROPHAGES_VICTORY",
+   "name": "(Belch!)",
+   "description": "Win with the Necrophages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/0f8b75ef83c8ce79880634f7485dea12baf56326.jpg"
+  },
+  {
+   "key": "FACTIONRAGEWIZARDS_VICTORY",
+   "name": "No Pain, no Gain",
+   "description": "Win with the Ardent Mages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/b5be6712e81dba8a7759054137531ff38fdc1382.jpg"
+  },
+  {
+   "key": "FACTIONREPLICANTS_VICTORY",
+   "name": "Unforgettable",
+   "description": "Win a game with the Forgotten.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/94f86bbea59b2300e9d1618b661561b852634941.jpg"
+  },
+  {
+   "key": "FACTIONROVINGCLANS_VICTORY",
+   "name": "Ka-ching!",
+   "description": "Win with the Roving Clans.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/d527e297e83ce8bd6cd0904d92cf451a0109741d.jpg"
+  },
+  {
+   "key": "FACTIONSEADEMONS_VICTORY",
+   "name": "The Grim Wave",
+   "description": "Win a game with the Morgawr.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/29af9917cb8d15cae1fcdb95eda810ab2c0a0234.jpg"
+  },
+  {
+   "key": "FACTIONVAULTERS_VICTORY",
+   "name": "So Outta Here",
+   "description": "Win with the Vaulters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/098bdecf45c80d8e67df6a38f54457b9faefd838.jpg"
+  },
+  {
+   "key": "FACTIONWINTERSHIFTERS_VICTORY",
+   "name": "Aurified",
+   "description": "Win with the Allayi.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/064711d78e71590f3b0cd85600317cec286e9af8.jpg"
+  },
+  {
+   "key": "FACTION_CUSTOM_VICTORY",
+   "name": "I Did It My Way",
+   "description": "Win with a Custom Faction.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/96116e9210b22316b87e082d085188f0e056574e.jpg"
+  },
+  {
+   "key": "FAST_EXPLORER",
+   "name": "Pheidippides",
+   "description": "Explore 1 000 tiles before the 50th turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/bc45113276887037e3bce4057d30275c7c859046.jpg"
+  },
+  {
+   "key": "FIGHT_ON_ICE",
+   "name": "Like Peipus",
+   "description": "Start and win a battle on frozen waters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8812f3c17e3641ca6dd39900116802e6812bb14d.jpg"
+  },
+  {
+   "key": "FINAL_QUESTER",
+   "name": "Epilogue",
+   "description": "Finish the last chapter of a faction quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/63167f2be75185a98e16cc9a3d55265b29ab1c5c.jpg"
+  },
+  {
+   "key": "FIRST_SECOND_ERA_REPLICANTS",
+   "name": "Cheaters Come Out Ahead",
+   "description": "With the Forgotten, be the first to reach the 2nd Era.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8f8fd69a30e03d817c637471206d4e3ed2153770.jpg"
+  },
+  {
+   "key": "FOG_BANK_AMBUSH",
+   "name": "Surprise!",
+   "description": "Ambush an enemy army from a fog-bank.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/f2ce549848b46411dfcdfdae335bceafa2b45533.jpg"
+  },
+  {
+   "key": "FOMORIAN_FORTRESS_CAPTURE",
+   "name": "Fomorian-bane",
+   "description": "Capture 50 Fomorian-controlled Fortresses across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/168ba3ee115137ddde1b78d0f3db3189e44259d0.jpg"
+  },
+  {
+   "key": "FOMORIAN_QUEST_COMPLETER",
+   "name": "Maritime Myths",
+   "description": "Complete 5 quests for the Fomorians in a single game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/dd5254d6cf44ee6caf3f34a87d4cb40c9c9381fc.jpg"
+  },
+  {
+   "key": "FORCE_SHIFT_OVERALL",
+   "name": "Shapeshifter",
+   "description": "Have 100 force-shifted units, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/e2482b2d8f7fae45bd10720a17a6ffb934744728.jpg"
+  },
+  {
+   "key": "GLOBALSCOREWHENLASTTURNREACHED_VICTORY",
+   "name": "Numbers. They Don't Lie.",
+   "description": "Win a Score Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/e7437164ab24493f548b10a033a17af901530d82.jpg"
+  },
+  {
+   "key": "HERO_CAPTURE",
+   "name": "Homeland Serenity",
+   "description": "Capture 10 spies, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/85bfe325cd239f67fef2c3e121514a9aac1d0540.jpg"
+  },
+  {
+   "key": "HERO_HOARDER",
+   "name": "A Byte of Barons",
+   "description": "Have 8 heroes in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/ca7e9bf3ea2f1131eedd94298ef5cfc3b8a41eb2.jpg"
+  },
+  {
+   "key": "HERO_LEVELER",
+   "name": "Endless Leveling",
+   "description": "Level up a hero to level 15.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/88b18f4565656b523db60d3ddde16bad4133354f.jpg"
+  },
+  {
+   "key": "KILLED_MIGRATION_UNIT",
+   "name": "Madder than Max",
+   "description": "Kill a roving city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/97991a5b7bd879731ff4be9d389f6d72d8617e0f.jpg"
+  },
+  {
+   "key": "KILL_GOVERNOR",
+   "name": "I Came I Slew I Scampered",
+   "description": "With a spy, return a governor to his owner's academy without being detected.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/822dc6ab9e3822dfe1616221722dcb0a121fb020.jpg"
+  },
+  {
+   "key": "LASTEMPIRESTANDING_VICTORY",
+   "name": "I Am the Eternal End",
+   "description": "Win an Elimination Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/5747bf17690c963b26d01b88702c9a3a174f06c6.jpg"
+  },
+  {
+   "key": "LONG_UNBROKEN_ALLIANCE",
+   "name": "BFFs",
+   "description": "Finish a game while never breaking an alliance you made at least 100 turns ago.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/34e5be7af71675ab0fb1ba99948c54f1adfc03b2.jpg"
+  },
+  {
+   "key": "MAD_FAIRIES_HIGH_SPEED_JOURNEY",
+   "name": "Speed Walker",
+   "description": "Move an army 20 tiles in a single turn with the Wild Walkers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/b8a4c58e1f37b5c8e2ee2f2a10970d676bc4fc77.jpg"
+  },
+  {
+   "key": "MAD_SEASON_TEMPLES_INVESTIGATION",
+   "name": "Night Rider",
+   "description": "Search 12 Temples in a single Dust Eclipse.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/5c823c54bb8c7be0c0f753009cc660e8b0979ff3.jpg"
+  },
+  {
+   "key": "MANTA_EXTRACTION_OVERALL",
+   "name": "Acquisitive Traveler",
+   "description": "Extract 100 strategic or luxury resources in another empire, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/6daff48d568be1a959d0a86cee8705a2955c9e51.jpg"
+  },
+  {
+   "key": "MANY_ACTIVE_LUXURY_BOOSTERS",
+   "name": "Stimulated",
+   "description": "Have 5 active luxury boosters at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3cd7b988719176c18787c9782f6eb08365a664c6.jpg"
+  },
+  {
+   "key": "MANY_LEVELED_BOROUGHS",
+   "name": "Urban Sprawl",
+   "description": "Have 3 city tiles at level 2 in one of your cities.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/e8a7c8d6b2ad6289606a1f687cc492730887091b.jpg"
+  },
+  {
+   "key": "MANY_TRADE_ROUTES",
+   "name": "All Roads Lead to Me",
+   "description": "Get 20 trade routes or more starting from, crossing or reaching your empire.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8c32cb9071c936824f7abf9187d40c0302e2851e.jpg"
+  },
+  {
+   "key": "MASS_DUST_GAINED",
+   "name": "Me and Croesus",
+   "description": "Gain 1 000 000 of Dust, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/57c3a5e8ef86649378aed278f05b2ece2a1ac850.jpg"
+  },
+  {
+   "key": "MAX_NET_CITY_DUST_ACH",
+   "name": "Cash Cow",
+   "description": "Have one city which produces more than 1 000 Dust.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/7c456d9cf6e9cf90b5d50a59b2548e7061551ecf.jpg"
+  },
+  {
+   "key": "MAX_NET_CITY_FOOD_ACH",
+   "name": "Harvester",
+   "description": "Have one city which produces more than 1 000 Food.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/68ee35c4aafa181e17f3d32f507d33c2467326ae.jpg"
+  },
+  {
+   "key": "MAX_NET_CITY_INDUSTRY_ACH",
+   "name": "Massively Mass Production",
+   "description": "Have one city which produces more than 1 000 Industry.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/9efe7acfd7ceff7e1495cf150e463dce3b124ae3.jpg"
+  },
+  {
+   "key": "MAX_NET_CITY_INFLUENCE_ACH",
+   "name": "Corridors of Power",
+   "description": "Have one city which produces more than 500 Influence.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1d97327fc3c50c33663366f37bfe6e99e1064de1.jpg"
+  },
+  {
+   "key": "MAX_NET_CITY_SCIENCE_ACH",
+   "name": "Labs and Fabs",
+   "description": "Have one city which produces more than 1 000 Science.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/cb4cd2873f1e3f2ff1be022080f73fb294ce2a13.jpg"
+  },
+  {
+   "key": "MINOR_FACTIONS_ASSIMILATION",
+   "name": "Making Friends",
+   "description": "Assimilate 3 minor factions.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3317c5c6a519989249e856108a96534a3ab93374.jpg"
+  },
+  {
+   "key": "MONSTER_WRANGLER",
+   "name": "Monster Wrangler",
+   "description": "Control all 3 Urkans at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/88b23ce9199788a93f008e712491b80dbcd3cddc.jpg"
+  },
+  {
+   "key": "MOSTTECHNOLOGIESDISCOVERED_VICTORY",
+   "name": "Dice with the Universe",
+   "description": "Win a Science Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3b13deb79a29866af539ddca6b095f6347c65c9c.jpg"
+  },
+  {
+   "key": "MULTIPLAYER_VICTORY",
+   "name": "Cage Match",
+   "description": "Win a game in multiplayer with at least one another human.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a061d5847c56110e213832a8e99d0c3a60290c05.jpg"
+  },
+  {
+   "key": "MULTIPLE_CITY_CONQUERED_WINTER",
+   "name": "Way Better Than Napoleon",
+   "description": "Conquer 5 cities during a single winter.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/00da2bdfdcafb4bfa3ccceeac8bdec5736309b9d.jpg"
+  },
+  {
+   "key": "NECROPHAGES_BATTLEBORN_CREATOR",
+   "name": "Cold Cuts",
+   "description": "Spawn 30 Battle Born using Cadaver stockpiles in a single game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c1c7a02dce0aedaa4c83400e03c91c80475ade9c.jpg"
+  },
+  {
+   "key": "NECROPHAGES_MANY_CADAVER_BOOSTER_USED",
+   "name": "Battlefield Buffet",
+   "description": "With the Necrophages, use 10 recycled stockpiles in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/236a4c23a34662468d867694d2742c470865c1b2.jpg"
+  },
+  {
+   "key": "OCEAN_CONTROL_WITH_TRADE",
+   "name": "By Any Means",
+   "description": "Complete your control of an ocean by trading for a Fortress.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3551b89f5463516604b023640b250235279dd745.jpg"
+  },
+  {
+   "key": "PILLAGE_BUILDINGS",
+   "name": "Plunderiffic",
+   "description": "Pillage 30 buildings, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/0570dadd73bc98a02296e47049fe6b8cabff3495.jpg"
+  },
+  {
+   "key": "PILLAGE_DUST_LOOT",
+   "name": "Sticky Fingers",
+   "description": "Get 500 Dust by pillage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a565aac014531cbe73d41ed380c359cc6399adb8.jpg"
+  },
+  {
+   "key": "QUEST_COMPLETED_ENDLESSDAY",
+   "name": "Endless Day",
+   "description": "...in the ruins all across Auriga, and even throughout...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/3e3ec3983e19eb56551d53186c4c325f1ca0f63f.jpg"
+  },
+  {
+   "key": "QUEST_COMPLETER",
+   "name": "Helping Hand",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8f60e6421c776e063d2aafa9927265bb8f9476f9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "QUEST_VICTORY",
+   "name": "Loremeister",
+   "description": "Win a Quest Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c1f844ce44a1e2f59e6a30fe342057fbb5a4ed54.jpg"
+  },
+  {
+   "key": "RAGE_WIZARDS_CRITICAL_DAMAGE",
+   "name": "Share The Pain",
+   "description": "Inflict 800 damage with a single unit in a single attack as the Ardent Mages.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a62179bbd5cb71670da2da9cc897966e568c4392.jpg"
+  },
+  {
+   "key": "RESISTANCE_IS_FUTILE",
+   "name": "Resistance is Futile",
+   "description": "Integrate 7 factions in a single game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/8f3018bc93ef17638855c04c7b6efea80a08bc5c.jpg"
+  },
+  {
+   "key": "ROVING_CLANS_HERO_KILLER_SETSEKE",
+   "name": "Beetlejuiced",
+   "description": "Kill an enemy hero with a Setseke.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/4aafd98386cba6b3008e6894f3d803b95552dcb0.jpg"
+  },
+  {
+   "key": "ROVING_CLANS_IRS",
+   "name": "Internal (and External) Revenue Service",
+   "description": "With the Roving Clans, get more than 1 000 Dust from the Market Place taxes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/edd65424f3d59a8cc990ca4e82030d2d5460c747.jpg"
+  },
+  {
+   "key": "SCENARIO_VICTORY",
+   "name": "I Built it my Way",
+   "description": "Win a game with generation presets other than default.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/fd38891789292eed50746cfdf406ce85857c3ea6.jpg"
+  },
+  {
+   "key": "SEA_DEMONS_4_CONTINENTS",
+   "name": "The Sun Never Sets",
+   "description": "As Morgawr, control one region on at least 4 different continents.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/0e1119bcac4271d4b66841597ce1c99d1a819d50.jpg"
+  },
+  {
+   "key": "SEA_DEMONS_NO_LAND_UNITS",
+   "name": "Xerophobic",
+   "description": "As Morgawr, win the game without ever building or purchasing land units (except for Settler units).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1872d42e31a9da743ccc625478ed56b9101a0b3f.jpg"
+  },
+  {
+   "key": "SEA_DEMONS_OCEANIC_HUB",
+   "name": "Mare Nostrum",
+   "description": "As Morgawr, control an ocean which borders 4 or more land regions you control.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/b5370ff6f6b2f9f99fe193d4977d50adb94a8549.jpg"
+  },
+  {
+   "key": "SEA_MONSTER_FAILED",
+   "name": "The Great Old One",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a51aa44ad615ff60bbb009d47fb82a5f176403b6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SEA_MONSTER_KILLED",
+   "name": "Go back to R'lyeh",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/e412196078e6267128526f655506d0f50f161f48.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SHADOW_OF_THE_COLOSSI",
+   "name": "Shadow of the Colossi",
+   "description": "Have all 3 Urkans affect a single one of your cities at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/73b833dfd874be80b12b9f529c7f602f8c0e3732.jpg"
+  },
+  {
+   "key": "SHAKE_YOUR_FUNDATIONS",
+   "name": "Shake your Foundations",
+   "description": "Deal 1 000 000 damage with Tremors over any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/086f9f816cc4cf3e491514d97a13e885ad8619b1.jpg"
+  },
+  {
+   "key": "SHARED_VICTORY",
+   "name": "United Empires",
+   "description": "Win a Shared Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1698ce51b6c310ce3d14a33234c8a59567fa1510.jpg"
+  },
+  {
+   "key": "SPORETASTIC",
+   "name": "Sporetastic",
+   "description": "Create 1000 Fungal Blooms across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/792818f645f16f1b2de3c9d445b75f2b178a5db9.jpg"
+  },
+  {
+   "key": "SPY_ACTION_SERIES",
+   "name": "Deep Mole",
+   "description": "Perform 5 infiltration actions without leaving the infiltrated city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/d521c0860f73608ef164b66816f5bd794562de59.jpg"
+  },
+  {
+   "key": "STEAL_TECHNOLOGIES",
+   "name": "IP Piracy",
+   "description": "With the Forgotten, steal 10 researches.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/21bf7289f21ae5d35691b0ca80419c77f848042f.jpg"
+  },
+  {
+   "key": "SUPREMACY_VICTORY",
+   "name": "Mwa ha ha ha haaa!",
+   "description": "Win a Supremacy Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/0a157c0dd90af2bfd111be249c956f3452805cc2.jpg"
+  },
+  {
+   "key": "THE_EXTERMINATOR",
+   "name": "The Exterminator",
+   "description": "Kill 1000 Lice units across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/9f1b1062ecd4e75a0239f0ce8fab08ad75b32cb7.jpg"
+  },
+  {
+   "key": "TILES_TERRAFORMED_OVERALL",
+   "name": "A World Of Fire And Ash",
+   "description": "Volcanoform 400 tiles over any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/b73f68bbd01c2dd0a0c8f7e8c778f30b7a7dd173.jpg"
+  },
+  {
+   "key": "TURNS_PLAYED2",
+   "name": "Heroic Patience",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/677fea12d305fb1d80119c844ec162c100a2d826.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TURNS_PLAYED3",
+   "name": "Endless Gamer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/0d5d9a75984b1bf7d3e76e92b2713c22c88a1f51.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TUTORIAL_VICTORY",
+   "name": "Boot Camp",
+   "description": "Finish the basics of tutorial.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/c5d8378ddc67fa8cc1fdde05ced2fa92f4ef6909.jpg"
+  },
+  {
+   "key": "TWO_CITIES_EARLY",
+   "name": "Cities Builder",
+   "description": "Have two cities in less than 15 turns.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/af87b866b1435dcaf5cdbb0a37625bc47e909251.jpg"
+  },
+  {
+   "key": "UNITS_KILLER",
+   "name": "Scourge of Auriga",
+   "description": "Kill 1 000 units, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/102105262d22641cbcd41a6ed1503addb6bc44f6.jpg"
+  },
+  {
+   "key": "VAULTERS_TELEPORTER",
+   "name": "Here Comes the Cavalry",
+   "description": "With the Vaulters, teleport 10 units in a besieged city in one turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/aa9d375842a03e81a406192f8988fb9f5e630558.jpg"
+  },
+  {
+   "key": "VAULTERS_TELEPORT_TO_SIEGING_HERO",
+   "name": "Finest Vault Reserves",
+   "description": "Teleport 5 or more units to a sieging Vaulter hero.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/5f31e5cae3c5537a8e35808e614a8ccaf79b9e03.jpg"
+  },
+  {
+   "key": "VILLAGE_PACIFIER",
+   "name": "Resistance Is Useless",
+   "description": "Pacify 500 villages, across any number of playthroughs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/cc4f4b07b55095d5c9b001dcbacd4b803b96a849.jpg"
+  },
+  {
+   "key": "WELCOME_TO_THE_FOLD",
+   "name": "Welcome to the Fold",
+   "description": "Control 20 Overgrown Cities at the same time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/542498f61ac1bce0a9414c8e418f71d1661a7a4b.jpg"
+  },
+  {
+   "key": "WILD_WALKERS_WIN_WITHOUT_DAMAGE",
+   "name": "Float Like a Butterfly",
+   "description": "With the Wild Walkers, win a battle against at least 4 enemies without taking any damage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/1840d79c07eb502159ab434a2d686744fd26e62d.jpg"
+  },
+  {
+   "key": "WONDER_VICTORY",
+   "name": "Gaze Upon It and Tremble!",
+   "description": "Win a Wonder Victory.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a49688ad5a5e32baaa734d486aa15fd3369176ad.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "ENDLESS Legend™",
+   "achievements": [
+    {
+     "apiname": "TURNS_PLAYED1",
+     "achieved": 1,
+     "unlocktime": 1450816701,
+     "name": "Toe in the Water",
+     "description": "Play for 10 turns, across any number of playthroughs."
+    },
+    {
+     "apiname": "TURNS_PLAYED2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heroic Patience",
+     "description": ""
+    },
+    {
+     "apiname": "TURNS_PLAYED3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Endless Gamer",
+     "description": ""
+    },
+    {
+     "apiname": "DIFFICULTY0_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cruise Control",
+     "description": "Win a game in Newbie or higher difficulty against AI."
+    },
+    {
+     "apiname": "DIFFICULTY1_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Asleep at the Wheel",
+     "description": "Win a game in Easy or higher difficulty against AI."
+    },
+    {
+     "apiname": "DIFFICULTY2_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Warming Up",
+     "description": "Win a game in Normal or higher difficulty against AI."
+    },
+    {
+     "apiname": "DIFFICULTY3_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strove, Sought, Found, Did Not Yield",
+     "description": "Win a game in Hard or higher difficulty against AI."
+    },
+    {
+     "apiname": "DIFFICULTY4_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Barely Broke a Sweat",
+     "description": "Win a game in Serious or higher difficulty against AI."
+    },
+    {
+     "apiname": "DIFFICULTY5_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Piece of (True) Cake",
+     "description": "Win a game in Impossible or higher difficulty against AI."
+    },
+    {
+     "apiname": "DIFFICULTY6_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Learner Is Now the Master",
+     "description": "Win a game in \"Endless\" difficulty against AI."
+    },
+    {
+     "apiname": "MULTIPLAYER_GAME",
+     "achieved": 1,
+     "unlocktime": 1450816701,
+     "name": "Press the Flesh",
+     "description": "Play a game in multiplayer with at least one another human."
+    },
+    {
+     "apiname": "MULTIPLAYER_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cage Match",
+     "description": "Win a game in multiplayer with at least one another human."
+    },
+    {
+     "apiname": "EXPANSION_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bigger Is Better",
+     "description": "Win an Expansion Victory."
+    },
+    {
+     "apiname": "ECONOMY_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maybe It Does Buy Happiness",
+     "description": "Win an Economic Victory."
+    },
+    {
+     "apiname": "DIPLOMACY_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Diplomanic",
+     "description": "Win a Diplomatic Victory."
+    },
+    {
+     "apiname": "MOSTTECHNOLOGIESDISCOVERED_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dice with the Universe",
+     "description": "Win a Science Victory."
+    },
+    {
+     "apiname": "GLOBALSCOREWHENLASTTURNREACHED_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Numbers. They Don't Lie.",
+     "description": "Win a Score Victory."
+    },
+    {
+     "apiname": "SUPREMACY_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mwa ha ha ha haaa!",
+     "description": "Win a Supremacy Victory."
+    },
+    {
+     "apiname": "LASTEMPIRESTANDING_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Am the Eternal End",
+     "description": "Win an Elimination Victory."
+    },
+    {
+     "apiname": "WONDER_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gaze Upon It and Tremble!",
+     "description": "Win a Wonder Victory."
+    },
+    {
+     "apiname": "TUTORIAL_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boot Camp",
+     "description": "Finish the basics of tutorial."
+    },
+    {
+     "apiname": "FACTIONBROKENLORDS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Un-Broken",
+     "description": "Win with the Broken Lords."
+    },
+    {
+     "apiname": "FACTIONRAGEWIZARDS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Pain, no Gain",
+     "description": "Win with the Ardent Mages."
+    },
+    {
+     "apiname": "FACTIONMADFAIRIES_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Share This!",
+     "description": "Win with the Wild Walkers."
+    },
+    {
+     "apiname": "FACTIONNECROPHAGES_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "(Belch!)",
+     "description": "Win with the Necrophages."
+    },
+    {
+     "apiname": "FACTIONROVINGCLANS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ka-ching!",
+     "description": "Win with the Roving Clans."
+    },
+    {
+     "apiname": "FACTIONVAULTERS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "So Outta Here",
+     "description": "Win with the Vaulters."
+    },
+    {
+     "apiname": "FACTIONDRAKKENS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Diplomeisters",
+     "description": "Win with the Drakken."
+    },
+    {
+     "apiname": "FACTIONCULTISTS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End is Nigh",
+     "description": "Win with the Cultists of the Eternal End."
+    },
+    {
+     "apiname": "FACTION_CUSTOM_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Did It My Way",
+     "description": "Win with a Custom Faction."
+    },
+    {
+     "apiname": "BEST_EMPIRE_PLAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maxed Out",
+     "description": "Activate all the 4th levels in the Empire Plan."
+    },
+    {
+     "apiname": "MAX_NET_CITY_DUST_ACH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cash Cow",
+     "description": "Have one city which produces more than 1 000 Dust."
+    },
+    {
+     "apiname": "MAX_NET_CITY_FOOD_ACH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Harvester",
+     "description": "Have one city which produces more than 1 000 Food."
+    },
+    {
+     "apiname": "MAX_NET_CITY_SCIENCE_ACH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Labs and Fabs",
+     "description": "Have one city which produces more than 1 000 Science."
+    },
+    {
+     "apiname": "MAX_NET_CITY_INDUSTRY_ACH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Massively Mass Production",
+     "description": "Have one city which produces more than 1 000 Industry."
+    },
+    {
+     "apiname": "MAX_NET_CITY_INFLUENCE_ACH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Corridors of Power",
+     "description": "Have one city which produces more than 500 Influence."
+    },
+    {
+     "apiname": "MINOR_FACTIONS_ASSIMILATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Making Friends",
+     "description": "Assimilate 3 minor factions."
+    },
+    {
+     "apiname": "QUEST_COMPLETER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helping Hand",
+     "description": ""
+    },
+    {
+     "apiname": "FINAL_QUESTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Epilogue",
+     "description": "Finish the last chapter of a faction quest."
+    },
+    {
+     "apiname": "ALL_FINAL_QUEST_COMPLETER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Know Thy Enemy",
+     "description": ""
+    },
+    {
+     "apiname": "ALL_STRATEGIC_EXTRACTORS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What's Mined is Mine",
+     "description": "Exploit each kind of strategic resource in one game."
+    },
+    {
+     "apiname": "ALL_STRATEGIC_RESOURCES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just in Case",
+     "description": "Have 100 of each strategic resource."
+    },
+    {
+     "apiname": "ALL_LUXURY_BOOSTER_USED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guinea Pig",
+     "description": "Use a booster of each luxury resource, across any number of playthroughs."
+    },
+    {
+     "apiname": "MANY_ACTIVE_LUXURY_BOOSTERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stimulated",
+     "description": "Have 5 active luxury boosters at the same time."
+    },
+    {
+     "apiname": "ALL_FIS_BOOSTER_USED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squirreling Away",
+     "description": "Use a Food, a Science, and an Industry stockpile in one game."
+    },
+    {
+     "apiname": "TWO_CITIES_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cities Builder",
+     "description": "Have two cities in less than 15 turns."
+    },
+    {
+     "apiname": "MANY_LEVELED_BOROUGHS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Urban Sprawl",
+     "description": "Have 3 city tiles at level 2 in one of your cities."
+    },
+    {
+     "apiname": "BUILDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Real Estate Mogul",
+     "description": "Build 100 improvements in your entire Empire in one game."
+    },
+    {
+     "apiname": "BEST_SCORE_EARLY_DIFFICULTY3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fast Start",
+     "description": "Be the faction with the highest score at turn 25 playing on hard or higher difficulty."
+    },
+    {
+     "apiname": "BEST_SCORE_EARLY_DIFFICULTY6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quick Out of the Blocks",
+     "description": "Be the faction with the highest score at turn 25 playing on Endless difficulty."
+    },
+    {
+     "apiname": "FAST_EXPLORER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pheidippides",
+     "description": "Explore 1 000 tiles before the 50th turn."
+    },
+    {
+     "apiname": "VILLAGE_PACIFIER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Resistance Is Useless",
+     "description": "Pacify 500 villages, across any number of playthroughs."
+    },
+    {
+     "apiname": "MASS_DUST_GAINED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Me and Croesus",
+     "description": "Gain 1 000 000 of Dust, across any number of playthroughs."
+    },
+    {
+     "apiname": "MANY_TRADE_ROUTES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Roads Lead to Me",
+     "description": "Get 20 trade routes or more starting from, crossing or reaching your empire."
+    },
+    {
+     "apiname": "HERO_HOARDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Byte of Barons",
+     "description": "Have 8 heroes in one game."
+    },
+    {
+     "apiname": "HERO_LEVELER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Endless Leveling",
+     "description": "Level up a hero to level 15."
+    },
+    {
+     "apiname": "UNITS_KILLER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scourge of Auriga",
+     "description": "Kill 1 000 units, across any number of playthroughs."
+    },
+    {
+     "apiname": "KILLED_MIGRATION_UNIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Madder than Max",
+     "description": "Kill a roving city."
+    },
+    {
+     "apiname": "ATTACK_ALLY_WITH_PRIVATEERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who, Me?",
+     "description": "Attack a friendly army with privateers."
+    },
+    {
+     "apiname": "ARDENT_MAGES_MANY_PILLARS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Landscaping",
+     "description": "With the Ardent Mages, have 5 pillars at the same time."
+    },
+    {
+     "apiname": "BROKEN_LORDS_DISTRICT_DUST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Not So Broken Lords",
+     "description": "With the Broken Lords, have a district producing more than 10 Dust."
+    },
+    {
+     "apiname": "CULTISTS_MANY_CONVERTED_VILLAGES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I \u003c3 Minions",
+     "description": "With the Cultists, have 20 converted villages at the same time."
+    },
+    {
+     "apiname": "DRAKKENS_VICTORY_NO_WAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fighting for Peace",
+     "description": "With the Drakken, win a game without having been in war."
+    },
+    {
+     "apiname": "NECROPHAGES_MANY_CADAVER_BOOSTER_USED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Battlefield Buffet",
+     "description": "With the Necrophages, use 10 recycled stockpiles in one game."
+    },
+    {
+     "apiname": "ROVING_CLANS_IRS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Internal (and External) Revenue Service",
+     "description": "With the Roving Clans, get more than 1 000 Dust from the Market Place taxes."
+    },
+    {
+     "apiname": "VAULTERS_TELEPORTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Here Comes the Cavalry",
+     "description": "With the Vaulters, teleport 10 units in a besieged city in one turn."
+    },
+    {
+     "apiname": "WILD_WALKERS_WIN_WITHOUT_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Float Like a Butterfly",
+     "description": "With the Wild Walkers, win a battle against at least 4 enemies without taking any damage."
+    },
+    {
+     "apiname": "QUEST_COMPLETED_ENDLESSDAY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Endless Day",
+     "description": "...in the ruins all across Auriga, and even throughout..."
+    },
+    {
+     "apiname": "MULTIPLE_CITY_CONQUERED_WINTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Way Better Than Napoleon",
+     "description": "Conquer 5 cities during a single winter."
+    },
+    {
+     "apiname": "LONG_UNBROKEN_ALLIANCE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BFFs",
+     "description": "Finish a game while never breaking an alliance you made at least 100 turns ago."
+    },
+    {
+     "apiname": "DRAKKEN_MANY_RUINS_EXPLOITED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dungeons \u0026 Drakken",
+     "description": "As the Drakken, exploit at least 5 ruins at the same time."
+    },
+    {
+     "apiname": "QUEST_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Loremeister",
+     "description": "Win a Quest Victory."
+    },
+    {
+     "apiname": "SCENARIO_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Built it my Way",
+     "description": "Win a game with generation presets other than default."
+    },
+    {
+     "apiname": "ALL_COLOSSI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collect'em All",
+     "description": "Have the 5 different Guardians at the same time."
+    },
+    {
+     "apiname": "ALL_WONDERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Marvelous",
+     "description": "Have the 5 Legendary Buildings at the same time."
+    },
+    {
+     "apiname": "ALL_MEDALS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heedful, Deedful",
+     "description": "Complete all the Legendary Deeds, across any number of playthroughs."
+    },
+    {
+     "apiname": "CAPTURE_WONDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What's Yours is Mine",
+     "description": "Capture a city containing a Legendary Building."
+    },
+    {
+     "apiname": "COLOSSI_KILLER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bigger They are...",
+     "description": "Kill a Guardian."
+    },
+    {
+     "apiname": "COOP_QUEST_CONTRIBUTOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Teamworker",
+     "description": "Contribute to a completed Co-operative Quest."
+    },
+    {
+     "apiname": "HERO_CAPTURE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Homeland Serenity",
+     "description": "Capture 10 spies, across any number of playthroughs."
+    },
+    {
+     "apiname": "SPY_ACTION_SERIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deep Mole",
+     "description": "Perform 5 infiltration actions without leaving the infiltrated city."
+    },
+    {
+     "apiname": "KILL_GOVERNOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Came I Slew I Scampered",
+     "description": "With a spy, return a governor to his owner's academy without being detected."
+    },
+    {
+     "apiname": "PILLAGE_BUILDINGS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Plunderiffic",
+     "description": "Pillage 30 buildings, across any number of playthroughs."
+    },
+    {
+     "apiname": "PILLAGE_DUST_LOOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sticky Fingers",
+     "description": "Get 500 Dust by pillage."
+    },
+    {
+     "apiname": "FACTIONREPLICANTS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unforgettable",
+     "description": "Win a game with the Forgotten."
+    },
+    {
+     "apiname": "FIRST_SECOND_ERA_REPLICANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cheaters Come Out Ahead",
+     "description": "With the Forgotten, be the first to reach the 2nd Era."
+    },
+    {
+     "apiname": "STEAL_TECHNOLOGIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IP Piracy",
+     "description": "With the Forgotten, steal 10 researches."
+    },
+    {
+     "apiname": "COLLECT_ORBS_PLAYTHROUGH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "String of Pearls",
+     "description": "Collect 1 000 Pearls in one game."
+    },
+    {
+     "apiname": "COLLECT_ORBS_OVERALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pearl Addiction",
+     "description": "Collect 10 000 Pearls, across any number of playthroughs."
+    },
+    {
+     "apiname": "COLLECT_BIG_ORB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cultured Pearl",
+     "description": "Collect 1 Pearl Cluster with a value of at least 20."
+    },
+    {
+     "apiname": "FIGHT_ON_ICE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Like Peipus",
+     "description": "Start and win a battle on frozen waters."
+    },
+    {
+     "apiname": "DROWN_ON_ICE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Berezina",
+     "description": "Lose one army due to the thaw."
+    },
+    {
+     "apiname": "CAST_VOTES_OVERALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Devotion",
+     "description": "Spend 1 000 prayers on Winter votes, across any number of playthroughs."
+    },
+    {
+     "apiname": "ALL_ORB_UNLOCKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jeweller's Shop",
+     "description": "Unlock all Blessings of the Altar of Auriga in one game."
+    },
+    {
+     "apiname": "FACTIONWINTERSHIFTERS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Aurified",
+     "description": "Win with the Allayi."
+    },
+    {
+     "apiname": "FORCE_SHIFT_OVERALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shapeshifter",
+     "description": "Have 100 force-shifted units, across any number of playthroughs."
+    },
+    {
+     "apiname": "BATTLE_SHIFT_FORM_VARIETY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Celebrate Diversity",
+     "description": "Fight with an army, reinforcements included, having both Light and Dark forms of each of the Allayi units (Seeker, Skyfin and Monk)."
+    },
+    {
+     "apiname": "MANTA_EXTRACTION_OVERALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Acquisitive Traveler",
+     "description": "Extract 100 strategic or luxury resources in another empire, across any number of playthroughs."
+    },
+    {
+     "apiname": "ALL_FORTRESSES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maritime Monopoly",
+     "description": "Control every Fortress in the world."
+    },
+    {
+     "apiname": "ALL_UNIQUE_FACILITIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Facility Completionist",
+     "description": "Control each of the unique facilities across any number of playthroughs."
+    },
+    {
+     "apiname": "OCEAN_CONTROL_WITH_TRADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "By Any Means",
+     "description": "Complete your control of an ocean by trading for a Fortress."
+    },
+    {
+     "apiname": "FOG_BANK_AMBUSH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Surprise!",
+     "description": "Ambush an enemy army from a fog-bank."
+    },
+    {
+     "apiname": "ATTACK_LAND_WITH_SUBMERSIBLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It Came from the Depths",
+     "description": "Attack an army containing only land units with an army containing only submersible units."
+    },
+    {
+     "apiname": "FOMORIAN_QUEST_COMPLETER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maritime Myths",
+     "description": "Complete 5 quests for the Fomorians in a single game."
+    },
+    {
+     "apiname": "FOMORIAN_FORTRESS_CAPTURE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fomorian-bane",
+     "description": "Capture 50 Fomorian-controlled Fortresses across any number of playthroughs."
+    },
+    {
+     "apiname": "BATTLE_FOMORIANS_VARIETY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Deck",
+     "description": "Win a battle using an army containing each type of Fomorian warship."
+    },
+    {
+     "apiname": "SEA_DEMONS_NO_LAND_UNITS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Xerophobic",
+     "description": "As Morgawr, win the game without ever building or purchasing land units (except for Settler units)."
+    },
+    {
+     "apiname": "SEA_DEMONS_OCEANIC_HUB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mare Nostrum",
+     "description": "As Morgawr, control an ocean which borders 4 or more land regions you control."
+    },
+    {
+     "apiname": "SEA_DEMONS_4_CONTINENTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Sun Never Sets",
+     "description": "As Morgawr, control one region on at least 4 different continents."
+    },
+    {
+     "apiname": "BLACK_SPOT_USED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Black Spot, Clean Hands",
+     "description": "As Morgawr, use a Black Spot to prompt the elimination of an empire by a third party."
+    },
+    {
+     "apiname": "FACTIONSEADEMONS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Grim Wave",
+     "description": "Win a game with the Morgawr."
+    },
+    {
+     "apiname": "SEA_MONSTER_KILLED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go back to R'lyeh",
+     "description": ""
+    },
+    {
+     "apiname": "SEA_MONSTER_FAILED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Great Old One",
+     "description": ""
+    },
+    {
+     "apiname": "SHARED_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "United Empires",
+     "description": "Win a Shared Victory."
+    },
+    {
+     "apiname": "FACTIONFLAMES_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golems Rule!",
+     "description": "Achieve victory with the Kapaku."
+    },
+    {
+     "apiname": "TILES_TERRAFORMED_OVERALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A World Of Fire And Ash",
+     "description": "Volcanoform 400 tiles over any number of playthroughs."
+    },
+    {
+     "apiname": "ALL_GEOMANCY_BUFFS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Geomancer's Delight",
+     "description": "Possess a unit with all Geomancy buffs active simultaneously."
+    },
+    {
+     "apiname": "ENEMY_EXPLOITATION_TERRAFORMED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scorched Earth Policy",
+     "description": "Volcanoform an enemy city's entire exploited tiles."
+    },
+    {
+     "apiname": "DUST_STORM_AMBUSH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dustjacker",
+     "description": "Ambush an enemy army from a Dust Blizzard."
+    },
+    {
+     "apiname": "ALL_MAP_BOOSTS_BUFFS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Total Eclipse Of The Art",
+     "description": "Possess an army with all Dust Eclipse map-based buffs active simultaneously."
+    },
+    {
+     "apiname": "MAD_SEASON_TEMPLES_INVESTIGATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Night Rider",
+     "description": "Search 12 Temples in a single Dust Eclipse."
+    },
+    {
+     "apiname": "MAD_FAIRIES_HIGH_SPEED_JOURNEY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Walker",
+     "description": "Move an army 20 tiles in a single turn with the Wild Walkers."
+    },
+    {
+     "apiname": "BROKEN_LORDS_DUST_CONSUMER_OVERALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pyromaniac",
+     "description": "Sacrifice 8000 total HP using Soul Burn over any number of playthroughs."
+    },
+    {
+     "apiname": "VAULTERS_TELEPORT_TO_SIEGING_HERO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finest Vault Reserves",
+     "description": "Teleport 5 or more units to a sieging Vaulter hero."
+    },
+    {
+     "apiname": "NECROPHAGES_BATTLEBORN_CREATOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cold Cuts",
+     "description": "Spawn 30 Battle Born using Cadaver stockpiles in a single game."
+    },
+    {
+     "apiname": "RAGE_WIZARDS_CRITICAL_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Share The Pain",
+     "description": "Inflict 800 damage with a single unit in a single attack as the Ardent Mages."
+    },
+    {
+     "apiname": "ROVING_CLANS_HERO_KILLER_SETSEKE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beetlejuiced",
+     "description": "Kill an enemy hero with a Setseke."
+    },
+    {
+     "apiname": "DRAKKENS_INSTANT_WORLD_PEACE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peace Talker",
+     "description": "Restore the peace with a least 3 empires within a single turn."
+    },
+    {
+     "apiname": "CULTISTS_MINIONS_LEGION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Machiavellian",
+     "description": "Win 8 battles with armies exclusively composed of minor faction units within a single turn."
+    },
+    {
+     "apiname": "FACTIONMIMICS_VICTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mildew'd",
+     "description": "Win with the Mykara."
+    },
+    {
+     "apiname": "SPORETASTIC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sporetastic",
+     "description": "Create 1000 Fungal Blooms across any number of playthroughs."
+    },
+    {
+     "apiname": "CREEPING_SPREE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blooming Marvelous",
+     "description": "Create 50 Fungal Blooms in a single game."
+    },
+    {
+     "apiname": "RESISTANCE_IS_FUTILE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Resistance is Futile",
+     "description": "Integrate 7 factions in a single game."
+    },
+    {
+     "apiname": "WELCOME_TO_THE_FOLD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to the Fold",
+     "description": "Control 20 Overgrown Cities at the same time."
+    },
+    {
+     "apiname": "MONSTER_WRANGLER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monster Wrangler",
+     "description": "Control all 3 Urkans at the same time."
+    },
+    {
+     "apiname": "SHADOW_OF_THE_COLOSSI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow of the Colossi",
+     "description": "Have all 3 Urkans affect a single one of your cities at the same time."
+    },
+    {
+     "apiname": "THE_EXTERMINATOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Exterminator",
+     "description": "Kill 1000 Lice units across any number of playthroughs."
+    },
+    {
+     "apiname": "SHAKE_YOUR_FUNDATIONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shake your Foundations",
+     "description": "Deal 1 000 000 damage with Tremors over any number of playthroughs."
+    },
+    {
+     "apiname": "CATCH_AND_RELEASE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Catch and Release",
+     "description": "Take control of an Urkan owned by another faction and set it free (in the same turn)."
+    }
+   ],
+   "success": true
+  }
+ }
+}

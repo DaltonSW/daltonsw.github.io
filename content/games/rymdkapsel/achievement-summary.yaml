@@ -1,0 +1,30 @@
+unlocked: 3
+total: 10
+playtime_mins: 104
+last_played: "2014-02-02"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 3
+      total: 10
+      playtime_mins: 104
+      last_played: "2014-02-02"
+earned:
+    - name: Research Any Monolith
+      description: A journey of a thousand miles begins with a single step.
+      date: "2014-02-01T11:15:05-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/d70141fec44b5ad228a3f96b5f00559d2f9c154a.jpg
+      provider: steam
+      platform: PC
+    - name: Research All Monoliths
+      description: The depths of space hides a secret. Unlock it.
+      date: "2014-02-02T22:18:27-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/e456858fdd9abdfaeafa8000f8b3e43d7eac57cf.jpg
+      provider: steam
+      platform: PC
+    - name: Research All Monoliths with Haste
+      description: Can you reach wisdom before 45 minutes have passed?
+      date: "2014-02-02T22:18:39-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253790/2409633e4130567ad7a1d8d4dfb3a0b88eb1a57e.jpg
+      provider: steam
+      platform: PC
