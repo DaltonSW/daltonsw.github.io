@@ -290,6 +290,14 @@ go run ./cmd/gamelog suggest okami        # direct, by slug
 go run ./cmd/gamelog suggest              # interactive game picker
 ```
 
+The web UI's **Suggest** page has the same per-game report plus a **Sweep all games** button:
+it runs the RA/Steam fetch across every linked game and, instead of one report per game, lists
+only the games whose provider history isn't already covered by their `playthroughs.yaml` —
+nothing logged, logged entries with no dates, or provider activity newer than the newest logged
+date. It's the batch form of walking the picker by hand. Read-only like the rest of `suggest`,
+and slow enough (RA throttles to ~1.2s/request) that it runs as a background job with progress,
+the same machinery as Housekeeping's "refresh all achievements".
+
 RetroAchievements achievement-unlock dates are close to ground truth (RA is achievement-first).
 A game with a finishing award — `mastered`, `completed`, `beaten-hardcore`, or
 `beaten-softcore` — reports **high** confidence and uses the award date as the suggested

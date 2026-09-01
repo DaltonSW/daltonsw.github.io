@@ -1,6 +1,18 @@
 {{define "content"}}
 <h1>Suggest</h1>
 <p class="lead">Read-only — prints suggested started/finished dates from RetroAchievements/Steam. Never writes.</p>
+
+<div class="tui">
+  <span class="tui__title">sweep all games</span>
+  <p>Runs the per-game check across every RetroAchievements/Steam-linked game and lists only the
+     ones whose provider history isn't already covered by their <code>playthroughs.yaml</code> —
+     so you don't have to open each game below by hand. Several minutes (RA throttles to
+     ~1.2s/request); runs as a background job you can watch.</p>
+  <form method="post" action="/suggest/all">
+    <button type="submit" class="btn--primary">Sweep all games</button>
+  </form>
+</div>
+
 <div class="table-wrap">
 <table>
   <tbody>

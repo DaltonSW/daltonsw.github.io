@@ -67,6 +67,39 @@ func TestHousekeepingRenders(t *testing.T) {
 			t.Errorf("page missing %q", want)
 		}
 	}
+
+	// Every per-row button posts via htmx and swaps its own row in place, so
+	// working through the list doesn't reload the page (and lose the open tab,
+	// its filters and the scroll position) on each click.
+	for _, want := range []string{
+		`hx-post="/scan"`,
+		`hx-post="/ignore"`,
+		`hx-include="#create-retroachievements-10210"`,
+		`hx-include="#ignore-retroachievements-10210"`,
+		`hx-target="closest tr"`,
+		`hx-swap="outerHTML"`,
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("page missing htmx wiring %q", want)
+		}
+	}
+
+	// The create form must carry provider+id, not a scan-position index: with
+	// only the acted row swapped out, the surviving rows outlive the scan they
+	// were numbered against, so createFromScan matches them back by id.
+	if strings.Contains(out, `name="candidate"`) {
+		t.Error("create form still posts a positional index; it must post provider+id")
+	}
+	for _, want := range []string{
+		`<input type="hidden" name="provider" value="retroachievements">`,
+		`<input type="hidden" name="id" value="10210">`,
+		`<input type="hidden" name="provider" value="steam">`,
+		`<input type="hidden" name="id" value="553420">`,
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("create form missing %q", want)
+		}
+	}
 }
 
 // A RetroAchievements subset row swaps its primary button for "attach to the

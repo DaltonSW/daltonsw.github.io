@@ -17,9 +17,12 @@
      whatever the dropdown happened to be showing. Only the clicked button's
      own name/value is submitted, which is what makes that flag reliable.
 
-     Takes a scanRow. Ignore posts the provider/id rather than a row index, so
-     unlike the create buttons it doesn't depend on the scan re-deriving
-     identically — and that pair also makes a page-unique id for the row.
+     Takes a scanRow. Every form here posts the candidate's provider/id, never
+     its position in the scan: the handlers re-derive the list, and a stale
+     index would land on the wrong game the moment anything created or ignored
+     earlier has dropped out of it — which is what happens as rows are worked
+     through without a page reload. The provider/id pair also makes a
+     page-unique id for the row's forms.
 
      A RetroAchievements *subset* row keeps the same three parts but swaps the
      primary: creating it would make a second entry for a game that already
@@ -29,6 +32,11 @@
      ignore does — see handleSubsetAttach. A subset whose parent couldn't be
      resolved falls back to an ordinary row: the title convention alone is
      never enough to link one. */}}
+{{/* Every button here posts via htmx and swaps its own <tr> for a one-line
+     result (see writeHousekeepingResult): the Housekeeping page is worked
+     through a row at a time, and a full reload per click threw away the open
+     tab, its filter fields and the scroll position every time. Buttons stay
+     type="submit" so a no-JS post still works the old redirect way. */}}
 {{define "create_actions"}}
 {{$row := printf "%s-%s" .C.ProviderKey .C.ID}}
 {{$sub := .C.Subset}}
@@ -36,8 +44,11 @@
   <form method="post" action="{{.Action}}" id="create-{{$row}}" class="cell-actions">
     <input type="hidden" name="min_hours" value="{{.MinHours}}">
     <input type="hidden" name="tab" value="{{.Tab}}">
-    <input type="hidden" name="candidate" value="{{.I}}">
-    <button type="submit" name="use_status" value="1">Create as</button>
+    <input type="hidden" name="provider" value="{{.C.ProviderKey}}">
+    <input type="hidden" name="id" value="{{.C.ID}}">
+    <button type="submit" name="use_status" value="1"
+      hx-post="{{.Action}}" hx-include="#create-{{$row}}" hx-vals='{"use_status":"1"}'
+      hx-target="closest tr" hx-swap="outerHTML">Create as</button>
     <select name="status" aria-label="Status to create {{.C.Title}} as">
       {{range .OtherStatuses}}<option value="{{.}}">{{.}}</option>{{end}}
     </select>
@@ -60,15 +71,24 @@
   {{end}}
   <div class="cell-actions">
     {{if and $sub $sub.ParentID}}
+      {{$subAction := "/subset/create-base"}}{{if $sub.Attachable}}{{$subAction = "/subset/attach"}}{{end}}
       {{if $sub.Attachable}}
-      <button type="submit" form="subset-{{$row}}" class="btn--primary">Attach to {{$sub.BaseTitle}}</button>
+      <button type="submit" form="subset-{{$row}}" class="btn--primary"
+        hx-post="{{$subAction}}" hx-include="#subset-{{$row}}"
+        hx-target="closest tr" hx-swap="outerHTML">Attach to {{$sub.BaseTitle}}</button>
       {{else}}
-      <button type="submit" form="subset-{{$row}}" class="btn--primary">Create {{$sub.BaseTitle}} + attach</button>
+      <button type="submit" form="subset-{{$row}}" class="btn--primary"
+        hx-post="{{$subAction}}" hx-include="#subset-{{$row}}"
+        hx-target="closest tr" hx-swap="outerHTML">Create {{$sub.BaseTitle}} + attach</button>
       {{end}}
     {{else}}
-    <button type="submit" form="create-{{$row}}" class="btn--primary">Correct — create {{.C.Status}}</button>
+    <button type="submit" form="create-{{$row}}" class="btn--primary"
+      hx-post="{{.Action}}" hx-include="#create-{{$row}}"
+      hx-target="closest tr" hx-swap="outerHTML">Correct — create {{.C.Status}}</button>
     {{end}}
-    <button type="submit" form="ignore-{{$row}}">Never log this</button>
+    <button type="submit" form="ignore-{{$row}}"
+      hx-post="/ignore" hx-include="#ignore-{{$row}}"
+      hx-target="closest tr" hx-swap="outerHTML">Never log this</button>
   </div>
 </div>
 {{end}}
@@ -203,7 +223,8 @@
     <td class="dim">{{.Provider}} {{.ID}}</td>
     <td class="dim">{{if .IgnoredOn}}{{.IgnoredOn}}{{else}}—{{end}}</td>
     <td>
-      <form method="post" action="/unignore">
+      <form method="post" action="/unignore"
+        hx-post="/unignore" hx-target="closest tr" hx-swap="outerHTML">
         <input type="hidden" name="provider" value="{{.Provider}}">
         <input type="hidden" name="id" value="{{.ID}}">
         <input type="hidden" name="title" value="{{.Title}}">
@@ -279,7 +300,8 @@
 <div class="tui">
   <span class="tui__title">{{.C.Game.Title}} · suggest {{.C.SuggestedStatus}}</span>
   <pre>{{.Card}}</pre>
-  <form method="post" action="/stale/{{.C.Game.Slug}}" class="btn-row">
+  <form method="post" action="/stale/{{.C.Game.Slug}}" class="btn-row"
+    hx-post="/stale/{{.C.Game.Slug}}" hx-target="closest .tui" hx-swap="outerHTML">
     <input type="hidden" name="stale_days" value="{{$.StaleDays}}">
     <input type="hidden" name="tab" value="stale">
     <button name="action" value="accept" type="submit" class="btn--primary">Correct — mark {{.C.SuggestedStatus}}</button>

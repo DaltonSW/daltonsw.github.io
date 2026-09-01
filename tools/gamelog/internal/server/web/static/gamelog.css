@@ -362,6 +362,10 @@ tr:hover td { background: var(--panel-2); }
 tr.row--saved td { animation: row-saved-flash 1.1s ease-out; }
 tr.row-error td { color: var(--stop); font-size: 0.85rem; }
 div.row--saved { animation: row-saved-flash 1.1s ease-out; }
+/* Housekeeping row action that came back an error: the swapped-in row/card
+   stays put (not dismissed like a success) so the message can be read. */
+tr.row--error td, div.tui.row--error { color: var(--stop); }
+div.tui.row--error { border-color: var(--stop); }
 .error-text { color: var(--stop); font-size: 0.85rem; }
 
 /* ── Game detail: two-column layout ───────────────────────────────────────

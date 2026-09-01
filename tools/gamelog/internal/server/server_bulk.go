@@ -92,10 +92,12 @@ func (s *server) handleBacklogCreate(w http.ResponseWriter, r *http.Request) {
 	s.createFromScan(w, r, commands.ScanModeBacklog)
 }
 
-// createFromScan backs both create buttons. The submitted checkbox values are
-// indices into a list the browser never held, so the scan has to be re-derived
-// with the same min_hours *and* the same mode — a mismatch on either would map
-// the indices onto different games.
+// createFromScan backs both create buttons. The scan is re-derived here (with
+// the same min_hours *and* mode) and the submitted rows are matched into it by
+// provider+id, not by position: the rows on the page can outlive the scan they
+// came from — htmx swaps only the acted row, so the rest keep rendering while
+// each create/ignore quietly shortens the next scan — and a positional index
+// would then point at the wrong game.
 func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode commands.ScanMode) {
 	if err := r.ParseForm(); err != nil {
 		redirectErr(w, r, "/housekeeping", err)
@@ -105,17 +107,35 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 	minHours := atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours)
 	candidates, _, err := s.scanCandidates(minHours, mode)
 	if err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
+	providers, ids := r.Form["provider"], r.Form["id"]
 	var chosen []int
-	for _, v := range r.Form["candidate"] {
-		if i, err := strconv.Atoi(v); err == nil && i >= 0 && i < len(candidates) {
-			chosen = append(chosen, i)
+	var stale bool
+	for i, pk := range providers {
+		if i >= len(ids) {
+			break
 		}
+		idx := -1
+		for j, c := range candidates {
+			if c.ProviderKey() == pk && c.ID == ids[i] {
+				idx = j
+				break
+			}
+		}
+		if idx < 0 {
+			stale = true
+			continue
+		}
+		chosen = append(chosen, idx)
 	}
 	if len(chosen) == 0 {
-		redirectOK(w, r, backTo, "Nothing created.")
+		if stale {
+			s.respondHousekeepingOK(w, r, backTo, "That game is no longer in the scan — it may already be logged or ignored. Reload to refresh the list.")
+			return
+		}
+		s.respondHousekeepingOK(w, r, backTo, "Nothing created.")
 		return
 	}
 
@@ -129,7 +149,7 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		// Validated because it goes straight into front matter, and a
 		// submitted form value is not a trusted one.
 		if !forms.IsGameStatus(status) {
-			redirectErr(w, r, backTo, fmt.Errorf("unknown status %q", status))
+			s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("unknown status %q", status))
 			return
 		}
 	}
@@ -141,7 +161,21 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 	} else if mode == commands.ScanModeBacklog {
 		kind = "created as backlog"
 	}
-	redirectOK(w, r, backTo, fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped))
+
+	// A row's button only ever creates the one game it belongs to, so the
+	// common result reads as a sentence about that game rather than a count
+	// with a "0 skipped" tail. The count form is kept for the (currently
+	// unreachable from the UI) case of more than one candidate in a post.
+	var msg string
+	switch {
+	case len(created) == 1 && skipped == 0:
+		msg = fmt.Sprintf("%s %s — finish it via the games list's \"drafts only\" filter.", created[0].Title, kind)
+	case len(created) == 0:
+		msg = fmt.Sprintf("Nothing created (%d skipped).", skipped)
+	default:
+		msg = fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped)
+	}
+	s.respondHousekeepingOK(w, r, backTo, msg)
 }
 
 // handleSubsetAttach links a RetroAchievements subset to the game it belongs
@@ -160,7 +194,7 @@ func (s *server) handleSubsetAttach(w http.ResponseWriter, r *http.Request) {
 	backTo := housekeepingReturnTo(r)
 	subsetID, slug := r.FormValue("id"), r.FormValue("slug")
 	if subsetID == "" || slug == "" {
-		redirectErr(w, r, backTo, fmt.Errorf("attaching a subset needs an id and a game"))
+		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("attaching a subset needs an id and a game"))
 		return
 	}
 	creds := commands.LoadCredentials()
@@ -168,11 +202,11 @@ func (s *server) handleSubsetAttach(w http.ResponseWriter, r *http.Request) {
 	name := model.FirstNonEmpty(title, r.FormValue("title"), subsetID)
 	switch {
 	case commands.IsAlreadyAttached(err):
-		redirectOK(w, r, backTo, fmt.Sprintf("%s was already attached to %s.", name, slug))
+		s.respondHousekeepingOK(w, r, backTo, fmt.Sprintf("%s was already attached to %s.", name, slug))
 	case err != nil:
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 	default:
-		redirectOK(w, r, backTo, fmt.Sprintf("%s attached to %s — its achievements now show on that game's page.", name, slug))
+		s.respondHousekeepingOK(w, r, backTo, fmt.Sprintf("%s attached to %s — its achievements now show on that game's page.", name, slug))
 	}
 }
 
@@ -187,16 +221,16 @@ func (s *server) handleSubsetCreateBase(w http.ResponseWriter, r *http.Request) 
 	backTo := housekeepingReturnTo(r)
 	subsetID := r.FormValue("id")
 	if subsetID == "" {
-		redirectErr(w, r, backTo, fmt.Errorf("creating a base game needs the subset's id"))
+		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("creating a base game needs the subset's id"))
 		return
 	}
 	creds := commands.LoadCredentials()
 	slug, baseTitle, err := commands.CreateBaseAndAttach(r.Context(), s.gamesDir, subsetID, commands.RAClientFor(creds), creds)
 	if err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
-	redirectOK(w, r, backTo, fmt.Sprintf("Created %s as a draft (%s) with its subset attached. Review it via the games list's \"drafts only\" filter.", baseTitle, slug))
+	s.respondHousekeepingOK(w, r, backTo, fmt.Sprintf("Created %s as a draft (%s) with its subset attached. Review it via the games list's \"drafts only\" filter.", baseTitle, slug))
 }
 
 // handleIgnore takes a scan candidate off the list for good. Unlike the
@@ -216,20 +250,20 @@ func (s *server) handleIgnore(w http.ResponseWriter, r *http.Request) {
 		Reason:   r.FormValue("reason"),
 	}
 	if g.Provider == "" || g.ID == "" {
-		redirectErr(w, r, backTo, fmt.Errorf("ignore needs a provider and an id"))
+		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("ignore needs a provider and an id"))
 		return
 	}
 	added, err := model.AddIgnored(model.FindArchiveDir(s.gamesDir), g)
 	if err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
 	name := model.FirstNonEmpty(g.Title, g.Provider+" "+g.ID)
 	if !added {
-		redirectOK(w, r, backTo, name+" was already ignored.")
+		s.respondHousekeepingOK(w, r, backTo, name+" was already ignored.")
 		return
 	}
-	redirectOK(w, r, backTo, name+" ignored — it won't show up in scans again.")
+	s.respondHousekeepingOK(w, r, backTo, name+" ignored — it won't show up in scans again.")
 }
 
 // handleUnignore is the undo. Nothing was destroyed by ignoring, so this just
@@ -243,14 +277,14 @@ func (s *server) handleUnignore(w http.ResponseWriter, r *http.Request) {
 	provider, id := r.FormValue("provider"), r.FormValue("id")
 	removed, err := model.RemoveIgnored(model.FindArchiveDir(s.gamesDir), provider, id)
 	if err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
 	if !removed {
-		redirectOK(w, r, backTo, "Nothing to un-ignore.")
+		s.respondHousekeepingOK(w, r, backTo, "Nothing to un-ignore.")
 		return
 	}
-	redirectOK(w, r, backTo, model.FirstNonEmpty(r.FormValue("title"), id)+" is back in the scan list.")
+	s.respondHousekeepingOK(w, r, backTo, model.FirstNonEmpty(r.FormValue("title"), id)+" is back in the scan list.")
 }
 
 func atoiFloatOr(s string, def float64) float64 {
@@ -457,12 +491,12 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
 	candidates, err := commands.FindStaleCandidates(model.FindArchiveDir(s.gamesDir), games, days)
 	if err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
 	var c *commands.StaleCandidate
@@ -473,7 +507,7 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	if c == nil {
-		redirectErr(w, r, backTo, fmt.Errorf("%s is no longer a stale candidate", slug))
+		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("%s is no longer a stale candidate", slug))
 		return
 	}
 
@@ -483,16 +517,16 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 	}
 	action := r.FormValue("action")
 	if action != forms.StaleAccept && !isStaleMarkAction(action) {
-		redirectErr(w, r, backTo, fmt.Errorf("unknown action %q", action))
+		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("unknown action %q", action))
 		return
 	}
 	commands.ApplyStaleAction(doc, *c, action)
 	syncing := pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
 	if err := mutate.WriteFrontMatter(doc, pf, syncing); err != nil {
-		redirectErr(w, r, backTo, err)
+		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
-	redirectOK(w, r, backTo, doc.FM.Title+": saved.")
+	s.respondHousekeepingOK(w, r, backTo, doc.FM.Title+": saved.")
 }
 
 func isStaleMarkAction(action string) bool {

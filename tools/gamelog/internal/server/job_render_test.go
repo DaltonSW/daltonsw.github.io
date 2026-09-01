@@ -20,7 +20,10 @@ func TestJobPageRenders(t *testing.T) {
 		ID:      "123",
 		Status:  "running",
 		Current: 3, Total: 12, CurrentItem: "Banjo-Kazooie",
-		Lines: []string{"Banjo-Kazooie", "  retroachievements: 12/189 unlocked, 2026-01-01 to 2026-01-02", ""},
+		Lines:     []string{"Banjo-Kazooie", "  retroachievements: 12/189 unlocked, 2026-01-01 to 2026-01-02", ""},
+		Heading:   "Achievements — refresh all",
+		BackHref:  "/housekeeping",
+		BackLabel: "Back to housekeeping",
 	}
 	var buf bytes.Buffer
 	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
@@ -36,6 +39,8 @@ func TestJobPageRenders(t *testing.T) {
 		`class="job__line job__line--gap">`,
 		`width: 25%`,
 		"Banjo-Kazooie</span>", // the "fetching" stat
+		`<h1>Achievements — refresh all</h1>`,
+		`href="/housekeeping">Back to housekeeping</a>`,
 	} {
 		if !strings.Contains(out, want) {
 			t.Errorf("job page missing %q", want)

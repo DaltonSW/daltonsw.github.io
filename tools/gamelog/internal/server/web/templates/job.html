@@ -1,8 +1,8 @@
 {{define "content"}}
 <div class="job">
   <div class="job__head">
-    <h1>Achievements — refresh all</h1>
-    <a class="btn" href="/housekeeping">Back to housekeeping</a>
+    <h1>{{.Heading}}</h1>
+    <a class="btn" href="{{.BackHref}}">{{.BackLabel}}</a>
   </div>
   {{template "job_progress" .}}
 </div>

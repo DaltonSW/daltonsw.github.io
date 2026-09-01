@@ -6,11 +6,16 @@ import (
 	"time"
 )
 
-// job tracks one long-running background operation — currently only
-// "refresh every game's achievements", the one operation slow enough (RA
-// throttles to ~1.2s/call, and there can be 200+ linked games) that it can't
-// run inside a single HTTP request. In-memory only: this is a single-user
-// local tool, so a job doesn't need to survive a restart of `gamelog serve`.
+// job tracks one long-running background operation — the whole-library
+// sweeps (refresh every game's achievements; suggest across every game) slow
+// enough (RA throttles to ~1.2s/call, and there can be 200+ linked games)
+// that they can't run inside a single HTTP request. In-memory only: this is
+// a single-user local tool, so a job doesn't need to survive a restart of
+// `gamelog serve`.
+//
+// Title/BackHref/BackLabel describe the job's monitor page. They're set once
+// in create, before the worker goroutine starts, and never mutated after —
+// so handlers read them directly rather than through the mutex.
 type job struct {
 	mu          sync.Mutex
 	Status      string // "running" | "done" | "error"
@@ -19,6 +24,10 @@ type job struct {
 	Current     int    // 1-based index of the item currently in flight (== Total when done)
 	Total       int    // number of items this job will process
 	CurrentItem string // title of the item currently in flight; "" once finished
+
+	Title     string // heading for the job monitor page
+	BackHref  string // where the monitor's "back" link points
+	BackLabel string // that link's text
 }
 
 func (j *job) log(format string, args ...any) {
@@ -63,11 +72,11 @@ func newJobRegistry() *jobRegistry {
 	return &jobRegistry{jobs: map[string]*job{}}
 }
 
-func (r *jobRegistry) create() (string, *job) {
+func (r *jobRegistry) create(title, backHref, backLabel string) (string, *job) {
 	r.mu.Lock()
 	defer r.mu.Unlock()
 	id := fmt.Sprintf("%d", time.Now().UnixNano())
-	j := &job{Status: "running"}
+	j := &job{Status: "running", Title: title, BackHref: backHref, BackLabel: backLabel}
 	r.jobs[id] = j
 	return id, j
 }

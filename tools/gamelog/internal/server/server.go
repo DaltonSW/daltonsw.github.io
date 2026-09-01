@@ -149,6 +149,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /jobs/{id}/progress", s.handleJobProgress)
 
 	mux.HandleFunc("GET /suggest", s.handleSuggestPicker)
+	mux.HandleFunc("POST /suggest/all", s.handleSuggestAll)
 	mux.HandleFunc("GET /suggest/{slug}", s.handleSuggestReport)
 
 	mux.HandleFunc("POST /project", s.handleProject)
@@ -359,6 +360,52 @@ func redirectOK(w http.ResponseWriter, r *http.Request, path, msg string) {
 
 func redirectErr(w http.ResponseWriter, r *http.Request, path string, err error) {
 	http.Redirect(w, r, withFlash(path, "error", err.Error()), http.StatusSeeOther)
+}
+
+// isHTMX reports whether the request was issued by htmx (see the housekeeping
+// row buttons), which means the handler should answer with an in-place
+// fragment rather than the full-page redirect a plain form post gets.
+func isHTMX(r *http.Request) bool {
+	return r.Header.Get("HX-Request") == "true"
+}
+
+// respondHousekeepingOK/Err are redirectOK/redirectErr for the per-row actions
+// on the Housekeeping page. From htmx they swap just the acted-on row for a
+// one-line result, leaving the open tab, its filters and scroll position
+// untouched so several rows can be worked through without a reload each; a
+// plain (no-JS) post still redirects back with a flash like everything else.
+func (s *server) respondHousekeepingOK(w http.ResponseWriter, r *http.Request, backTo, msg string) {
+	if isHTMX(r) {
+		writeHousekeepingResult(w, r, true, msg)
+		return
+	}
+	redirectOK(w, r, backTo, msg)
+}
+
+func (s *server) respondHousekeepingErr(w http.ResponseWriter, r *http.Request, backTo string, err error) {
+	if isHTMX(r) {
+		writeHousekeepingResult(w, r, false, err.Error())
+		return
+	}
+	redirectErr(w, r, backTo, err)
+}
+
+// writeHousekeepingResult emits the swap-in fragment: a <tr> for the table-based
+// tabs (scan/backlog/ignored) and a <div> for the Stale tab's .tui card, keyed
+// off the "tab" field every one of those forms already carries. row--saved is
+// the same one-shot confirmation flash the games list uses.
+func writeHousekeepingResult(w http.ResponseWriter, r *http.Request, ok bool, msg string) {
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	cls := "row--saved"
+	if !ok {
+		cls = "row--error"
+	}
+	esc := template.HTMLEscapeString(msg)
+	if r.FormValue("tab") == "stale" {
+		fmt.Fprintf(w, `<div class="tui %s">%s</div>`, cls, esc)
+		return
+	}
+	fmt.Fprintf(w, `<tr class="%s"><td colspan="99">%s</td></tr>`, cls, esc)
 }
 
 func withFlash(path, key, val string) string {

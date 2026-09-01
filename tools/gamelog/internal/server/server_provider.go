@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"path/filepath"
+	"time"
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/externalid"
@@ -81,6 +82,119 @@ func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+// handleSuggestAll kicks off runSuggestAllJob. Like achievements/all it's a
+// background job: the picker's one-game-at-a-time flow means opening 200+
+// games by hand to find the few with unlogged history, and doing that sweep
+// in one request would hang it for minutes (Steam is a couple of calls per
+// game, RA throttles to ~1.2s).
+func (s *server) handleSuggestAll(w http.ResponseWriter, r *http.Request) {
+	id, j := s.jobs.create("Suggest — sweep all games", "/suggest", "Back to suggest")
+	go s.runSuggestAllJob(j)
+	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
+}
+
+// runSuggestAllJob runs the per-game suggestion fetch (commands.FetchRAResult
+// / FetchSteamResult — the very calls the single-game /suggest/{slug} page
+// makes) across every RetroAchievements/Steam-linked game, then logs only
+// the games whose provider history isn't already covered by their
+// playthroughs.yaml (see commands.SuggestSweepVerdict). Nothing is written —
+// this is the same read-only "here are dates to enter by hand" tool as
+// single-game suggest, just swept across the library.
+func (s *server) runSuggestAllJob(j *job) {
+	games, err := model.ListGames(s.gamesDir)
+	if err != nil {
+		j.finish(err)
+		return
+	}
+	creds := commands.LoadCredentials()
+
+	var linked []model.GameSummary
+	for _, g := range games {
+		if g.RAGameID != "" || g.SteamAppID != "" {
+			linked = append(linked, g)
+		}
+	}
+	total := len(linked)
+	ctx := context.Background()
+
+	var flagged, failed int
+	for i, g := range linked {
+		j.progress(i+1, total, g.Title)
+
+		raID, steamAppID := g.RAGameID, g.SteamAppID
+		if id, err := externalid.ParseExternalID(raID); err == nil {
+			raID = id
+		}
+		if id, err := externalid.ParseExternalID(steamAppID); err == nil {
+			steamAppID = id
+		}
+
+		report := commands.SuggestionReport{
+			Title: g.Title, Slug: g.Slug, NumPlaythroughs: g.NumPlaythroughs,
+			RAGameID: raID, RAUsername: creds.RAUsername, SteamAppID: steamAppID,
+		}
+		report.RA = commands.FetchRAResult(ctx, raID, creds)
+		report.Steam = commands.FetchSteamResult(ctx, steamAppID, creds)
+
+		if report.RA.Errored {
+			j.log("%s", g.Title)
+			j.log("  RetroAchievements request failed: %v", report.RA.Err)
+			failed++
+		}
+		if report.Steam.Errored {
+			j.log("%s", g.Title)
+			j.log("  Steam request failed: %v", report.Steam.Err)
+			failed++
+		}
+
+		pf, err := model.LoadPlaythroughs(filepath.Dir(g.Path))
+		if err != nil {
+			j.log("%s", g.Title)
+			j.log("  could not read playthroughs.yaml: %v", err)
+			failed++
+			continue
+		}
+
+		actionable, note := commands.SuggestSweepVerdict(report, pf)
+		if !actionable {
+			continue
+		}
+		flagged++
+		j.log("%s", g.Title)
+		j.log("  %s", note)
+		if r := report.RA.RA; r != nil {
+			j.log("  RetroAchievements: %s", suggestRangeLine(r.Started, r.Finished, r.Confidence))
+		}
+		if st := report.Steam.Steam; st != nil {
+			j.log("  Steam: %s", suggestRangeLine(st.Started, st.Finished, ""))
+		}
+		j.log("  enter by hand: open %q, then \"Log a new session\" or \"Update a playthrough\"", g.Title)
+	}
+
+	j.progress(total, total, "")
+	j.log("")
+	j.log("%d linked games checked, %d need a playthrough logged or updated, %d errors",
+		total, flagged, failed)
+	j.finish(nil)
+}
+
+// suggestRangeLine renders a provider's suggested started→finished pair for a
+// job log line, tolerating a zero end (an open range) and an optional
+// confidence tag.
+func suggestRangeLine(start, finish time.Time, confidence string) string {
+	fmtDate := func(t time.Time) string {
+		if t.IsZero() {
+			return "?"
+		}
+		return t.Format("2006-01-02")
+	}
+	line := fmt.Sprintf("%s → %s", fmtDate(start), fmtDate(finish))
+	if confidence != "" {
+		line += " (" + confidence + " confidence)"
+	}
+	return line
+}
+
 // ── Achievements (single-game refresh lives in server_games.go) ─────────
 
 // handleAchievementsAll runs the same fetch-and-merge loop as
@@ -90,7 +204,7 @@ func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
 // in-memory job so the page can poll progress instead of the request
 // hanging for minutes.
 func (s *server) handleAchievementsAll(w http.ResponseWriter, r *http.Request) {
-	id, j := s.jobs.create()
+	id, j := s.jobs.create("Achievements — refresh all", "/housekeeping", "Back to housekeeping")
 	go s.runAchievementsAllJob(j)
 	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
 }
@@ -151,6 +265,9 @@ type jobData struct {
 	Current     int
 	Total       int
 	CurrentItem string
+	Heading     string // job.Title — the monitor's <h1>
+	BackHref    string // job.BackHref
+	BackLabel   string // job.BackLabel
 }
 
 func (s *server) handleJobStatus(w http.ResponseWriter, r *http.Request) {
@@ -163,12 +280,13 @@ func (s *server) handleJobStatus(w http.ResponseWriter, r *http.Request) {
 	status, lines, errMsg, current, total, currentItem := j.snapshot()
 	// The job monitor is a console, not a document: it claims the viewport
 	// and scrolls its log inside itself, so the page must not scroll too.
-	page := newPage(r, "Achievements — refresh all", "housekeeping")
+	page := newPage(r, j.Title, "housekeeping")
 	page.BodyClass = "body--fixed"
 	s.render(w, "job", jobData{
 		Page: page,
 		ID:   id, Status: status, Lines: lines, Err: errMsg,
 		Current: current, Total: total, CurrentItem: currentItem,
+		Heading: j.Title, BackHref: j.BackHref, BackLabel: j.BackLabel,
 	})
 }
 
