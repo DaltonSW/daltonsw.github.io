@@ -1,0 +1,30 @@
+unlocked: 3
+total: 63
+playtime_mins: 42
+last_played: "2015-07-29"
+providers:
+    - provider: steam
+      platform: PC
+      unlocked: 3
+      total: 63
+      playtime_mins: 42
+      last_played: "2015-07-29"
+earned:
+    - name: 1st Track Cleared
+      description: Complete your first track
+      date: "2014-03-22T16:50:37-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/cf81c3e387da3d754d66d920ed990ec7ba9aefb4.jpg
+      provider: steam
+      platform: PC
+    - name: The First Step
+      description: Level up
+      date: "2014-03-22T16:50:43-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/0544ae10d1fe285e4c07c80dfd48851d3bc52225.jpg
+      provider: steam
+      platform: PC
+    - name: Perfect
+      description: Complete a track of at least 3 minutes without losing a life
+      date: "2015-07-29T22:35:20-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ced539e3b38117d40169cb10cbbb411e4d1d34b5.jpg
+      provider: steam
+      platform: PC

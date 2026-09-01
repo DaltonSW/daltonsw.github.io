@@ -1,14 +1,14 @@
-unlocked: 26
+unlocked: 28
 total: 46
-playtime_mins: 6795
-last_played: "2026-08-15"
+playtime_mins: 7073
+last_played: "2026-08-25"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 26
+      unlocked: 28
       total: 46
-      playtime_mins: 6795
-      last_played: "2026-08-15"
+      playtime_mins: 7073
+      last_played: "2026-08-25"
 earned:
     - name: The Guardian
       date: "2017-12-12T01:37:18-06:00"
@@ -163,6 +163,18 @@ earned:
     - name: Sapphire+
       date: "2026-08-13T21:06:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/fbadf0310b59be3804493b1f29817dec55a58aa7.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Ruby+
+      date: "2026-08-23T09:41:33-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/72f6f4f9a7a34f6705e64b448c6f9d32329dcb3c.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: The End?
+      date: "2026-08-23T09:41:34-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/57c10f822ec122dd5003281fe35ab7644e4c7a6d.jpg
       provider: steam
       platform: PC
       hidden: true

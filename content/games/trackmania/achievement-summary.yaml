@@ -1,7 +1,7 @@
-unlocked: 21
+unlocked: 22
 total: 30
 playtime_mins: 4350
-last_played: "2026-08-14"
+last_played: "2026-08-27"
 providers:
     - provider: steam
       platform: PC
@@ -11,9 +11,9 @@ providers:
       last_played: "2026-05-23"
     - provider: ubisoft
       platform: Ubisoft
-      unlocked: 21
+      unlocked: 22
       total: 30
-      last_played: "2026-08-14"
+      last_played: "2026-08-27"
 earned:
     - name: player-of-the-month
       date: "2023-03-24T17:43:35-05:00"
@@ -118,5 +118,10 @@ earned:
     - name: climbing-the-ranks
       date: "2023-07-27T20:52:37-05:00"
       icon: https://m.exophase.com/uplay/awards/m/13551ded.png
+      provider: ubisoft
+      platform: Ubisoft
+    - name: you-surpassed-the-trackmaster
+      date: "2026-08-15T10:01:19-05:00"
+      icon: https://m.exophase.com/uplay/awards/m/dgj08d7g.png
       provider: ubisoft
       platform: Ubisoft

@@ -1,14 +1,14 @@
-unlocked: 3
+unlocked: 8
 total: 12
-playtime_mins: 173
-last_played: "2026-08-19"
+playtime_mins: 321
+last_played: "2026-08-26"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 3
+      unlocked: 8
       total: 12
-      playtime_mins: 173
-      last_played: "2026-08-19"
+      playtime_mins: 321
+      last_played: "2026-08-26"
 earned:
     - name: Big Walk
       description: Cross the drawbridge
@@ -26,5 +26,35 @@ earned:
       description: Visit the map
       date: "2026-08-19T22:12:10-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/2b20c1175896ea7e75a1a3914c101faf298f76b6.jpg
+      provider: steam
+      platform: PC
+    - name: Big Help
+      description: Wear something on your hip
+      date: "2026-08-26T19:23:47-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/a5446d7ea18dd5c786c2c39a977e90619e91d3e4.jpg
+      provider: steam
+      platform: PC
+    - name: Big Ride
+      description: Ride the train
+      date: "2026-08-26T20:56:11-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/81a5026dbd70fbec3d2e4ab1614d97a507dca137.jpg
+      provider: steam
+      platform: PC
+    - name: Big Tunnel
+      description: Enter a big tunnel
+      date: "2026-08-26T20:56:11-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/66b6e6a2332c744214991f32515e31d3d52cc14e.jpg
+      provider: steam
+      platform: PC
+    - name: Big Sit
+      description: Ride the chairlift
+      date: "2026-08-26T21:04:48-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/369728238bd72decb0c1e0099ca19b7bb35b109a.jpg
+      provider: steam
+      platform: PC
+    - name: Big Climb
+      description: Reach the highest point
+      date: "2026-08-26T21:08:49-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/e8590ab3c6fc677eab4facd960ab4af8c7d05a35.jpg
       provider: steam
       platform: PC

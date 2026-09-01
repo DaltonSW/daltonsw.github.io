@@ -1,14 +1,14 @@
-unlocked: 45
+unlocked: 52
 total: 53
-playtime_mins: 3944
-last_played: "2026-08-15"
+playtime_mins: 5529
+last_played: "2026-08-30"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 45
+      unlocked: 52
       total: 53
-      playtime_mins: 3944
-      last_played: "2026-08-15"
+      playtime_mins: 5529
+      last_played: "2026-08-30"
 earned:
     - name: Fatal Blow
       description: Deliver a successful Fatal Attack.
@@ -280,3 +280,45 @@ earned:
       provider: steam
       platform: PC
       hidden: true
+    - name: Learning about Emotions
+      description: Learn all gestures.
+      date: "2026-08-22T10:38:48-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/dfc5b03de8383826bf2df2f02567fd8da391a551.jpg
+      provider: steam
+      platform: PC
+    - name: The Story of a Stranger Girl
+      description: Find out about the last story of Eugénie.
+      date: "2026-08-22T19:24:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/b4fc4063e8e75c2f4e05f502682c528803876da3.jpg
+      provider: steam
+      platform: PC
+    - name: The Story of the Prince
+      description: Find out about the last story of Venigni.
+      date: "2026-08-25T17:05:12-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/0dc3f66dbb6ab901b5e05399c12b9234ea396036.jpg
+      provider: steam
+      platform: PC
+    - name: Golden Melody
+      description: Collect and play all records.
+      date: "2026-08-25T19:13:16-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/00766cad48180f3281174ef7284b86e18b8261f6.jpg
+      provider: steam
+      platform: PC
+    - name: 'Real boy : They all lived happily ever after'
+      date: "2026-08-25T19:53:02-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/cd7f8727982c85c7e101ff802eda5c4e75cc1742.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: The Story of One Father
+      description: Find out about the last story of Geppetto.
+      date: "2026-08-26T16:59:42-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/c1de01f6812455e26a88b026265fe76ef14db288.jpg
+      provider: steam
+      platform: PC
+    - name: Memory's Melody
+      description: Collect and listen to all records from the Forgotten Time.
+      date: "2026-08-29T22:27:59-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/434f02c44b6955dc8a1e3fa3b97bc1f4bbc03898.jpg
+      provider: steam
+      platform: PC

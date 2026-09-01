@@ -1,23 +1,23 @@
-unlocked: 16
+unlocked: 24
 total: 40
-playtime_mins: 1449
-last_played: "2026-08-14"
+playtime_mins: 1891
+last_played: "2026-08-29"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 16
+      unlocked: 24
       total: 40
-      playtime_mins: 1449
-      last_played: "2026-08-14"
+      playtime_mins: 1891
+      last_played: "2026-08-29"
 subsets:
     - name: Mouse Alley
       provider: retroachievements
       id: "25709"
       platform: Nintendo DS
-      unlocked: 6
+      unlocked: 7
       total: 52
-      playtime_mins: 202
-      last_played: "2026-07-25"
+      playtime_mins: 1117
+      last_played: "2026-08-26"
 earned:
     - name: The Fog of Misthallery
       description: Finish Chapter 1.
@@ -199,5 +199,78 @@ earned:
       points: 10
       hardcore: true
       icon: "151186"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Archaeologist in Misthallery
+      description: Collect all 300 Hint Coins in the Game without using any of them.
+      date: "2026-08-17T21:02:41-05:00"
+      points: 25
+      hardcore: true
+      icon: "151137"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Chugga Chugga Choo Choo
+      description: Complete all Toy Train Courses.
+      date: "2026-08-25T22:03:06-05:00"
+      points: 10
+      hardcore: true
+      icon: "151183"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Rafting Roundup
+      description: Solve Puzzle 5 in 7 moves.
+      date: "2026-08-26T21:54:31-05:00"
+      points: 2
+      hardcore: true
+      icon: "327503"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Rat Race
+      description: Solve Puzzle 10 in 16 moves.
+      date: "2026-08-26T22:02:11-05:00"
+      points: 3
+      hardcore: true
+      icon: "327491"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: All-Gone Gorgonzola
+      description: Get a Total Score of 30.000 Points in Mouse Alley.
+      date: "2026-08-26T22:37:53-05:00"
+      points: 3
+      hardcore: true
+      icon: "400432"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Priceless Treasure
+      description: Solve Puzzle 65 in 14 moves.
+      date: "2026-08-28T23:07:10-05:00"
+      points: 3
+      hardcore: true
+      icon: "327494"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Black Crow
+      description: Solve Puzzle 39 in 20 moves.
+      date: "2026-08-28T23:12:36-05:00"
+      points: 3
+      hardcore: true
+      icon: "327492"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Troubled Spacecraft
+      description: Solve Puzzle 26 in 31 moves.
+      date: "2026-08-28T23:17:58-05:00"
+      points: 3
+      hardcore: true
+      icon: "327490"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: House of the Boatman
+      description: Solve all three Puzzles in the Boatman's House.
+      date: "2026-08-28T23:22:33-05:00"
+      points: 10
+      hardcore: true
+      icon: "154009"
       provider: retroachievements
       platform: Nintendo DS
