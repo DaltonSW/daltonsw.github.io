@@ -2,22 +2,22 @@
  "provider": "ninjakiwi",
  "title": "Bloons TD 6",
  "id": "UULVSLFDA",
- "updated": "2026-08-18",
- "fetched": "2026-08-18",
- "last_attempt": "2026-08-18",
- "monkey_money": 5442,
- "trophies": 410,
- "xp": 106400725,
+ "updated": "2026-08-31",
+ "fetched": "2026-08-31",
+ "last_attempt": "2026-08-31",
+ "monkey_money": 4817,
+ "trophies": 50,
+ "xp": 108111327,
  "rank": 147,
- "lifetime_trophies": 1335,
+ "lifetime_trophies": 1435,
  "highest_seen_round": 163,
- "games_played": 1498,
- "daily_reward_count": 301,
- "total_daily_challenges_completed": 133,
+ "games_played": 2199,
+ "daily_reward_count": 308,
+ "total_daily_challenges_completed": 141,
  "total_races_entered": 4,
- "challenges_played": 161,
- "total_completed_odysseys": 26,
- "continues_used": 420,
+ "challenges_played": 170,
+ "total_completed_odysseys": 28,
+ "continues_used": 430,
  "collection_event_crates_opened": 116,
  "consecutive_daily_challenges_completed": 1,
  "primary_hero": "Sauda",
@@ -43,31 +43,32 @@
   "StrikerJones": true
  },
  "tower_xp": {
-  "Alchemist": 7110355,
+  "Alchemist": 7314179,
   "BananaFarm": 2705909,
   "BeastHandler": 1101308,
   "BombShooter": 1951214,
   "BoomerangMonkey": 1077941,
-  "DartMonkey": 4172849,
+  "DartMonkey": 4210832,
   "DartlingGunner": 651746,
   "Desperado": 968735,
-  "Druid": 6544346,
-  "EngineerMonkey": 2159455,
-  "GlueGunner": 3627032,
-  "HeliPilot": 2018991,
+  "Druid": 6570462,
+  "EngineerMonkey": 2238987,
+  "GlueGunner": 3778738,
+  "HeliPilot": 2036165,
   "IceMonkey": 774066,
   "Mermonkey": 2828204,
-  "MonkeyAce": 3641439,
-  "MonkeyBuccaneer": 9796998,
-  "MonkeySub": 4442458,
-  "MonkeyVillage": 4265104,
+  "MonkeyAce": 3821792,
+  "MonkeyBuccaneer": 10006214,
+  "MonkeySub": 4507771,
+  "MonkeyVillage": 4282438,
   "MortarMonkey": 124408,
-  "NinjaMonkey": 3028104,
-  "SniperMonkey": 12394368,
-  "SpikeFactory": 3276907,
+  "NinjaMonkey": 3139019,
+  "Skywarden": 0,
+  "SniperMonkey": 12916702,
+  "SpikeFactory": 3354092,
   "SuperMonkey": 1611877,
-  "TackShooter": 4174092,
-  "WizardMonkey": 14517005
+  "TackShooter": 4245595,
+  "WizardMonkey": 14609617
  },
  "unlocked_towers": {
   "Alchemist": true,
@@ -831,6 +832,7 @@
   "GameUIPowerSkinRoadSpikesFlowerPatch": false,
   "GameUIPowerSkinSuperVampireStorm": false,
   "GameUIPowerSkinThriveStonks": false,
+  "GameUIProfileAvatar102": true,
   "GameUIProfileAvatar129": true,
   "GameUIProfileAvatar13": false,
   "GameUIProfileAvatar14": false,
@@ -930,6 +932,7 @@
   "GameUIProfileBanner32": false,
   "GameUIProfileBanner33": false,
   "GameUIProfileBanner4": false,
+  "GameUIProfileBanner44": true,
   "GameUIProfileBanner5": false,
   "GameUIProfileBanner6": false,
   "GameUIProfileBanner7": false,
@@ -937,31 +940,36 @@
   "GameUIProfileBanner9": false,
   "GameUIUpgradesDisplayNamedMonkeys": false,
   "GameUIUpgradesNamedMonkeys": true,
+  "H-ChurchillSentaiSkinPetDrone": true,
   "H-StrikerJonesPetGermanShepherd": true,
   "H-StrikerJonesPlacementParadrop": true,
-  "HeroesAdmiralBrickellPetParrot": false,
+  "HeroesAdmiralBrickellPetParrot": true,
   "HeroesAdoraPlacementSunbeam": false,
+  "HeroesBenjaminPetMouse": true,
   "HeroesBenjaminPlacementMatrix": false,
   "HeroesBenjamminDJSkinPlacementPartyLights": false,
   "HeroesChurchillPlacementTankDrop": false,
   "HeroesChurchillSentaiSkinPetDrone": false,
+  "HeroesCorvusPetOwl": true,
   "HeroesETnPlacementBeamDown": false,
-  "HeroesEtiennePetRoomba": false,
-  "HeroesEziliPetFrog": false,
+  "HeroesEtiennePetRoomba": true,
+  "HeroesEziliPetFrog": true,
   "HeroesEziliPlacementGlyph": false,
-  "HeroesGeraldoPetPackMule": false,
-  "HeroesGwendolinPetFirefox": false,
+  "HeroesGeraldoPetPackMule": true,
+  "HeroesGwendolinPetFirefox": true,
   "HeroesGwendolinPlacementFireball": false,
-  "HeroesJoanOfArcAdoraPetDragon": false,
-  "HeroesMountainObynPetBalfrog": false,
-  "HeroesObynPetBunny": false,
+  "HeroesJoanOfArcAdoraPetDragon": true,
+  "HeroesMountainObynPetBalfrog": true,
+  "HeroesObynPetBunny": true,
   "HeroesObynPetWolf": true,
+  "HeroesPatFustyPetPig": true,
   "HeroesPatFustyPlacementSuperjump": false,
-  "HeroesPatPetPenguin": false,
-  "HeroesPsiPetBison": false,
+  "HeroesPatPetPenguin": true,
+  "HeroesPsiPetBison": true,
   "HeroesQuincyCyberQuincyPlacementFireworks": false,
-  "HeroesQuincyPetDadOfQuincy": false,
+  "HeroesQuincyPetDadOfQuincy": true,
   "HeroesQuincyPlacementSpecialForces": false,
+  "HeroesRosaliaPetCollie": true,
   "HeroesSaudaPetCrane": true,
   "HeroesStrikerJonesBikerBonesPlacementHellrift": false,
   "HeroesStrikerJonesPetGermanShepherd": false,
@@ -969,8 +977,11 @@
   "RaceEntry": false,
   "TP-AlchemistSpringFlowers": true,
   "TP-DartlingEasterEggs": true,
+  "TP-SpikeFactoryPineapples": true,
   "TP-WizardMonkeyFireworks": true,
+  "TPWizardSheep": true,
   "TPetBombshooterBestboy": true,
+  "TPetDartMonkeyDiscord": true,
   "TeamsBanner10": false,
   "TeamsBanner11": false,
   "TeamsBanner9": false,
@@ -996,19 +1007,25 @@
   "TowerEffectAllMonkeysPlacementUpgradesGhosts": false,
   "TowerEffectAllMonkeysPlacementUpgradesPresents": false,
   "TowerPetAlchemistPossum": true,
+  "TowerPetAlchemistSlimeCube": true,
   "TowerPetBananaFarmChicken": true,
-  "TowerPetBombshooterTortoise": false,
-  "TowerPetGlueGunnerRat": false,
-  "TowerPetHeliPilotHummingbird": false,
-  "TowerPetIceMonkeySnowman": false,
-  "TowerPetMonkeyAceDragonfly": false,
+  "TowerPetBombshooterTortoise": true,
+  "TowerPetBoomerangKangaroo": true,
+  "TowerPetDruidCapybara": true,
+  "TowerPetEngineerBot": true,
+  "TowerPetGlueGunnerRat": true,
+  "TowerPetHeliPilotHummingbird": true,
+  "TowerPetIceMonkeySnowman": true,
+  "TowerPetIceMonkeyWalrus": true,
+  "TowerPetMonkeyAceDragonfly": true,
   "TowerPetMonkeyBuccaneerNarwhal": true,
-  "TowerPetMonkeySubRubberDuck": false,
-  "TowerPetMonkeyVillageElf": false,
-  "TowerPetNinjaMonkeyKiwi": false,
+  "TowerPetMonkeySubRubberDuck": true,
+  "TowerPetMonkeyVillageElf": true,
+  "TowerPetMortarMonkeySafetyMole": true,
+  "TowerPetNinjaMonkeyKiwi": true,
   "TowerPetSniperMonkeyChameleon": true,
-  "TowerPetSupermonkeyBat": false,
-  "TowerPetTackShooterHedgehog": false,
+  "TowerPetSupermonkeyBat": true,
+  "TowerPetTackShooterHedgehog": true,
   "TowerProjectileAlchemistSpringFlowers": false,
   "TowerProjectileBananaFarmCandyCorn": false,
   "TowerProjectileBananaFarmPresents": false,
@@ -1024,7 +1041,7 @@
   "TowerProjectileSpikeFactoryPineapples": false,
   "TowerProjectileTackShooterIcicles": false,
   "TowerProjectileWizardMonkeyFireworks": false,
-  "TowerProjectileWizardZombies": false,
+  "TowerProjectileWizardZombies": true,
   "TowerPropMonkeyVillageAustralianFlag": false,
   "TowerPropMonkeyVillageBananaFlag": false,
   "TowerPropMonkeyVillageBrazilFlag": false,
@@ -1100,6 +1117,7 @@
   },
   "BombShooter": {
    "000": 2,
+   "002": 1,
    "010": 1,
    "011": 1,
    "012": 1,
@@ -1139,7 +1157,7 @@
    "003": 3,
    "004": 0,
    "010": 2,
-   "011": 1,
+   "011": 2,
    "012": 1,
    "024": 1,
    "030": 2,
@@ -1152,6 +1170,7 @@
    "200": 1,
    "202": 1,
    "203": 1,
+   "204": 1,
    "210": 1,
    "220": 2,
    "300": 2,
@@ -1207,7 +1226,7 @@
    "032": 1,
    "040": 1,
    "100": 1,
-   "110": 1,
+   "110": 2,
    "120": 1,
    "130": 3,
    "200": 1,
@@ -1226,7 +1245,7 @@
    "011": 2,
    "022": 2,
    "040": 1,
-   "042": 1,
+   "042": 2,
    "100": 2,
    "110": 1,
    "120": 2,
@@ -1278,9 +1297,9 @@
    "000": 2,
    "002": 1,
    "010": 1,
-   "011": 1,
+   "011": 2,
    "030": 1,
-   "032": 1,
+   "032": 2,
    "040": 1,
    "102": 1,
    "120": 2,
@@ -1371,7 +1390,7 @@
    "201": 1,
    "202": 2,
    "203": 2,
-   "220": 2,
+   "220": 3,
    "300": 1,
    "302": 1,
    "310": 1,
@@ -1385,6 +1404,7 @@
    "020": 3,
    "040": 2,
    "110": 2,
+   "201": 1,
    "204": 1,
    "220": 3,
    "310": 1,
@@ -1432,6 +1452,12 @@
    "230": 1,
    "302": 1
   },
+  "Skywarden": {
+   "003": 1,
+   "030": 1,
+   "130": 1,
+   "300": 1
+  },
   "SniperMonkey": {
    "000": 1,
    "001": 2,
@@ -1475,7 +1501,7 @@
    "202": 2,
    "203": 2,
    "210": 1,
-   "300": 1,
+   "300": 2,
    "302": 1,
    "310": 1,
    "400": 0,
@@ -1546,8 +1572,7 @@
  },
  "powers": {
   "BananaFarmer": {
-   "quantity": 17,
-   "is_new": true
+   "quantity": 17
   },
   "BattleCat": {
    "quantity": 8
@@ -1556,22 +1581,23 @@
    "quantity": 19
   },
   "CashDrop": {
-   "quantity": 12
+   "quantity": 13
   },
   "DartTime": {
    "quantity": 24
   },
   "EnergisingTotem": {
-   "quantity": 21
+   "quantity": 22
   },
   "GlueTrap": {
    "quantity": 20
   },
   "MoabMine": {
-   "quantity": 21
+   "quantity": 21,
+   "is_new": true
   },
   "MonkeyBoost": {
-   "quantity": 36
+   "quantity": 37
   },
   "Pontoon": {
    "quantity": 20
@@ -1580,7 +1606,7 @@
    "quantity": 23
   },
   "RoadSpikes": {
-   "quantity": 5
+   "quantity": 7
   },
   "SheRa": {
    "quantity": 8
@@ -1608,9 +1634,12 @@
   "BananaFarmerPro": {
    "xp": 500
   },
+  "MonkeyBoostPro": {},
+  "PortableLakePro": {},
   "SuperMonkeyBeacon": {
    "xp": 200
-  }
+  },
+  "TechBotPrime": {}
  },
  "achievements_claimed": [
   "First Win",
@@ -1925,6 +1954,20 @@
        "times_completed": 2
       },
       "SuperChimps": {}
+     }
+    }
+   }
+  },
+  "AncientPortal": {
+   "complete": true,
+   "difficulty": {
+    "Hard": {
+     "single": {
+      "Standard": {
+       "completed": true,
+       "best_round": 80,
+       "times_completed": 1
+      }
      }
     }
    }
@@ -3244,6 +3287,16 @@
       },
       "SuperChimps": {}
      }
+    },
+    "Medium": {
+     "single": {
+      "Standard": {
+       "completed": true,
+       "completed_without_loading_save": true,
+       "best_round": 60,
+       "times_completed": 1
+      }
+     }
     }
    }
   },
@@ -3480,7 +3533,7 @@
        "completed": true,
        "completed_without_loading_save": true,
        "best_round": 70,
-       "times_completed": 4
+       "times_completed": 5
       },
       "SuperChimps": {}
      }
@@ -5964,8 +6017,8 @@
       "Standard": {
        "completed": true,
        "completed_without_loading_save": true,
-       "best_round": 60,
-       "times_completed": 2
+       "best_round": 65,
+       "times_completed": 3
       },
       "SuperChimps": {}
      }
@@ -6177,7 +6230,7 @@
        "completed": true,
        "completed_without_loading_save": true,
        "best_round": 70,
-       "times_completed": 3
+       "times_completed": 4
       },
       "SuperChimps": {}
      }
@@ -6450,33 +6503,34 @@
   }
  },
  "raw": {
-  "latestGameVersion": "56.2",
+  "latestGameVersion": "56.3",
   "towerXP": {
-   "DartMonkey": 4172849,
+   "DartMonkey": 4210832,
    "BombShooter": 1951214,
-   "NinjaMonkey": 3028104,
+   "NinjaMonkey": 3139019,
    "SuperMonkey": 1611877,
-   "WizardMonkey": 14517005,
+   "WizardMonkey": 14609617,
    "BananaFarm": 2705909,
-   "MonkeyVillage": 4265104,
-   "HeliPilot": 2018991,
-   "Druid": 6544346,
-   "EngineerMonkey": 2159455,
+   "MonkeyVillage": 4282438,
+   "HeliPilot": 2036165,
+   "Druid": 6570462,
+   "EngineerMonkey": 2238987,
    "MortarMonkey": 124408,
-   "Alchemist": 7110355,
-   "MonkeyAce": 3641439,
+   "Alchemist": 7314179,
+   "MonkeyAce": 3821792,
    "BoomerangMonkey": 1077941,
-   "SpikeFactory": 3276907,
-   "GlueGunner": 3627032,
-   "TackShooter": 4174092,
-   "MonkeyBuccaneer": 9796998,
-   "MonkeySub": 4442458,
+   "SpikeFactory": 3354092,
+   "GlueGunner": 3778738,
+   "TackShooter": 4245595,
+   "MonkeyBuccaneer": 10006214,
+   "MonkeySub": 4507771,
    "DartlingGunner": 651746,
    "BeastHandler": 1101308,
    "IceMonkey": 774066,
-   "SniperMonkey": 12394368,
+   "SniperMonkey": 12916702,
    "Mermonkey": 2828204,
-   "Desperado": 968735
+   "Desperado": 968735,
+   "Skywarden": 0
   },
   "acquiredUpgrades": {
    "Quick Shots": true,
@@ -7131,7 +7185,7 @@
    "Silas": true,
    "Sheriff": true
   },
-  "gamesPlayed": 1498,
+  "gamesPlayed": 2199,
   "instaTowers": {
    "DartMonkey": {
     "102": 1,
@@ -7141,6 +7195,7 @@
     "200": 1,
     "202": 1,
     "203": 1,
+    "204": 1,
     "210": 1,
     "220": 2,
     "300": 2,
@@ -7157,7 +7212,7 @@
     "042": 1,
     "024": 1,
     "030": 2,
-    "011": 1
+    "011": 2
    },
    "WizardMonkey": {
     "100": 2,
@@ -7202,7 +7257,7 @@
    },
    "Druid": {
     "100": 1,
-    "110": 1,
+    "110": 2,
     "120": 1,
     "130": 3,
     "200": 1,
@@ -7234,11 +7289,11 @@
     "301": 1,
     "400": 1,
     "010": 1,
-    "011": 1,
+    "011": 2,
     "000": 2,
     "002": 1,
     "030": 1,
-    "032": 1,
+    "032": 2,
     "040": 1
    },
    "SniperMonkey": {
@@ -7273,7 +7328,7 @@
     "202": 2,
     "203": 2,
     "210": 1,
-    "300": 1,
+    "300": 2,
     "302": 1,
     "310": 1,
     "400": 0,
@@ -7324,7 +7379,7 @@
     "201": 1,
     "202": 2,
     "203": 2,
-    "220": 2,
+    "220": 3,
     "300": 1,
     "302": 1,
     "310": 1,
@@ -7418,7 +7473,7 @@
     "022": 2,
     "000": 1,
     "001": 1,
-    "042": 1,
+    "042": 2,
     "004": 1,
     "040": 1,
     "011": 2,
@@ -7549,10 +7604,12 @@
     "021": 1,
     "012": 1,
     "011": 1,
-    "020": 1
+    "020": 1,
+    "002": 1
    },
    "MonkeyVillage": {
     "110": 2,
+    "201": 1,
     "204": 1,
     "220": 3,
     "310": 1,
@@ -7634,15 +7691,21 @@
     "002": 1,
     "023": 1,
     "024": 1
+   },
+   "Skywarden": {
+    "130": 1,
+    "300": 1,
+    "030": 1,
+    "003": 1
    }
   },
-  "monkeyMoney": 5442,
-  "xp": 106400725,
+  "monkeyMoney": 4817,
+  "xp": 108111327,
   "rank": 147,
   "veteranXp": 0,
   "veteranRank": 0,
-  "trophies": 410,
-  "lifetimeTrophies": 1335,
+  "trophies": 50,
+  "lifetimeTrophies": 1435,
   "lifetimeTeamTrophies": 0,
   "knowledgePoints": 0,
   "primaryHero": "Sauda",
@@ -7750,20 +7813,20 @@
   ],
   "powers": {
    "CashDrop": {
-    "quantity": 12,
+    "quantity": 13,
     "isNew": false
    },
    "RoadSpikes": {
-    "quantity": 5,
+    "quantity": 7,
     "isNew": false
    },
    "MonkeyBoost": {
-    "quantity": 36,
+    "quantity": 37,
     "isNew": false
    },
    "BananaFarmer": {
     "quantity": 17,
-    "isNew": true
+    "isNew": false
    },
    "CamoTrap": {
     "quantity": 19,
@@ -7787,14 +7850,14 @@
    },
    "MoabMine": {
     "quantity": 21,
-    "isNew": false
+    "isNew": true
    },
    "Thrive": {
     "quantity": 11,
     "isNew": false
    },
    "EnergisingTotem": {
-    "quantity": 21,
+    "quantity": 22,
     "isNew": false
    },
    "DartTime": {
@@ -7840,16 +7903,31 @@
     "unlockedTier": 0,
     "seenUnlockPro": 0,
     "seenUnlockTier": 0
+   },
+   "MonkeyBoostPro": {
+    "isSeen": 0,
+    "xp": 0,
+    "unlockedTier": 0
+   },
+   "PortableLakePro": {
+    "isSeen": 0,
+    "xp": 0,
+    "unlockedTier": 0
+   },
+   "TechBotPrime": {
+    "isSeen": 0,
+    "xp": 0,
+    "unlockedTier": 0
    }
   },
   "highestSeenRound": 163,
-  "dailyRewardCount": 301,
-  "totalDailyChallengesCompleted": 133,
+  "dailyRewardCount": 308,
+  "totalDailyChallengesCompleted": 141,
   "consecutiveDailyChallengesCompleted": 1,
   "totalRacesEntered": 4,
-  "challengesPlayed": 161,
+  "challengesPlayed": 170,
   "challengesShared": 0,
-  "totalCompletedOdysseys": 26,
+  "totalCompletedOdysseys": 28,
   "unlockedBigBloons": true,
   "bigBloonsActive": false,
   "unlockedSmallBloons": true,
@@ -7897,18 +7975,19 @@
    "Geraldo": "Geraldo",
    "Corvus": "Corvus",
    "Rosalia": "Rosalia",
-   "Silas": "Silas"
+   "Silas": "Silas",
+   "Skywarden": "Skywarden"
   },
   "collectionEventCratesOpened": 116,
-  "continuesUsed": 420,
+  "continuesUsed": 430,
   "trophyStoreItems": {
    "HeroesQuincyCyberQuincyPlacementFireworks": false,
    "HeroesAdoraPlacementSunbeam": false,
    "HeroesChurchillPlacementTankDrop": false,
    "HeroesBenjamminDJSkinPlacementPartyLights": false,
    "HeroesStrikerJonesPlacementParadrop": false,
-   "HeroesQuincyPetDadOfQuincy": false,
-   "HeroesGwendolinPetFirefox": false,
+   "HeroesQuincyPetDadOfQuincy": true,
+   "HeroesGwendolinPetFirefox": true,
    "BloonsMOABSkinFootball": false,
    "BloonsBFBSkinPizza": false,
    "BloonsZOMGSkinWatermelon": false,
@@ -7946,7 +8025,7 @@
    "GameUIProfileAvatar21": false,
    "GameUIProfileAvatar22": false,
    "HeroesObynPetWolf": true,
-   "HeroesEziliPetFrog": false,
+   "HeroesEziliPetFrog": true,
    "BloonsAllBloonsPopsBarrelOfMonkeys": false,
    "BloonsAllBloonsTopHats": false,
    "CoopEmoteSoundCrickets": false,
@@ -7958,7 +8037,7 @@
    "GameUIMusicTrackMusicSunsetSilentNightMix": false,
    "TowerProjectileBombshooterPumpkin": false,
    "TowerProjectileBananaFarmCandyCorn": false,
-   "TowerPetSupermonkeyBat": false,
+   "TowerPetSupermonkeyBat": true,
    "TowerEffectAllMonkeysPlacementUpgradesGhosts": false,
    "BloonsBADSkinBones": false,
    "BloonsAllBloonsDecalAxe": false,
@@ -7972,11 +8051,11 @@
    "GameUIProfileAvatar26": false,
    "BloonsAllBloonsPopsBones": false,
    "GameUIMusicTrackMusicFiestaSynthwaveMix": false,
-   "TowerPetMonkeySubRubberDuck": false,
+   "TowerPetMonkeySubRubberDuck": true,
    "TowerProjectileMonkeyAceBones": false,
    "CoopEmoteTextRound100": false,
-   "HeroesAdmiralBrickellPetParrot": false,
-   "TowerPetMonkeyVillageElf": false,
+   "HeroesAdmiralBrickellPetParrot": true,
+   "TowerPetMonkeyVillageElf": true,
    "TowerEffectAllMonkeysPlacementUpgradesPresents": false,
    "TowerProjectileBoomerangCandyCane": false,
    "BloonsAllBloonsSantaHats": false,
@@ -7993,7 +8072,7 @@
    "GameUIProfileAvatar28": false,
    "GameUIProfileAvatar29": false,
    "GameUIProfileAvatar30": false,
-   "HeroesPatPetPenguin": false,
+   "HeroesPatPetPenguin": true,
    "GameUIMusicTrackMusicJingleBloons": false,
    "GameUIProfileAvatar31": false,
    "GameUIProfileAvatar32": false,
@@ -8003,9 +8082,9 @@
    "TowerProjectileSpikeFactoryPineapples": false,
    "GameUIMusicTrackMusicBMCStreetParty": false,
    "HeroesBenjaminPlacementMatrix": false,
-   "HeroesObynPetBunny": false,
+   "HeroesObynPetBunny": true,
    "TowerProjectileDartlingEasterEggs": false,
-   "TowerPetNinjaMonkeyKiwi": false,
+   "TowerPetNinjaMonkeyKiwi": true,
    "BloonsMOABSkinChocolate": false,
    "BloonsBFBSkinChocolate": false,
    "BloonsAllBloonsBunnyEars": false,
@@ -8030,7 +8109,7 @@
    "GameUIProfileAvatar39": false,
    "GameUIPowerSkinLavaLake": false,
    "CoopEmoteAnimationPlayerNumbers": false,
-   "HeroesEtiennePetRoomba": false,
+   "HeroesEtiennePetRoomba": true,
    "HeroesEziliPlacementGlyph": false,
    "TowerPropMonkeyVillageNZFlag": false,
    "TowerPropMonkeyVillageScotlandFlag": false,
@@ -8068,7 +8147,7 @@
    "GameUIProfileBanner5": false,
    "TowerEffectAllMonkeysPlacementUpgradesButterflies": false,
    "HeroesChurchillSentaiSkinPetDrone": false,
-   "TowerPetGlueGunnerRat": false,
+   "TowerPetGlueGunnerRat": true,
    "TowerEffectAllMonkeysPlacementUpgradesBats": false,
    "TowerPetMonkeyBuccaneerNarwhal": true,
    "TowerProjectileEngineerVampireHunter": false,
@@ -8085,10 +8164,10 @@
    "GameUIProfileBanner6": false,
    "GameUIProfileBanner7": false,
    "GameUIMusicTrackMusicHaunted": false,
-   "HeroesPsiPetBison": false,
+   "HeroesPsiPetBison": true,
    "TowerPropMonkeyVillageAustralianFlag": false,
    "TowerProjectileMortarSnow": false,
-   "TowerPetIceMonkeySnowman": false,
+   "TowerPetIceMonkeySnowman": true,
    "BloonsDDTSkinSleigh": false,
    "BloonsAllBloonsElfHat": false,
    "CoopEmoteAnimationBenCool": false,
@@ -8104,8 +8183,8 @@
    "GameUIMusicTrackMusicWinterChilledMix": false,
    "HeroesStrikerJonesPetGermanShepherd": false,
    "HeroesETnPlacementBeamDown": false,
-   "TowerPetHeliPilotHummingbird": false,
-   "TowerProjectileWizardZombies": false,
+   "TowerPetHeliPilotHummingbird": true,
+   "TowerProjectileWizardZombies": true,
    "BloonsAllBloonsDaisyChain": true,
    "BloonsBADSkinWhale": false,
    "CoopEmoteAnimationObynPeace": false,
@@ -8127,7 +8206,7 @@
    "GameUIProfileBanner13": false,
    "GameUIProfileBanner14": false,
    "GameUIMusicTrackMusicSunshineFiestaMix": false,
-   "HeroesMountainObynPetBalfrog": false,
+   "HeroesMountainObynPetBalfrog": true,
    "TowerPropMonkeyVillagePrideFlag": true,
    "CoopEmoteTextNeedMore": false,
    "CoopEmoteAnimationRainbow": false,
@@ -8154,7 +8233,7 @@
    "EventTeamRelic0": false,
    "EventTeamRelic1": false,
    "EventTeamRelic2": false,
-   "HeroesJoanOfArcAdoraPetDragon": false,
+   "HeroesJoanOfArcAdoraPetDragon": true,
    "BloonsDDTSkinSpider": false,
    "CoopEmoteAnimationPsigh": false,
    "GameUIProfileBanner17": false,
@@ -8172,7 +8251,7 @@
    "BuildingPropCastle": false,
    "WaterPropMiniPirateBoat": false,
    "FlyingPropMoonRabbit": false,
-   "TowerPetMonkeyAceDragonfly": false,
+   "TowerPetMonkeyAceDragonfly": true,
    "TowerProjectileBananaFarmPresents": false,
    "TowerProjectileTackShooterIcicles": false,
    "TowerProjectileDartMonkeySnowballs": false,
@@ -8207,7 +8286,7 @@
    "TeamsEmblemFrame15": false,
    "TeamsEmblemIcon17": false,
    "TeamsEmblemIcon18": false,
-   "TowerPetTackShooterHedgehog": false,
+   "TowerPetTackShooterHedgehog": true,
    "TowerProjectileAlchemistSpringFlowers": false,
    "BloonsBFBSkinLobster": false,
    "GameUIProfileAvatar73": false,
@@ -8224,7 +8303,7 @@
    "BasePropCakeMonkey": false,
    "TowerPropMonkeyVillageSwedenFlag": false,
    "HeroesQuincyPlacementSpecialForces": false,
-   "HeroesGeraldoPetPackMule": false,
+   "HeroesGeraldoPetPackMule": true,
    "GameUIMusicTrackMusicSunset64Mix": false,
    "GameUIProfileAvatar77": false,
    "GameUIProfileAvatar78": false,
@@ -8235,7 +8314,7 @@
    "TeamsEmblemFrame18": false,
    "TeamsEmblemIcon21": false,
    "BloonsAllBloonsPartyHat": false,
-   "TowerPetBombshooterTortoise": false,
+   "TowerPetBombshooterTortoise": true,
    "BloonsMOABSkinBoat": false,
    "BloonsAllBloonsSunglasses": false,
    "GameUIMusicTrackMusicFiestaHeliumHeightsMix": false,
@@ -8249,16 +8328,32 @@
    "TeamsEmblemFrame19": false,
    "TeamsEmblemIcon22": false,
    "BloonsAllBloonsCowboyHat": true,
+   "GameUIProfileAvatar102": true,
    "GameUIProfileAvatar129": true,
    "GameUIProfileAvatar83": true,
+   "GameUIProfileBanner44": true,
    "GameUIUpgradesNamedMonkeys": true,
+   "HeroesBenjaminPetMouse": true,
+   "H-ChurchillSentaiSkinPetDrone": true,
+   "HeroesCorvusPetOwl": true,
+   "HeroesPatFustyPetPig": true,
+   "HeroesRosaliaPetCollie": true,
    "H-StrikerJonesPetGermanShepherd": true,
    "H-StrikerJonesPlacementParadrop": true,
    "TowerPetAlchemistPossum": true,
+   "TowerPetAlchemistSlimeCube": true,
+   "TowerPetBoomerangKangaroo": true,
+   "TowerPetDruidCapybara": true,
+   "TowerPetEngineerBot": true,
+   "TowerPetIceMonkeyWalrus": true,
+   "TowerPetMortarMonkeySafetyMole": true,
    "TP-AlchemistSpringFlowers": true,
    "TP-DartlingEasterEggs": true,
    "TP-WizardMonkeyFireworks": true,
-   "TPetBombshooterBestboy": true
+   "TPetBombshooterBestboy": true,
+   "TPetDartMonkeyDiscord": true,
+   "TPWizardSheep": true,
+   "TP-SpikeFactoryPineapples": true
   },
   "mapProgress": {
    "Tutorial": {
@@ -8364,7 +8459,7 @@
         "completed": true,
         "completedWithoutLoadingSave": true,
         "bestRound": 70,
-        "timesCompleted": 3
+        "timesCompleted": 4
        },
        "MilitaryOnly": {
         "completed": true,
@@ -8643,8 +8738,8 @@
        "Standard": {
         "completed": true,
         "completedWithoutLoadingSave": true,
-        "bestRound": 60,
-        "timesCompleted": 2
+        "bestRound": 65,
+        "timesCompleted": 3
        },
        "SuperChimps": {
         "completed": false,
@@ -10318,7 +10413,7 @@
         "completed": true,
         "completedWithoutLoadingSave": true,
         "bestRound": 70,
-        "timesCompleted": 4
+        "timesCompleted": 5
        },
        "SuperChimps": {
         "completed": false,
@@ -11956,6 +12051,17 @@
         "completed": true,
         "completedWithoutLoadingSave": false,
         "bestRound": 100,
+        "timesCompleted": 1
+       }
+      },
+      "coop": {}
+     },
+     "Medium": {
+      "single": {
+       "Standard": {
+        "completed": true,
+        "completedWithoutLoadingSave": true,
+        "bestRound": 60,
         "timesCompleted": 1
        }
       },
@@ -14240,6 +14346,22 @@
      }
     }
    },
+   "AncientPortal": {
+    "complete": true,
+    "difficulty": {
+     "Hard": {
+      "single": {
+       "Standard": {
+        "completed": true,
+        "completedWithoutLoadingSave": false,
+        "bestRound": 80,
+        "timesCompleted": 1
+       }
+      },
+      "coop": {}
+     }
+    }
+   },
    "EnchantedGlade": {
     "complete": true,
     "difficulty": {
@@ -15332,9 +15454,9 @@
    },
    {
     "id": "SkywardenQuest",
-    "complete": false,
+    "complete": true,
     "parts": 1,
-    "partsComplete": 0
+    "partsComplete": 1
    }
   ]
  }

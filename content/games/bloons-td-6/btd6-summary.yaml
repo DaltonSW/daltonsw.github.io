@@ -1,18 +1,18 @@
 user_id: UULVSLFDA
-fetched: "2026-08-18"
-xp: 106400725
+fetched: "2026-08-31"
+xp: 108111327
 rank: 147
-trophies: 410
-lifetime_trophies: 1335
+trophies: 50
+lifetime_trophies: 1435
 knowledge_points: 0
 highest_seen_round: 163
-games_played: 1498
-total_odysseys: 26
+games_played: 2199
+total_odysseys: 28
 achievements_count: 100
 primary_hero: Sauda
 towers:
     - name: Alchemist
-      xp: 7110355
+      xp: 7314179
       unlocked: true
     - name: BananaFarm
       xp: 2705909
@@ -27,7 +27,7 @@ towers:
       xp: 1077941
       unlocked: true
     - name: DartMonkey
-      xp: 4172849
+      xp: 4210832
       unlocked: true
     - name: DartlingGunner
       xp: 651746
@@ -36,16 +36,16 @@ towers:
       xp: 968735
       unlocked: true
     - name: Druid
-      xp: 6544346
+      xp: 6570462
       unlocked: true
     - name: EngineerMonkey
-      xp: 2159455
+      xp: 2238987
       unlocked: true
     - name: GlueGunner
-      xp: 3627032
+      xp: 3778738
       unlocked: true
     - name: HeliPilot
-      xp: 2018991
+      xp: 2036165
       unlocked: true
     - name: IceMonkey
       xp: 774066
@@ -54,40 +54,40 @@ towers:
       xp: 2828204
       unlocked: true
     - name: MonkeyAce
-      xp: 3641439
+      xp: 3821792
       unlocked: true
     - name: MonkeyBuccaneer
-      xp: 9796998
+      xp: 10006214
       unlocked: true
     - name: MonkeySub
-      xp: 4442458
+      xp: 4507771
       unlocked: true
     - name: MonkeyVillage
-      xp: 4265104
+      xp: 4282438
       unlocked: true
     - name: MortarMonkey
       xp: 124408
       unlocked: true
     - name: NinjaMonkey
-      xp: 3028104
+      xp: 3139019
       unlocked: true
     - name: Skywarden
       xp: 0
       unlocked: true
     - name: SniperMonkey
-      xp: 12394368
+      xp: 12916702
       unlocked: true
     - name: SpikeFactory
-      xp: 3276907
+      xp: 3354092
       unlocked: true
     - name: SuperMonkey
       xp: 1611877
       unlocked: true
     - name: TackShooter
-      xp: 4174092
+      xp: 4245595
       unlocked: true
     - name: WizardMonkey
-      xp: 14517005
+      xp: 14609617
       unlocked: true
 heroes:
     - name: AdmiralBrickell
@@ -340,6 +340,14 @@ maps:
         - difficulty: Medium
           mode: SuperChimps
           completed: false
+    - name: AncientPortal
+      complete: true
+      modes:
+        - difficulty: Hard
+          mode: Standard
+          completed: true
+          best_round: 80
+          times_completed: 1
     - name: AnotherBrick
       complete: true
       modes:
@@ -1605,6 +1613,12 @@ maps:
         - difficulty: Hard
           mode: SuperChimps
           completed: false
+        - difficulty: Medium
+          mode: Standard
+          completed: true
+          completed_without_loading_save: true
+          best_round: 60
+          times_completed: 1
     - name: Hedge
       complete: true
       modes:
@@ -1834,7 +1848,7 @@ maps:
           completed: true
           completed_without_loading_save: true
           best_round: 70
-          times_completed: 4
+          times_completed: 5
         - difficulty: Medium
           mode: SuperChimps
           completed: false
@@ -4226,8 +4240,8 @@ maps:
           mode: Standard
           completed: true
           completed_without_loading_save: true
-          best_round: 60
-          times_completed: 2
+          best_round: 65
+          times_completed: 3
         - difficulty: Medium
           mode: SuperChimps
           completed: false
@@ -4435,7 +4449,7 @@ maps:
           completed: true
           completed_without_loading_save: true
           best_round: 70
-          times_completed: 3
+          times_completed: 4
         - difficulty: Medium
           mode: SuperChimps
           completed: false
@@ -4794,10 +4808,12 @@ insta_monkeys:
         - tier: "310"
           quantity: 1
     - tower: BombShooter
-      total: 24
+      total: 25
       tiers:
         - tier: "000"
           quantity: 2
+        - tier: "002"
+          quantity: 1
         - tier: "010"
           quantity: 1
         - tier: "011"
@@ -4862,7 +4878,7 @@ insta_monkeys:
         - tier: "401"
           quantity: 1
     - tower: DartMonkey
-      total: 33
+      total: 35
       tiers:
         - tier: "000"
           quantity: 1
@@ -4873,7 +4889,7 @@ insta_monkeys:
         - tier: "010"
           quantity: 2
         - tier: "011"
-          quantity: 1
+          quantity: 2
         - tier: "012"
           quantity: 1
         - tier: "024"
@@ -4897,6 +4913,8 @@ insta_monkeys:
         - tier: "202"
           quantity: 1
         - tier: "203"
+          quantity: 1
+        - tier: "204"
           quantity: 1
         - tier: "210"
           quantity: 1
@@ -4981,7 +4999,7 @@ insta_monkeys:
         - tier: "310"
           quantity: 1
     - tower: Druid
-      total: 30
+      total: 31
       tiers:
         - tier: "000"
           quantity: 3
@@ -5006,7 +5024,7 @@ insta_monkeys:
         - tier: "100"
           quantity: 1
         - tier: "110"
-          quantity: 1
+          quantity: 2
         - tier: "120"
           quantity: 1
         - tier: "130"
@@ -5026,7 +5044,7 @@ insta_monkeys:
         - tier: "320"
           quantity: 1
     - tower: EngineerMonkey
-      total: 26
+      total: 27
       tiers:
         - tier: "000"
           quantity: 1
@@ -5043,7 +5061,7 @@ insta_monkeys:
         - tier: "040"
           quantity: 1
         - tier: "042"
-          quantity: 1
+          quantity: 2
         - tier: "100"
           quantity: 2
         - tier: "110"
@@ -5135,7 +5153,7 @@ insta_monkeys:
         - tier: "302"
           quantity: 1
     - tower: IceMonkey
-      total: 18
+      total: 20
       tiers:
         - tier: "000"
           quantity: 2
@@ -5144,11 +5162,11 @@ insta_monkeys:
         - tier: "010"
           quantity: 1
         - tier: "011"
-          quantity: 1
+          quantity: 2
         - tier: "030"
           quantity: 1
         - tier: "032"
-          quantity: 1
+          quantity: 2
         - tier: "040"
           quantity: 1
         - tier: "102"
@@ -5285,7 +5303,7 @@ insta_monkeys:
         - tier: "420"
           quantity: 1
     - tower: MonkeySub
-      total: 31
+      total: 32
       tiers:
         - tier: "000"
           quantity: 2
@@ -5324,7 +5342,7 @@ insta_monkeys:
         - tier: "203"
           quantity: 2
         - tier: "220"
-          quantity: 2
+          quantity: 3
         - tier: "300"
           quantity: 1
         - tier: "302"
@@ -5334,7 +5352,7 @@ insta_monkeys:
         - tier: "320"
           quantity: 2
     - tower: MonkeyVillage
-      total: 19
+      total: 20
       tiers:
         - tier: "000"
           quantity: 1
@@ -5350,6 +5368,8 @@ insta_monkeys:
           quantity: 2
         - tier: "110"
           quantity: 2
+        - tier: "201"
+          quantity: 1
         - tier: "204"
           quantity: 1
         - tier: "220"
@@ -5440,6 +5460,17 @@ insta_monkeys:
           quantity: 1
         - tier: "302"
           quantity: 1
+    - tower: Skywarden
+      total: 4
+      tiers:
+        - tier: "003"
+          quantity: 1
+        - tier: "030"
+          quantity: 1
+        - tier: "130"
+          quantity: 1
+        - tier: "300"
+          quantity: 1
     - tower: SniperMonkey
       total: 31
       tiers:
@@ -5486,7 +5517,7 @@ insta_monkeys:
         - tier: "400"
           quantity: 1
     - tower: SpikeFactory
-      total: 31
+      total: 32
       tiers:
         - tier: "000"
           quantity: 1
@@ -5527,7 +5558,7 @@ insta_monkeys:
         - tier: "210"
           quantity: 1
         - tier: "300"
-          quantity: 1
+          quantity: 2
         - tier: "302"
           quantity: 1
         - tier: "310"
@@ -5655,4 +5686,4 @@ insta_monkeys:
           quantity: 2
         - tier: "402"
           quantity: 1
-insta_monkeys_total: 612
+insta_monkeys_total: 626
