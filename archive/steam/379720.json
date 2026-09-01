@@ -1,0 +1,779 @@
+{
+ "provider": "steam",
+ "title": "DOOM",
+ "updated": "2026-08-30",
+ "id": "379720",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 54,
+ "platform": "PC",
+ "icon": "b6e72ff47d1990cb644700751eeeff14e0aba6dc",
+ "achievements": [
+  {
+   "key": "ach_1",
+   "name": "Shoot it Until it Dies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/70b24a89d14d808b13ea75e7102515399003ce1a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_10",
+   "name": "IDKFA",
+   "description": "Earn the Masteries for all weapon mods",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/178d4fd9ed8a6d11ba2b3c901369d83da3d65c8f.jpg"
+  },
+  {
+   "key": "ach_11",
+   "name": "Hot Swapper",
+   "description": "Acquire all weapon mods",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/8d3c63ada12d28c000b88535c37d40534edf5a03.jpg"
+  },
+  {
+   "key": "ach_12",
+   "name": "Historian",
+   "description": "Find all Data Logs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/8c39ee5d71a13f547acd1f2d70b4bb799f18cf9c.jpg"
+  },
+  {
+   "key": "ach_13",
+   "name": "Timing is Everything",
+   "description": "Use explosive barrels to kill 100 enemies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/4f868ae3db6586dc23b73cdb79512e65b1252482.jpg"
+  },
+  {
+   "key": "ach_14",
+   "name": "Every Nook and Cranny",
+   "description": "Find all Collectibles",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/292e6efdb8b94391f86c6ae97b17b682a4a6b108.jpg"
+  },
+  {
+   "key": "ach_15",
+   "name": "Argent Overload",
+   "description": "Fully upgrade Health, Armor, or Ammo capacity",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/8a57b3f369da3e23d1bdb56e556ba375d2adffaf.jpg"
+  },
+  {
+   "key": "ach_16",
+   "name": "Argent Fiend",
+   "description": "Fully upgrade Health, Armor, and Ammo capacity on a single campaign run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/17bcab837a70ae0da6e117801bc93d6335ad4e96.jpg"
+  },
+  {
+   "key": "ach_17",
+   "name": "A Gift from Beyond",
+   "description": "Earn a Rune",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/6ff0d9e24b145a392279a4337ff7ba07565022e3.jpg"
+  },
+  {
+   "key": "ach_18",
+   "name": "The Circle is Complete",
+   "description": "Earn all Runes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/e48a8dbd8c37ac4ac88ac6dd5f6f6c0df43db9b3.jpg"
+  },
+  {
+   "key": "ach_19",
+   "name": "Tinkering",
+   "description": "Fully upgrade a Praetor Suit category.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/e03017195bddcf15c50b9251e54c3694517384e5.jpg"
+  },
+  {
+   "key": "ach_2",
+   "name": "Outnumbered? No Problem",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/be9b11efd693383c07960750042ac8bd0c049ad6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_20",
+   "name": "Overclocked",
+   "description": "Fully upgrade all Praetor Suit categories on a single campaign run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/88dfa31ae6bfb9ec297d8f317d9e8e594eab9c66.jpg"
+  },
+  {
+   "key": "ach_21",
+   "name": "Thorough Shopper",
+   "description": "Complete all Challenges for a single mission.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/ed1e51bf6d47bf7a5cdb8da27846923941ac1543.jpg"
+  },
+  {
+   "key": "ach_22",
+   "name": "Butcher",
+   "description": "Perform 200 Glory Kills",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/55a829f59847dd1c2736ce240ec9a07ef1e1eb1b.jpg"
+  },
+  {
+   "key": "ach_23",
+   "name": "Rip and Tear",
+   "description": "Glory Kill all common enemy types in the campaign.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/d130c33ce31374b6f2c1a231d4c8244ac68fcbc5.jpg"
+  },
+  {
+   "key": "ach_24",
+   "name": "Juicin' it up",
+   "description": "Kill 150 enemies while using Power Ups",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/d7cacb9a31cb313e7d3c88266d90cccd3df84d06.jpg"
+  },
+  {
+   "key": "ach_25",
+   "name": "Momentum Shift",
+   "description": "Upgrade a Rune",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/3c9bd3960d3358c72b555777595d9c7ab819d4e7.jpg"
+  },
+  {
+   "key": "ach_26",
+   "name": "IDDQD",
+   "description": "Upgrade all Runes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/60dc127e52da228b5c5c3823994c7c1a2dad2f2d.jpg"
+  },
+  {
+   "key": "ach_27",
+   "name": "What Else Ya Got?",
+   "description": "Complete all Mission Challenges",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/b9236985d74005c15eb96d39b65619e78a161267.jpg"
+  },
+  {
+   "key": "ach_28",
+   "name": "IPXSETUP.EXE",
+   "description": "Win a Multiplayer match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/7ed4f1de54e565e77e379876807199bbb8e56706.jpg"
+  },
+  {
+   "key": "ach_29",
+   "name": "Combat tested, Doomguy approved",
+   "description": "Reach Level 5 in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/58e65472c80bbbb9a58341553fad4fb0c86e59b6.jpg"
+  },
+  {
+   "key": "ach_3",
+   "name": "Who's Next?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/b39a9d30a0a6b7607ec31c221baf5964833396f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_30",
+   "name": "An Old Friend",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/8d3c04e9159c61cc036623b829555799ac9595f1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_31",
+   "name": "Shareware",
+   "description": "Create and publish a SnapMap",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/6872551a9a2a6c012726a6fe814befbaf74990df.jpg"
+  },
+  {
+   "key": "ach_32",
+   "name": "No Rest for the Living",
+   "description": "Play 5 published SnapMaps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/ca33cae3a57ddf8e31b0ee9530188b8eda5440e7.jpg"
+  },
+  {
+   "key": "ach_33",
+   "name": "Entryway",
+   "description": "Complete the SnapMap Basic and Advanced Tutorials",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/11e9719ad78da26e84cddaa8cdb4731fc4bf0515.jpg"
+  },
+  {
+   "key": "ach_34",
+   "name": "Tenderizing the Crops",
+   "description": "Kill 10 enemies with the Harvester demon in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/dc75e52e638555ecbe4b781da52cff455e70b895.jpg"
+  },
+  {
+   "key": "ach_35",
+   "name": "Marked for Death",
+   "description": "Kill 10 enemies with the EMG Mark V Pistol in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/22966290252da4b08a3846b77b48578dc10c2189.jpg"
+  },
+  {
+   "key": "ach_36",
+   "name": "Motion in the Explosion",
+   "description": "Kill 5 enemies with the Kinetic Mine in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/1bf9a6615aa8ba1258d2407987c8d327b743892e.jpg"
+  },
+  {
+   "key": "ach_37",
+   "name": "Sitting Duck",
+   "description": "Use a taunt from Expansion 1 during a Multiplayer Match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/2b36fd4b7cf63bfe8ce7541f6b47ed07b487cc6f.jpg"
+  },
+  {
+   "key": "ach_38",
+   "name": "Computing with Style",
+   "description": "Play a Multiplayer Match with a piece of Robotic Armor equipped",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/06dacea44acb57e1f025cdf7fe6b66a3bcc9821f.jpg"
+  },
+  {
+   "key": "ach_39",
+   "name": "Threat Assessment",
+   "description": "Detect 20 enemies using the Threat Pulse in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/0dea8a503255c6e368464717ea031b5febdc6bc2.jpg"
+  },
+  {
+   "key": "ach_4",
+   "name": "E1M1",
+   "description": "Complete the first mission of the campaign",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/84b187098fed91c573fca6de066d87ef7c6179da.jpg"
+  },
+  {
+   "key": "ach_40",
+   "name": "Eat Your Vitamins",
+   "description": "Kill 10 enemies with the Cacodemon in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/fd62b0750153e83b06c6e6df97a57de11338aa04.jpg"
+  },
+  {
+   "key": "ach_41",
+   "name": "Reaping all the Benefits",
+   "description": "Kill 10 enemies with the Reaper in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/8a9fecff21bd0f39810dd6674984b8fdaf51f893.jpg"
+  },
+  {
+   "key": "ach_42",
+   "name": "Beauty is Pain",
+   "description": "Play a Multiplayer Match with a piece of Cyber-Demonic armor equipped",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/fd0538e0403271935e4c229821cf2c864043a424.jpg"
+  },
+  {
+   "key": "ach_43",
+   "name": "Like Nobody is Watching",
+   "description": "Use a taunt from Expansion 2 during a Multiplayer Match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/4950e2684ffec25739ef5d417c88b0762664107f.jpg"
+  },
+  {
+   "key": "ach_44",
+   "name": "Filling the Trophy Case",
+   "description": "Earn every medal type in Arcade Mode in one run",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/b0e26ccfeb9e70cb961795137e97be492a030a88.jpg"
+  },
+  {
+   "key": "ach_45",
+   "name": "Go for the Gold",
+   "description": "Earn a gold rating in Arcade Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/ab84ae1a37dd3001933f0be254af40fee48da77b.jpg"
+  },
+  {
+   "key": "ach_46",
+   "name": "Arcade Stockpile",
+   "description": "Collect 20 bonus lives or relics in Arcade Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/37fc6846ded086d50620dbaf93c4cfafe2c3a324.jpg"
+  },
+  {
+   "key": "ach_47",
+   "name": "Bowling for Gibs",
+   "description": "Perform a MultiKill with the Spectre demon in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/2c89a7a82a02104438de19d5584ff18dc51a6905.jpg"
+  },
+  {
+   "key": "ach_48",
+   "name": "Head First",
+   "description": "Kill 10 enemies with the Spectre demon in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/0c43b121d657f370fa49a07589ec1bf82fee0238.jpg"
+  },
+  {
+   "key": "ach_49",
+   "name": "Successful Launch",
+   "description": "Kill 10 enemies with the Grenade Launcher in Multiplayer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/a6d94aa712c858a076c16077f6ec158f97b1702c.jpg"
+  },
+  {
+   "key": "ach_5",
+   "name": "Into the Unknown",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/b9d2f6298fc767aa879f5b94cf493461736f11fe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_50",
+   "name": "Fashion Fanatic",
+   "description": "Play a Multiplayer Match with a piece of Evil Cultist armor equipped",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/e1f94e84623304b57f2eb96977ee723af365ad3b.jpg"
+  },
+  {
+   "key": "ach_51",
+   "name": "Insult to Injury",
+   "description": "Use a taunt from Expansion 3 during a Multiplayer Match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/44c9e18c1a3adde3bdbb68c7a1398cd40a11098f.jpg"
+  },
+  {
+   "key": "ach_52",
+   "name": "On Track",
+   "description": "Complete a tracked challenge in a Multiplayer Match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/a9cca159909af4d8016cf7ca081152233f6e70bf.jpg"
+  },
+  {
+   "key": "ach_53",
+   "name": "A Memorable Performance",
+   "description": "Earn a Gold Rating in a Multiplayer Match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/4ce53b7cfd32fd20f3c51d3234a62a1a519cfc5c.jpg"
+  },
+  {
+   "key": "ach_54",
+   "name": "Slotted for Success",
+   "description": "Unlock all Multiplayer Runes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/7a774665c2da3d4dc7544a0b096515ebc5deff01.jpg"
+  },
+  {
+   "key": "ach_6",
+   "name": "Knee-Deep in the Dead",
+   "description": "Complete the campaign on 'I'm Too Young to Die', 'Hurt Me Plenty', 'Ultra Violence', or 'Nightmare'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/53fb13916b0c0c3e37babbcf09e93ec80ced768c.jpg"
+  },
+  {
+   "key": "ach_7",
+   "name": "A Toe into Madness",
+   "description": "Complete The UAC on Ultra-Nightmare",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/174b0585ce6ed88c21c6008339b1a80739937e4c.jpg"
+  },
+  {
+   "key": "ach_8",
+   "name": "Up Close and Personal",
+   "description": "Kill 50 enemies using the Chainsaw",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/8cd515ad4be597801eabc8c939f286d97db284f1.jpg"
+  },
+  {
+   "key": "ach_9",
+   "name": "Specialist",
+   "description": "Earn the Mastery for a weapon mod",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/379720/810219c2da7280ac7d86edb81cd027c96da99dd9.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "DOOM",
+   "achievements": [
+    {
+     "apiname": "ach_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shoot it Until it Dies",
+     "description": ""
+    },
+    {
+     "apiname": "ach_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Outnumbered? No Problem",
+     "description": ""
+    },
+    {
+     "apiname": "ach_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who's Next?",
+     "description": ""
+    },
+    {
+     "apiname": "ach_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "E1M1",
+     "description": "Complete the first mission of the campaign"
+    },
+    {
+     "apiname": "ach_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Into the Unknown",
+     "description": ""
+    },
+    {
+     "apiname": "ach_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Knee-Deep in the Dead",
+     "description": "Complete the campaign on 'I'm Too Young to Die', 'Hurt Me Plenty', 'Ultra Violence', or 'Nightmare'."
+    },
+    {
+     "apiname": "ach_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Toe into Madness",
+     "description": "Complete The UAC on Ultra-Nightmare"
+    },
+    {
+     "apiname": "ach_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Up Close and Personal",
+     "description": "Kill 50 enemies using the Chainsaw"
+    },
+    {
+     "apiname": "ach_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Specialist",
+     "description": "Earn the Mastery for a weapon mod"
+    },
+    {
+     "apiname": "ach_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IDKFA",
+     "description": "Earn the Masteries for all weapon mods"
+    },
+    {
+     "apiname": "ach_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot Swapper",
+     "description": "Acquire all weapon mods"
+    },
+    {
+     "apiname": "ach_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Historian",
+     "description": "Find all Data Logs"
+    },
+    {
+     "apiname": "ach_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Timing is Everything",
+     "description": "Use explosive barrels to kill 100 enemies"
+    },
+    {
+     "apiname": "ach_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Every Nook and Cranny",
+     "description": "Find all Collectibles"
+    },
+    {
+     "apiname": "ach_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Argent Overload",
+     "description": "Fully upgrade Health, Armor, or Ammo capacity"
+    },
+    {
+     "apiname": "ach_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Argent Fiend",
+     "description": "Fully upgrade Health, Armor, and Ammo capacity on a single campaign run."
+    },
+    {
+     "apiname": "ach_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Gift from Beyond",
+     "description": "Earn a Rune"
+    },
+    {
+     "apiname": "ach_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Circle is Complete",
+     "description": "Earn all Runes"
+    },
+    {
+     "apiname": "ach_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tinkering",
+     "description": "Fully upgrade a Praetor Suit category."
+    },
+    {
+     "apiname": "ach_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overclocked",
+     "description": "Fully upgrade all Praetor Suit categories on a single campaign run."
+    },
+    {
+     "apiname": "ach_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thorough Shopper",
+     "description": "Complete all Challenges for a single mission."
+    },
+    {
+     "apiname": "ach_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Butcher",
+     "description": "Perform 200 Glory Kills"
+    },
+    {
+     "apiname": "ach_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rip and Tear",
+     "description": "Glory Kill all common enemy types in the campaign."
+    },
+    {
+     "apiname": "ach_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Juicin' it up",
+     "description": "Kill 150 enemies while using Power Ups"
+    },
+    {
+     "apiname": "ach_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Momentum Shift",
+     "description": "Upgrade a Rune"
+    },
+    {
+     "apiname": "ach_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IDDQD",
+     "description": "Upgrade all Runes"
+    },
+    {
+     "apiname": "ach_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What Else Ya Got?",
+     "description": "Complete all Mission Challenges"
+    },
+    {
+     "apiname": "ach_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "IPXSETUP.EXE",
+     "description": "Win a Multiplayer match"
+    },
+    {
+     "apiname": "ach_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Combat tested, Doomguy approved",
+     "description": "Reach Level 5 in Multiplayer"
+    },
+    {
+     "apiname": "ach_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An Old Friend",
+     "description": ""
+    },
+    {
+     "apiname": "ach_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shareware",
+     "description": "Create and publish a SnapMap"
+    },
+    {
+     "apiname": "ach_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Rest for the Living",
+     "description": "Play 5 published SnapMaps"
+    },
+    {
+     "apiname": "ach_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Entryway",
+     "description": "Complete the SnapMap Basic and Advanced Tutorials"
+    },
+    {
+     "apiname": "ach_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tenderizing the Crops",
+     "description": "Kill 10 enemies with the Harvester demon in Multiplayer"
+    },
+    {
+     "apiname": "ach_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Marked for Death",
+     "description": "Kill 10 enemies with the EMG Mark V Pistol in Multiplayer"
+    },
+    {
+     "apiname": "ach_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Motion in the Explosion",
+     "description": "Kill 5 enemies with the Kinetic Mine in Multiplayer"
+    },
+    {
+     "apiname": "ach_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sitting Duck",
+     "description": "Use a taunt from Expansion 1 during a Multiplayer Match"
+    },
+    {
+     "apiname": "ach_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Computing with Style",
+     "description": "Play a Multiplayer Match with a piece of Robotic Armor equipped"
+    },
+    {
+     "apiname": "ach_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Threat Assessment",
+     "description": "Detect 20 enemies using the Threat Pulse in Multiplayer"
+    },
+    {
+     "apiname": "ach_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eat Your Vitamins",
+     "description": "Kill 10 enemies with the Cacodemon in Multiplayer"
+    },
+    {
+     "apiname": "ach_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reaping all the Benefits",
+     "description": "Kill 10 enemies with the Reaper in Multiplayer"
+    },
+    {
+     "apiname": "ach_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beauty is Pain",
+     "description": "Play a Multiplayer Match with a piece of Cyber-Demonic armor equipped"
+    },
+    {
+     "apiname": "ach_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Like Nobody is Watching",
+     "description": "Use a taunt from Expansion 2 during a Multiplayer Match"
+    },
+    {
+     "apiname": "ach_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Filling the Trophy Case",
+     "description": "Earn every medal type in Arcade Mode in one run"
+    },
+    {
+     "apiname": "ach_45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go for the Gold",
+     "description": "Earn a gold rating in Arcade Mode"
+    },
+    {
+     "apiname": "ach_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arcade Stockpile",
+     "description": "Collect 20 bonus lives or relics in Arcade Mode"
+    },
+    {
+     "apiname": "ach_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bowling for Gibs",
+     "description": "Perform a MultiKill with the Spectre demon in Multiplayer"
+    },
+    {
+     "apiname": "ach_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Head First",
+     "description": "Kill 10 enemies with the Spectre demon in Multiplayer"
+    },
+    {
+     "apiname": "ach_49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Successful Launch",
+     "description": "Kill 10 enemies with the Grenade Launcher in Multiplayer"
+    },
+    {
+     "apiname": "ach_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fashion Fanatic",
+     "description": "Play a Multiplayer Match with a piece of Evil Cultist armor equipped"
+    },
+    {
+     "apiname": "ach_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Insult to Injury",
+     "description": "Use a taunt from Expansion 3 during a Multiplayer Match"
+    },
+    {
+     "apiname": "ach_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Track",
+     "description": "Complete a tracked challenge in a Multiplayer Match"
+    },
+    {
+     "apiname": "ach_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Memorable Performance",
+     "description": "Earn a Gold Rating in a Multiplayer Match"
+    },
+    {
+     "apiname": "ach_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slotted for Success",
+     "description": "Unlock all Multiplayer Runes"
+    }
+   ],
+   "success": true
+  }
+ }
+}

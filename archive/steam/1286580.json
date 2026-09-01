@@ -1,0 +1,681 @@
+{
+ "provider": "steam",
+ "title": "Ship of Fools",
+ "updated": "2026-08-30",
+ "id": "1286580",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 47,
+ "platform": "PC",
+ "icon": "6154b229064a2f0c6b32f204aa31c41037ff8ec0",
+ "achievements": [
+  {
+   "key": "AllBountyLoot",
+   "name": "Apex Predator",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/7ae024f2a9a59ff968d8e17fea41189972aaa75c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllGarlandsGained",
+   "name": "Festive Fleet",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/8edd93634f5d731c001490d3b37853b72da47069.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AxolotlUnlocked",
+   "name": "Lotte Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/f469f2fa8f35650375ee501f5f86d9ef7e4c1fe7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BeaconRepelStorm",
+   "name": "Climate Change",
+   "description": "Repel nearby storm using The Beacon",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/bdbb074a7b134a2d356e6cd7864ab7ee273b5116.jpg"
+  },
+  {
+   "key": "BettaUnlocked",
+   "name": "Betty Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/c2cfd7e330fc6c292c486ee0a1b60fcb14aafd28.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BirdBoyUnlocked",
+   "name": "Cluck Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/7e9eaee93d9c2a367edb7bac234e6125f8225020.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BoughtAllUpgrades",
+   "name": "All the Treasures of the Sea",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/c0fcc19f0c0775dd4ad81579011288064a3e0d24.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BoughtFirstUpgrade",
+   "name": "Tendrils...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/fd174dc36479b1786842ab1c18d490848b20cc38.jpg",
+   "hidden": true
+  },
+  {
+   "key": "CannonMaxedOut",
+   "name": "Gold Plating",
+   "description": "Max out a cannon",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/c1f126185787ab18ff689b91917778c02a37d8fb.jpg"
+  },
+  {
+   "key": "CargoShipRunCompleted",
+   "name": "A Whale of a Time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/b1970b6bb4daa8e8cd1f7e9249fc14fce5778b01.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ClawsDefeated",
+   "name": "Tyrant of the Deep",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/82fcf2ee83b8df7c87a7ae8cebcab2e5a55ed455.jpg",
+   "hidden": true
+  },
+  {
+   "key": "CompletedCoopRun",
+   "name": "1 + 1 = 3",
+   "description": "Complete co-op run",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/481a4e7dd514fdd295ac1b1fa07f3832ef01c723.jpg"
+  },
+  {
+   "key": "CompletedSoloRun",
+   "name": "Old Sea Dog",
+   "description": "Complete solo run",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/6c6130c98d17b0dc0944af6fec010257431cf5c7.jpg"
+  },
+  {
+   "key": "CurseLifted",
+   "name": "Curse Lifter",
+   "description": "Lift a curse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/0947282a2601bd33f9039ac8643139476b157631.jpg"
+  },
+  {
+   "key": "DestroyedHundredMonsters",
+   "name": "Powder Fool",
+   "description": "Destroy 100 sea monsters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/85216d286812f883ac02de49911c98b6421023b7.jpg"
+  },
+  {
+   "key": "DestroyedTenThousandMonsters",
+   "name": "Master-At-Arms",
+   "description": "Destroy 10000 sea monsters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/a832fadaf3ea6f57faefc94c50dc75ed50766d19.jpg"
+  },
+  {
+   "key": "DestroyedThousandMonsters",
+   "name": "Ship Gunner",
+   "description": "Destroy 1000 sea monsters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/848f418579c7c607270ba8b0e7690f814a29b62c.jpg"
+  },
+  {
+   "key": "ElectricExplosionProjectiles",
+   "name": "120 volts",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/9c52b6b0dbca637bdcefaa272739a8c921e08070.jpg",
+   "hidden": true
+  },
+  {
+   "key": "EyeOfTheStormDefeated",
+   "name": "Eye of the Storm",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/432640e811633e79cb17fea692b226e6201a0f5a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FishUnlocked",
+   "name": "Gill Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/43a16976ecc46890376fd027c6abdb8fa31f8965.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FlashStepReflect",
+   "name": "Catrate Master",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/3e883a90d5f9cbcb3ff96f072ad42bd1d8861dd5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FogModeRunCompleted",
+   "name": "Ship of Fog",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/beae0f2178e621c28d0de1d91f308aa5458b1019.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HardModeCompleted",
+   "name": "The Great Lighthouse",
+   "description": "Unveil the mysteries of The Great Lighthouse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/1e7dd08660cba51a119c01610a7ad90ce23102a6.jpg"
+  },
+  {
+   "key": "HatModeRunCompleted",
+   "name": "M'lady",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/8442be53a9b2dc943a6be244e81593fc160e7870.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HeadsDefeated",
+   "name": "Harbinger of Hoarfrost",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/9250d349dbb31704facff8bb4613d9f6ab601257.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HolyArtifactsRunCompleted",
+   "name": "Glass Cannon",
+   "description": "Complete a run while having 3 Holy Artifacts still standing",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/a4994e8517adb3c2d1a917fced4af9ee69f36a7e.jpg"
+  },
+  {
+   "key": "InvertedModeRunCompleted",
+   "name": "dekcolnU tnemeveihcA",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/ee7bf51712861b29fe3a44b1d07bfd8633dffeaa.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LighthouseIslandRepaired",
+   "name": "As it should have been",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/84d1e413a72d1b14808bd3234fa2d21947e3a037.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NoDamageTakenRunCompleted",
+   "name": "The Perfect Crew",
+   "description": "Complete a run without taking damage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/fc344eb3a6f9270d778afe0a1fc5aca99ff3f55d.jpg"
+  },
+  {
+   "key": "PewPewModeRunCompleted",
+   "name": "Pew pew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/7bb5ee35d8c1a70eec01b8f7271ca11e00de7b17.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ReflectedProjectileEnemyHits",
+   "name": "Let There Be Light",
+   "description": "Hit 7 enemies with a single reflected projectile using Angus",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/0f8c50a526b9878f9dec3e2ec1e2009b1eb598bc.jpg"
+  },
+  {
+   "key": "ResonanceBlast",
+   "name": "Belting Overseas",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/b88efde6ebfff33267831f4f58379c19794dbb6d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "RetroModeRunCompleted",
+   "name": "Good old days",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/d2c2ce4887f243696e36aa799e9d968c7f0df5d7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ScavengerItemBought",
+   "name": "Buried Treasures",
+   "description": "Buy a scavenged item from Barnaby",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/2b3e9d476467e97edaa79fc740d8ccdc2d518a3b.jpg"
+  },
+  {
+   "key": "SharkUnlocked",
+   "name": "Finley Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/f6b0b86d6b7fbf5d5cfb46f5f5d63f9f573998be.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ShellUnlocked",
+   "name": "Shelbie Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/f63d6fd018866fa73b3591c9a9cba68bde60f112.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ShrimpUnlocked",
+   "name": "Krillstoph Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/66d66228d956267454fe74ddf225b514f3c0cf30.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SirenQuest",
+   "name": "Special Delivery",
+   "description": "Fulfill a Siren's request",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/89d04b0076f7dcc2fa7ec71a145f88af106edc0c.jpg"
+  },
+  {
+   "key": "SirenShipRunCompleted",
+   "name": "Reduce Reuse Recycle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/23c914a689db7fca6bcb7703e5f040cc98449026.jpg",
+   "hidden": true
+  },
+  {
+   "key": "StunsPrevented",
+   "name": "Arc Nemesis",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/94ddac7f00bfd3704e93516ce9c94f45e40ec267.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TentaclesDefeated",
+   "name": "Shadow of the Undergrowth",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/979b4dee28dd9de27cdac31ff7787c1d12c9246a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TreasureDig",
+   "name": "Fool's gold",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/260c39ee02406f60b740eaf5c2cda89bf5a764f6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TrinketHoarderRunCompleted",
+   "name": "Hoarder",
+   "description": "Complete a run while holding 20 trinkets using Jules",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/51cd5056af29b9854f2266dd0710de0dc22eb1d7.jpg"
+  },
+  {
+   "key": "TutorialCompleted",
+   "name": "It's the Aquapocalypse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/4a4c34ebceeaa7a363d749277f1da4a2d0ca11e7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TwinUnlocked",
+   "name": "Quill Joins the Crew",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/069ffb7bb176edf14b11340a55a3151d4b7c8774.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TwoProjectilesReflected",
+   "name": "Reflector",
+   "description": "Reflect two projectiles at once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/545b908417b0445a174248db882a9887691c848c.jpg"
+  },
+  {
+   "key": "WarShipRunCompleted",
+   "name": "Beast Tamer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/6fd7d20fbfafab59591c8c51ad0f5dee9e51c984.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Ship of Fools",
+   "achievements": [
+    {
+     "apiname": "DestroyedTenThousandMonsters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master-At-Arms",
+     "description": "Destroy 10000 sea monsters"
+    },
+    {
+     "apiname": "BoughtAllUpgrades",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All the Treasures of the Sea",
+     "description": ""
+    },
+    {
+     "apiname": "NoDamageTakenRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Perfect Crew",
+     "description": "Complete a run without taking damage"
+    },
+    {
+     "apiname": "TentaclesDefeated",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow of the Undergrowth",
+     "description": ""
+    },
+    {
+     "apiname": "ClawsDefeated",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tyrant of the Deep",
+     "description": ""
+    },
+    {
+     "apiname": "HeadsDefeated",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Harbinger of Hoarfrost",
+     "description": ""
+    },
+    {
+     "apiname": "EyeOfTheStormDefeated",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eye of the Storm",
+     "description": ""
+    },
+    {
+     "apiname": "DestroyedThousandMonsters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ship Gunner",
+     "description": "Destroy 1000 sea monsters"
+    },
+    {
+     "apiname": "CannonMaxedOut",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gold Plating",
+     "description": "Max out a cannon"
+    },
+    {
+     "apiname": "TwinUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quill Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "CompletedSoloRun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Old Sea Dog",
+     "description": "Complete solo run"
+    },
+    {
+     "apiname": "CompletedCoopRun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "1 + 1 = 3",
+     "description": "Complete co-op run"
+    },
+    {
+     "apiname": "DestroyedHundredMonsters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Powder Fool",
+     "description": "Destroy 100 sea monsters"
+    },
+    {
+     "apiname": "BoughtFirstUpgrade",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tendrils...",
+     "description": ""
+    },
+    {
+     "apiname": "FishUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gill Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "SharkUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finley Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "ShellUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shelbie Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "AxolotlUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lotte Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "BettaUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Betty Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "BirdBoyUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cluck Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "ShrimpUnlocked",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Krillstoph Joins the Crew",
+     "description": ""
+    },
+    {
+     "apiname": "TutorialCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's the Aquapocalypse",
+     "description": ""
+    },
+    {
+     "apiname": "CurseLifted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Curse Lifter",
+     "description": "Lift a curse"
+    },
+    {
+     "apiname": "TwoProjectilesReflected",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reflector",
+     "description": "Reflect two projectiles at once"
+    },
+    {
+     "apiname": "BeaconRepelStorm",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Climate Change",
+     "description": "Repel nearby storm using The Beacon"
+    },
+    {
+     "apiname": "SirenQuest",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Special Delivery",
+     "description": "Fulfill a Siren's request"
+    },
+    {
+     "apiname": "ScavengerItemBought",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Buried Treasures",
+     "description": "Buy a scavenged item from Barnaby"
+    },
+    {
+     "apiname": "HolyArtifactsRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glass Cannon",
+     "description": "Complete a run while having 3 Holy Artifacts still standing"
+    },
+    {
+     "apiname": "HardModeCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Great Lighthouse",
+     "description": "Unveil the mysteries of The Great Lighthouse"
+    },
+    {
+     "apiname": "ReflectedProjectileEnemyHits",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let There Be Light",
+     "description": "Hit 7 enemies with a single reflected projectile using Angus"
+    },
+    {
+     "apiname": "TrinketHoarderRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hoarder",
+     "description": "Complete a run while holding 20 trinkets using Jules"
+    },
+    {
+     "apiname": "CargoShipRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Whale of a Time",
+     "description": ""
+    },
+    {
+     "apiname": "SirenShipRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reduce Reuse Recycle",
+     "description": ""
+    },
+    {
+     "apiname": "WarShipRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beast Tamer",
+     "description": ""
+    },
+    {
+     "apiname": "AllGarlandsGained",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Festive Fleet",
+     "description": ""
+    },
+    {
+     "apiname": "FlashStepReflect",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Catrate Master",
+     "description": ""
+    },
+    {
+     "apiname": "ResonanceBlast",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Belting Overseas",
+     "description": ""
+    },
+    {
+     "apiname": "AllBountyLoot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Apex Predator",
+     "description": ""
+    },
+    {
+     "apiname": "TreasureDig",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fool's gold",
+     "description": ""
+    },
+    {
+     "apiname": "ElectricExplosionProjectiles",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "120 volts",
+     "description": ""
+    },
+    {
+     "apiname": "StunsPrevented",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arc Nemesis",
+     "description": ""
+    },
+    {
+     "apiname": "InvertedModeRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "dekcolnU tnemeveihcA",
+     "description": ""
+    },
+    {
+     "apiname": "RetroModeRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good old days",
+     "description": ""
+    },
+    {
+     "apiname": "HatModeRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "M'lady",
+     "description": ""
+    },
+    {
+     "apiname": "FogModeRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ship of Fog",
+     "description": ""
+    },
+    {
+     "apiname": "PewPewModeRunCompleted",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pew pew",
+     "description": ""
+    },
+    {
+     "apiname": "LighthouseIslandRepaired",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "As it should have been",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

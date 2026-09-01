@@ -1,0 +1,653 @@
+{
+ "provider": "steam",
+ "title": "shapez",
+ "updated": "2026-08-30",
+ "id": "1318690",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 45,
+ "platform": "PC",
+ "icon": "974fc8a55e4191dfb390f59a24cb2f1900393533",
+ "achievements": [
+  {
+   "key": "belt_500_tiles",
+   "name": "I need trains",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/66a5a57b700371f5bd393e289d6bf34e52daacb7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "blueprint_100k",
+   "name": "It's piling up",
+   "description": "Have 100k blueprint shapes stored in your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/a9dc7a8defa6ff6226e80bd28719d962853e43b3.jpg"
+  },
+  {
+   "key": "blueprint_1m",
+   "name": "I'll use it later",
+   "description": "Have 1 million blueprint shapes stored in your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/a0731c6ac75729bf1430a0c2a97789ff60fe444a.jpg"
+  },
+  {
+   "key": "complete_lvl_26",
+   "name": "Freedom",
+   "description": "Complete level 26, unlocking the free play mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/9631bb674822a499ce64f8358133512f02e25bb6.jpg"
+  },
+  {
+   "key": "cut_shape",
+   "name": "Cutter",
+   "description": "Cut a shape",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/1c484ff8a7b9e1d653f224bc80aae18d1ed186d4.jpg"
+  },
+  {
+   "key": "dark_mode",
+   "name": "My eyes no longer hurt",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/14c2071a16b9d550efda19b172e33f8fbbcad570.jpg",
+   "hidden": true
+  },
+  {
+   "key": "destroy_1000",
+   "name": "Perfectionist",
+   "description": "Destroy more than 1000 objects at once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/a75c846484a53bbc231c0421e179e3598ca2261c.jpg"
+  },
+  {
+   "key": "irrelevant_shape",
+   "name": "Oops",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/7cfe8da7ce2f8a0bd13f0554aaef25a4a99c4e1a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "level_100",
+   "name": "Is this the end?",
+   "description": "Reach level 100",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/59d30136321637409363e3e25b5d44577a6459ee.jpg"
+  },
+  {
+   "key": "level_50",
+   "name": "Can't stop",
+   "description": "Reach level 50",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/65571d33343b977ad16d1595ca3772139263d0d8.jpg"
+  },
+  {
+   "key": "logo_before_18",
+   "name": "A bit early?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/ae6c6c5496d2c929779e3630eba6f83969354343.jpg",
+   "hidden": true
+  },
+  {
+   "key": "mam",
+   "name": "MAM (Make Anything Machine)",
+   "description": "Complete any level (after level 26) without modifying your factory",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/780cedcff6351219e7316f27e39d6b4ad485be09.jpg"
+  },
+  {
+   "key": "map_markers_15",
+   "name": "GPS",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/a395e83c99ae54945a6b0467dfe8751bd5609470.jpg",
+   "hidden": true
+  },
+  {
+   "key": "no_belt_upgrades_until_bp",
+   "name": "It's so slow",
+   "description": "Reach \u0026 Complete level 12 without upgrading your belts",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/7c6779c34a9dc04afaca751b320ff40ee4ebee8e.jpg"
+  },
+  {
+   "key": "no_inverse_rotator",
+   "name": "King of Inefficiency",
+   "description": "Use no inverse rotator until level 14",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/780a4ca56c37c182a8b9e71185da556990506f21.jpg"
+  },
+  {
+   "key": "old_level_17",
+   "name": "Memories from the past",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/4d197f46f8e87082d80b7e9d68dc148b11fe5609.jpg",
+   "hidden": true
+  },
+  {
+   "key": "open_wires",
+   "name": "The next dimension",
+   "description": "Open the wires layer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/115fe00371b22735a7d0097530fd56abc0e491ad.jpg"
+  },
+  {
+   "key": "paint_shape",
+   "name": "Painter",
+   "description": "Paint a shape",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/5bfeacb11c3956d4a487c472c4a196d6117d8e17.jpg"
+  },
+  {
+   "key": "place_5000_wires",
+   "name": "Computer Guy",
+   "description": "Have more than 5,000 wires",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/4299c0edfbb6de70f7f472d99d9fb351fe9b6620.jpg"
+  },
+  {
+   "key": "place_blueprint",
+   "name": "Now it's easy",
+   "description": "Place a blueprint",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/8926b70ac081f1242d88c3cf1523dff149f4f8be.jpg"
+  },
+  {
+   "key": "place_bp_1000",
+   "name": "Copy-Pasta",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/20037434e06aba164c15564bfdcdf2ed54e9bce7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "play_10h",
+   "name": "It's been a long time",
+   "description": "Play one savegame for more than 10 hours",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/7e46193a0a7b6701d493bc5e38101641a6fc8f43.jpg"
+  },
+  {
+   "key": "play_1h",
+   "name": "Getting into it",
+   "description": "Play one savegame for more than 1 hour",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/859ca628aad6752673d03080a8a68d678691bf94.jpg"
+  },
+  {
+   "key": "play_20h",
+   "name": "Addicted",
+   "description": "Play one  savegame for more than 20 hours",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/e27c47aebd05d83742c78c9e364bb11d6464d684.jpg"
+  },
+  {
+   "key": "produce_logo",
+   "name": "The logo!",
+   "description": "Produce the shapez.io logo",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/c1d3293964648714e21df60a62e15682cdacd7ba.jpg"
+  },
+  {
+   "key": "produce_ms_logo",
+   "name": "I've seen that before ..",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/9631b377173760eb89e7fb09b606b7af11e7709e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "produce_rocket",
+   "name": "To the moon",
+   "description": "Produce the rocket shape",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/f9fedecd84b966ad8a0905e7b995f0462551f823.jpg"
+  },
+  {
+   "key": "rotate_shape",
+   "name": "Rotater",
+   "description": "Rotate a shape",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/a00e14dac175fc6b8105891551fdaa0cf7a266ec.jpg"
+  },
+  {
+   "key": "speedrun_bp_120",
+   "name": "Not an idle game",
+   "description": "Reach \u0026 complete level 12 in under 120 minutes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/d04613510603120c9281c506ddffb0da387cfe32.jpg"
+  },
+  {
+   "key": "speedrun_bp_30",
+   "name": "Speedrun Master",
+   "description": "Reach \u0026 complete level 12 in under 30 minutes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/97cd1c29b08f630ea1773a62ccf7a97f0fa23325.jpg"
+  },
+  {
+   "key": "speedrun_bp_60",
+   "name": "Speedrun Novice",
+   "description": "Reach \u0026 complete level 12 in under 60 minutes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/2f6fafd7203f95e4bc77c1353e26e8269ae73f84.jpg"
+  },
+  {
+   "key": "stack_4_layers",
+   "name": "Stack overflow",
+   "description": "Produce a shape with 4 layers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/59ea53a1db5c040f342caf37c02db7154468bb15.jpg"
+  },
+  {
+   "key": "stack_shape",
+   "name": "Wait, they stack?",
+   "description": "Stack a shape",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/7426e2c69bd8b1940d2092be1b976623d7f780a5.jpg"
+  },
+  {
+   "key": "store_100_unique",
+   "name": "It's a mess",
+   "description": "Have 100 different shapes stored in your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/6b7af769b3a1b808d20ea8273c7ff27d14f8c338.jpg"
+  },
+  {
+   "key": "store_shape",
+   "name": "Storage",
+   "description": "Store a shape in the storage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/be4b6647f6f385cc91bc117cffe35b79b3351fd8.jpg"
+  },
+  {
+   "key": "throughput_bp_25",
+   "name": "Efficiency 1",
+   "description": "Deliver 25 blueprints shapes / second to your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/dcd6539db83b5a56ad30668d1436e5861108716b.jpg"
+  },
+  {
+   "key": "throughput_bp_50",
+   "name": "Efficiency 2",
+   "description": "Deliver 50 blueprints shapes / second to your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/42842ebf472c225afbe819d3279a28b8bae646c0.jpg"
+  },
+  {
+   "key": "throughput_logo_25",
+   "name": "Branding specialist 1",
+   "description": "Deliver 25 logo shapes / second to your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/18f0192afc16ab346e607b720d70082ec604e54f.jpg"
+  },
+  {
+   "key": "throughput_logo_50",
+   "name": "Branding specialist 2",
+   "description": "Deliver 50 logo shapes / second to your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/68416f1f6c601466f9cdb4f2d30098c5037b03d4.jpg"
+  },
+  {
+   "key": "throughput_rocket_10",
+   "name": "Preparing to launch",
+   "description": "Deliver 10 rocket shapes / second to your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/4380317fe9a86f97e8017a1a4db27ce8138d3cc0.jpg"
+  },
+  {
+   "key": "throughput_rocket_20",
+   "name": "SpaceY",
+   "description": "Deliver 20 rocket shapes / second to your hub",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/d0917eee1664b3ea80700e0836a46effe2923478.jpg"
+  },
+  {
+   "key": "trash_1000",
+   "name": "Get rid of them",
+   "description": "Have 1000 shapes trashed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/736fcbd3811da5a9aa1c044a815ecfc4dc9372a3.jpg"
+  },
+  {
+   "key": "unlock_wires",
+   "name": "Wires",
+   "description": "Complete level 20, unlocking the wires layer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/f26f0a4a810c12e3660b76c624f103e0d29904b6.jpg"
+  },
+  {
+   "key": "upgrades_tier_5",
+   "name": "Faster",
+   "description": "Have all upgrades on tier 5 or higher",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/55a522578c782c5a1cf2fb61d6b43f068217d2c9.jpg"
+  },
+  {
+   "key": "upgrades_tier_8",
+   "name": "Even faster",
+   "description": "Have all upgrades on tier 8 or higher",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1318690/1801a98929dae63f283ea9d7f891f85ea963aded.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "shapez",
+   "achievements": [
+    {
+     "apiname": "paint_shape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Painter",
+     "description": "Paint a shape"
+    },
+    {
+     "apiname": "cut_shape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cutter",
+     "description": "Cut a shape"
+    },
+    {
+     "apiname": "rotate_shape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rotater",
+     "description": "Rotate a shape"
+    },
+    {
+     "apiname": "stack_shape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wait, they stack?",
+     "description": "Stack a shape"
+    },
+    {
+     "apiname": "place_blueprint",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Now it's easy",
+     "description": "Place a blueprint"
+    },
+    {
+     "apiname": "unlock_wires",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wires",
+     "description": "Complete level 20, unlocking the wires layer"
+    },
+    {
+     "apiname": "store_shape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storage",
+     "description": "Store a shape in the storage"
+    },
+    {
+     "apiname": "complete_lvl_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Freedom",
+     "description": "Complete level 26, unlocking the free play mode"
+    },
+    {
+     "apiname": "place_5000_wires",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Computer Guy",
+     "description": "Have more than 5,000 wires"
+    },
+    {
+     "apiname": "produce_logo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The logo!",
+     "description": "Produce the shapez.io logo"
+    },
+    {
+     "apiname": "produce_rocket",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "To the moon",
+     "description": "Produce the rocket shape"
+    },
+    {
+     "apiname": "blueprint_100k",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's piling up",
+     "description": "Have 100k blueprint shapes stored in your hub"
+    },
+    {
+     "apiname": "blueprint_1m",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'll use it later",
+     "description": "Have 1 million blueprint shapes stored in your hub"
+    },
+    {
+     "apiname": "speedrun_bp_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedrun Master",
+     "description": "Reach \u0026 complete level 12 in under 30 minutes"
+    },
+    {
+     "apiname": "speedrun_bp_60",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedrun Novice",
+     "description": "Reach \u0026 complete level 12 in under 60 minutes"
+    },
+    {
+     "apiname": "speedrun_bp_120",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not an idle game",
+     "description": "Reach \u0026 complete level 12 in under 120 minutes"
+    },
+    {
+     "apiname": "throughput_bp_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Efficiency 1",
+     "description": "Deliver 25 blueprints shapes / second to your hub"
+    },
+    {
+     "apiname": "throughput_bp_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Efficiency 2",
+     "description": "Deliver 50 blueprints shapes / second to your hub"
+    },
+    {
+     "apiname": "throughput_logo_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Branding specialist 1",
+     "description": "Deliver 25 logo shapes / second to your hub"
+    },
+    {
+     "apiname": "throughput_logo_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Branding specialist 2",
+     "description": "Deliver 50 logo shapes / second to your hub"
+    },
+    {
+     "apiname": "throughput_rocket_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Preparing to launch",
+     "description": "Deliver 10 rocket shapes / second to your hub"
+    },
+    {
+     "apiname": "throughput_rocket_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SpaceY",
+     "description": "Deliver 20 rocket shapes / second to your hub"
+    },
+    {
+     "apiname": "stack_4_layers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stack overflow",
+     "description": "Produce a shape with 4 layers"
+    },
+    {
+     "apiname": "store_100_unique",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's a mess",
+     "description": "Have 100 different shapes stored in your hub"
+    },
+    {
+     "apiname": "belt_500_tiles",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I need trains",
+     "description": ""
+    },
+    {
+     "apiname": "dark_mode",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "My eyes no longer hurt",
+     "description": ""
+    },
+    {
+     "apiname": "no_inverse_rotator",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King of Inefficiency",
+     "description": "Use no inverse rotator until level 14"
+    },
+    {
+     "apiname": "no_belt_upgrades_until_bp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's so slow",
+     "description": "Reach \u0026 Complete level 12 without upgrading your belts"
+    },
+    {
+     "apiname": "upgrades_tier_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Faster",
+     "description": "Have all upgrades on tier 5 or higher"
+    },
+    {
+     "apiname": "upgrades_tier_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Even faster",
+     "description": "Have all upgrades on tier 8 or higher"
+    },
+    {
+     "apiname": "irrelevant_shape",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oops",
+     "description": ""
+    },
+    {
+     "apiname": "mam",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MAM (Make Anything Machine)",
+     "description": "Complete any level (after level 26) without modifying your factory"
+    },
+    {
+     "apiname": "destroy_1000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfectionist",
+     "description": "Destroy more than 1000 objects at once"
+    },
+    {
+     "apiname": "place_bp_1000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Copy-Pasta",
+     "description": ""
+    },
+    {
+     "apiname": "trash_1000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get rid of them",
+     "description": "Have 1000 shapes trashed"
+    },
+    {
+     "apiname": "play_10h",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's been a long time",
+     "description": "Play one savegame for more than 10 hours"
+    },
+    {
+     "apiname": "play_20h",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Addicted",
+     "description": "Play one  savegame for more than 20 hours"
+    },
+    {
+     "apiname": "logo_before_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A bit early?",
+     "description": ""
+    },
+    {
+     "apiname": "level_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Can't stop",
+     "description": "Reach level 50"
+    },
+    {
+     "apiname": "level_100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Is this the end?",
+     "description": "Reach level 100"
+    },
+    {
+     "apiname": "play_1h",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Getting into it",
+     "description": "Play one savegame for more than 1 hour"
+    },
+    {
+     "apiname": "open_wires",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The next dimension",
+     "description": "Open the wires layer"
+    },
+    {
+     "apiname": "map_markers_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "GPS",
+     "description": ""
+    },
+    {
+     "apiname": "produce_ms_logo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I've seen that before ..",
+     "description": ""
+    },
+    {
+     "apiname": "old_level_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Memories from the past",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

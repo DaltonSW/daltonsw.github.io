@@ -1,0 +1,541 @@
+{
+ "provider": "steam",
+ "title": "Shadows Over Loathing",
+ "updated": "2026-08-30",
+ "id": "1939160",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 37,
+ "platform": "PC",
+ "icon": "7fe18694297d4c36d71677fd76d514590fa5cb09",
+ "achievements": [
+  {
+   "key": "ach_adams",
+   "name": "The Umbraline Solution",
+   "description": "Adams saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/bf3527a8fc7d45f7dce904030d8bb6a8fb02f596.jpg"
+  },
+  {
+   "key": "ach_alphonse",
+   "name": "The Bite Heard Round the World",
+   "description": "Alphonse saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/0d19e34637cb303038a809ac5c0fe8a76400c3de.jpg"
+  },
+  {
+   "key": "ach_bankvault",
+   "name": "Bad Dog(s)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/7ad1b11c527a0284c026902e5ec5374b6c86f48e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_barker",
+   "name": "No Dogs Don't Prevent Oblivion",
+   "description": "Barker saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/5a54468741cea49c3902685d7028a87f89671663.jpg"
+  },
+  {
+   "key": "ach_barrel",
+   "name": "More Meat Than Sense",
+   "description": "You bought a barrel",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/3be4ac0dca324c82239237678b2ed9432826ba52.jpg"
+  },
+  {
+   "key": "ach_boardinghouse",
+   "name": "A Victimless Crime",
+   "description": "You solved Mrs. Brewster's mystery",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/9ce3fd152136bed525cd480affae3a9c1b5d4ae5.jpg"
+  },
+  {
+   "key": "ach_boardwalkgame",
+   "name": "Hardcore Gamer",
+   "description": "You won all the prizes at the Ocean City Boardwalk",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/100d764c3df61a9167bc09b6cd9a05ff4293b5ed.jpg"
+  },
+  {
+   "key": "ach_cats",
+   "name": "Cat Fancy",
+   "description": "You unlocked every cat",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/b1e2e17323007052c21a6180c32ce615519e60fa.jpg"
+  },
+  {
+   "key": "ach_chess",
+   "name": "Chessica",
+   "description": "You beat Jessica at chess",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/d993c35a5a65453fccfcebe83e64fc7b768a3d0e.jpg"
+  },
+  {
+   "key": "ach_cornmaze",
+   "name": "Esprit de Corn",
+   "description": "You maximized morale in the Maize Maze",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/2d6d74fb0093654fc2e709060c2625e7663b8e58.jpg"
+  },
+  {
+   "key": "ach_fishpeace",
+   "name": "No, Truce With the Fishies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/9137f4ba7e4d6328c8d73c4cfd9d753d41ee03fa.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_gabby",
+   "name": "The Last Dance",
+   "description": "Gabby saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/fbbcb195ff02f4e4bc3f09c6535c02018b18f4c9.jpg"
+  },
+  {
+   "key": "ach_gascan",
+   "name": "Fuel Reserves",
+   "description": "You filled the gas can up ALL the way",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/8040b83cbdd978195d83c084a35a1024e75c984c.jpg"
+  },
+  {
+   "key": "ach_goliath",
+   "name": "Just Showing Off",
+   "description": "You defeated the Ziggurat Goliath",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/6daa97c03dc4a4bdfcb8d12a2e147181087020dd.jpg"
+  },
+  {
+   "key": "ach_heist",
+   "name": "Jasper's Six",
+   "description": "You executed a perfect heist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/f27e77f76ff86d56d2d41ebace71c0856e16ce7d.jpg"
+  },
+  {
+   "key": "ach_hilbert",
+   "name": "Cleaning House",
+   "description": "You drove enemies out of 23 Hilbert House rooms",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/af75128584d4a4e36ec710cf25fc3d0d6dd09417.jpg"
+  },
+  {
+   "key": "ach_hobo",
+   "name": "The Gang's All Here",
+   "description": "You received the hobo camp's highest honor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/6f0268201ab37d90685b43a30ddf1807b86b5793.jpg"
+  },
+  {
+   "key": "ach_luke",
+   "name": "The Prince of Tides",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/1d576856d6679b0ce10e4dbbbdc2c810ba20f51b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_mob",
+   "name": "A Friend of Ours",
+   "description": "You completed all of Don T's assignments",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/293870f731ed5388c2e7b99bb780282d7614a1a1.jpg"
+  },
+  {
+   "key": "ach_molly",
+   "name": "Bullet of Pure Love",
+   "description": "Molly saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/ce3b168217840c2c1cf72d87e3c43852447ba9a8.jpg"
+  },
+  {
+   "key": "ach_necklace",
+   "name": "Your Neck Will Go On",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/6a26b70f7b212b262c313af33ba291d6b142f790.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_obie",
+   "name": "The Forbidden Melody",
+   "description": "Obie saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/2747a07d0322f0769a3c8cc7f7bcafc09157829e.jpg"
+  },
+  {
+   "key": "ach_pacifist",
+   "name": "The Milk of Human Kindness",
+   "description": "You completed the game without fighting",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/98593724e885ed1b3a5baffed0ba62d7371e8f45.jpg"
+  },
+  {
+   "key": "ach_paradox",
+   "name": "Temporal Oopsie",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/8accd349050102be8494d87bca077e330fddd868.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_quarry",
+   "name": "Freaky Frogday",
+   "description": "You helped the workers of Haim Quarry",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/272803fc75973b2e32b99f52814587ac51baa0c9.jpg"
+  },
+  {
+   "key": "ach_sandwich",
+   "name": "A Witch in Time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/1286b4be495c8e2fa5f10202371d601c3efa3d8b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_shadowskills",
+   "name": "The Dark Side",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/a1bd367cdac6552f5a0a96945d8840557b08580e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_simone",
+   "name": "This Wrench Kills Machines",
+   "description": "Simone saved the universe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/2ba69193e5e03416c449e0a12aa6e5b1371e815d.jpg"
+  },
+  {
+   "key": "ach_sit",
+   "name": "A Well-Rounded Education",
+   "description": "You passed all nine SIT courses (requires multiple playthroughs)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/b20d89e64977a4291ccd5c6f27744dcedbbad937.jpg"
+  },
+  {
+   "key": "ach_squad",
+   "name": "You Did the Monster Sash",
+   "description": "You got a fully-decked out Monster Shack sash",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/ab05c47a17226f63648c58506538df0a41c52872.jpg"
+  },
+  {
+   "key": "ach_stuffedpepper",
+   "name": "Everything's a Sandwich If You Believe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/b85ac956f4ce2e0a0fb29918b150fa221eab69fe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_tentacles",
+   "name": "Ten Tickles",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/8fe5434bf9cad182fa19526a32c4d19b06deb2c7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_timeloop",
+   "name": "Predestined",
+   "description": "You closed the Time Loop",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/bc0120edc586334a7e2e1b3bbd06d7a9c64bce75.jpg"
+  },
+  {
+   "key": "ach_toilets",
+   "name": "Sanitation Engineer",
+   "description": "You flushed every toilet",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/0924823ec9b3b15fb93af2355a9fc43c96aad65e.jpg"
+  },
+  {
+   "key": "ach_twohats",
+   "name": "The Duality of Hat",
+   "description": "You posed for two different fedora pictures",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/75ba60131159f6c96ff4138d0eb117161724b6dc.jpg"
+  },
+  {
+   "key": "ach_watchradio",
+   "name": "The Hot 100",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/0cbb1e2718c172c1104cefd1d73ebfc54833b957.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ach_yithian",
+   "name": "Somebody Else's Problem",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1939160/335b3677350e0a74ee3d5a6ad0ae706ee835d98c.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Shadows Over Loathing",
+   "achievements": [
+    {
+     "apiname": "ach_gascan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fuel Reserves",
+     "description": "You filled the gas can up ALL the way"
+    },
+    {
+     "apiname": "ach_chess",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chessica",
+     "description": "You beat Jessica at chess"
+    },
+    {
+     "apiname": "ach_twohats",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Duality of Hat",
+     "description": "You posed for two different fedora pictures"
+    },
+    {
+     "apiname": "ach_boardinghouse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Victimless Crime",
+     "description": "You solved Mrs. Brewster's mystery"
+    },
+    {
+     "apiname": "ach_tentacles",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ten Tickles",
+     "description": ""
+    },
+    {
+     "apiname": "ach_boardwalkgame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hardcore Gamer",
+     "description": "You won all the prizes at the Ocean City Boardwalk"
+    },
+    {
+     "apiname": "ach_watchradio",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hot 100",
+     "description": ""
+    },
+    {
+     "apiname": "ach_barrel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "More Meat Than Sense",
+     "description": "You bought a barrel"
+    },
+    {
+     "apiname": "ach_sandwich",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Witch in Time",
+     "description": ""
+    },
+    {
+     "apiname": "ach_paradox",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Temporal Oopsie",
+     "description": ""
+    },
+    {
+     "apiname": "ach_timeloop",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Predestined",
+     "description": "You closed the Time Loop"
+    },
+    {
+     "apiname": "ach_stuffedpepper",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Everything's a Sandwich If You Believe",
+     "description": ""
+    },
+    {
+     "apiname": "ach_hilbert",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cleaning House",
+     "description": "You drove enemies out of 23 Hilbert House rooms"
+    },
+    {
+     "apiname": "ach_fishpeace",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No, Truce With the Fishies",
+     "description": ""
+    },
+    {
+     "apiname": "ach_sit",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Well-Rounded Education",
+     "description": "You passed all nine SIT courses (requires multiple playthroughs)"
+    },
+    {
+     "apiname": "ach_shadowskills",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Dark Side",
+     "description": ""
+    },
+    {
+     "apiname": "ach_luke",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Prince of Tides",
+     "description": ""
+    },
+    {
+     "apiname": "ach_quarry",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Freaky Frogday",
+     "description": "You helped the workers of Haim Quarry"
+    },
+    {
+     "apiname": "ach_squad",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Did the Monster Sash",
+     "description": "You got a fully-decked out Monster Shack sash"
+    },
+    {
+     "apiname": "ach_bankvault",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bad Dog(s)",
+     "description": ""
+    },
+    {
+     "apiname": "ach_goliath",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Showing Off",
+     "description": "You defeated the Ziggurat Goliath"
+    },
+    {
+     "apiname": "ach_necklace",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Your Neck Will Go On",
+     "description": ""
+    },
+    {
+     "apiname": "ach_cornmaze",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Esprit de Corn",
+     "description": "You maximized morale in the Maize Maze"
+    },
+    {
+     "apiname": "ach_heist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jasper's Six",
+     "description": "You executed a perfect heist"
+    },
+    {
+     "apiname": "ach_mob",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Friend of Ours",
+     "description": "You completed all of Don T's assignments"
+    },
+    {
+     "apiname": "ach_gabby",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Last Dance",
+     "description": "Gabby saved the universe"
+    },
+    {
+     "apiname": "ach_obie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Forbidden Melody",
+     "description": "Obie saved the universe"
+    },
+    {
+     "apiname": "ach_molly",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bullet of Pure Love",
+     "description": "Molly saved the universe"
+    },
+    {
+     "apiname": "ach_barker",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Dogs Don't Prevent Oblivion",
+     "description": "Barker saved the universe"
+    },
+    {
+     "apiname": "ach_adams",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Umbraline Solution",
+     "description": "Adams saved the universe"
+    },
+    {
+     "apiname": "ach_simone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This Wrench Kills Machines",
+     "description": "Simone saved the universe"
+    },
+    {
+     "apiname": "ach_alphonse",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bite Heard Round the World",
+     "description": "Alphonse saved the universe"
+    },
+    {
+     "apiname": "ach_yithian",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Somebody Else's Problem",
+     "description": ""
+    },
+    {
+     "apiname": "ach_pacifist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Milk of Human Kindness",
+     "description": "You completed the game without fighting"
+    },
+    {
+     "apiname": "ach_hobo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Gang's All Here",
+     "description": "You received the hobo camp's highest honor"
+    },
+    {
+     "apiname": "ach_cats",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cat Fancy",
+     "description": "You unlocked every cat"
+    },
+    {
+     "apiname": "ach_toilets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sanitation Engineer",
+     "description": "You flushed every toilet"
+    }
+   ],
+   "success": true
+  }
+ }
+}

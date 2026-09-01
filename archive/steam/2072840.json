@@ -1,0 +1,457 @@
+{
+ "provider": "steam",
+ "title": "Word Factori",
+ "updated": "2026-08-30",
+ "id": "2072840",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 31,
+ "platform": "PC",
+ "icon": "c92510ba8a3e9f668fff7ace769325d703c50c8d",
+ "achievements": [
+  {
+   "key": "beat_created_custom_level",
+   "name": "custom builder",
+   "description": "build a word that you typed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/2222b14ea62d55d7649d4824cd5ca0bcf2945e3a.jpg"
+  },
+  {
+   "key": "boxes_1",
+   "name": "box builder: surveyor",
+   "description": "build 100 boxes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/f4a68f238d89a1976b254a12ddfc947bec4cf120.jpg"
+  },
+  {
+   "key": "boxes_2",
+   "name": "box builder: constructor",
+   "description": "build 1,000 boxes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/d19fd826805befa43d1e9435686b040d0f89ea96.jpg"
+  },
+  {
+   "key": "boxes_3",
+   "name": "box builder: architect",
+   "description": "build 3,000 boxes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/4daea0722040ec8f42b9f7f2c6db2de9eaa748d2.jpg"
+  },
+  {
+   "key": "buildings_placed_1",
+   "name": "builder of buildings",
+   "description": "place 500 buildings",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/2e2a977a465382370f61146c895673ec5a3a090c.jpg"
+  },
+  {
+   "key": "complete_all_challenge_levels",
+   "name": "challenger",
+   "description": "complete all challenge levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/8615e537100c091281cde447c5cc68533715e293.jpg"
+  },
+  {
+   "key": "complete_all_secret_levels",
+   "name": "the end...?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/3747215c29ad2b8e3918bc26afa60ff146581792.jpg",
+   "hidden": true
+  },
+  {
+   "key": "complete_challenge_level",
+   "name": "challenge accepted",
+   "description": "complete a challenge level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/591fea59ac2fcb09c31f646e20c8b3171c8a6bf0.jpg"
+  },
+  {
+   "key": "create_custom_level",
+   "name": "diy word factori",
+   "description": "type your own word",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/da38e4207c889d0501acb8fdc63476160804b730.jpg"
+  },
+  {
+   "key": "find_all_letter_recipes",
+   "name": "next time won't you sing with me",
+   "description": "find all standard letter recipes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/94bd2bffc5824322384b4505660935c285942886.jpg"
+  },
+  {
+   "key": "find_all_letters",
+   "name": "now I know my ABC's",
+   "description": "find a recipe for each letter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/24ab53532aa40f53e218fe974a8cf492468b997d.jpg"
+  },
+  {
+   "key": "find_all_secret_characters",
+   "name": "master of secrets",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/ac5488bb4006bb43d88bda319febc8e65e9ae98d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "find_art_with_custom_level",
+   "name": "hey look, a sticker",
+   "description": "discover a sticker by typing your own word",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/3551b562eb1626d17e0d01f96cac79ad25097690.jpg"
+  },
+  {
+   "key": "find_first_secret_recipe",
+   "name": "shhh, it's a secret",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/2a1de90c79a29e60beb05e640b8d3eaa691aa447.jpg",
+   "hidden": true
+  },
+  {
+   "key": "finish_all_levels",
+   "name": "finish all levels",
+   "description": "finish all levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/90cba68e9aac6d8e07378b09a6a6481c94c1db8b.jpg"
+  },
+  {
+   "key": "finish_non_secret_levels",
+   "name": "the door awaits...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/a02bdc6e0c72a8c6085a369d657574ba58aa7221.jpg",
+   "hidden": true
+  },
+  {
+   "key": "finish_tutorial",
+   "name": "word factori 101",
+   "description": "finish the tutorial levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/deaac7efd169ab949881e1434ffd4546bf98ab48.jpg"
+  },
+  {
+   "key": "recipes_1",
+   "name": "letters recipes: junior chef",
+   "description": "discover your first recipe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/90cbd6dd53d3f05342b4233310e0f263c1e07151.jpg"
+  },
+  {
+   "key": "recipes_2",
+   "name": "letter recipes: head chef",
+   "description": "discover 20 recipes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/d6af6a7f95937e7d79c3640f1350a14db97535da.jpg"
+  },
+  {
+   "key": "recipes_3",
+   "name": "letter recipes: executive chef",
+   "description": "discover 50 recipes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/f8c6b29ba9bc9c98b69146b8d4ed178e8c874d5f.jpg"
+  },
+  {
+   "key": "spin_building_x_times",
+   "name": "uzumaki",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/f42356ad3634b4848d866f6201a6cf727bab8831.jpg",
+   "hidden": true
+  },
+  {
+   "key": "stamp_1",
+   "name": "stickerbook: dabbler",
+   "description": "discover your first sticker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/ef00668c8d024edb49c00227df726c0abc54d132.jpg"
+  },
+  {
+   "key": "stamp_2",
+   "name": "stickerbook: hobbyist",
+   "description": "discover 10 stickers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/490b9acbb9912a3242c18198130cd3236d731749.jpg"
+  },
+  {
+   "key": "stamp_3",
+   "name": "stickerbook: collector",
+   "description": "discover 25 stickers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/37bef085e48473aec24a99aef55c53c2b60c94d5.jpg"
+  },
+  {
+   "key": "stamp_4",
+   "name": "stickerbook: afficionado",
+   "description": "discover 50 stickers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/9ab877d509f486336acf4da1a37d65aa89253fca.jpg"
+  },
+  {
+   "key": "throw_building_off_screen",
+   "name": "unusual demolition",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/26e60120c0d69ecc64191f1bf97693504be3d9f3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "word_list_2",
+   "name": "wordsmith: wordy",
+   "description": "build 12 words",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/51dd65567ce82294068c83a3d4e91f5ff5cc574f.jpg"
+  },
+  {
+   "key": "word_list_3",
+   "name": "wordsmith: verbose",
+   "description": "build 24 words",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/9b4ab25f07ace461a5da08fe911490bf9187c933.jpg"
+  },
+  {
+   "key": "word_list_4",
+   "name": "wordsmith: loquacious",
+   "description": "build 96 words",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/eb01b603832079717bd4ed16404f093bcdcce323.jpg"
+  },
+  {
+   "key": "word_of_the_day_1",
+   "name": "word of the day",
+   "description": "complete a word of the day",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/b1ca4960117ed8aae383dc035aeee747de013a89.jpg"
+  },
+  {
+   "key": "word_of_the_day_2",
+   "name": "words of the week",
+   "description": "complete 7 words of the day",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/9940450c5633cabdc65b55e64bc539cbcf143a7d.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Word Factori",
+   "achievements": [
+    {
+     "apiname": "finish_tutorial",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "word factori 101",
+     "description": "finish the tutorial levels"
+    },
+    {
+     "apiname": "finish_non_secret_levels",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "the door awaits...",
+     "description": ""
+    },
+    {
+     "apiname": "recipes_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "letters recipes: junior chef",
+     "description": "discover your first recipe"
+    },
+    {
+     "apiname": "recipes_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "letter recipes: head chef",
+     "description": "discover 20 recipes"
+    },
+    {
+     "apiname": "recipes_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "letter recipes: executive chef",
+     "description": "discover 50 recipes"
+    },
+    {
+     "apiname": "stamp_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "stickerbook: dabbler",
+     "description": "discover your first sticker"
+    },
+    {
+     "apiname": "stamp_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "stickerbook: hobbyist",
+     "description": "discover 10 stickers"
+    },
+    {
+     "apiname": "stamp_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "stickerbook: collector",
+     "description": "discover 25 stickers"
+    },
+    {
+     "apiname": "stamp_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "stickerbook: afficionado",
+     "description": "discover 50 stickers"
+    },
+    {
+     "apiname": "word_list_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "wordsmith: wordy",
+     "description": "build 12 words"
+    },
+    {
+     "apiname": "word_list_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "wordsmith: verbose",
+     "description": "build 24 words"
+    },
+    {
+     "apiname": "word_list_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "wordsmith: loquacious",
+     "description": "build 96 words"
+    },
+    {
+     "apiname": "word_of_the_day_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "word of the day",
+     "description": "complete a word of the day"
+    },
+    {
+     "apiname": "word_of_the_day_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "words of the week",
+     "description": "complete 7 words of the day"
+    },
+    {
+     "apiname": "boxes_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "box builder: surveyor",
+     "description": "build 100 boxes"
+    },
+    {
+     "apiname": "boxes_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "box builder: constructor",
+     "description": "build 1,000 boxes"
+    },
+    {
+     "apiname": "boxes_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "box builder: architect",
+     "description": "build 3,000 boxes"
+    },
+    {
+     "apiname": "buildings_placed_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "builder of buildings",
+     "description": "place 500 buildings"
+    },
+    {
+     "apiname": "find_first_secret_recipe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "shhh, it's a secret",
+     "description": ""
+    },
+    {
+     "apiname": "find_all_secret_characters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "master of secrets",
+     "description": ""
+    },
+    {
+     "apiname": "complete_challenge_level",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "challenge accepted",
+     "description": "complete a challenge level"
+    },
+    {
+     "apiname": "complete_all_secret_levels",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "the end...?",
+     "description": ""
+    },
+    {
+     "apiname": "create_custom_level",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "diy word factori",
+     "description": "type your own word"
+    },
+    {
+     "apiname": "beat_created_custom_level",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "custom builder",
+     "description": "build a word that you typed"
+    },
+    {
+     "apiname": "find_art_with_custom_level",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "hey look, a sticker",
+     "description": "discover a sticker by typing your own word"
+    },
+    {
+     "apiname": "throw_building_off_screen",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "unusual demolition",
+     "description": ""
+    },
+    {
+     "apiname": "spin_building_x_times",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "uzumaki",
+     "description": ""
+    },
+    {
+     "apiname": "find_all_letters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "now I know my ABC's",
+     "description": "find a recipe for each letter"
+    },
+    {
+     "apiname": "find_all_letter_recipes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "next time won't you sing with me",
+     "description": "find all standard letter recipes"
+    },
+    {
+     "apiname": "complete_all_challenge_levels",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "challenger",
+     "description": "complete all challenge levels"
+    },
+    {
+     "apiname": "finish_all_levels",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "finish all levels",
+     "description": "finish all levels"
+    }
+   ],
+   "success": true
+  }
+ }
+}

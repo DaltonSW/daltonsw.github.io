@@ -1,0 +1,793 @@
+{
+ "provider": "steam",
+ "title": "Core Keeper",
+ "updated": "2026-08-30",
+ "id": "1621690",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 55,
+ "platform": "PC",
+ "icon": "53517a1b2eb22e22ac4a1f71c814209f1b84c063",
+ "achievements": [
+  {
+   "key": "CatchStarlightNautilus",
+   "name": "Legendary Fossil",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/acd196c8320d4a51ea6202558205cabcf7d67fa7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "CherryBlossomTrees",
+   "name": "5 Centimeters Per Second",
+   "description": "Planted 10 Cherry Trees",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/271b150753c5abe11d9377c0d3bc2601ae4a4cd6.jpg"
+  },
+  {
+   "key": "DefeatAtlanteanWorm",
+   "name": "Thalassophobia",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/89bc8cd1608db71981bb514ae8f68f376262d658.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatAzeos",
+   "name": "From the Skies!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/7d2d099a8912754d915a07991f74230ae97af18f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatCoreCommander",
+   "name": "Visitor From A Dying World",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/7b150d49529247c7e10f371bf88add36048db54e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatCrydra",
+   "name": "Howl of the Sea",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/bd5d3810fb240aaee6d708ade13cca46d091e40c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatDruidra",
+   "name": "Song of the Woods",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/10d7c1d3ddac573edfa3e535de0828c15bd3bc79.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatGhorm",
+   "name": "Bugging Out",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/321db7a2cc66966374da032b0e5d296fbede6c24.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatGlurch",
+   "name": "A Slimey Encounter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/c83e6ebe2352a87d3ae5fd4a1b080b4068d662cb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatHivemother",
+   "name": "Watch Your Step",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/c9ebacc069e05b18adc3c2bfc478adce62683b1d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatIgneous",
+   "name": "Burning Through",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/3df3956b001aa6072c585d098ad78476a16f7177.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatIvy",
+   "name": "Toxic Personality",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/36e00a87708f510f05766b4ea1fad2f03d6590fb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatKingSlime",
+   "name": "Slippery Shinobi",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/fe1c778c7193dd48ba352b7a106aa9160940fc56.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatMalugaz",
+   "name": "You're a Wizard",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/6b774d715b66440b53bad0ef061b97d17029b078.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatMorpha",
+   "name": "Slippery When Wet",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/19de23f029fbcead9088b756f57f5eb0f4018ae3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatNimruza",
+   "name": "Silence the Symphony",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/3f5bb0c595936aaee0ca654d49b472915b0dd1d5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatOblidra",
+   "name": "Whisper of the Void",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/7200080a86532a558d896aab59309bd7b7caf8af.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatOmoroth",
+   "name": "From the Depths!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/bd59b8a88a07b0d319453b297b2732b124b0a7f9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatPyrdra",
+   "name": "Roar of the Flames",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/d09f4b7b6d7a05aa395c203b05b7c6512aba7f0c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatRaAkar",
+   "name": "Just Deserts",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/d9713663134a56cadfa00de670b943f4a777b441.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatSahabar",
+   "name": "Calculated Prophecy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/fddf27435c08010390f8cd20b18583f2b0d75d49.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DefeatUrschleim",
+   "name": "Cambrian Behemoth",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/25045d558cb8371b5459e821bc76be1db629fed2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Discover100CookBookRecipes",
+   "name": "Certified Chef",
+   "description": "Discovered 100 recipes in the cook book",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/81792a6d816764e9a7862377e4432d494f8c48aa.jpg"
+  },
+  {
+   "key": "EquipRingOfRockAndStone",
+   "name": "Rock and Stone!",
+   "description": "Equipped the Ring of Rock and Ring of Stone",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/ac3541dfb85361f0b48ddb9fb2f1f6375559b06a.jpg"
+  },
+  {
+   "key": "FeedCattle",
+   "name": "A Good Life",
+   "description": "Fed cattle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/f04b2d74c0a864471f955c3bd8101c2759e5e8fa.jpg"
+  },
+  {
+   "key": "FirstPet",
+   "name": "Your Very First",
+   "description": "Hatched your first pet from an egg",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/5096542fc83ba0a5f5b14cfa0f4e34ab67bf28b4.jpg"
+  },
+  {
+   "key": "GainOver200MovementSpeed",
+   "name": "In a Rush",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/6c31610182e7b70469a2cb0b2585288c24a795f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HarvestGoldenIngredient",
+   "name": "Farmer Midas",
+   "description": "Harvested a golden plant",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/ceaa7905b394534841e2254e551933831ccd21dc.jpg"
+  },
+  {
+   "key": "KeyArtCharacter",
+   "name": "Impersonator Syndrome",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/acb4d17b9ae3b2ab431cf4aef23a98a9253f9dd2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "MaxedOutCooking",
+   "name": "Cheese it!",
+   "description": "Gained 100 skill points in cooking",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/93dd70f1ffdcb2d1f6b4b053919a67311c5fb9b8.jpg"
+  },
+  {
+   "key": "MaxedOutCrafting",
+   "name": "Crafty Explorer",
+   "description": "Gained 100 skill points in crafting",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/2dc1ba288e5b987462123e75aa96a80a613f7fc5.jpg"
+  },
+  {
+   "key": "MaxedOutExplosives",
+   "name": "Explosion Mastery",
+   "description": "Gained 100 skill points in explosions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/e01c293b03bb4747e8aa384f9d9ea4194a32eaf3.jpg"
+  },
+  {
+   "key": "MaxedOutFishing",
+   "name": "Completely Hooked",
+   "description": "Gained 100 skill points in fishing",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/b9a21c0c100df00cbf9dc188cf726365fe0302bc.jpg"
+  },
+  {
+   "key": "MaxedOutGardening",
+   "name": "Nature Nurturer",
+   "description": "Gained 100 skill points in gardening",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/f6f3b944f4b2cf72521cb68753879358ff2bbb3e.jpg"
+  },
+  {
+   "key": "MaxedOutMagic",
+   "name": "A Wizard Is Never Late",
+   "description": "Gained 100 skill points in magic",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/beceaeb19b4ddfc4b66580a611a38caaade7cb49.jpg"
+  },
+  {
+   "key": "MaxedOutMelee",
+   "name": "...Sting like a bee",
+   "description": "Gained 100 skill points in melee",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/5339fd744449f6d19f629769113af910950320b0.jpg"
+  },
+  {
+   "key": "MaxedOutMining",
+   "name": "Diggy Diggy Hole",
+   "description": "Gained 100 skill points in mining",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/6be0c43f57f49be36b9ebe6f6d47bbb9a7dc49d6.jpg"
+  },
+  {
+   "key": "MaxedOutRange",
+   "name": "Robin Hood",
+   "description": "Gained 100 skill points in range",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/5be3d984882590ca294e72d546dd7f3755ea38c7.jpg"
+  },
+  {
+   "key": "MaxedOutRunning",
+   "name": "Float like a butterfly...",
+   "description": "Gained 100 skill points in running",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/ba838f9493a90f02a8eeacbb88ecbf4a779456c8.jpg"
+  },
+  {
+   "key": "MaxedOutSummoning",
+   "name": "Stay Away From The Summoner!",
+   "description": "Gained 100 skill points in summoning",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/2c14a3bd3f30be6fa9b806feeff0d971db9a500e.jpg"
+  },
+  {
+   "key": "MaxedOutVitality",
+   "name": "Health Conscious",
+   "description": "Gained 100 skill points in vitality",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/b5d0894e4e322f1e95c2ae8e225eddc4753c15df.jpg"
+  },
+  {
+   "key": "ObtainCredenceOfRuin",
+   "name": "The Credence of Ruin",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/f239e04e1a13e88aec97546479e7061f123f3675.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainPhantomSpark",
+   "name": "The Phantom Spark",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/74295fa2cc0951ab9d192fe2dc2f742265b4dc24.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainRuneSong",
+   "name": "The Rune Song",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/37a9a48c4e6855497ccc306190efaa7f76ca2bb9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainSoulSeeker",
+   "name": "The Soul Seeker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/73d6dd386a7e4731372819033634202d70569de5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainStormbringer",
+   "name": "Wielder of Legends",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/10fa161e8cf9ef96a6ff4d3f0c2b5e83dda9c387.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainTheOracleDeck",
+   "name": "The Heart of the Cards",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/2e74eba331dda6a1bf625a4d4fc58e6608a1d3c6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainTitanBreath",
+   "name": "The Titan Breath",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/d3a1e95ff0576e8c7e283424403db3e422bc5ad6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PetColors",
+   "name": "I want ’em all!",
+   "description": "Stored all color variations of one pet type in a chest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/d43dbb3866b654312c0a13770f21cbc6ab507a5e.jpg"
+  },
+  {
+   "key": "PetMaxLevel",
+   "name": "Pet Prodigy",
+   "description": "Reached max level on a pet",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/bb48e8648b60e504c3ca012be10a43ae6908e7c7.jpg"
+  },
+  {
+   "key": "SitOnCavelingToiletWithACrown",
+   "name": "A Throne Fit for a King",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/620b772c6502ea0f4b3c30eabe1584d31a69b613.jpg",
+   "hidden": true
+  },
+  {
+   "key": "StormSong",
+   "name": "A Strange Song",
+   "description": "Play the Tune of Tempest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/f6a73bbdacbdae27111dafa8dc56d2a293169764.jpg"
+  },
+  {
+   "key": "SummonManyMinions",
+   "name": "Legion Commander",
+   "description": "Had 8 or more active minions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/e9d3f93093cfe2197ebb5f0e8f209b722e2a252a.jpg"
+  },
+  {
+   "key": "TalkToBigLarva",
+   "name": "Gossip Group",
+   "description": "Talked to a Big Larva",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/562b44bff95542e37f6c500c98b2c4f7bba9ece5.jpg"
+  },
+  {
+   "key": "UseWayPoint",
+   "name": "Beam Me Up",
+   "description": "Used a waypoint",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/541a68b3c591538c1b23b132c42fa0696ee26d71.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Core Keeper",
+   "achievements": [
+    {
+     "apiname": "DefeatGlurch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Slimey Encounter",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatGhorm",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bugging Out",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatHivemother",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Watch Your Step",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatAzeos",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From the Skies!",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatMalugaz",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You're a Wizard",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatIvy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toxic Personality",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatOmoroth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From the Depths!",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatMorpha",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slippery When Wet",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatRaAkar",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Deserts",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatIgneous",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Burning Through",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatKingSlime",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slippery Shinobi",
+     "description": ""
+    },
+    {
+     "apiname": "MaxedOutMining",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Diggy Diggy Hole",
+     "description": "Gained 100 skill points in mining"
+    },
+    {
+     "apiname": "MaxedOutCooking",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cheese it!",
+     "description": "Gained 100 skill points in cooking"
+    },
+    {
+     "apiname": "MaxedOutFishing",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Completely Hooked",
+     "description": "Gained 100 skill points in fishing"
+    },
+    {
+     "apiname": "MaxedOutGardening",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nature Nurturer",
+     "description": "Gained 100 skill points in gardening"
+    },
+    {
+     "apiname": "MaxedOutMelee",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "...Sting like a bee",
+     "description": "Gained 100 skill points in melee"
+    },
+    {
+     "apiname": "MaxedOutRange",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Robin Hood",
+     "description": "Gained 100 skill points in range"
+    },
+    {
+     "apiname": "MaxedOutVitality",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Health Conscious",
+     "description": "Gained 100 skill points in vitality"
+    },
+    {
+     "apiname": "MaxedOutRunning",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Float like a butterfly...",
+     "description": "Gained 100 skill points in running"
+    },
+    {
+     "apiname": "MaxedOutCrafting",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crafty Explorer",
+     "description": "Gained 100 skill points in crafting"
+    },
+    {
+     "apiname": "ObtainTheOracleDeck",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Heart of the Cards",
+     "description": ""
+    },
+    {
+     "apiname": "ObtainRuneSong",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Rune Song",
+     "description": ""
+    },
+    {
+     "apiname": "ObtainPhantomSpark",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Phantom Spark",
+     "description": ""
+    },
+    {
+     "apiname": "ObtainSoulSeeker",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Soul Seeker",
+     "description": ""
+    },
+    {
+     "apiname": "TalkToBigLarva",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gossip Group",
+     "description": "Talked to a Big Larva"
+    },
+    {
+     "apiname": "CatchStarlightNautilus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Legendary Fossil",
+     "description": ""
+    },
+    {
+     "apiname": "GainOver200MovementSpeed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In a Rush",
+     "description": ""
+    },
+    {
+     "apiname": "Discover100CookBookRecipes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Certified Chef",
+     "description": "Discovered 100 recipes in the cook book"
+    },
+    {
+     "apiname": "HarvestGoldenIngredient",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Farmer Midas",
+     "description": "Harvested a golden plant"
+    },
+    {
+     "apiname": "SitOnCavelingToiletWithACrown",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Throne Fit for a King",
+     "description": ""
+    },
+    {
+     "apiname": "EquipRingOfRockAndStone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rock and Stone!",
+     "description": "Equipped the Ring of Rock and Ring of Stone"
+    },
+    {
+     "apiname": "KeyArtCharacter",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Impersonator Syndrome",
+     "description": ""
+    },
+    {
+     "apiname": "CherryBlossomTrees",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "5 Centimeters Per Second",
+     "description": "Planted 10 Cherry Trees"
+    },
+    {
+     "apiname": "StormSong",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Strange Song",
+     "description": "Play the Tune of Tempest"
+    },
+    {
+     "apiname": "FirstPet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Your Very First",
+     "description": "Hatched your first pet from an egg"
+    },
+    {
+     "apiname": "DefeatAtlanteanWorm",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thalassophobia",
+     "description": ""
+    },
+    {
+     "apiname": "PetColors",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I want ’em all!",
+     "description": "Stored all color variations of one pet type in a chest"
+    },
+    {
+     "apiname": "FeedCattle",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Good Life",
+     "description": "Fed cattle"
+    },
+    {
+     "apiname": "PetMaxLevel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pet Prodigy",
+     "description": "Reached max level on a pet"
+    },
+    {
+     "apiname": "MaxedOutMagic",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Wizard Is Never Late",
+     "description": "Gained 100 skill points in magic"
+    },
+    {
+     "apiname": "MaxedOutSummoning",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stay Away From The Summoner!",
+     "description": "Gained 100 skill points in summoning"
+    },
+    {
+     "apiname": "DefeatDruidra",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Song of the Woods",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatCrydra",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Howl of the Sea",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatPyrdra",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Roar of the Flames",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatCoreCommander",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Visitor From A Dying World",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatUrschleim",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cambrian Behemoth",
+     "description": ""
+    },
+    {
+     "apiname": "SummonManyMinions",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Legion Commander",
+     "description": "Had 8 or more active minions"
+    },
+    {
+     "apiname": "ObtainStormbringer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wielder of Legends",
+     "description": ""
+    },
+    {
+     "apiname": "UseWayPoint",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beam Me Up",
+     "description": "Used a waypoint"
+    },
+    {
+     "apiname": "MaxedOutExplosives",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Explosion Mastery",
+     "description": "Gained 100 skill points in explosions"
+    },
+    {
+     "apiname": "DefeatNimruza",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silence the Symphony",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatOblidra",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Whisper of the Void",
+     "description": ""
+    },
+    {
+     "apiname": "DefeatSahabar",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Calculated Prophecy",
+     "description": ""
+    },
+    {
+     "apiname": "ObtainCredenceOfRuin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Credence of Ruin",
+     "description": ""
+    },
+    {
+     "apiname": "ObtainTitanBreath",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Titan Breath",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

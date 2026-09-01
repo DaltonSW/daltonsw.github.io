@@ -1,0 +1,639 @@
+{
+ "provider": "steam",
+ "title": "Far Cry® 3",
+ "updated": "2026-08-30",
+ "id": "220240",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 44,
+ "platform": "PC",
+ "icon": "8231f43d3dd47fb4b4111fd6bd4a849e73eb0520",
+ "achievements": [
+  {
+   "key": "FarCry3_Ach_1",
+   "name": "First Blood",
+   "description": "Escape the pirates and survive in the wilderness.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/07ff0ae5e79913c8755b6cfd31f23d04df2127a0.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_10",
+   "name": "Deep Cover",
+   "description": "Don’t blow cover during the interrogation.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/57f79876f1fcb3969a70f049e3d201145ddac16f.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_11",
+   "name": "Poker Night",
+   "description": "Win the poker game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/995b304fcab1e909752b70c05a4ba22bcfa1ba43.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_12",
+   "name": "What a Trip",
+   "description": "Attend the final ceremony.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/1da89c1e8ef362418051bbf1e79945a5b8f740f8.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_13",
+   "name": "Free Fall",
+   "description": "Freefall more than 100m and live (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/9e696d74ddbabfd49ce12ac873892d2164343c3a.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_14",
+   "name": "Inked Up",
+   "description": "Earn 5 skill tattoos.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/08516e09466e885a45b2c77414a73a2f9dbfa20a.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_15",
+   "name": "Fully Inked",
+   "description": "Earn every tattoo by learning all the skills.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/65288f4d3ce57564866d04fa735b45b1842aa5c8.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_16",
+   "name": "Money to Burn",
+   "description": "Spend $5000 at the shop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/40b541f4a1303e626fa66afcfabf4a0654a4e351.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_17",
+   "name": "Aftermarket Junkie",
+   "description": "Buy all attachments and paint jobs for one weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/7317ae2069366c9e09be58fef98368ddf4a83362.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_18",
+   "name": "Rebel With a Cause",
+   "description": "Liberate 3 outposts.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/0fba9c684361af00578cc4b0e96994b0930556ea.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_19",
+   "name": "Island Liberator",
+   "description": "Liberate all outposts.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/3a3de6b723461f442d3cf5da0cac4bc3057d635a.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_2",
+   "name": "Magic Mushroom",
+   "description": "Return to the doctor with the cave mushrooms.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/c60ebf677749e56087a1bb1e50b179af8bed263d.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_20",
+   "name": "Unheard",
+   "description": "Liberate an outpost without triggering an alarm.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/8cb88df572e5e3b75d7a63060589c771e416b563.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_21",
+   "name": "Full Bars",
+   "description": "Activate 9 radio towers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/b792915c0a739a0585917fc6c0ade610a60eb595.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_22",
+   "name": "Archeology 101",
+   "description": "Gather a total of 60 relics.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/ed9fed445dfa365376bdbacb9fbe5286ec276024.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_23",
+   "name": "Dead Letters",
+   "description": "Gather all \"Letters of the Lost\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/aac4100bd9601ad824b0f7ada7ed2485cdd4e86f.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_24",
+   "name": "Memory to Spare",
+   "description": "Gather all the memory cards.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/f1cf3bf72448872c7960e07b5f6593856ee17322.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_25",
+   "name": "Jungle Journal",
+   "description": "Unlock 50 entries in the Survival Guide.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/37db14438251f76001396dd58ebca3863814422c.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_26",
+   "name": "Bagged and Tagged",
+   "description": "Complete a Path of the Hunter quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/390aff61b435ed07c2ad25e7c1bd652f483419ac.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_27",
+   "name": "Road Trip",
+   "description": "Complete a Supply Drop quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/7cfacd38cf75676e2a62ee725b08eab8b18a02d5.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_28",
+   "name": "In Cold Blood",
+   "description": "Complete a WANTED Dead quest.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/b074f7327e014d8d586d083f35c2a0fdc2e1730f.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_29",
+   "name": "Let the Trials Begin",
+   "description": "Beat any Trials of the Rakyat score.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/80cfdcef3c3ce85ff2b53cac548740c3b3e916f0.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_3",
+   "name": "Worst Date Ever",
+   "description": "Escape the burning hotel.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/2469a54c7518c8f1313014ad62c909dc4edcf2df.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_30",
+   "name": "Poker Bully",
+   "description": "Win $1500 playing poker.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/0e012a593ce7c4a7f2a20ef132700d59df7f04e6.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_31",
+   "name": "Hunter Hunted",
+   "description": "Lure and kill a predator.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/9cb26d829d76bd4b3ba7ee3dc380cbc2ac454735.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_32",
+   "name": "Poacher",
+   "description": "Hunt and skin a rare animal.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/614e3943fbebcee0bd9bc835746b18c6cc676ef2.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_33",
+   "name": "Artsy Craftsy",
+   "description": "Craft 5 upgrades for your equipment.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/a5688a723067ccf03c78cbe47c0434b2fba85143.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_34",
+   "name": "Needle Exchange",
+   "description": "Craft 25 syringes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/3f16069f7db29d9eea1f70c5f357c464ce234d37.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_35",
+   "name": "The Good Stuff",
+   "description": "Craft a Special syringe.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/76e908fa6156f609c1031b25c7e2ef7c1000cbe1.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_36",
+   "name": "Say Hi to the Internet",
+   "description": "Find the lost Hollywood star.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/0a9853e83ac6de5b356e05da79ed98247f0f3487.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_37",
+   "name": "Heartless Pyro",
+   "description": "Kill 50 enemies with the flamethrower (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/50e096c6d2a08c23dfb75e744ab80a4e618e2195.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_38",
+   "name": "Love the Boom",
+   "description": "Kill 4 enemies simultaneously with one explosion (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/9a3d87da1602405c3389fe39ee721c392e596c74.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_39",
+   "name": "Rock Always Wins",
+   "description": "Fully distract 25 enemies with rocks (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/27c623d047cb91e9ed8bd8f21760a4a2981ea1b4.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_4",
+   "name": "One of Us",
+   "description": "Complete the Rakyat initiation.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/99c359c13454546e25911f5ad74f1640e3200ae9.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_40",
+   "name": "Never Saw it Coming",
+   "description": "Kill an enemy with a takedown from above from a glider, zipline or parachute (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/8f929435ac6d6ccf9df5955628126bb6e8263c23.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_41",
+   "name": "Improper Use",
+   "description": "Kill an enemy with the Repair Tool (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/26365a9ee4dd4e13893226fc278f34cc0c12f334.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_42",
+   "name": "Toxophilite",
+   "description": "Kill a target from 70m or more with the bow (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/c0be71e807e4d6a0174baabfa0ab570cca03c684.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_43",
+   "name": "Island Paparazzi",
+   "description": "Tag 25 enemies using the camera (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/ebb922c166371beb8e193730af55636c454a8f37.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_44",
+   "name": "Fearless or Stupid",
+   "description": "Dive more than 60m (Single Player only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/4eeefb5f4b587fba9f453b570154d1d0c5c11613.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_5",
+   "name": "Hands Off My Stoner",
+   "description": "Rescue your friend before he is sold as a slave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/f16ea2079f61a4ed8fdb649ecffcaaecadafcf82.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_6",
+   "name": "Retake Wall Street",
+   "description": "Rescue your friend from torture.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/5cfac618f452a18fd57cec811bd362ea35547ada.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_7",
+   "name": "Have I Told You?",
+   "description": "Discover the definition of insanity.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/fb77b9a7e1c20c16e9d907b364304af1baff6f7e.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_8",
+   "name": "Taken for Granted",
+   "description": "Survive Vaas’s attack in the compound.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/b82281c54dc969d10b0e55c869e50caf0c4c7158.jpg"
+  },
+  {
+   "key": "FarCry3_Ach_9",
+   "name": "Higher Than a Kite",
+   "description": "Reach the South Island alive. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/220240/f19f5321958e4b951a935282419d13e859522e81.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Far Cry® 3",
+   "achievements": [
+    {
+     "apiname": "FarCry3_Ach_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Blood",
+     "description": "Escape the pirates and survive in the wilderness."
+    },
+    {
+     "apiname": "FarCry3_Ach_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magic Mushroom",
+     "description": "Return to the doctor with the cave mushrooms."
+    },
+    {
+     "apiname": "FarCry3_Ach_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Worst Date Ever",
+     "description": "Escape the burning hotel."
+    },
+    {
+     "apiname": "FarCry3_Ach_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One of Us",
+     "description": "Complete the Rakyat initiation."
+    },
+    {
+     "apiname": "FarCry3_Ach_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hands Off My Stoner",
+     "description": "Rescue your friend before he is sold as a slave."
+    },
+    {
+     "apiname": "FarCry3_Ach_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Retake Wall Street",
+     "description": "Rescue your friend from torture."
+    },
+    {
+     "apiname": "FarCry3_Ach_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Have I Told You?",
+     "description": "Discover the definition of insanity."
+    },
+    {
+     "apiname": "FarCry3_Ach_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Taken for Granted",
+     "description": "Survive Vaas’s attack in the compound."
+    },
+    {
+     "apiname": "FarCry3_Ach_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Higher Than a Kite",
+     "description": "Reach the South Island alive. "
+    },
+    {
+     "apiname": "FarCry3_Ach_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deep Cover",
+     "description": "Don’t blow cover during the interrogation."
+    },
+    {
+     "apiname": "FarCry3_Ach_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poker Night",
+     "description": "Win the poker game."
+    },
+    {
+     "apiname": "FarCry3_Ach_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What a Trip",
+     "description": "Attend the final ceremony."
+    },
+    {
+     "apiname": "FarCry3_Ach_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Free Fall",
+     "description": "Freefall more than 100m and live (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inked Up",
+     "description": "Earn 5 skill tattoos."
+    },
+    {
+     "apiname": "FarCry3_Ach_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Inked",
+     "description": "Earn every tattoo by learning all the skills."
+    },
+    {
+     "apiname": "FarCry3_Ach_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Money to Burn",
+     "description": "Spend $5000 at the shop."
+    },
+    {
+     "apiname": "FarCry3_Ach_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Aftermarket Junkie",
+     "description": "Buy all attachments and paint jobs for one weapon."
+    },
+    {
+     "apiname": "FarCry3_Ach_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rebel With a Cause",
+     "description": "Liberate 3 outposts."
+    },
+    {
+     "apiname": "FarCry3_Ach_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Island Liberator",
+     "description": "Liberate all outposts."
+    },
+    {
+     "apiname": "FarCry3_Ach_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unheard",
+     "description": "Liberate an outpost without triggering an alarm."
+    },
+    {
+     "apiname": "FarCry3_Ach_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Bars",
+     "description": "Activate 9 radio towers."
+    },
+    {
+     "apiname": "FarCry3_Ach_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Archeology 101",
+     "description": "Gather a total of 60 relics."
+    },
+    {
+     "apiname": "FarCry3_Ach_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dead Letters",
+     "description": "Gather all \"Letters of the Lost\"."
+    },
+    {
+     "apiname": "FarCry3_Ach_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Memory to Spare",
+     "description": "Gather all the memory cards."
+    },
+    {
+     "apiname": "FarCry3_Ach_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jungle Journal",
+     "description": "Unlock 50 entries in the Survival Guide."
+    },
+    {
+     "apiname": "FarCry3_Ach_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bagged and Tagged",
+     "description": "Complete a Path of the Hunter quest."
+    },
+    {
+     "apiname": "FarCry3_Ach_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Road Trip",
+     "description": "Complete a Supply Drop quest."
+    },
+    {
+     "apiname": "FarCry3_Ach_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In Cold Blood",
+     "description": "Complete a WANTED Dead quest."
+    },
+    {
+     "apiname": "FarCry3_Ach_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let the Trials Begin",
+     "description": "Beat any Trials of the Rakyat score."
+    },
+    {
+     "apiname": "FarCry3_Ach_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poker Bully",
+     "description": "Win $1500 playing poker."
+    },
+    {
+     "apiname": "FarCry3_Ach_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hunter Hunted",
+     "description": "Lure and kill a predator."
+    },
+    {
+     "apiname": "FarCry3_Ach_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poacher",
+     "description": "Hunt and skin a rare animal."
+    },
+    {
+     "apiname": "FarCry3_Ach_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Artsy Craftsy",
+     "description": "Craft 5 upgrades for your equipment."
+    },
+    {
+     "apiname": "FarCry3_Ach_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Needle Exchange",
+     "description": "Craft 25 syringes."
+    },
+    {
+     "apiname": "FarCry3_Ach_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Good Stuff",
+     "description": "Craft a Special syringe."
+    },
+    {
+     "apiname": "FarCry3_Ach_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Say Hi to the Internet",
+     "description": "Find the lost Hollywood star."
+    },
+    {
+     "apiname": "FarCry3_Ach_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heartless Pyro",
+     "description": "Kill 50 enemies with the flamethrower (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Love the Boom",
+     "description": "Kill 4 enemies simultaneously with one explosion (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rock Always Wins",
+     "description": "Fully distract 25 enemies with rocks (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Never Saw it Coming",
+     "description": "Kill an enemy with a takedown from above from a glider, zipline or parachute (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Improper Use",
+     "description": "Kill an enemy with the Repair Tool (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toxophilite",
+     "description": "Kill a target from 70m or more with the bow (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Island Paparazzi",
+     "description": "Tag 25 enemies using the camera (Single Player only)."
+    },
+    {
+     "apiname": "FarCry3_Ach_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fearless or Stupid",
+     "description": "Dive more than 60m (Single Player only)."
+    }
+   ],
+   "success": true
+  }
+ }
+}

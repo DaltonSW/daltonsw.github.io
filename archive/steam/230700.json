@@ -1,0 +1,921 @@
+{
+ "provider": "steam",
+ "title": "La-Mulana",
+ "updated": "2026-08-30",
+ "id": "230700",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 64,
+ "platform": "PC",
+ "icon": "4c10ebd5c3071b06920b464bfca327de6a55f845",
+ "playtime_mins": 8,
+ "last_played": "2014-01-17",
+ "achievements": [
+  {
+   "key": "10Hours",
+   "name": "Speed Runner",
+   "description": "Completed the entire adventure within 10 hours.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/4e0a30303a089a7e4b0e88b35e8379af4f43aadb.jpg"
+  },
+  {
+   "key": "20Hours",
+   "name": "Skilled adventurer",
+   "description": "Completed the entire adventure within 20 hours.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/e7cf81c78a550921ca451fc71cd522f8db86fdd6.jpg"
+  },
+  {
+   "key": "40Hours",
+   "name": "Indomitable spirit",
+   "description": "Completed the entire adventure within 40 hours.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/32e94f4a725359150eec5f1aa1eeeb09b78567e9.jpg"
+  },
+  {
+   "key": "AllFairlies",
+   "name": "Fairy Light Completionist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/d2e371116b23c3ef35bcbfa11888798a8495747f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllItems",
+   "name": "Item Collector",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/47288f50d8c6bc2d9716f8b8204a8b747958451b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllJems",
+   "name": "Maximum Power",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/ac9b159024ad8b719f54e4353e5be354f3fdf276.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllKeypoints",
+   "name": "Master key",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/d83323f259ab1fea46aa6d464dd3075e4f7d4d13.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllMails",
+   "name": "Xelpud's Pen Pal",
+   "description": "Got all emails.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/2ca13a2eb7c7f71f4ca3c235ae8509a2b4180a70.jpg"
+  },
+  {
+   "key": "AllMaps",
+   "name": "Map Collector",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/7901b81229cc8d25ffec72850858f9cc1cf30094.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllMulbruks",
+   "name": "Mulbruk Can Be Yours",
+   "description": "Listened to everything Mulbruk has to say.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/01a5cce9e17d7897a024568781228cf36943e010.jpg"
+  },
+  {
+   "key": "AllObjects",
+   "name": "Archaeological authority",
+   "description": "Scanned all suspicious spots.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/a6efd3f709efd1e14c59bf22dc4705c5a66b27bc.jpg"
+  },
+  {
+   "key": "AllSofts",
+   "name": "Software Collector",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/6d2e70972b5631cba1de0cef03d36d43f825f43b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllStars",
+   "name": "Let's go together!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/f34533f4e009f197e5b22e8c6d9ab6a466515cc2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllSummer",
+   "name": "Running out in the open!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/57493a481dca97754da2f7debd497bf9d03d9e9f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllTreasures",
+   "name": "Treasure Hunter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/02695aa0d75128abc0eb59817af5186a31492452.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AllXelpud",
+   "name": "Xelpud's Best Friend",
+   "description": "Listened to everything Xelpud has to say.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/444318b5a27466cfc245a3603df796045d9286a8.jpg"
+  },
+  {
+   "key": "Amphisbaena",
+   "name": "Twin-Headed Snake",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/5a0aac324cb0f465eace656c7c355d5112f60b18.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Bahamut",
+   "name": "Dangerous Raid",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/8b3c208958a466c32d9250ecec6c6ac6c1f478c3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BalanceOfPower",
+   "name": "A one time challenge.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/fd9e7d6959d0d637c562b63b124e9480023e6407.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Baphomet",
+   "name": "Black Misa",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/fbe7430df6fdda740507213b6d9f77317021f7c1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BeoLaMulana",
+   "name": "Sound Track Mania",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/0bb700c3a12afd0e71e005f44d467c9dd7e633b9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Caution",
+   "name": "Once you read it, you can never go back",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/8678b8ed66bcfba925ef005a63acd8bc34d90440.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Clouch",
+   "name": "The Penitent Man",
+   "description": "Took a knee.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/dd73de6becf4ced08378c619e9c7dcbc7da00b22.jpg"
+  },
+  {
+   "key": "DarkSide",
+   "name": "Take a walk on the dark side.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/8bd627aa284983999087f4b41b6c06ab8edb7e68.jpg",
+   "hidden": true
+  },
+  {
+   "key": "EDEN",
+   "name": "Eden, here was.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/015d9ea8dcae2cdaa36b3dac8b726227c68707dd.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Elmac",
+   "name": "High Speed Beast",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/50eface386f274d0defa17163e8c3698580cb87a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Ending",
+   "name": "You are the strongest archaeologist!",
+   "description": "Completed the adventure.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/0d89f3428cac7c814f057f68d97d55212beeabd7.jpg"
+  },
+  {
+   "key": "GYONIN",
+   "name": "A fishy item...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/d3586dbf7a9c92d4f6ca0b6dcba9050ea788ff38.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Gurdians",
+   "name": "The Beginning of Hell and Awakening",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/ca3b0985012e57f5b2ced270d961b5d7812a2e65.jpg",
+   "hidden": true
+  },
+  {
+   "key": "GurdiansHard",
+   "name": "Great 8th child",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/a93ef6c002fa02a2663bff626dc144dc60f5dceb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HELL",
+   "name": "The gate to hell has opened.",
+   "description": "Unlocked the HELL TEMPLE.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/fae905aba374c07a2a1d0b61249542e8686b8bca.jpg"
+  },
+  {
+   "key": "HardMode",
+   "name": "Dear Foolish Adventurer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/4eb0fdb6fa2081513d4c8844f85d4e017ba74360.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HellOver",
+   "name": "This was not for human eyes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/3aa06547b30b4cf49a09766eb2153cd15a2e2ce2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HiddenPath",
+   "name": "The Hidden Road",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/a8725b00ef572e740b9d23c84d76ff2bb4abce12.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LaMulana",
+   "name": "La-Mulana Mania",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/6531905a8f49001563b57cbf77807baf1d8b17b3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LonelySummer",
+   "name": "Playful but Lonely",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/2a3c6763245e048a067eebe55c36d834a62182fe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Mario",
+   "name": "Dive Deep Down",
+   "description": "Dived into a pot.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/c034140aa8e5946eb0ded6af5156837c272a9fd9.jpg"
+  },
+  {
+   "key": "Masochist",
+   "name": "The Masochist King",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/ddd122e757e5937a07fa8d27da3967ee378b16f7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "MasterOfCurry",
+   "name": "Curry Addict",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/d91ddede652d81b06818876a2a3ba4ae5e7f4444.jpg",
+   "hidden": true
+  },
+  {
+   "key": "MulbulkAwake",
+   "name": "The girl awakens",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/aafe50d9a6aa42e6800ed3031267542557cbcaf0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NIGORO",
+   "name": "NIGORO MANIA",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/52eb7657962a69914d66d43d5f1edb36166d0487.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NoShurikensBonus",
+   "name": "All I need is one arm.",
+   "description": "Obliterated all guardians without using secondary weapons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/138ad20ee013355ea64e0528ec53e679ffcf8b86.jpg"
+  },
+  {
+   "key": "NoShurikensBonusHARD",
+   "name": "All I need is one finger!",
+   "description": "Obliterated all guardians without using secondary weapons in HARD MODE.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/672f55a2dd949a7314111c2f76c7e3ba9763f6ef.jpg"
+  },
+  {
+   "key": "ObtainedWing",
+   "name": "Seek a higher place.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/cc96a406738f2b7efbe2a150ddea11b4c0a802fe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Palenque",
+   "name": "Ancient Machine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/98576555d6f1875034303d843174147618933125.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PastOfTime",
+   "name": "The world of 8-bit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/3503be0c40666c040b4d8a14258a800da2649336.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Philosophers",
+   "name": "The Four Philosophers were awakened.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/84f1362eb2a8be4f6eacb57ab7b33e667e3860c9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PowerOfFairies",
+   "name": "Lights of the fairies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/09da18dc3f89c25962a8bfafe5b2a6ed769f404c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "RosettaStone",
+   "name": "Read all of the paleographies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/881bd10876744cac15fdf6fe745c284a51599751.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Running",
+   "name": "The Run To Ruin",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/b7e0584eb6b22a8cbcd2749f02e7ed09198de85e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SadnessOfTwins",
+   "name": "The Sadness of the Twins has vanished.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/ad05538285084925b2b2eb379275d30fbdad544f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Sakito",
+   "name": "Giant's Rage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/b61bdab5e4018d3fc8140b7743915c6ddef82d97.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SpaMania",
+   "name": "I love hot springs!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/0081edb7ab44b95d3fa58d0ea1094d1a36cfa8c0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SwimSuit",
+   "name": "This isn't even my final form!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/1c89ca772f661359ab5081c74c11c10dd7c3ca23.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Thunderbolt",
+   "name": "Watch Where You're Whipping",
+   "description": "Received damnation.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/ee1bddef4f73c2a944f3bbbcf71255927ca81148.jpg"
+  },
+  {
+   "key": "Tiamat",
+   "name": "Slippery Serpent",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/b662aee0f8f4ac7e2aec00b3b55468cfbc9a13dc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Trap1",
+   "name": "This is La-Mulana: Part I",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/cddf547e1bd490539decb0668d274956b8cbc824.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Trap2",
+   "name": "This is La-Mulana: Part II",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/1cd2572ec15ee1834d4d012063fbf28ee72210b2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Trap3",
+   "name": "This is La-Mulana: Part III",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/953caad365e19642d3e10c52c010e1aaee7c245b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Trap4",
+   "name": "This is La-Mulana: Part IV",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/a985858c87d8b30cdad23e7e2bda96a91a9df694.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Viy",
+   "name": "At the bottom",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/46237384e24cb75c5c2d58f74f3d0ca770aea8f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "WelcomeToLaMulana",
+   "name": "Welcome to La-Mulana",
+   "description": "Opened the entrance to La-Mulana.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/61fff1044fac2e960c64e9dc37d32582274b5dff.jpg"
+  },
+  {
+   "key": "YouAreSmall",
+   "name": "You are a small one",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/ffe8a0a922e33c3b3fc75401f9a5ade4c91bae7f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Zu",
+   "name": "Stop him without stopping time!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/b9582827054409ecbd6a3aa15f00a4a08049f145.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "La-Mulana",
+   "achievements": [
+    {
+     "apiname": "WelcomeToLaMulana",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to La-Mulana",
+     "description": "Opened the entrance to La-Mulana."
+    },
+    {
+     "apiname": "MulbulkAwake",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The girl awakens",
+     "description": ""
+    },
+    {
+     "apiname": "PowerOfFairies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lights of the fairies",
+     "description": ""
+    },
+    {
+     "apiname": "ObtainedWing",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seek a higher place.",
+     "description": ""
+    },
+    {
+     "apiname": "EDEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eden, here was.",
+     "description": ""
+    },
+    {
+     "apiname": "YouAreSmall",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You are a small one",
+     "description": ""
+    },
+    {
+     "apiname": "DarkSide",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take a walk on the dark side.",
+     "description": ""
+    },
+    {
+     "apiname": "SadnessOfTwins",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Sadness of the Twins has vanished.",
+     "description": ""
+    },
+    {
+     "apiname": "BalanceOfPower",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A one time challenge.",
+     "description": ""
+    },
+    {
+     "apiname": "RosettaStone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Read all of the paleographies.",
+     "description": ""
+    },
+    {
+     "apiname": "Philosophers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Four Philosophers were awakened.",
+     "description": ""
+    },
+    {
+     "apiname": "Amphisbaena",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Twin-Headed Snake",
+     "description": ""
+    },
+    {
+     "apiname": "Sakito",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Giant's Rage",
+     "description": ""
+    },
+    {
+     "apiname": "Elmac",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "High Speed Beast",
+     "description": ""
+    },
+    {
+     "apiname": "Bahamut",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dangerous Raid",
+     "description": ""
+    },
+    {
+     "apiname": "Viy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "At the bottom",
+     "description": ""
+    },
+    {
+     "apiname": "Palenque",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ancient Machine",
+     "description": ""
+    },
+    {
+     "apiname": "Baphomet",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Black Misa",
+     "description": ""
+    },
+    {
+     "apiname": "Tiamat",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slippery Serpent",
+     "description": ""
+    },
+    {
+     "apiname": "Gurdians",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Beginning of Hell and Awakening",
+     "description": ""
+    },
+    {
+     "apiname": "Ending",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You are the strongest archaeologist!",
+     "description": "Completed the adventure."
+    },
+    {
+     "apiname": "40Hours",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Indomitable spirit",
+     "description": "Completed the entire adventure within 40 hours."
+    },
+    {
+     "apiname": "20Hours",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skilled adventurer",
+     "description": "Completed the entire adventure within 20 hours."
+    },
+    {
+     "apiname": "10Hours",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Runner",
+     "description": "Completed the entire adventure within 10 hours."
+    },
+    {
+     "apiname": "LaMulana",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "La-Mulana Mania",
+     "description": ""
+    },
+    {
+     "apiname": "BeoLaMulana",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sound Track Mania",
+     "description": ""
+    },
+    {
+     "apiname": "PastOfTime",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The world of 8-bit",
+     "description": ""
+    },
+    {
+     "apiname": "SpaMania",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I love hot springs!",
+     "description": ""
+    },
+    {
+     "apiname": "AllItems",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Item Collector",
+     "description": ""
+    },
+    {
+     "apiname": "AllSofts",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Software Collector",
+     "description": ""
+    },
+    {
+     "apiname": "AllMaps",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Map Collector",
+     "description": ""
+    },
+    {
+     "apiname": "AllTreasures",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Treasure Hunter",
+     "description": ""
+    },
+    {
+     "apiname": "AllFairlies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fairy Light Completionist",
+     "description": ""
+    },
+    {
+     "apiname": "AllKeypoints",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master key",
+     "description": ""
+    },
+    {
+     "apiname": "AllJems",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maximum Power",
+     "description": ""
+    },
+    {
+     "apiname": "AllMails",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Xelpud's Pen Pal",
+     "description": "Got all emails."
+    },
+    {
+     "apiname": "AllMulbruks",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mulbruk Can Be Yours",
+     "description": "Listened to everything Mulbruk has to say."
+    },
+    {
+     "apiname": "AllXelpud",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Xelpud's Best Friend",
+     "description": "Listened to everything Xelpud has to say."
+    },
+    {
+     "apiname": "AllObjects",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Archaeological authority",
+     "description": "Scanned all suspicious spots."
+    },
+    {
+     "apiname": "GYONIN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A fishy item...",
+     "description": ""
+    },
+    {
+     "apiname": "HELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The gate to hell has opened.",
+     "description": "Unlocked the HELL TEMPLE."
+    },
+    {
+     "apiname": "HellOver",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This was not for human eyes.",
+     "description": ""
+    },
+    {
+     "apiname": "GurdiansHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Great 8th child",
+     "description": ""
+    },
+    {
+     "apiname": "AllStars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let's go together!",
+     "description": ""
+    },
+    {
+     "apiname": "AllSummer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Running out in the open!",
+     "description": ""
+    },
+    {
+     "apiname": "LonelySummer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Playful but Lonely",
+     "description": ""
+    },
+    {
+     "apiname": "Thunderbolt",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Watch Where You're Whipping",
+     "description": "Received damnation."
+    },
+    {
+     "apiname": "Clouch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Penitent Man",
+     "description": "Took a knee."
+    },
+    {
+     "apiname": "Mario",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dive Deep Down",
+     "description": "Dived into a pot."
+    },
+    {
+     "apiname": "Caution",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Once you read it, you can never go back",
+     "description": ""
+    },
+    {
+     "apiname": "HardMode",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dear Foolish Adventurer",
+     "description": ""
+    },
+    {
+     "apiname": "Zu",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stop him without stopping time!",
+     "description": ""
+    },
+    {
+     "apiname": "HiddenPath",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hidden Road",
+     "description": ""
+    },
+    {
+     "apiname": "Running",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Run To Ruin",
+     "description": ""
+    },
+    {
+     "apiname": "Masochist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Masochist King",
+     "description": ""
+    },
+    {
+     "apiname": "SwimSuit",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This isn't even my final form!",
+     "description": ""
+    },
+    {
+     "apiname": "NoShurikensBonus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All I need is one arm.",
+     "description": "Obliterated all guardians without using secondary weapons."
+    },
+    {
+     "apiname": "NoShurikensBonusHARD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All I need is one finger!",
+     "description": "Obliterated all guardians without using secondary weapons in HARD MODE."
+    },
+    {
+     "apiname": "NIGORO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "NIGORO MANIA",
+     "description": ""
+    },
+    {
+     "apiname": "MasterOfCurry",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Curry Addict",
+     "description": ""
+    },
+    {
+     "apiname": "Trap1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is La-Mulana: Part I",
+     "description": ""
+    },
+    {
+     "apiname": "Trap2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is La-Mulana: Part II",
+     "description": ""
+    },
+    {
+     "apiname": "Trap3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is La-Mulana: Part III",
+     "description": ""
+    },
+    {
+     "apiname": "Trap4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is La-Mulana: Part IV",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

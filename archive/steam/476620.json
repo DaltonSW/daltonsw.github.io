@@ -1,0 +1,793 @@
+{
+ "provider": "steam",
+ "title": "Call of Duty: WWII - Multiplayer",
+ "updated": "2026-08-30",
+ "id": "476620",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 55,
+ "platform": "PC",
+ "icon": "61353c6b23a7c04b11c875044a243210563e74ba",
+ "achievements": [
+  {
+   "key": "DLC1_ZM_BAKERS",
+   "name": "The Bakers Dozen Massacre",
+   "description": "In The Darkest Shore, line up and kill 13 zombies with one Ripsaw shot.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/531e5e8aab594ff1e740f96f1063186c3e0f9567.jpg"
+  },
+  {
+   "key": "DLC1_ZM_DARKER",
+   "name": "Black Winds to Darker Lands",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/fcf0b94a7b7a9c7bc86fc5b797308a6139b7ef54.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC1_ZM_FOG",
+   "name": "Own the Fog, Be the Fog",
+   "description": "In The Darkest Shore, kill a Meuchler in the fog.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/0d7fb5796c7fed3697cf1e005f9cf771d8c54d83.jpg"
+  },
+  {
+   "key": "DLC1_ZM_GOINGUP",
+   "name": "Going Up...",
+   "description": "In The Darkest Shore, unlock the Ubersprengen.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/4ea7184e640b125cf66a0b41f50782e20141d149.jpg"
+  },
+  {
+   "key": "DLC1_ZM_GOTTHIS",
+   "name": "I Got This",
+   "description": "In The Darkest Shore, survive the initial beach rush without using any machine gun turrets.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/9f473cb021b4e2a466eaabdd43e70b0d4bcc33c6.jpg"
+  },
+  {
+   "key": "DLC1_ZM_HISTORY",
+   "name": "Making History",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/77d79b47cc9d7a1f75250e9b568e35d6aa9c5b0d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC1_ZM_ISLAND",
+   "name": "This Damn Island",
+   "description": "In The Darkest Shore, explore the entire island.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/714ebbc054d4a315f36b603047be752e3f03d6e0.jpg"
+  },
+  {
+   "key": "DLC1_ZM_LURKING",
+   "name": "Still Lurking",
+   "description": "In The Darkest Shore, find and shoot Dr. Straub.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/4ed6a97188c019b9c5ad79ec923756f29ba6e4c4.jpg"
+  },
+  {
+   "key": "DLC1_ZM_POMMEL",
+   "name": "Severe Pommeling",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/20e57a0d1b40c952c8af700c8b5cee0cc12b4cd8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC1_ZM_SPINE",
+   "name": "Always on Spine",
+   "description": "In The Darkest Shore, rip out the spine of every Zombie type.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/9a2332cefa0811232da7eb65cce6babdd53e17aa.jpg"
+  },
+  {
+   "key": "DLC2_ZM_AMMO",
+   "name": "Ammo Conservation",
+   "description": "In The Shadowed Throne, obtain the Blade without firing a gunshot.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/14c155b68e14d342bb1807ac44d7f96cf40d5066.jpg"
+  },
+  {
+   "key": "DLC2_ZM_BALLISTIC",
+   "name": "Ballistics Be Damned",
+   "description": "In The Shadowed Throne, reach wave 15 using only melee weapons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/adef655eb9161e85b9b75c5fe4341238df00ed1b.jpg"
+  },
+  {
+   "key": "DLC2_ZM_DAS",
+   "name": "Das ist gut",
+   "description": "In The Shadowed Throne, find the Ubersprengen.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/35abebfdd66507398c87c1fb106bd847f29cd103.jpg"
+  },
+  {
+   "key": "DLC2_ZM_DESTROYER",
+   "name": "Equal Opportunity Destroyer",
+   "description": "In The Shadowed Throne, collect geistkraft from each zombie type in a single match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/642bb5bf764fe94d8b8ed64221f81ea418dd67f8.jpg"
+  },
+  {
+   "key": "DLC2_ZM_LUMBERJACK",
+   "name": "Lumberjack",
+   "description": "In The Shadowed Throne, kill a Wustling using each melee weapon in a single match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/15d7872c42fcbf3a829021296824cca0a505c6d2.jpg"
+  },
+  {
+   "key": "DLC2_ZM_MUSEUM",
+   "name": "This Belongs in a Museum",
+   "description": "In The Shadowed Throne, while inside the museum, kill 250 zombies with the Blade in a single match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/18e378dd7b85bb39e37a3b2c94b5673b2bc192ab.jpg"
+  },
+  {
+   "key": "DLC2_ZM_PRAYER",
+   "name": "Not a Prayer",
+   "description": "In The Shadowed Throne, after round 20, survive at least two full rounds without anyone leaving the church.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/31381253ea5db5f151e6b2ed375edbd17031b9de.jpg"
+  },
+  {
+   "key": "DLC2_ZM_SHOW",
+   "name": "Putting on a Show",
+   "description": "In The Shadowed Throne, keep a Gekocht alive on the stage for 1 minute.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/0874326e2469ef5053d713487d2774adf4a83794.jpg"
+  },
+  {
+   "key": "DLC2_ZM_STADT_DOWN",
+   "name": "Stadtjäger Down",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/dfbef312f1d2fcfeb4003204c0318041cf40bbac.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC2_ZM_WUNDERFUL",
+   "name": "Something Wunderful ",
+   "description": "In The Shadowed Throne, kill 50 Gekocht with the special weapon in one match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/5d099ed40cadcfa7996e9dc2bac903bbc5427830.jpg"
+  },
+  {
+   "key": "DLC3_ZM_BABY",
+   "name": "Over Engineered",
+   "description": "In The Tortured Path, collect 25 Engineered Parts.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/1b97bf2a964c883d01b91d830d953078f731413a.jpg"
+  },
+  {
+   "key": "DLC3_ZM_CHRISTMAS",
+   "name": "I'll Be Home for Christmas",
+   "description": "In The Tortured Path, successfully escape from Beneath the Ice.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/f317858e66eae25497d0038dc802403ca25a6d69.jpg"
+  },
+  {
+   "key": "DLC3_ZM_ELITE",
+   "name": "B.A.T. Elite",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/8e0e68c0f8fc9c69b0e5fd7dc50fdd9c6b2335b5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC3_ZM_EXTRA",
+   "name": "Extra Tortured Path",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/89b9d0d811451df6f7c57c25183ada2ee1ddc402.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC3_ZM_GOLIATH",
+   "name": "David, Meet Goliath",
+   "description": "In The Tortured Path, defeat the Guardian solo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/a0f7fc7d8cf212d04fa86a806791f43ee8bb7c10.jpg"
+  },
+  {
+   "key": "DLC3_ZM_JUSTBEGUN",
+   "name": "We've Only Just Begun",
+   "description": "In The Tortured Path, successfully escape from Into the Storm.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/d92a57a9bdb0215bbf025f1ebfeef31b86808b74.jpg"
+  },
+  {
+   "key": "DLC3_ZM_LURKER",
+   "name": "Uber Lurker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/70dab8649791478c2d9877465550534656917c0f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC3_ZM_POWER",
+   "name": "I Have the Power",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/a46c13da4c9b6ed4e1477231c8b36349fc808f0b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC3_ZM_RIDE",
+   "name": "Ride of the Century",
+   "description": "In The Tortured Path, complete 100 objective waves.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/143591c3bd783549dec12e594ca66eae0a7ab3b9.jpg"
+  },
+  {
+   "key": "DLC3_ZM_SEASICK",
+   "name": "Sea Sick",
+   "description": "In The Tortured Path, successfully escape from Across the Depths.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/27b2f66216c7326455b475b4968a371b579ee57c.jpg"
+  },
+  {
+   "key": "DLC4_ZM_BLOOD",
+   "name": "Blood Transfusion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/5b505784913a7dd3d8fd62174cdd76a0fb49c151.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC4_ZM_BLOODRAVEN",
+   "name": "Bloodraven's Chosen",
+   "description": "In The Frozen Dawn, survive the trials of the Bloodraven.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/146e6d1394fea265d9850d6a482d643fa55cf8bd.jpg"
+  },
+  {
+   "key": "DLC4_ZM_DEATHRAVEN",
+   "name": "Deathraven's Chosen",
+   "description": "In The Frozen Dawn, survive the trials of the Deathraven.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/8c653f390740da89eea0a708fea7a073f6042dc8.jpg"
+  },
+  {
+   "key": "DLC4_ZM_DESCENT",
+   "name": "The Final Descent",
+   "description": "In The Frozen Dawn, enter the lost city of Thule.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/6215cea00d06af99fc481233e5ae205d2fd4cecd.jpg"
+  },
+  {
+   "key": "DLC4_ZM_KINGFALL",
+   "name": "Kingfall",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/8a0ee0fc42268e7308d0cbe121944d95647baa9a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC4_ZM_LONG",
+   "name": "Go Long!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/244a19d76e4c44187b88a0d30f2883631e7c82f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC4_ZM_MOONRAVEN",
+   "name": "Moonraven's Chosen",
+   "description": "In The Frozen Dawn, survive the trials of the Moonraven.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/d2bcd4fcee0e57475afca3dcba7809540521ec20.jpg"
+  },
+  {
+   "key": "DLC4_ZM_STORMRAVEN",
+   "name": "Stormraven's Chosen",
+   "description": "In The Frozen Dawn, survive the trials of the Stormraven.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/725b6f81036fe2e27e105e7f2d5fa569af5a0300.jpg"
+  },
+  {
+   "key": "DLC4_ZM_SUPERIOR",
+   "name": "Superior Thulian Technology",
+   "description": "In The Frozen Dawn, unlock the Ancient Ubersprengen",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/9bd50348aa430df867060e24d3770e48b09672dd.jpg"
+  },
+  {
+   "key": "DLC4_ZM_WEAPON",
+   "name": "Weapon Lord",
+   "description": "In The Frozen Dawn, kill 100 zombies with each Raven Weapon in a single match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/bc21875d3703b16313741bed719261fbb2d1ffdf.jpg"
+  },
+  {
+   "key": "MP_CHALLENGE_21",
+   "name": "Ricky Recruit",
+   "description": "Complete 21 daily challenges in Headquarters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/d1f38005260fe5598668227f322d4fbfc955a590.jpg"
+  },
+  {
+   "key": "MP_DIV_PRESTIGE",
+   "name": "Divisional Commander",
+   "description": "Prestige a Division in Multiplayer while playing online.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/6a78ffd1b01c0db1b7efc5d4be32d98eea5c4e8e.jpg"
+  },
+  {
+   "key": "MP_KILL_10",
+   "name": "Buck Private",
+   "description": "Get 10 kills in Multiplayer while playing online.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/fafcdac24818ab3ea5fb9b062822e315636d7ec1.jpg"
+  },
+  {
+   "key": "MP_PRESTIGE",
+   "name": "General of the Army",
+   "description": "Enter Prestige 1 in Multiplayer while playing online.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/5b2a1593fe4240b9c6a6f4dd69965e33d5f0abe1.jpg"
+  },
+  {
+   "key": "MP_WAR_5",
+   "name": "Tour of Duty",
+   "description": "Win 5 War matches in Multiplayer while playing online.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/c56dac0afdaf369cc301c0067d1988bb74b67618.jpg"
+  },
+  {
+   "key": "ZM_BOMBER_10",
+   "name": "Red Mist",
+   "description": "In The Final Reich, get ten kills from a single Bomber’s explosion.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/e001bbd75e459f1a3698594ae4d906e637e85505.jpg"
+  },
+  {
+   "key": "ZM_BRUTE",
+   "name": "Fireworks",
+   "description": "In The Final Reich, retrieve the artifact.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/3e8727718b0f19b5faec8c42fab0b862b4b63481.jpg"
+  },
+  {
+   "key": "ZM_CHARGE_10",
+   "name": "Strike!",
+   "description": "In The Final Reich, knock over ten zombies with a Wüstling charge.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/066c58519c94120a7586b048285be0e03f2eac8f.jpg"
+  },
+  {
+   "key": "ZM_KLAUS",
+   "name": "Dark Reunion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/b10776bf82f624ffa3266e371074ac5f990a2f21.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ZM_KNUCKLE",
+   "name": "White Knuckles",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/6930db97368989cd6fd99cc8875511008f80f9ab.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ZM_SHOVEL",
+   "name": "Undertaker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/e7405eabbe8111af18d2edf6ff029482b2b700fb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ZM_STRAUB",
+   "name": "Lurking Around",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/8007c03be77aba99d7b1cc88e02a020118047bde.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ZM_TESLA",
+   "name": "Lightning Handler",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/3da38c567f9e948f20dc472fdb59f407b96dc8b2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ZM_TESLA_CHALLENGE",
+   "name": "Dark Arts",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/dd125e0c672897afd49f58d916a6b30508d5cb8f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ZM_TRAINING_20",
+   "name": "Pressure Cooker",
+   "description": "In Prologue, survive until wave twenty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/476620/2830777cd6e2ca860803a580a507927315639bdb.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Call of Duty: WWII - Multiplayer",
+   "achievements": [
+    {
+     "apiname": "MP_KILL_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Buck Private",
+     "description": "Get 10 kills in Multiplayer while playing online."
+    },
+    {
+     "apiname": "MP_CHALLENGE_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ricky Recruit",
+     "description": "Complete 21 daily challenges in Headquarters."
+    },
+    {
+     "apiname": "MP_PRESTIGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "General of the Army",
+     "description": "Enter Prestige 1 in Multiplayer while playing online."
+    },
+    {
+     "apiname": "MP_WAR_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tour of Duty",
+     "description": "Win 5 War matches in Multiplayer while playing online."
+    },
+    {
+     "apiname": "MP_DIV_PRESTIGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Divisional Commander",
+     "description": "Prestige a Division in Multiplayer while playing online."
+    },
+    {
+     "apiname": "ZM_BRUTE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fireworks",
+     "description": "In The Final Reich, retrieve the artifact."
+    },
+    {
+     "apiname": "ZM_KLAUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dark Reunion",
+     "description": ""
+    },
+    {
+     "apiname": "ZM_TRAINING_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pressure Cooker",
+     "description": "In Prologue, survive until wave twenty."
+    },
+    {
+     "apiname": "ZM_BOMBER_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Red Mist",
+     "description": "In The Final Reich, get ten kills from a single Bomber’s explosion."
+    },
+    {
+     "apiname": "ZM_TESLA_CHALLENGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dark Arts",
+     "description": ""
+    },
+    {
+     "apiname": "ZM_CHARGE_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strike!",
+     "description": "In The Final Reich, knock over ten zombies with a Wüstling charge."
+    },
+    {
+     "apiname": "ZM_STRAUB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lurking Around",
+     "description": ""
+    },
+    {
+     "apiname": "ZM_SHOVEL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Undertaker",
+     "description": ""
+    },
+    {
+     "apiname": "ZM_TESLA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lightning Handler",
+     "description": ""
+    },
+    {
+     "apiname": "ZM_KNUCKLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "White Knuckles",
+     "description": ""
+    },
+    {
+     "apiname": "DLC1_ZM_HISTORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Making History",
+     "description": ""
+    },
+    {
+     "apiname": "DLC1_ZM_DARKER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Black Winds to Darker Lands",
+     "description": ""
+    },
+    {
+     "apiname": "DLC1_ZM_POMMEL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Severe Pommeling",
+     "description": ""
+    },
+    {
+     "apiname": "DLC1_ZM_FOG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Own the Fog, Be the Fog",
+     "description": "In The Darkest Shore, kill a Meuchler in the fog."
+    },
+    {
+     "apiname": "DLC1_ZM_BAKERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Bakers Dozen Massacre",
+     "description": "In The Darkest Shore, line up and kill 13 zombies with one Ripsaw shot."
+    },
+    {
+     "apiname": "DLC1_ZM_GOINGUP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Going Up...",
+     "description": "In The Darkest Shore, unlock the Ubersprengen."
+    },
+    {
+     "apiname": "DLC1_ZM_LURKING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Still Lurking",
+     "description": "In The Darkest Shore, find and shoot Dr. Straub."
+    },
+    {
+     "apiname": "DLC1_ZM_SPINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Always on Spine",
+     "description": "In The Darkest Shore, rip out the spine of every Zombie type."
+    },
+    {
+     "apiname": "DLC1_ZM_GOTTHIS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Got This",
+     "description": "In The Darkest Shore, survive the initial beach rush without using any machine gun turrets."
+    },
+    {
+     "apiname": "DLC1_ZM_ISLAND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This Damn Island",
+     "description": "In The Darkest Shore, explore the entire island."
+    },
+    {
+     "apiname": "DLC2_ZM_STADT_DOWN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stadtjäger Down",
+     "description": ""
+    },
+    {
+     "apiname": "DLC2_ZM_DAS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Das ist gut",
+     "description": "In The Shadowed Throne, find the Ubersprengen."
+    },
+    {
+     "apiname": "DLC2_ZM_BALLISTIC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ballistics Be Damned",
+     "description": "In The Shadowed Throne, reach wave 15 using only melee weapons."
+    },
+    {
+     "apiname": "DLC2_ZM_WUNDERFUL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Something Wunderful ",
+     "description": "In The Shadowed Throne, kill 50 Gekocht with the special weapon in one match."
+    },
+    {
+     "apiname": "DLC2_ZM_SHOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Putting on a Show",
+     "description": "In The Shadowed Throne, keep a Gekocht alive on the stage for 1 minute."
+    },
+    {
+     "apiname": "DLC2_ZM_AMMO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ammo Conservation",
+     "description": "In The Shadowed Throne, obtain the Blade without firing a gunshot."
+    },
+    {
+     "apiname": "DLC2_ZM_PRAYER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not a Prayer",
+     "description": "In The Shadowed Throne, after round 20, survive at least two full rounds without anyone leaving the church."
+    },
+    {
+     "apiname": "DLC2_ZM_MUSEUM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This Belongs in a Museum",
+     "description": "In The Shadowed Throne, while inside the museum, kill 250 zombies with the Blade in a single match."
+    },
+    {
+     "apiname": "DLC2_ZM_DESTROYER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Equal Opportunity Destroyer",
+     "description": "In The Shadowed Throne, collect geistkraft from each zombie type in a single match."
+    },
+    {
+     "apiname": "DLC2_ZM_LUMBERJACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lumberjack",
+     "description": "In The Shadowed Throne, kill a Wustling using each melee weapon in a single match."
+    },
+    {
+     "apiname": "DLC3_ZM_RIDE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ride of the Century",
+     "description": "In The Tortured Path, complete 100 objective waves."
+    },
+    {
+     "apiname": "DLC3_ZM_POWER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Have the Power",
+     "description": ""
+    },
+    {
+     "apiname": "DLC3_ZM_CHRISTMAS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'll Be Home for Christmas",
+     "description": "In The Tortured Path, successfully escape from Beneath the Ice."
+    },
+    {
+     "apiname": "DLC3_ZM_BABY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Over Engineered",
+     "description": "In The Tortured Path, collect 25 Engineered Parts."
+    },
+    {
+     "apiname": "DLC3_ZM_SEASICK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sea Sick",
+     "description": "In The Tortured Path, successfully escape from Across the Depths."
+    },
+    {
+     "apiname": "DLC3_ZM_JUSTBEGUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We've Only Just Begun",
+     "description": "In The Tortured Path, successfully escape from Into the Storm."
+    },
+    {
+     "apiname": "DLC3_ZM_GOLIATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "David, Meet Goliath",
+     "description": "In The Tortured Path, defeat the Guardian solo."
+    },
+    {
+     "apiname": "DLC3_ZM_LURKER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Uber Lurker",
+     "description": ""
+    },
+    {
+     "apiname": "DLC3_ZM_ELITE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "B.A.T. Elite",
+     "description": ""
+    },
+    {
+     "apiname": "DLC3_ZM_EXTRA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extra Tortured Path",
+     "description": ""
+    },
+    {
+     "apiname": "DLC4_ZM_DESCENT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Final Descent",
+     "description": "In The Frozen Dawn, enter the lost city of Thule."
+    },
+    {
+     "apiname": "DLC4_ZM_SUPERIOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Superior Thulian Technology",
+     "description": "In The Frozen Dawn, unlock the Ancient Ubersprengen"
+    },
+    {
+     "apiname": "DLC4_ZM_BLOOD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blood Transfusion",
+     "description": ""
+    },
+    {
+     "apiname": "DLC4_ZM_LONG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go Long!",
+     "description": ""
+    },
+    {
+     "apiname": "DLC4_ZM_MOONRAVEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moonraven's Chosen",
+     "description": "In The Frozen Dawn, survive the trials of the Moonraven."
+    },
+    {
+     "apiname": "DLC4_ZM_BLOODRAVEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bloodraven's Chosen",
+     "description": "In The Frozen Dawn, survive the trials of the Bloodraven."
+    },
+    {
+     "apiname": "DLC4_ZM_DEATHRAVEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deathraven's Chosen",
+     "description": "In The Frozen Dawn, survive the trials of the Deathraven."
+    },
+    {
+     "apiname": "DLC4_ZM_STORMRAVEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stormraven's Chosen",
+     "description": "In The Frozen Dawn, survive the trials of the Stormraven."
+    },
+    {
+     "apiname": "DLC4_ZM_WEAPON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapon Lord",
+     "description": "In The Frozen Dawn, kill 100 zombies with each Raven Weapon in a single match."
+    },
+    {
+     "apiname": "DLC4_ZM_KINGFALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kingfall",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

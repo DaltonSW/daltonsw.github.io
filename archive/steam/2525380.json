@@ -1,0 +1,2375 @@
+{
+ "provider": "steam",
+ "title": "Tomb Raider IV-VI Remastered",
+ "updated": "2026-08-30",
+ "id": "2525380",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 168,
+ "platform": "PC",
+ "icon": "652424e4424cecb3f097f4f8a22597b5d477ed3c",
+ "achievements": [
+  {
+   "key": "TR4_3_BIG_SCORPIONS_1_GRENADE",
+   "name": "TR4 | Scorpion King",
+   "description": "Defeat three giant scorpions with one normal grenade",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1b02ea9dedda855ade3b8f85072752168977a7ac.jpg"
+  },
+  {
+   "key": "TR4_3_WRAITHS_1_STATUE",
+   "name": "TR4 | Three Stones With One Bird",
+   "description": "Destroy three wraiths with the power of a single statue",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/d7764cefba3868874c2823c774948312457dc997.jpg"
+  },
+  {
+   "key": "TR4_5_ENEMIES_1_SUPER_GRENADE",
+   "name": "TR4 | High Five to Maahes",
+   "description": "Defeat five enemies with one super grenade",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/5dbf2575e66b9762eea88c6fa0adbbbbffa76cda.jpg"
+  },
+  {
+   "key": "TR4_ALEXANDRIA_ALL_SECRETS",
+   "name": "TR4 | Codex of Alexandria",
+   "description": "Collect all secrets in Alexandria levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/4f94fde2a24d3399c8e705fb114b1cbecfd68c1e.jpg"
+  },
+  {
+   "key": "TR4_ALL_JEAN_YVES_CLUES",
+   "name": "TR4 | Inspector Wadjet",
+   "description": "Get all the clues you can from Jean-Yves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/afe412f3c7b92ee5b0c05ddc5108b5616b048387.jpg"
+  },
+  {
+   "key": "TR4_ALL_PICKUPS",
+   "name": "TR4 | Bury It With Me",
+   "description": "Take every collectable item in a single walkthrough",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f00a3baa3e5e7d28b7db3aed9e4b3e09272da7dd.jpg"
+  },
+  {
+   "key": "TR4_ALL_TARGETS_WITH_CROSSBOW",
+   "name": "TR4 | Godspeed",
+   "description": "Deactivate the trap by hitting all targets with only normal crossbow arrows",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/6322bb29a26a94daf3fb79b3155566213fa3ef2b.jpg"
+  },
+  {
+   "key": "TR4_BEAT_ENEMY_JEEP",
+   "name": "TR4 | Croft Tomb Racing",
+   "description": "Drive ahead of guide's jeep both into the gate and into the last tunnel",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8be55ca97065f0b20fe8bb615af1d12af1126cdc.jpg"
+  },
+  {
+   "key": "TR4_BEAT_NGPLUS",
+   "name": "TR4 | Welcome to Duat",
+   "description": "Beat the game on New Game+",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/4dc0e86a655eeaf9a06033da6918a4df04df4ae0.jpg"
+  },
+  {
+   "key": "TR4_BLIND_POISON_1SHOT_3ENEMY",
+   "name": "TR4 | Cooler than Henry",
+   "description": "Blind the three red assassins, poison them and then one-shot them in a row using single Lara's gun",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/ed119828ef7cc3476f5876a703310b9e382491c1.jpg"
+  },
+  {
+   "key": "TR4_BLOW_SKULL_IN_AIR",
+   "name": "TR4 | Dead Shot",
+   "description": "Blow the skeleton's skull off when it is in a jump",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1a0f104ce25b1bd818b68d3b712e77c590281df8.jpg"
+  },
+  {
+   "key": "TR4_BLOW_SKULL_SLEEPING",
+   "name": "TR4 | De-eskullation",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/306804f873e141bbd32cbc0b9dc81e6057f965ad.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_BREAK_9_VASES_LESS_10_SEC",
+   "name": "TR4 | Blowing off Some Steam",
+   "description": "Break 9 objects in less than 10 seconds without using explosives",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/6c6834c9243c656fd5ff6aec1ab0a80f0d369804.jpg"
+  },
+  {
+   "key": "TR4_BREAK_ALL_SHATTERS",
+   "name": "TR4 | Oops!",
+   "description": "Break every vessel in a single walkthrough",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/6168edd0f7f8f81c014cab0a9e1428f894c0e98b.jpg"
+  },
+  {
+   "key": "TR4_BREAK_GEMS_ALL_WEAPONS",
+   "name": "TR4 | Surrey Commando",
+   "description": "Break the gems using all types of weapons with normal ammo and no lasersight",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/34accc489f5f765a759223182f097f5c90f62e51.jpg"
+  },
+  {
+   "key": "TR4_BREAK_VASE_NO_LOCUSTS",
+   "name": "TR4 | A Plague Postponed",
+   "description": "Release the ice wraith without releasing the locusts",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/35efdf95b364d65b879ddfdef846df008a6aaa3b.jpg"
+  },
+  {
+   "key": "TR4_CAIRO_ALL_SECRETS",
+   "name": "TR4 | Codex of Cairo",
+   "description": "Collect all secrets in Cairo levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0c6c1b67840d1a07f2426f03da173f712d29506e.jpg"
+  },
+  {
+   "key": "TR4_CAIRO_GET_SECRET_NO_NITRO",
+   "name": "TR4 | Ghost Raider",
+   "description": "Get to the Cairo secret on a non-tuned motorcycle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/efe421f00c1206bbf996a3629100944c2cc4a8d0.jpg"
+  },
+  {
+   "key": "TR4_CAMBODIA_ALL_SECRETS",
+   "name": "TR4 | Codex of Angkor Wat",
+   "description": "Collect all secrets in Cambodia levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/3cf32ab5346c3e8ec33690adfe46c68cd8e803a1.jpg"
+  },
+  {
+   "key": "TR4_DEFEAT_AMMIT",
+   "name": "TR4 | Devourer of the Devourer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/116234e16cf285f1a4943d3bfae448da879a912d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_DEFEAT_ICE_WITHOUT_FIRE",
+   "name": "TR4 | Femme Elementale",
+   "description": "Eliminate the ice wraith without fire wraith's help or taking any damage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1053f6400c326fd7e5380c03814a3d1e0837dd5c.jpg"
+  },
+  {
+   "key": "TR4_DESTROY_ALL_TURRETS",
+   "name": "TR4 | Security Breach",
+   "description": "Destroy all the turrets",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7265dfbac949f9f31a800e5bec380eb8eec13bab.jpg"
+  },
+  {
+   "key": "TR4_DIE_BY_JONES",
+   "name": "TR4 | What’s Up, Doc?",
+   "description": "Lie down beside your predecessor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0bbc318cdaea1840da84b0845f7994add1fc5f44.jpg"
+  },
+  {
+   "key": "TR4_DOGS_SCORPIONS_FIRE_DEATH",
+   "name": "TR4 | Self-Defense Guide",
+   "description": "Make three jackals and three scorpions be defeated by fire in the Tomb of Seth",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/e6e95f2c043795718c8261bb50f92bdff8f84911.jpg"
+  },
+  {
+   "key": "TR4_DROWN_5_ROYAL_SKELETONS",
+   "name": "TR4 | Jason's Apprentice",
+   "description": "Drown five royal guard skeletons in the water",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/70a41f0caa33ed4b2e9dfacadb8f11c74e527ca3.jpg"
+  },
+  {
+   "key": "TR4_FIND_ALL_CLUES_GIZA",
+   "name": "TR4 | Hypatia Would Be Proud",
+   "description": "Find all the clues to the puzzles",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8a05b9c85a356b6233ac61743aa59195607dd9a5.jpg"
+  },
+  {
+   "key": "TR4_FINISH_ALEXANDRIA",
+   "name": "TR4 | Do Not Take Too Long Thinking It Over",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/39a31ace8197605ec391e9bf6817a2af1e190daf.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_FINISH_CAIRO",
+   "name": "TR4 | Barking Mad!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b505d112b04eb21515c2f7e93e5b5aa8edf0fbaf.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_FINISH_CAMBODIA",
+   "name": "TR4 | On Your Head Be It, Von Croy!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0a3de79ef5f32fbb917642eea5af399427145970.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_FINISH_GIZA",
+   "name": "TR4 | Good to See You Again, Werner",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7877b3227ca88aeb9278f1c1fa89bf70c091de21.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_FINISH_KARNAK",
+   "name": "TR4 | Take Me to Von Croy!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/69847c83e8421c9e6da4b1f5bece5f91b172a048.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_FINISH_TIMES",
+   "name": "TR4 | Time to Finish What Carter Started!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0f789336ab3f4f20d30b28990abea7132101ef8b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_FINISH_VALLEY",
+   "name": "TR4 | Time to Put Things Right!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8806b61ae293a5642082b8221ab7fa361d003583.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_GET_6_SENET",
+   "name": "TR4 | Six Out of Zero",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/3332587e5351d9bad2d0b09fd73e11d41acd3c8d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_GET_GLASSES",
+   "name": "TR4 | Prop With No Purpose",
+   "description": "Obtain Von Croy's glasses",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/352f2f64be41204de6b44b1f5eae5aead52203e3.jpg"
+  },
+  {
+   "key": "TR4_GIZA_ALL_SECRETS",
+   "name": "TR4 | Codex of Giza",
+   "description": "Collect all secrets in Giza levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1f0d777994a4c0423ee059dbb244b9c8a14d22f4.jpg"
+  },
+  {
+   "key": "TR4_GUARDIAN_EYES_LESS_50_SEC",
+   "name": "TR4 | A Muleta Woman",
+   "description": "Once the guardian breaks through the door, make him smash all three panels in 50 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/3be2adfa8915ed45d23fa20736f39b45191fdf7e.jpg"
+  },
+  {
+   "key": "TR4_GUARDIAN_SECRET_ITEMS",
+   "name": "TR4 | This Is Fine",
+   "description": "Get all three secret items despite the fire traps and finish the level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/4d80c5f65070f86cd13b28d204237ba64aa7a53e.jpg"
+  },
+  {
+   "key": "TR4_HANDSTAND_ALL_STATUES",
+   "name": "TR4 | Theomachist",
+   "description": "Do a handstand within sight of all the great statues",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f129cd002bb25e8bd7a0e1a447230a9e4cea4dee.jpg"
+  },
+  {
+   "key": "TR4_IRIS_LEFT_PATH_155",
+   "name": "TR4 | I’m up for a Little Heresy",
+   "description": "Get to the Iris in 1:55 or less using the path of the heretical",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1e3795e849b8ce956b32908cf9357a64d5c94d6f.jpg"
+  },
+  {
+   "key": "TR4_IRIS_RIGHT_PATH_130",
+   "name": "TR4 | A Regular Virtuoso",
+   "description": "Get to the Iris in 1:30 or less using the route of the virtuous",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1207d7f9ee3aebf4a510d0511c8199699487f9cd.jpg"
+  },
+  {
+   "key": "TR4_KARNAK_ALL_SECRETS",
+   "name": "TR4 | Codex of Karnak",
+   "description": "Collect all secrets in Karnak levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/a7a195750fff66d7cb0876ff3439d69318fb348c.jpg"
+  },
+  {
+   "key": "TR4_KARNAK_POISON",
+   "name": "TR4 | Get Over There!",
+   "description": "Without preparations or healing, be stung near the obelisk and then move Canopic Jar 1 into place",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/034453a584a010aa2b29e13e16b212be19ed4f75.jpg"
+  },
+  {
+   "key": "TR4_KEEP_ALL_SOLDIERS_ALIVE",
+   "name": "TR4 | Serket Saved",
+   "description": "Make sure all the soldiers in Giza survive",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/4ddf0a5dc0d9cea0fbaccbe8402d6eab0d68c589.jpg"
+  },
+  {
+   "key": "TR4_KILL_2_CROCS_IN_SPACE",
+   "name": "TR4 | That’s a Knife!",
+   "description": "Defeat two crocodiles while being in the same tight space with them",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/e6253d27c8f31ab4ae04cb782e7374c2ae5db763.jpg"
+  },
+  {
+   "key": "TR4_KILL_ASSASSIN_NO_BLADE",
+   "name": "TR4 | Gotcha!",
+   "description": "Defeat red assassin with Lara's pistols and don't let him fend off any bullets",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/ca47efc6d645d5ba0556f0b78b8461e394e9c357.jpg"
+  },
+  {
+   "key": "TR4_KILL_SCARAB_WITH_BIKE",
+   "name": "TR4 | Scarabicide",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/d2265165ce350dc806a1e5c2e2cb0b66fd48882e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_KILL_TUTS_PISTOLS_NO_DMG",
+   "name": "TR4 | Octavian's Legacy",
+   "description": "Defeat both Cleopatra's guardians using only Lara's pistols and without taking any damage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b74d3b5cd5fcf81aabf4f1847f2a0148e78d85b1.jpg"
+  },
+  {
+   "key": "TR4_LOCK_BOTH_GUARDIANS",
+   "name": "TR4 | Olly Olly Oxen Free",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/525f3b3d4d76f04ec2b24cbd0f02ecd30b381552.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_MUMMY_JUMPSCARE",
+   "name": "TR4 | I Hate It When These Things Do That!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7e776ef52b88e7cbdbb75c99986d0270de0f901f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_NO_DAMAGE_TO_GOLD_LARA",
+   "name": "TR4 | Double Trouble",
+   "description": "Do not get hurt through your replica statue",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7027903ac82b76791f2016710b6e8979aa576ec5.jpg"
+  },
+  {
+   "key": "TR4_PEDESTAL_BLADES_NO_DAMAGE",
+   "name": "TR4 | Blade Outrunner",
+   "description": "Do not take damage from any of pedestal blades",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/6f2099b576def68746cff123adbb0a617c3b362e.jpg"
+  },
+  {
+   "key": "TR4_PROTECT_MEDIPACK",
+   "name": "TR4 | Swiper, No Swiping!",
+   "description": "Don't let anyone steal your medipack in the Sphinx Complex",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/39e76148ffa745fcb4aaf6db9e61b9cb581e343f.jpg"
+  },
+  {
+   "key": "TR4_REACH_EXIT_LESS_40_SEC",
+   "name": "TR4 | Seth Timer",
+   "description": "After sealing the temple, reach the exit in 40 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/604ed0babce0a2928e89076f112dcaa6cfb212dc.jpg"
+  },
+  {
+   "key": "TR4_SAVE_ROOF_HELICOPTER",
+   "name": "TR4 | Minimal Damage",
+   "description": "Do not destroy the helicopter on the roof",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/bb414f4c0dbbb875935b1fc7b110d0d07303c57b.jpg"
+  },
+  {
+   "key": "TR4_SCARABS_TO_RA_GRAVE",
+   "name": "TR4 | Beep Beep!",
+   "description": "Send the scarabs to the grave in the room of Ra",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/9b892c574a4995cf92e1a5b290359b809a4cdb7f.jpg"
+  },
+  {
+   "key": "TR4_SPHINX_DEATH_PATH_NO_DMG",
+   "name": "TR4 | IAQ",
+   "description": "Pass through the corridors of traps without taking any damage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f70aecafc5c94546ff96dcdac3aedf9fe56ee0de.jpg"
+  },
+  {
+   "key": "TR4_STEAM_PIPES_NO_DAMAGE",
+   "name": "TR4 | With Khepri's Help",
+   "description": "Sneak past the steam pipes without taking any damage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/3a42b2414a03c7439120d0e631168cfb2ec1dcaf.jpg"
+  },
+  {
+   "key": "TR4_TIMES_ALL_SECRETS",
+   "name": "TR4 | Codex of Tutankhamun",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/5623e5288c4e8cc7bbb99edddfca2c0dbfb98f78.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_TRIGGER_SETHBLADE",
+   "name": "TR4 | Average Tea Party",
+   "description": "Defuse the blade trap by yourself in the Tomb of Seth",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/778986a835f946084917b2d1e034100ace20a05e.jpg"
+  },
+  {
+   "key": "TR4_USE_3_MONKEY_LEVERS",
+   "name": "TR4 | Three Wise Monkeys",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/ba53436a68b0edc4f7fa898a4536c75013b58f21.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR4_USE_PULLEY_NO_LION_SWITCH",
+   "name": "TR4 | Re-lion Yourself",
+   "description": "Don't flip the switch in the room with the lion heads",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/5a6cb2a01cf99bc1eff76f13fff92b4a8ca85934.jpg"
+  },
+  {
+   "key": "TR4_VALLEY_ALL_SECRETS",
+   "name": "TR4 | Codex of Kings",
+   "description": "Collect all secrets in Valley of the Kings levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/33feda0c08eb35d113c19509c178e2208f1d4d51.jpg"
+  },
+  {
+   "key": "TR4_WIN_SENET_PATH",
+   "name": "TR4 | Croft Gambit",
+   "description": "Finish Tomb of Semerkhet by winning the senet game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0b7de6807ff0994bc3f8b2daf62b95889b24c7c5.jpg"
+  },
+  {
+   "key": "TR5_13TH_ALL_SECRETS_NO_LASERS",
+   "name": "TR5 | The Trap Is Set",
+   "description": "Pick up all the secrets on the 13th floor, avoiding the lasers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/bcde720b285a41f952464fcf487a28eb22655c1d.jpg"
+  },
+  {
+   "key": "TR5_13TH_NO_ALARMS",
+   "name": "TR5 | Mission Impossible",
+   "description": "Get through the 13th Floor level unnoticed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f69228dfc9352bd21fe8cef655e8f7aab99f23f9.jpg"
+  },
+  {
+   "key": "TR5_1SHOT_5_GUARDS_LESS_20_SECS",
+   "name": "TR5 | Dodge This!",
+   "description": "One-shot five VCI guards in 20 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/a96ff3327ae25c193a125087110bfd550265278e.jpg"
+  },
+  {
+   "key": "TR5_ALL_PICKUPS",
+   "name": "TR5 | Hoarding Order",
+   "description": "Take every collectable item in a single walkthrough",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/708b95d22d5258cff208cacf0151990085e01f8e.jpg"
+  },
+  {
+   "key": "TR5_BEAT_NGPLUS",
+   "name": "TR5 | Pаst Mortem",
+   "description": "Beat the game on New Game+",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/912f314a9175ed3eb3c0183c6c329d66d2672ae9.jpg"
+  },
+  {
+   "key": "TR5_CHAPEL_SKELETONS_NODMG",
+   "name": "TR5 | Skeleton Prance",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/144d2e1d21165ccbb914d4ce115b9ba2c9f694f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_CHECK_ON_A_DEMON",
+   "name": "TR5 | Torchdown",
+   "description": "Check if the demon has been exorcised",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/76cd4d9b1dc58f0e9f006e7946d643bbc6194228.jpg"
+  },
+  {
+   "key": "TR5_DEFEAT_FIRST_CYBORG",
+   "name": "TR5 | Waterminator",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/9cfbe4a89ee17816b7e6a0a32a28a73312bfd69c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_DEFEAT_SECOND_CYBORG",
+   "name": "TR5 | Gassassin",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/87f70359fc675115f615ca30514ca9eb15c334be.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_DEFEAT_STATUE_PISTOL_NO_DMG",
+   "name": "TR5 | Feet of Clay",
+   "description": "Defeat the last soldier statue in the Colosseum using only Lara's pistols and without taking damage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/564f0480f9b33600680785f34b998a9b127afb2e.jpg"
+  },
+  {
+   "key": "TR5_DIVERT_10_TORPEDOES",
+   "name": "TR5 | Peculiarities of the National Fishing",
+   "description": "Use all ten chaff flares to divert torpedoes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/82af3f795866eb4397608fd53c382153f63a90a1.jpg"
+  },
+  {
+   "key": "TR5_DODGE_CLAW_3_TIMES",
+   "name": "TR5 | I’ll Get You Next Time!",
+   "description": "Dodge the falling claw three times in a row at the highest point of the warehouse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/916e34658e5abb101f5d517c242b5b71637f15cc.jpg"
+  },
+  {
+   "key": "TR5_FINISH_IRELAND",
+   "name": "TR5 | A Few Valuable Lessons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/29d1f600b71b7c373e8019fe310332fe91b15e9c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_FINISH_MAZE_LESS_25_SEC",
+   "name": "TR5 | Amaze Runner",
+   "description": "Run through the final labyrinth in 25 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/fb08d37a02b6291cfdfcb63ecc366aa0e10d865c.jpg"
+  },
+  {
+   "key": "TR5_FINISH_ROME",
+   "name": "TR5 | And So Ended the First of Many",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7d82b1001db39dcf0ae44025bf66456c6783117f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_FINISH_RUSSIA",
+   "name": "TR5 | Man Could Never Again Misuse It",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/dfae35371d5e2b17b306038dc76bc3102a53f78c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_FINISH_TRAINING_AREA",
+   "name": "TR5 | Dress Rehearsal",
+   "description": "Finish the Opera Backstage",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/73cf42ca70a97f0e42c9e2a3e405d96cfb031de6.jpg"
+  },
+  {
+   "key": "TR5_FINISH_VCI",
+   "name": "TR5 | To Absent Friends",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/08a13da69f2656ed59bad73f530331c35f701de4.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_GALLOWS_NO_IMP_DMG",
+   "name": "TR5 | Impatiens",
+   "description": "Don't let the little imps hurt you in the Gallows Tree level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1ff2bb2428e2c7a7b03cb7602da6f46a8f4e1823.jpg"
+  },
+  {
+   "key": "TR5_GET_ALL_ITEMS_BEFORE_CLAW",
+   "name": "TR5 | Crane Game",
+   "description": "Pick up all the items in the warehouse before the claw drops down at least once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/39f13d2030dbdb3f9ee737b1c172b9d1fe6ea74b.jpg"
+  },
+  {
+   "key": "TR5_GET_GUARDS_MEDIPACK",
+   "name": "TR5 | Sweet Dreams",
+   "description": "Get the unreachable medipack",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/af61acb0bfc5766f8deace56bf5db6ef948b257c.jpg"
+  },
+  {
+   "key": "TR5_GET_NITRO_NODMG_IN_THE_DARK",
+   "name": "TR5 | Nekrasov Woman",
+   "description": "Get the nitrogen canister without taking any damage before turning off the power",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/197120a63a9cc766794c99547a522a9aa48d6e9b.jpg"
+  },
+  {
+   "key": "TR5_GET_ROSE_ON_FIRE",
+   "name": "TR5 | Roses Are Gold, Lara Got Burned",
+   "description": "Before visiting the mill, pick up the secret behind the fires and survive",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8f576c9408f9e0233aa7575120896c279ae6c2a1.jpg"
+  },
+  {
+   "key": "TR5_GUARDIAN_IN_2_SHOTS",
+   "name": "TR5 | Mars Is Attacked!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/fc7606f1dc7a75da10e76d37611bca3e9a49e677.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_HANDSTAND_ABOVE_GATE",
+   "name": "TR5 | To the Envy of Venus",
+   "description": "Do a handstand over the portal gate",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b1677b562bf4729d2d426fff00d08471f3e47d75.jpg"
+  },
+  {
+   "key": "TR5_HANG_ON_RAM_SIDE_NO_DAMAGE",
+   "name": "TR5 | Not Ram Us",
+   "description": "Hang from the ledge on the ram side without being hurt",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/a48cfd1bfe86f2f09870cc8797a0f7e1d086ba37.jpg"
+  },
+  {
+   "key": "TR5_IRELAND_ALL_SECRETS",
+   "name": "TR5 | Codex of Ireland",
+   "description": "Collect all secrets in Ireland levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/871c0d086d5a93e260cc3f2172dbef1335764af4.jpg"
+  },
+  {
+   "key": "TR5_KEEP_LARA_CALM",
+   "name": "TR5 | Stress Level Zero",
+   "description": "Don't make Lara nervous before she takes the secret and finds the Spear of Destiny",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/28a7d87217acfd6341220553d51f0bdcb5ee6421.jpg"
+  },
+  {
+   "key": "TR5_KICK_IN_CUTSCENE",
+   "name": "TR5 | Damn, You're Not Good!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b8681601ca0af0fec365aaee74bf7f3e1214dcb0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_KILL_2_SNIPERS_NO_DMG",
+   "name": "TR5 | Double Down",
+   "description": "Defeat both snipers without being hurt",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/66372827f32d96522431db4f9331faa96c7f382f.jpg"
+  },
+  {
+   "key": "TR5_KILL_5_DOGS_BY_A_FOUNTAIN",
+   "name": "TR5 | Bark Square",
+   "description": "Defeat five dogs near the fountain",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/9bdf24c95acf87daa671f56c48cf91405c79a0b5.jpg"
+  },
+  {
+   "key": "TR5_KILL_ALL_LIONS_WITH_UZIS",
+   "name": "TR5 | Long Live the King!",
+   "description": "Defeat all the lions using Uzis",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/07b5a8b0043e65f2d39cd05fd712d58b7003e6dd.jpg"
+  },
+  {
+   "key": "TR5_LARA_BIRTHDAY",
+   "name": "TR5 | You Remembered!",
+   "description": "Happy birthday, Lara!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7aa351deeeb36adbf4038d6877fd45183497458d.jpg"
+  },
+  {
+   "key": "TR5_MAKE_IMPS_PANIC",
+   "name": "TR5 | Animal Instinct",
+   "description": "Make the little imps run in panic",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/21f11527b46cfe03ced64653bfb9a1bd61d461f1.jpg"
+  },
+  {
+   "key": "TR5_NO_FIRE_OR_SHOCKS",
+   "name": "TR5 | Hell and High Water",
+   "description": "Do not get fire burns or electric shocks in the Sinking Submarine level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/a5ab0a390eaba059c08bcf6356f3e945ac7ecee6.jpg"
+  },
+  {
+   "key": "TR5_NO_RAT_DMG",
+   "name": "TR5 | Tail Innocence",
+   "description": "Don't let the rat packs bite you through the whole walkthrough",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/2a1a5432cd208b8af2d0bf38c1e508250d67e824.jpg"
+  },
+  {
+   "key": "TR5_ROME_ALL_SECRETS",
+   "name": "TR5 | Codex of Rome",
+   "description": "Collect all secrets in Rome levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b5c7c6371d4c980f4d43e5c4b64fb9c564c4bdf7.jpg"
+  },
+  {
+   "key": "TR5_RUN_HALLWAY_NO_HELI_DMG",
+   "name": "TR5 | Miss Croft",
+   "description": "Run past the panoramic windows without taking damage from the helicopter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7a3872848e2088d43f9b22614f8d4991d02b25b2.jpg"
+  },
+  {
+   "key": "TR5_RUSSIA_ALL_SECRETS",
+   "name": "TR5 | Codex of Zapadnaya Litsa",
+   "description": "Collect all secrets in Russian Submarine levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8e551ddfaa8db062c90acf526155fdaef2b30d5d.jpg"
+  },
+  {
+   "key": "TR5_SUBMARINE_NO_MEDIPACKS",
+   "name": "TR5 | I Am Invincible!",
+   "description": "Do not use any medipacks in the Submarine level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/2ace17a8f3eae01f21a3b9e34157985ab5ec46bc.jpg"
+  },
+  {
+   "key": "TR5_SWANDIVE_3_ROLLS",
+   "name": "TR5 | 30/10",
+   "description": "Perform a full triple somersault dive",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/bc2280b027037c317f4a6d71fbc83df52acdabda.jpg"
+  },
+  {
+   "key": "TR5_SWANDIVE_INTO_WELL",
+   "name": "TR5 | Well Done",
+   "description": "Perform a clean somersault dive into the well",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/fba9222ef14098f909fa10e2c2cdf3baea54a476.jpg"
+  },
+  {
+   "key": "TR5_TELEPORT_BEFORE_BREAK_IN",
+   "name": "TR5 | VCI! Open Up!",
+   "description": "Get the teleport disk before the guards cut the door open",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f18929ead60c65eac4c91115b09beafd377bea19.jpg"
+  },
+  {
+   "key": "TR5_TORPEDO_HIT_MAIN_SUBMARINE",
+   "name": "TR5 | Silent Raider",
+   "description": "Make a torpedo crash into the submarine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8e5c6713c839a44fd51e7bf6911b63ccf0bf291a.jpg"
+  },
+  {
+   "key": "TR5_TRAP_HAG_LESS_25_SEC",
+   "name": "TR5 | Sleepy Merrow",
+   "description": "Once you're in the water, get rid of the creature in 25 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/30a054ae14c61225f46ec151c9896e253763b2b7.jpg"
+  },
+  {
+   "key": "TR5_USE_2_MOUTHS_LESS_16_SECS",
+   "name": "TR5 | What a Horrid Idea!",
+   "description": "After using the Mouth of Truth, use another one in 16 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/34f39c37cf6c262dc501219a039175f02fe00e9d.jpg"
+  },
+  {
+   "key": "TR5_USE_HAMMER",
+   "name": "TR5 | Nailed It!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/1b26e5f936645b635267c4693f3a8371a47e64af.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR5_VCI_ALL_SECRETS",
+   "name": "TR5 | Codex of VCI",
+   "description": "Collect all secrets in VCI Headquarters levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/e1daaea34e24e5ca86f59add6105eee7008f8dca.jpg"
+  },
+  {
+   "key": "TR5_WATCH_ALL_YOUNG_LARA_FAILS",
+   "name": "TR5 | Fail Compilation",
+   "description": "Watch all the scenes of young Lara's failures",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/16942343491c1554896a051747e1215227bc0b71.jpg"
+  },
+  {
+   "key": "TR6_ANCIENTS_SPEEDRUN",
+   "name": "TR6 | Fast and Curious",
+   "description": "Get to the bottom of the Tomb of the Ancients in 3 minutes or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/d8bbf5dbe8a6bc11ec0bf9d09e667113484d4610.jpg"
+  },
+  {
+   "key": "TR6_ANCIENTS_SWAN_NO_DAMAGE",
+   "name": "TR6 | High-Flying",
+   "description": "Pass through the trap corridor in the Tomb of the Ancients with one swan dive and no damage taken",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/4f630a992a645bd095a3280831a04e97ced811d4.jpg"
+  },
+  {
+   "key": "TR6_AQUATIC_SKIP_PUZZLE",
+   "name": "TR6 | Short Ration",
+   "description": "Finish the Aquatic Research Area without feeding the Leviathan",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8d1bd70bba767cdf5e59f9d5969d3d13cb9e80e4.jpg"
+  },
+  {
+   "key": "TR6_BEAT_NGPLUS",
+   "name": "TR6 | Never Again",
+   "description": "Beat the game on New Game+",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/27dae9a722f6757e5f9b3175a3c4d1b088701983.jpg"
+  },
+  {
+   "key": "TR6_BIO_HANDSTAND",
+   "name": "TR6 | Perfect Mimicry",
+   "description": "Do a handstand in front of the big flower in the main botanical greenhouse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/54c8e6093dc21c916486f4d8799242dd4fabe171.jpg"
+  },
+  {
+   "key": "TR6_BIO_KILL_ALL_MUTANTS",
+   "name": "TR6 | Unnatural Selection",
+   "description": "Defeat all the mutants in the Bio-Research Facility",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/93817a2d98534cd42f7fc47ced9038a081510bbb.jpg"
+  },
+  {
+   "key": "TR6_BOAZ_EVADE_ATTACKS",
+   "name": "TR6 | Dodgeboaz",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/71aacaced8bd7c19fe2d17d5915b4508b7f468e2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_CARVIER_RUDE",
+   "name": "TR6 | Crime Spree",
+   "description": "Be rude to Mlle Carvier and clean out her apartment before the police show up on the floor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/6f2ec0322a506d2a52a28e741dbe8a88e343e4c7.jpg"
+  },
+  {
+   "key": "TR6_CLUB_COLLAPSE_UNSEEN",
+   "name": "TR6 | Hit the Floor",
+   "description": "Drop the metal structure on the dance floor before security is aware of your presence",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/005103fcc3817df74fd9bcb9e837372dffaf1530.jpg"
+  },
+  {
+   "key": "TR6_COLLECT_ALL_CHOC_NO_USE",
+   "name": "TR6 | Chocollection",
+   "description": "Get all the chocolates in a single walkthrough, but do not eat any of them",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/cb027acda303658cd9b29562bb154eb80df3dea2.jpg"
+  },
+  {
+   "key": "TR6_COLLECT_ALL_MEDIPACKS",
+   "name": "TR6 | Tactical Medicine",
+   "description": "Collect all medipacks in a single walkthrough",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/ad25f8545db06e7f9bc4361879fa72871c6d83f3.jpg"
+  },
+  {
+   "key": "TR6_COLLECT_ALL_PISTOL_PAIRS",
+   "name": "TR6 | Two of Every Kind",
+   "description": "Find a pair both for Vector R35 and for Scorpion X guns",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8076c6789d7a7fec9ebeec42b25bf8bdcdb84bf6.jpg"
+  },
+  {
+   "key": "TR6_COMPLETE_TRAINING",
+   "name": "TR6 | Parkour!",
+   "description": "Finish your training in the back alleys",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/fefd9ca65de16259a5dbbe4b0df33165dae82f78.jpg"
+  },
+  {
+   "key": "TR6_DIGSITE_PUZZLE_NO_RING",
+   "name": "TR6 | Jackpot!",
+   "description": "Unlock the gate in the Archaeological Dig with no blocked rings on your last turn",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/070d911363305acb7b6fc2c7b8275738bef18833.jpg"
+  },
+  {
+   "key": "TR6_DIGSITE_STEALTH_KILL",
+   "name": "TR6 | Croft of the Blue",
+   "description": "Stealthly defeat the guard at the bottom of the Archaeological Dig",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b8bcee06c7a0059cda68881101c4c4b52d948fd3.jpg"
+  },
+  {
+   "key": "TR6_EARN_3500_EUROS",
+   "name": "TR6 | Cash Overload",
+   "description": "Earn more than 3500 euros",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/c542844496f78eda52424502bb7c32b833868401.jpg"
+  },
+  {
+   "key": "TR6_ECK_NO_CROUCH_DAMAGE",
+   "name": "TR6 | Great Work",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/02feff5c65bfa91ceb5b6c3e9975a3ed36806a3c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_ENTER_GYARD_DOORMAN",
+   "name": "TR6 | Spendthrift",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/419f6e801df083181c46d69fd3f74c95f11854f8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_EXAMINE_GHETTO_MAPS",
+   "name": "TR6 | Cartophile",
+   "description": "Examine all the Parisian Ghetto maps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/bc6fffb02dbf51fde6f2d980ab798da8ecb62b74.jpg"
+  },
+  {
+   "key": "TR6_EXTRA_1",
+   "name": "TR6 | Nehushtan",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0499dd8f6810c85386ae96e5c36a8ff56df92036.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_EXTRA_2",
+   "name": "TR6 | Pawn Promotion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/04d55ff73cf03f8c24b4b7a617a2d431544ac53d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_FALL_BOXRING",
+   "name": "TR6 | Player Three Connected",
+   "description": "Surprise the boxers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/dd13ceb5f318b402c33469d5a2488d99793cb9a7.jpg"
+  },
+  {
+   "key": "TR6_FINISH_GAME",
+   "name": "TR6 | I Feel Stronger Now",
+   "description": "Finish Tomb Raider: The Angel of Darkness",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/d31213d00777f7243ba201d24ee48c890dc37598.jpg"
+  },
+  {
+   "key": "TR6_GALLERIES_NO_RESP_KILL_ALL",
+   "name": "TR6 | More Gas, More Mess",
+   "description": "Escape the Louvre without using a respirator, healing or leaving any Gunderson's men alive",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/943b3e2e9b80a0467420bf1bfcc92ff9ab5271c6.jpg"
+  },
+  {
+   "key": "TR6_GET_AND_READ_ALL_ENTRIES",
+   "name": "TR6 | Memento Mori",
+   "description": "Collect and read all the notes in Werner's notebook",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f8fa0a00d4ac5dd0bc0f435945fd72631049f3a9.jpg"
+  },
+  {
+   "key": "TR6_GET_GOLDWATCH",
+   "name": "TR6 | Bet Girl",
+   "description": "Obtain the Gold Watch",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/56a9a6b3141e61c58b47fed0d91ed18fd88e56cc.jpg"
+  },
+  {
+   "key": "TR6_GET_GYARD_PASSWORD",
+   "name": "TR6 | Pluie Noir",
+   "description": "Learn the password",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/3df9ffe68ca74434bdcf59d8b081f7a60d038f64.jpg"
+  },
+  {
+   "key": "TR6_GET_GYARD_VPACKER_AMMO",
+   "name": "TR6 | Death-Defying",
+   "description": "Get V-Packer ammo in St. Aicard's Graveyard",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/7c7e37b9575cb32361e9a78287f9492735a921a1.jpg"
+  },
+  {
+   "key": "TR6_GET_SPORTSWATCH",
+   "name": "TR6 | Kleptomaniac",
+   "description": "Obtain the Sports Watch",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/a3ea39aec4641d2e915cc32b7e3d269763d0a124.jpg"
+  },
+  {
+   "key": "TR6_HADES_TWO_PILLARS",
+   "name": "TR6 | Two Steps a Hades",
+   "description": "Use only two pillars to take all the items in the Breath of Hades",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/fdc6ff1543b686d395a0cff0e34fe19032944609.jpg"
+  },
+  {
+   "key": "TR6_KILL_ALL_KNIGHTS_BY_FALL",
+   "name": "TR6 | This Is Lara!",
+   "description": "Send all undead knights into the pits",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f85708bb29673cc71298658c35fc6461f68010e9.jpg"
+  },
+  {
+   "key": "TR6_KILL_BOAZ",
+   "name": "TR6 | Took Care",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/dcac1c9ed5bef6a305d50f7f5805a39869f649de.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_KILL_CLEANER",
+   "name": "TR6 | Room Service",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/fcadfd2b27a7dd6c87c91666b54c1e70451402a0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_KILL_ECK",
+   "name": "TR6 | Shut Him Up",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0129816141adad67413fe1532a5077bf4e51352b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_KILL_PROTO",
+   "name": "TR6 | Great Flood",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/00106065792dc2e2b52ef6bf82bdced9e90ec45e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_KILL_SHOOT_FROM_CORNER",
+   "name": "TR6 | Corner Frag",
+   "description": "Defeat an enemy by shooting around the corner",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/ea4c40376685040283a452f456087bf14a54187e.jpg"
+  },
+  {
+   "key": "TR6_KILL_WEAPON_AND_MELEE",
+   "name": "TR6 | Coup de Grâce",
+   "description": "Open fire on an enemy and finish him off in melee combat",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/0e8122f5e9e24497d602a20de3328c0a9c06bf32.jpg"
+  },
+  {
+   "key": "TR6_LOUVRE_UNSEEN",
+   "name": "TR6 | Ghost of the Louvre",
+   "description": "Don't trigger the alarm in the Louvre Galleries",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8e4c2431fa803272ad8e70bf73c2bc8a708265c4.jpg"
+  },
+  {
+   "key": "TR6_NEPTUNE_NO_DAMAGE",
+   "name": "TR6 | Be Like Water",
+   "description": "Do not get any damage in the Neptune's Hall",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/cc5f312f6d75545e65a637fc91b554763bcd7522.jpg"
+  },
+  {
+   "key": "TR6_NO_DAMAGE_DOGS",
+   "name": "TR6 | Good Boys",
+   "description": "Do not kill any of the dogs or take any damage from them through the whole walkthrough",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/28ed8cd1551e0e97baeda05481c1d3c40c0b93a1.jpg"
+  },
+  {
+   "key": "TR6_NO_PITS_HIDEOUT",
+   "name": "TR6 | Let Pit Be",
+   "description": "In the Bouchard's Hideout do not fall in the pits",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/123cf9a079296e585139f621a14eb7d815f3d9d0.jpg"
+  },
+  {
+   "key": "TR6_OBSCURA_SPEEDRUN",
+   "name": "TR6 | Ghost in a Nutshell",
+   "description": "Get Brother Obscura's painting in 1 minute or less without being hurt",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/5008bbf53b7007c1310d70902af110c81b619ff9.jpg"
+  },
+  {
+   "key": "TR6_PROTO_MELEE_NO_DAMAGE",
+   "name": "TR6 | You’re Just a Monkey",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/66281bd7925c41cca74243cf0e0392f2dc6e2227.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_PURCHASE_SCORPX",
+   "name": "TR6 | Automatic From Luddick",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8fcb3ae6b091e62c31490495153b3d022c9e9871.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_SANCTUARY_FIVE_BLOCKS",
+   "name": "TR6 | Rocket Woman",
+   "description": "Take off on five different blocks without taking damage in the Sanctuary of Flame",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/f7fc64560277a035a6c85c2b1952df430a4f4a4e.jpg"
+  },
+  {
+   "key": "TR6_SANCTUARY_REACH_BEFORE_FIRE",
+   "name": "TR6 | Play with Fire",
+   "description": "Cross the Sanctuary of Flame before it is completely engulfed in flame and stay alive",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/ee111b98d13141a6a8ab34ccf3ec55a14af459a3.jpg"
+  },
+  {
+   "key": "TR6_SILLY_DEATHS",
+   "name": "TR6 | Darwin Awards",
+   "description": "Find all the silliest ways to die",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/b235de5f20e78d908f367f928dc723757f5adf3b.jpg"
+  },
+  {
+   "key": "TR6_STORM_SPEEDRUN",
+   "name": "TR6 | Super Lario",
+   "description": "After opening the first valve in Louvre Storm Drains open all others in 5 minutes or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/9d447643bdea29ebb0def87d7bf92738d1f42a1a.jpg"
+  },
+  {
+   "key": "TR6_STRAHOV_CLIMB_LADDER",
+   "name": "TR6 | Snake Eater",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/2d21aab47299964816d180020a8a23454247f37b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TR6_STRAHOV_LASER_NO_JUMP_CRAWL",
+   "name": "TR6 | Reel Deal",
+   "description": "Bypass the laser trap in the Strahov Fortress without jumping or crawling",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/20a66b4c08e28cd04f7e6c4a6f779ccb26caa344.jpg"
+  },
+  {
+   "key": "TR6_STRAHOV_UNSEEN",
+   "name": "TR6 | Silent as a Mouse",
+   "description": "Don't draw too much attention to yourself in the Strahov Fortress warehouses",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/8f98a69d0c04f73c5c5eed1a6347143ec011d38f.jpg"
+  },
+  {
+   "key": "TR6_SWANDIVE_LEVIATHAN",
+   "name": "TR6 | Into the Hellmouth",
+   "description": "Swan dive into the Leviathan's reservoir",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/572dd2f341a34435c43620bef98267ee02cc6487.jpg"
+  },
+  {
+   "key": "TR6_TASER_BATS_AND_RATS",
+   "name": "TR6 | Electrocuties",
+   "description": "Defeat two different non-human enemies by tasing them",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/89faf5b68edbcbb8063dd373654223116272eafc.jpg"
+  },
+  {
+   "key": "TR6_VAULT_AQUALUNG_NO_DAMAGE",
+   "name": "TR6 | Won’t Catch a Breath",
+   "description": "Get the aqua-lung and hold your breath until the end of the Vault of Trophies without losing health",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/98198c2029eb270d7f04d68aa77cf10efc3994db.jpg"
+  },
+  {
+   "key": "TR6_WRATH_WRONG_LEDGE",
+   "name": "TR6 | Live Dangerously",
+   "description": "Do not use the right ledge in the Wrath of the Beast",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2525380/57b35b761227b6d4048443f7de21a99e83f1e46c.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Tomb Raider IV-VI Remastered",
+   "achievements": [
+    {
+     "apiname": "TR4_FINISH_CAMBODIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | On Your Head Be It, Von Croy!",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_FINISH_VALLEY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Time to Put Things Right!",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_FINISH_KARNAK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Take Me to Von Croy!",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_FINISH_ALEXANDRIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Do Not Take Too Long Thinking It Over",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_FINISH_CAIRO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Barking Mad!",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_FINISH_GIZA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Good to See You Again, Werner",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_FINISH_TIMES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Time to Finish What Carter Started!",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_CAMBODIA_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Angkor Wat",
+     "description": "Collect all secrets in Cambodia levels"
+    },
+    {
+     "apiname": "TR4_VALLEY_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Kings",
+     "description": "Collect all secrets in Valley of the Kings levels"
+    },
+    {
+     "apiname": "TR4_KARNAK_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Karnak",
+     "description": "Collect all secrets in Karnak levels"
+    },
+    {
+     "apiname": "TR4_ALEXANDRIA_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Alexandria",
+     "description": "Collect all secrets in Alexandria levels"
+    },
+    {
+     "apiname": "TR4_CAIRO_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Cairo",
+     "description": "Collect all secrets in Cairo levels"
+    },
+    {
+     "apiname": "TR4_GIZA_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Giza",
+     "description": "Collect all secrets in Giza levels"
+    },
+    {
+     "apiname": "TR4_TIMES_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Codex of Tutankhamun",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_DIE_BY_JONES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | What’s Up, Doc?",
+     "description": "Lie down beside your predecessor"
+    },
+    {
+     "apiname": "TR4_IRIS_RIGHT_PATH_130",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | A Regular Virtuoso",
+     "description": "Get to the Iris in 1:30 or less using the route of the virtuous"
+    },
+    {
+     "apiname": "TR4_IRIS_LEFT_PATH_155",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | I’m up for a Little Heresy",
+     "description": "Get to the Iris in 1:55 or less using the path of the heretical"
+    },
+    {
+     "apiname": "TR4_DOGS_SCORPIONS_FIRE_DEATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Self-Defense Guide",
+     "description": "Make three jackals and three scorpions be defeated by fire in the Tomb of Seth"
+    },
+    {
+     "apiname": "TR4_TRIGGER_SETHBLADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Average Tea Party",
+     "description": "Defuse the blade trap by yourself in the Tomb of Seth"
+    },
+    {
+     "apiname": "TR4_BEAT_ENEMY_JEEP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Croft Tomb Racing",
+     "description": "Drive ahead of guide's jeep both into the gate and into the last tunnel"
+    },
+    {
+     "apiname": "TR4_KARNAK_POISON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Get Over There!",
+     "description": "Without preparations or healing, be stung near the obelisk and then move Canopic Jar 1 into place"
+    },
+    {
+     "apiname": "TR4_KILL_ASSASSIN_NO_BLADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Gotcha!",
+     "description": "Defeat red assassin with Lara's pistols and don't let him fend off any bullets"
+    },
+    {
+     "apiname": "TR4_GET_6_SENET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Six Out of Zero",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_WIN_SENET_PATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Croft Gambit",
+     "description": "Finish Tomb of Semerkhet by winning the senet game"
+    },
+    {
+     "apiname": "TR4_DEFEAT_ICE_WITHOUT_FIRE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Femme Elementale",
+     "description": "Eliminate the ice wraith without fire wraith's help or taking any damage"
+    },
+    {
+     "apiname": "TR4_PEDESTAL_BLADES_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Blade Outrunner",
+     "description": "Do not take damage from any of pedestal blades"
+    },
+    {
+     "apiname": "TR4_GUARDIAN_EYES_LESS_50_SEC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | A Muleta Woman",
+     "description": "Once the guardian breaks through the door, make him smash all three panels in 50 seconds or less"
+    },
+    {
+     "apiname": "TR4_GUARDIAN_SECRET_ITEMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | This Is Fine",
+     "description": "Get all three secret items despite the fire traps and finish the level"
+    },
+    {
+     "apiname": "TR4_ALL_JEAN_YVES_CLUES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Inspector Wadjet",
+     "description": "Get all the clues you can from Jean-Yves"
+    },
+    {
+     "apiname": "TR4_MUMMY_JUMPSCARE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | I Hate It When These Things Do That!",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_ALL_TARGETS_WITH_CROSSBOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Godspeed",
+     "description": "Deactivate the trap by hitting all targets with only normal crossbow arrows"
+    },
+    {
+     "apiname": "TR4_BLOW_SKULL_IN_AIR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Dead Shot",
+     "description": "Blow the skeleton's skull off when it is in a jump"
+    },
+    {
+     "apiname": "TR4_3_WRAITHS_1_STATUE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Three Stones With One Bird",
+     "description": "Destroy three wraiths with the power of a single statue"
+    },
+    {
+     "apiname": "TR4_FIND_ALL_CLUES_GIZA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Hypatia Would Be Proud",
+     "description": "Find all the clues to the puzzles"
+    },
+    {
+     "apiname": "TR4_USE_PULLEY_NO_LION_SWITCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Re-lion Yourself",
+     "description": "Don't flip the switch in the room with the lion heads"
+    },
+    {
+     "apiname": "TR4_BLIND_POISON_1SHOT_3ENEMY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Cooler than Henry",
+     "description": "Blind the three red assassins, poison them and then one-shot them in a row using single Lara's gun"
+    },
+    {
+     "apiname": "TR4_GET_GLASSES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Prop With No Purpose",
+     "description": "Obtain Von Croy's glasses"
+    },
+    {
+     "apiname": "TR4_DROWN_5_ROYAL_SKELETONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Jason's Apprentice",
+     "description": "Drown five royal guard skeletons in the water"
+    },
+    {
+     "apiname": "TR4_BLOW_SKULL_SLEEPING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | De-eskullation",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_KILL_TUTS_PISTOLS_NO_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Octavian's Legacy",
+     "description": "Defeat both Cleopatra's guardians using only Lara's pistols and without taking any damage"
+    },
+    {
+     "apiname": "TR4_NO_DAMAGE_TO_GOLD_LARA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Double Trouble",
+     "description": "Do not get hurt through your replica statue"
+    },
+    {
+     "apiname": "TR4_DESTROY_ALL_TURRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Security Breach",
+     "description": "Destroy all the turrets"
+    },
+    {
+     "apiname": "TR4_CAIRO_GET_SECRET_NO_NITRO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Ghost Raider",
+     "description": "Get to the Cairo secret on a non-tuned motorcycle"
+    },
+    {
+     "apiname": "TR4_BREAK_VASE_NO_LOCUSTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | A Plague Postponed",
+     "description": "Release the ice wraith without releasing the locusts"
+    },
+    {
+     "apiname": "TR4_KILL_SCARAB_WITH_BIKE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Scarabicide",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_SAVE_ROOF_HELICOPTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Minimal Damage",
+     "description": "Do not destroy the helicopter on the roof"
+    },
+    {
+     "apiname": "TR4_KILL_2_CROCS_IN_SPACE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | That’s a Knife!",
+     "description": "Defeat two crocodiles while being in the same tight space with them"
+    },
+    {
+     "apiname": "TR4_STEAM_PIPES_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | With Khepri's Help",
+     "description": "Sneak past the steam pipes without taking any damage"
+    },
+    {
+     "apiname": "TR4_PROTECT_MEDIPACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Swiper, No Swiping!",
+     "description": "Don't let anyone steal your medipack in the Sphinx Complex"
+    },
+    {
+     "apiname": "TR4_LOCK_BOTH_GUARDIANS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Olly Olly Oxen Free",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_SPHINX_DEATH_PATH_NO_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | IAQ",
+     "description": "Pass through the corridors of traps without taking any damage"
+    },
+    {
+     "apiname": "TR4_SCARABS_TO_RA_GRAVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Beep Beep!",
+     "description": "Send the scarabs to the grave in the room of Ra"
+    },
+    {
+     "apiname": "TR4_KEEP_ALL_SOLDIERS_ALIVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Serket Saved",
+     "description": "Make sure all the soldiers in Giza survive"
+    },
+    {
+     "apiname": "TR4_3_BIG_SCORPIONS_1_GRENADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Scorpion King",
+     "description": "Defeat three giant scorpions with one normal grenade"
+    },
+    {
+     "apiname": "TR4_5_ENEMIES_1_SUPER_GRENADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | High Five to Maahes",
+     "description": "Defeat five enemies with one super grenade"
+    },
+    {
+     "apiname": "TR4_USE_3_MONKEY_LEVERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Three Wise Monkeys",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_BREAK_GEMS_ALL_WEAPONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Surrey Commando",
+     "description": "Break the gems using all types of weapons with normal ammo and no lasersight"
+    },
+    {
+     "apiname": "TR4_DEFEAT_AMMIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Devourer of the Devourer",
+     "description": ""
+    },
+    {
+     "apiname": "TR4_REACH_EXIT_LESS_40_SEC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Seth Timer",
+     "description": "After sealing the temple, reach the exit in 40 seconds or less"
+    },
+    {
+     "apiname": "TR4_BREAK_9_VASES_LESS_10_SEC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Blowing off Some Steam",
+     "description": "Break 9 objects in less than 10 seconds without using explosives"
+    },
+    {
+     "apiname": "TR4_HANDSTAND_ALL_STATUES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Theomachist",
+     "description": "Do a handstand within sight of all the great statues"
+    },
+    {
+     "apiname": "TR4_ALL_PICKUPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Bury It With Me",
+     "description": "Take every collectable item in a single walkthrough"
+    },
+    {
+     "apiname": "TR4_BREAK_ALL_SHATTERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Oops!",
+     "description": "Break every vessel in a single walkthrough"
+    },
+    {
+     "apiname": "TR4_BEAT_NGPLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR4 | Welcome to Duat",
+     "description": "Beat the game on New Game+"
+    },
+    {
+     "apiname": "TR5_FINISH_ROME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | And So Ended the First of Many",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_FINISH_RUSSIA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Man Could Never Again Misuse It",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_FINISH_IRELAND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | A Few Valuable Lessons",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_FINISH_VCI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | To Absent Friends",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_ROME_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Codex of Rome",
+     "description": "Collect all secrets in Rome levels"
+    },
+    {
+     "apiname": "TR5_RUSSIA_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Codex of Zapadnaya Litsa",
+     "description": "Collect all secrets in Russian Submarine levels"
+    },
+    {
+     "apiname": "TR5_IRELAND_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Codex of Ireland",
+     "description": "Collect all secrets in Ireland levels"
+    },
+    {
+     "apiname": "TR5_VCI_ALL_SECRETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Codex of VCI",
+     "description": "Collect all secrets in VCI Headquarters levels"
+    },
+    {
+     "apiname": "TR5_FINISH_TRAINING_AREA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Dress Rehearsal",
+     "description": "Finish the Opera Backstage"
+    },
+    {
+     "apiname": "TR5_USE_2_MOUTHS_LESS_16_SECS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | What a Horrid Idea!",
+     "description": "After using the Mouth of Truth, use another one in 16 seconds or less"
+    },
+    {
+     "apiname": "TR5_HANG_ON_RAM_SIDE_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Not Ram Us",
+     "description": "Hang from the ledge on the ram side without being hurt"
+    },
+    {
+     "apiname": "TR5_KILL_5_DOGS_BY_A_FOUNTAIN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Bark Square",
+     "description": "Defeat five dogs near the fountain"
+    },
+    {
+     "apiname": "TR5_HANDSTAND_ABOVE_GATE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | To the Envy of Venus",
+     "description": "Do a handstand over the portal gate"
+    },
+    {
+     "apiname": "TR5_GUARDIAN_IN_2_SHOTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Mars Is Attacked!",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_KILL_ALL_LIONS_WITH_UZIS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Long Live the King!",
+     "description": "Defeat all the lions using Uzis"
+    },
+    {
+     "apiname": "TR5_DEFEAT_STATUE_PISTOL_NO_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Feet of Clay",
+     "description": "Defeat the last soldier statue in the Colosseum using only Lara's pistols and without taking damage"
+    },
+    {
+     "apiname": "TR5_DODGE_CLAW_3_TIMES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | I’ll Get You Next Time!",
+     "description": "Dodge the falling claw three times in a row at the highest point of the warehouse"
+    },
+    {
+     "apiname": "TR5_GET_ALL_ITEMS_BEFORE_CLAW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Crane Game",
+     "description": "Pick up all the items in the warehouse before the claw drops down at least once"
+    },
+    {
+     "apiname": "TR5_KILL_2_SNIPERS_NO_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Double Down",
+     "description": "Defeat both snipers without being hurt"
+    },
+    {
+     "apiname": "TR5_KICK_IN_CUTSCENE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Damn, You're Not Good!",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_SUBMARINE_NO_MEDIPACKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | I Am Invincible!",
+     "description": "Do not use any medipacks in the Submarine level"
+    },
+    {
+     "apiname": "TR5_DIVERT_10_TORPEDOES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Peculiarities of the National Fishing",
+     "description": "Use all ten chaff flares to divert torpedoes"
+    },
+    {
+     "apiname": "TR5_TORPEDO_HIT_MAIN_SUBMARINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Silent Raider",
+     "description": "Make a torpedo crash into the submarine"
+    },
+    {
+     "apiname": "TR5_KEEP_LARA_CALM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Stress Level Zero",
+     "description": "Don't make Lara nervous before she takes the secret and finds the Spear of Destiny"
+    },
+    {
+     "apiname": "TR5_NO_FIRE_OR_SHOCKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Hell and High Water",
+     "description": "Do not get fire burns or electric shocks in the Sinking Submarine level"
+    },
+    {
+     "apiname": "TR5_GET_NITRO_NODMG_IN_THE_DARK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Nekrasov Woman",
+     "description": "Get the nitrogen canister without taking any damage before turning off the power"
+    },
+    {
+     "apiname": "TR5_GALLOWS_NO_IMP_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Impatiens",
+     "description": "Don't let the little imps hurt you in the Gallows Tree level"
+    },
+    {
+     "apiname": "TR5_SWANDIVE_INTO_WELL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Well Done",
+     "description": "Perform a clean somersault dive into the well"
+    },
+    {
+     "apiname": "TR5_CHECK_ON_A_DEMON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Torchdown",
+     "description": "Check if the demon has been exorcised"
+    },
+    {
+     "apiname": "TR5_WATCH_ALL_YOUNG_LARA_FAILS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Fail Compilation",
+     "description": "Watch all the scenes of young Lara's failures"
+    },
+    {
+     "apiname": "TR5_CHAPEL_SKELETONS_NODMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Skeleton Prance",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_FINISH_MAZE_LESS_25_SEC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Amaze Runner",
+     "description": "Run through the final labyrinth in 25 seconds or less"
+    },
+    {
+     "apiname": "TR5_MAKE_IMPS_PANIC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Animal Instinct",
+     "description": "Make the little imps run in panic"
+    },
+    {
+     "apiname": "TR5_GET_ROSE_ON_FIRE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Roses Are Gold, Lara Got Burned",
+     "description": "Before visiting the mill, pick up the secret behind the fires and survive"
+    },
+    {
+     "apiname": "TR5_TRAP_HAG_LESS_25_SEC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Sleepy Merrow",
+     "description": "Once you're in the water, get rid of the creature in 25 seconds or less"
+    },
+    {
+     "apiname": "TR5_13TH_ALL_SECRETS_NO_LASERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | The Trap Is Set",
+     "description": "Pick up all the secrets on the 13th floor, avoiding the lasers"
+    },
+    {
+     "apiname": "TR5_USE_HAMMER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Nailed It!",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_13TH_NO_ALARMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Mission Impossible",
+     "description": "Get through the 13th Floor level unnoticed"
+    },
+    {
+     "apiname": "TR5_1SHOT_5_GUARDS_LESS_20_SECS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Dodge This!",
+     "description": "One-shot five VCI guards in 20 seconds or less"
+    },
+    {
+     "apiname": "TR5_TELEPORT_BEFORE_BREAK_IN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | VCI! Open Up!",
+     "description": "Get the teleport disk before the guards cut the door open"
+    },
+    {
+     "apiname": "TR5_DEFEAT_FIRST_CYBORG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Waterminator",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_RUN_HALLWAY_NO_HELI_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Miss Croft",
+     "description": "Run past the panoramic windows without taking damage from the helicopter"
+    },
+    {
+     "apiname": "TR5_DEFEAT_SECOND_CYBORG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Gassassin",
+     "description": ""
+    },
+    {
+     "apiname": "TR5_SWANDIVE_3_ROLLS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | 30/10",
+     "description": "Perform a full triple somersault dive"
+    },
+    {
+     "apiname": "TR5_LARA_BIRTHDAY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | You Remembered!",
+     "description": "Happy birthday, Lara!"
+    },
+    {
+     "apiname": "TR5_GET_GUARDS_MEDIPACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Sweet Dreams",
+     "description": "Get the unreachable medipack"
+    },
+    {
+     "apiname": "TR5_NO_RAT_DMG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Tail Innocence",
+     "description": "Don't let the rat packs bite you through the whole walkthrough"
+    },
+    {
+     "apiname": "TR5_ALL_PICKUPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Hoarding Order",
+     "description": "Take every collectable item in a single walkthrough"
+    },
+    {
+     "apiname": "TR5_BEAT_NGPLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR5 | Pаst Mortem",
+     "description": "Beat the game on New Game+"
+    },
+    {
+     "apiname": "TR6_FINISH_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | I Feel Stronger Now",
+     "description": "Finish Tomb Raider: The Angel of Darkness"
+    },
+    {
+     "apiname": "TR6_KILL_CLEANER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Room Service",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_KILL_PROTO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Great Flood",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_KILL_BOAZ",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Took Care",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_KILL_ECK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Shut Him Up",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_COMPLETE_TRAINING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Parkour!",
+     "description": "Finish your training in the back alleys"
+    },
+    {
+     "apiname": "TR6_CARVIER_RUDE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Crime Spree",
+     "description": "Be rude to Mlle Carvier and clean out her apartment before the police show up on the floor"
+    },
+    {
+     "apiname": "TR6_GET_GOLDWATCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Bet Girl",
+     "description": "Obtain the Gold Watch"
+    },
+    {
+     "apiname": "TR6_FALL_BOXRING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Player Three Connected",
+     "description": "Surprise the boxers"
+    },
+    {
+     "apiname": "TR6_KILL_WEAPON_AND_MELEE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Coup de Grâce",
+     "description": "Open fire on an enemy and finish him off in melee combat"
+    },
+    {
+     "apiname": "TR6_CLUB_COLLAPSE_UNSEEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Hit the Floor",
+     "description": "Drop the metal structure on the dance floor before security is aware of your presence"
+    },
+    {
+     "apiname": "TR6_EXAMINE_GHETTO_MAPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Cartophile",
+     "description": "Examine all the Parisian Ghetto maps"
+    },
+    {
+     "apiname": "TR6_GET_GYARD_PASSWORD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Pluie Noir",
+     "description": "Learn the password"
+    },
+    {
+     "apiname": "TR6_GET_SPORTSWATCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Kleptomaniac",
+     "description": "Obtain the Sports Watch"
+    },
+    {
+     "apiname": "TR6_ENTER_GYARD_DOORMAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Spendthrift",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_GET_GYARD_VPACKER_AMMO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Death-Defying",
+     "description": "Get V-Packer ammo in St. Aicard's Graveyard"
+    },
+    {
+     "apiname": "TR6_NO_DAMAGE_DOGS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Good Boys",
+     "description": "Do not kill any of the dogs or take any damage from them through the whole walkthrough"
+    },
+    {
+     "apiname": "TR6_NO_PITS_HIDEOUT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Let Pit Be",
+     "description": "In the Bouchard's Hideout do not fall in the pits"
+    },
+    {
+     "apiname": "TR6_STORM_SPEEDRUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Super Lario",
+     "description": "After opening the first valve in Louvre Storm Drains open all others in 5 minutes or less"
+    },
+    {
+     "apiname": "TR6_LOUVRE_UNSEEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Ghost of the Louvre",
+     "description": "Don't trigger the alarm in the Louvre Galleries"
+    },
+    {
+     "apiname": "TR6_DIGSITE_STEALTH_KILL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Croft of the Blue",
+     "description": "Stealthly defeat the guard at the bottom of the Archaeological Dig"
+    },
+    {
+     "apiname": "TR6_DIGSITE_PUZZLE_NO_RING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Jackpot!",
+     "description": "Unlock the gate in the Archaeological Dig with no blocked rings on your last turn"
+    },
+    {
+     "apiname": "TR6_ANCIENTS_SPEEDRUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Fast and Curious",
+     "description": "Get to the bottom of the Tomb of the Ancients in 3 minutes or less"
+    },
+    {
+     "apiname": "TR6_ANCIENTS_SWAN_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | High-Flying",
+     "description": "Pass through the trap corridor in the Tomb of the Ancients with one swan dive and no damage taken"
+    },
+    {
+     "apiname": "TR6_WRATH_WRONG_LEDGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Live Dangerously",
+     "description": "Do not use the right ledge in the Wrath of the Beast"
+    },
+    {
+     "apiname": "TR6_HADES_TWO_PILLARS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Two Steps a Hades",
+     "description": "Use only two pillars to take all the items in the Breath of Hades"
+    },
+    {
+     "apiname": "TR6_SANCTUARY_FIVE_BLOCKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Rocket Woman",
+     "description": "Take off on five different blocks without taking damage in the Sanctuary of Flame"
+    },
+    {
+     "apiname": "TR6_SANCTUARY_REACH_BEFORE_FIRE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Play with Fire",
+     "description": "Cross the Sanctuary of Flame before it is completely engulfed in flame and stay alive"
+    },
+    {
+     "apiname": "TR6_NEPTUNE_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Be Like Water",
+     "description": "Do not get any damage in the Neptune's Hall"
+    },
+    {
+     "apiname": "TR6_OBSCURA_SPEEDRUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Ghost in a Nutshell",
+     "description": "Get Brother Obscura's painting in 1 minute or less without being hurt"
+    },
+    {
+     "apiname": "TR6_GALLERIES_NO_RESP_KILL_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | More Gas, More Mess",
+     "description": "Escape the Louvre without using a respirator, healing or leaving any Gunderson's men alive"
+    },
+    {
+     "apiname": "TR6_PURCHASE_SCORPX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Automatic From Luddick",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_STRAHOV_UNSEEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Silent as a Mouse",
+     "description": "Don't draw too much attention to yourself in the Strahov Fortress warehouses"
+    },
+    {
+     "apiname": "TR6_STRAHOV_CLIMB_LADDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Snake Eater",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_STRAHOV_LASER_NO_JUMP_CRAWL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Reel Deal",
+     "description": "Bypass the laser trap in the Strahov Fortress without jumping or crawling"
+    },
+    {
+     "apiname": "TR6_BIO_KILL_ALL_MUTANTS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Unnatural Selection",
+     "description": "Defeat all the mutants in the Bio-Research Facility"
+    },
+    {
+     "apiname": "TR6_BIO_HANDSTAND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Perfect Mimicry",
+     "description": "Do a handstand in front of the big flower in the main botanical greenhouse"
+    },
+    {
+     "apiname": "TR6_SWANDIVE_LEVIATHAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Into the Hellmouth",
+     "description": "Swan dive into the Leviathan's reservoir"
+    },
+    {
+     "apiname": "TR6_AQUATIC_SKIP_PUZZLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Short Ration",
+     "description": "Finish the Aquatic Research Area without feeding the Leviathan"
+    },
+    {
+     "apiname": "TR6_PROTO_MELEE_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | You’re Just a Monkey",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_VAULT_AQUALUNG_NO_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Won’t Catch a Breath",
+     "description": "Get the aqua-lung and hold your breath until the end of the Vault of Trophies without losing health"
+    },
+    {
+     "apiname": "TR6_BOAZ_EVADE_ATTACKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Dodgeboaz",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_ECK_NO_CROUCH_DAMAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Great Work",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_SILLY_DEATHS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Darwin Awards",
+     "description": "Find all the silliest ways to die"
+    },
+    {
+     "apiname": "TR6_EARN_3500_EUROS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Cash Overload",
+     "description": "Earn more than 3500 euros"
+    },
+    {
+     "apiname": "TR6_COLLECT_ALL_PISTOL_PAIRS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Two of Every Kind",
+     "description": "Find a pair both for Vector R35 and for Scorpion X guns"
+    },
+    {
+     "apiname": "TR6_COLLECT_ALL_MEDIPACKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Tactical Medicine",
+     "description": "Collect all medipacks in a single walkthrough"
+    },
+    {
+     "apiname": "TR6_COLLECT_ALL_CHOC_NO_USE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Chocollection",
+     "description": "Get all the chocolates in a single walkthrough, but do not eat any of them"
+    },
+    {
+     "apiname": "TR6_GET_AND_READ_ALL_ENTRIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Memento Mori",
+     "description": "Collect and read all the notes in Werner's notebook"
+    },
+    {
+     "apiname": "TR6_TASER_BATS_AND_RATS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Electrocuties",
+     "description": "Defeat two different non-human enemies by tasing them"
+    },
+    {
+     "apiname": "TR6_KILL_SHOOT_FROM_CORNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Corner Frag",
+     "description": "Defeat an enemy by shooting around the corner"
+    },
+    {
+     "apiname": "TR6_KILL_ALL_KNIGHTS_BY_FALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | This Is Lara!",
+     "description": "Send all undead knights into the pits"
+    },
+    {
+     "apiname": "TR6_BEAT_NGPLUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Never Again",
+     "description": "Beat the game on New Game+"
+    },
+    {
+     "apiname": "TR6_EXTRA_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Nehushtan",
+     "description": ""
+    },
+    {
+     "apiname": "TR6_EXTRA_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TR6 | Pawn Promotion",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

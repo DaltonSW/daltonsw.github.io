@@ -1,0 +1,115 @@
+{
+ "provider": "steam",
+ "title": "SHENZHEN I/O",
+ "updated": "2026-08-30",
+ "id": "504210",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 1,
+ "total": 6,
+ "first": "2020-03-01",
+ "last": "2020-03-01",
+ "platform": "PC",
+ "icon": "b64581acf2b5e3c418ce32ad20cc6b7e1b3ac9a9",
+ "playtime_mins": 53,
+ "playtime": {
+  "windows": 53
+ },
+ "last_played": "2025-02-06",
+ "achievements": [
+  {
+   "key": "SOLITAIRE_1",
+   "name": "CLIMB THE MOUNTAIN",
+   "description": "Win a game of solitaire.",
+   "unlocked": true,
+   "date": "2020-03-01T19:06:39-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/504210/79c6e43211d0bde5117beec883d0c34889c6a81b.jpg"
+  },
+  {
+   "key": "ALL_AVALON",
+   "name": "TURBOCHARGE YOUR BRAIN!",
+   "description": "Solve every puzzle in the bonus campaign.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/504210/355364ecfe52260f850c37281ab6260edd2db0fa.jpg"
+  },
+  {
+   "key": "ALL_SHENZHEN",
+   "name": "EMPLOYEE OF THE MONTH",
+   "description": "Solve every puzzle in the main campaign.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/504210/e02dc1364c9726f0399e26a7c16e5765c3e959c7.jpg"
+  },
+  {
+   "key": "SECRET",
+   "name": "SECRET PUZZLE",
+   "description": "Solve the secret puzzle.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/504210/afa03caa2fb134f893780f70fd788dacb95b5c2e.jpg"
+  },
+  {
+   "key": "SOLITAIRE_2",
+   "name": "MEET THE DRAGON",
+   "description": "Win 10 games of solitaire.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/504210/305814c9382dbc74e0bb9ec9f775bcf962cbe738.jpg"
+  },
+  {
+   "key": "SOLITAIRE_3",
+   "name": "BECOME IMMORTAL",
+   "description": "Win 100 games of solitaire.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/504210/866b39267823f415ccf4419cad34b775a1086f15.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "SHENZHEN I/O",
+   "achievements": [
+    {
+     "apiname": "SECRET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SECRET PUZZLE",
+     "description": "Solve the secret puzzle."
+    },
+    {
+     "apiname": "SOLITAIRE_1",
+     "achieved": 1,
+     "unlocktime": 1583111199,
+     "name": "CLIMB THE MOUNTAIN",
+     "description": "Win a game of solitaire."
+    },
+    {
+     "apiname": "SOLITAIRE_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MEET THE DRAGON",
+     "description": "Win 10 games of solitaire."
+    },
+    {
+     "apiname": "SOLITAIRE_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BECOME IMMORTAL",
+     "description": "Win 100 games of solitaire."
+    },
+    {
+     "apiname": "ALL_SHENZHEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EMPLOYEE OF THE MONTH",
+     "description": "Solve every puzzle in the main campaign."
+    },
+    {
+     "apiname": "ALL_AVALON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TURBOCHARGE YOUR BRAIN!",
+     "description": "Solve every puzzle in the bonus campaign."
+    }
+   ],
+   "success": true
+  }
+ }
+}

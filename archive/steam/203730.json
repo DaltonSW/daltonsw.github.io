@@ -1,0 +1,759 @@
+{
+ "provider": "steam",
+ "title": "Q.U.B.E.",
+ "updated": "2026-08-30",
+ "id": "203730",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 4,
+ "total": 52,
+ "first": "2012-12-29",
+ "last": "2012-12-29",
+ "platform": "PC",
+ "icon": "9f33d74b54f584bd21418a1cba9a8f9740254d46",
+ "playtime_mins": 56,
+ "last_played": "2013-01-21",
+ "achievements": [
+  {
+   "key": "QUBEAch1",
+   "name": "Quick Understanding Of Block Extrusion",
+   "description": "Complete the tutorial",
+   "unlocked": true,
+   "date": "2012-12-29T21:58:54-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/51ceb8c9cf78731c2603eb15ff77263cfabe1ee9.jpg"
+  },
+  {
+   "key": "QUBEAch2",
+   "name": "Sector 1, Completed",
+   "description": "Complete Sector 1",
+   "unlocked": true,
+   "date": "2012-12-29T22:04:01-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/87a09f9ebd6edc684977e29e9a172cf175386773.jpg"
+  },
+  {
+   "key": "QUBEAch3",
+   "name": "Sector 2, Completed",
+   "description": "Complete Sector 2",
+   "unlocked": true,
+   "date": "2012-12-29T22:08:42-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/b543537e98cadf9dc9ebe2695edcdbc6bb6daeee.jpg"
+  },
+  {
+   "key": "QUBEAch4",
+   "name": "Sector 3, Completed",
+   "description": "Complete Sector 3",
+   "unlocked": true,
+   "date": "2012-12-29T22:25:42-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/7caacc83e702983b766d0242c7e7a6914dcbc88d.jpg"
+  },
+  {
+   "key": "QUBEAch10",
+   "name": "The Ball",
+   "description": "Complete the second ball puzzle in Sector 7",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/cb319a24f78455f7f0e6d55df5a36486ec96b526.jpg"
+  },
+  {
+   "key": "QUBEAch11",
+   "name": "Tough Going Part 1",
+   "description": "Complete the hardest puzzle in the game: Part 1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/5f469e3c77f04a847828853ba5f516057e6b9249.jpg"
+  },
+  {
+   "key": "QUBEAch12",
+   "name": "Tough Going Part 2",
+   "description": "Complete the hardest puzzle in the game: Part 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/5f469e3c77f04a847828853ba5f516057e6b9249.jpg"
+  },
+  {
+   "key": "QUBEAch13",
+   "name": "Fizzicks",
+   "description": "Complete the final physics puzzle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/f7e927803120baa26998c1bcc526be5e9eec56cb.jpg"
+  },
+  {
+   "key": "QUBEAch14",
+   "name": "Find The Developers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/fa97476d7300da2c5eb6074cf88b360000eac786.jpg",
+   "hidden": true
+  },
+  {
+   "key": "QUBEAch15",
+   "name": "Finale",
+   "description": "Complete Q.U.B.E.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/262de2f69e3318b0a7817632fc7dd849f85c022f.jpg"
+  },
+  {
+   "key": "QUBEAch18",
+   "name": "Behind The Scenes",
+   "description": "Find the hidden area in Sector 5",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/18aa9a6950e67a6a7159df8ce19ed4248d762cdf.jpg"
+  },
+  {
+   "key": "QUBEAch19",
+   "name": "BETA Complete Me",
+   "description": "Complete the hidden beta puzzle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/43990a5ed3190b77f1c95001be755ef6d1937356.jpg"
+  },
+  {
+   "key": "QUBEAch20",
+   "name": "You Can't Bring Them Here!",
+   "description": "Attempt to extrude the developers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/5a78f910bb042bd598acfa1ae69942c25feaedc8.jpg"
+  },
+  {
+   "key": "QUBEAch21",
+   "name": "Over Time!",
+   "description": "Make 1,000 moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/81dadc2a40d6bfcef6380d2a33e8a99487084157.jpg"
+  },
+  {
+   "key": "QUBEAch22",
+   "name": "Push Me To Completion",
+   "description": "Push the ball in the hidden area to the end",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/18aa9a6950e67a6a7159df8ce19ed4248d762cdf.jpg"
+  },
+  {
+   "key": "QUBEAch23",
+   "name": "Whatever Floats Your Boat",
+   "description": "Don't touch the floor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/61e788af75a9ff454b7f34934708e53f132e99d9.jpg"
+  },
+  {
+   "key": "QUBEAch24",
+   "name": "Hopscotch",
+   "description": "Jump on certain cubes in sequence",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/370ebf68b1a2bfbd6c9c877b6b5237836daec089.jpg"
+  },
+  {
+   "key": "QUBEAch25",
+   "name": "Everyone's A Winner Baby",
+   "description": "Winning a race for the first time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/83c354bc461aae9147520ecbc3016af8b51e4460.jpg"
+  },
+  {
+   "key": "QUBEAch26",
+   "name": "All Rounder",
+   "description": "Get 3 gold medals in every level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/4036eac1a8512d74c805989bfac79edbd52f2e7e.jpg"
+  },
+  {
+   "key": "QUBEAch27",
+   "name": "No Sweat!",
+   "description": "Make 1,000 moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/69afea88957240979c6ef30fb9358ace0e5129fb.jpg"
+  },
+  {
+   "key": "QUBEAch28",
+   "name": "If I Can Walk 10,000 Miles",
+   "description": "Travel 10,000 metres",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/fb6c45d8c6e0605deb6c308433d6fd6a99b65c10.jpg"
+  },
+  {
+   "key": "QUBEAch29",
+   "name": "Then I Can Walk 90,000 More!",
+   "description": "Travel 100,000 metres",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/2f1f985f6a53e14f1fcbbf5a5064eeb414062a63.jpg"
+  },
+  {
+   "key": "QUBEAch30",
+   "name": "Collector",
+   "description": "Collect 250 pickups",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/b994577b5acdc07f9d172888f569bbef5a5b0968.jpg"
+  },
+  {
+   "key": "QUBEAch31",
+   "name": "Hoarder",
+   "description": "Collect 1,000 pickups",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/ebc19b64eaea9b6bed62b254a238cb629cda70fd.jpg"
+  },
+  {
+   "key": "QUBEAch32",
+   "name": "You've Got A Problem",
+   "description": "Collect 10,000 pickups",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/a3b7263b5ee7a51633f81afd07a3aa0f4b490f71.jpg"
+  },
+  {
+   "key": "QUBEAch33",
+   "name": "Repeat Offender",
+   "description": "Play the game 100 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/8288ce0541c4717a7f6c5ee4fb2053c68905f5a9.jpg"
+  },
+  {
+   "key": "QUBEAch34",
+   "name": "Q.U.B.E. Master",
+   "description": "Play the game 500 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/72fb7f7eeb6f211b98eed959675258d5996ba89e.jpg"
+  },
+  {
+   "key": "QUBEAch35",
+   "name": "Speedy!",
+   "description": "Beat the Developer's Time in SPEED WAY",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch36",
+   "name": "That Was Easy",
+   "description": "Beat the Developer's Time in PLANS FOR FANS",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch37",
+   "name": "Beat That.",
+   "description": "Beat the Developer's Time in ROTATION STATION",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch38",
+   "name": "Another Hope",
+   "description": "Beat the Developer's Time in A NEW HOPE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch39",
+   "name": "Psychedelic",
+   "description": "Beat the Developer's Time in NEON NIGHTMARE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch40",
+   "name": "Done It With My Eyes Closed",
+   "description": "Beat the Developer's Time in LOST",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch41",
+   "name": "Tick, Tick, BOOM",
+   "description": "Beat the Developer's Time in TIME BOMB",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch42",
+   "name": "Cutting It Fine!",
+   "description": "Beat the Developer's Time in RUIN RUSH",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch43",
+   "name": "Toxic Who??",
+   "description": "Beat the Developer's Time in HOVER HEADWAY",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch44",
+   "name": "Spaced Out",
+   "description": "Beat the Developer's Time in SPACE RACE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/905f61815c2b09824e7228da77067b7d851a971c.jpg"
+  },
+  {
+   "key": "QUBEAch45",
+   "name": "2 + 2",
+   "description": "Complete SPEED WAY in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch46",
+   "name": "6 - 2",
+   "description": "Complete PLANS FOR FANS in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch47",
+   "name": "5 x 3",
+   "description": "Complete ROTATION STATION in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch48",
+   "name": "4 x 4",
+   "description": "Complete A NEW HOPE in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch49",
+   "name": "200 / 10",
+   "description": "Complete NEON NIGHTMARE in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch5",
+   "name": "Sector 4, Completed",
+   "description": "Complete Sector 4",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/4852e3bd8cdda58e69045d4ab8de3787d68979e6.jpg"
+  },
+  {
+   "key": "QUBEAch50",
+   "name": "10 + 15 - 20",
+   "description": "Complete LOST in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch51",
+   "name": "20 x 3 / 6 - 7",
+   "description": "Complete TIME BOMB in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch52",
+   "name": "2 + 2 x 4 / 8",
+   "description": "Complete RUIN RUSH in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch53",
+   "name": "7 x 7 + 21 / 10",
+   "description": "Complete HOVER HEADWAY in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch54",
+   "name": "8 * 9 / 5 - 7.4",
+   "description": "Complete SPACE RACE in the least amount of moves",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/d97283fa14821b08337d2f1aa47f528fa256a01e.jpg"
+  },
+  {
+   "key": "QUBEAch6",
+   "name": "Sector 5, Completed",
+   "description": "Complete Sector 5",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/9222bbfaad45d81542ad7d74439ab05d59c637e3.jpg"
+  },
+  {
+   "key": "QUBEAch7",
+   "name": "Sector 6, Completed ",
+   "description": " Complete Sector 6",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/728ece29be053c6102d75b71b00c7483d56eea45.jpg"
+  },
+  {
+   "key": "QUBEAch8",
+   "name": "Sector 7, Completed",
+   "description": "Complete Sector 7",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/e9f9f0a06edd659431f3af8edaca5e4dee808e31.jpg"
+  },
+  {
+   "key": "QUBEAch9",
+   "name": "Attractive",
+   "description": "Complete the series of magnet puzzles in Sector 5",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203730/47cb638421e1f55e9bdfe7921dbe3c4e85372aa5.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Q.U.B.E.",
+   "achievements": [
+    {
+     "apiname": "QUBEAch1",
+     "achieved": 1,
+     "unlocktime": 1356839934,
+     "name": "Quick Understanding Of Block Extrusion",
+     "description": "Complete the tutorial"
+    },
+    {
+     "apiname": "QUBEAch2",
+     "achieved": 1,
+     "unlocktime": 1356840241,
+     "name": "Sector 1, Completed",
+     "description": "Complete Sector 1"
+    },
+    {
+     "apiname": "QUBEAch3",
+     "achieved": 1,
+     "unlocktime": 1356840522,
+     "name": "Sector 2, Completed",
+     "description": "Complete Sector 2"
+    },
+    {
+     "apiname": "QUBEAch4",
+     "achieved": 1,
+     "unlocktime": 1356841542,
+     "name": "Sector 3, Completed",
+     "description": "Complete Sector 3"
+    },
+    {
+     "apiname": "QUBEAch5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sector 4, Completed",
+     "description": "Complete Sector 4"
+    },
+    {
+     "apiname": "QUBEAch6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sector 5, Completed",
+     "description": "Complete Sector 5"
+    },
+    {
+     "apiname": "QUBEAch7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sector 6, Completed ",
+     "description": " Complete Sector 6"
+    },
+    {
+     "apiname": "QUBEAch8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sector 7, Completed",
+     "description": "Complete Sector 7"
+    },
+    {
+     "apiname": "QUBEAch9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Attractive",
+     "description": "Complete the series of magnet puzzles in Sector 5"
+    },
+    {
+     "apiname": "QUBEAch10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Ball",
+     "description": "Complete the second ball puzzle in Sector 7"
+    },
+    {
+     "apiname": "QUBEAch11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tough Going Part 1",
+     "description": "Complete the hardest puzzle in the game: Part 1"
+    },
+    {
+     "apiname": "QUBEAch12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tough Going Part 2",
+     "description": "Complete the hardest puzzle in the game: Part 2"
+    },
+    {
+     "apiname": "QUBEAch13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fizzicks",
+     "description": "Complete the final physics puzzle"
+    },
+    {
+     "apiname": "QUBEAch14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Find The Developers",
+     "description": ""
+    },
+    {
+     "apiname": "QUBEAch15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finale",
+     "description": "Complete Q.U.B.E."
+    },
+    {
+     "apiname": "QUBEAch18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Behind The Scenes",
+     "description": "Find the hidden area in Sector 5"
+    },
+    {
+     "apiname": "QUBEAch19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BETA Complete Me",
+     "description": "Complete the hidden beta puzzle"
+    },
+    {
+     "apiname": "QUBEAch20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Can't Bring Them Here!",
+     "description": "Attempt to extrude the developers"
+    },
+    {
+     "apiname": "QUBEAch21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Over Time!",
+     "description": "Make 1,000 moves"
+    },
+    {
+     "apiname": "QUBEAch22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Push Me To Completion",
+     "description": "Push the ball in the hidden area to the end"
+    },
+    {
+     "apiname": "QUBEAch23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Whatever Floats Your Boat",
+     "description": "Don't touch the floor"
+    },
+    {
+     "apiname": "QUBEAch24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hopscotch",
+     "description": "Jump on certain cubes in sequence"
+    },
+    {
+     "apiname": "QUBEAch25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Everyone's A Winner Baby",
+     "description": "Winning a race for the first time"
+    },
+    {
+     "apiname": "QUBEAch26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Rounder",
+     "description": "Get 3 gold medals in every level"
+    },
+    {
+     "apiname": "QUBEAch27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Sweat!",
+     "description": "Make 1,000 moves"
+    },
+    {
+     "apiname": "QUBEAch28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "If I Can Walk 10,000 Miles",
+     "description": "Travel 10,000 metres"
+    },
+    {
+     "apiname": "QUBEAch29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Then I Can Walk 90,000 More!",
+     "description": "Travel 100,000 metres"
+    },
+    {
+     "apiname": "QUBEAch30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collector",
+     "description": "Collect 250 pickups"
+    },
+    {
+     "apiname": "QUBEAch31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hoarder",
+     "description": "Collect 1,000 pickups"
+    },
+    {
+     "apiname": "QUBEAch32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You've Got A Problem",
+     "description": "Collect 10,000 pickups"
+    },
+    {
+     "apiname": "QUBEAch33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Repeat Offender",
+     "description": "Play the game 100 times"
+    },
+    {
+     "apiname": "QUBEAch34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Q.U.B.E. Master",
+     "description": "Play the game 500 times"
+    },
+    {
+     "apiname": "QUBEAch35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedy!",
+     "description": "Beat the Developer's Time in SPEED WAY"
+    },
+    {
+     "apiname": "QUBEAch36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That Was Easy",
+     "description": "Beat the Developer's Time in PLANS FOR FANS"
+    },
+    {
+     "apiname": "QUBEAch37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beat That.",
+     "description": "Beat the Developer's Time in ROTATION STATION"
+    },
+    {
+     "apiname": "QUBEAch38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Another Hope",
+     "description": "Beat the Developer's Time in A NEW HOPE"
+    },
+    {
+     "apiname": "QUBEAch39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Psychedelic",
+     "description": "Beat the Developer's Time in NEON NIGHTMARE"
+    },
+    {
+     "apiname": "QUBEAch40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Done It With My Eyes Closed",
+     "description": "Beat the Developer's Time in LOST"
+    },
+    {
+     "apiname": "QUBEAch41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tick, Tick, BOOM",
+     "description": "Beat the Developer's Time in TIME BOMB"
+    },
+    {
+     "apiname": "QUBEAch42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cutting It Fine!",
+     "description": "Beat the Developer's Time in RUIN RUSH"
+    },
+    {
+     "apiname": "QUBEAch43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toxic Who??",
+     "description": "Beat the Developer's Time in HOVER HEADWAY"
+    },
+    {
+     "apiname": "QUBEAch44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spaced Out",
+     "description": "Beat the Developer's Time in SPACE RACE"
+    },
+    {
+     "apiname": "QUBEAch45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "2 + 2",
+     "description": "Complete SPEED WAY in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "6 - 2",
+     "description": "Complete PLANS FOR FANS in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "5 x 3",
+     "description": "Complete ROTATION STATION in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "4 x 4",
+     "description": "Complete A NEW HOPE in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "200 / 10",
+     "description": "Complete NEON NIGHTMARE in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "10 + 15 - 20",
+     "description": "Complete LOST in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "20 x 3 / 6 - 7",
+     "description": "Complete TIME BOMB in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "2 + 2 x 4 / 8",
+     "description": "Complete RUIN RUSH in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "7 x 7 + 21 / 10",
+     "description": "Complete HOVER HEADWAY in the least amount of moves"
+    },
+    {
+     "apiname": "QUBEAch54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "8 * 9 / 5 - 7.4",
+     "description": "Complete SPACE RACE in the least amount of moves"
+    }
+   ],
+   "success": true
+  }
+ }
+}

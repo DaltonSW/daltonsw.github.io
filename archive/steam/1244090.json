@@ -1,0 +1,779 @@
+{
+ "provider": "steam",
+ "title": "Sea of Stars: Sunset Edition",
+ "updated": "2026-08-30",
+ "id": "1244090",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 54,
+ "platform": "PC",
+ "icon": "529d0f064196911482aeeb8f42ffcc1ff77fed67",
+ "achievements": [
+  {
+   "key": "SOS_ACHIEVEMENT_1",
+   "name": "Boss Slugged",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/e3b498b9c72f882c56a7d8cde6421f0261c46e18.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_10",
+   "name": "Dweller of Torment",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/753d1f5116c4913d8132cbe012c9626d7816acbf.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_11",
+   "name": "Detritus Fallen",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/4e6512cc5e1e3d280050b6c92fd921148a084ba3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_12",
+   "name": "And stay down, too!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/f1d681bb380f7b9a0bcebcaf8123820b6595f03a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_13",
+   "name": "Dweller of Strife",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/ad7b102739ec596de12b7eb3bfad8abdbe91b95c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_14",
+   "name": "Fight fire with lunar",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/ffe4bd4c8b3c9b87fdc07e32cac4da32ab489f63.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_15",
+   "name": "The Warrior Cook",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/0438d801ea7a0638cc523d037ce1bee1bb60e936.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_16",
+   "name": "Who would have thought? Part 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/a71026d8051e9e72b2e80bca86b8f297568f87cd.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_17",
+   "name": "Chin up!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/45687690273610aece4607e44a4a3b6ab3ab3f32.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_18",
+   "name": "Featherweight",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/d42b4f043ab4a37d7fe0254f124108a21a242eea.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_19",
+   "name": "Enter the Artificer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/dbb0ddc9c81d1bfd267d32514e2fb1d901c82040.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_2",
+   "name": "No, wait!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/4f56beb2d6a53f58484522c853f919f96bde163f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_20",
+   "name": "Dweller of Dread",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/6ca4179a5111e7af633b71bf922a9080d748b3a7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_21",
+   "name": "Lieupedant",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/86233fc2860a7f50304081acce020b09b359e5dc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_22",
+   "name": "Clockwork Champion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/d1b06137e2fe510f7e39cffabd9d5945041e5348.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_23",
+   "name": "Wholesome Food",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/1d92afc3fc3b95fcc9d4de291d6b0d22da3c58d6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_24",
+   "name": "Better off dead",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/6930081c9f8f2a12f39e657b8cefb73ee05ce0d6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_25",
+   "name": "Hey, that's a reskin!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/83649c61b962758010fba3bc11c9266886b17aba.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_26",
+   "name": "Elder Dissed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/9295444d16cb09c9ffeedb0c8021b3362d92ac70.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_27",
+   "name": "Glassdiator",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/3967d96496960d6b421114f23cd39b3cff216e8a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_28",
+   "name": "Free from serviduke",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/c18eb6fe12b5037613fe62522486f8323ecd306d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_29",
+   "name": "Home Neat Home",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/5bede8aff462755d9e9a70f094e6761f2742704c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_3",
+   "name": "Stretch Quest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/5a77a9a4a554abe777c43f5868c9fdf1b5afa96e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_30",
+   "name": "Conch Master",
+   "description": "Bring all Conches to Mirna in Docarri Village",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/35e25ffbc87a5f4dee0ac382fa167ebb646fac76.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_31",
+   "name": "Master Angler",
+   "description": "Catch every fish species at least once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/e785a4509e3c39330910c16bba805c7a6d72b63b.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_32",
+   "name": "Living Encyclopedia",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/6f8961a6002373e4cdf8082d2e959c49b2ca6d25.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_33",
+   "name": "New Garl +",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/44c803dfc2dac01bc0254bcec8bf846ec63d75b6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_34",
+   "name": "No God of mine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/b0994ec5862650a4bcef0b4b27c4bda7f2a7447a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_35",
+   "name": "Bouncy",
+   "description": "Bounce a Moonerang 25 times in a row",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/bbeff4630a91aa9c2737be3812fb2eb21879f1e8.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_36",
+   "name": "Lock's Myth",
+   "description": "Break a total 50 locks in battle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/c8dd4d04cab26be2e03d8d97c16c37d3a5ce1f3b.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_37",
+   "name": "What a technique!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/b052d089bf42c7cd22aeb8a38f9cc94e30471d09.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_38",
+   "name": "Gustative Completion",
+   "description": "Cook every recipe at least once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/3861a98a5942cc7d17a82c2d45e05e0304678b0a.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_39",
+   "name": "To the teeth",
+   "description": "Unlock all combos",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/0b3579848e4b798c6769d3b47dd4b2759a23816a.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_4",
+   "name": "Now give me that!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/e8a2b769a7e6a1a52283e88e07a3fe96a95506b1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_40",
+   "name": "Well read (to)",
+   "description": "Listen to all of the campfire stories",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/e559bc29182a50230681d1a63b6845f402917eff.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_41",
+   "name": "Measure Hunter",
+   "description": "Find every single treasure",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/96cdeff2e827af7b179399a0f8734809098e860a.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_42",
+   "name": "Me day",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/c8d640262216da966614b3472a1aae64038ed024.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_43",
+   "name": "Turtle Power",
+   "description": "Do a team Timed Block with three players",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/52d28d75190194ed0ae475429ee6df68a4ed52dc.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_44",
+   "name": "Verifying Glass",
+   "description": "Reveal a lock by either breaking it or using a special move with the scan function",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/d141651289f330e9c44a0d5d6f00c4e5e328329f.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_45",
+   "name": "Team Power",
+   "description": "Do a team Timed Hit or Block",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/143da9002300107080d1348027d168a5c3d5e838.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_46",
+   "name": "Down Low",
+   "description": "Try all high-five combinations",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/c0bec8603ab4181e89d15333d45e5ebc49343a56.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_47",
+   "name": "Fishing Trip",
+   "description": "Catch at least one fish with each character",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/87c1dcb0c41d697ae6cf2e6b83560ebe9ef9d3f9.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_48",
+   "name": "I'm walking here!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/7537fe668cf0d9deb9169917e5b77ed1242be705.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_49",
+   "name": "Marquee Star",
+   "description": "Unlock all skills and combos for circus classes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/4c2d5d84f8f738796c283686dc22ba1650fcc005.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_5",
+   "name": "Dweller of Woe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/574f3588508ce58b835d9aecbfc35131fe92da99.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_50",
+   "name": "Carnival Culinarian",
+   "description": "Cook each of the five Horloge recipes at least once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/078436f64fe7e89817692c1689384ce88a593d0e.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_51",
+   "name": "Warlocked",
+   "description": "Beat all of Horloge's Wheels champions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/9b6d5f754363f5e4b4c90d81f5a2ae17cddf578a.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_52",
+   "name": "Unrivaled Wonder",
+   "description": "Earn top rank in all three of Horloge's minigames",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/f79b0a62c85d266514027d1591141a1d708ab4bc.jpg"
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_53",
+   "name": "Clockworkn't",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/fce16a9565947437999629aaa1f86db7ffdf809c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_54",
+   "name": "What doth it meanst?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/71bec74ac7106694c03b8bc99f3865c8dd597d93.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_6",
+   "name": "Who would have thought?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/657d63cc98bcaec98fbff4d90bb686d5ae3cb18e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_7",
+   "name": "Yo, Ho!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/ab7a3a6d169007ae97335d9402097d69ef26bb08.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_8",
+   "name": "Home sweet home",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/129e59c4a18df851b7e08f7c7b72b61b3f3b54c6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SOS_ACHIEVEMENT_9",
+   "name": "Solstice Power",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1244090/0d2eb36970486cf67bf503a03875e0f8b3c611b4.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Sea of Stars: Sunset Edition",
+   "achievements": [
+    {
+     "apiname": "SOS_ACHIEVEMENT_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boss Slugged",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No, wait!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stretch Quest",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Now give me that!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dweller of Woe",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who would have thought?",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yo, Ho!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Home sweet home",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Solstice Power",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dweller of Torment",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Detritus Fallen",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "And stay down, too!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dweller of Strife",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fight fire with lunar",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Warrior Cook",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who would have thought? Part 2",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chin up!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Featherweight",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Enter the Artificer",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dweller of Dread",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lieupedant",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clockwork Champion",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wholesome Food",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Better off dead",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hey, that's a reskin!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elder Dissed",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glassdiator",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Free from serviduke",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Home Neat Home",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Conch Master",
+     "description": "Bring all Conches to Mirna in Docarri Village"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Angler",
+     "description": "Catch every fish species at least once"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Living Encyclopedia",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "New Garl +",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No God of mine",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bouncy",
+     "description": "Bounce a Moonerang 25 times in a row"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lock's Myth",
+     "description": "Break a total 50 locks in battle"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What a technique!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gustative Completion",
+     "description": "Cook every recipe at least once"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "To the teeth",
+     "description": "Unlock all combos"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well read (to)",
+     "description": "Listen to all of the campfire stories"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Measure Hunter",
+     "description": "Find every single treasure"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Me day",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Turtle Power",
+     "description": "Do a team Timed Block with three players"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Verifying Glass",
+     "description": "Reveal a lock by either breaking it or using a special move with the scan function"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Team Power",
+     "description": "Do a team Timed Hit or Block"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Down Low",
+     "description": "Try all high-five combinations"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fishing Trip",
+     "description": "Catch at least one fish with each character"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm walking here!",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Marquee Star",
+     "description": "Unlock all skills and combos for circus classes"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Carnival Culinarian",
+     "description": "Cook each of the five Horloge recipes at least once"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Warlocked",
+     "description": "Beat all of Horloge's Wheels champions"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unrivaled Wonder",
+     "description": "Earn top rank in all three of Horloge's minigames"
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clockworkn't",
+     "description": ""
+    },
+    {
+     "apiname": "SOS_ACHIEVEMENT_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What doth it meanst?",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

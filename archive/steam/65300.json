@@ -1,0 +1,38 @@
+{
+ "provider": "steam",
+ "title": "Dustforce",
+ "updated": "2026-08-30",
+ "id": "65300",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 1,
+ "platform": "PC",
+ "icon": "7823652dcb6b11c024003ec590c17f461637c66f",
+ "playtime_mins": 7,
+ "last_played": "2014-06-22",
+ "achievements": [
+  {
+   "key": "NEW_ACHIEVEMENT_2_0",
+   "name": "Double S+",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/65300/3bbda8958c1ac47678c54e70cd414a52b8a5db81.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Dustforce",
+   "achievements": [
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Double S+",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

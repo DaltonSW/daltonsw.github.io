@@ -1,0 +1,912 @@
+{
+ "provider": "steam",
+ "title": "Beat Hazard",
+ "updated": "2026-08-30",
+ "id": "49600",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 3,
+ "total": 63,
+ "first": "2014-03-22",
+ "last": "2015-07-29",
+ "platform": "PC",
+ "icon": "2eec97f6dc441691097d3e14f39e2550059b90ee",
+ "playtime_mins": 42,
+ "last_played": "2015-07-29",
+ "achievements": [
+  {
+   "key": "NEW_ACHIEVEMENT_1_8",
+   "name": "1st Track Cleared",
+   "description": "Complete your first track",
+   "unlocked": true,
+   "date": "2014-03-22T16:50:37-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/cf81c3e387da3d754d66d920ed990ec7ba9aefb4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_12",
+   "name": "The First Step",
+   "description": "Level up",
+   "unlocked": true,
+   "date": "2014-03-22T16:50:43-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/0544ae10d1fe285e4c07c80dfd48851d3bc52225.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_0",
+   "name": "Perfect",
+   "description": "Complete a track of at least 3 minutes without losing a life",
+   "unlocked": true,
+   "date": "2015-07-29T22:35:20-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ced539e3b38117d40169cb10cbbb411e4d1d34b5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_1",
+   "name": "Don't Panic",
+   "description": "Don't fire for 60 seconds",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/c9bb3b01d28a3ca1ac13c9bbf1bbd0837a51fe25.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_10",
+   "name": "50!",
+   "description": "Complete 50 tracks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/eb657a1f644aa16d6baeb6ae67f0438d13a06759.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_11",
+   "name": "100!",
+   "description": "Complete 100 tracks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/4ae7e4aca8abc5eba1cdc7c39346fb2681c34718.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_13",
+   "name": "Half Way There",
+   "description": "Reach the rank of Senior Officer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/f7b95e7fcf651bea239df14fcb589776c1c9be92.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_14",
+   "name": "Elite!",
+   "description": "Reach the rank of Elite",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/0d29d92381bf39889a3b3463147bb267a8a99e4a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_15",
+   "name": "The First Hour",
+   "description": "Accumulate 1 hour of play",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/b9f78f8fde0df49e98785736834a67b8e49002f2.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_16",
+   "name": "High 5",
+   "description": "Accumulate 5 hours of play",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/f0f744d63d4b09f439726f9b7ec3bde0eb7cd1c8.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_17",
+   "name": "Veteran",
+   "description": "Accumulate 10 hours of play",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/b8955a9d572e41409538302959e4d7784fbbb000.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_18",
+   "name": "Millionare",
+   "description": "Score 1 Million Points",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/265651b094ac0c23ac9eba7c1fb0371e91bdde13.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_19",
+   "name": "Muti Millionare",
+   "description": "Score 5 Million Points",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/187271ed20be9a2f867caacf2b96e6a31eaeb90b.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_2",
+   "name": "x100",
+   "description": "Get a x100 Multiplier",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/bc988fc5a85a4380021a368bf9aeca02ef248549.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_20",
+   "name": "Dude of Hazard",
+   "description": "Score 10 Million Points",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/7eaa54045f3aab794f7f9b1c46627b94cf5d0d34.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_21",
+   "name": "I'm Just Starting",
+   "description": "Reach 5 Minutes in Survival Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/07b181eb89e2e85f8a1c77839a0dcb1c0bb4f22a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_22",
+   "name": "Don't Stop Me Now",
+   "description": "Reach 10 Minutes in Survival Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/d52145b84c84f68ff12d8783337a24b303e76330.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_23",
+   "name": "Coming Through!",
+   "description": "Reach 15 Minutes in Survival Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/79d95e6bf8b6134780ef2e941280325b9a4c5f99.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_24",
+   "name": "Survival Champion!",
+   "description": "Reach 20 Minutes in Survival Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/167065046bf42fd6d4d15aaa942a8092965f6d9f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_25",
+   "name": "Perks!",
+   "description": "Unlock all the Perks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/a213ddadaa0a9da2e4e548aca2cf79b6b879ba9d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_26",
+   "name": "Perk MAXED",
+   "description": "Buy all the upgrades for a Perk",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/539ef77e1c16dd8283374122cbe9ee60af71f635.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_27",
+   "name": "Mad MAXED",
+   "description": "Max out all the Perks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/a1d9ef2531b66a3db409440f953c6930e1911e4d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_28",
+   "name": "Cash Grab",
+   "description": "Get $10,000 in the bank",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/c3be9d73c26de44a3558f431c2c5352260fa1f45.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_29",
+   "name": "Completely Insane",
+   "description": "Complete a 4+ minute track on Insane difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/c48169df919f5537a347c4fbd2d89643c4c89986.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_3",
+   "name": "Boss Slayer",
+   "description": "Kill 8 bosses in 1 game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/72ba821a14ec646c24d49266d8009fd2814ab543.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_30",
+   "name": "Tough Guy",
+   "description": "Complete a 4+ minute track on Suicidal difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/d3cc7012a6f9257100fb2f19ed4075dc3ad90a22.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_31",
+   "name": "Death By A Thousand Cuts",
+   "description": "Get 10,000 kills using Micro Missiles",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/8e49e7eedd4c06f2877e8672bc91e7ce1698ff2a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_4",
+   "name": "Brutal Boss Kill",
+   "description": "Kill a boss before it fires",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/25ae7af3eb530bcd5527b3c04d384f2eae93a550.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_5",
+   "name": "Pwnage",
+   "description": "Get a 1,000 kill streak",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/9c5a77bafea6c0f50bf6b5cc62f3ebf2b589df66.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_6",
+   "name": "A Real Dare Devil",
+   "description": "In Normal Mode get the Dare Devil multiplier 10 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ab3b6a26e43979e9f795fe494c4eaee7cb082d8f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_7",
+   "name": "Go Platinum",
+   "description": "In Normal Mode score 1 million points in one track",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/3f23bb6a396d580942d82cb8a0e834df5a61cda2.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_9",
+   "name": "25!",
+   "description": "Complete 25 tracks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/99fde593893011bb46624d2fba35e71022bc5803.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_0",
+   "name": "Death Star",
+   "description": "Get 10,000 kills using the Ultra Beam power up",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ad5f51088e367bbc77616c6d66db0d52c19437e4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_1",
+   "name": "Untouchable",
+   "description": "Reflect 10,000 projectiles using the Reflect Shield power up",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/bb9881b863c98112768aa6cfaee0bb08a8cf4bc0.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_10",
+   "name": "Striptease",
+   "description": "Strip 2 bosses of their turrets and keep them alive for 60s",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/75252c7e69635fccbf17b4c9484ca49e52de1a3d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_11",
+   "name": "Survive Christmas 5",
+   "description": "In Survival Mode last 5 mins while playing to a Christmas Radio Station",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/7194a302ac2d1500ac282e0e06ac428312285479.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_12",
+   "name": "Survive Christmas 10",
+   "description": "In Survival Mode last 10 mins while playing to a Christmas Radio Station",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/c897865f90bff0400408494d8de7950bc356c7c3.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_13",
+   "name": "Survive Christmas 15",
+   "description": "In Survival Mode last 15 mins while playing to a Christmas Radio Station",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/c5acdeb22e01a6b97fbecff67ed22cbffa7a4570.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_14",
+   "name": "Survive Christmas 20",
+   "description": "In Survival Mode last 20 mins while playing to a Christmas Radio Station",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/bed2d55692f684a56d20e3a98833f31f81388663.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_2",
+   "name": "Ultra Beam of Death",
+   "description": "Kill 150 enemies with 1 Ultra Beam blast",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ba3fc75fb75dad4650d7c54a5bb262f7b39423fe.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_3",
+   "name": "Reflection",
+   "description": "Reflect 150 projectiles with 1 Shield burst",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/3e17b0b96108f465cfd115402790fc5518bc3b18.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_4",
+   "name": "Cool Tracks!",
+   "description": "Visit a musicians website from the Credits screen",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/3039a3aa89e6301446c96a51bcb26ba2e6c246a7.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_5",
+   "name": "Music Tour",
+   "description": "Score at least 1,000,000 on each built in track",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/d1d781376f288e29407ae9ed7f57fff32f43450e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_6",
+   "name": "A Real Mine Sweeper",
+   "description": "Hit 50 mines in one track without losing a life",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/5d2114c6a3369a3c04850c605292bf0812d1f5ea.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_7",
+   "name": "Tug of War",
+   "description": "Have a 10 second tug of war with a Stalker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ce442bd2b4ac4df0f17bbec56fa1b872e94882af.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_8",
+   "name": "Boss Dance",
+   "description": "Survive with 4 bosses on the screen in Boss Rush mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/e8d3b7386bfcea86947c7ec179da15b445f0bc66.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_9",
+   "name": "Boss King",
+   "description": "Get to Wave 30 in Boss Rush mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/fdd15524365e4fae478f0b6e5b7389cfe09ced1e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_Collector",
+   "name": "The Collector Shadow Mission",
+   "description": "Complete The Collector Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/5d3be33962249edaa114ae2cb53590b24167e1a8.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_DeathBlossom",
+   "name": "Death Blossom Shadow Mission",
+   "description": "Complete The Death Blossom Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/de85535830378f64b9140c77261551a0aff8d63a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_DragonFire",
+   "name": "Dragon Fire Shadow Mission",
+   "description": "Complete The Dragon Fire Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/c0687ee2e52eec89bcdd0872ca4add8b4ad4679d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_Juggernaut",
+   "name": "Juggernaut Shadow Mission",
+   "description": "Complete  The Juggernaut Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/ee14c61fcc04b65e32f8cd0b8268fd59cff20b8a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_Mosquito",
+   "name": "Mosquito Shadow Mission",
+   "description": "Complete  The Mosquito Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/a7a44b29815ffa77b929ef8c83ddb5c494697a17.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_Razorburn",
+   "name": "Razorburn Shadow Mission",
+   "description": "Complete The Razorburn Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/e2f062d3b58c6065f1fb9629f27c54d2ff8b6bd5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank1",
+   "name": "Shadow Rank Rookie",
+   "description": "Level up to Shadow Rookie",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/615fca9b2e77c98b16c5e0341f9c5d7352599600.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank2",
+   "name": "Shadow Rank Operative",
+   "description": "Level up to Shadow Operative",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/8851f181b16cc13676d8a5c9d6a9afaef0bb3ae1.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank3",
+   "name": "Shadow Rank Covert Agent",
+   "description": "Level up to Shadow Covert Agent",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/d0506ed8c659d1dcfc851b5b4b75b05d6916a09e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank4",
+   "name": "Shadow Rank Shadow Officer",
+   "description": "Level up to Shadow Officer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/02eae0a7fac5a7f8a304bd40770bbe8236fb3dba.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank5",
+   "name": "Shadow Rank Shadow Captain",
+   "description": "Level up to Shadow Captain",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/6761103cb2a2c54d0584863953a1ce83ea78bcd5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank6",
+   "name": "Shadow Rank Shadow Commander",
+   "description": "Level up to Shadow Commander",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/68f25d192bea88bfb8b42e9b18b1f45bee638036.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_SRank7",
+   "name": "Shadow Rank Shadow Force Elite",
+   "description": "Level up to Shadow Force Elite",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/0b4d61e7fbb4433cc2f5c2b37d9887347ad62423.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_Slick",
+   "name": "Slick Shadow Mission",
+   "description": "Complete  The Slick Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/9ca11263ac30920970ca703b9ea0f7245c22f329.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_Speedy",
+   "name": "Speedy Shadow Mission",
+   "description": "Complete  The Speedy Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/430c971b822439c87b3a11010cc8a81c2fe6cd9b.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_StarRunner",
+   "name": "Star Runner Shadow Mission",
+   "description": "Complete The Star Runner Shadow Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/49600/98548d8b31671fc7b9be0bdf7f2e22186fe1f9fc.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Beat Hazard",
+   "achievements": [
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_0",
+     "achieved": 1,
+     "unlocktime": 1438227320,
+     "name": "Perfect",
+     "description": "Complete a track of at least 3 minutes without losing a life"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't Panic",
+     "description": "Don't fire for 60 seconds"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "x100",
+     "description": "Get a x100 Multiplier"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boss Slayer",
+     "description": "Kill 8 bosses in 1 game"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brutal Boss Kill",
+     "description": "Kill a boss before it fires"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pwnage",
+     "description": "Get a 1,000 kill streak"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Real Dare Devil",
+     "description": "In Normal Mode get the Dare Devil multiplier 10 times"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go Platinum",
+     "description": "In Normal Mode score 1 million points in one track"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_8",
+     "achieved": 1,
+     "unlocktime": 1395525037,
+     "name": "1st Track Cleared",
+     "description": "Complete your first track"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "25!",
+     "description": "Complete 25 tracks"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "50!",
+     "description": "Complete 50 tracks"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "100!",
+     "description": "Complete 100 tracks"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_12",
+     "achieved": 1,
+     "unlocktime": 1395525043,
+     "name": "The First Step",
+     "description": "Level up"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Half Way There",
+     "description": "Reach the rank of Senior Officer"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elite!",
+     "description": "Reach the rank of Elite"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The First Hour",
+     "description": "Accumulate 1 hour of play"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "High 5",
+     "description": "Accumulate 5 hours of play"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Veteran",
+     "description": "Accumulate 10 hours of play"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Millionare",
+     "description": "Score 1 Million Points"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Muti Millionare",
+     "description": "Score 5 Million Points"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dude of Hazard",
+     "description": "Score 10 Million Points"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm Just Starting",
+     "description": "Reach 5 Minutes in Survival Mode"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't Stop Me Now",
+     "description": "Reach 10 Minutes in Survival Mode"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coming Through!",
+     "description": "Reach 15 Minutes in Survival Mode"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survival Champion!",
+     "description": "Reach 20 Minutes in Survival Mode"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perks!",
+     "description": "Unlock all the Perks"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perk MAXED",
+     "description": "Buy all the upgrades for a Perk"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mad MAXED",
+     "description": "Max out all the Perks"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cash Grab",
+     "description": "Get $10,000 in the bank"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Completely Insane",
+     "description": "Complete a 4+ minute track on Insane difficulty"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tough Guy",
+     "description": "Complete a 4+ minute track on Suicidal difficulty"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death By A Thousand Cuts",
+     "description": "Get 10,000 kills using Micro Missiles"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death Star",
+     "description": "Get 10,000 kills using the Ultra Beam power up"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Untouchable",
+     "description": "Reflect 10,000 projectiles using the Reflect Shield power up"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ultra Beam of Death",
+     "description": "Kill 150 enemies with 1 Ultra Beam blast"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reflection",
+     "description": "Reflect 150 projectiles with 1 Shield burst"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cool Tracks!",
+     "description": "Visit a musicians website from the Credits screen"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Music Tour",
+     "description": "Score at least 1,000,000 on each built in track"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Real Mine Sweeper",
+     "description": "Hit 50 mines in one track without losing a life"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tug of War",
+     "description": "Have a 10 second tug of war with a Stalker"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boss Dance",
+     "description": "Survive with 4 bosses on the screen in Boss Rush mode"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boss King",
+     "description": "Get to Wave 30 in Boss Rush mode"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Striptease",
+     "description": "Strip 2 bosses of their turrets and keep them alive for 60s"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survive Christmas 5",
+     "description": "In Survival Mode last 5 mins while playing to a Christmas Radio Station"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survive Christmas 10",
+     "description": "In Survival Mode last 10 mins while playing to a Christmas Radio Station"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survive Christmas 15",
+     "description": "In Survival Mode last 15 mins while playing to a Christmas Radio Station"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survive Christmas 20",
+     "description": "In Survival Mode last 20 mins while playing to a Christmas Radio Station"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_Razorburn",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Razorburn Shadow Mission",
+     "description": "Complete The Razorburn Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_DragonFire",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dragon Fire Shadow Mission",
+     "description": "Complete The Dragon Fire Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_Collector",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Collector Shadow Mission",
+     "description": "Complete The Collector Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_Speedy",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speedy Shadow Mission",
+     "description": "Complete  The Speedy Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_Slick",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slick Shadow Mission",
+     "description": "Complete  The Slick Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_Mosquito",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mosquito Shadow Mission",
+     "description": "Complete  The Mosquito Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_DeathBlossom",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death Blossom Shadow Mission",
+     "description": "Complete The Death Blossom Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_Juggernaut",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Juggernaut Shadow Mission",
+     "description": "Complete  The Juggernaut Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_StarRunner",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star Runner Shadow Mission",
+     "description": "Complete The Star Runner Shadow Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Rookie",
+     "description": "Level up to Shadow Rookie"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Operative",
+     "description": "Level up to Shadow Operative"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Covert Agent",
+     "description": "Level up to Shadow Covert Agent"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Shadow Officer",
+     "description": "Level up to Shadow Officer"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Shadow Captain",
+     "description": "Level up to Shadow Captain"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Shadow Commander",
+     "description": "Level up to Shadow Commander"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_SRank7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shadow Rank Shadow Force Elite",
+     "description": "Level up to Shadow Force Elite"
+    }
+   ],
+   "success": true
+  }
+ }
+}

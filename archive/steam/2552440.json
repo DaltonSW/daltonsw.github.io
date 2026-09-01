@@ -1,0 +1,989 @@
+{
+ "provider": "steam",
+ "title": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue",
+ "updated": "2026-08-30",
+ "id": "2552440",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 69,
+ "platform": "PC",
+ "icon": "14671268cde89a299b7d0b45f364ef84bb27eb54",
+ "achievements": [
+  {
+   "key": "ACH_01",
+   "name": "Wandering in the Dark",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/c8dfd72ad54bf93512ad16b52a96fbcb9422b5ac.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_02",
+   "name": "Flow of Time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/fdcee062a6e09c5ec98fd85bdb6982ba48753a16.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_03",
+   "name": "False Temptations",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/27cf44e21c6310c881ba808b125df48c682053d2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_04",
+   "name": "Real or Illusion?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/8c8f1bf8e1831a9cdacb85a51112c1b41edef7b2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_05",
+   "name": "Into the Depths of Darkness",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/b2e7c95db7faa36121fcd496fb82e0b39e86817d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_06",
+   "name": "Treasure Hunter",
+   "description": "Open all treasure chests in the Dark World.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/efe8e74ee8b3792b910f8163dfdbbe3d3f075950.jpg"
+  },
+  {
+   "key": "ACH_07",
+   "name": "Ambitious",
+   "description": "Complete all objectives.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ac707a3cd52b1f7a42cc5afc423745bad40643e4.jpg"
+  },
+  {
+   "key": "ACH_08",
+   "name": "Undefeated",
+   "description": "Complete the story without having to Retry or Continue after being defeated.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/21d71b8ff902c89def14f0b5522d8728542ae66e.jpg"
+  },
+  {
+   "key": "ACH_09",
+   "name": "Heartless Hunter",
+   "description": "Defeat 500 Heartless.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/4b30d715c184b56b37a09e9d2e16551725ef7493.jpg"
+  },
+  {
+   "key": "ACH_10",
+   "name": "Ice Queen",
+   "description": "Execute Spellweaver's Finish command 5 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ab6098059b6d4013cdea3efd034f764af6015b4f.jpg"
+  },
+  {
+   "key": "ACH_11",
+   "name": "Proud Player/Critical Competitor",
+   "description": "Complete the game in Proud or Critical Mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/1a68f6f3cb5763ef73abf26b2b6f98ad000f86da.jpg"
+  },
+  {
+   "key": "ACH_12",
+   "name": "A Magical Finale",
+   "description": "Execute all Magic Situation Commands.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/eaca4d98250337489fe20b2ecd311c3569716653.jpg"
+  },
+  {
+   "key": "ACH_13",
+   "name": "Shotlock Star",
+   "description": "Earn an Excellent rating in Shotlock.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/1d150236b06167db3723e7b65dacc4ef3b25d46c.jpg"
+  },
+  {
+   "key": "ACH_14",
+   "name": "Dark Explorer",
+   "description": "Walk a long distance within a single map.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/5404b9f30d9c08678636e07b4e996b36dad85d0c.jpg"
+  },
+  {
+   "key": "ACH_15",
+   "name": "Fashionista",
+   "description": "Equip an item in all wardrobe slots.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/0555da178bec9f13395406d2c7831d4c5f218b02.jpg"
+  },
+  {
+   "key": "ACH_16",
+   "name": "Record Keeper",
+   "description": "Achieve 100% completion in Combat, Story, Items, and Game Records.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/8f8f21cd25013dbba07c8c2a8a6f11347061a46b.jpg"
+  },
+  {
+   "key": "ACH_17",
+   "name": "Star Combatant",
+   "description": "Achieve 100% completion in Combat.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ede5162d0704229e4588552907cff2da4de71a61.jpg"
+  },
+  {
+   "key": "ACH_18",
+   "name": "Storyteller",
+   "description": "Achieve 100% completion in Story.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/2b19d306a1e77b032a0093337b252ec2c5b6d176.jpg"
+  },
+  {
+   "key": "ACH_19",
+   "name": "Item Collector",
+   "description": "Achieve 100% completion in Items.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/eb0e881e5536c10258b75d56edd69a2c1ae1ec54.jpg"
+  },
+  {
+   "key": "ACH_20",
+   "name": "Level Masters",
+   "description": "Achieve a cumulative level of 100.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/2bd57cdcce9fd1ed3fdde2502024dfd75d78036b.jpg"
+  },
+  {
+   "key": "ACH_21",
+   "name": "Droplet Magnet",
+   "description": "Rack up 300 or more Drop Points in a single turn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/74c31327741d49df9fd98372314db63a1de12fa2.jpg"
+  },
+  {
+   "key": "ACH_22",
+   "name": "Dream Dropper",
+   "description": "Drop 100 or more times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/b0dba92a463cffc4bb2a82d54b8a2f2e27146051.jpg"
+  },
+  {
+   "key": "ACH_23",
+   "name": "Deft Diver",
+   "description": "Complete a dive without taking damage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/4b2c749c76924ccdff33e1b745166ea73862b2d8.jpg"
+  },
+  {
+   "key": "ACH_24",
+   "name": "Ace Diver",
+   "description": "Perform an A-Rank dive.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/99a1c3decd9ae7a8d69efb472f8c56da3d241881.jpg"
+  },
+  {
+   "key": "ACH_25",
+   "name": "Loyal Customer",
+   "description": "Make a purchase at every Moogle Shop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/941e1fb44367131dd4654ba63d063c6a0bff8082.jpg"
+  },
+  {
+   "key": "ACH_26",
+   "name": "Command Collector",
+   "description": "Obtain all commands.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/858d43300f51d2871004eec31d72407107630874.jpg"
+  },
+  {
+   "key": "ACH_27",
+   "name": "Recipe Collector",
+   "description": "Obtain all recipes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/13580c7eddf579583520c3d353e1f25eefd3fc7d.jpg"
+  },
+  {
+   "key": "ACH_28",
+   "name": "Dream Piece Collector",
+   "description": "Obtain all Dream Pieces.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/a62dee352934c0794e8c3c4ade36243e2e7df2c2.jpg"
+  },
+  {
+   "key": "ACH_29",
+   "name": "Mark of Mastery",
+   "description": "Defeat the phantom Ursula and begin the Mark of Mastery exam.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/b8a9fe1cf59314202d575365a258f0d39a58d68c.jpg"
+  },
+  {
+   "key": "ACH_30",
+   "name": "A Divided World",
+   "description": "Complete Traverse Town as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ff3086e75da0676b57b179a4f31a8e67c22365ef.jpg"
+  },
+  {
+   "key": "ACH_31",
+   "name": "Dark Intervention",
+   "description": "Complete La Cité des Cloches as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/675d59e5ff18e77dfa6c6af79a01e6bde09270b1.jpg"
+  },
+  {
+   "key": "ACH_32",
+   "name": "Memory and Heart",
+   "description": "Complete The Grid as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/eefe50225913414247c15538f37fc188fab5f16e.jpg"
+  },
+  {
+   "key": "ACH_33",
+   "name": "Inhabitants of the Sleeping Worlds",
+   "description": "Complete Prankster's Paradise as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/70068e68f51a26d533b73a5a245d09ad50c54399.jpg"
+  },
+  {
+   "key": "ACH_34",
+   "name": "Distinct Worlds",
+   "description": "Revisit and complete Traverse Town as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/4d7938a45fed1d55c262e1d5848f4321c9500473.jpg"
+  },
+  {
+   "key": "ACH_35",
+   "name": "All for One, and One for All",
+   "description": "Complete Country of the Musketeers as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/b61bca2d396566d75b6f925918df99c2fee1ce06.jpg"
+  },
+  {
+   "key": "ACH_36",
+   "name": "A Sound Idea",
+   "description": "Complete Symphony of Sorcery as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/7525f242630f74777981b667e4ad8ca1ef07d329.jpg"
+  },
+  {
+   "key": "ACH_37",
+   "name": "The Depths of Darkness",
+   "description": "Complete The World That Never Was as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/f140ea589a2d9ec03dd5f1212c82044b9b10f862.jpg"
+  },
+  {
+   "key": "ACH_38",
+   "name": "Nostalgic",
+   "description": "View all flashbacks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/dde9341ac636d4fccc3c7573bcf7b0578c95a8f6.jpg"
+  },
+  {
+   "key": "ACH_39",
+   "name": "Flick Rush Fever",
+   "description": "Achieve a Rush Level of 20.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/010f33d3679d39d9247a669ad3fe9ebc5053abf0.jpg"
+  },
+  {
+   "key": "ACH_40",
+   "name": "Medal Master",
+   "description": "Obtain 3,000 or more medals in Flick Rush.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/c6a6b8985cfff04cf2312b439d7c1c1da2d26361.jpg"
+  },
+  {
+   "key": "ACH_41",
+   "name": "Lucky Seven",
+   "description": "Win a Flick Rush duel by lining up three 7s.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/4554abdc7158097fa58f34f93d76ee27c125a40c.jpg"
+  },
+  {
+   "key": "ACH_42",
+   "name": "Super Cyclist",
+   "description": "Earn a score of 1,000 or higher on the Light Cycle.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/fed49ffb1b3d16128b6aceda5d8c89ffcc309fa4.jpg"
+  },
+  {
+   "key": "ACH_43",
+   "name": "Balloon Master",
+   "description": "Earn a score of 200 or higher in the Balloon mini-game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/2ed8a0a35905951b8ac34d2145205040705fc2aa.jpg"
+  },
+  {
+   "key": "ACH_44",
+   "name": "Water Barrel Master",
+   "description": "Earn a score of 400 or higher in the Water Barrel mini-game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/34250737ae047e3f72a708e29517b195a5d0f6ae.jpg"
+  },
+  {
+   "key": "ACH_45",
+   "name": "Candy Goggles Master",
+   "description": "Earn a score of 800 or higher in the Candy Goggles mini-game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/37dfb4d3c821137d5c638353f5afdac3dac80b3c.jpg"
+  },
+  {
+   "key": "ACH_46",
+   "name": "Easy as 1-2-3",
+   "description": "Create a party with 3 Spirits.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/c76fc60c3445f05277e8f233a76f56ec2f087c4b.jpg"
+  },
+  {
+   "key": "ACH_47",
+   "name": "True Trainer",
+   "description": "Use every Training Toy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/3a17f89261c2129a7a9317b1611d64a8adc10822.jpg"
+  },
+  {
+   "key": "ACH_48",
+   "name": "Happy Campers",
+   "description": "Create a party with 3 Spirits and make them all very happy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/d8b495f768d0269c98cfe5510f44c3a1ce951f20.jpg"
+  },
+  {
+   "key": "ACH_49",
+   "name": "Kindred Spirits",
+   "description": "Max out a Spirit's Affinity Level.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/088c54108edb59bdbca6a5ed882daeffba901190.jpg"
+  },
+  {
+   "key": "ACH_50",
+   "name": "Golden Egg",
+   "description": "Breed a ★ Rank Spirit.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/1a82ddcdaed9fb8d294baad1f68235849bc9c0a1.jpg"
+  },
+  {
+   "key": "ACH_51",
+   "name": "Strongest Link",
+   "description": "Unlock all nodes on any Spirit's Ability Link board.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ef9e24d09afc4fc92ac78f77f854c3bde3d39565.jpg"
+  },
+  {
+   "key": "ACH_52",
+   "name": "Lifesaver",
+   "description": "Rescue Spirits 3 times in battle.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ee5282522efc627981cc7a5102331c50f4a1a2b8.jpg"
+  },
+  {
+   "key": "ACH_53",
+   "name": "Ability Ace",
+   "description": "Max out and install all Support and Spirits abilities.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/4d1fa66179ef5d6561447fd84c3b6fb47709ad51.jpg"
+  },
+  {
+   "key": "ACH_54",
+   "name": "Bull's-Eye",
+   "description": "Defeat 5 or more enemies with a single hit in Slingshot.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/d1205898e94b47bbbdb19ad01be672b0d92e7093.jpg"
+  },
+  {
+   "key": "ACH_55",
+   "name": "Sliding By",
+   "description": "Connect 6 or more points with a single Faithline.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/f6a73972026570c6de79ba9955db576144c90588.jpg"
+  },
+  {
+   "key": "ACH_56",
+   "name": "Super Hacker",
+   "description": "Activate all Code Break commands.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/4888447237cd06cf00decfc8c3403222d60bb0ff.jpg"
+  },
+  {
+   "key": "ACH_57",
+   "name": "Bubble Burster",
+   "description": "Trap 6 or more enemies in Bubble Burst.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/b6a35583cf385911bf207217687db967a3d00785.jpg"
+  },
+  {
+   "key": "ACH_58",
+   "name": "Comic King",
+   "description": "Activate all of Wonder Comic's effects at least once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/2d888e954830ef099e9413dc9f6e9931fea58635.jpg"
+  },
+  {
+   "key": "ACH_59",
+   "name": "Maestro",
+   "description": "Defeat 4 or more enemies in one turn of Melody Catcher.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/5c66136fb1ef52e6bcb9634caf48cc27ace35669.jpg"
+  },
+  {
+   "key": "ACH_60",
+   "name": "Chain Reaction",
+   "description": "Sever all chains with a single slash 3 times in a row using Nightmare's End or Mirage Split.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/230a49081f756d3510e386cb7ffbbe36dcb34fa9.jpg"
+  },
+  {
+   "key": "ACH_61",
+   "name": "Champions of All Districts",
+   "description": "Complete all Special Portals in Traverse Town as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/10b070a0086fa5d62bb3696705605fde3a898312.jpg"
+  },
+  {
+   "key": "ACH_62",
+   "name": "Champions of the Cathedral",
+   "description": "Complete all Special Portals in La Cité des Cloches as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/2f158bd673d60fc082c9cdd0d6ea37a370a314c4.jpg"
+  },
+  {
+   "key": "ACH_63",
+   "name": "Champions of the Digital World",
+   "description": "Complete all Special Portals in The Grid as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/fda6be9067173b5a16cf248a0a256a864ccf9232.jpg"
+  },
+  {
+   "key": "ACH_64",
+   "name": "Champions of the Endless Ocean",
+   "description": "Complete all Special Portals in Prankster's Paradise as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/f65eeb7a2327e45759de1249e4de54e1f4ee1588.jpg"
+  },
+  {
+   "key": "ACH_65",
+   "name": "Champions of the Opéra House",
+   "description": "Complete all Special Portals in Country of the Musketeers as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ebe13af8a4d0f4b4336a5bf67e7253773ec5a5dd.jpg"
+  },
+  {
+   "key": "ACH_66",
+   "name": "Champions of the Harmonic Score",
+   "description": "Complete all Special Portals in Symphony of Sorcery as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/ce2e363ce06ffd85e2bc82cd08a45655defc4e85.jpg"
+  },
+  {
+   "key": "ACH_67",
+   "name": "Champions of the Dark City",
+   "description": "Complete all Special Portals in The World That Never Was as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/8b1ef856080bd739592a0d55b1b3c01ffa2c589d.jpg"
+  },
+  {
+   "key": "ACH_68",
+   "name": "Brave Challengers",
+   "description": "Complete all 7 Link Portal bonus objectives.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/d344c0f82815b72bb96b9a2d4db86d573c09508b.jpg"
+  },
+  {
+   "key": "ACH_69",
+   "name": "Seekers of Secrets",
+   "description": "Complete all Secret Portals as both Sora and Riku.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/eb5a33df75637471ca6875fa263a65f6b0e8fbc8.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue",
+   "achievements": [
+    {
+     "apiname": "ACH_01",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wandering in the Dark",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_02",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flow of Time",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_03",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "False Temptations",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_04",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Real or Illusion?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_05",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Into the Depths of Darkness",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_06",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Treasure Hunter",
+     "description": "Open all treasure chests in the Dark World."
+    },
+    {
+     "apiname": "ACH_07",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ambitious",
+     "description": "Complete all objectives."
+    },
+    {
+     "apiname": "ACH_08",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Undefeated",
+     "description": "Complete the story without having to Retry or Continue after being defeated."
+    },
+    {
+     "apiname": "ACH_09",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heartless Hunter",
+     "description": "Defeat 500 Heartless."
+    },
+    {
+     "apiname": "ACH_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ice Queen",
+     "description": "Execute Spellweaver's Finish command 5 times."
+    },
+    {
+     "apiname": "ACH_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Proud Player/Critical Competitor",
+     "description": "Complete the game in Proud or Critical Mode."
+    },
+    {
+     "apiname": "ACH_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Magical Finale",
+     "description": "Execute all Magic Situation Commands."
+    },
+    {
+     "apiname": "ACH_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shotlock Star",
+     "description": "Earn an Excellent rating in Shotlock."
+    },
+    {
+     "apiname": "ACH_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dark Explorer",
+     "description": "Walk a long distance within a single map."
+    },
+    {
+     "apiname": "ACH_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fashionista",
+     "description": "Equip an item in all wardrobe slots."
+    },
+    {
+     "apiname": "ACH_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Record Keeper",
+     "description": "Achieve 100% completion in Combat, Story, Items, and Game Records."
+    },
+    {
+     "apiname": "ACH_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star Combatant",
+     "description": "Achieve 100% completion in Combat."
+    },
+    {
+     "apiname": "ACH_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Storyteller",
+     "description": "Achieve 100% completion in Story."
+    },
+    {
+     "apiname": "ACH_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Item Collector",
+     "description": "Achieve 100% completion in Items."
+    },
+    {
+     "apiname": "ACH_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Level Masters",
+     "description": "Achieve a cumulative level of 100."
+    },
+    {
+     "apiname": "ACH_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Droplet Magnet",
+     "description": "Rack up 300 or more Drop Points in a single turn."
+    },
+    {
+     "apiname": "ACH_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dream Dropper",
+     "description": "Drop 100 or more times."
+    },
+    {
+     "apiname": "ACH_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deft Diver",
+     "description": "Complete a dive without taking damage."
+    },
+    {
+     "apiname": "ACH_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ace Diver",
+     "description": "Perform an A-Rank dive."
+    },
+    {
+     "apiname": "ACH_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Loyal Customer",
+     "description": "Make a purchase at every Moogle Shop."
+    },
+    {
+     "apiname": "ACH_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Command Collector",
+     "description": "Obtain all commands."
+    },
+    {
+     "apiname": "ACH_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Recipe Collector",
+     "description": "Obtain all recipes."
+    },
+    {
+     "apiname": "ACH_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dream Piece Collector",
+     "description": "Obtain all Dream Pieces."
+    },
+    {
+     "apiname": "ACH_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mark of Mastery",
+     "description": "Defeat the phantom Ursula and begin the Mark of Mastery exam."
+    },
+    {
+     "apiname": "ACH_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Divided World",
+     "description": "Complete Traverse Town as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dark Intervention",
+     "description": "Complete La Cité des Cloches as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Memory and Heart",
+     "description": "Complete The Grid as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inhabitants of the Sleeping Worlds",
+     "description": "Complete Prankster's Paradise as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Distinct Worlds",
+     "description": "Revisit and complete Traverse Town as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All for One, and One for All",
+     "description": "Complete Country of the Musketeers as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Sound Idea",
+     "description": "Complete Symphony of Sorcery as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Depths of Darkness",
+     "description": "Complete The World That Never Was as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nostalgic",
+     "description": "View all flashbacks."
+    },
+    {
+     "apiname": "ACH_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flick Rush Fever",
+     "description": "Achieve a Rush Level of 20."
+    },
+    {
+     "apiname": "ACH_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Medal Master",
+     "description": "Obtain 3,000 or more medals in Flick Rush."
+    },
+    {
+     "apiname": "ACH_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucky Seven",
+     "description": "Win a Flick Rush duel by lining up three 7s."
+    },
+    {
+     "apiname": "ACH_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Super Cyclist",
+     "description": "Earn a score of 1,000 or higher on the Light Cycle."
+    },
+    {
+     "apiname": "ACH_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Balloon Master",
+     "description": "Earn a score of 200 or higher in the Balloon mini-game."
+    },
+    {
+     "apiname": "ACH_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Water Barrel Master",
+     "description": "Earn a score of 400 or higher in the Water Barrel mini-game."
+    },
+    {
+     "apiname": "ACH_45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Candy Goggles Master",
+     "description": "Earn a score of 800 or higher in the Candy Goggles mini-game."
+    },
+    {
+     "apiname": "ACH_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Easy as 1-2-3",
+     "description": "Create a party with 3 Spirits."
+    },
+    {
+     "apiname": "ACH_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Trainer",
+     "description": "Use every Training Toy."
+    },
+    {
+     "apiname": "ACH_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Happy Campers",
+     "description": "Create a party with 3 Spirits and make them all very happy."
+    },
+    {
+     "apiname": "ACH_49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kindred Spirits",
+     "description": "Max out a Spirit's Affinity Level."
+    },
+    {
+     "apiname": "ACH_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golden Egg",
+     "description": "Breed a ★ Rank Spirit."
+    },
+    {
+     "apiname": "ACH_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strongest Link",
+     "description": "Unlock all nodes on any Spirit's Ability Link board."
+    },
+    {
+     "apiname": "ACH_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lifesaver",
+     "description": "Rescue Spirits 3 times in battle."
+    },
+    {
+     "apiname": "ACH_53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ability Ace",
+     "description": "Max out and install all Support and Spirits abilities."
+    },
+    {
+     "apiname": "ACH_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bull's-Eye",
+     "description": "Defeat 5 or more enemies with a single hit in Slingshot."
+    },
+    {
+     "apiname": "ACH_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sliding By",
+     "description": "Connect 6 or more points with a single Faithline."
+    },
+    {
+     "apiname": "ACH_56",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Super Hacker",
+     "description": "Activate all Code Break commands."
+    },
+    {
+     "apiname": "ACH_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bubble Burster",
+     "description": "Trap 6 or more enemies in Bubble Burst."
+    },
+    {
+     "apiname": "ACH_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Comic King",
+     "description": "Activate all of Wonder Comic's effects at least once."
+    },
+    {
+     "apiname": "ACH_59",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Maestro",
+     "description": "Defeat 4 or more enemies in one turn of Melody Catcher."
+    },
+    {
+     "apiname": "ACH_60",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chain Reaction",
+     "description": "Sever all chains with a single slash 3 times in a row using Nightmare's End or Mirage Split."
+    },
+    {
+     "apiname": "ACH_61",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of All Districts",
+     "description": "Complete all Special Portals in Traverse Town as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_62",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of the Cathedral",
+     "description": "Complete all Special Portals in La Cité des Cloches as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_63",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of the Digital World",
+     "description": "Complete all Special Portals in The Grid as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_64",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of the Endless Ocean",
+     "description": "Complete all Special Portals in Prankster's Paradise as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_65",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of the Opéra House",
+     "description": "Complete all Special Portals in Country of the Musketeers as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_66",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of the Harmonic Score",
+     "description": "Complete all Special Portals in Symphony of Sorcery as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_67",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Champions of the Dark City",
+     "description": "Complete all Special Portals in The World That Never Was as both Sora and Riku."
+    },
+    {
+     "apiname": "ACH_68",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brave Challengers",
+     "description": "Complete all 7 Link Portal bonus objectives."
+    },
+    {
+     "apiname": "ACH_69",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seekers of Secrets",
+     "description": "Complete all Secret Portals as both Sora and Riku."
+    }
+   ],
+   "success": true
+  }
+ }
+}

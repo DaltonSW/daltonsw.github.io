@@ -1,0 +1,415 @@
+{
+ "provider": "steam",
+ "title": "Minit",
+ "updated": "2026-08-30",
+ "id": "609490",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 10,
+ "total": 27,
+ "first": "2019-03-26",
+ "last": "2019-03-26",
+ "platform": "PC",
+ "icon": "a000467e6d1f42730e6adac03ff39907f2ecd554",
+ "playtime_mins": 42,
+ "last_played": "2019-03-26",
+ "achievements": [
+  {
+   "key": "a1",
+   "name": "ADVENTURER",
+   "description": "FIND YOUR FIRST ITEM",
+   "unlocked": true,
+   "date": "2019-03-26T17:35:16-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/1d98377a4e1b68a72dd56f2859ad059095c88a77.jpg"
+  },
+  {
+   "key": "a5",
+   "name": "FIRST AIDER",
+   "description": "FIND YOUR FIRST HEART",
+   "unlocked": true,
+   "date": "2019-03-26T17:39:27-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/f4d3c0570d30888dd3803ea638d7a91cd0f228f5.jpg"
+  },
+  {
+   "key": "a18",
+   "name": "HOME OWNER",
+   "unlocked": true,
+   "date": "2019-03-26T17:43:33-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/6d00969393633126a4aaec4dd05a1d1c48856562.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a3",
+   "name": "TREASURE HUNTER",
+   "description": "FIND YOUR FIRST COIN",
+   "unlocked": true,
+   "date": "2019-03-26T17:45:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/1da691ac858282f90da73bead639a866578d2e8c.jpg"
+  },
+  {
+   "key": "a15",
+   "name": "GHOST HUNTER",
+   "unlocked": true,
+   "date": "2019-03-26T17:59:04-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/0bd2fa6b5c130976e1faed584e02ca0a74b9de1f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a13",
+   "name": "EXPLORER",
+   "description": "FIND AND DEFEAT THE OASIS GHOST",
+   "unlocked": true,
+   "date": "2019-03-26T18:18:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/c6a7d1715d4094ac6aa4061bb12d99009885da18.jpg"
+  },
+  {
+   "key": "a7",
+   "name": "MARINE ENTHUSIAST",
+   "description": "FIND YOUR FIRST TENTACLE",
+   "unlocked": true,
+   "date": "2019-03-26T18:18:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/0540d3723eaca93a35d36b29965d1d959cd887bc.jpg"
+  },
+  {
+   "key": "a14",
+   "name": "EMPLOYEE OF THE MONTH",
+   "description": "FIND ALL HOTEL GUESTS",
+   "unlocked": true,
+   "date": "2019-03-26T18:27:36-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/20c0249fa4094bc0f0ec5e47a7114b0494c111b9.jpg"
+  },
+  {
+   "key": "a16",
+   "name": "SAFETY INSPECTOR",
+   "description": "SHUT DOWN THE SWORD FACTORY",
+   "unlocked": true,
+   "date": "2019-03-26T18:40:55-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/aa6111517e5f0aa5bc956371bf101a5ce8e6e638.jpg"
+  },
+  {
+   "key": "a22",
+   "name": "MINIT",
+   "description": "COMPLETE THE GAME",
+   "unlocked": true,
+   "date": "2019-03-26T18:45:04-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/1b0da37c208f70b1ec73ec8f122ccd58bc07f889.jpg"
+  },
+  {
+   "key": "a10",
+   "name": "DOG WASHER",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/8a19aaf8fbaf38da4bd890a5a340ef97d749b8c1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a11",
+   "name": "LISTENER",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/1161286a9aeb589398fcc4a74d25c050cf108f6e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a12",
+   "name": "ARCHEOLOGIST",
+   "description": "SOLVE ALL THE PUZZLES IN THE SECRET TEMPLE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/3e1881d07870529140988b68d70b001ce5a09677.jpg"
+  },
+  {
+   "key": "a17",
+   "name": "TOURIST",
+   "description": "VISIT THE ISLAND",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/3c09603c2305e03d2f5f4c0fc807c79654b46f07.jpg"
+  },
+  {
+   "key": "a19",
+   "name": "TRAVELER",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/30dac442fe355de35db0ca01d4c4d591e7c3e07c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a2",
+   "name": "COLLECTOR",
+   "description": "FIND ALL ITEMS",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/a7395f7c48b590c16e970c5705a960eaaf9f0e26.jpg"
+  },
+  {
+   "key": "a20",
+   "name": "WORLD TRAVELER",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/f3efee31637d313ef534afcb62e0ea25bfab38c5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a21",
+   "name": "PUNCTUAL",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/5739305d59c762f9b5d2eaf0c17b6f86fe61e009.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a23",
+   "name": "ANOTHER MINIT",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/672cd47eb5cf66e8ea5a2e4908662494885d8a04.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a24",
+   "name": "HI MY NAME IS MARY",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/98f40d3e7d8d8d242f916009520cadf5164c8162.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a25",
+   "name": "PACIFIST, SORT OF",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/d86bfcedd11a6d1060c0b02630723d37d79cce46.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a26",
+   "name": "MINIMALIST",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/d02dd7cc37d9ea15d08a0586cc23a145d9bfc217.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a27",
+   "name": "CONNOISSEUR",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/5e96c9a59042518cea539fdd113d005275f6d466.jpg",
+   "hidden": true
+  },
+  {
+   "key": "a4",
+   "name": "TREASURE HOARDER",
+   "description": "FIND ALL COINS",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/2e1a8fdd1c7108791bc2cff02308354dba478714.jpg"
+  },
+  {
+   "key": "a6",
+   "name": "FULL AIDER",
+   "description": "FIND ALL HEARTS",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/6c274ced024f6d46beb893217d0e010cb4fce450.jpg"
+  },
+  {
+   "key": "a8",
+   "name": "MARINE BIOLOGIST",
+   "description": "FIND ALL TENTACLES",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/067f634daa2adc0363586d9650f0569838d0a50a.jpg"
+  },
+  {
+   "key": "a9",
+   "name": "BEST FRIEND",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/609490/952d9b58d6fbf6ca5f33784e16015063c434fb3d.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Minit",
+   "achievements": [
+    {
+     "apiname": "a1",
+     "achieved": 1,
+     "unlocktime": 1553639716,
+     "name": "ADVENTURER",
+     "description": "FIND YOUR FIRST ITEM"
+    },
+    {
+     "apiname": "a2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "COLLECTOR",
+     "description": "FIND ALL ITEMS"
+    },
+    {
+     "apiname": "a3",
+     "achieved": 1,
+     "unlocktime": 1553640310,
+     "name": "TREASURE HUNTER",
+     "description": "FIND YOUR FIRST COIN"
+    },
+    {
+     "apiname": "a4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TREASURE HOARDER",
+     "description": "FIND ALL COINS"
+    },
+    {
+     "apiname": "a5",
+     "achieved": 1,
+     "unlocktime": 1553639967,
+     "name": "FIRST AIDER",
+     "description": "FIND YOUR FIRST HEART"
+    },
+    {
+     "apiname": "a6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "FULL AIDER",
+     "description": "FIND ALL HEARTS"
+    },
+    {
+     "apiname": "a7",
+     "achieved": 1,
+     "unlocktime": 1553642338,
+     "name": "MARINE ENTHUSIAST",
+     "description": "FIND YOUR FIRST TENTACLE"
+    },
+    {
+     "apiname": "a8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MARINE BIOLOGIST",
+     "description": "FIND ALL TENTACLES"
+    },
+    {
+     "apiname": "a9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BEST FRIEND",
+     "description": ""
+    },
+    {
+     "apiname": "a10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "DOG WASHER",
+     "description": ""
+    },
+    {
+     "apiname": "a11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "LISTENER",
+     "description": ""
+    },
+    {
+     "apiname": "a12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "ARCHEOLOGIST",
+     "description": "SOLVE ALL THE PUZZLES IN THE SECRET TEMPLE"
+    },
+    {
+     "apiname": "a13",
+     "achieved": 1,
+     "unlocktime": 1553642338,
+     "name": "EXPLORER",
+     "description": "FIND AND DEFEAT THE OASIS GHOST"
+    },
+    {
+     "apiname": "a14",
+     "achieved": 1,
+     "unlocktime": 1553642856,
+     "name": "EMPLOYEE OF THE MONTH",
+     "description": "FIND ALL HOTEL GUESTS"
+    },
+    {
+     "apiname": "a15",
+     "achieved": 1,
+     "unlocktime": 1553641144,
+     "name": "GHOST HUNTER",
+     "description": ""
+    },
+    {
+     "apiname": "a16",
+     "achieved": 1,
+     "unlocktime": 1553643655,
+     "name": "SAFETY INSPECTOR",
+     "description": "SHUT DOWN THE SWORD FACTORY"
+    },
+    {
+     "apiname": "a17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TOURIST",
+     "description": "VISIT THE ISLAND"
+    },
+    {
+     "apiname": "a18",
+     "achieved": 1,
+     "unlocktime": 1553640213,
+     "name": "HOME OWNER",
+     "description": ""
+    },
+    {
+     "apiname": "a19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TRAVELER",
+     "description": ""
+    },
+    {
+     "apiname": "a20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "WORLD TRAVELER",
+     "description": ""
+    },
+    {
+     "apiname": "a21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "PUNCTUAL",
+     "description": ""
+    },
+    {
+     "apiname": "a22",
+     "achieved": 1,
+     "unlocktime": 1553643904,
+     "name": "MINIT",
+     "description": "COMPLETE THE GAME"
+    },
+    {
+     "apiname": "a23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "ANOTHER MINIT",
+     "description": ""
+    },
+    {
+     "apiname": "a24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "HI MY NAME IS MARY",
+     "description": ""
+    },
+    {
+     "apiname": "a25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "PACIFIST, SORT OF",
+     "description": ""
+    },
+    {
+     "apiname": "a26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MINIMALIST",
+     "description": ""
+    },
+    {
+     "apiname": "a27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "CONNOISSEUR",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

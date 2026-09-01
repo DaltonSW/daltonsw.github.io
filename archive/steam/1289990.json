@@ -1,0 +1,107 @@
+{
+ "provider": "steam",
+ "title": "Alan's Automaton Workshop",
+ "updated": "2026-08-30",
+ "id": "1289990",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 6,
+ "platform": "PC",
+ "icon": "c189943e1f5872014d5f1bb18cbe733cec4f82b4",
+ "achievements": [
+  {
+   "key": "achievement/findingGulliver",
+   "name": "Gulliver's Travels",
+   "description": "Spot Gulliver across the game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1289990/d706d5da0b973b68dbcb0064d2b77e2033258dd1.jpg"
+  },
+  {
+   "key": "achievement/storyProgress/ch1",
+   "name": "Scirocco the Watchbird",
+   "description": "Complete Chapter I",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1289990/ae6b24981f1fb6c20fcb81abad6b64b2969038ef.jpg"
+  },
+  {
+   "key": "achievement/storyProgress/ch2",
+   "name": "Al Jemel the Coffee Maker",
+   "description": "Complete Chapter II",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1289990/31cddc5b1b5a92822e6c68bc2a8a92edaa7cf375.jpg"
+  },
+  {
+   "key": "achievement/storyProgress/ch3",
+   "name": "Matthew Jr. the Auto-Accountant",
+   "description": "Complete Chapter III",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1289990/2f9f6f9986270b7164e72be87e661c22d24b95b1.jpg"
+  },
+  {
+   "key": "achievement/storyProgress/ch4",
+   "name": "Radius the Robotic Reporter",
+   "description": "Complete Chapter IV",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1289990/3e48c9a419effb3f400f5dcf99cd69fa13d314b1.jpg"
+  },
+  {
+   "key": "achievement/storyProgress/ch5",
+   "name": "Colossus the Tactical Adviser",
+   "description": "Complete Chapter V",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1289990/3ff93a0ec8eae260155158382801602fa78e4d48.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Alan's Automaton Workshop",
+   "achievements": [
+    {
+     "apiname": "achievement/storyProgress/ch1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scirocco the Watchbird",
+     "description": "Complete Chapter I"
+    },
+    {
+     "apiname": "achievement/storyProgress/ch2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Al Jemel the Coffee Maker",
+     "description": "Complete Chapter II"
+    },
+    {
+     "apiname": "achievement/storyProgress/ch3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Matthew Jr. the Auto-Accountant",
+     "description": "Complete Chapter III"
+    },
+    {
+     "apiname": "achievement/storyProgress/ch4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Radius the Robotic Reporter",
+     "description": "Complete Chapter IV"
+    },
+    {
+     "apiname": "achievement/storyProgress/ch5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Colossus the Tactical Adviser",
+     "description": "Complete Chapter V"
+    },
+    {
+     "apiname": "achievement/findingGulliver",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gulliver's Travels",
+     "description": "Spot Gulliver across the game"
+    }
+   ],
+   "success": true
+  }
+ }
+}

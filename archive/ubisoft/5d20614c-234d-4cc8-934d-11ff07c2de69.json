@@ -1,18 +1,18 @@
 {
  "provider": "ubisoft",
  "title": "Trackmania",
- "updated": "2026-08-15",
+ "updated": "2026-08-30",
  "id": "5d20614c-234d-4cc8-934d-11ff07c2de69",
- "fetched": "2026-08-15",
- "last_attempt": "2026-08-15",
- "unlocked": 21,
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 22,
  "total": 30,
  "first": "2023-03-24",
- "last": "2023-07-27",
+ "last": "2026-08-15",
  "platform": "Ubisoft",
- "completion": "70%",
+ "completion": "73%",
  "source": "exophase",
- "last_played": "2026-08-14",
+ "last_played": "2026-08-27",
  "achievements": [
   {
    "key": "player-of-the-month",
@@ -160,10 +160,33 @@
    "unlocked": true,
    "date": "2023-07-27T20:52:37-05:00",
    "icon": "https://m.exophase.com/uplay/awards/m/13551ded.png"
+  },
+  {
+   "key": "you-surpassed-the-trackmaster",
+   "name": "you-surpassed-the-trackmaster",
+   "unlocked": true,
+   "date": "2026-08-15T10:01:19-05:00",
+   "icon": "https://m.exophase.com/uplay/awards/m/dgj08d7g.png"
   }
  ],
  "raw": {
   "list": [
+   {
+    "masterAwardId": 4896256,
+    "awardid": 4896256,
+    "earned": "August 15, 2026, 3:01 pm (UTC+0)",
+    "slug": "you-surpassed-the-trackmaster",
+    "canonical_id": "9e9b5c61-8bb4-44ff-a3ef-6f404941c374",
+    "endpoint": "\/challenge\/trackmania-uplay\/8330-you-surpassed-the-trackmaster",
+    "icons": {
+     "s": "\/uplay\/awards\/s\/dgj08d7g.png",
+     "m": "\/uplay\/awards\/m\/dgj08d7g.png",
+     "l": "\/uplay\/awards\/l\/dgj08d7g.png",
+     "o": "\/uplay\/awards\/o\/dgj08d7g.png",
+     "t": "\/uplay\/awards\/t\/dgj08d7g.png"
+    },
+    "timestamp": 1786806079
+   },
    {
     "masterAwardId": 4839245,
     "awardid": 4839245,

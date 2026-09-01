@@ -1,0 +1,199 @@
+{
+ "provider": "steam",
+ "title": "Nidhogg",
+ "updated": "2026-08-30",
+ "id": "94400",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 1,
+ "total": 12,
+ "first": "2018-02-15",
+ "last": "2018-02-15",
+ "platform": "PC",
+ "icon": "7c48625fa63e0afd2595ba1f719758ed3d89fb03",
+ "playtime_mins": 41,
+ "playtime": {
+  "windows": 2
+ },
+ "last_played": "2021-07-11",
+ "achievements": [
+  {
+   "key": "memories",
+   "name": "MEMORIES",
+   "description": "Trap your opponent on your sword for a long time while moving it up and down",
+   "unlocked": true,
+   "date": "2018-02-15T21:26:30-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/a691e48dfdec383d3f8befafefff4a3b83589519.jpg"
+  },
+  {
+   "key": "beatSinglePlayer",
+   "name": "FLESH AND BLOOD",
+   "description": "Beat the singleplayer game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/184ec506db34a763d5348ae5df695592bd2d6c6c.jpg"
+  },
+  {
+   "key": "comeback",
+   "name": "COMEBACK KID",
+   "description": "Get eaten by the nidhogg after nearly allowing your opponent to do the same",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/195d5fae0619a3e2ad4a4f4347156852c8f77a38.jpg"
+  },
+  {
+   "key": "dominatedSinglePlayerGame",
+   "name": "HOGGLIKE",
+   "description": "Dominate every level in one singleplayer game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/80a0ddde76bb7a3a3467f42a97a1462b3ab0406a.jpg"
+  },
+  {
+   "key": "dominatedSinglePlayerLevel",
+   "name": "PERFECT STRIDE",
+   "description": "Win the faceoff and never lose the arrow in a singleplayer match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/04f8d2b619bca04f8dd0f2ee1bd58108f698c36c.jpg"
+  },
+  {
+   "key": "finishTournament",
+   "name": "GTD",
+   "description": "Finish an 8 player tournament",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/52fdc1f70b1706ae5ce6e213a2335fd2155481cc.jpg"
+  },
+  {
+   "key": "hourLongMatch",
+   "name": "TRAPPED IN DONKEYSPACE",
+   "description": "play a match lasting longer than 20 minutes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/d972050069aeef4f71caa89fcab381b60634a403.jpg"
+  },
+  {
+   "key": "hundredKillsMatch",
+   "name": "BLOODLUST",
+   "description": "100 total kills in one match",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/7124a78cc3ebfdf88e81e7a8aa726693abb32925.jpg"
+  },
+  {
+   "key": "hundredOnlineWins",
+   "name": "VALKYRIE",
+   "description": "Win 100 games through matchmaking",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/c9538740aab6f442d307c9b36e417ffdb7feebff.jpg"
+  },
+  {
+   "key": "nsa",
+   "name": "NSA",
+   "description": "Intelligence gathered",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/510b46a154268985846a38339d523b8a6115d4c0.jpg"
+  },
+  {
+   "key": "prometheus",
+   "name": "PROMETHEUS",
+   "description": "Run across your final screen in the castle with your sword cocked the whole time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/142a53e0e6381a8595225d07ccb5b1cf6608e5d5.jpg"
+  },
+  {
+   "key": "slowPlayed",
+   "name": "SLOW PLAYED",
+   "description": "Let the timer run out in your opponent's last screen and win in sudden death",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/0e987e66a5281da9dc8cc78af077619b501d88a4.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Nidhogg",
+   "achievements": [
+    {
+     "apiname": "beatSinglePlayer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "FLESH AND BLOOD",
+     "description": "Beat the singleplayer game"
+    },
+    {
+     "apiname": "dominatedSinglePlayerLevel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "PERFECT STRIDE",
+     "description": "Win the faceoff and never lose the arrow in a singleplayer match"
+    },
+    {
+     "apiname": "dominatedSinglePlayerGame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "HOGGLIKE",
+     "description": "Dominate every level in one singleplayer game"
+    },
+    {
+     "apiname": "hundredKillsMatch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "BLOODLUST",
+     "description": "100 total kills in one match"
+    },
+    {
+     "apiname": "hourLongMatch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "TRAPPED IN DONKEYSPACE",
+     "description": "play a match lasting longer than 20 minutes"
+    },
+    {
+     "apiname": "hundredOnlineWins",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "VALKYRIE",
+     "description": "Win 100 games through matchmaking"
+    },
+    {
+     "apiname": "finishTournament",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "GTD",
+     "description": "Finish an 8 player tournament"
+    },
+    {
+     "apiname": "comeback",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "COMEBACK KID",
+     "description": "Get eaten by the nidhogg after nearly allowing your opponent to do the same"
+    },
+    {
+     "apiname": "slowPlayed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SLOW PLAYED",
+     "description": "Let the timer run out in your opponent's last screen and win in sudden death"
+    },
+    {
+     "apiname": "memories",
+     "achieved": 1,
+     "unlocktime": 1518751590,
+     "name": "MEMORIES",
+     "description": "Trap your opponent on your sword for a long time while moving it up and down"
+    },
+    {
+     "apiname": "prometheus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "PROMETHEUS",
+     "description": "Run across your final screen in the castle with your sword cocked the whole time"
+    },
+    {
+     "apiname": "nsa",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "NSA",
+     "description": "Intelligence gathered"
+    }
+   ],
+   "success": true
+  }
+ }
+}

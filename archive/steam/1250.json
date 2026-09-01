@@ -1,0 +1,4027 @@
+{
+ "provider": "steam",
+ "title": "Killing Floor",
+ "updated": "2026-08-30",
+ "id": "1250",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 10,
+ "total": 285,
+ "first": "2017-03-29",
+ "last": "2017-03-29",
+ "platform": "PC",
+ "icon": "d8a2d777cb4c59cf06aa244166db232336520547",
+ "playtime_mins": 58,
+ "last_played": "2017-03-29",
+ "achievements": [
+  {
+   "key": "Kill5HalloweenZedsWithoutReload",
+   "name": "Trick, not Treat",
+   "description": "Kill 5 Halloween Specimens with any gun without reloading",
+   "unlocked": true,
+   "date": "2017-03-29T19:12:09-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ed78f627e2b589e177b7de6c93b3dd53b6804b56.jpg"
+  },
+  {
+   "key": "Kill20ChristmasClots",
+   "name": "Back to Work",
+   "description": "[2010 Xmas] Kill 20 Christmas Clots in one wave.",
+   "unlocked": true,
+   "date": "2017-03-29T19:12:09-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c5f4c52cb808df05db42c103cdd190331f908db5.jpg"
+  },
+  {
+   "key": "KillSelectXMasZedsOnSingleMap",
+   "name": "A Bloody Christmas Carol",
+   "description": "Kill 15 XMas Clots, 5 xmas Stalkers, 5 XMas Crawlers, 1 XMas Siren and 1 XMas Bloat.",
+   "unlocked": true,
+   "date": "2017-03-29T19:32:18-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/70c580cd2f9472aa5007bb0857275914033eb715.jpg"
+  },
+  {
+   "key": "KillXEnemies",
+   "name": "Experimenticenticide",
+   "description": "Kill 100 Specimens.",
+   "unlocked": true,
+   "date": "2017-03-29T19:39:01-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7595469134375f7694cc2d29c95058eabb3e42d2.jpg"
+  },
+  {
+   "key": "KillChristmasPatriarch",
+   "name": "Merry Friggin Christmas",
+   "description": "[2010 Xmas] Kill the Christmas Patriarch.",
+   "unlocked": true,
+   "date": "2017-03-29T19:39:28-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/555cae553ef16908e8cceba5db58f44d83c9381c.jpg"
+  },
+  {
+   "key": "KillSideshowPatriarch",
+   "name": "Ringmaster",
+   "description": "Kill the \"Ring Leader\" (Circus Patriarch)",
+   "unlocked": true,
+   "date": "2017-03-29T19:39:29-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/100321aa0c3c48f153dd75a0a9a18252f2701c93.jpg"
+  },
+  {
+   "key": "KillXEnemiesWithGrenade",
+   "name": "Social Outburst",
+   "description": "Kill 8 Specimens with One Grenade.",
+   "unlocked": true,
+   "date": "2017-03-29T19:52:59-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/600d69cd647857320befc6b5f35fa61467563f34.jpg"
+  },
+  {
+   "key": "KillEnemyUsingBloatAcid",
+   "name": "It's Not Easy Being Greasy",
+   "description": "Cause a Specimen to Die by Luring them into Bloat Acid.",
+   "unlocked": true,
+   "date": "2017-03-29T19:53:05-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/83869d3f15ce7afe4ae829c1f1a96f61c8e17e1a.jpg"
+  },
+  {
+   "key": "DonateXCashToTeammates",
+   "name": "Philanthropist",
+   "description": "Give 1,000 Pounds to Teammates who have 50% of Your Cash or Less.",
+   "unlocked": true,
+   "date": "2017-03-29T19:55:35-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/41354d3eddf6c5f9c2953a1a0b77f4e4ed7f8466.jpg"
+  },
+  {
+   "key": "KillPatriarchBeforeHeHeals",
+   "name": "Straight Rush",
+   "description": "Kill the Patriarch Before he has a Chance to Heal.",
+   "unlocked": true,
+   "date": "2017-03-29T19:56:18-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/5d3066e2f58125db0e26e100fc8afea2b9d8083c.jpg"
+  },
+  {
+   "key": "777",
+   "name": "777",
+   "description": "Win Fuel on the first try",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7050d94c5bf822758c8f194e4d4a2dbd9795fcf7.jpg"
+  },
+  {
+   "key": "AGiantstepBackForHumanity",
+   "name": "One Giant Leap (Back) for Mankind",
+   "description": "Beat Moonbase on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0b84e4c2b3cdb7965072b47bd962d47fc5d1dd2f.jpg"
+  },
+  {
+   "key": "Achievement132",
+   "name": "Uber Tuber",
+   "description": "Expensive but delicious! Brought to you by Dr. Dougley and Lord Ned.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/366d6ee5bd659841507fc9fd5de687ef1eeb92a5.jpg"
+  },
+  {
+   "key": "Achievement133",
+   "name": "Science Got Done",
+   "description": "Win a Long Game on Aperture on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c93ae13c436316bf782fb5134b9d61fbcdaeb57f.jpg"
+  },
+  {
+   "key": "Achievement134",
+   "name": "Still Alive",
+   "description": "Win a Long Game on Aperture on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8152a886a449ab7cf348a4f071b6232b24de2497.jpg"
+  },
+  {
+   "key": "Achievement135",
+   "name": "This is a Triumph",
+   "description": "Win a Long Game on Aperture on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7d8687db2557295911d2acfbf38a6f621b8f1895.jpg"
+  },
+  {
+   "key": "Achievement136",
+   "name": "I'm Making a Note Here, Huge Success",
+   "description": "Win a Long Game on Aperture on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ab95d12fde756090c23fe6edcedfe810f3bb3f9b.jpg"
+  },
+  {
+   "key": "Achievement137",
+   "name": "Golden Potato",
+   "description": "Get into GLaDOS' core on Aperture.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6fec2df9c6ab87f6a76dcc57eef788cbfa4a96f5.jpg"
+  },
+  {
+   "key": "AcquireXMinutesOfZedTime",
+   "name": "I Like To Watch",
+   "description": "Aquire 5 Minutes of \"Zed-Time\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9a41b0860a56f67f32dfdfa1435661f6999b0d44.jpg"
+  },
+  {
+   "key": "AllBreakersActive",
+   "name": "Full Charge",
+   "description": "Have 5 Breaker Boxes 100% repaired at the same time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fec10f9df23bc87c77a71e03f80e8fb732c47872.jpg"
+  },
+  {
+   "key": "AmusingDeath",
+   "name": "Amusing Death",
+   "description": "Beat Moonbase on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c464aeb60c0cf73984b92c3e6f94040bfb50b802.jpg"
+  },
+  {
+   "key": "AttemptingReentry",
+   "name": "Attempting Re-entry",
+   "description": "Beat Moonbase on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d01e5f21d69172394822e1db6d036ad9748410fd.jpg"
+  },
+  {
+   "key": "BileOrFlameEachZed",
+   "name": "Under The Weather",
+   "description": "Use Bile or the Flamethrower to kill one of each Halloween Zed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/36319c7285d3d9d1900ab4ae4f7aeaf72b88781c.jpg"
+  },
+  {
+   "key": "BlindingBigBrother",
+   "name": "Blinding Big Brother",
+   "description": "Destroy all 30 Cameras",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8a112f7400cb93a87da0c99e3c8225ed0a5e2957.jpg"
+  },
+  {
+   "key": "ButItsAllRed",
+   "name": "But It's All Red!",
+   "description": "Collect all 16 Z.E.D. Gun pieces",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b981e442cf30f6d4f1baa57c4244e399cfcd1652.jpg"
+  },
+  {
+   "key": "ChristmasVomitLive10Seconds",
+   "name": "Eggnog Anyone?",
+   "description": "[2010 Xmas] Get covered in Christmas Bloat Bile and live for 10 seconds on Hard, Suicidal, or Hell on Earth.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8d247fb5166b9c96fb7b3e82fbadaf3d559b42a3.jpg"
+  },
+  {
+   "key": "ClawMachineMaster",
+   "name": "Claw Machine Master",
+   "description": "Attach the crane hook within 125 seconds",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e6f799bbbd50520afcbd75184070bef4b17acb27.jpg"
+  },
+  {
+   "key": "CollectSnowGlobes",
+   "name": "All shook up",
+   "description": "Destroy all (15) Snow Globes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/aacc2f14eba8f6c476f7c2146e272dcd707e8b13.jpg"
+  },
+  {
+   "key": "Complete6ReaperAchievements",
+   "name": "Grim Reaper",
+   "description": "Get the 6 Special Halloween Achievements plus 1 Hillbilly Horror Map Achievement to unlock the Grim Reaper",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/67290efd2abb01e9dbdc3aa8301d0d0e5cf67691.jpg"
+  },
+  {
+   "key": "CompleteArcadeGames",
+   "name": "Arcade Gamer",
+   "description": "[2013 Summer] Complete the Pop the Clot, the Strong Man and the Grenade Toss games",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/4f4c0a376df41fe1b72dc00ad7dfd7b6fff637dc.jpg"
+  },
+  {
+   "key": "CompleteMsClamleyAchievements",
+   "name": "Doctor WHO??",
+   "description": "Transit - Get all Objective achievements AND beat KFO Transit on Hard or above to unlock Dr Rachel Clamely.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/851ce452dddb84c5bbf1c94cb461e4090e2827ba.jpg"
+  },
+  {
+   "key": "CompleteNewAchievementsHard",
+   "name": "Pound Cake",
+   "description": "Complete all new map achievements on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/45ada11a5451c875560ac672785c99804547ec3e.jpg"
+  },
+  {
+   "key": "CompleteNewAchievementsHell",
+   "name": "Devil Cake",
+   "description": "Complete all new map achievements on Hell On Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9c1f33213d49d895efa4f71a68fb75bc0fd808c8.jpg"
+  },
+  {
+   "key": "CompleteNewAchievementsNormal",
+   "name": "Piece of Cake",
+   "description": "Complete all new map achievements on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f44e5c97ef3950c60f335ce735200d4848c4093d.jpg"
+  },
+  {
+   "key": "CompleteNewAchievementsSuicidal",
+   "name": "Fruit Cake",
+   "description": "Complete all new map achievements on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9f7a92924ca1be06e76c37b5cefbbd8fb5eeea04.jpg"
+  },
+  {
+   "key": "CompleteSPMrsFosterAchievements",
+   "name": "Mrs. Punkd",
+   "description": "Get 4 of 6 of the 2013 Summer Event in-game level Achievements, one Standard and one Objective Mode map completion Achievement, plus the Punk'd Achievement to unlock Steampunk Mrs. Foster",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/372b78c8dd3d2e6c99372a0695edaff20ea4b833.jpg"
+  },
+  {
+   "key": "DecapBurningHalloweenZedInBedlam",
+   "name": "Carving The Jack O' Lantern",
+   "description": "Decapitate a burning Halloween specimen in Bedlam",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/4141d8592164ffeda39c4222f82b8510af6832a3.jpg"
+  },
+  {
+   "key": "DefeatPatriarchOnSuicidal",
+   "name": "Death To The Mad Scientist",
+   "description": "Defeat the Patriarch on Suicidal.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/041fdb9b287a21b9d3311914db2aa6b4b3001893.jpg"
+  },
+  {
+   "key": "DefendRingmaster",
+   "name": "Guardian Assault Protector",
+   "description": "Protect the ringmaster during the defense mission so that he does not get hit more than 15 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a8d779082e6f4bc3ec37bcee2ed75da80a75e56d.jpg"
+  },
+  {
+   "key": "Destroy25GnomesInHillbilly",
+   "name": "Soul Collector",
+   "description": "Free the souls of the 25 Gnomes hidden on Hillbilly Horror in 1 game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c66847dc8c01592229fd7aa9ad151eafc7a7253a.jpg"
+  },
+  {
+   "key": "DestroyBeerSteins",
+   "name": "Oktoberfest Master",
+   "description": "Collect all the Beer Steins",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/56c45bb4c9da52c30cc3963c6d2feea065cce0f6.jpg"
+  },
+  {
+   "key": "DestroyDNAVials",
+   "name": "Science Hater",
+   "description": "Transit - Destroy all the DNA vials",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/90a115c82fb10954fd4d3068848a48c8bf1645b6.jpg"
+  },
+  {
+   "key": "DestroyGoldBags",
+   "name": "Rich Evil Uncle",
+   "description": "Collect all the Treasure Bags",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/665e640f9b774b3cbf86ed05762ea8905d848489.jpg"
+  },
+  {
+   "key": "DestroyPukeyDolls",
+   "name": "Hide and go Puke",
+   "description": "[2013 Summer] Destroy all the Pukey the Clown dolls",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/78a652c1b47943ec04b8df2dca0c9c1d433b64f3.jpg"
+  },
+  {
+   "key": "DestroySkulls",
+   "name": "Skull Cracker",
+   "description": "Clandestine - Destroy 30 skulls",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/392c97b6620e991b9ebe1e1767172fa17acc6693.jpg"
+  },
+  {
+   "key": "Drop3Tier3WeaponsForOthersChristmas",
+   "name": "Tis Better to Give than to Receive",
+   "description": "[2010 Xmas] Drop 3 Tier 3 weapons for others (with which they kill at least one Christmas Zed).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/639df6179143cb53c310d78dc489353d0da27cd3.jpg"
+  },
+  {
+   "key": "Drop5Tier2WeaponsOneWaveSideshow",
+   "name": "Juggling Act",
+   "description": "Drop 5 different Tier 2 weapons in one wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9eaf229479791927953ea02841fdf761c204f0f6.jpg"
+  },
+  {
+   "key": "DwarfAxe",
+   "name": "Gimli That Axe!",
+   "description": "Get the Not-a-war-hammer Achievement in Dwarfs!?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6eb9e1dc66038ddabab2da97a8cf9d08cc0d5c12.jpg"
+  },
+  {
+   "key": "EscortRingmaster",
+   "name": "Extended Motion Protector",
+   "description": "[2013 Summer] Protect the Ringmaster during the escort mission so that he does not get hit more than 15 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b0584034cd25db326e596b8ec7f7e529a6ab1f89.jpg"
+  },
+  {
+   "key": "ExScientist",
+   "name": "Ex-scientist",
+   "description": "Collect all the bile without a contamination",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bcb2b7b4a0f22dd527cb24700b2f165e05062b4e.jpg"
+  },
+  {
+   "key": "GameOverMan",
+   "name": "Game Over, Man!",
+   "description": "Have 20 Zeds you slowed with the Z.E.D. gun killed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0642890335436559009bc4f98c20945126c56134.jpg"
+  },
+  {
+   "key": "Get1000BurnDamageWithMac10",
+   "name": "Let Them Burn",
+   "description": "Get 1000 points of burn damage with the MAC-10.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/03d719e87590c3e5e6b931b5d9193945e4cb3495.jpg"
+  },
+  {
+   "key": "GetHeadshotsOn4ZedsSPS",
+   "name": "Single-shot Equalizer",
+   "description": "Kill 4 different types of Zeds with headshots with 4 shots from the Long Musket or the M14 without reloading",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8e98c069d4fdcc59f76527a4da418a27830f35b0.jpg"
+  },
+  {
+   "key": "Gib500ZedsWithM79",
+   "name": "Blooper Reel",
+   "description": "Turn 500 Zeds into Giblets using the M79.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/85bc1602e33b63e6f08ec1876c6bf0331fe9a558.jpg"
+  },
+  {
+   "key": "HaveMyAxe",
+   "name": "Have my axe",
+   "description": "Kill 30 Fleshpounds with the Dwarfs!? axe with back attacks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c7309c4573654f44890f6ecce77a32c056f9b5c6.jpg"
+  },
+  {
+   "key": "Heal200TeammatesWithMP7",
+   "name": "Healing Touch",
+   "description": "Heal 200 teammates with the MP7's medication dart.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/223e39afb698e436a76d945f81bf583940ded108.jpg"
+  },
+  {
+   "key": "Heal3000PointsWithMP5DuringXMas",
+   "name": "I love ze Healing not ze Hurting",
+   "description": "Heal others for 3000 points of health with the MP5 SMG",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/89ced378daf98b1b8ea94ccf449764e101fa85c8.jpg"
+  },
+  {
+   "key": "HealAllPlayersWith1MedicNade",
+   "name": "Explosion of Love",
+   "description": "Heal yourself plus 5 other players with one grenade",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/18a3d7e78b507eac2946b88229e6d957c3f495d8.jpg"
+  },
+  {
+   "key": "HealSelfXTimes",
+   "name": "Self Medicator",
+   "description": "In Co-op Mode, Use Syringe on Yourself 100 Times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/56685c1b47a57b7c0682629e7cbed3ac29ae1d60.jpg"
+  },
+  {
+   "key": "HereIsToUs",
+   "name": "Here is to us",
+   "description": "Beat Moonbase on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9b14047012f710bdb25e4a0b165254f18080bd1c.jpg"
+  },
+  {
+   "key": "HoldAll3DualiesDuringXMas",
+   "name": "We Have Ourselves a Cowboy",
+   "description": "Hold dual 9mm, dual hand cannons and Dual Revolvers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/accf66a38adfcb6455d3a20819b732d9fbe49d6e.jpg"
+  },
+  {
+   "key": "Kill1000EnemiesWithPipebomb",
+   "name": "Explosive Personality",
+   "description": "As Demolitions, kill 1000 Specimens with the Pipebomb.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0fab02f7639d82bd6ed85cf382cba86714a99cdd.jpg"
+  },
+  {
+   "key": "Kill1000HillbillyZeds",
+   "name": "Meet Your Maker!",
+   "description": "Kill 1000 Hillbilly Zeds",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f6036f9204c1c311d93be829c083d6d810134b76.jpg"
+  },
+  {
+   "key": "Kill1000ZedsWithSCAR",
+   "name": "SCAR'd",
+   "description": "Kill 1000 Specimens with the SCAR.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bcefd9d9db70871f941b6b1f02148515cecc7d0d.jpg"
+  },
+  {
+   "key": "Kill100FleshpoundsWithAA12",
+   "name": "Pound This",
+   "description": "Kill 100 Fleshpounds with the AA12.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d58e3270113c800c78b9c15556484cc1a9cde3fc.jpg"
+  },
+  {
+   "key": "Kill10SideshowClotsWithFireWeapon",
+   "name": "Burning up the Midway",
+   "description": "Kill 10 Circus Clots with a Fire-based weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fc6b4134a63b6ec8ac45ffd4f14cd492ff41229e.jpg"
+  },
+  {
+   "key": "Kill10ZedsSeekerOrM32In5Secs",
+   "name": "Most Bang for the Buck",
+   "description": "Kill 10 Halloween zeds in explosions using the Seeker 6 or the M32 within 5 seconds",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/deed32e129411a7ec67d4ca20efb651a9e0932ae.jpg"
+  },
+  {
+   "key": "Kill12ClotsWithOneMagWithMK23",
+   "name": "Spec Ops ",
+   "description": "Kill 12 clots with one magazine without reloading (MK23)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d8ced0c566d1172f02084d304a40deaccf40a813.jpg"
+  },
+  {
+   "key": "Kill12XMasZedsWith1BenelliClip",
+   "name": "Italian Meat Pasta",
+   "description": "Kill 12 zeds with a full magazine from the Combat Shotgun",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/464149e224d486c1c9002025e44aeeacd78c2b57.jpg"
+  },
+  {
+   "key": "Kill15HillbillyCrawlersThomOrMKB",
+   "name": "Creepy Crawlies",
+   "description": "Kill 15 Hillbilly Crawlers in 1 game with the Tommy Gun or MKb42",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/63cf64cea635a4feda153869e190e34773e65992.jpg"
+  },
+  {
+   "key": "Kill15XMasHusksWithHuskCannon",
+   "name": "Burning Irony",
+   "description": "Kill 15 Husks with the Husk Cannon",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d8a5878d1aab09e7a40f103bb9c2f2926517114a.jpg"
+  },
+  {
+   "key": "Kill1Hillbilly1HuskAndZedIn1Shot",
+   "name": "Rippin' It Up",
+   "description": "Kill a Hillbilly Husk and another Hillbilly Zed in the same shot with the Buzzsaw Bow or M99",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a4e15ec7bcd6492594c7daac372bd36e7e3abd20.jpg"
+  },
+  {
+   "key": "Kill1XMasZedWithFullM4Clip",
+   "name": "Bloody Yanks",
+   "description": "Kill 1 specimen ONLY while expending a full M4 Assault Rifle magazine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7614ae4dcdfc542a0e8215a6fa16d19f80e0da35.jpg"
+  },
+  {
+   "key": "Kill20CrawlersKilledInAir",
+   "name": "Killer Junior",
+   "description": "Kill 20 crawlers in mid-air with the M79.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/81eada4d345278cacacb3e1435161773c4dddcf5.jpg"
+  },
+  {
+   "key": "Kill250HalloweenZedsInBedlam",
+   "name": "The Scene is Zed",
+   "description": "Kill 250 Halloween Specimens in Bedlam",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1926700435c6bfe6b90eaec11339aa1e57416409.jpg"
+  },
+  {
+   "key": "Kill25HalloweenScrakesInBedlam",
+   "name": "This is No Ordinary Rabbit!",
+   "description": "Kill 25 Halloween Scrakes in Bedlam",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bec243240fbe24309a4aae44d90dd5362acfc8dc.jpg"
+  },
+  {
+   "key": "Kill2ScrakesOneBulletWithBarret",
+   "name": "The Big One",
+   "description": "Kill 2 scrakes with one shot (M99)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a65c3810ba8c9507f3b0f894f6912226f1e25b0d.jpg"
+  },
+  {
+   "key": "Kill2SideshowStalkerWithBackstab",
+   "name": "Assistant Homicide",
+   "description": "Kill 2 Circus Stalkers with a Melee weapon to the back in one wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/30632da4bb9bfd3428780cbf440db6e87ea7d4c9.jpg"
+  },
+  {
+   "key": "Kill3ChristmasBloatsWithBullpup",
+   "name": "That's not Santa!",
+   "description": "[2010 Xmas] Kill 3 Christmas Bloats with the Bullpup in one wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/3741a30b3d5ae4feb49a411681c665bbe5e906e0.jpg"
+  },
+  {
+   "key": "Kill3ChristmasStalkersWithLAR",
+   "name": "Fending off Mrs. Claws",
+   "description": "[2010 Xmas] Kill 3 Christmas Stalkers with a Lever Action Rifle without reloading.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/197f449d619e06973a9d4a6658757444391a06cf.jpg"
+  },
+  {
+   "key": "Kill3SideshowClotsWithLAR",
+   "name": "Small Hands",
+   "description": "Kill 3 Circus Clots in a wave with the Lever Action Rifle.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/2bd28a76c391a7c31a0a98e4d316503fccf5b823.jpg"
+  },
+  {
+   "key": "Kill4EnemiesWithHuntingShotgunShot",
+   "name": "Careful Spender",
+   "description": "Kill 4 Specimens with a Single Shot from a Hunting Shotgun.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/783418c0018fb6d9e5670d4080de1f2a67752d66.jpg"
+  },
+  {
+   "key": "Kill4StalkersNailgun",
+   "name": "Nail'd!",
+   "description": "Kill 4 Stalkers in a game with the Vlad9000 Nailgun",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8bd48b7d4e85d07ae490eea16adc5415134b807d.jpg"
+  },
+  {
+   "key": "Kill5HillbillyZedsIn10SecsSythOrAxe",
+   "name": "I Am Become Death",
+   "description": "Kill 5 Hillbilly Zeds in 10 seconds with the Scythe or Axe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/5b9a85fb9055ea2f9b07f5dfdfb8585c0f33b694.jpg"
+  },
+  {
+   "key": "Kill5SideshowBloats",
+   "name": "Clearing Clown Alley",
+   "description": "Kill 5 Circus Bloats in one game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b9c697a092c9a9882499f007b24b9397a915bd0e.jpg"
+  },
+  {
+   "key": "Kill5SideshowCrawlersWithBullpup",
+   "name": "Seeing Double",
+   "description": "Kill 5 Circus Crawlers with a Bullpup in one wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9c39b2960ec8e72f2479e90b35b44fe6cdc60ad5.jpg"
+  },
+  {
+   "key": "Kill5ZedsInZedTimeNoReloadSPT",
+   "name": "Turbo Executioner",
+   "description": "Kill 5 zeds in ZED time without reloading with Dr. T's LDS or Bullpup",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a753c8a57a7db2a94a2299e78f86c894b2d6b225.jpg"
+  },
+  {
+   "key": "Kill6ZedWithoutReloadingMKB42",
+   "name": "Historical Remnants",
+   "description": "Kill 6 Zeds with one magazine on an MKb42, without reloading",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/22e824a06d2d3559ac712adf7492028625fa8f41.jpg"
+  },
+  {
+   "key": "KillChristmasCrawlerWithXBow",
+   "name": "Rudolph, the Bloody Nosed Reindeer",
+   "description": "[2010 Xmas] Kill a Christmas Crawler with a Crossbow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ff7594a304c3a5f281fa5f8da553f025ef91b9d9.jpg"
+  },
+  {
+   "key": "KillChristmasHuskWithPistol",
+   "name": "Who Brings a Gun to a Snow Ball Fight?",
+   "description": "[2010 Xmas] Kill a Christmas Husk with any Pistol.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/31350dba7ff054dbc9c866560e906d5be15e2919.jpg"
+  },
+  {
+   "key": "KillChristmasScrakeWithFire",
+   "name": "Toasted Jack Frost",
+   "description": "[2010 Xmas] Kill the Christmas Scrake with a Fire-based weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0f9fda120e60128fbf5ca312c7834d403fe44f97.jpg"
+  },
+  {
+   "key": "KillChristmasSirenWithLawImpact",
+   "name": "Not So Silent Night",
+   "description": "[2010 Xmas] Kill a Christmas Siren with an undetonated LAW rocket.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fb5b093771be90284616e907943252ef213fda84.jpg"
+  },
+  {
+   "key": "KillFleshpoundWithMelee",
+   "name": "Too Close For Comfort",
+   "description": "Finish off a Fleshpound using a Melee Attack.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e2eb0364ae4ff41954ecc542605cbc8de222b586.jpg"
+  },
+  {
+   "key": "KillHalloweenPatriarchInBedlam",
+   "name": "Sparkling in the Twilight",
+   "description": "Kill The Vampire Patriarch Ringmaster in Bedlam",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d39573bcc4b8fbaf2d0b1f7cd252b44b538b3626.jpg"
+  },
+  {
+   "key": "KillHuskWithFlamethrower",
+   "name": "Flaming Hell, That was Close",
+   "description": "As Firebug, kill the Husk with the Flamethrower before he hurts anyone.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ad2be44ea13470264e1a7038a8839304ea4addd2.jpg"
+  },
+  {
+   "key": "KillOneOfEachZedsWithKSG",
+   "name": "Fugly ",
+   "description": "Kill one of each type of zed in one round (HSG Shotgun) ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d0e61219d6b27b09dd32efee6468a1063a269a09.jpg"
+  },
+  {
+   "key": "KillPatriarchOnlyCrossbows",
+   "name": "Merry Men",
+   "description": "Kill the Patriarch when everyone is ONLY using Crossbows.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/09f2bec304e5d3ed79753d620d9b8cc0f614ca3e.jpg"
+  },
+  {
+   "key": "KillPatriarchWithLAW",
+   "name": "The L.A.W. That Broke The Camel's Back",
+   "description": "Deliver the Killing Blow to the Patriarch with a L.A.W. Rocket.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1c00c23ff2df64f6db7f96b6d9e6702f7c74e53a.jpg"
+  },
+  {
+   "key": "KillSideshowFleshpoundWithPistol",
+   "name": "Elephant Gun",
+   "description": "Land the killing blow on a Circus Fleshpound with a Pistol.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/455a11ba7d1e4c05139308bb5fdf79b718467cc3.jpg"
+  },
+  {
+   "key": "KillSideshowGorefastWithMelee",
+   "name": "Sparring with a Master",
+   "description": "Kill a Circus Gorefast with a Melee weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e4b458bc9b18e0f769c63697f095cfb84b7894cb.jpg"
+  },
+  {
+   "key": "KillSideshowHuskWithLAW",
+   "name": "Lifting a Dumbell",
+   "description": "Kill a Circus Husk with a LAW.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/24e53a657c0564f21844a97a124360b71a731b72.jpg"
+  },
+  {
+   "key": "KillSideshowScrakeWithCrossbow",
+   "name": "The Big Hunt",
+   "description": "Kill a Circus Scrake with a Crossbow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fa9aa734c5fb45cb5d5ee23db2592305508cf3ba.jpg"
+  },
+  {
+   "key": "KillXBloats",
+   "name": "Fascist Dietitian",
+   "description": "Kill 200 Bloats.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ffd6dae0c00e35e453c9655b7aba2b73083b75da.jpg"
+  },
+  {
+   "key": "KillXBurningEnemiesWithCrossbow",
+   "name": "Hot Cross Fun",
+   "description": "Kill 25 Burning Specimens with a Crossbow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/521e4f3239ac7262800fbf0b0dc7c23f758b712c.jpg"
+  },
+  {
+   "key": "KillXEnemies2",
+   "name": "Experimentimillicide",
+   "description": "Kill 1,000 Specimens.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/20df7e6bd941af8909060e3e3949157d6760950b.jpg"
+  },
+  {
+   "key": "KillXEnemies3",
+   "name": "Experimentilottacide",
+   "description": "Kill 10,000 Specimens.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/312934b98ddaa4b5a841369fdb6aca046e927a05.jpg"
+  },
+  {
+   "key": "KillXEnemiesFeedingOnCorpses",
+   "name": "Dignity for the Dead",
+   "description": "Kill 10 Specimens Feeding on Dead Teammates Corpses.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/929c119ba322cdf63be6e4b481c5f2c4a6f9a4f1.jpg"
+  },
+  {
+   "key": "KillXEnemiesWithFireAxe",
+   "name": "Random Axe of Kindness",
+   "description": "Kill 15 Specimens with a Fire Axe in a Single Wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/068acc5a9c47ce81ff40deb098fd26162f91a60c.jpg"
+  },
+  {
+   "key": "KillXMasPatriarchWithClaymoreDecap",
+   "name": "Highlander",
+   "description": "Kill a Scrake, a Fleshpound, and the Patriarch with the Claymore Sword within one map",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/814927ec1746179d0b1ac0b46955b74d8902be49.jpg"
+  },
+  {
+   "key": "KillXMasScrakeWithDirectM203Nade",
+   "name": "Finish Him",
+   "description": "Hit a Scrake with the M203 Rifle grenade to kill him",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/018e2e46d12755049c5a66e08f52abed17db0be6.jpg"
+  },
+  {
+   "key": "KillXMasZedWithEveryRevolverShot",
+   "name": "Feeling Lucky?",
+   "description": "Kill a specimen with every shot from your Revolver for one magazine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/cb4fa2e08442bc45967a7cd31885b8d76cfcf3cf.jpg"
+  },
+  {
+   "key": "KillXScrakesWithChainsaw",
+   "name": "Bitter Irony",
+   "description": "Kill 2 Scrakes with a Chainsaw in a Single Wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f40990e0d352bc19d2a4f26ee27ac2a501848893.jpg"
+  },
+  {
+   "key": "KillXSirens",
+   "name": "Homer's Heroes",
+   "description": "Kill 100 Sirens.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fe4fcda587ee1f18fe1b119843eb5eadd309872c.jpg"
+  },
+  {
+   "key": "KillXStalkersWithExplosives",
+   "name": "Keep Those Sneakers Off the Floor!",
+   "description": "Kill 20 Stalkers with Explosives.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c0ffe600623971b1640bfb565a894b59f555bf47.jpg"
+  },
+  {
+   "key": "KillXZedsDuringWeld",
+   "name": "Totally Metal",
+   "description": "Transit - Kill 250 Zeds before completing the welding objective",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/938bfefec4cf3acf86b5c481f04c8bd28b96ca00.jpg"
+  },
+  {
+   "key": "KillZedThatHurtPlayerWithM7A3",
+   "name": "Combat Medic",
+   "description": "Kill a zed that has injured a player (M7A3 rifle)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6ebcfc5675bf231d0954f78e93938f8b95980deb.jpg"
+  },
+  {
+   "key": "KillZedWithImpactSPG",
+   "name": "Single-Load Doom Bombardier",
+   "description": "Kill a ZED with a direct (unexploded) shot from the Orca Bomb Propeller or the M-79/M32",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a5e3f51c21abfc318bbc6cf3d6585c8e5cafd900.jpg"
+  },
+  {
+   "key": "KillZedWithSA80AndFNFal",
+   "name": "British Superiority",
+   "description": "Kill a zed each with both the Bullpup and FN-Fal",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/3484e9646fd20dd2e2785a9330d863e2ae698d76.jpg"
+  },
+  {
+   "key": "KnifeChristmasFleshpound",
+   "name": "Cracked the Nutcracker!",
+   "description": "[2010 Xmas] Land the killing blow on a Christmas Fleshpound with a Knife.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/894dc78c13d9032e4dfcec2f5d360adb7996e610.jpg"
+  },
+  {
+   "key": "LaserSightedEBRHeadshots25InARow",
+   "name": "Dot of Doom",
+   "description": "Get 25 headshots in a row with the EBR while using the Laser Sight.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/409376e60993d8fadf4a5ca4c1d285916e34ff02.jpg"
+  },
+  {
+   "key": "MaxOutAllPerks",
+   "name": "Mr. Perky",
+   "description": "Get All of your Perks up to Level 5.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1a74a4d0e91340a8e6bd6b8e11dc2285acbf8589.jpg"
+  },
+  {
+   "key": "MedicKillXEnemiesWithKnife",
+   "name": "Master Surgeon",
+   "description": "As a Medic, Kill 8 Specimens using a Knife in a Single Wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/cdd3ccb8acf79c79beb5ee79f039c1cabe20bb5b.jpg"
+  },
+  {
+   "key": "MeleeKill2ChristmasGorefastFromBack",
+   "name": "Can't Catch Me!",
+   "description": "[2010 Xmas] Kill 2 Christmas Gorefasts with a Melee weapon from behind in one wave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/70c1248622aacec0e3e8fa9afe8949e1306769b4.jpg"
+  },
+  {
+   "key": "MeleeKill3ChristmasZedsInOneSlomo",
+   "name": "Deck the Halls with Buckets o' Blood",
+   "description": "[2010 Xmas] Kill 3 Christmas Zeds in 1 ZED time chain with a Melee weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/172bb21a87ab0bf02fd257a8f1708c5b7a640627.jpg"
+  },
+  {
+   "key": "MeleeKill4SideshowZedsInOneSlomo",
+   "name": "Taking Down the Big Top",
+   "description": "Kill 4 Circus Zeds in 1 ZED time chain with a Melee weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bb80b572b6641a52f3d97c9cf54866b3a4c367b4.jpg"
+  },
+  {
+   "key": "NitroInXSeconds",
+   "name": "Nitro Boost!",
+   "description": "Transit - Get the Nitro to the Objective in 135 seconds or less",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7b4adee17cff70733a1b91d22d68983b3ab97ee2.jpg"
+  },
+  {
+   "key": "NoCarrierDamageGoldBars",
+   "name": "Golden 3 Crown Note",
+   "description": "Get all 3 gold bars without the carriers taking damage while they have them",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a31ba7b0cfb0199262e179e8d9575e8e0f8d3fc9.jpg"
+  },
+  {
+   "key": "Obliterate10ZedsWithPipebomb",
+   "name": "Getting Chunky",
+   "description": "Obliterate 10 Zeds at once with the Pipe Bomb.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8398bea0b74eb748a996177ac0b6306df5f40134.jpg"
+  },
+  {
+   "key": "OneSmallStepForMan",
+   "name": "One Small Step for Man",
+   "description": "Kill 500 Zeds with the Schneidzekk Medic Gun while you are falling",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/be1a8fd7874dc639c488867c0d9478c3ee992110.jpg"
+  },
+  {
+   "key": "OnlySurvivorXWaves",
+   "name": "Thin-Ice Pirouette",
+   "description": "Complete 10 Waves when the Rest of your Team has Died.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d1df5ec9cfaf0f851dd0783126a7fe6af114753b.jpg"
+  },
+  {
+   "key": "PickUpDoorKey",
+   "name": "Multi-pass",
+   "description": "Transit - Pick up the door key",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/4361f09d30dc059ec7522b87c33f5feb2624bb72.jpg"
+  },
+  {
+   "key": "PlayWithOrAsBallHero",
+   "name": "No Time for Love, Dr. Jones",
+   "description": "Win a short round on KF-Hell playing as or with Harchier Spebbington",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c31ca01b1538dd736593ada0248d2a21178b5dcd.jpg"
+  },
+  {
+   "key": "PushScrakeSPJ",
+   "name": "Assault Flayer Ordinance",
+   "description": "Push a scrake back with the direct fire from a Hunting Shotgun or alt fire from the Multi-Chamber ZED Thrower",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d564f704eb13c8a3e1d9a1a7e31cd051c4ed2804.jpg"
+  },
+  {
+   "key": "ScrakeAndFP1ShotLawHarpoon",
+   "name": "Fire and Forget",
+   "description": "Kill a Halloween Fleshpound and Scrake in the same explosion with the Seal Squeal Harpoon Bomber or the LAW",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b1b6dc84859b5d44a881ab7fec93ff2808ab263e.jpg"
+  },
+  {
+   "key": "Set200ZedOnFireInHillbilly",
+   "name": "Trench Warfare",
+   "description": "Set a total of 200 Zeds on fire with the Trench Gun in Hillbilly Horror",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7615489f3109fccc634969417aab4af18b0fe1c0.jpg"
+  },
+  {
+   "key": "Set3HillbillyGorefastsOnFire",
+   "name": "Fiery Personality",
+   "description": "Set 3 Hillbilly Gorefasts on fire with the Flare Pistol or Trench Gun",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/74956cb7f565f94a4e225de93b2dafa1cf25b30b.jpg"
+  },
+  {
+   "key": "SurviveSideshowSirenScreamPlus10Sec",
+   "name": "Windjammer Enthusiast",
+   "description": "Survive 10 seconds after being screamed at by a Circus Siren on Hard or above.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e5c63e808400cd45c47eb5b0e3b7116aac994b45.jpg"
+  },
+  {
+   "key": "TurnXEnemiesIntoGiblets",
+   "name": "It's What's Inside That Counts",
+   "description": "Turn 500 Specimens into Giblets.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f8c92abaf9eea11dfee55e2d985c1841d9a50fcc.jpg"
+  },
+  {
+   "key": "TurnXFleshpoundsIntoGiblets",
+   "name": "Quarter Pounder With Ease",
+   "description": "Turn 5 Fleshpounds into Giblets.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/25ba09203237cd47b92233374d7bd5c7eccbcbab.jpg"
+  },
+  {
+   "key": "Unlock10ofChristmasAchievements",
+   "name": "Bad Santa",
+   "description": "Unlock 10 of the 13 Christmas Achievements along with any Christmas Map achievement.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6817b56fa60d7ec79d5d9af80881a3e3ec91689b.jpg"
+  },
+  {
+   "key": "Unlock10ofSideshowAchievements",
+   "name": "Punk'd",
+   "description": "Unlock 10 of the 13 Circus Achievements along with any Abusement Park achievement.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8832e3d39419b8a39fd5b36b6c533f34ae024faf.jpg"
+  },
+  {
+   "key": "Unlock6ofHalloweenAchievements",
+   "name": "Rule The Roost",
+   "description": "Get all 6 achievements and unlock Commando Chicken",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6a4d61d0b04614ee837eb4e8c5039912de628f4a.jpg"
+  },
+  {
+   "key": "WinAll3SummerMapsHard",
+   "name": "Summer of 2009",
+   "description": "Complete a Long Game on all 3 Summer 2009 maps on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7fe4989667d2d8092c62b91fc5cb3c3a7e64baaf.jpg"
+  },
+  {
+   "key": "WinAll3SummerMapsNormal",
+   "name": "Long, Hot Summer",
+   "description": "Complete a Long Game on all 3 Summer 2009 maps on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7cad9e6491d72d53d4e7e9e985838fedd62c90d2.jpg"
+  },
+  {
+   "key": "WinAll3SummerMapsSuicidal",
+   "name": "And Back to School",
+   "description": "Complete a Long Game on all 3 Summer 2009 maps on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f7b871efba27458f78cec8cc721f97f9cd375235.jpg"
+  },
+  {
+   "key": "WinAllMapsHard",
+   "name": "The Hard War",
+   "description": "Complete a Long Game on all 5 Core Maps on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/24996372752872585752af94150d00ce3ac6ccd1.jpg"
+  },
+  {
+   "key": "WinAllMapsNormal",
+   "name": "The Long War",
+   "description": "Complete a Long Game on all 5 Core Maps on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9f97715762297aaea6a1f2e05b731e3031ed5e4f.jpg"
+  },
+  {
+   "key": "WinAllMapsSuicidal",
+   "name": "The Completely Suicidal War",
+   "description": "Complete a Long Game on all 5 Core Maps on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/725c83f1a5a08d3205cc71ef93f0ce8801c43b08.jpg"
+  },
+  {
+   "key": "WinAsylumHard",
+   "name": "Gone Mental",
+   "description": "Win a Long Game on Bedlam, on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/974e19f725a31cc9c0d7d60a0705643f2cff6231.jpg"
+  },
+  {
+   "key": "WinAsylumHell",
+   "name": "Commit-ed for life",
+   "description": "Win a Long Game on Bedlam on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e0d21ef89c5ed0564dbfe76aaf278592cbace653.jpg"
+  },
+  {
+   "key": "WinAsylumNormal",
+   "name": "A Bit Barmy",
+   "description": "Win a Long Game on Bedlam, on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bcc87420e28cd866042ee86c361665d5e7c6c314.jpg"
+  },
+  {
+   "key": "WinAsylumSuicidal",
+   "name": "Complete Barking",
+   "description": "Win a Long Game on Bedlam, on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ae07b573a8375cacb4439da06971f298571c1b26.jpg"
+  },
+  {
+   "key": "WinBedlamHardHalloween",
+   "name": "Zed October",
+   "description": "Win a Long Bedlam Match During the Halloween Event on Hard",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ae62d14b77126ae53a5305cbc0ea24ae7aaee80e.jpg"
+  },
+  {
+   "key": "WinBiohazardHard",
+   "name": "Waste Land",
+   "description": "Win a Long Game on Biohazard on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/91cc545b2291081ce4c6f72e71f278a6c32842d1.jpg"
+  },
+  {
+   "key": "WinBiohazardHell",
+   "name": "Wasted",
+   "description": "Win a Long Game on Biohazard on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9bfdad5fd26547cef59f5db1f4498d25a154b232.jpg"
+  },
+  {
+   "key": "WinBiohazardNormal",
+   "name": "Waste Disposal",
+   "description": "Win a Long Game on Biohazard on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f7a5167a61c699fa494202f93107c66fb518a1ce.jpg"
+  },
+  {
+   "key": "WinBiohazardSuicidal",
+   "name": "Waste of Space",
+   "description": "Win a Long Game on Biohazard on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/efc4ffd7a7e08f3139be1e44c9d70a0a1a1759f1.jpg"
+  },
+  {
+   "key": "WinBioticsLabHard",
+   "name": "Lab Assistant",
+   "description": "Win a Long Game on Biotics Lab on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7305dd4827c99893e67ac252e9875c56e864b9da.jpg"
+  },
+  {
+   "key": "WinBioticsLabHell",
+   "name": "Scientist from Hell",
+   "description": "Win a Long Game on Biotics Lab on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b03268913b91e83a18522f0f639fa92795d642dd.jpg"
+  },
+  {
+   "key": "WinBioticsLabNormal",
+   "name": "Lab Cleaner",
+   "description": "Win a Long Game on Biotics Lab on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8ece1deeb726121a624e9be3f84348e198c31a87.jpg"
+  },
+  {
+   "key": "WinBioticsLabSuicidal",
+   "name": "Lab Professor",
+   "description": "Win a Long Game on Biotics Lab on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9accb4411d5efcfe46c574158d27183c13bf0059.jpg"
+  },
+  {
+   "key": "WinClandestineHard",
+   "name": "Rack 'em up",
+   "description": "Beat Clandestine on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7345dc2d6c04c85ce0f00b67cb0d35bb90055839.jpg"
+  },
+  {
+   "key": "WinClandestineHell",
+   "name": "Hangover from Hell",
+   "description": "Beat Clandestine on Hell Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/afd2e03509205c4bd7ea971c8ccc7a542764dd39.jpg"
+  },
+  {
+   "key": "WinClandestineNormal",
+   "name": "Gone clubbing",
+   "description": "Beat Clandestine on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/afc2c7e1376f9531109521317b6d7a9e9791b363.jpg"
+  },
+  {
+   "key": "WinClandestineSuicidal",
+   "name": "Burned out",
+   "description": "Beat Clandestine on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/3085304e5a911579763eb788c2c22041420866d3.jpg"
+  },
+  {
+   "key": "WinCrashHard",
+   "name": "Warehouse Forklift Operator",
+   "description": "Win a Long Game on Crash on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/306871d6cd7033fe8b28357055e09013a89f1d78.jpg"
+  },
+  {
+   "key": "WinCrashHell",
+   "name": "Warehouse Manager",
+   "description": "Win a Long Game on Crash on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/695f68e909e1d4f1b55366c411d70f9ad819bf83.jpg"
+  },
+  {
+   "key": "WinCrashNormal",
+   "name": "Warehouse Janitor",
+   "description": "Win a Long Game on Crash on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ca5748ed2c8fa80505d74e137f80d58200108b01.jpg"
+  },
+  {
+   "key": "WinCrashSuicidal",
+   "name": "Warehouse Foreman",
+   "description": "Win a Long Game on Crash on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/755d353158a3a9b605c5319878b918169e8bde9d.jpg"
+  },
+  {
+   "key": "WinDepartedHard",
+   "name": "Departure Lounge",
+   "description": "Win a Long Game on Departed on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a5477cb8b739ca84cfa7801121711ee3024948b4.jpg"
+  },
+  {
+   "key": "WinDepartedHell",
+   "name": "Dear Departed",
+   "description": "Win a Long Game on Departed on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ee3abe07053c047a422e46e52a121ad03e5a1894.jpg"
+  },
+  {
+   "key": "WinDepartedNormal",
+   "name": "Departure Gallery",
+   "description": "Win a Long Game on Departed on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0b0c4770d4c70ba6ce61f4acb280181f66bb1a02.jpg"
+  },
+  {
+   "key": "WinDepartedSuicidal",
+   "name": "Departure Gate",
+   "description": "Win a Long Game on Departed on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f9999b3c63844a44a67e479a98366489b9703d74.jpg"
+  },
+  {
+   "key": "WinFarmHard",
+   "name": "Cattle Farmer",
+   "description": "Win a Long Game on Farm on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/160528d802fe978de6587461c085a31e3dd5c4f1.jpg"
+  },
+  {
+   "key": "WinFarmHell",
+   "name": "Demon Farmer",
+   "description": "Win a Long Game on Farm on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/657cce53340f3f2714ff532987034a3170fb724b.jpg"
+  },
+  {
+   "key": "WinFarmNormal",
+   "name": "Chicken Farmer",
+   "description": "Win a Long Game on Farm on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/eb3b66919858d2190303c9d861bbb17e8b2c0744.jpg"
+  },
+  {
+   "key": "WinFarmSuicidal",
+   "name": "Alligator Farmer",
+   "description": "Win a Long Game on Farm on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/585e7ec1ab1a6c845d49b288b5860600eedd4b7d.jpg"
+  },
+  {
+   "key": "WinFilthsCrossHard",
+   "name": "Missed Connection",
+   "description": "Win a Long Game on Filth's Cross on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/5e0516850b3ca319e38cb7ec1166fe0cd4f575f4.jpg"
+  },
+  {
+   "key": "WinFilthsCrossHell",
+   "name": "Pile Up",
+   "description": "Win a Long Game on Filth's Cross on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c215fe6fa0b1a4c042ad1a0d5586edc2b79182d5.jpg"
+  },
+  {
+   "key": "WinFilthsCrossNormal",
+   "name": "Running Late",
+   "description": "Win a Long Game on Filth's Cross on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0559acc193855c65a4319a27424259d1d2134395.jpg"
+  },
+  {
+   "key": "WinFilthsCrossSuicidal",
+   "name": "Train Wreck",
+   "description": "Win a Long Game on Filth's Cross on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/2aed207c503f757c651a7efe4689f6cac92e5e22.jpg"
+  },
+  {
+   "key": "WinForgottenHard",
+   "name": "Agnosia",
+   "description": "Beat Forgotten on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1e896da5c77e7002b97e13b8afcf261d05cc09b2.jpg"
+  },
+  {
+   "key": "WinForgottenHell",
+   "name": "Dementia",
+   "description": "Beat Forgotten on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1f0c660af1278da2a0260c0a3d7c7ce92957bdfe.jpg"
+  },
+  {
+   "key": "WinForgottenNormal",
+   "name": "Brain Fart",
+   "description": "Beat Forgotten on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/97f9b381c53124f02949066d6170dcd5ed190553.jpg"
+  },
+  {
+   "key": "WinForgottenSuicidal",
+   "name": "Amnesia",
+   "description": "Beat Forgotten on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d3e217a9a16bc72d78442609845c2356e6f6188a.jpg"
+  },
+  {
+   "key": "WinFoundryHard",
+   "name": "Steel Worker",
+   "description": "Win a Long Game on Foundry, on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fd3c0174d6900dc60bddaf5b82a307ae03d3a33f.jpg"
+  },
+  {
+   "key": "WinFoundryHell",
+   "name": "Diablo Steel Man",
+   "description": "Win a Long Game on Foundry on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8d2e028adc3f8dc9433d381b918e5456d347e085.jpg"
+  },
+  {
+   "key": "WinFoundryNormal",
+   "name": "Tin Man",
+   "description": "Win a Long Game on Foundry, on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1088d65171bb4b8293d1bec825e6051645e31bae.jpg"
+  },
+  {
+   "key": "WinFoundrySuicidal",
+   "name": "Man of Steel",
+   "description": "Win a Long Game on Foundry, on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/60ae8591a55b23073f9e89c1bede09cfc770b585.jpg"
+  },
+  {
+   "key": "WinFrightyardHard",
+   "name": "Gang Crew",
+   "description": "Beat Fright Yard on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b5e0e7ac40807bc3b5d7a5d9af4d7e1132a61b99.jpg"
+  },
+  {
+   "key": "WinFrightyardHell",
+   "name": "Wharfinger",
+   "description": "Beat Fright Yard on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/61f38503153e7619c475793e2b603b54e4692778.jpg"
+  },
+  {
+   "key": "WinFrightyardNormal",
+   "name": "Longshoreman",
+   "description": "Beat Fright Yard on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a40b5c4bb62d4126a742e5eceaabeb6aba05275d.jpg"
+  },
+  {
+   "key": "WinFrightyardObjHard",
+   "name": "Truck Driver",
+   "description": "Beat Fright Yard in Objective Mode on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/56b955bc40ee19de6c974506d3632fc7af8bf3aa.jpg"
+  },
+  {
+   "key": "WinFrightyardObjHell",
+   "name": "Shipping Magnate",
+   "description": "Beat Fright Yard in Objective Mode on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/019479b3d65f7b1187a40d5cdafd037c93dc66cd.jpg"
+  },
+  {
+   "key": "WinFrightyardObjNormal",
+   "name": "Fork Lift Operator",
+   "description": "Beat Fright Yard in Objective Mode on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e396662c7f5b0341dd7a37e7f6ce917b614435dd.jpg"
+  },
+  {
+   "key": "WinFrightyardObjSuicidal",
+   "name": "Crane Operator",
+   "description": "Beat Fright Yard in Objective Mode on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/833e56f20345d731b2c947572050db13fb4b095f.jpg"
+  },
+  {
+   "key": "WinFrightyardSuicidal",
+   "name": "Stevedore",
+   "description": "Beat Fright Yard on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/66930a337c9678380f6cb99000181026bc0e196d.jpg"
+  },
+  {
+   "key": "WinHellHard",
+   "name": "King Minos",
+   "description": "Beat Hell on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7c9667c7604e947936b73c4696a0212672abdb55.jpg"
+  },
+  {
+   "key": "WinHellHell",
+   "name": "Lucifer",
+   "description": "Beat Hell on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ecfb93dc558bb5517eddded1e95a283b24dbcf83.jpg"
+  },
+  {
+   "key": "WinHellNormal",
+   "name": "Death",
+   "description": "Beat Hell on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/3ba3e5e433dc3c8f793dbe0ef3c4b484ba6d7927.jpg"
+  },
+  {
+   "key": "WinHellSuicidal",
+   "name": "Cerberus",
+   "description": "Beat Hell on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a9b3093b58ce86e56715b8780db80f9dff893464.jpg"
+  },
+  {
+   "key": "WinHellrideHard",
+   "name": "Stuck in Limbo",
+   "description": "Beat Hellride on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d3057b3f1caf27a9f7362964170af886a06e6c80.jpg"
+  },
+  {
+   "key": "WinHellrideHell",
+   "name": "Devil's Co-pilot",
+   "description": "Beat Hellride on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6e61692b732267b99dbfbf99048ee95d0b05c4ed.jpg"
+  },
+  {
+   "key": "WinHellrideNormal",
+   "name": "Highway to Heaven",
+   "description": "Beat Hellride on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7322c1d1bd64e3186729f489eec6164c435b3a71.jpg"
+  },
+  {
+   "key": "WinHellrideSuicidal",
+   "name": "Demonic Road",
+   "description": "Beat Hellride on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/651afb3ac3c04831c6b732b3b3c48dd142d97145.jpg"
+  },
+  {
+   "key": "WinHillbillyHard",
+   "name": "Second Cousins",
+   "description": "Beat Hillbilly Horror on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c25770b3c6e90f050f5d6debda85ade80c30d9ce.jpg"
+  },
+  {
+   "key": "WinHillbillyHell",
+   "name": "First Cousins",
+   "description": "Beat Hillbilly Horror on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a08f38b218e60070dc3ae6cc82b6ec3bc3efd168.jpg"
+  },
+  {
+   "key": "WinHillbillyNormal",
+   "name": "Third Cousins",
+   "description": "Beat Hillbilly Horror on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6773a541882757cb1be36445f15c729b1e0984ea.jpg"
+  },
+  {
+   "key": "WinHillbillySuicidal",
+   "name": "First Cousins (Once Removed)",
+   "description": "Beat Hillbilly Horror on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/dff082afbc385f6e9a3113ebda172bf42158e3f3.jpg"
+  },
+  {
+   "key": "WinHospitalHorrorsHard",
+   "name": "That Bloody Well Hurts!",
+   "description": "Win a Long Game on Hospital Horrors on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fc74db626fda9435a1141a61acc6849e9b3b7503.jpg"
+  },
+  {
+   "key": "WinHospitalHorrorsHell",
+   "name": "Not Dead Yet!",
+   "description": "Win a Long Game on Hospital Horrors on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0972b908f868c8353d22f6d5fa3c871fc64dfbe3.jpg"
+  },
+  {
+   "key": "WinHospitalHorrorsNormal",
+   "name": "Gimme a Plaster!",
+   "description": "Win a Long Game on Hospital Horrors on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fc90a56e13046e5f0a73e075d7cde4f817349c78.jpg"
+  },
+  {
+   "key": "WinHospitalHorrorsSuicidal",
+   "name": "I'm Dying Here!",
+   "description": "Win a Long Game on Hospital Horrors on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/76d444ff113a906085eac90ecc4a5e00b07b9824.jpg"
+  },
+  {
+   "key": "WinIceCaveHard",
+   "name": "Stay Frosty",
+   "description": "Beat Ice Cave on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/11a75d40776f61d16f7b09db702e272154ceb697.jpg"
+  },
+  {
+   "key": "WinIceCaveHell",
+   "name": "Anti Freeze",
+   "description": "Beat Ice Cave on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c65c3615ec3c172331e0f9742229c1409985c851.jpg"
+  },
+  {
+   "key": "WinIceCaveNormal",
+   "name": "Snow Cone",
+   "description": "Beat Ice Cave on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/92b826d49c01dd1c5d623838134a125a71eb97df.jpg"
+  },
+  {
+   "key": "WinIceCaveSuicidal",
+   "name": "On the Rocks",
+   "description": "Beat Ice Cave on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/aac71be475b080b30c9a780eb15681cf122df953.jpg"
+  },
+  {
+   "key": "WinIcebreakerHard",
+   "name": "Crushed Ice",
+   "description": "Win a Long Game on Icebreaker on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/536fec3e8f897be0243cc29effbf27c392d4eef6.jpg"
+  },
+  {
+   "key": "WinIcebreakerHell",
+   "name": "Comet",
+   "description": "Win a Long Game on Icebreaker on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7f46d1a272d077b2033e8425bb5e703b7cd9262d.jpg"
+  },
+  {
+   "key": "WinIcebreakerNormal",
+   "name": "Ice Cube",
+   "description": "Win a Long Game on Icebreaker on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f070a1ab475d44f0539bd6bb160e76fcdf75ff11.jpg"
+  },
+  {
+   "key": "WinIcebreakerSuicidal",
+   "name": "Iceberg",
+   "description": "Win a Long Game on Icebreaker on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/64c95bb1a3234e94cb30379c707e5a55b545d867.jpg"
+  },
+  {
+   "key": "WinManorHard",
+   "name": "Duke of the Manor",
+   "description": "Win a Long Game on Manor on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/96a042586fb154f257b93d8656e1f8f8a3d08748.jpg"
+  },
+  {
+   "key": "WinManorHell",
+   "name": "Demonic King of the Manor",
+   "description": "Win a Long Game on Manor on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f7551daf81640957ac688160c411a0f668ad7307.jpg"
+  },
+  {
+   "key": "WinManorNormal",
+   "name": "Lord of the Manor",
+   "description": "Win a Long Game on Manor on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/62d77d52acf76bd228dc8996969145ce0b410528.jpg"
+  },
+  {
+   "key": "WinManorSuicidal",
+   "name": "Emperor of the Manor",
+   "description": "Win a Long Game on Manor on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/79fcc27e40dfbab79ac24001ed8aa22c1708bc1e.jpg"
+  },
+  {
+   "key": "WinMountainPassHard",
+   "name": "Gone Camping",
+   "description": "Win a Long Game on Mountain Pass on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/42d4bc2fc607414fe1df1a61f0ef163f27ec519f.jpg"
+  },
+  {
+   "key": "WinMountainPassHell",
+   "name": "Park Ranger",
+   "description": "Win a Long Game on Mountain Pass on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c37e3806d2d01efde06275a6f296eccaa4127f75.jpg"
+  },
+  {
+   "key": "WinMountainPassNormal",
+   "name": "Daytrip",
+   "description": "Win a Long Game on Mountain Pass on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/601be66f190790f066e8a6a576a84a51e9fcf53c.jpg"
+  },
+  {
+   "key": "WinMountainPassSuicidal",
+   "name": "Mountaineer",
+   "description": "Win a Long Game on Mountain Pass on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/d773e78ce6a28e1721e1fd36bcac7b7f74065efb.jpg"
+  },
+  {
+   "key": "WinOfficesHard",
+   "name": "Hard Boss",
+   "description": "Win a Long Game on Offices on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/db7ef13153b1bea8c2448a9a617ae4ee57c3e754.jpg"
+  },
+  {
+   "key": "WinOfficesHell",
+   "name": "Boss from Hell",
+   "description": "Win a Long Game on Offices on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b18fa111165c91b6647daaa965aa6dccca28d064.jpg"
+  },
+  {
+   "key": "WinOfficesNormal",
+   "name": "The Boss",
+   "description": "Win a Long Game on Offices on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fe7f70d3e880ffaec200234a50c9269d58e0c9b7.jpg"
+  },
+  {
+   "key": "WinOfficesSuicidal",
+   "name": "Mad Boss",
+   "description": "Win a Long Game on Offices on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a5d5e2dae246698a5cc2ee2d42e7a1ba04d9d84f.jpg"
+  },
+  {
+   "key": "WinSantasEvilLairHard",
+   "name": "Silent Night, Evil Night",
+   "description": "Win a Long Game on Santa's Evil Lair on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f530c7df75ef2a8010bc6b2b2ccc4744934b262f.jpg"
+  },
+  {
+   "key": "WinSantasEvilLairHell",
+   "name": "Grandma got Eaten by a Reindeer",
+   "description": "Win a Long Game on Santa's Evil Lair on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f04cee568176247e841157b465f431e7b555bef7.jpg"
+  },
+  {
+   "key": "WinSantasEvilLairNormal",
+   "name": "Walking in  A Winter Horror Land",
+   "description": "Win a Long Game on Santa's Evil Lair on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/39af135991f55ef77ccbad34acb10dcc158e6a64.jpg"
+  },
+  {
+   "key": "WinSantasEvilLairSuicidal",
+   "name": "I'm Dreaming of a Red Christmas",
+   "description": "Win a Long Game on Santa's Evil Lair on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/7e44ca416380344d55834e810cc9553cba54b3c9.jpg"
+  },
+  {
+   "key": "WinSideshowHard",
+   "name": "Dog and Pony Show",
+   "description": "Win a Long Game on Abusement Park on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/25c59e7f6e6a41474b9bc35037f07e1961ed83ce.jpg"
+  },
+  {
+   "key": "WinSideshowHell",
+   "name": "On Top of the Big Top",
+   "description": "Win a Long Game on Abusement Park on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c44d0a6ef3305f17f8435acf1caa2765054dbc64.jpg"
+  },
+  {
+   "key": "WinSideshowNormal",
+   "name": "Flea Circus",
+   "description": "Win a Long Game on Abusement Park on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/cc3df7a1cce966d08207fe22b11e8c9aa3854736.jpg"
+  },
+  {
+   "key": "WinSideshowSuicidal",
+   "name": "3 Ring Circus",
+   "description": "Win a Long Game on Abusement Park on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/0a9e5f193e50d0ac4d1840817cfc3de58a432dc6.jpg"
+  },
+  {
+   "key": "WinSirensBelchHard",
+   "name": "Micro Brewer",
+   "description": "Beat Siren's Belch on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b7b113d023776a214afd9336b9d88ac34f792d88.jpg"
+  },
+  {
+   "key": "WinSirensBelchHell",
+   "name": "Trappist Monk",
+   "description": "Beat Siren's Belch on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6093c2007584e0dee6e755d92fa8566c694ceebf.jpg"
+  },
+  {
+   "key": "WinSirensBelchNormal",
+   "name": "Home Brewer",
+   "description": "Beat Siren's Belch on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e02a7dc45d7ed0c0ac5c99c829226ee140d6ccb0.jpg"
+  },
+  {
+   "key": "WinSirensBelchSuicidal",
+   "name": "Master Brewer",
+   "description": "Beat Siren's Belch on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bc5796844ed35c2f573d404229314f4e1cc39aef.jpg"
+  },
+  {
+   "key": "WinSteamLandHard",
+   "name": "Modified Psychoacceleration Achiever",
+   "description": "Beat Steamland on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/ef3f5ae495aa80b2b1b191d6fb5911c49d8141f7.jpg"
+  },
+  {
+   "key": "WinSteamLandHell",
+   "name": "Advanced Omega Wave Resonance Explorer",
+   "description": "Beat Steamland on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e37b1cb15581f976b6b2552a72e2ad3c3141dd3b.jpg"
+  },
+  {
+   "key": "WinSteamLandNormal",
+   "name": "Astro Buffer Afficiando",
+   "description": "Beat Steamland on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/3c27038584c9acf5e0446de9c123d88c2a45942c.jpg"
+  },
+  {
+   "key": "WinSteamLandObjHard",
+   "name": "Oscillating Hydrogen Transition Achiever",
+   "description": "Beat Steamland in Objective Mode on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/559eefb902d4bc1ac5531773ef11ae7313d54721.jpg"
+  },
+  {
+   "key": "WinSteamLandObjHell",
+   "name": "Tachyon Cytoneutralization Explorer",
+   "description": "Beat Steamland in Objective Mode on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6d69ac7a84faec56eeb6e8094132173813a4ead1.jpg"
+  },
+  {
+   "key": "WinSteamLandObjNormal",
+   "name": "Simplified Force Adhesion Afficianado",
+   "description": "Beat Steamland in Objective Mode on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a0ad0073d71bca28b491e643b6c1e7f4e227d07a.jpg"
+  },
+  {
+   "key": "WinSteamLandObjSuicidal",
+   "name": "Alpha Wave Osteooxidation Activator",
+   "description": "Beat Steamland in Objective Mode on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/8f8a3c3e25a70cd7726e85e7ab2832e4888849da.jpg"
+  },
+  {
+   "key": "WinSteamLandSuicidal",
+   "name": "Fractional Neutron Activator",
+   "description": "Beat Steamland on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/3117321ffe3c7c5c0df5540e2bb5f90824d7e374.jpg"
+  },
+  {
+   "key": "WinStrongholdHard",
+   "name": "Squire",
+   "description": "Beat Stronghold on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fb99f767da3fbea66617ba2191b1ade525a30f39.jpg"
+  },
+  {
+   "key": "WinStrongholdHell",
+   "name": "King",
+   "description": "Beat Stronghold on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/cdb2ecb8842bdc028fd1844a7ed343718364b847.jpg"
+  },
+  {
+   "key": "WinStrongholdNormal",
+   "name": "Peasant",
+   "description": "Beat Stronghold on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/42a5efb0365f515ed27d6b306aa8333b64ac68bf.jpg"
+  },
+  {
+   "key": "WinStrongholdSuicidal",
+   "name": "Prince",
+   "description": "Beat Stronghold on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/42910f90b487828d8843db7303c7d0ea77304a39.jpg"
+  },
+  {
+   "key": "WinSuburbiaHard",
+   "name": "Private Security",
+   "description": "Win a Long Game on Suburbia on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/b5d61f04b1dbe58d0c2734591eed852293cde52a.jpg"
+  },
+  {
+   "key": "WinSuburbiaHell",
+   "name": "SWAT",
+   "description": "Win a Long Game on Suburbia on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/4c428dcd58a09f2383973450146d2a77b0242029.jpg"
+  },
+  {
+   "key": "WinSuburbiaNormal",
+   "name": "Neighborhood Watch",
+   "description": "Win a Long Game on Suburbia on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/2086204cddf09643c32b889f5495d989f1388ecb.jpg"
+  },
+  {
+   "key": "WinSuburbiaSuicidal",
+   "name": "Vigilante",
+   "description": "Win a Long Game on Suburbia on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/15f045229f0cf64bd2c94f68c38eb679922d3d15.jpg"
+  },
+  {
+   "key": "WinThrillsChillsHard",
+   "name": "Cavern of Pain",
+   "description": "Beat ThrillsChills on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/1c24c0ffb48580389546c349ffb676a63afda931.jpg"
+  },
+  {
+   "key": "WinThrillsChillsHell",
+   "name": "Hollow of Horror",
+   "description": "Beat ThrillsChills on Hell Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/be959df281bb1e4049be0791c7ac2e2e14432f7b.jpg"
+  },
+  {
+   "key": "WinThrillsChillsNormal",
+   "name": "Cave of Wonder",
+   "description": "Beat ThrillsChills on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/9878a45e3d5c4597ca70f21ddbef2f64181937bc.jpg"
+  },
+  {
+   "key": "WinThrillsChillsSuicidal",
+   "name": "Grotto of Terror",
+   "description": "Beat ThrillsChills on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/5170ce302e9e7b2961b649dc7534c52695bd3e6d.jpg"
+  },
+  {
+   "key": "WinTransitHard",
+   "name": "Economy Comfort",
+   "description": "Beat Transit on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/83a600a4d8914879594e2eaab19092f43674696f.jpg"
+  },
+  {
+   "key": "WinTransitHell",
+   "name": "First Class",
+   "description": "Beat Transit on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/a271f93f85bd34986cdffef9df3e43fdb81c4b33.jpg"
+  },
+  {
+   "key": "WinTransitNormal",
+   "name": "Cattle Class",
+   "description": "Beat Transit on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c175ab2764af952dfaecbf7229d02e0acaea4911.jpg"
+  },
+  {
+   "key": "WinTransitObjHard",
+   "name": "Long weekend",
+   "description": "Beat Transit in Objective Mode on Hard Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f1501b48c38c407e1cbfe8ee36784fa3def88404.jpg"
+  },
+  {
+   "key": "WinTransitObjHell",
+   "name": "Moved to Paris!",
+   "description": "Beat Transit in Objective Mode on Hell on Earth Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f801bf6afba6d6e5e197bfb8a9b61823c6c55e8a.jpg"
+  },
+  {
+   "key": "WinTransitObjNormal",
+   "name": "Day-trip",
+   "description": "Beat Transit in Objective Mode on Normal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/db414139411f2a0f23aab5a88a8ff5d3c736f475.jpg"
+  },
+  {
+   "key": "WinTransitObjSuicidal",
+   "name": "Serious vacation",
+   "description": "Beat Transit in Objective Mode on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/f7401823fbae613131c79dafd34ea35c93bd232d.jpg"
+  },
+  {
+   "key": "WinTransitSuicidal",
+   "name": "Business Class",
+   "description": "Beat Transit on Suicidal Difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/110c9e3fb35c9f737a1eb55985c4f765503384ba.jpg"
+  },
+  {
+   "key": "WinWaterworksHard",
+   "name": "Burst Pipe",
+   "description": "Win a Long Game on Waterworks on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/82254d27403c4c9871c43fd3e2b80493be17fa14.jpg"
+  },
+  {
+   "key": "WinWaterworksHell",
+   "name": "Floodgate to Hell",
+   "description": "Win a Long Game on Waterworks on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/384488db6e25782f87570f03c00f87e41aa29a08.jpg"
+  },
+  {
+   "key": "WinWaterworksNormal",
+   "name": "Slight Drip",
+   "description": "Win a Long Game on Waterworks on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/301ed64847f9794063779c668c808dafe58668c7.jpg"
+  },
+  {
+   "key": "WinWaterworksSuicidal",
+   "name": "Pressure Failure",
+   "description": "Win a Long Game on Waterworks on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/e68a07214446db70dd55d54c4e5e34d65b6d5f93.jpg"
+  },
+  {
+   "key": "WinWestLondonHard",
+   "name": "Hard Pub Crawl",
+   "description": "Win a Long Game on West London on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/fdf3f20e9d629db0fdb345fb8e66169ff2aba2a5.jpg"
+  },
+  {
+   "key": "WinWestLondonHell",
+   "name": "Hellish Pub Crawl",
+   "description": "Win a Long Game on West London on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/efa672a990eae17d1a699d4815588465cd225bf5.jpg"
+  },
+  {
+   "key": "WinWestLondonNormal",
+   "name": "Pub Crawl",
+   "description": "Win a Long Game on West London on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/c4412d094405c8e08680d9445610f113c3afd560.jpg"
+  },
+  {
+   "key": "WinWestLondonSuicidal",
+   "name": "Suicidal Pub Crawl",
+   "description": "Win a Long Game on West London on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/597668c95cf62c418eaac02249bc90a0a9e1ef26.jpg"
+  },
+  {
+   "key": "WinWyreHard",
+   "name": "Raccoon King of the Dark Forest",
+   "description": "Win a Long Game on Wyre, on Hard Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/bbd6b73d96ae36cb6e6d9629885c8f06ae038233.jpg"
+  },
+  {
+   "key": "WinWyreHell",
+   "name": "Wolf King of the Dark Forest",
+   "description": "Win a Long Game on Wyre on Hell on Earth Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/418a2b52ecc6d9544dd3025520d4fe20bc72ac65.jpg"
+  },
+  {
+   "key": "WinWyreNormal",
+   "name": "Squirrel King of the Dark Forest",
+   "description": "Win a Long Game on Wyre, on Normal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/dee55ff25d9a05fba3e069e191470f61b0704385.jpg"
+  },
+  {
+   "key": "WinWyreSuicidal",
+   "name": "Bear King of the Dark Forest",
+   "description": "Win a Long Game on Wyre, on Suicidal Difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6b39802f14939ae1d3be1d43b42a4b83001c67a7.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Killing Floor",
+   "achievements": [
+    {
+     "apiname": "WinWestLondonNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pub Crawl",
+     "description": "Win a Long Game on West London on Normal Difficulty."
+    },
+    {
+     "apiname": "WinManorNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lord of the Manor",
+     "description": "Win a Long Game on Manor on Normal Difficulty."
+    },
+    {
+     "apiname": "WinBioticsLabNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lab Cleaner",
+     "description": "Win a Long Game on Biotics Lab on Normal Difficulty."
+    },
+    {
+     "apiname": "WinFarmNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chicken Farmer",
+     "description": "Win a Long Game on Farm on Normal Difficulty."
+    },
+    {
+     "apiname": "WinOfficesNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Boss",
+     "description": "Win a Long Game on Offices on Normal Difficulty."
+    },
+    {
+     "apiname": "WinAllMapsNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Long War",
+     "description": "Complete a Long Game on all 5 Core Maps on Normal Difficulty."
+    },
+    {
+     "apiname": "KillXEnemies",
+     "achieved": 1,
+     "unlocktime": 1490834341,
+     "name": "Experimenticenticide",
+     "description": "Kill 100 Specimens."
+    },
+    {
+     "apiname": "KillXBloats",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fascist Dietitian",
+     "description": "Kill 200 Bloats."
+    },
+    {
+     "apiname": "KillXSirens",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Homer's Heroes",
+     "description": "Kill 100 Sirens."
+    },
+    {
+     "apiname": "KillXStalkersWithExplosives",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Keep Those Sneakers Off the Floor!",
+     "description": "Kill 20 Stalkers with Explosives."
+    },
+    {
+     "apiname": "KillXEnemiesWithFireAxe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Random Axe of Kindness",
+     "description": "Kill 15 Specimens with a Fire Axe in a Single Wave."
+    },
+    {
+     "apiname": "KillXScrakesWithChainsaw",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bitter Irony",
+     "description": "Kill 2 Scrakes with a Chainsaw in a Single Wave."
+    },
+    {
+     "apiname": "KillXBurningEnemiesWithCrossbow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot Cross Fun",
+     "description": "Kill 25 Burning Specimens with a Crossbow."
+    },
+    {
+     "apiname": "KillXEnemiesFeedingOnCorpses",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dignity for the Dead",
+     "description": "Kill 10 Specimens Feeding on Dead Teammates Corpses."
+    },
+    {
+     "apiname": "KillXEnemiesWithGrenade",
+     "achieved": 1,
+     "unlocktime": 1490835179,
+     "name": "Social Outburst",
+     "description": "Kill 8 Specimens with One Grenade."
+    },
+    {
+     "apiname": "Kill4EnemiesWithHuntingShotgunShot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Careful Spender",
+     "description": "Kill 4 Specimens with a Single Shot from a Hunting Shotgun."
+    },
+    {
+     "apiname": "KillEnemyUsingBloatAcid",
+     "achieved": 1,
+     "unlocktime": 1490835185,
+     "name": "It's Not Easy Being Greasy",
+     "description": "Cause a Specimen to Die by Luring them into Bloat Acid."
+    },
+    {
+     "apiname": "KillFleshpoundWithMelee",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Too Close For Comfort",
+     "description": "Finish off a Fleshpound using a Melee Attack."
+    },
+    {
+     "apiname": "MedicKillXEnemiesWithKnife",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Surgeon",
+     "description": "As a Medic, Kill 8 Specimens using a Knife in a Single Wave."
+    },
+    {
+     "apiname": "TurnXEnemiesIntoGiblets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's What's Inside That Counts",
+     "description": "Turn 500 Specimens into Giblets."
+    },
+    {
+     "apiname": "TurnXFleshpoundsIntoGiblets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quarter Pounder With Ease",
+     "description": "Turn 5 Fleshpounds into Giblets."
+    },
+    {
+     "apiname": "HealSelfXTimes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Self Medicator",
+     "description": "In Co-op Mode, Use Syringe on Yourself 100 Times."
+    },
+    {
+     "apiname": "OnlySurvivorXWaves",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thin-Ice Pirouette",
+     "description": "Complete 10 Waves when the Rest of your Team has Died."
+    },
+    {
+     "apiname": "DonateXCashToTeammates",
+     "achieved": 1,
+     "unlocktime": 1490835335,
+     "name": "Philanthropist",
+     "description": "Give 1,000 Pounds to Teammates who have 50% of Your Cash or Less."
+    },
+    {
+     "apiname": "AcquireXMinutesOfZedTime",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Like To Watch",
+     "description": "Aquire 5 Minutes of \"Zed-Time\"."
+    },
+    {
+     "apiname": "MaxOutAllPerks",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mr. Perky",
+     "description": "Get All of your Perks up to Level 5."
+    },
+    {
+     "apiname": "KillPatriarchBeforeHeHeals",
+     "achieved": 1,
+     "unlocktime": 1490835378,
+     "name": "Straight Rush",
+     "description": "Kill the Patriarch Before he has a Chance to Heal."
+    },
+    {
+     "apiname": "KillPatriarchWithLAW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The L.A.W. That Broke The Camel's Back",
+     "description": "Deliver the Killing Blow to the Patriarch with a L.A.W. Rocket."
+    },
+    {
+     "apiname": "DefeatPatriarchOnSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death To The Mad Scientist",
+     "description": "Defeat the Patriarch on Suicidal."
+    },
+    {
+     "apiname": "KillXEnemies2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Experimentimillicide",
+     "description": "Kill 1,000 Specimens."
+    },
+    {
+     "apiname": "KillXEnemies3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Experimentilottacide",
+     "description": "Kill 10,000 Specimens."
+    },
+    {
+     "apiname": "WinWestLondonHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Pub Crawl",
+     "description": "Win a Long Game on West London on Hard Difficulty."
+    },
+    {
+     "apiname": "WinManorHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Duke of the Manor",
+     "description": "Win a Long Game on Manor on Hard Difficulty."
+    },
+    {
+     "apiname": "WinFarmHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cattle Farmer",
+     "description": "Win a Long Game on Farm on Hard Difficulty."
+    },
+    {
+     "apiname": "WinOfficesHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Boss",
+     "description": "Win a Long Game on Offices on Hard Difficulty."
+    },
+    {
+     "apiname": "WinBioticsLabHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lab Assistant",
+     "description": "Win a Long Game on Biotics Lab on Hard Difficulty."
+    },
+    {
+     "apiname": "WinAllMapsHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hard War",
+     "description": "Complete a Long Game on all 5 Core Maps on Hard Difficulty."
+    },
+    {
+     "apiname": "WinWestLondonSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Suicidal Pub Crawl",
+     "description": "Win a Long Game on West London on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinManorSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Emperor of the Manor",
+     "description": "Win a Long Game on Manor on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinFarmSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Alligator Farmer",
+     "description": "Win a Long Game on Farm on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinOfficesSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mad Boss",
+     "description": "Win a Long Game on Offices on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinBioticsLabSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lab Professor",
+     "description": "Win a Long Game on Biotics Lab on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinAllMapsSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Completely Suicidal War",
+     "description": "Complete a Long Game on all 5 Core Maps on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinFoundryNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tin Man",
+     "description": "Win a Long Game on Foundry, on Normal Difficulty."
+    },
+    {
+     "apiname": "WinFoundryHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Steel Worker",
+     "description": "Win a Long Game on Foundry, on Hard Difficulty."
+    },
+    {
+     "apiname": "WinFoundrySuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Man of Steel",
+     "description": "Win a Long Game on Foundry, on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinAsylumNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Bit Barmy",
+     "description": "Win a Long Game on Bedlam, on Normal Difficulty."
+    },
+    {
+     "apiname": "WinAsylumHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gone Mental",
+     "description": "Win a Long Game on Bedlam, on Hard Difficulty."
+    },
+    {
+     "apiname": "WinAsylumSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Complete Barking",
+     "description": "Win a Long Game on Bedlam, on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinWyreNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squirrel King of the Dark Forest",
+     "description": "Win a Long Game on Wyre, on Normal Difficulty."
+    },
+    {
+     "apiname": "WinWyreHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Raccoon King of the Dark Forest",
+     "description": "Win a Long Game on Wyre, on Hard Difficulty."
+    },
+    {
+     "apiname": "WinWyreSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bear King of the Dark Forest",
+     "description": "Win a Long Game on Wyre, on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinAll3SummerMapsNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Long, Hot Summer",
+     "description": "Complete a Long Game on all 3 Summer 2009 maps on Normal Difficulty."
+    },
+    {
+     "apiname": "WinAll3SummerMapsHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Summer of 2009",
+     "description": "Complete a Long Game on all 3 Summer 2009 maps on Hard Difficulty."
+    },
+    {
+     "apiname": "WinAll3SummerMapsSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "And Back to School",
+     "description": "Complete a Long Game on all 3 Summer 2009 maps on Suicidal Difficulty."
+    },
+    {
+     "apiname": "Kill1000EnemiesWithPipebomb",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Explosive Personality",
+     "description": "As Demolitions, kill 1000 Specimens with the Pipebomb."
+    },
+    {
+     "apiname": "KillHuskWithFlamethrower",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flaming Hell, That was Close",
+     "description": "As Firebug, kill the Husk with the Flamethrower before he hurts anyone."
+    },
+    {
+     "apiname": "KillPatriarchOnlyCrossbows",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Merry Men",
+     "description": "Kill the Patriarch when everyone is ONLY using Crossbows."
+    },
+    {
+     "apiname": "Gib500ZedsWithM79",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blooper Reel",
+     "description": "Turn 500 Zeds into Giblets using the M79."
+    },
+    {
+     "apiname": "LaserSightedEBRHeadshots25InARow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dot of Doom",
+     "description": "Get 25 headshots in a row with the EBR while using the Laser Sight."
+    },
+    {
+     "apiname": "Kill1000ZedsWithSCAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SCAR'd",
+     "description": "Kill 1000 Specimens with the SCAR."
+    },
+    {
+     "apiname": "Heal200TeammatesWithMP7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Healing Touch",
+     "description": "Heal 200 teammates with the MP7's medication dart."
+    },
+    {
+     "apiname": "Kill100FleshpoundsWithAA12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pound This",
+     "description": "Kill 100 Fleshpounds with the AA12."
+    },
+    {
+     "apiname": "Kill20CrawlersKilledInAir",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Killer Junior",
+     "description": "Kill 20 crawlers in mid-air with the M79."
+    },
+    {
+     "apiname": "Obliterate10ZedsWithPipebomb",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Getting Chunky",
+     "description": "Obliterate 10 Zeds at once with the Pipe Bomb."
+    },
+    {
+     "apiname": "WinWestLondonHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hellish Pub Crawl",
+     "description": "Win a Long Game on West London on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinManorHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Demonic King of the Manor",
+     "description": "Win a Long Game on Manor on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinFarmHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Demon Farmer",
+     "description": "Win a Long Game on Farm on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinOfficesHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boss from Hell",
+     "description": "Win a Long Game on Offices on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinBioticsLabHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scientist from Hell",
+     "description": "Win a Long Game on Biotics Lab on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinFoundryHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Diablo Steel Man",
+     "description": "Win a Long Game on Foundry on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinAsylumHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Commit-ed for life",
+     "description": "Win a Long Game on Bedlam on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinWyreHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wolf King of the Dark Forest",
+     "description": "Win a Long Game on Wyre on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinBiohazardNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Waste Disposal",
+     "description": "Win a Long Game on Biohazard on Normal Difficulty."
+    },
+    {
+     "apiname": "WinBiohazardHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Waste Land",
+     "description": "Win a Long Game on Biohazard on Hard Difficulty."
+    },
+    {
+     "apiname": "WinBiohazardSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Waste of Space",
+     "description": "Win a Long Game on Biohazard on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinBiohazardHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wasted",
+     "description": "Win a Long Game on Biohazard on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinCrashNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Warehouse Janitor",
+     "description": "Win a Long Game on Crash on Normal Difficulty."
+    },
+    {
+     "apiname": "WinCrashHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Warehouse Forklift Operator",
+     "description": "Win a Long Game on Crash on Hard Difficulty."
+    },
+    {
+     "apiname": "WinCrashSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Warehouse Foreman",
+     "description": "Win a Long Game on Crash on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinCrashHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Warehouse Manager",
+     "description": "Win a Long Game on Crash on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinDepartedNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Departure Gallery",
+     "description": "Win a Long Game on Departed on Normal Difficulty."
+    },
+    {
+     "apiname": "WinDepartedHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Departure Lounge",
+     "description": "Win a Long Game on Departed on Hard Difficulty."
+    },
+    {
+     "apiname": "WinDepartedSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Departure Gate",
+     "description": "Win a Long Game on Departed on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinDepartedHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dear Departed",
+     "description": "Win a Long Game on Departed on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinFilthsCrossNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Running Late",
+     "description": "Win a Long Game on Filth's Cross on Normal Difficulty."
+    },
+    {
+     "apiname": "WinFilthsCrossHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Missed Connection",
+     "description": "Win a Long Game on Filth's Cross on Hard Difficulty."
+    },
+    {
+     "apiname": "WinFilthsCrossSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Train Wreck",
+     "description": "Win a Long Game on Filth's Cross on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinFilthsCrossHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pile Up",
+     "description": "Win a Long Game on Filth's Cross on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinHospitalHorrorsNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gimme a Plaster!",
+     "description": "Win a Long Game on Hospital Horrors on Normal Difficulty."
+    },
+    {
+     "apiname": "WinHospitalHorrorsHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That Bloody Well Hurts!",
+     "description": "Win a Long Game on Hospital Horrors on Hard Difficulty."
+    },
+    {
+     "apiname": "WinHospitalHorrorsSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm Dying Here!",
+     "description": "Win a Long Game on Hospital Horrors on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinHospitalHorrorsHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not Dead Yet!",
+     "description": "Win a Long Game on Hospital Horrors on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinIcebreakerNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ice Cube",
+     "description": "Win a Long Game on Icebreaker on Normal Difficulty."
+    },
+    {
+     "apiname": "WinIcebreakerHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crushed Ice",
+     "description": "Win a Long Game on Icebreaker on Hard Difficulty."
+    },
+    {
+     "apiname": "WinIcebreakerSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Iceberg",
+     "description": "Win a Long Game on Icebreaker on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinIcebreakerHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Comet",
+     "description": "Win a Long Game on Icebreaker on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinMountainPassNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Daytrip",
+     "description": "Win a Long Game on Mountain Pass on Normal Difficulty."
+    },
+    {
+     "apiname": "WinMountainPassHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gone Camping",
+     "description": "Win a Long Game on Mountain Pass on Hard Difficulty."
+    },
+    {
+     "apiname": "WinMountainPassSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mountaineer",
+     "description": "Win a Long Game on Mountain Pass on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinMountainPassHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Park Ranger",
+     "description": "Win a Long Game on Mountain Pass on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinSuburbiaNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Neighborhood Watch",
+     "description": "Win a Long Game on Suburbia on Normal Difficulty."
+    },
+    {
+     "apiname": "WinSuburbiaHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Private Security",
+     "description": "Win a Long Game on Suburbia on Hard Difficulty."
+    },
+    {
+     "apiname": "WinSuburbiaSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vigilante",
+     "description": "Win a Long Game on Suburbia on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinSuburbiaHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SWAT",
+     "description": "Win a Long Game on Suburbia on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "WinWaterworksNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Slight Drip",
+     "description": "Win a Long Game on Waterworks on Normal Difficulty."
+    },
+    {
+     "apiname": "WinWaterworksHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Burst Pipe",
+     "description": "Win a Long Game on Waterworks on Hard Difficulty."
+    },
+    {
+     "apiname": "WinWaterworksSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pressure Failure",
+     "description": "Win a Long Game on Waterworks on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinWaterworksHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Floodgate to Hell",
+     "description": "Win a Long Game on Waterworks on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "CompleteNewAchievementsNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Piece of Cake",
+     "description": "Complete all new map achievements on Normal Difficulty."
+    },
+    {
+     "apiname": "CompleteNewAchievementsHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pound Cake",
+     "description": "Complete all new map achievements on Hard Difficulty."
+    },
+    {
+     "apiname": "CompleteNewAchievementsSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fruit Cake",
+     "description": "Complete all new map achievements on Suicidal Difficulty."
+    },
+    {
+     "apiname": "CompleteNewAchievementsHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Devil Cake",
+     "description": "Complete all new map achievements on Hell On Earth Difficulty."
+    },
+    {
+     "apiname": "Get1000BurnDamageWithMac10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let Them Burn",
+     "description": "Get 1000 points of burn damage with the MAC-10."
+    },
+    {
+     "apiname": "WinSantasEvilLairNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Walking in  A Winter Horror Land",
+     "description": "Win a Long Game on Santa's Evil Lair on Normal Difficulty."
+    },
+    {
+     "apiname": "WinSantasEvilLairHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silent Night, Evil Night",
+     "description": "Win a Long Game on Santa's Evil Lair on Hard Difficulty."
+    },
+    {
+     "apiname": "WinSantasEvilLairSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm Dreaming of a Red Christmas",
+     "description": "Win a Long Game on Santa's Evil Lair on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinSantasEvilLairHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grandma got Eaten by a Reindeer",
+     "description": "Win a Long Game on Santa's Evil Lair on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "KillChristmasPatriarch",
+     "achieved": 1,
+     "unlocktime": 1490834368,
+     "name": "Merry Friggin Christmas",
+     "description": "[2010 Xmas] Kill the Christmas Patriarch."
+    },
+    {
+     "apiname": "KnifeChristmasFleshpound",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cracked the Nutcracker!",
+     "description": "[2010 Xmas] Land the killing blow on a Christmas Fleshpound with a Knife."
+    },
+    {
+     "apiname": "MeleeKill2ChristmasGorefastFromBack",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Can't Catch Me!",
+     "description": "[2010 Xmas] Kill 2 Christmas Gorefasts with a Melee weapon from behind in one wave."
+    },
+    {
+     "apiname": "KillChristmasScrakeWithFire",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toasted Jack Frost",
+     "description": "[2010 Xmas] Kill the Christmas Scrake with a Fire-based weapon."
+    },
+    {
+     "apiname": "Kill3ChristmasBloatsWithBullpup",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That's not Santa!",
+     "description": "[2010 Xmas] Kill 3 Christmas Bloats with the Bullpup in one wave."
+    },
+    {
+     "apiname": "KillChristmasCrawlerWithXBow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rudolph, the Bloody Nosed Reindeer",
+     "description": "[2010 Xmas] Kill a Christmas Crawler with a Crossbow."
+    },
+    {
+     "apiname": "KillChristmasSirenWithLawImpact",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not So Silent Night",
+     "description": "[2010 Xmas] Kill a Christmas Siren with an undetonated LAW rocket."
+    },
+    {
+     "apiname": "Kill3ChristmasStalkersWithLAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fending off Mrs. Claws",
+     "description": "[2010 Xmas] Kill 3 Christmas Stalkers with a Lever Action Rifle without reloading."
+    },
+    {
+     "apiname": "KillChristmasHuskWithPistol",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Brings a Gun to a Snow Ball Fight?",
+     "description": "[2010 Xmas] Kill a Christmas Husk with any Pistol."
+    },
+    {
+     "apiname": "MeleeKill3ChristmasZedsInOneSlomo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deck the Halls with Buckets o' Blood",
+     "description": "[2010 Xmas] Kill 3 Christmas Zeds in 1 ZED time chain with a Melee weapon."
+    },
+    {
+     "apiname": "Drop3Tier3WeaponsForOthersChristmas",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tis Better to Give than to Receive",
+     "description": "[2010 Xmas] Drop 3 Tier 3 weapons for others (with which they kill at least one Christmas Zed)."
+    },
+    {
+     "apiname": "ChristmasVomitLive10Seconds",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eggnog Anyone?",
+     "description": "[2010 Xmas] Get covered in Christmas Bloat Bile and live for 10 seconds on Hard, Suicidal, or Hell on Earth."
+    },
+    {
+     "apiname": "Unlock10ofChristmasAchievements",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bad Santa",
+     "description": "Unlock 10 of the 13 Christmas Achievements along with any Christmas Map achievement."
+    },
+    {
+     "apiname": "Kill20ChristmasClots",
+     "achieved": 1,
+     "unlocktime": 1490832729,
+     "name": "Back to Work",
+     "description": "[2010 Xmas] Kill 20 Christmas Clots in one wave."
+    },
+    {
+     "apiname": "Achievement132",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Uber Tuber",
+     "description": "Expensive but delicious! Brought to you by Dr. Dougley and Lord Ned."
+    },
+    {
+     "apiname": "Achievement133",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Science Got Done",
+     "description": "Win a Long Game on Aperture on Normal Difficulty."
+    },
+    {
+     "apiname": "Achievement134",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Still Alive",
+     "description": "Win a Long Game on Aperture on Hard Difficulty."
+    },
+    {
+     "apiname": "Achievement135",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is a Triumph",
+     "description": "Win a Long Game on Aperture on Suicidal Difficulty."
+    },
+    {
+     "apiname": "Achievement136",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm Making a Note Here, Huge Success",
+     "description": "Win a Long Game on Aperture on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "Achievement137",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golden Potato",
+     "description": "Get into GLaDOS' core on Aperture."
+    },
+    {
+     "apiname": "WinSideshowNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flea Circus",
+     "description": "Win a Long Game on Abusement Park on Normal Difficulty."
+    },
+    {
+     "apiname": "WinSideshowHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dog and Pony Show",
+     "description": "Win a Long Game on Abusement Park on Hard Difficulty."
+    },
+    {
+     "apiname": "WinSideshowSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "3 Ring Circus",
+     "description": "Win a Long Game on Abusement Park on Suicidal Difficulty."
+    },
+    {
+     "apiname": "WinSideshowHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Top of the Big Top",
+     "description": "Win a Long Game on Abusement Park on Hell on Earth Difficulty."
+    },
+    {
+     "apiname": "KillSideshowPatriarch",
+     "achieved": 1,
+     "unlocktime": 1490834369,
+     "name": "Ringmaster",
+     "description": "Kill the \"Ring Leader\" (Circus Patriarch)"
+    },
+    {
+     "apiname": "KillSideshowGorefastWithMelee",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sparring with a Master",
+     "description": "Kill a Circus Gorefast with a Melee weapon."
+    },
+    {
+     "apiname": "Kill2SideshowStalkerWithBackstab",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Assistant Homicide",
+     "description": "Kill 2 Circus Stalkers with a Melee weapon to the back in one wave."
+    },
+    {
+     "apiname": "Kill5SideshowCrawlersWithBullpup",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seeing Double",
+     "description": "Kill 5 Circus Crawlers with a Bullpup in one wave."
+    },
+    {
+     "apiname": "Kill5SideshowBloats",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clearing Clown Alley",
+     "description": "Kill 5 Circus Bloats in one game."
+    },
+    {
+     "apiname": "KillSideshowScrakeWithCrossbow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Big Hunt",
+     "description": "Kill a Circus Scrake with a Crossbow."
+    },
+    {
+     "apiname": "KillSideshowHuskWithLAW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lifting a Dumbell",
+     "description": "Kill a Circus Husk with a LAW."
+    },
+    {
+     "apiname": "Kill3SideshowClotsWithLAR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Small Hands",
+     "description": "Kill 3 Circus Clots in a wave with the Lever Action Rifle."
+    },
+    {
+     "apiname": "KillSideshowFleshpoundWithPistol",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elephant Gun",
+     "description": "Land the killing blow on a Circus Fleshpound with a Pistol."
+    },
+    {
+     "apiname": "Drop5Tier2WeaponsOneWaveSideshow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Juggling Act",
+     "description": "Drop 5 different Tier 2 weapons in one wave."
+    },
+    {
+     "apiname": "SurviveSideshowSirenScreamPlus10Sec",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Windjammer Enthusiast",
+     "description": "Survive 10 seconds after being screamed at by a Circus Siren on Hard or above."
+    },
+    {
+     "apiname": "MeleeKill4SideshowZedsInOneSlomo",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Taking Down the Big Top",
+     "description": "Kill 4 Circus Zeds in 1 ZED time chain with a Melee weapon."
+    },
+    {
+     "apiname": "Kill10SideshowClotsWithFireWeapon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Burning up the Midway",
+     "description": "Kill 10 Circus Clots with a Fire-based weapon."
+    },
+    {
+     "apiname": "Unlock10ofSideshowAchievements",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Punk'd",
+     "description": "Unlock 10 of the 13 Circus Achievements along with any Abusement Park achievement."
+    },
+    {
+     "apiname": "KillHalloweenPatriarchInBedlam",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sparkling in the Twilight",
+     "description": "Kill The Vampire Patriarch Ringmaster in Bedlam"
+    },
+    {
+     "apiname": "DecapBurningHalloweenZedInBedlam",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Carving The Jack O' Lantern",
+     "description": "Decapitate a burning Halloween specimen in Bedlam"
+    },
+    {
+     "apiname": "Kill250HalloweenZedsInBedlam",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Scene is Zed",
+     "description": "Kill 250 Halloween Specimens in Bedlam"
+    },
+    {
+     "apiname": "WinBedlamHardHalloween",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Zed October",
+     "description": "Win a Long Bedlam Match During the Halloween Event on Hard"
+    },
+    {
+     "apiname": "Kill25HalloweenScrakesInBedlam",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This is No Ordinary Rabbit!",
+     "description": "Kill 25 Halloween Scrakes in Bedlam"
+    },
+    {
+     "apiname": "Kill5HalloweenZedsWithoutReload",
+     "achieved": 1,
+     "unlocktime": 1490832729,
+     "name": "Trick, not Treat",
+     "description": "Kill 5 Halloween Specimens with any gun without reloading"
+    },
+    {
+     "apiname": "Unlock6ofHalloweenAchievements",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rule The Roost",
+     "description": "Get all 6 achievements and unlock Commando Chicken"
+    },
+    {
+     "apiname": "Kill15XMasHusksWithHuskCannon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Burning Irony",
+     "description": "Kill 15 Husks with the Husk Cannon"
+    },
+    {
+     "apiname": "KillXMasPatriarchWithClaymoreDecap",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Highlander",
+     "description": "Kill a Scrake, a Fleshpound, and the Patriarch with the Claymore Sword within one map"
+    },
+    {
+     "apiname": "Kill1XMasZedWithFullM4Clip",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bloody Yanks",
+     "description": "Kill 1 specimen ONLY while expending a full M4 Assault Rifle magazine"
+    },
+    {
+     "apiname": "KillXMasScrakeWithDirectM203Nade",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Finish Him",
+     "description": "Hit a Scrake with the M203 Rifle grenade to kill him"
+    },
+    {
+     "apiname": "Heal3000PointsWithMP5DuringXMas",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I love ze Healing not ze Hurting",
+     "description": "Heal others for 3000 points of health with the MP5 SMG"
+    },
+    {
+     "apiname": "Kill12XMasZedsWith1BenelliClip",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Italian Meat Pasta",
+     "description": "Kill 12 zeds with a full magazine from the Combat Shotgun"
+    },
+    {
+     "apiname": "KillXMasZedWithEveryRevolverShot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feeling Lucky?",
+     "description": "Kill a specimen with every shot from your Revolver for one magazine"
+    },
+    {
+     "apiname": "HoldAll3DualiesDuringXMas",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We Have Ourselves a Cowboy",
+     "description": "Hold dual 9mm, dual hand cannons and Dual Revolvers"
+    },
+    {
+     "apiname": "WinIceCaveNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Snow Cone",
+     "description": "Beat Ice Cave on Normal Difficulty"
+    },
+    {
+     "apiname": "WinIceCaveHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stay Frosty",
+     "description": "Beat Ice Cave on Hard Difficulty"
+    },
+    {
+     "apiname": "WinIceCaveSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On the Rocks",
+     "description": "Beat Ice Cave on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinIceCaveHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Anti Freeze",
+     "description": "Beat Ice Cave on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "KillSelectXMasZedsOnSingleMap",
+     "achieved": 1,
+     "unlocktime": 1490833938,
+     "name": "A Bloody Christmas Carol",
+     "description": "Kill 15 XMas Clots, 5 xmas Stalkers, 5 XMas Crawlers, 1 XMas Siren and 1 XMas Bloat."
+    },
+    {
+     "apiname": "Kill12ClotsWithOneMagWithMK23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spec Ops ",
+     "description": "Kill 12 clots with one magazine without reloading (MK23)"
+    },
+    {
+     "apiname": "KillZedThatHurtPlayerWithM7A3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Combat Medic",
+     "description": "Kill a zed that has injured a player (M7A3 rifle)"
+    },
+    {
+     "apiname": "KillOneOfEachZedsWithKSG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fugly ",
+     "description": "Kill one of each type of zed in one round (HSG Shotgun) "
+    },
+    {
+     "apiname": "KillZedWithSA80AndFNFal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "British Superiority",
+     "description": "Kill a zed each with both the Bullpup and FN-Fal"
+    },
+    {
+     "apiname": "Kill2ScrakesOneBulletWithBarret",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Big One",
+     "description": "Kill 2 scrakes with one shot (M99)"
+    },
+    {
+     "apiname": "WinHellrideNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Highway to Heaven",
+     "description": "Beat Hellride on Normal Difficulty"
+    },
+    {
+     "apiname": "WinHellrideHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stuck in Limbo",
+     "description": "Beat Hellride on Hard Difficulty"
+    },
+    {
+     "apiname": "WinHellrideSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Demonic Road",
+     "description": "Beat Hellride on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinHellrideHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Devil's Co-pilot",
+     "description": "Beat Hellride on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "Kill6ZedWithoutReloadingMKB42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Historical Remnants",
+     "description": "Kill 6 Zeds with one magazine on an MKb42, without reloading"
+    },
+    {
+     "apiname": "Kill4StalkersNailgun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nail'd!",
+     "description": "Kill 4 Stalkers in a game with the Vlad9000 Nailgun"
+    },
+    {
+     "apiname": "HealAllPlayersWith1MedicNade",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Explosion of Love",
+     "description": "Heal yourself plus 5 other players with one grenade"
+    },
+    {
+     "apiname": "Set200ZedOnFireInHillbilly",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trench Warfare",
+     "description": "Set a total of 200 Zeds on fire with the Trench Gun in Hillbilly Horror"
+    },
+    {
+     "apiname": "WinHillbillyNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Third Cousins",
+     "description": "Beat Hillbilly Horror on Normal Difficulty"
+    },
+    {
+     "apiname": "WinHillbillyHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Second Cousins",
+     "description": "Beat Hillbilly Horror on Hard Difficulty"
+    },
+    {
+     "apiname": "WinHillbillySuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Cousins (Once Removed)",
+     "description": "Beat Hillbilly Horror on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinHillbillyHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Cousins",
+     "description": "Beat Hillbilly Horror on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "Complete6ReaperAchievements",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grim Reaper",
+     "description": "Get the 6 Special Halloween Achievements plus 1 Hillbilly Horror Map Achievement to unlock the Grim Reaper"
+    },
+    {
+     "apiname": "Destroy25GnomesInHillbilly",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soul Collector",
+     "description": "Free the souls of the 25 Gnomes hidden on Hillbilly Horror in 1 game"
+    },
+    {
+     "apiname": "Kill1000HillbillyZeds",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meet Your Maker!",
+     "description": "Kill 1000 Hillbilly Zeds"
+    },
+    {
+     "apiname": "Kill15HillbillyCrawlersThomOrMKB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Creepy Crawlies",
+     "description": "Kill 15 Hillbilly Crawlers in 1 game with the Tommy Gun or MKb42"
+    },
+    {
+     "apiname": "Kill1Hillbilly1HuskAndZedIn1Shot",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rippin' It Up",
+     "description": "Kill a Hillbilly Husk and another Hillbilly Zed in the same shot with the Buzzsaw Bow or M99"
+    },
+    {
+     "apiname": "Kill5HillbillyZedsIn10SecsSythOrAxe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Am Become Death",
+     "description": "Kill 5 Hillbilly Zeds in 10 seconds with the Scythe or Axe"
+    },
+    {
+     "apiname": "Set3HillbillyGorefastsOnFire",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fiery Personality",
+     "description": "Set 3 Hillbilly Gorefasts on fire with the Flare Pistol or Trench Gun"
+    },
+    {
+     "apiname": "HaveMyAxe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Have my axe",
+     "description": "Kill 30 Fleshpounds with the Dwarfs!? axe with back attacks"
+    },
+    {
+     "apiname": "OneSmallStepForMan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Small Step for Man",
+     "description": "Kill 500 Zeds with the Schneidzekk Medic Gun while you are falling"
+    },
+    {
+     "apiname": "ButItsAllRed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "But It's All Red!",
+     "description": "Collect all 16 Z.E.D. Gun pieces"
+    },
+    {
+     "apiname": "GameOverMan",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Game Over, Man!",
+     "description": "Have 20 Zeds you slowed with the Z.E.D. gun killed"
+    },
+    {
+     "apiname": "HereIsToUs",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Here is to us",
+     "description": "Beat Moonbase on Normal Difficulty"
+    },
+    {
+     "apiname": "AttemptingReentry",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Attempting Re-entry",
+     "description": "Beat Moonbase on Hard Difficulty"
+    },
+    {
+     "apiname": "AmusingDeath",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Amusing Death",
+     "description": "Beat Moonbase on Suicidal Difficulty"
+    },
+    {
+     "apiname": "AGiantstepBackForHumanity",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Giant Leap (Back) for Mankind",
+     "description": "Beat Moonbase on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "DwarfAxe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gimli That Axe!",
+     "description": "Get the Not-a-war-hammer Achievement in Dwarfs!?"
+    },
+    {
+     "apiname": "WinSteamLandNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Astro Buffer Afficiando",
+     "description": "Beat Steamland on Normal Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Modified Psychoacceleration Achiever",
+     "description": "Beat Steamland on Hard Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fractional Neutron Activator",
+     "description": "Beat Steamland on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Advanced Omega Wave Resonance Explorer",
+     "description": "Beat Steamland on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandObjNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Simplified Force Adhesion Afficianado",
+     "description": "Beat Steamland in Objective Mode on Normal Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandObjHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oscillating Hydrogen Transition Achiever",
+     "description": "Beat Steamland in Objective Mode on Hard Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandObjSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Alpha Wave Osteooxidation Activator",
+     "description": "Beat Steamland in Objective Mode on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinSteamLandObjHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tachyon Cytoneutralization Explorer",
+     "description": "Beat Steamland in Objective Mode on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "DestroyPukeyDolls",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hide and go Puke",
+     "description": "[2013 Summer] Destroy all the Pukey the Clown dolls"
+    },
+    {
+     "apiname": "CompleteArcadeGames",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arcade Gamer",
+     "description": "[2013 Summer] Complete the Pop the Clot, the Strong Man and the Grenade Toss games"
+    },
+    {
+     "apiname": "AllBreakersActive",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Full Charge",
+     "description": "Have 5 Breaker Boxes 100% repaired at the same time"
+    },
+    {
+     "apiname": "EscortRingmaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extended Motion Protector",
+     "description": "[2013 Summer] Protect the Ringmaster during the escort mission so that he does not get hit more than 15 times"
+    },
+    {
+     "apiname": "DefendRingmaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guardian Assault Protector",
+     "description": "Protect the ringmaster during the defense mission so that he does not get hit more than 15 times"
+    },
+    {
+     "apiname": "NoCarrierDamageGoldBars",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golden 3 Crown Note",
+     "description": "Get all 3 gold bars without the carriers taking damage while they have them"
+    },
+    {
+     "apiname": "GetHeadshotsOn4ZedsSPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Single-shot Equalizer",
+     "description": "Kill 4 different types of Zeds with headshots with 4 shots from the Long Musket or the M14 without reloading"
+    },
+    {
+     "apiname": "PushScrakeSPJ",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Assault Flayer Ordinance",
+     "description": "Push a scrake back with the direct fire from a Hunting Shotgun or alt fire from the Multi-Chamber ZED Thrower"
+    },
+    {
+     "apiname": "KillZedWithImpactSPG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Single-Load Doom Bombardier",
+     "description": "Kill a ZED with a direct (unexploded) shot from the Orca Bomb Propeller or the M-79/M32"
+    },
+    {
+     "apiname": "Kill5ZedsInZedTimeNoReloadSPT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Turbo Executioner",
+     "description": "Kill 5 zeds in ZED time without reloading with Dr. T's LDS or Bullpup"
+    },
+    {
+     "apiname": "CompleteSPMrsFosterAchievements",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mrs. Punkd",
+     "description": "Get 4 of 6 of the 2013 Summer Event in-game level Achievements, one Standard and one Objective Mode map completion Achievement, plus the Punk'd Achievement to unlock Steampunk Mrs. Foster"
+    },
+    {
+     "apiname": "WinFrightyardNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Longshoreman",
+     "description": "Beat Fright Yard on Normal Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gang Crew",
+     "description": "Beat Fright Yard on Hard Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stevedore",
+     "description": "Beat Fright Yard on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wharfinger",
+     "description": "Beat Fright Yard on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardObjNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fork Lift Operator",
+     "description": "Beat Fright Yard in Objective Mode on Normal Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardObjHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Truck Driver",
+     "description": "Beat Fright Yard in Objective Mode on Hard Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardObjSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crane Operator",
+     "description": "Beat Fright Yard in Objective Mode on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinFrightyardObjHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shipping Magnate",
+     "description": "Beat Fright Yard in Objective Mode on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "ClawMachineMaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Claw Machine Master",
+     "description": "Attach the crane hook within 125 seconds"
+    },
+    {
+     "apiname": "ExScientist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ex-scientist",
+     "description": "Collect all the bile without a contamination"
+    },
+    {
+     "apiname": "777",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "777",
+     "description": "Win Fuel on the first try"
+    },
+    {
+     "apiname": "BlindingBigBrother",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blinding Big Brother",
+     "description": "Destroy all 30 Cameras"
+    },
+    {
+     "apiname": "ScrakeAndFP1ShotLawHarpoon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fire and Forget",
+     "description": "Kill a Halloween Fleshpound and Scrake in the same explosion with the Seal Squeal Harpoon Bomber or the LAW"
+    },
+    {
+     "apiname": "BileOrFlameEachZed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Under The Weather",
+     "description": "Use Bile or the Flamethrower to kill one of each Halloween Zed"
+    },
+    {
+     "apiname": "Kill10ZedsSeekerOrM32In5Secs",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Most Bang for the Buck",
+     "description": "Kill 10 Halloween zeds in explosions using the Seeker 6 or the M32 within 5 seconds"
+    },
+    {
+     "apiname": "WinHellNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Death",
+     "description": "Beat Hell on Normal Difficulty"
+    },
+    {
+     "apiname": "WinHellHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King Minos",
+     "description": "Beat Hell on Hard Difficulty"
+    },
+    {
+     "apiname": "WinHellSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cerberus",
+     "description": "Beat Hell on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinHellHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucifer",
+     "description": "Beat Hell on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "WinForgottenNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brain Fart",
+     "description": "Beat Forgotten on Normal Difficulty"
+    },
+    {
+     "apiname": "WinForgottenHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Agnosia",
+     "description": "Beat Forgotten on Hard Difficulty"
+    },
+    {
+     "apiname": "WinForgottenSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Amnesia",
+     "description": "Beat Forgotten on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinForgottenHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dementia",
+     "description": "Beat Forgotten on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "PlayWithOrAsBallHero",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Time for Love, Dr. Jones",
+     "description": "Win a short round on KF-Hell playing as or with Harchier Spebbington"
+    },
+    {
+     "apiname": "WinSirensBelchNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Home Brewer",
+     "description": "Beat Siren's Belch on Normal Difficulty"
+    },
+    {
+     "apiname": "WinSirensBelchHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Micro Brewer",
+     "description": "Beat Siren's Belch on Hard Difficulty"
+    },
+    {
+     "apiname": "WinSirensBelchSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Brewer",
+     "description": "Beat Siren's Belch on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinSirensBelchHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trappist Monk",
+     "description": "Beat Siren's Belch on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "DestroyBeerSteins",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Oktoberfest Master",
+     "description": "Collect all the Beer Steins"
+    },
+    {
+     "apiname": "WinStrongholdNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peasant",
+     "description": "Beat Stronghold on Normal Difficulty"
+    },
+    {
+     "apiname": "WinStrongholdHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Squire",
+     "description": "Beat Stronghold on Hard Difficulty"
+    },
+    {
+     "apiname": "WinStrongholdSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prince",
+     "description": "Beat Stronghold on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinStrongholdHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King",
+     "description": "Beat Stronghold on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "DestroyGoldBags",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rich Evil Uncle",
+     "description": "Collect all the Treasure Bags"
+    },
+    {
+     "apiname": "WinTransitNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cattle Class",
+     "description": "Beat Transit on Normal Difficulty"
+    },
+    {
+     "apiname": "WinTransitHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Economy Comfort",
+     "description": "Beat Transit on Hard Difficulty"
+    },
+    {
+     "apiname": "WinTransitSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Business Class",
+     "description": "Beat Transit on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinTransitHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Class",
+     "description": "Beat Transit on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "WinTransitObjNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Day-trip",
+     "description": "Beat Transit in Objective Mode on Normal Difficulty"
+    },
+    {
+     "apiname": "WinTransitObjHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Long weekend",
+     "description": "Beat Transit in Objective Mode on Hard Difficulty"
+    },
+    {
+     "apiname": "WinTransitObjSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Serious vacation",
+     "description": "Beat Transit in Objective Mode on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinTransitObjHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moved to Paris!",
+     "description": "Beat Transit in Objective Mode on Hell on Earth Difficulty"
+    },
+    {
+     "apiname": "NitroInXSeconds",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nitro Boost!",
+     "description": "Transit - Get the Nitro to the Objective in 135 seconds or less"
+    },
+    {
+     "apiname": "KillXZedsDuringWeld",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Totally Metal",
+     "description": "Transit - Kill 250 Zeds before completing the welding objective"
+    },
+    {
+     "apiname": "PickUpDoorKey",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Multi-pass",
+     "description": "Transit - Pick up the door key"
+    },
+    {
+     "apiname": "DestroyDNAVials",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Science Hater",
+     "description": "Transit - Destroy all the DNA vials"
+    },
+    {
+     "apiname": "CompleteMsClamleyAchievements",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Doctor WHO??",
+     "description": "Transit - Get all Objective achievements AND beat KFO Transit on Hard or above to unlock Dr Rachel Clamely."
+    },
+    {
+     "apiname": "WinClandestineNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gone clubbing",
+     "description": "Beat Clandestine on Normal Difficulty"
+    },
+    {
+     "apiname": "WinClandestineHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rack 'em up",
+     "description": "Beat Clandestine on Hard Difficulty"
+    },
+    {
+     "apiname": "WinClandestineSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Burned out",
+     "description": "Beat Clandestine on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinClandestineHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hangover from Hell",
+     "description": "Beat Clandestine on Hell Difficulty"
+    },
+    {
+     "apiname": "DestroySkulls",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skull Cracker",
+     "description": "Clandestine - Destroy 30 skulls"
+    },
+    {
+     "apiname": "WinThrillsChillsNormal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cave of Wonder",
+     "description": "Beat ThrillsChills on Normal Difficulty"
+    },
+    {
+     "apiname": "WinThrillsChillsHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cavern of Pain",
+     "description": "Beat ThrillsChills on Hard Difficulty"
+    },
+    {
+     "apiname": "WinThrillsChillsSuicidal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Grotto of Terror",
+     "description": "Beat ThrillsChills on Suicidal Difficulty"
+    },
+    {
+     "apiname": "WinThrillsChillsHell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hollow of Horror",
+     "description": "Beat ThrillsChills on Hell Difficulty"
+    },
+    {
+     "apiname": "CollectSnowGlobes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All shook up",
+     "description": "Destroy all (15) Snow Globes"
+    }
+   ],
+   "success": true
+  }
+ }
+}

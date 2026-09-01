@@ -1,0 +1,723 @@
+{
+ "provider": "steam",
+ "title": "DOOM Eternal",
+ "updated": "2026-08-30",
+ "id": "782330",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 50,
+ "platform": "PC",
+ "icon": "14235f425d27ab3b83661ba14c17d22dc90e566b",
+ "achievements": [
+  {
+   "key": "NEW_ACHIEVEMENT_1_0",
+   "name": "Doomsday",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/df8994bdc1ff5d8f83e77d8025c2a2a3c113d158.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_1",
+   "name": "The Hunters Became the Hunted",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/b155083414384537f2902765f40907fa968d7d22.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_10",
+   "name": "Running Up the High Score",
+   "description": "Complete Extra Life Mode with 10 Extra Lives in your Inventory",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/b11b539791bd775fcddded4fd388ddee78861823.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_11",
+   "name": "Crystal Craving",
+   "description": "Upgrade Health, Armor, or Ammo",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/11e5d362c82ff2b0ec48fcb91c2ca7f3849a454e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_12",
+   "name": "King of the Crystals",
+   "description": "Fully upgrade Health, Armor, or Ammo in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/ae3916ab8217d98f37c17ed6bf5cc76408249640.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_13",
+   "name": "This One's my Favorite",
+   "description": "Complete a Praetor Suit Perk category in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/d8ac552b1ba4e0628f3db931a494f62150d1a6b7.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_14",
+   "name": "They're ALL My Favorite",
+   "description": "Purchase all Praetor Suit Perks in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/0dd589a55944baf7082f19aa6ba5b05a3c2a198d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_15",
+   "name": "Homemaykr",
+   "description": "Spend 8 Sentinel Batteries in the Fortress of Doom in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/c3e82d2339f9fbd299e4903056ea12907512c9e1.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_16",
+   "name": "Extra Extra Lives",
+   "description": "Pick up 20 Extra Lives Total in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/a488fddd711b913a271411588cb7ece1e6b8c3e4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_17",
+   "name": "Reforged the Genie Lamp",
+   "description": "Complete the cheat code collection in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/c64e2dddbd9de55cd42f120c6310171476501160.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_18",
+   "name": "Metal Head",
+   "description": "Complete the album collection in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/74cc5c5e6a46181b2e12a8c690a9d56d1d626bd5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_19",
+   "name": "Playset Sold Separately",
+   "description": "Complete the toy collection in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/73cc45d3afb5982a8d81fa7aa03cf4cdfa4a807a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_2",
+   "name": "Interplanetary Fracking",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/eacdbdc7dce642f019eed1f61eb4772f255df9ca.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_20",
+   "name": "If Only I Could Read…",
+   "description": "Collect all physical Codex pages in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/235a9a996a446cfa3832ecc1227a7fb16bb6020e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_21",
+   "name": "Bonus Stage",
+   "description": "Complete a Slayer Gate",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/3039ba8fda75ba18188b71b5a7e47f70dbcd590c.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_22",
+   "name": "Breaker of Gates",
+   "description": "Complete all Slayer Gates in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/7d759de29f5480ab90b13993fa45598b835a9ef9.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_23",
+   "name": "Gunpletionist",
+   "description": "Master all Weapon Mods in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/7f147bd13840e82f9b00a4115128d73d58aae5c9.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_24",
+   "name": "Meet Your Unmaykr",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/57e50ac2b138cc6ac5c2e361662577fd500aa624.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_25",
+   "name": "Darn It, They Keep BREAKING",
+   "description": "Perform 33 Unique Glory Kills in a single save slot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/2c5d76d44e950aa2eaca0872836de853f6a86da3.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_26",
+   "name": "Mix and Match",
+   "description": "Play as 5 different Player Demons in BATTLEMODE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/d1d37c88c94353d1d7eabc18c87d0d16b3d52b0f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_27",
+   "name": "Fight Like Hell",
+   "description": "Do 5000 damage as a Player Demon in BATTLEMODE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/eb50e6d5fcf53b1719187c5f58773a87f53cf46c.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_28",
+   "name": "Blood Bath",
+   "description": "Kill 200 opponents in BATTLEMODE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/5e0e9acf125bbcd9196dfa72acd8416bc8ff9fa6.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_29",
+   "name": "Man vs Monsters",
+   "description": "Play 25 BATTLEMODE matches",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/3621c25d627856ffed6858a570df744e6567497d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_3",
+   "name": "Thumbs Down",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/6e5c74592352ddecb4e3cb8291fbeeb9ff87854e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_30",
+   "name": "Weapons Expert",
+   "description": "Kill a Player Demon with each of the 8 Slayer weapons in BATTLEMODE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/7dd031940c0adb9a6de508f0c55e4a426242869e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_31",
+   "name": "Truce between Demons",
+   "description": "Heal yourself or your teammate for 50000 health in BATTLEMODE",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/c9dd93b1a757fb2f57d26bf44ea1da82bbdc25d6.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_4",
+   "name": "Reforged and Refueled",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/a2176a79efc81b4dda80a5552a146bd8e3cfc2a1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_5",
+   "name": "Nontraditionalist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/cf9cb15e408a6c1ce0c79b40638430b7292a449c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_6",
+   "name": "Iconoclast",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/44f6594a048902f731e6603a7a6eed8e29ed2401.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_7",
+   "name": "The Once and Future Slayer",
+   "description": "Complete the Campaign on any difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/5c3a26504a651a67462db0589466c09d32156879.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_8",
+   "name": "Treasure Hunter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/168a1a4c4a9af10517beb4c2f8f8bd62bc43ab3e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_1_9",
+   "name": "Master of Fasting",
+   "description": "Complete a Mission with only the Famine Mode cheat on",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/b8748045bef334ce6e383605473d17616e08efef.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_0",
+   "name": "It's a Magic Number",
+   "description": "Kill 666 Demons (excluding Player Demons and Wolves)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/e90bddc8098f833907ac9d5d79409a9edd9adb90.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_1",
+   "name": "Torrential Pain",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/40c688e50668dd53a5f23b039de33f7bdfdde5d6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_10",
+   "name": "Siege the Day",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/a54114bc9cf10c096c6c77b9e04aacdcfbb1e589.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_11",
+   "name": "Tougher Than Nails",
+   "description": "Acquire all Sentinel Hammer upgrades (Ancient Gods 2)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/00274a750bf76272299d81c871ee26dfc18196c0.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_12",
+   "name": "Rest Your Weary Fists",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/ddf285b4ec1e7b5939676062e51852a49b01ad98.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_13",
+   "name": "Live Die Reload",
+   "description": "Complete Extra Life Mode with 5 Extra Lives in your Inventory (Ancient Gods 2)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/dd738f480c48f6fbb11f9f2c8d181ffecb00c2d8.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_14",
+   "name": "Critical Literature",
+   "description": "Collect all physical Codex pages in a single save slot (Ancient Gods 2)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/9cc3768fd67e9ac5804fe6c2ec72fc30fa4ca3cf.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_15",
+   "name": "Let's Play",
+   "description": "Complete the first Horde Mode Mission",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/e53669b868df785f2c069b47c3695648f8a1dd52.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_16",
+   "name": "Reinvent the Weapon Wheel",
+   "description": "Re-collect all of the weapons on the Weapon Wheel",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/920b33772b922399c04eab5ece37fafd62f7384a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_17",
+   "name": "Game Over",
+   "description": "Beat Horde Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/03314004bc3246271674c7bf1a4676cf2d091864.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_2",
+   "name": "To Take a Life Sphere",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/cde682df2540be9d6a61619d0afb377234061f2b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_3",
+   "name": "Regime Change",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/e112c64152e0e006917345d15e82e54f872ee38f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_4",
+   "name": "1-Upsmanship",
+   "description": "Complete Extra Life Mode with 5 Extra Lives in your Inventory (Ancient Gods 1)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/5fabec0088cb4e59329c9b65ba963c8e09a824a2.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_5",
+   "name": "Lucky Charm Bracelet",
+   "description": "Acquire all Support Runes in a single save slot (Ancient Gods 1)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/adc6dd48e29af348ca196fde9891bfa39029f36c.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_6",
+   "name": "Hypersonic",
+   "description": "Complete all Secret Encounters in a single save slot (Ancient Gods 1)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/0fabc2835007e790d7129b1eced8098ca489ac39.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_7",
+   "name": "Required Reading",
+   "description": "Collect all physical Codex pages in a single save slot (Ancient Gods 1)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/662c08316dd0d8a338a2a176151c46f31c492096.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_8",
+   "name": "Crystal Spelunker",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/465de16039f18963b9a3b44a1d47c708c4c2e3d2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_9",
+   "name": "Cross the Threshold",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/782330/d3a8389f1439984c54cd8b91a9b8659a03769a26.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "DOOM Eternal",
+   "achievements": [
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Doomsday",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hunters Became the Hunted",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Interplanetary Fracking",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thumbs Down",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reforged and Refueled",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nontraditionalist",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Iconoclast",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Once and Future Slayer",
+     "description": "Complete the Campaign on any difficulty"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Treasure Hunter",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of Fasting",
+     "description": "Complete a Mission with only the Famine Mode cheat on"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Running Up the High Score",
+     "description": "Complete Extra Life Mode with 10 Extra Lives in your Inventory"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crystal Craving",
+     "description": "Upgrade Health, Armor, or Ammo"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King of the Crystals",
+     "description": "Fully upgrade Health, Armor, or Ammo in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "This One's my Favorite",
+     "description": "Complete a Praetor Suit Perk category in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "They're ALL My Favorite",
+     "description": "Purchase all Praetor Suit Perks in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Homemaykr",
+     "description": "Spend 8 Sentinel Batteries in the Fortress of Doom in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extra Extra Lives",
+     "description": "Pick up 20 Extra Lives Total in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reforged the Genie Lamp",
+     "description": "Complete the cheat code collection in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Metal Head",
+     "description": "Complete the album collection in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Playset Sold Separately",
+     "description": "Complete the toy collection in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "If Only I Could Read…",
+     "description": "Collect all physical Codex pages in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bonus Stage",
+     "description": "Complete a Slayer Gate"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Breaker of Gates",
+     "description": "Complete all Slayer Gates in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gunpletionist",
+     "description": "Master all Weapon Mods in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Meet Your Unmaykr",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Darn It, They Keep BREAKING",
+     "description": "Perform 33 Unique Glory Kills in a single save slot"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mix and Match",
+     "description": "Play as 5 different Player Demons in BATTLEMODE"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fight Like Hell",
+     "description": "Do 5000 damage as a Player Demon in BATTLEMODE"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blood Bath",
+     "description": "Kill 200 opponents in BATTLEMODE"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Man vs Monsters",
+     "description": "Play 25 BATTLEMODE matches"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapons Expert",
+     "description": "Kill a Player Demon with each of the 8 Slayer weapons in BATTLEMODE"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_1_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Truce between Demons",
+     "description": "Heal yourself or your teammate for 50000 health in BATTLEMODE"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's a Magic Number",
+     "description": "Kill 666 Demons (excluding Player Demons and Wolves)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Torrential Pain",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "To Take a Life Sphere",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Regime Change",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "1-Upsmanship",
+     "description": "Complete Extra Life Mode with 5 Extra Lives in your Inventory (Ancient Gods 1)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lucky Charm Bracelet",
+     "description": "Acquire all Support Runes in a single save slot (Ancient Gods 1)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hypersonic",
+     "description": "Complete all Secret Encounters in a single save slot (Ancient Gods 1)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Required Reading",
+     "description": "Collect all physical Codex pages in a single save slot (Ancient Gods 1)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crystal Spelunker",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cross the Threshold",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Siege the Day",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tougher Than Nails",
+     "description": "Acquire all Sentinel Hammer upgrades (Ancient Gods 2)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rest Your Weary Fists",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Live Die Reload",
+     "description": "Complete Extra Life Mode with 5 Extra Lives in your Inventory (Ancient Gods 2)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Critical Literature",
+     "description": "Collect all physical Codex pages in a single save slot (Ancient Gods 2)"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let's Play",
+     "description": "Complete the first Horde Mode Mission"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reinvent the Weapon Wheel",
+     "description": "Re-collect all of the weapons on the Weapon Wheel"
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Game Over",
+     "description": "Beat Horde Mode"
+    }
+   ],
+   "success": true
+  }
+ }
+}

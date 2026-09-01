@@ -1,0 +1,681 @@
+{
+ "provider": "steam",
+ "title": "Yakuza 4 Remastered",
+ "updated": "2026-08-30",
+ "id": "1105500",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 47,
+ "platform": "PC",
+ "icon": "9c0917bca10b54193100c6e8071bc45c8c49d095",
+ "achievements": [
+  {
+   "key": "ACHIEVEMENT_0",
+   "name": "Master of Kamurocho",
+   "description": "Acquire all achievements in the game.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/0817f17632c6426e0162fe71010218990b82b06d.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_1",
+   "name": "The Plot Thickens",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/47c2f813046178685f9208cf5cb17282c8201cf7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_10",
+   "name": "Substory Novice",
+   "description": "Complete or finish four substories.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_11",
+   "name": "Substory Helper",
+   "description": "Complete or finish twenty substories.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_12",
+   "name": "Substory Lover",
+   "description": "Complete or finish forty substories.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_13",
+   "name": "Substory Champion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/2b4bf803ce5b2e59126305e828b90a05d44089fc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_14",
+   "name": "Gourmet of Kamurocho",
+   "description": "Order something at least once at each restaurant.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_15",
+   "name": "Way of the Key Master",
+   "description": "Open five coin lockers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_16",
+   "name": "The Joy of Gifting",
+   "description": "Have a hostess wear a present you give her.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/47c2f813046178685f9208cf5cb17282c8201cf7.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_17",
+   "name": "After-Work Hookup",
+   "description": "Have a hostess invite you on an after-work date.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/54e967aa69e04b4019a8825ec7e0af7411da0375.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_18",
+   "name": "Fashionista",
+   "description": "Gather at least one outfit from each category in \"Hostess Maker.\"",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/47c2f813046178685f9208cf5cb17282c8201cf7.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_19",
+   "name": "Business Card Hunter",
+   "description": "Receive business cards from all hostesses, including ones you train in \"Hostess Maker.\"",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/d14d3f2b58eec0041dcf45d9999b790534704165.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_2",
+   "name": "Reunited",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/335a1114e887c2dd22d5abc0cf74c4730d7b4bb9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_20",
+   "name": "Emblem Collector",
+   "description": "Collect ten emblems from survivors during gang encounters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/54e967aa69e04b4019a8825ec7e0af7411da0375.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_21",
+   "name": "Star of the Coliseum",
+   "description": "Acquire the title \"Star of the Coliseum.\"",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/335a1114e887c2dd22d5abc0cf74c4730d7b4bb9.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_22",
+   "name": "Master in Training",
+   "description": "Have one of your apprentices win the Rookie Tournament in \"Fighter Maker.\"",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/335a1114e887c2dd22d5abc0cf74c4730d7b4bb9.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_23",
+   "name": "Weapon Master",
+   "description": "Create one or more weapons for each weapon category.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_24",
+   "name": "Revelation Seeker",
+   "description": "Acquire three Revelations.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/c824da34276f70b358f6e9aa24fe3f15e49e092e.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_25",
+   "name": "VIP Member",
+   "description": "Become a VIP member at the massage parlor.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_26",
+   "name": "Table Tennis Pro",
+   "description": "Smash the ball three times in one match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_27",
+   "name": "The Human Jukebox",
+   "description": "Sing all songs at karaoke.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_28",
+   "name": "Hat Trick",
+   "description": "Achieve a hat trick in darts.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_29",
+   "name": "First Carom",
+   "description": "Win the first point in Four-Ball billiards.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_3",
+   "name": "A Detective's End",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/d14d3f2b58eec0041dcf45d9999b790534704165.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_30",
+   "name": "Boiled Turkey",
+   "description": "Achieve a turkey in bowling.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_31",
+   "name": "Novice Gambler",
+   "description": "Play all non-casino gambling games.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_32",
+   "name": "Casino Rookie",
+   "description": "Play all casino gambling games.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_33",
+   "name": "Welcome to SEGA",
+   "description": "Play all minigames at Club SEGA.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_34",
+   "name": "Shogi Promotion",
+   "description": "Achieve a promotion in shogi.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_35",
+   "name": "Seven Pairs",
+   "description": "Win a round by forming a concealed hand containing seven unique pairs in mahjong.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_36",
+   "name": "Captain Two-fer",
+   "description": "Successfully hit two panels at once at the batting center.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_37",
+   "name": "Mr. Outdoors",
+   "description": "Golf and fish five times each.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_38",
+   "name": "Walking Bank",
+   "description": "Possess 10,000,000 yen or more.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_39",
+   "name": "Kamurocho Iron Man",
+   "description": "Traverse 100 kilometers or more.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_4",
+   "name": "Only One Thing Left to Do...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/54e967aa69e04b4019a8825ec7e0af7411da0375.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_40",
+   "name": "Kamurocho Stampede King",
+   "description": "Knock over 100 people you pass by.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_41",
+   "name": "Akiyama the Hoarder",
+   "description": "Earn 1,000,000 yen playing as Akiyama.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/b19a256a6ac996f7190092c95cad3392682b13ad.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_42",
+   "name": "Saejima the Slinger",
+   "description": "Purchase five guns playing as Saejima.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/e1248db24de86a011af8b83db872eb09fd4b099b.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_43",
+   "name": "Tanimura the Gambler",
+   "description": "Acquire 10,000 casino points playing as Tanimura.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/530cf885d99b3e0eb18fd574dafaa83ee5b1c3e8.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_44",
+   "name": "Kiryu the Crusher",
+   "description": "Destroy 100 weapons you pick up playing as Kiryu.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/a6cde6a003ec8746a6ff5101f4a3462102e6ab04.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_45",
+   "name": "Kamurocho Tree Hugger",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/c824da34276f70b358f6e9aa24fe3f15e49e092e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_46",
+   "name": "Memo Master",
+   "description": "Collect all Memos in the Pause Menu.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/ce8b654df9ee204e0c5fdf77e9eb6f91812925c0.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_5",
+   "name": "Thank You!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/2b4bf803ce5b2e59126305e828b90a05d44089fc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_6",
+   "name": "Heir to the Legend",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/2b4bf803ce5b2e59126305e828b90a05d44089fc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_7",
+   "name": "Ultimate Challenger",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/702fb47b17c7bdf0defdceea670aa1c430af2b0a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACHIEVEMENT_8",
+   "name": "Fearsome Foursome",
+   "description": "Max out all characters to level 20.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/702fb47b17c7bdf0defdceea670aa1c430af2b0a.jpg"
+  },
+  {
+   "key": "ACHIEVEMENT_9",
+   "name": "Indomitable",
+   "description": "Clear Normal Mode without reverting to Easy Mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1105500/de0e7e9ee3fbd679dcd402e337fac2de00215e40.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Yakuza 4 Remastered",
+   "achievements": [
+    {
+     "apiname": "ACHIEVEMENT_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of Kamurocho",
+     "description": "Acquire all achievements in the game."
+    },
+    {
+     "apiname": "ACHIEVEMENT_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Plot Thickens",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reunited",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Detective's End",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Only One Thing Left to Do...",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thank You!",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heir to the Legend",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ultimate Challenger",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fearsome Foursome",
+     "description": "Max out all characters to level 20."
+    },
+    {
+     "apiname": "ACHIEVEMENT_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Indomitable",
+     "description": "Clear Normal Mode without reverting to Easy Mode."
+    },
+    {
+     "apiname": "ACHIEVEMENT_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Substory Novice",
+     "description": "Complete or finish four substories."
+    },
+    {
+     "apiname": "ACHIEVEMENT_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Substory Helper",
+     "description": "Complete or finish twenty substories."
+    },
+    {
+     "apiname": "ACHIEVEMENT_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Substory Lover",
+     "description": "Complete or finish forty substories."
+    },
+    {
+     "apiname": "ACHIEVEMENT_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Substory Champion",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gourmet of Kamurocho",
+     "description": "Order something at least once at each restaurant."
+    },
+    {
+     "apiname": "ACHIEVEMENT_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Way of the Key Master",
+     "description": "Open five coin lockers."
+    },
+    {
+     "apiname": "ACHIEVEMENT_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Joy of Gifting",
+     "description": "Have a hostess wear a present you give her."
+    },
+    {
+     "apiname": "ACHIEVEMENT_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "After-Work Hookup",
+     "description": "Have a hostess invite you on an after-work date."
+    },
+    {
+     "apiname": "ACHIEVEMENT_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fashionista",
+     "description": "Gather at least one outfit from each category in \"Hostess Maker.\""
+    },
+    {
+     "apiname": "ACHIEVEMENT_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Business Card Hunter",
+     "description": "Receive business cards from all hostesses, including ones you train in \"Hostess Maker.\""
+    },
+    {
+     "apiname": "ACHIEVEMENT_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Emblem Collector",
+     "description": "Collect ten emblems from survivors during gang encounters."
+    },
+    {
+     "apiname": "ACHIEVEMENT_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star of the Coliseum",
+     "description": "Acquire the title \"Star of the Coliseum.\""
+    },
+    {
+     "apiname": "ACHIEVEMENT_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master in Training",
+     "description": "Have one of your apprentices win the Rookie Tournament in \"Fighter Maker.\""
+    },
+    {
+     "apiname": "ACHIEVEMENT_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weapon Master",
+     "description": "Create one or more weapons for each weapon category."
+    },
+    {
+     "apiname": "ACHIEVEMENT_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Revelation Seeker",
+     "description": "Acquire three Revelations."
+    },
+    {
+     "apiname": "ACHIEVEMENT_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "VIP Member",
+     "description": "Become a VIP member at the massage parlor."
+    },
+    {
+     "apiname": "ACHIEVEMENT_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Table Tennis Pro",
+     "description": "Smash the ball three times in one match."
+    },
+    {
+     "apiname": "ACHIEVEMENT_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Human Jukebox",
+     "description": "Sing all songs at karaoke."
+    },
+    {
+     "apiname": "ACHIEVEMENT_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hat Trick",
+     "description": "Achieve a hat trick in darts."
+    },
+    {
+     "apiname": "ACHIEVEMENT_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Carom",
+     "description": "Win the first point in Four-Ball billiards."
+    },
+    {
+     "apiname": "ACHIEVEMENT_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boiled Turkey",
+     "description": "Achieve a turkey in bowling."
+    },
+    {
+     "apiname": "ACHIEVEMENT_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Novice Gambler",
+     "description": "Play all non-casino gambling games."
+    },
+    {
+     "apiname": "ACHIEVEMENT_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Casino Rookie",
+     "description": "Play all casino gambling games."
+    },
+    {
+     "apiname": "ACHIEVEMENT_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to SEGA",
+     "description": "Play all minigames at Club SEGA."
+    },
+    {
+     "apiname": "ACHIEVEMENT_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shogi Promotion",
+     "description": "Achieve a promotion in shogi."
+    },
+    {
+     "apiname": "ACHIEVEMENT_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seven Pairs",
+     "description": "Win a round by forming a concealed hand containing seven unique pairs in mahjong."
+    },
+    {
+     "apiname": "ACHIEVEMENT_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Captain Two-fer",
+     "description": "Successfully hit two panels at once at the batting center."
+    },
+    {
+     "apiname": "ACHIEVEMENT_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mr. Outdoors",
+     "description": "Golf and fish five times each."
+    },
+    {
+     "apiname": "ACHIEVEMENT_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Walking Bank",
+     "description": "Possess 10,000,000 yen or more."
+    },
+    {
+     "apiname": "ACHIEVEMENT_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kamurocho Iron Man",
+     "description": "Traverse 100 kilometers or more."
+    },
+    {
+     "apiname": "ACHIEVEMENT_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kamurocho Stampede King",
+     "description": "Knock over 100 people you pass by."
+    },
+    {
+     "apiname": "ACHIEVEMENT_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Akiyama the Hoarder",
+     "description": "Earn 1,000,000 yen playing as Akiyama."
+    },
+    {
+     "apiname": "ACHIEVEMENT_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Saejima the Slinger",
+     "description": "Purchase five guns playing as Saejima."
+    },
+    {
+     "apiname": "ACHIEVEMENT_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tanimura the Gambler",
+     "description": "Acquire 10,000 casino points playing as Tanimura."
+    },
+    {
+     "apiname": "ACHIEVEMENT_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kiryu the Crusher",
+     "description": "Destroy 100 weapons you pick up playing as Kiryu."
+    },
+    {
+     "apiname": "ACHIEVEMENT_45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kamurocho Tree Hugger",
+     "description": ""
+    },
+    {
+     "apiname": "ACHIEVEMENT_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Memo Master",
+     "description": "Collect all Memos in the Pause Menu."
+    }
+   ],
+   "success": true
+  }
+ }
+}

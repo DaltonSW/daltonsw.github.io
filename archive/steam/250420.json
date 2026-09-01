@@ -1,0 +1,361 @@
+{
+ "provider": "steam",
+ "title": "8BitMMO",
+ "updated": "2026-08-30",
+ "id": "250420",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 24,
+ "platform": "PC",
+ "icon": "1af623135bbe3cf0cdaacda4dd07c2de6abfb7a8",
+ "playtime_mins": 21,
+ "last_played": "2014-01-19",
+ "achievements": [
+  {
+   "key": "ACH_CITIZEN",
+   "name": "Model Citizen",
+   "description": "Join a town.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/74a9520200ab595aabd2dfc886ba3136681968df.jpg"
+  },
+  {
+   "key": "ACH_CREDITS",
+   "name": "/credits",
+   "description": "Pretend to read the credits.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/f9a19c3d398b4191c0b36ff4c8fa223fc3959aac.jpg"
+  },
+  {
+   "key": "ACH_DEV",
+   "name": "Be the Developer",
+   "description": "Write an MMO by yourself for thirteen years.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/8d39a0aa736554fceed0b34eb57688ef7b4a0406.jpg"
+  },
+  {
+   "key": "ACH_DRACO_COMPLETE",
+   "name": "Dragon Builder",
+   "description": "Finish all of Draco's quests.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/5c988ae20ba03ee91828eadc6bf929bdc3f2592e.jpg"
+  },
+  {
+   "key": "ACH_DRACO_PLACER",
+   "name": "Placer of Blocks",
+   "description": "Complete Draco's first quest: place five blocks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/a9ee6a838dd70744cfd117e17a680c146609efc2.jpg"
+  },
+  {
+   "key": "ACH_FRIEND",
+   "name": "Not forever alone",
+   "description": "Be popular and admired.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/bcaf4c8183d293ed0eaff9c4c460183fbf7cc984.jpg"
+  },
+  {
+   "key": "ACH_GAMEOVER",
+   "name": "Game Over",
+   "description": "You lose at MMO.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/49dbb4c3ad0b264a49285bd4ca66aff49210524d.jpg"
+  },
+  {
+   "key": "ACH_INVFULL",
+   "name": "Hoarder",
+   "description": "Compulsively collect newspapers from 1995, because you might need them later for reasons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/a2a666b8458174ae13ca1d67d192e00bed1aafe2.jpg"
+  },
+  {
+   "key": "ACH_LEVEL_2",
+   "name": "Reach Level 2",
+   "description": "Woo!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/c50e396e3484ff5b8b0b9cf98f192cf39fb3281f.jpg"
+  },
+  {
+   "key": "ACH_LEVEL_3",
+   "name": "Reach Level 3",
+   "description": "Woo!!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/2888a08228ed6b1125d08c2541c6dd7ddff6a639.jpg"
+  },
+  {
+   "key": "ACH_LEVEL_4",
+   "name": "Reach Level 4",
+   "description": "WOOOOO!!!!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/a6ba910119ee637a16f32b36bee0e84ff2ef0895.jpg"
+  },
+  {
+   "key": "ACH_LEVEL_5",
+   "name": "Reach Level 5",
+   "description": "Jeez, calm down.  That's enough levels already.  Now go outside and really live your life.  Visit a new place!  Learn a new language!  Talk to a stranger!  Write a novel!  Or don't, I'm just an achievement.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/ffd4f0e7db870d7628186e01c2d5c8f2074a99ac.jpg"
+  },
+  {
+   "key": "ACH_OPTIONS",
+   "name": "Options Hero",
+   "description": "Spend fifteen minutes in the options screen.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/19eaaafc953d90744254c3b605a386852996a743.jpg"
+  },
+  {
+   "key": "ACH_POTATO",
+   "name": "When you are Potato, anything is possible!",
+   "description": "Become potato for great glory of national party!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/c66b64b89546bb6b95c9b9a9c5a335ae5b5bf0a1.jpg"
+  },
+  {
+   "key": "ACH_RB_1",
+   "name": "Reward Finder",
+   "description": "Find one reward block.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/ff7e8d8cf9fb2fba381f99e2446cddc7daaa25c6.jpg"
+  },
+  {
+   "key": "ACH_RB_15",
+   "name": "Reward Searcher",
+   "description": "Find fifteen reward blocks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/43597255bd0b8fce4f6472ed82ad6bbf4c6c03f6.jpg"
+  },
+  {
+   "key": "ACH_RB_30",
+   "name": "Reward Hunter",
+   "description": "Find thirty reward blocks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/647c911b2ff85942871f41ffcf954be1c686e7c6.jpg"
+  },
+  {
+   "key": "ACH_RB_5",
+   "name": "Reward Scavenger",
+   "description": "Find five reward blocks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/5086aa293760685006e93e4939bacbf39ca43c34.jpg"
+  },
+  {
+   "key": "ACH_RB_ALL",
+   "name": "Reward... who am I kidding, no one will ever get this one",
+   "description": "Find EVERY reward block on /rewardblocks (Primary server only!)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/978ca854f8abb5b8348ad14aa8bd855db497cc35.jpg"
+  },
+  {
+   "key": "ACH_REBOOT",
+   "name": "Please hang up and try again",
+   "description": "Be mildly annoyed by a dropped connection or a 2AM SERVER REBOOT FUN TIME.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/7bc25bb70400d06e87a79dbb642c8745cf7715ce.jpg"
+  },
+  {
+   "key": "ACH_TRADE",
+   "name": "Trade",
+   "description": "Complete a trade with another player.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/20b042086f115517c4678cf1b9a42048c5d5c841.jpg"
+  },
+  {
+   "key": "ACH_VIRAL",
+   "name": "You should probably get tested",
+   "description": "After getting stabbed by someone with this achievement.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/80540d668a933ed47a8edfcfc8286b597b0ee3f2.jpg"
+  },
+  {
+   "key": "ACH_WIKI",
+   "name": "Important Wiki Edits",
+   "description": "Write fanfiction that involves a crossover between citizens of your town and an obscure 1960's sci-fi television drama.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/01ce16b28a917ec3646a8d3badb0204e2be14ca7.jpg"
+  },
+  {
+   "key": "ACH_ZOMBIE",
+   "name": "Braiiiiins",
+   "description": "Get infected with Zombieism (note, you can't get this from the shop -- you have to be bitten by another player).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/250420/40778ffaf3e29a012c1612093cfbf65cf68947e4.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "8BitMMO",
+   "achievements": [
+    {
+     "apiname": "ACH_RB_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reward Finder",
+     "description": "Find one reward block."
+    },
+    {
+     "apiname": "ACH_RB_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reward Scavenger",
+     "description": "Find five reward blocks."
+    },
+    {
+     "apiname": "ACH_RB_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reward Searcher",
+     "description": "Find fifteen reward blocks."
+    },
+    {
+     "apiname": "ACH_RB_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reward Hunter",
+     "description": "Find thirty reward blocks."
+    },
+    {
+     "apiname": "ACH_RB_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reward... who am I kidding, no one will ever get this one",
+     "description": "Find EVERY reward block on /rewardblocks (Primary server only!)"
+    },
+    {
+     "apiname": "ACH_GAMEOVER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Game Over",
+     "description": "You lose at MMO."
+    },
+    {
+     "apiname": "ACH_DRACO_PLACER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Placer of Blocks",
+     "description": "Complete Draco's first quest: place five blocks."
+    },
+    {
+     "apiname": "ACH_DRACO_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dragon Builder",
+     "description": "Finish all of Draco's quests."
+    },
+    {
+     "apiname": "ACH_LEVEL_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reach Level 2",
+     "description": "Woo!"
+    },
+    {
+     "apiname": "ACH_LEVEL_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reach Level 3",
+     "description": "Woo!!"
+    },
+    {
+     "apiname": "ACH_LEVEL_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reach Level 4",
+     "description": "WOOOOO!!!!"
+    },
+    {
+     "apiname": "ACH_LEVEL_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reach Level 5",
+     "description": "Jeez, calm down.  That's enough levels already.  Now go outside and really live your life.  Visit a new place!  Learn a new language!  Talk to a stranger!  Write a novel!  Or don't, I'm just an achievement."
+    },
+    {
+     "apiname": "ACH_ZOMBIE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Braiiiiins",
+     "description": "Get infected with Zombieism (note, you can't get this from the shop -- you have to be bitten by another player)."
+    },
+    {
+     "apiname": "ACH_CREDITS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "/credits",
+     "description": "Pretend to read the credits."
+    },
+    {
+     "apiname": "ACH_OPTIONS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Options Hero",
+     "description": "Spend fifteen minutes in the options screen."
+    },
+    {
+     "apiname": "ACH_POTATO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "When you are Potato, anything is possible!",
+     "description": "Become potato for great glory of national party!"
+    },
+    {
+     "apiname": "ACH_VIRAL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You should probably get tested",
+     "description": "After getting stabbed by someone with this achievement."
+    },
+    {
+     "apiname": "ACH_CITIZEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Model Citizen",
+     "description": "Join a town."
+    },
+    {
+     "apiname": "ACH_FRIEND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not forever alone",
+     "description": "Be popular and admired."
+    },
+    {
+     "apiname": "ACH_INVFULL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hoarder",
+     "description": "Compulsively collect newspapers from 1995, because you might need them later for reasons."
+    },
+    {
+     "apiname": "ACH_REBOOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Please hang up and try again",
+     "description": "Be mildly annoyed by a dropped connection or a 2AM SERVER REBOOT FUN TIME."
+    },
+    {
+     "apiname": "ACH_WIKI",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Important Wiki Edits",
+     "description": "Write fanfiction that involves a crossover between citizens of your town and an obscure 1960's sci-fi television drama."
+    },
+    {
+     "apiname": "ACH_TRADE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trade",
+     "description": "Complete a trade with another player."
+    },
+    {
+     "apiname": "ACH_DEV",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Be the Developer",
+     "description": "Write an MMO by yourself for thirteen years."
+    }
+   ],
+   "success": true
+  }
+ }
+}

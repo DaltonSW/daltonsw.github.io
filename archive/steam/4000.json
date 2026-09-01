@@ -1,0 +1,435 @@
+{
+ "provider": "steam",
+ "title": "Garry's Mod",
+ "updated": "2026-08-30",
+ "id": "4000",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 2,
+ "total": 29,
+ "first": "2012-12-28",
+ "last": "2012-12-28",
+ "platform": "PC",
+ "icon": "4a6f25cfa2426445d0d9d6e233408de4d371ce8b",
+ "playtime_mins": 20,
+ "last_played": "2012-12-29",
+ "achievements": [
+  {
+   "key": "GMA_PLAY_MULTIPLAYER",
+   "name": "Play Multiplayer",
+   "description": "Play multiplayer at least once",
+   "unlocked": true,
+   "date": "2012-12-28T23:27:06-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/d6b5b7ac882b0865415218642cb21bfb5a5fca77.jpg"
+  },
+  {
+   "key": "GMA_NOT_SANDBOX",
+   "name": "Play Around",
+   "description": "Play a gamemode that isn't sandbox",
+   "unlocked": true,
+   "date": "2012-12-28T23:28:34-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/c1421b7d9609b03bca96bae9abde44da628d20a1.jpg"
+  },
+  {
+   "key": "GMA_BADCODER",
+   "name": "Bad Coder",
+   "description": "Experience 500 Lua programming errors",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/ab6158930869f33717e4aa55122973ffd8d3d364.jpg"
+  },
+  {
+   "key": "GMA_BADDIES",
+   "name": "War Zone",
+   "description": "Killed 1000 Baddies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/88f7f6f51232d0792f70683599a55974b14086d1.jpg"
+  },
+  {
+   "key": "GMA_BALLEATER",
+   "name": "Ball Eater",
+   "description": "Eat 200 balls",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/0352bbe5511ea372e24108680a70929e559c3dcc.jpg"
+  },
+  {
+   "key": "GMA_BALLOONPOPPER",
+   "name": "Popper",
+   "description": "Burst 1000 balloons",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/1ce84afb8118aafc4e2aa5c007b97f8d7330bbf8.jpg"
+  },
+  {
+   "key": "GMA_BYSTANDER",
+   "name": "Innocent Bystander",
+   "description": "Kill 1000 innocent animals",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/33309ff1fc671bd3bf7f74dfd29df688429d2943.jpg"
+  },
+  {
+   "key": "GMA_DAY",
+   "name": "One Day",
+   "description": "24 hours of your life wasted",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/a200f9a8cc7327f9885218ff2e1a9317ce711459.jpg"
+  },
+  {
+   "key": "GMA_FRIENDS",
+   "name": "Friendly",
+   "description": "Play with 10 friends",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/14f07b40867ab5ceb305fa99fc1b112fc96abb14.jpg"
+  },
+  {
+   "key": "GMA_GOODIES",
+   "name": "Bad Friend",
+   "description": "Kill 1000 friendly NPCs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/040ae0e4fef44e23609b2cd2b545d3f41c782dd0.jpg"
+  },
+  {
+   "key": "GMA_HALFMARATHON",
+   "name": "Half Marathon",
+   "description": "Play on the same server \u0026 map for 4 hours",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/814409f41a371a1029d4dda336f3d6958c558548.jpg"
+  },
+  {
+   "key": "GMA_HUGETHUMB",
+   "name": "1000 Thumbs",
+   "description": "Your Workshop uploads got 1000 thumbs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/f0b8f66a9f445a80fcf7897d8b07c634ae26a469.jpg"
+  },
+  {
+   "key": "GMA_MARATHON",
+   "name": "Marathon",
+   "description": "Play on the same server \u0026 map for 8 hours",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/82ee06b6fb3a0aed698dfa33303526d58340f2c1.jpg"
+  },
+  {
+   "key": "GMA_MEDIUMTHUMB",
+   "name": "100 Thumbs",
+   "description": "Your workshop uploads got 100 thumbs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/0afc0d332af9c5e779302bb7a70d29b15fdec263.jpg"
+  },
+  {
+   "key": "GMA_MEGAUPLOAD",
+   "name": "Mega Upload",
+   "description": "Get 1000 thumbs on a single upload (then go to jail)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/75b1b16c2b67b893d35d3b8c79de90dcb14dfd4b.jpg"
+  },
+  {
+   "key": "GMA_MONTH",
+   "name": "One Month",
+   "description": "One whole month of your life wasted",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/812c6a24eb1997d7784e7bc6ab381899ae6b0753.jpg"
+  },
+  {
+   "key": "GMA_NPCSPAWNER",
+   "name": "Procreator",
+   "description": "Spawn 1000 NPCs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/e2e840130db8efd5e34f12087a0ccddb7b04f40e.jpg"
+  },
+  {
+   "key": "GMA_PLAYWITH_GARRY",
+   "name": "Yes, I am the real garry!",
+   "description": "Play on the same server as garry",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/b018137e2177a4a1ac63460f8b20757d4e7ef2da.jpg"
+  },
+  {
+   "key": "GMA_PLAY_SINGLEPLAYER",
+   "name": "Play Singleplayer",
+   "description": "Play singleplayer at least once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/b8ce64f366e8a8a1c2aef231cca8ec82f3115d63.jpg"
+  },
+  {
+   "key": "GMA_PROPSPAWNER",
+   "name": "Creator",
+   "description": "Spawn 5000 props",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/c45ed5c18d9b92d68ea034d13fe0ee537110753f.jpg"
+  },
+  {
+   "key": "GMA_RAGDOLLSPAWNER",
+   "name": "Dollhouse",
+   "description": "Spawn 2000 ragdolls",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/de22904018d342008bb6d94087190a0c2493689f.jpg"
+  },
+  {
+   "key": "GMA_REMOVER",
+   "name": "Destroyer",
+   "description": "Remove 5000 things",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/8fbefdee3a3f2ac51a51aa7cd2d5f7116165aad8.jpg"
+  },
+  {
+   "key": "GMA_SAY_1",
+   "name": "Secret Phrase",
+   "description": "Say the secret phrase",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/f331d3e21b7fc96c8f117787fe3e2d5e26b9952e.jpg"
+  },
+  {
+   "key": "GMA_SMALLTHUMB",
+   "name": "10 Thumbs",
+   "description": "Your Workshop uploads got 10 thumbs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/1c5bef9615a260ae3177c26ad8ac86f5dc192ead.jpg"
+  },
+  {
+   "key": "GMA_SPAWNMENUER",
+   "name": "Menu User",
+   "description": "Open the spawnmenu 100,000 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/5dd0d4a1bcd15561860a06ea76969dfce4ff6b76.jpg"
+  },
+  {
+   "key": "GMA_WEEK",
+   "name": "One Week",
+   "description": "One whole week of your life wasted",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/9d608f3ad483370e261da7991aece5c135432098.jpg"
+  },
+  {
+   "key": "GMA_X_MAPS",
+   "name": "Map Loader",
+   "description": "Play 20 different maps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/7cb317f7a953204e79a3fc2923aad8eb77df74bd.jpg"
+  },
+  {
+   "key": "GMA_X_MINUTES",
+   "name": "Addict",
+   "description": "You have wasted a year of your life playing GMod!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/9d99453c08ea180230b5ad24f904c0749e6ce139.jpg"
+  },
+  {
+   "key": "GMA_X_STARTUPS",
+   "name": "Startup Millenium",
+   "description": "Start Garry's Mod 1000 times",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/f4bc0f96a846eeaa63a9ea92d11757b342376374.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Garry's Mod",
+   "achievements": [
+    {
+     "apiname": "GMA_PLAY_SINGLEPLAYER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Play Singleplayer",
+     "description": "Play singleplayer at least once"
+    },
+    {
+     "apiname": "GMA_PLAY_MULTIPLAYER",
+     "achieved": 1,
+     "unlocktime": 1356758826,
+     "name": "Play Multiplayer",
+     "description": "Play multiplayer at least once"
+    },
+    {
+     "apiname": "GMA_X_STARTUPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Startup Millenium",
+     "description": "Start Garry's Mod 1000 times"
+    },
+    {
+     "apiname": "GMA_SAY_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Secret Phrase",
+     "description": "Say the secret phrase"
+    },
+    {
+     "apiname": "GMA_X_MINUTES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Addict",
+     "description": "You have wasted a year of your life playing GMod!"
+    },
+    {
+     "apiname": "GMA_X_MAPS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Map Loader",
+     "description": "Play 20 different maps"
+    },
+    {
+     "apiname": "GMA_NOT_SANDBOX",
+     "achieved": 1,
+     "unlocktime": 1356758914,
+     "name": "Play Around",
+     "description": "Play a gamemode that isn't sandbox"
+    },
+    {
+     "apiname": "GMA_BADDIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "War Zone",
+     "description": "Killed 1000 Baddies"
+    },
+    {
+     "apiname": "GMA_FRIENDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Friendly",
+     "description": "Play with 10 friends"
+    },
+    {
+     "apiname": "GMA_PLAYWITH_GARRY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yes, I am the real garry!",
+     "description": "Play on the same server as garry"
+    },
+    {
+     "apiname": "GMA_MARATHON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Marathon",
+     "description": "Play on the same server \u0026 map for 8 hours"
+    },
+    {
+     "apiname": "GMA_HALFMARATHON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Half Marathon",
+     "description": "Play on the same server \u0026 map for 4 hours"
+    },
+    {
+     "apiname": "GMA_DAY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Day",
+     "description": "24 hours of your life wasted"
+    },
+    {
+     "apiname": "GMA_WEEK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Week",
+     "description": "One whole week of your life wasted"
+    },
+    {
+     "apiname": "GMA_MONTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Month",
+     "description": "One whole month of your life wasted"
+    },
+    {
+     "apiname": "GMA_BYSTANDER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Innocent Bystander",
+     "description": "Kill 1000 innocent animals"
+    },
+    {
+     "apiname": "GMA_BALLEATER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ball Eater",
+     "description": "Eat 200 balls"
+    },
+    {
+     "apiname": "GMA_PROPSPAWNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Creator",
+     "description": "Spawn 5000 props"
+    },
+    {
+     "apiname": "GMA_BALLOONPOPPER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Popper",
+     "description": "Burst 1000 balloons"
+    },
+    {
+     "apiname": "GMA_REMOVER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Destroyer",
+     "description": "Remove 5000 things"
+    },
+    {
+     "apiname": "GMA_SPAWNMENUER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Menu User",
+     "description": "Open the spawnmenu 100,000 times"
+    },
+    {
+     "apiname": "GMA_BADCODER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bad Coder",
+     "description": "Experience 500 Lua programming errors"
+    },
+    {
+     "apiname": "GMA_NPCSPAWNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Procreator",
+     "description": "Spawn 1000 NPCs"
+    },
+    {
+     "apiname": "GMA_RAGDOLLSPAWNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dollhouse",
+     "description": "Spawn 2000 ragdolls"
+    },
+    {
+     "apiname": "GMA_GOODIES",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bad Friend",
+     "description": "Kill 1000 friendly NPCs"
+    },
+    {
+     "apiname": "GMA_SMALLTHUMB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "10 Thumbs",
+     "description": "Your Workshop uploads got 10 thumbs"
+    },
+    {
+     "apiname": "GMA_MEDIUMTHUMB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "100 Thumbs",
+     "description": "Your workshop uploads got 100 thumbs"
+    },
+    {
+     "apiname": "GMA_HUGETHUMB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "1000 Thumbs",
+     "description": "Your Workshop uploads got 1000 thumbs"
+    },
+    {
+     "apiname": "GMA_MEGAUPLOAD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mega Upload",
+     "description": "Get 1000 thumbs on a single upload (then go to jail)"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,410 @@
+{
+ "provider": "steam",
+ "title": "ENTROPOLY",
+ "updated": "2026-08-30",
+ "id": "2226160",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 2,
+ "total": 27,
+ "first": "2023-08-05",
+ "last": "2023-08-05",
+ "platform": "PC",
+ "icon": "977d41119935d775a95bf71254057e6d27506ab4",
+ "playtime_mins": 27,
+ "playtime": {
+  "windows": 27
+ },
+ "last_played": "2023-08-05",
+ "achievements": [
+  {
+   "key": "complete_nightmare_any",
+   "name": "Nightmare Voyager",
+   "description": "Beat ANY Nightmare Level",
+   "unlocked": true,
+   "date": "2023-08-05T15:18:14-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/bdd7bd18a7512ff0ac16d4932228d5f14714e7c2.jpg"
+  },
+  {
+   "key": "complete_realm0",
+   "name": "EARTH",
+   "description": "Beat ALL 8 Earth Levels",
+   "unlocked": true,
+   "date": "2023-08-05T15:36:20-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ac66bf4d3c7a0e8639c7dfaa7c676756160fa1d3.jpg"
+  },
+  {
+   "key": "collect_crystal0",
+   "name": "EARTH CRYSTAL",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/c610f1dfc8f5ccf2f435eddaae6b1c3c7c3c33f2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "collect_crystal1",
+   "name": "AIR CRYSTAL",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/20299e583987d37350dbf56a5df7d245bb905fe3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "collect_crystal2",
+   "name": "WATER CRYSTAL",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/889bc7435b48bff756679053d47409a6ec62569c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "collect_crystal3",
+   "name": "FIRE CRYSTAL",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/904ab125d31b927e36bccc9296f20088267e73d1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "collect_crystal4",
+   "name": "MIND CRYSTAL",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/342296d630e4d1adced20d840c24919b8e24b8dc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "complete_game",
+   "name": "Good Nights Sleep",
+   "description": "Cleansed the elemental hearts and restored order to the realms",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/b4b48641377a09639fd313de54996f5fbb87f25c.jpg"
+  },
+  {
+   "key": "complete_nightmare0",
+   "name": "Nightmare Trekker",
+   "description": "Beat ALL Nightmare Earth Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/905783d10f591238a12026f9722ad3ed482c73c0.jpg"
+  },
+  {
+   "key": "complete_nightmare1",
+   "name": "Nightmare Glider",
+   "description": "Beat ALL Nightmare Air Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/eeb69bbc58fa4cd0a71782e764dbd12bd2c14b84.jpg"
+  },
+  {
+   "key": "complete_nightmare2",
+   "name": "Nightmare Surfer",
+   "description": "Beat ALL Nightmare Water Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/30e26771dafeb08819539074329c8418dca0a980.jpg"
+  },
+  {
+   "key": "complete_nightmare3",
+   "name": "Nightmare Scorcher",
+   "description": "Beat ALL Nightmare Fire Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ef50483c29a016c68565dc7140afd50dd939af99.jpg"
+  },
+  {
+   "key": "complete_nightmare4",
+   "name": "Nightmare Psychonaut",
+   "description": "Beat ALL Nightmare Mind Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ba0819cb6e85923a7973f8cc402ecd09bcb1ac83.jpg"
+  },
+  {
+   "key": "complete_nightmare_all",
+   "name": "Nightmare MASTER",
+   "description": "Beat ALL Nightmare Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/dd300c0d70d22a882293ec65770caa147a9bc934.jpg"
+  },
+  {
+   "key": "complete_realm1",
+   "name": "AIR",
+   "description": "Beat ALL 8 Air Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/887c1f8af22f75db3742480a3729dccce8138765.jpg"
+  },
+  {
+   "key": "complete_realm2",
+   "name": "WATER",
+   "description": "Beat ALL 8 Water Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/06c107aab69344ac4af978de038bc28cf159349e.jpg"
+  },
+  {
+   "key": "complete_realm3",
+   "name": "FIRE",
+   "description": "Beat ALL 8 Fire Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/eed1085c2aa9ac2428725f3767468d047c170830.jpg"
+  },
+  {
+   "key": "complete_realm4",
+   "name": "MIND",
+   "description": "Beat ALL Mind Levels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/367088389bf2e97976cba6f16193d11425d90a83.jpg"
+  },
+  {
+   "key": "freestyle_300000",
+   "name": "Pretending I'm a Superman!",
+   "description": "Score a 300,000 point combo in freestyle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/90cbd2cdc6f57d8ca909c51b03e945a2743bf93f.jpg"
+  },
+  {
+   "key": "freestyle_edgecancel",
+   "name": "InZain",
+   "description": "Edgecancel 15 times in one combo in freestyle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/63177579f0330d4df345e5cbe206fc0742aebc76.jpg"
+  },
+  {
+   "key": "freestyle_every_special",
+   "name": "Okay Andy Anderson",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/886c49425b572e81542149bdf0116fb87e64f108.jpg",
+   "hidden": true
+  },
+  {
+   "key": "freestyle_multishine",
+   "name": "Seizure Warning",
+   "description": "Multishine 50 times in one combo in freestyle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/6f994f6e14087007e725b1aa9a146161bb675c9f.jpg"
+  },
+  {
+   "key": "splusrank",
+   "name": "S+ Rank",
+   "description": "Earn an S+ Rank on any Level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/fef84797f9f74f8e1082b72aa74cc93957b6fecd.jpg"
+  },
+  {
+   "key": "srank",
+   "name": "S Rank",
+   "description": "Earn an S Rank on any Level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/c278d591097e6fa812d10680ee376ee814398d3e.jpg"
+  },
+  {
+   "key": "volley100",
+   "name": "Polyball Gods",
+   "description": "Achieve 100 consecutive hits in Polyball",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/1b9d6d1763b35b2e94ae237d337aaa557f9f907d.jpg"
+  },
+  {
+   "key": "volley25",
+   "name": "Professionals",
+   "description": "Achieve 25 consecutive hits in Polyball",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/520fdb3dd5cd8ac29eb897132447f8d0eb1dcaa7.jpg"
+  },
+  {
+   "key": "volley50",
+   "name": "Sweaty Palms",
+   "description": "Achieve 50 consecutive hits in Polyball",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/6b7612d7486b1209933335795634f263c4849baa.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "ENTROPOLY",
+   "achievements": [
+    {
+     "apiname": "complete_realm0",
+     "achieved": 1,
+     "unlocktime": 1691267780,
+     "name": "EARTH",
+     "description": "Beat ALL 8 Earth Levels"
+    },
+    {
+     "apiname": "complete_realm1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "AIR",
+     "description": "Beat ALL 8 Air Levels"
+    },
+    {
+     "apiname": "complete_realm2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "WATER",
+     "description": "Beat ALL 8 Water Levels"
+    },
+    {
+     "apiname": "complete_realm3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "FIRE",
+     "description": "Beat ALL 8 Fire Levels"
+    },
+    {
+     "apiname": "complete_realm4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MIND",
+     "description": "Beat ALL Mind Levels"
+    },
+    {
+     "apiname": "complete_game",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Nights Sleep",
+     "description": "Cleansed the elemental hearts and restored order to the realms"
+    },
+    {
+     "apiname": "collect_crystal0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "EARTH CRYSTAL",
+     "description": ""
+    },
+    {
+     "apiname": "collect_crystal1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "AIR CRYSTAL",
+     "description": ""
+    },
+    {
+     "apiname": "collect_crystal2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "WATER CRYSTAL",
+     "description": ""
+    },
+    {
+     "apiname": "collect_crystal3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "FIRE CRYSTAL",
+     "description": ""
+    },
+    {
+     "apiname": "collect_crystal4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MIND CRYSTAL",
+     "description": ""
+    },
+    {
+     "apiname": "volley25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Professionals",
+     "description": "Achieve 25 consecutive hits in Polyball"
+    },
+    {
+     "apiname": "volley50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sweaty Palms",
+     "description": "Achieve 50 consecutive hits in Polyball"
+    },
+    {
+     "apiname": "volley100",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Polyball Gods",
+     "description": "Achieve 100 consecutive hits in Polyball"
+    },
+    {
+     "apiname": "srank",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "S Rank",
+     "description": "Earn an S Rank on any Level"
+    },
+    {
+     "apiname": "splusrank",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "S+ Rank",
+     "description": "Earn an S+ Rank on any Level"
+    },
+    {
+     "apiname": "complete_nightmare_any",
+     "achieved": 1,
+     "unlocktime": 1691266694,
+     "name": "Nightmare Voyager",
+     "description": "Beat ANY Nightmare Level"
+    },
+    {
+     "apiname": "complete_nightmare0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nightmare Trekker",
+     "description": "Beat ALL Nightmare Earth Levels"
+    },
+    {
+     "apiname": "complete_nightmare1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nightmare Glider",
+     "description": "Beat ALL Nightmare Air Levels"
+    },
+    {
+     "apiname": "complete_nightmare2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nightmare Surfer",
+     "description": "Beat ALL Nightmare Water Levels"
+    },
+    {
+     "apiname": "complete_nightmare3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nightmare Scorcher",
+     "description": "Beat ALL Nightmare Fire Levels"
+    },
+    {
+     "apiname": "complete_nightmare4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nightmare Psychonaut",
+     "description": "Beat ALL Nightmare Mind Levels"
+    },
+    {
+     "apiname": "complete_nightmare_all",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nightmare MASTER",
+     "description": "Beat ALL Nightmare Levels"
+    },
+    {
+     "apiname": "freestyle_every_special",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Okay Andy Anderson",
+     "description": ""
+    },
+    {
+     "apiname": "freestyle_300000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pretending I'm a Superman!",
+     "description": "Score a 300,000 point combo in freestyle"
+    },
+    {
+     "apiname": "freestyle_multishine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Seizure Warning",
+     "description": "Multishine 50 times in one combo in freestyle"
+    },
+    {
+     "apiname": "freestyle_edgecancel",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "InZain",
+     "description": "Edgecancel 15 times in one combo in freestyle"
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,919 @@
+{
+ "provider": "steam",
+ "title": "PEAK",
+ "updated": "2026-08-30",
+ "id": "3527290",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 64,
+ "platform": "PC",
+ "icon": "b3a992fd5991bd2f4c956d58e062b0ce2988d6cd",
+ "achievements": [
+  {
+   "key": "AdvancedMycologyBadge",
+   "name": "Advanced Mycology Badge",
+   "description": "Try all 5 types of Shroomberry in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e2c914d9a5584fa70875fca8f5a080569f6bcccc.jpg"
+  },
+  {
+   "key": "AeronauticsBadge",
+   "name": "Aeronautics Badge",
+   "description": "Achieve flight.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/adf04113ad409279bd2733d6ecc2504b96dc43a1.jpg"
+  },
+  {
+   "key": "AlpinistBadge",
+   "name": "Alpinist Badge",
+   "description": "Climb past the ALPINE.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/da9184f21ff1dae46b4de56ffda9a9458c4bfa09.jpg"
+  },
+  {
+   "key": "AnimalSerenadingBadge",
+   "name": "Animal Serenading Badge",
+   "description": "Play the bugle for a capybara.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/05d979b4b8cd780c5bb1bf12defe061104d1d3c0.jpg"
+  },
+  {
+   "key": "AppliedEsotericaBadge",
+   "name": "Applied Esoterica Badge",
+   "description": "Resurrect a friend using unholy means.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/8c10405f5bdfa9f2787403c5484697b7c5ee48f4.jpg"
+  },
+  {
+   "key": "ArboristBadge",
+   "name": "Arborist Badge",
+   "description": "Reach the top of a really big tree.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/f8da9f53f5938be55aef11a9890b6713164471d6.jpg"
+  },
+  {
+   "key": "ArcheryBadge",
+   "name": "Archery Badge",
+   "description": "Remove 10 arrows from yourself in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/537908bead031f940981ca6de3eec545619075f5.jpg"
+  },
+  {
+   "key": "AscenderBadge",
+   "name": "High Altitude Badge",
+   "description": "Climb 5000m total.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/ec338a888bb02b501e139b3f5184a83c1589a0d5.jpg"
+  },
+  {
+   "key": "AstronomyBadge",
+   "name": "Astronomy Badge",
+   "description": "Look a little too closely at the blazing sun.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/8a4dc7bbf6d10ac13a7d55ad16ff21c1c5c61c2d.jpg"
+  },
+  {
+   "key": "BalloonBadge",
+   "name": "Balloon Badge",
+   "description": "Escape the island without taking fall damage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/6ee281715373d8c3ce5ebb20196c5ef8d92d8dd6.jpg"
+  },
+  {
+   "key": "BeachcomberBadge",
+   "name": "Beachcomber Badge",
+   "description": "Climb past the SHORE.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/1c7eb9a4f5e33c592fe3e205c33edcfca8fd25c1.jpg"
+  },
+  {
+   "key": "BellringerBadge",
+   "name": "Bellringer Badge",
+   "description": "Ring 5 Belltowers in the GLOOM in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/0a75723d2422fe320ec82d7d6a7c0749e9bb39dd.jpg"
+  },
+  {
+   "key": "BingBongBadge",
+   "name": "Bing Bong Badge",
+   "description": "Help Bing Bong escape the island.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/cc147d22838ace1305c6f68b17db534db95173d5.jpg"
+  },
+  {
+   "key": "BookwormBadge",
+   "name": "Bookworm Badge",
+   "description": "Read the Scoutmaster’s final journal entry.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e748ca99706ac0b09ae5328747b13e6a1d2d42bf.jpg"
+  },
+  {
+   "key": "BoulderingBadge",
+   "name": "Bouldering Badge",
+   "description": "Place 10 pitons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e09d312cab58be2b5765a63772f77fe19f5d0c77.jpg"
+  },
+  {
+   "key": "BundledUpBadge",
+   "name": "Bundled Up Badge",
+   "description": "Climb past the ALPINE without ever having more than 20% Cold.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/633c5096e49e88946c6ee564046cc0a1d43ec146.jpg"
+  },
+  {
+   "key": "CalciumIntakeBadge",
+   "name": "Calcium Intake Badge",
+   "description": "Block 100 total damage with the Fortified Milk.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/89f7a17e55764abe4b0d9b59ab514f3abfef9605.jpg"
+  },
+  {
+   "key": "ClutchBadge",
+   "name": "Clutch Badge",
+   "description": "Resurrect 3 scouts in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/c330833ce80ea47ee0093bacceda296dc7565e5c.jpg"
+  },
+  {
+   "key": "CompetitiveEatingBadge",
+   "name": "Competitive Eating Badge",
+   "description": "Eat 3 Hot Dogs in 5 seconds or less.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/7f147afe83d692cb9199f654945b0b631b48190d.jpg"
+  },
+  {
+   "key": "CookingBadge",
+   "name": "Cooking Badge",
+   "description": "Cook 20 meals at campfires.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/59f105343a7cda0259cfabd1992463f28dd95200.jpg"
+  },
+  {
+   "key": "CoolCucumberBadge",
+   "name": "Cool Cucumber Badge",
+   "description": "Climb past the MESA without ever having more than 10% Heat.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/41ce6d7161b1da52240972e63e0169007cb78b67.jpg"
+  },
+  {
+   "key": "CryptogastronomyBadge",
+   "name": "Cryptogastronomy Badge",
+   "description": "Cook and eat a Mandrake.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/9f9e0fd40720a12fdd64c3ad8269348e5342d6ec.jpg"
+  },
+  {
+   "key": "DaredevilBadge",
+   "name": "Daredevil Badge",
+   "description": "Shoot across the MESA canyon in a Scout Cannon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/9757dbabadd3711df0ad3706383b36375d210dbd.jpg"
+  },
+  {
+   "key": "DisasterResponseBadge",
+   "name": "Disaster Response Badge",
+   "description": "Pull an unconscious friend 30m with the Rescue Claw.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e15c55deafcdfd3e6cb185100384c75d0e44496c.jpg"
+  },
+  {
+   "key": "EmergencyPreparednessBadge",
+   "name": "Emergency Preparedness Badge",
+   "description": "Heal an unconscious friend with an item to save them from death.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/40606fe9cbafb08a0e15d20315829f6747b335f9.jpg"
+  },
+  {
+   "key": "EnduranceBadge",
+   "name": "Endurance Badge",
+   "description": "Climb 50m upwards without touching the ground.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/d8e491ed5b6489b4b9c44cca9b0d8422267a8a53.jpg"
+  },
+  {
+   "key": "EsotericaBadge",
+   "name": "Esoterica Badge",
+   "description": "Obtain a mystical item.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/de12d278a0764bf904a5f70bd0d5a0ce248c078d.jpg"
+  },
+  {
+   "key": "ExorcistBadge",
+   "name": "Exorcist Badge",
+   "description": "Burn up the Ghost.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/0af59646327f6dff4936f42a2fd0ed325172dcce.jpg"
+  },
+  {
+   "key": "FirstAidBadge",
+   "name": "First Aid Badge",
+   "description": "Heal your friends for 100 points of injury in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/cd4367de9dca4e160bdf86297d7e9003cb791c74.jpg"
+  },
+  {
+   "key": "ForagingBadge",
+   "name": "Foraging Badge",
+   "description": "Eat 5 different berries in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/8ae93a068c402d8c43241e19b302171050c0050f.jpg"
+  },
+  {
+   "key": "ForestryBadge",
+   "name": "Forestry Badge",
+   "description": "Climb past the ROOTS.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/d7fbe6dcb35a51e67be5f38023b99b7cc90e4dd1.jpg"
+  },
+  {
+   "key": "GourmandBadge",
+   "name": "Gourmand Badge",
+   "description": "Escape the island after cooking and eating a coconut half, a honeycomb, a yellow winterberry, and an egg.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/7b9dca4f5bd14effe9605284fad4e54bf42bbdd7.jpg"
+  },
+  {
+   "key": "HangGlidingBadge",
+   "name": "Hang Gliding Badge",
+   "description": "Fly 100m with the Glider without touching the ground.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/4e13456429b07d12f2eb8cda87c4d46b408dd128.jpg"
+  },
+  {
+   "key": "HappyCamperBadge",
+   "name": "Happy Camper Badge",
+   "description": "Receive 5 Morale Boosts from campfires.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/7687e0907862bf82f0d64161bfbd9fa548482e32.jpg"
+  },
+  {
+   "key": "JesterBadge",
+   "name": "Jester Badge",
+   "description": "Open 2 Clown Luggage in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/d6e7927521bbb5f779e5f5c164d968f23597256b.jpg"
+  },
+  {
+   "key": "KnotTyingBadge",
+   "name": "Knot Tying Badge",
+   "description": "Place 100m of rope in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/8d759e3de8c3e1e04c7e22e1b68990b57004a5e9.jpg"
+  },
+  {
+   "key": "LastResortBadge",
+   "name": "Last Resort Badge",
+   "description": "Heal over 75% damage at once by using the Ritual Dagger.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/ba20dec73fdfbc48357a49c5c8074385f6495d09.jpg"
+  },
+  {
+   "key": "LeaveNoTraceBadge",
+   "name": "Leave No Trace Badge",
+   "description": "Escape the island without placing anything on the mountain.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/437385b0e5c2930db3496429ffb06a135f21d197.jpg"
+  },
+  {
+   "key": "LoneWolfBadge",
+   "name": "Lone Wolf Badge",
+   "description": "Escape the island in a solo expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/cd63536e849abccb956946a00f8d9ee99009af81.jpg"
+  },
+  {
+   "key": "MedievalHistoryBadge",
+   "name": "Medieval History Badge",
+   "description": "Climb past THE CITADEL without being hit by any traps.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/5cd2f654815550678317664cc3cbf112243881ed.jpg"
+  },
+  {
+   "key": "MegaentomologyBadge",
+   "name": "Megaentomology Badge",
+   "description": "Survive an Antlion attack.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/d370dcb90349afee0020fe3e3bb919f9f35c5092.jpg"
+  },
+  {
+   "key": "MentorshipBadge",
+   "name": "Mentorship Badge",
+   "description": "Have a 1-on-1 with the Scoutmaster.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/f2b577c84bea7f45ccc79ca2ccb2adcc2b99e120.jpg"
+  },
+  {
+   "key": "MycoacrobaticsBadge",
+   "name": "Mycoacrobatics Badge",
+   "description": "Bounce up 40m off a mushroom.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/479cd32912ac5fe93fb53905423291e7f6b67e51.jpg"
+  },
+  {
+   "key": "MycologyBadge",
+   "name": "Mycology Badge",
+   "description": "Eat four different non-toxic mushrooms in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/fb4d1339a859ab618ea42781f692ed7464d7eae8.jpg"
+  },
+  {
+   "key": "NaturalistBadge",
+   "name": "Naturalist Badge",
+   "description": "Escape the island without eating any packaged food.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/40701fa821c4afaec63b4910d6508d296c28c7a7.jpg"
+  },
+  {
+   "key": "NeedlepointBadge",
+   "name": "Needlepoint Badge",
+   "description": "Have a lot of cactuses stuck to you.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e54c31508e016e0599a54dc344cd63a50cf04a00.jpg"
+  },
+  {
+   "key": "NomadBadge",
+   "name": "Nomad Badge",
+   "description": "Climb past the MESA.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/97cb4ca98da4fccf015d3dd893937b3a9172f62e.jpg"
+  },
+  {
+   "key": "PeakBadge",
+   "name": "Peak Badge",
+   "description": "Reach the PEAK.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/6541523d91357a00bb49e24567429de6505ddcd3.jpg"
+  },
+  {
+   "key": "PlundererBadge",
+   "name": "Plunderer Badge",
+   "description": "Open 15 luggages in a single expedition.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/7904cc232eac6ffb345a96f2a265b1db4c1c535e.jpg"
+  },
+  {
+   "key": "ResourcefulnessBadge",
+   "name": "Resourcefulness Badge",
+   "description": "Give in to your hunger.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/68f452a9898f794532f05cb6167122dba64dfb57.jpg"
+  },
+  {
+   "key": "RuleZeroBadge",
+   "name": "Rule Zero Badge",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/18929a629a44bfe59f721787daac9e2b22062af6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SpeedClimberBadge",
+   "name": "Hasty Badge",
+   "description": "Escape the island in under an hour.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/6a51615469153bf8c206044c3c2190fe34e2cd12.jpg"
+  },
+  {
+   "key": "SurvivalistBadge",
+   "name": "Survivalist Badge",
+   "description": "Escape the island without ever losing consciousness.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/080311b4db37226006349b94c06f17520ee13fa7.jpg"
+  },
+  {
+   "key": "ToxicologyBadge",
+   "name": "Toxicology Badge",
+   "description": "Restore 200 total poison by using items.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/05543471ee7f7ab73d2c873b6157ca2c5cfa7b27.jpg"
+  },
+  {
+   "key": "TrailblazerBadge",
+   "name": "Trailblazer Badge",
+   "description": "Climb past the TROPICS.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e1e3550680fdce7c09093f29f2c9b205f737f4b4.jpg"
+  },
+  {
+   "key": "TreadLightlyBadge",
+   "name": "Tread Lightly Badge",
+   "description": "Climb past the ROOTS without ever having more than 25% spores.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/4cfa107040054253f82d9d3dbf69a97d84701c19.jpg"
+  },
+  {
+   "key": "TriedYourBestBadge",
+   "name": "Participation Badge",
+   "description": "Have a friend escape the island without you.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/82d65f1b4dd1482707d2f2c2f74d52521adb8be1.jpg"
+  },
+  {
+   "key": "TwentyFourKaratBadge",
+   "name": "24 Karat Badge",
+   "description": "Offer The Kiln a worthy sacrifice.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/e581cbc6f3483ff5ac80ee9cbfe2f541d9e4a3a6.jpg"
+  },
+  {
+   "key": "UltimateBadge",
+   "name": "Ultimate Badge",
+   "description": "Catch a Flying Disc from 100m away.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/17f7ba1cf072db223badfd2d30a36faf5dac4b77.jpg"
+  },
+  {
+   "key": "UndeadEncounterBadge",
+   "name": "Undead Encounter Badge",
+   "description": "Cure yourself from a zombie bite.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/dc79e538e20135ca50ff1735e87bd87bcf62dd9e.jpg"
+  },
+  {
+   "key": "VolcanologyBadge",
+   "name": "Volcanology Badge",
+   "description": "Climb past the CALDERA.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/5401aa59d9da99722a2b440cedf2bbe39baef566.jpg"
+  },
+  {
+   "key": "WandererBadge",
+   "name": "Wanderer Badge",
+   "description": "Climb past the GLOOM.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/a9e2236a6aa83d8cf0640e1317fb24bf27a2f5b0.jpg"
+  },
+  {
+   "key": "WebSecurityBadge",
+   "name": "Web Security Badge",
+   "description": "Escape a spider's web and survive.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/27f25eb3ec8fb4e7245aec8b48705a0812738773.jpg"
+  },
+  {
+   "key": "WellRestedBadge",
+   "name": "Well Rested Badge",
+   "description": "Consume The Early Worm.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3527290/eb842f863d8cbb7c769fec2ac2161f56776d8093.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "PEAK",
+   "achievements": [
+    {
+     "apiname": "PeakBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peak Badge",
+     "description": "Reach the PEAK."
+    },
+    {
+     "apiname": "CookingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cooking Badge",
+     "description": "Cook 20 meals at campfires."
+    },
+    {
+     "apiname": "KnotTyingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Knot Tying Badge",
+     "description": "Place 100m of rope in a single expedition."
+    },
+    {
+     "apiname": "BeachcomberBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beachcomber Badge",
+     "description": "Climb past the SHORE."
+    },
+    {
+     "apiname": "TriedYourBestBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Participation Badge",
+     "description": "Have a friend escape the island without you."
+    },
+    {
+     "apiname": "TrailblazerBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trailblazer Badge",
+     "description": "Climb past the TROPICS."
+    },
+    {
+     "apiname": "HappyCamperBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Happy Camper Badge",
+     "description": "Receive 5 Morale Boosts from campfires."
+    },
+    {
+     "apiname": "AlpinistBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Alpinist Badge",
+     "description": "Climb past the ALPINE."
+    },
+    {
+     "apiname": "VolcanologyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Volcanology Badge",
+     "description": "Climb past the CALDERA."
+    },
+    {
+     "apiname": "BoulderingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bouldering Badge",
+     "description": "Place 10 pitons."
+    },
+    {
+     "apiname": "ToxicologyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Toxicology Badge",
+     "description": "Restore 200 total poison by using items."
+    },
+    {
+     "apiname": "ForagingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Foraging Badge",
+     "description": "Eat 5 different berries in a single expedition."
+    },
+    {
+     "apiname": "EsotericaBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Esoterica Badge",
+     "description": "Obtain a mystical item."
+    },
+    {
+     "apiname": "LoneWolfBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lone Wolf Badge",
+     "description": "Escape the island in a solo expedition."
+    },
+    {
+     "apiname": "ClutchBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clutch Badge",
+     "description": "Resurrect 3 scouts in a single expedition."
+    },
+    {
+     "apiname": "BalloonBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Balloon Badge",
+     "description": "Escape the island without taking fall damage."
+    },
+    {
+     "apiname": "LeaveNoTraceBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Leave No Trace Badge",
+     "description": "Escape the island without placing anything on the mountain."
+    },
+    {
+     "apiname": "SpeedClimberBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hasty Badge",
+     "description": "Escape the island in under an hour."
+    },
+    {
+     "apiname": "BingBongBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bing Bong Badge",
+     "description": "Help Bing Bong escape the island."
+    },
+    {
+     "apiname": "NaturalistBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Naturalist Badge",
+     "description": "Escape the island without eating any packaged food."
+    },
+    {
+     "apiname": "GourmandBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gourmand Badge",
+     "description": "Escape the island after cooking and eating a coconut half, a honeycomb, a yellow winterberry, and an egg."
+    },
+    {
+     "apiname": "MycologyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mycology Badge",
+     "description": "Eat four different non-toxic mushrooms in a single expedition."
+    },
+    {
+     "apiname": "FirstAidBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Aid Badge",
+     "description": "Heal your friends for 100 points of injury in a single expedition."
+    },
+    {
+     "apiname": "SurvivalistBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Survivalist Badge",
+     "description": "Escape the island without ever losing consciousness."
+    },
+    {
+     "apiname": "AnimalSerenadingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Animal Serenading Badge",
+     "description": "Play the bugle for a capybara."
+    },
+    {
+     "apiname": "ArboristBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arborist Badge",
+     "description": "Reach the top of a really big tree."
+    },
+    {
+     "apiname": "MentorshipBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mentorship Badge",
+     "description": "Have a 1-on-1 with the Scoutmaster."
+    },
+    {
+     "apiname": "EmergencyPreparednessBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Emergency Preparedness Badge",
+     "description": "Heal an unconscious friend with an item to save them from death."
+    },
+    {
+     "apiname": "AscenderBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "High Altitude Badge",
+     "description": "Climb 5000m total."
+    },
+    {
+     "apiname": "PlundererBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Plunderer Badge",
+     "description": "Open 15 luggages in a single expedition."
+    },
+    {
+     "apiname": "BookwormBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bookworm Badge",
+     "description": "Read the Scoutmaster’s final journal entry."
+    },
+    {
+     "apiname": "EnduranceBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Endurance Badge",
+     "description": "Climb 50m upwards without touching the ground."
+    },
+    {
+     "apiname": "NomadBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nomad Badge",
+     "description": "Climb past the MESA."
+    },
+    {
+     "apiname": "UltimateBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ultimate Badge",
+     "description": "Catch a Flying Disc from 100m away."
+    },
+    {
+     "apiname": "CoolCucumberBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cool Cucumber Badge",
+     "description": "Climb past the MESA without ever having more than 10% Heat."
+    },
+    {
+     "apiname": "NeedlepointBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Needlepoint Badge",
+     "description": "Have a lot of cactuses stuck to you."
+    },
+    {
+     "apiname": "AeronauticsBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Aeronautics Badge",
+     "description": "Achieve flight."
+    },
+    {
+     "apiname": "TwentyFourKaratBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "24 Karat Badge",
+     "description": "Offer The Kiln a worthy sacrifice."
+    },
+    {
+     "apiname": "ResourcefulnessBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Resourcefulness Badge",
+     "description": "Give in to your hunger."
+    },
+    {
+     "apiname": "DaredevilBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Daredevil Badge",
+     "description": "Shoot across the MESA canyon in a Scout Cannon."
+    },
+    {
+     "apiname": "MegaentomologyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Megaentomology Badge",
+     "description": "Survive an Antlion attack."
+    },
+    {
+     "apiname": "AstronomyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Astronomy Badge",
+     "description": "Look a little too closely at the blazing sun."
+    },
+    {
+     "apiname": "BundledUpBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bundled Up Badge",
+     "description": "Climb past the ALPINE without ever having more than 20% Cold."
+    },
+    {
+     "apiname": "ForestryBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forestry Badge",
+     "description": "Climb past the ROOTS."
+    },
+    {
+     "apiname": "TreadLightlyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tread Lightly Badge",
+     "description": "Climb past the ROOTS without ever having more than 25% spores."
+    },
+    {
+     "apiname": "WebSecurityBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Web Security Badge",
+     "description": "Escape a spider's web and survive."
+    },
+    {
+     "apiname": "UndeadEncounterBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Undead Encounter Badge",
+     "description": "Cure yourself from a zombie bite."
+    },
+    {
+     "apiname": "AdvancedMycologyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Advanced Mycology Badge",
+     "description": "Try all 5 types of Shroomberry in a single expedition."
+    },
+    {
+     "apiname": "DisasterResponseBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Disaster Response Badge",
+     "description": "Pull an unconscious friend 30m with the Rescue Claw."
+    },
+    {
+     "apiname": "CalciumIntakeBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Calcium Intake Badge",
+     "description": "Block 100 total damage with the Fortified Milk."
+    },
+    {
+     "apiname": "CompetitiveEatingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Competitive Eating Badge",
+     "description": "Eat 3 Hot Dogs in 5 seconds or less."
+    },
+    {
+     "apiname": "AppliedEsotericaBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Applied Esoterica Badge",
+     "description": "Resurrect a friend using unholy means."
+    },
+    {
+     "apiname": "MycoacrobaticsBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mycoacrobatics Badge",
+     "description": "Bounce up 40m off a mushroom."
+    },
+    {
+     "apiname": "CryptogastronomyBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cryptogastronomy Badge",
+     "description": "Cook and eat a Mandrake."
+    },
+    {
+     "apiname": "WandererBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wanderer Badge",
+     "description": "Climb past the GLOOM."
+    },
+    {
+     "apiname": "BellringerBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bellringer Badge",
+     "description": "Ring 5 Belltowers in the GLOOM in a single expedition."
+    },
+    {
+     "apiname": "WellRestedBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well Rested Badge",
+     "description": "Consume The Early Worm."
+    },
+    {
+     "apiname": "JesterBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Jester Badge",
+     "description": "Open 2 Clown Luggage in a single expedition."
+    },
+    {
+     "apiname": "HangGlidingBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hang Gliding Badge",
+     "description": "Fly 100m with the Glider without touching the ground."
+    },
+    {
+     "apiname": "MedievalHistoryBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Medieval History Badge",
+     "description": "Climb past THE CITADEL without being hit by any traps."
+    },
+    {
+     "apiname": "LastResortBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Last Resort Badge",
+     "description": "Heal over 75% damage at once by using the Ritual Dagger."
+    },
+    {
+     "apiname": "ExorcistBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exorcist Badge",
+     "description": "Burn up the Ghost."
+    },
+    {
+     "apiname": "ArcheryBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Archery Badge",
+     "description": "Remove 10 arrows from yourself in a single expedition."
+    },
+    {
+     "apiname": "RuleZeroBadge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rule Zero Badge",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

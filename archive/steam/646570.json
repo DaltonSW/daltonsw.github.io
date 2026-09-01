@@ -1,22 +1,22 @@
 {
  "provider": "steam",
  "title": "Slay the Spire",
- "updated": "2026-08-15",
+ "updated": "2026-08-30",
  "id": "646570",
- "fetched": "2026-08-15",
- "last_attempt": "2026-08-15",
- "unlocked": 26,
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 28,
  "total": 46,
  "first": "2017-12-12",
- "last": "2026-08-13",
+ "last": "2026-08-23",
  "platform": "PC",
  "icon": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
- "playtime_mins": 6795,
+ "playtime_mins": 7073,
  "playtime": {
-  "linux": 658,
+  "linux": 936,
   "windows": 1397
  },
- "last_played": "2026-08-15",
+ "last_played": "2026-08-25",
  "achievements": [
   {
    "key": "GUARDIAN",
@@ -227,6 +227,22 @@
    "hidden": true
   },
   {
+   "key": "RUBY_PLUS",
+   "name": "Ruby+",
+   "unlocked": true,
+   "date": "2026-08-23T09:41:33-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/72f6f4f9a7a34f6705e64b448c6f9d32329dcb3c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "THE_ENDING",
+   "name": "The End?",
+   "unlocked": true,
+   "date": "2026-08-23T09:41:34-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/57c10f822ec122dd5003281fe35ab7644e4c7a6d.jpg",
+   "hidden": true
+  },
+  {
    "key": "AMETHYST_PLUS",
    "name": "Amethyst+",
    "description": "Complete the Ending with the Watcher.",
@@ -332,25 +348,11 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/646bb2d70cd11d45fb7c549e1d69a895a3ec92bf.jpg"
   },
   {
-   "key": "RUBY_PLUS",
-   "name": "Ruby+",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/72f6f4f9a7a34f6705e64b448c6f9d32329dcb3c.jpg",
-   "hidden": true
-  },
-  {
    "key": "SPEED_CLIMBER",
    "name": "Speed Climber",
    "description": "Beat the game in under 20 minutes.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a6f2ca9b978bccab7717002bb84340d404414388.jpg"
-  },
-  {
-   "key": "THE_ENDING",
-   "name": "The End?",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/57c10f822ec122dd5003281fe35ab7644e4c7a6d.jpg",
-   "hidden": true
   },
   {
    "key": "TRANSIENT",
@@ -647,8 +649,8 @@
     },
     {
      "apiname": "RUBY_PLUS",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1787496093,
      "name": "Ruby+",
      "description": ""
     },
@@ -668,8 +670,8 @@
     },
     {
      "apiname": "THE_ENDING",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1787496094,
      "name": "The End?",
      "description": ""
     },

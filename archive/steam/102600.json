@@ -1,0 +1,401 @@
+{
+ "provider": "steam",
+ "title": "Orcs Must Die!",
+ "updated": "2026-08-30",
+ "id": "102600",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 27,
+ "platform": "PC",
+ "icon": "0d14a70abb580146741de26bbad46d0ad81a67c7",
+ "achievements": [
+  {
+   "key": "DeadOrcGoodOrc",
+   "name": "Dead Orc = Good Orc",
+   "description": "Kill 1,000 orcs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/25af8fae5395d9dd44da3f7c9c711135a7e1dcef.jpg"
+  },
+  {
+   "key": "DeckTheHalls",
+   "name": "Deck the Halls",
+   "description": "Complete the Hallway using only the Arrow Wall trap, weapons, and spells",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/66ef9f2483c8d6e57394223869171a408e68f2fa.jpg"
+  },
+  {
+   "key": "Defender",
+   "name": "Defender",
+   "description": "Complete Act 1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/ee0452cd56071f69856786b2bb630ae45b2b33fe.jpg"
+  },
+  {
+   "key": "DroppinTenLarge",
+   "name": "Droppin' Ten Large",
+   "description": "Kill 10,000 orcs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/516f6177b3a5d931289b078cecf006f75168e413.jpg"
+  },
+  {
+   "key": "GibletStorm",
+   "name": "Giblet Storm!",
+   "description": "Gib more than 200 enemies on one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/6366bd4ec112e893e835e5bdd0d7188979e745b5.jpg"
+  },
+  {
+   "key": "GreatBallsOfFire",
+   "name": "Great Balls of Fire!",
+   "description": "Get 300 fireball kills in one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/42218b0b3edc5ac69dbcddee094e8558bc0a8a9e.jpg"
+  },
+  {
+   "key": "InYourFace",
+   "name": "In your Face!",
+   "description": "Get 100 acid pot kills in one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/72f51ebc5b723409fb67bdde41265c77227de514.jpg"
+  },
+  {
+   "key": "Keepmaster",
+   "name": "Keepmaster",
+   "description": "Complete Act 2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/99010c3f731e6c638979b345ef6aad9681370180.jpg"
+  },
+  {
+   "key": "LegendaryDefender",
+   "name": "Legendary Defender",
+   "description": "Complete Act 1 on Nightmare mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/fbb1fb995cd0f4cba9857b286e8c6ea48a309090.jpg"
+  },
+  {
+   "key": "LegendaryKeepmaster",
+   "name": "Legendary Keepmaster",
+   "description": "Complete Act 2 on Nightmare mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/04f3644d4f5e85877e2c2396b54e1eba7d44686a.jpg"
+  },
+  {
+   "key": "LegendaryWarMage",
+   "name": "Legendary War Mage",
+   "description": "Complete Act 3 on Nightmare mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/e6241e91c24d64c878fbcc339cd542e1c7216d0d.jpg"
+  },
+  {
+   "key": "LightsOut",
+   "name": "Lights Out!",
+   "description": "Get 20 chandelier kills in one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/1a9a7aa406e881d4eba84d69fb48bc7d5b770f53.jpg"
+  },
+  {
+   "key": "MasterWarMage",
+   "name": "Master War Mage",
+   "description": "Complete Act 3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/fbd417f30f60b6b2995eda30c264794883f9b974.jpg"
+  },
+  {
+   "key": "Member30kClub",
+   "name": "Member: 30k Club",
+   "description": "Kill 30,000 orcs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/83d45f47949ed72731ebaa36f44a9c1128496eb3.jpg"
+  },
+  {
+   "key": "Natural20",
+   "name": "Natural 20!",
+   "description": "Get a 20 kill streak",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/38f145d6e15fd47a304590dad73b0671df9f156b.jpg"
+  },
+  {
+   "key": "NoTrapsForYou",
+   "name": "No Traps for You!",
+   "description": "Win an act 2 or 3 level without using any traps",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/a9d05023763c700cd8881e36df4226c926a3d5f6.jpg"
+  },
+  {
+   "key": "OgreBisque",
+   "name": "Ogre Bisque",
+   "description": "Kill an Ogre in a Lava Pit or an Acid Pit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/ad48ab5e8bff80f9dc20fcf1448d096220ebc1f4.jpg"
+  },
+  {
+   "key": "Perfect10",
+   "name": "Perfect 10!",
+   "description": "Get a 10 kill streak",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/64d411dd9c1a98d39cc7820f01986ec40fbc048b.jpg"
+  },
+  {
+   "key": "PowPow",
+   "name": "Pow! Pow!",
+   "description": "Get 50 kills with explosive barrels on one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/bf9f17673d604d66a16cd235607530c486462a1c.jpg"
+  },
+  {
+   "key": "SG1",
+   "name": "SG1",
+   "description": "Go through portals 20 times in one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/47409456d86495098846e0714f9c898875e60caa.jpg"
+  },
+  {
+   "key": "SkinofyourTeeth",
+   "name": "Skin of your Teeth",
+   "description": "Win a level with 1 rift point left",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/d48311ab14d78b72d7e0b28beb0885e099af4e4d.jpg"
+  },
+  {
+   "key": "Tenderized",
+   "name": "Tenderized!",
+   "description": "Get 50 pounder kills in one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/a59da8d538cfe131fbb17248d1c89516b2bc333d.jpg"
+  },
+  {
+   "key": "TunnelVision",
+   "name": "Tunnel Vision",
+   "description": "Win an act 2 or 3 level using a single trap type",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/6743cce842325c52b51348a0dbf7e01036b6477e.jpg"
+  },
+  {
+   "key": "UltimateWarMage",
+   "name": "Ultimate War Mage",
+   "description": "Earn 5 skulls on every level on War Mage difficulty",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/2568a0a1510d74e60fa06c17fcda73e5532de66b.jpg"
+  },
+  {
+   "key": "WhatAMess",
+   "name": "What a Mess!",
+   "description": "Get a 30 kill streak",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/d29a186d8f73f3902de9fa313183eced2f463a4a.jpg"
+  },
+  {
+   "key": "WhoWantsPancakes",
+   "name": "Who Wants Pancakes?",
+   "description": "Get 50 kills with the rolling log in one level",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/0c0822169fcd33792a8a06253664d1d45e02caea.jpg"
+  },
+  {
+   "key": "WhoWantsSome",
+   "name": "Who Wants Some?!",
+   "description": "Get a 40 kill streak",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/fa9ed2f3061fe362efcb43b6989946acfeef44cd.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Orcs Must Die!",
+   "achievements": [
+    {
+     "apiname": "DeadOrcGoodOrc",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dead Orc = Good Orc",
+     "description": "Kill 1,000 orcs"
+    },
+    {
+     "apiname": "DroppinTenLarge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Droppin' Ten Large",
+     "description": "Kill 10,000 orcs"
+    },
+    {
+     "apiname": "Member30kClub",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Member: 30k Club",
+     "description": "Kill 30,000 orcs"
+    },
+    {
+     "apiname": "Defender",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defender",
+     "description": "Complete Act 1"
+    },
+    {
+     "apiname": "Keepmaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Keepmaster",
+     "description": "Complete Act 2"
+    },
+    {
+     "apiname": "MasterWarMage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master War Mage",
+     "description": "Complete Act 3"
+    },
+    {
+     "apiname": "UltimateWarMage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ultimate War Mage",
+     "description": "Earn 5 skulls on every level on War Mage difficulty"
+    },
+    {
+     "apiname": "Perfect10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect 10!",
+     "description": "Get a 10 kill streak"
+    },
+    {
+     "apiname": "Natural20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Natural 20!",
+     "description": "Get a 20 kill streak"
+    },
+    {
+     "apiname": "WhatAMess",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "What a Mess!",
+     "description": "Get a 30 kill streak"
+    },
+    {
+     "apiname": "WhoWantsSome",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Wants Some?!",
+     "description": "Get a 40 kill streak"
+    },
+    {
+     "apiname": "TunnelVision",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tunnel Vision",
+     "description": "Win an act 2 or 3 level using a single trap type"
+    },
+    {
+     "apiname": "NoTrapsForYou",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Traps for You!",
+     "description": "Win an act 2 or 3 level without using any traps"
+    },
+    {
+     "apiname": "SkinofyourTeeth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skin of your Teeth",
+     "description": "Win a level with 1 rift point left"
+    },
+    {
+     "apiname": "WhoWantsPancakes",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Who Wants Pancakes?",
+     "description": "Get 50 kills with the rolling log in one level"
+    },
+    {
+     "apiname": "PowPow",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pow! Pow!",
+     "description": "Get 50 kills with explosive barrels on one level"
+    },
+    {
+     "apiname": "GibletStorm",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Giblet Storm!",
+     "description": "Gib more than 200 enemies on one level"
+    },
+    {
+     "apiname": "LightsOut",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lights Out!",
+     "description": "Get 20 chandelier kills in one level"
+    },
+    {
+     "apiname": "GreatBallsOfFire",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Great Balls of Fire!",
+     "description": "Get 300 fireball kills in one level"
+    },
+    {
+     "apiname": "Tenderized",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tenderized!",
+     "description": "Get 50 pounder kills in one level"
+    },
+    {
+     "apiname": "InYourFace",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In your Face!",
+     "description": "Get 100 acid pot kills in one level"
+    },
+    {
+     "apiname": "SG1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SG1",
+     "description": "Go through portals 20 times in one level"
+    },
+    {
+     "apiname": "OgreBisque",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ogre Bisque",
+     "description": "Kill an Ogre in a Lava Pit or an Acid Pit"
+    },
+    {
+     "apiname": "LegendaryDefender",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Legendary Defender",
+     "description": "Complete Act 1 on Nightmare mode"
+    },
+    {
+     "apiname": "LegendaryKeepmaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Legendary Keepmaster",
+     "description": "Complete Act 2 on Nightmare mode"
+    },
+    {
+     "apiname": "LegendaryWarMage",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Legendary War Mage",
+     "description": "Complete Act 3 on Nightmare mode"
+    },
+    {
+     "apiname": "DeckTheHalls",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deck the Halls",
+     "description": "Complete the Hallway using only the Arrow Wall trap, weapons, and spells"
+    }
+   ],
+   "success": true
+  }
+ }
+}

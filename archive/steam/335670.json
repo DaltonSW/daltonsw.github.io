@@ -1,0 +1,983 @@
+{
+ "provider": "steam",
+ "title": "LISA",
+ "updated": "2026-08-30",
+ "id": "335670",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 1,
+ "total": 68,
+ "first": "2020-05-08",
+ "last": "2020-05-08",
+ "platform": "PC",
+ "icon": "4db7f8a68772c4b4ce484fc2db896e8000c32f7a",
+ "playtime_mins": 28,
+ "playtime": {
+  "windows": 28
+ },
+ "last_played": "2020-05-08",
+ "achievements": [
+  {
+   "key": "ACH_TERRY",
+   "name": "Hint Guy",
+   "description": "Recruit Terry Hints.",
+   "unlocked": true,
+   "date": "2020-05-08T21:58:23-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/c3e89cab8cb33b7a8b336450c7acd2abdb0c5fd8.jpg"
+  },
+  {
+   "key": "ACH_AJEET",
+   "name": "Poke Guy",
+   "description": "Recruit Ajeet Mandeep.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/4c3db8f45ff10e65ec80ebcfa4206965c2c97b40.jpg"
+  },
+  {
+   "key": "ACH_AREA_1",
+   "name": "Let's Find Her",
+   "description": "Reach the first crossroads.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/43e4b3159a253f9d1e70d73b6998562135a34ed5.jpg"
+  },
+  {
+   "key": "ACH_AREA_2",
+   "name": "It's All Falling Down",
+   "description": "Reach the second crossroads.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/966a0a6fd9d39589e6f1704570895f815bcfbffd.jpg"
+  },
+  {
+   "key": "ACH_AREA_3",
+   "name": "No Turning Back",
+   "description": "Reach the third crossroads.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/544c7db82950cae5ab9ceee8c6d782ac8bda6a43.jpg"
+  },
+  {
+   "key": "ACH_BEASTBORN",
+   "name": "Wild Guy",
+   "description": "Recruit Beastborn.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/ee105ad8a8ab579f5dd8ee92d2947eae2ca146b7.jpg"
+  },
+  {
+   "key": "ACH_BIRDIE",
+   "name": "Super Drunk Guy",
+   "description": "Recruit Birdie Hall.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/0894d0ccde193714413e76089e4a16f6ef8a17ff.jpg"
+  },
+  {
+   "key": "ACH_BO",
+   "name": "Weird Guy",
+   "description": "Recruit Bo Wyatt.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/495aa7273d62461455e64f03839c990b9a1f7aa2.jpg"
+  },
+  {
+   "key": "ACH_BRAD",
+   "name": "I'm Sorry",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/9409d31d480a3c6fc7d6d5c13c18211ace2785a3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_BUCKETS",
+   "name": "Mysterious Guy",
+   "description": "Recruit Buckets.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/72a56fef9c8cba0bd7687bb745c822b5c3ee4fb3.jpg"
+  },
+  {
+   "key": "ACH_BUFFALO",
+   "name": "American Guy",
+   "description": "Recruit Buffalo Van Dyke.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/b0e019ba7d57ff39189a9bdc935aede78bf3fbab.jpg"
+  },
+  {
+   "key": "ACH_BURNING_MAN",
+   "name": "Hot Snow",
+   "description": "Reach the Snowy Peak.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/202be36a5ef54a91208e2db09be0bfeffd0da49a.jpg"
+  },
+  {
+   "key": "ACH_BUZZO_DONE",
+   "name": "The Source",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/7616bf6349fee8aa6dc74246b2093768f1adf390.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_BUZZO_MEET",
+   "name": "Embrace the Joy",
+   "description": "Meet Buzzo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/01be86f3d0bd74968336d3678c3afa9191c04595.jpg"
+  },
+  {
+   "key": "ACH_BYE_I_GUESS",
+   "name": "Bye, I Guess...",
+   "description": "Race Columbo.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/fb866f967a7731b85ecf1538b1d9629881dae9e7.jpg"
+  },
+  {
+   "key": "ACH_CARP",
+   "name": "Fish Guy",
+   "description": "Recruit Carp.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/e8c806cfd25580136f70d33055598883e5098776.jpg"
+  },
+  {
+   "key": "ACH_CLINT",
+   "name": "Cool Dude Guy",
+   "description": "Recruit Clint Olympic.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/7f225559ed5d6ee35b6de8be62e5e2b8b024d237.jpg"
+  },
+  {
+   "key": "ACH_CREED",
+   "name": "Worth It",
+   "description": "Learn the ways of the Bob Friday.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/d95b73ea538c95236ec33e0b91b9c741119a4153.jpg"
+  },
+  {
+   "key": "ACH_CRISP",
+   "name": "Many Swords Guy",
+   "description": "Recruit Crisp Ladaddy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/e0ccbcc47fd278f8b1597e1ef24d716ccc1b9c8b.jpg"
+  },
+  {
+   "key": "ACH_DICK",
+   "name": "Party Guy",
+   "description": "Recruit Dick Dickson.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/3bec6b648f3b4e30f88aa8d873d0c4dfd6fb7228.jpg"
+  },
+  {
+   "key": "ACH_DOCTOR",
+   "name": "The Doctor is in the House",
+   "description": "Kill the doctor.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/b60c3571d00d4c94d1e429ca41518262dc01d651.jpg"
+  },
+  {
+   "key": "ACH_EWC_CHAMP",
+   "name": "The Champ is Here!",
+   "description": "Break the Streak, win the title.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/cbaf62475d9ccf57ed59d81b79e4095ab893b3e1.jpg"
+  },
+  {
+   "key": "ACH_FARDY",
+   "name": "Violated Guy",
+   "description": "Recruit Fardy Hernandez.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/0721b126bcea8c8f3f466f1c300b2eedcd67dc92.jpg"
+  },
+  {
+   "key": "ACH_FISHCAVE",
+   "name": "There's Something Fishy...",
+   "description": "Find the Fishmen.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/e20f7e0623d331d021d97574c76c9942a371ab41.jpg"
+  },
+  {
+   "key": "ACH_FLY",
+   "name": "Bug Guy",
+   "description": "Recruit Fly Minetti.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/8d36d41fb80309c5d68ce5a37413b9ff01ab93f8.jpg"
+  },
+  {
+   "key": "ACH_GARTH",
+   "name": "Art Guy",
+   "description": "Recruit Garth.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/5c7eb94b5a3102067449159b6232716cee986ded.jpg"
+  },
+  {
+   "key": "ACH_GEESE",
+   "name": "Rhyming Bird Guy",
+   "description": "Recruit Geese Thompson.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/ae1fb050607c91e489987ae61df1ff277a0b019c.jpg"
+  },
+  {
+   "key": "ACH_GREEN",
+   "name": "No Friends",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/6b793c88dd5cefe6099e6de6d0baa1f63e7d651f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_HAIRMANITY",
+   "name": "Really? Hairmanity?",
+   "description": "Kill the Men's Hair Club Presidents.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/af8ee2aba76d2d5675b9e113fbac8233682420f0.jpg"
+  },
+  {
+   "key": "ACH_HARVEY",
+   "name": "Lawyer Fish Guy",
+   "description": "Recruit Harvey Alibastor.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/3d2046aeeb7c53d5f6b5b396d0b7f39809c08f8e.jpg"
+  },
+  {
+   "key": "ACH_HEADSHOT",
+   "name": "Look on the Brightside",
+   "description": "Watch a well executed suicide.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/e5ad2bf00cf0de6b0dce7f71a3ed19d466a82c1d.jpg"
+  },
+  {
+   "key": "ACH_HINT_MASK",
+   "name": "Fan Club",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/26e0f3c434cb1619d8cc5a55e4c5f6de38ab7a13.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_HORNMAN",
+   "name": "...",
+   "description": "...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/6c79cc203cec60221cd273f33fc1252a0dd3fa12.jpg"
+  },
+  {
+   "key": "ACH_HOTEL_SECRET",
+   "name": "Weekend Getaway",
+   "description": "Find the relaxing researchers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/59093a2fda4fd1db681bb72b81c3b29d2ba63935.jpg"
+  },
+  {
+   "key": "ACH_JACK",
+   "name": "Magic Guy",
+   "description": "Recruit Jack.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/30a15d0ab9227c7a9df71a554ced356b2c60d1ea.jpg"
+  },
+  {
+   "key": "ACH_JOYFULL_END",
+   "name": "Joyful End",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/f670d2b706dc233fab50e81b6ad91a13ecfe847a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_JOYLESS_END",
+   "name": "Joyless End",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/dfa789b6b4ea6e99d2569c3c394de6abf719ef07.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_JOY_MASK",
+   "name": "Joy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/58f92c72862a2d6c8cdcd7fd7398231a668ee5a6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_LISA",
+   "name": "Lisa",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/01be86f3d0bd74968336d3678c3afa9191c04595.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_MADDOG",
+   "name": "Nipple Guy",
+   "description": "Recruit Mad Dog.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/05902b4d1f01bbd78f96344073ef9fd6217c3f37.jpg"
+  },
+  {
+   "key": "ACH_MARTY",
+   "name": "Father",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/993bb101c23bcd68a78210fdc6926fa5a108f50e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_MIKE",
+   "name": "10-4 Good Buddy",
+   "description": "Kill Satan.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/319b60c1c9b012591307b593dfb7ddc6fbf9fe0e.jpg"
+  },
+  {
+   "key": "ACH_NERN",
+   "name": "Annoying Guy",
+   "description": "Recruit Nern Guan.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/5a4d69f8077187469feb0d5d71382a46dd1afb76.jpg"
+  },
+  {
+   "key": "ACH_NO_ARMS",
+   "name": "Selfless",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/7613017fd6907f532a6481958b5d218d8296bab7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_OLAN",
+   "name": "Drunk Guy",
+   "description": "Recruit Olan Hyot.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/22a47963e0dca490a78d094300e5bb9b756fc6fd.jpg"
+  },
+  {
+   "key": "ACH_OLLIE",
+   "name": "Sweaty Guy",
+   "description": "Recruit Ollie Nickels.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/fa11291adc56e7cc2c9706df0184414a4b89d562.jpg"
+  },
+  {
+   "key": "ACH_ONE_ARMS",
+   "name": "Kind of Selfish",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/26ef45e8e88ae4d5b8ffa430861a2afc4f9bd5df.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PAIN_MODE",
+   "name": "Sorry Master",
+   "description": "The birth of Red Skull.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/ae6d15342608d06f2cac73de9f3dda3c067ffa35.jpg"
+  },
+  {
+   "key": "ACH_PERCY",
+   "name": "Poop Guy",
+   "description": "Recruit Percy Monsoon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/8b296a5b66ef49d83cafd279f8f3a1dcd49abae1.jpg"
+  },
+  {
+   "key": "ACH_POTTY",
+   "name": "No...",
+   "description": "It can't be...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/7d3a0417d61a2a559c74ad4b54c7b446d5f49c9f.jpg"
+  },
+  {
+   "key": "ACH_QUEEN",
+   "name": "Lady Guy",
+   "description": "Recruit Queen Roger.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/b288e41b19e9f9947f70aac29d381c0bdae6920e.jpg"
+  },
+  {
+   "key": "ACH_RAGE",
+   "name": "Headbutt Guy",
+   "description": "Recruit Rage Ironhead.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/09d64769e58ca7a9b321dffd2392101047ba238f.jpg"
+  },
+  {
+   "key": "ACH_RANDO_LANDO",
+   "name": "The End is Nigh",
+   "description": "Welcome to Hell.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/531ed8392088229a6bbf2b614c2eebe1c2810c33.jpg"
+  },
+  {
+   "key": "ACH_RANDO_MASK",
+   "name": "Rando",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/16565b2c21a65a92ad72dd42948ff60fb3578677.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_RANDO_MEET",
+   "name": "The Face of Blood",
+   "description": "Meet the Red Skull Rando",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/89ef903150d095a1f880f32ab97a052f0260744c.jpg"
+  },
+  {
+   "key": "ACH_RANGERS",
+   "name": "Salvation Ends",
+   "description": "Witness the fall of the Salvation Rangers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/f05eaceaed477377f0faa24a432db918186bf330.jpg"
+  },
+  {
+   "key": "ACH_ROOSTER",
+   "name": "Red Hair Guy",
+   "description": "Recruit Rooster Coleman.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/028595fb31e2ef690becfe8ca22ccde0dbb71358.jpg"
+  },
+  {
+   "key": "ACH_ROULETTE",
+   "name": "I Love You Son",
+   "description": "Kill all the Rouletters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/1e2339fbd022e92534eef2fdd2ad7c907f18d247.jpg"
+  },
+  {
+   "key": "ACH_RT",
+   "name": "Dirt Bag Guy",
+   "description": "Recruit RT.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/2801ce91db224ae263a5b2dfeb51e1e7b2172f3d.jpg"
+  },
+  {
+   "key": "ACH_SAVE_BUDDY",
+   "name": "Happy Reunion",
+   "description": "Save Buddy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/f3cc802a2e5dde9101604d9c39f1acf38981a0da.jpg"
+  },
+  {
+   "key": "ACH_SHOCKLORD",
+   "name": "Face First Guy",
+   "description": "Recruit Shocklord.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/d03d38bac50179fcb01444992dd87c2bb0b23c13.jpg"
+  },
+  {
+   "key": "ACH_SONNY",
+   "name": "Powerful Clothesline Guy",
+   "description": "Recruit Sonny Backluwitz.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/cbf8bda97cd95af66f563e4e68f46ba3948c3297.jpg"
+  },
+  {
+   "key": "ACH_TAG_CHAMP",
+   "name": "Arm-Shock 4 Life!",
+   "description": "Win the tag titles.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/83636b7f80d057ae613a9a300932297da5526848.jpg"
+  },
+  {
+   "key": "ACH_TIGERMAN",
+   "name": "Spear Guy",
+   "description": "Recruit Tiger Man.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/6abae3e7b0a02958ce56a979302c697c55fe34c8.jpg"
+  },
+  {
+   "key": "ACH_TWO_ARMS",
+   "name": "Selfish",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/9409d31d480a3c6fc7d6d5c13c18211ace2785a3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_W2D",
+   "name": "The Beat Never Dies",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/0f34b0b374b9c8303aff367b618a1740ae1615f8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_YADO",
+   "name": "Yado",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/388466f62d208cad0b3390953aaf0c5b01d460ae.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_YAZAN",
+   "name": "Cat Guy",
+   "description": "Recruit Yazan Barghouti.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/335670/d7fc6a338d0e7aeb0400a156e03f9e317a76a4b0.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "LISA",
+   "achievements": [
+    {
+     "apiname": "ACH_AREA_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let's Find Her",
+     "description": "Reach the first crossroads."
+    },
+    {
+     "apiname": "ACH_AREA_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's All Falling Down",
+     "description": "Reach the second crossroads."
+    },
+    {
+     "apiname": "ACH_AREA_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Turning Back",
+     "description": "Reach the third crossroads."
+    },
+    {
+     "apiname": "ACH_BUZZO_MEET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Embrace the Joy",
+     "description": "Meet Buzzo."
+    },
+    {
+     "apiname": "ACH_RANDO_MEET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Face of Blood",
+     "description": "Meet the Red Skull Rando"
+    },
+    {
+     "apiname": "ACH_SAVE_BUDDY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Happy Reunion",
+     "description": "Save Buddy."
+    },
+    {
+     "apiname": "ACH_ROULETTE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Love You Son",
+     "description": "Kill all the Rouletters."
+    },
+    {
+     "apiname": "ACH_HAIRMANITY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Really? Hairmanity?",
+     "description": "Kill the Men's Hair Club Presidents."
+    },
+    {
+     "apiname": "ACH_POTTY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No...",
+     "description": "It can't be..."
+    },
+    {
+     "apiname": "ACH_FISHCAVE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "There's Something Fishy...",
+     "description": "Find the Fishmen."
+    },
+    {
+     "apiname": "ACH_DOCTOR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Doctor is in the House",
+     "description": "Kill the doctor."
+    },
+    {
+     "apiname": "ACH_CREED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Worth It",
+     "description": "Learn the ways of the Bob Friday."
+    },
+    {
+     "apiname": "ACH_HEADSHOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Look on the Brightside",
+     "description": "Watch a well executed suicide."
+    },
+    {
+     "apiname": "ACH_EWC_CHAMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Champ is Here!",
+     "description": "Break the Streak, win the title."
+    },
+    {
+     "apiname": "ACH_TAG_CHAMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Arm-Shock 4 Life!",
+     "description": "Win the tag titles."
+    },
+    {
+     "apiname": "ACH_RANGERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Salvation Ends",
+     "description": "Witness the fall of the Salvation Rangers."
+    },
+    {
+     "apiname": "ACH_BURNING_MAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hot Snow",
+     "description": "Reach the Snowy Peak."
+    },
+    {
+     "apiname": "ACH_HOTEL_SECRET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weekend Getaway",
+     "description": "Find the relaxing researchers."
+    },
+    {
+     "apiname": "ACH_BYE_I_GUESS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bye, I Guess...",
+     "description": "Race Columbo."
+    },
+    {
+     "apiname": "ACH_RANDO_LANDO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End is Nigh",
+     "description": "Welcome to Hell."
+    },
+    {
+     "apiname": "ACH_MIKE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "10-4 Good Buddy",
+     "description": "Kill Satan."
+    },
+    {
+     "apiname": "ACH_HORNMAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "...",
+     "description": "..."
+    },
+    {
+     "apiname": "ACH_TERRY",
+     "achieved": 1,
+     "unlocktime": 1588993103,
+     "name": "Hint Guy",
+     "description": "Recruit Terry Hints."
+    },
+    {
+     "apiname": "ACH_CRISP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Many Swords Guy",
+     "description": "Recruit Crisp Ladaddy."
+    },
+    {
+     "apiname": "ACH_RT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dirt Bag Guy",
+     "description": "Recruit RT."
+    },
+    {
+     "apiname": "ACH_ROOSTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Red Hair Guy",
+     "description": "Recruit Rooster Coleman."
+    },
+    {
+     "apiname": "ACH_OLAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drunk Guy",
+     "description": "Recruit Olan Hyot."
+    },
+    {
+     "apiname": "ACH_NERN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Annoying Guy",
+     "description": "Recruit Nern Guan."
+    },
+    {
+     "apiname": "ACH_RAGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Headbutt Guy",
+     "description": "Recruit Rage Ironhead."
+    },
+    {
+     "apiname": "ACH_PERCY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poop Guy",
+     "description": "Recruit Percy Monsoon."
+    },
+    {
+     "apiname": "ACH_MADDOG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nipple Guy",
+     "description": "Recruit Mad Dog."
+    },
+    {
+     "apiname": "ACH_SHOCKLORD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Face First Guy",
+     "description": "Recruit Shocklord."
+    },
+    {
+     "apiname": "ACH_FARDY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Violated Guy",
+     "description": "Recruit Fardy Hernandez."
+    },
+    {
+     "apiname": "ACH_QUEEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lady Guy",
+     "description": "Recruit Queen Roger."
+    },
+    {
+     "apiname": "ACH_CARP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fish Guy",
+     "description": "Recruit Carp."
+    },
+    {
+     "apiname": "ACH_HARVEY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lawyer Fish Guy",
+     "description": "Recruit Harvey Alibastor."
+    },
+    {
+     "apiname": "ACH_CLINT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cool Dude Guy",
+     "description": "Recruit Clint Olympic."
+    },
+    {
+     "apiname": "ACH_BUCKETS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mysterious Guy",
+     "description": "Recruit Buckets."
+    },
+    {
+     "apiname": "ACH_BUFFALO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "American Guy",
+     "description": "Recruit Buffalo Van Dyke."
+    },
+    {
+     "apiname": "ACH_TIGERMAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spear Guy",
+     "description": "Recruit Tiger Man."
+    },
+    {
+     "apiname": "ACH_OLLIE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sweaty Guy",
+     "description": "Recruit Ollie Nickels."
+    },
+    {
+     "apiname": "ACH_GEESE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rhyming Bird Guy",
+     "description": "Recruit Geese Thompson."
+    },
+    {
+     "apiname": "ACH_DICK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Party Guy",
+     "description": "Recruit Dick Dickson."
+    },
+    {
+     "apiname": "ACH_JACK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magic Guy",
+     "description": "Recruit Jack."
+    },
+    {
+     "apiname": "ACH_SONNY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Powerful Clothesline Guy",
+     "description": "Recruit Sonny Backluwitz."
+    },
+    {
+     "apiname": "ACH_YAZAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cat Guy",
+     "description": "Recruit Yazan Barghouti."
+    },
+    {
+     "apiname": "ACH_BEASTBORN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wild Guy",
+     "description": "Recruit Beastborn."
+    },
+    {
+     "apiname": "ACH_FLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bug Guy",
+     "description": "Recruit Fly Minetti."
+    },
+    {
+     "apiname": "ACH_AJEET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Poke Guy",
+     "description": "Recruit Ajeet Mandeep."
+    },
+    {
+     "apiname": "ACH_GARTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Art Guy",
+     "description": "Recruit Garth."
+    },
+    {
+     "apiname": "ACH_BO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weird Guy",
+     "description": "Recruit Bo Wyatt."
+    },
+    {
+     "apiname": "ACH_BIRDIE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Super Drunk Guy",
+     "description": "Recruit Birdie Hall."
+    },
+    {
+     "apiname": "ACH_TWO_ARMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Selfish",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_ONE_ARMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kind of Selfish",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_NO_ARMS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Selfless",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_JOYLESS_END",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Joyless End",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_JOYFULL_END",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Joyful End",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PAIN_MODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sorry Master",
+     "description": "The birth of Red Skull."
+    },
+    {
+     "apiname": "ACH_BUZZO_DONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Source",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_W2D",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Beat Never Dies",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_JOY_MASK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Joy",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_RANDO_MASK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rando",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_HINT_MASK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fan Club",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_GREEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Friends",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_YADO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Yado",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_MARTY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Father",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_LISA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lisa",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_BRAD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm Sorry",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

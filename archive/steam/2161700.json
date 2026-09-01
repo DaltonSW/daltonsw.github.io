@@ -1,0 +1,807 @@
+{
+ "provider": "steam",
+ "title": "Persona 3 Reload",
+ "updated": "2026-08-30",
+ "id": "2161700",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 56,
+ "platform": "PC",
+ "icon": "2aeb189b126f766bb5930f725fbdcdd171a93c56",
+ "achievements": [
+  {
+   "key": "ACH_ALL_COMMU_MAX",
+   "name": "A Legacy of Friendships",
+   "description": "Maxed out all Social Links.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/e13241f5d81d1c58f11e58a934da02e7afe9c1c7.jpg"
+  },
+  {
+   "key": "ACH_ALL_COMMU_OPEN",
+   "name": "People Person",
+   "description": "Unlocked all Social Links.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7ef1f9ef4e48b8c15b9dd83c7b5b7013a19d56ba.jpg"
+  },
+  {
+   "key": "ACH_ALL_PERSONA_EVO",
+   "name": "A Newfound Strength",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/266b23707fa588742cab527fd146d48630a3548f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_ALL_THEURGIA_USE",
+   "name": "The Strength of Our Hearts",
+   "description": "Used all teammates' Theurgy.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0e663e02f247d96c7831a475cb94207c915edef7.jpg"
+  },
+  {
+   "key": "ACH_BOKOSUKA_50",
+   "name": "Making the Dream Work",
+   "description": "Performed 50 All-Out Attacks.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/53e6c89ecef18f0f7e707f51e6471b0eebcf4266.jpg"
+  },
+  {
+   "key": "ACH_CHALLENGE_MONADO",
+   "name": "Beyond the Darkness",
+   "description": "Unlocked access to the remaining Major Arcana.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0e6f407133cc515e57f87beb86bd249f88c1465e.jpg"
+  },
+  {
+   "key": "ACH_CHANCE_ENC_50",
+   "name": "Shrouded Assassin",
+   "description": "Initiated 50 Chance Encounters.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f6c209a43bd4c0a9b31a553e4edd885ac856402a.jpg"
+  },
+  {
+   "key": "ACH_CURE_CAT",
+   "name": "Benevolent Purr-tector",
+   "description": "Nursed a cat back to full health.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/4f79cf8baba93d056928ef91f448f49f20f0cfa9.jpg"
+  },
+  {
+   "key": "ACH_DAMAGE_999",
+   "name": "Get a Load of Those Numbers!",
+   "description": "Dealt over 999 damage in a single attack (All-Out Attacks excluded).(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f632d1d90c0fa88f1bae1de1cc0361ad1b8eb9f7.jpg"
+  },
+  {
+   "key": "ACH_DEFEAT_CHA_JUS",
+   "name": "Armor Disarmed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7e5fd859d6d84222d6b44d333c7141a45822dc18.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_EMP_EMP",
+   "name": "Empowered Protector",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d6d3355c5d8c54d1e63a7451c2251b3387725a0f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_FOR_STR",
+   "name": "Twist of Fate",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f0c23039e31ecb669cb20a0503fe663463d5a50e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_HANGEDMAN",
+   "name": "A Sense of Finality",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/14116fc193364e821577372f10cadb320f2dff40.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_HERMIT",
+   "name": "Dodging Lightning",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/cf213da3090699c7cc9d10f150813d73862e7984.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_HIE_LOV",
+   "name": "Never Toy with Matters of the Heart",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d8613caadc740915321b59b5dc3568bdc4e4e975.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_NUXE",
+   "name": "The Great Seal",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/39f90bc7ea42a2e2c01572e97356a9e9dde8616a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_PRIESTESS",
+   "name": "Back on Track",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0d3f8fb216d4a2db2a33f6cae43fbecbc1cc2e32.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DEFEAT_RARE_SHADOW",
+   "name": "The Thrill of the Hunt",
+   "description": "Defeated a rare, golden enemy.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/5e5635ae04602803fad7b1f8c195a67a17c82084.jpg"
+  },
+  {
+   "key": "ACH_ENC_DEATH",
+   "name": "Reaper Reaped",
+   "description": "Defeated the Reaper.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f8b5f66d0dc5c3dfcbe2e2c14044a82bd31b0001.jpg"
+  },
+  {
+   "key": "ACH_ENC_HAPPENING",
+   "name": "The Horror of the Shade",
+   "description": "Encountered a Dark Zone in Tartarus.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/917b7ce1ba571df9bd1df739f143dc59399f58f2.jpg"
+  },
+  {
+   "key": "ACH_EXE_2_SPREAD",
+   "name": "The First of Many",
+   "description": "Performed a Dyad Fusion.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/6e7494b675cda9e4e49c4f69b6db861215297875.jpg"
+  },
+  {
+   "key": "ACH_EXE_3_SPREAD",
+   "name": "Fusion Artisan",
+   "description": "Performed a fusion with three or more Personas.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/4c95b21722d1de5b705589d939be9f7451d7173e.jpg"
+  },
+  {
+   "key": "ACH_FIND_MISSING_PERSON",
+   "name": "Extracurricular Excellence",
+   "description": "Rescued a missing person.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7d664bfdec4a112ad18a5d5034918e58eabdff48.jpg"
+  },
+  {
+   "key": "ACH_FORB_DOOR_OPEN_10",
+   "name": "Glimpse of the Depths",
+   "description": "Discovered and conquered 10 Monad doors.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d72ecd4ac7caf3c13292345dd8358b8b29cee243.jpg"
+  },
+  {
+   "key": "ACH_GET_ARBEIT_50000",
+   "name": "The Grindset Mindset",
+   "description": "Earned over 50,000 yen total from part-time jobs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/73ad8f86e6847d8874e7aa9622108132cd71a2af.jpg"
+  },
+  {
+   "key": "ACH_GET_CONCEPTION_ITEM",
+   "name": "Birthday Present",
+   "description": "Obtained an item from a Persona Conception.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/ef63895dfa475a3963084f56ef800536ba252797.jpg"
+  },
+  {
+   "key": "ACH_GET_EXAM_TOP",
+   "name": "Top of the Class",
+   "description": "Aced an exam.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/651312569cc478cc05e5ad2c3dab93ffe04e9670.jpg"
+  },
+  {
+   "key": "ACH_GET_RAREMEDAL_ALL",
+   "name": "Eagle Eye",
+   "description": "Acquired every Twilight Fragment in town.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/a856968e661820563bebd0c6208ff1aa3fd07055.jpg"
+  },
+  {
+   "key": "ACH_HARVEST",
+   "name": "Eat Your Veggies, Peas!",
+   "description": "Harvested a crop that you grew with a teammate.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/23a75440bb50db6fc087e447db1fd02810916772.jpg"
+  },
+  {
+   "key": "ACH_HIDDEN_MENU_EMP",
+   "name": "Gourmand",
+   "description": "Ordered from a secret menu at the Iwatodai strip mall at night.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/75c750c94c51d8ba4a10472cc4b7a22221bf3d41.jpg"
+  },
+  {
+   "key": "ACH_H_PARAM_ALL_MAX",
+   "name": "Peak Performance",
+   "description": "Maxed out all Social Stats.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/3a12a681be0c024a4a91cf2a5de9108f72279a89.jpg"
+  },
+  {
+   "key": "ACH_H_PARAM_ONE_MAX",
+   "name": "Specialist",
+   "description": "Maxed out one Social Stat.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/9123883bed538d61e2e7f6bf6fbda9fb66408a0d.jpg"
+  },
+  {
+   "key": "ACH_INV_ELIZABETH",
+   "name": "Distinguished Visitor",
+   "description": "Invited Elizabeth to your room.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/eec895da4598ca4112a53ebcc662720154eb1a92.jpg"
+  },
+  {
+   "key": "ACH_MAIL_INVITATION_5",
+   "name": "In High Demand",
+   "description": "Accepted an invitation to hang out five times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/ea8f554646de2e4fc0048180e590796f62f8707d.jpg"
+  },
+  {
+   "key": "ACH_MAKE_LOVERS",
+   "name": "That Special Someone",
+   "description": "Nurtured a romance.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/8f389a34429e46fa8610e80490befefa3a361573.jpg"
+  },
+  {
+   "key": "ACH_MAKE_MESSIAH",
+   "name": "Path to Salvation",
+   "description": "Fused Messiah.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/3575a9f250c867eebc28bbdab3df4eef4f0c991d.jpg"
+  },
+  {
+   "key": "ACH_ONE_COMMU_MAX",
+   "name": "Unbreakable Link",
+   "description": "Maxed out one Social Link.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/a779b2dd91bd5f20fe20877381511f901a414c00.jpg"
+  },
+  {
+   "key": "ACH_ORPHEUS_GET",
+   "name": "Awakened Power",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/72dcd4e4707d8feb2fe31ebabeec7cf177dc1c8e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PAST_NIGHT_TIME",
+   "name": "Dorm Life",
+   "description": "Spent an evening in the dorm with a teammate.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/8b40cd9cbfc265b548bd8bc372d0885c0daac48f.jpg"
+  },
+  {
+   "key": "ACH_PRGS_ANTENORA",
+   "name": "The Disillusioned One",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/38f5bb95508fac4dd0a5490b3fd2fcf405d875c6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_CAINA",
+   "name": "The Determined One",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/06e5ae9df4f211f231947e9d985f72da4e996177.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_COCYTUS",
+   "name": "The Vengeful One",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f41856c7ac69f7985875630a6d5c1d3a48fc67e0.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_EMPIREO",
+   "name": "The One Who Dreamt",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7b80e9a905f918a252c4b8348f55eaad0e62897d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_ENDING",
+   "name": "Together, Into Tomorrow",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/5af674b5ebcadbb2382f22bee371ee54758689f4.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_JUDECCA",
+   "name": "The Steadfast One",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/5a0be4e98706d45859f3d4c406390de254fb47a2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_PTOLOMEA",
+   "name": "The Selfless One",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/2c7d0038536f11f16c78e674bf92d358bf410c00.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_PRGS_WILD",
+   "name": "Realized Power",
+   "description": "Awakened to the power of the wild card.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/e0adf6967450bb2ec8da680f4cc921aac187589c.jpg"
+  },
+  {
+   "key": "ACH_PROPERTY_GET_ONE",
+   "name": "Through Thick and Thin",
+   "description": "Unlocked a teammate's Combat Characteristic.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/2d5c8c7dc398608fb1f1fa04f72d5604883ff56d.jpg"
+  },
+  {
+   "key": "ACH_SEES_JOIN",
+   "name": "SEES the Day",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/307214c3efebe26460daca12c4cb02655289a726.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_SFL_M_ARCANA_GET_10",
+   "name": "The Fool's Journey",
+   "description": "Obtained 10 Major Arcana during Shuffle Time.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/93c248c226f427043b4f61a2876917bf6f638434.jpg"
+  },
+  {
+   "key": "ACH_SFL_PERSONA_GET_10",
+   "name": "The Power of Choice",
+   "description": "Obtained 10 Personas during Shuffle Time.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/64fa46f3f5f22ec1a9286cd9c5bda91b89759f8b.jpg"
+  },
+  {
+   "key": "ACH_SHIFT",
+   "name": "There's No \"I\" in \"Team\"",
+   "description": "Performed a Shift.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d449b1bd7151fa69e3d34e9b42bd3142a8cbb8a4.jpg"
+  },
+  {
+   "key": "ACH_SKILL_CHANGE",
+   "name": "Tempting Fate",
+   "description": "Triggered a skill change during fusion.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/a5d711b734350b9454100e5a98b99d7e8f2e43b8.jpg"
+  },
+  {
+   "key": "ACH_TREASURE_BOX_50",
+   "name": "Briefcase Burglar",
+   "description": "Opened 50 treasure chests.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/35de0c8a2dd70cfd8642f86eaaf492515ae13b70.jpg"
+  },
+  {
+   "key": "ACH_TRUE_END",
+   "name": "From Shadows into Light",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0d58f8647e10b903f991df94ba13474dd20e00ee.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_USE_RAREMEDAL_50",
+   "name": "Shattered Plumes",
+   "description": "Used a total of 50 Twilight Fragments.(Persona 3 Reload main story mode only)",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/341fd7756c79958d140be96f485a69ad3134272c.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Persona 3 Reload",
+   "achievements": [
+    {
+     "apiname": "ACH_ORPHEUS_GET",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Awakened Power",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SEES_JOIN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "SEES the Day",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_PRIESTESS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Back on Track",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_EMP_EMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Empowered Protector",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_HIE_LOV",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Never Toy with Matters of the Heart",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_CHA_JUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Armor Disarmed",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_HERMIT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dodging Lightning",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_FOR_STR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Twist of Fate",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_HANGEDMAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Sense of Finality",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_DEFEAT_NUXE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Great Seal",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_TRUE_END",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From Shadows into Light",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SFL_M_ARCANA_GET_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Fool's Journey",
+     "description": "Obtained 10 Major Arcana during Shuffle Time.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_INV_ELIZABETH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Distinguished Visitor",
+     "description": "Invited Elizabeth to your room."
+    },
+    {
+     "apiname": "ACH_GET_EXAM_TOP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Top of the Class",
+     "description": "Aced an exam."
+    },
+    {
+     "apiname": "ACH_ALL_COMMU_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Legacy of Friendships",
+     "description": "Maxed out all Social Links."
+    },
+    {
+     "apiname": "ACH_ALL_COMMU_OPEN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "People Person",
+     "description": "Unlocked all Social Links."
+    },
+    {
+     "apiname": "ACH_MAKE_LOVERS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "That Special Someone",
+     "description": "Nurtured a romance."
+    },
+    {
+     "apiname": "ACH_ONE_COMMU_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unbreakable Link",
+     "description": "Maxed out one Social Link."
+    },
+    {
+     "apiname": "ACH_ALL_PERSONA_EVO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Newfound Strength",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SFL_PERSONA_GET_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Power of Choice",
+     "description": "Obtained 10 Personas during Shuffle Time.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_SHIFT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "There's No \"I\" in \"Team\"",
+     "description": "Performed a Shift.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_ALL_THEURGIA_USE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Strength of Our Hearts",
+     "description": "Used all teammates' Theurgy.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_FIND_MISSING_PERSON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Extracurricular Excellence",
+     "description": "Rescued a missing person."
+    },
+    {
+     "apiname": "ACH_DAMAGE_999",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get a Load of Those Numbers!",
+     "description": "Dealt over 999 damage in a single attack (All-Out Attacks excluded).(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_CHANCE_ENC_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shrouded Assassin",
+     "description": "Initiated 50 Chance Encounters.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_DEFEAT_RARE_SHADOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Thrill of the Hunt",
+     "description": "Defeated a rare, golden enemy.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_BOKOSUKA_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Making the Dream Work",
+     "description": "Performed 50 All-Out Attacks.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_FORB_DOOR_OPEN_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Glimpse of the Depths",
+     "description": "Discovered and conquered 10 Monad doors.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_TREASURE_BOX_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Briefcase Burglar",
+     "description": "Opened 50 treasure chests.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_USE_RAREMEDAL_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shattered Plumes",
+     "description": "Used a total of 50 Twilight Fragments.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_ENC_HAPPENING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Horror of the Shade",
+     "description": "Encountered a Dark Zone in Tartarus."
+    },
+    {
+     "apiname": "ACH_ENC_DEATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reaper Reaped",
+     "description": "Defeated the Reaper.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_EXE_2_SPREAD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The First of Many",
+     "description": "Performed a Dyad Fusion.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_EXE_3_SPREAD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fusion Artisan",
+     "description": "Performed a fusion with three or more Personas.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_GET_CONCEPTION_ITEM",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Birthday Present",
+     "description": "Obtained an item from a Persona Conception.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_MAKE_MESSIAH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Path to Salvation",
+     "description": "Fused Messiah.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_SKILL_CHANGE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tempting Fate",
+     "description": "Triggered a skill change during fusion.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_HARVEST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eat Your Veggies, Peas!",
+     "description": "Harvested a crop that you grew with a teammate."
+    },
+    {
+     "apiname": "ACH_GET_ARBEIT_50000",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Grindset Mindset",
+     "description": "Earned over 50,000 yen total from part-time jobs."
+    },
+    {
+     "apiname": "ACH_H_PARAM_ONE_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Specialist",
+     "description": "Maxed out one Social Stat."
+    },
+    {
+     "apiname": "ACH_H_PARAM_ALL_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peak Performance",
+     "description": "Maxed out all Social Stats."
+    },
+    {
+     "apiname": "ACH_PAST_NIGHT_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dorm Life",
+     "description": "Spent an evening in the dorm with a teammate."
+    },
+    {
+     "apiname": "ACH_HIDDEN_MENU_EMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gourmand",
+     "description": "Ordered from a secret menu at the Iwatodai strip mall at night."
+    },
+    {
+     "apiname": "ACH_CURE_CAT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Benevolent Purr-tector",
+     "description": "Nursed a cat back to full health."
+    },
+    {
+     "apiname": "ACH_MAIL_INVITATION_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In High Demand",
+     "description": "Accepted an invitation to hang out five times."
+    },
+    {
+     "apiname": "ACH_CHALLENGE_MONADO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beyond the Darkness",
+     "description": "Unlocked access to the remaining Major Arcana.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_PROPERTY_GET_ONE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Through Thick and Thin",
+     "description": "Unlocked a teammate's Combat Characteristic.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_GET_RAREMEDAL_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eagle Eye",
+     "description": "Acquired every Twilight Fragment in town.(Persona 3 Reload main story mode only)"
+    },
+    {
+     "apiname": "ACH_PRGS_WILD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Realized Power",
+     "description": "Awakened to the power of the wild card."
+    },
+    {
+     "apiname": "ACH_PRGS_COCYTUS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Vengeful One",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PRGS_CAINA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Determined One",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PRGS_ANTENORA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Disillusioned One",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PRGS_PTOLOMEA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Selfless One",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PRGS_JUDECCA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Steadfast One",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PRGS_EMPIREO",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The One Who Dreamt",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_PRGS_ENDING",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Together, Into Tomorrow",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

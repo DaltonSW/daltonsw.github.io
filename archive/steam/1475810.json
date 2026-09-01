@@ -1,0 +1,947 @@
+{
+ "provider": "steam",
+ "title": "Ghostwire: Tokyo",
+ "updated": "2026-08-30",
+ "id": "1475810",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 66,
+ "platform": "PC",
+ "icon": "9b65bb20f181e58f6ff9a7bbb144830f0c44c195",
+ "achievements": [
+  {
+   "key": "ACH_001",
+   "name": "Beginnings",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/86b7f0251302818cbe48b6aa45f155025689ea80.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_002",
+   "name": "Trouble",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/99a796abda33626b983fd5f19a3cbaeec50fde92.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_003",
+   "name": "Connection",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/fb88b48e8b4da4a2757118b94ea739313a4f14b1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_004",
+   "name": "Contortion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/48e812f554534592e3f666fa796639e575028269.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_005",
+   "name": "Severance",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/bf0fe8481892810419726e8add38be9fe3f1ad73.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_006",
+   "name": "Binding",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/6b2f779833937c99f21845e43a737a87b205c03b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_007",
+   "name": "Conclusions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/2c69c4711645e50c197d9afb1f6d9b39752fcf72.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_008",
+   "name": "Helping Hand",
+   "description": "Transfer 25% of the spirits in the city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/8bd296f86e8027691ae25c1b893c2438969ac9a5.jpg"
+  },
+  {
+   "key": "ACH_009",
+   "name": "Savior",
+   "description": "Transfer 50% of the spirits in the city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/35a0cb5e84d80a056023348e81d5b2b7a6125e38.jpg"
+  },
+  {
+   "key": "ACH_010",
+   "name": "Salvation of All",
+   "description": "Transfer at least 100% of the spirits in the city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/1f7b49ce3c4c89c8a2024d906620579997ed60a6.jpg"
+  },
+  {
+   "key": "ACH_011",
+   "name": "Hero of Shibuya",
+   "description": "Complete the main story after transferring at least 100% of the spirits in the city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/38663cf1be3d6b7aef7713d8f12e9a959aa83825.jpg"
+  },
+  {
+   "key": "ACH_012",
+   "name": "Problem Solver",
+   "description": "Complete a side mission.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/db02c50aba0c52854f0625a808265c0b7313eb19.jpg"
+  },
+  {
+   "key": "ACH_013",
+   "name": "Wishmaker",
+   "description": "Complete all side missions (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/3678956f30f10a49a4c23d6c93b61dc5446724f2.jpg"
+  },
+  {
+   "key": "ACH_014",
+   "name": "Opening a Path",
+   "description": "Cleanse a torii gate.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/f65e227ccc5e15567da972a0f6bf7d9d28d9e0d4.jpg"
+  },
+  {
+   "key": "ACH_015",
+   "name": "Liberator",
+   "description": "Cleanse all torii gates (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/5adf5cda1e3bb58beeac5b677f804abca8266bab.jpg"
+  },
+  {
+   "key": "ACH_016",
+   "name": "Treasure Hunter",
+   "description": "Acquire a relic.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/2053696a25c5f9b632a916eff580a46af0c5ca4f.jpg"
+  },
+  {
+   "key": "ACH_017",
+   "name": "Collector",
+   "description": "Acquire all relics.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/b578185dadfb9221a58f7ab28da9df79b7a6b996.jpg"
+  },
+  {
+   "key": "ACH_018",
+   "name": "Mind and Body",
+   "description": "Unlock all Spirit Skills (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/4a518a0ac14f88287441883e35be7aef4ed29a66.jpg"
+  },
+  {
+   "key": "ACH_019",
+   "name": "On the Same Wavelength",
+   "description": "Raise your synergy level to 50 or higher.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/d111f0e0a55c158d555759ebfc398102f5a7cb1f.jpg"
+  },
+  {
+   "key": "ACH_020",
+   "name": "Shibuya Is My Back Yard",
+   "description": "Find all landmarks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/ed1823fadd4ec1098cceaca7741e04b82d10278c.jpg"
+  },
+  {
+   "key": "ACH_021",
+   "name": "Echoes of the Past",
+   "description": "Acquire a voice log.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/05b225f67f70a2dbe3e52b3f8e3d9a7cf277ac55.jpg"
+  },
+  {
+   "key": "ACH_022",
+   "name": "The Whole Truth",
+   "description": "Acquire all voice logs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/29d4532ee42dd286ca4c8de96a2b7b70fced32ce.jpg"
+  },
+  {
+   "key": "ACH_023",
+   "name": "It's All Thanks to Yokai",
+   "description": "Acquire a magatama.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/4eb65f7282bf531cb6ffbf6b59086d381ee582b8.jpg"
+  },
+  {
+   "key": "ACH_024",
+   "name": "With Their Powers Combined",
+   "description": "Acquire 40 or more different magatama.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/4d3f7485e29abba70ff303fbb7df3c7b284a0697.jpg"
+  },
+  {
+   "key": "ACH_025",
+   "name": "Roadside Spirituality",
+   "description": "Pray to a Jizo statue.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/72dd8ac9e02387098d0692057621f5348c24824e.jpg"
+  },
+  {
+   "key": "ACH_026",
+   "name": "Pilgrim",
+   "description": "Pray to all Jizo statues.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/34337e5056e934bb45a887314b975c5b158b1ff6.jpg"
+  },
+  {
+   "key": "ACH_027",
+   "name": "Your Tail's Showing",
+   "description": "Find all of the missing tanuki.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/b6dee87a0f1e8e977013485143c62c4ddcbdafd6.jpg"
+  },
+  {
+   "key": "ACH_028",
+   "name": "Gourmand",
+   "description": "Acquire all types of food and drink.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/d77adf91fddf7982c11f3c0d5d5181e41238a5e5.jpg"
+  },
+  {
+   "key": "ACH_029",
+   "name": "DJ Akito",
+   "description": "Acquire all music tracks (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/22a6ff81ef5e647e6145482aa41344958149d0d5.jpg"
+  },
+  {
+   "key": "ACH_030",
+   "name": "Trendsetter",
+   "description": "Acquire all items for the Outfit menu (excluding bonus and update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/3cc594d74dac8aa68a3e050d90124f4c6af88f52.jpg"
+  },
+  {
+   "key": "ACH_031",
+   "name": "Talismania",
+   "description": "Acquire all talismans (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/6b13dce924c34e174960c00a4ed2bb71617938b2.jpg"
+  },
+  {
+   "key": "ACH_032",
+   "name": "Power Overwhelming",
+   "description": "Acquire all sets of prayer beads (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/37c3e98b6e4c39fa93304e1eb829ade7ff23c44a.jpg"
+  },
+  {
+   "key": "ACH_033",
+   "name": "Boundless Spirit",
+   "description": "Acquire the maximum number of katashiro.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/056fb64b5fa6ff06c7b51f05d9a8aafa9c816b36.jpg"
+  },
+  {
+   "key": "ACH_034",
+   "name": "Animal Lover",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/72f8ca0e5c6444d5b25e809345699c610ae8505a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_035",
+   "name": "Amateur Photographer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/976992863e40adc91e1a0df413ac230b54997be3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_036",
+   "name": "You Wouldn't Steal a Spirit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/194cc978524eba16eaa72f5e1a63d391ae78a47b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_037",
+   "name": "Don't Worry About It",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/acc3e13983634c988f5b2b845dcba828c7a29b9b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_038",
+   "name": "Better Together",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/564ea7d68bbe953c47f4bd30ed18562c5dc036a8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_039",
+   "name": "Visiting Hours Are Over",
+   "description": "Defeat at least one of every type of Visitor (excluding update content).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/acf7a76e511203816768c905cf9fcdbfc8b6a3fc.jpg"
+  },
+  {
+   "key": "ACH_040",
+   "name": "Heartbreaker",
+   "description": "Defeat a Visitor by pulling out its core.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/966e9201e17ce81074b117607f9e49914b551b9d.jpg"
+  },
+  {
+   "key": "ACH_041",
+   "name": "Soul Breaker",
+   "description": "Defeat 50 Visitors by pulling out their cores.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/9593fdb894a640701ea13461e4ca478fbaf4d60f.jpg"
+  },
+  {
+   "key": "ACH_042",
+   "name": "One Fell Swoop",
+   "description": "Defeat at least 5 Visitors simultaneously by pulling out their cores.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/b9fd4adf8dc39f6a31acf5bb8eeb7b663023f923.jpg"
+  },
+  {
+   "key": "ACH_043",
+   "name": "Couldn't Take the Heat",
+   "description": "Defeat at least 3 Visitors simultaneously by detonating a red ether crystal.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/ba82207f431d340f05216731dcd70d310000a6ea.jpg"
+  },
+  {
+   "key": "ACH_044",
+   "name": "Silent Kill",
+   "description": "Defeat a total of 200 Visitors using Quick Purge.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/f421e683366071b005508acccbcbd30af4c88083.jpg"
+  },
+  {
+   "key": "ACH_045",
+   "name": "Take a Bow",
+   "description": "Defeat a total of 50 Visitors using the bow.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/ca5bce1d09782d4c57add581757ae2e8aac9e4be.jpg"
+  },
+  {
+   "key": "ACH_046",
+   "name": "Go For the Eyes",
+   "description": "Defeat a total of 20 Visitors with headshots.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/d4b73e6bbfeb342fc7c67dccbc867b4a7c472807.jpg"
+  },
+  {
+   "key": "ACH_047",
+   "name": "Sniper",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/8bae033e59462a99a92615b8bb32ee6155d7bac2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_048",
+   "name": "Freeze, Scumbag",
+   "description": "Defeat a total of 10 Visitors with Quick Purge while they are held by a Stun Talisman.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/977b769d8c58bf4bc833be2a42060081fc21fe2e.jpg"
+  },
+  {
+   "key": "ACH_049",
+   "name": "A Shrubbery!",
+   "description": "Defeat a total of 3 Visitors with Quick Purge while hiding in bushes created by a Thicket Talisman.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/f9c0332cfc5a5b22c41a48386a5afb00b4fdcf7e.jpg"
+  },
+  {
+   "key": "ACH_050",
+   "name": "Left Yourself Open",
+   "description": "Defeat a total of 10 Visitors by exposing their cores with Exposure Talismans and ripping them out.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/ecea8e15abef555384889059751734e93f5d7846.jpg"
+  },
+  {
+   "key": "ACH_051",
+   "name": "Master of Blocking",
+   "description": "Perform a total of 30 Perfect Blocks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/1ac823d0cd75759bba2a30464a78e67c88fac067.jpg"
+  },
+  {
+   "key": "ACH_052",
+   "name": "In Sync",
+   "description": "Wire In a total of 10 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/29c8f522eacdfcd1679252649f096947116bcd4b.jpg"
+  },
+  {
+   "key": "ACH_053",
+   "name": "Walking on Air",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/344af238093c46229bab9b492a29a63b4c9a6245.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_054",
+   "name": "Big Spender",
+   "description": "Spend a total of 1,000,000 meika.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/863f8c141abff79a14a44150ad1ddff1ffc62e2b.jpg"
+  },
+  {
+   "key": "ACH_055",
+   "name": "Pious",
+   "description": "Put a total of 10,000 meika into offering boxes.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/d0e20b84ba10040b9dd35541b5c3a86d9e2b52d4.jpg"
+  },
+  {
+   "key": "ACH_056",
+   "name": "Lonely Tsukimi",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/b6f8091cbad29dfd4d730ebe47d238d26d5fa9b7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_057",
+   "name": "Scary Stories to Tell at School",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/8eaaa21ee44e7162e14ba3add0aa9d89dd14b088.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_058",
+   "name": "Spirit Photographer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/902c107dd27dd378299c10bad5a1531be3b47973.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_059",
+   "name": "Further Liberation",
+   "description": "STU: Cleanse all newly-added torii gates.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/527bb24446663f42e2e96991aa7a15c16841b972.jpg"
+  },
+  {
+   "key": "ACH_060",
+   "name": "On-The-Job Training",
+   "description": "STU: Unlock all newly-added Spirit Skills.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/cf496f8f64e55839f65d3a49638e7cac39aa78b0.jpg"
+  },
+  {
+   "key": "ACH_061",
+   "name": "Unparalleled Talismaniac",
+   "description": "STU: Acquire all newly-added talismans.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/ca80f68da14c3fb9edc447152a2c8fbfd93788ea.jpg"
+  },
+  {
+   "key": "ACH_062",
+   "name": "Unexpected Visitors",
+   "description": "STU: Defeat at least one of every newly-added type of Visitor.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/7ef666126bbdfc4a9292933d93c970172441230c.jpg"
+  },
+  {
+   "key": "ACH_063",
+   "name": "Figure Aficionado",
+   "description": "STU: Try your luck at capsule machines at least 50 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/4236ddc4d94287791d124622420cb0fa282be843.jpg"
+  },
+  {
+   "key": "ACH_064",
+   "name": "Views From the Abyss",
+   "description": "STU: Complete \"The Spider's Thread\" mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/880540b69ea956bb219d2302107f6ced82025c1a.jpg"
+  },
+  {
+   "key": "ACH_065",
+   "name": "Catalog Conqueror",
+   "description": "STU: Complete all nekomata jobs in \"The Spider's Thread\" mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/7b1692a6ac2d07951fa5462e01fdb36c7fc68768.jpg"
+  },
+  {
+   "key": "ACH_066",
+   "name": "Welcome to Shibuya",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1475810/62f3c9f6a1f8c89fb726e230f31fa20ed3d807b1.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Ghostwire: Tokyo",
+   "achievements": [
+    {
+     "apiname": "ACH_001",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beginnings",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_002",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trouble",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_003",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Connection",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_004",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Contortion",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_005",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Severance",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_006",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Binding",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_007",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Conclusions",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_008",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Helping Hand",
+     "description": "Transfer 25% of the spirits in the city."
+    },
+    {
+     "apiname": "ACH_009",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Savior",
+     "description": "Transfer 50% of the spirits in the city."
+    },
+    {
+     "apiname": "ACH_010",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Salvation of All",
+     "description": "Transfer at least 100% of the spirits in the city."
+    },
+    {
+     "apiname": "ACH_011",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hero of Shibuya",
+     "description": "Complete the main story after transferring at least 100% of the spirits in the city."
+    },
+    {
+     "apiname": "ACH_012",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Problem Solver",
+     "description": "Complete a side mission."
+    },
+    {
+     "apiname": "ACH_013",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wishmaker",
+     "description": "Complete all side missions (excluding update content)."
+    },
+    {
+     "apiname": "ACH_014",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Opening a Path",
+     "description": "Cleanse a torii gate."
+    },
+    {
+     "apiname": "ACH_015",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Liberator",
+     "description": "Cleanse all torii gates (excluding update content)."
+    },
+    {
+     "apiname": "ACH_016",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Treasure Hunter",
+     "description": "Acquire a relic."
+    },
+    {
+     "apiname": "ACH_017",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Collector",
+     "description": "Acquire all relics."
+    },
+    {
+     "apiname": "ACH_018",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mind and Body",
+     "description": "Unlock all Spirit Skills (excluding update content)."
+    },
+    {
+     "apiname": "ACH_019",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On the Same Wavelength",
+     "description": "Raise your synergy level to 50 or higher."
+    },
+    {
+     "apiname": "ACH_020",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shibuya Is My Back Yard",
+     "description": "Find all landmarks."
+    },
+    {
+     "apiname": "ACH_021",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Echoes of the Past",
+     "description": "Acquire a voice log."
+    },
+    {
+     "apiname": "ACH_022",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Whole Truth",
+     "description": "Acquire all voice logs."
+    },
+    {
+     "apiname": "ACH_023",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's All Thanks to Yokai",
+     "description": "Acquire a magatama."
+    },
+    {
+     "apiname": "ACH_024",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "With Their Powers Combined",
+     "description": "Acquire 40 or more different magatama."
+    },
+    {
+     "apiname": "ACH_025",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Roadside Spirituality",
+     "description": "Pray to a Jizo statue."
+    },
+    {
+     "apiname": "ACH_026",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pilgrim",
+     "description": "Pray to all Jizo statues."
+    },
+    {
+     "apiname": "ACH_027",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Your Tail's Showing",
+     "description": "Find all of the missing tanuki."
+    },
+    {
+     "apiname": "ACH_028",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gourmand",
+     "description": "Acquire all types of food and drink."
+    },
+    {
+     "apiname": "ACH_029",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "DJ Akito",
+     "description": "Acquire all music tracks (excluding update content)."
+    },
+    {
+     "apiname": "ACH_030",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trendsetter",
+     "description": "Acquire all items for the Outfit menu (excluding bonus and update content)."
+    },
+    {
+     "apiname": "ACH_031",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Talismania",
+     "description": "Acquire all talismans (excluding update content)."
+    },
+    {
+     "apiname": "ACH_032",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Power Overwhelming",
+     "description": "Acquire all sets of prayer beads (excluding update content)."
+    },
+    {
+     "apiname": "ACH_033",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boundless Spirit",
+     "description": "Acquire the maximum number of katashiro."
+    },
+    {
+     "apiname": "ACH_034",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Animal Lover",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_035",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Amateur Photographer",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_036",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You Wouldn't Steal a Spirit",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_037",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't Worry About It",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_038",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Better Together",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_039",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Visiting Hours Are Over",
+     "description": "Defeat at least one of every type of Visitor (excluding update content)."
+    },
+    {
+     "apiname": "ACH_040",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heartbreaker",
+     "description": "Defeat a Visitor by pulling out its core."
+    },
+    {
+     "apiname": "ACH_041",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soul Breaker",
+     "description": "Defeat 50 Visitors by pulling out their cores."
+    },
+    {
+     "apiname": "ACH_042",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Fell Swoop",
+     "description": "Defeat at least 5 Visitors simultaneously by pulling out their cores."
+    },
+    {
+     "apiname": "ACH_043",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Couldn't Take the Heat",
+     "description": "Defeat at least 3 Visitors simultaneously by detonating a red ether crystal."
+    },
+    {
+     "apiname": "ACH_044",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Silent Kill",
+     "description": "Defeat a total of 200 Visitors using Quick Purge."
+    },
+    {
+     "apiname": "ACH_045",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Take a Bow",
+     "description": "Defeat a total of 50 Visitors using the bow."
+    },
+    {
+     "apiname": "ACH_046",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Go For the Eyes",
+     "description": "Defeat a total of 20 Visitors with headshots."
+    },
+    {
+     "apiname": "ACH_047",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sniper",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_048",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Freeze, Scumbag",
+     "description": "Defeat a total of 10 Visitors with Quick Purge while they are held by a Stun Talisman."
+    },
+    {
+     "apiname": "ACH_049",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Shrubbery!",
+     "description": "Defeat a total of 3 Visitors with Quick Purge while hiding in bushes created by a Thicket Talisman."
+    },
+    {
+     "apiname": "ACH_050",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Left Yourself Open",
+     "description": "Defeat a total of 10 Visitors by exposing their cores with Exposure Talismans and ripping them out."
+    },
+    {
+     "apiname": "ACH_051",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of Blocking",
+     "description": "Perform a total of 30 Perfect Blocks."
+    },
+    {
+     "apiname": "ACH_052",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "In Sync",
+     "description": "Wire In a total of 10 times."
+    },
+    {
+     "apiname": "ACH_053",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Walking on Air",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_054",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Big Spender",
+     "description": "Spend a total of 1,000,000 meika."
+    },
+    {
+     "apiname": "ACH_055",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pious",
+     "description": "Put a total of 10,000 meika into offering boxes."
+    },
+    {
+     "apiname": "ACH_056",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lonely Tsukimi",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_057",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scary Stories to Tell at School",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_058",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spirit Photographer",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_059",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Further Liberation",
+     "description": "STU: Cleanse all newly-added torii gates."
+    },
+    {
+     "apiname": "ACH_060",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On-The-Job Training",
+     "description": "STU: Unlock all newly-added Spirit Skills."
+    },
+    {
+     "apiname": "ACH_061",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unparalleled Talismaniac",
+     "description": "STU: Acquire all newly-added talismans."
+    },
+    {
+     "apiname": "ACH_062",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unexpected Visitors",
+     "description": "STU: Defeat at least one of every newly-added type of Visitor."
+    },
+    {
+     "apiname": "ACH_063",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Figure Aficionado",
+     "description": "STU: Try your luck at capsule machines at least 50 times."
+    },
+    {
+     "apiname": "ACH_064",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Views From the Abyss",
+     "description": "STU: Complete \"The Spider's Thread\" mode."
+    },
+    {
+     "apiname": "ACH_065",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Catalog Conqueror",
+     "description": "STU: Complete all nekomata jobs in \"The Spider's Thread\" mode."
+    },
+    {
+     "apiname": "ACH_066",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to Shibuya",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

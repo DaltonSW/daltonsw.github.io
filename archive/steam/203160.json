@@ -1,0 +1,723 @@
+{
+ "provider": "steam",
+ "title": "Tomb Raider",
+ "updated": "2026-08-30",
+ "id": "203160",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 50,
+ "platform": "PC",
+ "icon": "3ee640a8aba6992678e36f4e40cba9c71c02348b",
+ "achievements": [
+  {
+   "key": "NEW_ACHIEVEMENT_2_0",
+   "name": "Bookworm ",
+   "description": "Find 25% of all documents. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/2d7b3857cc63cac88922754116a6c40744cf6d11.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_1",
+   "name": "Historian ",
+   "description": "Find 75% of all documents. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/e862c13fd3b4c9e127d6d5de4c845818f289d218.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_10",
+   "name": "Lethal ",
+   "description": "Purchase all skills in all categories. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/94936d299f2fa2c63a089edf8f4ac1e25b4aaf15.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_11",
+   "name": "Now We're Getting Serious ",
+   "description": "Fully mod and completely upgrade any weapon. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/3ebfcf6160f19e8df8fb14ade3b64170a3f1ea96.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_12",
+   "name": "The Professional ",
+   "description": "Fully mod and completely upgrade all weapons. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/fe65495d80cfafb69f44e9e960efaf58c962f3c4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_13",
+   "name": "Big Game Hunter ",
+   "description": "Kill and loot 10 large animals (deer, boar, wolves). ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/4e76053118561c33cffd4cbf8c757dcc26aa92c1.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_14",
+   "name": "Tastes Like Chicken! ",
+   "description": "Kill and loot 10 small animals (rabbits, chickens, rats). ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/8ca881392ffd18e344cc936e0e3bc9d325d90305.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_15",
+   "name": "Feather Duster ",
+   "description": "Kill and loot 10 flying animals (crows and gulls). ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/821601f2c61cef86621fc72b3df184940ba50993.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_16",
+   "name": "Sharp Shooter ",
+   "description": "Perform 50 headshot kills in the single player campaign. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/7ec37bf1d7c5ebf76b46af0ba511b226ee31dcac.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_17",
+   "name": "Predator ",
+   "description": "Kill 50 enemies with the bow. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/7b89798ea907792e582302ee75112f259831e105.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_18",
+   "name": "Equalizer ",
+   "description": "Kill 75 enemies with the rifle. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/fe2bdde1f70d5a81dda93a0d8ce85577e0a88b98.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_19",
+   "name": "Widowmaker ",
+   "description": "Kill 40 enemies with the shotgun. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/3f1543b828d99194bd935535f2710e03cf98929d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_2",
+   "name": "Relic Hunter ",
+   "description": "Collect 25% of all relics. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/95c9bba38eef2b1c661630475b9542588270401a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_20",
+   "name": "Gunslinger ",
+   "description": "Kill 35 enemies with the pistol. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/99dc58ae0f4f014df74a27d8cbff7eb70d382bb8.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_21",
+   "name": "Epic Fumble ",
+   "description": "Force an enemy to drop dynamite that kills two people when exploding. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/2eb6b630f57baca9c8b58ae90c997f8d95e07ea4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_22",
+   "name": "Get Over Here! ",
+   "description": "Rope pull 5 enemies off edges. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/bfb3146960ab7fb70652ce541f9f60ac76934590.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_23",
+   "name": "Opportunist ",
+   "description": "Kill 25 unaware enemies. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/759b1656f928c2b45d4903f0169579176955038d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_24",
+   "name": "Down and Dirty ",
+   "description": "Perform 15 finishers. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/28b90a466ebe27d98fb9be96b2130a78c265c7c1.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_25",
+   "name": "Deadeye ",
+   "description": "Shoot 10 enemies off zip lines. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/10c0306843fd9bd1b911268249fb76dec3447476.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_26",
+   "name": "Former Adventurer ",
+   "description": "Incapacitate 25 enemies with dodge counter. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/cfc6345840030be759ea9a6ad24da84a006fb2a4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_27",
+   "name": "One Smart Cookie ",
+   "description": "Complete one optional tomb. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/b0fc73a9c40cef572789689e90db90749ab0c55b.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_28",
+   "name": "Intellectually Superior ",
+   "description": "Complete all optional tombs. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/d396939f20a60815d080e20a1ab6e50365028c45.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_29",
+   "name": "Unfinished Business ",
+   "description": "Complete one challenge. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/18619efd603f830ffaccead2070e8c21f2fe843a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_3",
+   "name": "Archaeologist ",
+   "description": "Collect 75% of all relics. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/b0cfe2d347d6b904fdccb110bc4c285e113d327e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_30",
+   "name": "Inconceivable! ",
+   "description": "Complete all challenges. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/5b576ff8f67b573af4e6d7bfcb0e100d3cef0ad3.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_31",
+   "name": "A Survivor Is Born ",
+   "description": "Complete the game. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/4e3a977c724fa07d4692f33b2dd28ffa16e02666.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_4",
+   "name": "Looking for Trouble ",
+   "description": "Find 25% of GPS caches. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/8f2c3e28aa648485cbe1ab7eab495235e8b99f03.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_5",
+   "name": "Bag Full O' Cache ",
+   "description": "Find 75% of GPS caches. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/80c682cbd5bf30890e579f041dca762cf17645c4.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_6",
+   "name": "No Stone Left Unturned ",
+   "description": "Find all documents, relics and GPS caches. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/247973cdf4f9da1dd6430e074aa417d368784256.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_7",
+   "name": "Scrounger ",
+   "description": "Collect 5000 pieces of salvage. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/4a0b651d9e3080af3c3bce240153fef731bc45a5.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_8",
+   "name": "Picky ",
+   "description": "Loot 200 enemies. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/bd0b8c172e965f22488f79ea50d9c6fa370a0225.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_2_9",
+   "name": "Clever Girl ",
+   "description": "Purchase all skills in one category. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/b75f6232948cb470afb5eadfedc96b5d1caef581.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_0",
+   "name": "Boom Goes the Dynamite ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/7efd8e6506625d06ba0a63512a90f0da70ce0d5d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_1",
+   "name": "Crab Cakes ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/d7a549434552bd4b5cac97d887cda1c8b6356e05.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_10",
+   "name": "Sole Survivor ",
+   "description": "In multiplayer, be the only player on your team that isn't dead or downed. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/9af19c07c2dd3b979521acf7db430aad41bd689a.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_11",
+   "name": "Lights Out ",
+   "description": "Kill 10 multiplayer enemies using your melee attack. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/5a955b0e3deb706c39ae3649e428c4532ef88777.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_12",
+   "name": "Master Blaster ",
+   "description": "Kill 2 multiplayer enemies with a single explosive. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/9edb0b2c45d1a608470e8a957ee118a5fb8e201d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_13",
+   "name": "Monkey Around ",
+   "description": "In multiplayer, escape death 3 times by using the rope ascender. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/32850aa031b032d2d915107e87c0e064a9069cbe.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_14",
+   "name": "Narcissistic ",
+   "description": "Purchase a new multiplayer character. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/649b6b04d84db9250db157c568b718c12b8f3012.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_15",
+   "name": "On My Way Up ",
+   "description": "Reach level 10 in multiplayer. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/156b01a179015f87cbbb1c94724dd96655459436.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_16",
+   "name": "Shopaholic ",
+   "description": "Buy every upgrade and character in multiplayer. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/58032d9dd63b82e9b40a1c7aafcd09fec803e88f.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_17",
+   "name": "True Commitment ",
+   "description": "Reach level 60 in multiplayer. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/3dd943f389c12dec9bdad9670b9a9511157cd1c7.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_2",
+   "name": "Chatterbox ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/f8cdb21594dd94c785079a7894827dcb1af64428.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_3",
+   "name": "Adventurer ",
+   "description": "Complete a match in all multiplayer modes. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/aaeb9bc5746be0a6fa327a7d37b4281d9dacd4ab.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_4",
+   "name": "Artilleryman ",
+   "description": "Kill 20 enemy players in multiplayer using a turret. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/09b5542e0ea37413b95c388f71923358014eebb0.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_5",
+   "name": "Down Boy! ",
+   "description": "Kill a zip-lining enemy player in multiplayer. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/1d37e0aa2e1e613fd62dfc411ebfec4d292abef9.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_6",
+   "name": "Entrapment ",
+   "description": "Catch a player in a snare trap in multiplayer. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/61a6987034d2aa0d7cd4e84013cdfc61106d73e9.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_7",
+   "name": "Escapist ",
+   "description": "Survive 10 explosions in multiplayer. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/fea29f77cee2c8730488abe62b06e1cc518ad92e.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_8",
+   "name": "Good Samaritan ",
+   "description": "Revive a teammate in a multiplayer match. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/8587ee066025f0750e67b5a618e76a55b1266146.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_3_9",
+   "name": "I'm all that! ",
+   "description": "Win a ranked match in every multiplayer mode. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/ff27adec28e9028700b285f54097737340c27498.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Tomb Raider",
+   "achievements": [
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bookworm ",
+     "description": "Find 25% of all documents. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Historian ",
+     "description": "Find 75% of all documents. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Relic Hunter ",
+     "description": "Collect 25% of all relics. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Archaeologist ",
+     "description": "Collect 75% of all relics. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Looking for Trouble ",
+     "description": "Find 25% of GPS caches. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bag Full O' Cache ",
+     "description": "Find 75% of GPS caches. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Stone Left Unturned ",
+     "description": "Find all documents, relics and GPS caches. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scrounger ",
+     "description": "Collect 5000 pieces of salvage. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Picky ",
+     "description": "Loot 200 enemies. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Clever Girl ",
+     "description": "Purchase all skills in one category. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lethal ",
+     "description": "Purchase all skills in all categories. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Now We're Getting Serious ",
+     "description": "Fully mod and completely upgrade any weapon. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Professional ",
+     "description": "Fully mod and completely upgrade all weapons. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Big Game Hunter ",
+     "description": "Kill and loot 10 large animals (deer, boar, wolves). "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tastes Like Chicken! ",
+     "description": "Kill and loot 10 small animals (rabbits, chickens, rats). "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feather Duster ",
+     "description": "Kill and loot 10 flying animals (crows and gulls). "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sharp Shooter ",
+     "description": "Perform 50 headshot kills in the single player campaign. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Predator ",
+     "description": "Kill 50 enemies with the bow. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Equalizer ",
+     "description": "Kill 75 enemies with the rifle. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Widowmaker ",
+     "description": "Kill 40 enemies with the shotgun. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gunslinger ",
+     "description": "Kill 35 enemies with the pistol. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Epic Fumble ",
+     "description": "Force an enemy to drop dynamite that kills two people when exploding. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Get Over Here! ",
+     "description": "Rope pull 5 enemies off edges. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Opportunist ",
+     "description": "Kill 25 unaware enemies. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Down and Dirty ",
+     "description": "Perform 15 finishers. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deadeye ",
+     "description": "Shoot 10 enemies off zip lines. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Former Adventurer ",
+     "description": "Incapacitate 25 enemies with dodge counter. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Smart Cookie ",
+     "description": "Complete one optional tomb. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Intellectually Superior ",
+     "description": "Complete all optional tombs. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unfinished Business ",
+     "description": "Complete one challenge. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Inconceivable! ",
+     "description": "Complete all challenges. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_2_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Survivor Is Born ",
+     "description": "Complete the game. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_0",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Boom Goes the Dynamite ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Crab Cakes ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chatterbox ",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adventurer ",
+     "description": "Complete a match in all multiplayer modes. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Artilleryman ",
+     "description": "Kill 20 enemy players in multiplayer using a turret. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Down Boy! ",
+     "description": "Kill a zip-lining enemy player in multiplayer. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Entrapment ",
+     "description": "Catch a player in a snare trap in multiplayer. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Escapist ",
+     "description": "Survive 10 explosions in multiplayer. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Samaritan ",
+     "description": "Revive a teammate in a multiplayer match. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I'm all that! ",
+     "description": "Win a ranked match in every multiplayer mode. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sole Survivor ",
+     "description": "In multiplayer, be the only player on your team that isn't dead or downed. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lights Out ",
+     "description": "Kill 10 multiplayer enemies using your melee attack. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Blaster ",
+     "description": "Kill 2 multiplayer enemies with a single explosive. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Monkey Around ",
+     "description": "In multiplayer, escape death 3 times by using the rope ascender. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Narcissistic ",
+     "description": "Purchase a new multiplayer character. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On My Way Up ",
+     "description": "Reach level 10 in multiplayer. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shopaholic ",
+     "description": "Buy every upgrade and character in multiplayer. "
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_3_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Commitment ",
+     "description": "Reach level 60 in multiplayer. "
+    }
+   ],
+   "success": true
+  }
+ }
+}

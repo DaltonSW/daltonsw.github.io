@@ -1,0 +1,1773 @@
+{
+ "provider": "steam",
+ "title": "Graveyard Keeper",
+ "updated": "2026-08-30",
+ "id": "599140",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 125,
+ "platform": "PC",
+ "icon": "b37ef6d7eb243b4d9fc017dec7bc11b234f34cc2",
+ "achievements": [
+  {
+   "key": "all_darkparts",
+   "name": "Match 3",
+   "description": "Collected three dark organs. Three in a row! The Inquisition is going to get a prize!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/6b0fa4c326195583fd4526550000e8c1c477432a.jpg"
+  },
+  {
+   "key": "astro_book",
+   "name": "Best seller",
+   "description": "Gave a gold-star book to Astrologer. You should consider writing six more...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/401b2ea91bdb44ba2078699aa3ac7db37a31f537.jpg"
+  },
+  {
+   "key": "astro_skull",
+   "name": "A perfect gift",
+   "description": "Gave a skull to Astrologer. A skull makes a nice present indeed!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7e4135ef195030b561d1255b4bfdbb5b4bfdb8e0.jpg"
+  },
+  {
+   "key": "betray_gerry",
+   "name": "He trusted you...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/64c2dc594b20a2202cbc4d2c0eed8d8fccb69936.jpg",
+   "hidden": true
+  },
+  {
+   "key": "burger_seller",
+   "name": "Not a hot dog",
+   "description": "Sold burgers at the burning ceremony. It's a mystery why you didn't make hotdogs.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/06abead78ea768e43a2fe9f17330879d86356ca6.jpg"
+  },
+  {
+   "key": "bury_10_bodies",
+   "name": "Advanced gravedigger",
+   "description": "Buried 10 bodies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/9d3a274c423e67d6c70b426034371d5216e246ae.jpg"
+  },
+  {
+   "key": "bury_1_body",
+   "name": "Novice gravedigger",
+   "description": "Buried your first body.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/54f64095383771d79bf2b9f20849116ae045162e.jpg"
+  },
+  {
+   "key": "bury_50_bodies",
+   "name": "Shovel master",
+   "description": "Buried 50 bodies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/5e4d9e44ddc61a254411f3a5b2f0c78ef9843462.jpg"
+  },
+  {
+   "key": "church_up_1",
+   "name": "His house",
+   "description": "Upgraded the church.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a3bd9d0a818934a11043f1798bde3119d7719c48.jpg"
+  },
+  {
+   "key": "church_up_2",
+   "name": "His mansion",
+   "description": "Upgraded the church for the second time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2738fbf53399ca904cdfafcde1e65077a6c0907e.jpg"
+  },
+  {
+   "key": "cook_1",
+   "name": "Kitchen boy",
+   "description": "Cooked 10 different dishes or drinks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a0ab9b762ff078313b921b17ac19697b474db41e.jpg"
+  },
+  {
+   "key": "cook_2",
+   "name": "Cook",
+   "description": "Cooked 20 different dishes or drinks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a607f59b86a73d88c20effb84ef4de121f502a40.jpg"
+  },
+  {
+   "key": "cook_3",
+   "name": "Chef",
+   "description": "Cooked 30 different dishes or drinks. You can call yourself a Chef now.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/9a70411b48bc42cfda1fd85dd449bbc9cf068cd8.jpg"
+  },
+  {
+   "key": "cook_golddinner",
+   "name": "Dream dinner",
+   "description": "Made a gold-star dinner. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a3da70f0d4f19f6c9a9594c0a4c7b41225269b3f.jpg"
+  },
+  {
+   "key": "craft_alch_1",
+   "name": "Apprentice",
+   "description": "Discovered 5 alchemy recipes. You're getting to know how things work in the lab.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/5c9b3b24da1e31b78acf3d560daab1fd4e3a106d.jpg"
+  },
+  {
+   "key": "craft_alch_2",
+   "name": "Alchemist",
+   "description": "Discovered 10 alchemy recipes. Just remember, the Philosopher's Stone is a lie.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2e9b2befab2af4006468357eea43577613876bb9.jpg"
+  },
+  {
+   "key": "craft_alch_3",
+   "name": "Master alchemist",
+   "description": "Discovered 20 alchemy recipes. Now it's time to buy a white van and drive into the desert.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/48c6718b4f5d4855f5678bbe252434b9e3c5fb5c.jpg"
+  },
+  {
+   "key": "craft_gold_wine",
+   "name": "Winemaker ",
+   "description": "Made a gold-star wine.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7abb78cfd04efb0590c5aa62278a477f72e6faa3.jpg"
+  },
+  {
+   "key": "decore_dtemple",
+   "name": "Simple but stylish",
+   "description": "Decorated a Dark Shrine. Looks better than your first apartment!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/8ed44ce67065f12211b21292285deb50c27b13bb.jpg"
+  },
+  {
+   "key": "dlc_refugees_city_1_fin",
+   "name": "Camp",
+   "description": "Now you have your own camp! And hundreds of potential enemies -- in the form of Inquisitors.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/96a2ae382264d95ab3cda7859388ee8436837638.jpg"
+  },
+  {
+   "key": "dlc_refugees_city_2_fin",
+   "name": "Developed camp",
+   "description": "You've improved your camp. The chances that the refugees will die of starvation got lower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/f4f1bf1cc3b0b32e8635a849a089d975790e91f9.jpg"
+  },
+  {
+   "key": "dlc_refugees_city_3_fin",
+   "name": "Strengthened camp",
+   "description": "You've provided the camp with some fortifications. They look dubious, but the settlers like them.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/e456a4abeaa4590e1216497908268291374fcbbf.jpg"
+  },
+  {
+   "key": "dlc_refugees_cook",
+   "name": "Raccoon thyroid stew",
+   "description": "The cook has recovered her peace of mind. Now her friends won't avoid obesity and gastritis.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/518fef68d66667309ea57c098265da30b0f36503.jpg"
+  },
+  {
+   "key": "dlc_refugees_d1",
+   "name": "Revolution begins",
+   "description": "It's your last chance to join the workers and peasants. To be more specific, the donkeys and rats.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a01447b3b0c668172354f21dee744ced2bac591d.jpg"
+  },
+  {
+   "key": "dlc_refugees_d10",
+   "name": "Ideologist of Revolution",
+   "description": "You've helped revolutionaries a third time. Who is next in line for General Secretary?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/fab9ad4b28b3da5f83c2c6d822bc9ce4741be59b.jpg"
+  },
+  {
+   "key": "dlc_refugees_d16",
+   "name": "Long live the Revolution",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/bda65cd29894166cdf1828f6c541872cd54acf62.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_refugees_d3",
+   "name": "Cook of Revolution",
+   "description": "You've helped the revolutionaries. Let's spread donkey communism across the world!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/3d56243bd495b5bf4ca6889d389edde5ef02e202.jpg"
+  },
+  {
+   "key": "dlc_refugees_d6",
+   "name": "Writer of Revolution",
+   "description": "You've helped the revolutionaries again. They'll be hard pressed to hang you as a \"dirty exploiter\".",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/64bda2a651f84987c2f7a75e2c861e5d9bc7eb14.jpg"
+  },
+  {
+   "key": "dlc_refugees_paradise",
+   "name": "Paradise",
+   "description": "Your camp is flawless. You should write a guide to camp management!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/bce559527067760bb2193bf1b60f5166848a4a26.jpg"
+  },
+  {
+   "key": "dlc_refugees_s1",
+   "name": "An unexpected guest",
+   "description": "Met marquis Teodoro Jr. An aristocrat in danger - what could be more profitable!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/4702bcc897eebfad2e674269076bb832cdc2df64.jpg"
+  },
+  {
+   "key": "dlc_refugees_s10",
+   "name": "The face of the enemy",
+   "description": "Exposed the vampire. Time to play Van Helsing!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/d3851b0b69936577e6fc437ac07546cff747d278.jpg"
+  },
+  {
+   "key": "dlc_refugees_s12",
+   "name": "To stop an Ancient Curse",
+   "description": "Alaric convinced you to help. Refusal would have been dangerous to your health.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/c24b05d4440ec9074dc84162c4c3cd925b2066ed.jpg"
+  },
+  {
+   "key": "dlc_refugees_s15_1",
+   "name": "One more inquisitor",
+   "description": "Met lady Beatrice. Technically, you resisted her charms. But in your imagination...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/dd9e0c17fe9a34d693e03491a1fdb027556a1314.jpg"
+  },
+  {
+   "key": "dlc_refugees_s15_2",
+   "name": "Blood supplier",
+   "description": "Brought corpse blood to the vampire. Not very tasty, but better than many popular diets!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/26283acb8543be5193752510e579282f05af4a8e.jpg"
+  },
+  {
+   "key": "dlc_refugees_s15_3",
+   "name": "Vampires are over",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7cb674e776796b74936e2ace36e0919456922d94.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_refugees_s18",
+   "name": "Mysterious woman",
+   "description": "Watched a scene from the past. Nothing is clear but it's quite intriguing...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/5d6056dec6b1ae02cff4f235532ebfa04a71b5cd.jpg"
+  },
+  {
+   "key": "dlc_refugees_s23",
+   "name": "Spirit summoner",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2a6242fb20b759d9ace99b60dd66f1a2bdd86734.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_refugees_s28",
+   "name": "Exterminate!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/5faba2ac0dae54ae1a0e7dbbeb8f6bace469eff2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_refugees_s33",
+   "name": "Awkward interrogation",
+   "description": "Interrogated vampire Carl, leaving Carl greatly enlightened.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/4e107d41e0096281b11a3fc0402e2b0df2c704e0.jpg"
+  },
+  {
+   "key": "dlc_refugees_s37",
+   "name": "Between worlds",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/c0a9e1b3eb9c77618c120a066e72b541272c6ae9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_refugees_s40",
+   "name": "Lesser evil",
+   "description": "Lady Beatrice made you an offer you can't refuse. Unless you decide to refuse.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/75b8b7ec4cda81b1bfa5e1fb65f0b65c471722d0.jpg"
+  },
+  {
+   "key": "dlc_refugees_s46_or_s53",
+   "name": "Refugees are safe",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7a01142bb5b43527322ea4d87baefe7e3885ee39.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_refugees_s5",
+   "name": "Vampires in the Village",
+   "description": "A vampire is terrorizing the villagers? Solution: an army of carnivorous bees.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/45199385b6b1bac9dace61411d5ff6dd23407fd1.jpg"
+  },
+  {
+   "key": "dlc_refugees_tanner",
+   "name": "More forest thugs",
+   "description": "You provided the tanner's son with the bright and happy future of a forest thug. Nice work!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7d078265897e6e034ba22906e1f84a5c4b2123d4.jpg"
+  },
+  {
+   "key": "dlc_refugees_undertaker",
+   "name": "Beheaded horse",
+   "description": "You helped the undertaker deal with her dead husband's relatives. The funeral mass is soon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/f00ea989a2f501933f5000f8e2c7587c4b6cfd87.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_1",
+   "name": "Strange delivery",
+   "description": "Someone had to become the first client of the Donkey Express.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/e85ce173edc11a6310dc8a6bd58542e261ce5b8d.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_15",
+   "name": "Long-awaited appreciation",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/32f653e668e60e0b712b49b78969d41aaca34e26.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_16_1",
+   "name": "The first session of curing therapy",
+   "description": "Start Euric's treatment.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/903a6bf7a9087ab4bb6d0a2d4f5c0bc949d7af53.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_22",
+   "name": "A controlled ignition",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/995b9333ce39c7d58f3be0c464f48a3baa375311.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_24",
+   "name": "A fortunate gift",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/6e30f0360472021ba1ffcda170fa3c3ee2670e9e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_25",
+   "name": "The second session of curing therapy",
+   "description": "Continue Euric's treatment. He says he's feeling better. Probably.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/3831fe4287c19d3e8c9fb806e1d450dfdd9f88a5.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_30",
+   "name": "Endless sadness",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/8bb4f4fcd7a56c52a13a2c12b6280c0d7659d9ed.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_31",
+   "name": "The birth of passion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7c2e61727b580bda910f4e7a6076bffa9f4b00eb.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_33",
+   "name": "A vulnerability for authority",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/e16e0ac3296a7a0e1da8d4ef6f9a4346da0a66fd.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_34",
+   "name": "The third session of curing therapy",
+   "description": "The treatment is over, but Euric doesn't look so cured.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2b8b8d45b5babb2ccaf933785dbcc9e75a2205db.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_35",
+   "name": "Dissatisfied villagers",
+   "description": "The villagers are unhappy about something. Pray it's not your fault.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/93f5ee66a1792cfa9f1fcd3f66188c527444c852.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_41",
+   "name": "Help the villagers",
+   "description": "They should be satisfied. At least for now.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/66aa87a187b32a914c3cb667f408dde84c855ecf.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_46",
+   "name": "Return to the beginning",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/41cfc06a21410c2cb30ac559a9262c98dbd3ca7a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_souls_s_s_4_3",
+   "name": "A locked ghost from the past",
+   "description": "How could someone not be crazy after all this time?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/e5cb989a770c596bc63ab0a689949b3ebaa73d24.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_6a",
+   "name": "A habitable room",
+   "description": "Not a 5-star suite, but it will do.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/d856002c8062f2127c2fd00c9204e57e19b23bdf.jpg"
+  },
+  {
+   "key": "dlc_souls_s_s_6b_2",
+   "name": "A lost stained glass window",
+   "description": "It belongs in the church.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/ddfb1af7a30766d6d2ef01b2ac83ae2699ffb015.jpg"
+  },
+  {
+   "key": "dlc_stories_15_events",
+   "name": "The show must go on",
+   "description": "Organized 15 events. You're a natural-born event manager!  ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/d46ec6f426ed1afc07cb6c5e797f1d114d492050.jpg"
+  },
+  {
+   "key": "dlc_stories_barman",
+   "name": "Employee of the month",
+   "description": "Yorick became your bartender. For no salary. Slavery? No, he's made of wood! ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/381960e6c562ca775f4709df34bdbc0229e821fe.jpg"
+  },
+  {
+   "key": "dlc_stories_build_tavern",
+   "name": "Talking Skull",
+   "description": "Built the tavern. Horadric wishes you were dead now.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/709e6e67a59785025470735071efb05ff71edd01.jpg"
+  },
+  {
+   "key": "dlc_stories_buy_land",
+   "name": "Landlord",
+   "description": "Bought your first land in the Village. By cheating a sick and helpless old man.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7ca5b696babb905431359fd7731659df1aada3ee.jpg"
+  },
+  {
+   "key": "dlc_stories_cut_scene_1",
+   "name": "Forward to the past",
+   "description": "Used the archaeological time machine for the first time. And didn't go mad.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/179b412b5ed1b16d6fc872c529d3512fb196022a.jpg"
+  },
+  {
+   "key": "dlc_stories_cut_scene_10",
+   "name": "A nation divided",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a8639894fff0957b30f7cf8e282dd288da736bbe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_stories_cut_scene_14",
+   "name": "Viva la King",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/69b3ca0afd1e42316ce783389b68e9108fbf53b2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_stories_cut_scene_18",
+   "name": "Read before signing",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/9620b769c3af6a04521cc3d41b97613d90b71963.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_stories_cut_scene_6",
+   "name": "Witnessed him",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/6d68e83f0d12ff485f612dd1f7f041fc204ee99b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_stories_cut_scene_9",
+   "name": "King Gerry",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/400df930167fe503a65b4212ab6b1fdd8c8ae237.jpg",
+   "hidden": true
+  },
+  {
+   "key": "dlc_stories_first_alcoparty",
+   "name": "First party",
+   "description": "Threw your first alco-party. The guests remember nothing, but they enjoyed it.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/0b77378728705f93c208acb595539f807402ae66.jpg"
+  },
+  {
+   "key": "dlc_stories_first_rat_race",
+   "name": "Rat race",
+   "description": "Organized your first rat race. The winning rat got a giant piece of cheese, choked on it, and died.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/9b9ec2e93e9ccd50d73c934730a68ef0f2541547.jpg"
+  },
+  {
+   "key": "dlc_stories_first_sharmel_song",
+   "name": "Locking up the sun",
+   "description": "Put on your first concert. Ms. Charm's fans fell into ecstasy and a brawl broke out. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/511dc753f3acc00329f981884c728f74acad4aee.jpg"
+  },
+  {
+   "key": "dlc_stories_first_stand_up",
+   "name": "Open mic",
+   "description": "Put on your first Comedy Show. The guests laughed on command, so everything went good. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a447f73f6650c8424efc9272549f2261aeab0d80.jpg"
+  },
+  {
+   "key": "dlc_stories_good_alcoparty",
+   "name": "Best party",
+   "description": "Threw an excellent alco-party. It's time to open the local drunk tank.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/cff96c2c111064424dfd13a305c494486f421c40.jpg"
+  },
+  {
+   "key": "dlc_stories_good_rat_race",
+   "name": "Best race",
+   "description": "Organized an excellent rat race. Two guests lost everything and drowned themselves.  ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/167dbe1fa4d3b02f8f0c8beb7417689c4426be7f.jpg"
+  },
+  {
+   "key": "dlc_stories_good_sharmel_song",
+   "name": "Best concert",
+   "description": "Put on an excellent concert. Ms. Charm received a marriage proposal from each male spectator.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2bc70d351527c2c3b00c9bf7aacaf359ee6af5d3.jpg"
+  },
+  {
+   "key": "dlc_stories_good_stand_up",
+   "name": "Best mic",
+   "description": "Put on an excellent Comedy Show. It can't be -- the guests didn't have to be commanded to laugh!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/3223aa6f2393bdf758b4ebe5c3d1947c6c1f744e.jpg"
+  },
+  {
+   "key": "dlc_stories_tavern_q_20",
+   "name": "Good skull",
+   "description": "Your tavern's quality is 20! Wow!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/02d060d9f9aca0f29f77f0bef539140216a9544b.jpg"
+  },
+  {
+   "key": "dlc_stories_tavern_q_40",
+   "name": "Well-known skull",
+   "description": "Your tavern's quality is 40! Double Wow!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/0b91c01a8a035af90fafe18c85f4ead8e3d50d59.jpg"
+  },
+  {
+   "key": "dlc_stories_tavern_q_80",
+   "name": "Epic skull",
+   "description": "Your tavern's quality is 80! Ultra Wow!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/c38860cecfac4c597d8cbb819d80c30913d9a80a.jpg"
+  },
+  {
+   "key": "dungeon_1",
+   "name": "Not far from the ground",
+   "description": "Dungeon level 5 cleared!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/6a5f531263856807b31e539fd00f39e0ac4fdc8c.jpg"
+  },
+  {
+   "key": "dungeon_2",
+   "name": "Scary dungeon depths",
+   "description": "Dungeon level 10 cleared!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/ab363cc1def2434924fbf86b9322db131cabac7e.jpg"
+  },
+  {
+   "key": "dungeon_3",
+   "name": "Nothing underneath",
+   "description": "Dungeon level 15 cleared!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/d0749015027bcde62a5f4ba8da4e7d53d71ba40d.jpg"
+  },
+  {
+   "key": "eat_fishstick",
+   "name": "Tastes like home",
+   "description": "Ate a fish stick. It reminded you of home...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/684f7b9820b6cfe25592fefbc4c5740ee8c01122.jpg"
+  },
+  {
+   "key": "eat_healpots",
+   "name": "Health care",
+   "description": "50 health potions. -- And all of them red!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/199f139f83de43796f3b5cb81652b975cbfefb70.jpg"
+  },
+  {
+   "key": "first_slice",
+   "name": "First slice",
+   "description": "Got your first slice of meat. Smells a little strange, but looks like ordinary meat...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/49b97c3f9c1580ccf8c1bad21229f60cb86b7ca3.jpg"
+  },
+  {
+   "key": "first_slice_10",
+   "name": "Sashimi master",
+   "description": "Made 30 slices. You've got the perfect size slice pretty much down.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/feaa922dfe8616049d3e5775f867850e91377f42.jpg"
+  },
+  {
+   "key": "fish_1",
+   "name": "A fish a day!",
+   "description": "Caught 6 different types of fish. One fish for every day!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/7453a4e9532deaba2d4e241dc9d15259d3ac415b.jpg"
+  },
+  {
+   "key": "fish_2",
+   "name": "Fish collector",
+   "description": "Caught 10 different types of fish.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/5a4f7399441ceecc4da4e0aef25dab19b6818289.jpg"
+  },
+  {
+   "key": "fish_200",
+   "name": "Brutal fisherman",
+   "description": "Caught 200 fish. Your name is used to terrify misbehaving fish larvae.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/bcd6a99c4e59e8edf0f396157c51c7fce3de54f3.jpg"
+  },
+  {
+   "key": "fish_3",
+   "name": "Ichthyologist",
+   "description": "Caught 15 types of fish! You know everything about fish. They feel uncomfortable about it...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/b9fe045b889b9e31b8abadfb06080080188a9b62.jpg"
+  },
+  {
+   "key": "fish_goldfish",
+   "name": "Gold fish",
+   "description": "Got a gold fish. Want to make a wish?",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/414a0b9f03aae02749a207ee18e4f25322007745.jpg"
+  },
+  {
+   "key": "fix_bridge",
+   "name": "Bridge builder",
+   "description": "Fixed the bridge. Whatever else happens, you'll always be remembered as a great bridge builder!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2c0bcc4f913c58c3bd61d4ff0eaf242f429a255d.jpg"
+  },
+  {
+   "key": "fix_garden",
+   "name": "Even here",
+   "description": "Fixed the garden. You'll spend a lot of time here...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/01ee0b1f71d2ffc73c77b2d6113bf33c1a2ca6de.jpg"
+  },
+  {
+   "key": "fix_mill",
+   "name": "The Mill",
+   "description": "Fixed the mill. No further need to grind everything by hand.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/df13242e677d11184d0421aaa1b057e9e9a18952.jpg"
+  },
+  {
+   "key": "gold_pumpkin",
+   "name": "Golden pumpkin",
+   "description": "Harvested a gold-star pumpkin.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/9e223c08b4309f5406fb1a0beda11da7ab43775b.jpg"
+  },
+  {
+   "key": "hidden_act_astro",
+   "name": "Prodigal father",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2f1c7832899adf1557e3782be8abe1ec4064c085.jpg",
+   "hidden": true
+  },
+  {
+   "key": "hidden_imyourfather",
+   "name": "A father and a son",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/4de04c2c17468b5eed26fc2b67698c3e9c3b72f1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "hidden_merch_bish",
+   "name": "Two brothers",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/fe029c42e5c67c7a8c88db7aca35f820f8be54f3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "hidden_portal",
+   "name": "Back home",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/88267ae80e7344e4fe2a0e5c1cf4a231100a1a0d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ideal_song",
+   "name": "Ideal song",
+   "description": "Got an Ideal Song from Vagner. Now you know how you'll make a million bucks, once you get back home.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/cabeb8fe40773ac1caedadc8e5fac73f37b1914b.jpg"
+  },
+  {
+   "key": "kill_witcher",
+   "name": "Side quest",
+   "description": "You killed a Vampire Hunter. In life, there are no side quests.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/33ce72b291e2fc2263a982219237fe55eb4de2a8.jpg"
+  },
+  {
+   "key": "marble",
+   "name": "Marble",
+   "description": "Got the marble quarry ready. Marble is better than stone.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/a2753fe4b4a546e179eeb58114e252610ddb4773.jpg"
+  },
+  {
+   "key": "meet_actress",
+   "name": "Charm itself",
+   "description": "Met Ms Charm. There's something about this woman that you can't understand.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/0736229b4673a112d409cb653a8c920db5c42444.jpg"
+  },
+  {
+   "key": "meet_astro",
+   "name": "Old Astrologer",
+   "description": "Met Astrologer. He's wise and tired of everything, even life.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2c2c2a4f232a82f214e027b9539075115f577449.jpg"
+  },
+  {
+   "key": "meet_bishop",
+   "name": "Sweetheart Bishop",
+   "description": "Met Bishop. His motto - Pray, preach, and look like you won the lottery.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/6af917b3f9155cba585a0456add5447a6f4bb444.jpg"
+  },
+  {
+   "key": "meet_inq",
+   "name": "Holy Inquisition",
+   "description": "Met the Lord Inquisitor. An unwavering kind of guy. You definitely wouldn't want to be his enemy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/fff43930fa4c359c7677017c9e0615d18c8439fb.jpg"
+  },
+  {
+   "key": "meet_merch",
+   "name": "Wealthy merchant",
+   "description": "Met Merchant. He's always ready to do business. Except around dinner time.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/9c77547ff77ab64ff7e97d146f40791de5e2475d.jpg"
+  },
+  {
+   "key": "meet_snake",
+   "name": "Shady Snake",
+   "description": "Met Snake. He seems dangerous. You get why everybody calls him Snake. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/66b8bef014921bbfe046714378b33b3f6e6cf635.jpg"
+  },
+  {
+   "key": "merch_5_fame",
+   "name": "On every shelf",
+   "description": "Your company achieved 5 Fame. When you want quality vegetables -- you go to the graveyard!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/af594fe28db4ce82ccf26bbf6ed85cf48c5515ff.jpg"
+  },
+  {
+   "key": "merch_deal",
+   "name": "Graveyard Veggies",
+   "description": "Started a company with Merchant. A great name for a successful company!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/d85ec9033a6821b8ff914f6c34125ca15946d2fc.jpg"
+  },
+  {
+   "key": "necronomicon",
+   "name": "A book with funny pictures",
+   "description": "Gave the Necronomicon to Snake. Hope nobody uses it as cookbook!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/2a73d08f929cf0806e58e9240a8b521f40f76f57.jpg"
+  },
+  {
+   "key": "parfume",
+   "name": "Perfume",
+   "description": "Gave some perfume to Ms Charm. It smells nice, and wasn't tested on animals.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/976653db1fae6afde5a0842fa721c56034538b14.jpg"
+  },
+  {
+   "key": "player_die",
+   "name": "MacPlayer",
+   "description": "There can be only one.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/1fad62cd7b82275b58320046b45f71f639a20c38.jpg"
+  },
+  {
+   "key": "stone_fence",
+   "name": "Stone fence",
+   "description": "Built a stone fence around the graveyard. Your graveyard is well protected now.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/0acebb083b22439003891ab3dd736750506af109.jpg"
+  },
+  {
+   "key": "summon_snake",
+   "name": "Summon a chicken",
+   "description": "Snake summoned a chicken. Well... it's a start. Better than nothing.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/e2a2aa0281d9f68a4731aa86a58c6cda9d51f316.jpg"
+  },
+  {
+   "key": "tech_b",
+   "name": "Just blue points",
+   "description": "Collected 1000 blue points. They do not decay at midnight. So that was easy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/ec95bfbeb449c58b670acfc496b3bbb7c787370a.jpg"
+  },
+  {
+   "key": "tech_b2",
+   "name": "More blue points!",
+   "description": "Collected 3000 blue points. Ok. Now that's impressive.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/14bbc250b4f6cc9a71c39c3f907023e278f783b5.jpg"
+  },
+  {
+   "key": "tech_g",
+   "name": "Just green points",
+   "description": "Collected 1000 green points. They do not decay at midnight. So that was easy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/71e30c482700d81721dae5c5bc735bec0b5850a2.jpg"
+  },
+  {
+   "key": "tech_g2",
+   "name": "More green points!",
+   "description": "Collected 3000 green points. Ok. Now that's impressive.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/91f84d11afcb2b53b6d150ec2b6b6a6989be63bb.jpg"
+  },
+  {
+   "key": "tech_r",
+   "name": "Just red points",
+   "description": "Collected 1000 red points. They do not decay at midnight. So that was easy.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/d338952c0d33e64a129ed0f50f45155d6986a9f6.jpg"
+  },
+  {
+   "key": "tech_r2",
+   "name": "More red points!",
+   "description": "Collected 3000 red points. Ok. Now that's impressive.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/36335ec6268ff6f2a18e84c823b90f1a545c1bcd.jpg"
+  },
+  {
+   "key": "witch_hill",
+   "name": "Night watch",
+   "description": "Got rid of the guardsmen's ambush. Now you are the Witch Hill Keeper too!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/599140/cb6284861c87785b08db7c4a08cec2cb14659461.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Graveyard Keeper",
+   "achievements": [
+    {
+     "apiname": "bury_1_body",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Novice gravedigger",
+     "description": "Buried your first body."
+    },
+    {
+     "apiname": "bury_10_bodies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Advanced gravedigger",
+     "description": "Buried 10 bodies."
+    },
+    {
+     "apiname": "bury_50_bodies",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shovel master",
+     "description": "Buried 50 bodies."
+    },
+    {
+     "apiname": "first_slice",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First slice",
+     "description": "Got your first slice of meat. Smells a little strange, but looks like ordinary meat..."
+    },
+    {
+     "apiname": "first_slice_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sashimi master",
+     "description": "Made 30 slices. You've got the perfect size slice pretty much down."
+    },
+    {
+     "apiname": "church_up_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "His house",
+     "description": "Upgraded the church."
+    },
+    {
+     "apiname": "church_up_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "His mansion",
+     "description": "Upgraded the church for the second time."
+    },
+    {
+     "apiname": "fish_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A fish a day!",
+     "description": "Caught 6 different types of fish. One fish for every day!"
+    },
+    {
+     "apiname": "fish_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fish collector",
+     "description": "Caught 10 different types of fish."
+    },
+    {
+     "apiname": "fish_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ichthyologist",
+     "description": "Caught 15 types of fish! You know everything about fish. They feel uncomfortable about it..."
+    },
+    {
+     "apiname": "fish_200",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brutal fisherman",
+     "description": "Caught 200 fish. Your name is used to terrify misbehaving fish larvae."
+    },
+    {
+     "apiname": "fish_goldfish",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gold fish",
+     "description": "Got a gold fish. Want to make a wish?"
+    },
+    {
+     "apiname": "cook_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kitchen boy",
+     "description": "Cooked 10 different dishes or drinks."
+    },
+    {
+     "apiname": "cook_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cook",
+     "description": "Cooked 20 different dishes or drinks."
+    },
+    {
+     "apiname": "cook_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chef",
+     "description": "Cooked 30 different dishes or drinks. You can call yourself a Chef now."
+    },
+    {
+     "apiname": "cook_golddinner",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dream dinner",
+     "description": "Made a gold-star dinner. "
+    },
+    {
+     "apiname": "eat_fishstick",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tastes like home",
+     "description": "Ate a fish stick. It reminded you of home..."
+    },
+    {
+     "apiname": "craft_alch_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Apprentice",
+     "description": "Discovered 5 alchemy recipes. You're getting to know how things work in the lab."
+    },
+    {
+     "apiname": "craft_alch_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Alchemist",
+     "description": "Discovered 10 alchemy recipes. Just remember, the Philosopher's Stone is a lie."
+    },
+    {
+     "apiname": "craft_alch_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master alchemist",
+     "description": "Discovered 20 alchemy recipes. Now it's time to buy a white van and drive into the desert."
+    },
+    {
+     "apiname": "eat_healpots",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Health care",
+     "description": "50 health potions. -- And all of them red!"
+    },
+    {
+     "apiname": "player_die",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "MacPlayer",
+     "description": "There can be only one."
+    },
+    {
+     "apiname": "dungeon_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not far from the ground",
+     "description": "Dungeon level 5 cleared!"
+    },
+    {
+     "apiname": "dungeon_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scary dungeon depths",
+     "description": "Dungeon level 10 cleared!"
+    },
+    {
+     "apiname": "dungeon_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nothing underneath",
+     "description": "Dungeon level 15 cleared!"
+    },
+    {
+     "apiname": "gold_pumpkin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golden pumpkin",
+     "description": "Harvested a gold-star pumpkin."
+    },
+    {
+     "apiname": "craft_gold_wine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Winemaker ",
+     "description": "Made a gold-star wine."
+    },
+    {
+     "apiname": "meet_astro",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Old Astrologer",
+     "description": "Met Astrologer. He's wise and tired of everything, even life."
+    },
+    {
+     "apiname": "meet_actress",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Charm itself",
+     "description": "Met Ms Charm. There's something about this woman that you can't understand."
+    },
+    {
+     "apiname": "meet_merch",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wealthy merchant",
+     "description": "Met Merchant. He's always ready to do business. Except around dinner time."
+    },
+    {
+     "apiname": "meet_inq",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Holy Inquisition",
+     "description": "Met the Lord Inquisitor. An unwavering kind of guy. You definitely wouldn't want to be his enemy."
+    },
+    {
+     "apiname": "meet_bishop",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sweetheart Bishop",
+     "description": "Met Bishop. His motto - Pray, preach, and look like you won the lottery."
+    },
+    {
+     "apiname": "summon_snake",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Summon a chicken",
+     "description": "Snake summoned a chicken. Well... it's a start. Better than nothing."
+    },
+    {
+     "apiname": "kill_witcher",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Side quest",
+     "description": "You killed a Vampire Hunter. In life, there are no side quests."
+    },
+    {
+     "apiname": "decore_dtemple",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Simple but stylish",
+     "description": "Decorated a Dark Shrine. Looks better than your first apartment!"
+    },
+    {
+     "apiname": "burger_seller",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not a hot dog",
+     "description": "Sold burgers at the burning ceremony. It's a mystery why you didn't make hotdogs."
+    },
+    {
+     "apiname": "all_darkparts",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Match 3",
+     "description": "Collected three dark organs. Three in a row! The Inquisition is going to get a prize!"
+    },
+    {
+     "apiname": "witch_hill",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Night watch",
+     "description": "Got rid of the guardsmen's ambush. Now you are the Witch Hill Keeper too!"
+    },
+    {
+     "apiname": "parfume",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfume",
+     "description": "Gave some perfume to Ms Charm. It smells nice, and wasn't tested on animals."
+    },
+    {
+     "apiname": "ideal_song",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ideal song",
+     "description": "Got an Ideal Song from Vagner. Now you know how you'll make a million bucks, once you get back home."
+    },
+    {
+     "apiname": "merch_deal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Graveyard Veggies",
+     "description": "Started a company with Merchant. A great name for a successful company!"
+    },
+    {
+     "apiname": "merch_5_fame",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On every shelf",
+     "description": "Your company achieved 5 Fame. When you want quality vegetables -- you go to the graveyard!"
+    },
+    {
+     "apiname": "astro_book",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best seller",
+     "description": "Gave a gold-star book to Astrologer. You should consider writing six more..."
+    },
+    {
+     "apiname": "fix_garden",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Even here",
+     "description": "Fixed the garden. You'll spend a lot of time here..."
+    },
+    {
+     "apiname": "stone_fence",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stone fence",
+     "description": "Built a stone fence around the graveyard. Your graveyard is well protected now."
+    },
+    {
+     "apiname": "marble",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Marble",
+     "description": "Got the marble quarry ready. Marble is better than stone."
+    },
+    {
+     "apiname": "astro_skull",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A perfect gift",
+     "description": "Gave a skull to Astrologer. A skull makes a nice present indeed!"
+    },
+    {
+     "apiname": "fix_mill",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Mill",
+     "description": "Fixed the mill. No further need to grind everything by hand."
+    },
+    {
+     "apiname": "necronomicon",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A book with funny pictures",
+     "description": "Gave the Necronomicon to Snake. Hope nobody uses it as cookbook!"
+    },
+    {
+     "apiname": "fix_bridge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bridge builder",
+     "description": "Fixed the bridge. Whatever else happens, you'll always be remembered as a great bridge builder!"
+    },
+    {
+     "apiname": "tech_g",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just green points",
+     "description": "Collected 1000 green points. They do not decay at midnight. So that was easy."
+    },
+    {
+     "apiname": "tech_b",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just blue points",
+     "description": "Collected 1000 blue points. They do not decay at midnight. So that was easy."
+    },
+    {
+     "apiname": "tech_r",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just red points",
+     "description": "Collected 1000 red points. They do not decay at midnight. So that was easy."
+    },
+    {
+     "apiname": "tech_g2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "More green points!",
+     "description": "Collected 3000 green points. Ok. Now that's impressive."
+    },
+    {
+     "apiname": "tech_b2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "More blue points!",
+     "description": "Collected 3000 blue points. Ok. Now that's impressive."
+    },
+    {
+     "apiname": "tech_r2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "More red points!",
+     "description": "Collected 3000 red points. Ok. Now that's impressive."
+    },
+    {
+     "apiname": "hidden_portal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Back home",
+     "description": ""
+    },
+    {
+     "apiname": "hidden_act_astro",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Prodigal father",
+     "description": ""
+    },
+    {
+     "apiname": "hidden_merch_bish",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Two brothers",
+     "description": ""
+    },
+    {
+     "apiname": "hidden_imyourfather",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A father and a son",
+     "description": ""
+    },
+    {
+     "apiname": "betray_gerry",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "He trusted you...",
+     "description": ""
+    },
+    {
+     "apiname": "meet_snake",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shady Snake",
+     "description": "Met Snake. He seems dangerous. You get why everybody calls him Snake. "
+    },
+    {
+     "apiname": "dlc_stories_buy_land",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Landlord",
+     "description": "Bought your first land in the Village. By cheating a sick and helpless old man."
+    },
+    {
+     "apiname": "dlc_stories_build_tavern",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Talking Skull",
+     "description": "Built the tavern. Horadric wishes you were dead now."
+    },
+    {
+     "apiname": "dlc_stories_tavern_q_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good skull",
+     "description": "Your tavern's quality is 20! Wow!"
+    },
+    {
+     "apiname": "dlc_stories_tavern_q_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well-known skull",
+     "description": "Your tavern's quality is 40! Double Wow!"
+    },
+    {
+     "apiname": "dlc_stories_tavern_q_80",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Epic skull",
+     "description": "Your tavern's quality is 80! Ultra Wow!"
+    },
+    {
+     "apiname": "dlc_stories_barman",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Employee of the month",
+     "description": "Yorick became your bartender. For no salary. Slavery? No, he's made of wood! "
+    },
+    {
+     "apiname": "dlc_stories_first_alcoparty",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First party",
+     "description": "Threw your first alco-party. The guests remember nothing, but they enjoyed it."
+    },
+    {
+     "apiname": "dlc_stories_first_stand_up",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Open mic",
+     "description": "Put on your first Comedy Show. The guests laughed on command, so everything went good. "
+    },
+    {
+     "apiname": "dlc_stories_first_sharmel_song",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Locking up the sun",
+     "description": "Put on your first concert. Ms. Charm's fans fell into ecstasy and a brawl broke out. "
+    },
+    {
+     "apiname": "dlc_stories_first_rat_race",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rat race",
+     "description": "Organized your first rat race. The winning rat got a giant piece of cheese, choked on it, and died."
+    },
+    {
+     "apiname": "dlc_stories_good_alcoparty",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best party",
+     "description": "Threw an excellent alco-party. It's time to open the local drunk tank."
+    },
+    {
+     "apiname": "dlc_stories_good_stand_up",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best mic",
+     "description": "Put on an excellent Comedy Show. It can't be -- the guests didn't have to be commanded to laugh!"
+    },
+    {
+     "apiname": "dlc_stories_good_sharmel_song",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best concert",
+     "description": "Put on an excellent concert. Ms. Charm received a marriage proposal from each male spectator."
+    },
+    {
+     "apiname": "dlc_stories_good_rat_race",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Best race",
+     "description": "Organized an excellent rat race. Two guests lost everything and drowned themselves.  "
+    },
+    {
+     "apiname": "dlc_stories_15_events",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The show must go on",
+     "description": "Organized 15 events. You're a natural-born event manager!  "
+    },
+    {
+     "apiname": "dlc_stories_cut_scene_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forward to the past",
+     "description": "Used the archaeological time machine for the first time. And didn't go mad."
+    },
+    {
+     "apiname": "dlc_stories_cut_scene_6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Witnessed him",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_stories_cut_scene_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A nation divided",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_stories_cut_scene_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Viva la King",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_stories_cut_scene_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Read before signing",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_stories_cut_scene_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "King Gerry",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_s1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "An unexpected guest",
+     "description": "Met marquis Teodoro Jr. An aristocrat in danger - what could be more profitable!"
+    },
+    {
+     "apiname": "dlc_refugees_s5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vampires in the Village",
+     "description": "A vampire is terrorizing the villagers? Solution: an army of carnivorous bees."
+    },
+    {
+     "apiname": "dlc_refugees_s10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The face of the enemy",
+     "description": "Exposed the vampire. Time to play Van Helsing!"
+    },
+    {
+     "apiname": "dlc_refugees_s12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "To stop an Ancient Curse",
+     "description": "Alaric convinced you to help. Refusal would have been dangerous to your health."
+    },
+    {
+     "apiname": "dlc_refugees_s15_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One more inquisitor",
+     "description": "Met lady Beatrice. Technically, you resisted her charms. But in your imagination..."
+    },
+    {
+     "apiname": "dlc_refugees_s15_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Blood supplier",
+     "description": "Brought corpse blood to the vampire. Not very tasty, but better than many popular diets!"
+    },
+    {
+     "apiname": "dlc_refugees_s15_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vampires are over",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_s18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mysterious woman",
+     "description": "Watched a scene from the past. Nothing is clear but it's quite intriguing..."
+    },
+    {
+     "apiname": "dlc_refugees_s23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spirit summoner",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_s28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exterminate!",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_s33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Awkward interrogation",
+     "description": "Interrogated vampire Carl, leaving Carl greatly enlightened."
+    },
+    {
+     "apiname": "dlc_refugees_s37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Between worlds",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_s40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lesser evil",
+     "description": "Lady Beatrice made you an offer you can't refuse. Unless you decide to refuse."
+    },
+    {
+     "apiname": "dlc_refugees_s46_or_s53",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Refugees are safe",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_d1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Revolution begins",
+     "description": "It's your last chance to join the workers and peasants. To be more specific, the donkeys and rats."
+    },
+    {
+     "apiname": "dlc_refugees_d3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cook of Revolution",
+     "description": "You've helped the revolutionaries. Let's spread donkey communism across the world!"
+    },
+    {
+     "apiname": "dlc_refugees_d6",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Writer of Revolution",
+     "description": "You've helped the revolutionaries again. They'll be hard pressed to hang you as a \"dirty exploiter\"."
+    },
+    {
+     "apiname": "dlc_refugees_d10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ideologist of Revolution",
+     "description": "You've helped revolutionaries a third time. Who is next in line for General Secretary?"
+    },
+    {
+     "apiname": "dlc_refugees_d16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Long live the Revolution",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_refugees_city_1_fin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Camp",
+     "description": "Now you have your own camp! And hundreds of potential enemies -- in the form of Inquisitors."
+    },
+    {
+     "apiname": "dlc_refugees_city_2_fin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Developed camp",
+     "description": "You've improved your camp. The chances that the refugees will die of starvation got lower."
+    },
+    {
+     "apiname": "dlc_refugees_city_3_fin",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strengthened camp",
+     "description": "You've provided the camp with some fortifications. They look dubious, but the settlers like them."
+    },
+    {
+     "apiname": "dlc_refugees_paradise",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Paradise",
+     "description": "Your camp is flawless. You should write a guide to camp management!"
+    },
+    {
+     "apiname": "dlc_refugees_cook",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Raccoon thyroid stew",
+     "description": "The cook has recovered her peace of mind. Now her friends won't avoid obesity and gastritis."
+    },
+    {
+     "apiname": "dlc_refugees_undertaker",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beheaded horse",
+     "description": "You helped the undertaker deal with her dead husband's relatives. The funeral mass is soon."
+    },
+    {
+     "apiname": "dlc_refugees_tanner",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "More forest thugs",
+     "description": "You provided the tanner's son with the bright and happy future of a forest thug. Nice work!"
+    },
+    {
+     "apiname": "dlc_souls_s_s_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Strange delivery",
+     "description": "Someone had to become the first client of the Donkey Express."
+    },
+    {
+     "apiname": "dlc_souls_s_s_4_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A locked ghost from the past",
+     "description": "How could someone not be crazy after all this time?"
+    },
+    {
+     "apiname": "dlc_souls_s_s_6a",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A habitable room",
+     "description": "Not a 5-star suite, but it will do."
+    },
+    {
+     "apiname": "dlc_souls_s_s_6b_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A lost stained glass window",
+     "description": "It belongs in the church."
+    },
+    {
+     "apiname": "dlc_souls_s_s_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Long-awaited appreciation",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_souls_s_s_16_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The first session of curing therapy",
+     "description": "Start Euric's treatment."
+    },
+    {
+     "apiname": "dlc_souls_s_s_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A controlled ignition",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_souls_s_s_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A fortunate gift",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_souls_s_s_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The second session of curing therapy",
+     "description": "Continue Euric's treatment. He says he's feeling better. Probably."
+    },
+    {
+     "apiname": "dlc_souls_s_s_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Endless sadness",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_souls_s_s_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The birth of passion",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_souls_s_s_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A vulnerability for authority",
+     "description": ""
+    },
+    {
+     "apiname": "dlc_souls_s_s_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The third session of curing therapy",
+     "description": "The treatment is over, but Euric doesn't look so cured."
+    },
+    {
+     "apiname": "dlc_souls_s_s_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dissatisfied villagers",
+     "description": "The villagers are unhappy about something. Pray it's not your fault."
+    },
+    {
+     "apiname": "dlc_souls_s_s_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Help the villagers",
+     "description": "They should be satisfied. At least for now."
+    },
+    {
+     "apiname": "dlc_souls_s_s_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Return to the beginning",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

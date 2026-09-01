@@ -1,0 +1,37 @@
+{
+ "provider": "steam",
+ "title": "Finding Paradise",
+ "updated": "2026-08-30",
+ "id": "337340",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 1,
+ "platform": "PC",
+ "icon": "a73f4efe629814dee218036dfc08e293dea41137",
+ "achievements": [
+  {
+   "key": "ACH_FIN",
+   "name": "Wish Granted",
+   "description": "Fulfill Colin's last wish. ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/337340/0629efc88b728ac1280cb8a028d64c13b9f70e17.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Finding Paradise",
+   "achievements": [
+    {
+     "apiname": "ACH_FIN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wish Granted",
+     "description": "Fulfill Colin's last wish. "
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,361 @@
+{
+ "provider": "steam",
+ "title": "Bastion",
+ "updated": "2026-08-30",
+ "id": "107100",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 24,
+ "platform": "PC",
+ "icon": "8377b4460f19465c261673f76f2656bdb3288273",
+ "playtime_mins": 73,
+ "last_played": "2014-01-19",
+ "achievements": [
+  {
+   "key": "AchAllWeaponUpgrades",
+   "name": "Man-at-Arms",
+   "description": "Use the Forge to fully upgrade every weapon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/2419c346be566d8a67543ef27760ead377892783.jpg"
+  },
+  {
+   "key": "AchAttack",
+   "name": "The Ura",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/ad722cdf0698903f2825c5443a441eaf74fc75ca.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchBastion",
+   "name": "The Stranger",
+   "description": "Complete the Wharf District",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/baaeb1e86d63264db974e50b2e6749e691448504.jpg"
+  },
+  {
+   "key": "AchEndA",
+   "name": "The End",
+   "description": "Complete the story",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/4c87944c39e916a115eb3bf49879203daff00916.jpg"
+  },
+  {
+   "key": "AchEndB",
+   "name": "The Beginning",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/a47082620790769836ceaeeb2acbe7a62141f6a9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchHardcorePoints",
+   "name": "Hard Bargain",
+   "description": "Earn a total of at least 1,000,000 points in Score Attack Mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/917118285c622bf389867cc70be2c686f83d337b.jpg"
+  },
+  {
+   "key": "AchNGP",
+   "name": "Calamity Kid",
+   "description": "Complete the story in New Game Plus",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/795e488d20feefe9a35d60e8be3ad91091fbeaba.jpg"
+  },
+  {
+   "key": "AchOnslaught01_10Idols",
+   "name": "Just Like That",
+   "description": "Complete the Kid's Dream with all ten Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/7c7eb4ac6ee994785cf3d6cb7607a71723a8874a.jpg"
+  },
+  {
+   "key": "AchOnslaught01_5Idols",
+   "name": "Whatever's Out There",
+   "description": "Complete the Kid's Dream with five or more Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/821051ff18aca11b12b4544d865324db7b89efa2.jpg"
+  },
+  {
+   "key": "AchOnslaught02_10Idols",
+   "name": "Calamity All Around",
+   "description": "Complete the Singer's Dream with all ten Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/7c63c767f7d54e482e9391d919fbaf8984680598.jpg"
+  },
+  {
+   "key": "AchOnslaught02_5Idols",
+   "name": "Lock Yourself In",
+   "description": "Complete the Singer's Dream with five or more Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/ce98b6dcbf72866fc28ddd42185e4f9c91660c26.jpg"
+  },
+  {
+   "key": "AchOnslaught03_10Idols",
+   "name": "Ashes in the Sky",
+   "description": "Complete the Survivor's Dream with all ten Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/822dea4229f36c31673500a390279214483a0a4c.jpg"
+  },
+  {
+   "key": "AchOnslaught03_5Idols",
+   "name": "A Lasting Peace",
+   "description": "Complete the Survivor's Dream with five or more Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/23ef3e6dba1e34ac25903387d411a8f1698cac9a.jpg"
+  },
+  {
+   "key": "AchOnslaught04_10Idols",
+   "name": "About the Author",
+   "description": "Complete the Stranger's Dream with all ten Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/20aa8ed8c6795e845683562550c8f4c4b02c3544.jpg"
+  },
+  {
+   "key": "AchOnslaught04_5Idols",
+   "name": "All in the Mind",
+   "description": "Complete the Stranger's Dream with five or more Shrine Idols invoked.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/d2664ca84ba5831e595e0eb6d4d4b5bb06b225e5.jpg"
+  },
+  {
+   "key": "AchOnslaughts",
+   "name": "Mind Voyager",
+   "description": "Complete each trip to Who Knows Where",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/4441730f2bf15c91310d08b1c31210e2dc9ff1e2.jpg"
+  },
+  {
+   "key": "AchPlayful",
+   "name": "Pet Sitter",
+   "description": "Get four different domesticated creatures in the Bastion",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/360d2b0eba998e94ea9c56b474804a6fd4b9d584.jpg"
+  },
+  {
+   "key": "AchPortalTurret",
+   "name": "Turret Opera",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/28537ab67af94038030356ee89b007aeac64890a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchVigilsA",
+   "name": "Vigilante",
+   "description": "Complete at least 50 percent of the Vigils in the Memorial",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/2bed8df5fedf8a053c73a8099c5dd0092b8d8234.jpg"
+  },
+  {
+   "key": "AchVigilsB",
+   "name": "Altruist",
+   "description": "Complete 100 percent of the Vigils in the Memorial",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/bca079a35fef34148068e4e7fc8c66f8f12497b0.jpg"
+  },
+  {
+   "key": "AchWeapons",
+   "name": "Kid-at-Arms",
+   "description": "Use the Forge to apply at least one upgrade to every weapon",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/bbad8152d0f1b6a9e03c40fc6e742f692b0d0b66.jpg"
+  },
+  {
+   "key": "AchWinter",
+   "name": "Ride the Wind",
+   "description": "Use the Skyway in the Wharf District.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/e6b71a22e2fd664cff80ab8684e8f6cbf196333c.jpg"
+  },
+  {
+   "key": "AchZia",
+   "name": "The Singer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/1c123369127abd0addf0fabd5f7ea4dd0a641666.jpg",
+   "hidden": true
+  },
+  {
+   "key": "AchZulf",
+   "name": "The Survivor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/107100/fb583f7a375f46373ab16d8560c7a92c74266c84.jpg",
+   "hidden": true
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Bastion",
+   "achievements": [
+    {
+     "apiname": "AchBastion",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Stranger",
+     "description": "Complete the Wharf District"
+    },
+    {
+     "apiname": "AchZulf",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Survivor",
+     "description": ""
+    },
+    {
+     "apiname": "AchZia",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Singer",
+     "description": ""
+    },
+    {
+     "apiname": "AchAttack",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Ura",
+     "description": ""
+    },
+    {
+     "apiname": "AchEndA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End",
+     "description": "Complete the story"
+    },
+    {
+     "apiname": "AchEndB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Beginning",
+     "description": ""
+    },
+    {
+     "apiname": "AchNGP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Calamity Kid",
+     "description": "Complete the story in New Game Plus"
+    },
+    {
+     "apiname": "AchOnslaughts",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mind Voyager",
+     "description": "Complete each trip to Who Knows Where"
+    },
+    {
+     "apiname": "AchWeapons",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Kid-at-Arms",
+     "description": "Use the Forge to apply at least one upgrade to every weapon"
+    },
+    {
+     "apiname": "AchPlayful",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pet Sitter",
+     "description": "Get four different domesticated creatures in the Bastion"
+    },
+    {
+     "apiname": "AchVigilsA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Vigilante",
+     "description": "Complete at least 50 percent of the Vigils in the Memorial"
+    },
+    {
+     "apiname": "AchVigilsB",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Altruist",
+     "description": "Complete 100 percent of the Vigils in the Memorial"
+    },
+    {
+     "apiname": "AchPortalTurret",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Turret Opera",
+     "description": ""
+    },
+    {
+     "apiname": "AchAllWeaponUpgrades",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Man-at-Arms",
+     "description": "Use the Forge to fully upgrade every weapon."
+    },
+    {
+     "apiname": "AchOnslaught01_5Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Whatever's Out There",
+     "description": "Complete the Kid's Dream with five or more Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchOnslaught01_10Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Just Like That",
+     "description": "Complete the Kid's Dream with all ten Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchOnslaught02_5Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lock Yourself In",
+     "description": "Complete the Singer's Dream with five or more Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchOnslaught02_10Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Calamity All Around",
+     "description": "Complete the Singer's Dream with all ten Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchOnslaught03_5Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Lasting Peace",
+     "description": "Complete the Survivor's Dream with five or more Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchOnslaught03_10Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ashes in the Sky",
+     "description": "Complete the Survivor's Dream with all ten Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchWinter",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ride the Wind",
+     "description": "Use the Skyway in the Wharf District."
+    },
+    {
+     "apiname": "AchHardcorePoints",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hard Bargain",
+     "description": "Earn a total of at least 1,000,000 points in Score Attack Mode"
+    },
+    {
+     "apiname": "AchOnslaught04_5Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All in the Mind",
+     "description": "Complete the Stranger's Dream with five or more Shrine Idols invoked."
+    },
+    {
+     "apiname": "AchOnslaught04_10Idols",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "About the Author",
+     "description": "Complete the Stranger's Dream with all ten Shrine Idols invoked."
+    }
+   ],
+   "success": true
+  }
+ }
+}

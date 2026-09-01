@@ -1,0 +1,653 @@
+{
+ "provider": "steam",
+ "title": "Children of Morta",
+ "updated": "2026-08-30",
+ "id": "330020",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 45,
+ "platform": "PC",
+ "icon": "29e179c5c7ac3aa6d3fb15ca5b19fd1124af4e7b",
+ "achievements": [
+  {
+   "key": "ANewMember",
+   "name": "A New Member",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/c40264c7793de2d5f342dbeb1d5244bc1fdb2024.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Adventurer",
+   "name": "Adventurer",
+   "description": "Complete 5 in-run events.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/9aad92c85a63494695d948c90e37d22602acf7e6.jpg"
+  },
+  {
+   "key": "AncientKnowledge",
+   "name": "Ancient Knowledge",
+   "description": "Upgrade The Book of Rea 5 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/e0411d513451f5608ccb481b2c4419d7a04c0cc8.jpg"
+  },
+  {
+   "key": "AncientMastery",
+   "name": "Ancient Mastery",
+   "description": "Upgrade The Book of Rea 15 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/5ded4ce26322ef7d5a378443743cc8294e435447.jpg"
+  },
+  {
+   "key": "ArmedtotheTeeth",
+   "name": "Armed to the Teeth",
+   "description": "Upgrade 75 times in the workshop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/2735685ae4b1b47160cbd0d72361a9637e4df5a8.jpg"
+  },
+  {
+   "key": "Bargainer",
+   "name": "Bargainer",
+   "description": "Free the shopkeeper.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/45ce4491e6d5ac3f8b6a85bbd566fc957e687e76.jpg"
+  },
+  {
+   "key": "BirthofHope",
+   "name": "Birth of Hope",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/e6f3f5a318f5df7b5fd9caaf8cd4f4084deecdc1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Challenger",
+   "name": "Challenger",
+   "description": "Complete 10 challenge rooms.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/5fa77979c92b4ac548a46afc7e86e5299dfb39f1.jpg"
+  },
+  {
+   "key": "CharmingBergson",
+   "name": "Charming Bergson",
+   "description": "Use 5 charms in the same dungeon run.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/8c3bc9a3831c5aa91af6b7dc4746f4dcabc46f5b.jpg"
+  },
+  {
+   "key": "ChildrenofGeppetto",
+   "name": "Children of Geppetto",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/fa97d253a4d1c381dfabf9d9a061381908eee142.jpg",
+   "hidden": true
+  },
+  {
+   "key": "CreamoftheCrop",
+   "name": "Cream of the Crop",
+   "description": "Unlock all family traits of a Bergson.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/ca586497b15762a31386387b3144e17faa18d33a.jpg"
+  },
+  {
+   "key": "DiVineMachine",
+   "name": "Di Vine Machine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/1566836638af95e23a618e0e7fea307861737150.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Explorer",
+   "name": "Explorer",
+   "description": "Complete 10 in-run events.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/5a8aae8f3fcf9adf7348c61d489669eb3cd3d630.jpg"
+  },
+  {
+   "key": "Faithful",
+   "name": "Faithful",
+   "description": "Find 10 divine items in a single dungeon.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/892e7ccd51e4301bb5752a1b3e1ad5dae0481f6d.jpg"
+  },
+  {
+   "key": "FamilyReunion",
+   "name": "Family Reunion",
+   "description": "Unlock all playable characters.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/2990b7f86e8bd158e76d9d91d2214c011c599cdd.jpg"
+  },
+  {
+   "key": "FerocityDenied",
+   "name": "Ferocity Denied",
+   "description": "Kill 50 ferocious enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/8ae7509ea3a6e88a4b3e275ba8a4cc41b00c8681.jpg"
+  },
+  {
+   "key": "FerocityShutDown",
+   "name": "Ferocity Shut Down",
+   "description": "Kill 250 ferocious enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/11e727efef216e5dd9c577b4f6c06f5c916af64a.jpg"
+  },
+  {
+   "key": "FirstSpirit",
+   "name": "First Spirit",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/912636042c6497c914e3c2fb2e7af4c93801e042.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FirstStep",
+   "name": "First Step",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/e04b96b7bbda9dbd8abe94d0d025616b6d9978b1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Gambler",
+   "name": "Gambler",
+   "description": "Free the blackmarketeer.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/dd8bfaa5cdaf38250f1501934171d4aa1a022bb9.jpg"
+  },
+  {
+   "key": "GearMastery",
+   "name": "Gear Mastery",
+   "description": "Upgrade 25 times in the workshop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/4ef265afd18542675970696882683f7ff493dcc7.jpg"
+  },
+  {
+   "key": "GearedUp",
+   "name": "Geared Up",
+   "description": "Have 3 runes equipped simultaneously.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/884273128cab903505dcb80c73239c202924c639.jpg"
+  },
+  {
+   "key": "GuardiansofMorta",
+   "name": "Guardians of Morta",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/61c5baef2ab08470a3e773f1ae0445e67978434b.jpg",
+   "hidden": true
+  },
+  {
+   "key": "IWontLetYouDie",
+   "name": "I Won't Let You Die",
+   "description": "Revive 5 times in co-op mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/a73cf203c692297eb46db2fdb772d800deda15a3.jpg"
+  },
+  {
+   "key": "ItHasBegun",
+   "name": "It Has Begun",
+   "description": "Investigate the shrine of Rea.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/01573e9168319fc4fc194fdae90fcbbabb74c2c7.jpg"
+  },
+  {
+   "key": "ItRunsintheFamily",
+   "name": "It Runs in the Family",
+   "description": "Kill a boss with every playable character.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/eb475cfc82390f05547de31105fbd91bf523c9e1.jpg"
+  },
+  {
+   "key": "Loremaster",
+   "name": "Loremaster",
+   "description": "Find 20 journals.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/5da48b5b1e7787fdc8b2ca30e3b39beaf63853bf.jpg"
+  },
+  {
+   "key": "MasteroftheObelisk",
+   "name": "Master of the Obelisk",
+   "description": "Gain each obelisk effect at least once.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/710659bfef3cef7224090f7526c319536fd031bf.jpg"
+  },
+  {
+   "key": "MostCurious",
+   "name": "Most Curious",
+   "description": "Resolve 20 puzzle events.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/e7b3d15d6c343a02a0ad41d45a20984dfe6408e0.jpg"
+  },
+  {
+   "key": "MotherMary",
+   "name": "Mother Mary",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/7d4dedec4f229ca5fa3c0a1b68e2c8a2f1275c50.jpg",
+   "hidden": true
+  },
+  {
+   "key": "NoMoreSecrets",
+   "name": "No More Secrets",
+   "description": "Find 10 secrets.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/08355cddcfe8dbecac5864ba617e2f6838e3c440.jpg"
+  },
+  {
+   "key": "OmnesproUno",
+   "name": "Omnes pro Uno",
+   "description": "Unlock all family traits.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/0cab80dff30912f8c84c4fa3e84c8fc6fb35d3c3.jpg"
+  },
+  {
+   "key": "Perfectionist",
+   "name": "Perfectionist",
+   "description": "Kill a boss without receiving damage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/eba37b35026a9cfb8f87b20d96872f9a5e4f5ba4.jpg"
+  },
+  {
+   "key": "RichieRich",
+   "name": "Richie Rich",
+   "description": "Have 20000 Morv.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/fd285ef2eed42dbedb2c4a7a97939a6e08acfde5.jpg"
+  },
+  {
+   "key": "Runemender",
+   "name": "Runemender",
+   "description": "Free the runemender.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/c2f464a233cb906b448f0d1b45835991949d9693.jpg"
+  },
+  {
+   "key": "SandSurvivor",
+   "name": "Sand Survivor",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/f2eae26c93a968cf8491608dc6add580681450a3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Scavenger",
+   "name": "Scavenger",
+   "description": "Bring back 15 souvenirs from the dungeons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/2a19658b2a5b57ef4d55e6e1e1e2b6a3d40200a9.jpg"
+  },
+  {
+   "key": "Stargazer",
+   "name": "Stargazer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/516de4dd01704efc815dc21b1f28839931c833ba.jpg",
+   "hidden": true
+  },
+  {
+   "key": "StrongerTogether",
+   "name": "Stronger Together",
+   "description": "Finish a dungeon in co-op mode.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/5b01194e81648b24014e1e3311c143ec838484ac.jpg"
+  },
+  {
+   "key": "TogetherWeStand",
+   "name": "Together We Stand",
+   "description": "Unlock a family trait of three different Bergsons.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/f7367ad412b5bf1ea16120ea2e107221a7128d74.jpg"
+  },
+  {
+   "key": "TooHottoStay",
+   "name": "Too Hot to Stay",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/e6afc7f6fea301b6743732de0f710a99b30a7b4e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "Trickster",
+   "name": "Trickster",
+   "description": "Kill 100 enemies using hazards.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/7885fa7a8860fed52d571d1a1377714a7195f082.jpg"
+  },
+  {
+   "key": "UnstoppableFamily",
+   "name": "Unstoppable Family",
+   "description": "Kill 5000 enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/d5e8fc695eb8dd0b488b785386dec67a75ce8131.jpg"
+  },
+  {
+   "key": "UnusproOmnibus",
+   "name": "Unus pro Omnibus",
+   "description": "Unlock a family trait.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/abe438ae95b45c5f8c15b0748dabe90ad6cf3ece.jpg"
+  },
+  {
+   "key": "Well-equipped",
+   "name": "Well-equipped",
+   "description": "Upgrade 10 times in the workshop.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/330020/c04809ec454d525cbe48b4307082660aaa4ccb59.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Children of Morta",
+   "achievements": [
+    {
+     "apiname": "ItHasBegun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It Has Begun",
+     "description": "Investigate the shrine of Rea."
+    },
+    {
+     "apiname": "FirstStep",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Step",
+     "description": ""
+    },
+    {
+     "apiname": "FirstSpirit",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Spirit",
+     "description": ""
+    },
+    {
+     "apiname": "MotherMary",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mother Mary",
+     "description": ""
+    },
+    {
+     "apiname": "SandSurvivor",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sand Survivor",
+     "description": ""
+    },
+    {
+     "apiname": "BirthofHope",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Birth of Hope",
+     "description": ""
+    },
+    {
+     "apiname": "TooHottoStay",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Too Hot to Stay",
+     "description": ""
+    },
+    {
+     "apiname": "GuardiansofMorta",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guardians of Morta",
+     "description": ""
+    },
+    {
+     "apiname": "ANewMember",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A New Member",
+     "description": ""
+    },
+    {
+     "apiname": "Stargazer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stargazer",
+     "description": ""
+    },
+    {
+     "apiname": "ChildrenofGeppetto",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Children of Geppetto",
+     "description": ""
+    },
+    {
+     "apiname": "DiVineMachine",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Di Vine Machine",
+     "description": ""
+    },
+    {
+     "apiname": "Adventurer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adventurer",
+     "description": "Complete 5 in-run events."
+    },
+    {
+     "apiname": "Explorer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Explorer",
+     "description": "Complete 10 in-run events."
+    },
+    {
+     "apiname": "Bargainer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bargainer",
+     "description": "Free the shopkeeper."
+    },
+    {
+     "apiname": "Runemender",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Runemender",
+     "description": "Free the runemender."
+    },
+    {
+     "apiname": "Gambler",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gambler",
+     "description": "Free the blackmarketeer."
+    },
+    {
+     "apiname": "Well-equipped",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well-equipped",
+     "description": "Upgrade 10 times in the workshop."
+    },
+    {
+     "apiname": "GearMastery",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gear Mastery",
+     "description": "Upgrade 25 times in the workshop."
+    },
+    {
+     "apiname": "ArmedtotheTeeth",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Armed to the Teeth",
+     "description": "Upgrade 75 times in the workshop."
+    },
+    {
+     "apiname": "AncientKnowledge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ancient Knowledge",
+     "description": "Upgrade The Book of Rea 5 times."
+    },
+    {
+     "apiname": "AncientMastery",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ancient Mastery",
+     "description": "Upgrade The Book of Rea 15 times."
+    },
+    {
+     "apiname": "UnusproOmnibus",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unus pro Omnibus",
+     "description": "Unlock a family trait."
+    },
+    {
+     "apiname": "CreamoftheCrop",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Cream of the Crop",
+     "description": "Unlock all family traits of a Bergson."
+    },
+    {
+     "apiname": "TogetherWeStand",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Together We Stand",
+     "description": "Unlock a family trait of three different Bergsons."
+    },
+    {
+     "apiname": "OmnesproUno",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Omnes pro Uno",
+     "description": "Unlock all family traits."
+    },
+    {
+     "apiname": "FamilyReunion",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Family Reunion",
+     "description": "Unlock all playable characters."
+    },
+    {
+     "apiname": "RichieRich",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Richie Rich",
+     "description": "Have 20000 Morv."
+    },
+    {
+     "apiname": "Scavenger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Scavenger",
+     "description": "Bring back 15 souvenirs from the dungeons."
+    },
+    {
+     "apiname": "Loremaster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Loremaster",
+     "description": "Find 20 journals."
+    },
+    {
+     "apiname": "MostCurious",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Most Curious",
+     "description": "Resolve 20 puzzle events."
+    },
+    {
+     "apiname": "Challenger",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Challenger",
+     "description": "Complete 10 challenge rooms."
+    },
+    {
+     "apiname": "Faithful",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Faithful",
+     "description": "Find 10 divine items in a single dungeon."
+    },
+    {
+     "apiname": "GearedUp",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Geared Up",
+     "description": "Have 3 runes equipped simultaneously."
+    },
+    {
+     "apiname": "CharmingBergson",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Charming Bergson",
+     "description": "Use 5 charms in the same dungeon run."
+    },
+    {
+     "apiname": "MasteroftheObelisk",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of the Obelisk",
+     "description": "Gain each obelisk effect at least once."
+    },
+    {
+     "apiname": "Trickster",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trickster",
+     "description": "Kill 100 enemies using hazards."
+    },
+    {
+     "apiname": "UnstoppableFamily",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Unstoppable Family",
+     "description": "Kill 5000 enemies."
+    },
+    {
+     "apiname": "FerocityDenied",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ferocity Denied",
+     "description": "Kill 50 ferocious enemies."
+    },
+    {
+     "apiname": "FerocityShutDown",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Ferocity Shut Down",
+     "description": "Kill 250 ferocious enemies."
+    },
+    {
+     "apiname": "StrongerTogether",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stronger Together",
+     "description": "Finish a dungeon in co-op mode."
+    },
+    {
+     "apiname": "IWontLetYouDie",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "I Won't Let You Die",
+     "description": "Revive 5 times in co-op mode."
+    },
+    {
+     "apiname": "NoMoreSecrets",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No More Secrets",
+     "description": "Find 10 secrets."
+    },
+    {
+     "apiname": "ItRunsintheFamily",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It Runs in the Family",
+     "description": "Kill a boss with every playable character."
+    },
+    {
+     "apiname": "Perfectionist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfectionist",
+     "description": "Kill a boss without receiving damage."
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "provider": "steam",
+ "title": "Momodora: Reverie Under the Moonlight",
+ "updated": "2026-08-30",
+ "id": "428550",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 9,
+ "platform": "PC",
+ "icon": "17d2a60ead58d88259b7ff68c0bf698b0b5e4afc",
+ "achievements": [
+  {
+   "key": "ACH_CHOIR",
+   "name": "Faithful",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/3acb18c79f04b3cd49de1022048b28f2d3bff644.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_END",
+   "name": "True Ending",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/859453c3d0075ef51ef6e6725bf4c6e81f5ad398.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_FLORIST",
+   "name": "Bug Collector",
+   "description": "Find all Ivory Bugs and bring them to the bunny florist.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/747822254d4ad28944e072be018c27d1312cebd3.jpg"
+  },
+  {
+   "key": "ACH_IMP",
+   "name": "P-pleasegiveittome!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/eaaa6f63f45f5ac06ab709e3982f663cb5892101.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_INSANE",
+   "name": "Don't even try this.",
+   "description": "Finish a playthrough on \"Insane\" difficulty.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/7a0266f883bc903333748cbcc943f74812b652a8.jpg"
+  },
+  {
+   "key": "ACH_MAP",
+   "name": "Explorer",
+   "description": "Complete 100% of the map.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/01bc796d6dce51b81486ac459d6a62221ef1bf8b.jpg"
+  },
+  {
+   "key": "ACH_NODEATH",
+   "name": "Imperishable",
+   "description": "Finish a playthrough without dying.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/099cb440fa501ef768c4f09489342c13e1ebf261.jpg"
+  },
+  {
+   "key": "ACH_PEACE",
+   "name": "Pacifist",
+   "description": "Finish a playthrough without killing any common enemies.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/02f619537436ecc96754565d38f4b0365dc8e6f9.jpg"
+  },
+  {
+   "key": "ACH_VITALITY",
+   "name": "Healthy!",
+   "description": "Find all Vitality Fragments.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/428550/ebd4593edebda337ac0e0f1cfcb434766ce07614.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Momodora: Reverie Under the Moonlight",
+   "achievements": [
+    {
+     "apiname": "ACH_CHOIR",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Faithful",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_MAP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Explorer",
+     "description": "Complete 100% of the map."
+    },
+    {
+     "apiname": "ACH_INSANE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Don't even try this.",
+     "description": "Finish a playthrough on \"Insane\" difficulty."
+    },
+    {
+     "apiname": "ACH_NODEATH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Imperishable",
+     "description": "Finish a playthrough without dying."
+    },
+    {
+     "apiname": "ACH_PEACE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pacifist",
+     "description": "Finish a playthrough without killing any common enemies."
+    },
+    {
+     "apiname": "ACH_FLORIST",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bug Collector",
+     "description": "Find all Ivory Bugs and bring them to the bunny florist."
+    },
+    {
+     "apiname": "ACH_VITALITY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Healthy!",
+     "description": "Find all Vitality Fragments."
+    },
+    {
+     "apiname": "ACH_END",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True Ending",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_IMP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "P-pleasegiveittome!",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

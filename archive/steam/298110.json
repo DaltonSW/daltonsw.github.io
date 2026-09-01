@@ -1,0 +1,826 @@
+{
+ "provider": "steam",
+ "title": "Far Cry 4",
+ "updated": "2026-08-30",
+ "id": "298110",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 57,
+ "platform": "PC",
+ "icon": "be1366a047a515ed2275aa500a36a50de587b7a7",
+ "playtime_mins": 18,
+ "playtime": {
+  "linux": 18
+ },
+ "last_played": "2026-08-15",
+ "achievements": [
+  {
+   "key": "FarCry4_Ach_1",
+   "name": "Welcome to Kyrat",
+   "description": "Join the Golden Path (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/57cb125b728bd159e9a56d336c58a13b7589a0ee.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_10",
+   "name": "All Clear",
+   "description": "Liberate all Outposts (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/a7f90e10be215479dec08c27bb668c8a42217436.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_11",
+   "name": "Tread Lightly",
+   "description": "Liberate any Outpost without triggering an alarm in any mode (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/1cdcedba225ade93c58db9e0890d16b96d30b57d.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_12",
+   "name": "End Transmission",
+   "description": "Liberate 8 Bell Towers (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/032f590ebf95dc65ad7652c36dcb38c76c008b6e.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_13",
+   "name": "Display Of Fortitude",
+   "description": "Conquer 2 Fortresses (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/3c589b82ab23433ef8822a7f30524918823a6a3c.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_14",
+   "name": "Well-Rounded",
+   "description": "Complete any 6 Hunting quests (Supplies, Control, Survival) (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/85f373ff98716cd71a25945659493549d042d843.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_15",
+   "name": "Trigger-Man",
+   "description": "Complete 3 Assassination or Eye for an Eye quests (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/e5f9b8424e04036d874d86e00d400767141c9e2e.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_16",
+   "name": "No One Left Behind",
+   "description": "Rescue 15 hostages in Hostage Rescue quests (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/11fcea111144261869a43bf80bf42068ea81352a.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_17",
+   "name": "Gearhead",
+   "description": "Complete 3 Kyrati Films: Racing or Kyrati Films: Survival activities (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/a2e449027d1565c15dda675aad25c70a66d95bb1.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_18",
+   "name": "Defender",
+   "description": "Repel 3 Outpost Retaliation Parties (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/c9ebf7f3a8f21e7fa8b98e69d44f637520106b42.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_19",
+   "name": "Robin Hood",
+   "description": "Hijack 3 Royal Cargo Trucks and return them to a liberated Outpost (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/37cdd2ed9c765d53d84bb3605234913b44140a29.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_2",
+   "name": "One Down",
+   "description": "Decide De Pleur's fate (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/54c5690c11126614ba349cbaa9d6d6db84fa7b0b.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_20",
+   "name": "Hand Of Justice",
+   "description": "Eliminate 3 Pagan's Wrath convoys (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/a916d59b4c1f77bca167ad57c64d2224509ff9b1.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_21",
+   "name": "Brother In Arms",
+   "description": "Liberate 1 Outpost playing as Hurk (Campaign Co-op only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/ae80eb6179e3f7702dc632822d94fc155b3d0485.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_22",
+   "name": "Defuser",
+   "description": "Complete 3 Bomb Defusal quests (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/9cdc09bf33a181585ad4407822c5f87ab610ca89.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_23",
+   "name": "Changing Lanes",
+   "description": "Perform a Vehicle Takedown from the passenger seat of a vehicle (Campaign Co-op only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/c318608ea6472f104f9e823baf72c4725a7b5537.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_24",
+   "name": "Fixer-Upper",
+   "description": "Purchase 3 items for the Ghale Homestead (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/203e800fe412b8f6815abde808c7d6a3cccc454f.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_25",
+   "name": "Exorcist",
+   "description": "Destroy 15 Masks of Yalung (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/899c82ea3593624dfad4ca1f772e84c432c2e53a.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_26",
+   "name": "Rewriting History",
+   "description": "Remove 30 Propaganda Posters (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/e8728ebefadfb921eefb584a87b66bd2eb6d5efb.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_27",
+   "name": "Caretaker Of Memory",
+   "description": "Find 10 Lost Letters (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/3289210bf5e7e7dca4bda709ce7ae71339ae81e5.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_28",
+   "name": "Right Tributes",
+   "description": "Spin 10 Mani Wheels (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/3849acc665b0ec04720a3926dabdf11599878780.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_29",
+   "name": "The Rarest Game",
+   "description": "Complete 3 Kyrat Fashion Week quests (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/fd8183f4b0d9f16b34ded40b8b92c16621b36387.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_3",
+   "name": "Overdose",
+   "description": "Discover Shangri-La (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/e8d22fe08f3595819ad4c4d2378010e5d592708d.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_30",
+   "name": "Well Read",
+   "description": "Read 10 notes (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/8949c1f2ccea08cd198bc2ac4ccf11dbcc1586b5.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_31",
+   "name": "Quick Learner",
+   "description": "Learn 10 skills (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/325b9bacf483ab470a25a3e22884cffe5ad50932.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_32",
+   "name": "Fully Loaded",
+   "description": "Learn all skills (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/5b9fa14f8c7a27ad5e20371f077152286fffcdfb.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_33",
+   "name": "Tricked Out",
+   "description": "Craft 5 upgrades for your equipment (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/537ae9378fc6235dad16ed440629086b843a0ae5.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_34",
+   "name": "Dr. Feelgood",
+   "description": "Craft 15 syringes (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/d95605250669c26cc3f05c5546e90b4f6568c44f.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_35",
+   "name": "Make It Rain",
+   "description": "Spend 500,000 rupees total at Trading Posts (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/55ffd18966e49313015790bebc905830dc13ab11.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_36",
+   "name": "Custom-Fitted",
+   "description": "Buy all attachments and paint schemes for a single weapon (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/4acd700ced11cf9045db813fc32efaddc4ef543a.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_37",
+   "name": "Tusker",
+   "description": "Kill 30 enemies with an elephant (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/ffbedb1dea8ce1b116c77a6c72f3f32926abef11.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_38",
+   "name": "Quad Kill",
+   "description": "Kill 4 enemies simultaneously with a single explosion (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/a3939878a3539a01b37616fc29e2694aa9e9f64e.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_39",
+   "name": "Misdirection",
+   "description": "Distract 15 enemies with rocks (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/630396abf63428d6c00c7b134f8d08ed7c74b087.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_40",
+   "name": "Shutterbug",
+   "description": "Tag 25 enemies using the camera (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/36c5d6d188916fd92479c75b3448489767bb34c0.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_41",
+   "name": "Reign Of Death",
+   "description": "Kill 30 enemies with Mortar rounds (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/6d847a26a181cae47e9d1264318e47ab9e533a8d.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_42",
+   "name": "From A Distance",
+   "description": "Kill a target from 60m or more with an arrow or bolt (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/6f3da7c657ae5d6d74b739ae7e7b2afb83bdb742.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_43",
+   "name": "Two Birds",
+   "description": "Using a sniper rifle, kill 2 targets with a single shot (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/f423d2e0f8301bcaa13888e08af31b53c6030514.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_44",
+   "name": "The Sky Is Falling",
+   "description": "Perform a takedown from a Buzzer (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/25772bd9f4e4d1f8370b46a3e78801dd3f3002fe.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_45",
+   "name": "Flame On!",
+   "description": "Kill 50 enemies with fire (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/9dfe1b2bedd77a1ef9d9f893fff0a8e306c7eace.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_46",
+   "name": "Drive-By",
+   "description": "Kill 25 enemies while shooting and driving (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/c7c0f9e05c5a404e469011110350471e2a5993d9.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_47",
+   "name": "The Good Fight",
+   "description": "Reach Karma Level 2, and purchase any Guns For Hire upgrade (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/a075f74e746371b40448588600f181d525c33c5e.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_48",
+   "name": "Like A Bird",
+   "description": "Fly 5000m total in the Wingsuit (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/468400a28fe534fab2b669ec823299a84510ec48.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_49",
+   "name": "Roadkill",
+   "description": "Run over 25 people (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/62f3011272682d27fa45872fb01ec40869928ba8.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_5",
+   "name": "Two Down",
+   "description": "Decide Noore's fate (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/ebdd92c3f7931f0e812143a973f59876323d2216.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_50",
+   "name": "The People's Champ",
+   "description": "Reach Arena Rank 5 (Campaign Arena only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/b663d05a537778e9c11f460f98e4a28c6802134d.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_51",
+   "name": "Renaissance Man",
+   "description": "Finish a public match of each game type in the Battles of Kyrat game mode (Battles of Kyrat only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/93df2f958988e47bf05dc6568ee2dd4d426df603.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_52",
+   "name": "Community Surprise",
+   "description": "Play a Top Rated map in the Map Browser (Map Browser only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/d706ce974af08e9960ae60eb67a23032862e1706.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_54",
+   "name": "Home Sweet Home",
+   "description": "Occupy The Relay Station (Valley Of The Yetis).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/bf4ed81bc725284b76be6a2307bb5d0a9ff802ed.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_55",
+   "name": "Night Survivor",
+   "description": "Defend The Relay Station And Survive The First Night (Valley Of The Yetis).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/4083c5a57d3f46c4cf9d7bab45260a3839a1e3e3.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_56",
+   "name": "Builder",
+   "description": "Complete One Relay Station Upgrade Quest (Valley Of The Yetis, Single Player Only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/6867fe0c65012ab706503202b6ca7b3fba799ccf.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_57",
+   "name": "Master Builder",
+   "description": "Complete All Relay Station Upgrade Quests (Valley Of The Yetis, Single Player Only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/fea904b701616973f8882cb1499cc1feed2bb74c.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_58",
+   "name": "Awakened!",
+   "description": "Complete The Valley Of The Yetis Campaign (Valley Of The Yetis).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/5b0e0099a58eca1935d2c294bd42ce4ed23fcf12.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_59",
+   "name": "Spiritual Hunter",
+   "description": "Kill A Yeti (Valley Of The Yetis, Single Player Only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/823ded0bb9f0370d9acb90d218dc2164c2fac2e7.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_60",
+   "name": "Master of the Awakened",
+   "description": "Kill 5 Yetis (Valley Of The Yetis, Single Player Only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/2f375462927b30fef9f72e1dd6e0cfb4370ea38e.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_7",
+   "name": "Hat-Trick",
+   "description": "Decide Yuma's fate (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/f96351ce0f2b660400fc7a043f1e4c0ad064b54d.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_8",
+   "name": "The King Is Dead",
+   "description": "Decide Pagan Min's fate (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/7b3e65e01def9b0b8f16ff3b8787e409e2dee599.jpg"
+  },
+  {
+   "key": "FarCry4_Ach_9",
+   "name": "Deliver Us From Evil",
+   "description": "Liberate 12 Outposts (Campaign only).",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/298110/7e81efcb5a0b93a5be855a498b5c83175a0b2dfc.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Far Cry 4",
+   "achievements": [
+    {
+     "apiname": "FarCry4_Ach_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to Kyrat",
+     "description": "Join the Golden Path (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One Down",
+     "description": "Decide De Pleur's fate (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Overdose",
+     "description": "Discover Shangri-La (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Two Down",
+     "description": "Decide Noore's fate (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_7",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hat-Trick",
+     "description": "Decide Yuma's fate (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The King Is Dead",
+     "description": "Decide Pagan Min's fate (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Deliver Us From Evil",
+     "description": "Liberate 12 Outposts (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All Clear",
+     "description": "Liberate all Outposts (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tread Lightly",
+     "description": "Liberate any Outpost without triggering an alarm in any mode (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "End Transmission",
+     "description": "Liberate 8 Bell Towers (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Display Of Fortitude",
+     "description": "Conquer 2 Fortresses (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well-Rounded",
+     "description": "Complete any 6 Hunting quests (Supplies, Control, Survival) (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Trigger-Man",
+     "description": "Complete 3 Assassination or Eye for an Eye quests (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No One Left Behind",
+     "description": "Rescue 15 hostages in Hostage Rescue quests (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_17",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gearhead",
+     "description": "Complete 3 Kyrati Films: Racing or Kyrati Films: Survival activities (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_18",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defender",
+     "description": "Repel 3 Outpost Retaliation Parties (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_19",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Robin Hood",
+     "description": "Hijack 3 Royal Cargo Trucks and return them to a liberated Outpost (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_20",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hand Of Justice",
+     "description": "Eliminate 3 Pagan's Wrath convoys (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_21",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Brother In Arms",
+     "description": "Liberate 1 Outpost playing as Hurk (Campaign Co-op only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_22",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Defuser",
+     "description": "Complete 3 Bomb Defusal quests (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_23",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Changing Lanes",
+     "description": "Perform a Vehicle Takedown from the passenger seat of a vehicle (Campaign Co-op only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_24",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fixer-Upper",
+     "description": "Purchase 3 items for the Ghale Homestead (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_25",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Exorcist",
+     "description": "Destroy 15 Masks of Yalung (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_26",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Rewriting History",
+     "description": "Remove 30 Propaganda Posters (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_27",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Caretaker Of Memory",
+     "description": "Find 10 Lost Letters (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_28",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Right Tributes",
+     "description": "Spin 10 Mani Wheels (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_29",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Rarest Game",
+     "description": "Complete 3 Kyrat Fashion Week quests (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_30",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Well Read",
+     "description": "Read 10 notes (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_31",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quick Learner",
+     "description": "Learn 10 skills (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_32",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fully Loaded",
+     "description": "Learn all skills (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_33",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tricked Out",
+     "description": "Craft 5 upgrades for your equipment (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_34",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dr. Feelgood",
+     "description": "Craft 15 syringes (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_35",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Make It Rain",
+     "description": "Spend 500,000 rupees total at Trading Posts (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_36",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Custom-Fitted",
+     "description": "Buy all attachments and paint schemes for a single weapon (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_37",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Tusker",
+     "description": "Kill 30 enemies with an elephant (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_38",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Quad Kill",
+     "description": "Kill 4 enemies simultaneously with a single explosion (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_39",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Misdirection",
+     "description": "Distract 15 enemies with rocks (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_40",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shutterbug",
+     "description": "Tag 25 enemies using the camera (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_41",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Reign Of Death",
+     "description": "Kill 30 enemies with Mortar rounds (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_42",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "From A Distance",
+     "description": "Kill a target from 60m or more with an arrow or bolt (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_43",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Two Birds",
+     "description": "Using a sniper rifle, kill 2 targets with a single shot (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_44",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Sky Is Falling",
+     "description": "Perform a takedown from a Buzzer (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_45",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Flame On!",
+     "description": "Kill 50 enemies with fire (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_46",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Drive-By",
+     "description": "Kill 25 enemies while shooting and driving (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_47",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Good Fight",
+     "description": "Reach Karma Level 2, and purchase any Guns For Hire upgrade (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_48",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Like A Bird",
+     "description": "Fly 5000m total in the Wingsuit (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_49",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Roadkill",
+     "description": "Run over 25 people (Campaign only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_50",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The People's Champ",
+     "description": "Reach Arena Rank 5 (Campaign Arena only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_51",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Renaissance Man",
+     "description": "Finish a public match of each game type in the Battles of Kyrat game mode (Battles of Kyrat only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_52",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Community Surprise",
+     "description": "Play a Top Rated map in the Map Browser (Map Browser only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_54",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Home Sweet Home",
+     "description": "Occupy The Relay Station (Valley Of The Yetis)."
+    },
+    {
+     "apiname": "FarCry4_Ach_55",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Night Survivor",
+     "description": "Defend The Relay Station And Survive The First Night (Valley Of The Yetis)."
+    },
+    {
+     "apiname": "FarCry4_Ach_56",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Builder",
+     "description": "Complete One Relay Station Upgrade Quest (Valley Of The Yetis, Single Player Only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_57",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Builder",
+     "description": "Complete All Relay Station Upgrade Quests (Valley Of The Yetis, Single Player Only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_58",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Awakened!",
+     "description": "Complete The Valley Of The Yetis Campaign (Valley Of The Yetis)."
+    },
+    {
+     "apiname": "FarCry4_Ach_59",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spiritual Hunter",
+     "description": "Kill A Yeti (Valley Of The Yetis, Single Player Only)."
+    },
+    {
+     "apiname": "FarCry4_Ach_60",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master of the Awakened",
+     "description": "Kill 5 Yetis (Valley Of The Yetis, Single Player Only)."
+    }
+   ],
+   "success": true
+  }
+ }
+}

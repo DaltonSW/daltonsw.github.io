@@ -1,0 +1,359 @@
+{
+ "provider": "steam",
+ "title": "Coffee Talk",
+ "updated": "2026-08-30",
+ "id": "914800",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 24,
+ "platform": "PC",
+ "icon": "49d266aef4f1f54f7b721ccce0264067cea797c0",
+ "achievements": [
+  {
+   "key": "ACH_10_DRINK_CHALLENGEMODE",
+   "name": "Barista Trainee",
+   "description": "Serve 10 correct drinks in a single session of challenge mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/daf5861ac1ef9a0bee1657453fd99072d9b53b26.jpg"
+  },
+  {
+   "key": "ACH_25_DRINK_CHALLENGEMODE",
+   "name": "Barista Expert",
+   "description": "Serve 25 correct drinks in a single session of challenge  mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/3e6491492063c34821472b56f1ddd5daf123dac1.jpg"
+  },
+  {
+   "key": "ACH_50_DRINK_CHALLENGEMODE",
+   "name": "Barista Guru",
+   "description": "Serve 50 correct drinks in a single session of challenge mode",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/65d0c204e59a89e72c0f52d583e67ca1d38ad27f.jpg"
+  },
+  {
+   "key": "ACH_BREW_FIRST_TIME",
+   "name": "First Brew",
+   "description": "Brew your first drink",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/5c73875e5c721e6be5a231ee52edaa9fa6cae82e.jpg"
+  },
+  {
+   "key": "ACH_BREW_LATTEART_FIRST_TIME",
+   "name": "It's a masterpiece!",
+   "description": "Create and serve your first latte art",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/7fc2f06690c8b1fbb06d1cdbc8f4cdf7579e538f.jpg"
+  },
+  {
+   "key": "ACH_FINISH_GALA_HYDE_ARC",
+   "name": "There's a spark",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/d760d34e213ca6ac0a418ffe1a3dfc55aef3e81a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_FINISH_LUA_BAILEYS_ARC",
+   "name": "Love of my life",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/e935688fe14b4a7a15a2fb6533cffbe9eb95d102.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_FINISH_ONCE",
+   "name": "Is that it?",
+   "description": "Play the story mode to conclusion once",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/cb8202be3f776e6c61b8192ce3e1dcd8d8d3b4c8.jpg"
+  },
+  {
+   "key": "ACH_FINISH_RACHEL_HENRY_ARC",
+   "name": "Father and Daughter",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/31bf6cef98bab7f08c3d79f882d81c0d19dee4bc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_LISTEN_ALL_SONG",
+   "name": "24/7 a beat to relax/study to",
+   "description": "Listen to all of the songs",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/529c2610a8fee15079e980de19b8312051dd2ef1.jpg"
+  },
+  {
+   "key": "ACH_NEIL_BARISTA",
+   "name": "Interstellar support",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/71183fd5e38fec3741bdb14e7df8ba20cb5643d9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_NEW_GAME_FIRST_TIME",
+   "name": "Welcome to Coffee Talk",
+   "description": "Start a new game",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/03b2a1ac778456b79252126906b05d4d208dd51c.jpg"
+  },
+  {
+   "key": "ACH_RACHEL_UNLOCKED",
+   "name": "Achievement Unlocked!",
+   "description": "Reach a certain point in the story",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/21f6b91e7c83723f2e9e6f967696d2fb75298325.jpg"
+  },
+  {
+   "key": "ACH_SECRET_STORY",
+   "name": "God of Caffeine",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/b026e036e2a936ac2721aa0fdb38461316d98b62.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_SERVE_GALAHAD_WEREWOLF",
+   "name": "Gala had a fit!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/26aff6ca5923b198426d4779963edaef5cd51689.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_TIME_SPENT_LATTEART",
+   "name": "Art takes time",
+   "description": "Spent a total of 1 hour making Latte Art",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/4ea15313088ff66d616de0ab5a43aa71a34947d7.jpg"
+  },
+  {
+   "key": "ACH_TRASH_25_DRINKS",
+   "name": "Stop it!",
+   "description": "Trash a total of 25 drinks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/c4c75aaab69c119c1250cfb97904c3a101a0bd34.jpg"
+  },
+  {
+   "key": "ACH_TRASH_FIRST_TIME",
+   "name": "Let me start over",
+   "description": "Trash your drink for the first time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/af9761a080ec9e76c977078b7099cd4eb692172b.jpg"
+  },
+  {
+   "key": "ACH_UNLOCK_ALL",
+   "name": "Coffee and Chill",
+   "description": "Unlock all achievements",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/c02a8a08f3f4588d2e11f95ee4f060934b871cf5.jpg"
+  },
+  {
+   "key": "ACH_UNLOCK_ALL_CHARACTER",
+   "name": "We are all friends",
+   "description": "Meet all of the main characters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/4ac748a359c32cae35d1b328da07198dfd1f3594.jpg"
+  },
+  {
+   "key": "ACH_UNLOCK_ALL_CHARCTER_MAX",
+   "name": "Social media fever",
+   "description": "Unlock all of the characters social media profile",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/46679a028dd251c6d2333f45915e5bc6526d130f.jpg"
+  },
+  {
+   "key": "ACH_UNLOCK_ALL_DRINK",
+   "name": "Master Brewer",
+   "description": "Unlock all special drinks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/bd0fe7e99f2a5fd0e400a62c867593718dd70e98.jpg"
+  },
+  {
+   "key": "ACH_UNLOCK_GALLERY",
+   "name": "Art Connoisseur",
+   "description": "Unlock all the artworks in the Gallery",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/29a789680a51905da5fb88dd041d9de3a39f007e.jpg"
+  },
+  {
+   "key": "ACH_WRONG_BREW_FIRST_TIME",
+   "name": "Is this it?",
+   "description": "Serve the wrong drink for the first time",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/d599bea9d04092279af771f2a1c24244d7436d4a.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Coffee Talk",
+   "achievements": [
+    {
+     "apiname": "ACH_NEW_GAME_FIRST_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Welcome to Coffee Talk",
+     "description": "Start a new game"
+    },
+    {
+     "apiname": "ACH_TRASH_FIRST_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Let me start over",
+     "description": "Trash your drink for the first time"
+    },
+    {
+     "apiname": "ACH_BREW_FIRST_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First Brew",
+     "description": "Brew your first drink"
+    },
+    {
+     "apiname": "ACH_BREW_LATTEART_FIRST_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "It's a masterpiece!",
+     "description": "Create and serve your first latte art"
+    },
+    {
+     "apiname": "ACH_RACHEL_UNLOCKED",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Achievement Unlocked!",
+     "description": "Reach a certain point in the story"
+    },
+    {
+     "apiname": "ACH_WRONG_BREW_FIRST_TIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Is this it?",
+     "description": "Serve the wrong drink for the first time"
+    },
+    {
+     "apiname": "ACH_UNLOCK_ALL_CHARACTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "We are all friends",
+     "description": "Meet all of the main characters"
+    },
+    {
+     "apiname": "ACH_TRASH_25_DRINKS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stop it!",
+     "description": "Trash a total of 25 drinks"
+    },
+    {
+     "apiname": "ACH_LISTEN_ALL_SONG",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "24/7 a beat to relax/study to",
+     "description": "Listen to all of the songs"
+    },
+    {
+     "apiname": "ACH_FINISH_ONCE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Is that it?",
+     "description": "Play the story mode to conclusion once"
+    },
+    {
+     "apiname": "ACH_TIME_SPENT_LATTEART",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Art takes time",
+     "description": "Spent a total of 1 hour making Latte Art"
+    },
+    {
+     "apiname": "ACH_10_DRINK_CHALLENGEMODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Barista Trainee",
+     "description": "Serve 10 correct drinks in a single session of challenge mode"
+    },
+    {
+     "apiname": "ACH_NEIL_BARISTA",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Interstellar support",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_25_DRINK_CHALLENGEMODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Barista Expert",
+     "description": "Serve 25 correct drinks in a single session of challenge  mode"
+    },
+    {
+     "apiname": "ACH_FINISH_GALA_HYDE_ARC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "There's a spark",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_FINISH_LUA_BAILEYS_ARC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Love of my life",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_FINISH_RACHEL_HENRY_ARC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Father and Daughter",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SERVE_GALAHAD_WEREWOLF",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Gala had a fit!",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_SECRET_STORY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "God of Caffeine",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_UNLOCK_ALL_DRINK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Master Brewer",
+     "description": "Unlock all special drinks"
+    },
+    {
+     "apiname": "ACH_UNLOCK_ALL_CHARCTER_MAX",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Social media fever",
+     "description": "Unlock all of the characters social media profile"
+    },
+    {
+     "apiname": "ACH_50_DRINK_CHALLENGEMODE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Barista Guru",
+     "description": "Serve 50 correct drinks in a single session of challenge mode"
+    },
+    {
+     "apiname": "ACH_UNLOCK_GALLERY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Art Connoisseur",
+     "description": "Unlock all the artworks in the Gallery"
+    },
+    {
+     "apiname": "ACH_UNLOCK_ALL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Coffee and Chill",
+     "description": "Unlock all achievements"
+    }
+   ],
+   "success": true
+  }
+ }
+}

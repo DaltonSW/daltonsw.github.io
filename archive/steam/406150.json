@@ -1,0 +1,175 @@
+{
+ "provider": "steam",
+ "title": "Refunct",
+ "updated": "2026-08-30",
+ "id": "406150",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 8,
+ "total": 10,
+ "first": "2018-02-10",
+ "last": "2018-02-10",
+ "platform": "PC",
+ "icon": "ca403dfb0c8bc2b5e92e1bdef6004a859c1a182c",
+ "playtime_mins": 28,
+ "last_played": "2018-02-10",
+ "achievements": [
+  {
+   "key": "ACH_START",
+   "name": "Hello?",
+   "unlocked": true,
+   "date": "2018-02-10T20:50:55-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/0eb5395ab86a4185f53dbc4a5e088adc9284c54f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_50_REFUNCT",
+   "name": "How are you?",
+   "unlocked": true,
+   "date": "2018-02-10T20:52:45-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/7fb1d614a46a1d749a09d0a6185dbac3c8e21768.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_75_REFUNCT",
+   "name": "What drives you?",
+   "unlocked": true,
+   "date": "2018-02-10T20:55:57-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/784ca167dd312af2627a8a4eed2447b6195979d3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_85_REFUNCT",
+   "name": "Do you do what you love?",
+   "unlocked": true,
+   "date": "2018-02-10T20:58:54-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/580393fc1afbb858f14ee8da044c1dbc388b8658.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_95_REFUNCT",
+   "name": "Who do you love?",
+   "unlocked": true,
+   "date": "2018-02-10T21:01:24-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/35f1f0d8cbb14b5232efa135bd647802be182b29.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_RAISED",
+   "name": "What makes you smile?",
+   "unlocked": true,
+   "date": "2018-02-10T21:02:19-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/59fc812338b6b0932d5ebb87935f99d4a8b70761.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_100_REFUNCT",
+   "name": "What makes you, you?",
+   "unlocked": true,
+   "date": "2018-02-10T21:03:00-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/72c8cd04fa6d858fb37a2ef613b61fba497ce1a9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_ANY_RUN_2",
+   "name": "Can we be friends?",
+   "description": "Finish Refunct in 8 minutes",
+   "unlocked": true,
+   "date": "2018-02-10T21:07:35-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/9d3f71a3acb57249df9b273e2431ed131d9cd670.jpg"
+  },
+  {
+   "key": "ACH_ANY_RUN",
+   "name": "Is this goodbye?",
+   "description": "Finish Refunct in 4 minutes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/05436570fe19a05159b9dd786690c054d3ad3236.jpg"
+  },
+  {
+   "key": "ACH_LOW_RUN",
+   "name": "Will you come back?",
+   "description": "Finish Refunct under 33%",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/406150/b22a51a6bc2c91477fe7c2ba7f459a60f11345da.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Refunct",
+   "achievements": [
+    {
+     "apiname": "ACH_START",
+     "achieved": 1,
+     "unlocktime": 1518317455,
+     "name": "Hello?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_RAISED",
+     "achieved": 1,
+     "unlocktime": 1518318139,
+     "name": "What makes you smile?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_75_REFUNCT",
+     "achieved": 1,
+     "unlocktime": 1518317757,
+     "name": "What drives you?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_100_REFUNCT",
+     "achieved": 1,
+     "unlocktime": 1518318180,
+     "name": "What makes you, you?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_ANY_RUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Is this goodbye?",
+     "description": "Finish Refunct in 4 minutes"
+    },
+    {
+     "apiname": "ACH_LOW_RUN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Will you come back?",
+     "description": "Finish Refunct under 33%"
+    },
+    {
+     "apiname": "ACH_ANY_RUN_2",
+     "achieved": 1,
+     "unlocktime": 1518318455,
+     "name": "Can we be friends?",
+     "description": "Finish Refunct in 8 minutes"
+    },
+    {
+     "apiname": "ACH_50_REFUNCT",
+     "achieved": 1,
+     "unlocktime": 1518317565,
+     "name": "How are you?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_85_REFUNCT",
+     "achieved": 1,
+     "unlocktime": 1518317934,
+     "name": "Do you do what you love?",
+     "description": ""
+    },
+    {
+     "apiname": "ACH_95_REFUNCT",
+     "achieved": 1,
+     "unlocktime": 1518318084,
+     "name": "Who do you love?",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

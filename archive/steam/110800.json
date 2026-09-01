@@ -1,0 +1,863 @@
+{
+ "provider": "steam",
+ "title": "L.A. Noire",
+ "updated": "2026-08-30",
+ "id": "110800",
+ "fetched": "2026-08-30",
+ "last_attempt": "2026-08-30",
+ "unlocked": 0,
+ "total": 60,
+ "platform": "PC",
+ "icon": "ee09d4d2552e52c78d139a3b6dbe60173079d9f8",
+ "achievements": [
+  {
+   "key": "ARSON_DESK_COMPLETE",
+   "name": "Moth To A Flame",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/9fc9b7080f2e7d20ccc3313771449b4d76cecbc6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ASPHALT_JUNGLE",
+   "name": "Asphalt Jungle",
+   "description": "Chase down and tackle a fleeing suspect on foot as an LAPD Detective.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/aec265fd08f62d1a5563e695ee508baf6a268fc5.jpg"
+  },
+  {
+   "key": "A_COP_ON_EVERY_CORNER",
+   "name": "A Cop On Every Corner",
+   "description": "Complete a single street crime case.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/537fdfc8e2d31a7d23334202930f6244f41a1c24.jpg"
+  },
+  {
+   "key": "DEAD_MEN_ARE_HEAVIER",
+   "name": "Dead Men Are Heavier",
+   "description": "Shoot and kill a total of 100 bad guys.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/2e401def18c43469966e96299d87511bc7b33223.jpg"
+  },
+  {
+   "key": "DLC_AA005_1",
+   "name": "The Big Unfriendly",
+   "description": "Complete 'Nicholson Electroplating'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/53ea844ea987cbde0ec0020b10d369aad454e55e.jpg"
+  },
+  {
+   "key": "DLC_AA005_2",
+   "name": "The Nose Knows",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/fdcbb209ee336a6ca7b61203b2b061fbe3a7c38a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AA005_3",
+   "name": "Skeletons In The Icebox",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/bb4e32d4ea410ccbf7b66f7662f9702d3ffa8b58.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AA005_4",
+   "name": "Bulletproof Windshield",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/d936c51f28b5144620db5645477ca7f39d172374.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AA005_5",
+   "name": "Out Of The Frying Pan",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/5c6b1da106615b2ea6a33a47a819be3d2ca2a1c4.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AT004_1",
+   "name": "The Printer's Devil",
+   "description": "Complete 'A Slip of the Tongue'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/aeb7ced0d02143b605314d765af555ebc9f5848e.jpg"
+  },
+  {
+   "key": "DLC_AT004_2",
+   "name": "Racing For Pinks",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/2c8f27d0a12fd4e972455158b4cd6e3d369773f5.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AT004_3",
+   "name": "Femme Imbécile",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/105ddf24f62f36a76d14f6296d5ccd5f3425109d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AT004_4",
+   "name": "Chop Shop",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/dbf20b4202eed8c87455a9f59f7e62406b109ae8.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AT004_5",
+   "name": "Nowhere In A Hurry",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/e2e997ee78a61b0182dfccac208c690a3247cbde.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV002_1",
+   "name": "Every Herb Bearing Seed",
+   "description": "Complete 'Reefer Madness'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/db2ec56229830fe489432366201cb8c0c75bd32d.jpg"
+  },
+  {
+   "key": "DLC_AV002_2",
+   "name": "Spare A Dime",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/809813521a3d291fb5367a729782a24b4c68594f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV002_3",
+   "name": "Soup In The Pot",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/00bf02e845e632fc8a2f3721c3cb368a03fe5705.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV002_4",
+   "name": "High Flyer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/ae7977462bf6d5d6a07329fdc32ffa787fef5783.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV002_5",
+   "name": "Forcible Rear Entry",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/49be07a959b66261cd762ce57bf7d08ff5eaaa71.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV004_1",
+   "name": "Eight Million Stories",
+   "description": "Complete 'The Naked City'.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/43b6e26e12a5aae390c56f6b2ed8df74cb16d5d2.jpg"
+  },
+  {
+   "key": "DLC_AV004_2",
+   "name": "A Good-Looking Corpse",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/c3ae1c5572d45fa1187e77f261e216b7b29b6ab6.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV004_3",
+   "name": "Fakeloo",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/9a0cd5c7ba95410ea23e1c7330edaf1bdb1a1022.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV004_4",
+   "name": "Chauffeur Service",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/de3db8d305bcfcb20762636e79e9406b46b40bef.jpg",
+   "hidden": true
+  },
+  {
+   "key": "DLC_AV004_5",
+   "name": "Give My Regards",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/ae9556b59154aab5134bca78c099eb770056acd3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "GOLDEN_BOY",
+   "name": "Golden Boy",
+   "description": "Clear a case finding every clue as an LAPD Detective or Investigator.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/debffeb5ec491ceaa99db27f91b5725a068ab7f6.jpg"
+  },
+  {
+   "key": "HOLLYWOODLAND",
+   "name": "Hollywoodland",
+   "description": "Find and inspect all gold film reels.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/49c8f555e397355314a95e8bff18bb7bbe469651.jpg"
+  },
+  {
+   "key": "HOMICIDE_DESK_COMPLETE",
+   "name": "The Simple Art of Murder",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/23c175af4286a522c8ec98ca0ecce2caec52150e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HUCKSTER",
+   "name": "Huckster",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/e74f781a00ee955acdab78fee3508a9c1be9f55d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "JOHNNY_ON_THE_SPOT",
+   "name": "Johnny On The Spot",
+   "description": "Respond to 20 street crime cases.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/02e3098442132ce9a54b1bdbce2fa2ada247e03f.jpg"
+  },
+  {
+   "key": "KEEP_A_LID_ON",
+   "name": "Keep A Lid On",
+   "description": "Complete a brawl without losing your hat as an LAPD Detective or Investigator.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/b3647acddbf379de62b6051409554b0cb6ba079d.jpg"
+  },
+  {
+   "key": "LEAD_FOOT",
+   "name": "Lead Foot",
+   "description": "Keep the needle above 80mph for more than ten seconds while driving.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/0f491b48a644976aeaa3113b712d9040f3326448.jpg"
+  },
+  {
+   "key": "MAGPIE",
+   "name": "Magpie",
+   "description": "Find and inspect 95% of all clues.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/143f9766a2e9bdf9b4ef17caffc30bf8ec6782d8.jpg"
+  },
+  {
+   "key": "MILES_ON_THE_CLOCK",
+   "name": "Miles On The Clock",
+   "description": "Drive more than 194.7 miles.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/25af68f04d9877a78b12f5da4c77e87b1d1d1a7a.jpg"
+  },
+  {
+   "key": "NOT_SO_HASTY",
+   "name": "Not So Hasty",
+   "description": "Stop a fleeing suspect with a warning shot as an LAPD Detective.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/1b6f693a1d5e34f59e7e843ae88dc3b275963dc4.jpg"
+  },
+  {
+   "key": "ONE_FOR_THE_FILE",
+   "name": "One For The File",
+   "description": "Find and inspect a clue as an LAPD Detective or Investigator.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/54dacb14dfe21f3d8e42454384a30510b2f02c0b.jpg"
+  },
+  {
+   "key": "PATROL_DESK_COMPLETE",
+   "name": "Police Academy",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/265376cab70a66c7277cddbf0cf73c60c0b610a9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PUBLIC_MENACE",
+   "name": "Public Menace",
+   "description": "Rack up $47,000 in penalties during a single story case.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/ad03d7d3138a92d7700e94fd33301762628ff625.jpg"
+  },
+  {
+   "key": "ROSCOE_AND_FRIENDS",
+   "name": "Roscoe And Friends",
+   "description": "Kill at least one bad guy with every gun.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/6878f870444e605d49153a73f3830c56ac9fc5de.jpg"
+  },
+  {
+   "key": "ROUND_HEELS",
+   "name": "Round Heels",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/374be553f6174449994486a0b1fcb537a97af73d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SHAMUS_TO_THE_STARS",
+   "name": "Shamus To The Stars",
+   "description": "Complete all story cases with a five star rating.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/15e75fe3ca9d8fc6b9323f442a3e0c02e473a7af.jpg"
+  },
+  {
+   "key": "STABRITE",
+   "name": "Stab-Rite",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/bb9eab4efd22e221350c574e4158df43b9c14d71.jpg",
+   "hidden": true
+  },
+  {
+   "key": "STAR_MAP",
+   "name": "Star Map",
+   "description": "Discover all landmark locations around the city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/4e925a09c540df79ed6cfdc66d8471ab06255119.jpg"
+  },
+  {
+   "key": "THE_BRASS",
+   "name": "The Brass",
+   "description": "Achieve maximum rank.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/32082d41a33c5fcc6c4773b72f7ad313d52841f3.jpg"
+  },
+  {
+   "key": "THE_CITY_OF_ANGELS",
+   "name": "The City Of The Angels",
+   "description": "Reach 100% Game Complete.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/1d778bb0c106038989b6c2183d69129f5ed9d046.jpg"
+  },
+  {
+   "key": "THE_FIGHTING_SIXTH",
+   "name": "The Fighting Sixth",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/158f5928f3da0d642e25897364ea7a4b38358bec.jpg",
+   "hidden": true
+  },
+  {
+   "key": "THE_HUNCH",
+   "name": "The Hunch",
+   "description": "Use four intuition points in a single interview session, correctly branching each question.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/ca9aba2a43799d581faf75f51fa9db7b09bd9152.jpg"
+  },
+  {
+   "key": "THE_LONG_ARM_OF_THE_LAW",
+   "name": "The Long Arm Of The Law",
+   "description": "Complete all street crime cases.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/e7fcb10c97b1b1f432237afd9eec6cdbbe481ede.jpg"
+  },
+  {
+   "key": "THE_MOOSE",
+   "name": "The Moose",
+   "description": "Follow Candy Edwards without using cover or incognito, except when starting or picking up the tail.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/745d471828591c21326f2586e9ef47de960555b8.jpg"
+  },
+  {
+   "key": "THE_PLOT_THICKENS",
+   "name": "The Plot Thickens",
+   "description": "Find and solve an inspection puzzle.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/c93431eacb827d5e652c0e5e6e27f56862eefaed.jpg"
+  },
+  {
+   "key": "THE_SHADOW",
+   "name": "The Shadow",
+   "description": "Tail a suspect without being spotted, in a single case.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/5fc853ae28dbc4f918cbe0de2b6a4366563c12bc.jpg"
+  },
+  {
+   "key": "THE_STRAIGHT_DOPE",
+   "name": "The Straight Dope",
+   "description": "Use evidence to prove a lie as an LAPD Detective or Investigator.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/a694bf5dca8aed2e5131333ef02eb883b0e660c6.jpg"
+  },
+  {
+   "key": "THE_THIRD_DEGREE",
+   "name": "The Third Degree",
+   "description": "Correctly branch every question in every interview in a single story case.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/488837b6f85bd9b74e37eec1d6baaae40b395cea.jpg"
+  },
+  {
+   "key": "THE_UP_AND_UP",
+   "name": "The Up And Up",
+   "description": "Complete a story case with a five star rating.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/a4f60469bd8c26c8364afd76438dbcd51802106b.jpg"
+  },
+  {
+   "key": "TRAFFIC_DESK_COMPLETE",
+   "name": "Paved With Good Intentions",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/637c9ceece15718817236da3f06a159e5c45e7dc.jpg",
+   "hidden": true
+  },
+  {
+   "key": "TRAFFIC_STOP",
+   "name": "Traffic Stop",
+   "description": "Disable a suspect vehicle with help from your partner.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/65846cdb2e1caf94c90d08f1f29bbaa566f24bb3.jpg"
+  },
+  {
+   "key": "VEHICLE_COLLECTION_LEVEL1",
+   "name": "Auto Enthusiast",
+   "description": "Drive 5 different vehicles.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/92aaefa1ae61eb864917ef94afd7c5193313ad4e.jpg"
+  },
+  {
+   "key": "VEHICLE_COLLECTION_LEVEL2",
+   "name": "Auto Collector",
+   "description": "Drive 40 different vehicles.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/c30e90d44a3c7e5a5f16bb870d5212092970214c.jpg"
+  },
+  {
+   "key": "VEHICLE_COLLECTION_LEVEL3",
+   "name": "Auto Fanatic",
+   "description": "Drive every vehicle in the city.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/1cf5a4ea989674b1f3c0e21926f23212c03e02df.jpg"
+  },
+  {
+   "key": "VICE_DESK_COMPLETE",
+   "name": "No Rest For The Wicked",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/e82497c7d28609246fe620c90b76a3d041188f15.jpg",
+   "hidden": true
+  },
+  {
+   "key": "WOODEN_OVERCOATS",
+   "name": "Wooden Overcoats",
+   "description": "Bring down a total of 30 bad guys with head shots.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/110800/1f36ea727e7401ea558ecdf9feaf03120f23e456.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "L.A. Noire",
+   "achievements": [
+    {
+     "apiname": "PATROL_DESK_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Police Academy",
+     "description": ""
+    },
+    {
+     "apiname": "TRAFFIC_DESK_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Paved With Good Intentions",
+     "description": ""
+    },
+    {
+     "apiname": "HOMICIDE_DESK_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Simple Art of Murder",
+     "description": ""
+    },
+    {
+     "apiname": "VICE_DESK_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "No Rest For The Wicked",
+     "description": ""
+    },
+    {
+     "apiname": "ARSON_DESK_COMPLETE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Moth To A Flame",
+     "description": ""
+    },
+    {
+     "apiname": "A_COP_ON_EVERY_CORNER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Cop On Every Corner",
+     "description": "Complete a single street crime case."
+    },
+    {
+     "apiname": "JOHNNY_ON_THE_SPOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Johnny On The Spot",
+     "description": "Respond to 20 street crime cases."
+    },
+    {
+     "apiname": "THE_LONG_ARM_OF_THE_LAW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Long Arm Of The Law",
+     "description": "Complete all street crime cases."
+    },
+    {
+     "apiname": "THE_CITY_OF_ANGELS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The City Of The Angels",
+     "description": "Reach 100% Game Complete."
+    },
+    {
+     "apiname": "THE_UP_AND_UP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Up And Up",
+     "description": "Complete a story case with a five star rating."
+    },
+    {
+     "apiname": "SHAMUS_TO_THE_STARS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shamus To The Stars",
+     "description": "Complete all story cases with a five star rating."
+    },
+    {
+     "apiname": "THE_BRASS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Brass",
+     "description": "Achieve maximum rank."
+    },
+    {
+     "apiname": "NOT_SO_HASTY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Not So Hasty",
+     "description": "Stop a fleeing suspect with a warning shot as an LAPD Detective."
+    },
+    {
+     "apiname": "ASPHALT_JUNGLE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Asphalt Jungle",
+     "description": "Chase down and tackle a fleeing suspect on foot as an LAPD Detective."
+    },
+    {
+     "apiname": "TRAFFIC_STOP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Traffic Stop",
+     "description": "Disable a suspect vehicle with help from your partner."
+    },
+    {
+     "apiname": "THE_STRAIGHT_DOPE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Straight Dope",
+     "description": "Use evidence to prove a lie as an LAPD Detective or Investigator."
+    },
+    {
+     "apiname": "ONE_FOR_THE_FILE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "One For The File",
+     "description": "Find and inspect a clue as an LAPD Detective or Investigator."
+    },
+    {
+     "apiname": "GOLDEN_BOY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Golden Boy",
+     "description": "Clear a case finding every clue as an LAPD Detective or Investigator."
+    },
+    {
+     "apiname": "THE_PLOT_THICKENS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Plot Thickens",
+     "description": "Find and solve an inspection puzzle."
+    },
+    {
+     "apiname": "STABRITE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Stab-Rite",
+     "description": ""
+    },
+    {
+     "apiname": "ROUND_HEELS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Round Heels",
+     "description": ""
+    },
+    {
+     "apiname": "THE_FIGHTING_SIXTH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Fighting Sixth",
+     "description": ""
+    },
+    {
+     "apiname": "HUCKSTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Huckster",
+     "description": ""
+    },
+    {
+     "apiname": "LEAD_FOOT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lead Foot",
+     "description": "Keep the needle above 80mph for more than ten seconds while driving."
+    },
+    {
+     "apiname": "MILES_ON_THE_CLOCK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Miles On The Clock",
+     "description": "Drive more than 194.7 miles."
+    },
+    {
+     "apiname": "WOODEN_OVERCOATS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wooden Overcoats",
+     "description": "Bring down a total of 30 bad guys with head shots."
+    },
+    {
+     "apiname": "DEAD_MEN_ARE_HEAVIER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Dead Men Are Heavier",
+     "description": "Shoot and kill a total of 100 bad guys."
+    },
+    {
+     "apiname": "ROSCOE_AND_FRIENDS",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Roscoe And Friends",
+     "description": "Kill at least one bad guy with every gun."
+    },
+    {
+     "apiname": "MAGPIE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Magpie",
+     "description": "Find and inspect 95% of all clues."
+    },
+    {
+     "apiname": "THE_SHADOW",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Shadow",
+     "description": "Tail a suspect without being spotted, in a single case."
+    },
+    {
+     "apiname": "THE_THIRD_DEGREE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Third Degree",
+     "description": "Correctly branch every question in every interview in a single story case."
+    },
+    {
+     "apiname": "THE_HUNCH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Hunch",
+     "description": "Use four intuition points in a single interview session, correctly branching each question."
+    },
+    {
+     "apiname": "STAR_MAP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Star Map",
+     "description": "Discover all landmark locations around the city."
+    },
+    {
+     "apiname": "PUBLIC_MENACE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Public Menace",
+     "description": "Rack up $47,000 in penalties during a single story case."
+    },
+    {
+     "apiname": "THE_MOOSE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Moose",
+     "description": "Follow Candy Edwards without using cover or incognito, except when starting or picking up the tail."
+    },
+    {
+     "apiname": "KEEP_A_LID_ON",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Keep A Lid On",
+     "description": "Complete a brawl without losing your hat as an LAPD Detective or Investigator."
+    },
+    {
+     "apiname": "VEHICLE_COLLECTION_LEVEL1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Auto Enthusiast",
+     "description": "Drive 5 different vehicles."
+    },
+    {
+     "apiname": "VEHICLE_COLLECTION_LEVEL2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Auto Collector",
+     "description": "Drive 40 different vehicles."
+    },
+    {
+     "apiname": "VEHICLE_COLLECTION_LEVEL3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Auto Fanatic",
+     "description": "Drive every vehicle in the city."
+    },
+    {
+     "apiname": "HOLLYWOODLAND",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hollywoodland",
+     "description": "Find and inspect all gold film reels."
+    },
+    {
+     "apiname": "DLC_AT004_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Printer's Devil",
+     "description": "Complete 'A Slip of the Tongue'."
+    },
+    {
+     "apiname": "DLC_AT004_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Racing For Pinks",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AT004_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Femme Imbécile",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AT004_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chop Shop",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AT004_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Nowhere In A Hurry",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV004_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Eight Million Stories",
+     "description": "Complete 'The Naked City'."
+    },
+    {
+     "apiname": "DLC_AV004_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "A Good-Looking Corpse",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV004_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fakeloo",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV004_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Chauffeur Service",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV004_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Give My Regards",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AA005_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Big Unfriendly",
+     "description": "Complete 'Nicholson Electroplating'."
+    },
+    {
+     "apiname": "DLC_AA005_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Nose Knows",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AA005_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skeletons In The Icebox",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AA005_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bulletproof Windshield",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AA005_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Out Of The Frying Pan",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV002_1",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Every Herb Bearing Seed",
+     "description": "Complete 'Reefer Madness'."
+    },
+    {
+     "apiname": "DLC_AV002_2",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Spare A Dime",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV002_3",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Soup In The Pot",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV002_4",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "High Flyer",
+     "description": ""
+    },
+    {
+     "apiname": "DLC_AV002_5",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Forcible Rear Entry",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}
