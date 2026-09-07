@@ -1,21 +1,22 @@
 {
  "provider": "steam",
  "title": "Lies of P",
- "updated": "2026-08-30",
+ "updated": "2026-09-07",
  "id": "1627720",
- "fetched": "2026-08-30",
- "last_attempt": "2026-08-30",
- "unlocked": 52,
+ "fetched": "2026-09-07",
+ "last_attempt": "2026-09-07",
+ "unlocked": 53,
  "total": 53,
  "first": "2026-07-18",
- "last": "2026-08-29",
+ "last": "2026-08-31",
+ "award_kind": "all achievements",
  "platform": "PC",
  "icon": "978b39341282c22c22264141f9618c36094b4214",
- "playtime_mins": 5529,
+ "playtime_mins": 5898,
  "playtime": {
-  "linux": 5529
+  "linux": 5898
  },
- "last_played": "2026-08-30",
+ "last_played": "2026-09-01",
  "achievements": [
   {
    "key": "LOP_122",
@@ -436,7 +437,8 @@
   {
    "key": "LOP_103",
    "name": "Free from the puppet string",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-08-31T21:17:27-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/8172e06c0923d848398ae0802f43692a491a7c31.jpg",
    "hidden": true
   }
@@ -455,8 +457,8 @@
     },
     {
      "apiname": "LOP_103",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1788229047,
      "name": "Free from the puppet string",
      "description": ""
     },

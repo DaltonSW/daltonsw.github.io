@@ -1,14 +1,14 @@
-unlocked: 52
+unlocked: 53
 total: 53
-playtime_mins: 5529
-last_played: "2026-08-30"
+playtime_mins: 5898
+last_played: "2026-09-01"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 52
+      unlocked: 53
       total: 53
-      playtime_mins: 5529
-      last_played: "2026-08-30"
+      playtime_mins: 5898
+      last_played: "2026-09-01"
 earned:
     - name: Fatal Blow
       description: Deliver a successful Fatal Attack.
@@ -322,3 +322,9 @@ earned:
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/434f02c44b6955dc8a1e3fa3b97bc1f4bbc03898.jpg
       provider: steam
       platform: PC
+    - name: Free from the puppet string
+      date: "2026-08-31T21:17:27-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1627720/8172e06c0923d848398ae0802f43692a491a7c31.jpg
+      provider: steam
+      platform: PC
+      hidden: true

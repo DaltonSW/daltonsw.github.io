@@ -1,22 +1,22 @@
 {
  "provider": "steam",
  "title": "Baldur's Gate 3",
- "updated": "2026-08-30",
+ "updated": "2026-09-07",
  "id": "1086940",
- "fetched": "2026-08-30",
- "last_attempt": "2026-08-30",
- "unlocked": 45,
+ "fetched": "2026-09-07",
+ "last_attempt": "2026-09-07",
+ "unlocked": 46,
  "total": 54,
  "first": "2023-10-15",
- "last": "2025-03-04",
+ "last": "2026-08-30",
  "platform": "PC",
  "icon": "d866cae7ea1e471fdbc206287111f1b642373bd9",
- "playtime_mins": 25883,
+ "playtime_mins": 27794,
  "playtime": {
-  "linux": 21,
+  "linux": 1931,
   "windows": 25862
  },
- "last_played": "2026-08-29",
+ "last_played": "2026-09-07",
  "achievements": [
   {
    "key": "BG3_Quest01",
@@ -379,6 +379,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/cfa3488b4ac501d846b14948b801c93c361a98fe.jpg"
   },
   {
+   "key": "BG3_Quest31",
+   "name": "Devil's in the Details ",
+   "description": "Defeat Commander Zhalk on the nautiloid.",
+   "unlocked": true,
+   "date": "2026-08-30T16:12:18-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/bbceefbcd994db5b4f7367e3fcb46fe0facd4ffb.jpg"
+  },
+  {
    "key": "BG3_Quest05",
    "name": "Absolute Power Corrupts",
    "unlocked": false,
@@ -412,13 +420,6 @@
    "description": "Earn a hundred gold from playing sweet, sweet music in a single playthrough. ",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/edfa43e6937d245c903c51d91826fa1ce6f7bcd6.jpg"
-  },
-  {
-   "key": "BG3_Quest31",
-   "name": "Devil's in the Details ",
-   "description": "Defeat Commander Zhalk on the nautiloid.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/bbceefbcd994db5b4f7367e3fcb46fe0facd4ffb.jpg"
   },
   {
    "key": "BG3_Quest37",
@@ -659,8 +660,8 @@
     },
     {
      "apiname": "BG3_Quest31",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1788124338,
      "name": "Devil's in the Details ",
      "description": "Defeat Commander Zhalk on the nautiloid."
     },

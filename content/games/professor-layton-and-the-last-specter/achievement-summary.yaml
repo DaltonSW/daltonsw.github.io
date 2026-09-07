@@ -1,14 +1,14 @@
-unlocked: 24
+unlocked: 27
 total: 40
-playtime_mins: 1891
-last_played: "2026-08-29"
+playtime_mins: 2002
+last_played: "2026-09-05"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 24
+      unlocked: 27
       total: 40
-      playtime_mins: 1891
-      last_played: "2026-08-29"
+      playtime_mins: 2002
+      last_played: "2026-09-05"
 subsets:
     - name: Mouse Alley
       provider: retroachievements
@@ -84,21 +84,21 @@ earned:
       provider: retroachievements
       platform: Nintendo DS
       subset: Mouse Alley
-    - name: Early Bird
-      description: Get a Total Score of 500 Points in Mouse Alley.
-      date: "2026-07-12T22:05:32-05:00"
-      points: 1
-      hardcore: true
-      icon: "400428"
-      provider: retroachievements
-      platform: Nintendo DS
-      subset: Mouse Alley
     - name: Common Chaser
       description: Get a Total Score of 100 Points in Mouse Alley.
       date: "2026-07-12T22:05:32-05:00"
       points: 1
       hardcore: true
       icon: "400427"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Early Bird
+      description: Get a Total Score of 500 Points in Mouse Alley.
+      date: "2026-07-12T22:05:32-05:00"
+      points: 1
+      hardcore: true
+      icon: "400428"
       provider: retroachievements
       platform: Nintendo DS
       subset: Mouse Alley
@@ -272,5 +272,29 @@ earned:
       points: 10
       hardcore: true
       icon: "154009"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: House of the Flute Player
+      description: Solve all three Puzzles in the Flute Player's House.
+      date: "2026-08-31T22:28:39-05:00"
+      points: 10
+      hardcore: true
+      icon: "154011"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: House of the Puppeteer
+      description: Solve all three Puzzles in the Puppeteer's House.
+      date: "2026-09-03T21:25:16-05:00"
+      points: 10
+      hardcore: true
+      icon: "154010"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: House of the Biologist
+      description: Solve all three Puzzles in the Biologist's House.
+      date: "2026-09-03T21:40:25-05:00"
+      points: 10
+      hardcore: true
+      icon: "154012"
       provider: retroachievements
       platform: Nintendo DS
