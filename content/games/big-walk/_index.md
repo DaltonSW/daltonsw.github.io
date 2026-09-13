@@ -1,21 +1,18 @@
 ---
-title: "Big Walk"
-platform: "PC"
-retroachievements_id:
+title: Big Walk
+platform: PC
+retroachievements_id: null
 steam_appid: 1478500
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "playing"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: playing
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["big-walk"]
+    games:
+      - big-walk
+cover: null
 ---
 
 

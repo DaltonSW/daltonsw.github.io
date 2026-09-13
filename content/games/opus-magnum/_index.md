@@ -1,21 +1,18 @@
 ---
-title: "Opus Magnum"
-platform: "PC"
-retroachievements_id:
+title: Opus Magnum
+platform: PC
+retroachievements_id: null
 steam_appid: 558990
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "playing"
-subgames:
-started:
-finished:
-rating:
-cover:
+status: unfinished
+started: ""
+finished: "2026-02-07"
+rating: null
 draft: true
 cascade:
   params:
-    games: ["opus-magnum"]
+    games:
+      - opus-magnum
+cover: null
 ---
 
 

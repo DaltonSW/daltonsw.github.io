@@ -1,14 +1,14 @@
-unlocked: 46
+unlocked: 47
 total: 54
-playtime_mins: 27794
-last_played: "2026-09-07"
+playtime_mins: 28484
+last_played: "2026-09-12"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 46
+      unlocked: 47
       total: 54
-      playtime_mins: 27794
-      last_played: "2026-09-07"
+      playtime_mins: 28484
+      last_played: "2026-09-12"
 earned:
     - name: Descent From Avernus
       description: Take control of the nautiloid and escape the Hells.
@@ -286,3 +286,9 @@ earned:
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/bbceefbcd994db5b4f7367e3fcb46fe0facd4ffb.jpg
       provider: steam
       platform: PC
+    - name: She Cannot Be Caged!
+      date: "2026-09-11T19:53:27-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/f533118fcd650c20ef740d6440ed4b766c36352c.jpg
+      provider: steam
+      platform: PC
+      hidden: true

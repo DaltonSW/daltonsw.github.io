@@ -1,14 +1,14 @@
-unlocked: 27
+unlocked: 35
 total: 40
-playtime_mins: 2002
-last_played: "2026-09-05"
+playtime_mins: 2088
+last_played: "2026-09-11"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 27
+      unlocked: 35
       total: 40
-      playtime_mins: 2002
-      last_played: "2026-09-05"
+      playtime_mins: 2088
+      last_played: "2026-09-11"
 subsets:
     - name: Mouse Alley
       provider: retroachievements
@@ -84,21 +84,21 @@ earned:
       provider: retroachievements
       platform: Nintendo DS
       subset: Mouse Alley
-    - name: Common Chaser
-      description: Get a Total Score of 100 Points in Mouse Alley.
-      date: "2026-07-12T22:05:32-05:00"
-      points: 1
-      hardcore: true
-      icon: "400427"
-      provider: retroachievements
-      platform: Nintendo DS
-      subset: Mouse Alley
     - name: Early Bird
       description: Get a Total Score of 500 Points in Mouse Alley.
       date: "2026-07-12T22:05:32-05:00"
       points: 1
       hardcore: true
       icon: "400428"
+      provider: retroachievements
+      platform: Nintendo DS
+      subset: Mouse Alley
+    - name: Common Chaser
+      description: Get a Total Score of 100 Points in Mouse Alley.
+      date: "2026-07-12T22:05:32-05:00"
+      points: 1
+      hardcore: true
+      icon: "400427"
       provider: retroachievements
       platform: Nintendo DS
       subset: Mouse Alley
@@ -296,5 +296,69 @@ earned:
       points: 10
       hardcore: true
       icon: "154012"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Treasure is Yours!
+      description: Solve Weekly Puzzle 32 in 128 moves.
+      date: "2026-09-08T21:29:23-05:00"
+      points: 10
+      hardcore: true
+      icon: "327502"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Brand-New Puzzles!
+      description: Solve all Weekly Puzzles.
+      date: "2026-09-08T21:29:37-05:00"
+      points: 10
+      hardcore: true
+      icon: "327772"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Even Greater Escape
+      description: Solve Puzzle 170 in 178 total moves.
+      date: "2026-09-10T21:08:34-05:00"
+      points: 25
+      hardcore: true
+      icon: "327501"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Misthallery's Best Puzzle-Solver
+      description: Solve all 170 Puzzles and collect all 7000 Picarats in the Game.
+      date: "2026-09-10T21:08:55-05:00"
+      points: 25
+      hardcore: true
+      icon: "154241"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: House of the Puzzle Cat
+      description: Solve all three Puzzles in the Puzzle Cat's House.
+      date: "2026-09-10T21:08:55-05:00"
+      points: 10
+      hardcore: true
+      icon: "154013"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: The Truth behind the Fairytales of Misthallery
+      description: Solve all 170 Puzzles in Misthallery.
+      date: "2026-09-10T21:08:55-05:00"
+      points: 25
+      hardcore: true
+      icon: "151129"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Pictures of Memory
+      description: Watch all Episodes in a single Session.
+      date: "2026-09-10T21:36:28-05:00"
+      points: 10
+      hardcore: true
+      icon: "151177"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Touch Stone
+      description: Solve Puzzle 158 in 20 moves.
+      date: "2026-09-10T21:40:44-05:00"
+      points: 5
+      hardcore: true
+      icon: "327495"
       provider: retroachievements
       platform: Nintendo DS

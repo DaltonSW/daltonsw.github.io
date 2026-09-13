@@ -1,22 +1,22 @@
 {
  "provider": "steam",
  "title": "Baldur's Gate 3",
- "updated": "2026-09-07",
+ "updated": "2026-09-12",
  "id": "1086940",
- "fetched": "2026-09-07",
- "last_attempt": "2026-09-07",
- "unlocked": 46,
+ "fetched": "2026-09-12",
+ "last_attempt": "2026-09-12",
+ "unlocked": 47,
  "total": 54,
  "first": "2023-10-15",
- "last": "2026-08-30",
+ "last": "2026-09-11",
  "platform": "PC",
  "icon": "d866cae7ea1e471fdbc206287111f1b642373bd9",
- "playtime_mins": 27794,
+ "playtime_mins": 28484,
  "playtime": {
-  "linux": 1931,
+  "linux": 2621,
   "windows": 25862
  },
- "last_played": "2026-09-07",
+ "last_played": "2026-09-12",
  "achievements": [
   {
    "key": "BG3_Quest01",
@@ -387,6 +387,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/bbceefbcd994db5b4f7367e3fcb46fe0facd4ffb.jpg"
   },
   {
+   "key": "BG3_Quest22",
+   "name": "She Cannot Be Caged!",
+   "unlocked": true,
+   "date": "2026-09-11T19:53:27-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/f533118fcd650c20ef740d6440ed4b766c36352c.jpg",
+   "hidden": true
+  },
+  {
    "key": "BG3_Quest05",
    "name": "Absolute Power Corrupts",
    "unlocked": false,
@@ -399,13 +407,6 @@
    "description": "Multiclass into every class in one playthrough without asking Withers to change your character.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/5f62e2f146d67732fe8a8dc02a322cf1f3a2c600.jpg"
-  },
-  {
-   "key": "BG3_Quest22",
-   "name": "She Cannot Be Caged!",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/f533118fcd650c20ef740d6440ed4b766c36352c.jpg",
-   "hidden": true
   },
   {
    "key": "BG3_Quest24",
@@ -597,8 +598,8 @@
     },
     {
      "apiname": "BG3_Quest22",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1789174407,
      "name": "She Cannot Be Caged!",
      "description": ""
     },

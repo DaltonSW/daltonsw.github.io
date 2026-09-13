@@ -3,7 +3,7 @@ title: Lies of P
 platform: PC
 retroachievements_id: null
 steam_appid: 1627720
-status: playing
+status: mastered
 started: ""
 finished: ""
 rating: null
@@ -14,5 +14,3 @@ cascade:
       - lies-of-p
 cover: null
 ---
-
-
