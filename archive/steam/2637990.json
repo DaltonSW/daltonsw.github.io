@@ -1,15 +1,26 @@
 {
  "provider": "steam",
  "title": "Duck Detective: The Secret Salami",
- "updated": "2026-09-07",
+ "updated": "2026-09-25",
  "id": "2637990",
- "fetched": "2026-09-07",
- "last_attempt": "2026-09-07",
- "unlocked": 0,
+ "fetched": "2026-09-25",
+ "last_attempt": "2026-09-25",
+ "unlocked": 1,
  "total": 7,
+ "first": "2026-09-25",
+ "last": "2026-09-25",
  "platform": "PC",
  "icon": "f84d21d80da084d2f00dea54187b2190187d8282",
+ "last_played": "2026-09-25",
  "achievements": [
+  {
+   "key": "Achievement.EarlyBird",
+   "name": "Early Bird",
+   "description": "Solve a deducktion",
+   "unlocked": true,
+   "date": "2026-09-25T18:47:14-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/8f0170a7f89503e573c979923d753421faa29c64.jpg"
+  },
   {
    "key": "Achievement.BeakPerformance",
    "name": "Beak Performance",
@@ -23,13 +34,6 @@
    "description": "Fill out all suspects' names",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/06e8121b75a8d5c27decb1e1078805f6c634e370.jpg"
-  },
-  {
-   "key": "Achievement.EarlyBird",
-   "name": "Early Bird",
-   "description": "Solve a deducktion",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/8f0170a7f89503e573c979923d753421faa29c64.jpg"
   },
   {
    "key": "Achievement.Emusing",
@@ -67,8 +71,8 @@
    "achievements": [
     {
      "apiname": "Achievement.EarlyBird",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1790380034,
      "name": "Early Bird",
      "description": "Solve a deducktion"
     },

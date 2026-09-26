@@ -1,14 +1,14 @@
-unlocked: 100
+unlocked: 101
 total: 156
-playtime_mins: 25641
-last_played: "2026-09-07"
+playtime_mins: 26050
+last_played: "2026-09-25"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 100
+      unlocked: 101
       total: 156
-      playtime_mins: 25641
-      last_played: "2026-09-07"
+      playtime_mins: 26050
+      last_played: "2026-09-25"
 earned:
     - name: First Win
       description: 1 Non-Tutorial Beginner map Win
@@ -608,5 +608,11 @@ earned:
       description: Defeat 5 unique Bosses at Tier 5 (Can be in Boss Event or Challenge Mode)
       date: "2026-08-15T13:18:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/576a51ba7ae5030af1e9a08e06d7f6f6fc0d652c.jpg
+      provider: steam
+      platform: PC
+    - name: Mid Season
+      description: Earn 7,500 Stars in any Social Season
+      date: "2026-09-10T18:16:20-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/45b9e6c494f376ee4b4bb13e58b1501510af2275.jpg
       provider: steam
       platform: PC

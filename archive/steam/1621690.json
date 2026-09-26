@@ -1,12 +1,12 @@
 {
  "provider": "steam",
  "title": "Core Keeper",
- "updated": "2026-09-07",
+ "updated": "2026-09-25",
  "id": "1621690",
- "fetched": "2026-09-07",
- "last_attempt": "2026-09-07",
+ "fetched": "2026-09-25",
+ "last_attempt": "2026-09-25",
  "unlocked": 0,
- "total": 55,
+ "total": 59,
  "platform": "PC",
  "icon": "53517a1b2eb22e22ac4a1f71c814209f1b84c063",
  "achievements": [
@@ -172,6 +172,13 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/81792a6d816764e9a7862377e4432d494f8c48aa.jpg"
   },
   {
+   "key": "EquipExplorer",
+   "name": "Fortune and Glory",
+   "description": "Equipped a Hookshot and the Explorer's vanity set",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/73280d345ee5bf3f5ac5146669d40b4cedfc959a.jpg"
+  },
+  {
    "key": "EquipRingOfRockAndStone",
    "name": "Rock and Stone!",
    "description": "Equipped the Ring of Rock and Ring of Stone",
@@ -298,10 +305,24 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/b5d0894e4e322f1e95c2ae8e225eddc4753c15df.jpg"
   },
   {
+   "key": "Mount",
+   "name": "Giddy Up",
+   "description": "Saddle-straddle-skedaddled cattle",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/f2dc2c170867edfcf487c075db91ca81d1ea3cce.jpg"
+  },
+  {
    "key": "ObtainCredenceOfRuin",
    "name": "The Credence of Ruin",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/f239e04e1a13e88aec97546479e7061f123f3675.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ObtainLegendaryScepter",
+   "name": "The Veil Crux",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/16b905897e784fa0ea756b89b59ce85853e7a2a1.jpg",
    "hidden": true
   },
   {
@@ -394,6 +415,13 @@
    "description": "Used a waypoint",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/541a68b3c591538c1b23b132c42fa0696ee26d71.jpg"
+  },
+  {
+   "key": "Vehicles",
+   "name": "Racer's Garage",
+   "description": "Stored 3 different kinds of Go-Karts in a chest",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1621690/260b1bcd6bbf6e5eb04f2e9cd994a1614613b18a.jpg"
   }
  ],
  "raw": {
@@ -785,6 +813,34 @@
      "unlocktime": 0,
      "name": "The Titan Breath",
      "description": ""
+    },
+    {
+     "apiname": "EquipExplorer",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fortune and Glory",
+     "description": "Equipped a Hookshot and the Explorer's vanity set"
+    },
+    {
+     "apiname": "Mount",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Giddy Up",
+     "description": "Saddle-straddle-skedaddled cattle"
+    },
+    {
+     "apiname": "ObtainLegendaryScepter",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Veil Crux",
+     "description": ""
+    },
+    {
+     "apiname": "Vehicles",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Racer's Garage",
+     "description": "Stored 3 different kinds of Go-Karts in a chest"
     }
    ],
    "success": true

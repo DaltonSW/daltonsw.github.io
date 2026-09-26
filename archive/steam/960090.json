@@ -1,23 +1,23 @@
 {
  "provider": "steam",
  "title": "Bloons TD 6",
- "updated": "2026-09-07",
+ "updated": "2026-09-25",
  "id": "960090",
- "fetched": "2026-09-07",
- "last_attempt": "2026-09-07",
- "unlocked": 100,
+ "fetched": "2026-09-25",
+ "last_attempt": "2026-09-25",
+ "unlocked": 101,
  "total": 156,
  "first": "2022-07-15",
- "last": "2026-08-15",
+ "last": "2026-09-10",
  "platform": "PC",
  "icon": "c5f0b67c8beeb6be99abe2ad8db2cada5d5ccff0",
- "playtime_mins": 25641,
+ "playtime_mins": 26050,
  "playtime": {
   "disconnected": 1,
-  "linux": 13384,
+  "linux": 13793,
   "windows": 12256
  },
- "last_played": "2026-09-07",
+ "last_played": "2026-09-25",
  "achievements": [
   {
    "key": "7",
@@ -820,6 +820,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/576a51ba7ae5030af1e9a08e06d7f6f6fc0d652c.jpg"
   },
   {
+   "key": "158",
+   "name": "Mid Season",
+   "description": "Earn 7,500 Stars in any Social Season",
+   "unlocked": true,
+   "date": "2026-09-10T18:16:20-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/45b9e6c494f376ee4b4bb13e58b1501510af2275.jpg"
+  },
+  {
    "key": "105",
    "name": "Freaky Friday",
    "description": "Use the Alchemist's Transforming Tonic abilities 100 times",
@@ -1014,13 +1022,6 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/104b8af45a7000198d64cd92594d1047ce2a16ff.jpg",
    "hidden": true
-  },
-  {
-   "key": "158",
-   "name": "Mid Season",
-   "description": "Earn 7,500 Stars in any Social Season",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/45b9e6c494f376ee4b4bb13e58b1501510af2275.jpg"
   },
   {
    "key": "159",
@@ -2297,8 +2298,8 @@
     },
     {
      "apiname": "158",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1789082180,
      "name": "Mid Season",
      "description": "Earn 7,500 Stars in any Social Season"
     },

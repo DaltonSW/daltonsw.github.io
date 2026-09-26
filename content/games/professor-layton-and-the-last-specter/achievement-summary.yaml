@@ -1,14 +1,14 @@
-unlocked: 35
+unlocked: 39
 total: 40
-playtime_mins: 2088
-last_played: "2026-09-11"
+playtime_mins: 2317
+last_played: "2026-09-14"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 35
+      unlocked: 39
       total: 40
-      playtime_mins: 2088
-      last_played: "2026-09-11"
+      playtime_mins: 2317
+      last_played: "2026-09-14"
 subsets:
     - name: Mouse Alley
       provider: retroachievements
@@ -17,7 +17,7 @@ subsets:
       unlocked: 7
       total: 52
       playtime_mins: 1117
-      last_played: "2026-08-26"
+      last_played: "2026-09-14"
 earned:
     - name: The Fog of Misthallery
       description: Finish Chapter 1.
@@ -360,5 +360,37 @@ earned:
       points: 5
       hardcore: true
       icon: "327495"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Mysterious Treasure Hunt
+      description: Open the Hidden Door of Misthallery.
+      date: "2026-09-13T15:52:50-05:00"
+      points: 10
+      hardcore: true
+      icon: "328339"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Bomb Squad
+      description: Solve Puzzle 159 in 46 moves.
+      date: "2026-09-13T15:59:14-05:00"
+      points: 5
+      hardcore: true
+      icon: "327496"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Jewel Swap
+      description: Solve Puzzle 164 in 61 moves.
+      date: "2026-09-13T16:04:41-05:00"
+      points: 5
+      hardcore: true
+      icon: "327498"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Sliding Pipes
+      description: Solve Puzzle 166 in 68 moves.
+      date: "2026-09-13T16:16:17-05:00"
+      points: 5
+      hardcore: true
+      icon: "327497"
       provider: retroachievements
       platform: Nintendo DS

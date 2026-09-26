@@ -1,18 +1,18 @@
 user_id: UULVSLFDA
-fetched: "2026-09-13"
-xp: 110688390
+fetched: "2026-09-25"
+xp: 111220660
 rank: 148
 trophies: 100
 lifetime_trophies: 1485
 knowledge_points: 0
 highest_seen_round: 163
-games_played: 2258
+games_played: 2264
 total_odysseys: 29
 achievements_count: 101
 primary_hero: Sauda
 towers:
     - name: Alchemist
-      xp: 7533413
+      xp: 7565666
       unlocked: true
     - name: BananaFarm
       xp: 2732534
@@ -30,7 +30,7 @@ towers:
       xp: 4262939
       unlocked: true
     - name: DartlingGunner
-      xp: 651746
+      xp: 722953
       unlocked: true
     - name: Desperado
       xp: 968823
@@ -42,7 +42,7 @@ towers:
       xp: 2288359
       unlocked: true
     - name: GlueGunner
-      xp: 3954612
+      xp: 4028828
       unlocked: true
     - name: HeliPilot
       xp: 2037108
@@ -51,16 +51,16 @@ towers:
       xp: 774066
       unlocked: true
     - name: Mermonkey
-      xp: 3157144
+      xp: 3264471
       unlocked: true
     - name: MonkeyAce
       xp: 4067009
       unlocked: true
     - name: MonkeyBuccaneer
-      xp: 10126066
+      xp: 10139530
       unlocked: true
     - name: MonkeySub
-      xp: 4720870
+      xp: 4857764
       unlocked: true
     - name: MonkeyVillage
       xp: 4301866
@@ -69,25 +69,25 @@ towers:
       xp: 124408
       unlocked: true
     - name: NinjaMonkey
-      xp: 3446029
+      xp: 3452327
       unlocked: true
     - name: Skywarden
       xp: 53120
       unlocked: true
     - name: SniperMonkey
-      xp: 13159600
+      xp: 13167208
       unlocked: true
     - name: SpikeFactory
       xp: 3354092
       unlocked: true
     - name: SuperMonkey
-      xp: 1627825
+      xp: 1732827
       unlocked: true
     - name: TackShooter
       xp: 4278306
       unlocked: true
     - name: WizardMonkey
-      xp: 14887985
+      xp: 14910903
       unlocked: true
 heroes:
     - name: AdmiralBrickell
@@ -1113,11 +1113,23 @@ maps:
           completed: false
         - difficulty: Hard
           mode: AlternateBloonsRounds
-          completed: false
+          completed: true
+          completed_without_loading_save: true
+          best_round: 80
+          times_completed: 1
         - difficulty: Hard
           mode: DoubleMoabHealth
           completed: true
           best_round: 80
+          times_completed: 1
+        - difficulty: Hard
+          mode: HalfCash
+          completed: false
+        - difficulty: Hard
+          mode: Impoppable
+          completed: true
+          completed_without_loading_save: true
+          best_round: 100
           times_completed: 1
         - difficulty: Hard
           mode: MagicOnly
@@ -1664,6 +1676,12 @@ maps:
     - name: Haunted
       complete: true
       modes:
+        - difficulty: Easy
+          mode: Standard
+          completed: true
+          completed_without_loading_save: true
+          best_round: 40
+          times_completed: 1
         - difficulty: Hard
           mode: AlternateBloonsRounds
           completed: true
@@ -1962,11 +1980,23 @@ maps:
       complete: true
       modes:
         - difficulty: Easy
+          mode: PrimaryOnly
+          completed: true
+          completed_without_loading_save: true
+          best_round: 40
+          times_completed: 1
+        - difficulty: Easy
+          mode: Sandbox
+          completed: false
+        - difficulty: Easy
           mode: Standard
           completed: true
           completed_without_loading_save: true
           best_round: 40
           times_completed: 1
+        - difficulty: Easy
+          mode: SuperChimps
+          completed: false
         - difficulty: Hard
           mode: AlternateBloonsRounds
           completed: true
@@ -3188,7 +3218,7 @@ maps:
           completed: true
           completed_without_loading_save: true
           best_round: 86
-          times_completed: 2
+          times_completed: 3
         - difficulty: Medium
           mode: SuperChimps
           completed: false
@@ -4409,7 +4439,7 @@ maps:
           completed: true
           completed_without_loading_save: true
           best_round: 55
-          times_completed: 4
+          times_completed: 5
         - difficulty: Easy
           mode: SuperChimps
           completed: false
@@ -4898,7 +4928,7 @@ insta_monkeys:
         - tier: "420"
           quantity: 2
     - tower: BananaFarm
-      total: 23
+      total: 24
       tiers:
         - tier: "000"
           quantity: 3
@@ -4927,6 +4957,8 @@ insta_monkeys:
         - tier: "200"
           quantity: 2
         - tier: "201"
+          quantity: 1
+        - tier: "210"
           quantity: 1
         - tier: "410"
           quantity: 1
@@ -5163,7 +5195,7 @@ insta_monkeys:
         - tier: "310"
           quantity: 1
     - tower: Druid
-      total: 33
+      total: 34
       tiers:
         - tier: "000"
           quantity: 3
@@ -5172,6 +5204,8 @@ insta_monkeys:
         - tier: "002"
           quantity: 2
         - tier: "003"
+          quantity: 1
+        - tier: "012"
           quantity: 1
         - tier: "013"
           quantity: 2
@@ -5559,7 +5593,7 @@ insta_monkeys:
         - tier: "420"
           quantity: 1
     - tower: MortarMonkey
-      total: 26
+      total: 28
       tiers:
         - tier: "001"
           quantity: 1
@@ -5572,6 +5606,8 @@ insta_monkeys:
         - tier: "021"
           quantity: 4
         - tier: "023"
+          quantity: 1
+        - tier: "031"
           quantity: 1
         - tier: "100"
           quantity: 1
@@ -5588,7 +5624,7 @@ insta_monkeys:
         - tier: "210"
           quantity: 1
         - tier: "220"
-          quantity: 1
+          quantity: 2
         - tier: "230"
           quantity: 1
         - tier: "300"
@@ -5637,7 +5673,7 @@ insta_monkeys:
         - tier: "302"
           quantity: 1
     - tower: Skywarden
-      total: 8
+      total: 9
       tiers:
         - tier: "003"
           quantity: 1
@@ -5654,6 +5690,8 @@ insta_monkeys:
         - tier: "200"
           quantity: 1
         - tier: "300"
+          quantity: 1
+        - tier: "310"
           quantity: 1
     - tower: SniperMonkey
       total: 34
@@ -5876,4 +5914,4 @@ insta_monkeys:
           quantity: 2
         - tier: "402"
           quantity: 1
-insta_monkeys_total: 658
+insta_monkeys_total: 663

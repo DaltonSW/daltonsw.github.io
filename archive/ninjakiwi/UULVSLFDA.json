@@ -2,24 +2,23 @@
  "provider": "ninjakiwi",
  "title": "Bloons TD 6",
  "id": "UULVSLFDA",
- "updated": "2026-09-13",
- "fetched": "2026-09-13",
- "last_attempt": "2026-09-13",
- "monkey_money": 4647,
+ "updated": "2026-09-25",
+ "fetched": "2026-09-25",
+ "last_attempt": "2026-09-25",
+ "monkey_money": 5754,
  "trophies": 100,
- "xp": 110688390,
+ "xp": 111220660,
  "rank": 148,
  "lifetime_trophies": 1485,
  "highest_seen_round": 163,
- "games_played": 2258,
- "daily_reward_count": 319,
- "total_daily_challenges_completed": 146,
+ "games_played": 2264,
+ "daily_reward_count": 325,
+ "total_daily_challenges_completed": 151,
  "total_races_entered": 4,
- "challenges_played": 175,
+ "challenges_played": 180,
  "total_completed_odysseys": 29,
- "continues_used": 450,
+ "continues_used": 453,
  "collection_event_crates_opened": 127,
- "consecutive_daily_challenges_completed": 1,
  "primary_hero": "Sauda",
  "unlocked_heroes": {
   "AdmiralBrickell": true,
@@ -43,32 +42,32 @@
   "StrikerJones": true
  },
  "tower_xp": {
-  "Alchemist": 7533413,
+  "Alchemist": 7565666,
   "BananaFarm": 2732534,
   "BeastHandler": 1101308,
   "BombShooter": 1976221,
   "BoomerangMonkey": 1077941,
   "DartMonkey": 4262939,
-  "DartlingGunner": 651746,
+  "DartlingGunner": 722953,
   "Desperado": 968823,
   "Druid": 6778926,
   "EngineerMonkey": 2288359,
-  "GlueGunner": 3954612,
+  "GlueGunner": 4028828,
   "HeliPilot": 2037108,
   "IceMonkey": 774066,
-  "Mermonkey": 3157144,
+  "Mermonkey": 3264471,
   "MonkeyAce": 4067009,
-  "MonkeyBuccaneer": 10126066,
-  "MonkeySub": 4720870,
+  "MonkeyBuccaneer": 10139530,
+  "MonkeySub": 4857764,
   "MonkeyVillage": 4301866,
   "MortarMonkey": 124408,
-  "NinjaMonkey": 3446029,
+  "NinjaMonkey": 3452327,
   "Skywarden": 53120,
-  "SniperMonkey": 13159600,
+  "SniperMonkey": 13167208,
   "SpikeFactory": 3354092,
-  "SuperMonkey": 1627825,
+  "SuperMonkey": 1732827,
   "TackShooter": 4278306,
-  "WizardMonkey": 14887985
+  "WizardMonkey": 14910903
  },
  "unlocked_towers": {
   "Alchemist": true,
@@ -714,6 +713,7 @@
   "BasePropTreasureChest": false,
   "BloonsAllBloonsBeards": false,
   "BloonsAllBloonsBucketHat": false,
+  "BloonsAllBloonsBumperStickers": true,
   "BloonsAllBloonsBunnyEars": false,
   "BloonsAllBloonsCatEar": true,
   "BloonsAllBloonsCowboyHat": true,
@@ -753,6 +753,7 @@
   "BloonsDDTSkinTron": false,
   "BloonsMOABSkinBoat": false,
   "BloonsMOABSkinBtd4Retro": false,
+  "BloonsMOABSkinCampervan": true,
   "BloonsMOABSkinChocolate": false,
   "BloonsMOABSkinFootball": false,
   "BloonsMOABSkinGlacier": true,
@@ -1106,6 +1107,7 @@
    "110": 1,
    "200": 2,
    "201": 1,
+   "210": 1,
    "410": 1,
    "420": 1
   },
@@ -1234,6 +1236,7 @@
    "001": 2,
    "002": 2,
    "003": 1,
+   "012": 1,
    "013": 2,
    "020": 1,
    "021": 2,
@@ -1440,6 +1443,7 @@
    "020": 1,
    "021": 4,
    "023": 1,
+   "031": 1,
    "100": 1,
    "101": 2,
    "110": 2,
@@ -1447,7 +1451,7 @@
    "130": 1,
    "200": 2,
    "210": 1,
-   "220": 1,
+   "220": 2,
    "230": 1,
    "300": 1,
    "301": 2,
@@ -1481,7 +1485,8 @@
    "120": 1,
    "130": 1,
    "200": 1,
-   "300": 1
+   "300": 1,
+   "310": 1
   },
   "SniperMonkey": {
    "000": 1,
@@ -1606,7 +1611,7 @@
    "quantity": 8
   },
   "CamoTrap": {
-   "quantity": 19
+   "quantity": 20
   },
   "CashDrop": {
    "quantity": 13
@@ -1615,7 +1620,8 @@
    "quantity": 24
   },
   "EnergisingTotem": {
-   "quantity": 22
+   "quantity": 23,
+   "is_new": true
   },
   "GlueTrap": {
    "quantity": 20
@@ -1627,13 +1633,17 @@
    "quantity": 40
   },
   "Pontoon": {
-   "quantity": 20
+   "quantity": 21
   },
   "PortableLake": {
    "quantity": 24
   },
+  "PortableLakePro": {
+   "quantity": 1
+  },
   "RoadSpikes": {
-   "quantity": 6
+   "quantity": 7,
+   "is_new": true
   },
   "SheRa": {
    "quantity": 8
@@ -1645,7 +1655,7 @@
    "quantity": 1
   },
   "SuperMonkeyStorm": {
-   "quantity": 48
+   "quantity": 49
   },
   "SwordOfPower": {
    "quantity": 5
@@ -2799,10 +2809,22 @@
     },
     "Hard": {
      "single": {
-      "AlternateBloonsRounds": {},
+      "AlternateBloonsRounds": {
+       "completed": true,
+       "completed_without_loading_save": true,
+       "best_round": 80,
+       "times_completed": 1
+      },
       "DoubleMoabHealth": {
        "completed": true,
        "best_round": 80,
+       "times_completed": 1
+      },
+      "HalfCash": {},
+      "Impoppable": {
+       "completed": true,
+       "completed_without_loading_save": true,
+       "best_round": 100,
        "times_completed": 1
       },
       "MagicOnly": {
@@ -3371,6 +3393,16 @@
   "Haunted": {
    "complete": true,
    "difficulty": {
+    "Easy": {
+     "single": {
+      "Standard": {
+       "completed": true,
+       "completed_without_loading_save": true,
+       "best_round": 40,
+       "times_completed": 1
+      }
+     }
+    },
     "Hard": {
      "single": {
       "AlternateBloonsRounds": {
@@ -3677,12 +3709,20 @@
    "difficulty": {
     "Easy": {
      "single": {
+      "PrimaryOnly": {
+       "completed": true,
+       "completed_without_loading_save": true,
+       "best_round": 40,
+       "times_completed": 1
+      },
+      "Sandbox": {},
       "Standard": {
        "completed": true,
        "completed_without_loading_save": true,
        "best_round": 40,
        "times_completed": 1
-      }
+      },
+      "SuperChimps": {}
      }
     },
     "Hard": {
@@ -4966,7 +5006,7 @@
        "completed": true,
        "completed_without_loading_save": true,
        "best_round": 86,
-       "times_completed": 2
+       "times_completed": 3
       },
       "SuperChimps": {}
      }
@@ -6222,7 +6262,7 @@
        "completed": true,
        "completed_without_loading_save": true,
        "best_round": 55,
-       "times_completed": 4
+       "times_completed": 5
       },
       "SuperChimps": {}
      }
@@ -6702,28 +6742,28 @@
   "towerXP": {
    "DartMonkey": 4262939,
    "BombShooter": 1976221,
-   "NinjaMonkey": 3446029,
-   "SuperMonkey": 1627825,
-   "WizardMonkey": 14887985,
+   "NinjaMonkey": 3452327,
+   "SuperMonkey": 1732827,
+   "WizardMonkey": 14910903,
    "BananaFarm": 2732534,
    "MonkeyVillage": 4301866,
    "HeliPilot": 2037108,
    "Druid": 6778926,
    "EngineerMonkey": 2288359,
    "MortarMonkey": 124408,
-   "Alchemist": 7533413,
+   "Alchemist": 7565666,
    "MonkeyAce": 4067009,
    "BoomerangMonkey": 1077941,
    "SpikeFactory": 3354092,
-   "GlueGunner": 3954612,
+   "GlueGunner": 4028828,
    "TackShooter": 4278306,
-   "MonkeyBuccaneer": 10126066,
-   "MonkeySub": 4720870,
-   "DartlingGunner": 651746,
+   "MonkeyBuccaneer": 10139530,
+   "MonkeySub": 4857764,
+   "DartlingGunner": 722953,
    "BeastHandler": 1101308,
    "IceMonkey": 774066,
-   "SniperMonkey": 13159600,
-   "Mermonkey": 3157144,
+   "SniperMonkey": 13167208,
+   "Mermonkey": 3264471,
    "Desperado": 968823,
    "Skywarden": 53120
   },
@@ -7394,7 +7434,7 @@
    "Silas": true,
    "Sheriff": true
   },
-  "gamesPlayed": 2258,
+  "gamesPlayed": 2264,
   "instaTowers": {
    "DartMonkey": {
     "102": 1,
@@ -7486,7 +7526,8 @@
     "020": 1,
     "032": 1,
     "002": 2,
-    "013": 2
+    "013": 2,
+    "012": 1
    },
    "IceMonkey": {
     "101": 1,
@@ -7659,7 +7700,7 @@
     "130": 1,
     "200": 2,
     "210": 1,
-    "220": 1,
+    "220": 2,
     "230": 1,
     "300": 1,
     "301": 2,
@@ -7669,7 +7710,8 @@
     "011": 1,
     "001": 1,
     "023": 1,
-    "020": 1
+    "020": 1,
+    "031": 1
    },
    "EngineerMonkey": {
     "100": 2,
@@ -7773,6 +7815,7 @@
     "110": 1,
     "200": 2,
     "201": 1,
+    "210": 1,
     "410": 1,
     "420": 1,
     "000": 3,
@@ -7918,12 +7961,13 @@
     "130": 1,
     "200": 1,
     "300": 1,
+    "310": 1,
     "030": 1,
     "003": 1
    }
   },
-  "monkeyMoney": 4647,
-  "xp": 110688390,
+  "monkeyMoney": 5754,
+  "xp": 111220660,
   "rank": 148,
   "veteranXp": 0,
   "veteranRank": 0,
@@ -8041,8 +8085,8 @@
     "isNew": false
    },
    "RoadSpikes": {
-    "quantity": 6,
-    "isNew": false
+    "quantity": 7,
+    "isNew": true
    },
    "MonkeyBoost": {
     "quantity": 40,
@@ -8053,15 +8097,15 @@
     "isNew": false
    },
    "CamoTrap": {
-    "quantity": 19,
-    "isNew": false
-   },
-   "Pontoon": {
     "quantity": 20,
     "isNew": false
    },
+   "Pontoon": {
+    "quantity": 21,
+    "isNew": false
+   },
    "SuperMonkeyStorm": {
-    "quantity": 48,
+    "quantity": 49,
     "isNew": false
    },
    "GlueTrap": {
@@ -8081,8 +8125,8 @@
     "isNew": false
    },
    "EnergisingTotem": {
-    "quantity": 22,
-    "isNew": false
+    "quantity": 23,
+    "isNew": true
    },
    "DartTime": {
     "quantity": 24,
@@ -8109,6 +8153,10 @@
     "isNew": false
    },
    "SuperMonkeyBeacon": {
+    "quantity": 1,
+    "isNew": false
+   },
+   "PortableLakePro": {
     "quantity": 1,
     "isNew": false
    }
@@ -8145,11 +8193,11 @@
    }
   },
   "highestSeenRound": 163,
-  "dailyRewardCount": 319,
-  "totalDailyChallengesCompleted": 146,
-  "consecutiveDailyChallengesCompleted": 1,
+  "dailyRewardCount": 325,
+  "totalDailyChallengesCompleted": 151,
+  "consecutiveDailyChallengesCompleted": 0,
   "totalRacesEntered": 4,
-  "challengesPlayed": 175,
+  "challengesPlayed": 180,
   "challengesShared": 0,
   "totalCompletedOdysseys": 29,
   "unlockedBigBloons": true,
@@ -8203,7 +8251,7 @@
    "Skywarden": "Skywarden"
   },
   "collectionEventCratesOpened": 127,
-  "continuesUsed": 450,
+  "continuesUsed": 453,
   "trophyStoreItems": {
    "HeroesQuincyCyberQuincyPlacementFireworks": false,
    "HeroesAdoraPlacementSunbeam": false,
@@ -8551,7 +8599,9 @@
    "TeamsBanner11": false,
    "TeamsEmblemFrame19": false,
    "TeamsEmblemIcon22": false,
+   "BloonsAllBloonsBumperStickers": true,
    "BloonsAllBloonsCowboyHat": true,
+   "BloonsMOABSkinCampervan": true,
    "GameUIProfileAvatar102": true,
    "GameUIProfileAvatar129": true,
    "GameUIProfileAvatar83": true,
@@ -8788,7 +8838,7 @@
         "completed": true,
         "completedWithoutLoadingSave": true,
         "bestRound": 55,
-        "timesCompleted": 4
+        "timesCompleted": 5
        },
        "Sandbox": {
         "completed": false,
@@ -9383,7 +9433,7 @@
         "completed": true,
         "completedWithoutLoadingSave": true,
         "bestRound": 86,
-        "timesCompleted": 2
+        "timesCompleted": 3
        },
        "MilitaryOnly": {
         "completed": true,
@@ -12178,6 +12228,24 @@
         "completedWithoutLoadingSave": true,
         "bestRound": 40,
         "timesCompleted": 1
+       },
+       "Sandbox": {
+        "completed": false,
+        "completedWithoutLoadingSave": false,
+        "bestRound": 0,
+        "timesCompleted": 0
+       },
+       "PrimaryOnly": {
+        "completed": true,
+        "completedWithoutLoadingSave": true,
+        "bestRound": 40,
+        "timesCompleted": 1
+       },
+       "SuperChimps": {
+        "completed": false,
+        "completedWithoutLoadingSave": false,
+        "bestRound": 0,
+        "timesCompleted": 0
        }
       },
       "coop": {}
@@ -12343,6 +12411,17 @@
        }
       },
       "coop": {}
+     },
+     "Easy": {
+      "single": {
+       "Standard": {
+        "completed": true,
+        "completedWithoutLoadingSave": true,
+        "bestRound": 40,
+        "timesCompleted": 1
+       }
+      },
+      "coop": {}
      }
     }
    },
@@ -12393,10 +12472,10 @@
         "timesCompleted": 0
        },
        "AlternateBloonsRounds": {
-        "completed": false,
-        "completedWithoutLoadingSave": false,
-        "bestRound": 0,
-        "timesCompleted": 0
+        "completed": true,
+        "completedWithoutLoadingSave": true,
+        "bestRound": 80,
+        "timesCompleted": 1
        },
        "Sandbox": {
         "completed": false,
@@ -12414,6 +12493,18 @@
         "completed": true,
         "completedWithoutLoadingSave": false,
         "bestRound": 80,
+        "timesCompleted": 1
+       },
+       "HalfCash": {
+        "completed": false,
+        "completedWithoutLoadingSave": false,
+        "bestRound": 0,
+        "timesCompleted": 0
+       },
+       "Impoppable": {
+        "completed": true,
+        "completedWithoutLoadingSave": true,
+        "bestRound": 100,
         "timesCompleted": 1
        }
       },

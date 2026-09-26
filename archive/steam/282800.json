@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "100% Orange Juice",
- "updated": "2026-09-07",
+ "updated": "2026-09-25",
  "id": "282800",
- "fetched": "2026-09-07",
- "last_attempt": "2026-09-07",
+ "fetched": "2026-09-25",
+ "last_attempt": "2026-09-25",
  "unlocked": 0,
  "total": 365,
  "platform": "PC",
@@ -2245,44 +2245,50 @@
   },
   {
    "key": "ACH_OJ60_C01",
-   "name": "Po Once More!",
+   "name": "Rinse and Repeat",
+   "description": "Play 10 games as Rinse",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/cd755b8a99324bd1314b965bfff33c9bc83e9f77.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/7bc817e888785bf5b2e254f66e7dabc021c1723f.jpg",
    "hidden": true
   },
   {
    "key": "ACH_OJ60_C02",
    "name": "A Selfish Streak",
+   "description": "As Rinse, benefit from your power in an unlikely way.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/56a9dc40e786bf2025245c79fd95e036797d4618.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/8065806b6f1a980a57c729ceaa7c2d76a1757c6b.jpg",
    "hidden": true
   },
   {
    "key": "ACH_OJ60_C03",
    "name": "Going a Little All Out",
+   "description": "As Rinse, gain 40 or more stars from one Fierce Young Lady.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/ecf6aaba1baef6315ec00f9eff7df49d4b18eb05.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/16211e8d65db8038d6e5aaf58e6c49b1f614c54a.jpg",
    "hidden": true
   },
   {
    "key": "ACH_OJ60_C11",
    "name": "Cool as Cucumber",
+   "description": "Play 10 games as Suishou",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/d70171bf36c962f35dc0e561357b0530116fa256.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/296c394f6d63c8669d768d554581460ce415c8f8.jpg",
    "hidden": true
   },
   {
    "key": "ACH_OJ60_C12",
    "name": "Stance Shift",
+   "description": "As Suishou, prove that the Yukimura Style is not used against weak opponents.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/93925248e6403a814b455e4877ef5ade212d8950.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/b90766ddbfb4bada26be66a196a16e299f333e71.jpg",
    "hidden": true
   },
   {
    "key": "ACH_OJ60_C13",
    "name": "Order in the Hallways",
+   "description": "As Suishou, display the true strength of the Yukimura Style against a formidable foe.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/a800beeec87736b4cfd42ef300be2b63ddc1ec0d.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/282800/4d73888a6aab01ae9f2615a2a1e45341e832a830.jpg",
    "hidden": true
   },
   {
@@ -5088,43 +5094,43 @@
      "apiname": "ACH_OJ60_C01",
      "achieved": 0,
      "unlocktime": 0,
-     "name": "Po Once More!",
-     "description": ""
+     "name": "Rinse and Repeat",
+     "description": "Play 10 games as Rinse"
     },
     {
      "apiname": "ACH_OJ60_C02",
      "achieved": 0,
      "unlocktime": 0,
      "name": "A Selfish Streak",
-     "description": ""
+     "description": "As Rinse, benefit from your power in an unlikely way."
     },
     {
      "apiname": "ACH_OJ60_C03",
      "achieved": 0,
      "unlocktime": 0,
      "name": "Going a Little All Out",
-     "description": ""
+     "description": "As Rinse, gain 40 or more stars from one Fierce Young Lady."
     },
     {
      "apiname": "ACH_OJ60_C11",
      "achieved": 0,
      "unlocktime": 0,
      "name": "Cool as Cucumber",
-     "description": ""
+     "description": "Play 10 games as Suishou"
     },
     {
      "apiname": "ACH_OJ60_C12",
      "achieved": 0,
      "unlocktime": 0,
      "name": "Stance Shift",
-     "description": ""
+     "description": "As Suishou, prove that the Yukimura Style is not used against weak opponents."
     },
     {
      "apiname": "ACH_OJ60_C13",
      "achieved": 0,
      "unlocktime": 0,
      "name": "Order in the Hallways",
-     "description": ""
+     "description": "As Suishou, display the true strength of the Yukimura Style against a formidable foe."
     }
    ],
    "success": true
