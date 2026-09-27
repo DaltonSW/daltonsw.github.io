@@ -124,7 +124,7 @@ func TestLoadDocReadsBareExternalIDs(t *testing.T) {
 	}
 }
 
-// Draft drives the `gamelog review` backlog filter, so ListGames has to
+// Draft drives the games list's "drafts only" filter, so ListGames has to
 // surface it, not just leave it readable via LoadDoc.
 func TestListGamesPopulatesDraft(t *testing.T) {
 	dir := t.TempDir()

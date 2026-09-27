@@ -28,7 +28,7 @@ const DefaultPort = 8080
 
 // devMode is true when internal/server/web/templates exists on disk relative
 // to the working directory the process started in — true for
-// `go run ./cmd/gamelog` from tools/gamelog, false for an installed binary
+// `go run .` from tools/gamelog, false for an installed binary
 // run from elsewhere. When true, templates and static assets are read
 // straight from disk and templates reparsed on every request, so editing
 // web/templates/*.html or web/static/* takes effect on the next browser

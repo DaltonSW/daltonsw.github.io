@@ -270,7 +270,7 @@ func (p Playthrough) EarliestDate() string {
 // started/finished once anything is logged in playthroughs.yaml, since that's
 // where the real per-run dates live (front matter's own started/finished is
 // largely a vestige of games created before playthroughs.yaml existed, or of
-// gamelog scan, which only ever fills in Finished, never Started). Returns
+// Housekeeping's scan, which only ever fills in Finished, never Started). Returns
 // "", "" when nothing is logged, so the caller can fall back to front matter
 // the same way those partials do.
 func gameDateRange(views []Playthrough) (earliest, latest string) {

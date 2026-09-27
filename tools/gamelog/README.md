@@ -5,30 +5,36 @@ A CLI + local web UI for maintaining this site's `content/games/<slug>/_index.md
 Run with no arguments (or `gamelog serve`) to serve the local web UI over `content/games`: pick or
 create a game, edit its info, log a new playthrough or session, update an existing one, or run
 housekeeping (scan for unlogged games, flag stale ones, bulk-close open playthroughs, refresh
-achievements). Everything that touches the log is done there now — the rest of the CLI is a
-handful of read-only/scriptable commands (see `gamelog help`).
+achievements), or fetch suggested dates for a game and log them. Everything that touches the log is
+done there now — the rest of the CLI is a handful of capture and read-only commands (see
+`gamelog help`).
 
 ```
-go run ./cmd/gamelog          # serve the web UI (default port 8080)
-go run ./cmd/gamelog help     # usage summary
+go run .                      # serve the web UI (default port 8080, 127.0.0.1 only)
+go run . serve --port 8081    # same, on another port
+go run . help                 # usage summary
 ```
+
+The entry point is `main.go` in this directory; `cmd/` is the cobra command tree it calls.
 
 ## Code layout
 
-Standard `cmd/` + `internal/` Go layout. `cmd/main.go` is just command dispatch (spf13/cobra);
+`main.go` + `cmd/` + `internal/`. `cmd/main.go` is just command dispatch (spf13/cobra);
 everything else lives under `internal/`, one package per concern:
 
 ```
 internal/model         domain types + storage: front matter, playthroughs.yaml, the archive
 internal/forms         the shared validation/status vocabulary, plus the couple of huh prompts
-                        gamelog suggest and gamelog achievements still use
-internal/mutate        confirm-preview-and-write-with-loss-check, shared by the web server and
-                        the achievements command's own-session nudge
-internal/providers/*   one package per API client (steam, retroachievements, exophase, xbox)
+                        the CLI still uses (suggest's game picker, achievements' session nudge)
+internal/mutate        write-with-loss-check, shared by the web server and the achievements
+                        command's own-session nudge
+internal/providers/*   one package per API client (retroachievements, steam, psn, exophase,
+                        xbox, nadeo, ninjakiwi)
 internal/dotenv        the tool's own minimal .env reader
 internal/externalid    parses a pasted RA/Steam ID or URL into a bare ID
-internal/commands      suggest/achievements/project, plus the scan/stale/close library
-                        functions internal/server calls (see the package doc comments)
+internal/commands      the CLI commands (suggest, achievements, project, psn, exophase, nadeo,
+                        ninjakiwi), plus the scan/backlog/stale/close/subset/suggest-sweep
+                        library functions internal/server calls
 internal/server        the local web UI (`gamelog serve`, also what bare `gamelog` runs)
 ```
 
@@ -51,9 +57,11 @@ content/games/<slug>/
 archive/
   retroachievements/4650.json      captured from the API. Merge-on-write, never
   steam/1145360.json               hand-edited, never read by Hugo.
-  psn/NPWR16532_00.json            PlayStation, mirrored via Exophase (see below).
-  ubisoft/12345.json                Ubisoft Connect, mirrored via Exophase too.
-  xbox/1480657033.json              Xbox 360, via OpenXBL (see below).
+  psn/NPWR16532_00.json            PlayStation, via Sony's own trophy API (see below).
+  ubisoft/12345.json               Ubisoft Connect, mirrored via Exophase.
+  xbox/1480657033.json             Xbox 360, via OpenXBL (see below).
+  nadeo/<account id>.json          Trackmania campaign times — not achievements (see below).
+  ninjakiwi/<user id>.json         BTD6 save state — not achievements either (see below).
   ignored.yaml                     games you've decided never to log, so Scan and
                                    Backlog stop offering them. Rewritten whole.
 ```
@@ -66,7 +74,8 @@ publishes it: bundle resources are copied to the built site, so the old layout w
 captured API response publicly.
 
 A game on several services gets one archive file each. Nothing in the archive links them —
-`retroachievements_id`, `steam_appid`, `psn_id`, `ubisoft_id` and `xbox_id` in front matter do, which is the
+`retroachievements_id`, `steam_appid`, `psn_id`, `ubisoft_id` and `xbox_id` in front matter do (plus
+`nadeo_account_id` and `ninjakiwi_user_id` for the two non-achievement providers), which is the
 right place for a judgement a human made rather than something any provider reported. The same
 holds for `retroachievements_subsets`, which is how one game ends up with more than one file
 under `retroachievements/` — see "RetroAchievements subsets" below.
@@ -133,12 +142,12 @@ It's `omitempty`, and **blank means "inherit the game's `platform:`"** rather th
 is what makes every file written before the field existed still mean what it did, and it's why the
 form offers the game's platform as a *label* on the blank option instead of prefilling it —
 prefilling would freeze a copy, so a later correction to the game would silently fail to reach its
-runs. Clearing the field in `gamelog` therefore declares `playthroughs[N].platform` as an allowed
+runs. Clearing the field in `gamelog serve` therefore declares `playthroughs[N].platform` as an allowed
 removal: handing a run back to the game is the intent, not loss.
 
 The games list and timeline render it per row, but only when a game's runs actually differ.
 Labelling one run `PS4` and leaving its sibling bare would make the reader infer what the bare one
-was; repeating `PC` on every row of the ~200 single-platform games is noise. `layouts/games/term.html`
+was; repeating `PC` on every row of the hundreds of single-platform games is noise. `layouts/games/term.html`
 counts distinct platforms across the entries and shows the column only when there's more than one.
 
 Note this is a *human* judgement, deliberately, and not the same thing as per-playthrough provider
@@ -159,9 +168,28 @@ onward (the markdown body) are kept exactly as read, and only the front-matter b
 delimiters is replaced. A hand-written overview paragraph below the front matter is never at risk,
 because it's never reconstructed — only ever copied verbatim from the original file.
 
-Title, platform, status, dates, rating, and `draft` are editable, through a game's edit page in
-`gamelog serve`. `retroachievements_id`/`steam_appid` are deliberately not — relinking a provider
-ID is a more consequential action than a date fix, and isn't implemented yet.
+The same two safeguards as `playthroughs.yaml` apply: an `Extra map[string]any` inline field
+catches `cover`, `cascade`, and anything else the struct doesn't model, so it round-trips instead
+of vanishing on a rewrite; and the pending rewrite is diffed against the bytes on disk before
+being allowed to land. One difference from `playthroughs.yaml`: front-matter scalar fields
+(`started`, `rating`, ...) are **not** `omitempty`, so clearing one leaves the key present with a
+blank/null value rather than dropping it — matching how a freshly-created file already looks
+(`started:`, `rating:` with nothing after the colon). That means clearing a field is never
+reported as data loss; there's nothing to declare.
+
+Re-encoding the front-matter block through `yaml.v3` won't reproduce today's hand-formatted
+quoting exactly — `title: "X"` may come back as `title: X` or `title: 'X'`, and a blank field may
+render as `null` instead of bare. This is cosmetic, not lossy: the loss-check compares decoded
+field *presence*, not text, and the same tradeoff is already accepted for `playthroughs.yaml`.
+
+Title, platform, status, subgames, dates, rating, and `draft` are editable through the "edit game
+info" form on a game's page in `gamelog serve`. Provider IDs (`retroachievements_id`,
+`steam_appid`, `psn_id`, `ubisoft_id`, `xbox_id`) have their own form in that page's sidebar, kept
+separate because RA/Steam accept a pasted URL and because clearing one of the `omitempty` IDs is a
+real key removal that has to be declared to the loss check. `retroachievements_subsets` is only
+written by Housekeeping's subset attach (see "RetroAchievements subsets"), and `nadeo_account_id`/
+`ninjakiwi_user_id` are hand-edited. The markdown body is written once, from the new-game form's
+overview field, and never edited by the tool after that.
 
 `status: mastered` is `finished`'s stronger sibling — the game was beaten *and* every achievement
 was earned, not just the ones that come from beating it. It's a distinct value rather than a flag
@@ -169,14 +197,14 @@ on `finished` so the timeline/list can color and filter them separately.
 
 `status: paused` is distinct from `dropped`: it means the game is on hold, not abandoned — you
 mean to come back to it eventually. Setting it never writes a finished date, since the game isn't
-finished; `gamelog stale` in particular offers it as a one-click correction on a quiet game it
+finished; Housekeeping's Stale tab in particular offers it as a one-click correction on a quiet game it
 otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
 
 `status: unfinished` sits between `dropped` and `paused`: like `dropped`, play has actually
 stopped and it gets a closed date; unlike `dropped`, it doesn't claim to know that's permanent.
 Use it for the common case where a game just trailed off with no stated intent either way — not a
 deliberate "I'm done with this" (`dropped`) and not a deliberate "I'll be back" (`paused`).
-`gamelog stale` offers it alongside `dropped`/`paused` as a one-click correction, and it's the
+Housekeeping's Stale tab offers it alongside `dropped`/`paused` as a one-click correction, and it's the
 default guess when there's no achievement signal at all to guess `dropped` from.
 
 `status: misc_launch` (entry-level only, not a `gameStatuses` value) covers a playthrough entry
@@ -184,7 +212,7 @@ that isn't a real attempt at all — booted up just to check dates, or a launch 
 broken platform port (e.g. a Linux build that wouldn't run) — as distinct from `dropped`, which
 implies play was actually attempted and abandoned. Unlike the one-shot statuses below, a second
 `misc_launch` entry on the same platform is *not* fragmentation — each launch is its own unrelated
-occasion — so it's excluded from `isOneShot` and can repeat freely.
+occasion — so it's excluded from `forms.IsOneShot` and can repeat freely.
 
 "Unplayed" is not a status. The site derives it (`layouts/partials/game-unplayed.html`) for any
 game with no playthrough entries — logged or written, `planned` excluded — and no captured
@@ -195,7 +223,7 @@ no meaningful start/finish narrative, used in an open-ended series of sessions w
 ends play. They're separate statuses because the *reason* differs: `endless` is a replay-loop
 design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `software` isn't a game at
 all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
-through the same `gamelog scan` and need somewhere to go that isn't a completion state.
+through the same Housekeeping scan and need somewhere to go that isn't a completion state.
 
 Any of the three gets exactly one `playthroughs.yaml` entry **per platform**, whose `sessions:`
 list *is* the record — so there's nothing to accidentally fragment into a second discrete
@@ -203,14 +231,20 @@ playthrough on the same platform later. The cap is per-platform rather than abso
 saves don't cross consoles: Spelunky 2 on PS4 and on Steam is two separate records with two
 separate achievement sets, which is not the fragmentation the cap exists to prevent.
 
-`forms.IsOneShot` is the predicate for the status; `interactive`'s `doNewPlaythrough` enforces the
-per-platform half, which can only be checked once the form has collected the platform — so a
-same-platform second entry is refused after the form rather than hidden from the menu.
-`model.EffectivePlatform` resolves blank to the game's platform, so an entry predating the field still
-compares equal to its own game.
+`forms.IsOneShot` is the predicate for the status; `mutate.OneShotConflict` enforces the
+per-platform half when a playthrough is created (`handleNewPlaythrough` in `gamelog serve`), which
+can only be checked once the form has collected the platform — so a same-platform second entry is
+refused on submit rather than hidden from the form. `model.EffectivePlatform` resolves blank to the
+game's platform, so an entry predating the field still compares equal to its own game.
 
-Note that the entry's own status stays `playing` — these three exist only in the game-level
-vocabulary, so anything reading entry status (the timeline, notably) has to special-case them.
+The cap is per *status*, too: a game with genuinely distinct modes (Hitman's story campaign, its
+Freelancer roguelike, and its multiplayer contracts) can carry one entry per mode, since `endless`
+and `multiplayer` are also entry-level statuses (`forms.PlaythroughStatuses`). `software` is
+game-level only — it describes the whole record, not a mode. Older entries of endless/multiplayer
+games still say `playing` and lean on the game-level status for their meaning;
+`mutate.EffectiveOneShotStatus` resolves those, so they don't need migrating. The timeline
+(`games-timeline.html`) still forces a game-level endless/multiplayer/software status onto every
+entry, so a mixed-mode game should carry its "headline" mode as its game-level status.
 
 `status: backlog` is the game-level marker for "not played yet" — a game with this status and no
 `playthroughs.yaml` at all. It's excluded from the games list's year-grouped table and shown
@@ -245,17 +279,18 @@ the timeline. `games-backlog.html` surfaces it explicitly instead, alongside `st
 games. `layouts/games/term.html`'s generic per-entry rendering also needed no change: it already
 renders any entry's `status` as a plain pill and leaves a blank meta row when dates are empty.
 
-"Manage a planned playthrough" (offered once at least one planned entry exists) either graduates it
+"Planned replays" on a game's page lists each placeholder with two forms: **Start now** graduates it
 — `GraduatePlannedPlaythrough` fills in `Started`/`Finished`/`Status`/etc. **in place**, at the same
-array index, rather than replacing the entry — or edits its platform/notes without touching status
-or dates. Graduating in place matters for the loss-check: every field it sets was previously empty,
-so `model.CheckNoFieldLoss` sees a pure addition and no `allowedRemovals` declaration is needed.
+array index, rather than replacing the entry — and **Save** edits its platform/subgame/notes
+(`EditPlanned`) without touching status or dates. Graduating in place matters for the loss-check:
+every field it sets was previously empty, so `mutate.VerifyNoLoss` sees a pure addition and no
+allowed-removals declaration is needed.
 
-`planned` is deliberately **not** in `forms.PlaythroughStatuses` — that list feeds the
-status `Select` in `PlaythroughForm` (new playthrough, which requires a `Started` date),
-`UpdateForm`, and `SplitStatusForm`, none of which should ever produce or accept a dateless entry.
-The only two code paths that can set or clear `planned` are `interactive`'s `doAddPlannedReplay` and
-`GraduatePlannedPlaythrough`.
+`planned` is deliberately **not** in `forms.PlaythroughStatuses` — that list feeds every status
+dropdown on the game page (new playthrough, which requires a `started` date; update; split), none of
+which should ever produce or accept a dateless entry. The only two code paths that can set or clear
+`planned` are `handleAddPlanned` (creating a placeholder, `AddPlaythrough` with `status: planned`)
+and `GraduatePlannedPlaythrough`.
 
 There is deliberately no "delete a planned entry" action. Removing an entry from `playthroughs[]`
 by index would shift every later entry down, and `SplitPlaythrough` (above) always appends its new
@@ -264,38 +299,34 @@ path into a later entry's own nested `sessions:` — ever moves. A stale planned
 deleted by hand; `playthroughs.yaml`'s own generated banner already says the file is safe to edit
 that way.
 
-The same two safeguards as `playthroughs.yaml` apply: an `Extra map[string]any` inline field
-catches `cover`, `cascade`, and anything else the struct doesn't model, so it round-trips instead
-of vanishing on a rewrite; and the pending rewrite is diffed against the bytes on disk before
-being allowed to land. One difference from `playthroughs.yaml`: front-matter scalar fields
-(`started`, `rating`, ...) are **not** `omitempty`, so clearing one leaves the key present with a
-blank/null value rather than dropping it — matching how a freshly-created file already looks
-(`started:`, `rating:` with nothing after the colon). That means clearing a field is never
-reported as data loss; there's nothing to declare.
-
-Re-encoding the front-matter block through `yaml.v3` won't reproduce today's hand-formatted
-quoting exactly — `title: "X"` may come back as `title: X` or `title: 'X'`, and a blank field may
-render as `null` instead of bare. This is cosmetic, not lossy: the loss-check compares decoded
-field *presence*, not text, and the same tradeoff is already accepted for `playthroughs.yaml`.
-
 ## `gamelog suggest` — playtime date suggestions
 
 `gamelog suggest [slug]` queries RetroAchievements and Steam for a game and prints suggested
-`started`/`finished` dates to the terminal. **It never writes to any file.** Review the
-suggestion, then enter the dates yourself through `gamelog serve`.
+`started`/`finished` dates to the terminal. **It never writes to any file.**
 
 ```
-go run ./cmd/gamelog suggest okami        # direct, by slug
-go run ./cmd/gamelog suggest              # interactive game picker
+go run . suggest okami        # direct, by slug
+go run . suggest              # interactive game picker
 ```
 
-The web UI's **Suggest** page has the same per-game report plus a **Sweep all games** button:
-it runs the RA/Steam fetch across every linked game and, instead of one report per game, lists
-only the games whose provider history isn't already covered by their `playthroughs.yaml` —
-nothing logged, logged entries with no dates, or provider activity newer than the newest logged
-date. It's the batch form of walking the picker by hand. Read-only like the rest of `suggest`,
-and slow enough (RA throttles to ~1.2s/request) that it runs as a background job with progress,
-the same machinery as Housekeeping's "refresh all achievements".
+In `gamelog serve` the same fetch lives on each game's own page, in a **suggested dates** panel
+shown for any RA- or Steam-linked game. It fetches on demand (a button, or automatically when you
+arrive via a Suggest link — `/games/<slug>?suggest=1`), never on every page view, since RA throttles
+to ~1.2s/request. Each provider that found dates gets pre-filled copies of the page's own forms —
+**Log as new playthrough** and **Add as session** to an existing playthrough — posting to the same
+handlers as the rest of the page, so nothing is written until one is submitted and every value can
+be edited first. A finished date is only pre-filled when the provider actually signals a finish (an
+RA award, or every Steam achievement unlocked); otherwise the field stays blank with the last
+activity date as its placeholder, and the status falls back to the game's usual default. The notes
+field is pre-filled with where the dates came from.
+
+The ways in: a **Suggest** button on every linked row of the games list, the **Suggest** tab
+(linked games only, with a title filter), and the tab's **Sweep all games** button. The sweep runs
+the RA/Steam fetch across every linked game and lists only the games whose provider history isn't
+already covered by their `playthroughs.yaml` — nothing logged, logged entries with no dates, or
+provider activity newer than the newest logged date — each title linking straight to its panel.
+It's read-only and slow, so it runs as a background job with progress, the same machinery as
+Housekeeping's "refresh all". Old `/suggest/<slug>` links redirect to the game page.
 
 RetroAchievements achievement-unlock dates are close to ground truth (RA is achievement-first).
 A game with a finishing award — `mastered`, `completed`, `beaten-hardcore`, or
@@ -316,15 +347,16 @@ All dates are reported in `America/Chicago`, matching `timezone` in
 
 Because RA/Steam only expose one achievement history per game, a suggestion reflects a game's
 *entire* history, not any single logged playthrough. If a game has more than one playthrough,
-the report says so — cross-reference manually before entering a date.
+the report (and the web panel) says so — cross-reference manually before entering a date.
 
 ## `gamelog serve` — the web UI, and its Housekeeping page
 
 `gamelog serve` (also what bare `gamelog` runs) serves a local web UI over `content/games`:
 create/edit/delete games, log playthroughs and sessions, manage planned replays, and reorder or
-split sessions. Its **Housekeeping** page is where the bulk maintenance flows live — scan,
-backlog, incomplete, stale, close, and achievement refresh-all — described below by what each one
-does; on the page itself these are filter fields, checkboxes, and buttons rather than CLI flags.
+split sessions, edit provider IDs, and log suggested dates (see `gamelog suggest` above). Its
+**Housekeeping** page is where the bulk maintenance flows live, one tab each — Scan, Backlog,
+Ignored, Incomplete, Stale, Close, and Achievements — described below by what each one does; on the
+page itself these are filter fields, checkboxes, and buttons rather than CLI flags.
 
 **Scan** lists games on RetroAchievements and Steam that have no entry in `content/games` (a
 `min_hours` field narrows the Steam side, default 5), one row each with the evidence behind it and
@@ -335,8 +367,8 @@ is written with `draft: true`, because every field is inferred — review it and
 publish. Scanning is essentially the two bulk endpoints (one request each), so it's fast and can't
 be rate-limited — the one exception is a **RetroAchievements subset row**, which costs one
 per-game request to resolve its parent, memoized for the process (see "RetroAchievements subsets"
-below). The bulk endpoints carry no start dates; create the entry, then run `gamelog
-suggest <slug>` for the precise range. A RetroAchievements game counts as finished when it carries
+below). The bulk endpoints carry no start dates; create the entry, then use the game's
+**Suggest** button for the precise range. A RetroAchievements game counts as finished when it carries
 a real award — the row names which one, since `12/189 achievements → finished` only makes sense
 once you can see it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award —
 every achievement, not just the ones needed to beat it — is suggested as `status: mastered`
@@ -363,9 +395,9 @@ than *create* — because creating it would make a second entry for a game that 
 See "RetroAchievements subsets" below for what attaching writes and how the parent link is
 verified; the row is otherwise identical, alternatives dropdown and *Never log this* included.
 
-Scan-created games land as `draft: true`; the games list index has a drafts-only filter with a
-**Draft?** column, and each one's page has Publish/Undraft, Edit, and Delete — the latter only
-offered when the game has no logged playthroughs *and* no archive record for either linked
+Scan-created games land as `draft: true`; the games list has a drafts-only filter, a **Draft?**
+column with an **Undraft** button per row, and each game's page has a Draft checkbox in its info
+form and a **Delete game** button — the latter only offered when the game has no logged playthroughs *and* no archive record for either linked
 provider ID, since once either exists it isn't a plausible false-positive scan match anymore and
 deleting it would risk real data.
 
@@ -398,15 +430,15 @@ Create buttons do.
 first. (Not to be confused with `status: unfinished` above — this tab is about achievement
 completion, not play status.) It reads only what's already in `archive/<provider>/<id>.json` — no
 API calls, nothing written — so it renders with no credentials configured at all, and it's a
-reading list rather than an action queue: each row links to the game's own page. A `min_pct` field
-(default 50) hides games that were opened once rather than nearly finished; those belong in
+reading list rather than an action queue: each row links to the game's own page. An
+`incomplete_pct` field (default 50) hides games that were opened once rather than nearly finished; those belong in
 Backlog above. One row per provider, not per game: a game linked to both Steam and
 RetroAchievements has two unrelated denominators, and merging them would invent a number that's
 true of neither. A RetroAchievements subset is another such denominator, so it gets its own row
 too, named (`retroachievements · Mouse Alley`) rather than repeating the bare provider on two rows
 with different numbers. The one-shot statuses (`endless`, `multiplayer`, `software`) never appear
 — there's no completion for them to be short of — and `finished`/`dropped`/`mastered`/`unfinished`
-games are opt-in via a checkbox, since leaving achievements on a game you've called finished (or
+games are opt-in via a checkbox (`incomplete_all`), since leaving achievements on a game you've called finished (or
 unfinished) is a decision, not an oversight. `paused` and `backlog` games *are* listed: both mean
 "not now", not "not ever".
 
@@ -420,7 +452,8 @@ the game has no achievements to go on at all (playtime alone doesn't prove compl
 nothing to go on there's no basis to guess `dropped` over `paused` either, so `unfinished` is the
 honest default, not a claim) — alongside the last-played date, achievement count, and playtime.
 Nothing is ever written automatically: accept the guess, pick one of the other statuses it might
-have guessed instead, open the full edit form prefilled with the guess, or leave it and it'll
+have guessed instead, open the game's page (**Edit before applying**) to change it by hand, or
+leave it and it'll
 surface again next time it's still `playing` and still quiet. None of the one-shot statuses
 (`endless`, `multiplayer`, `software`) ever shows up here — they aren't `status: playing` by
 definition (see above), and something used in indefinite session bursts has no "done" to detect
@@ -446,19 +479,22 @@ through the same pre-write proof as every other playthrough write: the pending r
 against what's on disk and refused if a field would vanish, and an entry closed between building
 the list and confirming it is left alone rather than overwritten.
 
-**Refresh all** runs the achievements fetch-and-merge (below) across every game with a provider
-link, in the background — the page redirects to a job status view while it runs.
+**Achievements** has two buttons. **Refresh all** runs the achievements fetch-and-merge (below)
+across every game with a provider link, in the background — the page redirects to a job status
+view while it runs. **Regenerate summaries** is `gamelog project` (below): no API calls, just
+rebuilding every `achievement-summary.yaml` from what's already archived.
 
 ## `gamelog achievements` — full unlock history
 
 `gamelog achievements [slug]` writes every achievement, with its unlock timestamp, to
-`archive/<provider>/<id>.json` — one file per provider, resolved from the game's
-`retroachievements_id`/`steam_appid`. `scan` does this automatically for each entry it creates;
-run the command directly to refresh a game or backfill one that predates it.
+`archive/<provider>/<id>.json` — one file per linked provider, resolved from the game's
+provider IDs (see "Linking a game to external IDs"). Housekeeping's Scan and Backlog do this
+automatically for each entry they create, and a game's page has a **Refresh achievements from
+providers** button; run the command directly to refresh a game or backfill one that predates it.
 
 ```
-go run ./cmd/gamelog achievements spelunky
-go run ./cmd/gamelog achievements --all    # refresh every game with a provider link
+go run . achievements spelunky
+go run . achievements --all    # refresh every game with a provider link
 ```
 
 `--all` is the same fetch-and-merge call as the single-slug path, just looped over every game
@@ -470,7 +506,7 @@ than needing its own, which is what makes it safe to point an unattended, schedu
 Everything above only touches `archive/` and `achievement-summary.yaml` — never
 `playthroughs.yaml`. That matters because the timeline's visible bars are built from
 `playthroughs.yaml` alone (see `layouts/partials/playthrough-entries.html`); `achievement-summary.yaml`
-only feeds a game's `last_played` sort key. Refreshing a game's achievements can therefore leave the
+only feeds counts, the earned-achievement lists, and a game's `last_played`. Refreshing a game's achievements can therefore leave the
 archive fully up to date while the timeline shows nothing new — the fix isn't a rebuild, it's that
 nobody logged a session for the activity that just got captured.
 
@@ -485,7 +521,8 @@ rarer multi-platform one-shot game is left to "Log a new session" by hand, same 
 refreshed that way still needs a manual session log afterward.
 
 The archive itself is deliberately not reachable from templates — see `gamelog project` below for
-how a slice of it (achievement counts) reaches the site without that changing.
+how a slice of it (counts and the earned-achievement list) reaches the site without that
+changing.
 
 ### The two rules that shape this file
 
@@ -507,7 +544,7 @@ access is lost.
 One record per file, at `archive/<provider>/<id>.json`:
 
 ```
-provider                  "retroachievements" | "steam"
+provider                  "retroachievements" | "steam" | "psn" | "ubisoft" | "xbox"
 title                     the provider's own name for the game, so an orphaned
                           record stays identifiable on its own
 updated
@@ -516,10 +553,15 @@ unlocked / total          earned vs. existing — locked ones are in the list to
 first / last              YYYY-MM-DD of earliest and latest unlock
 award_kind / award_date   the completion award, when there is one
 platform, icon, completion
+source                    set when the data was relayed by a third party (e.g. "exophase")
 playtime_mins, playtime{windows,mac,linux,deck,disconnected}, last_played
-achievements[]            key, name, description, unlocked, date, points, hardcore, icon
+achievements[]            key, name, description, unlocked, date, points, hardcore, icon,
+                          tier (PSN trophy grade), hidden
 raw                       the provider's verbatim response
 ```
+
+Trackmania and BTD6 records (`archive/nadeo/`, `archive/ninjakiwi/`) have their own shapes — see
+their sections below.
 
 Unlocked achievements sort first in date order, locked ones last. Dates are RFC3339 with the
 site's UTC offset (DST-correct), which is what Hugo's `time` function expects — no conversion
@@ -531,14 +573,14 @@ RetroAchievements' `API_GetUserRecentlyPlayedGames`. RA's progress endpoint has 
 before that list was walked an RA game's most recent date was whatever it last unlocked, which
 sits still for as long as a playthrough is stuck on one achievement. That list is user-level, not
 per game, so it's fetched **once per process** and cached (`raRecentlyPlayed` in
-`internal/commands/achievements.go`) — at RA's ~1 request/1.2s throttle, re-walking its pages for
-each of 200 games would cost more than the refresh itself. A failure to fetch it is warned about
+`internal/providers/retroachievements`) — at RA's ~1 request/1.2s throttle, re-walking its pages
+for every game would cost more than the refresh itself. A failure to fetch it is warned about
 and ignored: `last_played` falls back to the newest unlock, same as before.
 
 This is why history is kept per-achievement rather than collapsed to a start/finish pair: a game
 returned to over years (Spelunky's unlocks run 2013 → 2020 with multi-year gaps) has a shape two
-dates can't express. It's also why both providers are kept — the two records genuinely differ,
-and merging them is a presentation decision, not a storage one.
+dates can't express. It's also why every provider's record is kept separately — the records
+genuinely differ, and merging them is a presentation decision, not a storage one.
 
 ### Linking a game to external IDs
 
@@ -553,14 +595,16 @@ ubisoft_id: "12345"             # Ubisoft Connect canonical ID, via Exophase (se
 xbox_id: 1480657033             # Xbox titleId, via OpenXBL (see below)
 ```
 
-The interactive "new game" form accepts either the bare number or the full URL you copied it
-from (`retroachievements.org/game/4650`, `store.steampowered.com/app/1145360/Hades/`) and
-stores the bare ID. `suggest` accepts a pasted URL in front matter too.
+Set them from `gamelog serve`: the new-game form takes RA/Steam IDs, and the provider-IDs form in a
+game page's sidebar takes all five. RA/Steam fields accept either the bare number or the full URL
+you copied it from (`retroachievements.org/game/4650`, `store.steampowered.com/app/1145360/Hades/`)
+and store the bare ID. `suggest` accepts a pasted URL in front matter too.
 
-Everything that walks a game's archive takes `[]providerLink` (from `Doc.ProviderLinks` or
-`GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, so a fourth
-provider is a client file plus one entry in `providerOrder` — not an edit to every signature
-that touches the archive.
+Everything that walks a game's archive takes `[]model.ProviderLink` (from `Doc.ProviderLinks` or
+`GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, so another
+achievement provider is a client package plus one entry in `model.ProviderOrder` — not an edit to
+every signature that touches the archive. Nadeo and Ninja Kiwi are deliberately *not* in that list
+(see their sections).
 
 ### RetroAchievements subsets
 
@@ -692,7 +736,7 @@ use; see git history / the section above if you're wondering why PSN isn't here 
 survive the mirror going away.
 
 The ID isn't shown anywhere in Exophase's own UI — `canonical_id` only exists in a JS payload
-embedded in the profile page's HTML (see `canonicalIDs` above). Rather than view-source-diving for
+embedded in the profile page's HTML (see `ExophaseClient.canonicalIDs`). Rather than view-source-diving for
 it, run `gamelog exophase list ubisoft`: it prints every game on the configured `EXOPHASE_USER`
 profile next to its canonical ID and current unlock count, sorted by title, ready to paste into
 `ubisoft_id`.
@@ -756,25 +800,29 @@ Two quirks, found against live responses:
   Exophase's earned list. The total-possible count and last-played date come from a separate
   `player/titleHistory` call instead, which lists every title on the account in one response.
 
-A handful of `archive/xbox/*.json` records predate the live client: they were seeded from a
-one-time pasted OpenXBL export, before `XBLIO_API_KEY` existed. Those are summary-only —
-`unlocked`/`total` set directly, no per-achievement list — and `mergeProvider`'s `Summarize` step
-would silently zero `unlocked` for one if it ever ran through the normal merge path, so they were
-written straight to `archive/`, not through `SaveRecord`. Refreshing one of those games now (with
-a key configured) fetches real per-achievement data and merges normally from then on, the same as
-any other provider.
+A handful of `archive/xbox/*.json` records were first seeded from a one-time pasted OpenXBL export,
+before `XBLIO_API_KEY` existed. Those were summary-only — `unlocked`/`total` set directly, no
+per-achievement list — and were written straight to `archive/` rather than through `SaveRecord`,
+because `mergeProvider`'s `Summarize` step would silently zero `unlocked` for a record with no list.
+Every one has since been refreshed through the live client and now carries real per-achievement data
+and a `raw` response. Don't hand-seed a summary-only record again without the same care.
+
+Some of the oldest 360 unlocks come back without a usable date; they're kept as unlocked-but-undated
+rather than dropped.
 
 ### Trackmania, via Nadeo's own web services
 
 **This is the one provider that doesn't record achievements.** Trackmania's real history is a
-personal best time on every track of every official campaign — ~450 tracks across 18+ seasons —
-and there is no way to express that as unlocked/total. So it has its own record type
+personal best time on every track of every official campaign — 625 tracks across the 25 official
+campaigns archived so far — and there is no way to express that as unlocked/total. So it has its own record type
 (`model.NadeoRecord`), its own merge, its own projection (`campaigns.yaml`), and it is deliberately
 **not** part of `ProviderLinks`/`ProviderOrder`. Folding it in would restate Trackmania's headline
-meter as 433/480 of an achievement set that doesn't exist.
+meter as hundreds of "achievements" from a set that doesn't exist.
 
 `gamelog nadeo whoami` prints the account id for `nadeo_account_id`; `gamelog nadeo seasons` lists
-every campaign next to what's archived; `gamelog nadeo fetch` captures.
+every campaign next to what's archived; `gamelog nadeo fetch` captures — the current season by
+default, `--season <name>` (repeatable) for specific ones, `--since <year>` for every campaign from
+that year on, or `--all`.
 
 The API is documented (unofficially, by the community) at <https://webservices.openplanet.dev>.
 Things worth knowing before touching `providers/nadeo`:
@@ -791,7 +839,7 @@ Things worth knowing before touching `providers/nadeo`:
   affect play — but they carve out an explicit exception for "when your use case requires one
   specific player's authentication information to access their own data", which is this. The
   alternative (`/v2/mapRecords/by-account/`, which reads any account with any token) accepts only
-  **one map per request**, so avoiding the binding would mean ~450 requests per capture instead of
+  **one map per request**, so avoiding the binding would mean ~625 requests per capture instead of
   ~2, and a separate account is no protection against an IP ban anyway.
 
   Because the credentials are a real player's, `nadeoMinInterval` is 500ms and `fetch` defaults to
@@ -834,7 +882,8 @@ Things worth knowing before touching `providers/nadeo`:
   - `mapIdList` and `seasonIdList` must not both be sent: both filter every result, so together
     they intersect rather than union.
   - It returns at most the **1,000 most recent records**, and that's a ceiling, not a page. Fine
-    against ~450 campaign tracks; worth remembering if TOTDs are ever added.
+    against 625 campaign tracks, but four more years of campaigns reaches it — and it's worth
+    remembering if TOTDs are ever added.
   - `gameMode` is documented as recommended but the client omits it — no filter returns
     everything, which is harmless since results are indexed by `mapId`. Campaign Race maps come
     back as `"TimeAttack"`, confirmed live, if it's ever needed.
@@ -895,9 +944,9 @@ from the OAK token itself — the token is a rotating credential, not an identif
 
 ### Credentials
 
-Copy `.env.example` to `.env` (gitignored) and fill it in. `suggest` finds that file whether
-it's run from this directory or the repo root. Real environment variables always take
-precedence, so `RA_API_KEY=... go run ./cmd/gamelog suggest x` still overrides the file.
+Copy `.env.example` to `.env` (gitignored) and fill it in. Every command (and `gamelog serve`)
+finds that file whether it's run from this directory or the repo root. Real environment variables
+always take precedence, so `RA_API_KEY=... go run . suggest x` still overrides the file.
 
 | Variable | What it is |
 |---|---|
@@ -956,25 +1005,34 @@ while being broken in practice.
 ## `gamelog project` — achievement counts for the site
 
 The archive lives outside `content/` on purpose (see above), so Hugo can never read it directly.
-`gamelog project` is the projection step: it walks every game with a `retroachievements_id` or
-`steam_appid`, sums that game's `unlocked`/`total` across whichever providers it's linked to (RA
-12/40 + Steam 46/54 → 58/94) while also recording each provider separately under `providers:` plus
-total playtime summed across whichever providers report it (Steam always has; RA added
-`UserTotalPlaytime` in late 2025, so older archived RA records may predate it and simply have
-none), and writes the result to `content/games/<slug>/achievement-summary.yaml` —
-no `raw`, no per-achievement list, just the numbers the games list actually displays.
+`gamelog project` is the projection step: it walks every game with a provider link, sums that
+game's `unlocked`/`total` across whichever providers it's linked to (RA 12/40 + Steam 46/54 →
+58/94) while also recording each provider separately under `providers:` (and each RA subset under
+`subsets:`), plus total playtime summed across whichever providers report it (Steam always has; RA
+added `UserTotalPlaytime` in late 2025, so older archived RA records may predate it and simply have
+none), and `last_played`. It also flattens every *unlocked* achievement across those providers into
+an `earned:` list (name, description, date, points, hardcore, icon, provider, platform, hidden,
+subset), oldest first. The
+result is written to `content/games/<slug>/achievement-summary.yaml` — no `raw` and no locked
+achievements, only what the site displays: the games list's meters, each game's achievements
+section (`layouts/partials/game-achievements.html`), and the site-wide feed
+(`games-achievements.html`).
 
 ```
-go run ./cmd/gamelog project
+go run . project
 ```
+
+Trackmania and BTD6 have projections of their own (`campaigns.yaml`, `btd6-summary.yaml`), written
+by their own fetch commands.
 
 It only ever reads what's already in `archive/` — **no API calls**, so it's safe and fast to
 re-run any time the projection needs rebuilding (after `gamelog achievements` refreshes a game, or
-after the summary's shape changes) without touching credentials or rate limits. `gamelog scan` and
-`gamelog achievements` already call the same write for whichever game they just touched, so a
-full `project` run is only needed for a bulk backfill or to pick up an archive edited by hand.
+after the summary's shape changes) without touching credentials or rate limits. Housekeeping's Scan/Backlog,
+the per-game refresh button, and `gamelog achievements` already call the same write for whichever
+game they just touched, so a full `project` run (also Housekeeping's **Regenerate summaries**) is
+only needed for a bulk backfill or to pick up an archive edited by hand.
 
-A game with nothing archived for either provider gets no file — not a `0/0` one — and any stale
+A game with nothing archived for any provider gets no file — not a `0/0` one — and any stale
 file left over from a cleared or relinked provider ID is removed rather than shown. A Steam game
 with playtime but no achievements at all still gets one, just without the achievement line. The games list
 (`layouts/games/taxonomy.html`) reads the file via `.Resources.Get`, which is silently absent for
@@ -985,7 +1043,7 @@ to the public site.
 
 ### Not implemented (by design)
 
-No relinking `retroachievements_id`/`steam_appid` or editing the markdown body from within the
-tool, no `--json` output, no per-playthrough attribution (see above — the API data doesn't
-support it), no CLI-flag credential overrides, and no rendering of the archive (see
-`KNOWN-ISSUES.md`).
+No editing the markdown body from within the tool after creation, no `--json` output, no
+per-playthrough attribution (see above — the API data doesn't support it), no CLI-flag credential
+overrides, and no direct reads of `archive/` from Hugo (everything the site shows goes through a
+projection). What's still open is tracked in `KNOWN-ISSUES.md`.

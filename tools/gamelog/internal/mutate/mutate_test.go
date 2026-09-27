@@ -6,9 +6,8 @@ import (
 	"go.dalton.dog/gamelog/internal/model"
 )
 
-// OneShotConflict is doNewPlaythrough's guard, pulled out so it's testable
-// without driving the interactive form (huh has no headless mode a unit
-// test can exercise, so doNewPlaythrough itself isn't a useful test target).
+// OneShotConflict is handleNewPlaythrough's guard, kept out of the HTTP
+// handler so the rule itself can be tested directly.
 
 func TestOneShotConflict_RefusesASecondEntryOfTheSameOneShotStatusOnThePlatform(t *testing.T) {
 	existing := []model.PlaythroughEntry{

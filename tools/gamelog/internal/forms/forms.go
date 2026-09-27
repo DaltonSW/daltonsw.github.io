@@ -82,7 +82,7 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 // record, not a mode a game can also have alongside others.
 //
 // Each one-shot status still gets at most one entry per platform — see
-// IsOneShot and oneShotConflict — since none of the three has a save file or
+// IsOneShot and mutate.OneShotConflict — since none of the three has a save file or
 // finish line, a second entry of the *same* one-shot status on the same
 // platform would be fragmentation, not a second mode.
 //

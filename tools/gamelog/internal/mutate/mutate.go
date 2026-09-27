@@ -27,9 +27,9 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 	return false
 }
 
-// oneShotConflict reports the existing entry that already covers a one-shot
+// OneShotConflict reports the existing entry that already covers a one-shot
 // status (endless/multiplayer) on the given platform and subgame, if any —
-// that's the case doNewPlaythrough refuses. None of the one-shot statuses has
+// that's the case the web UI's handleNewPlaythrough refuses. None of the one-shot statuses has
 // a save file or finish line, so a *second* entry of the same one-shot
 // status on the same platform *and subgame* would be fragmentation, not a
 // distinct mode; a differently-statused entry (a finished campaign alongside
