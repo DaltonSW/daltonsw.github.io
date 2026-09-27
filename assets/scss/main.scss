@@ -591,6 +591,9 @@ $status-aliases: (wip: playing, stable: finished);
 .overview-status-row:nth-child(even), .overview-recent__item:nth-child(even) {
   background: var(--panel-2);
 }
+// "unplayed" is derived, not a status, so its count overlaps the rows above —
+// a rule sets it apart so the column doesn't read as summing to the total.
+.overview-status-row--flag { margin-top: 0.3rem; border-top: 1px dashed var(--stroke); border-radius: 0 0 4px 4px; }
 .overview-status-row__label { color: var(--dim); }
 .overview-status-row__count { color: var(--fg); }
 // Status/platform rows link out to /status/<term>/ and /platform/<term>/ when a term
@@ -1148,7 +1151,6 @@ $timeline-status-colors: (
   paused:        var(--pause),
   software:      color-mix(in srgb, var(--software) 70%, var(--dim)),
   misc_launch:   color-mix(in srgb, var(--misc-launch) 70%, var(--dim)),
-  unplayed:      color-mix(in srgb, var(--unplayed) 70%, var(--dim)),
   backlog:       var(--dim),
   planned:       color-mix(in srgb, var(--accent) 65%, var(--dim)),
 );

@@ -186,10 +186,9 @@ implies play was actually attempted and abandoned. Unlike the one-shot statuses 
 `misc_launch` entry on the same platform is *not* fragmentation — each launch is its own unrelated
 occasion — so it's excluded from `isOneShot` and can repeat freely.
 
-`status: unplayed` (game-level only) is for a game that was launched or touched somehow but never
-actually played — booting a Switch title solely for a cross-save/gift unlock is the case that
-prompted it — and, unlike `backlog`, makes no claim about ever getting to it. `backlog` says
-"haven't gotten to it yet"; `unplayed` says "no plan either way."
+"Unplayed" is not a status. The site derives it (`layouts/partials/game-unplayed.html`) for any
+game with no playthrough entries — logged or written, `planned` excluded — and no captured
+`playtime_mins`, and shows it as an extra tag beside whatever the status is. There's nothing to set.
 
 `endless`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
 no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
@@ -382,8 +381,7 @@ nothing it reports could be backlog. Each creation also captures the game's achi
 of N — the denominator is the point), which is one Steam request per game, so work through these
 in batches rather than the whole library at once. Its alternatives are a deliberately smaller set
 than Scan's — everything in this list is under the playtime threshold, so any status claiming real
-history would be contradicted by the evidence that put it here; `unplayed` against `backlog`
-("don't know if I ever will" versus "haven't gotten to it") is the distinction worth one click.
+history would be contradicted by the evidence that put it here.
 
 **Ignored** is the escape hatch for games you're never going to log — a demo, a bundle leftover, a
 tool that registers as a game. It's the escape hatch on every Scan and Backlog row — **Never log

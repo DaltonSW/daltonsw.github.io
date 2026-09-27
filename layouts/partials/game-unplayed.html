@@ -1,0 +1,12 @@
+{{/* Context: a game's term Page. Returns true when nothing documents the game ever
+     being played: no playthrough entries (logged or written — "planned" doesn't
+     count, it's a replay that hasn't happened) and no captured playtime. Derived,
+     not a status: it sits alongside whatever the game's status is. */}}
+{{- $played := false -}}
+{{- range partial "playthrough-entries.html" . -}}
+  {{- if ne .status "planned" -}}{{- $played = true -}}{{- end -}}
+{{- end -}}
+{{- with .Resources.Get "achievement-summary.yaml" -}}
+  {{- if gt ((. | transform.Unmarshal).playtime_mins | default 0) 0 -}}{{- $played = true -}}{{- end -}}
+{{- end -}}
+{{- return (not $played) -}}

@@ -38,7 +38,7 @@ func TestHousekeepingRenders(t *testing.T) {
 		"Correct — create finished",
 		`<option value="mastered">`,
 		"Correct — create backlog",
-		`<option value="unplayed">`,
+		`<option value="software">`,
 		`name="use_status"`,
 		"Never log this",
 		"12/189 achievements",

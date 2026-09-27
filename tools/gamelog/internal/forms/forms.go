@@ -86,11 +86,9 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 // finish line, a second entry of the *same* one-shot status on the same
 // platform would be fragmentation, not a second mode.
 //
-// "unplayed" is game-level only: it's for a game that was launched or
-// touched somehow (booting a Switch title solely for a cross-save/gift
-// unlock, say) but never actually played, and — unlike "backlog" — makes no
-// claim about intending to play it eventually. "backlog" says "haven't
-// gotten to it yet"; "unplayed" says "don't know if I ever will."
+// "unplayed" is deliberately not here: the site derives it for any game with
+// no playthrough entries and no captured playtime (layouts/partials/
+// game-unplayed.html), so it sits alongside a status rather than replacing one.
 // "unfinished" sits between "dropped" and "paused": play has actually
 // stopped, same as dropped, but it doesn't claim to know whether that's
 // permanent. "dropped" asserts you won't come back; "paused" asserts you
@@ -98,7 +96,7 @@ func SelectExistingGame(games []model.GameSummary) (string, error) {
 // trailed off with no stated intent either way. It closes like "dropped"
 // (gets a finished/closed date, counts as a done status), it just doesn't
 // share dropped's certainty.
-var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "unfinished", "paused", "endless", "multiplayer", "software", "unplayed"}
+var GameStatuses = []string{"backlog", "playing", "finished", "mastered", "dropped", "unfinished", "paused", "endless", "multiplayer", "software"}
 
 // IsOneShot reports whether a status (game-level or entry-level) forbids a
 // second playthrough entry of that same status on the same platform. Keep
@@ -161,9 +159,7 @@ var ScanQuickStatuses = []string{"playing", "finished", "mastered", "dropped", "
 // BacklogQuickStatuses is the backlog half's set. Deliberately smaller:
 // these are games under the playtime threshold, so any status claiming real
 // history would be contradicted by the evidence that put them in this list.
-// "unplayed" against "backlog" is the distinction worth one click —
-// "haven't gotten to it" versus "don't know if I ever will".
-var BacklogQuickStatuses = []string{"backlog", "unplayed", "software"}
+var BacklogQuickStatuses = []string{"backlog", "software"}
 
 // IsGameStatus reports whether s is a status a game may actually be created
 // or set to. Used to check values arriving from a submitted form, which must

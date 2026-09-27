@@ -1,6 +1,7 @@
 {{ define "main" }}
 <article>
-  <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}</h1>
+  <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+    {{- if partial "game-unplayed.html" . }} <span class="pill pill--unplayed">unplayed</span>{{ end }}</h1>
 
   {{/* Finished is gated to non-open-ended statuses because game-last-played.html
        returns "last known activity", not a real completion date, for open entries. */}}

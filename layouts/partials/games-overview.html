@@ -14,6 +14,7 @@
 {{- $unlocked := 0 -}}
 {{- $total := 0 -}}
 {{- $statusCounts := dict -}}
+{{- $unplayedCount := 0 -}}
 {{- $platformCounts := dict -}}
 {{- $providerCounts := dict -}}
 {{- range $providerOrder -}}{{- $providerCounts = merge $providerCounts (dict . 0) -}}{{- end -}}
@@ -22,6 +23,8 @@
 
 {{- range .Pages -}}
   {{- $page := . -}}
+
+  {{- if partial "game-unplayed.html" $page -}}{{- $unplayedCount = add $unplayedCount 1 -}}{{- end -}}
 
   {{- with .Params.status -}}
     {{- $statusCounts = merge $statusCounts (dict . (add ((index $statusCounts .) | default 0) 1)) -}}
@@ -64,7 +67,7 @@
 {{/* lifecycle order, matching $status-colors in main.scss; unlisted statuses append at the end */}}
 {{- $statusOrder := slice "playing" "endless" "multiplayer" "paused"
     "finished" "mastered" "software" "misc_launch"
-    "dropped" "unfinished" "backlog" "unplayed" "planned" -}}
+    "dropped" "unfinished" "backlog" "planned" -}}
 {{- $statuses := slice -}}
 {{- range $statusOrder -}}
   {{- if isset $statusCounts . -}}{{- $statuses = $statuses | append . -}}{{- end -}}
@@ -151,6 +154,13 @@
               {{ partial "game-status-tag.html" $status }}
               {{- end }}
               <span class="overview-status-row__count">{{ index $statusCounts $status }}</span>
+            </li>
+            {{- end }}
+            {{/* not a status — derived by game-unplayed.html, overlaps the rows above */}}
+            {{- if gt $unplayedCount 0 }}
+            <li class="overview-status-row overview-status-row--flag">
+              {{ partial "game-status-tag.html" "unplayed" }}
+              <span class="overview-status-row__count">{{ $unplayedCount }}</span>
             </li>
             {{- end }}
           </ul>

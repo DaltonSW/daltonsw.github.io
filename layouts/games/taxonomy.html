@@ -123,6 +123,7 @@
       </span>
       <span class="ps-row__game" role="cell">
         <a class="ps-row__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+        {{- if partial "game-unplayed.html" $page }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
         {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
       </span>
       <span class="ps-row__platform" role="cell">

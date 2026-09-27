@@ -20,6 +20,7 @@
   <li class="entry{{ with $page.Params.status }} entry--{{ . }}{{ end }}">
     <a class="entry__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
     {{- with $page.Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
+    {{- if partial "game-unplayed.html" $page }}<span class="pill pill--unplayed">unplayed</span>{{ end }}
     <span class="entry__meta">
       {{- with $page.Params.platform }}{{ . }}{{ end }}
       {{- with $start }}{{ if $page.Params.platform }} · {{ end }}{{ . | time.Format "Jan 2006" }}{{ end }}

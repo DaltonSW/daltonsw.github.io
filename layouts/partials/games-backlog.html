@@ -24,6 +24,7 @@
     {{- range . }}
     <li class="entry entry--backlog">
       <a class="entry__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- if partial "game-unplayed.html" . }}<span class="pill pill--unplayed">unplayed</span>{{ end }}
       {{- with .Params.platform }}<span class="entry__meta">{{ . }}</span>{{ end }}
     </li>
     {{- end }}
