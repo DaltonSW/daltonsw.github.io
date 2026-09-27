@@ -32,7 +32,7 @@
   {{if eq .Status "error"}}<p class="flash flash--error">{{.Err}}</p>{{end}}
 
   <div class="job__log" id="job-log" tabindex="0" role="log" aria-label="Refresh log">
-    {{range .Lines}}<div class="{{logLineClass .}}">{{.}}</div>{{else}}<p class="empty">Waiting for the first game…</p>{{end}}
+    {{range .Lines}}<div class="{{logLineClass .Text}}">{{if .Href}}<a href="{{.Href}}">{{.Text}}</a>{{else}}{{.Text}}{{end}}</div>{{else}}<p class="empty">Waiting for the first game…</p>{{end}}
   </div>
 </div>
 {{end}}

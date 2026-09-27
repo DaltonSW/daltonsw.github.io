@@ -386,6 +386,12 @@ div.tui.row--error { border-color: var(--stop); }
   .detail-sidebar { position: static; }
 }
 
+/* One provider's block in the game page's suggest panel (suggest_fragments.html):
+   its findings, then the pre-filled forms. Divided like .subset-list. */
+.suggest-provider + .suggest-provider { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--stroke); }
+.suggest-provider p { margin: 0 0 0.4rem; }
+.suggest-provider form + form { margin-top: 0.5rem; }
+
 /* Attached RetroAchievements subsets, under the provider-ID form they belong
    with. Read-only, so it's a list rather than fields — see game_detail.html. */
 .subset-list { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--stroke); }

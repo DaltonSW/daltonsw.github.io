@@ -1,23 +1,30 @@
 {{define "content"}}
 <h1>Suggest</h1>
-<p class="lead">Read-only — prints suggested started/finished dates from RetroAchievements/Steam. Never writes.</p>
+<p class="lead">Suggested started/finished dates from RetroAchievements/Steam, shown on each game's own page as pre-filled forms. Nothing is written until you submit one.</p>
 
 <div class="tui">
   <span class="tui__title">sweep all games</span>
   <p>Runs the per-game check across every RetroAchievements/Steam-linked game and lists only the
-     ones whose provider history isn't already covered by their <code>playthroughs.yaml</code> —
-     so you don't have to open each game below by hand. Several minutes (RA throttles to
-     ~1.2s/request); runs as a background job you can watch.</p>
+     ones whose provider history isn't already covered by their <code>playthroughs.yaml</code>,
+     each linked to its suggestion. Takes several minutes (RA throttles to ~1.2s/request) and
+     runs as a background job you can watch.</p>
   <form method="post" action="/suggest/all">
     <button type="submit" class="btn--primary">Sweep all games</button>
   </form>
 </div>
 
+<form method="get" action="/suggest" class="row">
+  <input type="search" name="q" placeholder="filter by title..." value="{{.Query}}" style="max-width: 22rem;">
+  <button type="submit">Filter</button>
+</form>
+
 <div class="table-wrap">
 <table>
   <tbody>
   {{range .Games}}
-    <tr><td><a href="/suggest/{{.Slug}}">{{.SuggestLabel}}</a></td></tr>
+    <tr><td><a href="/games/{{.Slug}}?suggest=1#suggest">{{.SuggestLabel}}</a></td></tr>
+  {{else}}
+    <tr><td class="empty">No RetroAchievements/Steam-linked games match.</td></tr>
   {{end}}
   </tbody>
 </table>

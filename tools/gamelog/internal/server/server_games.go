@@ -287,6 +287,9 @@ type gameDetailData struct {
 	// here: attaching one is Housekeeping's job, because it needs the parent
 	// check only the provider can answer (see commands.AttachSubset).
 	Subsets []model.SubsetBreakdown
+	// AutoSuggest fetches the suggest panel as soon as the page loads — set
+	// by ?suggest=1, which is where every "Suggest" link points.
+	AutoSuggest bool
 }
 
 func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, pf *model.PlaythroughsFile) gameDetailData {
@@ -297,10 +300,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		}
 	}
 
-	defaultStatus := "playing"
-	if doc.FM.Status == "endless" || doc.FM.Status == "multiplayer" {
-		defaultStatus = doc.FM.Status
-	}
+	defaultStatus := defaultPthStatus(doc.FM.Status)
 
 	// Same rule as the (now-removed) review flow's delete action: a game
 	// with captured playthroughs or archive history isn't a stub, and
@@ -343,7 +343,18 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		UbisoftID:        g.UbisoftID,
 		XboxID:           g.XboxID,
 		Subsets:          subsets,
+		AutoSuggest:      r.URL.Query().Get("suggest") == "1",
 	}
+}
+
+// defaultPthStatus is the status a new playthrough starts with when nothing
+// says otherwise: "playing", unless the game as a whole is one of the modes
+// that has no finish line.
+func defaultPthStatus(gameStatus string) string {
+	if gameStatus == "endless" || gameStatus == "multiplayer" {
+		return gameStatus
+	}
+	return "playing"
 }
 
 func (s *server) handleGameDetail(w http.ResponseWriter, r *http.Request) {

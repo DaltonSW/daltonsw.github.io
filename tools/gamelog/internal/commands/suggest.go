@@ -89,6 +89,10 @@ func day(t time.Time) string {
 	return t.In(model.SiteLocation).Format("2006-01-02")
 }
 
+// Day is day for callers outside this package — the web UI's pre-filled
+// suggestion forms must land on the same calendar date the CLI report prints.
+func Day(t time.Time) string { return day(t) }
+
 func (c Credentials) RAConfigured() bool    { return c.RAUsername != "" && c.RAAPIKey != "" }
 func (c Credentials) SteamConfigured() bool { return c.SteamAPIKey != "" && c.SteamID != "" }
 

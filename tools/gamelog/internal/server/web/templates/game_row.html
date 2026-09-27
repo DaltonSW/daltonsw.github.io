@@ -23,6 +23,7 @@
       hx-include="closest tr"
       hx-target="#row-{{.Slug}}"
       hx-swap="outerHTML">Save</button>
+    {{if or .RAGameID .SteamAppID}}<a class="btn" href="/games/{{.Slug}}?suggest=1#suggest" title="Fetch suggested dates from RetroAchievements/Steam and log them">Suggest</a>{{end}}
     <a class="btn btn-details" href="/games/{{.Slug}}">Details &rarr; </a>
   </td>
 </tr>

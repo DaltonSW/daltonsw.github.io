@@ -1,0 +1,51 @@
+{{/* The game-detail page's suggest panel, fetched on demand by htmx (see
+handleSuggestFragment) and swapped into #suggest-panel. Each provider that
+found dates gets pre-filled copies of the page's own forms, posting to the
+same handlers — nothing here writes until one of them is submitted, and every
+value stays editable first. */}}
+
+{{define "suggest_panel"}}
+{{if .Error}}<p class="error-text">{{.Error}}</p>{{end}}
+{{range .Providers}}
+<div class="suggest-provider">
+  <p><strong>{{.Name}}</strong>{{with .Confidence}} <span class="dim">· {{.}}</span>{{end}}</p>
+  {{if .SkipReason}}
+  <p class="dim">{{.SkipReason}}</p>
+  {{else}}
+  <p class="dim">{{.Detail}}</p>
+  <form method="post" action="/games/{{$.Slug}}/playthroughs" class="row">
+    <input type="text" name="started" placeholder="started (YYYY-MM-DD)" required value="{{.Started}}">
+    <select name="status">{{$st := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $st}} selected{{end}}>{{.}}</option>{{end}}</select>
+    <input type="text" name="finished" value="{{.Finished}}" placeholder="{{with .FinishedHint}}last activity {{.}}{{else}}finished (blank if ongoing){{end}}">
+    <input type="text" name="platform" placeholder="platform (blank = {{dash $.GamePlatform}})">
+    {{if $.GameSubgames}}
+    <select name="subgame"><option value="">(none — whole game)</option>{{range $.GameSubgames}}<option value="{{.}}">{{.}}</option>{{end}}</select>
+    {{end}}
+    <input type="text" name="rating" placeholder="rating 1-10">
+    <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
+    <button type="submit" class="btn--primary">Log as new playthrough</button>
+  </form>
+  {{if $.SessionTargets}}
+  {{/* One form for every playthrough: the select rewrites the form's action,
+       since the playthrough index is part of the endpoint's path. */}}
+  <form method="post" action="{{range $.SessionTargets}}{{if .Selected}}{{.Action}}{{end}}{{end}}" class="row">
+    <select aria-label="playthrough" onchange="this.form.action = this.value">
+      {{range $.SessionTargets}}<option value="{{.Action}}"{{if .Selected}} selected{{end}}>{{.Label}}</option>{{end}}
+    </select>
+    <input type="text" name="started" placeholder="session started" required value="{{.Started}}">
+    <input type="text" name="finished" value="{{.Finished}}" placeholder="{{with .FinishedHint}}last activity {{.}}{{else}}session finished (blank if ongoing){{end}}">
+    <input type="text" name="title" placeholder="session title (optional)">
+    <button type="submit">Add as session</button>
+  </form>
+  {{end}}
+  {{end}}
+</div>
+{{end}}
+{{if gt .NumPlaythroughs 1}}
+<p class="hint">This game has several playthroughs logged. These dates span your whole provider history for it, not any one playthrough, so check them before you log them.</p>
+{{end}}
+<div class="btn-row">
+  <button type="button" hx-get="/games/{{.Slug}}/suggest" hx-target="#suggest-panel" hx-disabled-elt="this" hx-indicator="next .htmx-indicator">Fetch again</button>
+  <span class="htmx-indicator dim">fetching…</span>
+</div>
+{{end}}

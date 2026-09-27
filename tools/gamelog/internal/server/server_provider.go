@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/commands"
@@ -17,47 +18,51 @@ import (
 type suggestPickerData struct {
 	Page
 	Games []model.GameSummary
+	Query string
 }
 
+// handleSuggestPicker lists only RA/Steam-linked games — nothing else can
+// produce a suggestion — with the same title filter as the Games page.
 func (s *server) handleSuggestPicker(w http.ResponseWriter, r *http.Request) {
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	s.render(w, "suggest_picker", suggestPickerData{Page: newPage(r, "Suggest", "suggest"), Games: games})
-}
-
-type suggestReportData struct {
-	Page
-	Title  string
-	Slug   string
-	Report string
-}
-
-func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
-	slug := r.PathValue("slug")
-	games, err := model.ListGames(s.gamesDir)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	var summary model.GameSummary
-	found := false
+	q := strings.TrimSpace(r.URL.Query().Get("q"))
+	lower := strings.ToLower(q)
+	var linked []model.GameSummary
 	for _, g := range games {
-		if g.Slug == slug {
-			summary, found = g, true
-			break
+		if g.RAGameID == "" && g.SteamAppID == "" {
+			continue
 		}
+		if q != "" && !strings.Contains(strings.ToLower(g.Title), lower) {
+			continue
+		}
+		linked = append(linked, g)
 	}
-	if !found {
-		http.NotFound(w, r)
-		return
-	}
-	doc, err := model.LoadDoc(summary.Path)
+	s.render(w, "suggest_picker", suggestPickerData{Page: newPage(r, "Suggest", "suggest"), Games: linked, Query: q})
+}
+
+// suggestPath is where a game's suggestion lives: its own detail page, with
+// the panel fetched on arrival — so every entry point (games list, picker,
+// sweep log) lands where the suggestion can be logged, not on a read-only
+// report that has to be retyped somewhere else.
+func suggestPath(slug string) string { return gamePath(slug) + "?suggest=1#suggest" }
+
+// handleSuggestReport keeps old /suggest/{slug} links working now that the
+// suggestion is shown on the game's own page.
+func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, suggestPath(r.PathValue("slug")), http.StatusSeeOther)
+}
+
+// suggestionFor runs the same provider fetches as `gamelog suggest` for one
+// game. It returns the loaded doc and playthroughs too, since every caller
+// needs them to decide what to pre-fill.
+func (s *server) suggestionFor(ctx context.Context, slug string) (commands.SuggestionReport, *model.Doc, *model.PlaythroughsFile, error) {
+	doc, pf, err := s.loadGame(slug)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
+		return commands.SuggestionReport{}, nil, nil, err
 	}
 	raID, steamAppID := doc.ExternalIDs()
 	if id, err := externalid.ParseExternalID(raID); err == nil {
@@ -67,19 +72,164 @@ func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
 		steamAppID = id
 	}
 	creds := commands.LoadCredentials()
+	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
 
 	report := commands.SuggestionReport{
-		Title: summary.Title, Slug: slug, NumPlaythroughs: summary.NumPlaythroughs,
+		Title: doc.FM.Title, Slug: slug, NumPlaythroughs: g.NumPlaythroughs,
 		RAGameID: raID, RAUsername: creds.RAUsername, SteamAppID: steamAppID,
 	}
-	ctx := r.Context()
 	report.RA = commands.FetchRAResult(ctx, raID, creds)
 	report.Steam = commands.FetchSteamResult(ctx, steamAppID, creds)
+	return report, doc, pf, nil
+}
 
-	s.render(w, "suggest_report", suggestReportData{
-		Page: newPage(r, "Suggest — "+summary.Title, "suggest"), Title: summary.Title, Slug: slug,
-		Report: commands.FormatSuggestionReport(report),
-	})
+// providerSuggestion is one provider's block in the suggest panel: what it
+// found, and — when it found dates — the values its forms are pre-filled with.
+type providerSuggestion struct {
+	Name       string
+	Confidence string
+	Detail     string
+	SkipReason string // set when the provider was skipped or failed; no forms then
+
+	// Pre-fill. Finished is left blank unless the provider actually signals
+	// a finish (an RA award, or every Steam achievement unlocked); the
+	// last-activity date goes in FinishedHint instead, so logging a
+	// suggestion never claims a finish nobody typed.
+	Started      string
+	Finished     string
+	FinishedHint string
+	Status       string
+	Notes        string
+}
+
+// sessionTarget is one existing playthrough a suggestion can be logged
+// against as a new session.
+type sessionTarget struct {
+	Action   string
+	Label    string
+	Selected bool
+}
+
+type suggestView struct {
+	Slug            string
+	NumPlaythroughs int
+	GamePlatform    string
+	GameSubgames    []string
+	Providers       []providerSuggestion
+	SessionTargets  []sessionTarget
+	Error           string
+}
+
+// buildSuggestView turns a report into the suggest panel's pre-filled forms.
+// defaultStatus is the status used when the provider doesn't signal a finish
+// — the same game-aware default the "start a new playthrough" form uses.
+func buildSuggestView(report commands.SuggestionReport, doc *model.Doc, pf *model.PlaythroughsFile, defaultStatus string) suggestView {
+	v := suggestView{
+		Slug:            report.Slug,
+		NumPlaythroughs: report.NumPlaythroughs,
+		GamePlatform:    doc.FM.Platform,
+		GameSubgames:    doc.FM.Subgames,
+		Providers: []providerSuggestion{
+			raSuggestion(report.RA, defaultStatus),
+			steamSuggestion(report.Steam, defaultStatus),
+		},
+	}
+	for _, p := range pf.Views() {
+		if p.Status == "planned" {
+			continue
+		}
+		label := fmt.Sprintf("#%d · %s", p.Index+1, p.Status)
+		if p.Subgame != "" {
+			label += " · " + p.Subgame
+		}
+		if p.Platform != "" {
+			label += " · " + p.Platform
+		}
+		v.SessionTargets = append(v.SessionTargets, sessionTarget{
+			Action: fmt.Sprintf("/games/%s/playthroughs/%d/sessions", report.Slug, p.Index),
+			Label:  label,
+		})
+	}
+	// The newest playthrough is the likeliest one a fresh session belongs to.
+	if n := len(v.SessionTargets); n > 0 {
+		v.SessionTargets[n-1].Selected = true
+	}
+	return v
+}
+
+func skippedReason(pr commands.ProviderResult) string {
+	if pr.Errored {
+		return fmt.Sprintf("request failed: %v", pr.Err)
+	}
+	return pr.Reason
+}
+
+func raSuggestion(pr commands.ProviderResult, defaultStatus string) providerSuggestion {
+	out := providerSuggestion{Name: "RetroAchievements"}
+	s := pr.RA
+	if s == nil {
+		out.SkipReason = skippedReason(pr)
+		return out
+	}
+	started, last := commands.Day(s.Started), commands.Day(s.Finished)
+	out.Started = started
+	out.Notes = "dates suggested from RetroAchievements"
+	if s.Confidence == "high" {
+		out.Confidence = "high (" + s.AwardKind + ")"
+		out.Detail = fmt.Sprintf("earliest achievement %s · %s %s", started, s.AwardKind, last)
+		out.Finished = last
+		out.Status = "finished"
+		if s.AwardKind == "mastered" || s.AwardKind == "completed" {
+			out.Status = "mastered"
+		}
+		out.Notes += " (" + s.AwardKind + ")"
+		return out
+	}
+	out.Confidence = "medium — no award, not confirmed finished"
+	out.Detail = fmt.Sprintf("earliest achievement %s · latest %s", started, last)
+	out.FinishedHint = last
+	out.Status = defaultStatus
+	return out
+}
+
+func steamSuggestion(pr commands.ProviderResult, defaultStatus string) providerSuggestion {
+	out := providerSuggestion{Name: "Steam"}
+	s := pr.Steam
+	if s == nil {
+		out.SkipReason = skippedReason(pr)
+		return out
+	}
+	started, last := commands.Day(s.Started), commands.Day(s.Finished)
+	out.Started = started
+	out.Confidence = "low — guessed from achievement unlock times"
+	out.Detail = fmt.Sprintf("%d/%d achievements · earliest unlock %s · latest %s", s.UnlockedCount, s.TotalCount, started, last)
+	if pr.SteamPlaytimeKnown {
+		out.Detail += " · " + commands.FormatHours(pr.SteamPlaytimeMinutes) + " total playtime"
+	}
+	out.Notes = fmt.Sprintf("dates suggested from Steam achievements (%d/%d)", s.UnlockedCount, s.TotalCount)
+	if s.UnlockedCount >= s.TotalCount {
+		out.Finished = last
+		out.Status = "finished"
+		return out
+	}
+	out.FinishedHint = last
+	out.Status = defaultStatus
+	return out
+}
+
+// handleSuggestFragment renders the game page's suggest panel on demand
+// (htmx), never as part of the page itself: RA throttles to ~1.2s a request,
+// too slow to pay on every visit. Failures render inside the panel with a
+// 200, since htmx 2 won't swap an error response in.
+func (s *server) handleSuggestFragment(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	report, doc, pf, err := s.suggestionFor(r.Context(), slug)
+	if err != nil {
+		s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", suggestView{Slug: slug, Error: err.Error()})
+		return
+	}
+	s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel",
+		buildSuggestView(report, doc, pf, defaultPthStatus(doc.FM.Status)))
 }
 
 // handleSuggestAll kicks off runSuggestAllJob. Like achievements/all it's a
@@ -160,7 +310,7 @@ func (s *server) runSuggestAllJob(j *job) {
 			continue
 		}
 		flagged++
-		j.log("%s", g.Title)
+		j.logLink(suggestPath(g.Slug), "%s", g.Title)
 		j.log("  %s", note)
 		if r := report.RA.RA; r != nil {
 			j.log("  RetroAchievements: %s", suggestRangeLine(r.Started, r.Finished, r.Confidence))
@@ -168,7 +318,6 @@ func (s *server) runSuggestAllJob(j *job) {
 		if st := report.Steam.Steam; st != nil {
 			j.log("  Steam: %s", suggestRangeLine(st.Started, st.Finished, ""))
 		}
-		j.log("  enter by hand: open %q, then \"Log a new session\" or \"Update a playthrough\"", g.Title)
 	}
 
 	j.progress(total, total, "")
@@ -260,7 +409,7 @@ type jobData struct {
 	Page
 	ID          string
 	Status      string
-	Lines       []string
+	Lines       []logLine
 	Err         string
 	Current     int
 	Total       int

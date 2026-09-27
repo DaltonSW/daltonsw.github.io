@@ -49,6 +49,7 @@ var pageTemplatesCache map[string]*template.Template
 var rowTemplateCache *template.Template
 var playthroughFragmentsCache *template.Template
 var jobProgressCache *template.Template
+var suggestFragmentsCache *template.Template
 
 func init() {
 	if info, err := os.Stat(devWebRoot + "/web/templates"); err == nil && info.IsDir() {
@@ -73,6 +74,8 @@ func init() {
 			ParseFS(templatesFS, "web/templates/playthrough_fragments.html"))
 		jobProgressCache = template.Must(template.New("job_progress.html").Funcs(funcMap).
 			ParseFS(templatesFS, "web/templates/job_progress.html"))
+		suggestFragmentsCache = template.Must(template.New("suggest_fragments.html").Funcs(funcMap).
+			ParseFS(templatesFS, "web/templates/suggest_fragments.html"))
 	}
 }
 
@@ -134,6 +137,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /games/{slug}/planned/{idx}/start", s.handleStartPlanned)
 	mux.HandleFunc("POST /games/{slug}/planned/{idx}/edit", s.handleEditPlanned)
 	mux.HandleFunc("POST /games/{slug}/achievements", s.handleRefreshAchievements)
+	mux.HandleFunc("GET /games/{slug}/suggest", s.handleSuggestFragment)
 
 	mux.HandleFunc("GET /housekeeping", s.handleHousekeeping)
 	mux.HandleFunc("POST /scan", s.handleScanCreate)
@@ -203,7 +207,7 @@ var funcMap = template.FuncMap{
 		return 100
 	},
 	"formatHoursFunc": commands.FormatHours,
-	// A job's log is a flat []string that the writers indent by two spaces
+	// A job's log is a flat list of lines that the writers indent by two spaces
 	// for a game's per-provider detail lines (see runAchievementsAllJob), so
 	// the shape is recoverable here rather than needing a structured record
 	// per line: un-indented lines are the game headings, indented ones its
@@ -261,7 +265,6 @@ var pageSpecs = map[string]struct {
 	"game_detail":    {"game_detail.html", []string{"web/templates/playthrough_fragments.html"}},
 	"housekeeping":   {"housekeeping.html", nil},
 	"suggest_picker": {"suggest_picker.html", nil},
-	"suggest_report": {"suggest_report.html", nil},
 	"job":            {"job.html", []string{"web/templates/job_progress.html"}},
 }
 
@@ -324,6 +327,25 @@ func (s *server) renderJobProgress(w http.ResponseWriter, data jobData) {
 	}
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	if err := tmpl.ExecuteTemplate(w, "job_progress", data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+// renderFragment renders one named template out of a standalone fragment
+// file (not wrapped in layout), reparsing it per request in dev mode like
+// the other render helpers.
+func (s *server) renderFragment(w http.ResponseWriter, cached *template.Template, file, name string, data any) {
+	tmpl := cached
+	if devMode {
+		var err error
+		tmpl, err = template.New(file).Funcs(funcMap).ParseFS(templatesFS, "web/templates/"+file)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	if err := tmpl.ExecuteTemplate(w, name, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }

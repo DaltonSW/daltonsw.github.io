@@ -19,7 +19,7 @@ import (
 type job struct {
 	mu          sync.Mutex
 	Status      string // "running" | "done" | "error"
-	Lines       []string
+	Lines       []logLine
 	Err         string
 	Current     int    // 1-based index of the item currently in flight (== Total when done)
 	Total       int    // number of items this job will process
@@ -30,10 +30,22 @@ type job struct {
 	BackLabel string // that link's text
 }
 
+// logLine is one line of a job's log. Href, when set, makes the line a link
+// — the suggest sweep uses it so a flagged game is one click from the panel
+// where its suggestion can be logged.
+type logLine struct {
+	Text string
+	Href string
+}
+
 func (j *job) log(format string, args ...any) {
+	j.logLink("", format, args...)
+}
+
+func (j *job) logLink(href, format string, args ...any) {
 	j.mu.Lock()
 	defer j.mu.Unlock()
-	j.Lines = append(j.Lines, fmt.Sprintf(format, args...))
+	j.Lines = append(j.Lines, logLine{Text: fmt.Sprintf(format, args...), Href: href})
 }
 
 // progress records structured position (for a progress bar), independent of
@@ -57,10 +69,10 @@ func (j *job) finish(err error) {
 
 // snapshot copies out what a status page needs, so the HTTP handler never
 // holds the lock while rendering a template.
-func (j *job) snapshot() (status string, lines []string, errMsg string, current, total int, currentItem string) {
+func (j *job) snapshot() (status string, lines []logLine, errMsg string, current, total int, currentItem string) {
 	j.mu.Lock()
 	defer j.mu.Unlock()
-	return j.Status, append([]string(nil), j.Lines...), j.Err, j.Current, j.Total, j.CurrentItem
+	return j.Status, append([]logLine(nil), j.Lines...), j.Err, j.Current, j.Total, j.CurrentItem
 }
 
 type jobRegistry struct {
