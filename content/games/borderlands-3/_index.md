@@ -1,21 +1,18 @@
 ---
-title: "Borderlands 3"
-platform: "PC"
-retroachievements_id:
+title: Borderlands 3
+platform: PC
+retroachievements_id: null
 steam_appid: 397540
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["borderlands-3"]
+    games:
+      - borderlands-3
+cover: null
 ---
 
 

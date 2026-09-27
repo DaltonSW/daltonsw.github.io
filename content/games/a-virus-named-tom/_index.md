@@ -1,21 +1,18 @@
 ---
-title: "A Virus Named TOM"
-platform: "PC"
-retroachievements_id:
+title: A Virus Named TOM
+platform: PC
+retroachievements_id: null
 steam_appid: 207650
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["a-virus-named-tom"]
+    games:
+      - a-virus-named-tom
+cover: null
 ---
 
 

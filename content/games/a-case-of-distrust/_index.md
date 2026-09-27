@@ -1,21 +1,18 @@
 ---
-title: "A Case of Distrust"
-platform: "PC"
-retroachievements_id:
+title: A Case of Distrust
+platform: PC
+retroachievements_id: null
 steam_appid: 717610
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["a-case-of-distrust"]
+    games:
+      - a-case-of-distrust
+cover: null
 ---
 
 

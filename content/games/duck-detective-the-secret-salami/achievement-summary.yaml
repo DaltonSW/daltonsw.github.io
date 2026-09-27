@@ -1,16 +1,54 @@
-unlocked: 1
+unlocked: 7
 total: 7
-last_played: "2026-09-25"
+playtime_mins: 131
+last_played: "2026-09-27"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 1
+      unlocked: 7
       total: 7
-      last_played: "2026-09-25"
+      playtime_mins: 131
+      last_played: "2026-09-27"
 earned:
     - name: Early Bird
       description: Solve a deducktion
       date: "2026-09-25T18:47:14-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/8f0170a7f89503e573c979923d753421faa29c64.jpg
+      provider: steam
+      platform: PC
+    - name: Fits the Bill
+      description: Complete 5 inspections
+      date: "2026-09-25T19:10:23-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/3f010e952622121835606ed5e0e692e0244f92ec.jpg
+      provider: steam
+      platform: PC
+    - name: Ducks in a Row
+      description: Fill out all suspects' names
+      date: "2026-09-25T19:35:19-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/06e8121b75a8d5c27decb1e1078805f6c634e370.jpg
+      provider: steam
+      platform: PC
+    - name: Poultry Case
+      description: Solve 5 deducktions
+      date: "2026-09-25T19:38:01-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/fa54ab173d8a8df0d6f62bd950be2c9ec4006747.jpg
+      provider: steam
+      platform: PC
+    - name: Rage Uncaged
+      description: Kick over all the bins at BearBus office
+      date: "2026-09-27T12:50:50-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/e717f035e3fc5e7a0eec8bae5c8ab60abbf3aa3b.jpg
+      provider: steam
+      platform: PC
+    - name: Beak Performance
+      description: Solve 10 deducktions
+      date: "2026-09-27T13:07:49-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/d4a5bf3ce234389ad44d64adcfc2eb46b0a16896.jpg
+      provider: steam
+      platform: PC
+    - name: Quacked the Case
+      description: Solve the mystery of the Secret Salami
+      date: "2026-09-27T13:51:26-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2637990/e7f5aa8be52327993e9d7b6586bdeaf791d611a2.jpg
       provider: steam
       platform: PC
