@@ -26,14 +26,18 @@ Consequences that should drive design decisions:
 
 - Run `npm install` before `hugo server` on a fresh clone — the timeline depends on
   `vis-timeline` from `node_modules`, mounted into `assets/` by `config/_default/hugo.toml`.
-- `tools/gamelog/` is the Go CLI that maintains the game log. Its README documents the storage
-  layout and the RetroAchievements/Steam API quirks that are easy to regress — read it before
-  touching either client.
+- `tools/gamelog/` is the Go tool that maintains the game log: a local web UI (`go run .` from
+  that directory) plus a few CLI commands. Its README documents the storage layout and each
+  provider's API quirks that are easy to regress — read it before touching any client.
 - **Storage is split three ways, on purpose.** `content/games/<slug>/_index.md` is authored by
-  hand and only read by the tool after creation; `playthroughs.yaml` beside it is tool-owned and
+  hand; the tool creates it and afterwards only splices individual front-matter fields, never the
+  markdown body; `playthroughs.yaml` beside it is tool-owned and
   rewritten whole; `archive/<provider>/<id>.json` holds captured API history, keyed by IDs that
   never change and kept outside `content/` so a rename or delete can't destroy it — and so Hugo
-  never parses or publishes it.
+  never parses or publishes it. The site reads captured data only through tool-generated
+  projections beside `_index.md` (`achievement-summary.yaml`, plus `campaigns.yaml` and
+  `btd6-summary.yaml` for the two non-achievement providers), which are regenerable from `archive/`
+  and never published either.
 - **`tools/gamelog/KNOWN-ISSUES.md` lists what's outstanding and, just as importantly, the
   invariants not to undo.** Read it before editing `internal/model/playthroughs.go` or
   `internal/model/archive.go` — the inline `Extra` catch-all, the string-typed dates, and the

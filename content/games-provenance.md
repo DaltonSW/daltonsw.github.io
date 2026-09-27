@@ -37,10 +37,20 @@ from each provider, and what had to be filled in by hand.
 
 - Xbox 360 has no public achievement API either. This data comes from an unofficial third-party service: unlocked achievements, timestamps, gamerscore, total achievement count, and last-played date.
 - Locked achievements aren't returned by this source, only unlocked ones.
-- Some of the oldest unlocks are missing a reliable date and show as unlocked but undated. A handful of early records were entered by hand before API access existed.
+- Some of the oldest unlocks are missing a reliable date and show as unlocked but undated.
+
+### Trackmania
+
+- Trackmania has no achievements. Instead, every official campaign's tracks come from Nadeo's own services: personal-best times, medals, and when each time was set.
+- Both the best time set while a campaign was live and the all-time best are kept, so going back later to improve a medal shows up as its own thing.
+
+### Bloons TD 6
+
+- The BTD6 save comes from Ninja Kiwi's own data API: rank, tower and hero progress, map completion across difficulties and modes, and more. Its Steam achievements are counted separately, through Steam.
+- The save is a snapshot rather than a history, so it shows where things stand as of the last fetch, not when each thing happened.
 
 ---
 
 - If a game was played across more than one platform or session, deciding which one gets credit for a provider's achievement history is always a human call. Providers only track achievements per game, not per individual playthrough.
 - Refreshing a provider's data never removes anything already captured. Unlocks stay unlocked, and a failed fetch just leaves existing history untouched.
-- Session dates for a playthrough are logged separately by hand, and aren't yet split out for games played across multiple, widely separated sessions. That's still a work in progress.
+- Session dates for a playthrough are logged by hand. Games played through more than once have been split into separate playthroughs where the break between runs was clear. A gap in achievement unlocks alone doesn't prove a new run started, so a few may still be one long entry.
