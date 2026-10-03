@@ -13,6 +13,8 @@ func TestNormalizeTitle(t *testing.T) {
 		{"Elden Ring®", "elden-ring"},
 		{"The Binding of Isaac: Rebirth", "the-binding-of-isaac-rebirth"},
 		{"Doc Louis's Punch-Out!!", "doc-louis-s-punch-out"},
+		{"Assassins Creed Odyssey", "Assassin's Creed Odyssey"},
+		{"Pokémon Red", "pokemon-red"},
 	}
 	for _, tc := range cases {
 		if normalizeTitle(tc.a) != normalizeTitle(tc.b) {

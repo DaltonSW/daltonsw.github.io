@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -209,12 +208,14 @@ func (i loggedIndex) hasSteam(id, title string) bool {
 	return i.steamIDs[id] || i.titles[normalizeTitle(title)] || i.ignored.Has(model.ProviderSteam, id)
 }
 
-var titleNoise = regexp.MustCompile(`[^a-z0-9]+`)
-
 // normalizeTitle reduces a title to a comparable form, so "Hades II" matches
-// "hades-ii" and "Elden Ring®" matches "Elden Ring".
+// "hades-ii", "Elden Ring®" matches "Elden Ring", and Exophase's "Assassins
+// Creed Odyssey" matches the logged "Assassin's Creed Odyssey". It folds
+// accents and symbols the way slugs do (model.Slugify) and then drops the
+// separators too, since services disagree about apostrophes and punctuation
+// far more often than two different games differ only by them.
 func normalizeTitle(s string) string {
-	return strings.Trim(titleNoise.ReplaceAllString(strings.ToLower(s), "-"), "-")
+	return strings.ReplaceAll(model.Slugify(s), "-", "")
 }
 
 func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candidate, error) {
