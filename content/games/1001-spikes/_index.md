@@ -1,21 +1,18 @@
 ---
-title: "1001 Spikes"
-platform: "PC"
-retroachievements_id:
+title: 1001 Spikes
+platform: PC
+retroachievements_id: null
 steam_appid: 260790
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "unfinished"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: unfinished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["1001-spikes"]
+    games:
+      - 1001-spikes
+cover: null
 ---
 
 

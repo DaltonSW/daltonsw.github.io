@@ -4,7 +4,7 @@ platform: PS5
 retroachievements_id: null
 steam_appid: null
 psn_id: NPWR20277_00
-status: ""
+status: finished
 started: ""
 finished: ""
 rating: null

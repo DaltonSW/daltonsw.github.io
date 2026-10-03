@@ -1,21 +1,18 @@
 ---
-title: "AirMech"
-platform: "PC"
-retroachievements_id:
+title: AirMech
+platform: PC
+retroachievements_id: null
 steam_appid: 206500
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: multiplayer
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["airmech"]
+    games:
+      - airmech
+cover: null
 ---
 
 

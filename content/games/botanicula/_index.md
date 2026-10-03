@@ -1,21 +1,18 @@
 ---
-title: "Botanicula"
-platform: "PC"
-retroachievements_id:
+title: Botanicula
+platform: PC
+retroachievements_id: null
 steam_appid: 207690
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["botanicula"]
+    games:
+      - botanicula
+cover: null
 ---
 
 

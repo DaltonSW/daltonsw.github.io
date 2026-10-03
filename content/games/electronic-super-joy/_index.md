@@ -1,21 +1,18 @@
 ---
-title: "Electronic Super Joy"
-platform: "PC"
-retroachievements_id:
+title: Electronic Super Joy
+platform: PC
+retroachievements_id: null
 steam_appid: 244870
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["electronic-super-joy"]
+    games:
+      - electronic-super-joy
+cover: null
 ---
 
 

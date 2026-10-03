@@ -1,21 +1,18 @@
 ---
-title: "Cave Story+"
-platform: "PC"
-retroachievements_id:
+title: Cave Story+
+platform: PC
+retroachievements_id: null
 steam_appid: 200900
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: finished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["cave-story"]
+    games:
+      - cave-story
+cover: null
 ---
 
 

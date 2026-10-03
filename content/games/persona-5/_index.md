@@ -4,7 +4,7 @@ platform: PS4, PS3
 retroachievements_id: null
 steam_appid: null
 psn_id: NPWR11866_00
-status: ""
+status: finished
 started: ""
 finished: ""
 rating: null
