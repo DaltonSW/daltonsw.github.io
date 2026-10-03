@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"regexp"
 	"strings"
+	"sync"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/model"
@@ -57,9 +58,39 @@ const exophasePageSize = 50
 
 // ExophaseClient reads one Exophase profile. Environments are Exophase's own
 // service slugs — "psn", "nintendo", "uplay".
+//
+// A client memoizes the account page and each environment's games list for
+// cacheTTL. Every per-game fetch needs both, so without it a refresh of 50
+// games re-reads the same profile ~50 times; holding one client across a run
+// (see commands.ExophaseClientFor) makes that one read.
 type ExophaseClient struct {
 	User string // the per-environment username, e.g. "DaltonSW"
 	HTTP *http.Client
+
+	mu      sync.Mutex
+	account cached[[]byte]
+	games   map[string]cached[map[string]Game]
+}
+
+// cacheTTL bounds how stale a memoized list can be. Long enough to cover one
+// Housekeeping session or one refresh-all run, short enough that a game
+// played since shows up without restarting the server.
+const cacheTTL = 10 * time.Minute
+
+type cached[T any] struct {
+	at  time.Time
+	val T
+}
+
+func (c cached[T]) fresh() bool { return !c.at.IsZero() && time.Since(c.at) < cacheTTL }
+
+// Forget drops everything memoized, so the next call re-reads the profile —
+// what an explicit "Re-scan" asks for.
+func (c *ExophaseClient) Forget() {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.account = cached[[]byte]{}
+	c.games = nil
 }
 
 func (c *ExophaseClient) httpClient() *http.Client {
@@ -135,9 +166,18 @@ type exophaseService struct {
 // service resolves one environment's player id and page from the account
 // profile. Both come from the same widget, so they can't disagree.
 func (c *ExophaseClient) service(ctx context.Context, env string) (exophaseService, error) {
-	body, err := c.get(ctx, exophaseBaseURL+"/user/"+c.User+"/")
-	if err != nil {
-		return exophaseService{}, err
+	c.mu.Lock()
+	acct := c.account
+	c.mu.Unlock()
+	body := acct.val
+	if !acct.fresh() {
+		var err error
+		if body, err = c.get(ctx, exophaseBaseURL+"/user/"+c.User+"/"); err != nil {
+			return exophaseService{}, err
+		}
+		c.mu.Lock()
+		c.account = cached[[]byte]{at: time.Now(), val: body}
+		c.mu.Unlock()
 	}
 	for _, m := range exophaseWidgetRe.FindAllStringSubmatch(string(body), -1) {
 		if m[2] == env {
@@ -228,7 +268,29 @@ func decodeJSString(s string) string {
 // Games lists every game on one environment of the profile, keyed by the
 // provider's own ID (an NPWR… for PSN, a title id for Nintendo). Games whose
 // canonical ID can't be resolved are omitted rather than guessed at.
+//
+// The result is memoized per client for cacheTTL — see ExophaseClient.
 func (c *ExophaseClient) Games(ctx context.Context, env string) (map[string]Game, error) {
+	c.mu.Lock()
+	hit := c.games[env]
+	c.mu.Unlock()
+	if hit.fresh() {
+		return hit.val, nil
+	}
+	out, err := c.fetchGames(ctx, env)
+	if err != nil {
+		return nil, err
+	}
+	c.mu.Lock()
+	if c.games == nil {
+		c.games = map[string]cached[map[string]Game]{}
+	}
+	c.games[env] = cached[map[string]Game]{at: time.Now(), val: out}
+	c.mu.Unlock()
+	return out, nil
+}
+
+func (c *ExophaseClient) fetchGames(ctx context.Context, env string) (map[string]Game, error) {
 	svc, err := c.service(ctx, env)
 	if err != nil {
 		return nil, err

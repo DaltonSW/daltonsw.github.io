@@ -140,7 +140,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			if !creds.ExophaseConfigured() {
 				continue
 			}
-			rec, err = exophase.FetchUbisoftRecord(ctx, &exophase.ExophaseClient{User: creds.ExophaseUser}, link.ID)
+			rec, err = exophase.FetchUbisoftRecord(ctx, ExophaseClientFor(creds), link.ID)
 		case model.ProviderXbox:
 			if !creds.XBLConfigured() {
 				continue
