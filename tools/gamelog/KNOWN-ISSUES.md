@@ -17,8 +17,9 @@ what's unfinished and what's load-bearing.
 - `archive/` holds **511 records (17 MB)**: 426 Steam, 45 RetroAchievements, 23 Xbox 360,
   13 PSN, 2 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
 - The day-to-day tool is the web UI (`gamelog serve`). Its Housekeeping page runs the scan for
-  unlogged games, the owned-but-unplayed backlog import, stale-game triage, subset attaching,
-  and the refresh-all and suggest-all sweeps. The CLI still has `suggest`, `achievements`,
+  unlogged and unlinked games across all six achievement providers, the owned-but-unplayed
+  backlog import, stale-game triage, subset attaching, and the refresh-all and suggest-all
+  sweeps. The CLI still has `suggest`, `achievements`,
   `project`, `exophase`, `psn`, `nadeo` and `ninjakiwi`. The old CLI `scan`, `stale` and `review`
   flows are gone, so don't go looking for them.
 - The status vocabulary is split in two on purpose (see `internal/forms/forms.go`):
@@ -52,6 +53,10 @@ what's unfinished and what's load-bearing.
   same 50. Google Play gets past it by decoding the app id out of a game's award ids (see the
   README's Google Play section). Ubisoft has no such fallback, but it has 6 games, so it isn't
   biting. Games past the ceiling are skipped, not mis-keyed.
+- **Scan leaves out Xbox titles that aren't Xbox 360**, with a notice naming them. Capture reads
+  only the x360 achievement endpoint, so creating one would archive an empty record that looks
+  like a real 0/N. All 23 titles in the account's history are 360 today. Supporting modern titles
+  means a second fetch path in `providers/xbox`, verified against a live modern title first.
 - **Nintendo is on the Exophase profile but not archived.** Switch has no achievements (only
   playtime and last-played), so it needs a record shape that doesn't pretend otherwise, as
   Nadeo and Ninja Kiwi each got, before it's worth adding.

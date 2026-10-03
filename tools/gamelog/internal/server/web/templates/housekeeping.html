@@ -31,7 +31,12 @@
      subset's own forms post ids rather than a row index, for the same reason
      ignore does — see handleSubsetAttach. A subset whose parent couldn't be
      resolved falls back to an ordinary row: the title convention alone is
-     never enough to link one. */}}
+     never enough to link one.
+
+     A *link* row — a game already logged under this title, with no id on
+     this provider yet — swaps the primary the same way: "Link to <game>"
+     writes the id onto that game and captures its history. "Create as" stays
+     for the case where it's really a different game with the same name. */}}
 {{/* Every button here posts via htmx and swaps its own <tr> for a one-line
      result (see writeHousekeepingResult): the Housekeeping page is worked
      through a row at a time, and a full reload per click threw away the open
@@ -60,6 +65,15 @@
     <input type="hidden" name="min_hours" value="{{.MinHours}}">
     <input type="hidden" name="tab" value="{{.Tab}}">
   </form>
+  {{with .C.LinkTo}}
+  <form method="post" action="/scan/link" id="link-{{$row}}" class="form--hidden">
+    <input type="hidden" name="provider" value="{{$.C.ProviderKey}}">
+    <input type="hidden" name="id" value="{{$.C.ID}}">
+    <input type="hidden" name="slug" value="{{.Slug}}">
+    <input type="hidden" name="min_hours" value="{{$.MinHours}}">
+    <input type="hidden" name="tab" value="{{$.Tab}}">
+  </form>
+  {{end}}
   {{if and $sub $sub.ParentID}}
   <form method="post" action="{{if $sub.Attachable}}/subset/attach{{else}}/subset/create-base{{end}}" id="subset-{{$row}}" class="form--hidden">
     <input type="hidden" name="id" value="{{.C.ID}}">
@@ -70,7 +84,11 @@
   </form>
   {{end}}
   <div class="cell-actions">
-    {{if and $sub $sub.ParentID}}
+    {{if .C.LinkTo}}
+    <button type="submit" form="link-{{$row}}" class="btn--primary"
+      hx-post="/scan/link" hx-include="#link-{{$row}}"
+      hx-target="closest tr" hx-swap="outerHTML">Link to {{.C.LinkTo.Title}}</button>
+    {{else if and $sub $sub.ParentID}}
       {{$subAction := "/subset/create-base"}}{{if $sub.Attachable}}{{$subAction = "/subset/attach"}}{{end}}
       {{if $sub.Attachable}}
       <button type="submit" form="subset-{{$row}}" class="btn--primary"
@@ -119,10 +137,13 @@
   </div>
 
   <section class="tabs__panel tabs__panel--scan">
-  <p class="lead">Games on RetroAchievements/Steam with no entry in <code>content/games</code>. Everything
-     created here is a <code>draft: true</code> guess — bulk data carries no start dates, so create
-     the entry, then run <code>gamelog suggest &lt;slug&gt;</code> for its real range. Steam games are
-     never marked finished: playtime says nothing about completion.</p>
+  <p class="lead">Games on every configured service — RetroAchievements, Steam, PSN, Xbox, Ubisoft and
+     Google Play — that aren't linked to anything in <code>content/games</code>. A game already logged
+     under the same title is offered as a <strong>link</strong> instead, so its history on the other
+     service gets captured too. Everything created here is a <code>draft: true</code> guess — bulk
+     data carries no start dates, so create the entry, then use the game's Suggest panel for its real
+     range. Steam games are never marked finished: playtime says nothing about completion. Provider
+     lists are kept for 10 minutes between page loads; Re-scan reads them all fresh.</p>
 
   <form method="get" action="/housekeeping" class="row">
     <label for="min_hours">Min Steam hours</label>
@@ -133,11 +154,13 @@
     <input type="hidden" name="incomplete_pct" value="{{.IncompletePct}}">
     {{if .IncompleteAll}}<input type="hidden" name="incomplete_all" value="1">{{end}}
     <input type="hidden" name="tab" value="scan">
+    <input type="hidden" name="refresh" value="1">
     <button type="submit">Re-scan</button>
   </form>
 
   {{with .ScanError}}<div class="flash flash--error">{{.}}</div>{{end}}
-  <p class="lead">{{len .ScanCandidates}} unlogged game(s), Steam filtered to {{.MinHours}}h+ ({{.NumLogged}} already logged).</p>
+  {{range .ScanNotices}}<div class="flash flash--error">{{.}}</div>{{end}}
+  <p class="lead">{{len .ScanCandidates}} unlogged or unlinked game(s){{with .ScanScanned}} across {{.}}{{end}}, Steam filtered to {{.MinHours}}h+ ({{.NumLogged}} already logged).</p>
 
   {{if .ScanCandidates}}
 <div class="table-wrap">
@@ -155,11 +178,15 @@
         {{- end -}}
       </span>
       {{- end}}
+      {{- if .C.LinkTo}}<span class="row-note">logged as {{.C.LinkTo.Slug}}, not linked to {{.C.ProviderLabel}} yet</span>{{end}}
+      {{- with .C.Note}}<span class="row-note">{{.}}</span>{{end}}
     </td>
-    <td class="dim">{{.C.Provider}} {{.C.ID}} · {{.C.Platform}}</td>
+    <td class="dim">{{.C.ProviderLabel}} {{.C.ID}} · {{.C.Platform}}</td>
     <td class="dim">{{with .C.Evidence}}{{.}}{{else}}—{{end}}</td>
     <td class="dim">
-      {{- if .C.IsSubset -}}
+      {{- if .C.IsLink -}}
+        link to {{.C.LinkTo.Title}}
+      {{- else if .C.IsSubset -}}
         {{- if .C.Subset.ParentID}}attach to {{.C.Subset.BaseTitle}}{{else}}—{{end -}}
       {{- else -}}
         {{- with .C.Outcome}}{{.}}{{else}}{{.C.Status}}{{end -}}
@@ -184,6 +211,7 @@
      in the Scan tab — the two lists split the library at the same line, so nothing appears in both.</p>
 
   {{with .BacklogError}}<div class="flash flash--error">{{.}}</div>{{end}}
+  {{range .BacklogNotices}}<div class="flash flash--error">{{.}}</div>{{end}}
   <p class="lead">{{len .BacklogCandidates}} owned Steam game(s) under {{.MinHours}}h with no entry.</p>
 
   {{if .BacklogCandidates}}
@@ -193,7 +221,10 @@
   <tbody>
   {{range .BacklogCandidates}}
   <tr>
-    <td>{{.C.Title}}</td>
+    <td>{{.C.Title}}
+      {{- with .C.LinkTo}}<span class="row-note">logged as {{.Slug}}, not linked to Steam yet</span>{{end}}
+      {{- with .C.Note}}<span class="row-note">{{.}}</span>{{end}}
+    </td>
     <td class="dim">{{if gt .C.PlaytimeMins 0}}{{formatHoursFunc .C.PlaytimeMins}}{{else}}never launched{{end}}</td>
     <td class="dim">{{with .C.LastActivity}}{{.}}{{else}}—{{end}}</td>
     <td>{{template "create_actions" .}}</td>
@@ -363,7 +394,7 @@
 
 <div class="tui">
   <span class="tui__title">refresh all</span>
-  <p>Fetches every linked game's unlock history from RetroAchievements/Steam. RA throttles to
+  <p>Fetches every linked game's unlock history from every provider it's linked to. RA throttles to
      ~1.2s/request, so with 200+ linked games this can take several minutes — runs as a background
      job you can watch progress on.</p>
   <form method="post" action="/achievements/all">

@@ -98,10 +98,13 @@ func (c *XBLClient) XUID(ctx context.Context) (string, error) {
 // achievement denominator and last-played date, since the x360 achievements
 // endpoint only reports what's unlocked (see the package doc comment).
 type Title struct {
-	TitleID     string   `json:"titleId"`
-	Name        string   `json:"name"`
-	Devices     []string `json:"devices"`
-	Achievement struct {
+	TitleID string   `json:"titleId"`
+	Name    string   `json:"name"`
+	Devices []string `json:"devices"`
+	// MediaItemType is "Xbox360Game" for a legacy 360 title — the only kind
+	// FetchRecord can capture, since it reads the x360-only endpoint.
+	MediaItemType string `json:"mediaItemType"`
+	Achievement   struct {
 		Current int `json:"currentAchievements"`
 		Total   int `json:"totalAchievements"`
 	} `json:"achievement"`

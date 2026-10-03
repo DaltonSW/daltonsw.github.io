@@ -56,7 +56,7 @@ func TestResolveSubsets_LinksToTheLoggedBaseGame(t *testing.T) {
 	ra := &fakeRA{byID: map[string]retroachievements.RAProgress{"25709": subsetProgress(7601)}}
 
 	got := ResolveSubsets(context.Background(), ra, []Candidate{{
-		Provider: "RetroAchievements", ID: "25709",
+		Provider: model.ProviderRA, ID: "25709",
 		Title:  "Professor Layton and the Last Specter [Subset - Mouse Alley]",
 		Subset: &SubsetInfo{Name: "Mouse Alley", BaseTitle: "Professor Layton and the Last Specter"},
 	}}, index)
@@ -84,7 +84,7 @@ func TestResolveSubsets_RecordsAFailureInsteadOfGuessing(t *testing.T) {
 	ra := &fakeRA{byID: map[string]retroachievements.RAProgress{"25709": subsetProgress(0)}}
 
 	got := ResolveSubsets(context.Background(), ra, []Candidate{{
-		Provider: "RetroAchievements", ID: "25709", Title: "X [Subset - Y]",
+		Provider: model.ProviderRA, ID: "25709", Title: "X [Subset - Y]",
 		Subset: &SubsetInfo{Name: "Y", BaseTitle: "X"},
 	}}, NewLoggedIndex(nil))
 
@@ -103,7 +103,7 @@ func TestResolveSubsets_LeavesOrdinaryCandidatesAlone(t *testing.T) {
 	resetSubsetCache(t)
 	ra := &fakeRA{}
 	got := ResolveSubsets(context.Background(), ra, []Candidate{
-		{Provider: "RetroAchievements", ID: "10210", Title: "Banjo-Kazooie"},
+		{Provider: model.ProviderRA, ID: "10210", Title: "Banjo-Kazooie"},
 	}, NewLoggedIndex(nil))
 	if got[0].Subset != nil || ra.calls != 0 {
 		t.Errorf("ordinary candidate touched: subset=%+v, calls=%d", got[0].Subset, ra.calls)
@@ -117,7 +117,7 @@ func TestLoggedIndex_SkipsAttachedSubsets(t *testing.T) {
 		Slug: "professor-layton-and-the-last-specter", Title: "Professor Layton and the Last Specter",
 		RAGameID: "7601", RASubsets: []string{"25709"},
 	}})
-	if !idx.hasRA("25709", "Professor Layton and the Last Specter [Subset - Mouse Alley]") {
+	if !idx.covered(model.ProviderRA, "25709") {
 		t.Error("an attached subset should be filtered out of the scan")
 	}
 	if _, ok := idx.raGames["25709"]; ok {

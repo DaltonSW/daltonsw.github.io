@@ -72,6 +72,24 @@ const (
 	ProviderGooglePlay = "googleplay"
 )
 
+// providerLabels are the names a reader knows each provider by.
+var providerLabels = map[string]string{
+	ProviderRA:         "RetroAchievements",
+	ProviderSteam:      "Steam",
+	ProviderPSN:        "PSN",
+	ProviderUbisoft:    "Ubisoft",
+	ProviderXbox:       "Xbox",
+	ProviderGooglePlay: "Google Play",
+}
+
+// ProviderLabel names a provider for display, falling back to its key.
+func ProviderLabel(provider string) string {
+	if l, ok := providerLabels[provider]; ok {
+		return l
+	}
+	return provider
+}
+
 // ProviderLink pairs a provider with this game's ID on it. Everything that
 // walks a game's archive takes a slice of these rather than a positional
 // (raID, steamAppID) pair, so adding a provider doesn't mean editing every

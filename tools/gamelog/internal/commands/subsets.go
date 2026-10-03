@@ -245,7 +245,7 @@ func CreateBaseAndAttach(ctx context.Context, gamesDir, subsetID string, ra RAPa
 	}
 
 	base := Candidate{
-		Provider:      "RetroAchievements",
+		Provider:      model.ProviderRA,
 		Title:         parent.Title,
 		Platform:      parent.ConsoleName,
 		ID:            parentID,

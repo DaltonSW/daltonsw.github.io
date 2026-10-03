@@ -22,10 +22,10 @@ func TestHousekeepingRenders(t *testing.T) {
 	data := housekeepingData{
 		MinHours: 5,
 		ScanCandidates: scanRows([]commands.Candidate{
-			{Provider: "RetroAchievements", Title: "Banjo", ID: "10210", Status: "finished", Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-01-02", AchievementsA: 12, AchievementsB: 189},
+			{Provider: model.ProviderRA, Title: "Banjo", ID: "10210", Status: "finished", Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-01-02", AchievementsA: 12, AchievementsB: 189},
 		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
 		BacklogCandidates: scanRows([]commands.Candidate{
-			{Provider: "Steam", Title: "Tunic", ID: "553420", Status: "backlog"},
+			{Provider: model.ProviderSteam, Title: "Tunic", ID: "553420", Status: "backlog"},
 		}, forms.BacklogQuickStatuses, "/backlog", 5, "backlog"),
 		Ignored: []model.IgnoredGame{{Provider: "steam", ID: "440", Title: "X", IgnoredOn: "2026-08-15"}},
 	}
@@ -115,7 +115,7 @@ func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
 		MinHours: 5,
 		ScanCandidates: scanRows([]commands.Candidate{
 			{
-				Provider: "RetroAchievements", Title: "Professor Layton and the Last Specter [Subset - Mouse Alley]",
+				Provider: model.ProviderRA, Title: "Professor Layton and the Last Specter [Subset - Mouse Alley]",
 				ID: "25709", Status: "playing", AchievementsA: 6, AchievementsB: 52,
 				Subset: &commands.SubsetInfo{
 					Name: "Mouse Alley", ParentID: "7601",
@@ -125,14 +125,14 @@ func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
 			},
 			// Same thing, base game not logged: the primary offers to create it.
 			{
-				Provider: "RetroAchievements", Title: "Some Game [Subset - Bonus]", ID: "99",
+				Provider: model.ProviderRA, Title: "Some Game [Subset - Bonus]", ID: "99",
 				Status: "playing",
 				Subset: &commands.SubsetInfo{Name: "Bonus", ParentID: "12", BaseTitle: "Some Game"},
 			},
 			// Unresolvable parent: falls back to an ordinary row, because the
 			// title convention alone is never enough to link one.
 			{
-				Provider: "RetroAchievements", Title: "Mystery [Subset - Huh]", ID: "77", Status: "playing",
+				Provider: model.ProviderRA, Title: "Mystery [Subset - Huh]", ID: "77", Status: "playing",
 				Subset: &commands.SubsetInfo{Name: "Huh", BaseTitle: "Mystery", Err: "no parent game"},
 			},
 		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
@@ -165,5 +165,49 @@ func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
 	// resolved subsets must not offer to duplicate a game as well as attach.
 	if n := strings.Count(out, "Correct — create"); n != 1 {
 		t.Errorf("create-as-a-game primary appears %d times, want 1 (the unresolvable row only)", n)
+	}
+}
+
+// A link row's primary action links the id onto the logged game rather than
+// creating anything, and must post the ids LinkToGame needs — while still
+// offering "Create as" (with its own guessed status in the dropdown, since
+// the primary no longer creates it) for a different game with the same name.
+func TestHousekeepingRendersLinkRow(t *testing.T) {
+	tmpl, err := parsePage(pageSpecs["housekeeping"].name, pageSpecs["housekeeping"].partials...)
+	if err != nil {
+		t.Fatal(err)
+	}
+	data := housekeepingData{
+		MinHours:    5,
+		ScanScanned: "Steam, Google Play",
+		ScanNotices: []commands.ScanNotice{{Provider: model.ProviderPSN, Message: "npsso expired"}},
+		ScanCandidates: scanRows([]commands.Candidate{{
+			Provider: model.ProviderGooglePlay, Title: "Balatro", ID: "588451498103", Platform: "Android",
+			Status: "playing", AchievementsA: 16, AchievementsB: 31,
+			LinkTo: &commands.LinkTarget{Slug: "balatro", Title: "Balatro"},
+		}}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
+	}
+	var buf bytes.Buffer
+	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
+		t.Fatal(err)
+	}
+	out := buf.String()
+	for _, want := range []string{
+		`id="link-googleplay-588451498103"`,
+		`form="link-googleplay-588451498103"`,
+		`action="/scan/link"`,
+		`name="slug" value="balatro"`,
+		"Link to Balatro",
+		"Google Play 588451498103",
+		`<option value="playing">`,
+		"PSN: npsso expired",
+		"across Steam, Google Play",
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("page missing %q", want)
+		}
+	}
+	if strings.Contains(out, "Correct — create") {
+		t.Error("a link row must not also offer the create guess as its primary button")
 	}
 }

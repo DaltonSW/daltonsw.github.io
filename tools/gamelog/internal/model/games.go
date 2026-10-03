@@ -337,6 +337,25 @@ type NewGameFields struct {
 	Draft bool
 }
 
+// SetProviderID fills the id field for one provider — what the scan uses, since
+// a candidate knows its provider as a key rather than as a field to set.
+func (f *NewGameFields) SetProviderID(provider, id string) {
+	switch provider {
+	case ProviderRA:
+		f.RetroAchievementsID = id
+	case ProviderSteam:
+		f.SteamAppID = id
+	case ProviderPSN:
+		f.PSNID = id
+	case ProviderUbisoft:
+		f.UbisoftID = id
+	case ProviderXbox:
+		f.XboxID = id
+	case ProviderGooglePlay:
+		f.GooglePlayID = id
+	}
+}
+
 func formatNewGameFile(f NewGameFields, slug string) string {
 	lines := []string{
 		"---",

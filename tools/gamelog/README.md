@@ -359,16 +359,45 @@ split sessions, edit provider IDs, and log suggested dates (see `gamelog suggest
 Ignored, Incomplete, Stale, Close, and Achievements — described below by what each one does; on the
 page itself these are filter fields, checkboxes, and buttons rather than CLI flags.
 
-**Scan** lists games on RetroAchievements and Steam that have no entry in `content/games` (a
-`min_hours` field narrows the Steam side, default 5), one row each with the evidence behind it and
-the entry it would create. Matching is by external ID where one is set, falling back to a
-normalised title — so a game logged before those fields existed is still recognised, and casing or
-a trailing `®` doesn't produce a duplicate (`elden-ring` matches `ELDEN RING`). Anything created
-is written with `draft: true`, because every field is inferred — review it and flip the flag to
-publish. Scanning is essentially the two bulk endpoints (one request each), so it's fast and can't
-be rate-limited — the one exception is a **RetroAchievements subset row**, which costs one
-per-game request to resolve its parent, memoized for the process (see "RetroAchievements subsets"
-below). The bulk endpoints carry no start dates; create the entry, then use the game's
+**Scan** covers every achievement provider with a bulk "what has this account played" list —
+RetroAchievements, Steam, PSN, Xbox, Ubisoft and Google Play, whichever have credentials — and
+lists each game whose id isn't in any game's front matter yet (a `min_hours` field narrows the
+Steam side, default 5), one row each with the evidence behind it and what it would do. Trackmania
+and BTD6 aren't in it: neither is an achievement provider, each covers exactly one game, and
+Nadeo calls run on a real player account.
+
+A row is one of two things:
+
+- **A link**, when a logged game already has the row's title but no id on that provider — Balatro
+  logged from Steam, found again on Google Play. The primary button (*Link to Balatro*) writes the
+  id onto that game, captures the provider's history and rebuilds its summary
+  (`commands.LinkToGame`); it never overwrites an id already set on either side. Before this, a
+  title match just hid the row, which left the second service's history uncaptured for good.
+  Links sort first.
+- **A create**, for everything else. If a logged game has the title but is already linked to a
+  *different* id on that provider (a PS4 and a PS5 trophy set; or two games sharing a name), the
+  row says so in a note rather than guessing which — create it, or *Never log this*.
+
+Title matching folds accents and symbols the way slugs do and then ignores separators, so
+`elden-ring` matches `ELDEN RING` and Exophase's `Assassins Creed Odyssey` matches the logged
+`Assassin's Creed Odyssey`. Anything created is written with `draft: true`, because every field
+is inferred — review it and flip the flag to publish.
+
+Providers are scanned concurrently, and **a provider that fails is a notice on the page, not a
+failed scan** — one expired PSN npsso shouldn't hide every other service's games (it used to fail
+silently). Xbox titles that aren't Xbox 360 are left out with a notice, since capture only reads
+the 360 endpoint. Each provider's bulk list is memoized for 10 minutes (`cachedList` in
+`internal/commands/scan_providers.go`; the Exophase client memoizes its own pages the same way):
+Housekeeping re-derives the scan on every render and every row's click, and with six providers —
+PSN's alone is an OAuth exchange plus the list — that was no longer cheap. Only the raw lists are
+cached; which games are covered is re-read from `content/games` every time, so an acted-on row
+drops out immediately. **Re-scan** forgets the cache, which is how something played in the last
+few minutes shows up. A **RetroAchievements subset row** costs one more per-game request to
+resolve its parent, memoized for the process (see "RetroAchievements subsets" below).
+
+Finish signals differ by provider. PSN's platinum, or every achievement on Xbox/Ubisoft/Google
+Play, is suggested as `status: mastered` — with Exophase's completion date when it has one, and
+no date otherwise (the bulk lists don't carry one; the archive gets the real date at creation). The bulk endpoints carry no start dates; create the entry, then use the game's
 **Suggest** button for the precise range. A RetroAchievements game counts as finished when it carries
 a real award — the row names which one, since `12/189 achievements → finished` only makes sense
 once you can see it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award —
@@ -603,9 +632,12 @@ you copied it from (`retroachievements.org/game/4650`, `store.steampowered.com/a
 and store the bare ID. `suggest` accepts a pasted URL in front matter too.
 
 Everything that walks a game's archive takes `[]model.ProviderLink` (from `Doc.ProviderLinks` or
-`GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, so another
-achievement provider is a client package plus one entry in `model.ProviderOrder` — not an edit to
-every signature that touches the archive. Nadeo and Ninja Kiwi are deliberately *not* in that list
+`GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, and ids are
+passed around as a provider-keyed map (`ProviderIDs`), so another achievement provider is a client
+package, an entry in `model.ProviderOrder` and `providerLabels`, its front-matter field (wired in
+`Doc.providerField`, `GameSummary`, `NewGameFields` and the provider-IDs form), a case in
+`SaveAchievements`, and a scan function in `commands.Scan` — not an edit to every signature that
+touches the archive. Nadeo and Ninja Kiwi are deliberately *not* in that list
 (see their sections).
 
 ### RetroAchievements subsets

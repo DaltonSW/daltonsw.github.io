@@ -21,12 +21,13 @@ import (
 const DefaultMinHours = 5
 
 // Candidate is one game found on an external service that isn't in
-// content/games yet.
+// content/games yet — or is, under its title, but isn't linked to this
+// service (see LinkTo).
 type Candidate struct {
-	Provider string // "RetroAchievements" or "Steam"
+	Provider string // the archive's provider key, e.g. model.ProviderSteam
 	Title    string
 	Platform string
-	ID       string // retroachievements_id or steam_appid
+	ID       string // the game's id on Provider — what its front-matter field holds
 
 	// Whatever finish signal the provider offers. Finished means a real
 	// completion award, not merely "hasn't been touched in a while".
@@ -49,30 +50,51 @@ type Candidate struct {
 	// than a game of its own — nil for everything else, which is nearly
 	// everything. See SubsetInfo and ResolveSubsets.
 	Subset *SubsetInfo
+
+	// LinkTo is set when a logged game already has this candidate's title
+	// but no id on this provider — Balatro logged from Steam, found again on
+	// Google Play. The row then offers to link the id to that game rather
+	// than create a second entry for it. Before this, a title match just hid
+	// the row, which left the second service's history uncaptured for good.
+	LinkTo *LinkTarget
+
+	// Note is anything else the row has to explain, e.g. that a logged game
+	// shares this title but is already linked to a different id here.
+	Note string
 }
+
+// LinkTarget is the logged game a candidate would be linked to.
+type LinkTarget struct {
+	Slug, Title string
+}
+
+// IsLink reports whether this candidate's primary action is linking it to a
+// logged game rather than creating one.
+func (c Candidate) IsLink() bool { return c.LinkTo != nil }
 
 // IsSubset reports whether this candidate belongs under an existing game
 // rather than becoming one.
 func (c Candidate) IsSubset() bool { return c.Subset != nil }
 
-// SortKey orders candidates so the ones most likely worth logging come first:
-// finished games, then by how much evidence there is.
+// sortWeight orders candidates so the ones most likely worth acting on come
+// first: links (history for a game already on the site), then finished
+// games, then by how much evidence there is.
 func (c Candidate) sortWeight() int {
-	if c.Finished {
+	switch {
+	case c.IsLink():
 		return 0
+	case c.Finished:
+		return 1
 	}
-	return 1
+	return 2
 }
 
-// ProviderKey is Provider as the archive spells it — Candidate.Provider is a
-// display string ("RetroAchievements"), and anything keyed by provider on
-// disk uses model's lowercase constants.
-func (c Candidate) ProviderKey() string {
-	if c.Provider == "Steam" {
-		return model.ProviderSteam
-	}
-	return model.ProviderRA
-}
+// ProviderKey is Provider, kept as a method because the templates and the
+// create/ignore forms key rows on it.
+func (c Candidate) ProviderKey() string { return c.Provider }
+
+// ProviderLabel is Provider as a reader knows it.
+func (c Candidate) ProviderLabel() string { return model.ProviderLabel(c.Provider) }
 
 // WithStatus is the "create as X instead" correction: the same candidate as
 // it would be created under a status chosen by hand rather than guessed.
@@ -105,11 +127,7 @@ func (c Candidate) NewGameFields() model.NewGameFields {
 		Finished: c.FinishedOn,
 		Draft:    true,
 	}
-	if c.Provider == "Steam" {
-		f.SteamAppID = c.ID
-	} else {
-		f.RetroAchievementsID = c.ID
-	}
+	f.SetProviderID(c.Provider, c.ID)
 	return f
 }
 
@@ -143,18 +161,22 @@ func (o ScanOptions) keeps(playtimeMins int) bool {
 	return below == (o.Mode == ScanModeBacklog)
 }
 
-// loggedIndex answers "should this game stay out of the scan list?" — either
-// because it's already in content/games, or because it's been explicitly
-// ignored. External IDs are the reliable signal, but existing entries predate
-// those fields, so a normalised title is the fallback.
+// loggedIndex answers "what should the scan do with this game?" — leave it
+// out (already linked, or explicitly ignored), offer to link it to a logged
+// game with the same title, or offer to create it.
 type loggedIndex struct {
-	raIDs    map[string]bool
-	steamIDs map[string]bool
-	titles   map[string]bool
+	// ids is every provider id already in front matter, by provider. A
+	// game's attached RA subsets count as covered under ProviderRA.
+	ids map[string]map[string]bool
+
+	// titles maps a normalised title (and slug) to the games carrying it.
+	// Existing entries predate the id fields, so a title is how a game
+	// logged one way is recognised when it turns up on another service.
+	titles map[string][]model.GameSummary
 
 	// raGames maps a game's *own* RetroAchievements id to it, so a subset can
 	// be traced to the base game it belongs under. Subset ids are deliberately
-	// not keys here (they are in raIDs, which is the "already covered?"
+	// not keys here (they are in ids, which is the "already covered?"
 	// question): a subset is not a game a further subset could hang off.
 	raGames map[string]model.GameSummary
 
@@ -167,27 +189,36 @@ type loggedIndex struct {
 
 func NewLoggedIndex(games []model.GameSummary) loggedIndex {
 	idx := loggedIndex{
-		raIDs:    map[string]bool{},
-		steamIDs: map[string]bool{},
-		titles:   map[string]bool{},
-		raGames:  map[string]model.GameSummary{},
+		ids:     map[string]map[string]bool{},
+		titles:  map[string][]model.GameSummary{},
+		raGames: map[string]model.GameSummary{},
+	}
+	cover := func(provider, id string) {
+		if idx.ids[provider] == nil {
+			idx.ids[provider] = map[string]bool{}
+		}
+		idx.ids[provider][id] = true
 	}
 	for _, g := range games {
+		for p, id := range g.ProviderIDs() {
+			cover(p, id)
+		}
 		if g.RAGameID != "" {
-			idx.raIDs[g.RAGameID] = true
 			idx.raGames[g.RAGameID] = g
 		}
 		// An attached subset is covered by the game it hangs off, so the scan
 		// must stop offering it as an unlogged game of its own — the whole
 		// point of attaching it.
 		for _, id := range g.RASubsets {
-			idx.raIDs[id] = true
+			cover(model.ProviderRA, id)
 		}
-		if g.SteamAppID != "" {
-			idx.steamIDs[g.SteamAppID] = true
+		keys := []string{normalizeTitle(g.Title)}
+		if k := normalizeTitle(g.Slug); k != keys[0] {
+			keys = append(keys, k)
 		}
-		idx.titles[normalizeTitle(g.Title)] = true
-		idx.titles[normalizeTitle(g.Slug)] = true
+		for _, k := range keys {
+			idx.titles[k] = append(idx.titles[k], g)
+		}
 	}
 	return idx
 }
@@ -200,12 +231,30 @@ func (i loggedIndex) WithIgnored(list model.IgnoredList) loggedIndex {
 	return i
 }
 
-func (i loggedIndex) hasRA(id, title string) bool {
-	return i.raIDs[id] || i.titles[normalizeTitle(title)] || i.ignored.Has(model.ProviderRA, id)
+// covered reports whether a game should stay out of the scan entirely: its id
+// is already in some game's front matter, or it's been ignored.
+func (i loggedIndex) covered(provider, id string) bool {
+	return i.ids[provider][id] || i.ignored.Has(provider, id)
 }
 
-func (i loggedIndex) hasSteam(id, title string) bool {
-	return i.steamIDs[id] || i.titles[normalizeTitle(title)] || i.ignored.Has(model.ProviderSteam, id)
+// place fills in what the scan should offer for an uncovered candidate: a
+// link when a logged game has its title and no id on its provider, and
+// otherwise an ordinary create — with a note when the title is taken by a game
+// already linked to a different id here (a PS4 and a PS5 trophy set are two
+// ids for one game; two different games can also share a name — only a human
+// can tell which this is, so the row says so rather than hiding it).
+func (i loggedIndex) place(c *Candidate) {
+	for _, g := range i.titles[normalizeTitle(c.Title)] {
+		if g.ProviderIDs()[c.Provider] == "" {
+			c.LinkTo = &LinkTarget{Slug: g.Slug, Title: g.Title}
+			return
+		}
+	}
+	for _, g := range i.titles[normalizeTitle(c.Title)] {
+		c.Note = fmt.Sprintf("%s has this title but is already linked to %s %s",
+			g.Slug, model.ProviderLabel(c.Provider), g.ProviderIDs()[c.Provider])
+		return
+	}
 }
 
 // normalizeTitle reduces a title to a comparable form, so "Hades II" matches
@@ -219,8 +268,10 @@ func normalizeTitle(s string) string {
 }
 
 func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candidate, error) {
-	client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
-	played, err := client.GetUserCompletionProgress(ctx)
+	played, err := cachedList("ra:"+creds.RAUsername, func() ([]retroachievements.RAPlayedGame, error) {
+		client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
+		return client.GetUserCompletionProgress(ctx)
+	})
 	if err != nil {
 		return nil, err
 	}
@@ -228,11 +279,11 @@ func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 	var out []Candidate
 	for _, g := range played {
 		id := strconv.Itoa(g.GameID)
-		if index.hasRA(id, g.Title) {
+		if index.covered(model.ProviderRA, id) {
 			continue
 		}
 		c := Candidate{
-			Provider:      "RetroAchievements",
+			Provider:      model.ProviderRA,
 			Title:         g.Title,
 			Platform:      g.ConsoleName,
 			ID:            id,
@@ -254,6 +305,8 @@ func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 		// nothing else.
 		if base, name, ok := model.SplitRASubsetTitle(g.Title); ok {
 			c.Subset = &SubsetInfo{Name: name, BaseTitle: base}
+		} else {
+			index.place(&c)
 		}
 		out = append(out, c)
 	}
@@ -270,8 +323,10 @@ func statusForAward(kind string) string {
 }
 
 func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts ScanOptions) ([]Candidate, error) {
-	client := &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
-	owned, err := client.GetOwnedGames(ctx)
+	owned, err := cachedList("steam:"+creds.SteamID, func() ([]steam.SteamOwnedGame, error) {
+		client := &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
+		return client.GetOwnedGames(ctx)
+	})
 	if err != nil {
 		return nil, err
 	}
@@ -283,11 +338,11 @@ func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts S
 			continue
 		}
 		id := strconv.Itoa(g.AppID)
-		if index.hasSteam(id, g.Name) {
+		if index.covered(model.ProviderSteam, id) {
 			continue
 		}
 		c := Candidate{
-			Provider:     "Steam",
+			Provider:     model.ProviderSteam,
 			Title:        g.Name,
 			Platform:     "PC",
 			ID:           id,
@@ -304,6 +359,7 @@ func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts S
 		if g.LastPlayed > 0 {
 			c.LastActivity = day(time.Unix(g.LastPlayed, 0))
 		}
+		index.place(&c)
 		out = append(out, c)
 	}
 	return out, nil
@@ -413,7 +469,7 @@ func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int,
 		// Capture the unlock history into the archive. A failure here costs
 		// the history, not the game, so it's reported and stepped over —
 		// `gamelog achievements <slug>` can retry later.
-		links := []model.ProviderLink{{Provider: c.ProviderKey(), ID: c.ID}}
+		links := []model.ProviderLink{{Provider: c.Provider, ID: c.ID}}
 		if _, err := SaveAchievements(ctx, archiveDir, c.Title, links, creds); err != nil {
 			fmt.Fprintf(os.Stderr, "    (no achievements saved: %v)\n", err)
 		} else if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(path), links); err != nil {

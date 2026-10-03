@@ -37,7 +37,7 @@ func TestScanOptions_ModesPartitionTheLibrary(t *testing.T) {
 // still a draft, and no finished date to imply it was ever played.
 func TestBacklogCandidate_CreatesBacklogDraft(t *testing.T) {
 	dir := t.TempDir()
-	c := Candidate{Provider: "Steam", Title: "Outer Wilds", Platform: "PC", ID: "753640", Status: "backlog"}
+	c := Candidate{Provider: model.ProviderSteam, Title: "Outer Wilds", Platform: "PC", ID: "753640", Status: "backlog"}
 
 	path, err := model.CreateGameFile(dir, model.Slugify(c.Title), c.NewGameFields())
 	if err != nil {

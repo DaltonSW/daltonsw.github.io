@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"slices"
 	"strconv"
+	"strings"
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/forms"
@@ -35,53 +36,31 @@ func housekeepingReturnTo(r *http.Request) string {
 
 // ── Scan (lives on the Housekeeping page — see below) ─────────────────────
 
-// scanCandidates re-runs the two bulk RA/Steam endpoints scan.go's runScan
-// calls. Both GET and POST need this (POST re-derives it to map submitted
-// checkbox indices back to real candidates) — cheap and safe to call twice,
-// per README: "two bulk endpoints ... fast, can't be rate-limited."
+// scanCandidates runs commands.Scan over every configured provider. Both GET
+// and POST need it (POST re-derives it to match a submitted row back to a real
+// candidate); the provider lists themselves are memoized for a few minutes
+// (see commands.cachedList), so a page of row-by-row clicks doesn't re-hit
+// six APIs per click, while which games are already covered is re-derived
+// from content/games every time.
 //
-// mode picks which half of the Steam library is wanted, and the backlog half
-// skips RetroAchievements entirely: RA has no notion of ownership, and
-// GetUserCompletionProgress only returns games with at least one achievement
-// already earned, so nothing it reports could belong in a backlog list.
-func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) ([]commands.Candidate, int, error) {
+// mode picks which half of the Steam library is wanted; the backlog half is
+// Steam alone — see commands.Scan.
+func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) (commands.ScanResult, int, error) {
 	existing, err := model.ListGames(s.gamesDir)
 	if err != nil {
-		return nil, 0, err
+		return commands.ScanResult{}, 0, err
 	}
 	creds := commands.LoadCredentials()
-	backlog := mode == commands.ScanModeBacklog
-	if backlog {
-		if !creds.SteamConfigured() {
-			return nil, len(existing), fmt.Errorf("Steam credentials not configured; see tools/gamelog/README.md")
-		}
-	} else if !creds.RAConfigured() && !creds.SteamConfigured() {
-		return nil, len(existing), fmt.Errorf("no credentials configured; see tools/gamelog/README.md")
+	if mode == commands.ScanModeBacklog && !creds.SteamConfigured() {
+		return commands.ScanResult{}, len(existing), fmt.Errorf("Steam credentials not configured; see tools/gamelog/README.md")
 	}
-	ctx := context.Background()
 	ignored, err := model.LoadIgnored(model.FindArchiveDir(s.gamesDir))
 	if err != nil {
-		return nil, len(existing), err
+		return commands.ScanResult{}, len(existing), err
 	}
 	index := commands.NewLoggedIndex(existing).WithIgnored(ignored)
-	var candidates []commands.Candidate
-	if creds.RAConfigured() && !backlog {
-		if found, err := commands.ScanRA(ctx, creds, index); err == nil {
-			// Resolves which base game each subset row belongs to, at one
-			// per-game request per subset never seen this process. The bulk
-			// endpoints carry no parent link, so this is the only way a subset
-			// row can offer to attach rather than to duplicate a game.
-			candidates = append(candidates, commands.ResolveSubsets(ctx, commands.RAClientFor(creds), found, index)...)
-		}
-	}
-	if creds.SteamConfigured() {
-		opts := commands.ScanOptions{MinHours: minHours, Mode: mode}
-		if found, err := commands.ScanSteam(ctx, creds, index, opts); err == nil {
-			candidates = append(candidates, found...)
-		}
-	}
-	commands.SortCandidates(candidates)
-	return candidates, len(existing), nil
+	res, err := commands.Scan(context.Background(), creds, index, commands.ScanOptions{MinHours: minHours, Mode: mode})
+	return res, len(existing), err
 }
 
 func (s *server) handleScanCreate(w http.ResponseWriter, r *http.Request) {
@@ -105,11 +84,12 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 	}
 	backTo := housekeepingReturnTo(r)
 	minHours := atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours)
-	candidates, _, err := s.scanCandidates(minHours, mode)
+	scan, _, err := s.scanCandidates(minHours, mode)
 	if err != nil {
 		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}
+	candidates := scan.Candidates
 	providers, ids := r.Form["provider"], r.Form["id"]
 	var chosen []int
 	var stale bool
@@ -176,6 +156,34 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		msg = fmt.Sprintf("%d %s, %d skipped. Find them via the games list's \"drafts only\" filter to finish them.", len(created), kind, skipped)
 	}
 	s.respondHousekeepingOK(w, r, backTo, msg)
+}
+
+// handleScanLink links a scanned game to the logged game sharing its title —
+// the same game found again on another service. Like ignore and attach it
+// posts ids rather than a row index, and commands.LinkToGame refuses to
+// overwrite an id either side already holds.
+func (s *server) handleScanLink(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, "/housekeeping", err)
+		return
+	}
+	backTo := housekeepingReturnTo(r)
+	provider, id, slug := r.FormValue("provider"), r.FormValue("id"), r.FormValue("slug")
+	if provider == "" || id == "" || slug == "" {
+		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("linking needs a provider, an id and a game"))
+		return
+	}
+	title, err := commands.LinkToGame(r.Context(), s.gamesDir, slug, provider, id, commands.LoadCredentials())
+	name := model.FirstNonEmpty(title, slug)
+	label := model.ProviderLabel(provider)
+	switch {
+	case commands.IsAlreadyLinked(err):
+		s.respondHousekeepingOK(w, r, backTo, fmt.Sprintf("%s was already linked to %s %s.", name, label, id))
+	case err != nil:
+		s.respondHousekeepingErr(w, r, backTo, err)
+	default:
+		s.respondHousekeepingOK(w, r, backTo, fmt.Sprintf("%s linked to %s %s — its history is captured and on the game's page.", name, label, id))
+	}
 }
 
 // handleSubsetAttach links a RetroAchievements subset to the game it belongs
@@ -335,9 +343,11 @@ type scanRow struct {
 func scanRows(candidates []commands.Candidate, quick []string, action string, minHours float64, tab string) []scanRow {
 	rows := make([]scanRow, len(candidates))
 	for i, c := range candidates {
+		// A link row's primary button links rather than creating its
+		// guessed status, so that status belongs in the dropdown too.
 		var others []string
 		for _, st := range quick {
-			if st != c.Status {
+			if st != c.Status || c.IsLink() {
 				others = append(others, st)
 			}
 		}
@@ -350,7 +360,12 @@ type housekeepingData struct {
 	Page
 	ScanCandidates []scanRow
 	ScanError      string
-	MinHours       float64
+	// ScanNotices are per-provider failures and deliberate omissions — one
+	// provider failing no longer hides the rest, so it has to say so.
+	ScanNotices []commands.ScanNotice
+	// ScanScanned names the providers that answered, comma-joined.
+	ScanScanned string
+	MinHours    float64
 	// NumLogged is how many games are already in content/games — the
 	// denominator that makes a candidate count mean something.
 	NumLogged int
@@ -359,6 +374,7 @@ type housekeepingData struct {
 	// so nothing can appear in both.
 	BacklogCandidates []scanRow
 	BacklogError      string
+	BacklogNotices    []commands.ScanNotice
 	Incomplete        []commands.IncompleteCandidate
 	IncompletePct     float64
 	IncompleteAll     bool
@@ -416,7 +432,12 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		ActiveTab:     activeTab,
 	}
 
-	candidates, numExisting, err := s.scanCandidates(minHours, commands.ScanModePlayed)
+	// Re-scan asks for every provider's list fresh, not the memoized one —
+	// that's how something played in the last few minutes shows up.
+	if q.Get("refresh") == "1" {
+		commands.ForgetScanCache(commands.LoadCredentials())
+	}
+	scan, numExisting, err := s.scanCandidates(minHours, commands.ScanModePlayed)
 	if err != nil {
 		// Kept separate from Page.Flash, which is reserved for the
 		// redirect-landing confirmation from a stale/close/scan-create
@@ -424,7 +445,13 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		// silently clobber that on every load.
 		data.ScanError = err.Error()
 	} else {
-		data.ScanCandidates = scanRows(candidates, forms.ScanQuickStatuses, "/scan", minHours, "scan")
+		data.ScanCandidates = scanRows(scan.Candidates, forms.ScanQuickStatuses, "/scan", minHours, "scan")
+		data.ScanNotices = scan.Notices
+		var scanned []string
+		for _, p := range scan.Scanned {
+			scanned = append(scanned, model.ProviderLabel(p))
+		}
+		data.ScanScanned = strings.Join(scanned, ", ")
 		data.NumLogged = numExisting
 	}
 
@@ -432,7 +459,8 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		data.BacklogError = err.Error()
 	} else {
-		data.BacklogCandidates = scanRows(backlog, forms.BacklogQuickStatuses, "/backlog", minHours, "backlog")
+		data.BacklogCandidates = scanRows(backlog.Candidates, forms.BacklogQuickStatuses, "/backlog", minHours, "backlog")
+		data.BacklogNotices = backlog.Notices
 	}
 
 	if ignored, err := model.LoadIgnored(model.FindArchiveDir(s.gamesDir)); err == nil {

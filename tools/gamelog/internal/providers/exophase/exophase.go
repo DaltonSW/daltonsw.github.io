@@ -126,13 +126,16 @@ func (c *ExophaseClient) get(ctx context.Context, url string) ([]byte, error) {
 
 // Game is one game on a profile, as the JSON API reports it.
 type Game struct {
-	MasterID     int     `json:"master_id"`
-	EarnedAwards int     `json:"earned_awards"`
-	TotalAwards  int     `json:"total_awards"`
-	Playtime     string  `json:"playtime"`
-	LastPlayed   int64   `json:"lastplayed"`
-	Percent      float64 `json:"percent"`
-	Meta         struct {
+	MasterID     int    `json:"master_id"`
+	EarnedAwards int    `json:"earned_awards"`
+	TotalAwards  int    `json:"total_awards"`
+	Playtime     string `json:"playtime"`
+	LastPlayed   int64  `json:"lastplayed"`
+	// CompletionDate is when the profile reached every award, as a Unix
+	// time; 0 when it hasn't.
+	CompletionDate int64   `json:"completion_date"`
+	Percent        float64 `json:"percent"`
+	Meta           struct {
 		Title       string `json:"title"`
 		CanonicalID string `json:"canonical_id"`
 		Platforms   []struct {

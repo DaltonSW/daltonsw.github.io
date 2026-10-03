@@ -1,6 +1,7 @@
 package commands
 
 import (
+	"strings"
 	"testing"
 
 	"go.dalton.dog/gamelog/internal/model"
@@ -28,75 +29,108 @@ func TestNormalizeTitle(t *testing.T) {
 }
 
 // Existing games predate the external-ID fields, so a game already logged
-// under a different-cased title must still be recognised — otherwise a scan
-// offers to create a duplicate of something already on the site.
-func TestLoggedIndex_MatchesByTitleWhenNoIDsSet(t *testing.T) {
+// under a different-cased title must still be recognised — and offered as a
+// link to that game, not as a duplicate or (as it used to be) silently hidden,
+// which left the second service's history uncaptured.
+func TestLoggedIndex_OffersLinkWhenTitleMatchesAndProviderUnlinked(t *testing.T) {
 	idx := NewLoggedIndex([]model.GameSummary{
 		{Slug: "hades-ii", Title: "Hades II"},
-		{Slug: "elden-ring", Title: "Elden Ring"},
+		{Slug: "balatro", Title: "Balatro", SteamAppID: "2379780"},
 	})
 
-	if !idx.hasSteam("1245620", "ELDEN RING") {
-		t.Error("ELDEN RING should match the logged elden-ring entry")
+	c := Candidate{Provider: model.ProviderGooglePlay, ID: "588451498103", Title: "BALATRO"}
+	idx.place(&c)
+	if c.LinkTo == nil || c.LinkTo.Slug != "balatro" {
+		t.Errorf("Balatro on Google Play should offer to link to the Steam-logged balatro, got %+v", c.LinkTo)
 	}
-	if !idx.hasSteam("1145350", "Hades II") {
-		t.Error("Hades II should match the logged hades-ii entry")
+	c = Candidate{Provider: model.ProviderSteam, ID: "1145350", Title: "Hades II"}
+	idx.place(&c)
+	if c.LinkTo == nil || c.LinkTo.Slug != "hades-ii" {
+		t.Errorf("Hades II should offer to link to the unlinked hades-ii, got %+v", c.LinkTo)
 	}
-	if idx.hasSteam("1145360", "Hades") {
-		t.Error("Hades (the first game) must not match the logged Hades II")
+	c = Candidate{Provider: model.ProviderSteam, ID: "1145360", Title: "Hades"}
+	idx.place(&c)
+	if c.LinkTo != nil || c.Note != "" {
+		t.Errorf("Hades (the first game) must not match the logged Hades II, got %+v / %q", c.LinkTo, c.Note)
 	}
 }
 
-func TestLoggedIndex_MatchesByExternalID(t *testing.T) {
+// A title match on a game already linked to a *different* id on the same
+// provider is either a second edition (PS4 vs PS5 trophy sets) or a different
+// game with the same name. Only a human can say which, so it's a create row
+// with a note — never a link, which would overwrite the existing id.
+func TestLoggedIndex_NotesTitleClashWithDifferentID(t *testing.T) {
 	idx := NewLoggedIndex([]model.GameSummary{
-		{Slug: "some-game", Title: "Renamed Locally", RAGameID: "104", SteamAppID: "1145360"},
+		{Slug: "persona-5-royal", Title: "Persona 5 Royal", PSNID: "NPWR19151_00"},
+	})
+	c := Candidate{Provider: model.ProviderPSN, ID: "PPSA01234_00", Title: "Persona 5 Royal"}
+	idx.place(&c)
+	if c.LinkTo != nil {
+		t.Fatalf("must not offer to link over an existing psn_id, got %+v", c.LinkTo)
+	}
+	if !strings.Contains(c.Note, "NPWR19151_00") {
+		t.Errorf("note should name the id already linked, got %q", c.Note)
+	}
+}
+
+func TestLoggedIndex_CoversExternalIDs(t *testing.T) {
+	idx := NewLoggedIndex([]model.GameSummary{
+		{Slug: "some-game", Title: "Renamed Locally", RAGameID: "104", SteamAppID: "1145360", GooglePlayID: "588451498103", RASubsets: []string{"25709"}},
 	})
 
-	if !idx.hasRA("104", "Kirby's Return to Dream Land") {
-		t.Error("should match on RA ID even when the local title differs")
+	for _, tc := range []struct{ provider, id string }{
+		{model.ProviderRA, "104"},
+		{model.ProviderSteam, "1145360"},
+		{model.ProviderGooglePlay, "588451498103"},
+		{model.ProviderRA, "25709"},
+	} {
+		if !idx.covered(tc.provider, tc.id) {
+			t.Errorf("%s %s should be covered", tc.provider, tc.id)
+		}
 	}
-	if !idx.hasSteam("1145360", "Hades") {
-		t.Error("should match on Steam appid even when the local title differs")
+	if idx.covered(model.ProviderRA, "999") {
+		t.Error("unrelated game should not be covered")
 	}
-	if idx.hasRA("999", "Something Else") {
-		t.Error("unrelated game should not match")
+	if idx.covered(model.ProviderSteam, "104") {
+		t.Error("coverage is per-provider: an RA ID must not cover a Steam appid")
 	}
 }
 
 func TestLoggedIndex_SkipsIgnoredGames(t *testing.T) {
 	idx := NewLoggedIndex(nil).WithIgnored(model.IgnoredList{Games: []model.IgnoredGame{
 		{Provider: model.ProviderSteam, ID: "440"},
-		{Provider: model.ProviderRA, ID: "104"},
+		{Provider: model.ProviderXbox, ID: "1480659447"},
 	}})
 
-	if !idx.hasSteam("440", "Team Fortress 2") {
+	if !idx.covered(model.ProviderSteam, "440") {
 		t.Error("ignored Steam game should be filtered out of the scan")
 	}
-	if !idx.hasRA("104", "Kirby's Return to Dream Land") {
-		t.Error("ignored RA game should be filtered out of the scan")
+	if !idx.covered(model.ProviderXbox, "1480659447") {
+		t.Error("ignored Xbox game should be filtered out of the scan")
 	}
-	if idx.hasSteam("104", "Some Steam Game") {
-		t.Error("an ignore is per-provider: an RA ID must not hide a Steam appid")
-	}
-	if idx.hasSteam("999", "Not Ignored") {
-		t.Error("unrelated game should still be offered")
+	if idx.covered(model.ProviderSteam, "1480659447") {
+		t.Error("an ignore is per-provider")
 	}
 }
 
-func TestSortCandidates_FinishedFirstThenPlaytime(t *testing.T) {
+func TestSortCandidates_LinksThenFinishedThenPlaytime(t *testing.T) {
 	candidates := []Candidate{
-		{Provider: "Steam", Title: "Small", PlaytimeMins: 300},
-		{Provider: "Steam", Title: "Big", PlaytimeMins: 6000},
-		{Provider: "RetroAchievements", Title: "Done", Finished: true},
+		{Provider: model.ProviderSteam, Title: "Small", PlaytimeMins: 300},
+		{Provider: model.ProviderSteam, Title: "Big", PlaytimeMins: 6000},
+		{Provider: model.ProviderRA, Title: "Done", Finished: true},
+		{Provider: model.ProviderPSN, Title: "Known", LinkTo: &LinkTarget{Slug: "known"}},
 	}
 	SortCandidates(candidates)
 
-	if !candidates[0].Finished {
-		t.Errorf("finished games should sort first, got %q", candidates[0].Title)
+	if !candidates[0].IsLink() {
+		t.Errorf("links should sort first, got %q", candidates[0].Title)
 	}
-	if candidates[1].Title != "Big" || candidates[2].Title != "Small" {
+	if !candidates[1].Finished {
+		t.Errorf("finished games should sort next, got %q", candidates[1].Title)
+	}
+	if candidates[2].Title != "Big" || candidates[3].Title != "Small" {
 		t.Errorf("unfinished games should sort by playtime desc, got %q then %q",
-			candidates[1].Title, candidates[2].Title)
+			candidates[2].Title, candidates[3].Title)
 	}
 }
 
@@ -104,7 +138,7 @@ func TestSortCandidates_FinishedFirstThenPlaytime(t *testing.T) {
 // award kind explains it, so Outcome has to name the award.
 func TestCandidateOutcome_NamesTheAward(t *testing.T) {
 	c := Candidate{
-		Provider: "RetroAchievements", Title: "Animal Crossing: City Folk",
+		Provider: model.ProviderRA, Title: "Animal Crossing: City Folk",
 		Platform: "Wii", ID: "34566",
 		Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-05-02",
 		Status:        "finished",
@@ -123,7 +157,7 @@ func TestCandidateOutcome_NamesTheAward(t *testing.T) {
 // award, so the row — and the status it suggests — should say so.
 func TestCandidateOutcome_NamesMasteredSeparatelyFromFinished(t *testing.T) {
 	c := Candidate{
-		Provider: "RetroAchievements", Title: "Earthbound",
+		Provider: model.ProviderRA, Title: "Earthbound",
 		Platform: "SNES", ID: "264",
 		Finished: true, AwardKind: "mastered", FinishedOn: "2026-05-02",
 		Status:        "mastered",
@@ -138,7 +172,7 @@ func TestCandidateOutcome_NamesMasteredSeparatelyFromFinished(t *testing.T) {
 // An unfinished candidate has no outcome to claim — the template falls back
 // to the suggested status rather than printing a half-built phrase.
 func TestCandidateOutcome_EmptyWhenUnfinished(t *testing.T) {
-	c := Candidate{Provider: "Steam", Title: "Hades", ID: "1145360", Status: "playing", PlaytimeMins: 90, LastActivity: "2026-05-02"}
+	c := Candidate{Provider: model.ProviderSteam, Title: "Hades", ID: "1145360", Status: "playing", PlaytimeMins: 90, LastActivity: "2026-05-02"}
 	if got := c.Outcome(); got != "" {
 		t.Errorf("Outcome() = %q, want empty for an unfinished candidate", got)
 	}
@@ -150,7 +184,7 @@ func TestCandidateOutcome_EmptyWhenUnfinished(t *testing.T) {
 // Nothing known means nothing shown — Evidence must not render a bare
 // separator or a stray "0h".
 func TestCandidateEvidence_EmptyWhenProviderOfferedNothing(t *testing.T) {
-	c := Candidate{Provider: "Steam", Title: "Never Launched", ID: "1", Status: "backlog"}
+	c := Candidate{Provider: model.ProviderSteam, Title: "Never Launched", ID: "1", Status: "backlog"}
 	if got := c.Evidence(); got != "" {
 		t.Errorf("Evidence() = %q, want empty", got)
 	}
@@ -161,7 +195,7 @@ func TestCandidateEvidence_EmptyWhenProviderOfferedNothing(t *testing.T) {
 // guess being overridden, and keeping it would write a contradiction.
 func TestCandidateWithStatus_DropsTheFinishWhenOverriddenToOpenStatus(t *testing.T) {
 	c := Candidate{
-		Provider: "RetroAchievements", Title: "Banjo-Kazooie", ID: "10210",
+		Provider: model.ProviderRA, Title: "Banjo-Kazooie", ID: "10210",
 		Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2024-12-04",
 		Status: "finished",
 	}
@@ -218,7 +252,7 @@ func TestCandidate_CreateFileRoundTrips(t *testing.T) {
 		{
 			name: "retroachievements",
 			candidate: Candidate{
-				Provider: "RetroAchievements", Title: "Banjo-Kazooie",
+				Provider: model.ProviderRA, Title: "Banjo-Kazooie",
 				Platform: "Nintendo 64", ID: "10210",
 				Finished: true, AwardKind: "beaten-hardcore",
 				FinishedOn: "2024-12-04", Status: "finished",
@@ -228,7 +262,7 @@ func TestCandidate_CreateFileRoundTrips(t *testing.T) {
 		{
 			name: "steam",
 			candidate: Candidate{
-				Provider: "Steam", Title: "Hollow Knight",
+				Provider: model.ProviderSteam, Title: "Hollow Knight",
 				Platform: "PC", ID: "367520", Status: "playing",
 			},
 			wantSteam: "367520", wantPlatform: "PC",
@@ -277,7 +311,7 @@ func TestCandidate_CreateFileRoundTrips(t *testing.T) {
 // Creating must never clobber an existing entry.
 func TestCandidate_CreateFileRefusesToOverwrite(t *testing.T) {
 	dir := t.TempDir()
-	c := Candidate{Provider: "Steam", Title: "Hollow Knight", Platform: "PC", ID: "367520", Status: "playing"}
+	c := Candidate{Provider: model.ProviderSteam, Title: "Hollow Knight", Platform: "PC", ID: "367520", Status: "playing"}
 	if _, err := model.CreateGameFile(dir, model.Slugify(c.Title), c.NewGameFields()); err != nil {
 		t.Fatal(err)
 	}
