@@ -326,7 +326,7 @@ func TestSaveAchievements_NeverTitlesASubsetWithTheGamesOwnName(t *testing.T) {
 	  "ConsoleName":"Nintendo DS","ParentGameID":7601,"NumAchievements":52,
 	  "Achievements":{"1":{"ID":1,"Title":"A","DateEarnedHardcore":"2026-07-12 10:00:00"}}}`)
 
-	links := model.BuildProviderLinks("", "", "", "", "", "25709")
+	links := model.BuildProviderLinks(nil, "25709")
 	saved, err := SaveAchievements(context.Background(), archiveDir,
 		"Professor Layton and the Last Specter", links, Credentials{RAUsername: "u", RAAPIKey: "k"})
 	if err != nil {

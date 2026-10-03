@@ -279,14 +279,59 @@ func (d *Doc) AddRASubset(id string) bool {
 // ProviderLinks returns every provider this game is linked to, in
 // ProviderOrder, skipping the ones with no ID set.
 func (d *Doc) ProviderLinks() []ProviderLink {
-	return BuildProviderLinks(
-		scalarString(d.FM.RetroAchievementsID),
-		scalarString(d.FM.SteamAppID),
-		scalarString(d.FM.PSNID),
-		scalarString(d.FM.UbisoftID),
-		scalarString(d.FM.XboxID),
-		d.RASubsetIDs()...,
-	)
+	return BuildProviderLinks(d.ProviderIDs(), d.RASubsetIDs()...)
+}
+
+// providerField maps a provider key onto the front-matter field holding this
+// game's id on it — the one place that pairing is spelled out, so ProviderIDs,
+// ProviderID and SetProviderID can't disagree about it. Nil for a provider
+// that isn't in ProviderOrder.
+func (d *Doc) providerField(provider string) *any {
+	switch provider {
+	case ProviderRA:
+		return &d.FM.RetroAchievementsID
+	case ProviderSteam:
+		return &d.FM.SteamAppID
+	case ProviderPSN:
+		return &d.FM.PSNID
+	case ProviderUbisoft:
+		return &d.FM.UbisoftID
+	case ProviderXbox:
+		return &d.FM.XboxID
+	}
+	return nil
+}
+
+// ProviderIDs is every provider id this game has set, keyed by provider.
+// RetroAchievements subsets aren't included — see RASubsetIDs.
+func (d *Doc) ProviderIDs() map[string]string {
+	out := map[string]string{}
+	for _, p := range ProviderOrder {
+		if id := d.ProviderID(p); id != "" {
+			out[p] = id
+		}
+	}
+	return out
+}
+
+// ProviderID is this game's id on one provider, or "" if it has none.
+func (d *Doc) ProviderID(provider string) string {
+	if f := d.providerField(provider); f != nil {
+		return scalarString(*f)
+	}
+	return ""
+}
+
+// SetProviderID writes this game's id on one provider, the way the provider-
+// IDs form does (a bare number is stored as one). An unknown provider is an
+// error rather than a no-op: it means a form value nobody validated.
+func (d *Doc) SetProviderID(provider, id string) error {
+	f := d.providerField(provider)
+	if f == nil {
+		return fmt.Errorf("unknown provider %q", provider)
+	}
+	*f = ScalarFromInput(id)
+	return nil
 }
 
 // NadeoAccountIDString is the Trackmania account id this game is linked to, if
@@ -308,8 +353,8 @@ func (d *Doc) NinjaKiwiUserIDString() string { return scalarString(d.FM.NinjaKiw
 // everything that walks a game's archive picks subsets up for free — and
 // anything that must treat them differently (the summary's headline totals,
 // chiefly) has a flag to key off rather than a title to guess from.
-func BuildProviderLinks(raID, steamAppID, psnID, ubisoftID, xboxID string, raSubsets ...string) []ProviderLink {
-	all := map[string]string{ProviderRA: raID, ProviderSteam: steamAppID, ProviderPSN: psnID, ProviderUbisoft: ubisoftID, ProviderXbox: xboxID}
+func BuildProviderLinks(ids map[string]string, raSubsets ...string) []ProviderLink {
+	all, raID := ids, ids[ProviderRA]
 	var out []ProviderLink
 	for _, p := range ProviderOrder {
 		if all[p] != "" {

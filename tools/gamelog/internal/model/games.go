@@ -62,7 +62,25 @@ type GameSummary struct {
 // ProviderLinks returns every provider this game is linked to, in
 // ProviderOrder, skipping the ones with no ID set.
 func (g GameSummary) ProviderLinks() []ProviderLink {
-	return BuildProviderLinks(g.RAGameID, g.SteamAppID, g.PSNID, g.UbisoftID, g.XboxID, g.RASubsets...)
+	return BuildProviderLinks(g.ProviderIDs(), g.RASubsets...)
+}
+
+// ProviderIDs is every provider id this game has set, keyed by provider —
+// Doc.ProviderIDs' counterpart for a summary.
+func (g GameSummary) ProviderIDs() map[string]string {
+	all := map[string]string{
+		ProviderRA:      g.RAGameID,
+		ProviderSteam:   g.SteamAppID,
+		ProviderPSN:     g.PSNID,
+		ProviderUbisoft: g.UbisoftID,
+		ProviderXbox:    g.XboxID,
+	}
+	for p, id := range all {
+		if id == "" {
+			delete(all, p)
+		}
+	}
+	return all
 }
 
 func (g GameSummary) Label() string {

@@ -247,7 +247,7 @@ func TestWriteAchievementSummary_SumsBothProviders(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "", "", ""))
+	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks(map[string]string{ProviderRA: "4650", ProviderSteam: "1145360"}))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -284,7 +284,7 @@ func TestWriteAchievementSummary_LastPlayedPrefersTheMostRecentSignal(t *testing
 		t.Fatal(err)
 	}
 
-	if _, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "", "", "")); err != nil {
+	if _, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks(map[string]string{ProviderRA: "4650", ProviderSteam: "1145360"})); err != nil {
 		t.Fatal(err)
 	}
 	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
@@ -367,7 +367,7 @@ func TestWriteAchievementSummary_RemovesStaleSummaryWhenNothingArchived(t *testi
 		t.Fatal(err)
 	}
 
-	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks("4650", "1145360", "", "", ""))
+	wrote, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks(map[string]string{ProviderRA: "4650", ProviderSteam: "1145360"}))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -467,7 +467,7 @@ func TestWriteAchievementSummary_KeepsSubsetsOutOfTheHeadlineTotals(t *testing.T
 		t.Fatal(err)
 	}
 
-	links := BuildProviderLinks("7601", "", "", "", "", "25709")
+	links := BuildProviderLinks(map[string]string{ProviderRA: "7601"}, "25709")
 	if _, err := WriteAchievementSummary(archiveDir, gameDir, links); err != nil {
 		t.Fatal(err)
 	}
@@ -512,7 +512,7 @@ func TestWriteAchievementSummary_KeepsSubsetsOutOfTheHeadlineTotals(t *testing.T
 }
 
 func TestBuildProviderLinks_PutsSubsetsBehindTheirBaseSet(t *testing.T) {
-	links := BuildProviderLinks("7601", "1145360", "", "", "", "25709", "25710")
+	links := BuildProviderLinks(map[string]string{ProviderRA: "7601", ProviderSteam: "1145360"}, "25709", "25710")
 	want := []ProviderLink{
 		{Provider: ProviderRA, ID: "7601"},
 		{Provider: ProviderRA, ID: "25709", Subset: true},
@@ -530,7 +530,7 @@ func TestBuildProviderLinks_PutsSubsetsBehindTheirBaseSet(t *testing.T) {
 
 	// A subset id that duplicates the base set would archive the same record
 	// twice and count it twice in the summary.
-	if got := BuildProviderLinks("7601", "", "", "", "", "7601"); len(got) != 1 {
+	if got := BuildProviderLinks(map[string]string{ProviderRA: "7601"}, "7601"); len(got) != 1 {
 		t.Errorf("got %+v, want the base link only", got)
 	}
 }
