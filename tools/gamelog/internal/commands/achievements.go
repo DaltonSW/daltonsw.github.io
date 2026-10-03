@@ -146,6 +146,11 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 				continue
 			}
 			rec, err = xbox.FetchRecord(ctx, &xbox.XBLClient{APIKey: creds.XBLAPIKey}, link.ID)
+		case model.ProviderGooglePlay:
+			if !creds.ExophaseConfigured() {
+				continue
+			}
+			rec, err = exophase.FetchGooglePlayRecord(ctx, ExophaseClientFor(creds), link.ID)
 		default:
 			continue
 		}
@@ -217,7 +222,7 @@ func RunAchievements(args []string) error {
 	}
 	links := doc.ProviderLinks()
 	if len(links) == 0 {
-		return fmt.Errorf("%s has no retroachievements_id, steam_appid, psn_id, ubisoft_id or xbox_id set", slug)
+		return fmt.Errorf("%s has no provider id set (retroachievements_id, steam_appid, psn_id, ubisoft_id, xbox_id or googleplay_id)", slug)
 	}
 
 	archiveDir := model.FindArchiveDir(gamesDir)

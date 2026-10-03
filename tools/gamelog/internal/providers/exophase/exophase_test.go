@@ -192,3 +192,58 @@ func swapExophaseURLs(base string) func() {
 		exophaseBaseURL, exophaseGamesURL, exophaseEarnedURL, exophaseMediaBaseURL = site, games, earned, media
 	}
 }
+
+// The decode is what keys every Google Play game past the profile payload's
+// 50, so it's pinned to an id captured live (Balatro's) rather than to one
+// built by hand.
+func TestGooglePlayAppIDFromAchievement(t *testing.T) {
+	if got, ok := GooglePlayAppIDFromAchievement("CgkI95DFk5AREAIQCQ"); !ok || got != "588451498103" {
+		t.Errorf("got %q, %v; want 588451498103", got, ok)
+	}
+	for _, bad := range []string{"", "not base64!", "card-discarder", "AAAA"} {
+		if got, ok := GooglePlayAppIDFromAchievement(bad); ok {
+			t.Errorf("%q decoded to %q; want no id", bad, got)
+		}
+	}
+}
+
+// A Google Play game missing from the profile payload is keyed from its award
+// ids, and its achievements key on Google's id rather than Exophase's slug.
+func TestFetchGooglePlayRecordPastThePayload(t *testing.T) {
+	var gamesQuery string
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch {
+		case strings.Contains(r.URL.Path, "/user/"):
+			// The payload knows a different game, not this one.
+			fmt.Fprint(w, strings.ReplaceAll(uplayProfileHTML(1, "111"), "uplay", "android"))
+		case strings.HasSuffix(r.URL.Path, "/earned"):
+			fmt.Fprint(w, `{"list":[{"slug":"card-discarder","canonical_id":"CgkI95DFk5AREAIQCQ","timestamp":1740058101}]}`)
+		case strings.HasSuffix(r.URL.Path, "/games"):
+			gamesQuery = r.URL.RawQuery
+			fmt.Fprint(w, `{"success":true,"games":[{"master_id":712725,"earned_awards":1,
+			  "total_awards":31,"lastplayed":1742500000,"percent":3,
+			  "meta":{"title":"Balatro","platforms":[{"name":"Google Play"}]}}]}`)
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	defer srv.Close()
+	defer swapExophaseURLs(srv.URL)()
+
+	rec, err := FetchGooglePlayRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "588451498103")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastError != "" {
+		t.Fatalf("unexpected error: %s", rec.LastError)
+	}
+	if gamesQuery != "environment=android" {
+		t.Errorf("games list query = %q; Google Play answers success:false without environment=android", gamesQuery)
+	}
+	if rec.Unlocked != 1 || rec.Total != 31 {
+		t.Errorf("got %d/%d, want 1/31", rec.Unlocked, rec.Total)
+	}
+	if rec.Achievements[0].Key != "CgkI95DFk5AREAIQCQ" || rec.Achievements[0].Name != "card-discarder" {
+		t.Errorf("achievement = %+v; want Google's id as key, slug as name", rec.Achievements[0])
+	}
+}

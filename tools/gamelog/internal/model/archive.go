@@ -63,6 +63,13 @@ const (
 	// refreshing them through the live client backfills real per-achievement
 	// data and merges normally from that point on.
 	ProviderXbox = "xbox"
+
+	// ProviderGooglePlay is Google Play Games, mirrored through Exophase like
+	// ProviderUbisoft — Google's own Play Games API only answers per app, for
+	// the app's own OAuth client, so there is no first-party way to list one
+	// player's achievements across games. The id is the Play Games
+	// application id (a 12-digit number), Google's own and permanent.
+	ProviderGooglePlay = "googleplay"
 )
 
 // ProviderLink pairs a provider with this game's ID on it. Everything that
@@ -89,7 +96,7 @@ type ProviderLink struct {
 // and everything driven by this list assumes an Unlocked/Total pair it can sum.
 // Adding it here would fold ~450 Trackmania campaign tracks into that game's
 // achievement denominator. See the ProviderNadeo doc comment in nadeo.go.
-var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox}
+var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox, ProviderGooglePlay}
 
 // raSubsetTitle matches RetroAchievements' subset naming convention, which is
 // the *only* thing distinguishing a subset in the bulk endpoints — e.g.

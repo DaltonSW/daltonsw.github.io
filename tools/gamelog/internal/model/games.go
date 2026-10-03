@@ -46,6 +46,7 @@ type GameSummary struct {
 	PSNID            string
 	UbisoftID        string
 	XboxID           string
+	GooglePlayID     string
 	// NadeoAccountID links this game to a Trackmania campaign archive. It is
 	// not part of ProviderLinks — see FrontMatter.NadeoAccountID.
 	NadeoAccountID string
@@ -69,11 +70,12 @@ func (g GameSummary) ProviderLinks() []ProviderLink {
 // Doc.ProviderIDs' counterpart for a summary.
 func (g GameSummary) ProviderIDs() map[string]string {
 	all := map[string]string{
-		ProviderRA:      g.RAGameID,
-		ProviderSteam:   g.SteamAppID,
-		ProviderPSN:     g.PSNID,
-		ProviderUbisoft: g.UbisoftID,
-		ProviderXbox:    g.XboxID,
+		ProviderRA:         g.RAGameID,
+		ProviderSteam:      g.SteamAppID,
+		ProviderPSN:        g.PSNID,
+		ProviderUbisoft:    g.UbisoftID,
+		ProviderXbox:       g.XboxID,
+		ProviderGooglePlay: g.GooglePlayID,
 	}
 	for p, id := range all {
 		if id == "" {
@@ -116,6 +118,9 @@ func (g GameSummary) SuggestLabel() string {
 	if g.XboxID != "" {
 		linked = append(linked, "Xbox")
 	}
+	if g.GooglePlayID != "" {
+		linked = append(linked, "Google Play")
+	}
 	// NadeoAccountID is deliberately absent: this label exists to stop the
 	// picker offering a game that can't produce a date suggestion, and a
 	// campaign archive produces none.
@@ -156,6 +161,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 	psnID := scalarString(doc.FM.PSNID)
 	ubisoftID := scalarString(doc.FM.UbisoftID)
 	xboxID := scalarString(doc.FM.XboxID)
+	googlePlayID := scalarString(doc.FM.GooglePlayID)
 	// The real per-run dates live in playthroughs.yaml, not front matter —
 	// see gameDateRange. Front matter's own started/finished is only a
 	// fallback, for a game with nothing logged yet.
@@ -194,6 +200,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		PSNID:            psnID,
 		UbisoftID:        ubisoftID,
 		XboxID:           xboxID,
+		GooglePlayID:     googlePlayID,
 		NadeoAccountID:   doc.NadeoAccountIDString(),
 		NinjaKiwiUserID:  doc.NinjaKiwiUserIDString(),
 		RASubsets:        doc.RASubsetIDs(),
@@ -316,6 +323,7 @@ type NewGameFields struct {
 	PSNID               string
 	UbisoftID           string
 	XboxID              string
+	GooglePlayID        string
 	Status              string // backlog|playing|finished|dropped|unfinished
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
@@ -339,6 +347,7 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		"psn_id: " + f.PSNID,
 		"ubisoft_id: " + f.UbisoftID,
 		"xbox_id: " + f.XboxID,
+		"googleplay_id: " + f.GooglePlayID,
 		fmt.Sprintf("status: %q", f.Status),
 		"subgames:",
 	}

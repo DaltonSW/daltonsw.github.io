@@ -48,9 +48,10 @@ what's unfinished and what's load-bearing.
   means deleting the id from `retroachievements_subsets:` by hand. This is deliberate: the archive
   record is keyed by provider id and survives either way.
 - **The Exophase canonical-ID map only covers the first 50 games per service.** The embedded
-  `window.playerGames` payload isn't paginated the way the JSON API is. Only Ubisoft goes through
-  Exophase now, with 2 games, so it isn't biting. Games past the ceiling are skipped, not
-  mis-keyed.
+  `window.playerGames` payload isn't paginated the way the JSON API is, and `?page=2` returns the
+  same 50. Google Play gets past it by decoding the app id out of a game's award ids (see the
+  README's Google Play section). Ubisoft has no such fallback, but it has 6 games, so it isn't
+  biting. Games past the ceiling are skipped, not mis-keyed.
 - **Nintendo is on the Exophase profile but not archived.** Switch has no achievements (only
   playtime and last-played), so it needs a record shape that doesn't pretend otherwise, as
   Nadeo and Ninja Kiwi each got, before it's worth adding.
@@ -152,7 +153,7 @@ what's unfinished and what's load-bearing.
 - **Steam puts useful JSON in 400/401/403 bodies.** Read the body; don't bail on the status.
 - **Steam needs a SteamID64**, not a vanity name. `SteamClient.resolveSteamID` handles both.
 
-### Exophase (Ubisoft)
+### Exophase (Ubisoft, Google Play)
 
 - **Exophase 403s Go's default User-Agent** (Cloudflare), so requests must send a browser one.
 - **The JSON API omits `canonical_id`**, the ID the archive keys on. It exists only in the
@@ -160,6 +161,11 @@ what's unfinished and what's load-bearing.
   game whose canonical ID can't be resolved is **skipped, not guessed at**.
 - **Only the account page carries per-service player ids.** The per-service pages don't, and the
   per-service username differs from the account name.
+- **The games list needs `?environment=android` for Google Play**, or it answers
+  `{"success":false}`. Ubisoft's is the same either way.
+- **Google Play achievements are keyed on Google's achievement id, Ubisoft's on Exophase's slug.**
+  Don't switch Ubisoft over: its archive is already slug-keyed, and changing the key would count
+  every unlock twice on merge.
 
 ### PSN (Sony's own trophy API)
 

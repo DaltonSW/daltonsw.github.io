@@ -2,6 +2,7 @@ package exophase
 
 import (
 	"context"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -57,12 +58,12 @@ const exophaseUserAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (K
 const exophasePageSize = 50
 
 // ExophaseClient reads one Exophase profile. Environments are Exophase's own
-// service slugs — "psn", "nintendo", "uplay".
+// service slugs — "psn", "nintendo", "uplay", "android".
 //
 // A client memoizes the account page and each environment's games list for
 // cacheTTL. Every per-game fetch needs both, so without it a refresh of 50
-// games re-reads the same profile ~50 times; holding one client across a run
-// (see commands.ExophaseClientFor) makes that one read.
+// Google Play games re-reads the same profile ~50 times; holding one client
+// across a run (see commands.ExophaseClientFor) makes that one read.
 type ExophaseClient struct {
 	User string // the per-environment username, e.g. "DaltonSW"
 	HTTP *http.Client
@@ -196,7 +197,9 @@ func (c *ExophaseClient) PlayerID(ctx context.Context, env string) (string, erro
 // canonicalIDs maps Exophase's master_id to the provider's own game ID, read
 // from the profile HTML because the JSON API omits it (see the type comment).
 //
-// The embedded payload holds only the first page of games. Callers must treat
+// The embedded payload holds only the first 50 games, and ?page= doesn't
+// change that (checked live). Google Play recovers the rest from each game's
+// award ids (googlePlayAppID); for every other service, callers must treat
 // a missing entry as "cannot key this record safely" rather than inventing an
 // ID — mis-keying the archive is exactly the failure the ID scheme exists to
 // prevent.
@@ -303,9 +306,12 @@ func (c *ExophaseClient) fetchGames(ctx context.Context, env string) (map[string
 
 	out := map[string]Game{}
 	for page := 1; ; page++ {
-		url := fmt.Sprintf(exophaseGamesURL, playerID)
+		// environment is required for some services and harmless for the
+		// rest: without it Google Play's list answers {"success":false},
+		// while Ubisoft's comes back identical either way (both checked live).
+		url := fmt.Sprintf(exophaseGamesURL, playerID) + "?environment=" + env
 		if page > 1 {
-			url += fmt.Sprintf("?page=%d", page)
+			url += fmt.Sprintf("&page=%d", page)
 		}
 		body, err := c.get(ctx, url)
 		if err != nil {
@@ -330,6 +336,9 @@ func (c *ExophaseClient) fetchGames(ctx context.Context, env string) (map[string
 			}
 			g.raw = rawGame
 			id := canon[g.MasterID]
+			if id == "" && env == EnvGooglePlay {
+				id = c.googlePlayAppID(ctx, playerID, g.MasterID)
+			}
 			if id == "" {
 				continue
 			}
@@ -350,10 +359,13 @@ func (c *ExophaseClient) fetchGames(ctx context.Context, env string) (map[string
 // site-relative paths in five sizes; "m" is used as a reasonable match for
 // the badge-sized rows RA/Steam icons already render at.
 type Award struct {
-	Slug      string `json:"slug"`
-	Earned    string `json:"earned"`
-	Timestamp int64  `json:"timestamp"`
-	Icons     struct {
+	Slug string `json:"slug"`
+	// CanonicalID is the service's own id for the achievement — on Google
+	// Play, the Play Games achievement id (see googlePlayAppID).
+	CanonicalID string `json:"canonical_id"`
+	Earned      string `json:"earned"`
+	Timestamp   int64  `json:"timestamp"`
+	Icons       struct {
 		Medium string `json:"m"`
 	} `json:"icons"`
 }
@@ -384,6 +396,58 @@ func (c *ExophaseClient) Earned(ctx context.Context, playerID string, masterID i
 
 // EnvUbisoft is Exophase's slug for Ubisoft Connect (formerly Uplay).
 const EnvUbisoft = "uplay"
+
+// EnvGooglePlay is Exophase's slug for Google Play Games.
+const EnvGooglePlay = "android"
+
+// googlePlayAppID recovers a Google Play game's application id from its earned
+// awards, for a game past the 50 the profile page's payload carries (see
+// canonicalIDs). Returns "" when there's no award to read it from, which the
+// caller treats like any other unresolvable id: skipped, not guessed.
+//
+// One request per such game, and only for games the payload missed.
+func (c *ExophaseClient) googlePlayAppID(ctx context.Context, playerID string, masterID int) string {
+	awards, _, err := c.Earned(ctx, playerID, masterID)
+	if err != nil {
+		return ""
+	}
+	for _, a := range awards {
+		if id, ok := GooglePlayAppIDFromAchievement(a.CanonicalID); ok {
+			return id
+		}
+	}
+	return ""
+}
+
+// GooglePlayAppIDFromAchievement extracts the application id a Play Games
+// achievement id belongs to. The achievement id (e.g. "CgkI95DFk5AREAIQCQ") is
+// unpadded base64 of a small protobuf whose first field is a message holding
+// the app id as a varint — 588451498103 here, Balatro. Checked live against
+// the profile payload's canonical_id on a sample of games, all agreeing.
+func GooglePlayAppIDFromAchievement(achievementID string) (string, bool) {
+	b, err := base64.RawURLEncoding.DecodeString(strings.TrimRight(achievementID, "="))
+	if err != nil {
+		if b, err = base64.RawStdEncoding.DecodeString(strings.TrimRight(achievementID, "=")); err != nil {
+			return "", false
+		}
+	}
+	// 0x0a: field 1, length-delimited; then its length; then 0x08: field 1,
+	// varint — the app id.
+	if len(b) < 4 || b[0] != 0x0a || b[2] != 0x08 {
+		return "", false
+	}
+	var v uint64
+	for i, shift := 3, uint(0); i < len(b) && shift < 64; i, shift = i+1, shift+7 {
+		v |= uint64(b[i]&0x7f) << shift
+		if b[i] < 0x80 {
+			if v == 0 {
+				return "", false
+			}
+			return fmt.Sprint(v), true
+		}
+	}
+	return "", false
+}
 
 var exophasePlaytimeRe = regexp.MustCompile(`(?:(\d+)h)?\s*(?:(\d+)m)?`)
 
@@ -421,10 +485,15 @@ func FetchUbisoftRecord(ctx context.Context, client *ExophaseClient, gameID stri
 	return fetchRecord(ctx, client, EnvUbisoft, "Ubisoft", gameID)
 }
 
-// fetchRecord is FetchUbisoftRecord's body, kept separate from it only
-// because it used to be shared with FetchPSNRecord too — env/label are still
-// parameters rather than hardcoded so that shape doesn't need to change if
-// another Exophase-mirrored provider shows up.
+// FetchGooglePlayRecord builds an archive record for one Google Play Games
+// title, keyed by its Play Games application id. Google's own API can't list
+// a player's achievements across games (see model.ProviderGooglePlay), so this
+// mirror is the only source here too.
+func FetchGooglePlayRecord(ctx context.Context, client *ExophaseClient, appID string) (*model.ProviderRecord, error) {
+	return fetchRecord(ctx, client, EnvGooglePlay, "Google Play", appID)
+}
+
+// fetchRecord is the body shared by every Exophase-mirrored provider.
 func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id string) (*model.ProviderRecord, error) {
 	rec := &model.ProviderRecord{ID: id, LastAttempt: today(), Source: "exophase"}
 
@@ -461,11 +530,19 @@ func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id str
 		if a.Timestamp <= 0 {
 			continue
 		}
+		// The awards feed carries no display name, only a slug. Using it for
+		// both keeps Key provider-stable and avoids inventing a title the
+		// provider never gave us; `raw` holds everything for later. Google
+		// Play keys on Google's own achievement id instead, which outlives
+		// any slug Exophase picks — Ubisoft stays on the slug because its
+		// archive already does, and a changed key would count every unlock
+		// twice on merge.
+		key := a.Slug
+		if env == EnvGooglePlay && a.CanonicalID != "" {
+			key = a.CanonicalID
+		}
 		rec.Achievements = append(rec.Achievements, model.ArchivedAchievement{
-			// The awards feed carries no display name, only a slug. Using it
-			// for both keeps Key provider-stable and avoids inventing a title
-			// the provider never gave us; `raw` holds everything for later.
-			Key:      a.Slug,
+			Key:      key,
 			Name:     a.Slug,
 			Unlocked: true,
 			Date:     stamp(time.Unix(a.Timestamp, 0)),

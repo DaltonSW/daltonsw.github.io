@@ -60,6 +60,7 @@ archive/
   psn/NPWR16532_00.json            PlayStation, via Sony's own trophy API (see below).
   ubisoft/12345.json               Ubisoft Connect, mirrored via Exophase.
   xbox/1480657033.json             Xbox 360, via OpenXBL (see below).
+  googleplay/588451498103.json     Google Play Games, mirrored via Exophase.
   nadeo/<account id>.json          Trackmania campaign times — not achievements (see below).
   ninjakiwi/<user id>.json         BTD6 save state — not achievements either (see below).
   ignored.yaml                     games you've decided never to log, so Scan and
@@ -74,7 +75,7 @@ publishes it: bundle resources are copied to the built site, so the old layout w
 captured API response publicly.
 
 A game on several services gets one archive file each. Nothing in the archive links them —
-`retroachievements_id`, `steam_appid`, `psn_id`, `ubisoft_id` and `xbox_id` in front matter do (plus
+`retroachievements_id`, `steam_appid`, `psn_id`, `ubisoft_id`, `xbox_id` and `googleplay_id` in front matter do (plus
 `nadeo_account_id` and `ninjakiwi_user_id` for the two non-achievement providers), which is the
 right place for a judgement a human made rather than something any provider reported. The same
 holds for `retroachievements_subsets`, which is how one game ends up with more than one file
@@ -544,7 +545,7 @@ access is lost.
 One record per file, at `archive/<provider>/<id>.json`:
 
 ```
-provider                  "retroachievements" | "steam" | "psn" | "ubisoft" | "xbox"
+provider                  "retroachievements" | "steam" | "psn" | "ubisoft" | "xbox" | "googleplay"
 title                     the provider's own name for the game, so an orphaned
                           record stays identifiable on its own
 updated
@@ -593,10 +594,11 @@ steam_appid: 1145360            # numeric appid from the game's Steam store URL
 psn_id: "NPWR16532_00"          # PlayStation trophy-set ID (see below)
 ubisoft_id: "12345"             # Ubisoft Connect canonical ID, via Exophase (see below)
 xbox_id: 1480657033             # Xbox titleId, via OpenXBL (see below)
+googleplay_id: 588451498103     # Google Play Games application id, via Exophase (see below)
 ```
 
 Set them from `gamelog serve`: the new-game form takes RA/Steam IDs, and the provider-IDs form in a
-game page's sidebar takes all five. RA/Steam fields accept either the bare number or the full URL
+game page's sidebar takes all six. RA/Steam fields accept either the bare number or the full URL
 you copied it from (`retroachievements.org/game/4650`, `store.steampowered.com/app/1145360/Hades/`)
 and store the bare ID. `suggest` accepts a pasted URL in front matter too.
 
@@ -783,6 +785,32 @@ The breakdown is labelled by `platform`, not by provider — `PS4` is what a rea
 `psn` is plumbing. A game on one provider renders the combined figure as before, which is the
 same number either way.
 
+### Google Play, via Exophase
+
+**Google's Play Games API answers per app, not per player.** A game's own OAuth client can read
+its players' achievements, but nothing lists one player's achievements across games, so — like
+Ubisoft — Google Play history is read from the public Exophase profile, where it's linked as the
+`android` environment. Same client, same `EXOPHASE_USER`, same never-lose merge, `source:
+exophase` on the record.
+
+`googleplay_id` is the **Play Games application id** — a 12-digit number (Balatro is
+`588451498103`), Google's own and permanent. `gamelog exophase list googleplay` prints every game
+next to it, and Scan offers every unlinked one. Achievements are keyed on Google's own achievement
+id (`CgkI…`) rather than Exophase's slug, which is kept as the name — the feed has no display
+names or descriptions, same as Ubisoft. There's no playtime and no first-played date; there is a
+last-played date and Exophase's completion date.
+
+Two quirks, both found against live responses:
+
+- **The games list answers `{"success":false}` for Google Play unless `?environment=android` is
+  sent.** Ubisoft's comes back identical either way, so the client always sends it.
+- **The profile page's embedded payload — the only place `canonical_id` appears — stops at 50
+  games**, and `?page=2` doesn't change that. Google Play gets past it because each achievement id
+  is unpadded base64 of a small protobuf whose first field holds the app id
+  (`exophase.GooglePlayAppIDFromAchievement`); a game past the 50 is keyed from its first earned
+  award, one request each. Checked live against the payload's own ids on a sample of games. Every
+  game Exophase lists has at least one unlock, so in practice none are skipped.
+
 ### Xbox 360, via OpenXBL
 
 **Microsoft has no public achievements API either.** Unlike Ubisoft, there's no Exophase-style
@@ -954,7 +982,7 @@ always take precedence, so `RA_API_KEY=... go run . suggest x` still overrides t
 | `RA_API_KEY` | RetroAchievements API key, from your account settings on retroachievements.org |
 | `STEAM_API_KEY` | Steam Web API key, from steamcommunity.com/dev/apikey |
 | `STEAM_ID` | Your SteamID64 **or** the vanity name from your profile URL — a vanity name is resolved automatically. `STEAM_USER_ID` is accepted as an alias. |
-| `EXOPHASE_USER` | Your Exophase profile name, for Ubisoft Connect achievements. **Not a secret** — it's a public profile, which just has to be public. `EXOPHASE_PSN_USER` is accepted as an alias, from when this also covered PSN. |
+| `EXOPHASE_USER` | Your Exophase profile name, for Ubisoft Connect and Google Play achievements. **Not a secret** — it's a public profile, which just has to be public. `EXOPHASE_PSN_USER` is accepted as an alias, from when this also covered PSN. |
 | `PSN_NPSSO` | npsso session value, for PSN trophies via Sony's own trophy API. **This is a real secret**, and it expires after ~2 months — see "PlayStation, via Sony's own trophy API" above for how to get one. |
 | `XBLIO_API_KEY` | Personal API key from xbl.io/console, for Xbox 360 achievements. **This one is a real secret** — it's scoped to your own Microsoft account, unlike `EXOPHASE_USER` above. |
 | `NADEO_SERVICE_LOGIN`, `NADEO_SERVICE_PASSWORD` | Trackmania service account, from trackmania.com's service account page, for campaign times. **Both are real secrets**, and the password is shown exactly once at creation. Must be created on the Ubisoft account you actually play on — see "Trackmania, via Nadeo's own web services" above for why. |
@@ -990,7 +1018,9 @@ produced wrong or missing output before it was found by running against live dat
 - Steam's API only accepts a 17-digit SteamID64; a vanity name must go through
   `ISteamUser/ResolveVanityURL` first.
 - Exophase 403s Go's default User-Agent (Cloudflare), omits `canonical_id` from its JSON API,
-  and only exposes per-service player ids on the account page. See "Ubisoft, via Exophase".
+  and only exposes per-service player ids on the account page. See "Ubisoft, via Exophase". Its
+  games list needs `?environment=` for Google Play, and the HTML payload holding `canonical_id`
+  stops at 50 games. See "Google Play, via Exophase".
 - PSN's OAuth authorize step hands back its authorization code as a query parameter on a **302
   redirect to a non-resolvable app-scheme URI** (`com.scee.psxandroid.scecompcall://redirect`) —
   the client must not follow it, only read `code` off the `Location` header. And a title whose

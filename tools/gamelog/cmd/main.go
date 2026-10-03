@@ -16,7 +16,7 @@ const envHelp = `Environment (or a .env beside this tool; real env vars take pre
   STEAM_ID                   SteamID64 or profile vanity name
                              (STEAM_USER_ID works too)
   EXOPHASE_USER              public Exophase profile name, for Ubisoft
-                             Connect achievements
+                             Connect and Google Play achievements
   PSN_NPSSO                  npsso session value for PSN trophies, from
                              https://ca.account.sony.com/api/v1/ssocookie
                              after logging into store.playstation.com
@@ -113,10 +113,10 @@ func newExophaseCmd() *cobra.Command {
 		Short: "Look up IDs from your Exophase profile",
 	}
 	exophase.AddCommand(&cobra.Command{
-		Use:   "list ubisoft",
+		Use:   "list ubisoft|googleplay",
 		Short: "Print every game on your Exophase profile next to its canonical ID",
 		Long: "Print every game on your Exophase profile next to its canonical ID,\n" +
-			"for filling in ubisoft_id.",
+			"for filling in ubisoft_id or googleplay_id.",
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return commands.RunExophase(append([]string{"list"}, args...))

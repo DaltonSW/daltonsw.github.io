@@ -24,7 +24,8 @@ var exophaseServices = map[string]struct {
 	fmField   string
 	titleCase string
 }{
-	"ubisoft": {exophase.EnvUbisoft, "ubisoft_id", "Ubisoft"},
+	"ubisoft":    {exophase.EnvUbisoft, "ubisoft_id", "Ubisoft"},
+	"googleplay": {exophase.EnvGooglePlay, "googleplay_id", "Google Play"},
 }
 
 // exophaseClients holds one client per profile for the life of the process, so
@@ -62,7 +63,7 @@ func RunExophase(args []string) error {
 
 	svc, ok := exophaseServices[args[1]]
 	if !ok {
-		return fmt.Errorf("gamelog exophase list: unknown service %q (want \"ubisoft\")", args[1])
+		return fmt.Errorf("gamelog exophase list: unknown service %q (want \"ubisoft\" or \"googleplay\")", args[1])
 	}
 
 	creds := LoadCredentials()

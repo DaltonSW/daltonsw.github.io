@@ -277,11 +277,12 @@ type gameDetailData struct {
 	// Provider ID fields, rendered as strings regardless of how the YAML
 	// scalar underneath decoded — see model.GameSummary's fields of the
 	// same name.
-	RAGameID   string
-	SteamAppID string
-	PSNID      string
-	UbisoftID  string
-	XboxID     string
+	RAGameID     string
+	SteamAppID   string
+	PSNID        string
+	UbisoftID    string
+	XboxID       string
+	GooglePlayID string
 	// Subsets are the RetroAchievements subsets attached to this game, with
 	// the counts the summary keeps separate from the game's own. Read-only
 	// here: attaching one is Housekeeping's job, because it needs the parent
@@ -342,6 +343,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		PSNID:            g.PSNID,
 		UbisoftID:        g.UbisoftID,
 		XboxID:           g.XboxID,
+		GooglePlayID:     g.GooglePlayID,
 		Subsets:          subsets,
 		AutoSuggest:      r.URL.Query().Get("suggest") == "1",
 	}
@@ -459,12 +461,12 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 }
 
 // handleUpdateProviders edits the game's provider IDs — RetroAchievements,
-// Steam, PSN, Ubisoft, Xbox — the fields that drive both achievement-fetch
+// Steam, PSN, Ubisoft, Xbox, Google Play — the fields that drive both achievement-fetch
 // linking (Doc.ProviderLinks) and the `suggest` picker. Split out from
 // handleEditInfo since these fields have their own validation (RA/Steam
-// accept a pasted URL or bare ID; PSN/Ubisoft/Xbox are free text since PSN's
-// NPWR… ids aren't numeric) and their own field-loss story: PSNID/UbisoftID/
-// XboxID are `omitempty`, so clearing one is a real key removal that must be
+// accept a pasted URL or bare ID; the rest are free text since PSN's NPWR…
+// ids aren't numeric) and their own field-loss story: PSNID/UbisoftID/
+// XboxID/GooglePlayID are `omitempty`, so clearing one is a real key removal that must be
 // declared, unlike every field handleEditInfo touches.
 func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
@@ -490,6 +492,7 @@ func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
 	psnID := strings.TrimSpace(r.FormValue("psn_id"))
 	ubisoftID := strings.TrimSpace(r.FormValue("ubisoft_id"))
 	xboxID := strings.TrimSpace(r.FormValue("xbox_id"))
+	googlePlayID := strings.TrimSpace(r.FormValue("googleplay_id"))
 
 	var allowedRemovals []string
 	if psnID == "" && doc.FM.PSNID != nil {
@@ -501,12 +504,16 @@ func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
 	if xboxID == "" && doc.FM.XboxID != nil {
 		allowedRemovals = append(allowedRemovals, "xbox_id")
 	}
+	if googlePlayID == "" && doc.FM.GooglePlayID != nil {
+		allowedRemovals = append(allowedRemovals, "googleplay_id")
+	}
 
 	doc.FM.RetroAchievementsID = model.ScalarFromInput(raID)
 	doc.FM.SteamAppID = model.ScalarFromInput(steamID)
 	doc.FM.PSNID = model.ScalarFromInput(psnID)
 	doc.FM.UbisoftID = model.ScalarFromInput(ubisoftID)
 	doc.FM.XboxID = model.ScalarFromInput(xboxID)
+	doc.FM.GooglePlayID = model.ScalarFromInput(googlePlayID)
 
 	if err := mutate.WriteFrontMatter(doc, pf, false, allowedRemovals...); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
@@ -1172,7 +1179,7 @@ func (s *server) handleRefreshAchievements(w http.ResponseWriter, r *http.Reques
 	}
 	links := doc.ProviderLinks()
 	if len(links) == 0 {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no retroachievements_id, steam_appid, psn_id, ubisoft_id or xbox_id set"))
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("no provider id set (retroachievements_id, steam_appid, psn_id, ubisoft_id, xbox_id or googleplay_id)"))
 		return
 	}
 	archiveDir := model.FindArchiveDir(s.gamesDir)

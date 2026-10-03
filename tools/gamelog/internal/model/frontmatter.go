@@ -50,6 +50,11 @@ type FrontMatter struct {
 	// shaped differently from every other provider's.
 	XboxID any `yaml:"xbox_id,omitempty"`
 
+	// GooglePlayID is the game's Google Play Games application id, mirrored
+	// through the same public Exophase profile as UbisoftID. See
+	// ProviderGooglePlay in archive.go.
+	GooglePlayID any `yaml:"googleplay_id,omitempty"`
+
 	// NadeoAccountID is the Trackmania account whose campaign history belongs
 	// to this game — an account id, not a game id, because Nadeo's API covers
 	// exactly one game and has no identifier for it.
@@ -298,6 +303,8 @@ func (d *Doc) providerField(provider string) *any {
 		return &d.FM.UbisoftID
 	case ProviderXbox:
 		return &d.FM.XboxID
+	case ProviderGooglePlay:
+		return &d.FM.GooglePlayID
 	}
 	return nil
 }
