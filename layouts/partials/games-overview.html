@@ -1,12 +1,13 @@
 {{/* Overview tab: library-wide summary cards — totals, status/provider/platform
      mix, recently-played. Included from layouts/games/taxonomy.html. */}}
-{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" -}}
+{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" "googleplay" -}}
 {{- $providerNames := dict
     "retroachievements" "RetroAchievements"
     "steam"             "Steam"
     "xbox"              "Xbox"
     "psn"               "PSN"
     "ubisoft"           "Ubisoft"
+    "googleplay"        "Google Play"
 -}}
 
 {{- $totalGames := len .Pages -}}

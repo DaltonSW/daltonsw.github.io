@@ -2,13 +2,14 @@
      game's achievement-summary.yaml (`earned`, written by tools/gamelog's
      writeAchievementSummary) into one feed, newest first and grouped by year,
      plus a sidebar of aggregate stats. Included from layouts/games/taxonomy.html. */}}
-{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" -}}
+{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" "googleplay" -}}
 {{- $providerNames := dict
     "retroachievements" "RetroAchievements"
     "steam"             "Steam"
     "xbox"              "Xbox"
     "psn"               "PSN"
     "ubisoft"           "Ubisoft"
+    "googleplay"        "Google Play"
 -}}
 {{/* only RA and Xbox achievements carry a points value ("gamerscore") */}}
 {{- $providerPointLabels := dict "retroachievements" "gamerscore" "xbox" "gamerscore" -}}
