@@ -1,22 +1,23 @@
 {
  "provider": "steam",
  "title": "Baldur's Gate 3",
- "updated": "2026-09-25",
+ "updated": "2026-10-03",
  "id": "1086940",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
- "unlocked": 48,
+ "fetched": "2026-10-03",
+ "last_attempt": "2026-10-03",
+ "unlocked": 54,
  "total": 54,
  "first": "2023-10-15",
- "last": "2026-09-20",
+ "last": "2026-10-03",
+ "award_kind": "all achievements",
  "platform": "PC",
  "icon": "d866cae7ea1e471fdbc206287111f1b642373bd9",
- "playtime_mins": 29598,
+ "playtime_mins": 31709,
  "playtime": {
-  "linux": 3735,
+  "linux": 5846,
   "windows": 25862
  },
- "last_played": "2026-09-20",
+ "last_played": "2026-10-03",
  "achievements": [
   {
    "key": "BG3_Quest01",
@@ -403,46 +404,52 @@
    "hidden": true
   },
   {
-   "key": "BG3_Quest05",
-   "name": "Absolute Power Corrupts",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/265327d387174ee2160946bcde392352ce635b88.jpg",
-   "hidden": true
-  },
-  {
    "key": "BG3_Quest16",
    "name": "Jack-of-all-Trades",
    "description": "Multiclass into every class in one playthrough without asking Withers to change your character.",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-09-30T17:30:02-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/5f62e2f146d67732fe8a8dc02a322cf1f3a2c600.jpg"
-  },
-  {
-   "key": "BG3_Quest24",
-   "name": "Leave No One Behind",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/cca40bc98c6fb9c7a84e10256866157d5157e060.jpg",
-   "hidden": true
-  },
-  {
-   "key": "BG3_Quest28",
-   "name": "Busker",
-   "description": "Earn a hundred gold from playing sweet, sweet music in a single playthrough. ",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/edfa43e6937d245c903c51d91826fa1ce6f7bcd6.jpg"
   },
   {
    "key": "BG3_Quest37",
    "name": "Fancy Footwork",
    "description": "Defeat Gortash in Wyrm's Rock without activating any traps.",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-10-02T14:15:57-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/ae3adaf3d6f530e91b33975acdd30e7f7031437a.jpg"
+  },
+  {
+   "key": "BG3_Quest28",
+   "name": "Busker",
+   "description": "Earn a hundred gold from playing sweet, sweet music in a single playthrough. ",
+   "unlocked": true,
+   "date": "2026-10-02T15:09:30-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/edfa43e6937d245c903c51d91826fa1ce6f7bcd6.jpg"
   },
   {
    "key": "BG3_Quest44",
    "name": "Punch Drunk",
    "description": "Defeat twenty opponents while drunk - down them.",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-10-02T15:28:28-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/9910e006d713e405320082f4a9f576cabdc7e6c0.jpg"
+  },
+  {
+   "key": "BG3_Quest05",
+   "name": "Absolute Power Corrupts",
+   "unlocked": true,
+   "date": "2026-10-03T14:58:19-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/265327d387174ee2160946bcde392352ce635b88.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BG3_Quest24",
+   "name": "Leave No One Behind",
+   "unlocked": true,
+   "date": "2026-10-03T14:58:20-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/cca40bc98c6fb9c7a84e10256866157d5157e060.jpg",
+   "hidden": true
   }
  ],
  "raw": {
@@ -480,8 +487,8 @@
     },
     {
      "apiname": "BG3_Quest05",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791057499,
      "name": "Absolute Power Corrupts",
      "description": ""
     },
@@ -557,8 +564,8 @@
     },
     {
      "apiname": "BG3_Quest16",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1790807402,
      "name": "Jack-of-all-Trades",
      "description": "Multiclass into every class in one playthrough without asking Withers to change your character."
     },
@@ -613,8 +620,8 @@
     },
     {
      "apiname": "BG3_Quest24",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791057500,
      "name": "Leave No One Behind",
      "description": ""
     },
@@ -641,8 +648,8 @@
     },
     {
      "apiname": "BG3_Quest28",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1790971770,
      "name": "Busker",
      "description": "Earn a hundred gold from playing sweet, sweet music in a single playthrough. "
     },
@@ -704,8 +711,8 @@
     },
     {
      "apiname": "BG3_Quest37",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1790968557,
      "name": "Fancy Footwork",
      "description": "Defeat Gortash in Wyrm's Rock without activating any traps."
     },
@@ -753,8 +760,8 @@
     },
     {
      "apiname": "BG3_Quest44",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1790972908,
      "name": "Punch Drunk",
      "description": "Defeat twenty opponents while drunk - down them."
     },

@@ -1,14 +1,14 @@
-unlocked: 48
+unlocked: 54
 total: 54
-playtime_mins: 29598
-last_played: "2026-09-20"
+playtime_mins: 31709
+last_played: "2026-10-03"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 48
+      unlocked: 54
       total: 54
-      playtime_mins: 29598
-      last_played: "2026-09-20"
+      playtime_mins: 31709
+      last_played: "2026-10-03"
 earned:
     - name: Descent From Avernus
       description: Take control of the nautiloid and escape the Hells.
@@ -295,6 +295,42 @@ earned:
     - name: Hot Date
       date: "2026-09-20T13:14:44-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/821fec5fcfe5336a83f02d966ae5fded0a66af3a.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Jack-of-all-Trades
+      description: Multiclass into every class in one playthrough without asking Withers to change your character.
+      date: "2026-09-30T17:30:02-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/5f62e2f146d67732fe8a8dc02a322cf1f3a2c600.jpg
+      provider: steam
+      platform: PC
+    - name: Fancy Footwork
+      description: Defeat Gortash in Wyrm's Rock without activating any traps.
+      date: "2026-10-02T14:15:57-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/ae3adaf3d6f530e91b33975acdd30e7f7031437a.jpg
+      provider: steam
+      platform: PC
+    - name: Busker
+      description: 'Earn a hundred gold from playing sweet, sweet music in a single playthrough. '
+      date: "2026-10-02T15:09:30-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/edfa43e6937d245c903c51d91826fa1ce6f7bcd6.jpg
+      provider: steam
+      platform: PC
+    - name: Punch Drunk
+      description: Defeat twenty opponents while drunk - down them.
+      date: "2026-10-02T15:28:28-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/9910e006d713e405320082f4a9f576cabdc7e6c0.jpg
+      provider: steam
+      platform: PC
+    - name: Absolute Power Corrupts
+      date: "2026-10-03T14:58:19-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/265327d387174ee2160946bcde392352ce635b88.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Leave No One Behind
+      date: "2026-10-03T14:58:20-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1086940/cca40bc98c6fb9c7a84e10256866157d5157e060.jpg
       provider: steam
       platform: PC
       hidden: true

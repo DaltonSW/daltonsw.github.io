@@ -1,7 +1,7 @@
-unlocked: 21
-total: 31
+unlocked: 37
+total: 62
 playtime_mins: 5139
-last_played: "2025-02-05"
+last_played: "2025-03-20"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +9,11 @@ providers:
       total: 31
       playtime_mins: 5139
       last_played: "2025-02-05"
+    - provider: googleplay
+      platform: Google Play
+      unlocked: 16
+      total: 31
+      last_played: "2025-03-20"
 earned:
     - name: 10K
       description: Score 10,000 Chips in a single hand
@@ -130,9 +135,89 @@ earned:
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2379780/753ee8cabb8f63c415c4e44970c8c63b37700754.jpg
       provider: steam
       platform: PC
+    - name: ante-up
+      date: "2024-11-24T21:53:34-06:00"
+      icon: https://m.exophase.com/android/awards/m/gj1711eg.png
+      provider: googleplay
+      platform: Google Play
+    - name: 10k
+      date: "2024-11-25T10:12:02-06:00"
+      icon: https://m.exophase.com/android/awards/m/j06166dj.png
+      provider: googleplay
+      platform: Google Play
+    - name: ante-upper
+      date: "2024-11-25T22:09:14-06:00"
+      icon: https://m.exophase.com/android/awards/m/dg08005d.png
+      provider: googleplay
+      platform: Google Play
+    - name: retrograde
+      date: "2024-11-25T22:12:54-06:00"
+      icon: https://m.exophase.com/android/awards/m/dg08003d.png
+      provider: googleplay
+      platform: Google Play
+    - name: heads-up
+      date: "2024-11-25T22:14:55-06:00"
+      icon: https://m.exophase.com/android/awards/m/j06166jj.png
+      provider: googleplay
+      platform: Google Play
+    - name: royale
+      date: "2024-11-26T09:03:38-06:00"
+      icon: https://m.exophase.com/android/awards/m/gj17116g.png
+      provider: googleplay
+      platform: Google Play
     - name: Shattered
       description: Break 2 Glass Cards in a single hand
       date: "2024-11-30T11:04:25-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2379780/383447ec9308e23b1297fab0a12f45539d4e38c6.jpg
       provider: steam
       platform: PC
+    - name: cartomancy
+      date: "2024-12-08T22:17:57-06:00"
+      icon: https://m.exophase.com/android/awards/m/b8g3gg53.png
+      provider: googleplay
+      platform: Google Play
+    - name: roi
+      date: "2024-12-08T22:19:48-06:00"
+      icon: https://m.exophase.com/android/awards/m/6d7g7783.png
+      provider: googleplay
+      platform: Google Play
+    - name: big-hands
+      date: "2024-12-12T22:23:36-06:00"
+      icon: https://m.exophase.com/android/awards/m/557b7780.png
+      provider: googleplay
+      platform: Google Play
+    - name: 1000k
+      date: "2024-12-12T22:27:05-06:00"
+      icon: https://m.exophase.com/android/awards/m/13717788.png
+      provider: googleplay
+      platform: Google Play
+    - name: card-player
+      date: "2025-01-03T21:56:45-06:00"
+      icon: https://m.exophase.com/android/awards/m/557b7740.png
+      provider: googleplay
+      platform: Google Play
+    - name: legendary
+      date: "2025-01-06T22:28:24-06:00"
+      icon: https://m.exophase.com/android/awards/m/40e6eeg1.png
+      provider: googleplay
+      platform: Google Play
+    - name: low-stakes
+      date: "2025-01-26T21:24:36-06:00"
+      icon: https://m.exophase.com/android/awards/m/137177d8.png
+      provider: googleplay
+      platform: Google Play
+    - name: you-get-what-you-get
+      date: "2025-01-28T22:12:49-06:00"
+      icon: https://m.exophase.com/android/awards/m/00313357.png
+      provider: googleplay
+      platform: Google Play
+    - name: mid-stakes
+      date: "2025-01-29T11:11:36-06:00"
+      icon: https://m.exophase.com/android/awards/m/357477eb.png
+      provider: googleplay
+      platform: Google Play
+    - name: card-discarder
+      date: "2025-02-20T07:28:21-06:00"
+      icon: https://m.exophase.com/android/awards/m/00313387.png
+      provider: googleplay
+      platform: Google Play

@@ -1,7 +1,7 @@
-unlocked: 1
-total: 35
+unlocked: 15
+total: 54
 playtime_mins: 36
-last_played: "2018-03-05"
+last_played: "2022-11-12"
 providers:
     - provider: steam
       platform: PC
@@ -9,10 +9,85 @@ providers:
       total: 35
       playtime_mins: 36
       last_played: "2018-03-05"
+    - provider: googleplay
+      platform: Google Play
+      unlocked: 14
+      total: 19
+      last_played: "2022-11-12"
 earned:
+    - name: atom-splitter
+      date: "2018-02-13T00:26:29-06:00"
+      icon: https://m.exophase.com/android/awards/m/be10ed3.png
+      provider: googleplay
+      platform: Google Play
+    - name: project-purity
+      date: "2018-02-13T00:28:30-06:00"
+      icon: https://m.exophase.com/android/awards/m/d4e547d.png
+      provider: googleplay
+      platform: Google Play
+    - name: mattress-stuffer
+      date: "2018-02-13T10:49:53-06:00"
+      icon: https://m.exophase.com/android/awards/m/j4gj4gj.png
+      provider: googleplay
+      platform: Google Play
+    - name: dine-and-dash
+      date: "2018-02-13T12:59:22-06:00"
+      icon: https://m.exophase.com/android/awards/m/gg4egbg.png
+      provider: googleplay
+      platform: Google Play
+    - name: better-settler
+      date: "2018-02-15T18:17:08-06:00"
+      icon: https://m.exophase.com/android/awards/m/3jgej1b.png
+      provider: googleplay
+      platform: Google Play
+    - name: hard-work-is-happy-work
+      date: "2018-02-17T20:19:11-06:00"
+      icon: https://m.exophase.com/android/awards/m/6b16b43.png
+      provider: googleplay
+      platform: Google Play
+    - name: vault-tec-architect
+      date: "2018-02-18T23:52:49-06:00"
+      icon: https://m.exophase.com/android/awards/m/gg4eg4g.png
+      provider: googleplay
+      platform: Google Play
+    - name: a-vault-for-my-vault
+      date: "2018-02-21T09:03:32-06:00"
+      icon: https://m.exophase.com/android/awards/m/1g6dg68.png
+      provider: googleplay
+      platform: Google Play
+    - name: prepared-for-the-future
+      date: "2018-02-25T15:39:29-06:00"
+      icon: https://m.exophase.com/android/awards/m/j4gj47j.png
+      provider: googleplay
+      platform: Google Play
+    - name: vault-tec-engineer
+      date: "2018-02-25T22:36:32-06:00"
+      icon: https://m.exophase.com/android/awards/m/d4e54ed.png
+      provider: googleplay
+      platform: Google Play
+    - name: higher-and-higher
+      date: "2018-02-26T09:24:35-06:00"
+      icon: https://m.exophase.com/android/awards/m/7g3egb3.png
+      provider: googleplay
+      platform: Google Play
     - name: Mattress Stuffer
       description: Collect 1000 Caps
       date: "2018-03-05T20:22:04-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588430/e9adf5e5069874e87de6cce98379eeb5112e06b2.jpg
       provider: steam
       platform: PC
+    - name: a-better-future-underground
+      date: "2018-03-10T12:07:41-06:00"
+      icon: https://m.exophase.com/android/awards/m/1g6dgb8.png
+      provider: googleplay
+      platform: Google Play
+    - name: overseer
+      date: "2018-03-23T08:03:51-05:00"
+      icon: https://m.exophase.com/android/awards/m/3jgejgb.png
+      provider: googleplay
+      platform: Google Play
+    - name: overachieve-much
+      date: "2018-03-28T12:41:25-05:00"
+      icon: https://m.exophase.com/android/awards/m/44d3471.png
+      provider: googleplay
+      platform: Google Play

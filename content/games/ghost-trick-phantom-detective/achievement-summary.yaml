@@ -1,8 +1,14 @@
-unlocked: 30
-total: 30
-playtime_mins: 1039
-last_played: "2026-02-01"
+unlocked: 32
+total: 63
+playtime_mins: 1116
+last_played: "2026-10-01"
 providers:
+    - provider: retroachievements
+      platform: Nintendo DS
+      unlocked: 2
+      total: 33
+      playtime_mins: 77
+      last_played: "2026-10-01"
     - provider: steam
       platform: PC
       unlocked: 30
@@ -190,3 +196,19 @@ earned:
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1967430/e565ad9fcb5083c5b990743212388978831cb66c.jpg
       provider: steam
       platform: PC
+    - name: Learning the Ropes
+      description: Clear Chapter 1.
+      date: "2026-09-28T21:46:36-05:00"
+      points: 5
+      hardcore: true
+      icon: "115215"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: A Courageous Little Animal
+      description: Clear Chapter 2.
+      date: "2026-09-30T20:26:38-05:00"
+      points: 5
+      hardcore: true
+      icon: "115216"
+      provider: retroachievements
+      platform: Nintendo DS
