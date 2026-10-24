@@ -1,7 +1,114 @@
-unlocked: 0
+unlocked: 17
 total: 38
+playtime_mins: 481
+last_played: "2026-10-11"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 0
+      unlocked: 17
       total: 38
+      playtime_mins: 481
+      last_played: "2026-10-11"
+earned:
+    - name: Hisomu's Heir
+      description: Kill one guard.
+      date: "2026-10-04T19:28:38-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f0783588ade5a3be715b5d8602d942557f67748f.jpg
+      provider: steam
+      platform: PC
+    - name: Awakened
+      description: Save Azai from the mercenaries.
+      date: "2026-10-04T19:41:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/dd62c281993eaaca039581cfd739088dcda9f7f7.jpg
+      provider: steam
+      platform: PC
+    - name: Stealth Assassin
+      description: Perform 25 successful stealth kills.
+      date: "2026-10-04T19:55:04-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/10227a3829066c097255b44bac835c0ca9e02a2d.jpg
+      provider: steam
+      platform: PC
+    - name: Masterful
+      description: Complete a level without getting detected.
+      date: "2026-10-04T20:13:32-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/08e7bf6986c60cf18204723e9b05f5c572cfc444.jpg
+      provider: steam
+      platform: PC
+    - name: Trickster
+      description: Distract 25 guards using environmental objects.
+      date: "2026-10-08T20:44:34-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/192a16e896c3440e52ccbec03a03bbb9126b8d13.jpg
+      provider: steam
+      platform: PC
+    - name: Snare
+      description: Use a dead body to lure another guard and then stealth kill him.
+      date: "2026-10-08T21:34:14-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/a2e9184d15a34da6cd0bd3ae4a1a431d47c1e6fa.jpg
+      provider: steam
+      platform: PC
+    - name: The Mercenary
+      description: Assassinate Kelly, the mercenary captain.
+      date: "2026-10-09T18:13:23-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/76b2ee6e0ad38629fa4cd577bf72882ed39387fd.jpg
+      provider: steam
+      platform: PC
+    - name: Crimson Haiku
+      description: Perform five different types of stealth kills in one level.
+      date: "2026-10-09T18:32:37-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/3435d419f21420133b747861ac743e4eaebcf91b.jpg
+      provider: steam
+      platform: PC
+    - name: Tactical Espionage Action
+      description: Within a single Focus, aim and throw three different types of items.
+      date: "2026-10-10T09:17:10-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/45c0ae24c230a043e5a01540feccee9545d333d2.jpg
+      provider: steam
+      platform: PC
+    - name: Deadly Shadows
+      description: Stealth kill a guard from inside a dumpster.
+      date: "2026-10-10T09:19:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f8bec590f23c43ece8c308667630ce160bcf80b6.jpg
+      provider: steam
+      platform: PC
+    - name: No One Lives Forever
+      description: Stealth kill an elite guard after stunning him.
+      date: "2026-10-10T09:29:32-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/ba61c86a261175c2cb4847bc9e53c2e9bed466c5.jpg
+      provider: steam
+      platform: PC
+    - name: The Worst Allies
+      description: Kill a guard by getting other guards to shoot him.
+      date: "2026-10-10T19:00:17-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/8fdcb4a58a5919ec0f85beadb95a35c81ab179d4.jpg
+      provider: steam
+      platform: PC
+    - name: Karajan's Fate
+      description: Assassinate Karajan.
+      date: "2026-10-10T19:32:44-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/d5794cf6740ca1b3bce5d179dbef2dd10fe5eb8c.jpg
+      provider: steam
+      platform: PC
+    - name: Escape
+      description: Escape from the Stronghold.
+      date: "2026-10-11T08:40:19-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/51985d82c621ea811e35c22f0fcaf918974f3e5d.jpg
+      provider: steam
+      platform: PC
+    - name: Fated
+      description: Determine your fate.
+      date: "2026-10-11T09:22:50-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/c4e189170635dcd13c8f45f3bc99f0abe58351b8.jpg
+      provider: steam
+      platform: PC
+    - name: Behind the Curtain
+      description: View any of the developer commentaries.
+      date: "2026-10-11T09:28:25-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/cb9ae2520f4bd6dbc3f7817288246e99af0cf3be.jpg
+      provider: steam
+      platform: PC
+    - name: Well, *I* Think It's Interesting
+      description: Read one of the history lesson developer commentaries.
+      date: "2026-10-11T09:28:25-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/8dc524b5a6b81695157b34e475a546fc15e002ca.jpg
+      provider: steam
+      platform: PC

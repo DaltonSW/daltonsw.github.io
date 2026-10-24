@@ -1,21 +1,18 @@
 ---
-title: "Sniper Elite 3"
-platform: "PC"
-retroachievements_id:
+title: Sniper Elite 3
+platform: PC
+retroachievements_id: null
 steam_appid: 238090
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["sniper-elite-3"]
+    games:
+      - sniper-elite-3
+cover: null
 ---
 
 

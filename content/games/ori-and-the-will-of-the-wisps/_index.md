@@ -2,7 +2,7 @@
 title: Ori and the Will of the Wisps
 platform: PC
 retroachievements_id: null
-steam_appid: null
+steam_appid: 1057090
 status: dropped
 started: ""
 finished: "2020-04-07"

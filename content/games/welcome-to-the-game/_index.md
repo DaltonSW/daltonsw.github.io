@@ -1,21 +1,18 @@
 ---
-title: "Welcome to the Game"
-platform: "PC"
-retroachievements_id:
+title: Welcome to the Game
+platform: PC
+retroachievements_id: null
 steam_appid: 485380
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["welcome-to-the-game"]
+    games:
+      - welcome-to-the-game
+cover: null
 ---
 
 

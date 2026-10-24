@@ -1,21 +1,18 @@
 ---
-title: "Persona 3 Reload"
-platform: "PC"
-retroachievements_id:
+title: Persona 3 Reload
+platform: PC
+retroachievements_id: null
 steam_appid: 2161700
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["persona-3-reload"]
+    games:
+      - persona-3-reload
+cover: null
 ---
 
 

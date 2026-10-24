@@ -1,14 +1,14 @@
-unlocked: 9
+unlocked: 10
 total: 38
-playtime_mins: 3173
-last_played: "2022-11-05"
+playtime_mins: 3182
+last_played: "2026-10-05"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 9
+      unlocked: 10
       total: 38
-      playtime_mins: 3173
-      last_played: "2022-11-05"
+      playtime_mins: 3182
+      last_played: "2026-10-05"
 earned:
     - name: From Zero to Hero
       date: "2017-08-06T18:07:55-05:00"
@@ -61,6 +61,12 @@ earned:
     - name: Five Alive
       date: "2017-08-14T21:44:16-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: All's Well That Ends...Umm...
+      date: "2026-10-05T19:47:03-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg
       provider: steam
       platform: PC
       hidden: true

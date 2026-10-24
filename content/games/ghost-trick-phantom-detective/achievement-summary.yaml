@@ -1,14 +1,14 @@
-unlocked: 32
+unlocked: 48
 total: 63
-playtime_mins: 1116
-last_played: "2026-10-01"
+playtime_mins: 1717
+last_played: "2026-10-23"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 2
+      unlocked: 18
       total: 33
-      playtime_mins: 77
-      last_played: "2026-10-01"
+      playtime_mins: 678
+      last_played: "2026-10-23"
     - provider: steam
       platform: PC
       unlocked: 30
@@ -210,5 +210,133 @@ earned:
       points: 5
       hardcore: true
       icon: "115216"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Writer's Block
+      description: Clear Chapter 3.
+      date: "2026-10-04T22:15:49-05:00"
+      points: 5
+      hardcore: true
+      icon: "115217"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Long Shot
+      description: Clear Chapter 4.
+      date: "2026-10-05T22:08:14-05:00"
+      points: 5
+      hardcore: true
+      icon: "115218"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Rube Goldberg Hates Your Guts
+      description: Clear Chapter 5.
+      date: "2026-10-05T22:32:08-05:00"
+      points: 5
+      hardcore: true
+      icon: "115219"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Writing on the Wall
+      description: Clear Chapter 6.
+      date: "2026-10-10T22:31:10-05:00"
+      points: 5
+      hardcore: true
+      icon: "115220"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Odd Girl
+      description: Clear Chapter 7.
+      date: "2026-10-12T22:06:49-05:00"
+      points: 5
+      hardcore: true
+      icon: "115221"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Panic at the Penitentiary
+      description: Clear Chapter 8.
+      date: "2026-10-13T07:38:32-05:00"
+      points: 5
+      hardcore: true
+      icon: "115222"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Light Show
+      description: Clear Chapter 9.
+      date: "2026-10-15T22:45:24-05:00"
+      points: 10
+      hardcore: true
+      icon: "115223"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: All Bottled Up
+      description: Clear Chapter 10.
+      date: "2026-10-16T21:58:03-05:00"
+      points: 10
+      hardcore: true
+      icon: "115224"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: The Little Ladies
+      description: Clear Chapter 11.
+      date: "2026-10-18T22:26:29-05:00"
+      points: 10
+      hardcore: true
+      icon: "115225"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: An Impossible Move
+      description: Clear Chapter 12.
+      date: "2026-10-19T21:14:14-05:00"
+      points: 10
+      hardcore: true
+      icon: "115226"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Hanging by a Thread
+      description: Clear Chapter 13.
+      date: "2026-10-19T21:40:10-05:00"
+      points: 10
+      hardcore: true
+      icon: "115227"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Ah, the Recklessness of Youth
+      description: Clear Chapter 14.
+      date: "2026-10-20T22:08:48-05:00"
+      points: 10
+      hardcore: true
+      icon: "115228"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Seeing Double
+      description: Clear Chapter 15.
+      date: "2026-10-21T22:13:32-05:00"
+      points: 10
+      hardcore: true
+      icon: "115229"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: In Too Deep
+      description: Clear Chapter 16.
+      date: "2026-10-22T21:40:53-05:00"
+      points: 10
+      hardcore: true
+      icon: "115230"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: The Final Countdown
+      description: Clear Chapter 17.
+      date: "2026-10-23T22:28:50-05:00"
+      points: 10
+      hardcore: true
+      icon: "115231"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: A New Dawn
+      description: Beat the game.
+      date: "2026-10-23T23:03:26-05:00"
+      points: 25
+      hardcore: true
+      icon: "115232"
       provider: retroachievements
       platform: Nintendo DS
