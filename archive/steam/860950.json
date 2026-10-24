@@ -1,21 +1,157 @@
 {
  "provider": "steam",
  "title": "Mark of the Ninja: Remastered",
- "updated": "2026-09-25",
+ "updated": "2026-10-24",
  "id": "860950",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
- "unlocked": 0,
+ "fetched": "2026-10-24",
+ "last_attempt": "2026-10-24",
+ "unlocked": 17,
  "total": 38,
+ "first": "2026-10-04",
+ "last": "2026-10-11",
  "platform": "PC",
  "icon": "15cafd79313f15077051ef753a66e50fd2c41596",
+ "playtime_mins": 481,
+ "playtime": {
+  "linux": 481
+ },
+ "last_played": "2026-10-11",
  "achievements": [
+  {
+   "key": "hisomus_heir",
+   "name": "Hisomu's Heir",
+   "description": "Kill one guard.",
+   "unlocked": true,
+   "date": "2026-10-04T19:28:38-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f0783588ade5a3be715b5d8602d942557f67748f.jpg"
+  },
   {
    "key": "awakened",
    "name": "Awakened",
    "description": "Save Azai from the mercenaries.",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-10-04T19:41:29-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/dd62c281993eaaca039581cfd739088dcda9f7f7.jpg"
+  },
+  {
+   "key": "stealth_assassin",
+   "name": "Stealth Assassin",
+   "description": "Perform 25 successful stealth kills.",
+   "unlocked": true,
+   "date": "2026-10-04T19:55:04-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/10227a3829066c097255b44bac835c0ca9e02a2d.jpg"
+  },
+  {
+   "key": "masterful",
+   "name": "Masterful",
+   "description": "Complete a level without getting detected.",
+   "unlocked": true,
+   "date": "2026-10-04T20:13:32-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/08e7bf6986c60cf18204723e9b05f5c572cfc444.jpg"
+  },
+  {
+   "key": "trickster",
+   "name": "Trickster",
+   "description": "Distract 25 guards using environmental objects.",
+   "unlocked": true,
+   "date": "2026-10-08T20:44:34-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/192a16e896c3440e52ccbec03a03bbb9126b8d13.jpg"
+  },
+  {
+   "key": "snare",
+   "name": "Snare",
+   "description": "Use a dead body to lure another guard and then stealth kill him.",
+   "unlocked": true,
+   "date": "2026-10-08T21:34:14-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/a2e9184d15a34da6cd0bd3ae4a1a431d47c1e6fa.jpg"
+  },
+  {
+   "key": "the_mercenary",
+   "name": "The Mercenary",
+   "description": "Assassinate Kelly, the mercenary captain.",
+   "unlocked": true,
+   "date": "2026-10-09T18:13:23-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/76b2ee6e0ad38629fa4cd577bf72882ed39387fd.jpg"
+  },
+  {
+   "key": "crimson_haiku",
+   "name": "Crimson Haiku",
+   "description": "Perform five different types of stealth kills in one level.",
+   "unlocked": true,
+   "date": "2026-10-09T18:32:37-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/3435d419f21420133b747861ac743e4eaebcf91b.jpg"
+  },
+  {
+   "key": "espionage",
+   "name": "Tactical Espionage Action",
+   "description": "Within a single Focus, aim and throw three different types of items.",
+   "unlocked": true,
+   "date": "2026-10-10T09:17:10-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/45c0ae24c230a043e5a01540feccee9545d333d2.jpg"
+  },
+  {
+   "key": "deadly_shadows",
+   "name": "Deadly Shadows",
+   "description": "Stealth kill a guard from inside a dumpster.",
+   "unlocked": true,
+   "date": "2026-10-10T09:19:29-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f8bec590f23c43ece8c308667630ce160bcf80b6.jpg"
+  },
+  {
+   "key": "live_forever",
+   "name": "No One Lives Forever",
+   "description": "Stealth kill an elite guard after stunning him.",
+   "unlocked": true,
+   "date": "2026-10-10T09:29:32-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/ba61c86a261175c2cb4847bc9e53c2e9bed466c5.jpg"
+  },
+  {
+   "key": "worst_allies",
+   "name": "The Worst Allies",
+   "description": "Kill a guard by getting other guards to shoot him.",
+   "unlocked": true,
+   "date": "2026-10-10T19:00:17-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/8fdcb4a58a5919ec0f85beadb95a35c81ab179d4.jpg"
+  },
+  {
+   "key": "kill_karajan",
+   "name": "Karajan's Fate",
+   "description": "Assassinate Karajan.",
+   "unlocked": true,
+   "date": "2026-10-10T19:32:44-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/d5794cf6740ca1b3bce5d179dbef2dd10fe5eb8c.jpg"
+  },
+  {
+   "key": "escape",
+   "name": "Escape",
+   "description": "Escape from the Stronghold.",
+   "unlocked": true,
+   "date": "2026-10-11T08:40:19-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/51985d82c621ea811e35c22f0fcaf918974f3e5d.jpg"
+  },
+  {
+   "key": "fated",
+   "name": "Fated",
+   "description": "Determine your fate.",
+   "unlocked": true,
+   "date": "2026-10-11T09:22:50-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/c4e189170635dcd13c8f45f3bc99f0abe58351b8.jpg"
+  },
+  {
+   "key": "behind_the_curtain",
+   "name": "Behind the Curtain",
+   "description": "View any of the developer commentaries.",
+   "unlocked": true,
+   "date": "2026-10-11T09:28:25-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/cb9ae2520f4bd6dbc3f7817288246e99af0cf3be.jpg"
+  },
+  {
+   "key": "history_lesson",
+   "name": "Well, *I* Think It's Interesting",
+   "description": "Read one of the history lesson developer commentaries.",
+   "unlocked": true,
+   "date": "2026-10-11T09:28:25-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/8dc524b5a6b81695157b34e475a546fc15e002ca.jpg"
   },
   {
    "key": "back_to_bed",
@@ -25,25 +161,11 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/b53f55ee284ba21e2a5072d153b6e1675722ab1f.jpg"
   },
   {
-   "key": "behind_the_curtain",
-   "name": "Behind the Curtain",
-   "description": "View any of the developer commentaries.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/cb9ae2520f4bd6dbc3f7817288246e99af0cf3be.jpg"
-  },
-  {
    "key": "cordyceps",
    "name": "Cordyceps",
    "description": "Dispatch two enemies at once using a body infected with Toxic Fungus.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/9ade58fdc783c9a07d3cb49a20189073fa71b3f5.jpg"
-  },
-  {
-   "key": "crimson_haiku",
-   "name": "Crimson Haiku",
-   "description": "Perform five different types of stealth kills in one level.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/3435d419f21420133b747861ac743e4eaebcf91b.jpg"
   },
   {
    "key": "dark_project",
@@ -60,39 +182,11 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/caaa7262d9f51b6b6471b0e05455512bd482889b.jpg"
   },
   {
-   "key": "deadly_shadows",
-   "name": "Deadly Shadows",
-   "description": "Stealth kill a guard from inside a dumpster.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f8bec590f23c43ece8c308667630ce160bcf80b6.jpg"
-  },
-  {
    "key": "descendent",
    "name": "Descendent of Iga",
    "description": "Earn three stars in every level.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/ca6ec1c1ec9c4fa1cc413c590cf2dd079143dfcd.jpg"
-  },
-  {
-   "key": "escape",
-   "name": "Escape",
-   "description": "Escape from the Stronghold.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/51985d82c621ea811e35c22f0fcaf918974f3e5d.jpg"
-  },
-  {
-   "key": "espionage",
-   "name": "Tactical Espionage Action",
-   "description": "Within a single Focus, aim and throw three different types of items.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/45c0ae24c230a043e5a01540feccee9545d333d2.jpg"
-  },
-  {
-   "key": "fated",
-   "name": "Fated",
-   "description": "Determine your fate.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/c4e189170635dcd13c8f45f3bc99f0abe58351b8.jpg"
   },
   {
    "key": "gallows",
@@ -116,20 +210,6 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/9a1cf78120ba77f0afa133904912bf669173eca2.jpg"
   },
   {
-   "key": "hisomus_heir",
-   "name": "Hisomu's Heir",
-   "description": "Kill one guard.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f0783588ade5a3be715b5d8602d942557f67748f.jpg"
-  },
-  {
-   "key": "history_lesson",
-   "name": "Well, *I* Think It's Interesting",
-   "description": "Read one of the history lesson developer commentaries.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/8dc524b5a6b81695157b34e475a546fc15e002ca.jpg"
-  },
-  {
    "key": "humble_moth",
    "name": "The Humble Moth",
    "description": "Stun an elite guard with moths then dispatch him.",
@@ -144,20 +224,6 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/7193b5bb1801696a8de9ac1d22cc228bfa087775.jpg"
   },
   {
-   "key": "kill_karajan",
-   "name": "Karajan's Fate",
-   "description": "Assassinate Karajan.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/d5794cf6740ca1b3bce5d179dbef2dd10fe5eb8c.jpg"
-  },
-  {
-   "key": "live_forever",
-   "name": "No One Lives Forever",
-   "description": "Stealth kill an elite guard after stunning him.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/ba61c86a261175c2cb4847bc9e53c2e9bed466c5.jpg"
-  },
-  {
    "key": "manipulator",
    "name": "Manipulator",
    "description": "Distract 25 guards using your equipment.",
@@ -170,13 +236,6 @@
    "description": "Earn all of the upgrades.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/f95784b832d70aac8f2bbe2927628e9370f79109.jpg"
-  },
-  {
-   "key": "masterful",
-   "name": "Masterful",
-   "description": "Complete a level without getting detected.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/08e7bf6986c60cf18204723e9b05f5c572cfc444.jpg"
   },
   {
    "key": "mercy",
@@ -207,39 +266,11 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/425e075d4edc181fa6d5f711a66c62a75841cb72.jpg"
   },
   {
-   "key": "snare",
-   "name": "Snare",
-   "description": "Use a dead body to lure another guard and then stealth kill him.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/a2e9184d15a34da6cd0bd3ae4a1a431d47c1e6fa.jpg"
-  },
-  {
    "key": "spotlight_moths",
    "name": "Couldn't Do That before",
    "description": "Disable a spotlight using the Dusk Moths.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/4095235f736eacae1c735437bb5464107d2993fc.jpg"
-  },
-  {
-   "key": "stealth_assassin",
-   "name": "Stealth Assassin",
-   "description": "Perform 25 successful stealth kills.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/10227a3829066c097255b44bac835c0ca9e02a2d.jpg"
-  },
-  {
-   "key": "the_mercenary",
-   "name": "The Mercenary",
-   "description": "Assassinate Kelly, the mercenary captain.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/76b2ee6e0ad38629fa4cd577bf72882ed39387fd.jpg"
-  },
-  {
-   "key": "trickster",
-   "name": "Trickster",
-   "description": "Distract 25 guards using environmental objects.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/192a16e896c3440e52ccbec03a03bbb9126b8d13.jpg"
   },
   {
    "key": "true_ninja",
@@ -268,13 +299,6 @@
    "description": "Complete one of the original Mark of the Ninja levels using the Path of Wisdom.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/0ed6672eff72637233a8a77d5ec404686d7624ee.jpg"
-  },
-  {
-   "key": "worst_allies",
-   "name": "The Worst Allies",
-   "description": "Kill a guard by getting other guards to shoot him.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/860950/8fdcb4a58a5919ec0f85beadb95a35c81ab179d4.jpg"
   }
  ],
  "raw": {
@@ -284,43 +308,43 @@
    "achievements": [
     {
      "apiname": "hisomus_heir",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791160118,
      "name": "Hisomu's Heir",
      "description": "Kill one guard."
     },
     {
      "apiname": "awakened",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791160889,
      "name": "Awakened",
      "description": "Save Azai from the mercenaries."
     },
     {
      "apiname": "the_mercenary",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791587603,
      "name": "The Mercenary",
      "description": "Assassinate Kelly, the mercenary captain."
     },
     {
      "apiname": "kill_karajan",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791678764,
      "name": "Karajan's Fate",
      "description": "Assassinate Karajan."
     },
     {
      "apiname": "escape",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791726019,
      "name": "Escape",
      "description": "Escape from the Stronghold."
     },
     {
      "apiname": "fated",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791728570,
      "name": "Fated",
      "description": "Determine your fate."
     },
@@ -368,8 +392,8 @@
     },
     {
      "apiname": "masterful",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791162812,
      "name": "Masterful",
      "description": "Complete a level without getting detected."
     },
@@ -403,22 +427,22 @@
     },
     {
      "apiname": "trickster",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791510274,
      "name": "Trickster",
      "description": "Distract 25 guards using environmental objects."
     },
     {
      "apiname": "stealth_assassin",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791161704,
      "name": "Stealth Assassin",
      "description": "Perform 25 successful stealth kills."
     },
     {
      "apiname": "crimson_haiku",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791588757,
      "name": "Crimson Haiku",
      "description": "Perform five different types of stealth kills in one level."
     },
@@ -445,29 +469,29 @@
     },
     {
      "apiname": "espionage",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791641830,
      "name": "Tactical Espionage Action",
      "description": "Within a single Focus, aim and throw three different types of items."
     },
     {
      "apiname": "live_forever",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791642572,
      "name": "No One Lives Forever",
      "description": "Stealth kill an elite guard after stunning him."
     },
     {
      "apiname": "deadly_shadows",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791641969,
      "name": "Deadly Shadows",
      "description": "Stealth kill a guard from inside a dumpster."
     },
     {
      "apiname": "worst_allies",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791676817,
      "name": "The Worst Allies",
      "description": "Kill a guard by getting other guards to shoot him."
     },
@@ -487,8 +511,8 @@
     },
     {
      "apiname": "snare",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791513254,
      "name": "Snare",
      "description": "Use a dead body to lure another guard and then stealth kill him."
     },
@@ -508,8 +532,8 @@
     },
     {
      "apiname": "behind_the_curtain",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791728905,
      "name": "Behind the Curtain",
      "description": "View any of the developer commentaries."
     },
@@ -536,8 +560,8 @@
     },
     {
      "apiname": "history_lesson",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791728905,
      "name": "Well, *I* Think It's Interesting",
      "description": "Read one of the history lesson developer commentaries."
     },

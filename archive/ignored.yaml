@@ -1,6 +1,10 @@
 # Games deliberately excluded from the scan and backlog lists.
 # Nothing is deleted by being here — remove an entry and it comes back.
 games:
+    - provider: googleplay
+      id: "670707713680"
+      title: 'while True: learn()'
+      ignored_on: "2026-10-24"
     - provider: steam
       id: "223850"
       title: 3DMark
@@ -85,3 +89,7 @@ games:
       id: "433850"
       title: Z1 Battle Royale
       ignored_on: "2026-08-15"
+    - provider: xbox
+      id: "1313673121"
+      title: 'Dark Souls: Prepare to Die Edition'
+      ignored_on: "2026-10-24"

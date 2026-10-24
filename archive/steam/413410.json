@@ -1,21 +1,22 @@
 {
  "provider": "steam",
  "title": "Danganronpa: Trigger Happy Havoc",
- "updated": "2026-09-25",
+ "updated": "2026-10-24",
  "id": "413410",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
- "unlocked": 9,
+ "fetched": "2026-10-24",
+ "last_attempt": "2026-10-24",
+ "unlocked": 10,
  "total": 38,
  "first": "2017-08-06",
- "last": "2017-08-14",
+ "last": "2026-10-05",
  "platform": "PC",
  "icon": "221f5116c2c1d46fa71a7b014b5e882334a2d0da",
- "playtime_mins": 3173,
+ "playtime_mins": 3182,
  "playtime": {
+  "linux": 8,
   "windows": 4
  },
- "last_played": "2022-11-05",
+ "last_played": "2026-10-05",
  "achievements": [
   {
    "key": "PROLOGUE",
@@ -90,18 +91,19 @@
    "hidden": true
   },
   {
+   "key": "CHAPTER_ALL",
+   "name": "All's Well That Ends...Umm...",
+   "unlocked": true,
+   "date": "2026-10-05T19:47:03-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
+   "hidden": true
+  },
+  {
    "key": "ASAHINA",
    "name": "Mystic Donut",
    "description": "Filled in every page of Aoi's Report Card",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
-  },
-  {
-   "key": "CHAPTER_ALL",
-   "name": "All's Well That Ends...Umm...",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
-   "hidden": true
   },
   {
    "key": "ENISHIMA",
@@ -342,8 +344,8 @@
     },
     {
      "apiname": "CHAPTER_ALL",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1791247623,
      "name": "All's Well That Ends...Umm...",
      "description": ""
     },

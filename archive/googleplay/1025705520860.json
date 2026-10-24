@@ -1,0 +1,70 @@
+{
+ "provider": "googleplay",
+ "title": "Reigns",
+ "updated": "2026-10-24",
+ "id": "1025705520860",
+ "fetched": "2026-10-24",
+ "last_attempt": "2026-10-24",
+ "unlocked": 2,
+ "total": 13,
+ "first": "2016-09-09",
+ "last": "2016-09-09",
+ "platform": "Google Play",
+ "completion": "3%",
+ "source": "exophase",
+ "last_played": "2017-05-06",
+ "achievements": [
+  {
+   "key": "CgkI3N3Ahu0dEAIQBw",
+   "name": "elder",
+   "unlocked": true,
+   "date": "2016-09-09T13:57:50-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5"
+  },
+  {
+   "key": "CgkI3N3Ahu0dEAIQBA",
+   "name": "shooting-star",
+   "unlocked": true,
+   "date": "2016-09-09T14:54:52-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 2572030,
+    "awardid": 2572030,
+    "earned": "September 9, 2016, 7:54 pm (UTC+0)",
+    "slug": "shooting-star",
+    "canonical_id": "CgkI3N3Ahu0dEAIQBA",
+    "endpoint": "\/achievement\/reigns-android\/11553-shooting-star",
+    "icons": {
+     "s": "\/android\/awards\/s\/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "m": "\/android\/awards\/m\/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "l": "\/android\/awards\/l\/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "o": "\/android\/awards\/o\/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "t": "\/android\/awards\/t\/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5"
+    },
+    "timestamp": 1473450892
+   },
+   {
+    "masterAwardId": 2572033,
+    "awardid": 2572033,
+    "earned": "September 9, 2016, 6:57 pm (UTC+0)",
+    "slug": "elder",
+    "canonical_id": "CgkI3N3Ahu0dEAIQBw",
+    "endpoint": "\/achievement\/reigns-android\/11556-elder",
+    "icons": {
+     "s": "\/android\/awards\/s\/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "m": "\/android\/awards\/m\/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "l": "\/android\/awards\/l\/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "o": "\/android\/awards\/o\/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5",
+     "t": "\/android\/awards\/t\/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5"
+    },
+    "timestamp": 1473447470
+   }
+  ],
+  "master_gameid": "140458",
+  "success": true
+ }
+}

@@ -1,0 +1,519 @@
+{
+ "provider": "steam",
+ "title": "Database Detective: Minor Crimes Division",
+ "updated": "2026-10-24",
+ "id": "3950130",
+ "fetched": "2026-10-24",
+ "last_attempt": "2026-10-24",
+ "unlocked": 13,
+ "total": 34,
+ "first": "2026-10-06",
+ "last": "2026-10-19",
+ "platform": "PC",
+ "icon": "05908d206c4b91d5d5e59ea5b52a15dd6773c3ac",
+ "playtime_mins": 349,
+ "playtime": {
+  "linux": 349
+ },
+ "last_played": "2026-10-21",
+ "achievements": [
+  {
+   "key": "LEVEL_1",
+   "name": "Keeping the City Clean",
+   "unlocked": true,
+   "date": "2026-10-06T19:01:34-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/28923569f271f89e8ef99c17f27d9eb33cdd160d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SQL_EXPERT",
+   "name": "SQL Expert",
+   "description": "Create your first table.",
+   "unlocked": true,
+   "date": "2026-10-06T19:08:24-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/c6aaf039ffd88af3d1ded40992e905c0723868d4.jpg"
+  },
+  {
+   "key": "LEVEL_2",
+   "name": "Environmental Terrorism",
+   "unlocked": true,
+   "date": "2026-10-06T19:08:57-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/83eb53be2273318042be36a12c3d619a6efaab6c.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LEVEL_3",
+   "name": "Sandwich Theft",
+   "unlocked": true,
+   "date": "2026-10-06T19:17:55-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/33f39be7811f9ac60caad4c0b386ca2ad55568d1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LEVEL_4",
+   "name": "Help a Landlord",
+   "unlocked": true,
+   "date": "2026-10-06T19:40:34-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/73f1217c2f359fb35bb79c8382a69b5adb470ce7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LEVEL_5",
+   "name": "Stop a War Criminal",
+   "unlocked": true,
+   "date": "2026-10-06T20:06:35-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4734453c55b97915b240f849a44e87e9c273c736.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FIVE_OUT_OF_FIVE",
+   "name": "That was a positive review, right?",
+   "description": "Write a review for your great leader.",
+   "unlocked": true,
+   "date": "2026-10-11T14:20:07-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/6929b2cd943127020681d14d6e57740a3c5bd87a.jpg"
+  },
+  {
+   "key": "FROG_MEMBER",
+   "name": "Frog Fan",
+   "description": "Apply to be a member of frogblog.net",
+   "unlocked": true,
+   "date": "2026-10-11T14:24:37-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4bc661414c81c223344f135ac8feff233f852058.jpg"
+  },
+  {
+   "key": "MULTIPLE_DELETE",
+   "name": "Destroyer of Tables",
+   "description": "Delete multiple tables at once.",
+   "unlocked": true,
+   "date": "2026-10-11T14:28:30-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/9f68501b0e70d4e34b6df2a8def98d37b17bfcc1.jpg"
+  },
+  {
+   "key": "LEVEL_6",
+   "name": "Defamation Detective",
+   "unlocked": true,
+   "date": "2026-10-11T15:08:34-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/d82dd9dd0ee68d21582cd6be4ed88fe9870d2d69.jpg",
+   "hidden": true
+  },
+  {
+   "key": "SQL_CREATOR",
+   "name": "Creator of Tables",
+   "description": "Create 50 tables.",
+   "unlocked": true,
+   "date": "2026-10-11T15:52:58-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/009ed9c43895cb75687a8f7cfe28d7843d680ddf.jpg"
+  },
+  {
+   "key": "LEVEL_7",
+   "name": "Legend of New Hampshire ",
+   "unlocked": true,
+   "date": "2026-10-13T19:23:24-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/7613e80580e78403565c6da189bc79f385492aff.jpg",
+   "hidden": true
+  },
+  {
+   "key": "APPLY_LZU",
+   "name": "Future Valedictorian",
+   "description": "Apply to LZU.",
+   "unlocked": true,
+   "date": "2026-10-19T18:10:27-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/c184e05922dde60e8403acdde1831c74901fee1d.jpg"
+  },
+  {
+   "key": "ARREST_CHILD",
+   "name": "Minor Crimes",
+   "description": "Arrest a child.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4a5f4e634b55557bfd1fa97316ee95565b82b2d2.jpg"
+  },
+  {
+   "key": "ARREST_ZORAN",
+   "name": "Very Funny",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/d7210633a8e68eef1338afe7a20f6f9a10bba805.jpg",
+   "hidden": true
+  },
+  {
+   "key": "BAD_GAME",
+   "name": "Sorry...",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/9c92c05008a3762482dee6ead0a44176f28bae7a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FAIL",
+   "name": "Busted",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/dd5460490d58371694f6676366b40b95a352ef65.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FINISH",
+   "name": "Thanks For Playing!!!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/8e9fa451f58cd80f000b17b2e649fa99e3785dc1.jpg",
+   "hidden": true
+  },
+  {
+   "key": "FROG_MAN",
+   "name": "Frog Man",
+   "description": " ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/551b1ce5b357943a255ae56760b0d382a4064f55.jpg"
+  },
+  {
+   "key": "GAMBLING_ADDICT",
+   "name": "Donation Addict",
+   "description": "Try to donate to goallin.com",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/38f93d13a4388f433310ca134edfa33ac7c379b7.jpg"
+  },
+  {
+   "key": "GOOD_GAME",
+   "name": "You're too kind!",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/094de66d97d89ec05364ec622f2fd24f13afa33a.jpg",
+   "hidden": true
+  },
+  {
+   "key": "HEARTBREAKER",
+   "name": "Heartbreaker",
+   "description": "Arrest someone featured on selectyourstar.com",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1bf47b38773927d43a2b3c6c5c96f9a0d0b1df9d.jpg"
+  },
+  {
+   "key": "HONK",
+   "name": "honk",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/a04a93bdcb2f7b8129c5b07f503e89e7db5f2bf3.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LEAVE_EARLY",
+   "name": "First to Leave, Last to Arrive",
+   "description": "Try to leave early.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/122103f68ac1126c461047de4559580954876af0.jpg"
+  },
+  {
+   "key": "LEVEL_10",
+   "name": "The Truth Revealed",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/481d37a5296b9df4e43d64b070b62eb0794dcb8d.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LEVEL_8",
+   "name": "LMAO PLZ",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1793f630314016b057f6fb9f9ce4860e567b36d9.jpg",
+   "hidden": true
+  },
+  {
+   "key": "LEVEL_9",
+   "name": "The Most Minor of Crimes",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/e4e8e8f6de6514cf7c0c181cbcf6f8b29054429f.jpg",
+   "hidden": true
+  },
+  {
+   "key": "MAJOR_CRIME",
+   "name": "STOP",
+   "description": "Try to commit a major crime.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4c7ff29e956b40f383c397dc8346f03a1dd21f2b.jpg"
+  },
+  {
+   "key": "MOLEMAN_PEEP",
+   "name": "Peeper",
+   "description": "Let the moleman on the tree watch you for a bit.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/e943c8478f2101dd1a80481d4ec26702cbd8d49f.jpg"
+  },
+  {
+   "key": "NEWSPAPER_HEADLINE",
+   "name": "Status Quo Enjoyer",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/bbe8cf9c1ddcf488d83cdd6f79e1ce8040433af7.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PICTURES_OF_YOU",
+   "name": "Pictures of You(r Arrest)",
+   "description": "Arrest a certain someone in level 7.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/a3f285eb3f4fc295770467f14b15c8cf5c5b2f74.jpg"
+  },
+  {
+   "key": "PINK_SLIP",
+   "name": "Pink Slip",
+   "description": "Get laid off.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1099b3fe43d101cdf24dfadc890d71148cb31168.jpg"
+  },
+  {
+   "key": "VACATION",
+   "name": "On Vacation",
+   "description": "Get put on temporary leave.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/fd80bf88a90ab602f46e92add24060d1e6988bd6.jpg"
+  },
+  {
+   "key": "WEBTROTTER",
+   "name": "Webtrotter",
+   "description": "Visit every website.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/da16dcc22cf3df634e56ffe22986cb4180f7761b.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Database Detective: Minor Crimes Division",
+   "achievements": [
+    {
+     "apiname": "PINK_SLIP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pink Slip",
+     "description": "Get laid off."
+    },
+    {
+     "apiname": "MULTIPLE_DELETE",
+     "achieved": 1,
+     "unlocktime": 1791746910,
+     "name": "Destroyer of Tables",
+     "description": "Delete multiple tables at once."
+    },
+    {
+     "apiname": "PICTURES_OF_YOU",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pictures of You(r Arrest)",
+     "description": "Arrest a certain someone in level 7."
+    },
+    {
+     "apiname": "GOOD_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "You're too kind!",
+     "description": ""
+    },
+    {
+     "apiname": "BAD_GAME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sorry...",
+     "description": ""
+    },
+    {
+     "apiname": "GAMBLING_ADDICT",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Donation Addict",
+     "description": "Try to donate to goallin.com"
+    },
+    {
+     "apiname": "WEBTROTTER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Webtrotter",
+     "description": "Visit every website."
+    },
+    {
+     "apiname": "HEARTBREAKER",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Heartbreaker",
+     "description": "Arrest someone featured on selectyourstar.com"
+    },
+    {
+     "apiname": "MOLEMAN_PEEP",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Peeper",
+     "description": "Let the moleman on the tree watch you for a bit."
+    },
+    {
+     "apiname": "MAJOR_CRIME",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "STOP",
+     "description": "Try to commit a major crime."
+    },
+    {
+     "apiname": "FROG_MAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Frog Man",
+     "description": " "
+    },
+    {
+     "apiname": "LEVEL_1",
+     "achieved": 1,
+     "unlocktime": 1791331294,
+     "name": "Keeping the City Clean",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_2",
+     "achieved": 1,
+     "unlocktime": 1791331737,
+     "name": "Environmental Terrorism",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_3",
+     "achieved": 1,
+     "unlocktime": 1791332275,
+     "name": "Sandwich Theft",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_4",
+     "achieved": 1,
+     "unlocktime": 1791333634,
+     "name": "Help a Landlord",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_5",
+     "achieved": 1,
+     "unlocktime": 1791335195,
+     "name": "Stop a War Criminal",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_6",
+     "achieved": 1,
+     "unlocktime": 1791749314,
+     "name": "Defamation Detective",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_7",
+     "achieved": 1,
+     "unlocktime": 1791937404,
+     "name": "Legend of New Hampshire ",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_8",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "LMAO PLZ",
+     "description": ""
+    },
+    {
+     "apiname": "LEVEL_9",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Most Minor of Crimes",
+     "description": ""
+    },
+    {
+     "apiname": "FIVE_OUT_OF_FIVE",
+     "achieved": 1,
+     "unlocktime": 1791746407,
+     "name": "That was a positive review, right?",
+     "description": "Write a review for your great leader."
+    },
+    {
+     "apiname": "VACATION",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "On Vacation",
+     "description": "Get put on temporary leave."
+    },
+    {
+     "apiname": "APPLY_LZU",
+     "achieved": 1,
+     "unlocktime": 1792451427,
+     "name": "Future Valedictorian",
+     "description": "Apply to LZU."
+    },
+    {
+     "apiname": "LEVEL_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Truth Revealed",
+     "description": ""
+    },
+    {
+     "apiname": "LEAVE_EARLY",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "First to Leave, Last to Arrive",
+     "description": "Try to leave early."
+    },
+    {
+     "apiname": "NEWSPAPER_HEADLINE",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Status Quo Enjoyer",
+     "description": ""
+    },
+    {
+     "apiname": "FAIL",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Busted",
+     "description": ""
+    },
+    {
+     "apiname": "FINISH",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Thanks For Playing!!!",
+     "description": ""
+    },
+    {
+     "apiname": "ARREST_ZORAN",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Very Funny",
+     "description": ""
+    },
+    {
+     "apiname": "FROG_MEMBER",
+     "achieved": 1,
+     "unlocktime": 1791746677,
+     "name": "Frog Fan",
+     "description": "Apply to be a member of frogblog.net"
+    },
+    {
+     "apiname": "SQL_EXPERT",
+     "achieved": 1,
+     "unlocktime": 1791331704,
+     "name": "SQL Expert",
+     "description": "Create your first table."
+    },
+    {
+     "apiname": "SQL_CREATOR",
+     "achieved": 1,
+     "unlocktime": 1791751978,
+     "name": "Creator of Tables",
+     "description": "Create 50 tables."
+    },
+    {
+     "apiname": "ARREST_CHILD",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Minor Crimes",
+     "description": "Arrest a child."
+    },
+    {
+     "apiname": "HONK",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "honk",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}
