@@ -354,11 +354,11 @@ func suggestRangeLine(start, finish time.Time, confidence string) string {
 // hanging for minutes.
 func (s *server) handleAchievementsAll(w http.ResponseWriter, r *http.Request) {
 	id, j := s.jobs.create("Achievements — refresh all", "/housekeeping", "Back to housekeeping")
-	go s.runAchievementsAllJob(j)
+	go s.runAchievementsAllJob(j, r.FormValue("full") == "1")
 	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
 }
 
-func (s *server) runAchievementsAllJob(j *job) {
+func (s *server) runAchievementsAllJob(j *job, full bool) {
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
 		j.finish(err)
@@ -375,12 +375,17 @@ func (s *server) runAchievementsAllJob(j *job) {
 	}
 	skipped, total := len(games)-len(withLinks), len(withLinks)
 
+	var opts []commands.SaveOption
+	if !full {
+		opts = append(opts, commands.SkipUnchanged)
+	}
+
 	var refreshed, failed int
 	for i, g := range withLinks {
 		links := g.ProviderLinks()
 		j.progress(i+1, total, g.Title)
 		j.log("%s", g.Title)
-		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, links, creds)
+		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, links, creds, opts...)
 		if err != nil {
 			j.log("  %v", err)
 			failed++
@@ -388,7 +393,9 @@ func (s *server) runAchievementsAllJob(j *job) {
 		}
 		for _, sv := range saved {
 			p := sv.Record
-			if p.LastError != "" {
+			if sv.Skipped {
+				j.log("  %s: unchanged since last fetch, skipped", sv.Label())
+			} else if p.LastError != "" {
 				j.log("  %s: %s (existing data kept)", sv.Label(), p.LastError)
 			} else {
 				j.log("  %s: %d/%d unlocked, %s to %s", sv.Label(), p.Unlocked, p.Total, p.First, p.Last)

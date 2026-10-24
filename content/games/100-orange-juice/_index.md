@@ -1,21 +1,18 @@
 ---
-title: "100% Orange Juice"
-platform: "PC"
-retroachievements_id:
+title: 100% Orange Juice
+platform: PC
+retroachievements_id: null
 steam_appid: 282800
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: multiplayer
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["100-orange-juice"]
+    games:
+      - 100-orange-juice
+cover: null
 ---
 
 

@@ -1,21 +1,18 @@
 ---
-title: "Her Story"
-platform: "PC"
-retroachievements_id:
+title: Her Story
+platform: PC
+retroachievements_id: null
 steam_appid: 368370
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "mastered"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: mastered
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["her-story"]
+    games:
+      - her-story
+cover: null
 ---
 
 

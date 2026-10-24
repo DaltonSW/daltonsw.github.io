@@ -1,21 +1,18 @@
 ---
-title: "Factorio"
-platform: "PC"
-retroachievements_id:
+title: Factorio
+platform: PC
+retroachievements_id: null
 steam_appid: 427520
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["factorio"]
+    games:
+      - factorio
+cover: null
 ---
 
 

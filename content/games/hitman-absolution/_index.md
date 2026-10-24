@@ -1,21 +1,18 @@
 ---
-title: "Hitman: Absolution"
-platform: "PC"
-retroachievements_id:
+title: 'Hitman: Absolution'
+platform: PC
+retroachievements_id: null
 steam_appid: 203140
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["hitman-absolution"]
+    games:
+      - hitman-absolution
+cover: null
 ---
 
 

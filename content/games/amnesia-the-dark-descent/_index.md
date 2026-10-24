@@ -1,21 +1,18 @@
 ---
-title: "Amnesia: The Dark Descent"
-platform: "PC"
-retroachievements_id:
+title: 'Amnesia: The Dark Descent'
+platform: PC
+retroachievements_id: null
 steam_appid: 57300
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: "2016-03-02"
+finished: "2016-03-02"
+rating: null
+draft: false
 cascade:
   params:
-    games: ["amnesia-the-dark-descent"]
+    games:
+      - amnesia-the-dark-descent
+cover: null
 ---
 
 

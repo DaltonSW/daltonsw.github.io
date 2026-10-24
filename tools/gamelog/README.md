@@ -531,6 +531,15 @@ go run . achievements --all    # refresh every game with a provider link
 `ListGames` returns that has a provider link — it inherits the merge-only guarantees below rather
 than needing its own, which is what makes it safe to point an unattended, scheduled run at.
 
+`--all` skips Steam games that haven't moved: the library listing is fetched once per run anyway, and
+if a game's `playtime_forever` and last-played day match the archive (and its last fetch succeeded),
+the per-game achievements/schema requests are left out. Anything uncertain — nothing archived, no
+successful fetch yet, a failed last attempt, the game missing from the listing — is fetched as
+usual. Offline unlocks can sync later without moving either value, so `--all --full` (or the
+"Re-fetch unchanged Steam games too" box on Housekeeping → Achievements) forces everything; worth
+doing now and then. Single-game refreshes and Scan/Backlog always fetch. Other providers aren't
+skipped yet.
+
 ### Closing the gap with the timeline
 
 Everything above only touches `archive/` and `achievement-summary.yaml` — never

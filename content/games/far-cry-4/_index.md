@@ -1,21 +1,18 @@
 ---
-title: "Far Cry 4"
-platform: "PC"
-retroachievements_id:
+title: Far Cry 4
+platform: PC
+retroachievements_id: null
 steam_appid: 298110
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["far-cry-4"]
+    games:
+      - far-cry-4
+cover: null
 ---
 
 

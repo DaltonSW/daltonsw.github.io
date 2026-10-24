@@ -1,21 +1,18 @@
 ---
-title: "The Basement Collection"
-platform: "PC"
-retroachievements_id:
+title: The Basement Collection
+platform: PC
+retroachievements_id: null
 steam_appid: 214790
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "endless"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: endless
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-basement-collection"]
+    games:
+      - the-basement-collection
+cover: null
 ---
 
 

@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"sync"
+	"time"
 
 	"github.com/charmbracelet/huh"
 
@@ -59,6 +60,10 @@ type savedRecord struct {
 	Subset   bool
 	Path     string
 	Record   *model.ArchiveRecord
+	// Skipped means the provider reported nothing new since the last fetch, so
+	// no per-game request was made and Record is simply what was already
+	// archived.
+	Skipped bool
 }
 
 // Label names the record in a progress line. Every link on a game reports the
@@ -89,7 +94,14 @@ func (s savedRecord) Label() string {
 // in place. That's safe, and better than discarding it: every write is a merge
 // that can only add (see model.mergeProvider), so a half-finished refresh is
 // simply a refresh of fewer sets.
-func SaveAchievements(ctx context.Context, archiveDir, title string, links []model.ProviderLink, creds Credentials) ([]savedRecord, error) {
+//
+// SkipUnchanged is for bulk refreshes: a Steam game whose playtime and
+// last-played date match the archive is not re-fetched (see steamUnchanged).
+func SaveAchievements(ctx context.Context, archiveDir, title string, links []model.ProviderLink, creds Credentials, opts ...SaveOption) ([]savedRecord, error) {
+	var o saveOptions
+	for _, opt := range opts {
+		opt(&o)
+	}
 	var (
 		raClient    *retroachievements.RAClient
 		steamClient *steam.SteamClient
@@ -128,6 +140,13 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 				if strconv.Itoa(steamOwned[i].AppID) == link.ID {
 					owned = &steamOwned[i]
 					break
+				}
+			}
+			if o.skipUnchanged && owned != nil {
+				if prev, lerr := model.LoadRecord(archiveDir, link.Provider, link.ID); lerr == nil && steamUnchanged(prev, owned) {
+					saved = append(saved, savedRecord{Provider: link.Provider, ID: link.ID, Subset: link.Subset,
+						Path: model.RecordPath(archiveDir, link.Provider, link.ID), Record: prev, Skipped: true})
+					continue
 				}
 			}
 			rec, err = steam.FetchRecord(ctx, steamClient, link.ID, owned)
@@ -184,11 +203,41 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 	return saved, nil
 }
 
+type saveOptions struct{ skipUnchanged bool }
+
+// SaveOption tunes SaveAchievements.
+type SaveOption func(*saveOptions)
+
+// SkipUnchanged lets SaveAchievements leave a Steam game alone when the
+// library listing shows nothing has happened to it since the last fetch.
+var SkipUnchanged SaveOption = func(o *saveOptions) { o.skipUnchanged = true }
+
+// steamUnchanged reports whether the already-archived Steam record is still
+// current against the library listing, which is fetched once per run anyway.
+// Any play moves playtime_forever, so equal playtime and last-played day mean
+// no new unlocks are expected. It errs toward fetching: nothing archived yet,
+// a never-successful fetch, or a failed last attempt all count as changed.
+// Achievements unlocked offline can sync later without moving either value, so
+// a full (non-skipping) refresh is still worth running occasionally.
+func steamUnchanged(prev *model.ArchiveRecord, owned *steam.SteamOwnedGame) bool {
+	if prev == nil || prev.Fetched == "" || prev.LastError != "" {
+		return false
+	}
+	if prev.PlaytimeMins != owned.PlaytimeMins {
+		return false
+	}
+	lastPlayed := ""
+	if owned.LastPlayed > 0 {
+		lastPlayed = time.Unix(owned.LastPlayed, 0).In(model.SiteLocation).Format("2006-01-02")
+	}
+	return prev.LastPlayed == lastPlayed
+}
+
 // RunAchievements fetches (or refreshes) the achievement history for one game
 // that already exists in content/games.
 func RunAchievements(args []string) error {
 	if len(args) > 0 && args[0] == "--all" {
-		return runAchievementsAll()
+		return runAchievementsAll(len(args) > 1 && args[1] == "--full")
 	}
 
 	gamesDir, err := model.FindGamesDir()
@@ -317,7 +366,7 @@ func maybePromptNewSession(gameDir, title string, saved []savedRecord) error {
 // more than saveAchievements/model.WriteAchievementSummary called per game, so it
 // inherits the same merge-only, never-lose-data guarantees as the one-game
 // path rather than needing its own.
-func runAchievementsAll() error {
+func runAchievementsAll(full bool) error {
 	gamesDir, err := model.FindGamesDir()
 	if err != nil {
 		return err
@@ -329,6 +378,11 @@ func runAchievementsAll() error {
 	archiveDir := model.FindArchiveDir(gamesDir)
 	creds := LoadCredentials()
 
+	var opts []SaveOption
+	if !full {
+		opts = append(opts, SkipUnchanged)
+	}
+
 	var refreshed, skipped, failed int
 	for _, g := range games {
 		links := g.ProviderLinks()
@@ -338,7 +392,7 @@ func runAchievementsAll() error {
 		}
 
 		fmt.Println(g.Title)
-		saved, err := SaveAchievements(context.Background(), archiveDir, g.Title, links, creds)
+		saved, err := SaveAchievements(context.Background(), archiveDir, g.Title, links, creds, opts...)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "  %v\n", err)
 			failed++
@@ -346,7 +400,9 @@ func runAchievementsAll() error {
 		}
 		for _, s := range saved {
 			p := s.Record
-			if p.LastError != "" {
+			if s.Skipped {
+				fmt.Printf("  %s: unchanged since last fetch, skipped\n", s.Label())
+			} else if p.LastError != "" {
 				fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Label(), p.LastError)
 			} else {
 				fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Label(), p.Unlocked, p.Total, p.First, p.Last)

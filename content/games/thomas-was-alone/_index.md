@@ -1,21 +1,18 @@
 ---
-title: "Thomas Was Alone"
-platform: "PC"
-retroachievements_id:
+title: Thomas Was Alone
+platform: PC
+retroachievements_id: null
 steam_appid: 220780
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["thomas-was-alone"]
+    games:
+      - thomas-was-alone
+cover: null
 ---
 
 

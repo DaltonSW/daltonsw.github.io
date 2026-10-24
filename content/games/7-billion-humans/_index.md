@@ -1,21 +1,18 @@
 ---
-title: "7 Billion Humans"
-platform: "PC"
-retroachievements_id:
+title: 7 Billion Humans
+platform: PC
+retroachievements_id: null
 steam_appid: 792100
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: unfinished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["7-billion-humans"]
+    games:
+      - 7-billion-humans
+cover: null
 ---
 
 

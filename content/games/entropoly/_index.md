@@ -1,21 +1,18 @@
 ---
-title: "ENTROPOLY"
-platform: "PC"
-retroachievements_id:
+title: ENTROPOLY
+platform: PC
+retroachievements_id: null
 steam_appid: 2226160
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "unfinished"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: unfinished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["entropoly"]
+    games:
+      - entropoly
+cover: null
 ---
 
 

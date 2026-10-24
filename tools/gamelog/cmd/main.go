@@ -73,7 +73,7 @@ func newSuggestCmd() *cobra.Command {
 }
 
 func newAchievementsCmd() *cobra.Command {
-	var all bool
+	var all, full bool
 	c := &cobra.Command{
 		Use:   "achievements [slug]",
 		Short: "Capture unlock history into archive/<provider>/<id>.json",
@@ -85,12 +85,17 @@ func newAchievementsCmd() *cobra.Command {
 				if len(args) > 0 {
 					return fmt.Errorf("cannot combine --all with a slug argument")
 				}
-				return commands.RunAchievements([]string{"--all"})
+				args = []string{"--all"}
+				if full {
+					args = append(args, "--full")
+				}
+				return commands.RunAchievements(args)
 			}
 			return commands.RunAchievements(args)
 		},
 	}
 	c.Flags().BoolVar(&all, "all", false, "refresh every game that has a provider link, instead of one slug at a time")
+	c.Flags().BoolVar(&full, "full", false, "with --all, also re-fetch Steam games whose playtime and last-played date are unchanged")
 	return c
 }
 

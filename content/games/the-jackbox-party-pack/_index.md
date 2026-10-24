@@ -1,21 +1,18 @@
 ---
-title: "The Jackbox Party Pack"
-platform: "PC"
-retroachievements_id:
+title: The Jackbox Party Pack
+platform: PC
+retroachievements_id: null
 steam_appid: 331670
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: multiplayer
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-jackbox-party-pack"]
+    games:
+      - the-jackbox-party-pack
+cover: null
 ---
 
 

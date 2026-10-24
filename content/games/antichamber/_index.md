@@ -1,21 +1,18 @@
 ---
-title: "Antichamber"
-platform: "PC"
-retroachievements_id:
+title: Antichamber
+platform: PC
+retroachievements_id: null
 steam_appid: 219890
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: finished
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["antichamber"]
+    games:
+      - antichamber
+cover: null
 ---
 
 

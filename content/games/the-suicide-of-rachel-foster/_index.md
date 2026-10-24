@@ -1,21 +1,18 @@
 ---
-title: "The Suicide of Rachel Foster"
-platform: "PC"
-retroachievements_id:
+title: The Suicide of Rachel Foster
+platform: PC
+retroachievements_id: null
 steam_appid: 1057750
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "mastered"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: mastered
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-suicide-of-rachel-foster"]
+    games:
+      - the-suicide-of-rachel-foster
+cover: null
 ---
 
 

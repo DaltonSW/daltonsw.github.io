@@ -1,21 +1,18 @@
 ---
-title: "Finding Paradise"
-platform: "PC"
-retroachievements_id:
+title: Finding Paradise
+platform: PC
+retroachievements_id: null
 steam_appid: 337340
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["finding-paradise"]
+    games:
+      - finding-paradise
+cover: null
 ---
 
 

@@ -1,21 +1,18 @@
 ---
-title: "Emily is Away"
-platform: "PC"
-retroachievements_id:
+title: Emily is Away
+platform: PC
+retroachievements_id: null
 steam_appid: 417860
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "mastered"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: mastered
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["emily-is-away"]
+    games:
+      - emily-is-away
+cover: null
 ---
 
 

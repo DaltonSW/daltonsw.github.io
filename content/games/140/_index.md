@@ -1,21 +1,18 @@
 ---
 title: "140"
-platform: "PC"
-retroachievements_id:
+platform: PC
+retroachievements_id: null
 steam_appid: 242820
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: dropped
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["140"]
+    games:
+      - "140"
+cover: null
 ---
 
 

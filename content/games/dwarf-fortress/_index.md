@@ -1,21 +1,18 @@
 ---
-title: "Dwarf Fortress"
-platform: "PC"
-retroachievements_id:
+title: Dwarf Fortress
+platform: PC
+retroachievements_id: null
 steam_appid: 975370
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dwarf-fortress"]
+    games:
+      - dwarf-fortress
+cover: null
 ---
 
 

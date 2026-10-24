@@ -1,21 +1,18 @@
 ---
-title: "PEAK"
-platform: "PC"
-retroachievements_id:
+title: PEAK
+platform: PC
+retroachievements_id: null
 steam_appid: 3527290
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["peak"]
+    games:
+      - peak
+cover: null
 ---
 
 

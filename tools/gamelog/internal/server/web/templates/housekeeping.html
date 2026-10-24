@@ -396,8 +396,11 @@
   <span class="tui__title">refresh all</span>
   <p>Fetches every linked game's unlock history from every provider it's linked to. RA throttles to
      ~1.2s/request, so with 200+ linked games this can take several minutes — runs as a background
-     job you can watch progress on.</p>
+     job you can watch progress on. Steam games whose playtime and last-played date haven't moved
+     since the last fetch are skipped; tick the box to re-fetch those too (worth doing now and then,
+     since offline unlocks can sync without moving either).</p>
   <form method="post" action="/achievements/all">
+    <label><input type="checkbox" name="full" value="1"> Re-fetch unchanged Steam games too</label>
     <button type="submit" class="btn--primary">Refresh all</button>
   </form>
 </div>

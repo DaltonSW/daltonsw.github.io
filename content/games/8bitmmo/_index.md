@@ -1,21 +1,18 @@
 ---
-title: "8BitMMO"
-platform: "PC"
-retroachievements_id:
+title: 8BitMMO
+platform: PC
+retroachievements_id: null
 steam_appid: 250420
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: multiplayer
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["8bitmmo"]
+    games:
+      - 8bitmmo
+cover: null
 ---
 
 
