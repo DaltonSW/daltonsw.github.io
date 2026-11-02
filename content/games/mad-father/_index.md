@@ -1,21 +1,18 @@
 ---
-title: "Mad Father"
-platform: "PC"
-retroachievements_id:
+title: Mad Father
+platform: PC
+retroachievements_id: null
 steam_appid: 483980
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["mad-father"]
+    games:
+      - mad-father
+cover: null
 ---
 
 

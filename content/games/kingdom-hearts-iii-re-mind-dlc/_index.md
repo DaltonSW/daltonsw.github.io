@@ -1,21 +1,18 @@
 ---
-title: "KINGDOM HEARTS III + Re Mind (DLC)"
-platform: "PC"
-retroachievements_id:
+title: KINGDOM HEARTS III + Re Mind (DLC)
+platform: PC
+retroachievements_id: null
 steam_appid: 2552450
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["kingdom-hearts-iii-re-mind-dlc"]
+    games:
+      - kingdom-hearts-iii-re-mind-dlc
+cover: null
 ---
 
 

@@ -1,21 +1,18 @@
 ---
-title: "Spiritfarer®: Farewell Edition"
-platform: "PC"
-retroachievements_id:
+title: 'Spiritfarer®: Farewell Edition'
+platform: PC
+retroachievements_id: null
 steam_appid: 972660
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["spiritfarer-farewell-edition"]
+    games:
+      - spiritfarer-farewell-edition
+cover: null
 ---
 
 

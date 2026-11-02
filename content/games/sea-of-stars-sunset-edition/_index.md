@@ -1,21 +1,18 @@
 ---
-title: "Sea of Stars: Sunset Edition"
-platform: "PC"
-retroachievements_id:
+title: 'Sea of Stars: Sunset Edition'
+platform: PC
+retroachievements_id: null
 steam_appid: 1244090
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["sea-of-stars-sunset-edition"]
+    games:
+      - sea-of-stars-sunset-edition
+cover: null
 ---
 
 

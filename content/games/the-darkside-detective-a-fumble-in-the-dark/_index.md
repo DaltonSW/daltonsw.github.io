@@ -1,21 +1,18 @@
 ---
-title: "The Darkside Detective: A Fumble in the Dark"
-platform: "PC"
-retroachievements_id:
+title: 'The Darkside Detective: A Fumble in the Dark'
+platform: PC
+retroachievements_id: null
 steam_appid: 795420
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-started:
-finished:
-rating:
-cover:
-draft: true
+status: backlog
+started: ""
+finished: ""
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-darkside-detective-a-fumble-in-the-dark"]
+    games:
+      - the-darkside-detective-a-fumble-in-the-dark
+cover: null
 ---
 
 
