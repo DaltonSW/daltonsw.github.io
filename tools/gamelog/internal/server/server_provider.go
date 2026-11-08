@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"path/filepath"
+	"slices"
 	"strings"
 	"time"
 
@@ -99,7 +100,6 @@ type providerSuggestion struct {
 	Finished     string
 	FinishedHint string
 	Status       string
-	Notes        string
 }
 
 // sessionTarget is one existing playthrough a suggestion can be logged
@@ -173,7 +173,6 @@ func raSuggestion(pr commands.ProviderResult, defaultStatus string) providerSugg
 	}
 	started, last := commands.Day(s.Started), commands.Day(s.Finished)
 	out.Started = started
-	out.Notes = "dates suggested from RetroAchievements"
 	if s.Confidence == "high" {
 		out.Confidence = "high (" + s.AwardKind + ")"
 		out.Detail = fmt.Sprintf("earliest achievement %s · %s %s", started, s.AwardKind, last)
@@ -182,7 +181,6 @@ func raSuggestion(pr commands.ProviderResult, defaultStatus string) providerSugg
 		if s.AwardKind == "mastered" || s.AwardKind == "completed" {
 			out.Status = "mastered"
 		}
-		out.Notes += " (" + s.AwardKind + ")"
 		return out
 	}
 	out.Confidence = "medium — no award, not confirmed finished"
@@ -206,7 +204,6 @@ func steamSuggestion(pr commands.ProviderResult, defaultStatus string) providerS
 	if pr.SteamPlaytimeKnown {
 		out.Detail += " · " + commands.FormatHours(pr.SteamPlaytimeMinutes) + " total playtime"
 	}
-	out.Notes = fmt.Sprintf("dates suggested from Steam achievements (%d/%d)", s.UnlockedCount, s.TotalCount)
 	if s.UnlockedCount >= s.TotalCount {
 		out.Finished = last
 		out.Status = "finished"
@@ -352,13 +349,42 @@ func suggestRangeLine(start, finish time.Time, confidence string) string {
 // there can be 200+ linked games. Kicked off in a goroutine behind an
 // in-memory job so the page can poll progress instead of the request
 // hanging for minutes.
+//
+// An optional "provider" form value narrows the sweep to that one provider:
+// only games linked to it are visited, and only that link is fetched. The
+// achievement summary is still rebuilt from every link, since it reads the
+// archive rather than the fetch.
 func (s *server) handleAchievementsAll(w http.ResponseWriter, r *http.Request) {
-	id, j := s.jobs.create("Achievements — refresh all", "/housekeeping", "Back to housekeeping")
-	go s.runAchievementsAllJob(j, r.FormValue("full") == "1")
+	provider := r.FormValue("provider")
+	title := "Achievements — refresh all"
+	if provider != "" {
+		if !slices.Contains(model.ProviderOrder, provider) {
+			http.Error(w, "unknown provider "+provider, http.StatusBadRequest)
+			return
+		}
+		title = "Achievements — refresh " + model.ProviderLabel(provider)
+	}
+	id, j := s.jobs.create(title, "/housekeeping", "Back to housekeeping")
+	go s.runAchievementsAllJob(j, r.FormValue("full") == "1", provider)
 	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
 }
 
-func (s *server) runAchievementsAllJob(j *job, full bool) {
+// fetchLinks is the subset of links a sweep fetches: all of them, or just
+// the ones on provider when it's set.
+func fetchLinks(links []model.ProviderLink, provider string) []model.ProviderLink {
+	if provider == "" {
+		return links
+	}
+	var out []model.ProviderLink
+	for _, l := range links {
+		if l.Provider == provider {
+			out = append(out, l)
+		}
+	}
+	return out
+}
+
+func (s *server) runAchievementsAllJob(j *job, full bool, provider string) {
 	games, err := model.ListGames(s.gamesDir)
 	if err != nil {
 		j.finish(err)
@@ -369,7 +395,7 @@ func (s *server) runAchievementsAllJob(j *job, full bool) {
 
 	var withLinks []model.GameSummary
 	for _, g := range games {
-		if len(g.ProviderLinks()) > 0 {
+		if len(fetchLinks(g.ProviderLinks(), provider)) > 0 {
 			withLinks = append(withLinks, g)
 		}
 	}
@@ -385,7 +411,7 @@ func (s *server) runAchievementsAllJob(j *job, full bool) {
 		links := g.ProviderLinks()
 		j.progress(i+1, total, g.Title)
 		j.log("%s", g.Title)
-		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, links, creds, opts...)
+		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, fetchLinks(links, provider), creds, opts...)
 		if err != nil {
 			j.log("  %v", err)
 			failed++
@@ -408,7 +434,11 @@ func (s *server) runAchievementsAllJob(j *job, full bool) {
 	}
 	j.progress(total, total, "")
 	j.log("")
-	j.log("%d refreshed, %d with no provider link, %d failed", refreshed, skipped, failed)
+	noLink := "no provider link"
+	if provider != "" {
+		noLink = "no " + model.ProviderLabel(provider) + " link"
+	}
+	j.log("%d refreshed, %d with %s, %d failed", refreshed, skipped, noLink, failed)
 	j.finish(nil)
 }
 

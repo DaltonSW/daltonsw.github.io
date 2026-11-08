@@ -84,7 +84,6 @@ func TestSuggestPanelPrefills(t *testing.T) {
 		`value="2024-01-10"`,
 		`value="2024-03-02"`,
 		`<option value="mastered" selected>`,
-		`value="dates suggested from RetroAchievements (mastered)"`,
 		`placeholder="last activity 2024-02-20"`,
 		`12/40 achievements`,
 		`1.5h total playtime`,
@@ -99,6 +98,9 @@ func TestSuggestPanelPrefills(t *testing.T) {
 	}
 	if strings.Contains(out, "planned") {
 		t.Error("a planned entry was offered as a session target")
+	}
+	if strings.Contains(out, "dates suggested") {
+		t.Error("notes must start blank, not carry a provenance snippet")
 	}
 }
 

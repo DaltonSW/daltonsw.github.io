@@ -319,7 +319,7 @@ handlers as the rest of the page, so nothing is written until one is submitted a
 be edited first. A finished date is only pre-filled when the provider actually signals a finish (an
 RA award, or every Steam achievement unlocked); otherwise the field stays blank with the last
 activity date as its placeholder, and the status falls back to the game's usual default. The notes
-field is pre-filled with where the dates came from.
+field always starts blank.
 
 The ways in: a **Suggest** button on every linked row of the games list, the **Suggest** tab
 (linked games only, with a title filter), and the tab's **Sweep all games** button. The sweep runs

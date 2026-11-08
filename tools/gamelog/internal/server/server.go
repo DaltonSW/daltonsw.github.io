@@ -184,6 +184,8 @@ func newPage(r *http.Request, title, nav string) Page {
 	return Page{Title: title, Nav: nav, Flash: Flash{OK: q.Get("ok"), Error: q.Get("error")}}
 }
 
+type providerOption struct{ Key, Label string }
+
 var funcMap = template.FuncMap{
 	"pillClass": func(status string) string {
 		if status == "" {
@@ -197,7 +199,16 @@ var funcMap = template.FuncMap{
 	"pthStatuses":  func() []string { return forms.PlaythroughStatuses },
 	"staleQuick":   func() []string { return forms.StaleQuickStatuses },
 	"add1":         func(i int) int { return i + 1 },
-	"itoa":         strconv.Itoa,
+	// achievementProviders is every provider a refresh can target, in
+	// ProviderOrder, for the per-provider refresh buttons.
+	"achievementProviders": func() []providerOption {
+		out := make([]providerOption, len(model.ProviderOrder))
+		for i, p := range model.ProviderOrder {
+			out[i] = providerOption{Key: p, Label: model.ProviderLabel(p)}
+		}
+		return out
+	},
+	"itoa": strconv.Itoa,
 	"percent": func(current, total int) int {
 		if total <= 0 {
 			return 0

@@ -21,6 +21,15 @@ type OpenEntry struct {
 	DaysSince int
 }
 
+// Key identifies the entry across requests: the game's slug plus the entry's
+// index in its file. A position in FindOpenEntries' result is not stable — the
+// list is rebuilt on submit, and an entry closed elsewhere or crossing the
+// day threshold at midnight shifts every row after it — but an entry's index
+// within its own file never moves (nothing removes playthroughs by index).
+func (e OpenEntry) Key() string {
+	return fmt.Sprintf("%s:%d", e.Game.Slug, e.Index)
+}
+
 // FindOpenEntries collects every playthrough whose trailing date is blank and
 // whose last known activity is at least thresholdDays old.
 //

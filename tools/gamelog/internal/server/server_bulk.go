@@ -581,15 +581,40 @@ func (s *server) handleCloseSelected(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	closed := 0
-	for _, v := range r.Form["entry"] {
-		i, err := strconv.Atoi(v)
-		if err != nil || i < 0 || i >= len(open) {
+	// Match the ticked rows by key against the list as it stands now, never by
+	// position (see OpenEntry.Key). Re-deriving it also keeps its filters in
+	// force: a row that was closed elsewhere, paused, or dropped under the
+	// threshold since the page rendered is skipped, not written.
+	byKey := make(map[string]commands.OpenEntry, len(open))
+	for _, e := range open {
+		byKey[e.Key()] = e
+	}
+	selected := r.Form["entry"]
+	closed, skipped := 0, 0
+	var failures []string
+	for _, key := range selected {
+		e, ok := byKey[key]
+		if !ok {
+			skipped++
 			continue
 		}
-		if did, err := commands.CloseEntry(open[i]); err == nil && did {
+		did, err := commands.CloseEntry(e)
+		switch {
+		case err != nil:
+			failures = append(failures, fmt.Sprintf("%s: %v", e.Game.Title, err))
+		case did:
 			closed++
+		default:
+			skipped++
 		}
 	}
-	redirectOK(w, r, backTo, fmt.Sprintf("Closed %d of %d.", closed, len(open)))
+	msg := fmt.Sprintf("Closed %d of %d selected.", closed, len(selected))
+	if skipped > 0 {
+		msg += fmt.Sprintf(" %d no longer open, skipped.", skipped)
+	}
+	if len(failures) > 0 {
+		redirectErr(w, r, backTo, fmt.Errorf("%s Failed: %s", msg, strings.Join(failures, "; ")))
+		return
+	}
+	redirectOK(w, r, backTo, msg)
 }

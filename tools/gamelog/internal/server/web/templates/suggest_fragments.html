@@ -22,7 +22,7 @@ value stays editable first. */}}
     <select name="subgame"><option value="">(none — whole game)</option>{{range $.GameSubgames}}<option value="{{.}}">{{.}}</option>{{end}}</select>
     {{end}}
     <input type="text" name="rating" placeholder="rating 1-10">
-    <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
+    <input type="text" name="notes" placeholder="notes">
     <button type="submit" class="btn--primary">Log as new playthrough</button>
   </form>
   {{if $.SessionTargets}}
