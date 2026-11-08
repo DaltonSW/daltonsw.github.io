@@ -45,6 +45,18 @@
 </form>
 {{end}}
 
+{{if .NadeoAccountID}}
+<form method="post" action="/games/{{.Slug}}/nadeo" class="row">
+  <button type="submit" title="Fetches the current season only — a full backfill is `gamelog nadeo fetch --all`">Refresh Trackmania times (current season)</button>
+</form>
+{{end}}
+
+{{if .NinjaKiwiUserID}}
+<form method="post" action="/games/{{.Slug}}/ninjakiwi" class="row">
+  <button type="submit">Refresh BTD6 save from Ninja Kiwi</button>
+</form>
+{{end}}
+
 {{if or .RAGameID .SteamAppID}}
 <div class="tui" id="suggest">
   <span class="tui__title">suggested dates</span>

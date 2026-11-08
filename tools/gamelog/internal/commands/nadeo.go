@@ -96,13 +96,6 @@ type NadeoFetchOptions struct {
 // RunNadeoFetch captures campaign history into archive/nadeo/<accountId>.json
 // and refreshes the game's campaigns.yaml projection.
 func RunNadeoFetch(opts NadeoFetchOptions) error {
-	creds := LoadCredentials()
-	c, err := nadeoClient(creds)
-	if err != nil {
-		return err
-	}
-	c.DumpRaw = opts.DumpRaw
-
 	gamesDir, err := model.FindGamesDir()
 	if err != nil {
 		return err
@@ -111,7 +104,6 @@ func RunNadeoFetch(opts NadeoFetchOptions) error {
 	if err != nil {
 		return err
 	}
-	archiveDir := model.FindArchiveDir(gamesDir)
 
 	// Ctrl-C cancels the fetch rather than killing the process, so a partial
 	// capture is still saved. The merge makes that strictly additive.
@@ -119,34 +111,23 @@ func RunNadeoFetch(opts NadeoFetchOptions) error {
 	defer stop()
 
 	progress := newNadeoProgress(game.Title, opts.Plain, stop)
-	rec, err := nadeo.FetchRecord(ctx, c, nadeo.FetchOptions{
+	res, err := SaveNadeo(ctx, gamesDir, nadeo.FetchOptions{
 		Seasons: opts.Seasons,
 		All:     opts.All,
 		Since:   opts.Since,
 		OnEvent: progress.Handle,
-	})
+	}, opts.DumpRaw)
 	progress.Close()
 	if err != nil {
 		return err
 	}
 
-	if rec.LastError != "" {
-		fmt.Fprintf(os.Stderr, "  nadeo: %s (existing data kept)\n", rec.LastError)
+	if res.LastError != "" {
+		fmt.Fprintf(os.Stderr, "  nadeo: %s (existing data kept)\n", res.LastError)
 	}
-
-	path, err := model.SaveNadeoRecord(archiveDir, rec.ID, rec)
-	if err != nil {
-		return err
-	}
-
-	stored, err := model.LoadNadeoRecord(archiveDir, rec.ID)
-	if err != nil {
-		return err
-	}
-	fmt.Printf("%s\nSaved %s\n", describeNadeoRecord(stored), path)
-
-	if _, err := model.WriteCampaignSummary(archiveDir, filepath.Dir(game.Path), rec.ID); err != nil {
-		fmt.Fprintf(os.Stderr, "  (campaign summary not updated: %v)\n", err)
+	fmt.Printf("%s\nSaved %s\n", DescribeNadeoRecord(res.Stored), res.Path)
+	if res.SummaryErr != nil {
+		fmt.Fprintf(os.Stderr, "  (campaign summary not updated: %v)\n", res.SummaryErr)
 	}
 	if opts.DumpRaw != "" {
 		fmt.Fprintf(os.Stderr, "  raw responses written to %s\n", opts.DumpRaw)
@@ -154,9 +135,54 @@ func RunNadeoFetch(opts NadeoFetchOptions) error {
 	return nil
 }
 
-// describeNadeoRecord is the one-line summary both the TTY and plain paths end
-// with, so scrollback keeps a record either way.
-func describeNadeoRecord(rec *model.NadeoRecord) string {
+// NadeoSaveResult is what one fetch-and-merge left behind.
+type NadeoSaveResult struct {
+	Game       model.GameSummary
+	Stored     *model.NadeoRecord // the merged record now on disk
+	Path       string
+	LastError  string // the fetch's own failure; existing data was kept
+	SummaryErr error  // campaigns.yaml couldn't be rebuilt; the archive is still saved
+}
+
+// SaveNadeo is the fetch → merge → project sequence shared by the CLI and the
+// web UI: capture what opts selects for the game owning nadeo_account_id,
+// merge it into the archive, and rebuild that game's campaigns.yaml.
+func SaveNadeo(ctx context.Context, gamesDir string, opts nadeo.FetchOptions, dumpRaw string) (NadeoSaveResult, error) {
+	c, err := nadeoClient(LoadCredentials())
+	if err != nil {
+		return NadeoSaveResult{}, err
+	}
+	c.DumpRaw = dumpRaw
+
+	game, err := findNadeoGame(gamesDir)
+	if err != nil {
+		return NadeoSaveResult{}, err
+	}
+	archiveDir := model.FindArchiveDir(gamesDir)
+
+	rec, err := nadeo.FetchRecord(ctx, c, opts)
+	if err != nil {
+		return NadeoSaveResult{}, err
+	}
+
+	path, err := model.SaveNadeoRecord(archiveDir, rec.ID, rec)
+	if err != nil {
+		return NadeoSaveResult{}, err
+	}
+	stored, err := model.LoadNadeoRecord(archiveDir, rec.ID)
+	if err != nil {
+		return NadeoSaveResult{}, err
+	}
+	_, summaryErr := model.WriteCampaignSummary(archiveDir, filepath.Dir(game.Path), rec.ID)
+	return NadeoSaveResult{
+		Game: game, Stored: stored, Path: path,
+		LastError: rec.LastError, SummaryErr: summaryErr,
+	}, nil
+}
+
+// DescribeNadeoRecord is the one-line summary the CLI ends with and the web
+// UI flashes after a refresh.
+func DescribeNadeoRecord(rec *model.NadeoRecord) string {
 	if rec == nil {
 		return "nadeo: nothing archived"
 	}

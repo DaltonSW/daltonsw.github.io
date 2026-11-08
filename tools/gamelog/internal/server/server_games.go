@@ -13,6 +13,7 @@ import (
 	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
+	"go.dalton.dog/gamelog/internal/providers/nadeo"
 )
 
 // loadGame loads a game's Doc and PlaythroughsFile by slug, the web
@@ -283,6 +284,11 @@ type gameDetailData struct {
 	UbisoftID    string
 	XboxID       string
 	GooglePlayID string
+	// NadeoAccountID/NinjaKiwiUserID are the non-achievement links (see
+	// KNOWN-ISSUES: they stay out of ProviderLinks); each gets its own
+	// refresh button.
+	NadeoAccountID  string
+	NinjaKiwiUserID string
 	// Subsets are the RetroAchievements subsets attached to this game, with
 	// the counts the summary keeps separate from the game's own. Read-only
 	// here: attaching one is Housekeeping's job, because it needs the parent
@@ -344,6 +350,8 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		UbisoftID:        g.UbisoftID,
 		XboxID:           g.XboxID,
 		GooglePlayID:     g.GooglePlayID,
+		NadeoAccountID:   doc.NadeoAccountIDString(),
+		NinjaKiwiUserID:  doc.NinjaKiwiUserIDString(),
 		Subsets:          subsets,
 		AutoSuggest:      r.URL.Query().Get("suggest") == "1",
 	}
@@ -1203,4 +1211,63 @@ func (s *server) handleRefreshAchievements(w http.ResponseWriter, r *http.Reques
 	}
 	sort.Strings(parts)
 	redirectOK(w, r, gamePath(slug), "Refreshed — "+strings.Join(parts, "; "))
+}
+
+// ── Per-game Trackmania / BTD6 refresh ──────────────────────────────────
+//
+// Neither is an achievement provider, so neither rides the achievements
+// button. Both run inline like it: Nadeo fetches only the current season (the
+// provider's zero-value default, a handful of throttled requests against a
+// real player's account), and a full backfill stays a deliberate CLI choice
+// (`gamelog nadeo fetch --all`). Ninja Kiwi is a single save request.
+
+func (s *server) handleRefreshNadeo(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	doc, _, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	if doc.NadeoAccountIDString() == "" {
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("this game has no nadeo_account_id"))
+		return
+	}
+	res, err := commands.SaveNadeo(r.Context(), s.gamesDir, nadeo.FetchOptions{}, "")
+	if err != nil {
+		redirectErr(w, r, gamePath(slug), err)
+		return
+	}
+	redirectRefreshed(w, r, slug, commands.DescribeNadeoRecord(res.Stored), res.LastError, res.SummaryErr, "campaigns.yaml")
+}
+
+func (s *server) handleRefreshNinjaKiwi(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	doc, _, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	if doc.NinjaKiwiUserIDString() == "" {
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("this game has no ninjakiwi_user_id"))
+		return
+	}
+	res, err := commands.SaveNinjaKiwi(r.Context(), s.gamesDir)
+	if err != nil {
+		redirectErr(w, r, gamePath(slug), err)
+		return
+	}
+	redirectRefreshed(w, r, slug, commands.DescribeNinjaKiwiRecord(res.Stored), res.LastError, res.SummaryErr, "btd6-summary.yaml")
+}
+
+// redirectRefreshed flashes a refresh's outcome. A fetch failure still saved
+// (only the attempt metadata changed), so it's reported as an error flash
+// that says the archive was kept rather than as a failed request.
+func redirectRefreshed(w http.ResponseWriter, r *http.Request, slug, summary, lastError string, summaryErr error, projection string) {
+	if lastError != "" {
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s (existing data kept) — archive now: %s", lastError, summary))
+		return
+	}
+	msg := "Refreshed — " + summary
+	if summaryErr != nil {
+		msg += fmt.Sprintf(" (%s not updated: %v)", projection, summaryErr)
+	}
+	redirectOK(w, r, gamePath(slug), msg)
 }

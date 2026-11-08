@@ -1,6 +1,7 @@
 package commands
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -22,51 +23,72 @@ func ninjaKiwiClient(creds Credentials) (*ninjakiwi.Client, error) {
 // RunNinjaKiwiFetch captures a BTD6 save into archive/ninjakiwi/<userId>.json
 // and refreshes the game's btd6-summary.yaml projection.
 func RunNinjaKiwiFetch() error {
-	creds := LoadCredentials()
-	c, err := ninjaKiwiClient(creds)
-	if err != nil {
-		return err
-	}
-
 	gamesDir, err := model.FindGamesDir()
 	if err != nil {
 		return err
 	}
-	game, err := findNinjaKiwiGame(gamesDir)
-	if err != nil {
-		return err
-	}
-	archiveDir := model.FindArchiveDir(gamesDir)
 
 	ctx, stop := interruptContext()
 	defer stop()
 
-	rec, err := ninjakiwi.FetchRecord(ctx, c, game.NinjaKiwiUserID)
+	res, err := SaveNinjaKiwi(ctx, gamesDir)
 	if err != nil {
 		return err
 	}
-	if rec.LastError != "" {
-		fmt.Fprintf(os.Stderr, "  ninjakiwi: %s (existing data kept)\n", rec.LastError)
+	if res.LastError != "" {
+		fmt.Fprintf(os.Stderr, "  ninjakiwi: %s (existing data kept)\n", res.LastError)
 	}
-
-	path, err := model.SaveNinjaKiwiRecord(archiveDir, rec.ID, rec)
-	if err != nil {
-		return err
-	}
-
-	stored, err := model.LoadNinjaKiwiRecord(archiveDir, rec.ID)
-	if err != nil {
-		return err
-	}
-	fmt.Printf("%s\nSaved %s\n", describeNinjaKiwiRecord(stored), path)
-
-	if _, err := model.WriteBTD6Summary(archiveDir, filepath.Dir(game.Path), rec.ID); err != nil {
-		fmt.Fprintf(os.Stderr, "  (btd6 summary not updated: %v)\n", err)
+	fmt.Printf("%s\nSaved %s\n", DescribeNinjaKiwiRecord(res.Stored), res.Path)
+	if res.SummaryErr != nil {
+		fmt.Fprintf(os.Stderr, "  (btd6 summary not updated: %v)\n", res.SummaryErr)
 	}
 	return nil
 }
 
-func describeNinjaKiwiRecord(rec *model.BTD6Record) string {
+// NinjaKiwiSaveResult is what one fetch-and-merge left behind.
+type NinjaKiwiSaveResult struct {
+	Game       model.GameSummary
+	Stored     *model.BTD6Record // the merged record now on disk
+	Path       string
+	LastError  string // the fetch's own failure; existing data was kept
+	SummaryErr error  // btd6-summary.yaml couldn't be rebuilt; the archive is still saved
+}
+
+// SaveNinjaKiwi is the fetch → merge → project sequence shared by the CLI and
+// the web UI, for the game owning ninjakiwi_user_id.
+func SaveNinjaKiwi(ctx context.Context, gamesDir string) (NinjaKiwiSaveResult, error) {
+	c, err := ninjaKiwiClient(LoadCredentials())
+	if err != nil {
+		return NinjaKiwiSaveResult{}, err
+	}
+	game, err := findNinjaKiwiGame(gamesDir)
+	if err != nil {
+		return NinjaKiwiSaveResult{}, err
+	}
+	archiveDir := model.FindArchiveDir(gamesDir)
+
+	rec, err := ninjakiwi.FetchRecord(ctx, c, game.NinjaKiwiUserID)
+	if err != nil {
+		return NinjaKiwiSaveResult{}, err
+	}
+	path, err := model.SaveNinjaKiwiRecord(archiveDir, rec.ID, rec)
+	if err != nil {
+		return NinjaKiwiSaveResult{}, err
+	}
+	stored, err := model.LoadNinjaKiwiRecord(archiveDir, rec.ID)
+	if err != nil {
+		return NinjaKiwiSaveResult{}, err
+	}
+	_, summaryErr := model.WriteBTD6Summary(archiveDir, filepath.Dir(game.Path), rec.ID)
+	return NinjaKiwiSaveResult{
+		Game: game, Stored: stored, Path: path,
+		LastError: rec.LastError, SummaryErr: summaryErr,
+	}, nil
+}
+
+// DescribeNinjaKiwiRecord is the one-line summary the CLI ends with and the
+// web UI flashes after a refresh.
+func DescribeNinjaKiwiRecord(rec *model.BTD6Record) string {
 	if rec == nil {
 		return "ninjakiwi: nothing archived"
 	}

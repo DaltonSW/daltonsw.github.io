@@ -137,6 +137,8 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /games/{slug}/planned/{idx}/start", s.handleStartPlanned)
 	mux.HandleFunc("POST /games/{slug}/planned/{idx}/edit", s.handleEditPlanned)
 	mux.HandleFunc("POST /games/{slug}/achievements", s.handleRefreshAchievements)
+	mux.HandleFunc("POST /games/{slug}/nadeo", s.handleRefreshNadeo)
+	mux.HandleFunc("POST /games/{slug}/ninjakiwi", s.handleRefreshNinjaKiwi)
 	mux.HandleFunc("GET /games/{slug}/suggest", s.handleSuggestFragment)
 
 	mux.HandleFunc("GET /housekeeping", s.handleHousekeeping)
