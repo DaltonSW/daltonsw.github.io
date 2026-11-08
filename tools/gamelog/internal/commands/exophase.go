@@ -17,7 +17,7 @@ import (
 // Exophase to Sony's own trophy API (see `gamelog psn list`); this map keeps
 // its "service name -> slug" shape rather than collapsing to a single
 // Ubisoft-only command in case another Exophase-mirrored provider (Nintendo
-// is visible on the profile but not yet archived — see KNOWN-ISSUES.md)
+// is visible on the profile but not yet archived — see INVARIANTS.md)
 // shows up later.
 var exophaseServices = map[string]struct {
 	env       string

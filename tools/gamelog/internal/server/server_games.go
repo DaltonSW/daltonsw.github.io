@@ -285,7 +285,7 @@ type gameDetailData struct {
 	XboxID       string
 	GooglePlayID string
 	// NadeoAccountID/NinjaKiwiUserID are the non-achievement links (see
-	// KNOWN-ISSUES: they stay out of ProviderLinks); each gets its own
+	// INVARIANTS.md: they stay out of ProviderLinks); each gets its own
 	// refresh button.
 	NadeoAccountID  string
 	NinjaKiwiUserID string

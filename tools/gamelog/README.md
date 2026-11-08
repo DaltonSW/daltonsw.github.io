@@ -1117,4 +1117,4 @@ to the public site.
 No editing the markdown body from within the tool after creation, no `--json` output, no
 per-playthrough attribution (see above — the API data doesn't support it), no CLI-flag credential
 overrides, and no direct reads of `archive/` from Hugo (everything the site shows goes through a
-projection). What's still open is tracked in `KNOWN-ISSUES.md`.
+projection). The invariants not to undo are in `INVARIANTS.md`.

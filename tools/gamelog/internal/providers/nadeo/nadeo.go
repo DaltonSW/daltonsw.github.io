@@ -20,7 +20,7 @@
 //     why nadeoMinInterval is deliberately conservative.
 //
 // Tokens live in memory for the lifetime of a Client and are never written to
-// disk, matching the standing decision for PSN in KNOWN-ISSUES.md.
+// disk, matching the standing decision for PSN in INVARIANTS.md.
 package nadeo
 
 import (

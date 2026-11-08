@@ -45,7 +45,7 @@
       {{- $gameStatus := $game.Params.status -}}
       {{- $status := $entry.status | default $gameStatus -}}
       {{/* endless/multiplayer/software are game-level statuses; the game's own status wins
-           (see tools/gamelog KNOWN-ISSUES) */}}
+           (see tools/gamelog/INVARIANTS.md) */}}
       {{- if in (slice "endless" "multiplayer" "software") $gameStatus -}}
         {{- $status = $gameStatus -}}
       {{- end -}}

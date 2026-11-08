@@ -38,8 +38,8 @@ Consequences that should drive design decisions:
   projections beside `_index.md` (`achievement-summary.yaml`, plus `campaigns.yaml` and
   `btd6-summary.yaml` for the two non-achievement providers), which are regenerable from `archive/`
   and never published either.
-- **`tools/gamelog/KNOWN-ISSUES.md` lists what's outstanding and, just as importantly, the
-  invariants not to undo.** Read it before editing `internal/model/playthroughs.go` or
+- **`tools/gamelog/INVARIANTS.md` lists the invariants not to undo.** Read it before editing
+  `internal/model/playthroughs.go` or
   `internal/model/archive.go` — the inline `Extra` catch-all, the string-typed dates, and the
   pre-write loss check each prevent a specific silent data loss that has already happened once.
 - Credentials live in `tools/gamelog/.env` (gitignored). `.env.example` is the template.

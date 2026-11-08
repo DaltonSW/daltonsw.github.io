@@ -22,7 +22,7 @@ import (
 // Decoding is proved separately in decode_test.go, against real response
 // bodies captured from a live run and committed under testdata/. Keep that
 // split: a synthetic body here is fine, but nothing that asserts a field name
-// should be written from documentation. See KNOWN-ISSUES.md for what happened
+// should be written from documentation. See the repo CLAUDE.md for what happened
 // the last time it was.
 
 // nadeoStub points both API bases at one local server.

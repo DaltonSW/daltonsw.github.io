@@ -1,21 +1,21 @@
-# gamelog — known issues
+# gamelog — invariants
 
-What's still open in `tools/gamelog/`, and the invariants that must not be undone, written for
-someone picking this up fresh.
+The rules in `tools/gamelog/` that must not be undone, and the known limits behind them, written
+for someone picking this up fresh.
 
 Read `CLAUDE.md` at the repo root first. It states the intent these are judged against: **this is
 a durable archive of gameplay history, and losing captured data is the worst thing that can
 happen.** `README.md` documents the provider APIs in more depth; this file is the short list of
-what's unfinished and what's load-bearing.
+what's load-bearing.
 
-## Current state (checked 2026-09-27)
+## Current state (checked 2026-11-08)
 
-- `content/games/` holds **528 game bundles**. 480 have an `achievement-summary.yaml` and 339
+- `content/games/` holds **540 game bundles**. 492 have an `achievement-summary.yaml` and 358
   have a `playthroughs.yaml`. A missing `playthroughs.yaml` is legal: `LoadPlaythroughs` returns
-  an empty file, and "nothing logged yet" is a real state. 243 games are still `draft: true`,
+  an empty file, and "nothing logged yet" is a real state. 123 games are still `draft: true`,
   and the games list's "drafts only" filter is how to walk them.
-- `archive/` holds **511 records (17 MB)**: 426 Steam, 45 RetroAchievements, 23 Xbox 360,
-  13 PSN, 2 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
+- `archive/` holds **529 records (17 MB)**: 434 Steam, 47 RetroAchievements, 23 Xbox 360,
+  13 PSN, 5 Google Play, 5 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
 - The day-to-day tool is the web UI (`gamelog serve`). Its Housekeeping page runs the scan for
   unlogged and unlinked games across all six achievement providers, the owned-but-unplayed
   backlog import, stale-game triage, subset attaching, and the refresh-all and suggest-all
@@ -29,44 +29,6 @@ what's unfinished and what's load-bearing.
   game-level only: it describes the whole record, not a mode a game can have alongside others.
   "Unplayed" is not a status at all. The site derives it (`layouts/partials/game-unplayed.html`)
   for any game with no playthrough entries and no captured playtime, and shows it as a tag.
-
----
-
-## Outstanding
-
-- **A few narrative games may still be one entry covering several runs.** The backfill wrote a
-  single entry per game. Most of the flagged candidates have since been split: 48 games now have
-  more than one playthrough, BG3 among them. Dishonored, A Hat in Time, and Phoenix Wright: Ace
-  Attorney Trilogy are still single entries, and whether that's right is the owner's call. A gap in
-  achievement unlocks marks an activity arc, not a playthrough, so boundaries must be confirmed by
-  hand and never derived and applied. Splitting has a cost (see `SyncStatus` below).
-- **A subset's parent lookup is memoized per process, not persisted.** `raParentCache` in
-  `internal/commands/subsets.go` keeps Housekeeping from re-asking RetroAchievements (~1.2s a
-  call) on every render, but each restart of `gamelog serve` pays for it again, once per
-  unattached subset row. That's fine at today's count (one subset in the whole library). It will
-  need a real cache well before the count grows much.
-- **Nothing detaches a subset from the tool.** Attaching is a Housekeeping button. Undoing it
-  means deleting the id from `retroachievements_subsets:` by hand. This is deliberate: the archive
-  record is keyed by provider id and survives either way.
-- **The Exophase canonical-ID map only covers the first 50 games per service.** The embedded
-  `window.playerGames` payload isn't paginated the way the JSON API is, and `?page=2` returns the
-  same 50. Google Play gets past it by decoding the app id out of a game's award ids (see the
-  README's Google Play section). Ubisoft has no such fallback, but it has 6 games, so it isn't
-  biting. Games past the ceiling are skipped, not mis-keyed.
-- **Scan leaves out Xbox titles that aren't Xbox 360**, with a notice naming them. Capture reads
-  only the x360 achievement endpoint, so creating one would archive an empty record that looks
-  like a real 0/N. All 23 titles in the account's history are 360 today. Supporting modern titles
-  means a second fetch path in `providers/xbox`, verified against a live modern title first.
-- **Nintendo is on the Exophase profile but not archived.** Switch has no achievements (only
-  playtime and last-played), so it needs a record shape that doesn't pretend otherwise, as
-  Nadeo and Ninja Kiwi each got, before it's worth adding.
-- **Three Hugo-side copies of the "last activity" rule.** `layouts/partials/games-timeline.html` and
-  `game-year-rows.html` each fold across playthroughs and max against `achievement-summary.yaml`
-  themselves. `game-first-played.html`/`game-last-played.html` are the shared version, used by
-  `layouts/games/term.html`, `taxonomy-game-list.html` and `games-overview.html`. The copies are
-  kept in step only by "same rule as game-last-played.html" comments. Consolidating them was
-  deferred because the timeline and year rows need richer per-item data than the partials'
-  bare-date return.
 
 ---
 
@@ -107,6 +69,8 @@ what's unfinished and what's load-bearing.
   this status refer to?" is ambiguous, so it returns false. Splitting a game therefore opts it out
   of automatic status sync for good, and its entries become hand-maintained. That's deliberate,
   not a bug to route around.
+- **Playthrough boundaries are confirmed by hand, never derived.** A gap in achievement unlocks
+  marks an activity arc, not a playthrough, so nothing should split entries automatically.
 
 ### Status vocabulary
 
@@ -152,6 +116,13 @@ what's unfinished and what's load-bearing.
   one case of two ids on one provider, so a `map[provider]id` would drop all but the last. It also
   passes a blank title for a subset record, so RA's name for the set isn't overwritten with the
   game's.
+- **Nothing detaches a subset from the tool.** Attaching is a Housekeeping button. Undoing it
+  means deleting the id from `retroachievements_subsets:` by hand. The archive record is keyed by
+  provider id and survives either way.
+- **A subset's parent lookup is memoized per process, not persisted.** `raParentCache` in
+  `internal/commands/subsets.go` saves Housekeeping a ~1.2s RA call per unattached subset row on
+  each render, but every restart of `gamelog serve` pays it again. Fine at one subset; it needs a
+  persisted cache before the count grows much.
 
 ### Steam
 
@@ -171,6 +142,13 @@ what's unfinished and what's load-bearing.
 - **Google Play achievements are keyed on Google's achievement id, Ubisoft's on Exophase's slug.**
   Don't switch Ubisoft over: its archive is already slug-keyed, and changing the key would count
   every unlock twice on merge.
+- **The canonical-ID map only covers the first 50 games per service.** The embedded
+  `window.playerGames` payload isn't paginated, and `?page=2` returns the same 50. Google Play
+  gets past it by decoding the app id out of a game's award ids (see the README's Google Play
+  section). Ubisoft has no fallback, so a Ubisoft game past the 50th is skipped, not mis-keyed.
+- **Nintendo is on the profile but deliberately not archived.** Switch has no achievements (only
+  playtime and last-played), so it needs a record shape that doesn't pretend otherwise, as Nadeo
+  and Ninja Kiwi each got, before it's added.
 
 ### PSN (Sony's own trophy API)
 
@@ -191,6 +169,10 @@ what's unfinished and what's load-bearing.
   endpoint returns an empty list for them.
 - **That endpoint only lists unlocked achievements**, so the total and last-played date come from
   `player/titleHistory`.
+- **Only 360 titles are captured.** Scan leaves out other Xbox titles with a notice naming them,
+  because the x360 endpoint would archive an empty record that looks like a real 0/N. Supporting
+  modern titles means a second fetch path in `providers/xbox`, verified against a live modern
+  title first.
 
 ### Providers that aren't achievements (Nadeo, Ninja Kiwi)
 
@@ -229,10 +211,14 @@ what's unfinished and what's load-bearing.
 
 ### Hugo side
 
-- **`last_played` from `achievement-summary.yaml` is maxed against logged playthroughs** in
-  `game-last-played.html`, `games-timeline.html` and `game-year-rows.html`. That's intentional: a
-  refreshed archive can legitimately be more recent than any logged session. Don't make it
-  agree with `playthroughs.yaml`.
+- **The per-entry "last activity" rule lives in one place**, `layouts/partials/entry-last-activity.html`
+  (the latest session's finish or start, otherwise the entry's own). `game-last-played.html`,
+  `games-timeline.html` and `game-year-rows.html` all call it. Don't inline it again.
+- **Only `game-last-played.html` maxes `achievement-summary.yaml`'s `last_played` against logged
+  playthroughs.** That's intentional: a refreshed archive can legitimately be more recent than any
+  logged session, so don't make it agree with `playthroughs.yaml`. The timeline and year rows stay
+  on logged activity only, because stretching a bar or a year span to an archive date would draw
+  play that has no session behind it.
 
 ---
 
@@ -256,4 +242,4 @@ Kept only because the invariants above point back to these. The details are in g
   `achievement-summary.yaml` (totals, per-provider breakdown, subsets, and the `earned` list),
   which the games list and each game's page read.
 - **Every game had exactly one playthrough entry.** The split/session tools now exist and have
-  been used on most of the flagged games. What's left is listed under Outstanding.
+  been used on most of the flagged games. Whether to split the rest is the owner's call.

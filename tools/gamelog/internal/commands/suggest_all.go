@@ -63,7 +63,7 @@ func latestSuggestedDate(r SuggestionReport) string {
 
 // latestLoggedDate is the lexicographically-latest YYYY-MM-DD found anywhere
 // in the file — playthrough and session, started and finished. Dates are
-// string-typed on purpose (see KNOWN-ISSUES.md); ISO order is date order, so
+// string-typed on purpose (see INVARIANTS.md); ISO order is date order, so
 // a string compare is the right one here.
 func latestLoggedDate(pf *model.PlaythroughsFile) string {
 	if pf == nil {

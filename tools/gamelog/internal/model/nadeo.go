@@ -26,7 +26,7 @@ import (
 // (`if fresh.Total > merged.Total`), which is exactly backwards for a lap time.
 //
 // So Nadeo gets its own record type, its own merge, and its own projection,
-// below. KNOWN-ISSUES.md already carries this decision for Nintendo — a
+// below. INVARIANTS.md already carries this decision for Nintendo — a
 // provider whose data isn't achievements needs a shape that doesn't pretend
 // otherwise.
 const ProviderNadeo = "nadeo"

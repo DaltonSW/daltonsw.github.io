@@ -85,7 +85,7 @@
 {{- end -}}
 
 {{/* endless/multiplayer/software are game-level statuses; let them override
-     the entry's own "playing" status (see tools/gamelog KNOWN-ISSUES) */}}
+     the entry's own "playing" status (see tools/gamelog/INVARIANTS.md) */}}
 {{- $gameStatus := $game.Params.status -}}
 {{- $override := in (slice "endless" "multiplayer" "software") $gameStatus -}}
 

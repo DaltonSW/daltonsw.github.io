@@ -81,7 +81,7 @@ func init() {
 
 // Run starts the local web UI: a same-process, no-build-step alternative
 // to the huh-based TUI, reusing the same data/write functions (and therefore
-// the same never-lose-data safety net — see README.md/KNOWN-ISSUES.md) that
+// the same never-lose-data safety net — see README.md/INVARIANTS.md) that
 // the TUI does. Binds to 127.0.0.1 only; this is a personal local tool, never
 // meant to be reachable off the machine it runs on.
 func Run(port int) error {
