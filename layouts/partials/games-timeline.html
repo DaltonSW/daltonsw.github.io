@@ -53,24 +53,10 @@
       {{/* a hand-edited status: backlog entry with real dates is excluded rather than drawn dim */}}
       {{- if ne $status "backlog" -}}
       {{- $hasItems = true -}}
-      {{/* same last-activity rule as game-last-played.html, so rows stay in the same order */}}
-      {{- $activityEnd := $entry.started -}}
-      {{- $entryOpen := false -}}
-      {{- if gt (len $entry.sessions) 0 -}}
-        {{- $lastSession := index (sort $entry.sessions "started" "asc") (sub (len $entry.sessions) 1) -}}
-        {{- $activityEnd = $lastSession.started -}}
-        {{- if $lastSession.finished -}}
-          {{- $activityEnd = $lastSession.finished -}}
-        {{- else -}}
-          {{- $entryOpen = true -}}
-        {{- end -}}
-      {{- else -}}
-        {{- if $entry.finished -}}
-          {{- $activityEnd = $entry.finished -}}
-        {{- else -}}
-          {{- $entryOpen = true -}}
-        {{- end -}}
-      {{- end -}}
+      {{/* shared per-entry rule (entry-last-activity.html); logged activity only, no last_played */}}
+      {{- $activity := partial "entry-last-activity.html" $entry -}}
+      {{- $activityEnd := $activity.end -}}
+      {{- $entryOpen := $activity.open -}}
       {{/* only a genuinely open session (not just an open-ended status label) floats a game up */}}
       {{- if and $entryOpen (in $openEndedStatuses $status) -}}{{- $groupHasOpen = true -}}{{- end -}}
       {{- if or (eq $groupLast "") (gt $activityEnd $groupLast) -}}

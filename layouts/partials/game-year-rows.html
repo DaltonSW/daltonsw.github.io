@@ -30,16 +30,8 @@
     {{- $finished := "" -}}
     {{- with .finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
 
-    {{/* same last-activity rule as game-last-played.html and the timeline */}}
-    {{- $end := $started -}}
-    {{- if gt (len .sessions) 0 -}}
-      {{- $sorted := sort .sessions "started" "asc" -}}
-      {{- $last := index $sorted (sub (len $sorted) 1) -}}
-      {{- $end = $last.started -}}
-      {{- with $last.finished -}}{{- $end = . -}}{{- end -}}
-    {{- else -}}
-      {{- with $finished -}}{{- $end = . -}}{{- end -}}
-    {{- end -}}
+    {{/* shared per-entry rule (entry-last-activity.html); logged activity only, no last_played */}}
+    {{- $end := (partial "entry-last-activity.html" .).end -}}
 
     {{/* span this entry contributes to each year, clipped to that year */}}
     {{- $spans := dict -}}

@@ -6,16 +6,7 @@
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $latest := "" -}}
 {{- range $entries -}}
-  {{- $candidate := "" -}}
-  {{- if gt (len .sessions) 0 -}}
-    {{- $sorted := sort .sessions "started" "asc" -}}
-    {{- $last := index $sorted (sub (len $sorted) 1) -}}
-    {{- $candidate = $last.started -}}
-    {{- with $last.finished -}}{{- $candidate = . -}}{{- end -}}
-  {{- else -}}
-    {{- $candidate = .started -}}
-    {{- with .finished -}}{{- $candidate = . -}}{{- end -}}
-  {{- end -}}
+  {{- $candidate := (partial "entry-last-activity.html" .).end -}}
   {{- if and $candidate (or (eq $latest "") (gt $candidate $latest)) -}}
     {{- $latest = $candidate -}}
   {{- end -}}

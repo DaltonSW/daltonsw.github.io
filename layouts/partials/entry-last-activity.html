@@ -1,0 +1,20 @@
+{{/* Context: one entry from playthrough-entries.html. Returns
+     dict "end" <"2006-01-02"> "open" <bool>: the entry's last known touch-point
+     (its latest session's finish or start, else its own finish or start) and
+     whether that touch-point is still unfinished.
+
+     The single per-entry last-activity rule shared by game-last-played.html,
+     games-timeline.html and game-year-rows.html. Only game-last-played.html
+     also maxes against achievement-summary.yaml's last_played; the timeline and
+     year rows stay on logged activity on purpose. */}}
+{{- $end := .started -}}
+{{- $open := false -}}
+{{- if gt (len .sessions) 0 -}}
+  {{- $last := index (sort .sessions "started" "asc") (sub (len .sessions) 1) -}}
+  {{- $end = $last.started -}}
+  {{- with $last.finished -}}{{- $end = . -}}{{- else -}}{{- $open = true -}}{{- end -}}
+{{- else -}}
+  {{- with .finished -}}{{- $end = . -}}{{- else -}}{{- $open = true -}}{{- end -}}
+{{- end -}}
+{{- with $end -}}{{- $end = (. | time.Format "2006-01-02") -}}{{- else -}}{{- $end = "" -}}{{- end -}}
+{{- return dict "end" $end "open" $open -}}
