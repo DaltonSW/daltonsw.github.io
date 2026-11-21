@@ -3,7 +3,7 @@ title: Spyro™ Reignited Trilogy
 platform: PC
 retroachievements_id: null
 steam_appid: 996580
-status: dropped
+status: finished
 subgames:
   - Spyro the Dragon
   - Ripto's Rage!

@@ -192,7 +192,7 @@ func AttachSubset(ctx context.Context, gamesDir, slug, subsetID string, ra RAPar
 	if !doc.AddRASubset(subsetID) {
 		return progress.Title, errAlreadyAttached
 	}
-	if err := mutate.WriteFrontMatter(doc, nil, false); err != nil {
+	if err := mutate.WriteFrontMatter(doc); err != nil {
 		return "", err
 	}
 

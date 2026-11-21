@@ -189,14 +189,28 @@ field *presence*, not text, and the same tradeoff is already accepted for `playt
 is the earliest finish of an entry whose status is `finished`, so a dropped run doesn't count. The
 new-game form's started/finished fields, and a scan candidate's finish, are written as the game's
 **first playthrough** by `CreateGameFile`. A game with no dates gets no entry. The edit forms show
-the derived dates read-only. When a game has exactly one playthrough and it's still open
-(`GameSummary.CanCloseSoleRun`), they also offer a "close the open playthrough on" date, which goes
-straight to `SyncStatus` and is never stored on the game. Thirteen older games carry an inert
+the derived dates read-only. Thirteen older games carry an inert
 `legacy_last_played:`: a Steam last-played snapshot that stale triage once wrote into front matter
 as `finished:`. The tool and site ignore it; it's kept because three of those dates exist nowhere
 else.
 
-Title, platform, status, subgames, rating, and `draft` are editable through the "edit game
+**A game's status is derived from its runs too**, wherever it can be (`model.DeriveGameStatus`):
+
+- **Any open run:** the most recently active one's status. A replay of a finished game reads
+  `playing`, and an on-hold run reads `paused`.
+- **Otherwise:** `finished` if any run was finished, since a later dropped attempt or co-op session
+  doesn't un-finish a game. Failing that, the status of the run that ended last.
+- **Runs that don't count:** `planned`, `misc_launch`, and `endless`/`multiplayer` side modes.
+- **Stays hand-set:** one-shot games (`endless`/`multiplayer`/`software`), because those describe
+  the kind of game rather than an outcome (Hades is `endless` even though its run is `finished`),
+  and any game with no counted runs (`backlog`, mostly).
+
+`mutate.SyncGameStatus` writes the derived value into front matter after every playthrough write,
+and `gamelog project` does it for every game. The site's status pages, counts and filters therefore
+keep reading `status:` as before. The edit forms show a derived status read-only: change a run to
+change it.
+
+Title, platform, status (when hand-set), subgames, rating, and `draft` are editable through the "edit game
 info" form on a game's page in `gamelog serve`. Provider IDs (`retroachievements_id`,
 `steam_appid`, `psn_id`, `ubisoft_id`, `xbox_id`) have their own form in that page's sidebar, kept
 separate because RA/Steam accept a pasted URL and because clearing one of the `omitempty` IDs is a
@@ -505,9 +519,10 @@ completion (100% included: mastery isn't a status), **dropped** otherwise, or **
 the game has no achievements to go on at all (playtime alone doesn't prove completion, and with
 nothing to go on there's no basis to guess `dropped` over `paused` either, so `unfinished` is the
 honest default, not a claim) — alongside the last-played date, achievement count, and playtime.
-Nothing is ever written automatically. Accepting sets the game's status and, for anything but
-`paused`, closes the game's sole open playthrough on the last-played date (`SyncStatus`; with
-several entries only the status changes). You can accept the guess, pick one of the other statuses it might
+Nothing is ever written automatically. Accepting applies the verdict to the game's most recently
+active open run (`CloseLatestOpenRun`), closing it on the last-played date unless the verdict is
+`paused`. The game's status then follows from its runs. Only a game with no open run gets its
+front-matter status set directly. You can accept the guess, pick one of the other statuses it might
 have guessed instead, open the game's page (**Edit before applying**) to change it by hand, or
 leave it and it'll
 surface again next time it's still `playing` and still quiet. None of the one-shot statuses
@@ -1145,6 +1160,9 @@ section (`layouts/partials/game-achievements.html`), and the site-wide feed
 ```
 go run . project
 ```
+
+It also re-derives every game's `status:` from its playthroughs (`mutate.SyncGameStatus`, see "How
+front matter is edited"). That's how a hand edit to a `playthroughs.yaml` reaches the game's status.
 
 Trackmania and BTD6 have projections of their own (`campaigns.yaml`, `btd6-summary.yaml`), written
 by their own fetch commands.

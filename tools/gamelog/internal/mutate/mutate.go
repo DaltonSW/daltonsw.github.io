@@ -6,6 +6,8 @@ package mutate
 
 import (
 	"fmt"
+	"os"
+	"path/filepath"
 	"strings"
 
 	"go.dalton.dog/gamelog/internal/forms"
@@ -74,13 +76,10 @@ func sameSubgames(a, b []string) bool {
 }
 
 // WriteFrontMatter previews nothing and prompts nothing — the caller (a
-// submitted web form) is already its own confirmation. When pf is non-nil,
-// it also syncs and writes the playthrough via SyncStatus under the same
-// loss-check, so status and the timeline never drift apart. syncing must
-// match what the caller already decided (whether
-// pf's status was brought in line with doc.FM.Status), since that's what
-// decides whether pf needs its own loss-check and save alongside doc's.
-func WriteFrontMatter(doc *model.Doc, pf *model.PlaythroughsFile, syncing bool, allowedRemovals ...string) error {
+// submitted web form) is already its own confirmation. It writes only the
+// game's front matter: status flows the other way now, from runs to the game
+// (SyncGameStatus), so a front-matter write never touches playthroughs.yaml.
+func WriteFrontMatter(doc *model.Doc, allowedRemovals ...string) error {
 	fm, err := doc.EncodeFM()
 	if err != nil {
 		return err
@@ -97,23 +96,10 @@ func WriteFrontMatter(doc *model.Doc, pf *model.PlaythroughsFile, syncing bool, 
 	if err := model.CheckNoFieldLoss(oldFields, newFields, allowedRemovals); err != nil {
 		return err
 	}
-	if syncing {
-		if err := VerifyNoLoss(pf, nil); err != nil {
-			return err
-		}
-	}
-
 	if err := doc.Save(); err != nil {
 		return err
 	}
 	fmt.Printf("Saved %s\n", doc.Path)
-
-	if syncing {
-		if err := pf.Save(); err != nil {
-			return err
-		}
-		fmt.Printf("Saved %s\n", pf.Path)
-	}
 	return nil
 }
 
@@ -175,7 +161,8 @@ func WriteEntry(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
 		return err
 	}
 	fmt.Printf("Saved %s\n", pf.Path)
-	return nil
+	_, err := SyncGameStatus(pf)
+	return err
 }
 
 // WriteSplit previews and prompts nothing — the caller (a submitted web
@@ -188,7 +175,31 @@ func WriteSplit(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
 		return err
 	}
 	fmt.Printf("Saved %s\n", pf.Path)
-	return nil
+	_, err := SyncGameStatus(pf)
+	return err
+}
+
+// SyncGameStatus writes the status a game's runs imply into its front matter
+// (model.DeriveGameStatus), after a playthrough write. It's a no-op for a
+// hand-set status, when the status already matches, and when the game has no
+// _index.md (a playthroughs file being written in isolation, as tests do).
+// Only the status field is touched, through the same field-loss check as
+// every other front-matter write.
+func SyncGameStatus(pf *model.PlaythroughsFile) (bool, error) {
+	path := filepath.Join(filepath.Dir(pf.Path), "_index.md")
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		return false, nil
+	}
+	doc, err := model.LoadDoc(path)
+	if err != nil {
+		return false, err
+	}
+	status, ok := model.DeriveGameStatus(doc.FM.Status, pf.Views())
+	if !ok || status == doc.FM.Status {
+		return false, nil
+	}
+	doc.FM.Status = status
+	return true, WriteFrontMatter(doc)
 }
 
 // previewEntry renders just the entry being changed. Showing the whole file

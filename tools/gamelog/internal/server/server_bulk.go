@@ -548,9 +548,12 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("unknown action %q", action))
 		return
 	}
-	closedOn := commands.ApplyStaleAction(doc, *c, action)
-	syncing := pf.SyncStatus(doc.FM.Status, closedOn)
-	if err := mutate.WriteFrontMatter(doc, pf, syncing); err != nil {
+	if commands.ApplyStaleAction(doc, pf, *c, action) {
+		err = mutate.WriteEntry(pf) // the game's status follows via SyncGameStatus
+	} else {
+		err = mutate.WriteFrontMatter(doc)
+	}
+	if err != nil {
 		s.respondHousekeepingErr(w, r, backTo, err)
 		return
 	}

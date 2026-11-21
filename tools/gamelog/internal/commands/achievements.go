@@ -432,9 +432,21 @@ func RunProject(args []string) error {
 	}
 	archiveDir := model.FindArchiveDir(gamesDir)
 
-	var written, empty, failed, campaigns int
+	var written, empty, failed, campaigns, statuses int
 	for _, g := range games {
 		gameDir := filepath.Dir(g.Path)
+
+		// A game's status is a projection of its runs too (model.
+		// DeriveGameStatus), so a hand edit to playthroughs.yaml shows up here.
+		if pf, err := model.LoadPlaythroughs(gameDir); err != nil {
+			fmt.Fprintf(os.Stderr, "  %s: status: %v\n", g.Slug, err)
+			failed++
+		} else if changed, err := mutate.SyncGameStatus(pf); err != nil {
+			fmt.Fprintf(os.Stderr, "  %s: status: %v\n", g.Slug, err)
+			failed++
+		} else if changed {
+			statuses++
+		}
 
 		// Trackmania's campaign history is a separate projection with its own
 		// source record, so it's rebuilt alongside rather than inside the
@@ -468,6 +480,9 @@ func RunProject(args []string) error {
 	fmt.Printf("%d summaries written, %d with nothing archived yet, %d failed\n", written, empty, failed)
 	if campaigns > 0 {
 		fmt.Printf("%d campaign summaries written\n", campaigns)
+	}
+	if statuses > 0 {
+		fmt.Printf("%d game statuses updated from their playthroughs\n", statuses)
 	}
 	return nil
 }

@@ -573,51 +573,6 @@ func SessionPath(idx, j int, field string) string {
 	return fmt.Sprintf("playthroughs[%d].sessions[%d].%s", idx, j, field)
 }
 
-// SyncStatus keeps a game's sole playthrough entry in step with a
-// front-matter status change to finished/dropped/unfinished/paused —
-// playthroughs.yaml is what actually renders once any playthrough exists,
-// and "ongoing" comes from the entry's finished date, not status text, so
-// front matter alone can't fix it. Only acts on exactly one playthrough
-// (none: nothing to sync; more than one: ambiguous, use "Update a
-// playthrough" instead). Never overwrites an already-set finished date, and
-// a blank closedOn (as "paused" should always pass) only syncs the status,
-// leaving dates untouched. Safe to call unconditionally.
-//
-// closedOn is never stored on the game — its front matter carries no dates.
-// It comes from the web forms' optional "close the open run on" field
-// (gated by GameSummary.CanCloseSoleRun, this same "exactly one playthrough,
-// still open" condition) and from stale triage's last-played date.
-func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
-	switch status {
-	case "finished", "dropped", "unfinished", "paused":
-	default:
-		return false
-	}
-	if len(f.Playthroughs) != 1 {
-		return false
-	}
-	e := &f.Playthroughs[0]
-	changed := false
-	if e.Status != status {
-		e.Status = status
-		changed = true
-	}
-	if closedOn == "" {
-		return changed
-	}
-	if len(e.Sessions) > 0 {
-		last := &e.Sessions[len(e.Sessions)-1]
-		if last.Finished == "" {
-			last.Finished = closedOn
-			changed = true
-		}
-	} else if e.Finished == "" {
-		e.Finished = closedOn
-		changed = true
-	}
-	return changed
-}
-
 // UpdatePlaythrough applies edited field values. The finished date belongs to
 // the last session once an entry has sessions, matching where the TUI showed
 // it.

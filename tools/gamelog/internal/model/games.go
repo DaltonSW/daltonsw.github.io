@@ -27,10 +27,10 @@ type GameSummary struct {
 	Started       string
 	Finished      string
 	FirstFinished string
-	// CanCloseSoleRun reports whether the game has exactly one playthrough
-	// and it's still open — the one case where a status change can also
-	// close a run (SyncStatus), so the forms offer a "close it on" date.
-	CanCloseSoleRun bool
+	// StatusDerived reports that Status comes from the game's runs
+	// (DeriveGameStatus) rather than being hand-set, so the forms show it
+	// read-only — change a run to change it.
+	StatusDerived   bool
 	Platform        string
 	Rating          string
 	NumPlaythroughs int
@@ -167,7 +167,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		Started:         started,
 		Finished:        finished,
 		FirstFinished:   firstFinished(views),
-		CanCloseSoleRun: len(views) == 1 && views[0].IsOpen(),
+		StatusDerived:   statusDerived(doc.FM.Status, views),
 		Platform:        doc.FM.Platform,
 		Rating:          doc.FM.RatingString(),
 		NumPlaythroughs: len(pf.Playthroughs),
@@ -181,6 +181,11 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		NinjaKiwiUserID: doc.NinjaKiwiUserIDString(),
 		RASubsets:       doc.RASubsetIDs(),
 	}
+}
+
+func statusDerived(current string, views []Playthrough) bool {
+	_, ok := DeriveGameStatus(current, views)
+	return ok
 }
 
 func ListGames(gamesDir string) ([]GameSummary, error) {

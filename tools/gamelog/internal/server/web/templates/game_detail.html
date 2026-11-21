@@ -17,16 +17,15 @@
     <div class="field"><label>Title</label><input type="text" name="title" value="{{.FM.Title}}" required></div>
     <div class="field"><label>Platform</label><input type="text" name="platform" value="{{.FM.Platform}}"></div>
     <div class="field"><label>Status</label>
-      <select name="status">{{$cur := .FM.Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>
+      {{if .StatusDerived}}<span class="dim" title="Derived from the playthroughs below — change a run to change it.">{{.FM.Status}} (from playthroughs)</span>
+      {{else}}<select name="status">{{$cur := .FM.Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>{{end}}
     </div>
     <div class="field field--wide">
       <label>Subgames (one per line, optional — marks this as a compilation)</label>
       <textarea name="subgames" rows="3">{{joinLines .FM.Subgames}}</textarea>
     </div>
     <div class="field field--wide dim">First played: {{or .Started "—"}} · First finished: {{or .FirstFinished "—"}} — derived from the playthroughs below; the game itself has no dates.</div>
-    {{if .CanCloseSoleRun}}
-    <div class="field"><label>Close the open playthrough on (optional)</label><input type="text" name="close_on" placeholder="YYYY-MM-DD"></div>
-    {{end}}
+
     <div class="field"><label>Rating (1-10)</label><input type="text" name="rating" value="{{.RatingStr}}"></div>
     <div class="checkbox-row field"><input type="checkbox" id="draft" name="draft" value="1"{{if .FM.Draft}} checked{{end}}><label for="draft">Draft (unpublished)</label></div>
     <div class="btn-row"><button type="submit" class="btn--primary">Save</button></div>

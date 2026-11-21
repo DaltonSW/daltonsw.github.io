@@ -146,11 +146,8 @@ func CloseEntry(e OpenEntry) (bool, error) {
 		entry.Finished = e.CloseOn
 	}
 
-	// Same pre-write proof every other playthrough write makes: nothing that
-	// was on disk may vanish. Only a date is being added, so no removal is
-	// ever legitimate here and none is declared.
-	if err := mutate.VerifyNoLoss(pf, nil); err != nil {
-		return false, err
-	}
-	return true, pf.Save()
+	// The same write every other playthrough change goes through: the
+	// pre-write loss check (only a date is added, so no removal is declared),
+	// then the game's derived status follows (mutate.SyncGameStatus).
+	return true, mutate.WriteEntry(pf)
 }

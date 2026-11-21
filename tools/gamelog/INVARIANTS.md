@@ -34,6 +34,13 @@ what's load-bearing.
   dates as a first playthrough (`CreateGameFile`), and stale triage closes the sole open entry
   rather than stamping the game. `legacy_last_played:` on 13 games is inert and preserved via
   `Extra`. Don't reintroduce `started`/`finished` on `FrontMatter`.
+  **A game's status is derived from its runs** (`model.DeriveGameStatus`):
+  - Any open run means the most recently active one's status.
+  - Otherwise `finished` if any run was finished, else the status of the run that ended last.
+  - Runs that don't count: `planned`, `misc_launch`, and `endless`/`multiplayer` side modes.
+  - It stays hand-set for one-shot games (`endless`/`multiplayer`/`software` describe the kind of
+    game, not an outcome) and for games with no counted runs.
+  - The edit forms show a derived status read-only.
   "Mastered" isn't a status either. It's derived from the archive (`model.DeriveMastery` →
   `achievement-summary.yaml`'s `mastered:`) and shown as a badge by
   `layouts/partials/game-mastery.html`, so a mastered game can still be `playing` a replay.
@@ -78,10 +85,12 @@ what's load-bearing.
   which is how the old layout once published every raw API response. `playthroughs.yaml` and
   `achievement-summary.yaml` stay unpublished via the `_build.publishResources: false` cascade in
   `content/games/_index.md`.
-- **`SyncStatus` only acts when a game has exactly one entry.** With two or more, "which one does
-  this status refer to?" is ambiguous, so it returns false. Splitting a game therefore opts it out
-  of automatic status sync for good, and its entries become hand-maintained. That's deliberate,
-  not a bug to route around.
+- **Status flows from runs to the game, never the other way.** `model.DeriveGameStatus` decides
+  the game's status, and `mutate.SyncGameStatus` writes it into front matter after every
+  playthrough write (`WriteEntry`/`WriteSplit`, so `close.go` and `AddSessionAndWrite` too) and for
+  every game in `gamelog project`. The old `SyncStatus`, which pushed a game status onto its sole
+  entry, is gone. Don't add a path that edits a derived game status directly: change a run.
+  Stale triage does exactly that (`CloseLatestOpenRun`).
 - **Playthrough boundaries are confirmed by hand, never derived.** A gap in achievement unlocks
   marks an activity arc, not a playthrough, so nothing should split entries automatically.
 

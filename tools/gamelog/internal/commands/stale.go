@@ -89,31 +89,32 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 	return out, nil
 }
 
-// ApplyStaleAction decides what a stale-action decision means for doc's
-// front matter — accepting the suggestion, or correcting it to a different
-// terminal status — and sets it. It does not write anything: the TUI still
-// wants its own confirm-and-write pass (confirmAndWriteFrontMatter, prompt
-// included) right after calling this, while the web UI's already-submitted
-// form is its confirmation, so it goes straight to the no-prompt
-// writeFrontMatter instead. "Edit before applying" isn't handled here: it
-// needs a whole extra form's worth of input first (see reviewStale and, for
-// the web UI, the regular game-info edit page instead of a stale-specific
-// one), and "skip"/"quit" change nothing.
+// ApplyStaleAction applies a stale-action decision — accepting the
+// suggestion, or correcting it to a different terminal status — without
+// writing anything; the caller writes whichever file it reports changed.
+// "Edit before applying" isn't handled here (it needs a whole extra form's
+// worth of input first, so the web UI sends it to the game's own page), and
+// "skip" changes nothing.
 //
-// It returns the date the game's open playthrough should close on, for the
-// caller to hand to PlaythroughsFile.SyncStatus — the game itself carries no
-// dates. "paused" isn't a finish (the game's still meant to be played, just
-// not right now), so it closes nothing.
-func ApplyStaleAction(doc *model.Doc, c StaleCandidate, action string) (closedOn string) {
+// The verdict lands on the game's most recently active open run, closed on
+// the last-played date (model.CloseLatestOpenRun), and the game's status then
+// follows from its runs (mutate.SyncGameStatus). "paused" isn't a finish, so
+// it re-labels the run without closing it. Only a game with no open run — one
+// logged before runs existed — gets its front-matter status set directly.
+func ApplyStaleAction(doc *model.Doc, pf *model.PlaythroughsFile, c StaleCandidate, action string) (runChanged bool) {
 	status := c.SuggestedStatus
 	if s, ok := strings.CutPrefix(action, forms.StaleMarkPrefix); ok {
 		status = s
 	}
-	doc.FM.Status = status
+	closedOn := c.LastPlayed
 	if status == "paused" {
-		return ""
+		closedOn = ""
 	}
-	return c.LastPlayed
+	if pf.CloseLatestOpenRun(status, closedOn) {
+		return true
+	}
+	doc.FM.Status = status
+	return false
 }
 
 func FormatStaleCard(c StaleCandidate) string {

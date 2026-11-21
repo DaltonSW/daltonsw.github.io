@@ -102,7 +102,7 @@ func newAchievementsCmd() *cobra.Command {
 func newProjectCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "project",
-		Short: "Regenerate every game's achievement-summary.yaml from the archive on disk",
+		Short: "Regenerate achievement summaries from the archive, and game statuses from playthroughs",
 		Long: "Regenerate every game's achievement-summary.yaml from the archive already\n" +
 			"on disk. Makes no API calls.",
 		Args: cobra.NoArgs,

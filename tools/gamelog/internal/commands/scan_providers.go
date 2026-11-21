@@ -385,7 +385,7 @@ func LinkToGame(ctx context.Context, gamesDir, slug, provider, id string, creds 
 	if err := doc.SetProviderID(provider, id); err != nil {
 		return "", err
 	}
-	if err := mutate.WriteFrontMatter(doc, nil, false); err != nil {
+	if err := mutate.WriteFrontMatter(doc); err != nil {
 		return "", err
 	}
 

@@ -32,7 +32,8 @@ Consequences that should drive design decisions:
 - **Storage is split three ways, on purpose.** `content/games/<slug>/_index.md` is authored by
   hand; the tool creates it and afterwards only splices individual front-matter fields, never the
   markdown body, and carries no dates (started/first finished/last played derive from playthroughs,
-  mastered from achievements); `playthroughs.yaml` beside it is tool-owned and
+  mastered from achievements). Its `status:` is written by the tool from the game's runs, except
+  for one-shot games and games with no runs; `playthroughs.yaml` beside it is tool-owned and
   rewritten whole; `archive/<provider>/<id>.json` holds captured API history, keyed by IDs that
   never change and kept outside `content/` so a rename or delete can't destroy it — and so Hugo
   never parses or publishes it. The site reads captured data only through tool-generated

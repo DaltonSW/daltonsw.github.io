@@ -2,7 +2,8 @@
 <tr id="row-{{.Slug}}"{{if .Saved}} class="row--saved"{{else if .Error}} class="row--error"{{end}}>
   <td><a href="/games/{{.Slug}}">{{.Title}}</a></td>
   <td>
-    <select name="status">{{$cur := .Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>
+    {{if .StatusDerived}}<span class="dim" title="Derived from playthroughs — change a run on the game's page.">{{.Status}}</span>
+    {{else}}<select name="status">{{$cur := .Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>{{end}}
   </td>
   <td>{{if .Draft}}
     <!-- <span class="pill pill--draft">draft</span> -->
@@ -13,7 +14,7 @@
       hx-swap="outerHTML">Undraft</button>
   {{else}}<span class="dim">no</span>{{end}}</td>
   <td><input type="text" value="{{.Started}}" disabled title="Derived from playthroughs.yaml — edit on the game's own page."></td>
-  <td>{{if .CanCloseSoleRun}}<input type="text" name="close_on" placeholder="close run on…" title="Close the game's one open playthrough on this date">{{else}}<input type="text" value="{{.FirstFinished}}" disabled title="Derived from playthroughs.yaml — edit on the game's own page.">{{end}}</td>
+  <td><input type="text" value="{{.FirstFinished}}" disabled title="Derived from playthroughs.yaml — edit on the game's own page."></td>
   <td><input type="text" name="platform" value="{{.Platform}}"></td>
   <td><input type="text" name="rating" value="{{.Rating}}" style="max-width: 4rem;"></td>
   <td class="dim">{{.NumPlaythroughs}}</td>
