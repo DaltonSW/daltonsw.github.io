@@ -105,7 +105,9 @@ function visibleGroupIds(
   return ids;
 }
 
-const HEIGHT_GAP = 32;
+// No safety margin, matching tabs.ts's PANEL_GAP, so the timeline and the
+// other tabs end on the same line just above the footer.
+const HEIGHT_GAP = 0;
 const MIN_ROOT_HEIGHT = 240;
 
 function applyRootHeight(root: HTMLElement): void {
@@ -122,7 +124,7 @@ function applyRootHeight(root: HTMLElement): void {
   const footer = document.querySelector<HTMLElement>(".site-footer");
   const footerHeight = footer ? footer.getBoundingClientRect().height : 0;
   const height = Math.max(
-    window.innerHeight - top - belowBox - belowPadding - footerHeight - HEIGHT_GAP,
+    Math.floor(window.innerHeight - top - belowBox - belowPadding - footerHeight - HEIGHT_GAP),
     MIN_ROOT_HEIGHT,
   );
   root.style.height = `${height}px`;
@@ -387,6 +389,18 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     window.clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(() => applyRootHeight(root), 150);
   });
+  // web fonts loading re-flows the content above the timeline; re-measure then
+  // (see tabs.ts for why fonts.ready alone isn't enough)
+  const remeasure = () => applyRootHeight(root);
+  document.fonts?.ready.then(remeasure);
+  document.fonts?.addEventListener("loadingdone", remeasure);
+  window.addEventListener("load", remeasure);
+  // The timeline renders while its tab is still hidden behind Overview, where
+  // it measures as starting at the top of the window and comes out a whole
+  // header-and-tabs too tall. Re-measure each time it actually comes into view.
+  new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) applyRootHeight(root);
+  }).observe(root);
 }
 
 main();
