@@ -26,15 +26,12 @@
 
 {{- range .Pages -}}
   {{- $page := . -}}
+  {{- if (partial "game-mastery.html" $page).date -}}{{- $masteredCount = add $masteredCount 1 -}}{{- end -}}
   {{- with .Resources.Get "achievement-summary.yaml" -}}
     {{- $summary := . | transform.Unmarshal -}}
     {{- $total := $summary.total | default 0 -}}
-    {{- $unlocked := $summary.unlocked | default 0 -}}
     {{- if gt $total 0 -}}
       {{- $trackedCount = add $trackedCount 1 -}}
-      {{- if eq $unlocked $total -}}
-        {{- $masteredCount = add $masteredCount 1 -}}
-      {{- end -}}
     {{- end -}}
     {{- range ($summary.earned | default slice) -}}
       {{- $entry := . -}}

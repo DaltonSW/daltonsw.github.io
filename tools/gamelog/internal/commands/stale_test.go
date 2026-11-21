@@ -96,7 +96,7 @@ func TestFindStaleCandidates_SuggestsByCompletion(t *testing.T) {
 		wantStatus      string
 		wantConfidence  string
 	}{
-		{"100% completion", 10, 10, "mastered", "medium"},
+		{"100% completion", 10, 10, "finished", "medium"},
 		{"high but not full completion", 10, 9, "finished", "medium"},
 		{"partial completion", 10, 3, "dropped", "medium"},
 		{"no achievements tracked", 0, 0, "unfinished", "low"},

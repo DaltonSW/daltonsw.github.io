@@ -154,6 +154,10 @@ type ArchivedAchievement struct {
 	// withholds until earned, to avoid spoiling it. Steam and PSN both
 	// report this; RA/Xbox/Exophase have no equivalent concept.
 	Hidden bool `json:"hidden,omitempty"`
+	// Group is PSN's trophyGroupId: "default" for the base game, "001",
+	// "002", … for each DLC pack. It's what lets base-game and DLC mastery be
+	// dated separately. No other provider reports anything like it.
+	Group string `json:"group,omitempty"`
 }
 
 // ProviderRecord is everything one service knows about one game.
@@ -195,6 +199,13 @@ type ProviderRecord struct {
 	LastPlayed   string         `json:"last_played,omitempty"`
 
 	Achievements []ArchivedAchievement `json:"achievements"`
+
+	// Mastery is every mastery milestone ever observed on this record. It is
+	// persisted rather than only derived because it can stop being derivable:
+	// a DLC that adds achievements makes an old 100% read as 54/60, and an RA
+	// set revision can demote HighestAwardKind. See DeriveMastery and
+	// unionMastery — milestones are only ever added.
+	Mastery []MasteryMilestone `json:"mastery,omitempty"`
 
 	// Raw is the provider's verbatim response. Kept so a field we didn't
 	// think to normalise is still recoverable without re-fetching — which
@@ -257,6 +268,7 @@ func (p *ProviderRecord) Summarize() {
 	if p.Total < len(p.Achievements) {
 		p.Total = len(p.Achievements)
 	}
+	p.Mastery = unionMastery(p.Mastery, DeriveMastery(p))
 }
 
 // mergeProvider folds a fresh fetch into what's already recorded. The rule
@@ -274,6 +286,10 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 	}
 
 	merged := *old
+	// Fold in whatever the old record already qualified for before anything
+	// changes, so a record written before milestones existed can't lose one
+	// to the very fetch that adds DLC achievements.
+	merged.Mastery = unionMastery(old.Mastery, DeriveMastery(old))
 	merged.LastAttempt = fresh.LastAttempt
 	merged.LastError = fresh.LastError
 
@@ -333,6 +349,7 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 	for _, k := range order {
 		merged.Achievements = append(merged.Achievements, byKey[k])
 	}
+	merged.Mastery = unionMastery(merged.Mastery, fresh.Mastery)
 	merged.Summarize()
 	return &merged
 }
@@ -345,6 +362,7 @@ func mergeAchievement(old, fresh ArchivedAchievement) ArchivedAchievement {
 	out.Description = FirstNonEmpty(fresh.Description, old.Description)
 	out.Icon = FirstNonEmpty(fresh.Icon, old.Icon)
 	out.Tier = FirstNonEmpty(fresh.Tier, old.Tier)
+	out.Group = FirstNonEmpty(fresh.Group, old.Group)
 	out.Hidden = fresh.Hidden || old.Hidden
 	if fresh.Points == 0 {
 		out.Points = old.Points
@@ -447,6 +465,11 @@ type AchievementSummary struct {
 	PlaytimeMins int    `yaml:"playtime_mins,omitempty"`
 	LastPlayed   string `yaml:"last_played,omitempty"`
 
+	// Mastered is the day the game first counted as mastered on any provider
+	// it's played on (subsets excluded): the earliest base-game or full-set
+	// milestone in Providers[].Mastery. Empty means not mastered.
+	Mastered string `yaml:"mastered,omitempty"`
+
 	// Providers is the same numbers before they were added together. A game
 	// played on two platforms has two separate achievement sets, and summing
 	// them reads as one impossible set — Persona 5 Royal is 53/53 on PS4 and
@@ -516,8 +539,9 @@ type SubsetBreakdown struct {
 	// played again under a different id — so it is kept here and deliberately
 	// left out of the game's total, which would otherwise double-count the
 	// same hours.
-	PlaytimeMins int    `yaml:"playtime_mins,omitempty"`
-	LastPlayed   string `yaml:"last_played,omitempty"`
+	PlaytimeMins int                `yaml:"playtime_mins,omitempty"`
+	LastPlayed   string             `yaml:"last_played,omitempty"`
+	Mastery      []MasteryMilestone `yaml:"mastery,omitempty"`
 }
 
 // ProviderBreakdown is one provider's contribution to a game's summary.
@@ -525,11 +549,12 @@ type ProviderBreakdown struct {
 	Provider string `yaml:"provider"`
 	// Platform is the provider's own name for where it was played (PS4, PC,
 	// GameCube). It's what a reader actually recognises — "psn" is plumbing.
-	Platform     string `yaml:"platform,omitempty"`
-	Unlocked     int    `yaml:"unlocked"`
-	Total        int    `yaml:"total"`
-	PlaytimeMins int    `yaml:"playtime_mins,omitempty"`
-	LastPlayed   string `yaml:"last_played,omitempty"`
+	Platform     string             `yaml:"platform,omitempty"`
+	Unlocked     int                `yaml:"unlocked"`
+	Total        int                `yaml:"total"`
+	PlaytimeMins int                `yaml:"playtime_mins,omitempty"`
+	LastPlayed   string             `yaml:"last_played,omitempty"`
+	Mastery      []MasteryMilestone `yaml:"mastery,omitempty"`
 }
 
 func achievementSummaryPath(gameDir string) string {
@@ -546,6 +571,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 	var breakdown []ProviderBreakdown
 	var subsets []SubsetBreakdown
 	var earned []EarnedAchievement
+	var mastered string
 	for _, link := range links {
 		provider, id := link.Provider, link.ID
 		if id == "" {
@@ -558,6 +584,9 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 		if rec == nil {
 			continue
 		}
+		// Derived as well as read back, so a record not refreshed since
+		// milestones were introduced still projects what it qualifies for.
+		mastery := unionMastery(rec.Mastery, DeriveMastery(&rec.ProviderRecord))
 		subsetName := ""
 		if link.Subset {
 			// A subset gets its own line and contributes nothing to the
@@ -579,6 +608,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				Total:        rec.Total,
 				PlaytimeMins: rec.PlaytimeMins,
 				LastPlayed:   FirstNonEmpty(rec.LastPlayed, rec.Last),
+				Mastery:      mastery,
 			})
 		} else {
 			breakdown = append(breakdown, ProviderBreakdown{
@@ -588,7 +618,11 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				Total:        rec.Total,
 				PlaytimeMins: rec.PlaytimeMins,
 				LastPlayed:   FirstNonEmpty(rec.LastPlayed, rec.Last),
+				Mastery:      mastery,
 			})
+			if d := MasteredOn(mastery); d != "" && (mastered == "" || d < mastered) {
+				mastered = d
+			}
 			unlocked += rec.Unlocked
 			total += rec.Total
 			playtimeMins += rec.PlaytimeMins
@@ -638,6 +672,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 
 	out, err := yaml.Marshal(AchievementSummary{
 		Unlocked: unlocked, Total: total, PlaytimeMins: playtimeMins, LastPlayed: lastPlayed,
+		Mastered:  mastered,
 		Providers: breakdown, Subsets: subsets, Earned: earned,
 	})
 	if err != nil {

@@ -2,6 +2,7 @@ unlocked: 62
 total: 68
 playtime_mins: 9226
 last_played: "2025-04-16"
+mastered: "2020-07-16"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 34
       playtime_mins: 9226
       last_played: "2024-07-13"
+      mastery:
+        - scope: all
+          date: "2020-07-16"
+          unlocked: 34
+          basis: 100%
     - provider: psn
       platform: PS4
       unlocked: 28

@@ -2,6 +2,7 @@ unlocked: 13
 total: 13
 playtime_mins: 250
 last_played: "2022-01-02"
+mastered: "2022-01-02"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 13
       playtime_mins: 250
       last_played: "2022-01-02"
+      mastery:
+        - scope: all
+          date: "2022-01-02"
+          unlocked: 13
+          basis: 100%
 earned:
     - name: It's a happy ending.
       date: "2022-01-02T13:30:10-06:00"

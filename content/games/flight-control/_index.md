@@ -3,7 +3,7 @@ title: Flight Control
 platform: Wii
 retroachievements_id: 34671
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-06-26"
 rating: null

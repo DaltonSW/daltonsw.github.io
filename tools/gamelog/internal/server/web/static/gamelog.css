@@ -219,7 +219,6 @@ summary.tui__title::marker { color: var(--accent); font-size: 0.7em; }
 }
 .pill--playing     { color: var(--warn); }
 .pill--finished     { color: var(--ok); }
-.pill--mastered    { color: var(--mastered); }
 .pill--dropped     { color: var(--stop); }
 .pill--backlog     { color: var(--dim); }
 .pill--paused      { color: var(--pause); }

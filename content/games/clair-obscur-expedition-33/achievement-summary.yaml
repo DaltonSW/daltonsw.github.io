@@ -2,6 +2,7 @@ unlocked: 55
 total: 55
 playtime_mins: 8252
 last_played: "2026-01-10"
+mastered: "2025-12-29"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 55
       playtime_mins: 8252
       last_played: "2026-01-10"
+      mastery:
+        - scope: all
+          date: "2025-12-29"
+          unlocked: 55
+          basis: 100%
 earned:
     - name: Overcharge
       description: With Gustave, use a fully charged Overcharge that Breaks an enemy.

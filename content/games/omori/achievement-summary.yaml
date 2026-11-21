@@ -2,6 +2,7 @@ unlocked: 84
 total: 84
 playtime_mins: 4020
 last_played: "2022-02-20"
+mastered: "2022-02-20"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 84
       playtime_mins: 4020
       last_played: "2022-02-20"
+      mastery:
+        - scope: all
+          date: "2022-02-20"
+          unlocked: 84
+          basis: 100%
 earned:
     - name: Green Thumb
       date: "2021-07-01T21:33:47-05:00"

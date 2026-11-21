@@ -2,6 +2,7 @@ unlocked: 45
 total: 45
 playtime_mins: 1452
 last_played: "2026-03-14"
+mastered: "2026-03-14"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 45
       playtime_mins: 1452
       last_played: "2026-03-14"
+      mastery:
+        - scope: all
+          date: "2026-03-14"
+          unlocked: 45
+          basis: 100%
 earned:
     - name: Groundwork
       date: "2026-02-25T18:48:07-06:00"

@@ -3,7 +3,7 @@ title: Super Paper Mario
 platform: Wii
 retroachievements_id: 187
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-04-05"
 rating: null

@@ -2,6 +2,7 @@ unlocked: 114
 total: 114
 playtime_mins: 873
 last_played: "2024-11-09"
+mastered: "2024-11-09"
 providers:
     - provider: retroachievements
       platform: Nintendo 64
@@ -9,6 +10,15 @@ providers:
       total: 114
       playtime_mins: 873
       last_played: "2024-11-09"
+      mastery:
+        - scope: base
+          date: "2024-11-09"
+          unlocked: 114
+          basis: ra-mastered
+        - scope: all
+          date: "2024-11-09"
+          unlocked: 114
+          basis: 100%
 earned:
     - name: A New Journey
       description: Grab your first Power Star.

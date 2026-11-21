@@ -65,7 +65,7 @@ func TestSuggestPanelPrefills(t *testing.T) {
 	v := buildSuggestView(report, doc, pf, "playing")
 
 	ra, st := v.Providers[0], v.Providers[1]
-	if ra.Started != "2024-01-10" || ra.Finished != "2024-03-02" || ra.Status != "mastered" {
+	if ra.Started != "2024-01-10" || ra.Finished != "2024-03-02" || ra.Status != "finished" {
 		t.Errorf("RA prefill = %+v", ra)
 	}
 	if st.Finished != "" || st.FinishedHint != "2024-02-20" || st.Status != "playing" {
@@ -83,7 +83,7 @@ func TestSuggestPanelPrefills(t *testing.T) {
 		`action="/games/banjo/playthroughs"`,
 		`value="2024-01-10"`,
 		`value="2024-03-02"`,
-		`<option value="mastered" selected>`,
+		`<option value="finished" selected>`,
 		`placeholder="last activity 2024-02-20"`,
 		`12/40 achievements`,
 		`1.5h total playtime`,

@@ -32,6 +32,22 @@
   </ul>
   {{- end }}
 
+  {{/* every mastery milestone (base game, DLC groups, full set, subsets), oldest first */}}
+  {{- with (partial "game-mastery.html" .).milestones }}
+  {{- $platforms := slice }}{{ range . }}{{ $platforms = $platforms | append .platform }}{{ end }}
+  {{- $multi := gt (len (uniq $platforms)) 1 }}
+  <ul class="ach-mastery">
+    {{- range . }}
+    <li>
+      <span class="ach-mastery__mark" aria-hidden="true">★</span>
+      <span class="ach-mastery__label">{{ .label }}{{ if $multi }} · {{ .platform }}{{ end }}</span>
+      <span class="ach-mastery__date">{{ .date | time.Format "Jan 2, 2006" }}</span>
+      <span class="ach-mastery__basis">{{ if eq .basis "platinum" }}platinum{{ else if hasPrefix .basis "ra-" }}RA {{ strings.TrimPrefix "ra-" .basis }}{{ else }}{{ .unlocked }}/{{ .unlocked }}{{ end }}</span>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
   {{/* RA subsets (AchievementSummary.Subsets): shown even when there's only one, unlike
        the provider breakdown above, since a lone subset is the point of the section. */}}
   {{- with $summary.subsets }}

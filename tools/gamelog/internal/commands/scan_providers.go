@@ -168,14 +168,15 @@ func ScanPSN(ctx context.Context, creds Credentials, index loggedIndex) ([]Candi
 		if ts, err := time.Parse(time.RFC3339, t.LastUpdatedDateTime); err == nil {
 			c.LastActivity = day(ts)
 		}
-		// A platinum is every base-game trophy, which is what mastered means.
+		// A platinum is every base-game trophy, so the game was finished (and
+		// mastered, which the archive records — mastery isn't a status).
 		// There's no date for it in the bulk list — the archive gets the real
 		// one when the game is created — so none is guessed here.
 		switch {
 		case t.EarnedTrophies.Platinum > 0:
-			c.Finished, c.AwardKind, c.Status = true, "platinum", "mastered"
+			c.Finished, c.AwardKind, c.Status = true, "platinum", "finished"
 		case total > 0 && earned == total:
-			c.Finished, c.AwardKind, c.Status = true, "every trophy", "mastered"
+			c.Finished, c.AwardKind, c.Status = true, "every trophy", "finished"
 		}
 		index.place(&c)
 		out = append(out, c)
@@ -217,7 +218,7 @@ func ScanXbox(ctx context.Context, creds Credentials, index loggedIndex) ([]Cand
 			c.LastActivity = day(ts)
 		}
 		if t.Achievement.Total > 0 && t.Achievement.Current == t.Achievement.Total {
-			c.Finished, c.AwardKind, c.Status = true, "every achievement", "mastered"
+			c.Finished, c.AwardKind, c.Status = true, "every achievement", "finished"
 		}
 		index.place(&c)
 		out = append(out, c)
@@ -272,7 +273,7 @@ func ScanExophase(ctx context.Context, creds Credentials, index loggedIndex, pro
 			c.LastActivity = day(time.Unix(g.LastPlayed, 0))
 		}
 		if g.TotalAwards > 0 && g.EarnedAwards == g.TotalAwards {
-			c.Finished, c.AwardKind, c.Status = true, "every achievement", "mastered"
+			c.Finished, c.AwardKind, c.Status = true, "every achievement", "finished"
 			if g.CompletionDate > 0 {
 				c.FinishedOn = day(time.Unix(g.CompletionDate, 0))
 			}

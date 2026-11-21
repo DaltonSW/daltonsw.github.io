@@ -2,6 +2,7 @@ unlocked: 43
 total: 43
 playtime_mins: 1226
 last_played: "2026-05-12"
+mastered: "2026-05-12"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
@@ -9,6 +10,15 @@ providers:
       total: 43
       playtime_mins: 1226
       last_played: "2026-05-12"
+      mastery:
+        - scope: base
+          date: "2026-05-12"
+          unlocked: 43
+          basis: ra-mastered
+        - scope: all
+          date: "2026-05-12"
+          unlocked: 43
+          basis: 100%
 earned:
     - name: Pancakes for You
       description: Solve Puzzle 006 'Piles of Pancakes 1' in 7 moves.

@@ -36,6 +36,7 @@
   {{- $hasItems := false -}}
   {{- $groupLast := "" -}}
   {{- $groupHasOpen := false -}}
+  {{- $entryStarts := slice -}}
 
   {{- range $idx, $entry := $entries -}}
     {{- if $entry.started -}}
@@ -69,6 +70,7 @@
       {{- if and (eq $end "") (not (in $openEndedStatuses $status)) -}}
         {{- $end = ($activityEnd | time.Format $fmt) -}}
       {{- end -}}
+      {{- $entryStarts = $entryStarts | append (dict "sub" $sub "start" $start) -}}
       {{- if or (eq $earliestStart "") (lt $start $earliestStart) -}}
         {{- $earliestStart = $start -}}
       {{- end -}}
@@ -146,6 +148,30 @@
         -}}
       {{- end -}}
       {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{/* mastery milestones (game-mastery.html) as one point per day, drawn on the lane of
+       the latest run that had started by then — mastery belongs to the game, not a run */}}
+  {{- if $hasItems -}}
+    {{- $byDate := dict -}}
+    {{- range (partial "game-mastery.html" $game).milestones -}}
+      {{- $line := printf "%s · %s" .label .platform -}}
+      {{- $byDate = merge $byDate (dict .date (((index $byDate .date) | default slice) | append $line)) -}}
+    {{- end -}}
+    {{- range $day, $lines := $byDate -}}
+      {{- $sub := (index $entryStarts 0).sub -}}
+      {{- $best := "" -}}
+      {{- range $entryStarts -}}
+        {{- if and (le .start $day) (ge .start $best) -}}{{- $sub = .sub -}}{{- $best = .start -}}{{- end -}}
+      {{- end -}}
+      {{- $items = $items | append (dict
+          "id" (printf "%s--mastery-%s" $slug $day) "group" $slug "subgroup" $sub
+          "type" "point" "className" "pt-mastery" "content" "★"
+          "title" (printf "Mastered · %s<br>%s" ($day | time.Format "Jan 2, 2006") (delimit $lines "<br>"))
+          "start" $day
+        )
+      -}}
     {{- end -}}
   {{- end -}}
 

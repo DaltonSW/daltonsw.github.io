@@ -2,6 +2,7 @@ unlocked: 4
 total: 4
 playtime_mins: 1572
 last_played: "2021-03-10"
+mastered: "2021-03-10"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 4
       playtime_mins: 1572
       last_played: "2021-03-10"
+      mastery:
+        - scope: all
+          date: "2021-03-10"
+          unlocked: 4
+          basis: 100%
 earned:
     - name: Show's Over, Crime!
       description: Complete Case 1

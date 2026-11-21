@@ -3,7 +3,7 @@ title: Her Story
 platform: PC
 retroachievements_id: null
 steam_appid: 368370
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

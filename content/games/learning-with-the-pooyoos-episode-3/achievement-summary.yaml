@@ -2,6 +2,7 @@ unlocked: 6
 total: 6
 playtime_mins: 9
 last_played: "2026-07-12"
+mastered: "2026-07-12"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 6
       playtime_mins: 9
       last_played: "2026-07-12"
+      mastery:
+        - scope: base
+          date: "2026-07-12"
+          unlocked: 6
+          basis: ra-mastered
+        - scope: all
+          date: "2026-07-12"
+          unlocked: 6
+          basis: 100%
 earned:
     - name: Hide-and-Seek!
       description: Score 15 points in the "Hide-and-seek!" mini-game on Big PooYoo.

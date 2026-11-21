@@ -2,6 +2,7 @@ unlocked: 107
 total: 107
 playtime_mins: 2713
 last_played: "2026-06-14"
+mastered: "2026-06-14"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 107
       playtime_mins: 2713
       last_played: "2026-06-14"
+      mastery:
+        - scope: base
+          date: "2026-06-14"
+          unlocked: 107
+          basis: ra-mastered
+        - scope: all
+          date: "2026-06-14"
+          unlocked: 107
+          basis: 100%
 earned:
     - name: Day on the Ranch
       description: Herd some goats at Ordon Ranch and then hit the hay

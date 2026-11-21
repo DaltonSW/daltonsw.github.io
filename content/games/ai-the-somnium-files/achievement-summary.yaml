@@ -2,6 +2,7 @@ unlocked: 45
 total: 45
 playtime_mins: 1991
 last_played: "2024-09-20"
+mastered: "2020-07-05"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 45
       playtime_mins: 1991
       last_played: "2024-09-20"
+      mastery:
+        - scope: all
+          date: "2020-07-05"
+          unlocked: 45
+          basis: 100%
 earned:
     - name: 'Dream Documentation Duty: Intern'
       date: "2020-06-29T20:32:10-05:00"

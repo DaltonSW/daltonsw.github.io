@@ -2,6 +2,7 @@ unlocked: 46
 total: 46
 playtime_mins: 1556
 last_played: "2025-11-16"
+mastered: "2025-11-16"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 46
       playtime_mins: 1556
       last_played: "2025-11-16"
+      mastery:
+        - scope: all
+          date: "2025-11-16"
+          unlocked: 46
+          basis: 100%
 earned:
     - name: Constriction
       description: Solve the Constriction scenario

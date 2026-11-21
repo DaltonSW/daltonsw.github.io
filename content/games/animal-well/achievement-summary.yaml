@@ -2,6 +2,7 @@ unlocked: 20
 total: 20
 playtime_mins: 1084
 last_played: "2026-05-03"
+mastered: "2026-01-30"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 20
       playtime_mins: 1084
       last_played: "2026-05-03"
+      mastery:
+        - scope: all
+          date: "2026-01-30"
+          unlocked: 20
+          basis: 100%
 earned:
     - name: EXPLORER
       description: Find the map

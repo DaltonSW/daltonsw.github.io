@@ -2,6 +2,7 @@ unlocked: 13
 total: 13
 playtime_mins: 39
 last_played: "2026-07-11"
+mastered: "2026-07-11"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 13
       playtime_mins: 39
       last_played: "2026-07-11"
+      mastery:
+        - scope: base
+          date: "2026-07-11"
+          unlocked: 13
+          basis: ra-mastered
+        - scope: all
+          date: "2026-07-11"
+          unlocked: 13
+          basis: 100%
 earned:
     - name: Loop-de-Loop
       description: Meet up with Luther

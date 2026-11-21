@@ -3,7 +3,7 @@ title: TUNIC
 platform: PC
 retroachievements_id: null
 steam_appid: 553420
-status: mastered
+status: finished
 started: ""
 finished: "2026-07-16"
 rating: 10

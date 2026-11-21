@@ -6,7 +6,7 @@ steam_appid:
 psn_id: NPWR05818_00
 ubisoft_id:
 xbox_id:
-status: "mastered"
+status: "finished"
 subgames:
 started:
 finished:

@@ -2,6 +2,7 @@ unlocked: 6
 total: 6
 playtime_mins: 33
 last_played: "2023-02-10"
+mastered: "2023-02-10"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 6
       playtime_mins: 33
       last_played: "2023-02-10"
+      mastery:
+        - scope: all
+          date: "2023-02-10"
+          unlocked: 6
+          basis: 100%
 earned:
     - name: PICKED IT UP
       description: Good detecting, friend!

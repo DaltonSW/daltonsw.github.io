@@ -3,7 +3,7 @@ title: To the Moon
 platform: PC
 retroachievements_id: null
 steam_appid: 206440
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

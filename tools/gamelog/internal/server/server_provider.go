@@ -177,10 +177,9 @@ func raSuggestion(pr commands.ProviderResult, defaultStatus string) providerSugg
 		out.Confidence = "high (" + s.AwardKind + ")"
 		out.Detail = fmt.Sprintf("earliest achievement %s · %s %s", started, s.AwardKind, last)
 		out.Finished = last
+		// A mastery award still only says the run finished; the mastery
+		// itself is read from the archive (model.DeriveMastery), not a status.
 		out.Status = "finished"
-		if s.AwardKind == "mastered" || s.AwardKind == "completed" {
-			out.Status = "mastered"
-		}
 		return out
 	}
 	out.Confidence = "medium — no award, not confirmed finished"

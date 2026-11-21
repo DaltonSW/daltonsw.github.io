@@ -3,7 +3,7 @@ title: The Case of the Golden Idol
 platform: PC
 retroachievements_id: null
 steam_appid: 1677770
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

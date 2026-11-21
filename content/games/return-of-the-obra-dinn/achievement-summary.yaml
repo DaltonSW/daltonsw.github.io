@@ -2,6 +2,7 @@ unlocked: 16
 total: 16
 playtime_mins: 742
 last_played: "2020-05-09"
+mastered: "2020-05-09"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 16
       playtime_mins: 742
       last_played: "2020-05-09"
+      mastery:
+        - scope: all
+          date: "2020-05-09"
+          unlocked: 16
+          basis: 100%
 earned:
     - name: Any 6
       description: Solve any 6 fates.

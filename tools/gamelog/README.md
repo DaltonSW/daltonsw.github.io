@@ -131,11 +131,11 @@ dates and separate outcomes, so an entry may carry its own `platform:`:
 playthroughs:
   - started: "2020-05-19"
     finished: "2020-10-17"
-    status: mastered
+    status: finished
     platform: PS4
   - started: "2023-03-12"
     finished: "2023-05-14"
-    status: mastered
+    status: finished
     platform: PC
 ```
 
@@ -192,9 +192,12 @@ written by Housekeeping's subset attach (see "RetroAchievements subsets"), and `
 `ninjakiwi_user_id` are hand-edited. The markdown body is written once, from the new-game form's
 overview field, and never edited by the tool after that.
 
-`status: mastered` is `finished`'s stronger sibling — the game was beaten *and* every achievement
-was earned, not just the ones that come from beating it. It's a distinct value rather than a flag
-on `finished` so the timeline/list can color and filter them separately.
+**"Mastered" is not a status.** It used to be `finished`'s stronger sibling, at both game and entry
+level, which didn't work for a replay of a game already mastered. Now it's a fact about the
+*game*, derived from the archive (see "Mastery milestones" below) and shown as a badge beside
+whatever the status is, so a mastered game can be `playing` again. Runs that were `mastered` are
+`finished`. A game with no achievement data can carry a hand-set front-matter `mastered:
+"YYYY-MM-DD"`, which the site prefers over the derived date. The tool never writes it.
 
 `status: paused` is distinct from `dropped`: it means the game is on hold, not abandoned — you
 mean to come back to it eventually. Setting it never writes a finished date, since the game isn't
@@ -396,13 +399,13 @@ few minutes shows up. A **RetroAchievements subset row** costs one more per-game
 resolve its parent, memoized for the process (see "RetroAchievements subsets" below).
 
 Finish signals differ by provider. PSN's platinum, or every achievement on Xbox/Ubisoft/Google
-Play, is suggested as `status: mastered` — with Exophase's completion date when it has one, and
+Play, is suggested as `status: finished` (the row still names the award) — with Exophase's completion date when it has one, and
 no date otherwise (the bulk lists don't carry one; the archive gets the real date at creation). The bulk endpoints carry no start dates; create the entry, then use the game's
 **Suggest** button for the precise range. A RetroAchievements game counts as finished when it carries
 a real award — the row names which one, since `12/189 achievements → finished` only makes sense
-once you can see it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award —
-every achievement, not just the ones needed to beat it — is suggested as `status: mastered`
-instead of `finished`. **Steam games are never auto-marked finished**: playtime alone says nothing
+once you can see it was `beaten-hardcore` rather than a mastery. A `mastered`/`completed` award is
+still suggested as `finished`. The mastery itself is read from the archive, not stored as a
+status. **Steam games are never auto-marked finished**: playtime alone says nothing
 about completion.
 
 **Every guessed row follows the same three-part shape as the Stale section**, which is the
@@ -467,7 +470,7 @@ RetroAchievements has two unrelated denominators, and merging them would invent 
 true of neither. A RetroAchievements subset is another such denominator, so it gets its own row
 too, named (`retroachievements · Mouse Alley`) rather than repeating the bare provider on two rows
 with different numbers. The one-shot statuses (`endless`, `multiplayer`, `software`) never appear
-— there's no completion for them to be short of — and `finished`/`dropped`/`mastered`/`unfinished`
+— there's no completion for them to be short of — and `finished`/`dropped`/`unfinished`
 games are opt-in via a checkbox (`incomplete_all`), since leaving achievements on a game you've called finished (or
 unfinished) is a decision, not an oversight. `paused` and `backlog` games *are* listed: both mean
 "not now", not "not ever".
@@ -476,8 +479,8 @@ unfinished) is a decision, not an oversight. `paused` and `backlog` games *are* 
 as `last_played`) to find games you've probably stopped playing but never marked as such —
 currently `status: playing`, Steam-linked, and untouched for a while (`stale_days` field, default
 30) — draft or published; draft ones are tagged `[draft]` so accepting a suggestion is clearly not
-the same as publishing. For each one it computes a guess — **mastered** at 100% achievement
-completion, **finished** at ≥90%, **dropped** otherwise, or **unfinished at low confidence** when
+the same as publishing. For each one it computes a guess — **finished** at ≥90% achievement
+completion (100% included: mastery isn't a status), **dropped** otherwise, or **unfinished at low confidence** when
 the game has no achievements to go on at all (playtime alone doesn't prove completion, and with
 nothing to go on there's no basis to guess `dropped` over `paused` either, so `unfinished` is the
 honest default, not a claim) — alongside the last-played date, achievement count, and playtime.
@@ -591,11 +594,13 @@ id, fetched, last_attempt, last_error
 unlocked / total          earned vs. existing — locked ones are in the list too
 first / last              YYYY-MM-DD of earliest and latest unlock
 award_kind / award_date   the completion award, when there is one
+mastery[]                 scope, date, unlocked, basis — every mastery milestone ever
+                          observed (see below); only ever added to
 platform, icon, completion
 source                    set when the data was relayed by a third party (e.g. "exophase")
 playtime_mins, playtime{windows,mac,linux,deck,disconnected}, last_played
 achievements[]            key, name, description, unlocked, date, points, hardcore, icon,
-                          tier (PSN trophy grade), hidden
+                          tier (PSN trophy grade), hidden, group (PSN trophy group)
 raw                       the provider's verbatim response
 ```
 
@@ -620,6 +625,28 @@ This is why history is kept per-achievement rather than collapsed to a start/fin
 returned to over years (Spelunky's unlocks run 2013 → 2020 with multi-year gaps) has a shape two
 dates can't express. It's also why every provider's record is kept separately — the records
 genuinely differ, and merging them is a presentation decision, not a storage one.
+
+### Mastery milestones
+
+`mastery[]` records each time a set of achievements was completed, so base-game and DLC mastery
+get separate dates. `model.DeriveMastery` reads them off the record, and `Summarize` unions them
+into what's already stored:
+
+- **`base`**: the base game. Comes from a PSN platinum (its unlock date), a PSN `default` trophy
+  group at 100% when there's no platinum, or a RetroAchievements `mastered`/`completed` award
+  (`award_date`). A `beaten-*` award isn't mastery.
+- **a PSN group id** (`"001"`, …): that DLC pack's trophy group at 100%. `group` is PSN's
+  `trophyGroupId`. Records captured before the field existed were backfilled from their `raw`.
+- **`all`**: every achievement the provider listed at the time, on any provider, dated to the
+  newest unlock. Steam, Xbox 360 and Exophase don't say which achievements are DLC, so for them
+  this is the only scope. A DLC that raises the total and is later cleared shows up as a *second*
+  `all` milestone with a larger `unlocked`.
+
+Milestones are **persisted, not just derived**, because they can stop being derivable: a DLC turns
+an old 50/50 into 50/60, and an RA set revision can demote `award_kind`. `mergeProvider` folds in
+whatever the *old* record qualified for before applying a fetch, and `unionMastery` keeps the
+earliest date per milestone (`base` keyed by scope alone, others by scope + size). So nothing a
+refresh brings in can remove one.
 
 ### Linking a game to external IDs
 
@@ -1083,7 +1110,10 @@ game's `unlocked`/`total` across whichever providers it's linked to (RA 12/40 + 
 added `UserTotalPlaytime` in late 2025, so older archived RA records may predate it and simply have
 none), and `last_played`. It also flattens every *unlocked* achievement across those providers into
 an `earned:` list (name, description, date, points, hardcore, icon, provider, platform, hidden,
-subset), oldest first. The
+subset), oldest first. Each provider and subset carries its `mastery:` milestones, and the top-level
+`mastered:` is the earliest `base` or `all` milestone across the game's providers (subsets
+excluded). That date is what makes a game "mastered" on the site
+(`layouts/partials/game-mastery.html`). The
 result is written to `content/games/<slug>/achievement-summary.yaml` — no `raw` and no locked
 achievements, only what the site displays: the games list's meters, each game's achievements
 section (`layouts/partials/game-achievements.html`), and the site-wide feed

@@ -59,7 +59,7 @@ const DefaultIncompletePct = 50
 type IncompleteOptions struct {
 	MinPct float64
 	// IncludeDone keeps games whose status already says they're over
-	// (finished/dropped/mastered/unfinished). Off by default: a finished game
+	// (finished/dropped/unfinished). Off by default: a finished game
 	// with achievements left is a deliberate decision, not an oversight.
 	IncludeDone bool
 }
@@ -70,7 +70,7 @@ type IncompleteOptions struct {
 // `unfinished` is included: like `dropped`, play has actually stopped and it
 // carries a closed date — it just doesn't claim to know whether that's
 // permanent.
-var doneStatuses = map[string]bool{"finished": true, "dropped": true, "mastered": true, "unfinished": true}
+var doneStatuses = map[string]bool{"finished": true, "dropped": true, "unfinished": true}
 
 // FindIncomplete ranks logged games by how close they are to having every
 // achievement. It reads only the archive on disk — no provider calls — so it

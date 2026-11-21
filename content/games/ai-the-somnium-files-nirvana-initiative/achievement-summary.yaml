@@ -2,6 +2,7 @@ unlocked: 49
 total: 49
 playtime_mins: 2560
 last_played: "2022-07-02"
+mastered: "2022-07-02"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 49
       playtime_mins: 2560
       last_played: "2022-07-02"
+      mastery:
+        - scope: all
+          date: "2022-07-02"
+          unlocked: 49
+          basis: 100%
 earned:
     - name: Determination
       date: "2022-06-25T10:09:06-05:00"

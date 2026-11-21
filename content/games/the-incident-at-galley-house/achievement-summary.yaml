@@ -2,6 +2,7 @@ unlocked: 15
 total: 15
 playtime_mins: 613
 last_played: "2026-11-02"
+mastered: "2026-11-02"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 15
       playtime_mins: 613
       last_played: "2026-11-02"
+      mastery:
+        - scope: all
+          date: "2026-11-02"
+          unlocked: 15
+          basis: 100%
 earned:
     - name: Seance
       description: Viewed your first scene

@@ -3,7 +3,7 @@ title: 'The Legend of Zelda: The Wind Waker'
 platform: GameCube
 retroachievements_id: 9190
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2025-05-10"
 rating: null

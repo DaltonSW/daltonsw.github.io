@@ -3,7 +3,7 @@ title: Overboard!
 platform: PC
 retroachievements_id: null
 steam_appid: 1546920
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

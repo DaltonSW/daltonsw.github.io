@@ -2,6 +2,7 @@ unlocked: 6
 total: 6
 playtime_mins: 5
 last_played: "2026-07-11"
+mastered: "2026-07-11"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 6
       playtime_mins: 5
       last_played: "2026-07-11"
+      mastery:
+        - scope: base
+          date: "2026-07-11"
+          unlocked: 6
+          basis: ra-mastered
+        - scope: all
+          date: "2026-07-11"
+          unlocked: 6
+          basis: 100%
 earned:
     - name: Bubble Buddy
       description: Pop 20 bubbles or more in a round of "Bubbles" on Big PooYoo

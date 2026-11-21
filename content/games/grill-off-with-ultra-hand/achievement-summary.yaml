@@ -2,6 +2,7 @@ unlocked: 10
 total: 10
 playtime_mins: 17
 last_played: "2026-07-18"
+mastered: "2026-07-18"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 10
       playtime_mins: 17
       last_played: "2026-07-18"
+      mastery:
+        - scope: base
+          date: "2026-07-18"
+          unlocked: 10
+          basis: ra-mastered
+        - scope: all
+          date: "2026-07-18"
+          unlocked: 10
+          basis: 100%
 earned:
     - name: Hash Slinger
       description: Score over 2,500 points.

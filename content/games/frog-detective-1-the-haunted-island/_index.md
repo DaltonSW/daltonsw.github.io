@@ -3,7 +3,7 @@ title: 'Frog Detective 1: The Haunted Island'
 platform: PC
 retroachievements_id: null
 steam_appid: 963000
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

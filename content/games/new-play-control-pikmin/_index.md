@@ -3,7 +3,7 @@ title: New Play Control! Pikmin
 platform: Wii
 retroachievements_id: 35989
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-06-02"
 rating: null

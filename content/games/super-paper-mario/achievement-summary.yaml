@@ -2,6 +2,7 @@ unlocked: 96
 total: 96
 playtime_mins: 2165
 last_played: "2026-04-05"
+mastered: "2026-04-05"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 96
       playtime_mins: 2165
       last_played: "2026-04-05"
+      mastery:
+        - scope: base
+          date: "2026-04-05"
+          unlocked: 96
+          basis: ra-mastered
+        - scope: all
+          date: "2026-04-05"
+          unlocked: 96
+          basis: 100%
 earned:
     - name: The Dark Prognosticus Unfolds
       description: Place the first Pure Heart in its Heart Pillar.

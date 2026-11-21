@@ -3,7 +3,7 @@ title: 'SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated'
 platform: PC
 retroachievements_id: null
 steam_appid: 969990
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

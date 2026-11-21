@@ -2,6 +2,7 @@ unlocked: 54
 total: 54
 playtime_mins: 31709
 last_played: "2026-10-03"
+mastered: "2026-10-03"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 54
       playtime_mins: 31709
       last_played: "2026-10-03"
+      mastery:
+        - scope: all
+          date: "2026-10-03"
+          unlocked: 54
+          basis: 100%
 earned:
     - name: Descent From Avernus
       description: Take control of the nautiloid and escape the Hells.

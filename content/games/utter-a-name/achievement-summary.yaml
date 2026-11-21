@@ -2,6 +2,7 @@ unlocked: 4
 total: 4
 playtime_mins: 156
 last_played: "2026-01-04"
+mastered: "2026-01-04"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 4
       playtime_mins: 156
       last_played: "2026-01-04"
+      mastery:
+        - scope: all
+          date: "2026-01-04"
+          unlocked: 4
+          basis: 100%
 earned:
     - name: Utter a name
       date: "2026-01-04T14:01:35-06:00"

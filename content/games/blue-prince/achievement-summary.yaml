@@ -2,6 +2,7 @@ unlocked: 16
 total: 16
 playtime_mins: 8928
 last_played: "2025-07-03"
+mastered: "2025-07-03"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 16
       playtime_mins: 8928
       last_played: "2025-07-03"
+      mastery:
+        - scope: all
+          date: "2025-07-03"
+          unlocked: 16
+          basis: 100%
 earned:
     - name: Inheritance Trophy
       description: Reach Room 46

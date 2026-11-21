@@ -191,7 +191,6 @@ hr { border: 0; border-top: 1px solid var(--stroke); margin: 2rem 0; }
 $status-colors: (
   playing:       var(--warn),
   finished:      var(--ok),
-  mastered:      var(--mastered),
   dropped:       var(--stop),
   unfinished:    var(--unfinished),
   backlog:       var(--dim),
@@ -217,6 +216,9 @@ $status-aliases: (wip: playing, stable: finished);
 @each $alias, $canonical in $status-aliases {
   .pill--#{$alias} { color: map.get($status-colors, $canonical); }
 }
+// derived from achievements (layouts/partials/game-mastery.html), not a status — so
+// there's no .entry--mastered or timeline bar colour, only the badge
+.pill--mastered { color: var(--mastered); }
 
 /* ── Prose helpers ──────────────────────────────────────────────────────── */
 .prose { max-width: $measure; }
@@ -633,6 +635,16 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
 }
 .ach-provider-breakdown li { display: flex; align-items: center; gap: 0.6rem; }
 .ach-provider-breakdown__name { flex: 0 0 6rem; color: var(--fg); }
+
+.ach-mastery {
+  list-style: none; margin: 0.7rem 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.3rem;
+  font-family: $font-ui; font-size: 0.8rem;
+}
+.ach-mastery li { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+.ach-mastery__mark { color: var(--mastered); }
+.ach-mastery__label { color: var(--fg); }
+.ach-mastery__date, .ach-mastery__basis { color: var(--dim); }
 
 .ach-subsets {
   list-style: none; margin: 0.7rem 0 0; padding: 0.6rem 0 0;
@@ -1145,7 +1157,6 @@ $timeline-status-colors: (
   endless:       color-mix(in srgb, var(--endless) 65%, var(--dim)),
   multiplayer:   color-mix(in srgb, var(--multi) 65%, var(--dim)),
   finished:      var(--ok),
-  mastered:      var(--mastered),
   dropped:       var(--stop),
   unfinished:    var(--unfinished),
   paused:        var(--pause),
@@ -1156,6 +1167,16 @@ $timeline-status-colors: (
 );
 @each $status, $color in $timeline-status-colors {
   .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
+}
+// mastery markers (games-timeline.html): a bare gold star, not a bar
+.games-timeline .vis-item.vis-point.pt-mastery {
+  background: none; border: none; box-shadow: none;
+  color: var(--mastered); z-index: 2;
+}
+.games-timeline .vis-item.vis-point.pt-mastery .vis-dot { display: none; }
+.games-timeline .vis-item.vis-point.pt-mastery .vis-item-content {
+  color: var(--mastered); font-size: 0.95rem; line-height: 22px; padding: 0;
+  margin-left: -0.35em; // centre the glyph on its day
 }
 // connectors overlap real session bars — keep them behind so they don't veil color/text
 .games-timeline .vis-item.pt-connector { opacity: 0.35; z-index: 0; }

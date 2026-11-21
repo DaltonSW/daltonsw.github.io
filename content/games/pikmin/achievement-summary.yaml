@@ -2,6 +2,7 @@ unlocked: 44
 total: 44
 playtime_mins: 1900
 last_played: "2024-09-29"
+mastered: "2024-09-29"
 providers:
     - provider: retroachievements
       platform: GameCube
@@ -9,6 +10,15 @@ providers:
       total: 44
       playtime_mins: 1900
       last_played: "2024-09-29"
+      mastery:
+        - scope: base
+          date: "2024-09-29"
+          unlocked: 44
+          basis: ra-mastered
+        - scope: all
+          date: "2024-09-29"
+          unlocked: 44
+          basis: 100%
 earned:
     - name: Its Shape Is Similar to the Pikpik Brand Carrots I Love So Much
       description: Unlock the Red Pikmin.

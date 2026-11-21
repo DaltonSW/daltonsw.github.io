@@ -2,6 +2,7 @@ unlocked: 11
 total: 11
 playtime_mins: 204
 last_played: "2025-07-02"
+mastered: "2025-07-02"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 11
       playtime_mins: 204
       last_played: "2025-07-02"
+      mastery:
+        - scope: all
+          date: "2025-07-02"
+          unlocked: 11
+          basis: 100%
 earned:
     - name: '"Nice" to meet you'
       description: Make first contact with Irving.

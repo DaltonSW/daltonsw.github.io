@@ -89,8 +89,6 @@ func (g GameSummary) Label() string {
 	switch g.Status {
 	case "finished":
 		return fmt.Sprintf("%s — finished %s", g.Title, g.Finished)
-	case "mastered":
-		return fmt.Sprintf("%s — mastered %s", g.Title, g.Finished)
 	case "playing":
 		return fmt.Sprintf("%s — playing since %s", g.Title, g.Started)
 	default:

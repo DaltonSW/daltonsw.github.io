@@ -23,12 +23,15 @@ what's load-bearing.
   `project`, `exophase`, `psn`, `nadeo` and `ninjakiwi`. The old CLI `scan`, `stale` and `review`
   flows are gone, so don't go looking for them.
 - The status vocabulary is split in two on purpose (see `internal/forms/forms.go`):
-  `GameStatuses` (front matter, 10 values, including `backlog` and `software`) and
-  `PlaythroughStatuses` (entries in `playthroughs.yaml`, 9 values, including `misc_launch`).
+  `GameStatuses` (front matter, 9 values, including `backlog` and `software`) and
+  `PlaythroughStatuses` (entries in `playthroughs.yaml`, 8 values, including `misc_launch`).
   `planned` is a third, placeholder-only entry status for planned replays. `software` is
   game-level only: it describes the whole record, not a mode a game can have alongside others.
   "Unplayed" is not a status at all. The site derives it (`layouts/partials/game-unplayed.html`)
   for any game with no playthrough entries and no captured playtime, and shows it as a tag.
+  "Mastered" isn't a status either. It's derived from the archive (`model.DeriveMastery` →
+  `achievement-summary.yaml`'s `mastered:`) and shown as a badge by
+  `layouts/partials/game-mastery.html`, so a mastered game can still be `playing` a replay.
 
 ---
 
@@ -40,6 +43,11 @@ what's load-bearing.
   keeps every unlock once recorded, and a fetch that errors or returns no achievements updates
   only the attempt metadata. The regression tests in `internal/model/archive_test.go` cover this.
   Keep them.
+- **Mastery milestones are only ever added.** `ProviderRecord.Mastery` is persisted because it can
+  stop being derivable: a DLC turns 50/50 into 50/60, and an RA set revision demotes `award_kind`.
+  `mergeProvider` unions in what the *old* record qualified for before applying a fetch, and
+  `unionMastery` keeps the earliest date. `TestMergeProvider_DLCNeverErasesAMastery` covers this.
+  Don't turn `Mastery` into a value recomputed from the current achievement list.
 - **`Extra map[string]any` with `yaml:",inline"` is load-bearing** on `PlaythroughEntry`,
   `SessionEntry` and `FrontMatter`. It's the only thing keeping a hand-added field from being
   deleted by the next whole-file rewrite.

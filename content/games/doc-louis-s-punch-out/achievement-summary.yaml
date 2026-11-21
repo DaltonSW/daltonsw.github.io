@@ -2,6 +2,7 @@ unlocked: 7
 total: 7
 playtime_mins: 122
 last_played: "2026-05-23"
+mastered: "2026-05-23"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 7
       playtime_mins: 122
       last_played: "2026-05-23"
+      mastery:
+        - scope: base
+          date: "2026-05-23"
+          unlocked: 7
+          basis: ra-mastered
+        - scope: all
+          date: "2026-05-23"
+          unlocked: 7
+          basis: 100%
 earned:
     - name: One-Upped the Doc
       description: Win against Doc Louis in the Warm-Up Lesson

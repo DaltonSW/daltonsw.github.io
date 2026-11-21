@@ -2,6 +2,7 @@ unlocked: 30
 total: 30
 playtime_mins: 4214
 last_played: "2025-10-21"
+mastered: "2025-10-21"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 30
       playtime_mins: 4214
       last_played: "2025-10-21"
+      mastery:
+        - scope: all
+          date: "2025-10-21"
+          unlocked: 30
+          basis: 100%
 earned:
     - name: First Steps
       description: 'Start playing PW: AA Trilogy.'

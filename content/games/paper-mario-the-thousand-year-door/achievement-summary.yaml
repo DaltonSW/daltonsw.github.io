@@ -2,6 +2,7 @@ unlocked: 123
 total: 123
 playtime_mins: 3007
 last_played: "2024-12-26"
+mastered: "2024-12-26"
 providers:
     - provider: retroachievements
       platform: GameCube
@@ -9,6 +10,15 @@ providers:
       total: 123
       playtime_mins: 3007
       last_played: "2024-12-26"
+      mastery:
+        - scope: base
+          date: "2024-12-26"
+          unlocked: 123
+          basis: ra-mastered
+        - scope: all
+          date: "2024-12-26"
+          unlocked: 123
+          basis: 100%
 earned:
     - name: He Knows About Timed Hits!
       description: Defeat Crump in only 2 attacks.

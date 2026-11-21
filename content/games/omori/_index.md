@@ -3,7 +3,7 @@ title: OMORI
 platform: PC
 retroachievements_id: null
 steam_appid: 1150690
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

@@ -3,7 +3,7 @@ title: 'Freddi Fish: Kelp Seed Mystery'
 platform: Wii
 retroachievements_id: 35216
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-07-11"
 rating: null

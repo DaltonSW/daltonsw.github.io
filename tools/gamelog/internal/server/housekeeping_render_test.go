@@ -36,7 +36,7 @@ func TestHousekeepingRenders(t *testing.T) {
 	out := buf.String()
 	for _, want := range []string{
 		"Correct — create finished",
-		`<option value="mastered">`,
+		`<option value="dropped">`,
 		"Correct — create backlog",
 		`<option value="software">`,
 		`name="use_status"`,

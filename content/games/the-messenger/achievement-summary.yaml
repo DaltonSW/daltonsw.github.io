@@ -2,6 +2,7 @@ unlocked: 48
 total: 48
 playtime_mins: 1485
 last_played: "2026-01-24"
+mastered: "2026-01-24"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 48
       playtime_mins: 1485
       last_played: "2026-01-24"
+      mastery:
+        - scope: all
+          date: "2026-01-24"
+          unlocked: 48
+          basis: 100%
 earned:
     - name: Enter The Ninja
       description: Beat the intro without dying

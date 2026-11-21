@@ -3,7 +3,7 @@ title: Grill-Off with Ultra Hand!
 platform: Wii
 retroachievements_id: 36125
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-07-18"
 rating: null

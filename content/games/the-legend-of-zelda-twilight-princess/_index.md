@@ -3,7 +3,7 @@ title: 'The Legend of Zelda: Twilight Princess'
 platform: Wii
 retroachievements_id: 204
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-06-14"
 rating: null

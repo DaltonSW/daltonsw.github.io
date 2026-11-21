@@ -2,6 +2,7 @@ unlocked: 126
 total: 126
 playtime_mins: 3016
 last_played: "2025-05-10"
+mastered: "2025-05-10"
 providers:
     - provider: retroachievements
       platform: GameCube
@@ -9,6 +10,15 @@ providers:
       total: 126
       playtime_mins: 3016
       last_played: "2025-05-10"
+      mastery:
+        - scope: base
+          date: "2025-05-10"
+          unlocked: 126
+          basis: ra-mastered
+        - scope: all
+          date: "2025-05-10"
+          unlocked: 126
+          basis: 100%
 earned:
     - name: Hog Wild
       description: Wrangle all 3 pigs on Outset Island without crawling or going indoors.

@@ -1,12 +1,26 @@
 unlocked: 40
 total: 40
 last_played: "2021-11-13"
+mastered: "2020-12-12"
 providers:
     - provider: psn
       platform: PS4
       unlocked: 40
       total: 40
       last_played: "2021-11-13"
+      mastery:
+        - scope: base
+          date: "2020-12-12"
+          unlocked: 34
+          basis: platinum
+        - scope: "001"
+          date: "2021-11-13"
+          unlocked: 6
+          basis: 100%
+        - scope: all
+          date: "2021-11-13"
+          unlocked: 40
+          basis: 100%
 earned:
     - name: Cleric Beast
       description: Defeat Cleric Beast.

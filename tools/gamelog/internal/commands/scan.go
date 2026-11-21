@@ -295,7 +295,7 @@ func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 		if c.Finished {
 			c.FinishedOn = raDay(g.HighestAwardDate)
 			c.AwardKind = strings.ToLower(g.HighestAwardKind)
-			c.Status = statusForAward(c.AwardKind)
+			c.Status = "finished"
 		} else {
 			c.Status = "playing"
 		}
@@ -311,15 +311,6 @@ func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 		out = append(out, c)
 	}
 	return out, nil
-}
-
-// statusForAward maps an RA HighestAwardKind onto a front-matter status —
-// mastered/completed means every achievement was earned, not just beaten.
-func statusForAward(kind string) string {
-	if kind == "mastered" || kind == "completed" {
-		return "mastered"
-	}
-	return "finished"
 }
 
 func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts ScanOptions) ([]Candidate, error) {

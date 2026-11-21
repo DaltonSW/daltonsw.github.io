@@ -4,7 +4,7 @@ platform: PC
 retroachievements_id: null
 steam_appid: 814380
 psn_id: NPWR15587_00
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

@@ -3,7 +3,7 @@ title: Professor Layton and the Diabolical Box
 platform: Nintendo DS
 retroachievements_id: 9564
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-05-12"
 rating: null

@@ -3,7 +3,7 @@ title: Doc Louis's Punch-Out!!
 platform: Wii
 retroachievements_id: 34666
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-05-23"
 rating: null

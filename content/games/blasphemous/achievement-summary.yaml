@@ -2,6 +2,7 @@ unlocked: 45
 total: 45
 playtime_mins: 3896
 last_played: "2024-05-18"
+mastered: "2024-05-07"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 45
       playtime_mins: 3896
       last_played: "2024-05-18"
+      mastery:
+        - scope: all
+          date: "2024-05-07"
+          unlocked: 45
+          basis: 100%
 earned:
     - name: A Long Path Ahead
       date: "2024-04-15T20:15:38-05:00"

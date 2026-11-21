@@ -2,6 +2,7 @@ unlocked: 26
 total: 26
 playtime_mins: 441
 last_played: "2026-02-14"
+mastered: "2026-02-14"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 26
       playtime_mins: 441
       last_played: "2026-02-14"
+      mastery:
+        - scope: all
+          date: "2026-02-14"
+          unlocked: 26
+          basis: 100%
 earned:
     - name: Double Homicide
       description: Two down

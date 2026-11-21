@@ -2,6 +2,7 @@ unlocked: 48
 total: 63
 playtime_mins: 1717
 last_played: "2026-10-23"
+mastered: "2026-02-01"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
@@ -15,6 +16,11 @@ providers:
       total: 30
       playtime_mins: 1039
       last_played: "2026-02-01"
+      mastery:
+        - scope: all
+          date: "2026-02-01"
+          unlocked: 30
+          basis: 100%
 earned:
     - name: 7:02PM - 7:31PM
       description: Cleared Chapter 1

@@ -3,7 +3,7 @@ title: Return of the Obra Dinn
 platform: PC
 retroachievements_id: null
 steam_appid: 653530
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: 10

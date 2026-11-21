@@ -2,6 +2,7 @@ unlocked: 20
 total: 20
 playtime_mins: 50
 last_played: "2016-02-18"
+mastered: "2016-02-18"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 20
       playtime_mins: 50
       last_played: "2016-02-18"
+      mastery:
+        - scope: all
+          date: "2016-02-18"
+          unlocked: 20
+          basis: 100%
 earned:
     - name: "2002"
       description: Complete Chapter 1

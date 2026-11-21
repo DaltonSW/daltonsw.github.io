@@ -2,6 +2,7 @@ unlocked: 42
 total: 42
 playtime_mins: 15896
 last_played: "2024-08-04"
+mastered: "2024-08-02"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 42
       playtime_mins: 15896
       last_played: "2024-08-04"
+      mastery:
+        - scope: all
+          date: "2024-08-02"
+          unlocked: 42
+          basis: 100%
 earned:
     - name: Margit, the Fell Omen
       date: "2022-02-25T10:10:43-06:00"

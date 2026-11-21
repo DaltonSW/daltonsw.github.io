@@ -2,6 +2,7 @@ unlocked: 36
 total: 36
 playtime_mins: 2970
 last_played: "2026-07-16"
+mastered: "2023-01-28"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 36
       playtime_mins: 2970
       last_played: "2026-07-16"
+      mastery:
+        - scope: all
+          date: "2023-01-28"
+          unlocked: 36
+          basis: 100%
 earned:
     - name: A Stick!
       date: "2023-01-01T12:41:34-06:00"

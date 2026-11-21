@@ -3,7 +3,7 @@ title: Call of the Sea
 platform: PC
 retroachievements_id: null
 steam_appid: 1042490
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

@@ -19,8 +19,8 @@ const DefaultStaleDays = 30
 // finishedCompletionThreshold is the achievement completion above which a
 // stale game is guessed "finished" rather than "dropped". Set high since
 // most players don't 100% a game even when they've finished it — this is
-// meant to catch clear cases, not draw a precise line. 100% itself is
-// guessed "mastered" rather than "finished" — see FindStaleCandidates.
+// meant to catch clear cases, not draw a precise line. Mastery isn't a
+// status, so 100% is simply "finished" too.
 const finishedCompletionThreshold = 0.9
 
 // StaleCandidate is one Steam-linked game that's gone quiet, with the
@@ -31,7 +31,7 @@ type StaleCandidate struct {
 	DaysSince       int
 	Unlocked, Total int
 	PlaytimeMins    int
-	SuggestedStatus string // "mastered" | "finished" | "dropped" | "unfinished"
+	SuggestedStatus string // "finished" | "dropped" | "unfinished"
 	Confidence      string // "medium" | "low"
 }
 
@@ -70,8 +70,6 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 		if rec.Total > 0 {
 			c.Confidence = "medium"
 			switch {
-			case rec.Unlocked == rec.Total:
-				c.SuggestedStatus = "mastered"
 			case float64(rec.Unlocked)/float64(rec.Total) >= finishedCompletionThreshold:
 				c.SuggestedStatus = "finished"
 			default:

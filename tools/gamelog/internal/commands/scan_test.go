@@ -154,17 +154,18 @@ func TestCandidateOutcome_NamesTheAward(t *testing.T) {
 }
 
 // A "mastered"/"completed" award is a stronger signal than a plain beaten
-// award, so the row — and the status it suggests — should say so.
-func TestCandidateOutcome_NamesMasteredSeparatelyFromFinished(t *testing.T) {
+// award, so the row names it — but the status is still "finished": mastery is
+// read from the archive, not stored as a status.
+func TestCandidateOutcome_NamesTheMasteryAward(t *testing.T) {
 	c := Candidate{
 		Provider: model.ProviderRA, Title: "Earthbound",
 		Platform: "SNES", ID: "264",
 		Finished: true, AwardKind: "mastered", FinishedOn: "2026-05-02",
-		Status:        "mastered",
+		Status:        "finished",
 		AchievementsA: 79, AchievementsB: 79,
 	}
 
-	if got, want := c.Outcome(), "mastered 2026-05-02 (mastered)"; got != want {
+	if got, want := c.Outcome(), "finished 2026-05-02 (mastered)"; got != want {
 		t.Errorf("Outcome() = %q, want %q", got, want)
 	}
 }
@@ -208,11 +209,11 @@ func TestCandidateWithStatus_DropsTheFinishWhenOverriddenToOpenStatus(t *testing
 		t.Errorf("front matter finished = %q, want empty", got)
 	}
 
-	// mastered still asserts the game is over, so the date it was earned on
-	// survives the correction.
-	mastered := c.WithStatus("mastered")
-	if mastered.FinishedOn != "2024-12-04" || !mastered.Finished {
-		t.Errorf("mastered should keep the finish, got %q", mastered.FinishedOn)
+	// dropped still asserts the game is over, so the date survives the
+	// correction.
+	dropped := c.WithStatus("dropped")
+	if dropped.FinishedOn != "2024-12-04" || !dropped.Finished {
+		t.Errorf("dropped should keep the finish, got %q", dropped.FinishedOn)
 	}
 
 	// The original must be untouched: rows are re-derived per request, but a
@@ -222,20 +223,6 @@ func TestCandidateWithStatus_DropsTheFinishWhenOverriddenToOpenStatus(t *testing
 	}
 	if blank := c.WithStatus(""); blank.Status != "finished" {
 		t.Errorf("a blank status means keep the guess, got %q", blank.Status)
-	}
-}
-
-func TestStatusForAward(t *testing.T) {
-	cases := map[string]string{
-		"mastered":        "mastered",
-		"completed":       "mastered",
-		"beaten-hardcore": "finished",
-		"beaten-softcore": "finished",
-	}
-	for kind, want := range cases {
-		if got := statusForAward(kind); got != want {
-			t.Errorf("statusForAward(%q) = %q, want %q", kind, got, want)
-		}
 	}
 }
 

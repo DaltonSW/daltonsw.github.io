@@ -3,7 +3,7 @@ title: ANIMAL WELL
 platform: PC
 retroachievements_id: null
 steam_appid: 813230
-status: mastered
+status: finished
 started: "2026-01-24"
 finished: "2026-01-30"
 rating: 10

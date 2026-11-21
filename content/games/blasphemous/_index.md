@@ -3,7 +3,7 @@ title: Blasphemous
 platform: PC
 retroachievements_id: null
 steam_appid: 774361
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

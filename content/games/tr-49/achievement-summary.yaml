@@ -2,6 +2,7 @@ unlocked: 21
 total: 21
 playtime_mins: 394
 last_played: "2026-02-19"
+mastered: "2026-02-19"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 21
       playtime_mins: 394
       last_played: "2026-02-19"
+      mastery:
+        - scope: all
+          date: "2026-02-19"
+          unlocked: 21
+          basis: 100%
 earned:
     - name: BO-07
       description: Power on.

@@ -3,7 +3,7 @@ title: Pikmin
 platform: GameCube
 retroachievements_id: 15540
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2024-09-29"
 rating: null

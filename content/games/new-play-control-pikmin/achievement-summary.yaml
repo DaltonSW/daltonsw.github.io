@@ -2,6 +2,7 @@ unlocked: 51
 total: 51
 playtime_mins: 989
 last_played: "2026-06-02"
+mastered: "2026-06-02"
 providers:
     - provider: retroachievements
       platform: Wii
@@ -9,6 +10,15 @@ providers:
       total: 51
       playtime_mins: 989
       last_played: "2026-06-02"
+      mastery:
+        - scope: base
+          date: "2026-06-02"
+          unlocked: 51
+          basis: ra-mastered
+        - scope: all
+          date: "2026-06-02"
+          unlocked: 51
+          basis: 100%
 earned:
     - name: My Pointy-Nosed Saviors
       description: Discover the Red Onion and its fiery inhabitants

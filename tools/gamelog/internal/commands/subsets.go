@@ -257,7 +257,7 @@ func CreateBaseAndAttach(ctx context.Context, gamesDir, subsetID string, ra RAPa
 	if suggestion := retroachievements.RASuggestRange(parent); suggestion.OK && suggestion.AwardKind != "" {
 		base.Finished = true
 		base.AwardKind = suggestion.AwardKind
-		base.Status = statusForAward(suggestion.AwardKind)
+		base.Status = "finished"
 		base.FinishedOn = day(suggestion.Finished)
 	}
 

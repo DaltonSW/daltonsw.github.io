@@ -2,6 +2,7 @@ unlocked: 34
 total: 34
 playtime_mins: 379
 last_played: "2026-10-03"
+mastered: "2026-10-03"
 providers:
     - provider: steam
       platform: PC
@@ -9,6 +10,11 @@ providers:
       total: 34
       playtime_mins: 379
       last_played: "2026-10-03"
+      mastery:
+        - scope: all
+          date: "2026-10-03"
+          unlocked: 34
+          basis: 100%
 earned:
     - name: A Family Heirloom
       description: You have completed the Prologue.

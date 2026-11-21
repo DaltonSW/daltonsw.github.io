@@ -3,7 +3,7 @@ title: The Seance of Blake Manor
 platform: PC
 retroachievements_id: null
 steam_appid: 1395520
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: 9

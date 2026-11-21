@@ -280,7 +280,7 @@
 <form method="get" action="/housekeeping" class="row">
   <label for="incomplete_pct">Min completion %</label>
   <input type="number" step="5" id="incomplete_pct" name="incomplete_pct" value="{{.IncompletePct}}" style="max-width: 8rem;">
-  <div class="checkbox-row"><input type="checkbox" id="incomplete_all" name="incomplete_all" value="1"{{if .IncompleteAll}} checked{{end}}><label for="incomplete_all">include finished/dropped/mastered/unfinished</label></div>
+  <div class="checkbox-row"><input type="checkbox" id="incomplete_all" name="incomplete_all" value="1"{{if .IncompleteAll}} checked{{end}}><label for="incomplete_all">include finished/dropped/unfinished</label></div>
   <input type="hidden" name="min_hours" value="{{.MinHours}}">
   <input type="hidden" name="stale_days" value="{{.StaleDays}}">
   <input type="hidden" name="close_days" value="{{.CloseDays}}">

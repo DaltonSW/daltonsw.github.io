@@ -16,6 +16,11 @@ function readJSON<T>(id: string): T | null {
   }
 }
 
+// a "point" item (a mastery marker) has no end; it occupies only its start
+function itemEnd(item: DataItem): string | number | Date {
+  return item.end ?? item.start;
+}
+
 function toTime(value: string | number | Date): number {
   return value instanceof Date ? value.getTime() : new Date(value).getTime();
 }
@@ -92,8 +97,8 @@ function visibleGroupIds(
   const ids = new Set<unknown>();
   for (const item of items) {
     const itemStart = toTime(item.start);
-    const itemEnd = toTime(item.end as string);
-    if (itemStart <= paddedEnd && itemEnd >= paddedStart) {
+    const end = toTime(itemEnd(item));
+    if (itemStart <= paddedEnd && end >= paddedStart) {
       ids.add(item.group);
     }
   }
@@ -136,7 +141,7 @@ function main(): void {
 function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[]): void {
   const today = new Date().toISOString().slice(0, 10);
   for (const item of items) {
-    if (!item.end) item.end = today;
+    if (!item.end && item.type !== "point") item.end = today;
   }
 
   const groupNames = new Map<string, string>();
@@ -148,7 +153,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
   items.push(...buildConnectors(items, groupNames));
 
   const domainStart = Math.min(...items.map((item) => toTime(item.start)));
-  const domainEnd = Math.max(...items.map((item) => toTime(item.end as string)));
+  const domainEnd = Math.max(...items.map((item) => toTime(itemEnd(item))));
   const domainSpan = Math.max(domainEnd - domainStart, daySpan * 30);
 
   root.replaceChildren();
@@ -182,8 +187,11 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
       followMouse: true,
       overflowMethod: "cap",
     },
-    template: (item: GameItem) =>
-      item.className?.includes("pt-connector") ? "" : (item.status ?? ""),
+    template: (item: GameItem) => {
+      if (item.className?.includes("pt-connector")) return "";
+      if (item.type === "point") return String(item.content ?? "");
+      return item.status ?? "";
+    },
   });
 
   // fade top/bottom edges in when there's more to scroll; .vis-panel.vis-left is the

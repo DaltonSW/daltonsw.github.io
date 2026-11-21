@@ -1,0 +1,31 @@
+{{/* Context: a game's term Page. Returns a dict:
+       date       — the day the game first counted as mastered, "" if it never has
+       milestones — every mastery milestone (base game, each PSN DLC group, every
+                    achievement) across providers and RA subsets, oldest first, each
+                    tagged with provider/platform/subset and a display label
+     Derived by tools/gamelog (model.DeriveMastery) into achievement-summary.yaml.
+     A hand-set front-matter `mastered:` date wins over the derived one, for a game
+     with no achievement data. Not a status: it sits alongside whatever the game's
+     status is, so a mastered game can still be "playing" a replay. */}}
+{{- $date := "" -}}
+{{- $milestones := slice -}}
+{{- $scopeLabels := dict "base" "Base game" "all" "All achievements" -}}
+{{- with .Resources.Get "achievement-summary.yaml" -}}
+  {{- $s := . | transform.Unmarshal -}}
+  {{- $date = $s.mastered | default "" -}}
+  {{- range $s.providers -}}
+    {{- $p := . -}}
+    {{- range .mastery -}}
+      {{- $label := index $scopeLabels .scope | default (printf "DLC %s" .scope) -}}
+      {{- $milestones = $milestones | append (merge . (dict "provider" $p.provider "platform" ($p.platform | default $p.provider) "subset" "" "label" $label)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $s.subsets -}}
+    {{- $sub := . -}}
+    {{- range .mastery -}}
+      {{- $milestones = $milestones | append (merge . (dict "provider" $sub.provider "platform" ($sub.platform | default $sub.provider) "subset" $sub.name "label" (printf "Subset: %s" $sub.name))) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Params.mastered -}}{{- $date = . | time.Format "2006-01-02" -}}{{- end -}}
+{{- return dict "date" $date "milestones" (sort $milestones "date") -}}

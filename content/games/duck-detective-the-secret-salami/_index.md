@@ -3,7 +3,7 @@ title: 'Duck Detective: The Secret Salami'
 platform: PC
 retroachievements_id: null
 steam_appid: 2637990
-status: mastered
+status: finished
 started: "2026-09-25"
 finished: "2026-09-27"
 rating: null

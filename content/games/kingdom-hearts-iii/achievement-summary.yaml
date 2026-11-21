@@ -1,12 +1,18 @@
 unlocked: 48
 total: 52
 last_played: "2022-07-23"
+mastered: "2022-07-23"
 providers:
     - provider: psn
       platform: PS4
       unlocked: 48
       total: 52
       last_played: "2022-07-23"
+      mastery:
+        - scope: base
+          date: "2022-07-23"
+          unlocked: 46
+          basis: platinum
 earned:
     - name: A New Journey
       description: Begin your brand new adventure.

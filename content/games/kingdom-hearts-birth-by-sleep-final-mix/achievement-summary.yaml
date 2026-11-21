@@ -1,12 +1,22 @@
 unlocked: 46
 total: 46
 last_played: "2022-07-02"
+mastered: "2022-07-02"
 providers:
     - provider: psn
       platform: PS4
       unlocked: 46
       total: 46
       last_played: "2022-07-02"
+      mastery:
+        - scope: base
+          date: "2022-07-02"
+          unlocked: 46
+          basis: platinum
+        - scope: all
+          date: "2022-07-02"
+          unlocked: 46
+          basis: 100%
 earned:
     - name: The Journey Begins
       description: Clear the prologue, "The Land of Departure."

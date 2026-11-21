@@ -3,7 +3,7 @@ title: Super Mario 64
 platform: Nintendo 64
 retroachievements_id: 10003
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2024-11-09"
 rating: null

@@ -2,6 +2,7 @@ unlocked: 106
 total: 106
 playtime_mins: 8011
 last_played: "2023-05-14"
+mastered: "2020-08-22"
 providers:
     - provider: steam
       platform: PC
@@ -9,11 +10,25 @@ providers:
       total: 53
       playtime_mins: 8011
       last_played: "2023-05-14"
+      mastery:
+        - scope: all
+          date: "2023-05-14"
+          unlocked: 53
+          basis: 100%
     - provider: psn
       platform: PS4
       unlocked: 53
       total: 53
       last_played: "2020-08-22"
+      mastery:
+        - scope: base
+          date: "2020-08-22"
+          unlocked: 53
+          basis: platinum
+        - scope: all
+          date: "2020-08-22"
+          unlocked: 53
+          basis: 100%
 earned:
     - name: Spirit of Rebellion
       description: Obtained Arsène.

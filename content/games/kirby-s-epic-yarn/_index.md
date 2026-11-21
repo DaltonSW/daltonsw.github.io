@@ -3,7 +3,7 @@ title: Kirby's Epic Yarn
 platform: Wii
 retroachievements_id: 149
 steam_appid: null
-status: mastered
+status: finished
 started: ""
 finished: "2026-05-10"
 rating: null

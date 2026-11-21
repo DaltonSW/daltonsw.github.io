@@ -3,7 +3,7 @@ title: 'Zero Escape: Zero Time Dilemma'
 platform: PC
 retroachievements_id: null
 steam_appid: 311240
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: null

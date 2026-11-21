@@ -3,7 +3,7 @@ title: The Incident at Galley House
 platform: PC
 retroachievements_id: null
 steam_appid: 3641000
-status: mastered
+status: finished
 started: ""
 finished: ""
 rating: 10
