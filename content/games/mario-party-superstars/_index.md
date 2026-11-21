@@ -5,8 +5,6 @@ retroachievements_id:
 steam_appid:
 nintendo_id: "01006FE013472000"
 status: "multiplayer"
-started:
-finished:
 rating:
 cover:
 draft: false

@@ -5,8 +5,6 @@ retroachievements_id: null
 steam_appid: null
 xbox_id: 1414793202
 status: dropped
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

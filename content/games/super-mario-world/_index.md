@@ -4,8 +4,6 @@ platform: SNES
 retroachievements_id: 228
 steam_appid: null
 status: finished
-started: ""
-finished: "2025-06-01"
 rating: null
 draft: false
 cascade:

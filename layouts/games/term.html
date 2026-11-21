@@ -5,16 +5,14 @@
     {{- with $mastery.date }} <span class="pill pill--mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}">mastered</span>{{ end }}
     {{- if partial "game-unplayed.html" . }} <span class="pill pill--unplayed">unplayed</span>{{ end }}</h1>
 
-  {{/* Finished is gated to non-open-ended statuses because game-last-played.html
-       returns "last known activity", not a real completion date, for open entries. */}}
-  {{- $openEndedStatuses := slice "playing" "endless" "multiplayer" "software" }}
+  {{/* every date is derived — from playthroughs, or achievements for Mastered and
+       Last played; the game's front matter carries none */}}
   <div class="meta-row">
     {{- with .Params.platform }}<span><b>Platform:</b> {{ . }}</span>{{ end }}
     {{- with (partial "game-first-played.html" .) }}<span><b>Started:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
-    {{- if not (in $openEndedStatuses .Params.status) }}
-      {{- with (partial "game-last-played.html" .) }}<span><b>Finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
-    {{- end }}
+    {{- with (partial "game-first-finished.html" .) }}<span><b>First finished:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
     {{- with $mastery.date }}<span><b>Mastered:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
+    {{- with (partial "game-last-played.html" .) }}<span><b>Last played:</b> {{ . | time.Format "Jan 2, 2006" }}</span>{{ end }}
     {{- with .Params.rating }}<span><b>Rating:</b> {{ . }}/10</span>{{ end }}
   </div>
 

@@ -14,24 +14,6 @@
   {{- $slug := $game.File.ContentBaseName -}}
   {{- $entries := partial "playthrough-entries.html" $game -}}
 
-  {{- if eq (len $entries) 0 -}}
-    {{/* normalize possible time.Time (from hugo.toml [frontmatter] wiring) to a string */}}
-    {{- with $game.Params.started -}}
-      {{- $finished := "" -}}
-      {{- with $game.Params.finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
-      {{- $entries = slice (dict
-          "written"  false
-          "started"  (. | time.Format "2006-01-02")
-          "finished" $finished
-          "status"   $game.Params.status
-          "rating"   $game.Params.rating
-          "notes"    nil
-          "sessions" slice
-        )
-      -}}
-    {{- end -}}
-  {{- end -}}
-
   {{- $subgroupStack := dict -}}
   {{- $hasItems := false -}}
   {{- $groupLast := "" -}}
@@ -45,9 +27,10 @@
       {{/* fall back to the game's own status; mirrors game-year-rows.html's fallback */}}
       {{- $gameStatus := $game.Params.status -}}
       {{- $status := $entry.status | default $gameStatus -}}
-      {{/* endless/multiplayer/software are game-level statuses; the game's own status wins
-           (see tools/gamelog/INVARIANTS.md) */}}
-      {{- if in (slice "endless" "multiplayer" "software") $gameStatus -}}
+      {{/* "software" is game-level only, so a software game's runs say "playing" and
+           mean software; every other run's own status is the truth (endless and
+           multiplayer are real per-run statuses — see tools/gamelog/INVARIANTS.md) */}}
+      {{- if and (eq $gameStatus "software") (eq $status "playing") -}}
         {{- $status = $gameStatus -}}
       {{- end -}}
 

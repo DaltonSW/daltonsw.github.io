@@ -9,8 +9,6 @@ subgames:
   - Plague of Shadows
   - Specter of Torment
   - King of Crowns
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

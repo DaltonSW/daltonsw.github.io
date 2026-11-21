@@ -5,8 +5,6 @@ retroachievements_id: null
 steam_appid: null
 psn_id: NPWR12334_00
 status: finished
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

@@ -27,9 +27,11 @@ timezone = "America/Chicago"
     platform = "platform"
     status = "status"
 
-# Games track real dates in `started`/`finished`; projects use `date`. Wire both
-# into Hugo's canonical dates so feeds, sitemap <lastmod>, and .Date are accurate
-# instead of falling back to file mod time.
+# Written playthrough pages track real dates in `started`/`finished`; projects use
+# `date`. Wire both into Hugo's canonical dates so feeds, sitemap <lastmod>, and
+# .Date are accurate instead of falling back to file mod time. Game pages carry no
+# dates (they're derived from playthroughs.yaml), so they fall through to
+# :fileModTime.
 [frontmatter]
     date = ['date', 'started', ':fileModTime', ':default']
     lastmod = ['lastmod', 'finished', 'started', ':fileModTime', ':default']

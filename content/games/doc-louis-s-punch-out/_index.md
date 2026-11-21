@@ -4,8 +4,6 @@ platform: Wii
 retroachievements_id: 34666
 steam_appid: null
 status: finished
-started: ""
-finished: "2026-05-23"
 rating: null
 draft: false
 cascade:

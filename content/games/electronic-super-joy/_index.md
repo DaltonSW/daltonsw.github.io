@@ -4,8 +4,6 @@ platform: PC
 retroachievements_id: null
 steam_appid: 244870
 status: dropped
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

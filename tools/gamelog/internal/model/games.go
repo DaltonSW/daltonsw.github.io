@@ -15,38 +15,31 @@ import (
 // GameSummary is a lightweight view over one content/games/<slug>/_index.md,
 // used to build the game picker.
 type GameSummary struct {
-	Slug     string
-	Path     string
-	Title    string
-	Status   string
-	Draft    bool
-	Started  string
-	Finished string
-	// FMStarted/FMFinished are the raw front-matter fields, unlike
-	// Started/Finished above which fall back to the playthroughs-derived
-	// range for display. Editing started/finished must bind to these raw
-	// fields — writing the derived value back would silently turn an
-	// intentionally-blank fallback into a hardcoded front-matter override
-	// every time any other field on the row is saved.
-	FMStarted       string
-	FMFinished      string
+	Slug   string
+	Path   string
+	Title  string
+	Status string
+	Draft  bool
+	// Started/Finished are the span of every logged playthrough (earliest
+	// date to latest), and FirstFinished is the day the first run with status
+	// "finished" ended. All three are derived from playthroughs.yaml; a game's
+	// front matter carries no dates.
+	Started       string
+	Finished      string
+	FirstFinished string
+	// CanCloseSoleRun reports whether the game has exactly one playthrough
+	// and it's still open — the one case where a status change can also
+	// close a run (SyncStatus), so the forms offer a "close it on" date.
+	CanCloseSoleRun bool
 	Platform        string
 	Rating          string
 	NumPlaythroughs int
-	// StartedEditable/FinishedEditable report whether editing the
-	// front-matter field would have any effect on what the site displays.
-	// SyncStatus (playthroughs.go) never writes Started, so it's live only
-	// with zero playthroughs; it does backfill Finished, but only for a
-	// single still-open playthrough, so that's the one case beyond zero
-	// playthroughs where editing Finished isn't a silent no-op.
-	StartedEditable  bool
-	FinishedEditable bool
-	RAGameID         string
-	SteamAppID       string
-	PSNID            string
-	UbisoftID        string
-	XboxID           string
-	GooglePlayID     string
+	RAGameID        string
+	SteamAppID      string
+	PSNID           string
+	UbisoftID       string
+	XboxID          string
+	GooglePlayID    string
 	// NadeoAccountID links this game to a Trackmania campaign archive. It is
 	// not part of ProviderLinks — see FrontMatter.NadeoAccountID.
 	NadeoAccountID string
@@ -88,7 +81,7 @@ func (g GameSummary) ProviderIDs() map[string]string {
 func (g GameSummary) Label() string {
 	switch g.Status {
 	case "finished":
-		return fmt.Sprintf("%s — finished %s", g.Title, g.Finished)
+		return fmt.Sprintf("%s — finished %s", g.Title, g.FirstFinished)
 	case "playing":
 		return fmt.Sprintf("%s — playing since %s", g.Title, g.Started)
 	default:
@@ -160,48 +153,33 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 	ubisoftID := scalarString(doc.FM.UbisoftID)
 	xboxID := scalarString(doc.FM.XboxID)
 	googlePlayID := scalarString(doc.FM.GooglePlayID)
-	// The real per-run dates live in playthroughs.yaml, not front matter —
-	// see gameDateRange. Front matter's own started/finished is only a
-	// fallback, for a game with nothing logged yet.
-	started, finished := gameDateRange(pf.Views())
-	if started == "" {
-		started = doc.FM.Started
-	}
-	if finished == "" {
-		finished = doc.FM.Finished
-	}
-
-	numPlaythroughs := len(pf.Playthroughs)
-	finishedEditable := numPlaythroughs == 0
-	if numPlaythroughs == 1 {
-		views := pf.Views()
-		finishedEditable = views[0].IsOpen()
-	}
+	// Every date is derived from playthroughs.yaml — see gameDateRange and
+	// firstFinished. Front matter carries none.
+	views := pf.Views()
+	started, finished := gameDateRange(views)
 
 	return GameSummary{
-		Slug:             slug,
-		Path:             path,
-		Title:            doc.FM.Title,
-		Status:           doc.FM.Status,
-		Draft:            doc.FM.Draft,
-		Started:          started,
-		Finished:         finished,
-		FMStarted:        doc.FM.Started,
-		FMFinished:       doc.FM.Finished,
-		Platform:         doc.FM.Platform,
-		Rating:           doc.FM.RatingString(),
-		NumPlaythroughs:  numPlaythroughs,
-		StartedEditable:  numPlaythroughs == 0,
-		FinishedEditable: finishedEditable,
-		RAGameID:         raID,
-		SteamAppID:       steamAppID,
-		PSNID:            psnID,
-		UbisoftID:        ubisoftID,
-		XboxID:           xboxID,
-		GooglePlayID:     googlePlayID,
-		NadeoAccountID:   doc.NadeoAccountIDString(),
-		NinjaKiwiUserID:  doc.NinjaKiwiUserIDString(),
-		RASubsets:        doc.RASubsetIDs(),
+		Slug:            slug,
+		Path:            path,
+		Title:           doc.FM.Title,
+		Status:          doc.FM.Status,
+		Draft:           doc.FM.Draft,
+		Started:         started,
+		Finished:        finished,
+		FirstFinished:   firstFinished(views),
+		CanCloseSoleRun: len(views) == 1 && views[0].IsOpen(),
+		Platform:        doc.FM.Platform,
+		Rating:          doc.FM.RatingString(),
+		NumPlaythroughs: len(pf.Playthroughs),
+		RAGameID:        raID,
+		SteamAppID:      steamAppID,
+		PSNID:           psnID,
+		UbisoftID:       ubisoftID,
+		XboxID:          xboxID,
+		GooglePlayID:    googlePlayID,
+		NadeoAccountID:  doc.NadeoAccountIDString(),
+		NinjaKiwiUserID: doc.NinjaKiwiUserIDString(),
+		RASubsets:       doc.RASubsetIDs(),
 	}
 }
 
@@ -326,6 +304,8 @@ type NewGameFields struct {
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
 	Subgames []string
+	// Started/Finished aren't front matter: when either is set, CreateGameFile
+	// writes them as the game's first playthrough entry.
 	Started  string
 	Finished string
 	Rating   string
@@ -372,8 +352,6 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		lines = append(lines, fmt.Sprintf("  - %q", sg))
 	}
 	lines = append(lines,
-		"started: "+f.Started,
-		"finished: "+f.Finished,
 		"rating: "+f.Rating,
 		"cover:",
 		fmt.Sprintf("draft: %t", f.Draft),
@@ -406,5 +384,32 @@ func CreateGameFile(gamesDir, slug string, f NewGameFields) (string, error) {
 	if err := os.WriteFile(path, []byte(content), 0o644); err != nil {
 		return "", err
 	}
+	if err := writeFirstPlaythrough(dir, f); err != nil {
+		return path, fmt.Errorf("created %s, but its first playthrough wasn't written: %w", path, err)
+	}
 	return path, nil
+}
+
+// writeFirstPlaythrough records a new game's dates as its first playthrough,
+// since a game's front matter carries none. A game with no dates (backlog,
+// or a scan candidate with nothing to go on) gets no entry: an undated entry
+// would only mark the game as played without saying when.
+func writeFirstPlaythrough(dir string, f NewGameFields) error {
+	if f.Started == "" && f.Finished == "" {
+		return nil
+	}
+	status := f.Status
+	switch status {
+	case "backlog", "":
+		status = "playing"
+	case "software":
+		// game-level only, so its entry says "playing" (the site reads it as software)
+		status = "playing"
+	}
+	pf, err := LoadPlaythroughs(dir)
+	if err != nil {
+		return err
+	}
+	pf.AddPlaythrough(PlaythroughFields{Started: f.Started, Finished: f.Finished, Status: status})
+	return pf.Save()
 }

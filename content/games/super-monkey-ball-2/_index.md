@@ -4,8 +4,6 @@ platform: GameCube
 retroachievements_id: 6253
 steam_appid: null
 status: finished
-started: ""
-finished: "2024-12-28"
 rating: null
 draft: false
 cascade:

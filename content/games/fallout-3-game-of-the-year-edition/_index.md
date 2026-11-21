@@ -5,8 +5,6 @@ retroachievements_id: null
 steam_appid: 22370
 xbox_id: 1112737750
 status: finished
-started: ""
-finished: "2013-12-23"
 rating: null
 draft: false
 cascade:

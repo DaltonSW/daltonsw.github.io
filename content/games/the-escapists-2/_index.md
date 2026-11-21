@@ -8,8 +8,6 @@ ubisoft_id:
 xbox_id:
 status: "endless"
 subgames:
-started:
-finished:
 rating:
 cover:
 draft: true

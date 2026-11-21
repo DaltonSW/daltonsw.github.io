@@ -6,8 +6,6 @@ retroachievements_subsets:
   - 25709
 steam_appid: null
 status: playing
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

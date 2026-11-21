@@ -5,22 +5,6 @@
 {{- $game := . -}}
 {{- $entries := partial "playthrough-entries.html" $game -}}
 
-{{- if eq (len $entries) 0 -}}
-  {{/* normalize possible time.Time (from hugo.toml [frontmatter] wiring) to a string */}}
-  {{- with $game.Params.started -}}
-    {{- $finished := "" -}}
-    {{- with $game.Params.finished -}}{{- $finished = (. | time.Format "2006-01-02") -}}{{- end -}}
-    {{- $entries = slice (dict
-        "started"  (. | time.Format "2006-01-02")
-        "finished" $finished
-        "status"   $game.Params.status
-        "platform" $game.Params.platform
-        "sessions" slice
-      )
-    -}}
-  {{- end -}}
-{{- end -}}
-
 {{- $rows := dict -}}
 
 {{- range $entries -}}
@@ -84,15 +68,14 @@
   {{- end -}}
 {{- end -}}
 
-{{/* endless/multiplayer/software are game-level statuses; let them override
-     the entry's own "playing" status (see tools/gamelog/INVARIANTS.md) */}}
+{{/* "software" is game-level only, so a software game's "playing" runs mean
+     software; every other run's own status stands (same rule as games-timeline.html) */}}
 {{- $gameStatus := $game.Params.status -}}
-{{- $override := in (slice "endless" "multiplayer" "software") $gameStatus -}}
 
 {{- $out := slice -}}
 {{- range $year, $row := $rows -}}
   {{- $status := $row.status | default $gameStatus -}}
-  {{- if $override -}}{{- $status = $gameStatus -}}{{- end -}}
+  {{- if and (eq $gameStatus "software") (eq $status "playing") -}}{{- $status = $gameStatus -}}{{- end -}}
   {{- $out = $out | append (merge $row (dict "status" $status)) -}}
 {{- end -}}
 

@@ -548,8 +548,8 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("unknown action %q", action))
 		return
 	}
-	commands.ApplyStaleAction(doc, *c, action)
-	syncing := pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
+	closedOn := commands.ApplyStaleAction(doc, *c, action)
+	syncing := pf.SyncStatus(doc.FM.Status, closedOn)
 	if err := mutate.WriteFrontMatter(doc, pf, syncing); err != nil {
 		s.respondHousekeepingErr(w, r, backTo, err)
 		return

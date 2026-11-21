@@ -152,7 +152,7 @@ func TestListGamesPopulatesDraft(t *testing.T) {
 }
 
 func TestGameSummary_SuggestLabel(t *testing.T) {
-	base := GameSummary{Title: "Hades", Status: "finished", Finished: "2026-03-20"}
+	base := GameSummary{Title: "Hades", Status: "finished", FirstFinished: "2026-03-20"}
 
 	linkedBoth := base
 	linkedBoth.RAGameID, linkedBoth.SteamAppID = "4650", "1145360"

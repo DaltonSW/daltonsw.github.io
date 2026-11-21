@@ -9,8 +9,6 @@ xbox_id:
 googleplay_id: 736626089642
 status: "endless"
 subgames:
-started:
-finished:
 rating:
 cover:
 draft: true

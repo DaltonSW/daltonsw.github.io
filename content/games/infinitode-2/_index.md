@@ -4,8 +4,6 @@ platform: PC
 retroachievements_id: null
 steam_appid: 937310
 status: endless
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

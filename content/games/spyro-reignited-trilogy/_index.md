@@ -8,8 +8,6 @@ subgames:
   - Spyro the Dragon
   - Ripto's Rage!
   - Year of the Dragon
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

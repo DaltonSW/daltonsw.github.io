@@ -85,11 +85,11 @@ type FrontMatter struct {
 	// `subgame:` names which roster member it covers — see PlaythroughEntry.
 	Subgames []string `yaml:"subgames,omitempty"`
 
-	// Dates are typed as strings on purpose. YAML resolves an unquoted
-	// 2026-01-04 to a timestamp, and decoding that into `any` yields a
-	// time.Time whose text form is no longer what the file says.
-	Started  string `yaml:"started"`
-	Finished string `yaml:"finished"`
+	// There are deliberately no dates here. A game's first-played,
+	// first-finished and last-played dates are all derived from
+	// playthroughs.yaml (see GameSummaryFor). A stray `started:`/`finished:`
+	// in a hand-edited file lands in Extra and is preserved untouched, as is
+	// the inert `legacy_last_played:` some older games carry.
 
 	// Rating is written bare (`rating: 9`), so it decodes as an int. `any`
 	// plus scalarString keeps whichever form the file used.

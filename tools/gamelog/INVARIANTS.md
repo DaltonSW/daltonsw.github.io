@@ -29,6 +29,11 @@ what's load-bearing.
   game-level only: it describes the whole record, not a mode a game can have alongside others.
   "Unplayed" is not a status at all. The site derives it (`layouts/partials/game-unplayed.html`)
   for any game with no playthrough entries and no captured playtime, and shows it as a tag.
+  A game's front matter carries **no dates**. Started, first finished and last played are derived
+  from `playthroughs.yaml`, so a date that belongs to the game belongs in an entry. Creation writes
+  dates as a first playthrough (`CreateGameFile`), and stale triage closes the sole open entry
+  rather than stamping the game. `legacy_last_played:` on 13 games is inert and preserved via
+  `Extra`. Don't reintroduce `started`/`finished` on `FrontMatter`.
   "Mastered" isn't a status either. It's derived from the archive (`model.DeriveMastery` →
   `achievement-summary.yaml`'s `mastered:`) and shown as a badge by
   `layouts/partials/game-mastery.html`, so a mastered game can still be `playing` a replay.
@@ -85,15 +90,18 @@ what's load-bearing.
 - **One-shot statuses gate per entry-status, per platform.** `forms.IsOneShot` (endless,
   multiplayer, software) is enforced by `mutate.OneShotConflict`: at most one entry of a given
   one-shot status per platform, while a *different*-status entry is a real second mode and is
-  allowed. `mutate.EffectiveOneShotStatus` resolves older entries that say `playing` and lean on
-  the game-level status for their meaning. Those don't need migrating.
+  allowed. **Every entry carries its own status.** The 57 old endless/multiplayer entries that said
+  `playing` and leaned on the game's status were rewritten on 2026-11-21, and the code and template
+  special cases that resolved them were deleted. Don't write a `playing` entry meaning
+  endless/multiplayer again. The one exception is `software`: it's game-level only, so a software
+  game's entries say `playing`, and the timeline/year rows read them as software.
 - **Stale triage only looks at game-level `playing`** (`FindStaleCandidates` in
   `internal/commands/stale.go`), so endless/multiplayer/software games are never offered for
   finished/dropped triage, whatever their entries say.
 - **Adding another one-shot status means changing four places together:** `forms.IsOneShot`,
   `PlaythroughStatuses` (only if it's a real per-entry mode), `NO_CONNECTOR_CLASSES` in
   `assets/js/games-timeline.ts`, and the status colour maps in `assets/scss/main.scss` and
-  `_vars.scss`. The game-level override in `layouts/partials/games-timeline.html` also lists them.
+  `_vars.scss`.
 
 ### RetroAchievements
 

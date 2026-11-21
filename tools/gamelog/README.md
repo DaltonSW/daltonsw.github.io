@@ -173,9 +173,9 @@ The same two safeguards as `playthroughs.yaml` apply: an `Extra map[string]any` 
 catches `cover`, `cascade`, and anything else the struct doesn't model, so it round-trips instead
 of vanishing on a rewrite; and the pending rewrite is diffed against the bytes on disk before
 being allowed to land. One difference from `playthroughs.yaml`: front-matter scalar fields
-(`started`, `rating`, ...) are **not** `omitempty`, so clearing one leaves the key present with a
+(`rating`, ...) are **not** `omitempty`, so clearing one leaves the key present with a
 blank/null value rather than dropping it — matching how a freshly-created file already looks
-(`started:`, `rating:` with nothing after the colon). That means clearing a field is never
+(`rating:` with nothing after the colon). That means clearing a field is never
 reported as data loss; there's nothing to declare.
 
 Re-encoding the front-matter block through `yaml.v3` won't reproduce today's hand-formatted
@@ -183,7 +183,20 @@ quoting exactly — `title: "X"` may come back as `title: X` or `title: 'X'`, an
 render as `null` instead of bare. This is cosmetic, not lossy: the loss-check compares decoded
 field *presence*, not text, and the same tradeoff is already accepted for `playthroughs.yaml`.
 
-Title, platform, status, subgames, dates, rating, and `draft` are editable through the "edit game
+**A game carries no dates.** Started, first finished and last played are all derived from
+`playthroughs.yaml` (`gameDateRange` and `firstFinished` in `internal/model`, and the site's
+`game-first-played.html`, `game-first-finished.html` and `game-last-played.html`). First finished
+is the earliest finish of an entry whose status is `finished`, so a dropped run doesn't count. The
+new-game form's started/finished fields, and a scan candidate's finish, are written as the game's
+**first playthrough** by `CreateGameFile`. A game with no dates gets no entry. The edit forms show
+the derived dates read-only. When a game has exactly one playthrough and it's still open
+(`GameSummary.CanCloseSoleRun`), they also offer a "close the open playthrough on" date, which goes
+straight to `SyncStatus` and is never stored on the game. Thirteen older games carry an inert
+`legacy_last_played:`: a Steam last-played snapshot that stale triage once wrote into front matter
+as `finished:`. The tool and site ignore it; it's kept because three of those dates exist nowhere
+else.
+
+Title, platform, status, subgames, rating, and `draft` are editable through the "edit game
 info" form on a game's page in `gamelog serve`. Provider IDs (`retroachievements_id`,
 `steam_appid`, `psn_id`, `ubisoft_id`, `xbox_id`) have their own form in that page's sidebar, kept
 separate because RA/Steam accept a pasted URL and because clearing one of the `omitempty` IDs is a
@@ -200,7 +213,7 @@ whatever the status is, so a mastered game can be `playing` again. Runs that wer
 "YYYY-MM-DD"`, which the site prefers over the derived date. The tool never writes it.
 
 `status: paused` is distinct from `dropped`: it means the game is on hold, not abandoned — you
-mean to come back to it eventually. Setting it never writes a finished date, since the game isn't
+mean to come back to it eventually. Setting it never closes a playthrough, since the game isn't
 finished; Housekeeping's Stale tab in particular offers it as a one-click correction on a quiet game it
 otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
 
@@ -244,11 +257,11 @@ game's platform, so an entry predating the field still compares equal to its own
 The cap is per *status*, too: a game with genuinely distinct modes (Hitman's story campaign, its
 Freelancer roguelike, and its multiplayer contracts) can carry one entry per mode, since `endless`
 and `multiplayer` are also entry-level statuses (`forms.PlaythroughStatuses`). `software` is
-game-level only — it describes the whole record, not a mode. Older entries of endless/multiplayer
-games still say `playing` and lean on the game-level status for their meaning;
-`mutate.EffectiveOneShotStatus` resolves those, so they don't need migrating. The timeline
-(`games-timeline.html`) still forces a game-level endless/multiplayer/software status onto every
-entry, so a mixed-mode game should carry its "headline" mode as its game-level status.
+game-level only — it describes the whole record, not a mode, so a software game's entries say
+`playing` and the site reads them as software. Every other entry carries its own status and is shown
+as such: Hades' finished run is drawn as finished even though the game is `endless`. (Older
+endless/multiplayer entries once said `playing` and leaned on the game's status. They were rewritten
+in place on 2026-11-21, which removed the special cases that resolved them.)
 
 `status: backlog` is the game-level marker for "not played yet" — a game with this status and no
 `playthroughs.yaml` at all. It's excluded from the games list's year-grouped table and shown
@@ -492,7 +505,9 @@ completion (100% included: mastery isn't a status), **dropped** otherwise, or **
 the game has no achievements to go on at all (playtime alone doesn't prove completion, and with
 nothing to go on there's no basis to guess `dropped` over `paused` either, so `unfinished` is the
 honest default, not a claim) — alongside the last-played date, achievement count, and playtime.
-Nothing is ever written automatically: accept the guess, pick one of the other statuses it might
+Nothing is ever written automatically. Accepting sets the game's status and, for anything but
+`paused`, closes the game's sole open playthrough on the last-played date (`SyncStatus`; with
+several entries only the status changes). You can accept the guess, pick one of the other statuses it might
 have guessed instead, open the game's page (**Edit before applying**) to change it by hand, or
 leave it and it'll
 surface again next time it's still `playing` and still quiet. None of the one-shot statuses

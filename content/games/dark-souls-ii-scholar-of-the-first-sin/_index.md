@@ -4,8 +4,6 @@ platform: PC
 retroachievements_id: null
 steam_appid: 335300
 status: finished
-started: ""
-finished: "2021-05-21"
 rating: null
 draft: false
 cascade:

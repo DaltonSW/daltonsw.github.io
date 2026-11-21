@@ -4,8 +4,6 @@ platform: PC
 retroachievements_id: null
 steam_appid: 397460
 status: multiplayer
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

@@ -5,8 +5,6 @@ retroachievements_id: null
 steam_appid: 418530
 psn_id: NPWR21664_00
 status: endless
-started: ""
-finished: ""
 rating: 10
 draft: false
 cascade:

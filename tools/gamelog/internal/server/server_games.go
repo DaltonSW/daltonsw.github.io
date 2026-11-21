@@ -266,15 +266,13 @@ type gameDetailData struct {
 	Today            string
 	DefaultPthStatus string
 	CanDelete        bool
-	// Started/Finished are the fallback-aware display values (playthroughs
-	// first, front matter only if nothing's logged); StartedEditable/
-	// FinishedEditable gate whether editing the raw front-matter field below
-	// would have any effect — see model.GameSummary's doc comment.
-	Started          string
-	Finished         string
-	StartedEditable  bool
-	FinishedEditable bool
-	Achievements     []model.EarnedAchievement
+	// Started/FirstFinished are derived from playthroughs.yaml and shown
+	// read-only; the game itself carries no dates. CanCloseSoleRun offers a
+	// "close the open run on" date — see model.GameSummary.
+	Started         string
+	FirstFinished   string
+	CanCloseSoleRun bool
+	Achievements    []model.EarnedAchievement
 	// Provider ID fields, rendered as strings regardless of how the YAML
 	// scalar underneath decoded — see model.GameSummary's fields of the
 	// same name.
@@ -340,9 +338,8 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		DefaultPthStatus: defaultStatus,
 		CanDelete:        canDelete,
 		Started:          g.Started,
-		Finished:         g.Finished,
-		StartedEditable:  g.StartedEditable,
-		FinishedEditable: g.FinishedEditable,
+		FirstFinished:    g.FirstFinished,
+		CanCloseSoleRun:  g.CanCloseSoleRun,
 		Achievements:     achievements,
 		RAGameID:         g.RAGameID,
 		SteamAppID:       g.SteamAppID,
@@ -397,6 +394,21 @@ func (s *server) handleDeleteGame(w http.ResponseWriter, r *http.Request) {
 
 // ── Game info ────────────────────────────────────────────────────────────
 
+// closeOnFromForm reads the optional "close the open run on" date. It's
+// only honoured when the game has exactly one playthrough and it's open —
+// SyncStatus closes nothing otherwise — so a stale page or hand-crafted POST
+// can't smuggle a date in. The game itself never stores it.
+func closeOnFromForm(r *http.Request, g model.GameSummary) (string, error) {
+	if !g.CanCloseSoleRun {
+		return "", nil
+	}
+	closeOn := strings.TrimSpace(r.FormValue("close_on"))
+	if err := forms.ValidateDate(false)(closeOn); err != nil {
+		return "", fmt.Errorf("close on: %w", err)
+	}
+	return closeOn, nil
+}
+
 func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
 	doc, pf, ok := s.gameOr404(w, r, slug)
@@ -414,26 +426,10 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Started/Finished are only genuinely editable here when the game's
-	// GameSummary says so — otherwise playthroughs.yaml already governs
-	// them and a value typed here would silently never be displayed. This
-	// is the load-bearing check: the template hides/disables these inputs,
-	// but a stale page or a hand-crafted POST must still be rejected here.
-	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
-	started, finished := doc.FM.Started, doc.FM.Finished
-	if g.StartedEditable {
-		started = r.FormValue("started")
-		if err := forms.ValidateDate(false)(started); err != nil {
-			redirectErr(w, r, gamePath(slug), err)
-			return
-		}
-	}
-	if g.FinishedEditable {
-		finished = r.FormValue("finished")
-		if err := forms.ValidateDate(false)(finished); err != nil {
-			redirectErr(w, r, gamePath(slug), err)
-			return
-		}
+	closeOn, err := closeOnFromForm(r, model.GameSummaryFor(slug, doc.Path, doc, pf))
+	if err != nil {
+		redirectErr(w, r, gamePath(slug), err)
+		return
 	}
 	rating := r.FormValue("rating")
 	if err := forms.ValidateRating(rating); err != nil {
@@ -446,12 +442,10 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	updated.Platform = r.FormValue("platform")
 	updated.Status = r.FormValue("status")
 	updated.Subgames = forms.ParseSubgames(r.FormValue("subgames"))
-	updated.Started = started
-	updated.Finished = finished
 	updated.SetRating(rating)
 	updated.Draft = r.FormValue("draft") == "1"
 
-	if mutate.SameGameInfo(doc.FM, updated) {
+	if mutate.SameGameInfo(doc.FM, updated) && closeOn == "" {
 		redirectOK(w, r, gamePath(slug), "No changes.")
 		return
 	}
@@ -460,7 +454,7 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	// Front-matter scalar fields aren't omitempty, so clearing one leaves the
 	// key present rather than dropping it — nothing here is ever a legitimate
 	// removal to declare, matching doEditGameInfo in main.go.
-	syncing := pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
+	syncing := pf.SyncStatus(doc.FM.Status, closeOn)
 	if err := mutate.WriteFrontMatter(doc, pf, syncing); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
@@ -549,34 +543,19 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
 	status := r.FormValue("status")
-	started, finished := doc.FM.Started, doc.FM.Finished
-	if g.StartedEditable {
-		started = r.FormValue("started")
-	}
-	if g.FinishedEditable {
-		finished = r.FormValue("finished")
-	}
 	platform, rating := r.FormValue("platform"), r.FormValue("rating")
 
 	fail := func(err error) {
 		row := model.GameSummaryFor(slug, doc.Path, doc, pf)
-		row.Status, row.FMStarted, row.FMFinished, row.Platform, row.Rating = status, started, finished, platform, rating
+		row.Status, row.Platform, row.Rating = status, platform, rating
 		s.renderRow(w, gameRowView{GameSummary: row, Error: err.Error()})
 	}
 
-	if g.StartedEditable {
-		if err := forms.ValidateDate(false)(started); err != nil {
-			fail(fmt.Errorf("started: %w", err))
-			return
-		}
-	}
-	if g.FinishedEditable {
-		if err := forms.ValidateDate(false)(finished); err != nil {
-			fail(fmt.Errorf("finished: %w", err))
-			return
-		}
+	closeOn, err := closeOnFromForm(r, model.GameSummaryFor(slug, doc.Path, doc, pf))
+	if err != nil {
+		fail(err)
+		return
 	}
 	if err := forms.ValidateRating(rating); err != nil {
 		fail(fmt.Errorf("rating: %w", err))
@@ -585,18 +564,16 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 
 	updated := doc.FM
 	updated.Status = status
-	updated.Started = started
-	updated.Finished = finished
 	updated.Platform = platform
 	updated.SetRating(rating)
 
-	if !mutate.SameGameInfo(doc.FM, updated) {
+	if !mutate.SameGameInfo(doc.FM, updated) || closeOn != "" {
 		doc.FM = updated
 		// Front-matter scalar fields aren't omitempty, so clearing one leaves
 		// the key present rather than dropping it — same reasoning as
 		// handleEditInfo above: nothing here is ever a legitimate removal to
 		// declare.
-		syncing := pf.SyncStatus(doc.FM.Status, doc.FM.Finished)
+		syncing := pf.SyncStatus(doc.FM.Status, closeOn)
 		if err := mutate.WriteFrontMatter(doc, pf, syncing); err != nil {
 			fail(err)
 			return
@@ -631,7 +608,7 @@ func (s *server) handleUndraftGame(w http.ResponseWriter, r *http.Request) {
 	draftsOnly := r.FormValue("drafts") == "1"
 	if doc.FM.Draft {
 		doc.FM.Draft = false
-		if err := mutate.WriteFrontMatter(doc, pf, pf.SyncStatus(doc.FM.Status, doc.FM.Finished)); err != nil {
+		if err := mutate.WriteFrontMatter(doc, pf, pf.SyncStatus(doc.FM.Status, "")); err != nil {
 			s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Error: err.Error()})
 			return
 		}
@@ -685,7 +662,7 @@ func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, doc.FM.Status, f.Subgame); conflict != nil {
+	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, f.Subgame); conflict != nil {
 		want := model.EffectivePlatform(f.Platform, doc.FM.Platform)
 		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
 			doc.FM.Title, f.Status, forms.OrDash(want)))

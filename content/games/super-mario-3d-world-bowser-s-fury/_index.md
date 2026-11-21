@@ -5,8 +5,6 @@ retroachievements_id:
 steam_appid:
 nintendo_id: "010028600EBDA000"
 status: "finished"
-started:
-finished:
 rating:
 cover:
 draft: false

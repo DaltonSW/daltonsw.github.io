@@ -7,8 +7,6 @@ status: paused
 subgames:
   - '999: Nine Hours, Nine Persons, Nine Doors'
   - Virtue's Last Reward
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

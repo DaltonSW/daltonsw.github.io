@@ -12,7 +12,7 @@
 
 <div class="table-wrap">
 <table>
-  <thead><tr><th>Title</th><th>Status</th><th>Draft?</th><th>Started</th><th>Finished</th><th>Platform</th><th>Rating</th><th>Playthroughs</th><th></th></tr></thead>
+  <thead><tr><th>Title</th><th>Status</th><th>Draft?</th><th>First played</th><th>First finished</th><th>Platform</th><th>Rating</th><th>Playthroughs</th><th></th></tr></thead>
   <tbody>
     {{range .Games}}{{template "game_row" .}}{{else}}
     <tr><td colspan="9" class="empty">No games match.</td></tr>

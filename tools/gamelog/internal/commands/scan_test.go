@@ -1,6 +1,7 @@
 package commands
 
 import (
+	"path/filepath"
 	"strings"
 	"testing"
 
@@ -285,8 +286,20 @@ func TestCandidate_CreateFileRoundTrips(t *testing.T) {
 			if got := doc.FM.Status; got != tc.candidate.Status {
 				t.Errorf("status = %q, want %q", got, tc.candidate.Status)
 			}
-			if got := doc.FM.Finished; got != tc.candidate.FinishedOn {
-				t.Errorf("finished = %q, want %q", got, tc.candidate.FinishedOn)
+			// The finish lands on the first playthrough, never the game.
+			if _, ok := doc.FM.Extra["finished"]; ok {
+				t.Error("front matter must carry no finished date")
+			}
+			pf, err := model.LoadPlaythroughs(filepath.Dir(path))
+			if err != nil {
+				t.Fatal(err)
+			}
+			got := ""
+			if len(pf.Playthroughs) > 0 {
+				got = pf.Playthroughs[0].Finished
+			}
+			if got != tc.candidate.FinishedOn {
+				t.Errorf("first playthrough finished = %q, want %q", got, tc.candidate.FinishedOn)
 			}
 			if !doc.FM.Draft {
 				t.Error("a scanned entry must be created as a draft")

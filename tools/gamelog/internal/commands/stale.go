@@ -99,17 +99,21 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 // needs a whole extra form's worth of input first (see reviewStale and, for
 // the web UI, the regular game-info edit page instead of a stale-specific
 // one), and "skip"/"quit" change nothing.
-func ApplyStaleAction(doc *model.Doc, c StaleCandidate, action string) {
+//
+// It returns the date the game's open playthrough should close on, for the
+// caller to hand to PlaythroughsFile.SyncStatus — the game itself carries no
+// dates. "paused" isn't a finish (the game's still meant to be played, just
+// not right now), so it closes nothing.
+func ApplyStaleAction(doc *model.Doc, c StaleCandidate, action string) (closedOn string) {
 	status := c.SuggestedStatus
 	if s, ok := strings.CutPrefix(action, forms.StaleMarkPrefix); ok {
 		status = s
 	}
 	doc.FM.Status = status
-	// "paused" isn't a finish — the game's still meant to be played, just
-	// not right now, so it gets no finished date.
-	if status != "paused" {
-		doc.FM.Finished = c.LastPlayed
+	if status == "paused" {
+		return ""
 	}
+	return c.LastPlayed
 }
 
 func FormatStaleCard(c StaleCandidate) string {

@@ -23,15 +23,9 @@
       <label>Subgames (one per line, optional — marks this as a compilation)</label>
       <textarea name="subgames" rows="3">{{joinLines .FM.Subgames}}</textarea>
     </div>
-    {{if .StartedEditable}}
-    <div class="field"><label>Started</label><input type="text" name="started" value="{{.FM.Started}}"></div>
-    {{else}}
-    <div class="field field--wide dim">Started: {{.Started}} — governed by playthroughs.yaml, edit in the Playthroughs section below.</div>
-    {{end}}
-    {{if .FinishedEditable}}
-    <div class="field"><label>Finished</label><input type="text" name="finished" value="{{.FM.Finished}}"></div>
-    {{else}}
-    <div class="field field--wide dim">Finished: {{.Finished}} — governed by playthroughs.yaml, edit in the Playthroughs section below.</div>
+    <div class="field field--wide dim">First played: {{or .Started "—"}} · First finished: {{or .FirstFinished "—"}} — derived from the playthroughs below; the game itself has no dates.</div>
+    {{if .CanCloseSoleRun}}
+    <div class="field"><label>Close the open playthrough on (optional)</label><input type="text" name="close_on" placeholder="YYYY-MM-DD"></div>
     {{end}}
     <div class="field"><label>Rating (1-10)</label><input type="text" name="rating" value="{{.RatingStr}}"></div>
     <div class="checkbox-row field"><input type="checkbox" id="draft" name="draft" value="1"{{if .FM.Draft}} checked{{end}}><label for="draft">Draft (unpublished)</label></div>

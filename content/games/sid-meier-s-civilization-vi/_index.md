@@ -4,8 +4,6 @@ platform: "PC"
 retroachievements_id:
 steam_appid: 289070
 status: "endless"
-started:
-finished:
 rating:
 cover:
 draft: false

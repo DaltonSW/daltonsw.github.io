@@ -50,9 +50,6 @@ func TestBacklogCandidate_CreatesBacklogDraft(t *testing.T) {
 	if doc.FM.Status != "backlog" {
 		t.Errorf("status = %q, want backlog", doc.FM.Status)
 	}
-	if doc.FM.Finished != "" {
-		t.Errorf("a backlog entry must have no finished date, got %q", doc.FM.Finished)
-	}
 	if !doc.FM.Draft {
 		t.Error("a backlog entry must be created as a draft")
 	}

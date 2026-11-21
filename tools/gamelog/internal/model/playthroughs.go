@@ -238,6 +238,16 @@ func (p Playthrough) LatestDate() string {
 	return FirstNonEmpty(p.Finished, p.Started)
 }
 
+// FinishDate is the day this playthrough ended: its last session's
+// `finished`, or the flat `finished` for an entry without sessions. Blank
+// while it's still open.
+func (p Playthrough) FinishDate() string {
+	if p.HasSessions() {
+		return p.Sessions[len(p.Sessions)-1].Finished
+	}
+	return p.Finished
+}
+
 // IsOpen reports whether this playthrough (or, if it has sessions, its most
 // recent session) has a blank `finished` field.
 func (p Playthrough) IsOpen() bool {
@@ -283,6 +293,22 @@ func gameDateRange(views []Playthrough) (earliest, latest string) {
 		}
 	}
 	return earliest, latest
+}
+
+// firstFinished is the earliest finish date among entries whose status is
+// "finished" — the day the game was first beaten. Dropped, unfinished and
+// one-shot entries don't count: they ended, but nothing was finished.
+func firstFinished(views []Playthrough) string {
+	var first string
+	for _, p := range views {
+		if p.Status != "finished" {
+			continue
+		}
+		if d := p.FinishDate(); d != "" && (first == "" || d < first) {
+			first = d
+		}
+	}
+	return first
 }
 
 // Views renders every entry in the form the TUI consumes.
@@ -557,14 +583,10 @@ func SessionPath(idx, j int, field string) string {
 // a blank closedOn (as "paused" should always pass) only syncs the status,
 // leaving dates untouched. Safe to call unconditionally.
 //
-// The web game-info form (server_games.go's handleEditInfo/handleQuickEditGame)
-// now gates whether it even reads a Finished value from the request behind
-// GameSummary.FinishedEditable, which requires this same "exactly one
-// playthrough, still open" condition to be true. So at those two call sites,
-// closedOn is only ever non-blank when this method would've backfilled it
-// anyway; the meaningful callers of the backfill behavior are
-// server_bulk.go's handleStaleAction and the CLI paths through mutate.go,
-// not the web form.
+// closedOn is never stored on the game — its front matter carries no dates.
+// It comes from the web forms' optional "close the open run on" field
+// (gated by GameSummary.CanCloseSoleRun, this same "exactly one playthrough,
+// still open" condition) and from stale triage's last-played date.
 func (f *PlaythroughsFile) SyncStatus(status, closedOn string) bool {
 	switch status {
 	case "finished", "dropped", "unfinished", "paused":

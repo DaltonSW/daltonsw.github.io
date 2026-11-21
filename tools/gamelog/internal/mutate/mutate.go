@@ -39,39 +39,25 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 // subgame: two compilation entries each with their own endless mode on the
 // same platform are two real modes, not fragmentation of one.
 //
-// gameStatus resolves entries written before per-entry endless/multiplayer
-// existed — see effectiveOneShotStatus.
-func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, gameStatus, subgame string) *model.PlaythroughEntry {
+// Every entry carries its own status. Entries on endless/multiplayer games
+// that once said "playing" and leaned on the game's status were rewritten on
+// 2026-11-21, so nothing here consults the game's status any more.
+func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, subgame string) *model.PlaythroughEntry {
 	if !forms.IsOneShot(status) {
 		return nil
 	}
 	want := model.EffectivePlatform(entryPlatform, gamePlatform)
 	for i, e := range playthroughs {
-		if EffectiveOneShotStatus(e.Status, gameStatus) == status && model.EffectivePlatform(e.Platform, gamePlatform) == want && e.Subgame == subgame {
+		if e.Status == status && model.EffectivePlatform(e.Platform, gamePlatform) == want && e.Subgame == subgame {
 			return &playthroughs[i]
 		}
 	}
 	return nil
 }
 
-// effectiveOneShotStatus resolves what one-shot status, if any, an existing
-// entry really represents. Every endless/multiplayer/software game written
-// before per-entry endless/multiplayer support kept its sole entry's own
-// status as "playing" and relied entirely on the game's front-matter status
-// for its real meaning (games-timeline.html's override still does this for
-// display). Without this, a new literal "endless" entry wouldn't be seen as
-// conflicting with that old-style "playing" entry, silently dropping the
-// fragmentation guard for every game written the old way.
-func EffectiveOneShotStatus(entryStatus, gameStatus string) string {
-	if entryStatus == "playing" && forms.IsOneShot(gameStatus) {
-		return gameStatus
-	}
-	return entryStatus
-}
-
 func SameGameInfo(a, b model.FrontMatter) bool {
 	return a.Title == b.Title && a.Platform == b.Platform && a.Status == b.Status &&
-		a.Started == b.Started && a.Finished == b.Finished && a.Draft == b.Draft &&
+		a.Draft == b.Draft &&
 		a.RatingString() == b.RatingString() && sameSubgames(a.Subgames, b.Subgames)
 }
 

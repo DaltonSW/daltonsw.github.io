@@ -4,8 +4,6 @@ platform: PC
 retroachievements_id: null
 steam_appid: 213610
 status: backlog
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

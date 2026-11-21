@@ -9,8 +9,6 @@ xbox_id:
 googleplay_id: 1025705520860
 status: "finished"
 subgames:
-started:
-finished:
 rating:
 cover:
 draft: true

@@ -4,8 +4,6 @@ platform: Nintendo 64
 retroachievements_id: 10003
 steam_appid: null
 status: finished
-started: ""
-finished: "2024-11-09"
 rating: null
 draft: false
 cascade:

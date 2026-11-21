@@ -4,8 +4,6 @@ platform: Nintendo DS
 retroachievements_id: 9518
 steam_appid: null
 status: finished
-started: ""
-finished: "2026-04-18"
 rating: null
 draft: false
 cascade:

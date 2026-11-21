@@ -4,8 +4,6 @@ platform: Xbox
 retroachievements_id: null
 steam_appid: null
 status: finished
-started: ""
-finished: ""
 rating: null
 draft: false
 cascade:

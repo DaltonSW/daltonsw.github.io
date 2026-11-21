@@ -1,6 +1,6 @@
-{{/* Context: a game's term Page. Returns the earliest known "started" date as a
-     "2006-01-02" string, falling back to front-matter Params.started (same
-     fallback games-timeline.html uses) only when nothing's logged yet. */}}
+{{/* Context: a game's term Page. Returns the earliest playthrough start as a
+     "2006-01-02" string, "" when nothing's logged. A game's front matter carries
+     no dates (see tools/gamelog/INVARIANTS.md). */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $earliest := "" -}}
 {{- range $entries -}}
@@ -9,8 +9,5 @@
       {{- $earliest = .started -}}
     {{- end -}}
   {{- end -}}
-{{- end -}}
-{{- if eq $earliest "" -}}
-  {{- with .Params.started -}}{{- $earliest = (. | time.Format "2006-01-02") -}}{{- end -}}
 {{- end -}}
 {{- return $earliest -}}

@@ -2,7 +2,7 @@
      "2006-01-02" string: the max of each entry's last known touch-point and
      achievement-summary.yaml's last_played (Steam's real timestamp, or RA's
      last-unlock date as its only proxy — see writeAchievementSummary in
-     tools/gamelog). Falls back to front-matter only when nothing else exists. */}}
+     tools/gamelog). "" when neither exists — a game's front matter carries no dates. */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $latest := "" -}}
 {{- range $entries -}}
@@ -14,12 +14,6 @@
 {{- with .Resources.Get "achievement-summary.yaml" -}}
   {{- with (. | transform.Unmarshal).last_played -}}
     {{- if or (eq $latest "") (gt . $latest) -}}{{- $latest = . -}}{{- end -}}
-  {{- end -}}
-{{- end -}}
-{{- if eq $latest "" -}}
-  {{- with .Params.finished -}}{{- $latest = (. | time.Format "2006-01-02") -}}{{- end -}}
-  {{- if eq $latest "" -}}
-    {{- with .Params.started -}}{{- $latest = (. | time.Format "2006-01-02") -}}{{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return $latest -}}

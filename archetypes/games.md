@@ -6,8 +6,6 @@ steam_appid:           # numeric appid from the game's Steam store URL, optional
 # Also optional: psn_id, ubisoft_id, xbox_id, nadeo_account_id, ninjakiwi_user_id —
 # easiest to set from the provider-IDs form in `gamelog serve`.
 status: "playing"   # backlog | playing | finished | dropped | unfinished | paused | endless | multiplayer | software — "mastered" is derived from achievements, not set here
-started: {{ now.Format "2006-01-02" }}
-finished:
 rating:
 cover:
 draft: false
@@ -16,8 +14,9 @@ cascade:
     games: ["{{ .File.ContentBaseName }}"]
 ---
 
-A sentence or two on the game overall. This is the implicit first playthrough — only log a
-playthrough for a replay, or write a full nested page for something that deserves its own URL.
+A sentence or two on the game overall. The game itself carries no dates: started, first finished
+and last played are all derived from its playthroughs (log one for every run, including the
+first), and mastered from its achievements.
 
 Playthroughs live in `playthroughs.yaml` beside this file, maintained by `tools/gamelog`.
 Captured provider history lives in `archive/<provider>/<id>.json` at the repo root, keyed by the

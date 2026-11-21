@@ -4,8 +4,7 @@ platform: PC
 retroachievements_id: null
 steam_appid: 1092790
 status: finished
-started: ""
-finished: "2025-02-17"
+legacy_last_played: "2025-02-17"
 rating: null
 draft: false
 cascade:
