@@ -167,7 +167,7 @@
       {{- end -}}
       {{- $items = $items | append (dict
           "id" (printf "%s--mastery-%s" $slug $day) "group" $slug "subgroup" $sub
-          "type" "point" "className" "pt-mastery" "content" "★"
+          "type" "point" "className" "pt-mastery" "content" ""
           "title" (printf "Mastered · %s<br>%s" ($day | time.Format "Jan 2, 2006") (delimit $lines "<br>"))
           "start" $day
         )

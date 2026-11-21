@@ -39,7 +39,7 @@
   <ul class="ach-mastery">
     {{- range . }}
     <li>
-      <span class="ach-mastery__mark" aria-hidden="true">★</span>
+      <span class="ach-mastery__mark" aria-hidden="true">&#xf005;</span>
       <span class="ach-mastery__label">{{ .label }}{{ if $multi }} · {{ .platform }}{{ end }}</span>
       <span class="ach-mastery__date">{{ .date | time.Format "Jan 2, 2006" }}</span>
       <span class="ach-mastery__basis">{{ if eq .basis "platinum" }}platinum{{ else if hasPrefix .basis "ra-" }}RA {{ strings.TrimPrefix "ra-" .basis }}{{ else }}{{ .unlocked }}/{{ .unlocked }}{{ end }}</span>

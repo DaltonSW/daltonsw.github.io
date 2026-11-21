@@ -370,6 +370,14 @@ $status-aliases: (wip: playing, stable: finished);
 .ps-row__game { color: var(--fg); font-weight: 500; display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; padding-left: 0.3rem; }
 .ps-row__title { color: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ps-row:hover .ps-row__title { color: var(--accent); }
+// mastered (game-mastery.html): gold title plus a star, instead of a bracketed tag
+.ps-row__title--mastered { color: var(--mastered); }
+// the star is Nerd Font nf-fa-star (U+F005): only SauceCode carries it, and the
+// Unicode ★ is in neither bundled font, so it fell back to a small system glyph
+.ps-row__mastered, .ach-mastery__mark {
+  font-family: $font-body; font-weight: 400;
+}
+.ps-row__mastered { color: var(--mastered); flex: none; font-size: 1.05em; line-height: 1; }
 .ps-row__rating { color: var(--dim); font-size: 0.8rem; flex: none; }
 .ps-row__platform, .ps-row__played, .ps-row__playtime { color: var(--dim); }
 // Platform/status cells link out to /platform/<term>/ and /status/<term>/ — inherit the
@@ -642,7 +650,7 @@ a.overview-status-row__label:hover, .overview-status-row a:hover {
   font-family: $font-ui; font-size: 0.8rem;
 }
 .ach-mastery li { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
-.ach-mastery__mark { color: var(--mastered); }
+.ach-mastery__mark { color: var(--mastered); font-size: 1.05em; }
 .ach-mastery__label { color: var(--fg); }
 .ach-mastery__date, .ach-mastery__basis { color: var(--dim); }
 
@@ -1168,15 +1176,20 @@ $timeline-status-colors: (
 @each $status, $color in $timeline-status-colors {
   .games-timeline .vis-item.pt--#{$status} { background: $color; border-color: $color; }
 }
-// mastery markers (games-timeline.html): a bare gold star, not a bar
+// mastery markers (games-timeline.html): a gold milestone diamond drawn in CSS, centred
+// on its day — a font glyph got clipped by the fixed-height row
 .games-timeline .vis-item.vis-point.pt-mastery {
   background: none; border: none; box-shadow: none;
-  color: var(--mastered); z-index: 2;
+  width: 0; overflow: visible; z-index: 2; cursor: default;
 }
-.games-timeline .vis-item.vis-point.pt-mastery .vis-dot { display: none; }
-.games-timeline .vis-item.vis-point.pt-mastery .vis-item-content {
-  color: var(--mastered); font-size: 0.95rem; line-height: 22px; padding: 0;
-  margin-left: -0.35em; // centre the glyph on its day
+.games-timeline .vis-item.vis-point.pt-mastery .vis-dot,
+.games-timeline .vis-item.vis-point.pt-mastery .vis-item-content { display: none; }
+.games-timeline .vis-item.vis-point.pt-mastery::before {
+  content: ""; position: absolute; top: 50%; left: 0;
+  width: 9px; height: 9px;
+  background: var(--mastered);
+  outline: 1.5px solid var(--bg); // separates it from the bar it sits on
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 // connectors overlap real session bars — keep them behind so they don't veil color/text
 .games-timeline .vis-item.pt-connector { opacity: 0.35; z-index: 0; }

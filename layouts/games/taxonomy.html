@@ -122,8 +122,10 @@
         {{- end }}
       </span>
       <span class="ps-row__game" role="cell">
-        <a class="ps-row__title" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
-        {{- with (partial "game-mastery.html" $page).date }} <span title="Mastered {{ . | time.Format "Jan 2, 2006" }}">{{ partial "game-status-tag.html" "mastered" }}</span>{{ end }}
+        {{- $masteredOn := (partial "game-mastery.html" $page).date }}
+        <a class="ps-row__title{{ if $masteredOn }} ps-row__title--mastered{{ end }}" href="{{ $page.RelPermalink }}"
+          {{- with $masteredOn }} title="Mastered {{ . | time.Format "Jan 2, 2006" }}"{{ end }}>{{ $page.Title }}</a>
+        {{- with $masteredOn }}<span class="ps-row__mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}" aria-label="mastered">&#xf005;</span>{{ end }}
         {{- if partial "game-unplayed.html" $page }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
         {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
       </span>

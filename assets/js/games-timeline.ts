@@ -189,7 +189,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
     },
     template: (item: GameItem) => {
       if (item.className?.includes("pt-connector")) return "";
-      if (item.type === "point") return String(item.content ?? "");
+      if (item.type === "point") return ""; // mastery markers are drawn in CSS
       return item.status ?? "";
     },
   });
