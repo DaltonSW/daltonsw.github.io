@@ -1,19 +1,155 @@
 {
  "provider": "steam",
  "title": "Chants of Sennaar",
- "updated": "2026-09-25",
+ "updated": "2026-11-21",
  "id": "1931770",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
- "unlocked": 0,
+ "fetched": "2026-11-21",
+ "last_attempt": "2026-11-21",
+ "unlocked": 17,
  "total": 25,
+ "first": "2026-11-14",
+ "last": "2026-11-21",
  "platform": "PC",
  "icon": "99618001a2111dd020f1fc957c5c47c0d6d5d327",
+ "playtime_mins": 483,
+ "playtime": {
+  "linux": 483
+ },
+ "last_played": "2026-11-21",
  "achievements": [
+  {
+   "key": "PROGRESS_FIRST_PAGE",
+   "name": "That's the spirit",
+   "description": "Fill in the Journal's first page",
+   "unlocked": true,
+   "date": "2026-11-14T18:34:37-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/1a93dc363f1fafd3af0e031a8b214853f98700de.jpg"
+  },
+  {
+   "key": "PROGRESS_N1",
+   "name": "Welcome to the Tower",
+   "description": "Reach the Abbey",
+   "unlocked": true,
+   "date": "2026-11-14T18:56:17-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/34db897bdadbb7b9043c5731921f04c6fe8bac28.jpg"
+  },
+  {
+   "key": "OPTIONNAL_PREACHER",
+   "name": "The Preacher's fate",
+   "unlocked": true,
+   "date": "2026-11-14T20:00:26-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/c071db0f4fe20f767b87e2b3968242ad7ef84d99.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PROGRESS_N2",
+   "name": "The great escape",
+   "description": "Reach the Frontier",
+   "unlocked": true,
+   "date": "2026-11-14T20:01:51-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/cd8a64c8fe10dc6400aeab7a9e00d54b851ac5c4.jpg"
+  },
+  {
+   "key": "PROGRESS_N3",
+   "name": "A new dawn",
+   "description": "Reach the Garden",
+   "unlocked": true,
+   "date": "2026-11-15T12:24:17-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/66e962d1a408443cc4601681a775304f5d727b27.jpg"
+  },
+  {
+   "key": "META_FIRST_LINK",
+   "name": "A good beginning",
+   "description": "Rebuild a first link",
+   "unlocked": true,
+   "date": "2026-11-16T18:03:19-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/d69d91ddf3492745696e451ef7cadf3c05e4e294.jpg"
+  },
+  {
+   "key": "PROGRESS_HALF_RUNES",
+   "name": "Scholar",
+   "description": "Validate half of the game's glyphs",
+   "unlocked": true,
+   "date": "2026-11-16T18:24:00-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/935b5792aa1ca410a19e1d2bfe430bafacd6e15e.jpg"
+  },
+  {
+   "key": "OPTIONNAL_GAMES",
+   "name": "True G3M4R",
+   "unlocked": true,
+   "date": "2026-11-16T18:27:48-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/be62405c07699dfffccdc58c9d417c95dc1bec83.jpg",
+   "hidden": true
+  },
+  {
+   "key": "PROGRESS_N4",
+   "name": "The darkness",
+   "description": "Reach the Galleries",
+   "unlocked": true,
+   "date": "2026-11-17T18:22:25-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/23eac08ef02c2f2a2f13754cd5bb088f39a95929.jpg"
+  },
+  {
+   "key": "PROGRESS_N5",
+   "name": "One last step",
+   "description": "Reach Exile",
+   "unlocked": true,
+   "date": "2026-11-19T18:15:31-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/b6a408a7316945bd72a4a839bd359cd44b7e20e7.jpg"
+  },
+  {
+   "key": "META_ALL_TERMINAL",
+   "name": "Cable guy",
+   "description": "Activate all Terminals",
+   "unlocked": true,
+   "date": "2026-11-21T10:17:46-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/3b3d7b57305d26115feed384b8938e8cf4df48a6.jpg"
+  },
+  {
+   "key": "PROGRESS_ALL_RUNES",
+   "name": "Champollion",
+   "description": "Validate all glyphs in the game",
+   "unlocked": true,
+   "date": "2026-11-21T10:29:09-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/bbfb590edc91753c45b7abe937ebb551ee56d515.jpg"
+  },
+  {
+   "key": "META_RESULT_1-4",
+   "name": "Feels like springtime",
+   "unlocked": true,
+   "date": "2026-11-21T10:35:18-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/80ae27db6e3e81b14f76cb2ad8ff157b94657ae2.jpg",
+   "hidden": true
+  },
+  {
+   "key": "META_HALF_LINK",
+   "name": "Half the way",
+   "description": "Rebuild half of the links",
+   "unlocked": true,
+   "date": "2026-11-21T10:42:45-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/9af56e6e87f20fc0d6d1919dd5b3ec365e7c68e4.jpg"
+  },
+  {
+   "key": "META_ALL_LINK",
+   "name": "Peace walker",
+   "description": "Rebuild all links in the game",
+   "unlocked": true,
+   "date": "2026-11-21T11:07:40-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/bbb37e53952847a2ad01483f131c39097b71c130.jpg"
+  },
+  {
+   "key": "OPTIONNAL_AIRLINES",
+   "name": "Alchemists Express",
+   "unlocked": true,
+   "date": "2026-11-21T11:08:16-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/25e4f5da05d9608bb346f5e8e90f0244becfbd50.jpg",
+   "hidden": true
+  },
   {
    "key": "END_BAD",
    "name": "I did it",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-11-21T11:12:43-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/dc05442085bcc7e7455efd4c347fb2cd999e9792.jpg",
    "hidden": true
   },
@@ -23,34 +159,6 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/d8996495a1afa977c8b9052c254ab31d518c31ef.jpg",
    "hidden": true
-  },
-  {
-   "key": "META_ALL_LINK",
-   "name": "Peace walker",
-   "description": "Rebuild all links in the game",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/bbb37e53952847a2ad01483f131c39097b71c130.jpg"
-  },
-  {
-   "key": "META_ALL_TERMINAL",
-   "name": "Cable guy",
-   "description": "Activate all Terminals",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/3b3d7b57305d26115feed384b8938e8cf4df48a6.jpg"
-  },
-  {
-   "key": "META_FIRST_LINK",
-   "name": "A good beginning",
-   "description": "Rebuild a first link",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/d69d91ddf3492745696e451ef7cadf3c05e4e294.jpg"
-  },
-  {
-   "key": "META_HALF_LINK",
-   "name": "Half the way",
-   "description": "Rebuild half of the links",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/9af56e6e87f20fc0d6d1919dd5b3ec365e7c68e4.jpg"
   },
   {
    "key": "META_RESULT_1-2",
@@ -64,13 +172,6 @@
    "name": "Free at last",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/6c4863e04d4239c65ce457ac7e86f7def35ac3d1.jpg",
-   "hidden": true
-  },
-  {
-   "key": "META_RESULT_1-4",
-   "name": "Feels like springtime",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/80ae27db6e3e81b14f76cb2ad8ff157b94657ae2.jpg",
    "hidden": true
   },
   {
@@ -95,31 +196,10 @@
    "hidden": true
   },
   {
-   "key": "OPTIONNAL_AIRLINES",
-   "name": "Alchemists Express",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/25e4f5da05d9608bb346f5e8e90f0244becfbd50.jpg",
-   "hidden": true
-  },
-  {
    "key": "OPTIONNAL_BELL",
    "name": "Rascal",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/9c733c21247b41dcfcf2dbaa0f828342a55560a2.jpg",
-   "hidden": true
-  },
-  {
-   "key": "OPTIONNAL_GAMES",
-   "name": "True G3M4R",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/be62405c07699dfffccdc58c9d417c95dc1bec83.jpg",
-   "hidden": true
-  },
-  {
-   "key": "OPTIONNAL_PREACHER",
-   "name": "The Preacher's fate",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/c071db0f4fe20f767b87e2b3968242ad7ef84d99.jpg",
    "hidden": true
   },
   {
@@ -128,62 +208,6 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/5a48cabfd3254c33a1e1a2c931287832cf22c69b.jpg",
    "hidden": true
-  },
-  {
-   "key": "PROGRESS_ALL_RUNES",
-   "name": "Champollion",
-   "description": "Validate all glyphs in the game",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/bbfb590edc91753c45b7abe937ebb551ee56d515.jpg"
-  },
-  {
-   "key": "PROGRESS_FIRST_PAGE",
-   "name": "That's the spirit",
-   "description": "Fill in the Journal's first page",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/1a93dc363f1fafd3af0e031a8b214853f98700de.jpg"
-  },
-  {
-   "key": "PROGRESS_HALF_RUNES",
-   "name": "Scholar",
-   "description": "Validate half of the game's glyphs",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/935b5792aa1ca410a19e1d2bfe430bafacd6e15e.jpg"
-  },
-  {
-   "key": "PROGRESS_N1",
-   "name": "Welcome to the Tower",
-   "description": "Reach the Abbey",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/34db897bdadbb7b9043c5731921f04c6fe8bac28.jpg"
-  },
-  {
-   "key": "PROGRESS_N2",
-   "name": "The great escape",
-   "description": "Reach the Frontier",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/cd8a64c8fe10dc6400aeab7a9e00d54b851ac5c4.jpg"
-  },
-  {
-   "key": "PROGRESS_N3",
-   "name": "A new dawn",
-   "description": "Reach the Garden",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/66e962d1a408443cc4601681a775304f5d727b27.jpg"
-  },
-  {
-   "key": "PROGRESS_N4",
-   "name": "The darkness",
-   "description": "Reach the Galleries",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/23eac08ef02c2f2a2f13754cd5bb088f39a95929.jpg"
-  },
-  {
-   "key": "PROGRESS_N5",
-   "name": "One last step",
-   "description": "Reach Exile",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/b6a408a7316945bd72a4a839bd359cd44b7e20e7.jpg"
   }
  ],
  "raw": {
@@ -193,64 +217,64 @@
    "achievements": [
     {
      "apiname": "PROGRESS_FIRST_PAGE",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794702877,
      "name": "That's the spirit",
      "description": "Fill in the Journal's first page"
     },
     {
      "apiname": "PROGRESS_N1",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794704177,
      "name": "Welcome to the Tower",
      "description": "Reach the Abbey"
     },
     {
      "apiname": "PROGRESS_N2",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794708111,
      "name": "The great escape",
      "description": "Reach the Frontier"
     },
     {
      "apiname": "PROGRESS_N3",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794767057,
      "name": "A new dawn",
      "description": "Reach the Garden"
     },
     {
      "apiname": "PROGRESS_N4",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794961345,
      "name": "The darkness",
      "description": "Reach the Galleries"
     },
     {
      "apiname": "PROGRESS_N5",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795133731,
      "name": "One last step",
      "description": "Reach Exile"
     },
     {
      "apiname": "PROGRESS_HALF_RUNES",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794875040,
      "name": "Scholar",
      "description": "Validate half of the game's glyphs"
     },
     {
      "apiname": "PROGRESS_ALL_RUNES",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795278549,
      "name": "Champollion",
      "description": "Validate all glyphs in the game"
     },
     {
      "apiname": "END_BAD",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795281163,
      "name": "I did it",
      "description": ""
     },
@@ -263,36 +287,36 @@
     },
     {
      "apiname": "META_FIRST_LINK",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794873799,
      "name": "A good beginning",
      "description": "Rebuild a first link"
     },
     {
      "apiname": "META_HALF_LINK",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795279365,
      "name": "Half the way",
      "description": "Rebuild half of the links"
     },
     {
      "apiname": "META_ALL_LINK",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795280860,
      "name": "Peace walker",
      "description": "Rebuild all links in the game"
     },
     {
      "apiname": "META_ALL_TERMINAL",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795277866,
      "name": "Cable guy",
      "description": "Activate all Terminals"
     },
     {
      "apiname": "META_RESULT_1-4",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795278918,
      "name": "Feels like springtime",
      "description": ""
     },
@@ -333,8 +357,8 @@
     },
     {
      "apiname": "OPTIONNAL_PREACHER",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794708026,
      "name": "The Preacher's fate",
      "description": ""
     },
@@ -354,15 +378,15 @@
     },
     {
      "apiname": "OPTIONNAL_GAMES",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794875268,
      "name": "True G3M4R",
      "description": ""
     },
     {
      "apiname": "OPTIONNAL_AIRLINES",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795280896,
      "name": "Alchemists Express",
      "description": ""
     }

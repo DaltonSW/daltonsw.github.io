@@ -1,14 +1,14 @@
-unlocked: 101
+unlocked: 102
 total: 156
-playtime_mins: 26528
-last_played: "2026-10-24"
+playtime_mins: 26881
+last_played: "2026-11-21"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 101
+      unlocked: 102
       total: 156
-      playtime_mins: 26528
-      last_played: "2026-10-24"
+      playtime_mins: 26881
+      last_played: "2026-11-21"
 earned:
     - name: First Win
       description: 1 Non-Tutorial Beginner map Win
@@ -614,5 +614,11 @@ earned:
       description: Earn 7,500 Stars in any Social Season
       date: "2026-09-10T18:16:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/45b9e6c494f376ee4b4bb13e58b1501510af2275.jpg
+      provider: steam
+      platform: PC
+    - name: The greatest challenge
+      description: Create or Play 200 Challenges
+      date: "2026-10-28T21:17:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/9b78e763053706195a666d335ea334c8a04e6235.jpg
       provider: steam
       platform: PC

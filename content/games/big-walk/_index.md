@@ -3,7 +3,7 @@ title: Big Walk
 platform: PC
 retroachievements_id: null
 steam_appid: 1478500
-status: playing
+status: finished
 started: ""
 finished: ""
 rating: null

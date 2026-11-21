@@ -340,7 +340,11 @@ type RASuggestion struct {
 	Finished   time.Time
 	Confidence string // "high" (a finishing award was earned) or "medium" (partial progress, no award)
 	AwardKind  string // the raw HighestAwardKind behind a "high" confidence, e.g. "mastered"
-	OK         bool
+	// Unlocks is every earned instant (softcore and hardcore), so callers can
+	// tell which of them a logged playthrough already covers
+	// (commands.WithCoverage).
+	Unlocks []time.Time
+	OK      bool
 }
 
 // RASuggestRange derives a suggested playthrough date range from a user's
@@ -349,6 +353,7 @@ type RASuggestion struct {
 // the latest unlock stands in at medium confidence.
 func RASuggestRange(p RAProgress) RASuggestion {
 	var earliest, latest time.Time
+	var unlocks []time.Time
 	found := false
 	for _, a := range p.Achievements {
 		for _, raw := range []string{a.DateEarned, a.DateEarnedHardcore} {
@@ -356,6 +361,7 @@ func RASuggestRange(p RAProgress) RASuggestion {
 			if err != nil {
 				continue
 			}
+			unlocks = append(unlocks, t)
 			if !found || t.Before(earliest) {
 				earliest = t
 			}
@@ -369,7 +375,7 @@ func RASuggestRange(p RAProgress) RASuggestion {
 		return RASuggestion{}
 	}
 
-	s := RASuggestion{Started: earliest, OK: true}
+	s := RASuggestion{Started: earliest, Unlocks: unlocks, OK: true}
 	kind := strings.ToLower(p.HighestAwardKind)
 	if raAwardKinds[kind] {
 		if t, err := ParseRAAwardDate(p.HighestAwardDate); err == nil {

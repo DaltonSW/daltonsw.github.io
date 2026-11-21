@@ -1,21 +1,21 @@
 {
  "provider": "steam",
  "title": "Big Walk",
- "updated": "2026-09-25",
+ "updated": "2026-11-21",
  "id": "1478500",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
- "unlocked": 8,
+ "fetched": "2026-11-21",
+ "last_attempt": "2026-11-21",
+ "unlocked": 10,
  "total": 12,
  "first": "2026-08-19",
- "last": "2026-08-26",
+ "last": "2026-11-17",
  "platform": "PC",
  "icon": "aba91d96c91f87c1aa3d87eedae20fbbf01f2d54",
- "playtime_mins": 321,
+ "playtime_mins": 499,
  "playtime": {
-  "linux": 321
+  "linux": 499
  },
- "last_played": "2026-08-26",
+ "last_played": "2026-11-17",
  "achievements": [
   {
    "key": "Drawbridge",
@@ -82,9 +82,18 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/e8590ab3c6fc677eab4facd960ab4af8c7d05a35.jpg"
   },
   {
+   "key": "Wall",
+   "name": "Big Wall",
+   "description": "Go beyond the wall",
+   "unlocked": true,
+   "date": "2026-11-17T21:43:11-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/5c0b7721eeff5e1f7791e4677363f89ef7cee26c.jpg"
+  },
+  {
    "key": "Ending1",
    "name": "Big Goodbye",
-   "unlocked": false,
+   "unlocked": true,
+   "date": "2026-11-17T22:36:18-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/4b835ad4479999e45bae1747c6240bbcec59b7f8.jpg",
    "hidden": true
   },
@@ -101,13 +110,6 @@
    "description": "Get shiny",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/20df037faaaaeed0344762a2b834d44a999addc6.jpg"
-  },
-  {
-   "key": "Wall",
-   "name": "Big Wall",
-   "description": "Go beyond the wall",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1478500/5c0b7721eeff5e1f7791e4677363f89ef7cee26c.jpg"
   }
  ],
  "raw": {
@@ -152,15 +154,15 @@
     },
     {
      "apiname": "Wall",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794973391,
      "name": "Big Wall",
      "description": "Go beyond the wall"
     },
     {
      "apiname": "Ending1",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794976578,
      "name": "Big Goodbye",
      "description": ""
     },

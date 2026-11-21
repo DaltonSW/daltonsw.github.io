@@ -326,9 +326,9 @@ field always starts blank.
 
 The ways in: a **Suggest** button on every linked row of the games list, the **Suggest** tab
 (linked games only, with a title filter), and the tab's **Sweep all games** button. The sweep runs
-the RA/Steam fetch across every linked game and lists only the games whose provider history isn't
-already covered by their `playthroughs.yaml` — nothing logged, logged entries with no dates, or
-provider activity newer than the newest logged date — each title linking straight to its panel.
+the RA/Steam fetch across every linked game and lists only the games with provider activity on a
+day their `playthroughs.yaml` doesn't cover (see below) — including gaps between logged runs, not
+just activity after the newest one — each title linking straight to its panel.
 It's read-only and slow, so it runs as a background job with progress, the same machinery as
 Housekeeping's "refresh all". Old `/suggest/<slug>` links redirect to the game page.
 
@@ -349,9 +349,17 @@ surfaced as plain skip reasons rather than raw status codes.
 All dates are reported in `America/Chicago`, matching `timezone` in
 `config/_default/hugo.toml`, so a late-evening session isn't attributed to the next day.
 
-Because RA/Steam only expose one achievement history per game, a suggestion reflects a game's
-*entire* history, not any single logged playthrough. If a game has more than one playthrough,
-the report (and the web panel) says so — cross-reference manually before entering a date.
+Because RA/Steam only expose one achievement history per game, the raw range spans every run ever
+played. So before suggesting anything, each unlock day is checked against `playthroughs.yaml`
+(`commands.WithCoverage`): a day inside any logged session — or a playthrough's own
+started/finished when it has no sessions — is dropped, and the suggestion spans only what's left.
+A span with no finish date runs until the next logged span starts, or indefinitely if none does;
+planned entries cover nothing; partial dates (`2018-09`) cover their whole month. When every day is
+covered, no form is offered — the panel says so, and if the newest activity sits in a playthrough
+with no finish date, names it as a finish-date candidate there. An award (RA) or 100% unlock
+(Steam) only pre-fills a finish if that finishing date is itself uncovered; an RA award inside a
+logged run drops the leftover activity to medium confidence. The remaining days can still span
+more than one run, so a game with several playthroughs still gets a cross-reference hint.
 
 ## `gamelog serve` — the web UI, and its Housekeeping page
 

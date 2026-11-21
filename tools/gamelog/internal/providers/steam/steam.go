@@ -332,8 +332,11 @@ func (c *SteamClient) GetOwnedGamePlaytime(ctx context.Context, appID string) (m
 // "completion" signal, so this is a guess even when every achievement is
 // unlocked.
 type SteamSuggestion struct {
-	Started       time.Time
-	Finished      time.Time
+	Started  time.Time
+	Finished time.Time
+	// Unlocks is every unlock instant, so callers can tell which of them a
+	// logged playthrough already covers (commands.WithCoverage).
+	Unlocks       []time.Time
 	UnlockedCount int
 	TotalCount    int
 	OK            bool
@@ -349,6 +352,7 @@ func SteamSuggestRange(achievements []SteamAchievement) SteamSuggestion {
 		}
 		s.UnlockedCount++
 		t := time.Unix(a.UnlockTime, 0)
+		s.Unlocks = append(s.Unlocks, t)
 		if !found || t.Before(earliest) {
 			earliest = t
 		}

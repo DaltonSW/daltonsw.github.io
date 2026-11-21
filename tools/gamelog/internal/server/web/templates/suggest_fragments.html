@@ -11,6 +11,8 @@ value stays editable first. */}}
   <p><strong>{{.Name}}</strong>{{with .Confidence}} <span class="dim">· {{.}}</span>{{end}}</p>
   {{if .SkipReason}}
   <p class="dim">{{.SkipReason}}</p>
+  {{else if .Covered}}
+  <p class="dim">{{.Covered}}</p>
   {{else}}
   <p class="dim">{{.Detail}}</p>
   <form method="post" action="/games/{{$.Slug}}/playthroughs" class="row">
@@ -42,7 +44,7 @@ value stays editable first. */}}
 </div>
 {{end}}
 {{if gt .NumPlaythroughs 1}}
-<p class="hint">This game has several playthroughs logged. These dates span your whole provider history for it, not any one playthrough, so check them before you log them.</p>
+<p class="hint">This game has several playthroughs logged. Activity already inside one of them is left out, but what remains may still span more than one run, so check it before you log it.</p>
 {{end}}
 <div class="btn-row">
   <button type="button" hx-get="/games/{{.Slug}}/suggest" hx-target="#suggest-panel" hx-disabled-elt="this" hx-indicator="next .htmx-indicator">Fetch again</button>

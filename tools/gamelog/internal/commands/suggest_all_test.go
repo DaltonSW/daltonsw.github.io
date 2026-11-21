@@ -64,12 +64,32 @@ func TestSuggestSweepVerdict(t *testing.T) {
 			actionable: false,
 		},
 		{
-			name:   "session dates count as logged coverage",
+			name:   "activity in a gap between logged sessions is flagged",
 			report: steamReport("2024-03-01", "2024-05-01"),
 			pf: logged(model.PlaythroughEntry{Sessions: []model.SessionEntry{
 				{Started: "2024-02-01", Finished: "2024-02-15"},
 				{Started: "2024-05-20", Finished: "2024-06-01"},
 			}}),
+			actionable: true,
+		},
+		{
+			name:   "activity inside logged sessions is covered",
+			report: steamReport("2024-02-03", "2024-05-25"),
+			pf: logged(model.PlaythroughEntry{Sessions: []model.SessionEntry{
+				{Started: "2024-02-01", Finished: "2024-02-15"},
+				{Started: "2024-05-20", Finished: "2024-06-01"},
+			}}),
+			actionable: false,
+		},
+		{
+			// Celeste: newest activity postdates every logged date, but the
+			// newest playthrough has no finish, so it's still that run.
+			name:   "open playthrough covers later activity",
+			report: steamReport("2018-09-03", "2024-12-01"),
+			pf: logged(
+				model.PlaythroughEntry{Status: "finished", Sessions: []model.SessionEntry{{Started: "2018-09-03", Finished: "2018-10-01"}}},
+				model.PlaythroughEntry{Status: "finished", Started: "2024-11-24"},
+			),
 			actionable: false,
 		},
 	}

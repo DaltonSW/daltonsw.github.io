@@ -1,21 +1,21 @@
 {
  "provider": "steam",
  "title": "Persona 3 Reload",
- "updated": "2026-10-24",
+ "updated": "2026-11-21",
  "id": "2161700",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
- "unlocked": 25,
+ "fetched": "2026-11-21",
+ "last_attempt": "2026-11-21",
+ "unlocked": 40,
  "total": 56,
  "first": "2026-10-09",
- "last": "2026-10-22",
+ "last": "2026-11-19",
  "platform": "PC",
  "icon": "2aeb189b126f766bb5930f725fbdcdd171a93c56",
- "playtime_mins": 1902,
+ "playtime_mins": 5712,
  "playtime": {
-  "linux": 1902
+  "linux": 5712
  },
- "last_played": "2026-10-24",
+ "last_played": "2026-11-21",
  "achievements": [
   {
    "key": "ACH_ORPHEUS_GET",
@@ -218,6 +218,126 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/93c248c226f427043b4f61a2876917bf6f638434.jpg"
   },
   {
+   "key": "ACH_DEFEAT_HIE_LOV",
+   "name": "Never Toy with Matters of the Heart",
+   "unlocked": true,
+   "date": "2026-10-24T16:14:08-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d8613caadc740915321b59b5dc3568bdc4e4e975.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_CURE_CAT",
+   "name": "Benevolent Purr-tector",
+   "description": "Nursed a cat back to full health.",
+   "unlocked": true,
+   "date": "2026-10-25T12:40:40-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/4f79cf8baba93d056928ef91f448f49f20f0cfa9.jpg"
+  },
+  {
+   "key": "ACH_CHALLENGE_MONADO",
+   "name": "Beyond the Darkness",
+   "description": "Unlocked access to the remaining Major Arcana.(Persona 3 Reload main story mode only)",
+   "unlocked": true,
+   "date": "2026-10-27T18:03:23-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0e6f407133cc515e57f87beb86bd249f88c1465e.jpg"
+  },
+  {
+   "key": "ACH_DEFEAT_CHA_JUS",
+   "name": "Armor Disarmed",
+   "unlocked": true,
+   "date": "2026-10-27T22:12:53-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7e5fd859d6d84222d6b44d333c7141a45822dc18.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_ALL_THEURGIA_USE",
+   "name": "The Strength of Our Hearts",
+   "description": "Used all teammates' Theurgy.(Persona 3 Reload main story mode only)",
+   "unlocked": true,
+   "date": "2026-10-29T17:20:53-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0e663e02f247d96c7831a475cb94207c915edef7.jpg"
+  },
+  {
+   "key": "ACH_DEFEAT_HERMIT",
+   "name": "Dodging Lightning",
+   "unlocked": true,
+   "date": "2026-10-31T18:55:36-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/cf213da3090699c7cc9d10f150813d73862e7984.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_DAMAGE_999",
+   "name": "Get a Load of Those Numbers!",
+   "description": "Dealt over 999 damage in a single attack (All-Out Attacks excluded).(Persona 3 Reload main story mode only)",
+   "unlocked": true,
+   "date": "2026-11-03T11:17:08-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f632d1d90c0fa88f1bae1de1cc0361ad1b8eb9f7.jpg"
+  },
+  {
+   "key": "ACH_ENC_HAPPENING",
+   "name": "The Horror of the Shade",
+   "description": "Encountered a Dark Zone in Tartarus.",
+   "unlocked": true,
+   "date": "2026-11-03T16:12:45-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/917b7ce1ba571df9bd1df739f143dc59399f58f2.jpg"
+  },
+  {
+   "key": "ACH_FORB_DOOR_OPEN_10",
+   "name": "Glimpse of the Depths",
+   "description": "Discovered and conquered 10 Monad doors.(Persona 3 Reload main story mode only)",
+   "unlocked": true,
+   "date": "2026-11-03T16:23:19-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d72ecd4ac7caf3c13292345dd8358b8b29cee243.jpg"
+  },
+  {
+   "key": "ACH_DEFEAT_FOR_STR",
+   "name": "Twist of Fate",
+   "unlocked": true,
+   "date": "2026-11-04T19:37:52-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f0c23039e31ecb669cb20a0503fe663463d5a50e.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_H_PARAM_ALL_MAX",
+   "name": "Peak Performance",
+   "description": "Maxed out all Social Stats.",
+   "unlocked": true,
+   "date": "2026-11-05T20:28:47-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/3a12a681be0c024a4a91cf2a5de9108f72279a89.jpg"
+  },
+  {
+   "key": "ACH_SKILL_CHANGE",
+   "name": "Tempting Fate",
+   "description": "Triggered a skill change during fusion.(Persona 3 Reload main story mode only)",
+   "unlocked": true,
+   "date": "2026-11-08T11:33:34-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/a5d711b734350b9454100e5a98b99d7e8f2e43b8.jpg"
+  },
+  {
+   "key": "ACH_MAKE_LOVERS",
+   "name": "That Special Someone",
+   "description": "Nurtured a romance.",
+   "unlocked": true,
+   "date": "2026-11-08T13:27:14-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/8f389a34429e46fa8610e80490befefa3a361573.jpg"
+  },
+  {
+   "key": "ACH_DEFEAT_HANGEDMAN",
+   "name": "A Sense of Finality",
+   "unlocked": true,
+   "date": "2026-11-08T14:34:23-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/14116fc193364e821577372f10cadb320f2dff40.jpg",
+   "hidden": true
+  },
+  {
+   "key": "ACH_INV_ELIZABETH",
+   "name": "Distinguished Visitor",
+   "description": "Invited Elizabeth to your room.",
+   "unlocked": true,
+   "date": "2026-11-19T18:42:11-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/eec895da4598ca4112a53ebcc662720154eb1a92.jpg"
+  },
+  {
    "key": "ACH_ALL_COMMU_MAX",
    "name": "A Legacy of Friendships",
    "description": "Maxed out all Social Links.",
@@ -239,69 +359,6 @@
    "hidden": true
   },
   {
-   "key": "ACH_ALL_THEURGIA_USE",
-   "name": "The Strength of Our Hearts",
-   "description": "Used all teammates' Theurgy.(Persona 3 Reload main story mode only)",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0e663e02f247d96c7831a475cb94207c915edef7.jpg"
-  },
-  {
-   "key": "ACH_CHALLENGE_MONADO",
-   "name": "Beyond the Darkness",
-   "description": "Unlocked access to the remaining Major Arcana.(Persona 3 Reload main story mode only)",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0e6f407133cc515e57f87beb86bd249f88c1465e.jpg"
-  },
-  {
-   "key": "ACH_CURE_CAT",
-   "name": "Benevolent Purr-tector",
-   "description": "Nursed a cat back to full health.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/4f79cf8baba93d056928ef91f448f49f20f0cfa9.jpg"
-  },
-  {
-   "key": "ACH_DAMAGE_999",
-   "name": "Get a Load of Those Numbers!",
-   "description": "Dealt over 999 damage in a single attack (All-Out Attacks excluded).(Persona 3 Reload main story mode only)",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f632d1d90c0fa88f1bae1de1cc0361ad1b8eb9f7.jpg"
-  },
-  {
-   "key": "ACH_DEFEAT_CHA_JUS",
-   "name": "Armor Disarmed",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7e5fd859d6d84222d6b44d333c7141a45822dc18.jpg",
-   "hidden": true
-  },
-  {
-   "key": "ACH_DEFEAT_FOR_STR",
-   "name": "Twist of Fate",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f0c23039e31ecb669cb20a0503fe663463d5a50e.jpg",
-   "hidden": true
-  },
-  {
-   "key": "ACH_DEFEAT_HANGEDMAN",
-   "name": "A Sense of Finality",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/14116fc193364e821577372f10cadb320f2dff40.jpg",
-   "hidden": true
-  },
-  {
-   "key": "ACH_DEFEAT_HERMIT",
-   "name": "Dodging Lightning",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/cf213da3090699c7cc9d10f150813d73862e7984.jpg",
-   "hidden": true
-  },
-  {
-   "key": "ACH_DEFEAT_HIE_LOV",
-   "name": "Never Toy with Matters of the Heart",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d8613caadc740915321b59b5dc3568bdc4e4e975.jpg",
-   "hidden": true
-  },
-  {
    "key": "ACH_DEFEAT_NUXE",
    "name": "The Great Seal",
    "unlocked": false,
@@ -316,46 +373,11 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f8b5f66d0dc5c3dfcbe2e2c14044a82bd31b0001.jpg"
   },
   {
-   "key": "ACH_ENC_HAPPENING",
-   "name": "The Horror of the Shade",
-   "description": "Encountered a Dark Zone in Tartarus.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/917b7ce1ba571df9bd1df739f143dc59399f58f2.jpg"
-  },
-  {
-   "key": "ACH_FORB_DOOR_OPEN_10",
-   "name": "Glimpse of the Depths",
-   "description": "Discovered and conquered 10 Monad doors.(Persona 3 Reload main story mode only)",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d72ecd4ac7caf3c13292345dd8358b8b29cee243.jpg"
-  },
-  {
    "key": "ACH_GET_ARBEIT_50000",
    "name": "The Grindset Mindset",
    "description": "Earned over 50,000 yen total from part-time jobs.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/73ad8f86e6847d8874e7aa9622108132cd71a2af.jpg"
-  },
-  {
-   "key": "ACH_H_PARAM_ALL_MAX",
-   "name": "Peak Performance",
-   "description": "Maxed out all Social Stats.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/3a12a681be0c024a4a91cf2a5de9108f72279a89.jpg"
-  },
-  {
-   "key": "ACH_INV_ELIZABETH",
-   "name": "Distinguished Visitor",
-   "description": "Invited Elizabeth to your room.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/eec895da4598ca4112a53ebcc662720154eb1a92.jpg"
-  },
-  {
-   "key": "ACH_MAKE_LOVERS",
-   "name": "That Special Someone",
-   "description": "Nurtured a romance.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/8f389a34429e46fa8610e80490befefa3a361573.jpg"
   },
   {
    "key": "ACH_MAKE_MESSIAH",
@@ -421,13 +443,6 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/e0adf6967450bb2ec8da680f4cc921aac187589c.jpg"
   },
   {
-   "key": "ACH_SKILL_CHANGE",
-   "name": "Tempting Fate",
-   "description": "Triggered a skill change during fusion.(Persona 3 Reload main story mode only)",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/a5d711b734350b9454100e5a98b99d7e8f2e43b8.jpg"
-  },
-  {
    "key": "ACH_TRUE_END",
    "name": "From Shadows into Light",
    "unlocked": false,
@@ -470,36 +485,36 @@
     },
     {
      "apiname": "ACH_DEFEAT_HIE_LOV",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1792876448,
      "name": "Never Toy with Matters of the Heart",
      "description": ""
     },
     {
      "apiname": "ACH_DEFEAT_CHA_JUS",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793157173,
      "name": "Armor Disarmed",
      "description": ""
     },
     {
      "apiname": "ACH_DEFEAT_HERMIT",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793490936,
      "name": "Dodging Lightning",
      "description": ""
     },
     {
      "apiname": "ACH_DEFEAT_FOR_STR",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793842672,
      "name": "Twist of Fate",
      "description": ""
     },
     {
      "apiname": "ACH_DEFEAT_HANGEDMAN",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794170063,
      "name": "A Sense of Finality",
      "description": ""
     },
@@ -526,8 +541,8 @@
     },
     {
      "apiname": "ACH_INV_ELIZABETH",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795135331,
      "name": "Distinguished Visitor",
      "description": "Invited Elizabeth to your room."
     },
@@ -554,8 +569,8 @@
     },
     {
      "apiname": "ACH_MAKE_LOVERS",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794166034,
      "name": "That Special Someone",
      "description": "Nurtured a romance."
     },
@@ -589,8 +604,8 @@
     },
     {
      "apiname": "ACH_ALL_THEURGIA_USE",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793312453,
      "name": "The Strength of Our Hearts",
      "description": "Used all teammates' Theurgy.(Persona 3 Reload main story mode only)"
     },
@@ -603,8 +618,8 @@
     },
     {
      "apiname": "ACH_DAMAGE_999",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793726228,
      "name": "Get a Load of Those Numbers!",
      "description": "Dealt over 999 damage in a single attack (All-Out Attacks excluded).(Persona 3 Reload main story mode only)"
     },
@@ -631,8 +646,8 @@
     },
     {
      "apiname": "ACH_FORB_DOOR_OPEN_10",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793744599,
      "name": "Glimpse of the Depths",
      "description": "Discovered and conquered 10 Monad doors.(Persona 3 Reload main story mode only)"
     },
@@ -652,8 +667,8 @@
     },
     {
      "apiname": "ACH_ENC_HAPPENING",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793743965,
      "name": "The Horror of the Shade",
      "description": "Encountered a Dark Zone in Tartarus."
     },
@@ -694,8 +709,8 @@
     },
     {
      "apiname": "ACH_SKILL_CHANGE",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1794159214,
      "name": "Tempting Fate",
      "description": "Triggered a skill change during fusion.(Persona 3 Reload main story mode only)"
     },
@@ -722,8 +737,8 @@
     },
     {
      "apiname": "ACH_H_PARAM_ALL_MAX",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793932127,
      "name": "Peak Performance",
      "description": "Maxed out all Social Stats."
     },
@@ -743,8 +758,8 @@
     },
     {
      "apiname": "ACH_CURE_CAT",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1792950040,
      "name": "Benevolent Purr-tector",
      "description": "Nursed a cat back to full health."
     },
@@ -757,8 +772,8 @@
     },
     {
      "apiname": "ACH_CHALLENGE_MONADO",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793142203,
      "name": "Beyond the Darkness",
      "description": "Unlocked access to the remaining Major Arcana.(Persona 3 Reload main story mode only)"
     },

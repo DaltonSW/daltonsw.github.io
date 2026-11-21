@@ -43,7 +43,7 @@ func suggestTestGame(t *testing.T) (*model.Doc, *model.PlaythroughsFile) {
 	pf := &model.PlaythroughsFile{}
 	pf.AddPlaythrough(model.PlaythroughFields{Started: "2020-01-01", Finished: "2020-02-01", Status: "finished"})
 	pf.AddPlaythrough(model.PlaythroughFields{Status: "planned"})
-	pf.AddPlaythrough(model.PlaythroughFields{Started: "2023-05-01", Status: "playing", Platform: "PC"})
+	pf.AddPlaythrough(model.PlaythroughFields{Started: "2023-05-01", Finished: "2023-06-01", Status: "playing", Platform: "PC"})
 	return &model.Doc{FM: model.FrontMatter{Title: "Banjo", Platform: "N64"}}, pf
 }
 
@@ -119,5 +119,58 @@ func TestSuggestPanelSkippedProviders(t *testing.T) {
 	}
 	if strings.Contains(out, "<form") {
 		t.Error("a provider with no dates must not offer a form")
+	}
+}
+
+// Celeste's shape: every unlock falls inside a logged session or the open
+// newest playthrough, so there's nothing to log as a new playthrough.
+func TestSuggestPanelAllCovered(t *testing.T) {
+	doc := &model.Doc{FM: model.FrontMatter{Title: "Celeste"}}
+	pf := &model.PlaythroughsFile{Playthroughs: []model.PlaythroughEntry{
+		{Status: "finished", Sessions: []model.SessionEntry{{Started: "2018-09-03", Finished: "2018-10-01"}}},
+		{Status: "finished", Started: "2024-11-24"},
+	}}
+	report := commands.SuggestionReport{
+		Slug: "celeste", NumPlaythroughs: 2,
+		RA: commands.ProviderResult{Skipped: true, Reason: "no retroachievements_id set on this game"},
+		Steam: commands.ProviderResult{Steam: &steam.SteamSuggestion{
+			Started: noon("2018-09-03"), Finished: noon("2024-12-01"),
+			Unlocks:       []time.Time{noon("2018-09-03"), noon("2018-10-01"), noon("2024-11-24"), noon("2024-12-01")},
+			UnlockedCount: 4, TotalCount: 6, OK: true,
+		}},
+	}
+	out := renderSuggestPanel(t, buildSuggestView(report, doc, pf, "playing"))
+	for _, want := range []string{"All 4 activity day(s) fall inside logged playthroughs", "Latest activity 2024-12-01 is inside #2"} {
+		if !strings.Contains(out, want) {
+			t.Errorf("panel missing %q\n%s", want, out)
+		}
+	}
+	if strings.Contains(out, `action="/games/celeste/playthroughs"`) {
+		t.Error("fully covered activity must not offer a new-playthrough form")
+	}
+}
+
+// Only the unlogged unlocks are suggested, and a 100% Steam game whose last
+// unlock is already logged doesn't get that unlock pre-filled as a finish.
+func TestSuggestPanelPartiallyCovered(t *testing.T) {
+	doc := &model.Doc{FM: model.FrontMatter{Title: "Tunic"}}
+	pf := &model.PlaythroughsFile{Playthroughs: []model.PlaythroughEntry{
+		{Status: "finished", Started: "2022-03-01", Finished: "2022-03-20"},
+		{Status: "finished", Started: "2024-01-01", Finished: "2024-01-31"},
+	}}
+	report := commands.SuggestionReport{
+		Slug: "tunic",
+		Steam: commands.ProviderResult{Steam: &steam.SteamSuggestion{
+			Started: noon("2022-03-05"), Finished: noon("2024-01-20"),
+			Unlocks:       []time.Time{noon("2022-03-05"), noon("2023-06-10"), noon("2023-06-12"), noon("2024-01-20")},
+			UnlockedCount: 4, TotalCount: 4, OK: true,
+		}},
+	}
+	st := buildSuggestView(report, doc, pf, "playing").Providers[1]
+	if st.Started != "2023-06-10" || st.FinishedHint != "2023-06-12" || st.Finished != "" || st.Status != "playing" {
+		t.Errorf("steam prefill = %+v", st)
+	}
+	if !strings.Contains(st.Detail, "2 of 4 activity days not yet logged") {
+		t.Errorf("detail = %q", st.Detail)
 	}
 }

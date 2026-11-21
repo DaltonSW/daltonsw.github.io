@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -127,6 +128,10 @@ type ProviderResult struct {
 
 	SteamPlaytimeMinutes int
 	SteamPlaytimeKnown   bool
+
+	// Coverage is set by WithCoverage; RA/Steam's Started/Finished then span
+	// only the activity no logged playthrough accounts for.
+	Coverage *Coverage
 }
 
 // SuggestionReport is the full result of `gamelog suggest` for one game.
@@ -173,6 +178,10 @@ func RunSuggest(args []string) error {
 	if err != nil {
 		return err
 	}
+	pf, err := model.LoadPlaythroughs(filepath.Dir(summary.Path))
+	if err != nil {
+		return err
+	}
 	raID, steamAppID := doc.ExternalIDs()
 	// Front matter may have been hand-edited with a pasted URL rather than a
 	// bare ID; normalise so both work. A value that parses as neither is left
@@ -197,6 +206,7 @@ func RunSuggest(args []string) error {
 	ctx := context.Background()
 	report.RA = FetchRAResult(ctx, raID, creds)
 	report.Steam = FetchSteamResult(ctx, steamAppID, creds)
+	report = WithCoverage(report, pf)
 
 	fmt.Print(FormatSuggestionReport(report))
 	return nil
@@ -290,9 +300,9 @@ func FormatSuggestionReport(r SuggestionReport) string {
 	b.WriteString("\n")
 
 	if r.NumPlaythroughs > 1 {
-		b.WriteString("Note: this game has multiple playthroughs logged. These dates reflect your\n")
-		b.WriteString("ENTIRE RetroAchievements/Steam history for this game, not any single\n")
-		b.WriteString("playthrough — cross-reference manually before entering them via `gamelog`.\n\n")
+		b.WriteString("Note: this game has multiple playthroughs logged. Activity already inside\n")
+		b.WriteString("one of them is left out, but what remains may still span more than one\n")
+		b.WriteString("run — cross-reference manually before entering it via `gamelog`.\n\n")
 	}
 
 	fmt.Fprintf(&b, "Enter these manually: run `gamelog`, pick %s, then \"Log a new session\"\n", r.Title)
@@ -313,8 +323,11 @@ func formatRABlock(r SuggestionReport) string {
 		fmt.Fprintf(&b, "  request failed (%v), skipping.\n", r.RA.Err)
 	case r.RA.Skipped:
 		fmt.Fprintf(&b, "  %s, skipping.\n", r.RA.Reason)
+	case r.RA.RA != nil && allCovered(r.RA.Coverage):
+		b.WriteString(coveredLines(r.RA.Coverage))
 	case r.RA.RA != nil:
 		s := r.RA.RA
+		b.WriteString(uncoveredLine(r.RA.Coverage))
 		confidenceLabel := "high (award earned)"
 		if s.AwardKind != "" {
 			confidenceLabel = fmt.Sprintf("high (%s)", s.AwardKind)
@@ -346,8 +359,11 @@ func formatSteamBlock(r SuggestionReport) string {
 		fmt.Fprintf(&b, "  request failed (%v), skipping.\n", r.Steam.Err)
 	case r.Steam.Skipped:
 		fmt.Fprintf(&b, "  %s, skipping.\n", r.Steam.Reason)
+	case r.Steam.Steam != nil && allCovered(r.Steam.Coverage):
+		b.WriteString(coveredLines(r.Steam.Coverage))
 	case r.Steam.Steam != nil:
 		s := r.Steam.Steam
+		b.WriteString(uncoveredLine(r.Steam.Coverage))
 		b.WriteString("  confidence: low (guess from achievement unlock times, not a real playtime timeline)\n")
 		fmt.Fprintf(&b, "  achievements unlocked        : %d / %d\n", s.UnlockedCount, s.TotalCount)
 		fmt.Fprintf(&b, "  earliest unlock              : %s\n", day(s.Started))
@@ -357,7 +373,7 @@ func formatSteamBlock(r SuggestionReport) string {
 		}
 		fmt.Fprintf(&b, "  -> suggested started : %s\n", day(s.Started))
 		weak := ""
-		if s.UnlockedCount < s.TotalCount {
+		if s.UnlockedCount < s.TotalCount || (r.Steam.Coverage != nil && r.Steam.Coverage.FinishCovered) {
 			weak = "  (weak — not all achievements earned, may still be playing)"
 		}
 		fmt.Fprintf(&b, "  -> suggested finished: %s%s\n", day(s.Finished), weak)
@@ -367,4 +383,28 @@ func formatSteamBlock(r SuggestionReport) string {
 
 func FormatHours(minutes int) string {
 	return fmt.Sprintf("%.1fh", float64(minutes)/60.0)
+}
+
+func allCovered(c *Coverage) bool { return c != nil && c.Uncovered == 0 }
+
+// CoveredSummary is the "nothing new to log" line shared by the CLI report
+// and the web panel.
+func CoveredSummary(c *Coverage) string {
+	out := fmt.Sprintf("All %d activity day(s) fall inside logged playthroughs.", c.Days)
+	if c.LatestOpenIn >= 0 {
+		out += fmt.Sprintf(" Latest activity %s is inside #%d, which has no finish date — set one there if that run is done.",
+			c.Latest, c.LatestOpenIn+1)
+	}
+	return out
+}
+
+func coveredLines(c *Coverage) string {
+	return "  " + CoveredSummary(c) + "\n"
+}
+
+func uncoveredLine(c *Coverage) string {
+	if c == nil || c.Uncovered == c.Days {
+		return ""
+	}
+	return fmt.Sprintf("  not yet logged               : %d of %d activity days (the rest fall inside logged playthroughs)\n", c.Uncovered, c.Days)
 }

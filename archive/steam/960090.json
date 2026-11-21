@@ -1,23 +1,23 @@
 {
  "provider": "steam",
  "title": "Bloons TD 6",
- "updated": "2026-10-24",
+ "updated": "2026-11-21",
  "id": "960090",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
- "unlocked": 101,
+ "fetched": "2026-11-21",
+ "last_attempt": "2026-11-21",
+ "unlocked": 102,
  "total": 156,
  "first": "2022-07-15",
- "last": "2026-09-10",
+ "last": "2026-10-28",
  "platform": "PC",
  "icon": "c5f0b67c8beeb6be99abe2ad8db2cada5d5ccff0",
- "playtime_mins": 26528,
+ "playtime_mins": 26881,
  "playtime": {
   "disconnected": 1,
-  "linux": 14271,
+  "linux": 14624,
   "windows": 12256
  },
- "last_played": "2026-10-24",
+ "last_played": "2026-11-21",
  "achievements": [
   {
    "key": "7",
@@ -828,6 +828,14 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/45b9e6c494f376ee4b4bb13e58b1501510af2275.jpg"
   },
   {
+   "key": "73",
+   "name": "The greatest challenge",
+   "description": "Create or Play 200 Challenges",
+   "unlocked": true,
+   "date": "2026-10-28T21:17:29-05:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/9b78e763053706195a666d335ea334c8a04e6235.jpg"
+  },
+  {
    "key": "105",
    "name": "Freaky Friday",
    "description": "Use the Alchemist's Transforming Tonic abilities 100 times",
@@ -1141,13 +1149,6 @@
    "description": "Complete any Race in under 3 minutes",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0bac8a40adb2ca61d9a62162e414b1c3402b5898.jpg"
-  },
-  {
-   "key": "73",
-   "name": "The greatest challenge",
-   "description": "Create or Play 200 Challenges",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/9b78e763053706195a666d335ea334c8a04e6235.jpg"
   },
   {
    "key": "74",
@@ -1717,8 +1718,8 @@
     },
     {
      "apiname": "73",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1793240249,
      "name": "The greatest challenge",
      "description": "Create or Play 200 Challenges"
     },

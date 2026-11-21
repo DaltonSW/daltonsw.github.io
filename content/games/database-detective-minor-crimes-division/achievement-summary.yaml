@@ -1,14 +1,20 @@
-unlocked: 13
+unlocked: 34
 total: 34
-playtime_mins: 349
-last_played: "2026-10-21"
+playtime_mins: 683
+last_played: "2026-10-26"
+mastered: "2026-10-26"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 13
+      unlocked: 34
       total: 34
-      playtime_mins: 349
-      last_played: "2026-10-21"
+      playtime_mins: 683
+      last_played: "2026-10-26"
+      mastery:
+        - scope: all
+          date: "2026-10-26"
+          unlocked: 34
+          basis: 100%
 earned:
     - name: Keeping the City Clean
       date: "2026-10-06T19:01:34-05:00"
@@ -86,5 +92,131 @@ earned:
       description: Apply to LZU.
       date: "2026-10-19T18:10:27-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/c184e05922dde60e8403acdde1831c74901fee1d.jpg
+      provider: steam
+      platform: PC
+    - name: LMAO PLZ
+      date: "2026-10-24T18:22:55-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1793f630314016b057f6fb9f9ce4860e567b36d9.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Donation Addict
+      description: Try to donate to goallin.com
+      date: "2026-10-25T09:29:47-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/38f93d13a4388f433310ca134edfa33ac7c379b7.jpg
+      provider: steam
+      platform: PC
+    - name: The Most Minor of Crimes
+      date: "2026-10-25T10:43:29-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/e4e8e8f6de6514cf7c0c181cbcf6f8b29054429f.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Webtrotter
+      description: Visit every website.
+      date: "2026-10-25T10:54:09-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/da16dcc22cf3df634e56ffe22986cb4180f7761b.jpg
+      provider: steam
+      platform: PC
+    - name: honk
+      date: "2026-10-26T18:04:08-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/a04a93bdcb2f7b8129c5b07f503e89e7db5f2bf3.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Busted
+      date: "2026-10-26T18:41:44-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/dd5460490d58371694f6676366b40b95a352ef65.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: The Truth Revealed
+      date: "2026-10-26T18:46:03-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/481d37a5296b9df4e43d64b070b62eb0794dcb8d.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Thanks For Playing!!!
+      date: "2026-10-26T18:46:05-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/8e9fa451f58cd80f000b17b2e649fa99e3785dc1.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: You're too kind!
+      date: "2026-10-26T18:50:05-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/094de66d97d89ec05364ec622f2fd24f13afa33a.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: First to Leave, Last to Arrive
+      description: Try to leave early.
+      date: "2026-10-26T18:51:42-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/122103f68ac1126c461047de4559580954876af0.jpg
+      provider: steam
+      platform: PC
+    - name: Minor Crimes
+      description: Arrest a child.
+      date: "2026-10-26T18:53:05-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4a5f4e634b55557bfd1fa97316ee95565b82b2d2.jpg
+      provider: steam
+      platform: PC
+    - name: On Vacation
+      description: Get put on temporary leave.
+      date: "2026-10-26T18:56:34-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/fd80bf88a90ab602f46e92add24060d1e6988bd6.jpg
+      provider: steam
+      platform: PC
+    - name: Peeper
+      description: Let the moleman on the tree watch you for a bit.
+      date: "2026-10-26T18:58:53-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/e943c8478f2101dd1a80481d4ec26702cbd8d49f.jpg
+      provider: steam
+      platform: PC
+    - name: Pink Slip
+      description: Get laid off.
+      date: "2026-10-26T19:00:31-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1099b3fe43d101cdf24dfadc890d71148cb31168.jpg
+      provider: steam
+      platform: PC
+    - name: Heartbreaker
+      description: Arrest someone featured on selectyourstar.com
+      date: "2026-10-26T19:04:40-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1bf47b38773927d43a2b3c6c5c96f9a0d0b1df9d.jpg
+      provider: steam
+      platform: PC
+    - name: Very Funny
+      date: "2026-10-26T19:05:38-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/d7210633a8e68eef1338afe7a20f6f9a10bba805.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Status Quo Enjoyer
+      date: "2026-10-26T19:19:05-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/bbe8cf9c1ddcf488d83cdd6f79e1ce8040433af7.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: Frog Man
+      description: ' '
+      date: "2026-10-26T19:20:25-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/551b1ce5b357943a255ae56760b0d382a4064f55.jpg
+      provider: steam
+      platform: PC
+    - name: Pictures of You(r Arrest)
+      description: Arrest a certain someone in level 7.
+      date: "2026-10-26T19:21:38-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/a3f285eb3f4fc295770467f14b15c8cf5c5b2f74.jpg
+      provider: steam
+      platform: PC
+    - name: Sorry...
+      date: "2026-10-26T19:25:47-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/9c92c05008a3762482dee6ead0a44176f28bae7a.jpg
+      provider: steam
+      platform: PC
+      hidden: true
+    - name: STOP
+      description: Try to commit a major crime.
+      date: "2026-10-26T19:30:52-05:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4c7ff29e956b40f383c397dc8346f03a1dd21f2b.jpg
       provider: steam
       platform: PC

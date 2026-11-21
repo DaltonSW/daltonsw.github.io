@@ -91,6 +91,7 @@ type providerSuggestion struct {
 	Confidence string
 	Detail     string
 	SkipReason string // set when the provider was skipped or failed; no forms then
+	Covered    string // set when every activity day is already logged; no forms then
 
 	// Pre-fill. Finished is left blank unless the provider actually signals
 	// a finish (an RA award, or every Steam achievement unlocked); the
@@ -124,6 +125,7 @@ type suggestView struct {
 // defaultStatus is the status used when the provider doesn't signal a finish
 // — the same game-aware default the "start a new playthrough" form uses.
 func buildSuggestView(report commands.SuggestionReport, doc *model.Doc, pf *model.PlaythroughsFile, defaultStatus string) suggestView {
+	report = commands.WithCoverage(report, pf)
 	v := suggestView{
 		Slug:            report.Slug,
 		NumPlaythroughs: report.NumPlaythroughs,
@@ -171,8 +173,13 @@ func raSuggestion(pr commands.ProviderResult, defaultStatus string) providerSugg
 		out.SkipReason = skippedReason(pr)
 		return out
 	}
+	if c := pr.Coverage; c != nil && c.Uncovered == 0 {
+		out.Covered = commands.CoveredSummary(c)
+		return out
+	}
 	started, last := commands.Day(s.Started), commands.Day(s.Finished)
 	out.Started = started
+	defer func() { out.Detail += partialCoverage(pr.Coverage) }()
 	if s.Confidence == "high" {
 		out.Confidence = "high (" + s.AwardKind + ")"
 		out.Detail = fmt.Sprintf("earliest achievement %s · %s %s", started, s.AwardKind, last)
@@ -196,6 +203,10 @@ func steamSuggestion(pr commands.ProviderResult, defaultStatus string) providerS
 		out.SkipReason = skippedReason(pr)
 		return out
 	}
+	if c := pr.Coverage; c != nil && c.Uncovered == 0 {
+		out.Covered = commands.CoveredSummary(c)
+		return out
+	}
 	started, last := commands.Day(s.Started), commands.Day(s.Finished)
 	out.Started = started
 	out.Confidence = "low — guessed from achievement unlock times"
@@ -203,7 +214,10 @@ func steamSuggestion(pr commands.ProviderResult, defaultStatus string) providerS
 	if pr.SteamPlaytimeKnown {
 		out.Detail += " · " + commands.FormatHours(pr.SteamPlaytimeMinutes) + " total playtime"
 	}
-	if s.UnlockedCount >= s.TotalCount {
+	out.Detail += partialCoverage(pr.Coverage)
+	// Every achievement unlocked only signals a finish if the last unlock is
+	// new; otherwise it belongs to a run that's already logged.
+	if s.UnlockedCount >= s.TotalCount && (pr.Coverage == nil || !pr.Coverage.FinishCovered) {
 		out.Finished = last
 		out.Status = "finished"
 		return out
@@ -211,6 +225,15 @@ func steamSuggestion(pr commands.ProviderResult, defaultStatus string) providerS
 	out.FinishedHint = last
 	out.Status = defaultStatus
 	return out
+}
+
+// partialCoverage notes, after a provider's detail line, that its dates have
+// been narrowed to the activity not already logged.
+func partialCoverage(c *commands.Coverage) string {
+	if c == nil || c.Uncovered == c.Days {
+		return ""
+	}
+	return fmt.Sprintf(" · %d of %d activity days not yet logged (dates above are those)", c.Uncovered, c.Days)
 }
 
 // handleSuggestFragment renders the game page's suggest panel on demand
@@ -302,6 +325,7 @@ func (s *server) runSuggestAllJob(j *job) {
 		}
 
 		actionable, note := commands.SuggestSweepVerdict(report, pf)
+		report = commands.WithCoverage(report, pf) // log the narrowed ranges the verdict saw
 		if !actionable {
 			continue
 		}
