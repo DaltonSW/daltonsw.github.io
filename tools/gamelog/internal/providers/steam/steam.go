@@ -457,6 +457,27 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 		}
 	}
 
+	// The API withholds hidden achievements' text; the Steam client's local
+	// cache has it. Only blanks are filled, and a missing cache changes nothing.
+	var local map[string]LocalAchievement
+	for i := range rec.Achievements {
+		a := &rec.Achievements[i]
+		if !a.Hidden || a.Description != "" {
+			continue
+		}
+		if local == nil {
+			if local = LoadLocalSchema(appID); local == nil {
+				break
+			}
+		}
+		if l, ok := local[a.Key]; ok {
+			a.Description = l.Description
+			if a.Name == a.Key && l.Name != "" {
+				a.Name = l.Name // DisplayName fell back to the API key
+			}
+		}
+	}
+
 	rec.Summarize()
 	if rec.Total > 0 && rec.Unlocked == rec.Total {
 		rec.AwardKind = "all achievements"

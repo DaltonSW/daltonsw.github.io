@@ -642,6 +642,14 @@ achievements[]            key, name, description, unlocked, date, points, hardco
 raw                       the provider's verbatim response
 ```
 
+**Steam hidden achievements.** The Web API returns hidden achievements with a blank description.
+On fetch, `steam.LoadLocalSchema` fills those blanks (English name and description only) from the
+Steam client's own cache, `appcache/stats/UserGameStatsSchema_<appid>.bin` — binary VDF, found at
+`~/.local/share/Steam/` or `~/.steam/steam/`, or wherever `STEAM_STATS_DIR` points. It only exists
+for games the client has fetched a schema for; when it's missing or unreadable the record is just
+what the API returned, and descriptions already archived are kept by the merge. API text is never
+overwritten, and it needs no extra request, so a refresh-all sweep backfills existing games.
+
 Trackmania and BTD6 records (`archive/nadeo/`, `archive/ninjakiwi/`) have their own shapes — see
 their sections below.
 

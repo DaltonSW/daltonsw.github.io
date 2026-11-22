@@ -153,6 +153,9 @@ what's load-bearing.
 
 - **Steam puts useful JSON in 400/401/403 bodies.** Read the body; don't bail on the status.
 - **Steam needs a SteamID64**, not a vanity name. `SteamClient.resolveSteamID` handles both.
+- **Hidden-achievement text comes from the local Steam cache, and only fills blanks.** The Web API
+  blanks it; `LoadLocalSchema` reads `UserGameStatsSchema_<appid>.bin`. A missing or unparseable
+  file must fall back silently to the API result, never fail the fetch or overwrite API text.
 
 ### Exophase (Ubisoft, Google Play)
 

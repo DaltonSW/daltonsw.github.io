@@ -1,22 +1,24 @@
 unlocked: 40
 total: 56
-playtime_mins: 5712
-last_played: "2026-11-21"
+playtime_mins: 6008
+last_played: "2026-11-22"
 providers:
     - provider: steam
       platform: PC
       unlocked: 40
       total: 56
-      playtime_mins: 5712
-      last_played: "2026-11-21"
+      playtime_mins: 6008
+      last_played: "2026-11-22"
 earned:
     - name: Awakened Power
+      description: Obtained Orpheus.(Persona 3 Reload main story mode only)
       date: "2026-10-09T20:49:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/72dcd4e4707d8feb2fe31ebabeec7cf177dc1c8e.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: SEES the Day
+      description: Joined the Specialized Extracurricular Execution Squad.
       date: "2026-10-09T21:29:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/307214c3efebe26460daca12c4cb02655289a726.jpg
       provider: steam
@@ -59,6 +61,7 @@ earned:
       provider: steam
       platform: PC
     - name: Back on Track
+      description: Defeated the Priestess.
       date: "2026-10-11T17:59:16-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0d3f8fb216d4a2db2a33f6cae43fbecbc1cc2e32.jpg
       provider: steam
@@ -89,6 +92,7 @@ earned:
       provider: steam
       platform: PC
     - name: Empowered Protector
+      description: Defeated the Empress and Emperor.
       date: "2026-10-18T21:17:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d6d3355c5d8c54d1e63a7451c2251b3387725a0f.jpg
       provider: steam
@@ -161,6 +165,7 @@ earned:
       provider: steam
       platform: PC
     - name: Never Toy with Matters of the Heart
+      description: Defeated the Hierophant and the Lovers.
       date: "2026-10-24T16:14:08-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d8613caadc740915321b59b5dc3568bdc4e4e975.jpg
       provider: steam
@@ -179,6 +184,7 @@ earned:
       provider: steam
       platform: PC
     - name: Armor Disarmed
+      description: Defeated the Chariot and Justice.
       date: "2026-10-27T22:12:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7e5fd859d6d84222d6b44d333c7141a45822dc18.jpg
       provider: steam
@@ -191,6 +197,7 @@ earned:
       provider: steam
       platform: PC
     - name: Dodging Lightning
+      description: Defeated the Hermit.
       date: "2026-10-31T18:55:36-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/cf213da3090699c7cc9d10f150813d73862e7984.jpg
       provider: steam
@@ -215,6 +222,7 @@ earned:
       provider: steam
       platform: PC
     - name: Twist of Fate
+      description: Defeated Fortune and Strength.
       date: "2026-11-04T19:37:52-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f0c23039e31ecb669cb20a0503fe663463d5a50e.jpg
       provider: steam
@@ -239,6 +247,7 @@ earned:
       provider: steam
       platform: PC
     - name: A Sense of Finality
+      description: Defeated the Hanged Man.
       date: "2026-11-08T14:34:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/14116fc193364e821577372f10cadb320f2dff40.jpg
       provider: steam

@@ -1,14 +1,24 @@
-unlocked: 39
+unlocked: 40
 total: 40
-playtime_mins: 2551
+playtime_mins: 2601
 last_played: "2026-11-21"
+mastered: "2026-11-21"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 39
+      unlocked: 40
       total: 40
-      playtime_mins: 2551
+      playtime_mins: 2601
       last_played: "2026-11-21"
+      mastery:
+        - scope: base
+          date: "2026-11-21"
+          unlocked: 40
+          basis: ra-mastered
+        - scope: all
+          date: "2026-11-21"
+          unlocked: 40
+          basis: 100%
 subsets:
     - name: Mouse Alley
       provider: retroachievements
@@ -392,5 +402,13 @@ earned:
       points: 5
       hardcore: true
       icon: "327497"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Puzzles Were Better on My Days...
+      description: Have 99h and 59min of gameplay time and open the trunk. [Check Forum Topic]
+      date: "2026-11-21T20:21:25-06:00"
+      points: 1
+      hardcore: true
+      icon: "328377"
       provider: retroachievements
       platform: Nintendo DS

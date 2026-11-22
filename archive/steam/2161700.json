@@ -1,25 +1,26 @@
 {
  "provider": "steam",
  "title": "Persona 3 Reload",
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "id": "2161700",
- "fetched": "2026-11-21",
- "last_attempt": "2026-11-21",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
  "unlocked": 40,
  "total": 56,
  "first": "2026-10-09",
  "last": "2026-11-19",
  "platform": "PC",
  "icon": "2aeb189b126f766bb5930f725fbdcdd171a93c56",
- "playtime_mins": 5712,
+ "playtime_mins": 6008,
  "playtime": {
-  "linux": 5712
+  "linux": 6008
  },
- "last_played": "2026-11-21",
+ "last_played": "2026-11-22",
  "achievements": [
   {
    "key": "ACH_ORPHEUS_GET",
    "name": "Awakened Power",
+   "description": "Obtained Orpheus.(Persona 3 Reload main story mode only)",
    "unlocked": true,
    "date": "2026-10-09T20:49:37-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/72dcd4e4707d8feb2fe31ebabeec7cf177dc1c8e.jpg",
@@ -28,6 +29,7 @@
   {
    "key": "ACH_SEES_JOIN",
    "name": "SEES the Day",
+   "description": "Joined the Specialized Extracurricular Execution Squad.",
    "unlocked": true,
    "date": "2026-10-09T21:29:02-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/307214c3efebe26460daca12c4cb02655289a726.jpg",
@@ -84,6 +86,7 @@
   {
    "key": "ACH_DEFEAT_PRIESTESS",
    "name": "Back on Track",
+   "description": "Defeated the Priestess.",
    "unlocked": true,
    "date": "2026-10-11T17:59:16-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0d3f8fb216d4a2db2a33f6cae43fbecbc1cc2e32.jpg",
@@ -124,6 +127,7 @@
   {
    "key": "ACH_DEFEAT_EMP_EMP",
    "name": "Empowered Protector",
+   "description": "Defeated the Empress and Emperor.",
    "unlocked": true,
    "date": "2026-10-18T21:17:37-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d6d3355c5d8c54d1e63a7451c2251b3387725a0f.jpg",
@@ -220,6 +224,7 @@
   {
    "key": "ACH_DEFEAT_HIE_LOV",
    "name": "Never Toy with Matters of the Heart",
+   "description": "Defeated the Hierophant and the Lovers.",
    "unlocked": true,
    "date": "2026-10-24T16:14:08-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/d8613caadc740915321b59b5dc3568bdc4e4e975.jpg",
@@ -244,6 +249,7 @@
   {
    "key": "ACH_DEFEAT_CHA_JUS",
    "name": "Armor Disarmed",
+   "description": "Defeated the Chariot and Justice.",
    "unlocked": true,
    "date": "2026-10-27T22:12:53-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7e5fd859d6d84222d6b44d333c7141a45822dc18.jpg",
@@ -260,6 +266,7 @@
   {
    "key": "ACH_DEFEAT_HERMIT",
    "name": "Dodging Lightning",
+   "description": "Defeated the Hermit.",
    "unlocked": true,
    "date": "2026-10-31T18:55:36-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/cf213da3090699c7cc9d10f150813d73862e7984.jpg",
@@ -292,6 +299,7 @@
   {
    "key": "ACH_DEFEAT_FOR_STR",
    "name": "Twist of Fate",
+   "description": "Defeated Fortune and Strength.",
    "unlocked": true,
    "date": "2026-11-04T19:37:52-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f0c23039e31ecb669cb20a0503fe663463d5a50e.jpg",
@@ -324,6 +332,7 @@
   {
    "key": "ACH_DEFEAT_HANGEDMAN",
    "name": "A Sense of Finality",
+   "description": "Defeated the Hanged Man.",
    "unlocked": true,
    "date": "2026-11-08T14:34:23-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/14116fc193364e821577372f10cadb320f2dff40.jpg",
@@ -354,6 +363,7 @@
   {
    "key": "ACH_ALL_PERSONA_EVO",
    "name": "A Newfound Strength",
+   "description": "Awakened all teammates' ultimate Personas.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/266b23707fa588742cab527fd146d48630a3548f.jpg",
    "hidden": true
@@ -361,6 +371,7 @@
   {
    "key": "ACH_DEFEAT_NUXE",
    "name": "The Great Seal",
+   "description": "Sealed Nyx.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/39f90bc7ea42a2e2c01572e97356a9e9dde8616a.jpg",
    "hidden": true
@@ -389,6 +400,7 @@
   {
    "key": "ACH_PRGS_ANTENORA",
    "name": "The Disillusioned One",
+   "description": "Witnessed Junpei's past.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/38f5bb95508fac4dd0a5490b3fd2fcf405d875c6.jpg",
    "hidden": true
@@ -396,6 +408,7 @@
   {
    "key": "ACH_PRGS_CAINA",
    "name": "The Determined One",
+   "description": "Witnessed Sanada's past.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/06e5ae9df4f211f231947e9d985f72da4e996177.jpg",
    "hidden": true
@@ -403,6 +416,7 @@
   {
    "key": "ACH_PRGS_COCYTUS",
    "name": "The Vengeful One",
+   "description": "Witnessed Amada's past.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/f41856c7ac69f7985875630a6d5c1d3a48fc67e0.jpg",
    "hidden": true
@@ -410,6 +424,7 @@
   {
    "key": "ACH_PRGS_EMPIREO",
    "name": "The One Who Dreamt",
+   "description": "Witnessed Aigis's past.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/7b80e9a905f918a252c4b8348f55eaad0e62897d.jpg",
    "hidden": true
@@ -417,6 +432,7 @@
   {
    "key": "ACH_PRGS_ENDING",
    "name": "Together, Into Tomorrow",
+   "description": "Watched the ending.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/5af674b5ebcadbb2382f22bee371ee54758689f4.jpg",
    "hidden": true
@@ -424,6 +440,7 @@
   {
    "key": "ACH_PRGS_JUDECCA",
    "name": "The Steadfast One",
+   "description": "Witnessed Yukari's past.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/5a0be4e98706d45859f3d4c406390de254fb47a2.jpg",
    "hidden": true
@@ -431,6 +448,7 @@
   {
    "key": "ACH_PRGS_PTOLOMEA",
    "name": "The Selfless One",
+   "description": "Witnessed Mitsuru's past.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/2c7d0038536f11f16c78e674bf92d358bf410c00.jpg",
    "hidden": true
@@ -445,6 +463,7 @@
   {
    "key": "ACH_TRUE_END",
    "name": "From Shadows into Light",
+   "description": "Watched the good ending.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/0d58f8647e10b903f991df94ba13474dd20e00ee.jpg",
    "hidden": true

@@ -1,14 +1,14 @@
-unlocked: 4
+unlocked: 5
 total: 20
-playtime_mins: 271
-last_played: "2026-11-20"
+playtime_mins: 332
+last_played: "2026-11-21"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 4
+      unlocked: 5
       total: 20
-      playtime_mins: 271
-      last_played: "2026-11-20"
+      playtime_mins: 332
+      last_played: "2026-11-21"
 earned:
     - name: Child's Play
       description: Chapter 1 - Solve the jigsaw puzzle.
@@ -40,5 +40,13 @@ earned:
       points: 5
       hardcore: true
       icon: "504716"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Amateur Electrician
+      description: Chapter 3 - Solve the breaker puzzle in the Electrical Room.
+      date: "2026-11-21T22:25:45-06:00"
+      points: 2
+      hardcore: true
+      icon: "504757"
       provider: retroachievements
       platform: Nintendo DS

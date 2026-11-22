@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Chants of Sennaar",
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "id": "1931770",
- "fetched": "2026-11-21",
- "last_attempt": "2026-11-21",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
  "unlocked": 17,
  "total": 25,
  "first": "2026-11-14",
@@ -36,6 +36,7 @@
   {
    "key": "OPTIONNAL_PREACHER",
    "name": "The Preacher's fate",
+   "description": "Discover the Preacher's corpse",
    "unlocked": true,
    "date": "2026-11-14T20:00:26-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/c071db0f4fe20f767b87e2b3968242ad7ef84d99.jpg",
@@ -76,6 +77,7 @@
   {
    "key": "OPTIONNAL_GAMES",
    "name": "True G3M4R",
+   "description": "Winning at both games in the Gardens",
    "unlocked": true,
    "date": "2026-11-16T18:27:48-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/be62405c07699dfffccdc58c9d417c95dc1bec83.jpg",
@@ -116,6 +118,7 @@
   {
    "key": "META_RESULT_1-4",
    "name": "Feels like springtime",
+   "description": "Visit the revived Abbey Garden",
    "unlocked": true,
    "date": "2026-11-21T10:35:18-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/80ae27db6e3e81b14f76cb2ad8ff157b94657ae2.jpg",
@@ -140,6 +143,7 @@
   {
    "key": "OPTIONNAL_AIRLINES",
    "name": "Alchemists Express",
+   "description": "Take a trip in the Alchemists' cable car",
    "unlocked": true,
    "date": "2026-11-21T11:08:16-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/25e4f5da05d9608bb346f5e8e90f0244becfbd50.jpg",
@@ -148,6 +152,7 @@
   {
    "key": "END_BAD",
    "name": "I did it",
+   "description": "Get to the top",
    "unlocked": true,
    "date": "2026-11-21T11:12:43-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/dc05442085bcc7e7455efd4c347fb2cd999e9792.jpg",
@@ -156,6 +161,7 @@
   {
    "key": "END_GOOD",
    "name": "In this together",
+   "description": "Reaching the real end of the game",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/d8996495a1afa977c8b9052c254ab31d518c31ef.jpg",
    "hidden": true
@@ -163,6 +169,7 @@
   {
    "key": "META_RESULT_1-2",
    "name": "Open door",
+   "description": "See the Great Door of the Abbey open",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/e072a6394ee4c31745326a9fdfbf5d8d3ae9b561.jpg",
    "hidden": true
@@ -170,6 +177,7 @@
   {
    "key": "META_RESULT_1-3",
    "name": "Free at last",
+   "description": "Meet a Serf in the Abbey",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/6c4863e04d4239c65ce457ac7e86f7def35ac3d1.jpg",
    "hidden": true
@@ -177,6 +185,7 @@
   {
    "key": "META_RESULT_2-3",
    "name": "A great audience",
+   "description": "Attend the Bards' show in the Fortress",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/cad237299c917fe1acfd18312c77cd834d54df28.jpg",
    "hidden": true
@@ -184,6 +193,7 @@
   {
    "key": "META_RESULT_2-4",
    "name": "For its own good",
+   "description": "See the captured monster in the Laboratories",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/ee7a4cc3ff4c9b688a01c2f650ddef1fd225150c.jpg",
    "hidden": true
@@ -191,6 +201,7 @@
   {
    "key": "META_RESULT_3-4",
    "name": "A Link to the Past",
+   "description": "Meet Bards in the Library",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/4274e36e5753e867b8e33138b5406cc82c7d7598.jpg",
    "hidden": true
@@ -198,6 +209,7 @@
   {
    "key": "OPTIONNAL_BELL",
    "name": "Rascal",
+   "description": "Ring the Abbey bell three times",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/9c733c21247b41dcfcf2dbaa0f828342a55560a2.jpg",
    "hidden": true
@@ -205,6 +217,7 @@
   {
    "key": "OPTIONNAL_WEAPONS",
    "name": "Fashion victim",
+   "description": "Leave the Armory with the wrong disguise once the Call is made",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1931770/5a48cabfd3254c33a1e1a2c931287832cf22c69b.jpg",
    "hidden": true

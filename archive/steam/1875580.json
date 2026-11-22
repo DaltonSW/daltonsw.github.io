@@ -1,22 +1,22 @@
 {
  "provider": "steam",
  "title": "Mina the Hollower",
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "id": "1875580",
- "fetched": "2026-11-21",
- "last_attempt": "2026-11-21",
- "unlocked": 18,
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
+ "unlocked": 20,
  "total": 50,
  "first": "2026-11-08",
- "last": "2026-11-18",
+ "last": "2026-11-22",
  "platform": "PC",
  "icon": "dede041a155f1846f1b2104daf9a389af8db0e62",
- "playtime_mins": 2083,
+ "playtime_mins": 2258,
  "playtime": {
   "disconnected": 167,
-  "linux": 2083
+  "linux": 2258
  },
- "last_played": "2026-11-21",
+ "last_played": "2026-11-22",
  "achievements": [
   {
    "key": "ThorneBeater",
@@ -53,6 +53,7 @@
   {
    "key": "PuppetDance",
    "name": "Traumatized",
+   "description": "Dance with Poppit.",
    "unlocked": true,
    "date": "2026-11-14T09:13:04-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/496d848646cda03e9a6f2b311c75aff927fa48fe.jpg",
@@ -163,6 +164,22 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/8599a040a837b65ecb620f079b2cb64aaddcc8a1.jpg"
   },
   {
+   "key": "Lopsided",
+   "name": "Lopsided",
+   "description": "Raise one stat to 10 while keeping all others at 3 or below.",
+   "unlocked": true,
+   "date": "2026-11-22T10:08:21-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/9555f2618ca7b7c7b8188fd2f369c9a7372e6d75.jpg"
+  },
+  {
+   "key": "Bonestone",
+   "name": "Bonestone Tycoon",
+   "description": "Convert over 20,000 in the Bone Sinterer in one go.",
+   "unlocked": true,
+   "date": "2026-11-22T11:21:13-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/0ca87f2ace2e6557b24080df14c9fd792b743c2d.jpg"
+  },
+  {
    "key": "AllFeats",
    "name": "Feat Accompli",
    "description": "Earn all other Feats.",
@@ -182,13 +199,6 @@
    "description": "Finish the game without spending any Bones in shops.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/e29e7d6d324fb08567c684d7ec6af913c3938d49.jpg"
-  },
-  {
-   "key": "Bonestone",
-   "name": "Bonestone Tycoon",
-   "description": "Convert over 20,000 in the Bone Sinterer in one go.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/0ca87f2ace2e6557b24080df14c9fd792b743c2d.jpg"
   },
   {
    "key": "BusterBat",
@@ -266,13 +276,6 @@
    "description": "Keep the Beckoning Collar creature active for most of a boss fight.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/c97bd1b2179172d0a4a87c0e51751903148dbb8e.jpg"
-  },
-  {
-   "key": "Lopsided",
-   "name": "Lopsided",
-   "description": "Raise one stat to 10 while keeping all others at 3 or below.",
-   "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/9555f2618ca7b7c7b8188fd2f369c9a7372e6d75.jpg"
   },
   {
    "key": "Masochist",
@@ -702,15 +705,15 @@
     },
     {
      "apiname": "Bonestone",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795368073,
      "name": "Bonestone Tycoon",
      "description": "Convert over 20,000 in the Bone Sinterer in one go."
     },
     {
      "apiname": "Lopsided",
-     "achieved": 0,
-     "unlocktime": 0,
+     "achieved": 1,
+     "unlocktime": 1795363701,
      "name": "Lopsided",
      "description": "Raise one stat to 10 while keeping all others at 3 or below."
     },

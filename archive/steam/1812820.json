@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Bitburner",
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "id": "1812820",
- "fetched": "2026-11-21",
- "last_attempt": "2026-11-21",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
  "unlocked": 40,
  "total": 98,
  "first": "2023-05-09",
@@ -222,6 +222,7 @@
   {
    "key": "SF1.1",
    "name": "Source Genesis",
+   "description": "Acquire SF1.1",
    "unlocked": true,
    "date": "2023-06-04T19:02:31-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/bf2685fc78361095e9784ed102b1cc345f4b4645.jpg",
@@ -230,6 +231,7 @@
   {
    "key": "GANG",
    "name": "Gangster",
+   "description": "Form a gang.",
    "unlocked": true,
    "date": "2023-06-04T21:41:32-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/0f7e57a3f0c8ec56073cb12b8086a53e477cfab8.jpg",
@@ -238,6 +240,7 @@
   {
    "key": "FULL_GANG",
    "name": "Don",
+   "description": "Recruit all gang members.",
    "unlocked": true,
    "date": "2023-06-06T16:46:45-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9e39da46dd2dbd85677fa33bfc21facdf9ab5b0b.jpg",
@@ -246,6 +249,7 @@
   {
    "key": "GANG_MEMBER_POWER",
    "name": "One punch guy",
+   "description": "Have a gang member with 10 000 in 1 skill.",
    "unlocked": true,
    "date": "2023-06-06T21:37:03-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2928bbc19f4135db56628689404e8f91d266b2b0.jpg",
@@ -262,6 +266,7 @@
   {
    "key": "ILLUMINATI",
    "name": "Illuminati",
+   "description": "Join the Illuminati.",
    "unlocked": true,
    "date": "2023-06-10T14:15:58-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9e2d515b9f9cae01ca9f47782be363e0fa925181.jpg",
@@ -270,6 +275,7 @@
   {
    "key": "THE_COVENANT",
    "name": "The Covenant",
+   "description": "Join The Covenant.",
    "unlocked": true,
    "date": "2023-06-10T14:16:59-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/aa608f01684a1a96865dee8b1d494639e12440de.jpg",
@@ -278,6 +284,7 @@
   {
    "key": "UNCLICKABLE",
    "name": "Exploit: unclickable",
+   "description": "Click the unclickable.",
    "unlocked": true,
    "date": "2023-06-10T18:01:00-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
@@ -286,6 +293,7 @@
   {
    "key": "N00DLES",
    "name": "Exploit: noodles",
+   "description": "Harness the power of the noodles.",
    "unlocked": true,
    "date": "2023-06-10T19:27:58-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
@@ -302,6 +310,7 @@
   {
    "key": "SF2.1",
    "name": "Rise of the Underworld",
+   "description": "Acquire SF2.1",
    "unlocked": true,
    "date": "2023-06-12T16:20:13-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/17d24c940b48c1b80b132cc173474560aabff8f7.jpg",
@@ -310,6 +319,7 @@
   {
    "key": "CORPORATION",
    "name": "A small loan of 150b dollars.",
+   "description": "Create a corporation.",
    "unlocked": true,
    "date": "2023-06-30T19:34:38-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/533ac94e89c5d52984c5863be4b55c4ece5ba7f1.jpg",
@@ -326,6 +336,7 @@
   {
    "key": "SF3.1",
    "name": "Corporatocracy",
+   "description": "Acquire SF3.1",
    "unlocked": true,
    "date": "2023-07-27T17:50:33-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/695f444cdc4898b6ea83bab4fc500e4faffec6b3.jpg",
@@ -334,6 +345,7 @@
   {
    "key": "ALL_HACKNET_SERVER",
    "name": "Full network",
+   "description": "Buy all hacknet servers.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/bbfa8fff7a5db9334edfb09bc1376c9a473ffe03.jpg",
    "hidden": true
@@ -341,6 +353,7 @@
   {
    "key": "BLADEBURNER_DIVISION",
    "name": "Bladeburners",
+   "description": "Join the Bladeburner division.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2514cdd107186087c8151d1902cf8ba0845b0697.jpg",
    "hidden": true
@@ -348,6 +361,7 @@
   {
    "key": "BLADEBURNER_OVERCLOCK",
    "name": "Overclock!",
+   "description": "Reach maximum level of Overclock",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cdf24382f7a50cf4f0a598733ab5b2be1a7e082b.jpg",
    "hidden": true
@@ -355,6 +369,7 @@
   {
    "key": "BLADEBURNER_UNSPENT_100000",
    "name": "You should really spend those.",
+   "description": "Have 100 000 unspent bladeburner skill points.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ab8b64cb31334759859bd25b0abbd7ccf3f57d87.jpg",
    "hidden": true
@@ -362,6 +377,7 @@
   {
    "key": "BYPASS",
    "name": "Exploit: bypass",
+   "description": "Circumventing the ram cost of document.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -369,6 +385,7 @@
   {
    "key": "CHALLENGE_BN1",
    "name": "BN1: Challenge",
+   "description": "Destroy BN1 with at most 128GB and 1 core.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/25858f1b4d0265ba2a2e55080244991a7066299f.jpg",
    "hidden": true
@@ -376,6 +393,7 @@
   {
    "key": "CHALLENGE_BN10",
    "name": "BN10: Challenge",
+   "description": "Destroy BN10 without using sleeves.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9f54d574cd9d105f86863233baecb1b5944cd4c9.jpg",
    "hidden": true
@@ -383,6 +401,7 @@
   {
    "key": "CHALLENGE_BN12",
    "name": "BN12: Challenge",
+   "description": "Destroy BN12 50 times.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/e629a34f98132329a1f2543827d3ca03b8432d34.jpg",
    "hidden": true
@@ -390,6 +409,7 @@
   {
    "key": "CHALLENGE_BN13",
    "name": "BN13: Challenge",
+   "description": "Complete BN13 without Stanek's Gift.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/95c4259fff017e12d60598a5d832f6fcff0a33e2.jpg",
    "hidden": true
@@ -397,6 +417,7 @@
   {
    "key": "CHALLENGE_BN2",
    "name": "BN2: Challenge",
+   "description": "Destroy BN2 without forming a gang.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c73dd2fb0fcf36d621273c4e06e3917d58bb36b0.jpg",
    "hidden": true
@@ -404,6 +425,7 @@
   {
    "key": "CHALLENGE_BN3",
    "name": "BN3: Challenge",
+   "description": "Destroy BN3 without creating corporation.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/ff98a0d8279c4e9c2b5ee00700f5fb5adc43282c.jpg",
    "hidden": true
@@ -411,6 +433,7 @@
   {
    "key": "CHALLENGE_BN6",
    "name": "BN6: Challenge",
+   "description": "Destroy BN6 without joining the bladeburner division.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fc201d0abf28179b33af86e3c795bb1ecac48bd9.jpg",
    "hidden": true
@@ -418,6 +441,7 @@
   {
    "key": "CHALLENGE_BN7",
    "name": "BN7: Challenge",
+   "description": "Destroy BN7 without joining the bladeburner division.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/cdf761a2d380316447b917b13b156889aa705b9a.jpg",
    "hidden": true
@@ -425,6 +449,7 @@
   {
    "key": "CHALLENGE_BN8",
    "name": "BN8: Challenge",
+   "description": "Destroy BN8 without purchasing the 4s market data.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83db2bce979ed6ab401a11982af4ff6f23ee7537.jpg",
    "hidden": true
@@ -432,6 +457,7 @@
   {
    "key": "CHALLENGE_BN9",
    "name": "BN9: Challenge",
+   "description": "Destroy BN9 without using hacknet servers or hacknet nodes.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9591355095655ad7cedc9bee83f86434ff7a21ec.jpg",
    "hidden": true
@@ -439,6 +465,7 @@
   {
    "key": "CORPORATION_BRIBE",
    "name": "Lobbying is great!",
+   "description": "Lower your taxes through lobbying.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/6b4f0d909bdae1336d237840c17d198b7e46f02d.jpg",
    "hidden": true
@@ -446,6 +473,7 @@
   {
    "key": "CORPORATION_EMPLOYEE_3000",
    "name": "Small town",
+   "description": "Have a division with 3000 employee.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/df7f21e100c757de1d9f2d7535da81b891134522.jpg",
    "hidden": true
@@ -453,6 +481,7 @@
   {
    "key": "CORPORATION_PROD_1000",
    "name": "Streamlined manufacturing",
+   "description": "Have a division with a production multiplier of 1000.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/aca7c732154738c662f2cb2546f964beae63ebd4.jpg",
    "hidden": true
@@ -460,6 +489,7 @@
   {
    "key": "CORPORATION_REAL_ESTATE",
    "name": "Own the land",
+   "description": "Expand to the Real Estate division.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/7a11a884681a1ce31b6dd8ff2776daf73932032a.jpg",
    "hidden": true
@@ -467,6 +497,7 @@
   {
    "key": "DEVMENU",
    "name": "Exploit: You're not meant to access this.",
+   "description": "Open the dev menu.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -481,6 +512,7 @@
   {
    "key": "EDITSAVEFILE",
    "name": "Exploit: edit",
+   "description": "Acquire the EditSaveFile Source-File -1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -488,6 +520,7 @@
   {
    "key": "FAST_BN",
    "name": "Speed demon.",
+   "description": "Destroy a bitnode in under 2 days.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/663158d0470d3d2b8efc003ecbb2d9ada6bffd3c.jpg",
    "hidden": true
@@ -495,6 +528,7 @@
   {
    "key": "FIRST_HACKNET_SERVER",
    "name": "The improved hacker.",
+   "description": "Purchase your first hacknet server.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/f69a7a5f6f665b6ee71858e85cc0a5a0b927d665.jpg",
    "hidden": true
@@ -502,6 +536,7 @@
   {
    "key": "GANG_TERRITORY",
    "name": "Stay out of my territory",
+   "description": "Have 100% of the territory.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fe6da75c274bf52b2cebcf744c4f72ef5373f730.jpg",
    "hidden": true
@@ -516,6 +551,7 @@
   {
    "key": "HACKNET_SERVER_1B",
    "name": "Not passive anymore",
+   "description": "Make $1b with hacknet servers.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/fdbd1599d0edcbfc3b86af05d860a19fe513c44a.jpg",
    "hidden": true
@@ -523,6 +559,7 @@
   {
    "key": "INDECISIVE",
    "name": "Too many options.",
+   "description": "Spend 1h straight on the bitverse.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/b67901172a4bede076893d48eec13bca3e831f37.jpg",
    "hidden": true
@@ -537,6 +574,7 @@
   {
    "key": "INTELLIGENCE_255",
    "name": "Smart!",
+   "description": "Reach intelligence 255",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/3185efaf4dd93f5d3edc9c07a3270490617ee149.jpg",
    "hidden": true
@@ -551,6 +589,7 @@
   {
    "key": "MAX_CACHE",
    "name": "What a waste.",
+   "description": "Cap your hashes.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/9174efb36db7bba48e2beba35129ce917f0e91c8.jpg",
    "hidden": true
@@ -565,6 +604,7 @@
   {
    "key": "MAX_HACKNET_SERVER",
    "name": "That's the new limit.",
+   "description": "Maximize a hacknet server.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/acc775938a3d3ec7c6e596f5e734af096b97efda.jpg",
    "hidden": true
@@ -600,6 +640,7 @@
   {
    "key": "PROTOTYPETAMPERING",
    "name": "Exploit: prototype tampering",
+   "description": "Tamper with the Numbers prototype.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -614,6 +655,7 @@
   {
    "key": "RAINBOW",
    "name": "Exploit: rainbow",
+   "description": "Make good use of the rainbow.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -621,6 +663,7 @@
   {
    "key": "REALITYALTERATION",
    "name": "Exploit: reality alteration",
+   "description": "Alter reality.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -635,6 +678,7 @@
   {
    "key": "SF10.1",
    "name": "Digital Carbon",
+   "description": "Acquire SF10.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/6966047ac837703e65c6652f369b8af5acc418b8.jpg",
    "hidden": true
@@ -642,6 +686,7 @@
   {
    "key": "SF11.1",
    "name": "The Big Crash",
+   "description": "Acquire SF11.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/2fee59872a6e9a585ce026671a926c87f3440458.jpg",
    "hidden": true
@@ -649,6 +694,7 @@
   {
    "key": "SF12.1",
    "name": "The Recursion",
+   "description": "Acquire SF12.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/874863461bf8c6de39cc3e63d75ed61a8ab6a697.jpg",
    "hidden": true
@@ -656,6 +702,7 @@
   {
    "key": "SF4.1",
    "name": "The Singularity",
+   "description": "Acquire SF4.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/3b19130949f0490c96c5a54cdad9ec5b9b06dda8.jpg",
    "hidden": true
@@ -663,6 +710,7 @@
   {
    "key": "SF5.1",
    "name": "Artificial Intelligence",
+   "description": "Acquire SF5.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/a7432be46f7edf29a64ce1bd206cd97ef1e2ee39.jpg",
    "hidden": true
@@ -670,6 +718,7 @@
   {
    "key": "SF6.1",
    "name": "Bladeburners",
+   "description": "Acquire SF6.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/941d9b450c6ac701dec88f05c35add7e5db8dffa.jpg",
    "hidden": true
@@ -677,6 +726,7 @@
   {
    "key": "SF7.1",
    "name": "Bladeburners 2079",
+   "description": "Acquire SF7.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c82f089b65bf446e2fddfbb0309d5c6d12cee0af.jpg",
    "hidden": true
@@ -684,6 +734,7 @@
   {
    "key": "SF8.1",
    "name": "Ghost of Wall Street",
+   "description": "Acquire SF8.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/bb04916c88008eab173e1c5274551875a8e25e96.jpg",
    "hidden": true
@@ -691,6 +742,7 @@
   {
    "key": "SF9.1",
    "name": "Hacktocracy",
+   "description": "Acquire SF9.1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/62591a71bafa2fbcb5cb6c6c3c0a3271c72e7cbf.jpg",
    "hidden": true
@@ -698,6 +750,7 @@
   {
    "key": "SLEEVE_8",
    "name": "You and what army?",
+   "description": "Acquire all 8 sleeves.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/63f260fee4ea904c6f5d79304d2b5bc9abf8c69a.jpg",
    "hidden": true
@@ -712,6 +765,7 @@
   {
    "key": "TIMECOMPRESSION",
    "name": "Exploit: time compression",
+   "description": "Compress time.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -719,6 +773,7 @@
   {
    "key": "TRUE_RECURSION",
    "name": "Exploit: true recursion",
+   "description": "Beat BN1 in megabyteburner 2000",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/83f7c91aeee6b7cd2c3e225777a89056aa560d3d.jpg",
    "hidden": true
@@ -733,6 +788,7 @@
   {
    "key": "UNDOCUMENTEDFUNCTIONCALL",
    "name": "Exploit: undocumented",
+   "description": "Call the undocumented function.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1812820/c97cd48ea97731a8b5cf2ea1341408713f95d741.jpg",
    "hidden": true

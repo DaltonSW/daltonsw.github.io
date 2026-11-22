@@ -223,6 +223,9 @@ func steamUnchanged(prev *model.ArchiveRecord, owned *steam.SteamOwnedGame) bool
 	if prev == nil || prev.Fetched == "" || prev.LastError != "" {
 		return false
 	}
+	if hiddenGapsFillable(prev) {
+		return false
+	}
 	if prev.PlaytimeMins != owned.PlaytimeMins {
 		return false
 	}
@@ -231,6 +234,28 @@ func steamUnchanged(prev *model.ArchiveRecord, owned *steam.SteamOwnedGame) bool
 		lastPlayed = time.Unix(owned.LastPlayed, 0).In(model.SiteLocation).Format("2006-01-02")
 	}
 	return prev.LastPlayed == lastPlayed
+}
+
+// hiddenGapsFillable reports whether the record has a hidden achievement with
+// no description that the Steam client's local cache can now supply — e.g. the
+// game was launched, so Steam fetched its schema, after the last fetch. Without
+// this a bulk refresh would skip the game forever, as playtime hasn't moved.
+func hiddenGapsFillable(prev *model.ArchiveRecord) bool {
+	var local map[string]steam.LocalAchievement
+	for _, a := range prev.Achievements {
+		if !a.Hidden || a.Description != "" {
+			continue
+		}
+		if local == nil {
+			if local = steam.LoadLocalSchema(prev.ID); local == nil {
+				return false
+			}
+		}
+		if local[a.Key].Description != "" {
+			return true
+		}
+	}
+	return false
 }
 
 // RunAchievements fetches (or refreshes) the achievement history for one game
