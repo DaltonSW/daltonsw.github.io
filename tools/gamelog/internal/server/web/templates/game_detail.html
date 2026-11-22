@@ -81,6 +81,7 @@
     <input type="text" name="started" placeholder="started (YYYY-MM-DD)" required>
     <select name="status">{{range pthStatuses}}<option value="{{.}}">{{.}}</option>{{end}}</select>
     <input type="text" name="finished" placeholder="finished (blank if ongoing)">
+    <input type="text" name="beaten" placeholder="beaten (if before finished)" title="The day this run beat the game, when it carried on afterwards (post-game, mastery). The game's first-finished date uses this instead of the run's finish.">
     <input type="text" name="platform" placeholder="platform (blank = {{dash $.FM.Platform}})" value="{{.Platform}}">
     {{if $.FM.Subgames}}
     <select name="subgame"><option value="">(none — whole game)</option>{{$sg := .Subgame}}{{range $.FM.Subgames}}<option value="{{.}}"{{if eq . $sg}} selected{{end}}>{{.}}</option>{{end}}</select>
@@ -114,6 +115,7 @@
     <input type="text" name="started" placeholder="started (YYYY-MM-DD)" required value="{{.Today}}">
     <select name="status">{{$def := .DefaultPthStatus}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $def}} selected{{end}}>{{.}}</option>{{end}}</select>
     <input type="text" name="finished" placeholder="finished (blank if ongoing)">
+    <input type="text" name="beaten" placeholder="beaten (if before finished)" title="The day this run beat the game, when it carried on afterwards (post-game, mastery). The game's first-finished date uses this instead of the run's finish.">
     <input type="text" name="platform" placeholder="platform (blank = {{dash .FM.Platform}})">
     {{if .FM.Subgames}}
     <select name="subgame"><option value="">(none — whole game)</option>{{range .FM.Subgames}}<option value="{{.}}">{{.}}</option>{{end}}</select>

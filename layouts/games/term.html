@@ -47,6 +47,7 @@
       <span class="entry__meta">
         {{- with .started }}{{ . | time.Format "Jan 2006" }}{{ end }}
         {{- with .finished }} – {{ . | time.Format "Jan 2006" }}{{ end }}
+        {{- with .beaten }} · beaten {{ . | time.Format "Jan 2, 2006" }}{{ end }}
         {{- if $showPlatform }}{{ with .platform }} · {{ . }}{{ end }}{{ end }}
         {{- with .rating }} · {{ . }}/10{{ end }}
       </span>

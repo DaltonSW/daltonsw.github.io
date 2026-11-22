@@ -176,14 +176,33 @@ func TestFindUnloggedActivity_Award(t *testing.T) {
 		r.AwardKind, r.AwardDate = "mastered", "2024-01-30"
 	}, "2024-01-05", "2026-11-15")
 
+	f.game("postgame", "backlog", []string{"retroachievements_id: 12"}, "")
+	f.record("retroachievements", "12", func(r *model.ArchiveRecord) {
+		r.AwardKind, r.AwardDate = "beaten-softcore", "2026-11-05"
+	}, "2026-11-01", "2026-11-05", "2026-11-18")
+	f.game("mastered", "backlog", []string{"retroachievements_id: 13"}, "")
+	f.record("retroachievements", "13", func(r *model.ArchiveRecord) {
+		r.AwardKind, r.AwardDate = "mastered", "2026-11-14"
+	}, "2026-11-02", "2026-11-14")
+
 	rep := f.find(ActivityOptions{})
 	beaten := f.item(rep, "beaten")
 	if beaten == nil || beaten.Award != "2026-11-12" {
 		t.Fatalf("want the uncovered award, got %+v", beaten)
 	}
-	if g := beaten.Guess; g.Target != -1 || g.Status != "finished" || g.Finished != "2026-11-12" || g.Started != "2026-11-01" {
-		t.Errorf("guess = %+v, want a finished run 2026-11-01 → 2026-11-12", g)
+	if g := beaten.Guess; g.Target != -1 || g.Status != "finished" || g.Finished != "2026-11-12" || g.Started != "2026-11-01" || g.Beaten != "" {
+		t.Errorf("guess = %+v, want a finished run 2026-11-01 → 2026-11-12, beaten when it ended", g)
 	}
+	// Beaten, then carried on toward mastery: the run ends on the last
+	// activity, and the beaten award becomes its beaten: date.
+	if g := f.item(rep, "postgame").Guess; g.Finished != "2026-11-18" || g.Beaten != "2026-11-05" {
+		t.Errorf("post-game guess = %+v, want finished 2026-11-18, beaten 2026-11-05", g)
+	}
+	// A mastery date isn't a beaten date.
+	if g := f.item(rep, "mastered").Guess; g.Finished != "2026-11-14" || g.Beaten != "" {
+		t.Errorf("mastery guess = %+v, want finished on the mastery day with no beaten date", g)
+	}
+
 	replay := f.item(rep, "replay")
 	if replay == nil {
 		t.Fatal("activity after the logged run must be flagged")

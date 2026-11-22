@@ -24,8 +24,9 @@
 
      The two buttons reach their forms by id, the same pattern as the scan
      rows, so they share a row without nesting one form in another. Picking
-     a session target disables the status select: a session has no status of
-     its own, and a disabled field isn't submitted. Takes an activityCard. */}}
+     a session target disables the status select and the beaten field: both
+     belong to a playthrough, not a session, and a disabled field isn't
+     submitted. Takes an activityCard. */}}
 {{define "activity_card"}}
 {{$slug := .Game.Slug}}
 <div class="tui activity{{if .Error}} row--error{{end}}">
@@ -46,12 +47,14 @@
   <form method="post" action="/catchup/log/{{$slug}}" id="log-{{$slug}}" class="row activity__form">
     {{template "catchup_hidden" .Thresholds}}
     <input type="hidden" name="tab" value="activity">
-    <select name="target" aria-label="Log {{.Game.Title}} as" onchange="this.form.elements.status.disabled = this.value !== 'new'">
+    <select name="target" aria-label="Log {{.Game.Title}} as" onchange="this.form.elements.status.disabled = this.form.elements.beaten.disabled = this.value !== 'new'">
       {{range .Targets}}<option value="{{.Value}}"{{if .Selected}} selected{{end}}>{{.Label}}</option>{{end}}
     </select>
     <input type="text" name="started" required value="{{.Started}}" placeholder="started (YYYY-MM-DD)" aria-label="started">
     <input type="text" name="finished" value="{{.Finished}}" aria-label="finished"
       placeholder="{{with .FinishedHint}}last activity {{.}}{{else}}finished (blank if ongoing){{end}}">
+    <input type="text" name="beaten" value="{{.Beaten}}" aria-label="beaten" placeholder="beaten (if before finished)"{{if .IsSession}} disabled{{end}}
+      title="The day this run beat the game, when it carried on afterwards. The game's first-finished date uses this instead of the run's finish.">
     <select name="status" aria-label="status"{{if .IsSession}} disabled{{end}}>
       {{$st := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $st}} selected{{end}}>{{.}}</option>{{end}}
     </select>

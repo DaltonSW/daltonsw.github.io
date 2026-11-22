@@ -57,6 +57,7 @@ type activityCard struct {
 	Started      string
 	Finished     string
 	FinishedHint string
+	Beaten       string
 	Status       string
 	Notes        string
 	Error        string
@@ -67,7 +68,7 @@ func newActivityCard(it commands.ActivityItem, th catchupThresholds) activityCar
 	g := it.Guess
 	c := activityCard{
 		ActivityItem: it, Started: g.Started, Finished: g.Finished, FinishedHint: g.FinishedHint,
-		Status: g.Status, Target: "new", Thresholds: th,
+		Beaten: g.Beaten, Status: g.Status, Target: "new", Thresholds: th,
 	}
 	if g.Target >= 0 {
 		c.Target = strconv.Itoa(g.Target)
@@ -429,10 +430,11 @@ func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {
 	}
 	target := r.FormValue("target")
 	started, finished, status, notes := r.FormValue("started"), r.FormValue("finished"), r.FormValue("status"), r.FormValue("notes")
+	beaten := strings.TrimSpace(r.FormValue("beaten"))
 
 	var msg string
 	if target == "new" {
-		err = logNewPlaythrough(doc, pf, model.PlaythroughFields{Started: started, Finished: finished, Status: status, Notes: notes})
+		err = logNewPlaythrough(doc, pf, model.PlaythroughFields{Started: started, Finished: finished, Beaten: beaten, Status: status, Notes: notes})
 		msg = fmt.Sprintf("%s: logged a %s playthrough from %s", doc.FM.Title, status, started)
 	} else {
 		idx, aerr := strconv.Atoi(target)
@@ -454,6 +456,7 @@ func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {
 		}
 		c := newActivityCard(*it, th)
 		c.Target, c.Started, c.Finished, c.Status, c.Notes, c.Error = target, started, finished, status, notes, err.Error()
+		c.Beaten = beaten
 		c.setTargets()
 		s.renderFragment(w, catchupFragmentsCache, "catchup_fragments.html", "activity_card", c, catchupFragmentFiles[1:]...)
 		return

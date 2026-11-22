@@ -27,6 +27,54 @@ func TestFirstFinished_EarliestFinishedRunOnly(t *testing.T) {
 	}
 }
 
+// A run that beat the game partway through — credits, then post-game toward
+// mastery — ends later than the day it was beaten. Its beaten: date is what
+// first-finished reads, whatever the run's status.
+func TestFirstFinished_BeatenOverridesTheRunsEnd(t *testing.T) {
+	views := []Playthrough{
+		{Status: "finished", Started: "2024-01-01", Finished: "2024-06-30", Beaten: "2024-02-10"},
+		{Status: "finished", Started: "2024-03-01", Finished: "2024-03-20"},
+	}
+	if got := firstFinished(views); got != "2024-02-10" {
+		t.Errorf("firstFinished = %q, want the beaten date 2024-02-10", got)
+	}
+	views[0].Beaten = ""
+	if got := firstFinished(views); got != "2024-03-20" {
+		t.Errorf("without beaten, firstFinished = %q, want the earliest finish 2024-03-20", got)
+	}
+	// Still playing for mastery, but already beaten.
+	playing := []Playthrough{{Status: "playing", Started: "2026-10-01", Beaten: "2026-10-20"}}
+	if got := firstFinished(playing); got != "2026-10-20" {
+		t.Errorf("an open run with a beaten date = %q, want 2026-10-20", got)
+	}
+}
+
+func TestBeaten_RoundTripsAndClears(t *testing.T) {
+	dir := t.TempDir()
+	pf, err := LoadPlaythroughs(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	pf.AddPlaythrough(PlaythroughFields{Started: "2024-01-01", Finished: "2024-06-30", Beaten: "2024-02-10", Status: "finished"})
+	if err := pf.Save(); err != nil {
+		t.Fatal(err)
+	}
+	got, err := LoadPlaythroughs(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if v := got.Views()[0]; v.Beaten != "2024-02-10" || v.Finished != "2024-06-30" {
+		t.Fatalf("round trip = %+v", v)
+	}
+	if err := got.SetBeaten(0, ""); err != nil {
+		t.Fatal(err)
+	}
+	raw, _ := got.Encode()
+	if strings.Contains(string(raw), "beaten") {
+		t.Errorf("a cleared beaten date should drop its key:\n%s", raw)
+	}
+}
+
 // A new game's dates become its first playthrough; the front matter has none.
 func TestCreateGameFile_DatesBecomeTheFirstPlaythrough(t *testing.T) {
 	dir := t.TempDir()

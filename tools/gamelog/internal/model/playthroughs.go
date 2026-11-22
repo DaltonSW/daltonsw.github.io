@@ -56,8 +56,14 @@ type SessionEntry struct {
 // `platform:` when absent, which is why every file written before this field
 // existed still means what it did.
 type PlaythroughEntry struct {
-	Started  string         `yaml:"started,omitempty"`
-	Finished string         `yaml:"finished,omitempty"`
+	Started  string `yaml:"started,omitempty"`
+	Finished string `yaml:"finished,omitempty"`
+	// Beaten is the day this run beat the game, when that's earlier than the
+	// day the run ended — a run that rolled credits and carried on into the
+	// post-game or toward mastery. Finished stays the run's end; Beaten is what
+	// the game's first-finished date reads instead (see firstFinished). Blank
+	// means "beaten when it finished", for a run whose status is finished.
+	Beaten   string         `yaml:"beaten,omitempty"`
 	Status   string         `yaml:"status,omitempty"`
 	Platform string         `yaml:"platform,omitempty"`
 	Rating   any            `yaml:"rating,omitempty"`
@@ -79,6 +85,7 @@ type PlaythroughEntry struct {
 type PlaythroughFields struct {
 	Started  string
 	Finished string
+	Beaten   string // optional: the day the run beat the game, if before Finished
 	Status   string // playing|finished|dropped|unfinished|paused|endless|multiplayer|misc_launch
 	Platform string // blank means "same as the game's front matter"
 	Subgame  string // blank means "the whole game"; otherwise a member of the game's subgames: roster
@@ -215,6 +222,7 @@ type Playthrough struct {
 	Index    int
 	Started  string
 	Finished string
+	Beaten   string
 	Status   string
 	Platform string
 	Subgame  string
@@ -295,16 +303,29 @@ func gameDateRange(views []Playthrough) (earliest, latest string) {
 	return earliest, latest
 }
 
-// firstFinished is the earliest finish date among entries whose status is
-// "finished" — the day the game was first beaten. Dropped, unfinished and
-// one-shot entries don't count: they ended, but nothing was finished.
+// BeatenDate is the day this run beat the game: its explicit Beaten date, or
+// its finish date when the run's status is finished. "" when it didn't (yet).
+// Beaten counts whatever the status, so a run still "playing" toward mastery
+// after rolling credits already beat the game.
+func (p Playthrough) BeatenDate() string {
+	if p.Beaten != "" {
+		return p.Beaten
+	}
+	if p.Status == "finished" {
+		return p.FinishDate()
+	}
+	return ""
+}
+
+// firstFinished is the day the game was first beaten: the earliest BeatenDate
+// across its runs. By default that's the earliest finish of an entry whose
+// status is "finished" — dropped, unfinished and one-shot entries ended, but
+// nothing was finished — and an entry's `beaten:` overrides its own finish.
+// Mirrored by layouts/partials/game-first-finished.html.
 func firstFinished(views []Playthrough) string {
 	var first string
 	for _, p := range views {
-		if p.Status != "finished" {
-			continue
-		}
-		if d := p.FinishDate(); d != "" && (first == "" || d < first) {
+		if d := p.BeatenDate(); d != "" && (first == "" || d < first) {
 			first = d
 		}
 	}
@@ -319,6 +340,7 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 			Index:    i,
 			Started:  e.Started,
 			Finished: e.Finished,
+			Beaten:   e.Beaten,
 			Status:   e.Status,
 			Platform: e.Platform,
 			Subgame:  e.Subgame,
@@ -338,6 +360,7 @@ func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 	e := PlaythroughEntry{
 		Started:  pf.Started,
 		Finished: pf.Finished,
+		Beaten:   pf.Beaten,
 		Status:   pf.Status,
 		Platform: pf.Platform,
 		Subgame:  pf.Subgame,
@@ -476,6 +499,7 @@ func (f *PlaythroughsFile) GraduatePlannedPlaythrough(idx int, pf PlaythroughFie
 	}
 	e.Started = pf.Started
 	e.Finished = pf.Finished
+	e.Beaten = pf.Beaten
 	e.Status = pf.Status
 	e.Platform = pf.Platform
 	e.Subgame = pf.Subgame
@@ -592,6 +616,17 @@ func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform
 	e.Subgame = subgame
 	e.SetRating(rating)
 	e.Notes = notes
+	return nil
+}
+
+// SetBeaten sets (or, with "", clears) the day playthrough idx beat the game.
+// Clearing drops the key, so the caller declares playthroughs[idx].beaten as
+// an allowed removal.
+func (f *PlaythroughsFile) SetBeaten(idx int, beaten string) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to update", idx+1)
+	}
+	f.Playthroughs[idx].Beaten = beaten
 	return nil
 }
 

@@ -6,10 +6,11 @@ playthroughsSectionView and the handlers that render these. */}}
 {{define "playthrough_header"}}
 <div id="pth-{{.Index}}" class="{{if .Saved}}row--saved{{else if .Error}}row--error{{end}}">
   <details{{if or .Saved .Error}} open{{end}}>
-    <summary class="tui__title">#{{add1 .Index}} · {{.Status}}{{with .Subgame}} · {{.}}{{end}}{{with .Platform}} · {{.}}{{end}}{{with .DisplayFinished}} · finished {{.}}{{end}}{{with .Rating}} · {{.}}/10{{end}}</summary>
+    <summary class="tui__title">#{{add1 .Index}} · {{.Status}}{{with .Subgame}} · {{.}}{{end}}{{with .Platform}} · {{.}}{{end}}{{with .DisplayFinished}} · finished {{.}}{{end}}{{with .Beaten}} · beaten {{.}}{{end}}{{with .Rating}} · {{.}}/10{{end}}</summary>
     {{if .Error}}<p class="error-text">{{.Error}}</p>{{end}}
     <form hx-post="/games/{{.Slug}}/playthroughs/{{.Index}}" hx-target="#pth-{{.Index}}" hx-swap="outerHTML" class="row">
       <input type="text" name="finished" placeholder="finished" value="{{.DisplayFinished}}">
+      <input type="text" name="beaten" placeholder="beaten (if before finished)" value="{{.Beaten}}" title="The day this run beat the game, when it carried on afterwards (post-game, mastery). The game's first-finished date uses this instead of the run's finish.">
       <select name="status">{{$s := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $s}} selected{{end}}>{{.}}</option>{{end}}</select>
       <input type="text" name="platform" placeholder="platform (blank = {{dash .GamePlatform}})" value="{{.Platform}}">
       {{if .GameSubgames}}

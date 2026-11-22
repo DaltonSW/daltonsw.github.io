@@ -35,7 +35,9 @@ what's load-bearing.
   from `playthroughs.yaml`, so a date that belongs to the game belongs in an entry. Creation writes
   dates as a first playthrough (`CreateGameFile`), and stale triage closes the sole open entry
   rather than stamping the game. `legacy_last_played:` on 13 games is inert and preserved via
-  `Extra`. Don't reintroduce `started`/`finished` on `FrontMatter`.
+  `Extra`. Don't reintroduce `started`/`finished` on `FrontMatter`. An entry's `finished` is the day
+  the run ended; its optional `beaten:` is the day it beat the game when that's earlier, and is
+  what first finished reads (`firstFinished` and `game-first-finished.html`, kept in step).
   **A game's status is derived from its runs** (`model.DeriveGameStatus`):
   - Any open run means the most recently active one's status.
   - Otherwise `finished` if any run was finished, else the status of the run that ended last.

@@ -1,12 +1,17 @@
 {{/* Context: a game's term Page. Returns the day the game was first beaten as a
-     "2006-01-02" string: the earliest finish date among entries with status
-     "finished" (dropped/unfinished runs ended, but nothing was finished). "" when
-     there's none. Mirrors firstFinished in tools/gamelog/internal/model. */}}
+     "2006-01-02" string: the earliest of each entry's beaten date, which is its
+     `beaten:` when set (a run that carried on past the credits, toward the
+     post-game or mastery) and otherwise its finish date when its status is
+     "finished" (dropped/unfinished runs ended, but nothing was finished). ""
+     when there's none. Mirrors firstFinished in tools/gamelog/internal/model. */}}
 {{- $first := "" -}}
 {{- range partial "playthrough-entries.html" . -}}
-  {{- if and (eq .status "finished") .finished -}}
-    {{- $d := .finished | time.Format "2006-01-02" -}}
-    {{- if or (eq $first "") (lt $d $first) -}}{{- $first = $d -}}{{- end -}}
+  {{- $d := "" -}}
+  {{- with .beaten -}}
+    {{- $d = . | time.Format "2006-01-02" -}}
+  {{- else -}}
+    {{- if and (eq .status "finished") .finished -}}{{- $d = .finished | time.Format "2006-01-02" -}}{{- end -}}
   {{- end -}}
+  {{- if and $d (or (eq $first "") (lt $d $first)) -}}{{- $first = $d -}}{{- end -}}
 {{- end -}}
 {{- return $first -}}

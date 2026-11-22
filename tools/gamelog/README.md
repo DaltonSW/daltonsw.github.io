@@ -191,8 +191,18 @@ field *presence*, not text, and the same tradeoff is already accepted for `playt
 **A game carries no dates.** Started, first finished and last played are all derived from
 `playthroughs.yaml` (`gameDateRange` and `firstFinished` in `internal/model`, and the site's
 `game-first-played.html`, `game-first-finished.html` and `game-last-played.html`). First finished
-is the earliest finish of an entry whose status is `finished`, so a dropped run doesn't count. The
-new-game form's started/finished fields, and a scan candidate's finish, are written as the game's
+is the earliest finish of an entry whose status is `finished`, so a dropped run doesn't count.
+
+A playthrough's `finished` is the day **the run ended**, which isn't always the day it beat the
+game: a run that rolled credits and carried on into the post-game or toward mastery ends later. An
+entry's optional `beaten:` records that day, and first finished reads it in place of the entry's
+own finish (`Playthrough.BeatenDate`). It counts whatever the entry's status, so a run still
+`playing` for mastery has already beaten the game. It must fall inside the run (on or after it
+started, on or before it finished), it's set from the playthrough forms on a game's page and from
+Catch up's cards, and clearing it drops the key as a declared removal. The game page shows it
+beside the run's dates.
+
+The new-game form's started/finished fields, and a scan candidate's finish, are written as the game's
 **first playthrough** by `CreateGameFile`. A game with no dates gets no entry. The edit forms show
 the derived dates read-only. Thirteen older games carry an inert
 `legacy_last_played:`: a Steam last-played snapshot that stale triage once wrote into front matter
@@ -431,8 +441,10 @@ leaving out empty sections:
   suggest panel's rules (`loggedSpans`/`coverageOf` in `coverage.go`): sessions, or a playthrough's
   own range; an open run covers everything until the next logged span; planned entries cover
   nothing. Each card carries one pre-filled form — **log as** a new playthrough or a session on an
-  existing run, started/finished/status/notes — whose guess is, in order: a session on a one-shot
-  game's run; a `finished` run ending on an uncovered award; an `unfinished` run closed on the last
+  existing run, started/finished/beaten/status/notes — whose guess is, in order: a session on a one-shot
+  game's run; a `finished` run ending on the last activity day when there's an uncovered award (with
+  the award as its `beaten:` date when it's an RA beaten award earlier than that — a mastery or
+  platinum date isn't a beaten date); an `unfinished` run closed on the last
   day for activity older than the Gone quiet threshold; otherwise an open run with the game's
   default status. **Log** goes through the same helpers as the game page's forms
   (`logNewPlaythrough`/`logSession`, so the same validation, one-shot cap and pre-write loss check),

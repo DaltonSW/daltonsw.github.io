@@ -595,6 +595,7 @@ func parsePlaythroughFields(r *http.Request) model.PlaythroughFields {
 	return model.PlaythroughFields{
 		Started:  r.FormValue("started"),
 		Finished: r.FormValue("finished"),
+		Beaten:   strings.TrimSpace(r.FormValue("beaten")),
 		Status:   r.FormValue("status"),
 		Platform: r.FormValue("platform"),
 		Subgame:  r.FormValue("subgame"),
@@ -612,6 +613,30 @@ func validatePlaythroughFields(f model.PlaythroughFields, requireStarted bool) e
 	}
 	if err := forms.ValidateRating(f.Rating); err != nil {
 		return fmt.Errorf("rating: %w", err)
+	}
+	return validateBeaten(f.Beaten, f.Started, f.Finished)
+}
+
+// validateBeaten checks a run's beaten: date is a date inside the run — on or
+// after it started, and on or before it finished when it has. Compared at the
+// coarser date's precision, so a partial "2018-09" start doesn't reject a day
+// in September.
+func validateBeaten(beaten, started, finished string) error {
+	if beaten == "" {
+		return nil
+	}
+	if err := forms.ValidateDate(false)(beaten); err != nil {
+		return fmt.Errorf("beaten: %w", err)
+	}
+	cmp := func(a, b string) int {
+		n := min(len(a), len(b))
+		return strings.Compare(a[:n], b[:n])
+	}
+	if started != "" && cmp(beaten, started) < 0 {
+		return fmt.Errorf("beaten %s is before the run started (%s)", beaten, started)
+	}
+	if finished != "" && cmp(beaten, finished) > 0 {
+		return fmt.Errorf("beaten %s is after the run finished (%s) — leave it blank to use the finish date", beaten, finished)
 	}
 	return nil
 }
@@ -678,10 +703,12 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 
 	finished, status := r.FormValue("finished"), r.FormValue("status")
 	platform, subgame, rating, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("rating"), r.FormValue("notes")
+	beaten := strings.TrimSpace(r.FormValue("beaten"))
 
 	fail := func(err error) {
 		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p)
 		view.DisplayFinished, view.Status, view.Platform, view.Subgame, view.Rating, view.Notes = finished, status, platform, subgame, rating, notes
+		view.Beaten = beaten
 		view.Error = err.Error()
 		s.renderPlaythroughFragment(w, "playthrough_header", view)
 	}
@@ -694,13 +721,21 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		fail(err)
 		return
 	}
+	if err := validateBeaten(beaten, p.EarliestDate(), finished); err != nil {
+		fail(err)
+		return
+	}
 	if finished == displayFinished && status == p.Status && platform == p.Platform &&
-		subgame == p.Subgame && rating == p.Rating && notes == p.Notes {
+		subgame == p.Subgame && rating == p.Rating && notes == p.Notes && beaten == p.Beaten {
 		s.renderPlaythroughFragment(w, "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p))
 		return
 	}
 
 	if err := pf.UpdatePlaythrough(idx, finished, status, platform, subgame, rating, notes); err != nil {
+		fail(err)
+		return
+	}
+	if err := pf.SetBeaten(idx, beaten); err != nil {
 		fail(err)
 		return
 	}
@@ -722,6 +757,9 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	}
 	if strings.TrimSpace(subgame) == "" {
 		allowed = append(allowed, base+".subgame")
+	}
+	if beaten == "" {
+		allowed = append(allowed, base+".beaten")
 	}
 	if strings.TrimSpace(finished) == "" {
 		allowed = append(allowed, base+".finished",

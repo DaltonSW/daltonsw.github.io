@@ -3,6 +3,7 @@ package commands
 import (
 	"path/filepath"
 	"sort"
+	"strings"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/forms"
@@ -38,6 +39,9 @@ type ActivityGuess struct {
 	Started      string
 	Finished     string
 	FinishedHint string // last activity, shown as the placeholder when Finished is blank
+	// Beaten is the day the run beat the game, when an award says so and the
+	// run carried on past it (a new playthrough only).
+	Beaten string
 }
 
 // ActivityItem is one logged game with provider activity on days no logged
@@ -251,7 +255,10 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 //   - a one-shot game (endless/multiplayer/software) with a run of that kind:
 //     a session on it, spanning the uncovered activity — the run's sessions
 //     list is the record, so a new playthrough would fragment it;
-//   - an uncovered finishing award: a new finished playthrough ending on it;
+//   - an uncovered finishing award: a new finished playthrough ending on the
+//     last activity day (the run's end), with a beaten date when the award is
+//     a RetroAchievements beaten award earlier than that — a mastery or
+//     platinum date says when the set was cleared, not when the game was;
 //   - activity that stopped before staleCutoff: a new playthrough closed on
 //     the last activity day as unfinished, the same "it trailed off" default
 //     stale triage uses when nothing says otherwise;
@@ -284,7 +291,10 @@ func guessActivity(it ActivityItem, staleCutoff string) ActivityGuess {
 	}
 	switch {
 	case it.Award != "":
-		g.Status, g.Finished = "finished", it.Award
+		g.Status, g.Finished = "finished", it.Last
+		if strings.HasPrefix(it.AwardKind, "beaten") && it.Award < it.Last {
+			g.Beaten = it.Award
+		}
 	case it.Last < staleCutoff:
 		g.Status, g.Finished = "unfinished", it.Last
 	default:
