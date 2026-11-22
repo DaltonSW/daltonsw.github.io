@@ -50,7 +50,7 @@ func housekeepingReturnTo(r *http.Request) string {
 //
 // mode picks which half of the Steam library is wanted; the backlog half is
 // Steam alone — see commands.Scan.
-func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) (commands.ScanResult, int, error) {
+func (s *server) scanCandidates(minHours float64, mode commands.ScanMode, opts ...func(*commands.ScanOptions)) (commands.ScanResult, int, error) {
 	existing, err := model.ListGames(s.gamesDir)
 	if err != nil {
 		return commands.ScanResult{}, 0, err
@@ -64,7 +64,11 @@ func (s *server) scanCandidates(minHours float64, mode commands.ScanMode) (comma
 		return commands.ScanResult{}, len(existing), err
 	}
 	index := commands.NewLoggedIndex(existing).WithIgnored(ignored)
-	res, err := commands.Scan(context.Background(), creds, index, commands.ScanOptions{MinHours: minHours, Mode: mode})
+	so := commands.ScanOptions{MinHours: minHours, Mode: mode}
+	for _, o := range opts {
+		o(&so)
+	}
+	res, err := commands.Scan(context.Background(), creds, index, so)
 	return res, len(existing), err
 }
 
@@ -89,7 +93,15 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 	}
 	backTo := housekeepingReturnTo(r)
 	minHours := atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours)
-	scan, _, err := s.scanCandidates(minHours, mode)
+	// Rows from an on-demand provider were loaded by its button, so the
+	// re-derived scan has to include it to find them again.
+	var extra []string
+	for _, pk := range r.Form["provider"] {
+		if slices.Contains(commands.OnDemandScanProviders, pk) {
+			extra = append(extra, pk)
+		}
+	}
+	scan, _, err := s.scanCandidates(minHours, mode, func(o *commands.ScanOptions) { o.Include = extra })
 	if err != nil {
 		s.respondHousekeepingErr(w, r, backTo, err)
 		return

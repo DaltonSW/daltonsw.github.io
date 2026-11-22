@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -150,6 +151,22 @@ const (
 type ScanOptions struct {
 	MinHours float64
 	Mode     ScanMode
+	// Include adds on-demand providers (OnDemandScanProviders) to the default
+	// set; Only, when non-empty, runs just those providers instead. A zero
+	// value scans every provider except the on-demand ones.
+	Include []string
+	Only    []string
+}
+
+// OnDemandScanProviders are left out of a default scan and fetched only when
+// asked for (Catch up's per-provider buttons): their lists are large and slow.
+var OnDemandScanProviders = []string{model.ProviderPSN, model.ProviderXbox, model.ProviderUbisoft, model.ProviderGooglePlay}
+
+func (o ScanOptions) wants(provider string) bool {
+	if len(o.Only) > 0 {
+		return slices.Contains(o.Only, provider)
+	}
+	return !slices.Contains(OnDemandScanProviders, provider) || slices.Contains(o.Include, provider)
 }
 
 // keeps reports whether a game with this much recorded playtime belongs to

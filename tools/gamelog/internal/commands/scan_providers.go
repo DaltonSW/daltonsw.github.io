@@ -99,6 +99,7 @@ func Scan(ctx context.Context, creds Credentials, index loggedIndex, opts ScanOp
 			)
 		}
 	}
+	jobs = slices.DeleteFunc(jobs, func(j job) bool { return !opts.wants(j.provider) })
 	if len(jobs) == 0 {
 		return ScanResult{}, errNoScanCredentials
 	}

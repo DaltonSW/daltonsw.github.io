@@ -450,7 +450,8 @@ leaving out empty sections:
   (`logNewPlaythrough`/`logSession`, so the same validation, one-shot cap and pre-write loss check),
   and an error re-renders the card with what was typed. Nothing is logged without a submit:
   playthrough boundaries stay a human call.
-- **New games**: the scan rows (below), loaded after the page so it doesn't wait on six APIs.
+- **New games**: the scan rows (below), loaded after the page so it doesn't wait on the APIs. PSN, Xbox, Ubisoft and Google Play
+  (`commands.OnDemandScanProviders`) are left out and fetched only when their "Load" button is clicked.
 - **Gone quiet** and **Left open**: the stale and close lists (below).
 - **Older unlogged activity**, collapsed: the same cards for activity before the boundary — history
   from before a game was logged, gaps between old runs.

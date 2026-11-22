@@ -51,6 +51,14 @@
 <div hx-get="/catchup/scan?min_hours={{.Thresholds.MinHours}}" hx-trigger="load" hx-swap="outerHTML">
   <p class="dim">Checking every provider's library…</p>
 </div>
+<p class="hint">Slower lists load only when asked for:</p>
+<div id="scan-on-demand">
+  {{range $p := .OnDemandScan}}
+  <button type="button" hx-get="/catchup/scan?min_hours={{$.Thresholds.MinHours}}&with={{$p.Key}}"
+    hx-target="#scan-{{$p.Key}}" hx-swap="innerHTML" hx-disabled-elt="this">Load {{$p.Label}}</button>
+  {{end}}
+  {{range $p := .OnDemandScan}}<div id="scan-{{$p.Key}}"></div>{{end}}
+</div>
 
 {{if .Stale}}
 <h2>Gone quiet <span class="dim">({{len .Stale}})</span></h2>

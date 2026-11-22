@@ -80,7 +80,7 @@
      logged or ignored: the scan rows that used to be Housekeeping's Scan
      tab, unchanged. Takes a catchupScanData. */}}
 {{define "catchup_scan"}}
-<div id="catchup-scan">
+<div class="catchup-scan">
   {{with .Error}}<div class="flash flash--error">{{.}}</div>{{end}}
   {{range .Notices}}<div class="flash flash--error">{{.}}</div>{{end}}
   {{if .Rows}}

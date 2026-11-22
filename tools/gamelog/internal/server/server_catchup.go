@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
@@ -91,6 +92,17 @@ func (c *activityCard) setTargets() {
 // IsSession reports whether the card is set to add a session, which is what
 // disables its status select (a session has no status of its own).
 func (c activityCard) IsSession() bool { return c.Target != "new" }
+
+type onDemandProvider struct{ Key, Label string }
+
+// OnDemandScan is the providers whose New games lists wait for a button.
+func (catchupData) OnDemandScan() []onDemandProvider {
+	var out []onDemandProvider
+	for _, p := range commands.OnDemandScanProviders {
+		out = append(out, onDemandProvider{p, model.ProviderLabel(p)})
+	}
+	return out
+}
 
 type catchupData struct {
 	Page
@@ -221,6 +233,7 @@ type catchupScanData struct {
 	Error      string
 	NumLogged  int
 	Thresholds catchupThresholds
+	OnDemand   string // label of the provider this fragment was loaded for, if any
 }
 
 // handleCatchupScan renders the New games section on its own, fetched by htmx
@@ -230,7 +243,13 @@ type catchupScanData struct {
 func (s *server) handleCatchupScan(w http.ResponseWriter, r *http.Request) {
 	th := thresholdsFrom(r.URL.Query().Get)
 	data := catchupScanData{Thresholds: th}
-	scan, numLogged, err := s.scanCandidates(th.MinHours, commands.ScanModePlayed)
+	// ?with=psn loads one on-demand provider instead of the default set.
+	var only []string
+	if w := r.URL.Query().Get("with"); slices.Contains(commands.OnDemandScanProviders, w) {
+		only = []string{w}
+		data.OnDemand = model.ProviderLabel(w)
+	}
+	scan, numLogged, err := s.scanCandidates(th.MinHours, commands.ScanModePlayed, func(o *commands.ScanOptions) { o.Only = only })
 	if err != nil {
 		data.Error = err.Error()
 	} else {
