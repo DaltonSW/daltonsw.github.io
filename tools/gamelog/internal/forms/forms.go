@@ -108,6 +108,16 @@ func IsOneShot(status string) bool {
 	return status == "endless" || status == "multiplayer" || status == "software"
 }
 
+// DefaultPlaythroughStatus is the status a new playthrough starts with when
+// nothing says otherwise: "playing", unless the game as a whole is one of the
+// modes that has no finish line.
+func DefaultPlaythroughStatus(gameStatus string) string {
+	if gameStatus == "endless" || gameStatus == "multiplayer" {
+		return gameStatus
+	}
+	return "playing"
+}
+
 // "misc_launch" covers an entry that isn't a real attempt at all — booted up
 // just to check dates, or a launch that never got past a broken platform
 // port (e.g. a Linux build that wouldn't run) — as distinct from "dropped",
