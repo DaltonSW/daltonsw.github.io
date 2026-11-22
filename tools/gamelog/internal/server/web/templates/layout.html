@@ -15,9 +15,9 @@
         <span class="brand__prompt">gamelog@localhost</span><span>:~$</span><span class="brand__cursor" aria-hidden="true"></span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="/"{{if eq .Nav "games"}} aria-current="page"{{end}}>games</a>
+        <a href="/"{{if eq .Nav "catchup"}} aria-current="page"{{end}}>catch up</a>
+        <a href="/games"{{if eq .Nav "games"}} aria-current="page"{{end}}>games</a>
         <a href="/housekeeping"{{if eq .Nav "housekeeping"}} aria-current="page"{{end}}>housekeeping</a>
-        <a href="/suggest"{{if eq .Nav "suggest"}} aria-current="page"{{end}}>suggest</a>
       </nav>
     </div>
   </header>

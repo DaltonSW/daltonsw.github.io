@@ -7,54 +7,31 @@ import (
 	"path/filepath"
 	"slices"
 	"strings"
-	"time"
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/externalid"
+	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
 // ── Suggest (read-only) ──────────────────────────────────────────────────
 
-type suggestPickerData struct {
-	Page
-	Games []model.GameSummary
-	Query string
-}
-
-// handleSuggestPicker lists only RA/Steam-linked games — nothing else can
-// produce a suggestion — with the same title filter as the Games page.
-func (s *server) handleSuggestPicker(w http.ResponseWriter, r *http.Request) {
-	games, err := model.ListGames(s.gamesDir)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	q := strings.TrimSpace(r.URL.Query().Get("q"))
-	lower := strings.ToLower(q)
-	var linked []model.GameSummary
-	for _, g := range games {
-		if g.RAGameID == "" && g.SteamAppID == "" {
-			continue
-		}
-		if q != "" && !strings.Contains(strings.ToLower(g.Title), lower) {
-			continue
-		}
-		linked = append(linked, g)
-	}
-	s.render(w, "suggest_picker", suggestPickerData{Page: newPage(r, "Suggest", "suggest"), Games: linked, Query: q})
-}
-
 // suggestPath is where a game's suggestion lives: its own detail page, with
-// the panel fetched on arrival — so every entry point (games list, picker,
-// sweep log) lands where the suggestion can be logged, not on a read-only
-// report that has to be retyped somewhere else.
+// the panel fetched on arrival — so every entry point (the games list's
+// Suggest button, old /suggest/{slug} links) lands where the suggestion can be
+// logged, not on a read-only report that has to be retyped somewhere else.
 func suggestPath(slug string) string { return gamePath(slug) + "?suggest=1#suggest" }
 
 // handleSuggestReport keeps old /suggest/{slug} links working now that the
 // suggestion is shown on the game's own page.
 func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, suggestPath(r.PathValue("slug")), http.StatusSeeOther)
+}
+
+// handleSuggestIndex keeps /suggest working now that its whole-library sweep
+// is Catch up's unlogged-activity list.
+func (s *server) handleSuggestIndex(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
 // suggestionFor runs the same provider fetches as `gamelog suggest` for one
@@ -140,16 +117,9 @@ func buildSuggestView(report commands.SuggestionReport, doc *model.Doc, pf *mode
 		if p.Status == "planned" {
 			continue
 		}
-		label := fmt.Sprintf("#%d · %s", p.Index+1, p.Status)
-		if p.Subgame != "" {
-			label += " · " + p.Subgame
-		}
-		if p.Platform != "" {
-			label += " · " + p.Platform
-		}
 		v.SessionTargets = append(v.SessionTargets, sessionTarget{
 			Action: fmt.Sprintf("/games/%s/playthroughs/%d/sessions", report.Slug, p.Index),
-			Label:  label,
+			Label:  runLabel(p),
 		})
 	}
 	// The newest playthrough is the likeliest one a fresh session belongs to.
@@ -157,6 +127,19 @@ func buildSuggestView(report commands.SuggestionReport, doc *model.Doc, pf *mode
 		v.SessionTargets[n-1].Selected = true
 	}
 	return v
+}
+
+// runLabel names an existing playthrough in a "log it against which run?"
+// choice: its number, status, and whatever distinguishes it from a sibling.
+func runLabel(p model.Playthrough) string {
+	label := fmt.Sprintf("#%d · %s", p.Index+1, p.Status)
+	if p.Subgame != "" {
+		label += " · " + p.Subgame
+	}
+	if p.Platform != "" {
+		label += " · " + p.Platform
+	}
+	return label
 }
 
 func skippedReason(pr commands.ProviderResult) string {
@@ -248,120 +231,7 @@ func (s *server) handleSuggestFragment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel",
-		buildSuggestView(report, doc, pf, defaultPthStatus(doc.FM.Status)))
-}
-
-// handleSuggestAll kicks off runSuggestAllJob. Like achievements/all it's a
-// background job: the picker's one-game-at-a-time flow means opening 200+
-// games by hand to find the few with unlogged history, and doing that sweep
-// in one request would hang it for minutes (Steam is a couple of calls per
-// game, RA throttles to ~1.2s).
-func (s *server) handleSuggestAll(w http.ResponseWriter, r *http.Request) {
-	id, j := s.jobs.create("Suggest — sweep all games", "/suggest", "Back to suggest")
-	go s.runSuggestAllJob(j)
-	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
-}
-
-// runSuggestAllJob runs the per-game suggestion fetch (commands.FetchRAResult
-// / FetchSteamResult — the very calls the single-game /suggest/{slug} page
-// makes) across every RetroAchievements/Steam-linked game, then logs only
-// the games whose provider history isn't already covered by their
-// playthroughs.yaml (see commands.SuggestSweepVerdict). Nothing is written —
-// this is the same read-only "here are dates to enter by hand" tool as
-// single-game suggest, just swept across the library.
-func (s *server) runSuggestAllJob(j *job) {
-	games, err := model.ListGames(s.gamesDir)
-	if err != nil {
-		j.finish(err)
-		return
-	}
-	creds := commands.LoadCredentials()
-
-	var linked []model.GameSummary
-	for _, g := range games {
-		if g.RAGameID != "" || g.SteamAppID != "" {
-			linked = append(linked, g)
-		}
-	}
-	total := len(linked)
-	ctx := context.Background()
-
-	var flagged, failed int
-	for i, g := range linked {
-		j.progress(i+1, total, g.Title)
-
-		raID, steamAppID := g.RAGameID, g.SteamAppID
-		if id, err := externalid.ParseExternalID(raID); err == nil {
-			raID = id
-		}
-		if id, err := externalid.ParseExternalID(steamAppID); err == nil {
-			steamAppID = id
-		}
-
-		report := commands.SuggestionReport{
-			Title: g.Title, Slug: g.Slug, NumPlaythroughs: g.NumPlaythroughs,
-			RAGameID: raID, RAUsername: creds.RAUsername, SteamAppID: steamAppID,
-		}
-		report.RA = commands.FetchRAResult(ctx, raID, creds)
-		report.Steam = commands.FetchSteamResult(ctx, steamAppID, creds)
-
-		if report.RA.Errored {
-			j.log("%s", g.Title)
-			j.log("  RetroAchievements request failed: %v", report.RA.Err)
-			failed++
-		}
-		if report.Steam.Errored {
-			j.log("%s", g.Title)
-			j.log("  Steam request failed: %v", report.Steam.Err)
-			failed++
-		}
-
-		pf, err := model.LoadPlaythroughs(filepath.Dir(g.Path))
-		if err != nil {
-			j.log("%s", g.Title)
-			j.log("  could not read playthroughs.yaml: %v", err)
-			failed++
-			continue
-		}
-
-		actionable, note := commands.SuggestSweepVerdict(report, pf)
-		report = commands.WithCoverage(report, pf) // log the narrowed ranges the verdict saw
-		if !actionable {
-			continue
-		}
-		flagged++
-		j.logLink(suggestPath(g.Slug), "%s", g.Title)
-		j.log("  %s", note)
-		if r := report.RA.RA; r != nil {
-			j.log("  RetroAchievements: %s", suggestRangeLine(r.Started, r.Finished, r.Confidence))
-		}
-		if st := report.Steam.Steam; st != nil {
-			j.log("  Steam: %s", suggestRangeLine(st.Started, st.Finished, ""))
-		}
-	}
-
-	j.progress(total, total, "")
-	j.log("")
-	j.log("%d linked games checked, %d need a playthrough logged or updated, %d errors",
-		total, flagged, failed)
-	j.finish(nil)
-}
-
-// suggestRangeLine renders a provider's suggested started→finished pair for a
-// job log line, tolerating a zero end (an open range) and an optional
-// confidence tag.
-func suggestRangeLine(start, finish time.Time, confidence string) string {
-	fmtDate := func(t time.Time) string {
-		if t.IsZero() {
-			return "?"
-		}
-		return t.Format("2006-01-02")
-	}
-	line := fmt.Sprintf("%s → %s", fmtDate(start), fmtDate(finish))
-	if confidence != "" {
-		line += " (" + confidence + " confidence)"
-	}
-	return line
+		buildSuggestView(report, doc, pf, forms.DefaultPlaythroughStatus(doc.FM.Status)))
 }
 
 // ── Achievements (single-game refresh lives in server_games.go) ─────────
@@ -413,56 +283,131 @@ func (s *server) runAchievementsAllJob(j *job, full bool, provider string) {
 		j.finish(err)
 		return
 	}
-	archiveDir := model.FindArchiveDir(s.gamesDir)
-	creds := commands.LoadCredentials()
-
 	var withLinks []model.GameSummary
 	for _, g := range games {
 		if len(fetchLinks(g.ProviderLinks(), provider)) > 0 {
 			withLinks = append(withLinks, g)
 		}
 	}
-	skipped, total := len(games)-len(withLinks), len(withLinks)
+	skipped := len(games) - len(withLinks)
 
-	var opts []commands.SaveOption
-	if !full {
-		opts = append(opts, commands.SkipUnchanged)
-	}
+	counts := s.refreshAchievements(j, withLinks, refreshOptions{full: full, provider: provider, total: len(withLinks)})
 
-	var refreshed, failed int
-	for i, g := range withLinks {
-		links := g.ProviderLinks()
-		j.progress(i+1, total, g.Title)
-		j.log("%s", g.Title)
-		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, fetchLinks(links, provider), creds, opts...)
-		if err != nil {
-			j.log("  %v", err)
-			failed++
-			continue
-		}
-		for _, sv := range saved {
-			p := sv.Record
-			if sv.Skipped {
-				j.log("  %s: unchanged since last fetch, skipped", sv.Label())
-			} else if p.LastError != "" {
-				j.log("  %s: %s (existing data kept)", sv.Label(), p.LastError)
-			} else {
-				j.log("  %s: %d/%d unlocked, %s to %s", sv.Label(), p.Unlocked, p.Total, p.First, p.Last)
-			}
-		}
-		if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {
-			j.log("  (achievement summary not updated: %v)", err)
-		}
-		refreshed++
-	}
-	j.progress(total, total, "")
+	j.progress(len(withLinks), len(withLinks), "")
 	j.log("")
 	noLink := "no provider link"
 	if provider != "" {
 		noLink = "no " + model.ProviderLabel(provider) + " link"
 	}
-	j.log("%d refreshed, %d with %s, %d failed", refreshed, skipped, noLink, failed)
+	j.log("%d refreshed, %d with %s, %d failed", counts.refreshed, skipped, noLink, counts.failed)
 	j.finish(nil)
+}
+
+// refreshOptions tunes refreshAchievements.
+type refreshOptions struct {
+	full     bool   // re-fetch Steam games whose playtime/last-played haven't moved
+	provider string // only this provider's links, when set
+	// quiet logs only the games whose archive actually changed (and failures),
+	// with what changed, instead of a line per provider per game — Catch up
+	// walks 400+ games and wants the dozen that moved.
+	quiet bool
+	// base and total place this loop's games within the job's progress bar,
+	// for a job that does other work around it.
+	base, total int
+}
+
+type refreshCounts struct{ refreshed, changed, failed int }
+
+// refreshAchievements is the fetch-and-merge loop behind both refresh-all
+// and Catch up: SaveAchievements per game (every write a merge that can only
+// add — see model.mergeProvider), then that game's achievement summary.
+func (s *server) refreshAchievements(j *job, games []model.GameSummary, o refreshOptions) refreshCounts {
+	archiveDir := model.FindArchiveDir(s.gamesDir)
+	creds := commands.LoadCredentials()
+	var opts []commands.SaveOption
+	if !o.full {
+		opts = append(opts, commands.SkipUnchanged)
+	}
+
+	var c refreshCounts
+	for i, g := range games {
+		links := g.ProviderLinks()
+		fetch := fetchLinks(links, o.provider)
+		j.progress(o.base+i+1, o.total, g.Title)
+
+		var before map[string]*model.ArchiveRecord
+		if o.quiet {
+			before = map[string]*model.ArchiveRecord{}
+			for _, l := range fetch {
+				if rec, err := model.LoadRecord(archiveDir, l.Provider, l.ID); err == nil {
+					before[l.Provider+"/"+l.ID] = rec
+				}
+			}
+		}
+
+		saved, err := commands.SaveAchievements(context.Background(), archiveDir, g.Title, fetch, creds, opts...)
+		if err != nil {
+			j.log("%s", g.Title)
+			j.log("  %v", err)
+			c.failed++
+			continue
+		}
+		var lines []string
+		for _, sv := range saved {
+			p := sv.Record
+			switch {
+			case o.quiet:
+				if line := describeChange(sv.Label(), before[sv.Provider+"/"+sv.ID], p); line != "" {
+					lines = append(lines, line)
+				}
+			case sv.Skipped:
+				lines = append(lines, fmt.Sprintf("%s: unchanged since last fetch, skipped", sv.Label()))
+			case p.LastError != "":
+				lines = append(lines, fmt.Sprintf("%s: %s (existing data kept)", sv.Label(), p.LastError))
+			default:
+				lines = append(lines, fmt.Sprintf("%s: %d/%d unlocked, %s to %s", sv.Label(), p.Unlocked, p.Total, p.First, p.Last))
+			}
+		}
+		if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {
+			lines = append(lines, fmt.Sprintf("(achievement summary not updated: %v)", err))
+		}
+		c.refreshed++
+		if len(lines) > 0 {
+			if o.quiet {
+				c.changed++
+			}
+			j.log("%s", g.Title)
+			for _, l := range lines {
+				j.log("  %s", l)
+			}
+		}
+	}
+	return c
+}
+
+// describeChange is one record's line in Catch up's quiet log: what a refresh
+// added, or why it couldn't, or "" when nothing moved.
+func describeChange(label string, before, after *model.ArchiveRecord) string {
+	if after == nil {
+		return ""
+	}
+	if after.LastError != "" && (before == nil || before.LastAttempt != after.LastAttempt || before.LastError != after.LastError) {
+		return fmt.Sprintf("%s: %s (existing data kept)", label, after.LastError)
+	}
+	if before == nil {
+		return fmt.Sprintf("%s: first capture, %d/%d unlocked", label, after.Unlocked, after.Total)
+	}
+	var parts []string
+	if d := after.Unlocked - before.Unlocked; d > 0 {
+		parts = append(parts, fmt.Sprintf("+%d (%d/%d)", d, after.Unlocked, after.Total))
+	}
+	if after.LastPlayed != "" && after.LastPlayed != before.LastPlayed {
+		parts = append(parts, "last played "+after.LastPlayed)
+	}
+	if len(parts) == 0 {
+		return ""
+	}
+	return label + ": " + strings.Join(parts, ", ")
 }
 
 type jobData struct {
@@ -489,7 +434,7 @@ func (s *server) handleJobStatus(w http.ResponseWriter, r *http.Request) {
 	status, lines, errMsg, current, total, currentItem := j.snapshot()
 	// The job monitor is a console, not a document: it claims the viewport
 	// and scrolls its log inside itself, so the page must not scroll too.
-	page := newPage(r, j.Title, "housekeeping")
+	page := newPage(r, j.Title, j.Nav)
 	page.BodyClass = "body--fixed"
 	s.render(w, "job", jobData{
 		Page: page,
@@ -511,6 +456,9 @@ func (s *server) handleJobProgress(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	status, lines, errMsg, current, total, currentItem := j.snapshot()
+	if status == "done" && j.DoneHref != "" {
+		w.Header().Set("HX-Redirect", j.DoneHref)
+	}
 	s.renderJobProgress(w, jobData{
 		ID: id, Status: status, Lines: lines, Err: errMsg,
 		Current: current, Total: total, CurrentItem: currentItem,

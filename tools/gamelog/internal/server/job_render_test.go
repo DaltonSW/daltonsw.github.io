@@ -2,6 +2,9 @@ package server
 
 import (
 	"bytes"
+	"errors"
+	"net/http"
+	"net/http/httptest"
 	"strings"
 	"testing"
 )
@@ -63,5 +66,41 @@ func TestJobPageRenders(t *testing.T) {
 	}
 	if !strings.Contains(buf.String(), "job__stat-value--done") {
 		t.Error("finished job not reported as done")
+	}
+}
+
+// Catch up's run sends the browser back to the queue once it's done, via the
+// progress poll — but only on a clean finish, so a failed run stays on its log.
+func TestJobProgress_RedirectsWhenDone(t *testing.T) {
+	s := &server{jobs: newJobRegistry()}
+	poll := func(id string) string {
+		req := httptest.NewRequest(http.MethodGet, "/jobs/"+id+"/progress", nil)
+		req.SetPathValue("id", id)
+		rec := httptest.NewRecorder()
+		s.handleJobProgress(rec, req)
+		return rec.Header().Get("HX-Redirect")
+	}
+
+	id, j := s.jobs.create("Catch up", "/", "Back")
+	j.DoneHref = "/?min_hours=5"
+	if got := poll(id); got != "" {
+		t.Errorf("running job redirected to %q", got)
+	}
+	j.finish(nil)
+	if got := poll(id); got != "/?min_hours=5" {
+		t.Errorf("done job redirect = %q", got)
+	}
+
+	failed, fj := s.jobs.create("Catch up", "/", "Back")
+	fj.DoneHref = "/"
+	fj.finish(errors.New("boom"))
+	if got := poll(failed); got != "" {
+		t.Errorf("failed job redirected to %q; it should stay on its log", got)
+	}
+
+	plain, pj := s.jobs.create("Refresh all", "/housekeeping", "Back")
+	pj.finish(nil)
+	if got := poll(plain); got != "" {
+		t.Errorf("a job without DoneHref redirected to %q", got)
 	}
 }

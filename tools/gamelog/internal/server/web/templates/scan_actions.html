@@ -1,0 +1,120 @@
+{{/* Shared by Catch up's New games section (catchup_fragments.html) and
+     Housekeeping's Backlog tab: one scan row's action block. A row carrying
+     From="catchup" adds that hidden field so a no-JS post lands back on
+     Catch up (see housekeepingReturnTo). */}}
+{{/* One scan/backlog row's actions, in the same shape the Stale section uses:
+     the guess as the primary button, the other plausible statuses beside it,
+     and a way out that isn't "create it and fix it later". The alternatives
+     are one button plus a dropdown rather than a button each — with five
+     statuses per row and a row per unlogged game, a button apiece is most of
+     the page.
+
+     Two lines: "Create as" + its dropdown, then the two one-click buttons.
+     The buttons reach their forms by `form=` id rather than by nesting, since
+     they belong to two different forms (create and ignore) but read as one
+     row — nesting would force a line each. Ignore's form is markup-only, so
+     `.form--hidden` takes it out of the stack's layout entirely.
+
+     The select is only consulted when its own button was the one clicked
+     (see use_status in createFromScan): a <select> submits its value whatever
+     button sent the form, so the primary button would otherwise pick up
+     whatever the dropdown happened to be showing. Only the clicked button's
+     own name/value is submitted, which is what makes that flag reliable.
+
+     Takes a scanRow. Every form here posts the candidate's provider/id, never
+     its position in the scan: the handlers re-derive the list, and a stale
+     index would land on the wrong game the moment anything created or ignored
+     earlier has dropped out of it — which is what happens as rows are worked
+     through without a page reload. The provider/id pair also makes a
+     page-unique id for the row's forms.
+
+     A RetroAchievements *subset* row keeps the same three parts but swaps the
+     primary: creating it would make a second entry for a game that already
+     has one, so the guess becomes "attach it to that game" (or, when the base
+     game isn't logged either, "create the base game and attach"). The
+     subset's own forms post ids rather than a row index, for the same reason
+     ignore does — see handleSubsetAttach. A subset whose parent couldn't be
+     resolved falls back to an ordinary row: the title convention alone is
+     never enough to link one.
+
+     A *link* row — a game already logged under this title, with no id on
+     this provider yet — swaps the primary the same way: "Link to <game>"
+     writes the id onto that game and captures its history. "Create as" stays
+     for the case where it's really a different game with the same name. */}}
+{{/* Every button here posts via htmx and swaps its own <tr> for a one-line
+     result (see writeHousekeepingResult): these lists (Catch up's New games,
+     Housekeeping's Backlog) are worked through a row at a time, and a full reload per click threw away the open
+     tab, its filter fields and the scroll position every time. Buttons stay
+     type="submit" so a no-JS post still works the old redirect way. */}}
+{{define "create_actions"}}
+{{$row := printf "%s-%s" .C.ProviderKey .C.ID}}
+{{$sub := .C.Subset}}
+<div class="cell-stack">
+  <form method="post" action="{{.Action}}" id="create-{{$row}}" class="cell-actions">
+    <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="tab" value="{{.Tab}}">
+    {{with $.From}}<input type="hidden" name="from" value="{{.}}">{{end}}
+    <input type="hidden" name="provider" value="{{.C.ProviderKey}}">
+    <input type="hidden" name="id" value="{{.C.ID}}">
+    <button type="submit" name="use_status" value="1"
+      hx-post="{{.Action}}" hx-include="#create-{{$row}}" hx-vals='{"use_status":"1"}'
+      hx-target="closest tr" hx-swap="outerHTML">Create as</button>
+    <select name="status" aria-label="Status to create {{.C.Title}} as">
+      {{range .OtherStatuses}}<option value="{{.}}">{{.}}</option>{{end}}
+    </select>
+  </form>
+  <form method="post" action="/ignore" id="ignore-{{$row}}" class="form--hidden">
+    <input type="hidden" name="provider" value="{{.C.ProviderKey}}">
+    <input type="hidden" name="id" value="{{.C.ID}}">
+    <input type="hidden" name="title" value="{{.C.Title}}">
+    <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="tab" value="{{.Tab}}">
+    {{with $.From}}<input type="hidden" name="from" value="{{.}}">{{end}}
+  </form>
+  {{with .C.LinkTo}}
+  <form method="post" action="/scan/link" id="link-{{$row}}" class="form--hidden">
+    <input type="hidden" name="provider" value="{{$.C.ProviderKey}}">
+    <input type="hidden" name="id" value="{{$.C.ID}}">
+    <input type="hidden" name="slug" value="{{.Slug}}">
+    <input type="hidden" name="min_hours" value="{{$.MinHours}}">
+    <input type="hidden" name="tab" value="{{$.Tab}}">
+    {{with $.From}}<input type="hidden" name="from" value="{{.}}">{{end}}
+  </form>
+  {{end}}
+  {{if and $sub $sub.ParentID}}
+  <form method="post" action="{{if $sub.Attachable}}/subset/attach{{else}}/subset/create-base{{end}}" id="subset-{{$row}}" class="form--hidden">
+    <input type="hidden" name="id" value="{{.C.ID}}">
+    <input type="hidden" name="slug" value="{{$sub.BaseSlug}}">
+    <input type="hidden" name="title" value="{{.C.Title}}">
+    <input type="hidden" name="min_hours" value="{{.MinHours}}">
+    <input type="hidden" name="tab" value="{{.Tab}}">
+    {{with $.From}}<input type="hidden" name="from" value="{{.}}">{{end}}
+  </form>
+  {{end}}
+  <div class="cell-actions">
+    {{if .C.LinkTo}}
+    <button type="submit" form="link-{{$row}}" class="btn--primary"
+      hx-post="/scan/link" hx-include="#link-{{$row}}"
+      hx-target="closest tr" hx-swap="outerHTML">Link to {{.C.LinkTo.Title}}</button>
+    {{else if and $sub $sub.ParentID}}
+      {{$subAction := "/subset/create-base"}}{{if $sub.Attachable}}{{$subAction = "/subset/attach"}}{{end}}
+      {{if $sub.Attachable}}
+      <button type="submit" form="subset-{{$row}}" class="btn--primary"
+        hx-post="{{$subAction}}" hx-include="#subset-{{$row}}"
+        hx-target="closest tr" hx-swap="outerHTML">Attach to {{$sub.BaseTitle}}</button>
+      {{else}}
+      <button type="submit" form="subset-{{$row}}" class="btn--primary"
+        hx-post="{{$subAction}}" hx-include="#subset-{{$row}}"
+        hx-target="closest tr" hx-swap="outerHTML">Create {{$sub.BaseTitle}} + attach</button>
+      {{end}}
+    {{else}}
+    <button type="submit" form="create-{{$row}}" class="btn--primary"
+      hx-post="{{.Action}}" hx-include="#create-{{$row}}"
+      hx-target="closest tr" hx-swap="outerHTML">Correct — create {{.C.Status}}</button>
+    {{end}}
+    <button type="submit" form="ignore-{{$row}}"
+      hx-post="/ignore" hx-include="#ignore-{{$row}}"
+      hx-target="closest tr" hx-swap="outerHTML">Never log this</button>
+  </div>
+</div>
+{{end}}

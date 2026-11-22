@@ -34,7 +34,7 @@ func (e OpenEntry) Key() string {
 // whose last known activity is at least thresholdDays old.
 //
 // Games still marked "playing" are skipped unless includePlaying: an open date
-// on a game you're actually playing is correct, and Housekeeping's Stale tab
+// on a game you're actually playing is correct, and Catch up's Gone quiet list
 // (FindStaleCandidates) is where "should this still be playing?" gets asked.
 func FindOpenEntries(archiveDir, gamesDir string, games []model.GameSummary, thresholdDays int, includePlaying bool) ([]OpenEntry, error) {
 	now := time.Now().In(model.SiteLocation)

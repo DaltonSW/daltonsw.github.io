@@ -1,0 +1,117 @@
+{{define "content"}}
+<h1>Catch up</h1>
+
+<div class="tui">
+  <span class="tui__title">load what's new</span>
+  <p>{{if .LastRun}}Last loaded {{.LastRun}} ({{.LastRunAgo}}).{{else}}Not loaded yet.{{end}}
+     Scans every provider's library for new games, refreshes every linked game's achievements and
+     last-played dates into the archive, and refreshes BTD6. Runs in the background (RA throttles to
+     ~1.2s/request) and comes back here when it's done. Everything below is read from what's on disk.</p>
+  {{with .RunningJob}}<div class="flash flash--ok">A load is running — <a href="/jobs/{{.}}">watch it</a>.</div>{{end}}
+  <form method="post" action="/catchup/run">
+    {{template "catchup_hidden" .Thresholds}}
+    <div class="checkbox-row"><input type="checkbox" id="nadeo" name="nadeo" value="1"><label for="nadeo">Trackmania too (current season; uses your play account)</label></div>
+    <div class="checkbox-row"><input type="checkbox" id="full" name="full" value="1"><label for="full">re-fetch unchanged Steam games (offline unlocks can sync late)</label></div>
+    <div class="btn-row"><button type="submit" class="btn--primary">Load what's new</button></div>
+  </form>
+  <details class="catchup-options">
+    <summary class="dim">thresholds</summary>
+    <form method="get" action="/" class="row">
+      <label for="min_hours">New games: min Steam hours</label>
+      <input type="number" step="0.5" id="min_hours" name="min_hours" value="{{.Thresholds.MinHours}}" style="max-width: 7rem;">
+      <label for="stale_days">Gone quiet after (days)</label>
+      <input type="number" id="stale_days" name="stale_days" value="{{.Thresholds.StaleDays}}" style="max-width: 7rem;">
+      <label for="close_days">Left open after (days)</label>
+      <input type="number" id="close_days" name="close_days" value="{{.Thresholds.CloseDays}}" style="max-width: 7rem;">
+      <div class="checkbox-row"><input type="checkbox" id="close_all" name="close_all" value="1"{{if .Thresholds.CloseAll}} checked{{end}}><label for="close_all">include "playing" games in Left open</label></div>
+      <button type="submit">Apply</button>
+    </form>
+  </details>
+</div>
+
+<p class="lead">Since {{.Since}}: {{.GamesPlayed}} game{{if ne .GamesPlayed 1}}s{{end}} played, {{.Unlocks}} achievement{{if ne .Unlocks 1}}s{{end}} unlocked.</p>
+
+{{if or .Problems .Notes}}
+<h2>Problems</h2>
+{{range .Notes}}<div class="flash flash--error">{{.}}</div>{{end}}
+{{range .Problems}}
+<div class="flash flash--error">{{providerLabel .Provider}}: {{.Error}} — {{len .Games}} game{{if ne (len .Games) 1}}s{{end}}
+  <span class="dim">({{range $i, $g := .Games}}{{if lt $i 3}}{{if $i}}, {{end}}{{$g}}{{end}}{{end}}{{if gt (len .Games) 3}}, …{{end}})</span>. Existing data was kept.</div>
+{{end}}
+{{end}}
+
+{{if .New}}
+<h2>Played since {{.Since}} <span class="dim">({{len .New}})</span></h2>
+<p class="hint">Provider activity on days no logged playthrough or session covers. Log it as a new run or a
+   session on an existing one, or dismiss it if it isn't worth logging.</p>
+{{range .New}}{{template "activity_card" .}}{{end}}
+{{end}}
+
+<h2>New games</h2>
+<div hx-get="/catchup/scan?min_hours={{.Thresholds.MinHours}}" hx-trigger="load" hx-swap="outerHTML">
+  <p class="dim">Checking every provider's library…</p>
+</div>
+
+{{if .Stale}}
+<h2>Gone quiet <span class="dim">({{len .Stale}})</span></h2>
+<p class="hint">Still marked <code>playing</code>, but Steam hasn't seen them in {{.Thresholds.StaleDays}}+ days.
+   Accepting closes the latest open run on the last-played date (except paused, which leaves it open).</p>
+{{range .Stale}}
+<div class="tui">
+  <span class="tui__title">{{.C.Game.Title}} · suggest {{.C.SuggestedStatus}}</span>
+  <pre>{{.Card}}</pre>
+  <form method="post" action="/stale/{{.C.Game.Slug}}" class="btn-row"
+    hx-post="/stale/{{.C.Game.Slug}}" hx-target="closest .tui" hx-swap="outerHTML">
+    {{template "catchup_hidden" $.Thresholds}}
+    <input type="hidden" name="tab" value="stale">
+    <button name="action" value="accept" type="submit" class="btn--primary">Correct — mark {{.C.SuggestedStatus}}</button>
+    {{range .OtherStatuses}}
+    <button name="action" value="mark_{{.}}" type="submit">Mark {{.}} instead</button>
+    {{end}}
+    <a class="btn" href="/games/{{.C.Game.Slug}}">Edit before applying</a>
+  </form>
+</div>
+{{end}}
+{{end}}
+
+{{if .Close}}
+<h2>Left open <span class="dim">({{len .Close}})</span></h2>
+<p class="hint">Runs whose trailing date is blank and haven't been played in {{.Thresholds.CloseDays}}+ days.
+   Closing only writes the date; statuses are left alone. Untick the exceptions.</p>
+<form method="post" action="/close">
+  {{template "catchup_hidden" .Thresholds}}
+  <input type="hidden" name="tab" value="close">
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th></th><th>Game</th><th>Close on</th><th>Source</th><th>Quiet for</th></tr></thead>
+    <tbody>
+    {{range $e := .Close}}
+    <tr>
+      <td><input type="checkbox" name="entry" value="{{$e.Key}}" checked aria-label="close {{$e.Game.Title}}"></td>
+      <td><a href="/games/{{$e.Game.Slug}}">{{$e.Game.Title}}</a></td>
+      <td>{{$e.CloseOn}}</td>
+      <td class="dim">{{$e.Source}}</td>
+      <td class="dim">{{$e.DaysSince}}d</td>
+    </tr>
+    {{end}}
+    </tbody>
+  </table>
+  </div>
+  <div class="btn-row"><button type="submit" class="btn--primary">Close selected</button></div>
+</form>
+{{end}}
+
+{{if .Quiet}}<p class="empty">Nothing else to act on — all caught up.</p>{{end}}
+
+{{if .Older}}
+<details class="catchup-older">
+  <summary><h2>Older unlogged activity <span class="dim">({{len .Older}})</span></h2></summary>
+  <p class="hint">Activity from before {{.Since}} that no logged playthrough covers: history from before a game
+     was logged, or gaps between runs. Log what's worth having; dismiss the rest and it won't come back
+     unless there's newer activity.</p>
+  {{range .Older}}{{template "activity_card" .}}{{end}}
+</details>
+{{end}}
+
+{{if .Drafts}}<p class="hint"><a href="/games?drafts=1">{{.Drafts}} draft{{if ne .Drafts 1}}s{{end}} awaiting review →</a></p>{{end}}
+{{end}}

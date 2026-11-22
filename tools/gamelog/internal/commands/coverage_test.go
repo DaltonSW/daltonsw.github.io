@@ -68,3 +68,7 @@ func TestWithCoverage_RAAwardOutsideLoggedRunsStaysHigh(t *testing.T) {
 		t.Errorf("narrowed = %+v", s)
 	}
 }
+
+func logged(entries ...model.PlaythroughEntry) *model.PlaythroughsFile {
+	return &model.PlaythroughsFile{Playthroughs: entries}
+}

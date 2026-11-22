@@ -305,7 +305,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		}
 	}
 
-	defaultStatus := defaultPthStatus(doc.FM.Status)
+	defaultStatus := forms.DefaultPlaythroughStatus(doc.FM.Status)
 
 	// Same rule as the (now-removed) review flow's delete action: a game
 	// with captured playthroughs or archive history isn't a stub, and
@@ -354,16 +354,6 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 	}
 }
 
-// defaultPthStatus is the status a new playthrough starts with when nothing
-// says otherwise: "playing", unless the game as a whole is one of the modes
-// that has no finish line.
-func defaultPthStatus(gameStatus string) string {
-	if gameStatus == "endless" || gameStatus == "multiplayer" {
-		return gameStatus
-	}
-	return "playing"
-}
-
 func (s *server) handleGameDetail(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
 	doc, pf, ok := s.gameOr404(w, r, slug)
@@ -389,7 +379,7 @@ func (s *server) handleDeleteGame(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	redirectOK(w, r, "/", doc.FM.Title+": deleted.")
+	redirectOK(w, r, "/games", doc.FM.Title+": deleted.")
 }
 
 // ── Game info ────────────────────────────────────────────────────────────
@@ -636,23 +626,28 @@ func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	f := parsePlaythroughFields(r)
-	if err := validatePlaythroughFields(f, true); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
-		return
-	}
-	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, f.Subgame); conflict != nil {
-		want := model.EffectivePlatform(f.Platform, doc.FM.Platform)
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
-			doc.FM.Title, f.Status, forms.OrDash(want)))
-		return
-	}
-	pf.AddPlaythrough(f)
-	if err := mutate.WriteEntry(pf); err != nil {
+	if err := logNewPlaythrough(doc, pf, parsePlaythroughFields(r)); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
 	redirectOK(w, r, gamePath(slug), "Playthrough started.")
+}
+
+// logNewPlaythrough validates and appends one playthrough, then writes it
+// through the pre-write loss check (the game's status follows via
+// SyncGameStatus). Shared by the game page and Catch up's activity cards, so
+// there's one path that can add a run.
+func logNewPlaythrough(doc *model.Doc, pf *model.PlaythroughsFile, f model.PlaythroughFields) error {
+	if err := validatePlaythroughFields(f, true); err != nil {
+		return err
+	}
+	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, f.Subgame); conflict != nil {
+		want := model.EffectivePlatform(f.Platform, doc.FM.Platform)
+		return fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
+			doc.FM.Title, f.Status, forms.OrDash(want))
+	}
+	pf.AddPlaythrough(f)
+	return mutate.WriteEntry(pf)
 }
 
 // handleUpdatePlaythrough answers with the playthrough_header fragment
@@ -800,28 +795,37 @@ func (s *server) handleAddSession(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	idx, err := strconv.Atoi(r.PathValue("idx"))
-	if err != nil || idx < 0 || idx >= len(pf.Playthroughs) {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("no such playthrough"))
-		return
+	if err != nil {
+		idx = -1
 	}
 	if err := r.ParseForm(); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	started, finished, title := r.FormValue("started"), r.FormValue("finished"), r.FormValue("title")
-	if err := forms.ValidateDate(true)(started); err != nil {
+	if err := logSession(pf, idx, r.FormValue("started"), r.FormValue("finished"), r.FormValue("title")); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
+	}
+	redirectOK(w, r, gamePath(slug), "Session logged.")
+}
+
+// logSession validates and appends one session to playthrough idx, then
+// writes it through the loss check. The first session on an entry moves its
+// flat started/finished pair into the session, so those two paths are the
+// declared removals in that case. Shared with Catch up's activity cards.
+func logSession(pf *model.PlaythroughsFile, idx int, started, finished, title string) error {
+	if idx < 0 || idx >= len(pf.Playthroughs) {
+		return fmt.Errorf("no such playthrough")
+	}
+	if err := forms.ValidateDate(true)(started); err != nil {
+		return err
 	}
 	if err := forms.ValidateDate(false)(finished); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
-		return
+		return err
 	}
-
 	hadSessions := pf.Views()[idx].HasSessions()
 	if err := pf.AddSession(idx, started, finished, title); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
-		return
+		return err
 	}
 	var allowed []string
 	if !hadSessions {
@@ -830,11 +834,7 @@ func (s *server) handleAddSession(w http.ResponseWriter, r *http.Request) {
 			fmt.Sprintf("playthroughs[%d].finished", idx),
 		}
 	}
-	if err := mutate.WriteEntry(pf, allowed...); err != nil {
-		redirectErr(w, r, gamePath(slug), err)
-		return
-	}
-	redirectOK(w, r, gamePath(slug), "Session logged.")
+	return mutate.WriteEntry(pf, allowed...)
 }
 
 // handleEditSession answers with just the one session_row fragment it

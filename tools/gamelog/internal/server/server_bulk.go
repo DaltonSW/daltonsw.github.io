@@ -15,26 +15,31 @@ import (
 	"go.dalton.dog/gamelog/internal/mutate"
 )
 
-// housekeepingReturnTo rebuilds the /housekeeping URL from whichever filter
-// fields — and which tab — the posting form carried as hidden inputs, so a
-// housekeeping action's redirect lands back on the same view the user was
-// looking at rather than the page's bare defaults (see forms in
-// housekeeping.html: every POST form there carries these alongside its own
-// fields for exactly this reason).
+// housekeepingReturnTo rebuilds the page URL from whichever filter fields —
+// and which tab — the posting form carried as hidden inputs, so an action's
+// redirect lands back on the same view the user was looking at rather than
+// the page's bare defaults (see the forms in housekeeping.html and
+// catchup.html: every POST form there carries these alongside its own fields
+// for exactly this reason). A form carrying from=catchup came from Catch up
+// (/), which shares the scan, stale and close handlers with Housekeeping.
 func housekeepingReturnTo(r *http.Request) string {
+	base, keys := "/housekeeping", []string{"min_hours", "incomplete_pct", "incomplete_all", "tab"}
+	if r.FormValue("from") == "catchup" {
+		base, keys = "/", []string{"min_hours", "stale_days", "close_days", "close_all"}
+	}
 	v := url.Values{}
-	for _, key := range []string{"min_hours", "stale_days", "close_days", "close_all", "incomplete_pct", "incomplete_all", "tab"} {
+	for _, key := range keys {
 		if val := r.FormValue(key); val != "" {
 			v.Set(key, val)
 		}
 	}
 	if len(v) == 0 {
-		return "/housekeeping"
+		return base
 	}
-	return "/housekeeping?" + v.Encode()
+	return base + "?" + v.Encode()
 }
 
-// ── Scan (lives on the Housekeeping page — see below) ─────────────────────
+// ── Scan (rows render on Catch up; Backlog's on Housekeeping) ─────────────
 
 // scanCandidates runs commands.Scan over every configured provider. Both GET
 // and POST need it (POST re-derives it to match a submitted row back to a real
@@ -303,16 +308,12 @@ func atoiFloatOr(s string, def float64) float64 {
 	return f
 }
 
-// ── Housekeeping (scan + stale + close + achievements) ────────────────────
+// ── Housekeeping (backlog + ignored + incomplete + achievements) ──────────
 //
-// All periodic whole-library maintenance, sharing one page: scan finds
-// un-logged games, stale/close both clean up playthroughs that went quiet
-// (status vs. finish date — see README), achievements refreshes archived
-// data. Draft review itself isn't here — the games list's own "drafts only"
-// filter and Draft? column cover that now. The scan/stale/close sections use
-// disjoint query-param prefixes (min_hours is already scan-only; stale_*/
-// close_* for the other two) since stale and close would otherwise collide
-// on "days" now that they share a page.
+// The whole-library lists that aren't a "what changed" queue: owned-but-
+// unplayed games, the ignore list, achievement completion, and the manual
+// refresh/regenerate tools. Scan, Stale and Close render on Catch up (/)
+// instead, but their row handlers live here and serve both pages.
 
 type staleRow struct {
 	C             commands.StaleCandidate
@@ -329,13 +330,15 @@ type scanRow struct {
 	C             commands.Candidate
 	OtherStatuses []string
 
-	// Action, MinHours, and Tab are carried per row rather than read off the
-	// page data, because the button block is a nested template: inside a
+	// Action, MinHours, Tab and From are carried per row rather than read off
+	// the page data, because the button block is a nested template: inside a
 	// {{define}} the enclosing page's dot isn't reachable. Tab is which panel
-	// this row's form should redirect back into (see housekeepingReturnTo).
+	// this row's form should redirect back into, and From which page (see
+	// housekeepingReturnTo).
 	Action   string
 	MinHours float64
 	Tab      string
+	From     string
 }
 
 // scanRows pairs each candidate with the alternatives to its guessed status.
@@ -358,45 +361,31 @@ func scanRows(candidates []commands.Candidate, quick []string, action string, mi
 
 type housekeepingData struct {
 	Page
-	ScanCandidates []scanRow
-	ScanError      string
-	// ScanNotices are per-provider failures and deliberate omissions — one
-	// provider failing no longer hides the rest, so it has to say so.
-	ScanNotices []commands.ScanNotice
-	// ScanScanned names the providers that answered, comma-joined.
-	ScanScanned string
-	MinHours    float64
-	// NumLogged is how many games are already in content/games — the
-	// denominator that makes a candidate count mean something.
-	NumLogged int
-	// Backlog* is the same scan against the other side of MinHours. It
-	// shares min_hours on purpose — one boundary, two complementary lists,
-	// so nothing can appear in both.
+	MinHours float64
+	// Backlog* is the Steam scan against the low side of MinHours — the
+	// other side of Catch up's New games list. They share min_hours on
+	// purpose: one boundary, two complementary lists, so nothing can appear
+	// in both.
 	BacklogCandidates []scanRow
 	BacklogError      string
 	BacklogNotices    []commands.ScanNotice
 	Incomplete        []commands.IncompleteCandidate
 	IncompletePct     float64
 	IncompleteAll     bool
-	StaleGames        []staleRow
-	StaleDays         int
-	CloseEntries      []commands.OpenEntry
-	CloseDays         int
-	CloseAll          bool
-	// Ignored are the games deliberately kept out of the two lists above.
+	// Ignored are the games deliberately kept out of New games and Backlog.
 	// Shown so the decision stays visible and reversible from the same page
 	// it was made on.
 	Ignored []model.IgnoredGame
 	// ActiveTab is which of the page's radio-driven tabs should render
 	// checked, so a redirect back from a POST action (see
 	// housekeepingReturnTo) reopens on the tab the user was on rather than
-	// always snapping back to Scan.
+	// always snapping back to Backlog.
 	ActiveTab string
 }
 
 // housekeepingTabs are the valid values for the "tab" query/form param —
 // the ids on housekeeping.html's tab radios, minus their "tab-" prefix.
-var housekeepingTabs = []string{"scan", "backlog", "ignored", "incomplete", "stale", "close", "achievements"}
+var housekeepingTabs = []string{"backlog", "ignored", "incomplete", "achievements"}
 
 func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
@@ -406,9 +395,6 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 			minHours = f
 		}
 	}
-	staleDays := atoiOr(q.Get("stale_days"), commands.DefaultStaleDays)
-	closeDays := atoiOr(q.Get("close_days"), commands.DefaultStaleDays)
-	closeAll := q.Get("close_all") == "1"
 	incompletePct := float64(commands.DefaultIncompletePct)
 	if v := q.Get("incomplete_pct"); v != "" {
 		if f, err := strconv.ParseFloat(v, 64); err == nil {
@@ -416,7 +402,7 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	incompleteAll := q.Get("incomplete_all") == "1"
-	activeTab := "scan"
+	activeTab := "backlog"
 	if v := q.Get("tab"); slices.Contains(housekeepingTabs, v) {
 		activeTab = v
 	}
@@ -426,35 +412,14 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 		MinHours:      minHours,
 		IncompletePct: incompletePct,
 		IncompleteAll: incompleteAll,
-		StaleDays:     staleDays,
-		CloseDays:     closeDays,
-		CloseAll:      closeAll,
 		ActiveTab:     activeTab,
 	}
 
-	// Re-scan asks for every provider's list fresh, not the memoized one —
-	// that's how something played in the last few minutes shows up.
+	// Re-scan asks for Steam's list fresh, not the memoized one — that's how
+	// something bought in the last few minutes shows up.
 	if q.Get("refresh") == "1" {
 		commands.ForgetScanCache(commands.LoadCredentials())
 	}
-	scan, numExisting, err := s.scanCandidates(minHours, commands.ScanModePlayed)
-	if err != nil {
-		// Kept separate from Page.Flash, which is reserved for the
-		// redirect-landing confirmation from a stale/close/scan-create
-		// action — scan's "no credentials configured" would otherwise
-		// silently clobber that on every load.
-		data.ScanError = err.Error()
-	} else {
-		data.ScanCandidates = scanRows(scan.Candidates, forms.ScanQuickStatuses, "/scan", minHours, "scan")
-		data.ScanNotices = scan.Notices
-		var scanned []string
-		for _, p := range scan.Scanned {
-			scanned = append(scanned, model.ProviderLabel(p))
-		}
-		data.ScanScanned = strings.Join(scanned, ", ")
-		data.NumLogged = numExisting
-	}
-
 	backlog, _, err := s.scanCandidates(minHours, commands.ScanModeBacklog)
 	if err != nil {
 		data.BacklogError = err.Error()
@@ -485,31 +450,23 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	}
 	data.Incomplete = incomplete
 
-	staleCandidates, err := commands.FindStaleCandidates(model.FindArchiveDir(s.gamesDir), games, staleDays)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	staleRows := make([]staleRow, len(staleCandidates))
-	for i, c := range staleCandidates {
+	s.render(w, "housekeeping", data)
+}
+
+// staleRows pairs each stale candidate with its rendered card and the
+// statuses it didn't guess, for the one-click corrections beside the guess.
+func staleRows(candidates []commands.StaleCandidate) []staleRow {
+	rows := make([]staleRow, len(candidates))
+	for i, c := range candidates {
 		var others []string
 		for _, st := range forms.StaleQuickStatuses {
 			if st != c.SuggestedStatus {
 				others = append(others, st)
 			}
 		}
-		staleRows[i] = staleRow{C: c, Card: commands.FormatStaleCard(c), OtherStatuses: others}
+		rows[i] = staleRow{C: c, Card: commands.FormatStaleCard(c), OtherStatuses: others}
 	}
-	data.StaleGames = staleRows
-
-	open, err := commands.FindOpenEntries(model.FindArchiveDir(s.gamesDir), s.gamesDir, games, closeDays, closeAll)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	data.CloseEntries = open
-
-	s.render(w, "housekeeping", data)
+	return rows
 }
 
 func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {

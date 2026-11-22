@@ -7,7 +7,7 @@ import (
 )
 
 // job tracks one long-running background operation — the whole-library
-// sweeps (refresh every game's achievements; suggest across every game) slow
+// runs (refresh every game's achievements; Catch up's "Load what's new") slow
 // enough (RA throttles to ~1.2s/call, and there can be 200+ linked games)
 // that they can't run inside a single HTTP request. In-memory only: this is
 // a single-user local tool, so a job doesn't need to survive a restart of
@@ -28,11 +28,15 @@ type job struct {
 	Title     string // heading for the job monitor page
 	BackHref  string // where the monitor's "back" link points
 	BackLabel string // that link's text
+	Nav       string // which nav item the monitor highlights
+
+	// DoneHref, when set, is where the monitor sends the browser once the job
+	// finishes cleanly (an HX-Redirect on the progress poll) — Catch up's run
+	// lands straight back on the queue it just built rather than on its log.
+	DoneHref string
 }
 
-// logLine is one line of a job's log. Href, when set, makes the line a link
-// — the suggest sweep uses it so a flagged game is one click from the panel
-// where its suggestion can be logged.
+// logLine is one line of a job's log. Href, when set, makes the line a link.
 type logLine struct {
 	Text string
 	Href string
@@ -88,9 +92,20 @@ func (r *jobRegistry) create(title, backHref, backLabel string) (string, *job) {
 	r.mu.Lock()
 	defer r.mu.Unlock()
 	id := fmt.Sprintf("%d", time.Now().UnixNano())
-	j := &job{Status: "running", Title: title, BackHref: backHref, BackLabel: backLabel}
+	j := &job{Status: "running", Title: title, BackHref: backHref, BackLabel: backLabel, Nav: "housekeeping"}
 	r.jobs[id] = j
 	return id, j
+}
+
+// running reports whether the job with this id exists and hasn't finished.
+func (r *jobRegistry) running(id string) bool {
+	j := r.get(id)
+	if j == nil {
+		return false
+	}
+	j.mu.Lock()
+	defer j.mu.Unlock()
+	return j.Status == "running"
 }
 
 func (r *jobRegistry) get(id string) *job {

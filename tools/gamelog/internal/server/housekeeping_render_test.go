@@ -2,6 +2,7 @@ package server
 
 import (
 	"bytes"
+	"html/template"
 	"strings"
 	"testing"
 
@@ -9,6 +10,21 @@ import (
 	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
+
+// renderScan renders Catch up's New games fragment, where the scan rows live
+// now, the same way handleCatchupScan does.
+func renderScan(t *testing.T, data catchupScanData) string {
+	t.Helper()
+	tmpl, err := template.New("catchup_fragments.html").Funcs(funcMap).ParseFS(templatesFS, catchupFragmentFiles...)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var buf bytes.Buffer
+	if err := tmpl.ExecuteTemplate(&buf, "catchup_scan", data); err != nil {
+		t.Fatal(err)
+	}
+	return buf.String()
+}
 
 // The scan and backlog rows follow the stale section's paradigm — the guess
 // as the primary button, every other plausible status one click beside it,
@@ -21,9 +37,6 @@ func TestHousekeepingRenders(t *testing.T) {
 	}
 	data := housekeepingData{
 		MinHours: 5,
-		ScanCandidates: scanRows([]commands.Candidate{
-			{Provider: model.ProviderRA, Title: "Banjo", ID: "10210", Status: "finished", Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-01-02", AchievementsA: 12, AchievementsB: 189},
-		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
 		BacklogCandidates: scanRows([]commands.Candidate{
 			{Provider: model.ProviderSteam, Title: "Tunic", ID: "553420", Status: "backlog"},
 		}, forms.BacklogQuickStatuses, "/backlog", 5, "backlog"),
@@ -33,7 +46,17 @@ func TestHousekeepingRenders(t *testing.T) {
 	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
 		t.Fatal(err)
 	}
-	out := buf.String()
+	scanned := scanRows([]commands.Candidate{
+		{Provider: model.ProviderRA, Title: "Banjo", ID: "10210", Status: "finished", Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-01-02", AchievementsA: 12, AchievementsB: 189},
+	}, forms.ScanQuickStatuses, "/scan", 5, "scan")
+	scanned[0].From = "catchup"
+	out := buf.String() + renderScan(t, catchupScanData{Rows: scanned, Thresholds: catchupThresholds{MinHours: 5}})
+	if !strings.Contains(out, `<input type="hidden" name="from" value="catchup">`) {
+		t.Error("a Catch up scan row must carry from=catchup so a no-JS post lands back there")
+	}
+	if strings.Contains(buf.String(), "tab-scan") || strings.Contains(buf.String(), "tab-stale") || strings.Contains(buf.String(), "tab-close") {
+		t.Error("Scan, Stale and Close moved to Catch up; Housekeeping must not still render their tabs")
+	}
 	for _, want := range []string{
 		"Correct — create finished",
 		`<option value="dropped">`,
@@ -106,14 +129,10 @@ func TestHousekeepingRenders(t *testing.T) {
 // game this belongs to" — creating it would make a second entry for a game
 // that already has one. The other two parts of the row (create-as, never log
 // this) stay, since the guess can still be wrong.
-func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
-	tmpl, err := parsePage(pageSpecs["housekeeping"].name, pageSpecs["housekeeping"].partials...)
-	if err != nil {
-		t.Fatal(err)
-	}
-	data := housekeepingData{
-		MinHours: 5,
-		ScanCandidates: scanRows([]commands.Candidate{
+func TestScanRenders_SubsetRowOffersAttach(t *testing.T) {
+	data := catchupScanData{
+		Thresholds: catchupThresholds{MinHours: 5},
+		Rows: scanRows([]commands.Candidate{
 			{
 				Provider: model.ProviderRA, Title: "Professor Layton and the Last Specter [Subset - Mouse Alley]",
 				ID: "25709", Status: "playing", AchievementsA: 6, AchievementsB: 52,
@@ -137,11 +156,7 @@ func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
 			},
 		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
 	}
-	var buf bytes.Buffer
-	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
-		t.Fatal(err)
-	}
-	out := buf.String()
+	out := renderScan(t, data)
 
 	for _, want := range []string{
 		`action="/subset/attach"`,
@@ -172,26 +187,18 @@ func TestHousekeepingRenders_SubsetRowOffersAttach(t *testing.T) {
 // creating anything, and must post the ids LinkToGame needs — while still
 // offering "Create as" (with its own guessed status in the dropdown, since
 // the primary no longer creates it) for a different game with the same name.
-func TestHousekeepingRendersLinkRow(t *testing.T) {
-	tmpl, err := parsePage(pageSpecs["housekeeping"].name, pageSpecs["housekeeping"].partials...)
-	if err != nil {
-		t.Fatal(err)
-	}
-	data := housekeepingData{
-		MinHours:    5,
-		ScanScanned: "Steam, Google Play",
-		ScanNotices: []commands.ScanNotice{{Provider: model.ProviderPSN, Message: "npsso expired"}},
-		ScanCandidates: scanRows([]commands.Candidate{{
+func TestScanRendersLinkRow(t *testing.T) {
+	data := catchupScanData{
+		Thresholds: catchupThresholds{MinHours: 5},
+		Scanned:    "Steam, Google Play",
+		Notices:    []commands.ScanNotice{{Provider: model.ProviderPSN, Message: "npsso expired"}},
+		Rows: scanRows([]commands.Candidate{{
 			Provider: model.ProviderGooglePlay, Title: "Balatro", ID: "588451498103", Platform: "Android",
 			Status: "playing", AchievementsA: 16, AchievementsB: 31,
 			LinkTo: &commands.LinkTarget{Slug: "balatro", Title: "Balatro"},
 		}}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
 	}
-	var buf bytes.Buffer
-	if err := tmpl.ExecuteTemplate(&buf, "layout", data); err != nil {
-		t.Fatal(err)
-	}
-	out := buf.String()
+	out := renderScan(t, data)
 	for _, want := range []string{
 		`id="link-googleplay-588451498103"`,
 		`form="link-googleplay-588451498103"`,

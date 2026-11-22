@@ -316,23 +316,17 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); width
 }
 .tabs__label:hover { color: var(--fg); background: var(--panel-2); }
 .tabs__panel { display: none; }
-#tab-scan:checked ~ .tabs__nav .tabs__label[for="tab-scan"],
 #tab-backlog:checked ~ .tabs__nav .tabs__label[for="tab-backlog"],
 #tab-ignored:checked ~ .tabs__nav .tabs__label[for="tab-ignored"],
 #tab-incomplete:checked ~ .tabs__nav .tabs__label[for="tab-incomplete"],
-#tab-stale:checked ~ .tabs__nav .tabs__label[for="tab-stale"],
-#tab-close:checked ~ .tabs__nav .tabs__label[for="tab-close"],
 #tab-achievements:checked ~ .tabs__nav .tabs__label[for="tab-achievements"] {
   color: var(--accent); background: var(--panel);
   border-color: var(--stroke); border-bottom-color: var(--panel);
   margin-bottom: -1px;
 }
-#tab-scan:checked ~ .tabs__panel--scan,
 #tab-backlog:checked ~ .tabs__panel--backlog,
 #tab-ignored:checked ~ .tabs__panel--ignored,
 #tab-incomplete:checked ~ .tabs__panel--incomplete,
-#tab-stale:checked ~ .tabs__panel--stale,
-#tab-close:checked ~ .tabs__panel--close,
 #tab-achievements:checked ~ .tabs__panel--achievements { display: block; }
 
 /* ── Tables ────────────────────────────────────────────────────────────── */
@@ -390,6 +384,16 @@ div.tui.row--error { border-color: var(--stop); }
 .suggest-provider + .suggest-provider { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--stroke); }
 .suggest-provider p { margin: 0 0 0.4rem; }
 .suggest-provider form + form { margin-top: 0.5rem; }
+
+/* Catch up (catchup.html): an activity card's findings, then its one-line
+   form. The older-activity section is a <details> whose summary is the h2. */
+.activity__summary { margin: 0 0 0.3rem; }
+.activity__providers { margin: 0 0 0.4rem; padding-left: 1.2rem; color: var(--dim); font-size: 0.85rem; }
+.activity__form select { width: auto; }
+.catchup-older > summary { cursor: pointer; list-style: revert; }
+.catchup-older > summary h2 { display: inline; }
+.catchup-options { margin-top: 1rem; }
+.catchup-options > summary { cursor: pointer; font-size: 0.85rem; }
 
 /* Attached RetroAchievements subsets, under the provider-ID form they belong
    with. Read-only, so it's a list rather than fields — see game_detail.html. */

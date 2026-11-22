@@ -3,7 +3,7 @@
 <p class="lead">{{len .Games}} logged.</p>
 <p class="hint">Started/Finished are the game's own dates; a greyed-out date is known from a playthrough instead — edit that from the game's own page.</p>
 
-<form method="get" action="/" class="row">
+<form method="get" action="/games" class="row">
   <input type="search" name="q" placeholder="filter by title..." value="{{.Query}}" style="max-width: 22rem;">
   <div class="checkbox-row"><input type="checkbox" id="drafts" name="drafts" value="1"{{if .DraftsOnly}} checked{{end}} onchange="this.form.submit()"><label for="drafts">drafts only</label></div>
   <button type="submit">Filter</button>

@@ -1,0 +1,128 @@
+{{/* Catch up's swappable pieces. Parsed into the page itself and, on their own
+     (with scan_actions.html), for the htmx responses that replace them: an
+     activity card re-rendered with an error, and the New games table loaded
+     after the page is up (see handleCatchupScan). */}}
+
+{{/* The page's thresholds plus from=catchup, carried by every form that
+     posts from Catch up so a plain (no-JS) post lands back on the same view
+     (see housekeepingReturnTo). Takes a catchupThresholds. */}}
+{{define "catchup_hidden"}}
+<input type="hidden" name="from" value="catchup">
+<input type="hidden" name="min_hours" value="{{.MinHours}}">
+<input type="hidden" name="stale_days" value="{{.StaleDays}}">
+<input type="hidden" name="close_days" value="{{.CloseDays}}">
+{{if .CloseAll}}<input type="hidden" name="close_all" value="1">{{end}}
+{{end}}
+
+{{/* One game with provider activity no logged playthrough covers. The form
+     is pre-filled with commands.guessActivity's answer — a session on a
+     one-shot game's run, a finished run for an uncovered award, a closed
+     unfinished run for activity that stopped long ago, an open run otherwise —
+     and every field stays editable. Log posts through the game page's own
+     write helpers; Dismiss marks this activity reviewed (archive/catchup.yaml)
+     so it stops coming back until there's something newer.
+
+     The two buttons reach their forms by id, the same pattern as the scan
+     rows, so they share a row without nesting one form in another. Picking
+     a session target disables the status select: a session has no status of
+     its own, and a disabled field isn't submitted. Takes an activityCard. */}}
+{{define "activity_card"}}
+{{$slug := .Game.Slug}}
+<div class="tui activity{{if .Error}} row--error{{end}}">
+  <span class="tui__title">{{.Game.Title}}{{if .Game.Draft}} · draft{{end}} · {{.Days}} unlogged day{{if ne .Days 1}}s{{end}}</span>
+  <p class="activity__summary">
+    <strong>{{.First}}{{if ne .First .Last}} → {{.Last}}{{end}}</strong>
+    {{- with .AwardKind}} · {{.}} {{$.Award}}{{end}}
+    {{- if .NewUnlocks}} · +{{.NewUnlocks}} achievement{{if ne .NewUnlocks 1}}s{{end}} since last catch-up{{end}}
+  </p>
+  <ul class="activity__providers">
+    {{range .Providers}}<li>{{.Label}}{{with .Platform}} · {{.}}{{end}}: {{.Days}} day{{if ne .Days 1}}s{{end}}, {{.First}}{{if ne .First .Last}} → {{.Last}}{{end}}{{with .LastPlayed}} · last played {{.}}{{end}}</li>{{end}}
+  </ul>
+  <p class="hint">
+    {{- with .Runs}}Logged: {{range $i, $r := .}}{{if $i}}; {{end}}#{{add1 $r.Index}} {{$r.Status}} {{dash $r.EarliestDate}} → {{dash $r.FinishDate}}{{end}}
+    {{- else}}Nothing logged yet{{if eq .Game.Status "backlog"}} (status: backlog){{end}}.{{end -}}
+  </p>
+  {{with .Error}}<p class="error-text">{{.}}</p>{{end}}
+  <form method="post" action="/catchup/log/{{$slug}}" id="log-{{$slug}}" class="row activity__form">
+    {{template "catchup_hidden" .Thresholds}}
+    <input type="hidden" name="tab" value="activity">
+    <select name="target" aria-label="Log {{.Game.Title}} as" onchange="this.form.elements.status.disabled = this.value !== 'new'">
+      {{range .Targets}}<option value="{{.Value}}"{{if .Selected}} selected{{end}}>{{.Label}}</option>{{end}}
+    </select>
+    <input type="text" name="started" required value="{{.Started}}" placeholder="started (YYYY-MM-DD)" aria-label="started">
+    <input type="text" name="finished" value="{{.Finished}}" aria-label="finished"
+      placeholder="{{with .FinishedHint}}last activity {{.}}{{else}}finished (blank if ongoing){{end}}">
+    <select name="status" aria-label="status"{{if .IsSession}} disabled{{end}}>
+      {{$st := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $st}} selected{{end}}>{{.}}</option>{{end}}
+    </select>
+    <input type="text" name="notes" value="{{.Notes}}" placeholder="notes" aria-label="notes">
+  </form>
+  <form method="post" action="/catchup/dismiss/{{$slug}}" id="dismiss-{{$slug}}" class="form--hidden">
+    {{template "catchup_hidden" .Thresholds}}
+    <input type="hidden" name="tab" value="activity">
+  </form>
+  <div class="btn-row">
+    <button type="submit" form="log-{{$slug}}" class="btn--primary"
+      hx-post="/catchup/log/{{$slug}}" hx-include="#log-{{$slug}}"
+      hx-target="closest .tui" hx-swap="outerHTML">Log</button>
+    <button type="submit" form="dismiss-{{$slug}}"
+      hx-post="/catchup/dismiss/{{$slug}}" hx-include="#dismiss-{{$slug}}"
+      hx-target="closest .tui" hx-swap="outerHTML">Dismiss</button>
+    <a class="btn" href="/games/{{$slug}}">Open game</a>
+  </div>
+</div>
+{{end}}
+
+{{/* The New games section: every configured provider's library, less what's
+     logged or ignored: the scan rows that used to be Housekeeping's Scan
+     tab, unchanged. Takes a catchupScanData. */}}
+{{define "catchup_scan"}}
+<div id="catchup-scan">
+  {{with .Error}}<div class="flash flash--error">{{.}}</div>{{end}}
+  {{range .Notices}}<div class="flash flash--error">{{.}}</div>{{end}}
+  {{if .Rows}}
+  <p class="hint">{{len .Rows}} unlogged or unlinked game{{if ne (len .Rows) 1}}s{{end}}{{with .Scanned}} across {{.}}{{end}},
+     Steam filtered to {{.Thresholds.MinHours}}h+ ({{.NumLogged}} already logged). A game already logged under the
+     same title is offered as a link, so its history on the other service gets captured too. Anything
+     created is a <code>draft: true</code> guess. Steam games are never marked finished: playtime says
+     nothing about completion. Once it exists, its activity shows up above for real dates.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Game</th><th>Provider</th><th>Evidence</th><th>Would create</th><th></th></tr></thead>
+    <tbody>
+    {{range .Rows}}
+    <tr>
+      <td>{{.C.Title}}
+        {{- with .C.Subset}}
+        <span class="row-note">
+          {{- if .Attachable}}subset of {{.BaseSlug}}
+          {{- else if .ParentID}}subset of RA {{.ParentID}} — not logged yet
+          {{- else}}looks like a subset, but its parent could not be resolved{{with .Err}} ({{.}}){{end}}
+          {{- end -}}
+        </span>
+        {{- end}}
+        {{- if .C.LinkTo}}<span class="row-note">logged as {{.C.LinkTo.Slug}}, not linked to {{.C.ProviderLabel}} yet</span>{{end}}
+        {{- with .C.Note}}<span class="row-note">{{.}}</span>{{end}}
+      </td>
+      <td class="dim">{{.C.ProviderLabel}} {{.C.ID}} · {{.C.Platform}}</td>
+      <td class="dim">{{with .C.Evidence}}{{.}}{{else}}—{{end}}</td>
+      <td class="dim">
+        {{- if .C.IsLink -}}
+          link to {{.C.LinkTo.Title}}
+        {{- else if .C.IsSubset -}}
+          {{- if .C.Subset.ParentID}}attach to {{.C.Subset.BaseTitle}}{{else}}—{{end -}}
+        {{- else -}}
+          {{- with .C.Outcome}}{{.}}{{else}}{{.C.Status}}{{end -}}
+        {{- end -}}
+      </td>
+      <td>{{template "create_actions" .}}</td>
+    </tr>
+    {{end}}
+    </tbody>
+  </table>
+  </div>
+  {{else if not .Error}}
+  <p class="empty">No new games{{with .Scanned}} on {{.}}{{end}}.</p>
+  {{end}}
+</div>
+{{end}}

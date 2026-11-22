@@ -118,12 +118,12 @@ func TestCloseSelected_SkipsStaleAndPositionalValues(t *testing.T) {
 }
 
 // The checkbox has to carry the key, or the handler has nothing to match.
-func TestHousekeepingCloseRowsPostKeys(t *testing.T) {
-	tmpl, err := parsePage(pageSpecs["housekeeping"].name, pageSpecs["housekeeping"].partials...)
+func TestCatchupCloseRowsPostKeys(t *testing.T) {
+	tmpl, err := parsePage(pageSpecs["catchup"].name, pageSpecs["catchup"].partials...)
 	if err != nil {
 		t.Fatal(err)
 	}
-	data := housekeepingData{CloseEntries: []commands.OpenEntry{
+	data := catchupData{Close: []commands.OpenEntry{
 		{Game: model.GameSummary{Slug: "alpha", Title: "Alpha"}, Index: 2, CloseOn: "2015-01-01"},
 	}}
 	var buf bytes.Buffer

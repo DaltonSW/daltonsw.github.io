@@ -10,6 +10,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sync"
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/forms"
@@ -50,6 +51,7 @@ var rowTemplateCache *template.Template
 var playthroughFragmentsCache *template.Template
 var jobProgressCache *template.Template
 var suggestFragmentsCache *template.Template
+var catchupFragmentsCache *template.Template
 
 func init() {
 	if info, err := os.Stat(devWebRoot + "/web/templates"); err == nil && info.IsDir() {
@@ -76,6 +78,8 @@ func init() {
 			ParseFS(templatesFS, "web/templates/job_progress.html"))
 		suggestFragmentsCache = template.Must(template.New("suggest_fragments.html").Funcs(funcMap).
 			ParseFS(templatesFS, "web/templates/suggest_fragments.html"))
+		catchupFragmentsCache = template.Must(template.New("catchup_fragments.html").Funcs(funcMap).
+			ParseFS(templatesFS, catchupFragmentFiles...))
 	}
 }
 
@@ -107,6 +111,14 @@ func Run(port int) error {
 type server struct {
 	gamesDir string
 	jobs     *jobRegistry
+
+	// catchup is the in-flight (or last) "Load what's new" run, so a second
+	// click joins it instead of starting another, plus the notes that run
+	// left for the Catch up page (a failed BTD6 or Trackmania fetch) — kept in
+	// memory only, since they describe the run that just happened.
+	catchupMu    sync.Mutex
+	catchupJobID string
+	catchupNotes []string
 }
 
 func (s *server) registerRoutes(mux *http.ServeMux) {
@@ -116,7 +128,13 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	}
 	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServerFS(staticSub)))
 
-	mux.HandleFunc("GET /{$}", s.handleIndex)
+	mux.HandleFunc("GET /{$}", s.handleCatchup)
+	mux.HandleFunc("POST /catchup/run", s.handleCatchupRun)
+	mux.HandleFunc("GET /catchup/scan", s.handleCatchupScan)
+	mux.HandleFunc("POST /catchup/log/{slug}", s.handleCatchupLog)
+	mux.HandleFunc("POST /catchup/dismiss/{slug}", s.handleCatchupDismiss)
+
+	mux.HandleFunc("GET /games", s.handleIndex)
 	mux.HandleFunc("GET /games/new", s.handleNewGameForm)
 	mux.HandleFunc("POST /games/new", s.handleCreateGame)
 	mux.HandleFunc("GET /games/{slug}", s.handleGameDetail)
@@ -155,8 +173,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /jobs/{id}", s.handleJobStatus)
 	mux.HandleFunc("GET /jobs/{id}/progress", s.handleJobProgress)
 
-	mux.HandleFunc("GET /suggest", s.handleSuggestPicker)
-	mux.HandleFunc("POST /suggest/all", s.handleSuggestAll)
+	mux.HandleFunc("GET /suggest", s.handleSuggestIndex)
 	mux.HandleFunc("GET /suggest/{slug}", s.handleSuggestReport)
 
 	mux.HandleFunc("POST /project", s.handleProject)
@@ -210,7 +227,8 @@ var funcMap = template.FuncMap{
 		}
 		return out
 	},
-	"itoa": strconv.Itoa,
+	"itoa":          strconv.Itoa,
+	"providerLabel": model.ProviderLabel,
 	"percent": func(current, total int) int {
 		if total <= 0 {
 			return 0
@@ -274,13 +292,18 @@ var pageSpecs = map[string]struct {
 	name     string
 	partials []string
 }{
-	"index":          {"index.html", []string{"web/templates/game_row.html"}},
-	"game_new":       {"game_new.html", nil},
-	"game_detail":    {"game_detail.html", []string{"web/templates/playthrough_fragments.html"}},
-	"housekeeping":   {"housekeeping.html", nil},
-	"suggest_picker": {"suggest_picker.html", nil},
-	"job":            {"job.html", []string{"web/templates/job_progress.html"}},
+	"catchup":      {"catchup.html", []string{"web/templates/catchup_fragments.html", "web/templates/scan_actions.html"}},
+	"index":        {"index.html", []string{"web/templates/game_row.html"}},
+	"game_new":     {"game_new.html", nil},
+	"game_detail":  {"game_detail.html", []string{"web/templates/playthrough_fragments.html"}},
+	"housekeeping": {"housekeeping.html", []string{"web/templates/scan_actions.html"}},
+	"job":          {"job.html", []string{"web/templates/job_progress.html"}},
 }
+
+// catchupFragmentFiles are what Catch up's htmx fragments (an activity card
+// re-rendered with an error, the lazily loaded New games table) parse from:
+// the fragments themselves plus the scan rows' shared action block.
+var catchupFragmentFiles = []string{"web/templates/catchup_fragments.html", "web/templates/scan_actions.html"}
 
 // renderRow renders game_row.html on its own — the fragment
 // handleQuickEditGame swaps into the index page via htmx, as opposed to a
@@ -347,12 +370,14 @@ func (s *server) renderJobProgress(w http.ResponseWriter, data jobData) {
 
 // renderFragment renders one named template out of a standalone fragment
 // file (not wrapped in layout), reparsing it per request in dev mode like
-// the other render helpers.
-func (s *server) renderFragment(w http.ResponseWriter, cached *template.Template, file, name string, data any) {
+// the other render helpers. partials are any further files (paths under
+// web/templates/) the fragment calls into.
+func (s *server) renderFragment(w http.ResponseWriter, cached *template.Template, file, name string, data any, partials ...string) {
 	tmpl := cached
 	if devMode {
 		var err error
-		tmpl, err = template.New(file).Funcs(funcMap).ParseFS(templatesFS, "web/templates/"+file)
+		files := append([]string{"web/templates/" + file}, partials...)
+		tmpl, err = template.New(file).Funcs(funcMap).ParseFS(templatesFS, files...)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -427,7 +452,8 @@ func (s *server) respondHousekeepingErr(w http.ResponseWriter, r *http.Request, 
 }
 
 // writeHousekeepingResult emits the swap-in fragment: a <tr> for the table-based
-// tabs (scan/backlog/ignored) and a <div> for the Stale tab's .tui card, keyed
+// lists (scan/backlog/ignored) and a <div> for a .tui card (stale, and Catch
+// up's activity cards), keyed
 // off the "tab" field every one of those forms already carries. row--saved is
 // the same one-shot confirmation flash the games list uses.
 func writeHousekeepingResult(w http.ResponseWriter, r *http.Request, ok bool, msg string) {
@@ -437,7 +463,7 @@ func writeHousekeepingResult(w http.ResponseWriter, r *http.Request, ok bool, ms
 		cls = "row--error"
 	}
 	esc := template.HTMLEscapeString(msg)
-	if r.FormValue("tab") == "stale" {
+	if tab := r.FormValue("tab"); tab == "stale" || tab == "activity" {
 		fmt.Fprintf(w, `<div class="tui %s">%s</div>`, cls, esc)
 		return
 	}
