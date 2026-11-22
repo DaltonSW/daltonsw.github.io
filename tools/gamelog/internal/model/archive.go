@@ -359,6 +359,13 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 func mergeAchievement(old, fresh ArchivedAchievement) ArchivedAchievement {
 	out := fresh
 	out.Name = FirstNonEmpty(fresh.Name, old.Name)
+	// Name and description travel together: a fresh entry with no description
+	// is a provider that didn't (or couldn't) say more this time — Exophase's
+	// page fetch failing leaves only a slug as the name — and it must not
+	// replace the real name an earlier refresh captured.
+	if fresh.Description == "" && old.Description != "" {
+		out.Name = old.Name
+	}
 	out.Description = FirstNonEmpty(fresh.Description, old.Description)
 	out.Icon = FirstNonEmpty(fresh.Icon, old.Icon)
 	out.Tier = FirstNonEmpty(fresh.Tier, old.Tier)

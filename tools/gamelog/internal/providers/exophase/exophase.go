@@ -5,9 +5,11 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"html"
 	"io"
 	"net/http"
 	"regexp"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -42,6 +44,9 @@ var (
 	exophaseBaseURL   = "https://www.exophase.com"
 	exophaseGamesURL  = "https://api.exophase.com/public/player/%s/games"
 	exophaseEarnedURL = "https://api.exophase.com/public/player/%s/game/%s/earned"
+	// exophaseGameAwardsURL is a game's page of every award, earned or not,
+	// with its display name and description. The JSON feed above has neither.
+	exophaseGameAwardsURL = "%s/game/%s/achievements/"
 	// exophaseMediaBaseURL serves award/trophy icons — a different host than
 	// the site itself (exophaseBaseURL 404s on these paths). Confirmed
 	// against the profile page's own embedded config, which names it
@@ -358,11 +363,18 @@ func (c *ExophaseClient) fetchGames(ctx context.Context, env string) (map[string
 
 // Award is one earned trophy. Only earned ones are listed — the
 // locked denominator comes from the game's TotalAwards. The feed carries no
-// display name or description (see fetchRecord), but it does carry icons —
-// site-relative paths in five sizes; "m" is used as a reasonable match for
-// the badge-sized rows RA/Steam icons already render at.
+// display name or description (those come from the game's page, see
+// GameAwards), but it does carry icons — site-relative paths in five sizes;
+// "m" is used as a reasonable match for the badge-sized rows RA/Steam icons
+// already render at.
 type Award struct {
 	Slug string `json:"slug"`
+	// MasterAwardID joins this award to its row on the game's page.
+	MasterAwardID int `json:"masterAwardId"`
+	// Endpoint is the award's own page path,
+	// /achievement/<game slug>/<id>-<award slug>; the game slug is what
+	// GameAwards needs.
+	Endpoint string `json:"endpoint"`
 	// CanonicalID is the service's own id for the achievement — on Google
 	// Play, the Play Games achievement id (see googlePlayAppID).
 	CanonicalID string `json:"canonical_id"`
@@ -395,6 +407,78 @@ func (c *ExophaseClient) Earned(ctx context.Context, playerID string, masterID i
 		return nil, nil, fmt.Errorf("exophase: decoding awards for game %d: %w", masterID, err)
 	}
 	return payload.List, body, nil
+}
+
+// AwardDetail is what a game's page says about one award that the earned feed
+// doesn't: its real name and description, and its points.
+type AwardDetail struct {
+	Name        string
+	Description string
+	Points      int
+}
+
+var (
+	awardRowRe    = regexp.MustCompile(`<li class="[^"]*\baward\b[^"]*"([^>]*)>`)
+	awardMasterRe = regexp.MustCompile(`data-master="(\d+)"`)
+	awardPointsRe = regexp.MustCompile(`data-points="(\d+)"`)
+	awardTitleRe  = regexp.MustCompile(`(?s)award-title[^>]*>\s*<a [^>]*>([^<]*)</a>`)
+	awardDescRe   = regexp.MustCompile(`(?s)award-description[^>]*>\s*<p>(.*?)</p>`)
+	awardGameRe   = regexp.MustCompile(`^/achievement/([^/]+)/`)
+)
+
+// ParseGameAwards reads a game's achievements page into details keyed by
+// master award id — the same id the earned feed carries as masterAwardId, so
+// locked awards parse too and are ready the day they're earned. Rows missing
+// an id or a name are skipped, never guessed at.
+func ParseGameAwards(page []byte) map[int]AwardDetail {
+	out := map[int]AwardDetail{}
+	rows := awardRowRe.FindAllSubmatchIndex(page, -1)
+	for i, r := range rows {
+		end := len(page)
+		if i+1 < len(rows) {
+			end = rows[i+1][0]
+		}
+		attrs, body := string(page[r[2]:r[3]]), string(page[r[1]:end])
+		id := awardMasterRe.FindStringSubmatch(attrs)
+		title := awardTitleRe.FindStringSubmatch(body)
+		if id == nil || title == nil {
+			continue
+		}
+		var d AwardDetail
+		d.Name = strings.TrimSpace(html.UnescapeString(title[1]))
+		if m := awardDescRe.FindStringSubmatch(body); m != nil {
+			d.Description = strings.TrimSpace(html.UnescapeString(m[1]))
+		}
+		if m := awardPointsRe.FindStringSubmatch(attrs); m != nil {
+			d.Points, _ = strconv.Atoi(m[1])
+		}
+		n, _ := strconv.Atoi(id[1])
+		if d.Name != "" && n > 0 {
+			out[n] = d
+		}
+	}
+	return out
+}
+
+// GameAwards fetches a game's page of every award by its Exophase slug.
+func (c *ExophaseClient) GameAwards(ctx context.Context, gameSlug string) (map[int]AwardDetail, error) {
+	body, err := c.get(ctx, fmt.Sprintf(exophaseGameAwardsURL, exophaseBaseURL, gameSlug))
+	if err != nil {
+		return nil, err
+	}
+	details := ParseGameAwards(body)
+	if len(details) == 0 {
+		return nil, fmt.Errorf("exophase: no awards found on the page for %q", gameSlug)
+	}
+	return details, nil
+}
+
+// gameSlug is the Exophase slug of the game an earned award belongs to, or "".
+func (a Award) gameSlug() string {
+	if m := awardGameRe.FindStringSubmatch(a.Endpoint); m != nil {
+		return m[1]
+	}
+	return ""
 }
 
 // EnvUbisoft is Exophase's slug for Ubisoft Connect (formerly Uplay).
@@ -529,13 +613,24 @@ func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id str
 		rec.LastError = err.Error()
 		return rec, nil
 	}
+	// The feed names awards only by slug, so read real names and descriptions
+	// off the game's page. Best effort: a failure leaves the slug as the name,
+	// and mergeAchievement never lets that overwrite a name an earlier refresh
+	// got, so the next refresh simply tries again.
+	var details map[int]AwardDetail
+	for _, a := range awards {
+		if slug := a.gameSlug(); slug != "" {
+			details, _ = client.GameAwards(ctx, slug)
+			break
+		}
+	}
 	for _, a := range awards {
 		if a.Timestamp <= 0 {
 			continue
 		}
-		// The awards feed carries no display name, only a slug. Using it for
-		// both keeps Key provider-stable and avoids inventing a title the
-		// provider never gave us; `raw` holds everything for later. Google
+		// Name falls back to the slug when the page had no row for the
+		// award. Using it keeps Key provider-stable and avoids inventing a
+		// title the provider never gave us; `raw` holds everything. Google
 		// Play keys on Google's own achievement id instead, which outlives
 		// any slug Exophase picks — Ubisoft stays on the slug because its
 		// archive already does, and a changed key would count every unlock
@@ -544,13 +639,17 @@ func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id str
 		if env == EnvGooglePlay && a.CanonicalID != "" {
 			key = a.CanonicalID
 		}
-		rec.Achievements = append(rec.Achievements, model.ArchivedAchievement{
+		ach := model.ArchivedAchievement{
 			Key:      key,
 			Name:     a.Slug,
 			Unlocked: true,
 			Date:     stamp(time.Unix(a.Timestamp, 0)),
 			Icon:     a.IconURL(),
-		})
+		}
+		if d, ok := details[a.MasterAwardID]; ok {
+			ach.Name, ach.Description, ach.Points = d.Name, d.Description, d.Points
+		}
+		rec.Achievements = append(rec.Achievements, ach)
 	}
 	rec.Raw = raw
 	rec.Fetched = today()

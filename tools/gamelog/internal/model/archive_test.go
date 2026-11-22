@@ -534,3 +534,25 @@ func TestBuildProviderLinks_PutsSubsetsBehindTheirBaseSet(t *testing.T) {
 		t.Errorf("got %+v, want the base link only", got)
 	}
 }
+
+// A refresh whose Exophase page fetch failed carries only a slug as the name.
+// It must not replace the real name and description an earlier refresh got.
+func TestMergeAchievement_SlugNameDoesNotReplaceDescribedName(t *testing.T) {
+	old := ArchivedAchievement{Key: "k", Name: "Novice Treasure Hunter", Description: "Collect 250 gold in one game", Points: 500, Unlocked: true}
+	fresh := ArchivedAchievement{Key: "k", Name: "novice-treasure-hunter", Unlocked: true}
+	got := mergeAchievement(old, fresh)
+	if got.Name != old.Name || got.Description != old.Description || got.Points != 500 {
+		t.Errorf("merged = %+v, want the described entry kept", got)
+	}
+}
+
+// The other direction is the whole point: a described fresh entry upgrades an
+// old slug-named one.
+func TestMergeAchievement_DescribedNameReplacesSlug(t *testing.T) {
+	old := ArchivedAchievement{Key: "k", Name: "novice-treasure-hunter", Unlocked: true}
+	fresh := ArchivedAchievement{Key: "k", Name: "Novice Treasure Hunter", Description: "Collect 250 gold in one game", Points: 500, Unlocked: true}
+	got := mergeAchievement(old, fresh)
+	if got.Name != "Novice Treasure Hunter" || got.Description == "" {
+		t.Errorf("merged = %+v, want the described entry", got)
+	}
+}

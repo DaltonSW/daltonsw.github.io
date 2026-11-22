@@ -1,0 +1,74 @@
+{
+ "provider": "googleplay",
+ "title": "Shattered Pixel Dungeon",
+ "updated": "2026-11-22",
+ "id": "162079574763",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
+ "unlocked": 2,
+ "total": 45,
+ "first": "2023-02-18",
+ "last": "2023-02-18",
+ "platform": "Google Play",
+ "completion": "1%",
+ "source": "exophase",
+ "last_played": "2023-02-18",
+ "achievements": [
+  {
+   "key": "CgkI65XI5dsEEAIQIg",
+   "name": "Novice Monster Hunter",
+   "unlocked": true,
+   "date": "2023-02-18T22:41:43-06:00",
+   "icon": "https://m.exophase.com/android/awards/m/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1",
+   "description": "Defeat 10 enemies in one game",
+   "points": 500
+  },
+  {
+   "key": "CgkI65XI5dsEEAIQJA",
+   "name": "Novice Treasure Hunter",
+   "unlocked": true,
+   "date": "2023-02-18T22:41:52-06:00",
+   "icon": "https://m.exophase.com/android/awards/m/64357e4.png?af08decea0c0f102213c26c8a8fbbef1",
+   "description": "Collect 250 gold in one game",
+   "points": 500
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 4576792,
+    "awardid": 4576792,
+    "earned": "February 19, 2023, 4:41 am (UTC+0)",
+    "slug": "novice-treasure-hunter",
+    "canonical_id": "CgkI65XI5dsEEAIQJA",
+    "endpoint": "/achievement/shattered-pixel-dungeon-android/641630-novice-treasure-hunter",
+    "icons": {
+     "s": "/android/awards/s/64357e4.png?af08decea0c0f102213c26c8a8fbbef1",
+     "m": "/android/awards/m/64357e4.png?af08decea0c0f102213c26c8a8fbbef1",
+     "l": "/android/awards/l/64357e4.png?af08decea0c0f102213c26c8a8fbbef1",
+     "o": "/android/awards/o/64357e4.png?af08decea0c0f102213c26c8a8fbbef1",
+     "t": "/android/awards/t/64357e4.png?af08decea0c0f102213c26c8a8fbbef1"
+    },
+    "timestamp": 1676781712
+   },
+   {
+    "masterAwardId": 4576790,
+    "awardid": 4576790,
+    "earned": "February 19, 2023, 4:41 am (UTC+0)",
+    "slug": "novice-monster-hunter",
+    "canonical_id": "CgkI65XI5dsEEAIQIg",
+    "endpoint": "/achievement/shattered-pixel-dungeon-android/641628-novice-monster-hunter",
+    "icons": {
+     "s": "/android/awards/s/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1",
+     "m": "/android/awards/m/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1",
+     "l": "/android/awards/l/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1",
+     "o": "/android/awards/o/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1",
+     "t": "/android/awards/t/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1"
+    },
+    "timestamp": 1676781703
+   }
+  ],
+  "master_gameid": "141684",
+  "success": true
+ }
+}

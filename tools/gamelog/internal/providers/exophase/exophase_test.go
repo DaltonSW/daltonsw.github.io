@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"strings"
 	"testing"
 )
@@ -245,5 +246,38 @@ func TestFetchGooglePlayRecordPastThePayload(t *testing.T) {
 	}
 	if rec.Achievements[0].Key != "CgkI95DFk5AREAIQCQ" || rec.Achievements[0].Name != "card-discarder" {
 		t.Errorf("achievement = %+v; want Google's id as key, slug as name", rec.Achievements[0])
+	}
+}
+
+// testdata/game_achievements.html is two rows cut from the live
+// /game/shattered-pixel-dungeon-android/achievements/ page: one locked, one
+// earned. Both must parse, since the page lists locked awards too.
+func TestParseGameAwardsReadsNameDescriptionAndPoints(t *testing.T) {
+	page, err := os.ReadFile("testdata/game_achievements.html")
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := ParseGameAwards(page)
+	want := map[int]AwardDetail{
+		4576792: {Name: "Novice Treasure Hunter", Description: "Collect 250 gold in one game", Points: 500},
+		2603576: {Name: "Prison Warden", Description: "Defeat the boss at the end of the prison", Points: 1000},
+	}
+	if len(got) != len(want) {
+		t.Fatalf("parsed %d awards, want %d: %+v", len(got), len(want), got)
+	}
+	for id, w := range want {
+		if got[id] != w {
+			t.Errorf("award %d = %+v, want %+v", id, got[id], w)
+		}
+	}
+}
+
+func TestAwardGameSlugComesFromItsEndpoint(t *testing.T) {
+	a := Award{Endpoint: "/achievement/shattered-pixel-dungeon-android/641630-novice-treasure-hunter"}
+	if got := a.gameSlug(); got != "shattered-pixel-dungeon-android" {
+		t.Errorf("gameSlug = %q", got)
+	}
+	if got := (Award{}).gameSlug(); got != "" {
+		t.Errorf("gameSlug with no endpoint = %q, want empty", got)
 	}
 }

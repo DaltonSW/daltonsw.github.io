@@ -982,8 +982,15 @@ exophase` on the record.
 `googleplay_id` is the **Play Games application id** — a 12-digit number (Balatro is
 `588451498103`), Google's own and permanent. `gamelog exophase list googleplay` prints every game
 next to it, and Scan offers every unlinked one. Achievements are keyed on Google's own achievement
-id (`CgkI…`) rather than Exophase's slug, which is kept as the name — the feed has no display
-names or descriptions, same as Ubisoft. There's no playtime and no first-played date; there is a
+id (`CgkI…`) rather than Exophase's slug. The earned feed has only the slug (same as Ubisoft), so
+each refresh also reads the game's `/game/<slug>/achievements/` page (`GameAwards`; the game slug
+is in each award's `endpoint`) and joins its rows on `masterAwardId` for the real name,
+description and points. The page lists locked awards too, but only earned ones are archived — a
+locked one has no `CgkI…` key to file it under. It's best effort: if the page fetch fails the slug
+stays as the name, `mergeAchievement` won't let a description-less entry replace a described
+one's name, and the next refresh tries again. Parsing is by regexp against live markup
+(`testdata/game_achievements.html`), so a layout change shows up as slug names, not lost data.
+There's no playtime and no first-played date; there is a
 last-played date and Exophase's completion date.
 
 Two quirks, both found against live responses:
