@@ -12,7 +12,7 @@ function initGamesLog(root: HTMLElement): void {
   const provider = root.querySelector<HTMLSelectElement>("[data-log-provider]");
   const kinds = Array.from(root.querySelectorAll<HTMLInputElement>("[data-log-kind]"));
   const empty = root.querySelector<HTMLElement>("[data-log-empty]");
-  const groups = Array.from(root.querySelectorAll<HTMLDetailsElement>(".ach-list > .year-group"));
+  const groups = Array.from(root.querySelectorAll<HTMLDetailsElement>(".side-panel__main > .year-group"));
 
   const originalOpen = new Map<HTMLDetailsElement, boolean>();
   for (const group of groups) originalOpen.set(group, group.open);

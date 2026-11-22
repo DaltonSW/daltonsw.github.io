@@ -1,0 +1,749 @@
+{
+ "provider": "steam",
+ "title": "Mina the Hollower",
+ "updated": "2026-11-21",
+ "id": "1875580",
+ "fetched": "2026-11-21",
+ "last_attempt": "2026-11-21",
+ "unlocked": 18,
+ "total": 50,
+ "first": "2026-11-08",
+ "last": "2026-11-18",
+ "platform": "PC",
+ "icon": "dede041a155f1846f1b2104daf9a389af8db0e62",
+ "playtime_mins": 2083,
+ "playtime": {
+  "disconnected": 167,
+  "linux": 2083
+ },
+ "last_played": "2026-11-21",
+ "achievements": [
+  {
+   "key": "ThorneBeater",
+   "name": "Thorne Beater",
+   "description": "Defeat Thorne for the first time.",
+   "unlocked": true,
+   "date": "2026-11-08T17:00:38-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/0b2487f202b4a9f9f339761e2d044e1182aa27a8.jpg"
+  },
+  {
+   "key": "FirstPurchase",
+   "name": "First Purchase",
+   "description": "Buy your first item.",
+   "unlocked": true,
+   "date": "2026-11-08T17:46:01-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/036c30dc92aeded5e538c43731b179330d9da6e4.jpg"
+  },
+  {
+   "key": "SillyHub",
+   "name": "Trash Juggler",
+   "description": "Knock the kids' can below the bottom of the bridge.",
+   "unlocked": true,
+   "date": "2026-11-08T17:59:15-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/aaf212b09e7002ab42516d97d79fac3f0a0f5c41.jpg"
+  },
+  {
+   "key": "Axe",
+   "name": "Four-Point Hatchet",
+   "description": "Hit 4 enemies, one with each spark of a single Volt Hatchet.",
+   "unlocked": true,
+   "date": "2026-11-13T18:28:33-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/b2df528f772a2f64692449b8f561c4db4b08ac86.jpg"
+  },
+  {
+   "key": "PuppetDance",
+   "name": "Traumatized",
+   "unlocked": true,
+   "date": "2026-11-14T09:13:04-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/496d848646cda03e9a6f2b311c75aff927fa48fe.jpg",
+   "hidden": true
+  },
+  {
+   "key": "RoundTrip",
+   "name": "Drag Race",
+   "description": "Ride the Iron Steed across 6 unique screens without doubling back.",
+   "unlocked": true,
+   "date": "2026-11-14T11:54:37-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/e8d48d2e5352f881e5cf562546cc0ce7c988164d.jpg"
+  },
+  {
+   "key": "TowerFixer",
+   "name": "Sparks of Genius",
+   "description": "Restore half of the Spark Generators.",
+   "unlocked": true,
+   "date": "2026-11-14T11:57:36-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/25312559a1de1d629d893cf1d2d3dc1840fb6843.jpg"
+  },
+  {
+   "key": "BigSpender",
+   "name": "Big Spender",
+   "description": "Spend a combined 50,000 Bones in shops.",
+   "unlocked": true,
+   "date": "2026-11-14T16:01:40-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/260d43226965a62b01dd284f7ce514e1d56c445b.jpg"
+  },
+  {
+   "key": "Miniboss",
+   "name": "Renegade Roundup",
+   "description": "Defeat Armand, Maxi, Willis, the Dugin, and Evra.",
+   "unlocked": true,
+   "date": "2026-11-15T14:09:48-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/97463b5ecec00afdd7cc71472d0eda563aceec50.jpg"
+  },
+  {
+   "key": "Minigame",
+   "name": "Minigame Master",
+   "description": "Master all Racing, Ring Dive, and Wrecker challenges.",
+   "unlocked": true,
+   "date": "2026-11-15T14:59:13-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/145ada063e14d12bd75ce254cbbccdad9db13340.jpg"
+  },
+  {
+   "key": "Fishing",
+   "name": "Fishin' Reactor",
+   "description": "Acquire all trophies on the Fish Board.",
+   "unlocked": true,
+   "date": "2026-11-15T17:15:30-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/2f1205ee480153f4f1900762c88bebc9c40f5f3b.jpg"
+  },
+  {
+   "key": "FullyEquipped",
+   "name": "Fully Equipped",
+   "description": "Unlock all Weapons, Trinkets, Cloaks, and Upgrades.",
+   "unlocked": true,
+   "date": "2026-11-16T19:32:44-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/992b9f3c47a0af35fb481faef637c2e7d47f82f2.jpg"
+  },
+  {
+   "key": "Victory",
+   "name": "Hollow Victory",
+   "description": "Reach the conclusion of the game.",
+   "unlocked": true,
+   "date": "2026-11-16T20:08:09-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/b545fdcdb3916415c2b3995c7927082d5f3d1acc.jpg"
+  },
+  {
+   "key": "Whip",
+   "name": "Tip Tapper",
+   "description": "Kill 10 enemies in a row using Nightstar's Dread Mace upgrade, hitting only with the tip.",
+   "unlocked": true,
+   "date": "2026-11-16T20:25:21-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/53dd11c9dc10b38d94a32afc596a495a07b9deac.jpg"
+  },
+  {
+   "key": "BoomerangKnife",
+   "name": "Boomerang Blade",
+   "description": "Kill 2 foes with a single Gyro Dagger, changing its direction with each strike.",
+   "unlocked": true,
+   "date": "2026-11-16T20:33:39-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/d97eece1155bb47c0c46c83dbde2b0e231519842.jpg"
+  },
+  {
+   "key": "BikeHopper",
+   "name": "Steed Hopper",
+   "description": "Using the Iron Steed, hop on 3 enemies' heads without touching the ground.",
+   "unlocked": true,
+   "date": "2026-11-16T20:41:35-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/7c7c74658c3539202df91ef14a04011683b96b2e.jpg"
+  },
+  {
+   "key": "ComboCapacitor",
+   "name": "Combo Conductor",
+   "description": "While in combat, maintain max combo with the Chain Capacitor Trinket for 10 seconds.",
+   "unlocked": true,
+   "date": "2026-11-16T20:44:34-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/4c06cb750d49e70fa3db57ae3cf9fa5565b236ed.jpg"
+  },
+  {
+   "key": "Hammer",
+   "name": "Hammerama",
+   "description": "Defeat a boss using only fully charged attacks from the Blaststrike Maul.",
+   "unlocked": true,
+   "date": "2026-11-18T17:52:21-06:00",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/8599a040a837b65ecb620f079b2cb64aaddcc8a1.jpg"
+  },
+  {
+   "key": "AllFeats",
+   "name": "Feat Accompli",
+   "description": "Earn all other Feats.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/c9d49800e8010a63457bda754fd6b792fbbe2a0c.jpg"
+  },
+  {
+   "key": "BoneKeeper",
+   "name": "Bone Keeper",
+   "description": "Complete the game without ever losing your Bones.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/1b30f0da3081b4aadc8e2a0e5d16a1f3ef85ec2e.jpg"
+  },
+  {
+   "key": "BonePincher",
+   "name": "Bone Pincher",
+   "description": "Finish the game without spending any Bones in shops.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/e29e7d6d324fb08567c684d7ec6af913c3938d49.jpg"
+  },
+  {
+   "key": "Bonestone",
+   "name": "Bonestone Tycoon",
+   "description": "Convert over 20,000 in the Bone Sinterer in one go.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/0ca87f2ace2e6557b24080df14c9fd792b743c2d.jpg"
+  },
+  {
+   "key": "BusterBat",
+   "name": "Buster Bounce",
+   "description": "Defeat 3 enemies in a row with only double bank shots using the Battery Buster.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/e3fb978031689cf5b84ac06f039fc65524836d16.jpg"
+  },
+  {
+   "key": "ChargeLantern",
+   "name": "Light 'em Up",
+   "description": "Avoid a certain fate in the darkness by using the Dynamo Lantern.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/d490a75b6348f96c6549ee603f1b0c347cc893f2.jpg"
+  },
+  {
+   "key": "ChemicalClackers",
+   "name": "Bounding Bonanza",
+   "description": "Kill an enemy with a Bounding Bomb explosion, after both orbs bounce 3 times.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/480f7ee258bbfa5525bdd97e8bd715f574fcbfc6.jpg"
+  },
+  {
+   "key": "Daggers",
+   "name": "Sniper Dagger",
+   "description": "Kill a boss with Whisper and Vesper thrown from across the screen.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/6bbccfc761d46b0bca17258743f4f8dd6c8636e2.jpg"
+  },
+  {
+   "key": "DodgingPendulum",
+   "name": "Pendulum Master",
+   "description": "Parry 10 attacks without getting hit using the Dodging Pendulum Trinket.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/fb1acdf942d0a5e721f6cb9472049ebd978dfa1d.jpg"
+  },
+  {
+   "key": "FogThrower",
+   "name": "Fogburst",
+   "description": "Eliminate 6 enemies using one continuous spray of the Fog Thrower.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/b12a83407f1b2be8585437e001177c2a1474271e.jpg"
+  },
+  {
+   "key": "HauntedUrn",
+   "name": "Haunting Reach",
+   "description": "Hit a foe from 25 tiles away using the Gnawing Ghosts.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/bbd9fe49354b450a2b8e5220d11c39417e851a75.jpg"
+  },
+  {
+   "key": "HollowinAgain",
+   "name": "Hollowin' Again!",
+   "description": "Finish the game in New Game Plus.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/ef7a8c4660ba2ffa7bf52fd37e474a822c74937c.jpg"
+  },
+  {
+   "key": "JouleSyringe",
+   "name": "Joule Junkie",
+   "description": "Kill a boss while at 1 HP, using only Sidearms and the Joule Syringe Trinket.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/e1c27d1b039f0cd08a142ee75958f42e5aa41a40.jpg"
+  },
+  {
+   "key": "JumpChallenge",
+   "name": "Opossum Impressem",
+   "description": "Show Lena that you can clear 10 tiles without touching the ground.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/d907d1b3132e348f4e8e34479a26049c5b6f514c.jpg"
+  },
+  {
+   "key": "LeashedPhantom",
+   "name": "Beckoning Buddy",
+   "description": "Keep the Beckoning Collar creature active for most of a boss fight.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/c97bd1b2179172d0a4a87c0e51751903148dbb8e.jpg"
+  },
+  {
+   "key": "Lopsided",
+   "name": "Lopsided",
+   "description": "Raise one stat to 10 while keeping all others at 3 or below.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/9555f2618ca7b7c7b8188fd2f369c9a7372e6d75.jpg"
+  },
+  {
+   "key": "Masochist",
+   "name": "Masochist",
+   "description": "Defeat a boss while wearing exactly 3 Beastium Trinkets.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/d53b767f889f063a41487b2c3339d4007d186477.jpg"
+  },
+  {
+   "key": "MistShift",
+   "name": "Mist Glide",
+   "description": "Use the Mist Jar to phase through 3 enemies in one use.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/3234ed606cd63b5c80857529e64d639533e08628.jpg"
+  },
+  {
+   "key": "ModifierHard",
+   "name": "Hardifier",
+   "description": "Finish the game with 3 active Hard Modifiers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/79d948e232c52ef550bcb786d575249955d7d1e4.jpg"
+  },
+  {
+   "key": "ModifierWeird",
+   "name": "Weirdifier",
+   "description": "Finish the game with 3 active Weird Modifiers.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/944d52569ed69775bd5953e5a60fba3cce8f3181.jpg"
+  },
+  {
+   "key": "NegPerc",
+   "name": "Below Zero",
+   "description": "Finish the game with -1% Collection or less.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/fd4be53ad4b423d7f731e6e87a9abbff5dae01da.jpg"
+  },
+  {
+   "key": "Parasol",
+   "name": "Pitfall Parasol",
+   "description": "Knock multiple enemies into a pit using a single Deflector Parasol.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/f60477e9f3c5153e8a569ebce1c80a1afd472193.jpg"
+  },
+  {
+   "key": "Pawned",
+   "name": "Pawned Off",
+   "description": "Sell the maximum number of items at Pawnty's Exchange.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/2965303623bd01225e5a52ecfd2e8b2c764804d6.jpg"
+  },
+  {
+   "key": "PlasmaJug",
+   "name": "Plasma Survivor",
+   "description": "Fill your reserve tank with the Plasma Jug Trinket while at 1 HP.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/13fe5b7aaa4575d3b86549e7af78dec9975c3083.jpg"
+  },
+  {
+   "key": "RocketShield",
+   "name": "Bashful",
+   "description": "Strike 3 enemies with one charge of the Drill Driver.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/beccaba39ab86b39dc60dd1d44e814bdefce422e.jpg"
+  },
+  {
+   "key": "Shield",
+   "name": "Perfect Guard",
+   "description": "Parry 15 consecutive attacks with the Guardian Casket.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/d16be80bcb1e09be25fc9cc902d75fbe01b4090a.jpg"
+  },
+  {
+   "key": "ShockFlint",
+   "name": "Shock Tactician",
+   "description": "Defeat a boss using a spark from the Shock Flint Trinket.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/cf5f36626c20abc005249f82a526c38b84c3ec7b.jpg"
+  },
+  {
+   "key": "SkippinStone",
+   "name": "Skippin' Stone",
+   "description": "Kill an enemy across 8 tiles of water using the Hollower's Rocks.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/226232e6ec1843a48dba0498ffe72b0d34f40313.jpg"
+  },
+  {
+   "key": "SpeedRun",
+   "name": "Speed Runner",
+   "description": "Complete the game in under 4 hours.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/2f00ff88f9e1a9ebffe4dff225138fb1e2aa86ec.jpg"
+  },
+  {
+   "key": "UnderLabless",
+   "name": "Off the Grid",
+   "description": "Finish the game without ever entering the Underlab.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/6ad45b1cabf74fe053fd34c4852a5f8b74263242.jpg"
+  },
+  {
+   "key": "Unscathed",
+   "name": "Untouchable",
+   "description": "Defeat a Spark Generator boss without taking damage.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/83e014fdbd76073d1ad907b45e64873a392fa48e.jpg"
+  },
+  {
+   "key": "WarpPortal",
+   "name": "Wormhole",
+   "description": "Kill an enemy after warping from offscreen with the Recall Disc.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1875580/01e6683567b8f5fcc3bb0fa45fa3482ef1e60c17.jpg"
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Mina the Hollower",
+   "achievements": [
+    {
+     "apiname": "Victory",
+     "achieved": 1,
+     "unlocktime": 1794881289,
+     "name": "Hollow Victory",
+     "description": "Reach the conclusion of the game."
+    },
+    {
+     "apiname": "FullyEquipped",
+     "achieved": 1,
+     "unlocktime": 1794879164,
+     "name": "Fully Equipped",
+     "description": "Unlock all Weapons, Trinkets, Cloaks, and Upgrades."
+    },
+    {
+     "apiname": "HollowinAgain",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hollowin' Again!",
+     "description": "Finish the game in New Game Plus."
+    },
+    {
+     "apiname": "ThorneBeater",
+     "achieved": 1,
+     "unlocktime": 1794178838,
+     "name": "Thorne Beater",
+     "description": "Defeat Thorne for the first time."
+    },
+    {
+     "apiname": "TowerFixer",
+     "achieved": 1,
+     "unlocktime": 1794679056,
+     "name": "Sparks of Genius",
+     "description": "Restore half of the Spark Generators."
+    },
+    {
+     "apiname": "BigSpender",
+     "achieved": 1,
+     "unlocktime": 1794693700,
+     "name": "Big Spender",
+     "description": "Spend a combined 50,000 Bones in shops."
+    },
+    {
+     "apiname": "FirstPurchase",
+     "achieved": 1,
+     "unlocktime": 1794181561,
+     "name": "First Purchase",
+     "description": "Buy your first item."
+    },
+    {
+     "apiname": "Fishing",
+     "achieved": 1,
+     "unlocktime": 1794784530,
+     "name": "Fishin' Reactor",
+     "description": "Acquire all trophies on the Fish Board."
+    },
+    {
+     "apiname": "Miniboss",
+     "achieved": 1,
+     "unlocktime": 1794773388,
+     "name": "Renegade Roundup",
+     "description": "Defeat Armand, Maxi, Willis, the Dugin, and Evra."
+    },
+    {
+     "apiname": "Minigame",
+     "achieved": 1,
+     "unlocktime": 1794776353,
+     "name": "Minigame Master",
+     "description": "Master all Racing, Ring Dive, and Wrecker challenges."
+    },
+    {
+     "apiname": "ModifierHard",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hardifier",
+     "description": "Finish the game with 3 active Hard Modifiers."
+    },
+    {
+     "apiname": "ModifierWeird",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Weirdifier",
+     "description": "Finish the game with 3 active Weird Modifiers."
+    },
+    {
+     "apiname": "SpeedRun",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Speed Runner",
+     "description": "Complete the game in under 4 hours."
+    },
+    {
+     "apiname": "Unscathed",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Untouchable",
+     "description": "Defeat a Spark Generator boss without taking damage."
+    },
+    {
+     "apiname": "BonePincher",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bone Pincher",
+     "description": "Finish the game without spending any Bones in shops."
+    },
+    {
+     "apiname": "BoneKeeper",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bone Keeper",
+     "description": "Complete the game without ever losing your Bones."
+    },
+    {
+     "apiname": "UnderLabless",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Off the Grid",
+     "description": "Finish the game without ever entering the Underlab."
+    },
+    {
+     "apiname": "BikeHopper",
+     "achieved": 1,
+     "unlocktime": 1794883295,
+     "name": "Steed Hopper",
+     "description": "Using the Iron Steed, hop on 3 enemies' heads without touching the ground."
+    },
+    {
+     "apiname": "RoundTrip",
+     "achieved": 1,
+     "unlocktime": 1794678877,
+     "name": "Drag Race",
+     "description": "Ride the Iron Steed across 6 unique screens without doubling back."
+    },
+    {
+     "apiname": "ChemicalClackers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bounding Bonanza",
+     "description": "Kill an enemy with a Bounding Bomb explosion, after both orbs bounce 3 times."
+    },
+    {
+     "apiname": "SkippinStone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Skippin' Stone",
+     "description": "Kill an enemy across 8 tiles of water using the Hollower's Rocks."
+    },
+    {
+     "apiname": "Axe",
+     "achieved": 1,
+     "unlocktime": 1794616113,
+     "name": "Four-Point Hatchet",
+     "description": "Hit 4 enemies, one with each spark of a single Volt Hatchet."
+    },
+    {
+     "apiname": "BoomerangKnife",
+     "achieved": 1,
+     "unlocktime": 1794882819,
+     "name": "Boomerang Blade",
+     "description": "Kill 2 foes with a single Gyro Dagger, changing its direction with each strike."
+    },
+    {
+     "apiname": "WarpPortal",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Wormhole",
+     "description": "Kill an enemy after warping from offscreen with the Recall Disc."
+    },
+    {
+     "apiname": "RocketShield",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bashful",
+     "description": "Strike 3 enemies with one charge of the Drill Driver."
+    },
+    {
+     "apiname": "ChargeLantern",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Light 'em Up",
+     "description": "Avoid a certain fate in the darkness by using the Dynamo Lantern."
+    },
+    {
+     "apiname": "Parasol",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pitfall Parasol",
+     "description": "Knock multiple enemies into a pit using a single Deflector Parasol."
+    },
+    {
+     "apiname": "LeashedPhantom",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Beckoning Buddy",
+     "description": "Keep the Beckoning Collar creature active for most of a boss fight."
+    },
+    {
+     "apiname": "HauntedUrn",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Haunting Reach",
+     "description": "Hit a foe from 25 tiles away using the Gnawing Ghosts."
+    },
+    {
+     "apiname": "MistShift",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mist Glide",
+     "description": "Use the Mist Jar to phase through 3 enemies in one use."
+    },
+    {
+     "apiname": "FogThrower",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Fogburst",
+     "description": "Eliminate 6 enemies using one continuous spray of the Fog Thrower."
+    },
+    {
+     "apiname": "Whip",
+     "achieved": 1,
+     "unlocktime": 1794882321,
+     "name": "Tip Tapper",
+     "description": "Kill 10 enemies in a row using Nightstar's Dread Mace upgrade, hitting only with the tip."
+    },
+    {
+     "apiname": "Hammer",
+     "achieved": 1,
+     "unlocktime": 1795045941,
+     "name": "Hammerama",
+     "description": "Defeat a boss using only fully charged attacks from the Blaststrike Maul."
+    },
+    {
+     "apiname": "Daggers",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Sniper Dagger",
+     "description": "Kill a boss with Whisper and Vesper thrown from across the screen."
+    },
+    {
+     "apiname": "Shield",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Perfect Guard",
+     "description": "Parry 15 consecutive attacks with the Guardian Casket."
+    },
+    {
+     "apiname": "BusterBat",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Buster Bounce",
+     "description": "Defeat 3 enemies in a row with only double bank shots using the Battery Buster."
+    },
+    {
+     "apiname": "ComboCapacitor",
+     "achieved": 1,
+     "unlocktime": 1794883474,
+     "name": "Combo Conductor",
+     "description": "While in combat, maintain max combo with the Chain Capacitor Trinket for 10 seconds."
+    },
+    {
+     "apiname": "ShockFlint",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shock Tactician",
+     "description": "Defeat a boss using a spark from the Shock Flint Trinket."
+    },
+    {
+     "apiname": "PlasmaJug",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Plasma Survivor",
+     "description": "Fill your reserve tank with the Plasma Jug Trinket while at 1 HP."
+    },
+    {
+     "apiname": "JouleSyringe",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Joule Junkie",
+     "description": "Kill a boss while at 1 HP, using only Sidearms and the Joule Syringe Trinket."
+    },
+    {
+     "apiname": "DodgingPendulum",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pendulum Master",
+     "description": "Parry 10 attacks without getting hit using the Dodging Pendulum Trinket."
+    },
+    {
+     "apiname": "PuppetDance",
+     "achieved": 1,
+     "unlocktime": 1794669184,
+     "name": "Traumatized",
+     "description": ""
+    },
+    {
+     "apiname": "Masochist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Masochist",
+     "description": "Defeat a boss while wearing exactly 3 Beastium Trinkets."
+    },
+    {
+     "apiname": "Pawned",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Pawned Off",
+     "description": "Sell the maximum number of items at Pawnty's Exchange."
+    },
+    {
+     "apiname": "Bonestone",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Bonestone Tycoon",
+     "description": "Convert over 20,000 in the Bone Sinterer in one go."
+    },
+    {
+     "apiname": "Lopsided",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Lopsided",
+     "description": "Raise one stat to 10 while keeping all others at 3 or below."
+    },
+    {
+     "apiname": "NegPerc",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Below Zero",
+     "description": "Finish the game with -1% Collection or less."
+    },
+    {
+     "apiname": "SillyHub",
+     "achieved": 1,
+     "unlocktime": 1794182355,
+     "name": "Trash Juggler",
+     "description": "Knock the kids' can below the bottom of the bridge."
+    },
+    {
+     "apiname": "JumpChallenge",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Opossum Impressem",
+     "description": "Show Lena that you can clear 10 tiles without touching the ground."
+    },
+    {
+     "apiname": "AllFeats",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Feat Accompli",
+     "description": "Earn all other Feats."
+    }
+   ],
+   "success": true
+  }
+ }
+}

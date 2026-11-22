@@ -279,7 +279,7 @@ in place on 2026-11-21, which removed the special cases that resolved them.)
 
 `status: backlog` is the game-level marker for "not played yet" — a game with this status and no
 `playthroughs.yaml` at all. It shows in the Games page's "Game list" tab like every other game
-(`layouts/partials/games-list.html`), where the status filter's "backlog" option selects it.
+(`layouts/partials/games-list.html`), where the sidebar's `[backlog]` status row filters to it.
 
 ## Planned replays
 
@@ -306,7 +306,7 @@ that family (`forms.IsOneShot` returns `false` for it, and it's deliberately abs
 Because a blank `started` is what every date-based partial (`games-timeline.html`,
 `games-log.html`) already guards on before turning an entry into a bar or a log event, a planned
 entry is automatically invisible to both. `games-list.html` surfaces it explicitly instead: the
-game gets a `[planned]` tag, and the Game list's "backlog" status filter includes it alongside
+game gets a `[planned]` tag, and the Game list sidebar's `[backlog]` filter includes it alongside
 `status: backlog` games. `layouts/games/term.html`'s generic per-entry rendering also needed no change: it already
 renders any entry's `status` as a plain pill and leaves a blank meta row when dates are empty.
 

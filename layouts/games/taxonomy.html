@@ -12,18 +12,16 @@
 
 <div class="tabs" data-tabs>
   <div class="tabs__list" role="tablist" aria-label="Games view" hidden>
-    <button type="button" class="tabs__tab" id="games-tab-overview" role="tab"
-      aria-selected="true" aria-controls="games-panel-overview">Overview</button>
+    <button type="button" class="tabs__tab" id="games-tab-log" role="tab"
+      aria-selected="true" aria-controls="games-panel-log">Log</button>
     <button type="button" class="tabs__tab" id="games-tab-timeline" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-timeline">Timeline</button>
     <button type="button" class="tabs__tab" id="games-tab-list" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-list">Game list</button>
-    <button type="button" class="tabs__tab" id="games-tab-log" role="tab"
-      aria-selected="false" tabindex="-1" aria-controls="games-panel-log">Log</button>
   </div>
 
-  <div class="tabs__panel" id="games-panel-overview" role="tabpanel" aria-labelledby="games-tab-overview">
-    {{ partial "games-overview.html" . }}
+  <div class="tabs__panel" id="games-panel-log" role="tabpanel" aria-labelledby="games-tab-log">
+    {{ partial "games-log.html" . }}
   </div>
 
   <div class="tabs__panel" id="games-panel-timeline" role="tabpanel" aria-labelledby="games-tab-timeline" data-self-sized>
@@ -32,10 +30,6 @@
 
   <div class="tabs__panel" id="games-panel-list" role="tabpanel" aria-labelledby="games-tab-list">
     {{ partial "games-list.html" . }}
-  </div>
-
-  <div class="tabs__panel" id="games-panel-log" role="tabpanel" aria-labelledby="games-tab-log">
-    {{ partial "games-log.html" . }}
   </div>
 </div>
 
@@ -66,7 +60,7 @@
 {{- $provJS := resources.Get "js/provenance-modal.ts" | js.Build $provJSOpts | fingerprint -}}
 <script src="{{ $provJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $provJS.Data.Integrity }}"{{ end }} defer></script>
 
-{{- range slice "games-list" "games-log" }}
+{{- range slice "games-list" "games-log" "time-played" }}
 {{- $opts := dict
     "targetPath" (printf "js/%s.js" .)
     "format"     "iife"

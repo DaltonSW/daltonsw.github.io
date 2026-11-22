@@ -1,14 +1,24 @@
-unlocked: 9
+unlocked: 23
 total: 23
-playtime_mins: 430
-last_played: "2026-11-01"
+playtime_mins: 1018
+last_played: "2026-11-07"
+mastered: "2026-11-07"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 9
+      unlocked: 23
       total: 23
-      playtime_mins: 430
-      last_played: "2026-11-01"
+      playtime_mins: 1018
+      last_played: "2026-11-07"
+      mastery:
+        - scope: base
+          date: "2026-11-07"
+          unlocked: 23
+          basis: ra-mastered
+        - scope: all
+          date: "2026-11-07"
+          unlocked: 23
+          basis: 100%
 earned:
     - name: Let Our Game Begin
       description: Escape from the room you woke up in.
@@ -80,5 +90,117 @@ earned:
       points: 5
       hardcore: true
       icon: "109628"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Taken out of Storage
+      description: Escape from the cargo room.
+      date: "2026-11-02T19:21:24-06:00"
+      points: 5
+      hardcore: true
+      icon: "109603"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Slaughterhouse-Nine
+      description: Unlock the Knife Ending and save your game.
+      date: "2026-11-02T19:32:16-06:00"
+      points: 10
+      hardcore: true
+      icon: "109627"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Upgrade from Economy
+      description: Escape from the first class cabin.
+      date: "2026-11-03T20:56:29-06:00"
+      points: 5
+      hardcore: true
+      icon: "109634"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Baby Needs a New Pair of Shoes
+      description: Escape from the casino.
+      date: "2026-11-03T21:11:50-06:00"
+      points: 5
+      hardcore: true
+      icon: "109633"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Primum Non Nocere
+      description: Escape from the operating room.
+      date: "2026-11-05T07:34:15-06:00"
+      points: 5
+      hardcore: true
+      icon: "109629"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Onward to Treacherous Waters
+      description: Escape from the wheelhouse.
+      date: "2026-11-05T21:39:25-06:00"
+      points: 5
+      hardcore: true
+      icon: "109631"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Our Fearful Trip Is Done
+      description: Escape from the captain's quarters.
+      date: "2026-11-05T21:53:32-06:00"
+      points: 5
+      hardcore: true
+      icon: "109630"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Et Tu, Amica?
+      description: Unlock the Axe Ending and save your game.
+      date: "2026-11-05T22:02:08-06:00"
+      points: 10
+      hardcore: true
+      icon: "109639"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Gateway to the Truth
+      description: Unlock the Safe Ending and save your game.
+      date: "2026-11-06T16:24:39-06:00"
+      points: 10
+      hardcore: true
+      icon: "109605"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: A Ghost of the Past
+      description: Escape from the library.
+      date: "2026-11-06T22:01:07-06:00"
+      points: 5
+      hardcore: true
+      icon: "109602"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: The Mandela Effect
+      description: Escape from the study.
+      date: "2026-11-07T15:00:26-06:00"
+      points: 5
+      hardcore: true
+      icon: "109635"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Garns's Inferno
+      description: Solve the sudoku puzzle in the incinerator.
+      date: "2026-11-07T22:36:35-06:00"
+      points: 1
+      hardcore: true
+      icon: "109636"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: A Corpse in the Dark
+      description: Unlock the Coffin Ending and save your game.
+      date: "2026-11-07T22:54:05-06:00"
+      points: 10
+      hardcore: true
+      icon: "109637"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Plaudite! Acta Est Fabula!
+      description: Unlock the True Ending and save your game.
+      date: "2026-11-07T22:54:06-06:00"
+      points: 25
+      hardcore: true
+      icon: "109638"
       provider: retroachievements
       platform: Nintendo DS

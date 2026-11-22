@@ -1,7 +1,8 @@
 {{/* Log tab: one newest-first feed per year that mixes playthrough events
      (from playthrough-entries.html), mastery dates (game-mastery.html), and
      earned achievements (achievement-summary.yaml's `earned`, grouped per game,
-     provider, subset, and day). A sidebar holds the filters
+     provider, subset, and day), plus a provider's last-played date when no other
+     event already covers that day. A sidebar holds the filters
      (assets/js/games-log.ts) and the aggregate achievement stats.
      Included from layouts/games/taxonomy.html. */}}
 {{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" "googleplay" -}}
@@ -15,10 +16,12 @@
 -}}
 
 {{/* sortKey = "<day>|<rank>|<time>", sorted desc: within a day, mastery (3) and
-     a run ending (2) read above that day's unlocks (1), and a run starting (0)
-     below them. */}}
+     a run ending or a provider's last-played (2) read above that day's unlocks
+     (1), and a run starting (0) below them. */}}
 {{- $events := slice -}}
-{{- $earnedCount := 0 -}}
+{{- $unlockedSum := 0 -}}
+{{- $playtimeMins := 0 -}}
+{{- $totalSum := 0 -}}
 {{- $trackedCount := 0 -}}
 {{- $masteredCount := 0 -}}
 {{- $hasHidden := false -}}
@@ -31,6 +34,7 @@
 
 {{- range .Pages -}}
   {{- $page := . -}}
+  {{- $eventsBefore := len $events -}}
 
   {{/* playthroughs */}}
   {{- range partial "playthrough-entries.html" $page -}}
@@ -61,12 +65,14 @@
   {{- with .Resources.Get "achievement-summary.yaml" -}}
     {{- $summary := . | transform.Unmarshal -}}
     {{- if gt ($summary.total | default 0) 0 }}{{ $trackedCount = add $trackedCount 1 }}{{ end -}}
+    {{- $unlockedSum = add $unlockedSum ($summary.unlocked | default 0) -}}
+    {{- $playtimeMins = add $playtimeMins ($summary.playtime_mins | default 0) -}}
+    {{- $totalSum = add $totalSum ($summary.total | default 0) -}}
     {{- $groups := newScratch -}}
     {{- range ($summary.earned | default slice) -}}
       {{- $day := "" -}}
       {{- with .date }}{{ $day = . | time.Format "2006-01-02" }}{{ end -}}
       {{- $groups.Add (printf "%s|%s|%s" $day .provider (.subset | default "")) (slice .) -}}
-      {{- $earnedCount = add $earnedCount 1 -}}
       {{- if .hidden }}{{ $hasHidden = true }}{{ end -}}
       {{- if isset $byProvider .provider -}}
         {{- $byProvider = merge $byProvider (dict .provider (add (index $byProvider .provider) 1)) -}}
@@ -87,6 +93,24 @@
           "platform" ($first.platform | default "") "provider" ($first.provider | default "") "subset" ($first.subset | default "")
           "sortKey" $sortKey) -}}
     {{- end -}}
+
+    {{/* Last played per provider: one timestamp, not a history, so it only shows on
+         a day nothing else covers for this game. That also drops RA's (and any
+         record's) fallback to the newest unlock, which always lands on an unlock day. */}}
+    {{- $gameDays := slice -}}
+    {{- range after $eventsBefore $events }}{{ $gameDays = $gameDays | append .date }}{{ end -}}
+    {{- range ($summary.providers | default slice) -}}
+      {{- $prov := . -}}
+      {{- with .last_played -}}
+        {{- $day := . | time.Format "2006-01-02" -}}
+        {{- if not (in $gameDays $day) -}}
+          {{- $gameDays = $gameDays | append $day -}}
+          {{- $events = $events | append (dict "kind" "lastplayed" "page" $page "date" $day "year" (substr $day 0 4)
+              "platform" ($prov.platform | default "") "providerName" (index $providerNames $prov.provider | default $prov.provider)
+              "provider" "" "sortKey" (printf "%s|2|" $day)) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
@@ -103,10 +127,10 @@
 {{- if $hasUndated }}{{ $years = $years | append "Undated" }}{{ end -}}
 {{- $platforms = sort $platforms -}}
 
-<div class="ach-panel" data-ach-root data-log-root>
-  <aside class="ach-sidebar" aria-label="Log filters and stats">
-    <div class="overview-status-card log-filters" data-log-filters hidden>
-      <span class="overview-status-card__name">Filter</span>
+<div class="side-panel" data-ach-root data-log-root>
+  <aside class="side-panel__aside" aria-label="Log filters and stats">
+    <div class="side-card log-filters" data-log-filters hidden>
+      <span class="side-card__name">Filter</span>
       <input type="search" class="games-search__input" placeholder="Search games…"
         aria-label="Search games" data-log-search>
       <div class="log-filters__kinds" role="group" aria-label="Entry types">
@@ -127,24 +151,29 @@
       <button type="button" class="ach-reveal-toggle" data-ach-reveal-toggle hidden aria-pressed="false">Unhide everything</button>
       {{- end }}
     </div>
-    {{/* one-line stats and row lists, same scale as the Overview sidebar */}}
-    <div class="overview-stat">
-      <span class="overview-stat__label">Achievements</span>
-      <span class="overview-stat__value">{{ $earnedCount }}</span>
+    {{/* one-line stats and row lists, same scale as the Game list sidebar */}}
+    <div class="side-stat">
+      <span class="side-stat__label">Games logged</span>
+      <span class="side-stat__value">{{ len .Pages }}</span>
     </div>
-    <div class="overview-stat">
-      <span class="overview-stat__label">Mastered</span>
-      <span class="overview-stat__value">{{ $masteredCount }}{{ if $trackedCount }}<span class="overview-stat__of">/{{ $trackedCount }}</span>{{ end }}</span>
+    {{ partial "time-played-stat.html" $playtimeMins }}
+    <div class="side-stat">
+      <span class="side-stat__label" title="Achievements earned, of all achievements in tracked games">Earned</span>
+      <span class="side-stat__value">{{ $unlockedSum }}{{ if gt $totalSum 0 }}<span class="side-stat__of">/{{ $totalSum }}</span>{{ end }}</span>
     </div>
-    <div class="overview-status-card">
-      <span class="overview-status-card__name">Earned by source</span>
-      <ul class="overview-status-card__rows">
+    <div class="side-stat">
+      <span class="side-stat__label">Mastered</span>
+      <span class="side-stat__value">{{ $masteredCount }}{{ if $trackedCount }}<span class="side-stat__of">/{{ $trackedCount }}</span>{{ end }}</span>
+    </div>
+    <div class="side-card">
+      <span class="side-card__name">Earned by source</span>
+      <ul class="side-card__rows">
         {{- range $providerOrder }}
         {{- $count := index $byProvider . }}
         {{- if gt $count 0 }}
-        <li class="overview-status-row">
-          <span class="overview-status-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
-          <span class="overview-status-row__count">{{ $count }}</span>
+        <li class="side-row">
+          <span class="side-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
+          <span class="side-row__count">{{ $count }}</span>
         </li>
         {{- end }}
         {{- end }}
@@ -154,13 +183,13 @@
     {{- $pointRows := slice }}
     {{- range $providerOrder }}{{ if gt (index $pointsByProvider .) 0 }}{{ $pointRows = $pointRows | append . }}{{ end }}{{ end }}
     {{- with $pointRows }}
-    <div class="overview-status-card">
-      <span class="overview-status-card__name">Gamerscore</span>
-      <ul class="overview-status-card__rows">
+    <div class="side-card">
+      <span class="side-card__name">Gamerscore</span>
+      <ul class="side-card__rows">
         {{- range . }}
-        <li class="overview-status-row">
-          <span class="overview-status-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
-          <span class="overview-status-row__count">{{ index $pointsByProvider . }}</span>
+        <li class="side-row">
+          <span class="side-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
+          <span class="side-row__count">{{ index $pointsByProvider . }}</span>
         </li>
         {{- end }}
       </ul>
@@ -168,7 +197,7 @@
     {{- end }}
   </aside>
 
-  <section class="ach-list" aria-label="Log">
+  <section class="side-panel__main" aria-label="Log">
   <p class="games-search__empty" hidden data-log-empty>Nothing matches these filters.</p>
   {{- if eq (len $events) 0 }}
     <p class="ach-empty">Nothing logged yet.</p>
@@ -224,6 +253,14 @@
               </div>
             </details>
             {{- end }}
+          {{- else if eq .kind "lastplayed" }}
+            <div class="log-line" title="The provider's last-played date: one timestamp per game, not a logged run">
+              <span class="log-event__glyph" aria-hidden="true">&#xf017;</span>
+              <span class="log-line__verb">Last played</span>
+              <a class="log-event__game" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+              {{- with .platform }}<span class="log-event__meta">{{ . }}</span>{{ end }}
+              <span class="log-event__meta">via {{ .providerName }}</span>
+            </div>
           {{- else if eq .kind "mastery" }}
             <div class="log-line">
               <span class="log-event__glyph log-event__glyph--mastered" aria-hidden="true">&#xf005;</span>
@@ -232,13 +269,22 @@
             </div>
           {{- else }}
             {{- $entry := .entry }}
-            <div class="log-line">
+            {{- /* a closed run reads as its status ("Dropped", "Finished"), coloured like that
+                   status's pill; Started takes playing's colour. No status: neutral verb, no wash. */}}
+            {{- $verb := .verb }}
+            {{- $tone := "" }}
+            {{- if eq .verb "Started" }}
+              {{- $tone = "playing" }}
+            {{- else if $entry.status }}
+              {{- $verb = humanize $entry.status }}
+              {{- $tone = $entry.status }}
+            {{- end }}
+            <div class="log-line{{ with $tone }} log-line--{{ . }}{{ end }}">
               <span class="log-event__glyph" aria-hidden="true">{{ if eq .verb "Started" }}&#xf04b;{{ else }}&#xf11e;{{ end }}</span>
-              <span class="log-line__verb">{{ .verb }}</span>
+              <span class="log-line__verb">{{ $verb }}</span>
               <a class="log-event__game" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
               {{- with $entry.subgame }}<span class="log-event__meta">{{ . }}</span>{{ end }}
               {{- with .platform }}<span class="log-event__meta">{{ . }}</span>{{ end }}
-              {{- if ne .verb "Started" }}{{ with $entry.status }} {{ partial "game-status-tag.html" . }}{{ end }}{{ end }}
               {{- if $entry.written }}<a class="log-event__meta" href="{{ $entry.permalink }}">{{ $entry.title }}</a>{{ end }}
             </div>
           {{- end }}

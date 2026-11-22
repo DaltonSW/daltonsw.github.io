@@ -1,15 +1,24 @@
-unlocked: 48
+unlocked: 63
 total: 63
-playtime_mins: 1717
-last_played: "2026-10-23"
+playtime_mins: 1740
+last_played: "2026-10-24"
 mastered: "2026-02-01"
 providers:
     - provider: retroachievements
       platform: Nintendo DS
-      unlocked: 18
+      unlocked: 33
       total: 33
-      playtime_mins: 678
-      last_played: "2026-10-23"
+      playtime_mins: 701
+      last_played: "2026-10-24"
+      mastery:
+        - scope: base
+          date: "2026-10-24"
+          unlocked: 33
+          basis: ra-mastered
+        - scope: all
+          date: "2026-10-24"
+          unlocked: 33
+          basis: 100%
     - provider: steam
       platform: PC
       unlocked: 30
@@ -344,5 +353,125 @@ earned:
       points: 25
       hardcore: true
       icon: "115232"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Last Meal
+      description: Near the start of Chapter 15, visit the kitchen.
+      date: "2026-10-24T16:22:19-05:00"
+      points: 3
+      hardcore: true
+      icon: "115298"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: The Suspiciousness of Youth
+      description: Near the start of Chapter 15, visit the park.
+      date: "2026-10-24T16:23:34-05:00"
+      points: 3
+      hardcore: true
+      icon: "115297"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Be Free, Amelie
+      description: Near the start of Chapter 12, visit the lady's red apartment.
+      date: "2026-10-24T16:24:40-05:00"
+      points: 3
+      hardcore: true
+      icon: "115286"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Holding Out For a Hero
+      description: Near the start of Chapter 11, visit the junkyard.
+      date: "2026-10-24T16:25:43-05:00"
+      points: 3
+      hardcore: true
+      icon: "115289"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Long Night Ahead
+      description: Near the start of Chapter 10, visit the special investigation chief's office.
+      date: "2026-10-24T16:26:58-05:00"
+      points: 3
+      hardcore: true
+      icon: "115295"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Ghost Whisperer
+      description: Near the start of Chapter 10, visit the mortuary.
+      date: "2026-10-24T16:28:18-05:00"
+      points: 3
+      hardcore: true
+      icon: "115296"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Take Notes, Please
+      description: Near the start of Chapter 8, visit the junkyard.
+      date: "2026-10-24T16:29:41-05:00"
+      points: 3
+      hardcore: true
+      icon: "115288"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: On Hold
+      description: Near the start of Chapter 8, visit the troubled man's office.
+      date: "2026-10-24T16:31:23-05:00"
+      points: 3
+      hardcore: true
+      icon: "115291"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Godlike Memry
+      description: Near the start of Chapter 8, visit the kitchen.
+      date: "2026-10-24T16:34:48-05:00"
+      points: 3
+      hardcore: true
+      icon: "115294"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: A Strange Dream
+      description: Near the start of Chapter 3 or 4, visit the lady's red apartment.
+      date: "2026-10-24T16:37:42-05:00"
+      points: 3
+      hardcore: true
+      icon: "115302"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Moving Along
+      description: Near the start of Chapter 5, visit the junkyard.
+      date: "2026-10-24T16:38:42-05:00"
+      points: 3
+      hardcore: true
+      icon: "115287"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Good Luck, Mama
+      description: Near the start of Chapter 6, visit the lady's red apartment.
+      date: "2026-10-24T16:39:41-05:00"
+      points: 3
+      hardcore: true
+      icon: "115285"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: That Bodes Well
+      description: Near the start of Chapter 7, visit the park.
+      date: "2026-10-24T16:41:21-05:00"
+      points: 3
+      hardcore: true
+      icon: "115292"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Scatterbrain
+      description: Near the start of Chapter 7, visit the troubled man's office.
+      date: "2026-10-24T16:41:35-05:00"
+      points: 3
+      hardcore: true
+      icon: "115290"
+      provider: retroachievements
+      platform: Nintendo DS
+    - name: Odd Man
+      description: Near the start of Chapter 7, visit the guard room.
+      date: "2026-10-24T16:43:05-05:00"
+      points: 3
+      hardcore: true
+      icon: "115293"
       provider: retroachievements
       platform: Nintendo DS

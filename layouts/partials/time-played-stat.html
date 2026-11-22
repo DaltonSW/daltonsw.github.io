@@ -1,0 +1,8 @@
+{{/* "Time played" sidebar stat. Context: total playtime in minutes. Renders hours;
+     assets/js/time-played.ts adds a tooltip with every conversion and makes the
+     card cycle formats on click (all such cards stay in sync). */}}
+{{- $mins := . | default 0 -}}
+<button type="button" class="side-stat side-stat--cycle" data-time-played data-mins="{{ $mins }}">
+  <span class="side-stat__label">Time played</span>
+  <span class="side-stat__value" data-time-played-value>{{ printf "%.0fh" (div $mins 60.0) }}</span>
+</button>

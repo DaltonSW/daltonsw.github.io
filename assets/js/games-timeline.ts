@@ -395,7 +395,7 @@ function renderTimeline(root: HTMLElement, groups: DataGroup[], items: GameItem[
   document.fonts?.ready.then(remeasure);
   document.fonts?.addEventListener("loadingdone", remeasure);
   window.addEventListener("load", remeasure);
-  // The timeline renders while its tab is still hidden behind Overview, where
+  // The timeline renders while its tab is still hidden behind the Log, where
   // it measures as starting at the top of the window and comes out a whole
   // header-and-tabs too tall. Re-measure each time it actually comes into view.
   new IntersectionObserver((entries) => {
