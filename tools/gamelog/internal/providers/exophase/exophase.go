@@ -421,9 +421,10 @@ var (
 	awardRowRe    = regexp.MustCompile(`<li class="[^"]*\baward\b[^"]*"([^>]*)>`)
 	awardMasterRe = regexp.MustCompile(`data-master="(\d+)"`)
 	awardPointsRe = regexp.MustCompile(`data-points="(\d+)"`)
-	awardTitleRe  = regexp.MustCompile(`(?s)award-title[^>]*>\s*<a [^>]*>([^<]*)</a>`)
-	awardDescRe   = regexp.MustCompile(`(?s)award-description[^>]*>\s*<p>(.*?)</p>`)
-	awardGameRe   = regexp.MustCompile(`^/achievement/([^/]+)/`)
+	// An unobtainable award has an <svg> badge between the title div and its link.
+	awardTitleRe = regexp.MustCompile(`(?s)award-title[^>]*>.*?<a [^>]*>([^<]*)</a>`)
+	awardDescRe  = regexp.MustCompile(`(?s)award-description[^>]*>\s*<p>(.*?)</p>`)
+	awardGameRe  = regexp.MustCompile(`^/achievement/([^/]+)/`)
 )
 
 // ParseGameAwards reads a game's achievements page into details keyed by

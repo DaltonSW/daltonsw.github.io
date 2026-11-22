@@ -249,9 +249,9 @@ func TestFetchGooglePlayRecordPastThePayload(t *testing.T) {
 	}
 }
 
-// testdata/game_achievements.html is two rows cut from the live
+// testdata/game_achievements.html is three rows cut from the live
 // /game/shattered-pixel-dungeon-android/achievements/ page: one locked, one
-// earned. Both must parse, since the page lists locked awards too.
+// earned, plus one unobtainable. All must parse, since the page lists locked awards too.
 func TestParseGameAwardsReadsNameDescriptionAndPoints(t *testing.T) {
 	page, err := os.ReadFile("testdata/game_achievements.html")
 	if err != nil {
@@ -261,6 +261,9 @@ func TestParseGameAwardsReadsNameDescriptionAndPoints(t *testing.T) {
 	want := map[int]AwardDetail{
 		4576792: {Name: "Novice Treasure Hunter", Description: "Collect 250 gold in one game", Points: 500},
 		2603576: {Name: "Prison Warden", Description: "Defeat the boss at the end of the prison", Points: 1000},
+		// From Animal Crossing: Pocket Camp, where the title carries an
+		// "Unobtainable" <svg> before its link.
+		2564685: {Name: "Planting the Seed", Description: "You reached level 5!", Points: 500},
 	}
 	if len(got) != len(want) {
 		t.Fatalf("parsed %d awards, want %d: %+v", len(got), len(want), got)
