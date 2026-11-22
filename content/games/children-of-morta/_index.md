@@ -1,19 +1,16 @@
 ---
-title: "Children of Morta"
-platform: "PC"
-retroachievements_id:
+title: Children of Morta
+platform: PC
+retroachievements_id: null
 steam_appid: 330020
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["children-of-morta"]
+    games:
+      - children-of-morta
+cover: null
 ---
 
 

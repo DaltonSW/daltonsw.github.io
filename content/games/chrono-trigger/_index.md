@@ -1,19 +1,16 @@
 ---
-title: "CHRONO TRIGGER"
-platform: "PC"
-retroachievements_id:
+title: CHRONO TRIGGER
+platform: PC
+retroachievements_id: null
 steam_appid: 613830
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["chrono-trigger"]
+    games:
+      - chrono-trigger
+cover: null
 ---
 
 

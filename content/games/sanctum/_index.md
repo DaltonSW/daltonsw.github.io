@@ -1,19 +1,16 @@
 ---
-title: "Sanctum"
-platform: "PC"
-retroachievements_id:
+title: Sanctum
+platform: PC
+retroachievements_id: null
 steam_appid: 91600
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "endless"
-subgames:
-rating:
-cover:
-draft: true
+status: endless
+rating: null
+draft: false
 cascade:
   params:
-    games: ["sanctum"]
+    games:
+      - sanctum
+cover: null
 ---
 
 

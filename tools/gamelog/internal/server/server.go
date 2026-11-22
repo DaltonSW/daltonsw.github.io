@@ -148,6 +148,7 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/split", s.handleSplitPlaythrough)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions", s.handleAddSession)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}", s.handleEditSession)
+	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/split", s.handleSplitSession)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/delete", s.handleDeleteSession)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/move-up", s.handleMoveSessionUp)
 	mux.HandleFunc("POST /games/{slug}/playthroughs/{idx}/sessions/{j}/move-down", s.handleMoveSessionDown)

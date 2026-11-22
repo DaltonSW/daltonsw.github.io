@@ -1,19 +1,16 @@
 ---
-title: "Evoland 2"
-platform: "PC"
-retroachievements_id:
+title: Evoland 2
+platform: PC
+retroachievements_id: null
 steam_appid: 359310
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["evoland-2"]
+    games:
+      - evoland-2
+cover: null
 ---
 
 

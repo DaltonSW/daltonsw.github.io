@@ -1,19 +1,16 @@
 ---
-title: "Escape Goat 2"
-platform: "PC"
-retroachievements_id:
+title: Escape Goat 2
+platform: PC
+retroachievements_id: null
 steam_appid: 255340
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["escape-goat-2"]
+    games:
+      - escape-goat-2
+cover: null
 ---
 
 

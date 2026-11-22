@@ -456,6 +456,64 @@ func (f *PlaythroughsFile) EditSession(idx, j int, started, finished, title stri
 	return nil
 }
 
+// SplitSession turns session j into two: the first keeps its start and
+// title (and any Extra keys) and ends on firstEnd; a new session after it
+// starts on secondStart and ends on the original finish. Needs a finished
+// session with started <= firstEnd < secondStart <= finished. Like
+// EditSession, session 0 of a never-converted flat entry is converted first.
+// Later sessions shift down one index, which callers declare to the loss
+// check with InsertSessionAllowedPaths.
+func (f *PlaythroughsFile) SplitSession(idx, j int, firstEnd, secondStart string) error {
+	if idx < 0 || idx >= len(f.Playthroughs) {
+		return fmt.Errorf("no playthrough %d to split a session on", idx+1)
+	}
+	e := &f.Playthroughs[idx]
+	if j == 0 && len(e.Sessions) == 0 {
+		if e.Started == "" {
+			return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
+		}
+		e.Sessions = []SessionEntry{{Started: e.Started, Finished: e.Finished}}
+		e.Started, e.Finished = "", ""
+	}
+	if j < 0 || j >= len(e.Sessions) {
+		return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
+	}
+	orig := e.Sessions[j]
+	if orig.Finished == "" {
+		return fmt.Errorf("session %d is still open — it needs a finish date to split", j+1)
+	}
+	// ISO dates compare correctly as strings (callers validate the format).
+	if firstEnd < orig.Started || firstEnd >= secondStart || secondStart > orig.Finished {
+		return fmt.Errorf("need %s ≤ first end < second start ≤ %s", orig.Started, orig.Finished)
+	}
+	second := SessionEntry{Started: secondStart, Finished: orig.Finished}
+	e.Sessions[j].Finished = firstEnd
+	e.Sessions = append(e.Sessions, SessionEntry{})
+	copy(e.Sessions[j+2:], e.Sessions[j+1:])
+	e.Sessions[j+1] = second
+	return nil
+}
+
+// InsertSessionAllowedPaths returns the session paths that legitimately go
+// quiet when a session is inserted: wherever the entry now at an index lacks
+// a field the one that used to be there had (title, Extra keys), because
+// that field moved along with its session.
+func InsertSessionAllowedPaths(idx int, before, after []SessionEntry) []string {
+	var paths []string
+	for p := range before {
+		if p >= len(after) {
+			break
+		}
+		cur := sessionFieldNames(after[p])
+		for name := range sessionFieldNames(before[p]) {
+			if !cur[name] {
+				paths = append(paths, SessionPath(idx, p, name))
+			}
+		}
+	}
+	return paths
+}
+
 // SplitPlaythrough moves sessions[j:] out of playthrough idx into a new
 // entry appended to the file. append always lands the new entry at the true
 // end of f.Playthroughs, so no other entry's index is ever disturbed. The

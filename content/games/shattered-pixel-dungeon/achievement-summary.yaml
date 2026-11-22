@@ -8,13 +8,17 @@ providers:
       total: 45
       last_played: "2023-02-18"
 earned:
-    - name: novice-monster-hunter
+    - name: Novice Monster Hunter
+      description: Defeat 10 enemies in one game
       date: "2023-02-18T22:41:43-06:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/e0g13jb.png?af08decea0c0f102213c26c8a8fbbef1
       provider: googleplay
       platform: Google Play
-    - name: novice-treasure-hunter
+    - name: Novice Treasure Hunter
+      description: Collect 250 gold in one game
       date: "2023-02-18T22:41:52-06:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/64357e4.png?af08decea0c0f102213c26c8a8fbbef1
       provider: googleplay
       platform: Google Play

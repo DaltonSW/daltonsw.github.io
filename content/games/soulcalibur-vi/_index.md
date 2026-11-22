@@ -1,19 +1,16 @@
 ---
-title: "SOULCALIBUR VI"
-platform: "PC"
-retroachievements_id:
+title: SOULCALIBUR VI
+platform: PC
+retroachievements_id: null
 steam_appid: 544750
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["soulcalibur-vi"]
+    games:
+      - soulcalibur-vi
+cover: null
 ---
 
 

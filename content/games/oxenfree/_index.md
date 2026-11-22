@@ -1,19 +1,16 @@
 ---
-title: "Oxenfree"
-platform: "PC"
-retroachievements_id:
+title: Oxenfree
+platform: PC
+retroachievements_id: null
 steam_appid: 388880
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["oxenfree"]
+    games:
+      - oxenfree
+cover: null
 ---
 
 

@@ -1,19 +1,16 @@
 ---
-title: "Curse of the Dead Gods"
-platform: "PC"
-retroachievements_id:
+title: Curse of the Dead Gods
+platform: PC
+retroachievements_id: null
 steam_appid: 1123770
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["curse-of-the-dead-gods"]
+    games:
+      - curse-of-the-dead-gods
+cover: null
 ---
 
 

@@ -8,338 +8,472 @@ providers:
       total: 186
       last_played: "2023-10-10"
 earned:
-    - name: bar-of-soap
+    - name: Bar of Soap
+      description: Have a Bar of Soap add 4 or more Bubbles before being destroyed.
       date: "2023-08-27T18:16:38-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/135deg8b.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: geologist
+    - name: Geologist
+      description: 'Have a Geologist destroy 20 or more symbols before rent payment #12 is due.'
       date: "2023-08-27T18:16:38-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/gj0e8g66.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: beastmaster
+    - name: Beastmaster
+      description: Have a Beastmaster increase the value of 5 or more symbols during a spin.
       date: "2023-08-27T18:16:39-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/55e416d7.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: bubble
+    - name: Bubble
+      description: Have 3 or more Bubbles be destroyed during a spin.
       date: "2023-08-27T18:16:39-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/135deg4b.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: bee
+    - name: Bee
+      description: Have a Bee give 6 or more coins.
       date: "2023-08-27T18:16:39-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/007g6b5d.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: card-shark
+    - name: Card Shark
+      description: Have a Card Shark make 5 or more symbols Wildcards during a spin.
       date: "2023-08-27T18:16:40-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/55e416j7.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: candy
+    - name: Candy
+      description: Have 8 or more Candy.
       date: "2023-08-27T18:16:40-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/77je6g37.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: cherry
+    - name: Cherry
+      description: Have 3 or more Cherries adjacent to each other.
       date: "2023-08-27T18:16:41-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06eb1e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: chef
+    - name: Chef
+      description: Have a Chef increase the value of 5 or more symbols during a spin.
       date: "2023-08-27T18:16:41-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/eed4j658.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: clubs
+    - name: Clubs
+      description: Have 5 or more Clubs.
       date: "2023-08-27T18:16:42-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/dgj5d4e6.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: chick
+    - name: Chick
+      description: Have a Chick not grow into a Chicken for 12 or more spins.
       date: "2023-08-27T18:16:42-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/b870be10.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: cow
+    - name: Cow
+      description: Have a Cow add a Milk that is destroyed by a Cat during the same spin.
       date: "2023-08-27T18:16:43-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/007g6b4d.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: comedian
+    - name: Comedian
+      description: Have a Comedian be destroyed by General Zaroff.
       date: "2023-08-27T18:16:43-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/55e41607.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: crab
+    - name: Crab
+      description: Have 5 Crabs in a row.
       date: "2023-08-27T18:16:44-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/8j1gbed0.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: credits
+    - name: Credits
+      description: Visit the Credits page.
       date: "2023-08-27T18:16:44-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/eed4j608.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: three-sided-die
+    - name: Three-Sided Die
+      description: Have a Three-Sided Die destroy 2 or more Gamblers during a spin.
       date: "2023-08-27T18:16:45-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/b870bed0.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: cultist
+    - name: Cultist
+      description: Have 6 or more Cultists.
       date: "2023-08-27T18:16:45-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06eb4e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: dog
+    - name: Dog
+      description: Pet the Dog for 1 minute or more.
       date: "2023-08-27T18:16:46-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/77je66j7.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: five-sided-die
+    - name: Five-Sided Die
+      description: Have a Five-Sided Die destroy 2 or more Gamblers during a spin.
       date: "2023-08-27T18:16:46-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/gj0e8gb6.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: gambler
+    - name: Gambler
+      description: 'Have a Gambler give 200 or more coins when destroyed before rent payment #12 is due.'
       date: "2023-08-27T18:16:47-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/135dee5b.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: essences
+    - name: Essences
+      description: Unlock Essences.
       date: "2023-08-27T18:16:47-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/b870bb70.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: golden-egg
+    - name: Golden Egg
+      description: Have a Golden Egg adjacent to an Egg.
       date: "2023-08-27T18:16:48-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/55e41157.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: goldfish
+    - name: Goldfish
+      description: Have a Goldfish and Toddler share a Bubble.
       date: "2023-08-27T18:16:48-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/007g660d.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: hearts
+    - name: Hearts
+      description: Have 5 or more Hearts.
       date: "2023-08-27T18:16:49-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06eede.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: guillotine-essence
+    - name: Guillotine Essence
+      description: Be destroyed by Guillotine Essence.
       date: "2023-08-27T18:16:49-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/4053jj04.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: honey
+    - name: Honey
+      description: Have a Honey give 20 or more coins.
       date: "2023-08-27T18:16:50-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/007g663d.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: hex-of-thievery
+    - name: Hex of Thievery
+      description: Have a Hex of Thievery trigger 3 spins in a row.
       date: "2023-08-27T18:16:50-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/77je6607.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: jellyfish
+    - name: Jellyfish
+      description: Remove a Jellyfish with a Removal Token.
       date: "2023-08-27T18:16:51-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06ee7e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: item-capsule
+    - name: Item Capsule
+      description: Have an Item Capsule add a Pool Ball.
       date: "2023-08-27T18:16:51-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/4053jje4.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: landlord-defeated
+    - name: Landlord Defeated
+      description: Defeat your Landlord.
       date: "2023-08-27T18:16:52-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/j0bj886g.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: key
+    - name: Key
+      description: Have a Key destroy 2 or more symbols during a spin.
       date: "2023-08-27T18:16:52-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/gj0e8816.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: joker
+    - name: Joker
+      description: Have a Joker increase the value of 5 or more symbols during a spin.
       date: "2023-08-27T18:16:52-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/b870bbg0.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: magpie
+    - name: Magpie
+      description: Be 1 coin short of affording rent during a spin where a Magpie gives less than 0 coins.
       date: "2023-08-27T18:16:53-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06ee55.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: wealthy-capsule
+    - name: Wealthy Capsule
+      description: Have a Wealthy Capsule not be destroyed 3 or more spins after adding it.
       date: "2023-08-27T18:16:53-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/77je6647.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: milk
+    - name: Milk
+      description: Have 2 or more Cats share a Milk.
       date: "2023-08-27T18:16:54-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/135dee0d.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: mine
+    - name: Mine
+      description: 'Have 2 or more Mining Picks before rent payment #12 is due.'
       date: "2023-08-27T18:16:54-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/353edd08.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: mega-chest
+    - name: Mega Chest
+      description: 'Destroy 2 Mega Chests before rent payment #12 is due.'
       date: "2023-08-27T18:16:54-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/dgj5dd14.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: miner
+    - name: Miner
+      description: Have a Beer be destroyed while adjacent to a Miner.
       date: "2023-08-27T18:16:55-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/77je6641.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: ninja
+    - name: Ninja
+      description: Have a Ninja in your inventory but not appear for 3 spins in a row.
       date: "2023-08-27T18:16:55-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/4053jjbe.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: omelette
+    - name: Omelette
+      description: Have an Omelette give 20 or more coins.
       date: "2023-08-27T18:16:56-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06ee35.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: owl
+    - name: Owl
+      description: Have an Owl give 12 or more coins.
       date: "2023-08-27T18:16:56-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/dgj5ddb4.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: present
+    - name: Present
+      description: Have a Present be destroyed 1 spin before the holidays.
       date: "2023-08-27T18:16:57-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/8j1gbb41.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: pearl
+    - name: Pearl
+      description: Have a Diver and a Geologist share a Pearl.
       date: "2023-08-27T18:16:57-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/77je6651.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: lucky-capsule
+    - name: Lucky Capsule
+      description: Add a Common symbol from the choice after destroying a Lucky Capsule.
       date: "2023-08-27T18:16:58-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/gj0e8877.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: rain
+    - name: Rain
+      description: Have a Rain adjacent to a Seed that grows into a Flower.
       date: "2023-08-27T18:16:58-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/b870bb34.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: pufferfish
+    - name: Pufferfish
+      description: Have a Pufferfish adjacent to a Bubble that is destroyed during a spin.
       date: "2023-08-27T18:16:58-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/eed4jj8e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: reroll-capsule
+    - name: Reroll Capsule
+      description: Have a Reroll Capsule not be destroyed 3 or more spins after adding it.
       date: "2023-08-27T18:16:59-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/j0bj8818.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: removal-capsule
+    - name: Removal Capsule
+      description: Have a Removal Capsule not be destroyed 3 or more spins after adding it.
       date: "2023-08-27T18:16:59-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/dgj5dd84.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: sapphire
+    - name: Sapphire
+      description: Have a Big Ore add 2 Sapphires during a spin.
       date: "2023-08-27T18:17:00-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/007g6614.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: shiny-pebble
+    - name: Shiny Pebble
+      description: Have a Big Ore add 2 Shiny Pebbles during a spin.
       date: "2023-08-27T18:17:00-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/eed4jj6e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: sun
+    - name: Sun
+      description: Have 3 or more Suns adjacent to the same Flower.
       date: "2023-08-27T18:17:01-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/135deegd.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: spades
+    - name: Spades
+      description: Have 5 or more Spades.
       date: "2023-08-27T18:17:01-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/gj0e88g7.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: time-capsule
+    - name: Time Capsule
+      description: Have a Time Capsule add a different capsule.
       date: "2023-08-27T18:17:02-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/007g66b4.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: target
+    - name: Target
+      description: Have a Target be destroyed by a symbol that isn't adjacent to it.
       date: "2023-08-27T18:17:02-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/353eddj8.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: toddler
+    - name: Toddler
+      description: Have a Toddler destroy 6 or more symbols during a spin.
       date: "2023-08-27T18:17:03-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/8j1gbbb1.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: turtle
+    - name: Turtle
+      description: Have a Turtle appear in the leftmost column during a spin, then appear in the rightmost column during the next spin.
       date: "2023-08-27T18:17:03-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06eee5.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: witch
+    - name: Witch
+      description: Have an Eldritch Creature destroy a Witch.
       date: "2023-08-27T18:17:04-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/55e4111j.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-2
+    - name: Apartment Floor 2
+      description: Win a game on floor 2.
       date: "2023-08-27T18:17:04-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/eed4jj4e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-1
+    - name: Apartment Floor 1
+      description: Win a game on floor 1.
       date: "2023-08-27T18:17:04-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/8j1gbbg1.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-4
+    - name: Apartment Floor 4
+      description: Win a game on floor 4.
       date: "2023-08-27T18:17:05-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/6d06ee65.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-3
+    - name: Apartment Floor 3
+      description: Win a game on floor 3.
       date: "2023-08-27T18:17:05-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/4053jj3e.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-6
+    - name: Apartment Floor 6
+      description: Win a game on floor 6.
       date: "2023-08-27T18:17:06-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/gj0e88e7.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-5
+    - name: Apartment Floor 5
+      description: Win a game on floor 5.
       date: "2023-08-27T18:17:06-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/b870bb04.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-9
+    - name: Apartment Floor 9
+      description: Win a game on floor 9.
       date: "2023-08-27T18:17:07-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/135deedd.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-8
+    - name: Apartment Floor 8
+      description: Win a game on floor 8.
       date: "2023-08-27T18:17:07-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/j0bj88j8.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-7
+    - name: Apartment Floor 7
+      description: Win a game on floor 7.
       date: "2023-08-27T18:17:07-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/dgj5dd54.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play
-    - name: apartment-floor-10
+    - name: Apartment Floor 10
+      description: Win a game on floor 10.
       date: "2023-08-27T18:17:08-05:00"
+      points: 500
       icon: https://m.exophase.com/android/awards/m/353edde8.png?a4e151e1b828477ae496183b93bb9bff
       provider: googleplay
       platform: Google Play

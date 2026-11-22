@@ -934,3 +934,22 @@ func TestEffectivePlatformTreatsBlankAsTheGames(t *testing.T) {
 		}
 	}
 }
+
+func TestSplitSession(t *testing.T) {
+	f := &PlaythroughsFile{Playthroughs: []PlaythroughEntry{{Started: "2026-02-04", Finished: "2026-06-22", Status: "finished"}}}
+	if err := f.SplitSession(0, 0, "2026-02-08", "2026-06-18"); err != nil {
+		t.Fatal(err)
+	}
+	got := f.Playthroughs[0]
+	if got.Started != "" || len(got.Sessions) != 2 ||
+		got.Sessions[0].Started != "2026-02-04" || got.Sessions[0].Finished != "2026-02-08" ||
+		got.Sessions[1].Started != "2026-06-18" || got.Sessions[1].Finished != "2026-06-22" {
+		t.Fatalf("unexpected result: %+v", got)
+	}
+	if err := f.SplitSession(0, 0, "2026-02-08", "2026-02-08"); err == nil {
+		t.Fatal("expected error when second start is not after first end")
+	}
+	if err := f.SplitSession(0, 1, "2026-06-18", "2026-06-23"); err == nil {
+		t.Fatal("expected error when second start is past the finish")
+	}
+}

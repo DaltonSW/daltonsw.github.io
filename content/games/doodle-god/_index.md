@@ -1,20 +1,17 @@
 ---
-title: "Doodle God"
-platform: "Android"
-retroachievements_id:
-steam_appid:
-psn_id:
-ubisoft_id:
-xbox_id:
+title: Doodle God
+platform: Android
+retroachievements_id: null
+steam_appid: null
 googleplay_id: 693603860501
-status: "unfinished"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["doodle-god"]
+    games:
+      - doodle-god
+cover: null
 ---
 
 

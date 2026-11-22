@@ -1,19 +1,16 @@
 ---
-title: "Dead Space (2008)"
-platform: "PC"
-retroachievements_id:
+title: Dead Space (2008)
+platform: PC
+retroachievements_id: null
 steam_appid: 17470
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dead-space-2008"]
+    games:
+      - dead-space-2008
+cover: null
 ---
 
 

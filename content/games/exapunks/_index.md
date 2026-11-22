@@ -1,19 +1,16 @@
 ---
-title: "EXAPUNKS"
-platform: "PC"
-retroachievements_id:
+title: EXAPUNKS
+platform: PC
+retroachievements_id: null
 steam_appid: 716490
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["exapunks"]
+    games:
+      - exapunks
+cover: null
 ---
 
 

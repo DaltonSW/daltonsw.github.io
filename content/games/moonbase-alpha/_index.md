@@ -1,19 +1,16 @@
 ---
-title: "Moonbase Alpha"
-platform: "PC"
-retroachievements_id:
+title: Moonbase Alpha
+platform: PC
+retroachievements_id: null
 steam_appid: 39000
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["moonbase-alpha"]
+    games:
+      - moonbase-alpha
+cover: null
 ---
 
 

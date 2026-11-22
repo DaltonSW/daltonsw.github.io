@@ -1,20 +1,16 @@
 ---
-title: "Normal Golf Game"
-platform: "PC"
-retroachievements_id:
+title: Normal Golf Game
+platform: PC
+retroachievements_id: null
 steam_appid: 3510740
-psn_id:
-ubisoft_id:
-xbox_id:
-googleplay_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["normal-golf-game"]
+    games:
+      - normal-golf-game
+cover: null
 ---
 
 

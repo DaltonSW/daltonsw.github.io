@@ -962,6 +962,56 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+// handleSplitSession cuts one session into two at a gap the user names. It
+// answers with the whole sessions_table, since later sessions shift down.
+func (s *server) handleSplitSession(w http.ResponseWriter, r *http.Request) {
+	slug := r.PathValue("slug")
+	doc, pf, ok := s.gameOr404(w, r, slug)
+	if !ok {
+		return
+	}
+	idx, j, ok := s.sessionIndices(r, pf)
+	if !ok {
+		http.Error(w, "no such session", http.StatusNotFound)
+		return
+	}
+	if err := r.ParseForm(); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	fail := func(err error) {
+		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
+		view.Error = err.Error()
+		s.renderPlaythroughFragment(w, "sessions_table", view)
+	}
+	firstEnd, secondStart := r.FormValue("split_end"), r.FormValue("split_start")
+	if err := forms.ValidateDate(true)(firstEnd); err != nil {
+		fail(fmt.Errorf("first session end: %w", err))
+		return
+	}
+	if err := forms.ValidateDate(true)(secondStart); err != nil {
+		fail(fmt.Errorf("second session start: %w", err))
+		return
+	}
+	hadSessions := len(pf.Playthroughs[idx].Sessions) > 0
+	before := append([]model.SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
+	if err := pf.SplitSession(idx, j, firstEnd, secondStart); err != nil {
+		fail(err)
+		return
+	}
+	allowed := model.InsertSessionAllowedPaths(idx, before, pf.Playthroughs[idx].Sessions)
+	if !hadSessions {
+		allowed = append(allowed,
+			fmt.Sprintf("playthroughs[%d].started", idx),
+			fmt.Sprintf("playthroughs[%d].finished", idx))
+	}
+	if err := mutate.WriteEntry(pf, allowed...); err != nil {
+		fail(err)
+		return
+	}
+	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
+}
+
 // handleDeleteSession answers with the whole sessions_table fragment for
 // that one playthrough — RemoveSession shifts every later session's index
 // down (model.PlaythroughsFile.RemoveSession), which changes the URL every

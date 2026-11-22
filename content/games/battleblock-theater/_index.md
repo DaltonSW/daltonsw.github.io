@@ -1,19 +1,16 @@
 ---
-title: "BattleBlock Theater"
-platform: "PC"
-retroachievements_id:
+title: BattleBlock Theater
+platform: PC
+retroachievements_id: null
 steam_appid: 238460
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["battleblock-theater"]
+    games:
+      - battleblock-theater
+cover: null
 ---
 
 

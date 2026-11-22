@@ -8,38 +8,52 @@ providers:
       total: 33
       last_played: "2018-08-07"
 earned:
-    - name: unlucky
+    - name: Unlucky
+      description: Roll 1 in any die roll.
       date: "2018-08-06T11:40:07-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/4j5bj75.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play
-    - name: bring-it-on
+    - name: Bring It On
+      description: Win a boss fight.
       date: "2018-08-06T13:09:19-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/76j563e.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play
-    - name: lucky
+    - name: Lucky
+      description: Roll 20 in any die roll.
       date: "2018-08-06T14:42:26-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/6e03e4d.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play
-    - name: the-big-spender
+    - name: The Big Spender
+      description: Spend over 9000 gold.
       date: "2018-08-06T19:30:45-05:00"
+      points: 3000
       icon: https://m.exophase.com/android/awards/m/bb74bdg.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play
-    - name: dress-up
+    - name: Dress Up
+      description: Have a character fully equipped.
       date: "2018-08-06T19:41:32-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/1e5je6g.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play
-    - name: class-ninja
+    - name: 'Class: Ninja'
+      description: Unlock the Ninja class.
       date: "2018-08-06T22:02:43-05:00"
+      points: 3000
       icon: https://m.exophase.com/android/awards/m/8b10b77.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play
-    - name: mad-scientist
+    - name: Mad Scientist
+      description: Craft an item without a recipe.
       date: "2018-08-07T09:16:39-05:00"
+      points: 3000
       icon: https://m.exophase.com/android/awards/m/76j561e.png?8aba824cda2cd10a30ebaa0a8641d76a
       provider: googleplay
       platform: Google Play

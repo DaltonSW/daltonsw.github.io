@@ -1,19 +1,16 @@
 ---
-title: "Fibbage XL"
-platform: "PC"
-retroachievements_id:
+title: Fibbage XL
+platform: PC
+retroachievements_id: null
 steam_appid: 448080
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["fibbage-xl"]
+    games:
+      - fibbage-xl
+cover: null
 ---
 
 

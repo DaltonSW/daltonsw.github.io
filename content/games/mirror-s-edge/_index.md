@@ -1,19 +1,16 @@
 ---
-title: "Mirror's Edge"
-platform: "PC"
-retroachievements_id:
+title: Mirror's Edge
+platform: PC
+retroachievements_id: null
 steam_appid: 17410
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["mirror-s-edge"]
+    games:
+      - mirror-s-edge
+cover: null
 ---
 
 

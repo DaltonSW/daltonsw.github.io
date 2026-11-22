@@ -1,19 +1,16 @@
 ---
-title: "Orcs Must Die! 2"
-platform: "PC"
-retroachievements_id:
+title: Orcs Must Die! 2
+platform: PC
+retroachievements_id: null
 steam_appid: 201790
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["orcs-must-die-2"]
+    games:
+      - orcs-must-die-2
+cover: null
 ---
 
 

@@ -1,19 +1,16 @@
 ---
-title: "Call of Duty: WWII - Multiplayer"
-platform: "PC"
-retroachievements_id:
+title: 'Call of Duty: WWII - Multiplayer'
+platform: PC
+retroachievements_id: null
 steam_appid: 476620
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["call-of-duty-wwii-multiplayer"]
+    games:
+      - call-of-duty-wwii-multiplayer
+cover: null
 ---
 
 

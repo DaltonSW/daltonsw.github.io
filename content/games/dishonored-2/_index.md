@@ -1,19 +1,16 @@
 ---
-title: "Dishonored 2"
-platform: "PC"
-retroachievements_id:
+title: Dishonored 2
+platform: PC
+retroachievements_id: null
 steam_appid: 403640
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dishonored-2"]
+    games:
+      - dishonored-2
+cover: null
 ---
 
 

@@ -1,19 +1,16 @@
 ---
-title: "Epiphany City"
-platform: "PC"
-retroachievements_id:
+title: Epiphany City
+platform: PC
+retroachievements_id: null
 steam_appid: 1508530
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["epiphany-city"]
+    games:
+      - epiphany-city
+cover: null
 ---
 
 

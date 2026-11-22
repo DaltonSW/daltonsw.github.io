@@ -1,10 +1,10 @@
 {
  "provider": "googleplay",
  "title": "Luck be a Landlord",
- "updated": "2026-10-24",
+ "updated": "2026-11-22",
  "id": "736626089642",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
  "unlocked": 67,
  "total": 186,
  "first": "2023-08-27",
@@ -16,471 +16,605 @@
  "achievements": [
   {
    "key": "CgkIqr3YkrgVEAIQCA",
-   "name": "bar-of-soap",
+   "name": "Bar of Soap",
+   "description": "Have a Bar of Soap add 4 or more Bubbles before being destroyed.",
    "unlocked": true,
    "date": "2023-08-27T18:16:38-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/135deg8b.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQBQ",
-   "name": "geologist",
+   "name": "Geologist",
+   "description": "Have a Geologist destroy 20 or more symbols before rent payment #12 is due.",
    "unlocked": true,
    "date": "2023-08-27T18:16:38-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/gj0e8g66.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQCw",
-   "name": "beastmaster",
+   "name": "Beastmaster",
+   "description": "Have a Beastmaster increase the value of 5 or more symbols during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:39-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/55e416d7.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQFQ",
-   "name": "bubble",
+   "name": "Bubble",
+   "description": "Have 3 or more Bubbles be destroyed during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:39-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/135deg4b.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQDA",
-   "name": "bee",
+   "name": "Bee",
+   "description": "Have a Bee give 6 or more coins.",
    "unlocked": true,
    "date": "2023-08-27T18:16:39-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/007g6b5d.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQGA",
-   "name": "card-shark",
+   "name": "Card Shark",
+   "description": "Have a Card Shark make 5 or more symbols Wildcards during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:40-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/55e416j7.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQFw",
-   "name": "candy",
+   "name": "Candy",
+   "description": "Have 8 or more Candy.",
    "unlocked": true,
    "date": "2023-08-27T18:16:40-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/77je6g37.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQHQ",
-   "name": "cherry",
+   "name": "Cherry",
+   "description": "Have 3 or more Cherries adjacent to each other.",
    "unlocked": true,
    "date": "2023-08-27T18:16:41-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06eb1e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQGw",
-   "name": "chef",
+   "name": "Chef",
+   "description": "Have a Chef increase the value of 5 or more symbols during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:41-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/eed4j658.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQIA",
-   "name": "clubs",
+   "name": "Clubs",
+   "description": "Have 5 or more Clubs.",
    "unlocked": true,
    "date": "2023-08-27T18:16:42-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/dgj5d4e6.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQHg",
-   "name": "chick",
+   "name": "Chick",
+   "description": "Have a Chick not grow into a Chicken for 12 or more spins.",
    "unlocked": true,
    "date": "2023-08-27T18:16:42-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/b870be10.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQJg",
-   "name": "cow",
+   "name": "Cow",
+   "description": "Have a Cow add a Milk that is destroyed by a Cat during the same spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:43-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/007g6b4d.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQJQ",
-   "name": "comedian",
+   "name": "Comedian",
+   "description": "Have a Comedian be destroyed by General Zaroff.",
    "unlocked": true,
    "date": "2023-08-27T18:16:43-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/55e41607.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQJw",
-   "name": "crab",
+   "name": "Crab",
+   "description": "Have 5 Crabs in a row.",
    "unlocked": true,
    "date": "2023-08-27T18:16:44-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/8j1gbed0.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQKA",
-   "name": "credits",
+   "name": "Credits",
+   "description": "Visit the Credits page.",
    "unlocked": true,
    "date": "2023-08-27T18:16:44-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/eed4j608.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQKw",
-   "name": "three-sided-die",
+   "name": "Three-Sided Die",
+   "description": "Have a Three-Sided Die destroy 2 or more Gamblers during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:45-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/b870bed0.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQKg",
-   "name": "cultist",
+   "name": "Cultist",
+   "description": "Have 6 or more Cultists.",
    "unlocked": true,
    "date": "2023-08-27T18:16:45-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06eb4e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQMQ",
-   "name": "dog",
+   "name": "Dog",
+   "description": "Pet the Dog for 1 minute or more.",
    "unlocked": true,
    "date": "2023-08-27T18:16:46-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/77je66j7.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQLA",
-   "name": "five-sided-die",
+   "name": "Five-Sided Die",
+   "description": "Have a Five-Sided Die destroy 2 or more Gamblers during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:46-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/gj0e8gb6.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQPA",
-   "name": "gambler",
+   "name": "Gambler",
+   "description": "Have a Gambler give 200 or more coins when destroyed before rent payment #12 is due.",
    "unlocked": true,
    "date": "2023-08-27T18:16:47-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/135dee5b.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQOA",
-   "name": "essences",
+   "name": "Essences",
+   "description": "Unlock Essences.",
    "unlocked": true,
    "date": "2023-08-27T18:16:47-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/b870bb70.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQPw",
-   "name": "golden-egg",
+   "name": "Golden Egg",
+   "description": "Have a Golden Egg adjacent to an Egg.",
    "unlocked": true,
    "date": "2023-08-27T18:16:48-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/55e41157.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQQA",
-   "name": "goldfish",
+   "name": "Goldfish",
+   "description": "Have a Goldfish and Toddler share a Bubble.",
    "unlocked": true,
    "date": "2023-08-27T18:16:48-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/007g660d.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQRA",
-   "name": "hearts",
+   "name": "Hearts",
+   "description": "Have 5 or more Hearts.",
    "unlocked": true,
    "date": "2023-08-27T18:16:49-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06eede.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQQw",
-   "name": "guillotine-essence",
+   "name": "Guillotine Essence",
+   "description": "Be destroyed by Guillotine Essence.",
    "unlocked": true,
    "date": "2023-08-27T18:16:49-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/4053jj04.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQTw",
-   "name": "honey",
+   "name": "Honey",
+   "description": "Have a Honey give 20 or more coins.",
    "unlocked": true,
    "date": "2023-08-27T18:16:50-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/007g663d.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQTQ",
-   "name": "hex-of-thievery",
+   "name": "Hex of Thievery",
+   "description": "Have a Hex of Thievery trigger 3 spins in a row.",
    "unlocked": true,
    "date": "2023-08-27T18:16:50-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/77je6607.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQUw",
-   "name": "jellyfish",
+   "name": "Jellyfish",
+   "description": "Remove a Jellyfish with a Removal Token.",
    "unlocked": true,
    "date": "2023-08-27T18:16:51-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06ee7e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQUg",
-   "name": "item-capsule",
+   "name": "Item Capsule",
+   "description": "Have an Item Capsule add a Pool Ball.",
    "unlocked": true,
    "date": "2023-08-27T18:16:51-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/4053jje4.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQVw",
-   "name": "landlord-defeated",
+   "name": "Landlord Defeated",
+   "description": "Defeat your Landlord.",
    "unlocked": true,
    "date": "2023-08-27T18:16:52-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/j0bj886g.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQVQ",
-   "name": "key",
+   "name": "Key",
+   "description": "Have a Key destroy 2 or more symbols during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:52-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/gj0e8816.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQVA",
-   "name": "joker",
+   "name": "Joker",
+   "description": "Have a Joker increase the value of 5 or more symbols during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:52-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/b870bbg0.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQXA",
-   "name": "magpie",
+   "name": "Magpie",
+   "description": "Be 1 coin short of affording rent during a spin where a Magpie gives less than 0 coins.",
    "unlocked": true,
    "date": "2023-08-27T18:16:53-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06ee55.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQWg",
-   "name": "wealthy-capsule",
+   "name": "Wealthy Capsule",
+   "description": "Have a Wealthy Capsule not be destroyed 3 or more spins after adding it.",
    "unlocked": true,
    "date": "2023-08-27T18:16:53-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/77je6647.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQYQ",
-   "name": "milk",
+   "name": "Milk",
+   "description": "Have 2 or more Cats share a Milk.",
    "unlocked": true,
    "date": "2023-08-27T18:16:54-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/135dee0d.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQYg",
-   "name": "mine",
+   "name": "Mine",
+   "description": "Have 2 or more Mining Picks before rent payment #12 is due.",
    "unlocked": true,
    "date": "2023-08-27T18:16:54-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/353edd08.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQXw",
-   "name": "mega-chest",
+   "name": "Mega Chest",
+   "description": "Destroy 2 Mega Chests before rent payment #12 is due.",
    "unlocked": true,
    "date": "2023-08-27T18:16:54-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/dgj5dd14.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQYw",
-   "name": "miner",
+   "name": "Miner",
+   "description": "Have a Beer be destroyed while adjacent to a Miner.",
    "unlocked": true,
    "date": "2023-08-27T18:16:55-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/77je6641.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQaA",
-   "name": "ninja",
+   "name": "Ninja",
+   "description": "Have a Ninja in your inventory but not appear for 3 spins in a row.",
    "unlocked": true,
    "date": "2023-08-27T18:16:55-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/4053jjbe.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQaQ",
-   "name": "omelette",
+   "name": "Omelette",
+   "description": "Have an Omelette give 20 or more coins.",
    "unlocked": true,
    "date": "2023-08-27T18:16:56-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06ee35.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQbA",
-   "name": "owl",
+   "name": "Owl",
+   "description": "Have an Owl give 12 or more coins.",
    "unlocked": true,
    "date": "2023-08-27T18:16:56-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/dgj5ddb4.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQcw",
-   "name": "present",
+   "name": "Present",
+   "description": "Have a Present be destroyed 1 spin before the holidays.",
    "unlocked": true,
    "date": "2023-08-27T18:16:57-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/8j1gbb41.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQcA",
-   "name": "pearl",
+   "name": "Pearl",
+   "description": "Have a Diver and a Geologist share a Pearl.",
    "unlocked": true,
    "date": "2023-08-27T18:16:57-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/77je6651.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQeA",
-   "name": "lucky-capsule",
+   "name": "Lucky Capsule",
+   "description": "Add a Common symbol from the choice after destroying a Lucky Capsule.",
    "unlocked": true,
    "date": "2023-08-27T18:16:58-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/gj0e8877.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQdw",
-   "name": "rain",
+   "name": "Rain",
+   "description": "Have a Rain adjacent to a Seed that grows into a Flower.",
    "unlocked": true,
    "date": "2023-08-27T18:16:58-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/b870bb34.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQdA",
-   "name": "pufferfish",
+   "name": "Pufferfish",
+   "description": "Have a Pufferfish adjacent to a Bubble that is destroyed during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:16:58-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/eed4jj8e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQeg",
-   "name": "reroll-capsule",
+   "name": "Reroll Capsule",
+   "description": "Have a Reroll Capsule not be destroyed 3 or more spins after adding it.",
    "unlocked": true,
    "date": "2023-08-27T18:16:59-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/j0bj8818.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQeQ",
-   "name": "removal-capsule",
+   "name": "Removal Capsule",
+   "description": "Have a Removal Capsule not be destroyed 3 or more spins after adding it.",
    "unlocked": true,
    "date": "2023-08-27T18:16:59-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/dgj5dd84.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQfw",
-   "name": "sapphire",
+   "name": "Sapphire",
+   "description": "Have a Big Ore add 2 Sapphires during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:17:00-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/007g6614.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQgQE",
-   "name": "shiny-pebble",
+   "name": "Shiny Pebble",
+   "description": "Have a Big Ore add 2 Shiny Pebbles during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:17:00-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/eed4jj6e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQiAE",
-   "name": "sun",
+   "name": "Sun",
+   "description": "Have 3 or more Suns adjacent to the same Flower.",
    "unlocked": true,
    "date": "2023-08-27T18:17:01-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/135deegd.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQhQE",
-   "name": "spades",
+   "name": "Spades",
+   "description": "Have 5 or more Spades.",
    "unlocked": true,
    "date": "2023-08-27T18:17:01-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/gj0e88g7.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQjAE",
-   "name": "time-capsule",
+   "name": "Time Capsule",
+   "description": "Have a Time Capsule add a different capsule.",
    "unlocked": true,
    "date": "2023-08-27T18:17:02-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/007g66b4.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQiQE",
-   "name": "target",
+   "name": "Target",
+   "description": "Have a Target be destroyed by a symbol that isn't adjacent to it.",
    "unlocked": true,
    "date": "2023-08-27T18:17:02-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/353eddj8.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQjQE",
-   "name": "toddler",
+   "name": "Toddler",
+   "description": "Have a Toddler destroy 6 or more symbols during a spin.",
    "unlocked": true,
    "date": "2023-08-27T18:17:03-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/8j1gbbb1.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQkAE",
-   "name": "turtle",
+   "name": "Turtle",
+   "description": "Have a Turtle appear in the leftmost column during a spin, then appear in the rightmost column during the next spin.",
    "unlocked": true,
    "date": "2023-08-27T18:17:03-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06eee5.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQmAE",
-   "name": "witch",
+   "name": "Witch",
+   "description": "Have an Eldritch Creature destroy a Witch.",
    "unlocked": true,
    "date": "2023-08-27T18:17:04-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/55e4111j.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQmwE",
-   "name": "apartment-floor-2",
+   "name": "Apartment Floor 2",
+   "description": "Win a game on floor 2.",
    "unlocked": true,
    "date": "2023-08-27T18:17:04-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/eed4jj4e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQmgE",
-   "name": "apartment-floor-1",
+   "name": "Apartment Floor 1",
+   "description": "Win a game on floor 1.",
    "unlocked": true,
    "date": "2023-08-27T18:17:04-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/8j1gbbg1.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQnQE",
-   "name": "apartment-floor-4",
+   "name": "Apartment Floor 4",
+   "description": "Win a game on floor 4.",
    "unlocked": true,
    "date": "2023-08-27T18:17:05-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6d06ee65.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQnAE",
-   "name": "apartment-floor-3",
+   "name": "Apartment Floor 3",
+   "description": "Win a game on floor 3.",
    "unlocked": true,
    "date": "2023-08-27T18:17:05-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/4053jj3e.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQnwE",
-   "name": "apartment-floor-6",
+   "name": "Apartment Floor 6",
+   "description": "Win a game on floor 6.",
    "unlocked": true,
    "date": "2023-08-27T18:17:06-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/gj0e88e7.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQngE",
-   "name": "apartment-floor-5",
+   "name": "Apartment Floor 5",
+   "description": "Win a game on floor 5.",
    "unlocked": true,
    "date": "2023-08-27T18:17:06-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/b870bb04.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQogE",
-   "name": "apartment-floor-9",
+   "name": "Apartment Floor 9",
+   "description": "Win a game on floor 9.",
    "unlocked": true,
    "date": "2023-08-27T18:17:07-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/135deedd.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQoQE",
-   "name": "apartment-floor-8",
+   "name": "Apartment Floor 8",
+   "description": "Win a game on floor 8.",
    "unlocked": true,
    "date": "2023-08-27T18:17:07-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/j0bj88j8.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQoAE",
-   "name": "apartment-floor-7",
+   "name": "Apartment Floor 7",
+   "description": "Win a game on floor 7.",
    "unlocked": true,
    "date": "2023-08-27T18:17:07-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/dgj5dd54.png?a4e151e1b828477ae496183b93bb9bff"
   },
   {
    "key": "CgkIqr3YkrgVEAIQowE",
-   "name": "apartment-floor-10",
+   "name": "Apartment Floor 10",
+   "description": "Win a game on floor 10.",
    "unlocked": true,
    "date": "2023-08-27T18:17:08-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/353edde8.png?a4e151e1b828477ae496183b93bb9bff"
   }
  ],

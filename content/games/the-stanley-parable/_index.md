@@ -1,19 +1,16 @@
 ---
-title: "The Stanley Parable"
-platform: "PC"
-retroachievements_id:
+title: The Stanley Parable
+platform: PC
+retroachievements_id: null
 steam_appid: 221910
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-stanley-parable"]
+    games:
+      - the-stanley-parable
+cover: null
 ---
 
 

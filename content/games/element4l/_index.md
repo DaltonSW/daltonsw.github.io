@@ -1,19 +1,16 @@
 ---
-title: "Element4l"
-platform: "PC"
-retroachievements_id:
+title: Element4l
+platform: PC
+retroachievements_id: null
 steam_appid: 235820
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["element4l"]
+    games:
+      - element4l
+cover: null
 ---
 
 

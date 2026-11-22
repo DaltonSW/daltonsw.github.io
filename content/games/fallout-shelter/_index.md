@@ -6,7 +6,7 @@ steam_appid: 588430
 googleplay_id: 461745824600
 status: endless
 rating: null
-draft: true
+draft: false
 cascade:
   params:
     games:

@@ -8,33 +8,45 @@ providers:
       total: 12
       last_played: "2026-07-04"
 earned:
-    - name: first-steps
+    - name: First Steps
+      description: Completed World 1
       date: "2019-12-05T00:29:29-06:00"
+      points: 2000
       icon: https://m.exophase.com/android/awards/m/667dd83.png?c5bdf70be4aa4564318ab6c5da05033c
       provider: googleplay
       platform: Google Play
-    - name: taking-it-to-the-skies
+    - name: Taking It To The Skies
+      description: Completed World 2
       date: "2019-12-05T00:34:17-06:00"
+      points: 2500
       icon: https://m.exophase.com/android/awards/m/b0g88j3.png?c5bdf70be4aa4564318ab6c5da05033c
       provider: googleplay
       platform: Google Play
-    - name: unstoppable
+    - name: Unstoppable
+      description: Completed World 3
       date: "2019-12-10T23:05:31-06:00"
+      points: 3000
       icon: https://m.exophase.com/android/awards/m/ge1jj6g.png?c5bdf70be4aa4564318ab6c5da05033c
       provider: googleplay
       platform: Google Play
-    - name: making-a-splash
+    - name: Making A Splash
+      description: Completed World 4
       date: "2020-01-15T17:50:42-06:00"
+      points: 3500
       icon: https://m.exophase.com/android/awards/m/d50gg3d.png?c5bdf70be4aa4564318ab6c5da05033c
       provider: googleplay
       platform: Google Play
-    - name: bouncing-off
+    - name: Bouncing Off
+      description: Completed World 5
       date: "2020-03-14T22:03:03-05:00"
+      points: 4000
       icon: https://m.exophase.com/android/awards/m/jj600dj.png?c5bdf70be4aa4564318ab6c5da05033c
       provider: googleplay
       platform: Google Play
-    - name: thinking-with-portals
+    - name: Thinking With Portals
+      description: Completed World 6
       date: "2020-05-17T11:59:31-05:00"
+      points: 5000
       icon: https://m.exophase.com/android/awards/m/1d73388.png?c5bdf70be4aa4564318ab6c5da05033c
       provider: googleplay
       platform: Google Play

@@ -1,19 +1,16 @@
 ---
-title: "The End Is Nigh"
-platform: "PC"
-retroachievements_id:
+title: The End Is Nigh
+platform: PC
+retroachievements_id: null
 steam_appid: 583470
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-end-is-nigh"]
+    games:
+      - the-end-is-nigh
+cover: null
 ---
 
 

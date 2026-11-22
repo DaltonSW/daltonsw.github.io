@@ -613,6 +613,7 @@ a.side-row__label:hover { color: var(--accent); text-decoration-color: currentCo
 .log-days { display: flex; flex-direction: column; gap: 0.6rem; margin: 0.9rem 0 0; }
 .log-day { display: flex; align-items: flex-start; gap: 0.7rem; }
 .log-day[hidden], .log-event[hidden] { display: none; }
+.log-days--wide .log-day__date { flex-basis: 11ch; }
 // the day's gutter already carries the date
 .log-day .ach-row__date { display: none; }
 // the date shows once per day; a rule down the left of the day's events ties them to it

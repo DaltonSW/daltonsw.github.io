@@ -1,19 +1,16 @@
 ---
-title: "Crypt of the NecroDancer"
-platform: "PC"
-retroachievements_id:
+title: Crypt of the NecroDancer
+platform: PC
+retroachievements_id: null
 steam_appid: 247080
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "endless"
-subgames:
-rating:
-cover:
-draft: true
+status: endless
+rating: null
+draft: false
 cascade:
   params:
-    games: ["crypt-of-the-necrodancer"]
+    games:
+      - crypt-of-the-necrodancer
+cover: null
 ---
 
 

@@ -1,19 +1,16 @@
 ---
-title: "VVVVVV"
-platform: "PC"
-retroachievements_id:
+title: VVVVVV
+platform: PC
+retroachievements_id: null
 steam_appid: 70300
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["vvvvvv"]
+    games:
+      - vvvvvv
+cover: null
 ---
 
 

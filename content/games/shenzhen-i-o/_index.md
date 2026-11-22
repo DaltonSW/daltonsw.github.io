@@ -1,19 +1,16 @@
 ---
-title: "SHENZHEN I/O"
-platform: "PC"
-retroachievements_id:
+title: SHENZHEN I/O
+platform: PC
+retroachievements_id: null
 steam_appid: 504210
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "unfinished"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["shenzhen-i-o"]
+    games:
+      - shenzhen-i-o
+cover: null
 ---
 
 

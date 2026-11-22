@@ -1,19 +1,16 @@
 ---
-title: "Dead by Daylight"
-platform: "PC"
-retroachievements_id:
+title: Dead by Daylight
+platform: PC
+retroachievements_id: null
 steam_appid: 381210
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dead-by-daylight"]
+    games:
+      - dead-by-daylight
+cover: null
 ---
 
 

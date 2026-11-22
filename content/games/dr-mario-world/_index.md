@@ -1,20 +1,17 @@
 ---
-title: "Dr. Mario World"
-platform: "Android"
-retroachievements_id:
-steam_appid:
-psn_id:
-ubisoft_id:
-xbox_id:
+title: Dr. Mario World
+platform: Android
+retroachievements_id: null
+steam_appid: null
 googleplay_id: 419844773443
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dr-mario-world"]
+    games:
+      - dr-mario-world
+cover: null
 ---
 
 

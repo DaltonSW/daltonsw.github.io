@@ -1,19 +1,16 @@
 ---
-title: "Okami HD"
-platform: "PC"
-retroachievements_id:
+title: Okami HD
+platform: PC
+retroachievements_id: null
 steam_appid: 587620
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["okami-hd"]
+    games:
+      - okami-hd
+cover: null
 ---
 
 

@@ -1,19 +1,16 @@
 ---
-title: "Strange Horticulture"
-platform: "PC"
-retroachievements_id:
+title: Strange Horticulture
+platform: PC
+retroachievements_id: null
 steam_appid: 1574580
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["strange-horticulture"]
+    games:
+      - strange-horticulture
+cover: null
 ---
 
 

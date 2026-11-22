@@ -1,19 +1,16 @@
 ---
-title: "YOU DON'T KNOW JACK Vol. 3"
-platform: "PC"
-retroachievements_id:
+title: YOU DON'T KNOW JACK Vol. 3
+platform: PC
+retroachievements_id: null
 steam_appid: 259960
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["you-don-t-know-jack-vol-3"]
+    games:
+      - you-don-t-know-jack-vol-3
+cover: null
 ---
 
 

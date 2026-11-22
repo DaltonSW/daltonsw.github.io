@@ -1,19 +1,16 @@
 ---
-title: "Scribblenauts Unlimited"
-platform: "PC"
-retroachievements_id:
+title: Scribblenauts Unlimited
+platform: PC
+retroachievements_id: null
 steam_appid: 218680
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["scribblenauts-unlimited"]
+    games:
+      - scribblenauts-unlimited
+cover: null
 ---
 
 

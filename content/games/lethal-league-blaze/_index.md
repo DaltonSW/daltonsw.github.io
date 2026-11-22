@@ -1,19 +1,16 @@
 ---
-title: "Lethal League Blaze"
-platform: "PC"
-retroachievements_id:
+title: Lethal League Blaze
+platform: PC
+retroachievements_id: null
 steam_appid: 553310
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["lethal-league-blaze"]
+    games:
+      - lethal-league-blaze
+cover: null
 ---
 
 

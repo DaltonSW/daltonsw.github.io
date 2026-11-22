@@ -1,19 +1,16 @@
 ---
-title: "Killing Floor"
-platform: "PC"
-retroachievements_id:
+title: Killing Floor
+platform: PC
+retroachievements_id: null
 steam_appid: 1250
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["killing-floor"]
+    games:
+      - killing-floor
+cover: null
 ---
 
 

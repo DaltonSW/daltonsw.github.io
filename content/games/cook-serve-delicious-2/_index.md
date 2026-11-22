@@ -1,19 +1,16 @@
 ---
-title: "Cook, Serve, Delicious! 2!!"
-platform: "PC"
-retroachievements_id:
+title: Cook, Serve, Delicious! 2!!
+platform: PC
+retroachievements_id: null
 steam_appid: 386620
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "endless"
-subgames:
-rating:
-cover:
-draft: true
+status: endless
+rating: null
+draft: false
 cascade:
   params:
-    games: ["cook-serve-delicious-2"]
+    games:
+      - cook-serve-delicious-2
+cover: null
 ---
 
 

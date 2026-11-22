@@ -1,19 +1,16 @@
 ---
-title: "Gods Will Be Watching"
-platform: "PC"
-retroachievements_id:
+title: Gods Will Be Watching
+platform: PC
+retroachievements_id: null
 steam_appid: 274290
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["gods-will-be-watching"]
+    games:
+      - gods-will-be-watching
+cover: null
 ---
 
 

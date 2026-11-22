@@ -1,19 +1,16 @@
 ---
-title: "Prison Architect"
-platform: "PC"
-retroachievements_id:
+title: Prison Architect
+platform: PC
+retroachievements_id: null
 steam_appid: 233450
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "endless"
-subgames:
-rating:
-cover:
-draft: true
+status: endless
+rating: null
+draft: false
 cascade:
   params:
-    games: ["prison-architect"]
+    games:
+      - prison-architect
+cover: null
 ---
 
 

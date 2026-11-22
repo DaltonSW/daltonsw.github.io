@@ -1,19 +1,16 @@
 ---
-title: "Owlboy"
-platform: "PC"
-retroachievements_id:
+title: Owlboy
+platform: PC
+retroachievements_id: null
 steam_appid: 115800
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["owlboy"]
+    games:
+      - owlboy
+cover: null
 ---
 
 

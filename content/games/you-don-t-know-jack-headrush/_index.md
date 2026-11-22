@@ -1,19 +1,16 @@
 ---
-title: "YOU DON'T KNOW JACK HEADRUSH"
-platform: "PC"
-retroachievements_id:
+title: YOU DON'T KNOW JACK HEADRUSH
+platform: PC
+retroachievements_id: null
 steam_appid: 260060
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["you-don-t-know-jack-headrush"]
+    games:
+      - you-don-t-know-jack-headrush
+cover: null
 ---
 
 

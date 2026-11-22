@@ -1,19 +1,16 @@
 ---
-title: "The Tiny Bang Story"
-platform: "PC"
-retroachievements_id:
+title: The Tiny Bang Story
+platform: PC
+retroachievements_id: null
 steam_appid: 96000
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-tiny-bang-story"]
+    games:
+      - the-tiny-bang-story
+cover: null
 ---
 
 

@@ -1,10 +1,10 @@
 {
  "provider": "googleplay",
  "title": "Super Stickman Golf 3",
- "updated": "2026-10-24",
+ "updated": "2026-11-22",
  "id": "21093003863",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
  "unlocked": 5,
  "total": 56,
  "first": "2016-09-23",
@@ -16,37 +16,47 @@
  "achievements": [
   {
    "key": "CggI1-T2yU4QAhAD",
-   "name": "thats-a-bingo",
+   "name": "That's a Bingo",
+   "description": "Get a hole in one",
    "unlocked": true,
    "date": "2016-09-23T10:09:48-05:00",
+   "points": 1000,
    "icon": "https://m.exophase.com/android/awards/m/8ed5e51.png?da80ac51d981b6a6f53330202073b89a"
   },
   {
    "key": "CggI1-T2yU4QAhAM",
-   "name": "the-trio",
+   "name": "The Trio",
+   "description": "Bag three hole in ones in a row",
    "unlocked": true,
    "date": "2016-09-23T10:10:27-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/3j17j78.png?da80ac51d981b6a6f53330202073b89a"
   },
   {
    "key": "CggI1-T2yU4QAhAE",
-   "name": "eagle",
+   "name": "Eagle",
+   "description": "Get an Eagle",
    "unlocked": true,
    "date": "2016-09-23T10:12:16-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/e60363e.png?da80ac51d981b6a6f53330202073b89a"
   },
   {
    "key": "CggI1-T2yU4QAhAF",
-   "name": "nothin-but-net",
+   "name": "Nothin But Net",
+   "description": "Get a hole in one without touching the green",
    "unlocked": true,
    "date": "2016-11-11T11:40:05-06:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/447e4ee.png?da80ac51d981b6a6f53330202073b89a"
   },
   {
    "key": "CggI1-T2yU4QAhAN",
-   "name": "nil-score",
+   "name": "Nil Score",
+   "description": "Score a zero on a hole",
    "unlocked": true,
    "date": "2016-11-11T11:40:06-06:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/7gb0g01.png?da80ac51d981b6a6f53330202073b89a"
   }
  ],

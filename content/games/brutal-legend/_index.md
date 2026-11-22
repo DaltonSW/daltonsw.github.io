@@ -1,19 +1,16 @@
 ---
-title: "Brütal Legend"
-platform: "PC"
-retroachievements_id:
+title: Brütal Legend
+platform: PC
+retroachievements_id: null
 steam_appid: 225260
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["brutal-legend"]
+    games:
+      - brutal-legend
+cover: null
 ---
 
 

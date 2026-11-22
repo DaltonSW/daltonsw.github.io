@@ -1,20 +1,17 @@
 ---
-title: "holedown"
-platform: "Android"
-retroachievements_id:
-steam_appid:
-psn_id:
-ubisoft_id:
-xbox_id:
+title: holedown
+platform: Android
+retroachievements_id: null
+steam_appid: null
 googleplay_id: 1019197458330
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["holedown"]
+    games:
+      - holedown
+cover: null
 ---
 
 

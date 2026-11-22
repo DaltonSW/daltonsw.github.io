@@ -1,19 +1,16 @@
 ---
-title: "PAYDAY 2"
-platform: "PC"
-retroachievements_id:
+title: PAYDAY 2
+platform: PC
+retroachievements_id: null
 steam_appid: 218620
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["payday-2"]
+    games:
+      - payday-2
+cover: null
 ---
 
 

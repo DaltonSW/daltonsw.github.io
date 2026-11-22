@@ -55,6 +55,15 @@ playthroughsSectionView and the handlers that render these. */}}
       hx-swap="outerHTML"
       hx-confirm="Delete this session?">Delete</button>
     {{end}}
+    {{if .Finished}}
+    <input type="text" name="split_end" placeholder="1st ends" size="10" title="Split this session in two: the first part ends on this day">
+    <input type="text" name="split_start" placeholder="2nd starts" size="10" title="…and the second part starts on this day and runs to the current finish">
+    <button type="button"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/split"
+      hx-include="closest tr"
+      hx-target="#sessions-{{.PthIndex}}"
+      hx-swap="outerHTML">Split session</button>
+    {{end}}
     {{if lt (add1 .Index) .NumSessions}}
     <input type="hidden" name="keep_last" value="{{.Index}}">
     <select name="new_status">{{range pthStatuses}}<option value="{{.}}">{{.}}</option>{{end}}</select>

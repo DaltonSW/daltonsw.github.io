@@ -1,19 +1,16 @@
 ---
-title: "Don't Starve Together"
-platform: "PC"
-retroachievements_id:
+title: Don't Starve Together
+platform: PC
+retroachievements_id: null
 steam_appid: 322330
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["don-t-starve-together"]
+    games:
+      - don-t-starve-together
+cover: null
 ---
 
 

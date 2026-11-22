@@ -1,19 +1,16 @@
 ---
-title: "The Beginner's Guide"
-platform: "PC"
-retroachievements_id:
+title: The Beginner's Guide
+platform: PC
+retroachievements_id: null
 steam_appid: 303210
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-beginner-s-guide"]
+    games:
+      - the-beginner-s-guide
+cover: null
 ---
 
 

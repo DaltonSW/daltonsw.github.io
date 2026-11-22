@@ -1,19 +1,16 @@
 ---
-title: "LEGO® Star Wars™: The Complete Saga"
-platform: "PC"
-retroachievements_id:
+title: 'LEGO® Star Wars™: The Complete Saga'
+platform: PC
+retroachievements_id: null
 steam_appid: 32440
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["lego-star-wars-the-complete-saga"]
+    games:
+      - lego-star-wars-the-complete-saga
+cover: null
 ---
 
 

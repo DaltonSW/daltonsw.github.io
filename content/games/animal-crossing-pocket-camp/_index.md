@@ -1,20 +1,17 @@
 ---
-title: "Animal Crossing: Pocket Camp"
-platform: "Android"
-retroachievements_id:
-steam_appid:
-psn_id:
-ubisoft_id:
-xbox_id:
+title: 'Animal Crossing: Pocket Camp'
+platform: Android
+retroachievements_id: null
+steam_appid: null
 googleplay_id: 734508928088
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["animal-crossing-pocket-camp"]
+    games:
+      - animal-crossing-pocket-camp
+cover: null
 ---
 
 

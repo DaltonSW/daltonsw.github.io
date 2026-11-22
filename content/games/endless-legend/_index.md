@@ -1,19 +1,16 @@
 ---
-title: "ENDLESS Legend™"
-platform: "PC"
-retroachievements_id:
+title: ENDLESS Legend™
+platform: PC
+retroachievements_id: null
 steam_appid: 289130
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["endless-legend"]
+    games:
+      - endless-legend
+cover: null
 ---
 
 

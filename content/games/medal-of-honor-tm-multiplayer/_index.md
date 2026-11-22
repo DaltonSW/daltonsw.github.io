@@ -1,19 +1,16 @@
 ---
-title: "Medal of Honor(TM) Multiplayer"
-platform: "PC"
-retroachievements_id:
+title: Medal of Honor(TM) Multiplayer
+platform: PC
+retroachievements_id: null
 steam_appid: 47830
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["medal-of-honor-tm-multiplayer"]
+    games:
+      - medal-of-honor-tm-multiplayer
+cover: null
 ---
 
 

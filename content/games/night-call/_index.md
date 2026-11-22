@@ -1,19 +1,16 @@
 ---
-title: "Night Call"
-platform: "PC"
-retroachievements_id:
+title: Night Call
+platform: PC
+retroachievements_id: null
 steam_appid: 680380
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["night-call"]
+    games:
+      - night-call
+cover: null
 ---
 
 

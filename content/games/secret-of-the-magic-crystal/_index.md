@@ -1,19 +1,16 @@
 ---
-title: "Secret of the Magic Crystal"
-platform: "PC"
-retroachievements_id:
+title: Secret of the Magic Crystal
+platform: PC
+retroachievements_id: null
 steam_appid: 45100
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["secret-of-the-magic-crystal"]
+    games:
+      - secret-of-the-magic-crystal
+cover: null
 ---
 
 

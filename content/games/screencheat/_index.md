@@ -1,19 +1,16 @@
 ---
-title: "Screencheat"
-platform: "PC"
-retroachievements_id:
+title: Screencheat
+platform: PC
+retroachievements_id: null
 steam_appid: 301970
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["screencheat"]
+    games:
+      - screencheat
+cover: null
 ---
 
 

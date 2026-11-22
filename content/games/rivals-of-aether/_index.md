@@ -1,19 +1,16 @@
 ---
-title: "Rivals of Aether"
-platform: "PC"
-retroachievements_id:
+title: Rivals of Aether
+platform: PC
+retroachievements_id: null
 steam_appid: 383980
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["rivals-of-aether"]
+    games:
+      - rivals-of-aether
+cover: null
 ---
 
 

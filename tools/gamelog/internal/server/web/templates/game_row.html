@@ -18,7 +18,8 @@
   <td><input type="text" name="platform" value="{{.Platform}}"></td>
   <td><input type="text" name="rating" value="{{.Rating}}" style="max-width: 4rem;"></td>
   <td class="dim">{{.NumPlaythroughs}}</td>
-  <td class="row row--nowrap">
+  <td>
+  <div class="row row--nowrap">
     <button type="button" class="btn--primary"
       hx-post="/games/{{.Slug}}/quickedit"
       hx-include="closest tr"
@@ -26,7 +27,7 @@
       hx-swap="outerHTML">Save</button>
     {{if or .RAGameID .SteamAppID .PSNID .UbisoftID .XboxID .GooglePlayID}}<a class="btn" href="/games/{{.Slug}}?suggest=1#suggest" title="Suggest dates from linked providers (live RetroAchievements/Steam, archived history for all) and log them">Suggest</a>{{end}}
     <a class="btn btn-details" href="/games/{{.Slug}}">Details &rarr; </a>
-  </td>
+  </div></td>
 </tr>
 {{if .Error}}
 <tr class="row-error"><td colspan="9">{{.Error}}</td></tr>

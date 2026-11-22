@@ -1,19 +1,16 @@
 ---
-title: "Daikatana"
-platform: "PC"
-retroachievements_id:
+title: Daikatana
+platform: PC
+retroachievements_id: null
 steam_appid: 242980
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["daikatana"]
+    games:
+      - daikatana
+cover: null
 ---
 
 

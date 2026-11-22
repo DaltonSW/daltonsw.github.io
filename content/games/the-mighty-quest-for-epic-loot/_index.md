@@ -1,19 +1,16 @@
 ---
-title: "The Mighty Quest For Epic Loot"
-platform: "PC"
-retroachievements_id:
+title: The Mighty Quest For Epic Loot
+platform: PC
+retroachievements_id: null
 steam_appid: 239220
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-mighty-quest-for-epic-loot"]
+    games:
+      - the-mighty-quest-for-epic-loot
+cover: null
 ---
 
 

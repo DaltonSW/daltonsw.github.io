@@ -68,9 +68,37 @@
       <span class="year-group__year">Earned</span>
       <span class="year-group__count">{{ len . }} achievement{{ if ne (len .) 1 }}s{{ end }}</span>
     </summary>
-    <div class="ach-rows">
-      {{- range . }}
-      {{ partial "achievement-row.html" (dict "row" .) }}
+    {{/* same per-day gutter as the main Log (.log-day styles give the compact rows) */}}
+    {{- $days := slice }}
+    {{- range . }}
+      {{- $d := "" }}{{ with .date }}{{ $d = . | time.Format "2006-01-02" }}{{ end }}
+      {{- if not (in $days $d) }}{{ $days = $days | append $d }}{{ end }}
+    {{- end }}
+    {{- $days = sort (complement (slice "") $days) "value" "desc" }}
+    <div class="log-days log-days--wide">
+      {{- range $days }}
+      {{- $day := . }}
+      <div class="log-day">
+        <span class="log-day__date">{{ . | time.Format "Jan 2, 2006" }}</span>
+        <div class="log-day__events">
+          <div class="ach-rows">
+            {{- range $earned }}
+            {{- if and .date (eq (.date | time.Format "2006-01-02") $day) }}
+            {{ partial "achievement-row.html" (dict "row" .) }}
+            {{- end }}
+            {{- end }}
+          </div>
+        </div>
+      </div>
+      {{- end }}
+      {{- $undated := where $earned "date" "eq" nil }}
+      {{- with $undated }}
+      <div class="log-day">
+        <span class="log-day__date">Undated</span>
+        <div class="log-day__events"><div class="ach-rows">
+          {{- range . }}{{ partial "achievement-row.html" (dict "row" .) }}{{ end }}
+        </div></div>
+      </div>
       {{- end }}
     </div>
   </details>

@@ -1,19 +1,16 @@
 ---
-title: "Taiji"
-platform: "PC"
-retroachievements_id:
+title: Taiji
+platform: PC
+retroachievements_id: null
 steam_appid: 1141580
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "unfinished"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["taiji"]
+    games:
+      - taiji
+cover: null
 ---
 
 

@@ -1,19 +1,16 @@
 ---
-title: "Sayonara Wild Hearts"
-platform: "PC"
-retroachievements_id:
+title: Sayonara Wild Hearts
+platform: PC
+retroachievements_id: null
 steam_appid: 1122720
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["sayonara-wild-hearts"]
+    games:
+      - sayonara-wild-hearts
+cover: null
 ---
 
 

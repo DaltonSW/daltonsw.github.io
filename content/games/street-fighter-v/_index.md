@@ -1,19 +1,16 @@
 ---
-title: "Street Fighter V"
-platform: "PC"
-retroachievements_id:
+title: Street Fighter V
+platform: PC
+retroachievements_id: null
 steam_appid: 310950
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["street-fighter-v"]
+    games:
+      - street-fighter-v
+cover: null
 ---
 
 

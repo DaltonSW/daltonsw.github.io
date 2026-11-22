@@ -1,19 +1,16 @@
 ---
-title: "The Final Station"
-platform: "PC"
-retroachievements_id:
+title: The Final Station
+platform: PC
+retroachievements_id: null
 steam_appid: 435530
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["the-final-station"]
+    games:
+      - the-final-station
+cover: null
 ---
 
 

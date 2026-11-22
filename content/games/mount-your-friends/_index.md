@@ -1,19 +1,16 @@
 ---
-title: "Mount Your Friends"
-platform: "PC"
-retroachievements_id:
+title: Mount Your Friends
+platform: PC
+retroachievements_id: null
 steam_appid: 296470
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "multiplayer"
-subgames:
-rating:
-cover:
-draft: true
+status: multiplayer
+rating: null
+draft: false
 cascade:
   params:
-    games: ["mount-your-friends"]
+    games:
+      - mount-your-friends
+cover: null
 ---
 
 

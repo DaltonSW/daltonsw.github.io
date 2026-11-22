@@ -1,19 +1,16 @@
 ---
-title: "Do Not Feed the Monkeys"
-platform: "PC"
-retroachievements_id:
+title: Do Not Feed the Monkeys
+platform: PC
+retroachievements_id: null
 steam_appid: 658850
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["do-not-feed-the-monkeys"]
+    games:
+      - do-not-feed-the-monkeys
+cover: null
 ---
 
 

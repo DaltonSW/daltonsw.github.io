@@ -1,19 +1,16 @@
 ---
-title: "Totally Accurate Battlegrounds"
-platform: "PC"
-retroachievements_id:
+title: Totally Accurate Battlegrounds
+platform: PC
+retroachievements_id: null
 steam_appid: 823130
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "endless"
-subgames:
-rating:
-cover:
-draft: true
+status: endless
+rating: null
+draft: false
 cascade:
   params:
-    games: ["totally-accurate-battlegrounds"]
+    games:
+      - totally-accurate-battlegrounds
+cover: null
 ---
 
 

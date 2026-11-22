@@ -1,19 +1,16 @@
 ---
-title: "Dishonored®: Death of the Outsider™ "
-platform: "PC"
-retroachievements_id:
+title: 'Dishonored®: Death of the Outsider™ '
+platform: PC
+retroachievements_id: null
 steam_appid: 614570
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["dishonored-death-of-the-outsider"]
+    games:
+      - dishonored-death-of-the-outsider
+cover: null
 ---
 
 

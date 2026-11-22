@@ -8,168 +8,234 @@ providers:
       total: 62
       last_played: "2018-07-30"
 earned:
-    - name: 2k
+    - name: 2K
+      description: Tap 2K times.
       date: "2018-07-12T13:08:21-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/bb80340.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: the-tiro
+    - name: The Tiro
+      description: Craft an artifact.
       date: "2018-07-13T03:00:03-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/j80j148.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: put-a-rune-on-it
+    - name: Put a Rune on it
+      description: Collect 1 rune.
       date: "2018-07-13T03:03:02-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/5154b1j.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: new-adventure
+    - name: New Adventure
+      description: Prestige 1 time.
       date: "2018-07-13T14:42:16-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/3d5e443.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: you-call-that-a-challenge
+    - name: You Call That A Challenge?
+      description: Complete 1 Time Challenge.
       date: "2018-07-13T14:48:23-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/g8je777.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: the-fryer
+    - name: The Fryer
+      description: Craft 5 artifacts.
       date: "2018-07-13T22:50:20-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/1e3d1gd.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: common
+    - name: Common
+      description: Have more than 1000 artifact quality.
       date: "2018-07-14T20:51:40-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/060g1b4.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: apprentice
+    - name: Apprentice
+      description: Evolve to Common
       date: "2018-07-14T22:21:33-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/767edd1.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: journeyman
+    - name: Journeyman
+      description: Evolve to Uncommon
       date: "2018-07-14T22:22:17-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/5154bbj.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: 50k
+    - name: 50K
+      description: Tap 50k times.
       date: "2018-07-15T00:06:31-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/g8je756.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: expert
+    - name: Expert
+      description: Evolve to rare.
       date: "2018-07-15T10:39:54-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/060g114.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: one-more-try
+    - name: One More Try
+      description: Complete 5 Time Challenges.
       date: "2018-07-15T11:58:26-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/ddg5884.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: my-precious
+    - name: My Precious
+      description: Collect 5 runes.
       date: "2018-07-15T17:58:56-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/060g164.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: the-cook
+    - name: The Cook
+      description: Craft 10 artifacts.
       date: "2018-07-15T18:13:40-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/3d5e4j8.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: getting-used-to
+    - name: Getting Used To
+      description: Prestige 5 times.
       date: "2018-07-15T20:41:00-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/767edd7.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: getting-serious
+    - name: Getting Serious
+      description: Complete 10 Time Challenges.
       date: "2018-07-16T10:58:38-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/j80j118.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: uncommon
+    - name: Uncommon
+      description: Have more than 5000 artifact quality.
       date: "2018-07-16T11:01:18-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/8bjg4b1.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: rare
+    - name: Rare
+      description: Have more than 20000 artifact quality.
       date: "2018-07-19T09:42:19-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/eje48je.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: a-small-detour
+    - name: A Small Detour
+      description: Complete 1 side quest.
       date: "2018-07-20T15:11:59-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/ddg58d4.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: epic
+    - name: Epic
+      description: Have more than 50000 artifact quality.
       date: "2018-07-20T21:10:28-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/4j036je.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: a-fellowship-of-runes
+    - name: A Fellowship of Runes
+      description: Collect 9 runes.
       date: "2018-07-21T00:08:27-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/8bjg4g1.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: the-craftsman
+    - name: The Craftsman
+      description: Craft 20 artifacts.
       date: "2018-07-21T10:02:15-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/767edg1.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: legendary
+    - name: Legendary
+      description: Have more than 100000 artifact quality.
       date: "2018-07-21T12:08:14-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/6ed6ge5.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: together-we-stand
+    - name: Together We Stand
+      description: Complete 15 Time Challenges.
       date: "2018-07-21T17:58:06-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/1e3d11d.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: the-artist
+    - name: The Artist
+      description: Craft 30 artifacts.
       date: "2018-07-21T18:03:03-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/5154b6j.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: adept
+    - name: Adept
+      description: Evolve to Epic
       date: "2018-07-21T21:24:38-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/8bjg4e1.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: beginners
+    - name: Beginners
+      description: Evolve 11 heroes to COMMON
       date: "2018-07-22T01:53:39-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/4j0364e.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: wannabes
+    - name: Wannabes
+      description: Evolve 11 heroes to UNCOMMON
       date: "2018-07-22T01:53:55-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/6ed6gb5.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: not-enough-fingers
+    - name: Not Enough Fingers
+      description: Collect 15 runes.
       date: "2018-07-22T13:31:31-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/eje484e.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: maybe-another-time
+    - name: Maybe Another Time
+      description: Prestige 25 times.
       date: "2018-07-22T21:45:49-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/4j0366e.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: wandering-but-not-lost
+    - name: Wandering, but not lost
+      description: Complete 5 side quests.
       date: "2018-07-27T11:16:32-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/j80j188.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: divided-we-fall
+    - name: Divided We Fall
+      description: Complete 20 Time Challenges.
       date: "2018-07-27T12:43:03-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/3d5e448.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play
-    - name: master
+    - name: Master
+      description: Evolve to Legendary
       date: "2018-07-27T17:56:04-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/eje486e.png?98be3995c518e45097d118fa65f4d603
       provider: googleplay
       platform: Google Play

@@ -8,13 +8,17 @@ providers:
       total: 24
       last_played: "2018-10-12"
 earned:
-    - name: first-of-many
+    - name: First of many
+      description: Win your first ranked board
       date: "2018-10-02T17:37:52-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/1gb36gd.png?69fef78bb68f546a7a295528f76e0003
       provider: googleplay
       platform: Google Play
-    - name: regnant
+    - name: Regnant
+      description: Checkmate the AI with a queen
       date: "2018-10-02T17:37:54-05:00"
+      points: 1000
       icon: https://m.exophase.com/android/awards/m/3j15gd8.png?69fef78bb68f546a7a295528f76e0003
       provider: googleplay
       platform: Google Play

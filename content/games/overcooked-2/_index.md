@@ -1,19 +1,16 @@
 ---
-title: "Overcooked! 2"
-platform: "PC"
-retroachievements_id:
+title: Overcooked! 2
+platform: PC
+retroachievements_id: null
 steam_appid: 728880
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["overcooked-2"]
+    games:
+      - overcooked-2
+cover: null
 ---
 
 

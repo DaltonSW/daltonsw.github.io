@@ -1,19 +1,16 @@
 ---
-title: "Vampire Survivors"
-platform: "PC"
-retroachievements_id:
+title: Vampire Survivors
+platform: PC
+retroachievements_id: null
 steam_appid: 1794680
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "dropped"
-subgames:
-rating:
-cover:
-draft: true
+status: dropped
+rating: null
+draft: false
 cascade:
   params:
-    games: ["vampire-survivors"]
+    games:
+      - vampire-survivors
+cover: null
 ---
 
 
