@@ -50,11 +50,11 @@
 </form>
 {{end}}
 
-{{if or .RAGameID .SteamAppID}}
+{{if or .RAGameID .SteamAppID .PSNID .UbisoftID .XboxID .GooglePlayID}}
 <div class="tui" id="suggest">
   <span class="tui__title">suggested dates</span>
   <div id="suggest-panel">
-    <p class="hint">Dates from your RetroAchievements/Steam achievement history, as pre-filled forms you can log from. Nothing is saved until you submit one.</p>
+    <p class="hint">Dates from your linked providers' achievement history (RetroAchievements/Steam live, everything else from the archive), as pre-filled forms you can log from. Nothing is saved until you submit one.</p>
     <div class="btn-row">
       <button type="button" hx-get="/games/{{.Slug}}/suggest" hx-target="#suggest-panel" hx-disabled-elt="this" hx-indicator="next .htmx-indicator"
         hx-trigger="click{{if .AutoSuggest}}, load{{end}}">Fetch suggestions</button>

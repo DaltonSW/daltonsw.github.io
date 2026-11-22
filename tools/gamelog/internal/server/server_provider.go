@@ -230,8 +230,59 @@ func (s *server) handleSuggestFragment(w http.ResponseWriter, r *http.Request) {
 		s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", suggestView{Slug: slug, Error: err.Error()})
 		return
 	}
-	s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel",
-		buildSuggestView(report, doc, pf, forms.DefaultPlaythroughStatus(doc.FM.Status)))
+	status := forms.DefaultPlaythroughStatus(doc.FM.Status)
+	v := buildSuggestView(report, doc, pf, status)
+	v.Providers = append(v.Providers, s.archiveSuggestion(slug, doc, pf, status))
+	s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", v)
+}
+
+// archiveSuggestion is the panel's block for everything the live RA/Steam
+// requests can't see: every linked record's last_played, award dates and
+// unlocks on all providers, read from the archive with no API call. It's the
+// same read Catch up does, narrowed to this one game — so a Steam game with
+// no achievements still gets a suggestion from its last-played date.
+func (s *server) archiveSuggestion(slug string, doc *model.Doc, pf *model.PlaythroughsFile, defaultStatus string) providerSuggestion {
+	out := providerSuggestion{Name: "Archive (all linked providers)"}
+	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
+	if len(g.ProviderLinks()) == 0 {
+		out.SkipReason = "no provider records linked to this game"
+		return out
+	}
+	rep, err := commands.FindUnloggedActivity(model.FindArchiveDir(s.gamesDir), []model.GameSummary{g},
+		commands.ActivityOptions{StaleDays: 90})
+	if err != nil {
+		out.SkipReason = "couldn't read the archive: " + err.Error()
+		return out
+	}
+	if len(rep.Items) == 0 {
+		out.SkipReason = "the archive has no dated activity outside logged playthroughs (or none captured yet — refresh achievements)"
+		return out
+	}
+	it := rep.Items[0]
+	var parts []string
+	for _, p := range it.Providers {
+		d := fmt.Sprintf("%s %s", p.Label, p.First)
+		if p.Last != p.First {
+			d += " – " + p.Last
+		}
+		if p.LastPlayed != "" {
+			d += " (last played " + p.LastPlayed + ")"
+		}
+		parts = append(parts, d)
+	}
+	out.Confidence = "low — dates from archived unlocks, last-played and awards"
+	out.Detail = strings.Join(parts, " · ")
+	if it.Award != "" {
+		out.Detail += fmt.Sprintf(" · %s %s", it.AwardKind, it.Award)
+	}
+	out.Started = it.Guess.Started
+	out.Finished = it.Guess.Finished
+	out.FinishedHint = it.Guess.FinishedHint
+	out.Status = it.Guess.Status
+	if out.Status == "" {
+		out.Status = defaultStatus
+	}
+	return out
 }
 
 // ── Achievements (single-game refresh lives in server_games.go) ─────────
