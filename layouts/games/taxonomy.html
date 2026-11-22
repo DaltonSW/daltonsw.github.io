@@ -18,10 +18,8 @@
       aria-selected="false" tabindex="-1" aria-controls="games-panel-timeline">Timeline</button>
     <button type="button" class="tabs__tab" id="games-tab-list" role="tab"
       aria-selected="false" tabindex="-1" aria-controls="games-panel-list">Game list</button>
-    <button type="button" class="tabs__tab" id="games-tab-backlog" role="tab"
-      aria-selected="false" tabindex="-1" aria-controls="games-panel-backlog">Backlog</button>
-    <button type="button" class="tabs__tab" id="games-tab-achievements" role="tab"
-      aria-selected="false" tabindex="-1" aria-controls="games-panel-achievements">Achievements</button>
+    <button type="button" class="tabs__tab" id="games-tab-log" role="tab"
+      aria-selected="false" tabindex="-1" aria-controls="games-panel-log">Log</button>
   </div>
 
   <div class="tabs__panel" id="games-panel-overview" role="tabpanel" aria-labelledby="games-tab-overview">
@@ -33,143 +31,11 @@
   </div>
 
   <div class="tabs__panel" id="games-panel-list" role="tabpanel" aria-labelledby="games-tab-list">
-  <section aria-label="Game list">
-  <div class="games-search">
-    <input type="search" class="games-search__input" placeholder="Search games…"
-      aria-label="Search games" data-games-search>
-    <p class="games-search__empty" hidden data-games-search-empty>No games match “<span data-games-search-query></span>”.</p>
-  </div>
-  {{/* one record per game per year played; backlog games excluded (games-backlog.html lists them) */}}
-{{- $rows := slice }}
-{{- range (where .Pages "Params.status" "ne" "backlog") }}
-  {{- $page := . }}
-  {{- $achievements := "" }}
-  {{- with .Resources.Get "achievement-summary.yaml" }}
-    {{- $achievements = . | transform.Unmarshal }}
-  {{- end }}
-  {{- $yearRows := partial "game-year-rows.html" . }}
-  {{- if eq (len $yearRows) 0 }}
-    {{- $yearRows = slice (dict "year" "Undated" "count" 0 "start" "" "end" ""
-        "status" $page.Params.status "platform" $page.Params.platform) }}
-  {{- end }}
-  {{- range $yearRows }}
-    {{- $rows = $rows | append (merge . (dict "page" $page "achievements" $achievements)) }}
-  {{- end }}
-{{- end }}
-
-{{- $years := slice }}
-{{- range $rows }}
-  {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}
-{{- end }}
-{{- $hasUndated := in $years "Undated" }}
-{{- $years = sort (complement (slice "Undated") $years) "value" "desc" }}
-{{- if $hasUndated }}{{ $years = $years | append "Undated" }}{{ end }}
-
-{{- range $years }}
-{{- $year := . }}
-{{- $inYear := sort (where $rows "year" "eq" $year) "end" "desc" }}
-<details class="year-group"{{ if eq $year (index $years 0) }} open{{ end }}>
-  <summary class="year-group__heading">
-    <span class="year-group__caret" aria-hidden="true"></span>
-    <span class="year-group__year">{{ $year }}</span>
-    <span class="year-group__count">{{ len $inYear }} game{{ if ne (len $inYear) 1 }}s{{ end }}</span>
-  </summary>
-  <div class="ps-table" role="table">
-    <div class="ps-row ps-row--head" role="row">
-      <span class="ps-row__status" role="columnheader">status</span>
-      <span class="ps-row__game" role="columnheader">game</span>
-      <span class="ps-row__platform" role="columnheader">platform</span>
-      <span class="ps-row__played" role="columnheader">played</span>
-      <span class="ps-row__playtime" role="columnheader">playtime</span>
-      <span class="ps-row__achievements" role="columnheader">achievements</span>
-    </div>
-    {{- range $inYear }}
-    {{- $row := . }}
-    {{- $page := .page }}
-    {{- $achievements := .achievements }}
-    {{/* achievement sets/playtime don't combine across platforms — attribute to the row's own provider */}}
-    {{- $source := "" }}
-    {{- with $achievements }}
-      {{- $providers := .providers | default slice }}
-      {{- $matched := where $providers "platform" "eq" $row.platform }}
-      {{- if eq (len $matched) 1 }}
-        {{- $source = index $matched 0 }}
-      {{- else if eq (len $providers) 1 }}
-        {{- $source = index $providers 0 }}
-      {{- else if eq (len $providers) 0 }}
-        {{/* older summaries predate the per-provider breakdown */}}
-        {{- $source = $achievements }}
-      {{- else if gt (len (split $row.platform ", ")) 1 }}
-        {{/* $row.platform is itself a comma-joined list (see playthrough-entries.html);
-             can't attribute to one provider, so show the combined total */}}
-        {{- $source = $achievements }}
-      {{- end }}
-    {{- end }}
-    {{/* Links point at the game's own classification (its front-matter status/platform),
-         not necessarily $row's — a row can show a per-year/per-entry override (e.g. a
-         mixed-status game's headline status, or a playthrough-specific platform) that has
-         no term page of its own. Falling back to plain text when the page carries no term
-         (e.g. an empty status) keeps this from ever linking to a page that doesn't exist. */}}
-    {{- $statusTerm := "" }}
-    {{- with $page.GetTerms "status" }}{{ $statusTerm = index . 0 }}{{ end }}
-    {{- $platformTerm := "" }}
-    {{- with $page.GetTerms "platform" }}{{ $platformTerm = index . 0 }}{{ end }}
-    <div class="ps-row{{ with $row.status }} ps-row--{{ . }}{{ end }}" role="row">
-      <span class="ps-row__status" role="cell">
-        {{- with $row.status }}
-          {{- if $statusTerm }}<a href="{{ $statusTerm.RelPermalink }}">{{ partial "game-status-tag.html" . }}</a>
-          {{- else }}{{ partial "game-status-tag.html" . }}{{ end }}
-        {{- end }}
-      </span>
-      <span class="ps-row__game" role="cell">
-        {{- $masteredOn := (partial "game-mastery.html" $page).date }}
-        <a class="ps-row__title{{ if $masteredOn }} ps-row__title--mastered{{ end }}" href="{{ $page.RelPermalink }}"
-          {{- with $masteredOn }} title="Mastered {{ . | time.Format "Jan 2, 2006" }}"{{ end }}>{{ $page.Title }}</a>
-        {{- with $masteredOn }}<span class="ps-row__mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}" aria-label="mastered">&#xf005;</span>{{ end }}
-        {{- if partial "game-unplayed.html" $page }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
-        {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
-      </span>
-      <span class="ps-row__platform" role="cell">
-        {{- if $platformTerm }}<a href="{{ $platformTerm.RelPermalink }}">{{ $row.platform }}</a>
-        {{- else }}{{ $row.platform }}{{ end }}
-      </span>
-      <span class="ps-row__played" role="cell">
-        {{- $start := "" }}{{ with $row.start }}{{ $start = . | time.Format "Jan 2006" }}{{ end }}
-        {{- $end := "" }}{{ with $row.end }}{{ $end = . | time.Format "Jan 2006" }}{{ end }}
-        {{- if and $start $end (ne $start $end) }}
-          {{- $start }} – {{ $end }}
-        {{- else if or $start $end }}
-          {{- or $start $end }}
-        {{- else }}
-        <span class="ps-row__played--none">-</span>
-        {{- end }}
-      </span>
-      <span class="ps-row__playtime" role="cell">
-        {{- with $source }}{{ with .playtime_mins }}{{ printf "%.1fh" (div . 60.0) }}{{ end }}{{ end -}}
-      </span>
-      <span class="ps-row__achievements" role="cell">
-        {{- with $source }}
-          {{- with .total }}{{ partial "achievement-meter.html" (dict "unlocked" $source.unlocked "total" .) }}{{ end }}
-        {{- end -}}
-      </span>
-    </div>
-    {{- end }}
-  </div>
-</details>
-{{- else }}
-<div class="ps-table" role="table">
-  <div class="ps-row" role="row"><span class="ps-row__game" role="cell">No games logged yet.</span></div>
-</div>
-{{- end }}
-  </section>
+    {{ partial "games-list.html" . }}
   </div>
 
-  <div class="tabs__panel" id="games-panel-backlog" role="tabpanel" aria-labelledby="games-tab-backlog">
-    {{ partial "games-backlog.html" . }}
-  </div>
-
-  <div class="tabs__panel" id="games-panel-achievements" role="tabpanel" aria-labelledby="games-tab-achievements">
-    {{ partial "games-achievements.html" . }}
+  <div class="tabs__panel" id="games-panel-log" role="tabpanel" aria-labelledby="games-tab-log">
+    {{ partial "games-log.html" . }}
   </div>
 </div>
 
@@ -200,12 +66,14 @@
 {{- $provJS := resources.Get "js/provenance-modal.ts" | js.Build $provJSOpts | fingerprint -}}
 <script src="{{ $provJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $provJS.Data.Integrity }}"{{ end }} defer></script>
 
-{{- $searchJSOpts := dict
-    "targetPath" "js/games-search.js"
+{{- range slice "games-list" "games-log" }}
+{{- $opts := dict
+    "targetPath" (printf "js/%s.js" .)
     "format"     "iife"
     "minify"     hugo.IsProduction
     "sourceMap"  (cond hugo.IsProduction "none" "inline")
 -}}
-{{- $searchJS := resources.Get "js/games-search.ts" | js.Build $searchJSOpts | fingerprint -}}
-<script src="{{ $searchJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $searchJS.Data.Integrity }}"{{ end }} defer></script>
+{{- $js := resources.Get (printf "js/%s.ts" .) | js.Build $opts | fingerprint -}}
+<script src="{{ $js.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $js.Data.Integrity }}"{{ end }} defer></script>
+{{- end }}
 {{ end }}

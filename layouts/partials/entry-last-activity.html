@@ -4,9 +4,9 @@
      whether that touch-point is still unfinished.
 
      The single per-entry last-activity rule shared by game-last-played.html,
-     games-timeline.html and game-year-rows.html. Only game-last-played.html
+     games-timeline.html and games-log.html. Only game-last-played.html
      also maxes against achievement-summary.yaml's last_played; the timeline and
-     year rows stay on logged activity on purpose. */}}
+     log stay on logged activity on purpose. */}}
 {{- $end := .started -}}
 {{- $open := false -}}
 {{- if gt (len .sessions) 0 -}}

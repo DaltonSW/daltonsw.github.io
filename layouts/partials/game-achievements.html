@@ -1,5 +1,5 @@
-{{/* Achievements section for a single game's term page; reuses games-achievements.html's
-     .ach-row markup, minus the per-row game link. */}}
+{{/* Achievements section for a single game's term page; rows come from
+     achievement-row.html, without the per-row game link. */}}
 {{- $summary := "" -}}
 {{- with .Resources.Get "achievement-summary.yaml" -}}
   {{- $summary = . | transform.Unmarshal -}}
@@ -70,40 +70,7 @@
     </summary>
     <div class="ach-rows">
       {{- range . }}
-      {{- $row := . }}
-      {{- $hidden := $row.hidden | default false }}
-      <div class="ach-row{{ if $hidden }} ach-row--hidden{{ end }}"{{ if $hidden }} data-hidden tabindex="0" role="button" aria-pressed="false" aria-label="Hidden achievement — click to reveal" title="Hidden achievement — click to reveal"{{ end }}>
-        {{- $iconSrc := "" }}
-        {{- if $row.icon }}
-          {{- if eq $row.provider "retroachievements" }}
-            {{- $iconSrc = printf "https://media.retroachievements.org/Badge/%s.png" $row.icon }}
-          {{- else }}
-            {{- $iconSrc = $row.icon }}
-          {{- end }}
-        {{- end }}
-        {{- if $iconSrc }}
-        <img class="ach-row__icon" src="{{ $iconSrc }}" alt="" loading="lazy" width="32" height="32">
-        {{- else }}
-        <span class="ach-row__icon ach-row__icon--none" aria-hidden="true"></span>
-        {{- end }}
-        <div class="ach-row__body">
-          {{/* only name/description are spoiler-bearing; icon/meta stay legible */}}
-          <div class="ach-row__blur-content">
-            <div class="ach-row__title-line">
-              <span class="ach-row__name">{{ $row.name }}</span>
-              {{- with $row.points }}<span class="ach-row__points">{{ . }} pt{{ if ne . 1 }}s{{ end }}{{ if $row.hardcore }} · HC{{ end }}</span>{{ end }}
-            </div>
-            {{- with $row.description }}<p class="ach-row__desc">{{ . }}</p>{{ end }}
-            {{- if $hidden }}<span class="ach-row__hidden-tag" aria-hidden="true">hidden — click to reveal</span>{{ end }}
-          </div>
-          <div class="ach-row__meta">
-            {{- with $row.platform }}<span class="ach-row__platform">{{ . }}</span>{{ end }}
-            {{- with $row.subset }}<span class="ach-row__subset">{{ . }}</span>{{ end }}
-            {{- if $row.date }}<span class="ach-row__date">{{ $row.date | time.Format "Jan 2, 2006" }}</span>
-            {{- else }}<span class="ach-row__date ach-row__date--unknown">Date unknown</span>{{ end }}
-          </div>
-        </div>
-      </div>
+      {{ partial "achievement-row.html" (dict "row" .) }}
       {{- end }}
     </div>
   </details>

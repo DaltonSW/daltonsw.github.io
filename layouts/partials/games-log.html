@@ -1,0 +1,255 @@
+{{/* Log tab: one newest-first feed per year that mixes playthrough events
+     (from playthrough-entries.html), mastery dates (game-mastery.html), and
+     earned achievements (achievement-summary.yaml's `earned`, grouped per game,
+     provider, subset, and day). A sidebar holds the filters
+     (assets/js/games-log.ts) and the aggregate achievement stats.
+     Included from layouts/games/taxonomy.html. */}}
+{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" "googleplay" -}}
+{{- $providerNames := dict
+    "retroachievements" "RetroAchievements"
+    "steam"             "Steam"
+    "xbox"              "Xbox"
+    "psn"               "PSN"
+    "ubisoft"           "Ubisoft"
+    "googleplay"        "Google Play"
+-}}
+
+{{/* sortKey = "<day>|<rank>|<time>", sorted desc: within a day, mastery (3) and
+     a run ending (2) read above that day's unlocks (1), and a run starting (0)
+     below them. */}}
+{{- $events := slice -}}
+{{- $earnedCount := 0 -}}
+{{- $trackedCount := 0 -}}
+{{- $masteredCount := 0 -}}
+{{- $hasHidden := false -}}
+{{- $byProvider := dict -}}
+{{- $pointsByProvider := dict -}}
+{{- range $providerOrder -}}
+  {{- $byProvider = merge $byProvider (dict . 0) -}}
+  {{- $pointsByProvider = merge $pointsByProvider (dict . 0) -}}
+{{- end -}}
+
+{{- range .Pages -}}
+  {{- $page := . -}}
+
+  {{/* playthroughs */}}
+  {{- range partial "playthrough-entries.html" $page -}}
+    {{- $entry := . -}}
+    {{- if and .started (ne .status "planned") -}}
+      {{- $started := .started | time.Format "2006-01-02" -}}
+      {{- $last := partial "entry-last-activity.html" . -}}
+      {{- $base := dict "kind" "playthrough" "page" $page "entry" $entry "platform" ($entry.platform | default "") "provider" "" -}}
+      {{- if and (not $last.open) (eq $last.end $started) -}}
+        {{- $events = $events | append (merge $base (dict "verb" "Played" "date" $started "year" (substr $started 0 4) "sortKey" (printf "%s|2|" $started))) -}}
+      {{- else -}}
+        {{- $events = $events | append (merge $base (dict "verb" "Started" "date" $started "year" (substr $started 0 4) "sortKey" (printf "%s|0|" $started) "status" "")) -}}
+        {{- if and (not $last.open) $last.end -}}
+          {{- $events = $events | append (merge $base (dict "verb" "Ended" "date" $last.end "year" (substr $last.end 0 4) "sortKey" (printf "%s|2|" $last.end))) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{/* mastery */}}
+  {{- with (partial "game-mastery.html" $page).date -}}
+    {{- $masteredCount = add $masteredCount 1 -}}
+    {{- $events = $events | append (dict "kind" "mastery" "page" $page "date" . "year" (substr . 0 4)
+        "platform" ($page.Params.platform | default "") "provider" "" "sortKey" (printf "%s|3|" .)) -}}
+  {{- end -}}
+
+  {{/* achievements, grouped per provider/subset/day */}}
+  {{- with .Resources.Get "achievement-summary.yaml" -}}
+    {{- $summary := . | transform.Unmarshal -}}
+    {{- if gt ($summary.total | default 0) 0 }}{{ $trackedCount = add $trackedCount 1 }}{{ end -}}
+    {{- $groups := newScratch -}}
+    {{- range ($summary.earned | default slice) -}}
+      {{- $day := "" -}}
+      {{- with .date }}{{ $day = . | time.Format "2006-01-02" }}{{ end -}}
+      {{- $groups.Add (printf "%s|%s|%s" $day .provider (.subset | default "")) (slice .) -}}
+      {{- $earnedCount = add $earnedCount 1 -}}
+      {{- if .hidden }}{{ $hasHidden = true }}{{ end -}}
+      {{- if isset $byProvider .provider -}}
+        {{- $byProvider = merge $byProvider (dict .provider (add (index $byProvider .provider) 1)) -}}
+        {{- $pointsByProvider = merge $pointsByProvider (dict .provider (add (index $pointsByProvider .provider) (.points | default 0))) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- range $key, $items := $groups.Values -}}
+      {{- $items = sort $items "date" "desc" -}}
+      {{- $first := index $items 0 -}}
+      {{- $day := index (split $key "|") 0 -}}
+      {{- $year := "Undated" -}}
+      {{- $sortKey := "" -}}
+      {{- if $day -}}
+        {{- $year = substr $day 0 4 -}}
+        {{- $sortKey = printf "%s|1|%s" $day ($first.date | time.Format "15:04:05") -}}
+      {{- end -}}
+      {{- $events = $events | append (dict "kind" "achievement" "page" $page "items" $items "date" $day "year" $year
+          "platform" ($first.platform | default "") "provider" ($first.provider | default "") "subset" ($first.subset | default "")
+          "sortKey" $sortKey) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $events = sort $events "sortKey" "desc" -}}
+
+{{- $years := slice -}}
+{{- $platforms := slice -}}
+{{- range $events -}}
+  {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end -}}
+  {{- if and .platform (not (in $platforms .platform)) }}{{ $platforms = $platforms | append .platform }}{{ end -}}
+{{- end -}}
+{{- $hasUndated := in $years "Undated" -}}
+{{- $years = sort (complement (slice "Undated") $years) "value" "desc" -}}
+{{- if $hasUndated }}{{ $years = $years | append "Undated" }}{{ end -}}
+{{- $platforms = sort $platforms -}}
+
+<div class="ach-panel" data-ach-root data-log-root>
+  <aside class="ach-sidebar" aria-label="Log filters and stats">
+    <div class="overview-status-card log-filters" data-log-filters hidden>
+      <span class="overview-status-card__name">Filter</span>
+      <input type="search" class="games-search__input" placeholder="Search games…"
+        aria-label="Search games" data-log-search>
+      <div class="log-filters__kinds" role="group" aria-label="Entry types">
+        <label><input type="checkbox" data-log-kind="playthrough" checked> Playthroughs</label>
+        <label><input type="checkbox" data-log-kind="achievement" checked> Achievements</label>
+      </div>
+      <select class="games-list__select" aria-label="Filter by platform" data-log-platform>
+        <option value="">All platforms</option>
+        {{- range $platforms }}<option value="{{ lower . }}">{{ . }}</option>{{ end }}
+      </select>
+      <select class="games-list__select" aria-label="Filter by achievement source" data-log-provider>
+        <option value="">All sources</option>
+        {{- range $providerOrder }}
+        {{- if gt (index $byProvider .) 0 }}<option value="{{ . }}">{{ index $providerNames . }}</option>{{ end }}
+        {{- end }}
+      </select>
+      {{- if $hasHidden }}
+      <button type="button" class="ach-reveal-toggle" data-ach-reveal-toggle hidden aria-pressed="false">Unhide everything</button>
+      {{- end }}
+    </div>
+    {{/* one-line stats and row lists, same scale as the Overview sidebar */}}
+    <div class="overview-stat">
+      <span class="overview-stat__label">Achievements</span>
+      <span class="overview-stat__value">{{ $earnedCount }}</span>
+    </div>
+    <div class="overview-stat">
+      <span class="overview-stat__label">Mastered</span>
+      <span class="overview-stat__value">{{ $masteredCount }}{{ if $trackedCount }}<span class="overview-stat__of">/{{ $trackedCount }}</span>{{ end }}</span>
+    </div>
+    <div class="overview-status-card">
+      <span class="overview-status-card__name">Earned by source</span>
+      <ul class="overview-status-card__rows">
+        {{- range $providerOrder }}
+        {{- $count := index $byProvider . }}
+        {{- if gt $count 0 }}
+        <li class="overview-status-row">
+          <span class="overview-status-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
+          <span class="overview-status-row__count">{{ $count }}</span>
+        </li>
+        {{- end }}
+        {{- end }}
+      </ul>
+    </div>
+    {{/* only RA and Xbox carry points */}}
+    {{- $pointRows := slice }}
+    {{- range $providerOrder }}{{ if gt (index $pointsByProvider .) 0 }}{{ $pointRows = $pointRows | append . }}{{ end }}{{ end }}
+    {{- with $pointRows }}
+    <div class="overview-status-card">
+      <span class="overview-status-card__name">Gamerscore</span>
+      <ul class="overview-status-card__rows">
+        {{- range . }}
+        <li class="overview-status-row">
+          <span class="overview-status-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
+          <span class="overview-status-row__count">{{ index $pointsByProvider . }}</span>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </aside>
+
+  <section class="ach-list" aria-label="Log">
+  <p class="games-search__empty" hidden data-log-empty>Nothing matches these filters.</p>
+  {{- if eq (len $events) 0 }}
+    <p class="ach-empty">Nothing logged yet.</p>
+  {{- else }}
+  {{- range $years }}
+    {{- $year := . }}
+    {{- $inYear := where $events "year" "eq" $year }}
+    {{- $playCount := len (where $inYear "kind" "ne" "achievement") }}
+    {{- $achCount := 0 }}
+    {{- range where $inYear "kind" "eq" "achievement" }}{{ $achCount = add $achCount (len .items) }}{{ end }}
+    <details class="year-group"{{ if eq $year (index $years 0) }} open{{ end }}>
+      <summary class="year-group__heading">
+        <span class="year-group__caret" aria-hidden="true"></span>
+        <span class="year-group__year">{{ $year }}</span>
+        <span class="year-group__count">
+          {{- if $playCount }}{{ $playCount }} play event{{ if ne $playCount 1 }}s{{ end }}{{ end }}
+          {{- if and $playCount $achCount }} · {{ end }}
+          {{- if $achCount }}{{ $achCount }} achievement{{ if ne $achCount 1 }}s{{ end }}{{ end -}}
+        </span>
+      </summary>
+      {{/* one block per day: the date sits once in the gutter beside that day's events.
+           `where` keeps the sortKey order, so the days and their events stay newest first. */}}
+      {{- $days := slice }}
+      {{- range $inYear }}{{ if not (in $days .date) }}{{ $days = $days | append .date }}{{ end }}{{ end }}
+      <div class="log-days">
+        {{- range $days }}
+        <div class="log-day">
+          <span class="log-day__date">{{ with . }}{{ . | time.Format "Jan 2" }}{{ else }}Undated{{ end }}</span>
+          <div class="log-day__events">
+        {{- range where $inYear "date" "eq" . }}
+        {{- $page := .page }}
+        <div class="log-event log-event--{{ .kind }}"
+          data-kind="{{ cond (eq .kind "achievement") "achievement" "playthrough" }}"
+          data-title="{{ lower $page.Title }}"
+          data-platform="{{ lower .platform }}"
+          data-provider="{{ .provider }}">
+          {{- if eq .kind "achievement" }}
+            {{- if eq (len .items) 1 }}
+            {{ partial "achievement-row.html" (dict "row" (index .items 0) "page" $page) }}
+            {{- else }}
+            <details class="log-group">
+              <summary class="log-group__summary">
+                <span class="log-event__glyph" aria-hidden="true">&#xf091;</span>
+                <span class="log-group__count">{{ len .items }} achievements</span>
+                <a class="log-event__game" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+                {{- with .platform }}<span class="log-event__meta">{{ . }}</span>{{ end }}
+                {{- with .subset }}<span class="ach-row__subset">{{ . }}</span>{{ end }}
+              </summary>
+              <div class="ach-rows">
+                {{- range .items }}
+                {{ partial "achievement-row.html" (dict "row" .) }}
+                {{- end }}
+              </div>
+            </details>
+            {{- end }}
+          {{- else if eq .kind "mastery" }}
+            <div class="log-line">
+              <span class="log-event__glyph log-event__glyph--mastered" aria-hidden="true">&#xf005;</span>
+              <span class="log-line__verb">Mastered</span>
+              <a class="log-event__game" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+            </div>
+          {{- else }}
+            {{- $entry := .entry }}
+            <div class="log-line">
+              <span class="log-event__glyph" aria-hidden="true">{{ if eq .verb "Started" }}&#xf04b;{{ else }}&#xf11e;{{ end }}</span>
+              <span class="log-line__verb">{{ .verb }}</span>
+              <a class="log-event__game" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+              {{- with $entry.subgame }}<span class="log-event__meta">{{ . }}</span>{{ end }}
+              {{- with .platform }}<span class="log-event__meta">{{ . }}</span>{{ end }}
+              {{- if ne .verb "Started" }}{{ with $entry.status }} {{ partial "game-status-tag.html" . }}{{ end }}{{ end }}
+              {{- if $entry.written }}<a class="log-event__meta" href="{{ $entry.permalink }}">{{ $entry.title }}</a>{{ end }}
+            </div>
+          {{- end }}
+        </div>
+        {{- end }}
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </details>
+  {{- end }}
+  {{- end }}
+  </section>
+</div>

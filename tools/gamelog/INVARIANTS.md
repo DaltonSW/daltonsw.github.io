@@ -238,7 +238,7 @@ what's load-bearing.
 
 - **The per-entry "last activity" rule lives in one place**, `layouts/partials/entry-last-activity.html`
   (the latest session's finish or start, otherwise the entry's own). `game-last-played.html`,
-  `games-timeline.html` and `game-year-rows.html` all call it. Don't inline it again.
+  `games-timeline.html` and `games-log.html` all call it. Don't inline it again.
 - **Only `game-last-played.html` maxes `achievement-summary.yaml`'s `last_played` against logged
   playthroughs.** That's intentional: a refreshed archive can legitimately be more recent than any
   logged session, so don't make it agree with `playthroughs.yaml`. The timeline and year rows stay

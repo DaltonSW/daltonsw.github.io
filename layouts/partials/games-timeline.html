@@ -24,7 +24,7 @@
     {{- if $entry.started -}}
       {{- $sub := printf "pt-%d" $idx -}}
       {{- $baseID := printf "%s--%s" $slug $sub -}}
-      {{/* fall back to the game's own status; mirrors game-year-rows.html's fallback */}}
+      {{/* fall back to the game's own status */}}
       {{- $gameStatus := $game.Params.status -}}
       {{- $status := $entry.status | default $gameStatus -}}
       {{/* "software" is game-level only, so a software game's runs say "playing" and

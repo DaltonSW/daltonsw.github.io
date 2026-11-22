@@ -275,7 +275,15 @@ $status-aliases: (wip: playing, stable: finished);
 .entry__dates b { color: var(--fg); font-weight: 500; }
 .entry__dates--none { font-style: italic; }
 
-.games-search { margin: 0 0 1rem; }
+.games-list__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: 0 0 1rem; }
+.games-list__controls .games-search__input { flex: 1 1 14rem; width: auto; }
+.games-list__select {
+  font-family: $font-ui; font-size: 0.85rem; color: var(--fg);
+  background: var(--panel-2); border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+}
+.games-list__select:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.games-list__count { color: var(--dim); font-family: $font-ui; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 .games-search__input {
   width: 100%; box-sizing: border-box;
   font-family: $font-ui; font-size: 0.9rem; color: var(--fg);
@@ -317,11 +325,7 @@ $status-aliases: (wip: playing, stable: finished);
 .entry__notes { width: 100%; margin: 0.4rem 0 0; font-size: 0.9rem; color: var(--fg); }
 .entry__notes p:last-child { margin-bottom: 0; }
 
-.games-backlog { margin: 2rem 0; }
-.games-backlog h3 { margin-top: 1.2rem; }
-.games-backlog .entry-list { margin-top: 0.7rem; }
-
-/* ── Tabs (games taxonomy page: Timeline / Game list / Backlog) ─────────── */
+/* ── Tabs (games taxonomy page: Overview / Timeline / Game list / Log) ──── */
 .tabs__list { display: flex; gap: 0.2rem; border-bottom: 1px solid var(--stroke); margin-bottom: 1.5rem; }
 // max-height set inline by tabs.ts
 .tabs__panel {
@@ -352,9 +356,10 @@ $status-aliases: (wip: playing, stable: finished);
   font-family: $font-ui; font-size: 0.85rem;
 }
 .ps-row[hidden] { display: none; }
+.ps-rows { display: contents; }
 .ps-row {
   display: grid;
-  grid-template-columns: 10ch minmax(10ch, 1.6fr) minmax(6ch, 0.8fr) minmax(9ch, 1fr) 9ch minmax(7.5rem, 1fr);
+  grid-template-columns: 10ch minmax(10ch, 1.8fr) minmax(6ch, 0.8fr) 9ch 9ch 8ch minmax(7.5rem, 1fr);
   align-items: baseline; column-gap: 0.9rem;
   padding: 0.5rem 0.8rem;
   border: 1px solid var(--stroke); border-radius: var(--radius);
@@ -379,7 +384,24 @@ $status-aliases: (wip: playing, stable: finished);
 }
 .ps-row__mastered { color: var(--mastered); flex: none; font-size: 1.05em; line-height: 1; }
 .ps-row__rating { color: var(--dim); font-size: 0.8rem; flex: none; }
-.ps-row__platform, .ps-row__played, .ps-row__playtime { color: var(--dim); }
+.ps-row__platform, .ps-row__first, .ps-row__played, .ps-row__playtime { color: var(--dim); }
+.ps-row__first, .ps-row__played { white-space: nowrap; }
+// narrow date columns: let their two-word headers wrap instead of colliding
+.ps-row--head > span { white-space: normal; }
+.ps-sort { text-align: left; }
+// sortable headers: the button looks like the plain header text until hovered;
+// the arrow tracks aria-sort on the header cell
+.ps-sort {
+  font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit;
+  background: none; border: 0; padding: 0; cursor: pointer;
+}
+.ps-sort:hover { color: var(--accent); }
+.ps-sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+[aria-sort] > .ps-sort { color: var(--accent); }
+[aria-sort="ascending"] > .ps-sort::after  { content: " ▲"; font-size: 0.7em; }
+[aria-sort="descending"] > .ps-sort::after { content: " ▼"; font-size: 0.7em; }
+// no-JS: headers aren't clickable, so don't dress them as buttons
+[data-games-list]:not(.games-list--js) .ps-sort { cursor: default; pointer-events: none; }
 // Platform/status cells link out to /platform/<term>/ and /status/<term>/ — inherit the
 // row's muted color rather than the default link accent (a wall of accent-colored text
 // in a dense table reads as noise), but keep a standing underline so they still read as
@@ -419,7 +441,7 @@ $status-aliases: (wip: playing, stable: finished);
 
 @media (max-width: 768px) {
   .ps-row {
-    grid-template-columns: 9ch minmax(8ch, 1.3fr) minmax(5ch, 0.7fr) minmax(7ch, 0.9fr) 8ch minmax(6rem, 0.9fr);
+    grid-template-columns: 9ch minmax(8ch, 1.4fr) minmax(5ch, 0.7fr) 8ch 8ch 7ch minmax(6rem, 0.9fr);
     column-gap: 0.5rem;
   }
 }
@@ -431,6 +453,7 @@ $status-aliases: (wip: playing, stable: finished);
     grid-template-areas:
       "status game"
       "status platform"
+      "status first"
       "status played"
       "status playtime"
       "status achievements";
@@ -439,39 +462,23 @@ $status-aliases: (wip: playing, stable: finished);
   .ps-row__status  { grid-area: status; }
   .ps-row__game    { grid-area: game; }
   .ps-row__platform{ grid-area: platform; }
+  .ps-row__first   { grid-area: first; }
   .ps-row__played  { grid-area: played; }
   .ps-row__playtime{ grid-area: playtime; }
   .ps-row__achievements { grid-area: achievements; }
 }
 
-/* ── Achievements tab: stat sidebar + year-grouped feed ─────────────────── */
+/* ── Log tab: filter/stat sidebar + year-grouped feed ───────────────────── */
 .ach-panel { display: flex; align-items: flex-start; gap: 1.5rem; }
 .ach-sidebar {
   position: sticky; top: 0;
   flex: 0 0 12rem;
-  display: flex; flex-direction: column; gap: 1rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
   font-family: $font-ui;
 }
-.ach-stat {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid var(--stroke); border-radius: var(--radius);
-  background: var(--panel);
-  display: flex; flex-direction: column; gap: 0.15rem;
-}
-.ach-stat__value { font-size: 1.4rem; font-weight: 600; color: var(--fg); font-variant-numeric: tabular-nums; }
-.ach-stat__label { font-size: 0.75rem; color: var(--dim); letter-spacing: 0.02em; }
-.ach-provider-card {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid var(--stroke); border-radius: var(--radius);
-  background: var(--panel);
-  display: flex; flex-direction: column; gap: 0.25rem;
-}
-.ach-provider-card__name { font-size: 0.8rem; font-weight: 500; color: var(--fg); }
-.ach-provider-card__name a { color: inherit; }
-.ach-provider-card__name a:hover { color: var(--accent); text-decoration: underline; }
-.ach-provider-card__username { font-size: 0.72rem; color: var(--dim); }
-.ach-provider-card__stats { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; color: var(--dim); font-variant-numeric: tabular-nums; }
-
+// hold the 12rem width (min-width: auto let long rows widen it); labels truncate instead
+.ach-sidebar { min-width: 0; }
+.ach-sidebar .overview-status-row__label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ach-list { flex: 1; min-width: 0; }
 .ach-empty { color: var(--dim); }
 .ach-rows { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.9rem 0 0; }
@@ -526,6 +533,67 @@ $status-aliases: (wip: playing, stable: finished);
 .ach-reveal-all .ach-row--hidden .ach-row__hidden-tag { display: none; }
 .ach-row--hidden.ach-row--revealed { cursor: default; }
 
+// filter card: controls at the sidebar rows' 0.78rem scale
+.log-filters .games-search__input,
+.log-filters .games-list__select { font-size: 0.78rem; padding: 0.25rem 0.5rem; }
+.log-filters .ach-reveal-toggle { align-self: flex-start; white-space: nowrap; }
+.log-filters__kinds { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.78rem; color: var(--fg); }
+.log-filters__kinds label { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+.log-filters__kinds input { accent-color: var(--accent); }
+.log-filters .games-list__select { width: 100%; }
+
+.log-days { display: flex; flex-direction: column; gap: 0.6rem; margin: 0.9rem 0 0; }
+.log-day { display: flex; align-items: flex-start; gap: 0.7rem; }
+.log-day[hidden], .log-event[hidden] { display: none; }
+// the day's gutter already carries the date
+.log-day .ach-row__date { display: none; }
+// the date shows once per day; a rule down the left of the day's events ties them to it
+.log-day__date {
+  flex: 0 0 7ch; padding-top: 0.4rem;
+  position: sticky; top: 0;
+  font-family: $font-ui; font-size: 0.75rem; font-weight: 600; color: var(--fg);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.log-day__events {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding-left: 0.7rem; border-left: 2px solid var(--stroke);
+}
+// Description shares the name's line (dim, truncated) so a Log row keeps the
+// compact two-line, icon-height shape of the Overview's rows (rules below).
+.log-day .ach-row__blur-content { display: flex; align-items: baseline; gap: 0.6rem; min-width: 0; line-height: 1rem; }
+.log-day .ach-row__title-line { flex: 0 1 auto; min-width: 0; }
+.log-day .ach-row__desc {
+  flex: 1 1 0; min-width: 0; margin: 0;
+  font-size: 0.72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.log-day .log-group > .ach-rows { margin: 0.3rem 0 0 1rem; }
+.log-line, .log-group__summary {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+  background: var(--panel);
+  font-family: $font-ui; font-size: 0.8rem; line-height: 1rem;
+  white-space: nowrap; overflow: hidden;
+}
+.log-line .log-event__game, .log-group__summary .log-event__game { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.log-event--playthrough .log-line { border-left: 3px solid var(--accent); }
+.log-event--mastery .log-line { border-left: 3px solid var(--mastered); }
+.log-line__verb { color: var(--fg); font-weight: 600; }
+// Nerd Font glyphs (trophy/play/flag/star) only exist in SauceCode
+.log-event__glyph { font-family: $font-body; color: var(--dim); }
+.log-event__glyph--mastered { color: var(--mastered); }
+.log-event__game { color: var(--accent); }
+.log-event__game:hover { text-decoration: underline; }
+.log-event__meta { color: var(--dim); font-size: 0.78rem; }
+.log-group__summary { cursor: pointer; list-style: none; }
+.log-group__summary::-webkit-details-marker { display: none; }
+.log-group__summary:hover { border-color: var(--accent); }
+.log-group__summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.log-group__summary::after { content: "▸"; margin-left: auto; color: var(--dim); }
+.log-group[open] > .log-group__summary::after { content: "▾"; }
+.log-group__count { color: var(--fg); font-weight: 500; }
+
 .ach-reveal-toggle {
   font-family: $font-ui; font-size: 0.78rem; color: var(--dim);
   background: none; border: 1px solid var(--stroke); border-radius: 6px;
@@ -541,12 +609,7 @@ $status-aliases: (wip: playing, stable: finished);
 
 @media (max-width: 640px) {
   .ach-panel { flex-direction: column; }
-  .ach-sidebar {
-    position: static;
-    flex-direction: row; flex-wrap: wrap;
-    width: 100%;
-  }
-  .ach-stat, .ach-provider-card { flex: 1 1 8rem; }
+  .ach-sidebar { position: static; width: 100%; }
 }
 
 /* ── Overview tab: library-wide summary cards ────────────────────────────── */
@@ -623,16 +686,17 @@ a.overview-status-row__label, .overview-status-row a {
 a.overview-status-row__label:hover, .overview-status-row a:hover {
   color: var(--accent); text-decoration-color: currentColor;
 }
-// Compact achievement rows: two 1rem lines (name, game · date) exactly match the
+// Compact achievement rows (Overview and Log): two 1rem lines (name, game · date) exactly match the
 // 2rem icon, and each line truncates rather than wrapping so rows stay one height.
-.overview-recent-achievements .ach-rows { margin-top: 0; gap: 0.3rem; }
-.overview-recent-achievements .ach-row { align-items: center; gap: 0.6rem; padding: 0.3rem 0.5rem; }
-.overview-recent-achievements .ach-row__body { display: flex; flex-direction: column; }
+.overview-recent-achievements .ach-rows, .log-day .ach-rows { margin-top: 0; gap: 0.3rem; }
+.overview-recent-achievements .ach-row, .log-day .ach-row { align-items: center; gap: 0.6rem; padding: 0.3rem 0.5rem; }
+.overview-recent-achievements .ach-row__body, .log-day .ach-row__body { display: flex; flex-direction: column; }
 .overview-recent-achievements .ach-row__title-line,
-.overview-recent-achievements .ach-row__meta { line-height: 1rem; flex-wrap: nowrap; white-space: nowrap; }
-.overview-recent-achievements .ach-row__name { font-size: 0.8rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-.overview-recent-achievements .ach-row__meta { margin-top: 0; font-size: 0.72rem; gap: 0.8rem; }
-.overview-recent-achievements .ach-row__game { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.overview-recent-achievements .ach-row__meta,
+.log-day .ach-row__title-line, .log-day .ach-row__meta { line-height: 1rem; flex-wrap: nowrap; white-space: nowrap; }
+.overview-recent-achievements .ach-row__name, .log-day .ach-row__name { font-size: 0.8rem; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.overview-recent-achievements .ach-row__meta, .log-day .ach-row__meta { margin-top: 0; font-size: 0.72rem; gap: 0.8rem; }
+.overview-recent-achievements .ach-row__game, .log-day .ach-row__game { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .overview-recent__item { justify-content: flex-start; }
 .overview-recent__item .ach-row__game { flex: 1; min-width: 0; }
 .overview-recent__date { color: var(--dim); white-space: nowrap; }

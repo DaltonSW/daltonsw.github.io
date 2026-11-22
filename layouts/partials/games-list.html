@@ -1,0 +1,124 @@
+{{/* Game list tab: one row per game, backlog included, server-rendered newest
+     last-played first. Each row carries data-* sort/filter keys read by
+     assets/js/games-list.ts, which reveals the controls and re-orders rows.
+     Included from layouts/games/taxonomy.html. */}}
+{{- $rows := slice -}}
+{{- $statuses := slice -}}
+{{- range .Pages -}}
+  {{- $page := . -}}
+  {{- $summary := dict -}}
+  {{- with .Resources.Get "achievement-summary.yaml" }}{{ $summary = . | transform.Unmarshal }}{{ end -}}
+  {{- $planned := false -}}
+  {{- range partial "playthrough-entries.html" $page -}}
+    {{- if eq .status "planned" }}{{ $planned = true }}{{ end -}}
+  {{- end -}}
+  {{- $status := .Params.status | default "" -}}
+  {{- if and $status (not (in $statuses $status)) }}{{ $statuses = $statuses | append $status }}{{ end -}}
+  {{- $rows = $rows | append (dict
+      "page"    $page
+      "title"   $page.Title
+      "status"  $status
+      "first"   (partial "game-first-played.html" $page)
+      "last"    (partial "game-last-played.html" $page)
+      "summary" $summary
+      "planned" $planned
+  ) -}}
+{{- end -}}
+{{/* default order: last played desc, undated last, ties by title */}}
+{{- $dated := sort (sort (where $rows "last" "ne" "") "title" "asc") "last" "desc" -}}
+{{- $undated := sort (where $rows "last" "eq" "") "title" "asc" -}}
+{{- $rows = $dated | append $undated -}}
+{{- $statuses = sort $statuses -}}
+{{- if in $statuses "backlog" }}{{ $statuses = (complement (slice "backlog") $statuses) | append "backlog" }}{{ end -}}
+
+<section aria-label="Game list" data-games-list>
+  <div class="games-list__controls" data-games-list-controls hidden>
+    <input type="search" class="games-search__input" placeholder="Search games…"
+      aria-label="Search games" data-games-list-search>
+    <select class="games-list__select" aria-label="Filter by status" data-games-list-status>
+      <option value="">All statuses</option>
+      {{- range $statuses }}
+      <option value="{{ . }}">{{ if eq . "backlog" }}backlog (incl. planned replays){{ else }}{{ . }}{{ end }}</option>
+      {{- end }}
+    </select>
+    <span class="games-list__count" data-games-list-count aria-live="polite"></span>
+  </div>
+  <p class="games-search__empty" hidden data-games-list-empty>No games match.</p>
+
+  <div class="ps-table ps-table--list" role="table">
+    <div class="ps-row ps-row--head" role="row">
+      {{- range slice
+          (dict "key" "status"   "label" "status"       "dir" "asc")
+          (dict "key" "title"    "label" "game"         "dir" "asc")
+          (dict "key" "platform" "label" "platform"     "dir" "asc")
+          (dict "key" "first"    "label" "first played" "dir" "desc")
+          (dict "key" "last"     "label" "last played"  "dir" "desc")
+          (dict "key" "playtime" "label" "playtime"     "dir" "desc")
+          (dict "key" "ach"      "label" "achievements" "dir" "desc") }}
+      {{- $cls := cond (eq .key "title") "game" (cond (eq .key "first") "first" (cond (eq .key "last") "played" (cond (eq .key "ach") "achievements" .key))) }}
+      <span class="ps-row__{{ $cls }}" role="columnheader"{{ if eq .key "last" }} aria-sort="descending"{{ end }}>
+        <button type="button" class="ps-sort" data-sort="{{ .key }}" data-sort-dir="{{ .dir }}">{{ .label }}</button>
+      </span>
+      {{- end }}
+    </div>
+    <div class="ps-rows" data-games-list-rows>
+    {{- range $rows }}
+    {{- $row := . }}
+    {{- $page := .page }}
+    {{- $s := .summary }}
+    {{- $statusTerm := "" }}
+    {{- with $page.GetTerms "status" }}{{ $statusTerm = index . 0 }}{{ end }}
+    {{- $platformTerm := "" }}
+    {{- with $page.GetTerms "platform" }}{{ $platformTerm = index . 0 }}{{ end }}
+    {{- $ach := "" }}
+    {{- with $s.total }}{{ $ach = printf "%.4f" (div ($s.unlocked | default 0 | float) .) }}{{ end }}
+    {{- $masteredOn := (partial "game-mastery.html" $page).date }}
+    <div class="ps-row{{ with $row.status }} ps-row--{{ . }}{{ end }}" role="row"
+      data-title="{{ lower $page.Title }}"
+      data-status="{{ $row.status }}"
+      data-platform="{{ lower ($page.Params.platform | default "") }}"
+      data-first="{{ $row.first }}"
+      data-last="{{ $row.last }}"
+      data-playtime="{{ $s.playtime_mins | default "" }}"
+      data-ach="{{ $ach }}"
+      data-rating="{{ $page.Params.rating | default "" }}"
+      {{- if $row.planned }} data-planned{{ end }}>
+      <span class="ps-row__status" role="cell">
+        {{- with $row.status }}
+          {{- if $statusTerm }}<a href="{{ $statusTerm.RelPermalink }}">{{ partial "game-status-tag.html" . }}</a>
+          {{- else }}{{ partial "game-status-tag.html" . }}{{ end }}
+        {{- end }}
+      </span>
+      <span class="ps-row__game" role="cell">
+        <a class="ps-row__title{{ if $masteredOn }} ps-row__title--mastered{{ end }}" href="{{ $page.RelPermalink }}"
+          {{- with $masteredOn }} title="Mastered {{ . | time.Format "Jan 2, 2006" }}"{{ end }}>{{ $page.Title }}</a>
+        {{- with $masteredOn }}<span class="ps-row__mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}" aria-label="mastered">&#xf005;</span>{{ end }}
+        {{- if partial "game-unplayed.html" $page }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
+        {{- if $row.planned }} {{ partial "game-status-tag.html" "planned" }}{{ end }}
+        {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
+      </span>
+      <span class="ps-row__platform" role="cell">
+        {{- with $page.Params.platform }}
+          {{- if $platformTerm }}<a href="{{ $platformTerm.RelPermalink }}">{{ . }}</a>
+          {{- else }}{{ . }}{{ end }}
+        {{- end }}
+      </span>
+      <span class="ps-row__first" role="cell">
+        {{- with $row.first }}{{ . | time.Format "Jan 2006" }}{{ else }}<span class="ps-row__played--none">-</span>{{ end -}}
+      </span>
+      <span class="ps-row__played" role="cell">
+        {{- with $row.last }}{{ . | time.Format "Jan 2006" }}{{ else }}<span class="ps-row__played--none">-</span>{{ end -}}
+      </span>
+      <span class="ps-row__playtime" role="cell">
+        {{- with $s.playtime_mins }}{{ printf "%.1fh" (div . 60.0) }}{{ end -}}
+      </span>
+      <span class="ps-row__achievements" role="cell">
+        {{- with $s.total }}{{ partial "achievement-meter.html" (dict "unlocked" $s.unlocked "total" .) }}{{ end -}}
+      </span>
+    </div>
+    {{- else }}
+    <div class="ps-row" role="row"><span class="ps-row__game" role="cell">No games logged yet.</span></div>
+    {{- end }}
+    </div>
+  </div>
+</section>
