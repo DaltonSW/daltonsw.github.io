@@ -1,5 +1,6 @@
 {{/* Log tab: one newest-first feed per year that mixes playthrough events
-     (from playthrough-entries.html), mastery dates (game-mastery.html), and
+     (from playthrough-entries.html: a run starting, ending, and the day it beat
+     the game when its `beaten:` is earlier than its end), mastery dates (game-mastery.html), and
      earned achievements (achievement-summary.yaml's `earned`, grouped per game,
      provider, subset, and day), plus a provider's last-played date when no other
      event already covers that day. A sidebar holds the filters
@@ -16,8 +17,8 @@
 -}}
 
 {{/* sortKey = "<day>|<rank>|<time>", sorted desc: within a day, mastery (3) and
-     a run ending or a provider's last-played (2) read above that day's unlocks
-     (1), and a run starting (0) below them. */}}
+     a run ending, a run beating the game, or a provider's last-played (2) read
+     above that day's unlocks (1), and a run starting (0) below them. */}}
 {{- $events := slice -}}
 {{- $unlockedSum := 0 -}}
 {{- $playtimeMins := 0 -}}
@@ -49,6 +50,14 @@
         {{- $events = $events | append (merge $base (dict "verb" "Started" "date" $started "year" (substr $started 0 4) "sortKey" (printf "%s|0|" $started) "status" "")) -}}
         {{- if and (not $last.open) $last.end -}}
           {{- $events = $events | append (merge $base (dict "verb" "Ended" "date" $last.end "year" (substr $last.end 0 4) "sortKey" (printf "%s|2|" $last.end))) -}}
+        {{- end -}}
+      {{- end -}}
+      {{/* The day the run beat the game, when it carried on afterwards. On the
+           run's last day it would only repeat the end event, so it's left out. */}}
+      {{- with .beaten -}}
+        {{- $beaten := . | time.Format "2006-01-02" -}}
+        {{- if ne $beaten $last.end -}}
+          {{- $events = $events | append (merge $base (dict "verb" "Beaten" "date" $beaten "year" (substr $beaten 0 4) "sortKey" (printf "%s|2|" $beaten))) -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
@@ -270,11 +279,14 @@
           {{- else }}
             {{- $entry := .entry }}
             {{- /* a closed run reads as its status ("Dropped", "Finished"), coloured like that
-                   status's pill; Started takes playing's colour. No status: neutral verb, no wash. */}}
+                   status's pill; Started takes playing's colour, and Beaten finished's. No
+                   status: neutral verb, no wash. */}}
             {{- $verb := .verb }}
             {{- $tone := "" }}
             {{- if eq .verb "Started" }}
               {{- $tone = "playing" }}
+            {{- else if eq .verb "Beaten" }}
+              {{- $tone = "finished" }}
             {{- else if $entry.status }}
               {{- $verb = humanize $entry.status }}
               {{- $tone = $entry.status }}
