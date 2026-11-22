@@ -3,7 +3,7 @@ title: '999: Nine Hours, Nine Persons, Nine Doors'
 platform: Nintendo DS
 retroachievements_id: 999
 steam_appid: null
-status: playing
+status: finished
 rating: null
 draft: false
 cascade:
