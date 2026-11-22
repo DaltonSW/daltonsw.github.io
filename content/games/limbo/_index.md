@@ -1,19 +1,16 @@
 ---
-title: "LIMBO"
-platform: "PC"
-retroachievements_id:
+title: LIMBO
+platform: PC
+retroachievements_id: null
 steam_appid: 48000
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: unfinished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["limbo"]
+    games:
+      - limbo
+cover: null
 ---
 
 

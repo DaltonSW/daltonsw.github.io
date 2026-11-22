@@ -3,7 +3,7 @@ title: Chants of Sennaar
 platform: PC
 retroachievements_id: null
 steam_appid: 1931770
-status: backlog
+status: playing
 rating: null
 draft: false
 cascade:

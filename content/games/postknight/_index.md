@@ -1,0 +1,20 @@
+---
+title: "Postknight"
+platform: "Android"
+retroachievements_id:
+steam_appid:
+psn_id:
+ubisoft_id:
+xbox_id:
+googleplay_id: 563587610695
+status: "unfinished"
+subgames:
+rating:
+cover:
+draft: true
+cascade:
+  params:
+    games: ["postknight"]
+---
+
+

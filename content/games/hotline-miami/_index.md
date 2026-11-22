@@ -1,19 +1,16 @@
 ---
-title: "Hotline Miami"
-platform: "PC"
-retroachievements_id:
+title: Hotline Miami
+platform: PC
+retroachievements_id: null
 steam_appid: 219150
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "backlog"
-subgames:
-rating:
-cover:
-draft: true
+status: backlog
+rating: null
+draft: false
 cascade:
   params:
-    games: ["hotline-miami"]
+    games:
+      - hotline-miami
+cover: null
 ---
 
 

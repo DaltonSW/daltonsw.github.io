@@ -1,20 +1,16 @@
 ---
-title: "Database Detective: Minor Crimes Division"
-platform: "PC"
-retroachievements_id:
+title: 'Database Detective: Minor Crimes Division'
+platform: PC
+retroachievements_id: null
 steam_appid: 3950130
-psn_id:
-ubisoft_id:
-xbox_id:
-googleplay_id:
-status: "playing"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["database-detective-minor-crimes-division"]
+    games:
+      - database-detective-minor-crimes-division
+cover: null
 ---
 
 

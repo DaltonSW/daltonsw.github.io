@@ -1,0 +1,783 @@
+{
+ "provider": "googleplay",
+ "title": "Almost a Hero — Idle RPG",
+ "updated": "2026-11-22",
+ "id": "862605511190",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
+ "unlocked": 33,
+ "total": 62,
+ "first": "2018-07-12",
+ "last": "2018-07-27",
+ "platform": "Google Play",
+ "completion": "55%",
+ "source": "exophase",
+ "last_played": "2018-07-30",
+ "achievements": [
+  {
+   "key": "CgkIlpSuuo0ZEAIQBw",
+   "name": "2k",
+   "unlocked": true,
+   "date": "2018-07-12T13:08:21-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/bb80340.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQIQ",
+   "name": "the-tiro",
+   "unlocked": true,
+   "date": "2018-07-13T03:00:03-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/j80j148.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQMw",
+   "name": "put-a-rune-on-it",
+   "unlocked": true,
+   "date": "2018-07-13T03:03:02-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/5154b1j.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQDQ",
+   "name": "new-adventure",
+   "unlocked": true,
+   "date": "2018-07-13T14:42:16-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/3d5e443.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQEg",
+   "name": "you-call-that-a-challenge",
+   "unlocked": true,
+   "date": "2018-07-13T14:48:23-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/g8je777.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQIg",
+   "name": "the-fryer",
+   "unlocked": true,
+   "date": "2018-07-13T22:50:20-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/1e3d1gd.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQJg",
+   "name": "common",
+   "unlocked": true,
+   "date": "2018-07-14T20:51:40-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/060g1b4.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQFw",
+   "name": "apprentice",
+   "unlocked": true,
+   "date": "2018-07-14T22:21:33-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/767edd1.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQGA",
+   "name": "journeyman",
+   "unlocked": true,
+   "date": "2018-07-14T22:22:17-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/5154bbj.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQCA",
+   "name": "50k",
+   "unlocked": true,
+   "date": "2018-07-15T00:06:31-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/g8je756.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQGQ",
+   "name": "expert",
+   "unlocked": true,
+   "date": "2018-07-15T10:39:54-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/060g114.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQEw",
+   "name": "one-more-try",
+   "unlocked": true,
+   "date": "2018-07-15T11:58:26-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/ddg5884.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQNA",
+   "name": "my-precious",
+   "unlocked": true,
+   "date": "2018-07-15T17:58:56-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/060g164.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQIw",
+   "name": "the-cook",
+   "unlocked": true,
+   "date": "2018-07-15T18:13:40-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/3d5e4j8.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQDg",
+   "name": "getting-used-to",
+   "unlocked": true,
+   "date": "2018-07-15T20:41:00-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/767edd7.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQFA",
+   "name": "getting-serious",
+   "unlocked": true,
+   "date": "2018-07-16T10:58:38-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/j80j118.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQJw",
+   "name": "uncommon",
+   "unlocked": true,
+   "date": "2018-07-16T11:01:18-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/8bjg4b1.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQKA",
+   "name": "rare",
+   "unlocked": true,
+   "date": "2018-07-19T09:42:19-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/eje48je.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQLQ",
+   "name": "a-small-detour",
+   "unlocked": true,
+   "date": "2018-07-20T15:11:59-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/ddg58d4.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQKQ",
+   "name": "epic",
+   "unlocked": true,
+   "date": "2018-07-20T21:10:28-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/4j036je.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQNQ",
+   "name": "a-fellowship-of-runes",
+   "unlocked": true,
+   "date": "2018-07-21T00:08:27-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/8bjg4g1.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQJQ",
+   "name": "the-craftsman",
+   "unlocked": true,
+   "date": "2018-07-21T10:02:15-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/767edg1.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQKg",
+   "name": "legendary",
+   "unlocked": true,
+   "date": "2018-07-21T12:08:14-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/6ed6ge5.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQFQ",
+   "name": "together-we-stand",
+   "unlocked": true,
+   "date": "2018-07-21T17:58:06-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/1e3d11d.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQJA",
+   "name": "the-artist",
+   "unlocked": true,
+   "date": "2018-07-21T18:03:03-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/5154b6j.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQGw",
+   "name": "adept",
+   "unlocked": true,
+   "date": "2018-07-21T21:24:38-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/8bjg4e1.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQHA",
+   "name": "beginners",
+   "unlocked": true,
+   "date": "2018-07-22T01:53:39-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/4j0364e.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQHQ",
+   "name": "wannabes",
+   "unlocked": true,
+   "date": "2018-07-22T01:53:55-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/6ed6gb5.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQNg",
+   "name": "not-enough-fingers",
+   "unlocked": true,
+   "date": "2018-07-22T13:31:31-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/eje484e.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQDw",
+   "name": "maybe-another-time",
+   "unlocked": true,
+   "date": "2018-07-22T21:45:49-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/4j0366e.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQLg",
+   "name": "wandering-but-not-lost",
+   "unlocked": true,
+   "date": "2018-07-27T11:16:32-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/j80j188.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQFg",
+   "name": "divided-we-fall",
+   "unlocked": true,
+   "date": "2018-07-27T12:43:03-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/3d5e448.png?98be3995c518e45097d118fa65f4d603"
+  },
+  {
+   "key": "CgkIlpSuuo0ZEAIQGg",
+   "name": "master",
+   "unlocked": true,
+   "date": "2018-07-27T17:56:04-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/eje486e.png?98be3995c518e45097d118fa65f4d603"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 2646112,
+    "awardid": 2646112,
+    "earned": "July 27, 2018, 10:56 pm (UTC+0)",
+    "slug": "master",
+    "canonical_id": "CgkIlpSuuo0ZEAIQGg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71655-master",
+    "icons": {
+     "s": "\/android\/awards\/s\/eje486e.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/eje486e.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/eje486e.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/eje486e.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/eje486e.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532732164
+   },
+   {
+    "masterAwardId": 2646107,
+    "awardid": 2646107,
+    "earned": "July 27, 2018, 5:43 pm (UTC+0)",
+    "slug": "divided-we-fall",
+    "canonical_id": "CgkIlpSuuo0ZEAIQFg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71650-divided-we-fall",
+    "icons": {
+     "s": "\/android\/awards\/s\/3d5e448.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/3d5e448.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/3d5e448.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/3d5e448.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/3d5e448.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532713383
+   },
+   {
+    "masterAwardId": 2646131,
+    "awardid": 2646131,
+    "earned": "July 27, 2018, 4:16 pm (UTC+0)",
+    "slug": "wandering-but-not-lost",
+    "canonical_id": "CgkIlpSuuo0ZEAIQLg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71674-wandering-but-not-lost",
+    "icons": {
+     "s": "\/android\/awards\/s\/j80j188.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/j80j188.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/j80j188.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/j80j188.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/j80j188.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532708192
+   },
+   {
+    "masterAwardId": 2646100,
+    "awardid": 2646100,
+    "earned": "July 23, 2018, 2:45 am (UTC+0)",
+    "slug": "maybe-another-time",
+    "canonical_id": "CgkIlpSuuo0ZEAIQDw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71643-maybe-another-time",
+    "icons": {
+     "s": "\/android\/awards\/s\/4j0366e.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/4j0366e.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/4j0366e.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/4j0366e.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/4j0366e.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532313949
+   },
+   {
+    "masterAwardId": 2646138,
+    "awardid": 2646138,
+    "earned": "July 22, 2018, 6:31 pm (UTC+0)",
+    "slug": "not-enough-fingers",
+    "canonical_id": "CgkIlpSuuo0ZEAIQNg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71681-not-enough-fingers",
+    "icons": {
+     "s": "\/android\/awards\/s\/eje484e.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/eje484e.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/eje484e.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/eje484e.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/eje484e.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532284291
+   },
+   {
+    "masterAwardId": 2646114,
+    "awardid": 2646114,
+    "earned": "July 22, 2018, 6:53 am (UTC+0)",
+    "slug": "wannabes",
+    "canonical_id": "CgkIlpSuuo0ZEAIQHQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71657-wannabes",
+    "icons": {
+     "s": "\/android\/awards\/s\/6ed6gb5.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/6ed6gb5.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/6ed6gb5.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/6ed6gb5.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/6ed6gb5.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532242435
+   },
+   {
+    "masterAwardId": 2646113,
+    "awardid": 2646113,
+    "earned": "July 22, 2018, 6:53 am (UTC+0)",
+    "slug": "beginners",
+    "canonical_id": "CgkIlpSuuo0ZEAIQHA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71656-beginners",
+    "icons": {
+     "s": "\/android\/awards\/s\/4j0364e.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/4j0364e.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/4j0364e.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/4j0364e.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/4j0364e.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532242419
+   },
+   {
+    "masterAwardId": 2646111,
+    "awardid": 2646111,
+    "earned": "July 22, 2018, 2:24 am (UTC+0)",
+    "slug": "adept",
+    "canonical_id": "CgkIlpSuuo0ZEAIQGw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71654-adept",
+    "icons": {
+     "s": "\/android\/awards\/s\/8bjg4e1.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/8bjg4e1.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/8bjg4e1.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/8bjg4e1.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/8bjg4e1.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532226278
+   },
+   {
+    "masterAwardId": 2646122,
+    "awardid": 2646122,
+    "earned": "July 21, 2018, 11:03 pm (UTC+0)",
+    "slug": "the-artist",
+    "canonical_id": "CgkIlpSuuo0ZEAIQJA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71665-the-artist",
+    "icons": {
+     "s": "\/android\/awards\/s\/5154b6j.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/5154b6j.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/5154b6j.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/5154b6j.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/5154b6j.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532214183
+   },
+   {
+    "masterAwardId": 2646106,
+    "awardid": 2646106,
+    "earned": "July 21, 2018, 10:58 pm (UTC+0)",
+    "slug": "together-we-stand",
+    "canonical_id": "CgkIlpSuuo0ZEAIQFQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71649-together-we-stand",
+    "icons": {
+     "s": "\/android\/awards\/s\/1e3d11d.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/1e3d11d.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/1e3d11d.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/1e3d11d.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/1e3d11d.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532213886
+   },
+   {
+    "masterAwardId": 2646127,
+    "awardid": 2646127,
+    "earned": "July 21, 2018, 5:08 pm (UTC+0)",
+    "slug": "legendary",
+    "canonical_id": "CgkIlpSuuo0ZEAIQKg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71670-legendary",
+    "icons": {
+     "s": "\/android\/awards\/s\/6ed6ge5.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/6ed6ge5.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/6ed6ge5.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/6ed6ge5.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/6ed6ge5.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532192894
+   },
+   {
+    "masterAwardId": 2646121,
+    "awardid": 2646121,
+    "earned": "July 21, 2018, 3:02 pm (UTC+0)",
+    "slug": "the-craftsman",
+    "canonical_id": "CgkIlpSuuo0ZEAIQJQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71664-the-craftsman",
+    "icons": {
+     "s": "\/android\/awards\/s\/767edg1.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/767edg1.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/767edg1.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/767edg1.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/767edg1.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532185335
+   },
+   {
+    "masterAwardId": 2646137,
+    "awardid": 2646137,
+    "earned": "July 21, 2018, 5:08 am (UTC+0)",
+    "slug": "a-fellowship-of-runes",
+    "canonical_id": "CgkIlpSuuo0ZEAIQNQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71680-a-fellowship-of-runes",
+    "icons": {
+     "s": "\/android\/awards\/s\/8bjg4g1.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/8bjg4g1.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/8bjg4g1.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/8bjg4g1.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/8bjg4g1.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532149707
+   },
+   {
+    "masterAwardId": 2646126,
+    "awardid": 2646126,
+    "earned": "July 21, 2018, 2:10 am (UTC+0)",
+    "slug": "epic",
+    "canonical_id": "CgkIlpSuuo0ZEAIQKQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71669-epic",
+    "icons": {
+     "s": "\/android\/awards\/s\/4j036je.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/4j036je.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/4j036je.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/4j036je.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/4j036je.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532139028
+   },
+   {
+    "masterAwardId": 2646130,
+    "awardid": 2646130,
+    "earned": "July 20, 2018, 8:11 pm (UTC+0)",
+    "slug": "a-small-detour",
+    "canonical_id": "CgkIlpSuuo0ZEAIQLQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71673-a-small-detour",
+    "icons": {
+     "s": "\/android\/awards\/s\/ddg58d4.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/ddg58d4.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/ddg58d4.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/ddg58d4.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/ddg58d4.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532117519
+   },
+   {
+    "masterAwardId": 2646125,
+    "awardid": 2646125,
+    "earned": "July 19, 2018, 2:42 pm (UTC+0)",
+    "slug": "rare",
+    "canonical_id": "CgkIlpSuuo0ZEAIQKA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71668-rare",
+    "icons": {
+     "s": "\/android\/awards\/s\/eje48je.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/eje48je.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/eje48je.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/eje48je.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/eje48je.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1532011339
+   },
+   {
+    "masterAwardId": 2646124,
+    "awardid": 2646124,
+    "earned": "July 16, 2018, 4:01 pm (UTC+0)",
+    "slug": "uncommon",
+    "canonical_id": "CgkIlpSuuo0ZEAIQJw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71667-uncommon",
+    "icons": {
+     "s": "\/android\/awards\/s\/8bjg4b1.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/8bjg4b1.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/8bjg4b1.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/8bjg4b1.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/8bjg4b1.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531756878
+   },
+   {
+    "masterAwardId": 2646105,
+    "awardid": 2646105,
+    "earned": "July 16, 2018, 3:58 pm (UTC+0)",
+    "slug": "getting-serious",
+    "canonical_id": "CgkIlpSuuo0ZEAIQFA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71648-getting-serious",
+    "icons": {
+     "s": "\/android\/awards\/s\/j80j118.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/j80j118.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/j80j118.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/j80j118.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/j80j118.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531756718
+   },
+   {
+    "masterAwardId": 2646099,
+    "awardid": 2646099,
+    "earned": "July 16, 2018, 1:41 am (UTC+0)",
+    "slug": "getting-used-to",
+    "canonical_id": "CgkIlpSuuo0ZEAIQDg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71642-getting-used-to",
+    "icons": {
+     "s": "\/android\/awards\/s\/767edd7.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/767edd7.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/767edd7.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/767edd7.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/767edd7.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531705260
+   },
+   {
+    "masterAwardId": 2646120,
+    "awardid": 2646120,
+    "earned": "July 15, 2018, 11:13 pm (UTC+0)",
+    "slug": "the-cook",
+    "canonical_id": "CgkIlpSuuo0ZEAIQIw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71663-the-cook",
+    "icons": {
+     "s": "\/android\/awards\/s\/3d5e4j8.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/3d5e4j8.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/3d5e4j8.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/3d5e4j8.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/3d5e4j8.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531696420
+   },
+   {
+    "masterAwardId": 2646136,
+    "awardid": 2646136,
+    "earned": "July 15, 2018, 10:58 pm (UTC+0)",
+    "slug": "my-precious",
+    "canonical_id": "CgkIlpSuuo0ZEAIQNA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71679-my-precious",
+    "icons": {
+     "s": "\/android\/awards\/s\/060g164.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/060g164.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/060g164.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/060g164.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/060g164.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531695536
+   },
+   {
+    "masterAwardId": 2646104,
+    "awardid": 2646104,
+    "earned": "July 15, 2018, 4:58 pm (UTC+0)",
+    "slug": "one-more-try",
+    "canonical_id": "CgkIlpSuuo0ZEAIQEw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71647-one-more-try",
+    "icons": {
+     "s": "\/android\/awards\/s\/ddg5884.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/ddg5884.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/ddg5884.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/ddg5884.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/ddg5884.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531673906
+   },
+   {
+    "masterAwardId": 2646110,
+    "awardid": 2646110,
+    "earned": "July 15, 2018, 3:39 pm (UTC+0)",
+    "slug": "expert",
+    "canonical_id": "CgkIlpSuuo0ZEAIQGQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71653-expert",
+    "icons": {
+     "s": "\/android\/awards\/s\/060g114.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/060g114.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/060g114.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/060g114.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/060g114.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531669194
+   },
+   {
+    "masterAwardId": 2646094,
+    "awardid": 2646094,
+    "earned": "July 15, 2018, 5:06 am (UTC+0)",
+    "slug": "50k",
+    "canonical_id": "CgkIlpSuuo0ZEAIQCA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71637-50k",
+    "icons": {
+     "s": "\/android\/awards\/s\/g8je756.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/g8je756.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/g8je756.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/g8je756.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/g8je756.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531631191
+   },
+   {
+    "masterAwardId": 2646109,
+    "awardid": 2646109,
+    "earned": "July 15, 2018, 3:22 am (UTC+0)",
+    "slug": "journeyman",
+    "canonical_id": "CgkIlpSuuo0ZEAIQGA",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71652-journeyman",
+    "icons": {
+     "s": "\/android\/awards\/s\/5154bbj.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/5154bbj.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/5154bbj.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/5154bbj.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/5154bbj.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531624937
+   },
+   {
+    "masterAwardId": 2646108,
+    "awardid": 2646108,
+    "earned": "July 15, 2018, 3:21 am (UTC+0)",
+    "slug": "apprentice",
+    "canonical_id": "CgkIlpSuuo0ZEAIQFw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71651-apprentice",
+    "icons": {
+     "s": "\/android\/awards\/s\/767edd1.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/767edd1.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/767edd1.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/767edd1.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/767edd1.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531624893
+   },
+   {
+    "masterAwardId": 2646123,
+    "awardid": 2646123,
+    "earned": "July 15, 2018, 1:51 am (UTC+0)",
+    "slug": "common",
+    "canonical_id": "CgkIlpSuuo0ZEAIQJg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71666-common",
+    "icons": {
+     "s": "\/android\/awards\/s\/060g1b4.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/060g1b4.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/060g1b4.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/060g1b4.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/060g1b4.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531619500
+   },
+   {
+    "masterAwardId": 2646119,
+    "awardid": 2646119,
+    "earned": "July 14, 2018, 3:50 am (UTC+0)",
+    "slug": "the-fryer",
+    "canonical_id": "CgkIlpSuuo0ZEAIQIg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71662-the-fryer",
+    "icons": {
+     "s": "\/android\/awards\/s\/1e3d1gd.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/1e3d1gd.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/1e3d1gd.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/1e3d1gd.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/1e3d1gd.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531540220
+   },
+   {
+    "masterAwardId": 2646103,
+    "awardid": 2646103,
+    "earned": "July 13, 2018, 7:48 pm (UTC+0)",
+    "slug": "you-call-that-a-challenge",
+    "canonical_id": "CgkIlpSuuo0ZEAIQEg",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71646-you-call-that-a-challenge",
+    "icons": {
+     "s": "\/android\/awards\/s\/g8je777.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/g8je777.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/g8je777.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/g8je777.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/g8je777.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531511303
+   },
+   {
+    "masterAwardId": 2646098,
+    "awardid": 2646098,
+    "earned": "July 13, 2018, 7:42 pm (UTC+0)",
+    "slug": "new-adventure",
+    "canonical_id": "CgkIlpSuuo0ZEAIQDQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71641-new-adventure",
+    "icons": {
+     "s": "\/android\/awards\/s\/3d5e443.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/3d5e443.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/3d5e443.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/3d5e443.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/3d5e443.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531510936
+   },
+   {
+    "masterAwardId": 2646135,
+    "awardid": 2646135,
+    "earned": "July 13, 2018, 8:03 am (UTC+0)",
+    "slug": "put-a-rune-on-it",
+    "canonical_id": "CgkIlpSuuo0ZEAIQMw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71678-put-a-rune-on-it",
+    "icons": {
+     "s": "\/android\/awards\/s\/5154b1j.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/5154b1j.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/5154b1j.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/5154b1j.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/5154b1j.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531468982
+   },
+   {
+    "masterAwardId": 2646118,
+    "awardid": 2646118,
+    "earned": "July 13, 2018, 8:00 am (UTC+0)",
+    "slug": "the-tiro",
+    "canonical_id": "CgkIlpSuuo0ZEAIQIQ",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71661-the-tiro",
+    "icons": {
+     "s": "\/android\/awards\/s\/j80j148.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/j80j148.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/j80j148.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/j80j148.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/j80j148.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531468803
+   },
+   {
+    "masterAwardId": 2646093,
+    "awardid": 2646093,
+    "earned": "July 12, 2018, 6:08 pm (UTC+0)",
+    "slug": "2k",
+    "canonical_id": "CgkIlpSuuo0ZEAIQBw",
+    "endpoint": "\/achievement\/almost-a-hero-android\/71636-2k",
+    "icons": {
+     "s": "\/android\/awards\/s\/bb80340.png?98be3995c518e45097d118fa65f4d603",
+     "m": "\/android\/awards\/m\/bb80340.png?98be3995c518e45097d118fa65f4d603",
+     "l": "\/android\/awards\/l\/bb80340.png?98be3995c518e45097d118fa65f4d603",
+     "o": "\/android\/awards\/o\/bb80340.png?98be3995c518e45097d118fa65f4d603",
+     "t": "\/android\/awards\/t\/bb80340.png?98be3995c518e45097d118fa65f4d603"
+    },
+    "timestamp": 1531418901
+   }
+  ],
+  "master_gameid": "143494",
+  "success": true
+ }
+}

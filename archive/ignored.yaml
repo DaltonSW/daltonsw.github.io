@@ -2,6 +2,10 @@
 # Nothing is deleted by being here — remove an entry and it comes back.
 games:
     - provider: googleplay
+      id: "514733955274"
+      title: Bitcoin Billionaire
+      ignored_on: "2026-11-22"
+    - provider: googleplay
       id: "670707713680"
       title: 'while True: learn()'
       ignored_on: "2026-10-24"
@@ -89,6 +93,10 @@ games:
       id: "433850"
       title: Z1 Battle Royale
       ignored_on: "2026-08-15"
+    - provider: ubisoft
+      id: 99fc311b-7f16-4701-8064-622f2b53ecae
+      title: Far Cry® 4 Arena Master
+      ignored_on: "2026-11-22"
     - provider: xbox
       id: "1313673121"
       title: 'Dark Souls: Prepare to Die Edition'

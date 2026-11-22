@@ -1,0 +1,70 @@
+{
+ "provider": "googleplay",
+ "title": "Really Bad Chess",
+ "updated": "2026-11-22",
+ "id": "337778764381",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
+ "unlocked": 2,
+ "total": 24,
+ "first": "2018-10-02",
+ "last": "2018-10-02",
+ "platform": "Google Play",
+ "completion": "3%",
+ "source": "exophase",
+ "last_played": "2018-10-12",
+ "achievements": [
+  {
+   "key": "CgkI3dS7qeoJEAIQAg",
+   "name": "first-of-many",
+   "unlocked": true,
+   "date": "2018-10-02T17:37:52-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/1gb36gd.png?69fef78bb68f546a7a295528f76e0003"
+  },
+  {
+   "key": "CgkI3dS7qeoJEAIQEA",
+   "name": "regnant",
+   "unlocked": true,
+   "date": "2018-10-02T17:37:54-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/3j15gd8.png?69fef78bb68f546a7a295528f76e0003"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 2574646,
+    "awardid": 2574646,
+    "earned": "October 2, 2018, 10:37 pm (UTC+0)",
+    "slug": "regnant",
+    "canonical_id": "CgkI3dS7qeoJEAIQEA",
+    "endpoint": "\/achievement\/really-bad-chess-android\/13598-regnant",
+    "icons": {
+     "s": "\/android\/awards\/s\/3j15gd8.png?69fef78bb68f546a7a295528f76e0003",
+     "m": "\/android\/awards\/m\/3j15gd8.png?69fef78bb68f546a7a295528f76e0003",
+     "l": "\/android\/awards\/l\/3j15gd8.png?69fef78bb68f546a7a295528f76e0003",
+     "o": "\/android\/awards\/o\/3j15gd8.png?69fef78bb68f546a7a295528f76e0003",
+     "t": "\/android\/awards\/t\/3j15gd8.png?69fef78bb68f546a7a295528f76e0003"
+    },
+    "timestamp": 1538519874
+   },
+   {
+    "masterAwardId": 2574632,
+    "awardid": 2574632,
+    "earned": "October 2, 2018, 10:37 pm (UTC+0)",
+    "slug": "first-of-many",
+    "canonical_id": "CgkI3dS7qeoJEAIQAg",
+    "endpoint": "\/achievement\/really-bad-chess-android\/13584-first-of-many",
+    "icons": {
+     "s": "\/android\/awards\/s\/1gb36gd.png?69fef78bb68f546a7a295528f76e0003",
+     "m": "\/android\/awards\/m\/1gb36gd.png?69fef78bb68f546a7a295528f76e0003",
+     "l": "\/android\/awards\/l\/1gb36gd.png?69fef78bb68f546a7a295528f76e0003",
+     "o": "\/android\/awards\/o\/1gb36gd.png?69fef78bb68f546a7a295528f76e0003",
+     "t": "\/android\/awards\/t\/1gb36gd.png?69fef78bb68f546a7a295528f76e0003"
+    },
+    "timestamp": 1538519872
+   }
+  ],
+  "master_gameid": "140545",
+  "success": true
+ }
+}

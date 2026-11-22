@@ -1,0 +1,93 @@
+{
+ "provider": "googleplay",
+ "title": "Dr. Mario World",
+ "updated": "2026-11-22",
+ "id": "419844773443",
+ "fetched": "2026-11-22",
+ "last_attempt": "2026-11-22",
+ "unlocked": 3,
+ "total": 19,
+ "first": "2019-07-09",
+ "last": "2019-07-19",
+ "platform": "Google Play",
+ "completion": "7%",
+ "source": "exophase",
+ "last_played": "2019-08-03",
+ "achievements": [
+  {
+   "key": "CgkIw6zLhZwMEAIQAQ",
+   "name": "50-clear-stars",
+   "unlocked": true,
+   "date": "2019-07-09T23:42:52-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/4366084.png?a91e16f27b658b08ee56a63f849b881c"
+  },
+  {
+   "key": "CgkIw6zLhZwMEAIQAg",
+   "name": "100-clear-stars",
+   "unlocked": true,
+   "date": "2019-07-14T23:20:06-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c"
+  },
+  {
+   "key": "CgkIw6zLhZwMEAIQCA",
+   "name": "clear-world-1",
+   "unlocked": true,
+   "date": "2019-07-19T17:27:02-05:00",
+   "icon": "https://m.exophase.com/android/awards/m/jj110dg.png?a91e16f27b658b08ee56a63f849b881c"
+  }
+ ],
+ "raw": {
+  "list": [
+   {
+    "masterAwardId": 3124431,
+    "awardid": 3124431,
+    "earned": "July 19, 2019, 10:27 pm (UTC+0)",
+    "slug": "clear-world-1",
+    "canonical_id": "CgkIw6zLhZwMEAIQCA",
+    "endpoint": "\/achievement\/dr-mario-world-android\/256489-clear-world-1",
+    "icons": {
+     "s": "\/android\/awards\/s\/jj110dg.png?a91e16f27b658b08ee56a63f849b881c",
+     "m": "\/android\/awards\/m\/jj110dg.png?a91e16f27b658b08ee56a63f849b881c",
+     "l": "\/android\/awards\/l\/jj110dg.png?a91e16f27b658b08ee56a63f849b881c",
+     "o": "\/android\/awards\/o\/jj110dg.png?a91e16f27b658b08ee56a63f849b881c",
+     "t": "\/android\/awards\/t\/jj110dg.png?a91e16f27b658b08ee56a63f849b881c"
+    },
+    "timestamp": 1563575222
+   },
+   {
+    "masterAwardId": 3124427,
+    "awardid": 3124427,
+    "earned": "July 15, 2019, 4:20 am (UTC+0)",
+    "slug": "100-clear-stars",
+    "canonical_id": "CgkIw6zLhZwMEAIQAg",
+    "endpoint": "\/achievement\/dr-mario-world-android\/256485-100-clear-stars",
+    "icons": {
+     "s": "\/android\/awards\/s\/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c",
+     "m": "\/android\/awards\/m\/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c",
+     "l": "\/android\/awards\/l\/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c",
+     "o": "\/android\/awards\/o\/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c",
+     "t": "\/android\/awards\/t\/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c"
+    },
+    "timestamp": 1563164406
+   },
+   {
+    "masterAwardId": 3124426,
+    "awardid": 3124426,
+    "earned": "July 10, 2019, 4:42 am (UTC+0)",
+    "slug": "50-clear-stars",
+    "canonical_id": "CgkIw6zLhZwMEAIQAQ",
+    "endpoint": "\/achievement\/dr-mario-world-android\/256484-50-clear-stars",
+    "icons": {
+     "s": "\/android\/awards\/s\/4366084.png?a91e16f27b658b08ee56a63f849b881c",
+     "m": "\/android\/awards\/m\/4366084.png?a91e16f27b658b08ee56a63f849b881c",
+     "l": "\/android\/awards\/l\/4366084.png?a91e16f27b658b08ee56a63f849b881c",
+     "o": "\/android\/awards\/o\/4366084.png?a91e16f27b658b08ee56a63f849b881c",
+     "t": "\/android\/awards\/t\/4366084.png?a91e16f27b658b08ee56a63f849b881c"
+    },
+    "timestamp": 1562733772
+   }
+  ],
+  "master_gameid": "194148",
+  "success": true
+ }
+}

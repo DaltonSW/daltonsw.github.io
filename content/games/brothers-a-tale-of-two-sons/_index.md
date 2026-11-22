@@ -1,19 +1,16 @@
 ---
-title: "Brothers - A Tale of Two Sons"
-platform: "PC"
-retroachievements_id:
+title: Brothers - A Tale of Two Sons
+platform: PC
+retroachievements_id: null
 steam_appid: 225080
-psn_id:
-ubisoft_id:
-xbox_id:
-status: "finished"
-subgames:
-rating:
-cover:
-draft: true
+status: finished
+rating: null
+draft: false
 cascade:
   params:
-    games: ["brothers-a-tale-of-two-sons"]
+    games:
+      - brothers-a-tale-of-two-sons
+cover: null
 ---
 
 
