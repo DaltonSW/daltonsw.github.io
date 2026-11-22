@@ -2,12 +2,14 @@
 
 A CLI + local web UI for maintaining this site's `content/games/<slug>/_index.md` playthrough log.
 
-Run with no arguments (or `gamelog serve`) to serve the local web UI over `content/games`: pick or
-create a game, edit its info, log a new playthrough or session, update an existing one, or run
-housekeeping (scan for unlogged games, flag stale ones, bulk-close open playthroughs, refresh
-achievements), or fetch suggested dates for a game and log them. Everything that touches the log is
-done there now — the rest of the CLI is a handful of capture and read-only commands (see
-`gamelog help`).
+Run with no arguments (or `gamelog serve`) to serve the local web UI over `content/games`. Its home
+page, **Catch up**, is the "I'm back, what's changed?" flow: one button fetches everything new
+from every provider, then lists what to act on in place — unlogged play to log as a run or
+session, new games to create or link, games gone quiet, runs left open. Beyond that you can pick or
+create a game, edit its info, log or update playthroughs and sessions, and use Housekeeping for the
+whole-library lists (backlog, ignored, achievement completion) and manual refreshes. Everything
+that touches the log is done there now — the rest of the CLI is a handful of capture and
+read-only commands (see `gamelog help`).
 
 ```
 go run .                      # serve the web UI (default port 8080, 127.0.0.1 only)
@@ -33,7 +35,7 @@ internal/providers/*   one package per API client (retroachievements, steam, psn
 internal/dotenv        the tool's own minimal .env reader
 internal/externalid    parses a pasted RA/Steam ID or URL into a bare ID
 internal/commands      the CLI commands (suggest, achievements, project, psn, exophase, nadeo,
-                        ninjakiwi), plus the scan/backlog/stale/close/subset/suggest-sweep
+                        ninjakiwi), plus the scan/backlog/stale/close/subset/activity
                         library functions internal/server calls
 internal/server        the local web UI (`gamelog serve`, also what bare `gamelog` runs)
 ```
@@ -63,8 +65,11 @@ archive/
   googleplay/588451498103.json     Google Play Games, mirrored via Exophase.
   nadeo/<account id>.json          Trackmania campaign times — not achievements (see below).
   ninjakiwi/<user id>.json         BTD6 save state — not achievements either (see below).
-  ignored.yaml                     games you've decided never to log, so Scan and
+  ignored.yaml                     games you've decided never to log, so New games and
                                    Backlog stop offering them. Rewritten whole.
+  catchup.yaml                     Catch up's state: when "Load what's new" last ran,
+                                   and activity reviewed and left unlogged (by
+                                   provider ID, through a day). Rewritten whole.
 ```
 
 **The archive is keyed by provider ID, not by slug, and lives outside `content/`.** A slug is a
@@ -215,7 +220,7 @@ info" form on a game's page in `gamelog serve`. Provider IDs (`retroachievements
 `steam_appid`, `psn_id`, `ubisoft_id`, `xbox_id`) have their own form in that page's sidebar, kept
 separate because RA/Steam accept a pasted URL and because clearing one of the `omitempty` IDs is a
 real key removal that has to be declared to the loss check. `retroachievements_subsets` is only
-written by Housekeeping's subset attach (see "RetroAchievements subsets"), and `nadeo_account_id`/
+written by the subset attach on Catch up's New games (see "RetroAchievements subsets"), and `nadeo_account_id`/
 `ninjakiwi_user_id` are hand-edited. The markdown body is written once, from the new-game form's
 overview field, and never edited by the tool after that.
 
@@ -228,14 +233,14 @@ whatever the status is, so a mastered game can be `playing` again. Runs that wer
 
 `status: paused` is distinct from `dropped`: it means the game is on hold, not abandoned — you
 mean to come back to it eventually. Setting it never closes a playthrough, since the game isn't
-finished; Housekeeping's Stale tab in particular offers it as a one-click correction on a quiet game it
-otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
+finished; Catch up's Gone quiet list in particular offers it as a one-click correction on a quiet game
+it otherwise would have guessed `dropped`, for exactly that "no, I'll get back to it" case.
 
 `status: unfinished` sits between `dropped` and `paused`: like `dropped`, play has actually
 stopped and it gets a closed date; unlike `dropped`, it doesn't claim to know that's permanent.
 Use it for the common case where a game just trailed off with no stated intent either way — not a
 deliberate "I'm done with this" (`dropped`) and not a deliberate "I'll be back" (`paused`).
-Housekeeping's Stale tab offers it alongside `dropped`/`paused` as a one-click correction, and it's the
+Catch up's Gone quiet list offers it alongside `dropped`/`paused` as a one-click correction, and it's the
 default guess when there's no achievement signal at all to guess `dropped` from.
 
 `status: misc_launch` (entry-level only, not a `gameStatuses` value) covers a playthrough entry
@@ -254,7 +259,7 @@ no meaningful start/finish narrative, used in an open-ended series of sessions w
 ends play. They're separate statuses because the *reason* differs: `endless` is a replay-loop
 design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `software` isn't a game at
 all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
-through the same Housekeeping scan and need somewhere to go that isn't a completion state.
+through the same new-games scan and need somewhere to go that isn't a completion state.
 
 Any of the three gets exactly one `playthroughs.yaml` entry **per platform**, whose `sessions:`
 list *is* the record — so there's nothing to accidentally fragment into a second discrete
@@ -351,13 +356,12 @@ RA award, or every Steam achievement unlocked); otherwise the field stays blank 
 activity date as its placeholder, and the status falls back to the game's usual default. The notes
 field always starts blank.
 
-The ways in: a **Suggest** button on every linked row of the games list, the **Suggest** tab
-(linked games only, with a title filter), and the tab's **Sweep all games** button. The sweep runs
-the RA/Steam fetch across every linked game and lists only the games with provider activity on a
-day their `playthroughs.yaml` doesn't cover (see below) — including gaps between logged runs, not
-just activity after the newest one — each title linking straight to its panel.
-It's read-only and slow, so it runs as a background job with progress, the same machinery as
-Housekeeping's "refresh all". Old `/suggest/<slug>` links redirect to the game page.
+The way in is the **Suggest** button on every linked row of the games list. The whole-library
+version — every game with provider activity on a day its `playthroughs.yaml` doesn't cover — is
+Catch up's activity list (see "Catch up" below), which applies the same coverage rules to the
+archive instead of fetching again, across every provider rather than just these two, and offers the
+forms right on the list. Old `/suggest` and `/suggest/<slug>` links redirect to Catch up and the
+game page respectively.
 
 RetroAchievements achievement-unlock dates are close to ground truth (RA is achievement-first).
 A game with a finishing award — `mastered`, `completed`, `beaten-hardcore`, or
@@ -388,16 +392,71 @@ with no finish date, names it as a finish-date candidate there. An award (RA) or
 logged run drops the leftover activity to medium confidence. The remaining days can still span
 more than one run, so a game with several playthroughs still gets a cross-reference hint.
 
-## `gamelog serve` — the web UI, and its Housekeeping page
+## `gamelog serve` — the web UI: Catch up and Housekeeping
 
 `gamelog serve` (also what bare `gamelog` runs) serves a local web UI over `content/games`:
-create/edit/delete games, log playthroughs and sessions, manage planned replays, and reorder or
-split sessions, edit provider IDs, and log suggested dates (see `gamelog suggest` above). Its
-**Housekeeping** page is where the bulk maintenance flows live, one tab each — Scan, Backlog,
-Ignored, Incomplete, Stale, Close, and Achievements — described below by what each one does; on the
-page itself these are filter fields, checkboxes, and buttons rather than CLI flags.
+create/edit/delete games (the games list is at `/games`), log playthroughs and sessions, manage
+planned replays, reorder or split sessions, edit provider IDs, and log suggested dates (see
+`gamelog suggest` above). Two pages hold the bulk flows. **Catch up** (`/`, the home page) is the
+"what's changed since I last looked" queue: New games, unlogged activity, Gone quiet and Left open.
+**Housekeeping** keeps the whole-library lists that aren't about what changed — Backlog, Ignored,
+Incomplete — and the manual Achievements tools. Each list is described below by what it does; on
+the pages themselves these are filter fields, checkboxes, and buttons rather than CLI flags.
 
-**Scan** covers every achievement provider with a bulk "what has this account played" list —
+### Catch up
+
+One **Load what's new** button runs a background job (the same job monitor as refresh-all, which
+sends the browser back to the queue when it finishes):
+
+1. the new-games scan, with every provider's list fetched fresh — this warms the 10-minute cache
+   the page's New games section reads;
+2. every linked game's achievements, through the same fetch-and-merge as refresh-all (unchanged
+   Steam games skipped unless the re-fetch box is ticked), logging only the games that changed;
+3. BTD6, a single unauthenticated request;
+4. Trackmania (current season) **only when its box is ticked**, since Nadeo calls run on a real
+   player account;
+5. the run's start time, written to `archive/catchup.yaml`.
+
+Nothing in that run writes `playthroughs.yaml`. The page then reads everything back from disk —
+it renders in a fraction of a second, and works with no credentials at all — in this order,
+leaving out empty sections:
+
+- **Problems**: archive records whose fetch failed during the last run, grouped by provider and
+  error (an expired PSN npsso fails every PSN game at once), plus any BTD6/Trackmania/scan failure
+  from the run itself.
+- **Played since \<date\>**: logged games with provider activity on days no playthrough or session
+  covers (`commands.FindUnloggedActivity`), newest first. Activity is every unlocked achievement's
+  date, each record's `last_played`, and its award date, on all six achievement providers and RA
+  subsets — read from the archive the run just refreshed, not fetched again. Coverage follows the
+  suggest panel's rules (`loggedSpans`/`coverageOf` in `coverage.go`): sessions, or a playthrough's
+  own range; an open run covers everything until the next logged span; planned entries cover
+  nothing. Each card carries one pre-filled form — **log as** a new playthrough or a session on an
+  existing run, started/finished/status/notes — whose guess is, in order: a session on a one-shot
+  game's run; a `finished` run ending on an uncovered award; an `unfinished` run closed on the last
+  day for activity older than the Gone quiet threshold; otherwise an open run with the game's
+  default status. **Log** goes through the same helpers as the game page's forms
+  (`logNewPlaythrough`/`logSession`, so the same validation, one-shot cap and pre-write loss check),
+  and an error re-renders the card with what was typed. Nothing is logged without a submit:
+  playthrough boundaries stay a human call.
+- **New games**: the scan rows (below), loaded after the page so it doesn't wait on six APIs.
+- **Gone quiet** and **Left open**: the stale and close lists (below).
+- **Older unlogged activity**, collapsed: the same cards for activity before the boundary — history
+  from before a game was logged, gaps between old runs.
+
+"Since" is the run *before* the latest one (the latest is what loaded the new data), or 30 days
+back before there's been a second run. **Dismiss** on a card marks each provider record on it
+reviewed through its newest activity day, in `archive/catchup.yaml`'s `reviewed:` list. That's
+keyed by provider ID like `ignored.yaml`, only ever raised, and touches nothing else: the card's
+activity stops being offered, and anything newer on the same record comes back on its own. Delete
+an entry by hand to see its activity again.
+
+The thresholds — New games' minimum Steam hours, Gone quiet's and Left open's day counts, and
+whether Left open includes `playing` games — sit in a collapsed form on the page and carry through
+every action on it.
+
+### The lists
+
+**New games** (on Catch up) covers every achievement provider with a bulk "what has this account played" list —
 RetroAchievements, Steam, PSN, Xbox, Ubisoft and Google Play, whichever have credentials — and
 lists each game whose id isn't in any game's front matter yet (a `min_hours` field narrows the
 Steam side, default 5), one row each with the evidence behind it and what it would do. Trackmania
@@ -426,11 +485,11 @@ failed scan** — one expired PSN npsso shouldn't hide every other service's gam
 silently). Xbox titles that aren't Xbox 360 are left out with a notice, since capture only reads
 the 360 endpoint. Each provider's bulk list is memoized for 10 minutes (`cachedList` in
 `internal/commands/scan_providers.go`; the Exophase client memoizes its own pages the same way):
-Housekeeping re-derives the scan on every render and every row's click, and with six providers —
+the scan is re-derived on every render and every row's click, and with six providers —
 PSN's alone is an OAuth exchange plus the list — that was no longer cheap. Only the raw lists are
 cached; which games are covered is re-read from `content/games` every time, so an acted-on row
-drops out immediately. **Re-scan** forgets the cache, which is how something played in the last
-few minutes shows up. A **RetroAchievements subset row** costs one more per-game request to
+drops out immediately. Catch up's **Load what's new** forgets the cache (as does Backlog's
+**Re-scan**), which is how something played in the last few minutes shows up. A **RetroAchievements subset row** costs one more per-game request to
 resolve its parent, memoized for the process (see "RetroAchievements subsets" below).
 
 Finish signals differ by provider. PSN's platinum, or every achievement on Xbox/Ubisoft/Google
@@ -443,12 +502,12 @@ still suggested as `finished`. The mastery itself is read from the archive, not 
 status. **Steam games are never auto-marked finished**: playtime alone says nothing
 about completion.
 
-**Every guessed row follows the same three-part shape as the Stale section**, which is the
+**Every guessed row follows the same three-part shape as the Gone quiet list**, which is the
 paradigm to keep reaching for here: the guess as the primary button (*Correct — create finished*),
 the other plausible answers beside it as *Create as* + a dropdown (which includes `software`, for
 the tools Steam reports playtime for identically), and a way out that isn't "create it and fix it
 later" (*Never log this*). The alternatives are a dropdown rather than a button each — unlike
-Stale, which shows a handful of cards, this is a row per unlogged game, and five buttons apiece
+Gone quiet, which shows a handful of cards, this is a row per unlogged game, and five buttons apiece
 was most of the page. **The dropdown only counts when its own button was clicked**: a `<select>`
 submits its value whichever button sent the form, so the primary button would otherwise create
 whatever the dropdown was left showing — hence the `use_status` flag its button carries.
@@ -469,7 +528,7 @@ form and a **Delete game** button — the latter only offered when the game has 
 provider ID, since once either exists it isn't a plausible false-positive scan match anymore and
 deleting it would risk real data.
 
-**Backlog** is the same Steam scan against the other side of `min_hours`: games you own but have
+**Backlog** (on Housekeeping) is the same Steam scan against the other side of `min_hours`: games you own but have
 played for less than that and never logged. Scan and Backlog partition the library at one shared
 line — the threshold itself counts as played — so a game is always in exactly one of the two
 lists, and moving the field moves games between them rather than duplicating them. Creating one
@@ -510,7 +569,7 @@ games are opt-in via a checkbox (`incomplete_all`), since leaving achievements o
 unfinished) is a decision, not an oversight. `paused` and `backlog` games *are* listed: both mean
 "not now", not "not ever".
 
-**Stale** uses Steam's `GetOwnedGames rtime_last_played` (captured into every Steam archive record
+**Gone quiet** (on Catch up) uses Steam's `GetOwnedGames rtime_last_played` (captured into every Steam archive record
 as `last_played`) to find games you've probably stopped playing but never marked as such —
 currently `status: playing`, Steam-linked, and untouched for a while (`stale_days` field, default
 30) — draft or published; draft ones are tagged `[draft]` so accepting a suggestion is clearly not
@@ -530,9 +589,9 @@ surface again next time it's still `playing` and still quiet. None of the one-sh
 definition (see above), and something used in indefinite session bursts has no "done" to detect
 from staleness alone.
 
-**Close** finds every playthrough whose trailing date is blank and offers to cap it at the last
+**Left open** (on Catch up) finds every playthrough whose trailing date is blank and offers to cap it at the last
 day it was actually played — **never changing a status**, only writing a date. This is a different
-question from what Stale asks: Stale looks at games still marked `playing` and guesses a
+question from what Gone quiet asks: Gone quiet looks at games still marked `playing` and guesses a
 *terminal status* from achievement completion; the entries Close targets are mostly one-shot games
 whose status is already correct, where the only thing wrong is a trailing `finished: ""` that
 renders as "ongoing" forever. A sandbox last touched in 2017 isn't mid-playthrough, but it isn't
@@ -550,7 +609,7 @@ through the same pre-write proof as every other playthrough write: the pending r
 against what's on disk and refused if a field would vanish, and an entry closed between building
 the list and confirming it is left alone rather than overwritten.
 
-**Achievements** has two buttons. **Refresh all** runs the achievements fetch-and-merge (below)
+**Achievements** (on Housekeeping) has two buttons. **Refresh all** runs the achievements fetch-and-merge (below)
 across every game with a provider link, in the background — the page redirects to a job status
 view while it runs. **Regenerate summaries** is `gamelog project` (below): no API calls, just
 rebuilding every `achievement-summary.yaml` from what's already archived.
@@ -559,7 +618,7 @@ rebuilding every `achievement-summary.yaml` from what's already archived.
 
 `gamelog achievements [slug]` writes every achievement, with its unlock timestamp, to
 `archive/<provider>/<id>.json` — one file per linked provider, resolved from the game's
-provider IDs (see "Linking a game to external IDs"). Housekeeping's Scan and Backlog do this
+provider IDs (see "Linking a game to external IDs"). New games and Backlog do this
 automatically for each entry they create, and a game's page has a **Refresh achievements from
 providers** button; run the command directly to refresh a game or backfill one that predates it.
 
@@ -577,7 +636,7 @@ if a game's `playtime_forever` and last-played day match the archive (and its la
 the per-game achievements/schema requests are left out. Anything uncertain — nothing archived, no
 successful fetch yet, a failed last attempt, the game missing from the listing — is fetched as
 usual. Offline unlocks can sync later without moving either value, so `--all --full` (or the
-"Re-fetch unchanged Steam games too" box on Housekeeping → Achievements) forces everything; worth
+re-fetch box on Catch up or Housekeeping → Achievements) forces everything; worth
 doing now and then. Single-game refreshes and Scan/Backlog always fetch. Other providers aren't
 skipped yet.
 
@@ -781,10 +840,10 @@ field at all, so the `[Subset - …]` convention is only used to *spot* a candid
 endpoint's `ParentGameID` is what actually links one, and `commands.AttachSubset` re-checks it
 against the target game's own `retroachievements_id` before writing anything — a submitted form
 value must not be able to put another game's achievements on this game's page. That costs one
-extra RA request per subset row, memoized per process (`raParentCache`), since Housekeeping
-re-derives its scan on every render and RA throttles to ~1.2s a call.
+extra RA request per subset row, memoized per process (`raParentCache`), since the New games
+list re-derives its scan on every render and RA throttles to ~1.2s a call.
 
-On the Housekeeping page a subset row keeps the usual three parts but swaps the primary button:
+In New games a subset row keeps the usual three parts but swaps the primary button:
 **Attach to \<base game\>** when the base game is logged, **Create \<base game\> + attach** when it
 isn't (which creates the base game from RA's own report of *it*, as a draft, like everything else
 Scan creates), and an ordinary *Correct — create …* only when the parent couldn't be resolved at
@@ -1177,7 +1236,7 @@ by their own fetch commands.
 
 It only ever reads what's already in `archive/` — **no API calls**, so it's safe and fast to
 re-run any time the projection needs rebuilding (after `gamelog achievements` refreshes a game, or
-after the summary's shape changes) without touching credentials or rate limits. Housekeeping's Scan/Backlog,
+after the summary's shape changes) without touching credentials or rate limits. New games/Backlog,
 the per-game refresh button, and `gamelog achievements` already call the same write for whichever
 game they just touched, so a full `project` run (also Housekeeping's **Regenerate summaries**) is
 only needed for a bulk backfill or to pick up an archive edited by hand.

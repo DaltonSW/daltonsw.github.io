@@ -16,10 +16,12 @@ what's load-bearing.
   and the games list's "drafts only" filter is how to walk them.
 - `archive/` holds **529 records (17 MB)**: 434 Steam, 47 RetroAchievements, 23 Xbox 360,
   13 PSN, 5 Google Play, 5 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
-- The day-to-day tool is the web UI (`gamelog serve`). Its Housekeeping page runs the scan for
-  unlogged and unlinked games across all six achievement providers, the owned-but-unplayed
-  backlog import, stale-game triage, subset attaching, and the refresh-all and suggest-all
-  sweeps. The CLI still has `suggest`, `achievements`,
+- The day-to-day tool is the web UI (`gamelog serve`). Its home page, Catch up, runs one "Load
+  what's new" job (scan across all six achievement providers, refresh every linked game into the
+  archive, BTD6, and Trackmania only when ticked), then lists what to act on in place: unlogged
+  activity read from the archive, new or unlinked games (including subset attaching), stale-game
+  triage, and runs left open. Housekeeping keeps the owned-but-unplayed backlog import, the
+  ignore list, achievement completion, and the manual refresh tools. The CLI still has `suggest`, `achievements`,
   `project`, `exophase`, `psn`, `nadeo` and `ninjakiwi`. The old CLI `scan`, `stale` and `review`
   flows are gone, so don't go looking for them.
 - The status vocabulary is split in two on purpose (see `internal/forms/forms.go`):
