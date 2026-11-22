@@ -596,10 +596,21 @@ a.side-row__label:hover { color: var(--accent); text-decoration-color: currentCo
 .ach-row--hidden.ach-row--revealed .ach-row__desc,
 .ach-reveal-all .ach-row--hidden .ach-row__icon,
 .ach-reveal-all .ach-row--hidden .ach-row__title-line,
-.ach-reveal-all .ach-row--hidden .ach-row__desc { filter: none; }
+.ach-reveal-all .ach-row--hidden .ach-row__desc,
+.spoilers-shown .ach-row--hidden .ach-row__icon,
+.spoilers-shown .ach-row--hidden .ach-row__title-line,
+.spoilers-shown .ach-row--hidden .ach-row__desc { filter: none; }
 .ach-row--hidden.ach-row--revealed .ach-row__hidden-tag,
-.ach-reveal-all .ach-row--hidden .ach-row__hidden-tag { display: none; }
-.ach-row--hidden.ach-row--revealed { cursor: default; }
+.ach-reveal-all .ach-row--hidden .ach-row__hidden-tag,
+.spoilers-shown .ach-row--hidden .ach-row__hidden-tag { display: none; }
+.ach-row--hidden.ach-row--revealed,
+.spoilers-shown .ach-row--hidden { cursor: default; }
+// the site-wide setting supersedes the per-section toggle
+.spoilers-shown .ach-reveal-toggle { display: none; }
+.spoilers-toggle {
+  background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer;
+}
+.spoilers-toggle:hover { color: var(--accent); }
 
 // filter card: controls at the sidebar rows' 0.78rem scale
 .log-filters .games-search__input,
@@ -613,7 +624,7 @@ a.side-row__label:hover { color: var(--accent); text-decoration-color: currentCo
 .log-days { display: flex; flex-direction: column; gap: 0.6rem; margin: 0.9rem 0 0; }
 .log-day { display: flex; align-items: flex-start; gap: 0.7rem; }
 .log-day[hidden], .log-event[hidden] { display: none; }
-.log-days--wide .log-day__date { flex-basis: 11ch; }
+.log-days--wide .log-day__date { flex-basis: 13ch; }
 // the day's gutter already carries the date
 .log-day .ach-row__date { display: none; }
 // the date shows once per day; a rule down the left of the day's events ties them to it

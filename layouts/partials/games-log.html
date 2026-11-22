@@ -177,28 +177,31 @@
     <div class="side-card">
       <span class="side-card__name">Earned by source</span>
       <ul class="side-card__rows">
+        {{- $earnedRows := slice }}
         {{- range $providerOrder }}
         {{- $count := index $byProvider . }}
-        {{- if gt $count 0 }}
-        <li class="side-row">
-          <span class="side-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
-          <span class="side-row__count">{{ $count }}</span>
-        </li>
+        {{- if gt $count 0 }}{{ $earnedRows = $earnedRows | append (dict "id" . "n" $count) }}{{ end }}
         {{- end }}
+        {{- range sort $earnedRows "n" "desc" }}
+        <li class="side-row">
+          <span class="side-row__label" title="{{ index $providerNames .id }}">{{ index $providerNames .id }}</span>
+          <span class="side-row__count">{{ lang.FormatNumber 0 .n }}</span>
+        </li>
         {{- end }}
       </ul>
     </div>
     {{/* only RA and Xbox carry points */}}
     {{- $pointRows := slice }}
-    {{- range $providerOrder }}{{ if gt (index $pointsByProvider .) 0 }}{{ $pointRows = $pointRows | append . }}{{ end }}{{ end }}
+    {{- range $providerOrder }}{{ if gt (index $pointsByProvider .) 0 }}{{ $pointRows = $pointRows | append (dict "id" . "n" (index $pointsByProvider .)) }}{{ end }}{{ end }}
+    {{- $pointRows = sort $pointRows "n" "desc" }}
     {{- with $pointRows }}
     <div class="side-card">
       <span class="side-card__name">Gamerscore</span>
       <ul class="side-card__rows">
         {{- range . }}
         <li class="side-row">
-          <span class="side-row__label" title="{{ index $providerNames . }}">{{ index $providerNames . }}</span>
-          <span class="side-row__count">{{ index $pointsByProvider . }}</span>
+          <span class="side-row__label" title="{{ index $providerNames .id }}">{{ index $providerNames .id }}</span>
+          <span class="side-row__count">{{ lang.FormatNumber 0 .n }}</span>
         </li>
         {{- end }}
       </ul>

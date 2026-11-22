@@ -5,7 +5,7 @@ retroachievements_id: 7601
 retroachievements_subsets:
   - 25709
 steam_appid: null
-status: playing
+status: finished
 rating: null
 draft: false
 cascade:

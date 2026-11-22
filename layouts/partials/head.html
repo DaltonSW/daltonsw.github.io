@@ -15,6 +15,9 @@
   {{- with $desc }}<meta property="og:description" content="{{ . }}">{{ end }}
   <meta name="twitter:card" content="summary">
 
+  {{/* site-wide spoiler setting; runs before paint so blurred rows don't flash */}}
+  <script>try{if(localStorage.getItem("spoilers")==="show")document.documentElement.classList.add("spoilers-shown")}catch(e){}</script>
+
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{- $opts := dict "transpiler" "dartsass" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) -}}
