@@ -1,0 +1,22 @@
+{{/* Status icon: a Nerd Font glyph (nf-fa-*, plus nf-md-infinity; only SauceCode carries them) coloured
+     by .pill--<status>. Decorative: callers name the status in text alongside it. */}}
+{{- $status := . -}}
+{{- $glyphs := dict
+    "playing"     "f04b"
+    "wip"         "f04b"
+    "finished"    "f11e"
+    "stable"      "f11e"
+    "dropped"     "f00d"
+    "unfinished"  "f042"
+    "backlog"     "f01c"
+    "paused"      "f04c"
+    "endless"     "f06e4"
+    "multiplayer" "f0c0"
+    "software"    "f013"
+    "misc_launch" "f135"
+    "unplayed"    "f10c"
+    "mastered"    "f005"
+-}}
+{{- with index $glyphs $status -}}
+<span class="status-icon pill--{{ $status }}" aria-hidden="true">{{ printf "&#x%s;" . | safeHTML }}</span>
+{{- end -}}

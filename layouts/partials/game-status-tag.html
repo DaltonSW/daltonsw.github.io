@@ -1,5 +1,5 @@
 {{/* Bracketed status tag, e.g. "[playing]". Color reuses .pill--<status>. "multiplayer"
-     gets a shorter display label so the STATUS column doesn't reserve space for it. */}}
+     gets a shorter display label to keep the tag narrow. */}}
 {{- $status := . -}}
 {{- if $status -}}
 {{- $labels := dict "multiplayer" "multi" -}}

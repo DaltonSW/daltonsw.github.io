@@ -48,7 +48,6 @@
       "page"     $page
       "title"    $page.Title
       "status"   $status
-      "first"    (partial "game-first-played.html" $page)
       "last"     (partial "game-last-played.html" $page)
       "summary"  $summary
       "planned"  $planned
@@ -115,7 +114,7 @@
         <li class="side-row side-row--filter">
           <button type="button" class="side-row__btn" data-filter="status" data-value="{{ . }}" aria-pressed="false"
             {{- if and (eq . "backlog") (gt $plannedCount 0) }} title="Includes {{ $plannedCount }} game{{ if ne $plannedCount 1 }}s{{ end }} with a planned replay"{{ end }}>
-            {{ partial "game-status-tag.html" . }}
+            <span class="side-row__status">{{ partial "game-status-icon.html" . }}{{ partial "game-status-tag.html" . }}</span>
             <span class="side-row__count">{{ $count }}{{ if and (eq . "backlog") (gt $plannedCount 0) }}<span class="side-stat__of">+{{ $plannedCount }}</span>{{ end }}</span>
           </button>
         </li>
@@ -126,7 +125,7 @@
         {{- if gt .count 0 }}
         <li class="side-row side-row--filter side-row--flag">
           <button type="button" class="side-row__btn" data-filter="status" data-value="{{ .flag }}" aria-pressed="false">
-            {{ partial "game-status-tag.html" .flag }}
+            <span class="side-row__status">{{ partial "game-status-icon.html" .flag }}{{ partial "game-status-tag.html" .flag }}</span>
             <span class="side-row__count">{{ .count }}</span>
           </button>
         </li>
@@ -161,14 +160,12 @@
   <div class="ps-table ps-table--list" role="table">
     <div class="ps-row ps-row--head" role="row">
       {{- range slice
-          (dict "key" "status"   "label" "status"       "dir" "asc")
           (dict "key" "title"    "label" "game"         "dir" "asc")
           (dict "key" "platform" "label" "platform"     "dir" "asc")
-          (dict "key" "first"    "label" "first played" "dir" "desc")
           (dict "key" "last"     "label" "last played"  "dir" "desc")
           (dict "key" "playtime" "label" "playtime"     "dir" "desc")
           (dict "key" "ach"      "label" "achievements" "dir" "desc") }}
-      {{- $cls := cond (eq .key "title") "game" (cond (eq .key "first") "first" (cond (eq .key "last") "played" (cond (eq .key "ach") "achievements" .key))) }}
+      {{- $cls := cond (eq .key "title") "game" (cond (eq .key "last") "played" (cond (eq .key "ach") "achievements" .key)) }}
       <span class="ps-row__{{ $cls }}" role="columnheader"{{ if eq .key "last" }} aria-sort="descending"{{ end }}>
         <button type="button" class="ps-sort" data-sort="{{ .key }}" data-sort-dir="{{ .dir }}">{{ .label }}</button>
       </span>
@@ -179,8 +176,6 @@
     {{- $row := . }}
     {{- $page := .page }}
     {{- $s := .summary }}
-    {{- $statusTerm := "" }}
-    {{- with $page.GetTerms "status" }}{{ $statusTerm = index . 0 }}{{ end }}
     {{- $platformTerm := "" }}
     {{- with $page.GetTerms "platform" }}{{ $platformTerm = index . 0 }}{{ end }}
     {{- $ach := "" }}
@@ -190,7 +185,6 @@
       data-title="{{ lower $page.Title }}"
       data-status="{{ $row.status }}"
       data-platform="{{ lower ($page.Params.platform | default "") }}"
-      data-first="{{ $row.first }}"
       data-last="{{ $row.last }}"
       data-playtime="{{ $s.playtime_mins | default "" }}"
       data-ach="{{ $ach }}"
@@ -198,13 +192,10 @@
       {{- if $row.planned }} data-planned{{ end }}
       {{- if $row.mastered }} data-mastered{{ end }}
       {{- if $row.unplayed }} data-unplayed{{ end }}>
-      <span class="ps-row__status" role="cell">
-        {{- with $row.status }}
-          {{- if $statusTerm }}<a href="{{ $statusTerm.RelPermalink }}">{{ partial "game-status-tag.html" . }}</a>
-          {{- else }}{{ partial "game-status-tag.html" . }}{{ end }}
-        {{- end }}
-      </span>
+      {{/* the row's wash (.ps-row--<status>) and icon show the status; the hidden text names it for screen readers */}}
       <span class="ps-row__game" role="cell">
+        <span class="ps-row__icon">{{ partial "game-status-icon.html" $row.status }}</span>
+        {{- with $row.status }}<span class="ps-row__status-sr">{{ humanize . }}: </span>{{ end }}
         <a class="ps-row__title{{ if $masteredOn }} ps-row__title--mastered{{ end }}" href="{{ $page.RelPermalink }}"
           {{- with $masteredOn }} title="Mastered {{ . | time.Format "Jan 2, 2006" }}"{{ end }}>{{ $page.Title }}</a>
         {{- with $masteredOn }}<span class="ps-row__mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}" aria-label="mastered">&#xf005;</span>{{ end }}
@@ -218,9 +209,6 @@
           {{- else }}{{ . }}{{ end }}
         {{- end }}
       </span>
-      <span class="ps-row__first" role="cell">
-        {{- with $row.first }}{{ . | time.Format "Jan 2006" }}{{ else }}<span class="ps-row__played--none">-</span>{{ end -}}
-      </span>
       <span class="ps-row__played" role="cell">
         {{- with $row.last }}{{ . | time.Format "Jan 2006" }}{{ else }}<span class="ps-row__played--none">-</span>{{ end -}}
       </span>
@@ -228,7 +216,7 @@
         {{- with $s.playtime_mins }}{{ printf "%.1fh" (div . 60.0) }}{{ end -}}
       </span>
       <span class="ps-row__achievements" role="cell">
-        {{- with $s.total }}{{ partial "achievement-meter.html" (dict "unlocked" $s.unlocked "total" . "scaled" true) }}{{ end -}}
+        {{- with $s.total }}{{ partial "achievement-meter.html" (dict "unlocked" $s.unlocked "total" . "scaled" true "counts" true) }}{{ end -}}
       </span>
     </div>
     {{- else }}

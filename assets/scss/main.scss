@@ -204,6 +204,14 @@ $status-colors: (
 );
 $status-aliases: (wip: playing, stable: finished);
 
+// whole-row wash (tinted fill and border) in a status colour: Log lines and Game list rows.
+// $accents are descendants that take the colour outright (the Log's verb and glyph).
+@mixin status-wash($color, $fill: 8%, $accents: null) {
+  border-color: color-mix(in srgb, #{$color} 45%, var(--stroke));
+  background: color-mix(in srgb, #{$color} #{$fill}, var(--panel));
+  @if $accents { #{$accents} { color: $color; } }
+}
+
 .pill {
   display: inline-block; font-family: $font-ui; font-size: 0.72rem;
   font-weight: 500; letter-spacing: 0.03em;
@@ -277,6 +285,15 @@ $status-aliases: (wip: playing, stable: finished);
 
 .games-list__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: 0 0 1rem; }
 .games-list__controls .games-search__input { flex: 1 1 14rem; width: auto; }
+// Game list: search bar and column header stay pinned at the top of the tab panel,
+// which is the scroll container (see .tabs__panel), so offsets start at 0.
+.side-panel__main { --sticky-controls-h: 3.1rem; }
+.side-panel__main > .games-list__controls {
+  position: sticky; top: 0; z-index: 5;
+  height: var(--sticky-controls-h); box-sizing: border-box;
+  margin: 0; padding-block: 0.35rem;
+  background: var(--bg);
+}
 .games-list__select {
   font-family: $font-ui; font-size: 0.85rem; color: var(--fg);
   background: var(--panel-2); border: 1px solid var(--stroke); border-radius: 6px;
@@ -355,24 +372,49 @@ $status-aliases: (wip: playing, stable: finished);
   margin: 0.9rem 0 0;
   font-family: $font-ui; font-size: 0.85rem;
 }
+// Game list: same density as the Log's lines (.log-line)
+.ps-table--list { margin-top: 0; gap: 0.3rem; font-size: 0.8rem; line-height: 1rem; } // the sticky search row supplies the space above
 .ps-row[hidden] { display: none; }
 .ps-rows { display: contents; }
 .ps-row {
   display: grid;
-  grid-template-columns: 10ch minmax(10ch, 1.8fr) minmax(6ch, 0.8fr) 9ch 9ch 8ch minmax(7.5rem, 1fr);
+  // achievements is fixed at the meter's width: as a growing column it kept space the
+  // meter never used, which the game column (and its titles) can have instead
+  // platform fits "Xbox 360"/"GameCube"; the few longer (multi-platform "PC, Xbox 360") wrap
+  grid-template-columns: minmax(10ch, 1fr) 9ch 9ch 8ch 12rem;
   align-items: baseline; column-gap: 0.9rem;
-  padding: 0.5rem 0.8rem;
+  padding: 0.3rem 0.5rem;
   border: 1px solid var(--stroke); border-radius: var(--radius);
   background: var(--panel);
 }
+// status shows as the row's wash, in place of a status column
+@each $status, $color in $status-colors {
+  .ps-row--#{$status} { @include status-wash($color); }
+}
+@each $alias, $canonical in $status-aliases {
+  .ps-row--#{$alias} { @include status-wash(map.get($status-colors, $canonical)); }
+}
 .ps-row:hover { border-color: var(--accent); }
 .ps-row--head {
-  background: none; border-color: transparent;
+  background: var(--bg); border-color: transparent;
+  position: sticky; top: var(--sticky-controls-h, 3.1rem); z-index: 4;
+  // opaque cover over the grid gap below the header so rows don't peek through it
+  box-shadow: 0 0.35rem 0 var(--bg);
+  border-radius: 0; // inherited .ps-row radius left transparent corners that rows showed through
   padding-bottom: 0.15rem;
   color: var(--dim); letter-spacing: 0.04em; text-transform: uppercase;
 }
 .ps-status { font-weight: 600; white-space: nowrap; }
 .ps-row__game { color: var(--fg); font-weight: 500; display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; padding-left: 0.3rem; }
+// Nerd Font glyphs (game-status-icon.html) only exist in SauceCode
+.status-icon { font-family: $font-body; font-weight: 400; line-height: 1; }
+// fixed-width slot (empty for status-less games) so titles line up down the list
+.ps-row__icon { flex: none; width: 1.2em; text-align: center; }
+.ps-row--head .ps-row__game { padding-left: calc(0.3rem + 1.2em + 0.5rem); } // line up with the titles past the icon slot
+.ps-row__status-sr {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 .ps-row__title { color: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ps-row:hover .ps-row__title { color: var(--accent); }
 // mastered (game-mastery.html): gold title plus a star, instead of a bracketed tag
@@ -384,8 +426,8 @@ $status-aliases: (wip: playing, stable: finished);
 }
 .ps-row__mastered { color: var(--mastered); flex: none; font-size: 1.05em; line-height: 1; }
 .ps-row__rating { color: var(--dim); font-size: 0.8rem; flex: none; }
-.ps-row__platform, .ps-row__first, .ps-row__played, .ps-row__playtime { color: var(--dim); }
-.ps-row__first, .ps-row__played { white-space: nowrap; }
+.ps-row__platform, .ps-row__played, .ps-row__playtime { color: var(--dim); }
+.ps-row__played { white-space: nowrap; }
 // narrow date columns: let their two-word headers wrap instead of colliding
 .ps-row--head > span { white-space: normal; }
 .ps-sort { text-align: left; }
@@ -402,15 +444,14 @@ $status-aliases: (wip: playing, stable: finished);
 [aria-sort="descending"] > .ps-sort::after { content: " ▼"; font-size: 0.7em; }
 // no-JS: headers aren't clickable, so don't dress them as buttons
 [data-games-list]:not(.games-list--js) .ps-sort { cursor: default; pointer-events: none; }
-// Platform/status cells link out to /platform/<term>/ and /status/<term>/ — inherit the
-// row's muted color rather than the default link accent (a wall of accent-colored text
-// in a dense table reads as noise), but keep a standing underline so they still read as
-// clickable at rest, not just on hover.
-.ps-row__platform a, .ps-row__status a {
+// Platform cells link out to /platform/<term>/ — inherit the row's muted color rather
+// than the default link accent (a wall of accent-colored text in a dense table reads as
+// noise), but keep a standing underline so they still read as clickable at rest.
+.ps-row__platform a {
   color: inherit; text-decoration: underline; text-decoration-color: var(--stroke);
   text-underline-offset: 2px;
 }
-.ps-row__platform a:hover, .ps-row__status a:hover {
+.ps-row__platform a:hover {
   color: var(--accent); text-decoration-color: currentColor;
 }
 .ps-row__played--none { font-style: italic; }
@@ -437,47 +478,34 @@ $status-aliases: (wip: playing, stable: finished);
   transition: transform 0.2s ease;
 }
 @media (prefers-reduced-motion: reduce) { .ps-meter__fill { transition: none; } }
-.ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; }
+.ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; min-width: 4ch; text-align: right; } // room for "100%" so shorter values align
+.ps-meter__count { color: var(--dim); font-variant-numeric: tabular-nums; font-size: 0.85em; }
 
-// Scaled meters (game list): hue runs red (0%) → green (99%), gold at 100%.
+// Scaled meters (game list): hue runs red (0%) → green (99%), rainbow at 100%.
 .ps-meter--scaled {
   --meter-color: hsl(calc(var(--pct) * 120) 60% 62%);
   .ps-meter__fill { background: var(--meter-color); }
   .ps-meter__pct { color: var(--meter-color); }
 }
-.ps-meter--complete { --meter-color: var(--mastered); .ps-meter__pct { font-weight: 600; } }
+.ps-meter--complete {
+  .ps-meter__fill { background: linear-gradient(90deg, #e5484d, #f5a524, #f2d94e, #46c36b, #3ba3f0, #8b5cf6, #d946ef); }
+  .ps-meter__pct { color: #fff; font-weight: 700; }
+}
 @media (prefers-color-scheme: light) {
   .ps-meter--scaled { --meter-color: hsl(calc(var(--pct) * 120) 65% 34%); }
-  .ps-meter--complete { --meter-color: var(--mastered); }
+  .ps-meter--complete .ps-meter__pct { color: var(--fg); }
 }
 
 @media (max-width: 768px) {
   .ps-row {
-    grid-template-columns: 9ch minmax(8ch, 1.4fr) minmax(5ch, 0.7fr) 8ch 8ch 7ch minmax(6rem, 0.9fr);
+    grid-template-columns: minmax(8ch, 1fr) 8ch 8ch 7ch 10rem;
     column-gap: 0.5rem;
   }
 }
 
 @media (max-width: 640px) {
   .ps-row--head { display: none; }
-  .ps-row {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "status game"
-      "status platform"
-      "status first"
-      "status played"
-      "status playtime"
-      "status achievements";
-    row-gap: 0.15rem;
-  }
-  .ps-row__status  { grid-area: status; }
-  .ps-row__game    { grid-area: game; }
-  .ps-row__platform{ grid-area: platform; }
-  .ps-row__first   { grid-area: first; }
-  .ps-row__played  { grid-area: played; }
-  .ps-row__playtime{ grid-area: playtime; }
-  .ps-row__achievements { grid-area: achievements; }
+  .ps-row { grid-template-columns: 1fr; row-gap: 0.15rem; }
 }
 
 /* ── Sidebar layout (Log and Game list tabs): 13.5rem card column + main ─── */
@@ -551,6 +579,9 @@ a.side-row__label:hover { color: var(--accent); text-decoration-color: currentCo
   background: none; border: 1px solid transparent; border-radius: 4px;
   cursor: pointer;
 }
+// status filter rows: icon + tag, so the sidebar doubles as the key to the list's icons
+.side-row__status { display: inline-flex; align-items: center; gap: 0.4rem; }
+.side-row__status .status-icon { width: 1.2em; text-align: center; }
 .side-row__btn:hover { border-color: var(--accent); }
 .side-row__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .side-row__btn[aria-pressed="true"] {
@@ -679,21 +710,16 @@ a.side-row__label:hover { color: var(--accent); text-decoration-color: currentCo
   white-space: nowrap; overflow: hidden;
 }
 .log-line .log-event__game, .log-group__summary .log-event__game { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-// milestones get a whole-row wash (tinted fill, border, verb and glyph) in the colour the
-// matching status pill uses elsewhere: Started = playing, a closed run = its own status,
-// Mastered = mastered
-@mixin log-line-wash($color, $fill: 8%) {
-  border-color: color-mix(in srgb, #{$color} 45%, var(--stroke));
-  background: color-mix(in srgb, #{$color} #{$fill}, var(--panel));
-  .log-line__verb, .log-event__glyph { color: $color; }
-}
+// milestones get a whole-row wash in the colour the matching status pill uses elsewhere:
+// Started = playing, a closed run = its own status, Mastered = mastered
+$log-accents: ".log-line__verb, .log-event__glyph";
 @each $status, $color in $status-colors {
-  .log-line--#{$status} { @include log-line-wash($color); }
+  .log-line--#{$status} { @include status-wash($color, $accents: $log-accents); }
 }
 @each $alias, $canonical in $status-aliases {
-  .log-line--#{$alias} { @include log-line-wash(map.get($status-colors, $canonical)); }
+  .log-line--#{$alias} { @include status-wash(map.get($status-colors, $canonical), $accents: $log-accents); }
 }
-.log-event--mastery .log-line { @include log-line-wash(var(--mastered), 10%); }
+.log-event--mastery .log-line { @include status-wash(var(--mastered), 10%, $log-accents); }
 // a provider's single last-played timestamp, not a logged run: dashed and dim
 .log-event--lastplayed .log-line { border-style: dashed; color: var(--dim); }
 .log-event--lastplayed .log-line__verb { color: var(--dim); font-weight: 500; }
