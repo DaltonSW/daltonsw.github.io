@@ -16,144 +16,168 @@ providers:
       last_played: "2022-04-24"
 earned:
     - name: Obedience
+      description: Stopped the experiment voluntarily.
       date: "2022-04-24T19:40:22-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Somebody Else?
+      description: Played as Aiden for the first time.
       date: "2022-04-24T19:40:22-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/15f67a2283b8c0191dc08ce7399b31ede7ff99d6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Clean Job
+      description: Shut down the monitor and finished the mission using only Aiden.
       date: "2022-04-24T19:57:22-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/15f67a2283b8c0191dc08ce7399b31ede7ff99d6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Stealth Apprentice
+      description: Completed all stealth training without being spotted.
       date: "2022-04-24T20:49:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Fight Apprentice
+      description: Won every fight whilst taking less than 5 hits.
       date: "2022-04-24T20:49:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Perfect Soldier
+      description: Completed most of the physical training successfully.
       date: "2022-04-24T20:49:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/15f67a2283b8c0191dc08ce7399b31ede7ff99d6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Catch Me if You Can
+      description: Escaped the train without being arrested.
       date: "2022-04-24T21:12:33-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Portal Shutdown
+      description: Successfully shut down the condenser portal.
       date: "2022-04-25T21:38:09-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Money to Eat
+      description: Earned enough money to have some chocolate during dinner.
       date: "2022-04-25T22:53:52-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Smart Thief
+      description: Deactivated the supermarket's camera.
       date: "2022-04-25T22:53:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Entities Apprentice
+      description: Vanquished the entities with Aiden.
       date: "2022-04-28T20:42:19-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Entities Master
+      description: Was victorious in every battle with the evil entities.
       date: "2022-04-28T20:42:19-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/ee0e0ff12758a39d53daadb92cd66d14b533dfb1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Together Forever
+      description: Protected Jodie from her attackers.
       date: "2022-04-28T21:03:07-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Not My Father
+      description: Choked Philip with Aiden.
       date: "2022-04-28T21:08:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/15f67a2283b8c0191dc08ce7399b31ede7ff99d6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Not Just Sand
+      description: Ran from the sandstorm and took less than 3 hits.
       date: "2022-04-29T13:36:28-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Medicine Girl
+      description: Successfully performed the entire ritual.
       date: "2022-04-29T13:36:29-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Never Alone
+      description: Started at least one romance.
       date: "2022-04-29T13:36:29-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/ee0e0ff12758a39d53daadb92cd66d14b533dfb1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Stealth Master
+      description: Made it to the cathedral without being spotted.
       date: "2022-04-29T21:11:39-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Agent 894732
+      description: Told the truth during the interrogation.
       date: "2022-04-30T08:59:22-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Almost Too Easy
+      description: Went to the containment shield with the General.
       date: "2022-04-30T08:59:22-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Convince Dawkins
+      description: Helped Dawkins see the truth.
       date: "2022-04-30T10:27:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Black Sun Down
+      description: Deactivated the Black Sun.
       date: "2022-04-30T10:27:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: The End
+      description: One possible reality has been uncovered...
       date: "2022-04-30T10:27:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/ee0e0ff12758a39d53daadb92cd66d14b533dfb1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Chose Life
+      description: Stayed in reality.
       date: "2022-04-30T10:27:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960990/da7e36bb56778ee9276c6245b1bdc3cdff582706.jpg
       provider: steam

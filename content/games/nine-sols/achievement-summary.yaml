@@ -11,48 +11,56 @@ providers:
       last_played: "2026-02-22"
 earned:
     - name: My Revenge Starts Here
+      description: Defeat Baichang.
       date: "2026-01-24T19:14:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/ca9a9a14d38e544a2edb077827f195baae480558.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: I'm Coming for You, Old Friend
+      description: Defeat Yingzhao.
       date: "2026-01-31T20:44:57-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/034d35829e92d3ebd7743eff871e3111999aa2f9.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Reap What You Sow
+      description: Defeat Goumang.
       date: "2026-02-07T17:54:43-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/89d3cbeb3a107e3e488bdc78219da8ce6eb9a082.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: You Should Respect Your Elders
+      description: Defeat Yanlao.
       date: "2026-02-08T17:32:47-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/bcd642a3c2a613b656f01c4f042baae22f680d7d.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Jail Break
+      description: Successfully escape from prison.
       date: "2026-02-08T19:08:12-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/d256a46c9049a1eea695db86606cc3e505774c5f.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Fight Dirty
+      description: Use the Gene Eradicator to fight Jiequan.
       date: "2026-02-11T21:31:27-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/705d15a243086bc1ffb862ae42b534a114699350.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: No Pain, No Gain
+      description: Defeat Jiequan.
       date: "2026-02-11T21:51:24-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/c3d36e1c1715bcbd77c9e4fb1e98f521e42978d2.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Wake Up From My Sin
+      description: Defeat Lady Ethereal.
       date: "2026-02-13T19:05:28-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/87aa2f838ec7cb792b967b3ded0980b965316887.jpg
       provider: steam
@@ -65,6 +73,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Cavalry's Here
+      description: Rescue the people of the Peach Blossom Village.
       date: "2026-02-13T20:43:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/37cf93a2edc424c308d84f747226c96d6d15f879.jpg
       provider: steam
@@ -77,6 +86,7 @@ earned:
       provider: steam
       platform: PC
     - name: Magical Bean
+      description: Help Shuanshuan unlock the true potential of agriculture.
       date: "2026-02-14T10:17:53-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/40caeef25eae1c683590b53e5fd0369d95a14457.jpg
       provider: steam
@@ -89,18 +99,21 @@ earned:
       provider: steam
       platform: PC
     - name: Across Time and Space
+      description: Bid farewell to Lear.
       date: "2026-02-14T17:48:51-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/7ba7fd821974a725da770cad967ac29f5953c3f6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Come, Sweet Death
+      description: Defeat Ji.
       date: "2026-02-14T18:10:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/ca3f8f8f9ecc72db1cc854b3abd1299e47953db4.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Repurposed
+      description: Use the Fortune teller machine crafted by Shuanshuan.
       date: "2026-02-14T18:36:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/5bf3a0a016eb5ba7aa0a7ec44c21194257316422.jpg
       provider: steam
@@ -113,12 +126,14 @@ earned:
       provider: steam
       platform: PC
     - name: We Have Each Other
+      description: Defeat Fuxi and Nuwa.
       date: "2026-02-15T09:12:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/c4d702717dfe619d9ca20a816291414d319c9c04.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Passing on the Torch
+      description: Help Shennong become the leader of Peach Blossom Village.
       date: "2026-02-15T09:25:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/6635561c64a57cb0ce2622a09bccabc2f8481a2c.jpg
       provider: steam
@@ -155,12 +170,14 @@ earned:
       provider: steam
       platform: PC
     - name: Evolution
+      description: Discover a tremendous secret.
       date: "2026-02-15T11:11:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/4d0c2dff315458066dd9a9e2f02f753c92d3f04c.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Found You
+      description: Help Shanhai 9000 find Chien.
       date: "2026-02-15T11:36:14-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/2887d936d3452c242e7688ba62f02017ecb7d0ed.jpg
       provider: steam
@@ -173,6 +190,7 @@ earned:
       provider: steam
       platform: PC
     - name: Rest for the Wicked
+      description: Help Chiyou bring peace to Xingtian.
       date: "2026-02-22T13:24:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1809540/d31c7edac94e010c0210ef9e4f93083923f88531.jpg
       provider: steam

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Game Dev Tycoon",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "239820",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 2,
  "total": 35,
  "first": "2014-01-15",
@@ -20,7 +20,8 @@
    "description": "Support a young start-up. Buy the game.",
    "unlocked": true,
    "date": "2014-01-15T21:27:10-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/f9adddf58cac0ea6cbe1abee7d69f69b5f417568.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/f9adddf58cac0ea6cbe1abee7d69f69b5f417568.jpg",
+   "rarity": 97.9
   },
   {
    "key": "goodCombo",
@@ -28,238 +29,272 @@
    "description": "Create a game with a good topic/genre combination.",
    "unlocked": true,
    "date": "2014-01-15T21:33:03-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/aee165a65fd24791bf80ad1c3cabb3605e8f87a0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/aee165a65fd24791bf80ad1c3cabb3605e8f87a0.jpg",
+   "rarity": 96.4
   },
   {
    "key": "admirer",
    "name": "Admirer",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/4201a5e6c5b40efbbeb727ce2b4aef34e4500796.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6
   },
   {
    "key": "againstAllOdds",
    "name": "Against all odds",
    "description": "Beat all odds and finish the game in pirate mode.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/1425a903d5597162aa3e48edc9f01e4d1d0a3961.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/1425a903d5597162aa3e48edc9f01e4d1d0a3961.jpg",
+   "rarity": 1.6
   },
   {
    "key": "cake",
    "name": "Eat Cake",
    "description": "Show them red barrels some action.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/77fb0d1059543896595acc9e915d053b4593a82d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/77fb0d1059543896595acc9e915d053b4593a82d.jpg",
+   "rarity": 21.1
   },
   {
    "key": "cult",
    "name": "Cult Status",
    "description": "Set a new standard for the early gaming industry.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/3feca99fc3e23fdabc1ff3836f8b9eb6cddfa5a2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/3feca99fc3e23fdabc1ff3836f8b9eb6cddfa5a2.jpg",
+   "rarity": 71.1
   },
   {
    "key": "diamond",
    "name": "Diamond",
    "description": "Sell ten million copies of a game without the help of a publisher.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/0c0ca8e9fdb8c971094de8accede52337390703e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/0c0ca8e9fdb8c971094de8accede52337390703e.jpg",
+   "rarity": 37.6
   },
   {
    "key": "diversity",
    "name": "Diversity",
    "description": "Have male and female staff.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/4ba71def2f343952335f5fd0aa349a4a0ae899f3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/4ba71def2f343952335f5fd0aa349a4a0ae899f3.jpg",
+   "rarity": 69
   },
   {
    "key": "easterEggs",
    "name": "Detective",
    "description": "Find at least one of the easter eggs in the game.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/a94c654c804e7050f1c69fd75b0f4658a684409e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/a94c654c804e7050f1c69fd75b0f4658a684409e.jpg",
+   "rarity": 12.2
   },
   {
    "key": "engine100K",
    "name": "100K Engine",
    "description": "Invest over 100K in a new game engine.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/ce62f1db0f396b3f75fc17ae822138b9c9afc56f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/ce62f1db0f396b3f75fc17ae822138b9c9afc56f.jpg",
+   "rarity": 84.3
   },
   {
    "key": "engine1M",
    "name": "1M Engine",
    "description": "Invest over one million in a new game engine.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/5d4647c46a615188bac236e5a9206072c89ea291.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/5d4647c46a615188bac236e5a9206072c89ea291.jpg",
+   "rarity": 49.8
   },
   {
    "key": "engine500K",
    "name": "500K Engine",
    "description": "Invest over 500K in a new game engine.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/d045672f8871fbfdf1ee59834c6e1d0b7564de80.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/d045672f8871fbfdf1ee59834c6e1d0b7564de80.jpg",
+   "rarity": 60.7
   },
   {
    "key": "fanboy",
    "name": "Fan",
    "description": "Pick an inspired company name.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/19eafefdddade3dcb3f9ba43be75f0072908c29c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/19eafefdddade3dcb3f9ba43be75f0072908c29c.jpg",
+   "rarity": 14.9
   },
   {
    "key": "finishedGame",
    "name": "Game Dev Tycoon",
    "description": "Finish Game Dev Tycoon.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/32649184f0ab2bba34ad501911d98704fc41194d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/32649184f0ab2bba34ad501911d98704fc41194d.jpg",
+   "rarity": 37.3
   },
   {
    "key": "fullHouse",
    "name": "Full House",
    "description": "Have the maximum number of employees.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/82b9a0d20562b6be773827c5becd45f3c5c3cbb9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/82b9a0d20562b6be773827c5becd45f3c5c3cbb9.jpg",
+   "rarity": 48.4
   },
   {
    "key": "gold",
    "name": "Gold",
    "description": "Sell half a million copies of a game without the help of a publisher.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/e1a3694b3f1a3887de53de87048db607b7777e38.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/e1a3694b3f1a3887de53de87048db607b7777e38.jpg",
+   "rarity": 70.2
   },
   {
    "key": "hireSomeoneFamous",
    "name": "Famous",
    "description": "Hire someone famous.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/bd37d31deac96cf592a5de384f629d645a0435fa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/bd37d31deac96cf592a5de384f629d645a0435fa.jpg",
+   "rarity": 73.1
   },
   {
    "key": "inception",
    "name": "Inception",
    "description": "Develop the game within the game.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/8a2d899aa9ae8ee9aa0c3856e016a62c10cb1bbf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/8a2d899aa9ae8ee9aa0c3856e016a62c10cb1bbf.jpg",
+   "rarity": 20.6
   },
   {
    "key": "legend",
    "name": "Legend",
    "description": "Reach level 10 with a character.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/0fbbb9de7a7282221270adc761370cfa6cbc7a15.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/0fbbb9de7a7282221270adc761370cfa6cbc7a15.jpg",
+   "rarity": 27.7
   },
   {
    "key": "lvl1EasterEgg",
    "name": "Treasure Hunter",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/3c0ee4fd6865a29b86706e67ca674a25bd5b104b.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 8.5
   },
   {
    "key": "lvl2Poster1",
    "name": "Bluehair reporting for space duty",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/cc4fd1966fc8564037767315eb99c5d558052b3a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.4
   },
   {
    "key": "lvl2Poster2",
    "name": "Welcome to Mars",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/ebb4b9f62b9963c308cd798a33adf9bca9645587.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 5.8
   },
   {
    "key": "lvl3Poster1",
    "name": "Best ride to work ever",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/7f8678c3a47585287eed7e87e828896db0136611.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.9
   },
   {
    "key": "lvl3Poster2",
    "name": "Welcome to your hospital",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/a9845d825ef0d246e1aeb7638fb302e2161d8cc0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.8
   },
   {
    "key": "lvl4Poster1",
    "name": "Welcome Chief",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/c0fbbb4273090b62421109d1b80084b6558d2499.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.8
   },
   {
    "key": "lvl4Poster2",
    "name": "The sky is not the limit.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/2fcab201a8b35796187d22e3855f8915a56ea517.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.5
   },
   {
    "key": "lvl4Poster3",
    "name": "Painting with nature.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/269081133d91f1afd2c81504ed50c858be7d46f3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.3
   },
   {
    "key": "perfectGame",
    "name": "Perfect Game",
    "description": "Release a game with a clean score of 10.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/45b30c2cea71cd1fa259176c291e5c340f465504.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/45b30c2cea71cd1fa259176c291e5c340f465504.jpg",
+   "rarity": 32.3
   },
   {
    "key": "perfectGame11",
    "name": "Turn it up to 11",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/f359e60e3a04be0457eb83466d5b1ee0ea90c121.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.1
   },
   {
    "key": "piracyLevel2",
    "name": "Statistical Anomaly",
    "description": "Reach level 2 in pirate mode.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/6a343ed8e896fc6f6232a3763de6b4c70888d283.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/6a343ed8e896fc6f6232a3763de6b4c70888d283.jpg",
+   "rarity": 3.4
   },
   {
    "key": "platinum",
    "name": "Platinum",
    "description": "Sell one million copies of a game without the help of a publisher.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/7e239cc27aa4ca352fa66b762a7304ec36133834.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/7e239cc27aa4ca352fa66b762a7304ec36133834.jpg",
+   "rarity": 57.6
   },
   {
    "key": "professional",
    "name": "Professional",
    "description": "Reach level 5 with a character.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/ac5e2f715ac0547e9a841ac480978a22a548d19a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/ac5e2f715ac0547e9a841ac480978a22a548d19a.jpg",
+   "rarity": 70.8
   },
   {
    "key": "unobtainium",
    "name": "Unobtainium (seriously?)",
    "description": "Sell one hundred million copies of a game without the help of a publisher.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/512659454191c768ca8ae42d312f942d1bec23bd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/512659454191c768ca8ae42d312f942d1bec23bd.jpg",
+   "rarity": 8.7
   },
   {
    "key": "versatile",
    "name": "Versatile",
    "description": "Release a successful game in each of the five main genres.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/2b928d9416264708b7ddc8554c56844d7c1187e1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/2b928d9416264708b7ddc8554c56844d7c1187e1.jpg",
+   "rarity": 48.6
   },
   {
    "key": "writersBlock",
    "name": "Writer's Block",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239820/ffcfd21b38e90296009e4ed6714ce0ab655c10f7.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 40.9
   }
  ],
  "raw": {

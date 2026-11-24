@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "TIS-100",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "370360",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 10,
  "platform": "PC",
@@ -15,70 +15,80 @@
    "name": "100_PERCENT_V1",
    "description": "Solve every puzzle in the TIS-100 SEGMENT MAP.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/ce5f71cc378b25bdefcb0cea156ea04a2f3f9515.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/ce5f71cc378b25bdefcb0cea156ea04a2f3f9515.jpg",
+   "rarity": 2.9
   },
   {
    "key": "100_PERCENT_V2",
    "name": "100_PERCENT_V2",
    "description": "Solve every puzzle in the TIS-NET DIRECTORY.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/ca8f4d418c81d2da150b52b8798f881539777bd9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/ca8f4d418c81d2da150b52b8798f881539777bd9.jpg",
+   "rarity": 1.2
   },
   {
    "key": "BUSY_LOOP",
    "name": "BUSY_LOOP",
    "description": "Solve SELF-TEST DIAGNOSTIC in over 100,000 cycles.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/999e3b6b74f6f6dbc3b0230cbe61a911c0543a88.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/999e3b6b74f6f6dbc3b0230cbe61a911c0543a88.jpg",
+   "rarity": 11.3
   },
   {
    "key": "HALT_AND_CATCH_FIRE",
    "name": "HALT_AND_CATCH_FIRE",
    "description": "Crash the TIS-100 with the hidden opcode.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/63e4357e6b195bb81d9039c69ebd810afd12ed1a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/63e4357e6b195bb81d9039c69ebd810afd12ed1a.jpg",
+   "rarity": 9.6
   },
   {
    "key": "ILLEGAL_EAGLE",
    "name": "ILLEGAL_EAGLE",
    "description": "Find and solve the hidden puzzle.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/293883ff75aa69fcb6a959c2e88dd4eb41f56c5f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/293883ff75aa69fcb6a959c2e88dd4eb41f56c5f.jpg",
+   "rarity": 3.3
   },
   {
    "key": "NO_BACKUP",
    "name": "NO_BACKUP",
    "description": "Solve SEQUENCE COUNTER without using the SWP instruction.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/81093ddea2792a616016c6e16b3891f10a11009e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/81093ddea2792a616016c6e16b3891f10a11009e.jpg",
+   "rarity": 8.5
   },
   {
    "key": "NO_MEMORY",
    "name": "NO_MEMORY",
    "description": "Solve SEQUENCE REVERSER without writing any values to a stack memory node.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/5991251490461321cf1a2cb40c72859362ecd80f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/5991251490461321cf1a2cb40c72859362ecd80f.jpg",
+   "rarity": 2.8
   },
   {
    "key": "PARALLELIZE",
    "name": "PARALLELIZE",
    "description": "Solve SIGNAL AMPLIFIER in fewer than 100 cycles.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/c0a81091c400f5890b6470ce239dc15572cac4a0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/c0a81091c400f5890b6470ce239dc15572cac4a0.jpg",
+   "rarity": 19.3
   },
   {
    "key": "RTFM",
    "name": "RTFM",
    "description": "View the TIS-100 manual.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/9ea9e55d8f253b608642c0fb5e9e5bcaa7f1966c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/9ea9e55d8f253b608642c0fb5e9e5bcaa7f1966c.jpg",
+   "rarity": 90.5
   },
   {
    "key": "UNCONDITIONAL",
    "name": "UNCONDITIONAL",
    "description": "Solve SIGNAL COMPARATOR without using the JGZ, JLZ, JEZ, or JNZ instructions.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/b5573b1cbae3f3d9d0ed08436c18fbc440c9f2ea.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/370360/b5573b1cbae3f3d9d0ed08436c18fbc440c9f2ea.jpg",
+   "rarity": 7.1
   }
  ],
  "raw": {

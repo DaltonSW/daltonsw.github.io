@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Shadow of the Tomb Raider",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "750920",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 99,
  "platform": "PC",
@@ -13,695 +13,846 @@
   {
    "key": "AllDLCMissionsComplete",
    "name": "Seasoned Pro",
+   "description": "Complete all 7 downloadable content missions and receive the Tunic of the Shorn One",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/f936babcb4fb9bbef1074a14b2b74407e6ae3e19.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.9
   },
   {
    "key": "ApexPredator",
    "name": "Deadly Obsession",
    "description": "Complete Shadow of the Tomb Raider on Deadly Obsession difficulty",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/269dbdbb200ad7f91ecd52024a5c2b2ba261c2d7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/269dbdbb200ad7f91ecd52024a5c2b2ba261c2d7.jpg",
+   "rarity": 2.2
   },
   {
    "key": "Archeologist",
    "name": "Archeologist",
    "description": "Complete an Artifact Collection",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/97b6f50f8b27fa32181a677107abfc84e9eed1ca.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/97b6f50f8b27fa32181a677107abfc84e9eed1ca.jpg",
+   "rarity": 50.4
   },
   {
    "key": "AskingPrice",
    "name": "Asking Price",
    "description": "Buy an item from a merchant",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/46ac9b5e557f145c5cd30cb7cc36ad8246995ff1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/46ac9b5e557f145c5cd30cb7cc36ad8246995ff1.jpg",
+   "rarity": 59.5
   },
   {
    "key": "BackToPaititi",
    "name": "Back to Where We Started",
+   "description": "Return to Paititi",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/f8ed6c5dba5bcecc0464491f7a6a55b9b98afc51.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 44
   },
   {
    "key": "BeastOfLegend",
    "name": "Beast of Legend",
+   "description": "Defeat the Nahual",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b664fe782f319dca927ab99c26e003b074fde244.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 22
   },
   {
    "key": "BetterEquipped",
    "name": "Better Equipped",
    "description": "Get 3 pieces of equipment",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/2961d273763177d7033df5b724cd43f3d387ec13.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/2961d273763177d7033df5b724cd43f3d387ec13.jpg",
+   "rarity": 37
   },
   {
    "key": "BleedingEdge",
    "name": "Bleeding Edge",
+   "description": "Obtain the Grenadier Skill, equip the Umbrage 3-80 Shade weapon, and Brocken Shadow outfit",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/bcf94c1f1c12449851c127accbad4dafaf5e29a4.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.4
   },
   {
    "key": "BugCollection",
    "name": "Zoologist",
    "description": "Collect 20 critters",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/072258a957a791c8cf67a8981c8c5a314147a74b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/072258a957a791c8cf67a8981c8c5a314147a74b.jpg",
+   "rarity": 33.4
   },
   {
    "key": "CaimanConquered",
    "name": "Caiman Conquered",
+   "description": "Complete the Zipacna's Craving Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/8f16435a6821f94c80d11a0a0796456cd1bd5f22.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.9
   },
   {
    "key": "Cannonized",
    "name": "Cannonized",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Score Attack for the Sixth Seal Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/c17774b3dbf59a970c622d650100f88b75a5c1c7.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "ChelAttack",
    "name": "Chak Attack",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Score Attack for the Mother Protector Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/048e76f97ffb62ec8d2258efd6ed8779db76327b.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "ChelGame",
    "name": "Chel Game",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Time Attack for the Mother Protector Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/5688af9d955a0862ac8bfd14ce93839e413c4bc2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "ComoTeLlama",
    "name": "Como Te Llama",
    "description": "Pet 5 llamas",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/aab92e50c61fba8bf0707de6d8e7c619a60ecb5f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/aab92e50c61fba8bf0707de6d8e7c619a60ecb5f.jpg",
+   "rarity": 10.3
   },
   {
    "key": "Completionist",
    "name": "Completionist",
    "description": "Reach 100% completion",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b316133ade41548caab548317054d0d5ebe983de.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b316133ade41548caab548317054d0d5ebe983de.jpg",
+   "rarity": 5.7
   },
   {
    "key": "CreatureComforts",
    "name": "Creature Comforts",
+   "description": "Obtain White Breath skill, equip Grip of Fear White Knuckle and Scales of Q Feathered Serpent",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/624f2f8f822dc1ad7d615b7e67dd0058e8ee4a03.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.7
   },
   {
    "key": "CrimsonBlade",
    "name": "Día de Muertos",
+   "description": "Remove the dagger from the Temple of the Moon",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/47fc88b60108a76e99ecaeb434b4a4ff1182753d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 81.3
   },
   {
    "key": "DecipherAMonolith",
    "name": "Treasures from the Past",
    "description": "Decipher a Monolith",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/f65ca961a219326737bfb79c519b7e05ab447346.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/f65ca961a219326737bfb79c519b7e05ab447346.jpg",
+   "rarity": 55.1
   },
   {
    "key": "DestinysTrialed",
    "name": "Destiny's Trialed",
+   "description": "Complete the Forge of Destiny Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/9a307e5d94adde6ee6c6aaab09b581fa89c7751d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.7
   },
   {
    "key": "DrCroft",
    "name": "Dr. Croft",
    "description": "Complete all Artifact Collections",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/1f7501bec65e6e91c8adbe3ba650265e24176af5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/1f7501bec65e6e91c8adbe3ba650265e24176af5.jpg",
+   "rarity": 6.7
   },
   {
    "key": "DressedForSuccess",
    "name": "Dressed For Success",
+   "description": "Obtain the Raptor's Eye skill, equip the Silent Sting Scorpion weapon and Hunter's Array Apex outfit",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/5ce10553770d6afb3be838d261b810f8957941be.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.7
   },
   {
    "key": "EchoesOfTheFast",
    "name": "Echoes of the Fast",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Time Attack for the Forge of Destiny Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/1ed39bd0f94ded7e628b548abfb90521416e9c9b.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.7
   },
   {
    "key": "EchoesOfTheFurious",
    "name": "Echoes of the Furious",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Score Attack for the Forge of Destiny Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/7f797159922167b18f1ed4ebbb89bbffc7a7a7ff.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.7
   },
   {
    "key": "EyesOfTheStorm",
    "name": "Eyes Of The Storm",
+   "description": "Obtain A Thousand Eyes skill, equip elite versions of Oathtaker's Bow and Sinchi Chiqa Battle Dress",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/838b1c4dc7867ccb905d53f928eef55741bfe691.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.1
   },
   {
    "key": "FamilyTies",
    "name": "Family Ties",
+   "description": "Free Unuratu from prison",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3f41c6411c3a0931c1b0153d3f56f9667a8a8e1d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 47.5
   },
   {
    "key": "FireOflife",
    "name": "Fire of Life",
+   "description": "Enter the Temple of Life's inner chamber",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/db5c9a2fe01d0e4682ad3aa064723db02f64185a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 63.7
   },
   {
    "key": "FirstBlood",
    "name": "That's a Knife!",
    "description": "Fully upgrade the knife",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/39d140efd6d1017317aad9819c5388f5a6e2f6d0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/39d140efd6d1017317aad9819c5388f5a6e2f6d0.jpg",
+   "rarity": 27.7
   },
   {
    "key": "FirstSteps",
    "name": "First Steps",
    "description": "Purchase a Skill",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/35e3a9c8a522271d288ca0305e8bff23c2604c00.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/35e3a9c8a522271d288ca0305e8bff23c2604c00.jpg",
+   "rarity": 76.7
   },
   {
    "key": "FloatLikeAButterfly",
    "name": "Float Like A Butterfly",
+   "description": "Obtain a Bronze, Silver or Gold medal in Time Attack for the Path of Huracan Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/ae8312ceb9ae2db2a9e91a1520923bff6dab3739.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "GoCart",
    "name": "Go Cart",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Time Attack for the Sixth Seal Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/67aa7f93c6d486b1b9eebbcb8e120b45f28025d2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "GoFish",
    "name": "Go Fish",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Score Attack for the Slayer's Gauntlet Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/8f405e1913b17012dc2561b21d10898550dd2f8b.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "GoWithTheFlow",
    "name": "Go With The Flow",
+   "description": "Complete The Age Makers Side Mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/0f5d029342aeed7c513299b6cbf79f245a06c045.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 20.6
   },
   {
    "key": "GoodSamaritan",
    "name": "Good Samaritan",
    "description": "Complete 8 Side Missions",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/cb34a1dc53e7baef1e81960419afc7bfcb554f9b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/cb34a1dc53e7baef1e81960419afc7bfcb554f9b.jpg",
+   "rarity": 18.8
   },
   {
    "key": "Gunslinger",
    "name": "Gunslinger",
    "description": "Perform 3 headshots in 3 seconds with the pistol",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/066440f38d436e20ee1591fcb24f89862b5a9694.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/066440f38d436e20ee1591fcb24f89862b5a9694.jpg",
+   "rarity": 6.6
   },
   {
    "key": "Harmony",
    "name": "Harmony",
+   "description": "Complete the Path of Fear Side Mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/8956ea5390701b31c026f9ae2561854e1c9470ad.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.6
   },
   {
    "key": "HeAintHeavy",
    "name": "He Ain't Heavy",
+   "description": "Complete The Dragon and the Prince Side Mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/2e6932e2f05b9a5abc063ae58cfdde80e153a3ee.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.1
   },
   {
    "key": "HeartOfTheSerpent",
    "name": "Heart of the Serpent",
+   "description": "Find the mission of San Juan",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/25eddf92aa0cbe643f5cbe7f6df71359da76d9b3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 46
   },
   {
    "key": "HeartsAndMinds",
    "name": "Hearts and Minds",
+   "description": "Retrieve Manko's Necklace",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/8cf2cb17379dd775a87d96d511c02f394838c434.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 32.8
   },
   {
    "key": "HeirBorn",
    "name": "Heir Born",
+   "description": "Complete the Echoes of the Past Side Mission and discover Abby’s ancient origins",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/a2970a479fe76e612b46baf9bdb648ca8b2e0375.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15.9
   },
   {
    "key": "HelpThyNeighbor",
    "name": "Help thy Neighbor",
    "description": "Complete a Side Mission",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/66ba09e91a2ff608bb6ecd3c3772053d11ff8dc4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/66ba09e91a2ff608bb6ecd3c3772053d11ff8dc4.jpg",
+   "rarity": 49.6
   },
   {
    "key": "HowlLong",
    "name": "Howl Long",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Time Attack for the Howl of the Monkey Gods Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/e851504514e5bb6749cda0c1860f13563a661386.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "HydroPower",
    "name": "Hydro Power",
+   "description": "Complete the Slayer's Gauntlet Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/97b600351f75b3855b6c70d833c95563824d2a98.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.9
   },
   {
    "key": "IAmLaraCroft",
    "name": "Rite of Passage",
    "description": "Complete Shadow of the Tomb Raider on Rite of Passage difficulty",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/d062bece861c322e7102ba62ee9a5f0f9759298e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/d062bece861c322e7102ba62ee9a5f0f9759298e.jpg",
+   "rarity": 32.4
   },
   {
    "key": "InTheMoment",
    "name": "In the Moment",
    "description": "Kill 10 enemies while Focus is active",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/65cef459af6f99aeb546f3932e12ff6a59b0a2d9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/65cef459af6f99aeb546f3932e12ff6a59b0a2d9.jpg",
+   "rarity": 9.6
   },
   {
    "key": "LastKnownPosition",
    "name": "Last Known Position",
    "description": "Lose the enemy 10 times",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/db2fcbd1bd313230d8467ea25f60283b95ad5cfc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/db2fcbd1bd313230d8467ea25f60283b95ad5cfc.jpg",
+   "rarity": 31.1
   },
   {
    "key": "LeapingLizards",
    "name": "Leaping Lizards",
+   "description": "Complete The Wrathful God Side Mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/d64a9a76a425bd17259e4b50e01ef55db9014a9c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.6
   },
   {
    "key": "LegendaryHunter",
    "name": "Legendary Hunter",
    "description": "Hunt and loot 5 rare animals",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/e45d67c118103028560f34554a9951e45344ab57.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/e45d67c118103028560f34554a9951e45344ab57.jpg",
+   "rarity": 25.9
   },
   {
    "key": "LikeAShadow",
    "name": "Like a Shadow",
    "description": "Stealth Takedown 25 enemies",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/53fe837554d39ba0ab21e540e14370307ad7e05f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/53fe837554d39ba0ab21e540e14370307ad7e05f.jpg",
+   "rarity": 51.1
   },
   {
    "key": "LookThere",
    "name": "Look, Over There!",
    "description": "Kill 3 enemies while they are distracted",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/62bd2a8a75a321c3c76c41a20363efb801ef5811.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/62bd2a8a75a321c3c76c41a20363efb801ef5811.jpg",
+   "rarity": 67.7
   },
   {
    "key": "MadeToEndure",
    "name": "Made to Endure",
    "description": "Takedown 10 enemies while Endurance is active",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/75c7c5c6c6e60e5893371e75cc989908a088e827.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/75c7c5c6c6e60e5893371e75cc989908a088e827.jpg",
+   "rarity": 2.7
   },
   {
    "key": "MakeshiftArsenal",
    "name": "Makeshift Arsenal",
    "description": "Fully upgrade a weapon",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b2b2a7b9fa41488387fed2419328f3b5530d4dee.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b2b2a7b9fa41488387fed2419328f3b5530d4dee.jpg",
+   "rarity": 45.3
   },
   {
    "key": "Marksman",
    "name": "Marksman",
    "description": "Perform 20 headshots with the bow",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/7de9d488dc401e4b7c087aaf9cc1e57e09ab6fb5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/7de9d488dc401e4b7c087aaf9cc1e57e09ab6fb5.jpg",
+   "rarity": 33.4
   },
   {
    "key": "MonkeyDo",
    "name": "Monkey Do",
+   "description": "Complete the Howl of the Monkey Gods Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b9d540cee5a064cdd817f979ccd231aee995faad.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 17
   },
   {
    "key": "MoonlightSonata",
    "name": "Moonlight Sonata",
+   "description": "Complete the Eternal Reward Side Mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/fbc2de6727f4c236a93f97ad662d2c8878f9a890.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.4
   },
   {
    "key": "MoonlitKnight",
    "name": "Moonlit Knight",
+   "description": "Obtain Magic Touch Skill, equip Silver Strike Moonbeam weapon and Midnight Sentinel Farseer outfit",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/946fc5ee83265bbed64262afa1fdaec1fdfe77a3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.5
   },
   {
    "key": "MudMonster",
    "name": "Chain Gang",
    "description": "Perform the Serpent's Fury 3 times",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/6495460cf0075334b56717514937d726505138e7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/6495460cf0075334b56717514937d726505138e7.jpg",
+   "rarity": 23.5
   },
   {
    "key": "MushroomWithAView",
    "name": "Mushroom With A View",
+   "description": "Complete The Sixth Seal Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/cfbae9eb4d99ac8a2b7e0ec3544392eccd557475.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.7
   },
   {
    "key": "OffshoreCount",
    "name": "Offshore Count",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Score Attack for the Zipacna's Craving Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/dc86639e05262c3373f9ba833596efa7c331247b.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "OnTheGo",
    "name": "On the Go",
    "description": "Craft special ammunition 50 times",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/78a2e6d70710ede83d83d825c66286ee1f7aebf0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/78a2e6d70710ede83d83d825c66286ee1f7aebf0.jpg",
+   "rarity": 20.7
   },
   {
    "key": "OneWithTheJungle",
    "name": "One with the Jungle",
    "description": "Complete Shadow of the Tomb Raider on One with the Jungle difficulty",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/4e8c2ba6f0bea23fa5df61e403075187d65963a1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/4e8c2ba6f0bea23fa5df61e403075187d65963a1.jpg",
+   "rarity": 5.6
   },
   {
    "key": "OrganGrinder",
    "name": "Organ Grinder",
+   "description": "Obtain a Bronze, Silver or Gold medal in Score Attack for the Howl of the Monkey Gods Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/deb0cda7cc601f3cfcc7c0f63ed4bfe9f7509417.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "PathOfTheStars",
    "name": "Path of the Stars",
+   "description": "Decipher the Path of the Stars",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/bc36f34da56ac68440215db9f255eae1b127e9f2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 89.8
   },
   {
    "key": "PlayingWithFire",
    "name": "Playing with Fire",
    "description": "Burn 2 enemies simultaneously",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/f8e0795f2e42f2f3877cc29d334cd07bfadf8c9b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/f8e0795f2e42f2f3877cc29d334cd07bfadf8c9b.jpg",
+   "rarity": 42.4
   },
   {
    "key": "PointofInterest",
    "name": "Point of Interest",
    "description": "Learn of 5 interesting locations from civilians",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/08e982da8b8bf453ff33031f6dabe7a763831ac3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/08e982da8b8bf453ff33031f6dabe7a763831ac3.jpg",
+   "rarity": 49.8
   },
   {
    "key": "PrisonBreak",
    "name": "I Believe Hakan Fly",
+   "description": "Rescue Hakan from the cultists",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/14ac87ae1e17a8d2697fffb6d329263a0e92f5db.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 33.5
   },
   {
    "key": "PutHerselfTogether",
    "name": "Put Herself Together",
+   "description": "Complete the Mother Protector Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/6be3d52b41c492c28b3a27ca7bb482c24061e183.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 8
   },
   {
    "key": "QueenOfTheDamned",
    "name": "Queen of the Damned",
+   "description": "Make an unlikely ally",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/9baa83cc0041ff88044ba22ac9acb8af98d4bd4e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 41.5
   },
   {
    "key": "QuiteTheAdventure",
    "name": "Smart and Resourceful",
    "description": "Complete Shadow of the Tomb Raider on Smart and Resourceful difficulty",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/64e71c4aec10fd866c954eb005f593ed252767f0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/64e71c4aec10fd866c954eb005f593ed252767f0.jpg",
+   "rarity": 40.8
   },
   {
    "key": "Rapids",
    "name": "Rapids",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Time Attack for the Slayer's Gauntlet Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/37ed110cbe5e8b4511c70999dbdc92c986fe2340.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "ReadyToRumble",
    "name": "Ready To Rumble",
+   "description": "Obtain the Volcano Skill, equip Whispering Scourge Pandemic weapon and Reptile Hide Leviathan outfit",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/184d2002b72e61104537dbf0a86a0438aca73a98.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3
   },
   {
    "key": "RecipeForDisaster",
    "name": "Recipe for Disaster",
+   "description": "Survive the flood",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/2249d179ac9e47db6cb00dacdc0b84110a03a45f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 79.7
   },
   {
    "key": "RestingPlaces",
    "name": "Resting Places",
    "description": "Uncover 3 main game Crypts' secrets",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/31e6cd40f7cf70b0d335629fb06541a47e923096.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/31e6cd40f7cf70b0d335629fb06541a47e923096.jpg",
+   "rarity": 35.7
   },
   {
    "key": "SeasonedClimber",
    "name": "New Heights",
    "description": "Complete a climb after finding the Overhang Climbing Gear",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/6e1900513ec1a28c11f592ec7ccac9773b1d316b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/6e1900513ec1a28c11f592ec7ccac9773b1d316b.jpg",
+   "rarity": 51.3
   },
   {
    "key": "SixthSense",
    "name": "Sixth Sense",
    "description": "Hunt and kill 10 enemies while Perception is active",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/dda603c74f2018edaebacc8047c7fe5270cc77a5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/dda603c74f2018edaebacc8047c7fe5270cc77a5.jpg",
+   "rarity": 14.1
   },
   {
    "key": "Specialized",
    "name": "Specialized",
    "description": "Earn all skills in one category",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/1599ef00d2de8e67019d18d49e0c01d7c17e7683.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/1599ef00d2de8e67019d18d49e0c01d7c17e7683.jpg",
+   "rarity": 12.6
   },
   {
    "key": "SpoiledForChoice",
    "name": "Spoiled For Choice",
+   "description": "Obtain Divine Bounty skill, equip Serpent Lash Godslayer weapon and Dragon Scales Legend outfit",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b35c1f53e83d952da06b53ee63df186ac698c4f2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.2
   },
   {
    "key": "SteleHunter",
    "name": "Stele Hunter",
    "description": "Complete 3 main game Challenge Tombs",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/04dabb25f0f08043ee19b5f19eea1d59f60816dc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/04dabb25f0f08043ee19b5f19eea1d59f60816dc.jpg",
+   "rarity": 35.2
   },
   {
    "key": "StingLikeABee",
    "name": "Sting Like A Bee",
+   "description": "Obtain a Bronze, Silver or Gold medal in Score Attack for the Path of Huracan Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/60639b10c4e65c4c83e4764905e6bc3219209eef.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "SupriseAirAttack",
    "name": "Surprise!",
    "description": "Perform 5 Eagle's Talon Takedowns",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/5c95146e94b94dea2eb70eeed1d817592caabed9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/5c95146e94b94dea2eb70eeed1d817592caabed9.jpg",
+   "rarity": 15.5
   },
   {
    "key": "SurvivalInstincts",
    "name": "Survival Instincts",
+   "description": "Defeat the Empress Jaguar",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/68ca9d80741b249c55b035762ace456d04c70166.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 71.8
   },
   {
    "key": "Teamkill",
    "name": "Total Party Kill",
    "description": "Kill 5 enemies with friendly fire",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3df7021481d34fc7e8220f93ebe9897595feca6a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3df7021481d34fc7e8220f93ebe9897595feca6a.jpg",
+   "rarity": 26.8
   },
   {
    "key": "Thanksgiving",
    "name": "Thanksgiving",
    "description": "Shoot a turkey with a Flare Round",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/756602cec4f8f31650d0f630d1513c19b8d7d75b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/756602cec4f8f31650d0f630d1513c19b8d7d75b.jpg",
+   "rarity": 3.8
   },
   {
    "key": "ThatWasABreeze",
    "name": "That Was A Breeze",
+   "description": "Complete the Path of Huracan Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/65a3714767b0233f41320822cc30997691e0b0c1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 21.2
   },
   {
    "key": "TheChosenOne",
    "name": "The Chosen One",
+   "description": "Find the Silver Box of Ix Chel",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/004d8260d4cb6c8565e7852f08c4de6eadfb915d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 44.4
   },
   {
    "key": "TheHiddenCity",
    "name": "The Hidden City",
+   "description": "Find Paititi",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/594d736ed2142e61c8015cb88c4f7d33884a0a46.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 59.6
   },
   {
    "key": "TheLesserEvil",
    "name": "Quite the Adventure",
    "description": "Finish the main storyline",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/4d73923c9a014cf26a23eccc4500cebd50ac82eb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/4d73923c9a014cf26a23eccc4500cebd50ac82eb.jpg",
+   "rarity": 40.8
   },
   {
    "key": "TheUnderworld",
    "name": "The Underworld",
+   "description": "Get out of the Cenote alive",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3efb0138a4b80a3cd8d07ab898cad81dcc16109d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 51.5
   },
   {
    "key": "ThreadTheNeedle",
    "name": "Thread the Past",
    "description": "Restore 5 vestige outfit pieces",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3e5bff961972e958687ae2acef614c1c53d956ea.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3e5bff961972e958687ae2acef614c1c53d956ea.jpg",
+   "rarity": 21.8
   },
   {
    "key": "ToTheNines",
    "name": "To the Nines",
    "description": "Restore and equip a matching vestige outfit",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/a7b702062558d94faae6b4c2bbabbc794b796de3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/a7b702062558d94faae6b4c2bbabbc794b796de3.jpg",
+   "rarity": 21.5
   },
   {
    "key": "TombRaider",
    "name": "Tomb Raider",
    "description": "Complete all main game Challenge Tombs",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/288206c1aaaeb098c83713085da1617d42dc1e9f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/288206c1aaaeb098c83713085da1617d42dc1e9f.jpg",
+   "rarity": 14.9
   },
   {
    "key": "TreasureHunter",
    "name": "Treasure Hunter",
    "description": "Find and open all the main game Conquistador treasure chests",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3fc65e8bedc115d30481be6a778bff2b45dc19bc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3fc65e8bedc115d30481be6a778bff2b45dc19bc.jpg",
+   "rarity": 8.2
   },
   {
    "key": "TurnTables",
    "name": "Tables Turned",
    "description": "Kill 5 enemies while they are searching for Lara",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/34893bae347ff9fc30975bc234b2e2bf3e3dee7c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/34893bae347ff9fc30975bc234b2e2bf3e3dee7c.jpg",
+   "rarity": 50.3
   },
   {
    "key": "UnderwaterArcheologist",
    "name": "Underwater Archeologist",
    "description": "Collect 5 underwater Artifacts",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/e7d91009e06f3529e408be71d59312fe74303da7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/e7d91009e06f3529e408be71d59312fe74303da7.jpg",
+   "rarity": 20.3
   },
   {
    "key": "UntoldRiches",
    "name": "Untold Riches",
    "description": "Gather 40 gold ore",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b31ec784e34460673d0057543bdf0323dcf65fa1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b31ec784e34460673d0057543bdf0323dcf65fa1.jpg",
+   "rarity": 51.2
   },
   {
    "key": "UnwantedTenants",
    "name": "Unwelcome Guests",
+   "description": "Get rid of the pillagers outside of Kuwaq Yaku",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/491f08ce97f5411815eb601df8d052f066f359b0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 41.1
   },
   {
    "key": "UpToTheChallenge",
    "name": "Up to the Challenge",
    "description": "Complete 5 Challenges",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/2fcd8389bd0901ae998a7b94c81d0f11a32fcaa0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/2fcd8389bd0901ae998a7b94c81d0f11a32fcaa0.jpg",
+   "rarity": 23.9
   },
   {
    "key": "WholeWorldBlind",
    "name": "Whole World Blind",
+   "description": "Complete the Two Graves Side Mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/3fddd5da2b237d530c989c5e2a917e12bb9ec409.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.6
   },
   {
    "key": "ZipIt",
    "name": "Zip It",
+   "description": "Obtain a Bronze, Silver, or Gold medal in Time Attack for the Zipacna's Craving Challenge Tomb",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/21e4c827bdba80138cd37cc745a550d1f3998c3f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "camouflage",
    "name": "First Blood",
    "description": "Perform a Stealth Takedown from a mud-covered wall",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b9c5d3d1606fabf204c41d129005902a805a0b48.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/750920/b9c5d3d1606fabf204c41d129005902a805a0b48.jpg",
+   "rarity": 58.2
   }
  ],
  "raw": {

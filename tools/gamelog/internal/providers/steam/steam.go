@@ -21,6 +21,7 @@ var (
 	OwnedGamesURL         = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/"
 	ResolveVanityURL      = "https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/"
 	SchemaForGameURL      = "https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/"
+	GlobalPercentagesURL  = "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/"
 )
 
 // SteamClient talks to the Steam Web API.
@@ -242,6 +243,54 @@ func (c *SteamClient) GetSchemaForGame(ctx context.Context, appID string) ([]Ste
 	return parsed.Game.AvailableGameStats.Achievements, nil
 }
 
+type steamGlobalPercentagesResponse struct {
+	AchievementPercentages struct {
+		Achievements []struct {
+			Name string `json:"name"`
+			// A string in v0002 ("34.5"); v0001 used a bare number.
+			Percent json.Number `json:"percent"`
+		} `json:"achievements"`
+	} `json:"achievementpercentages"`
+}
+
+// GetGlobalPercentages fetches the share of all players (0-100) who earned
+// each achievement, keyed by apiname. Public: no key or SteamID needed. An
+// unknown or stats-less app answers 403 rather than an empty list.
+func (c *SteamClient) GetGlobalPercentages(ctx context.Context, appID string) (map[string]float64, error) {
+	q := url.Values{}
+	q.Set("gameid", appID)
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, GlobalPercentagesURL+"?"+q.Encode(), nil)
+	if err != nil {
+		return nil, err
+	}
+	resp, err := c.httpClient().Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("steam: global percentages request for appid %s: %w", appID, err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("steam: reading global percentages for appid %s: %w", appID, err)
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("steam: global percentages for appid %s: unexpected status %s", appID, resp.Status)
+	}
+
+	var parsed steamGlobalPercentagesResponse
+	if err := json.Unmarshal(body, &parsed); err != nil {
+		return nil, fmt.Errorf("steam: decoding global percentages for appid %s: %w", appID, err)
+	}
+	out := make(map[string]float64, len(parsed.AchievementPercentages.Achievements))
+	for _, a := range parsed.AchievementPercentages.Achievements {
+		if f, err := a.Percent.Float64(); err == nil {
+			out[a.Name] = f
+		}
+	}
+	return out, nil
+}
+
 // SteamOwnedGame is one entry in the user's library. LastPlayed is a Unix
 // timestamp, 0 if never played.
 type SteamOwnedGame struct {
@@ -454,6 +503,14 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 				}
 				rec.Achievements[i].Hidden = a.Hidden == 1
 			}
+		}
+	}
+
+	// Global earn rates: best-effort like the schema. A failure leaves Rarity
+	// zero, which the merge reads as "not reported" and keeps any earlier value.
+	if pct, err := client.GetGlobalPercentages(ctx, appID); err == nil {
+		for i := range rec.Achievements {
+			rec.Achievements[i].Rarity = pct[rec.Achievements[i].Key]
 		}
 	}
 

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Slay the Spire",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "646570",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 28,
  "total": 46,
  "first": "2017-12-12",
@@ -21,10 +21,12 @@
   {
    "key": "GUARDIAN",
    "name": "The Guardian",
+   "description": "Defeated the Guardian.",
    "unlocked": true,
    "date": "2017-12-12T01:37:18-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/387d8bcb7169cbcef26e66c155eed304d3912237.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 84.9
   },
   {
    "key": "ADRENALINE",
@@ -32,15 +34,18 @@
    "description": "Have 9 Energy during a single turn of combat.",
    "unlocked": true,
    "date": "2017-12-12T01:42:38-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/84a69a52e1a46585853fe59c45e3eb58462842f6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/84a69a52e1a46585853fe59c45e3eb58462842f6.jpg",
+   "rarity": 60.6
   },
   {
    "key": "GHOST_GUARDIAN",
    "name": "The Ghost",
+   "description": "Defeated Hexaghost.",
    "unlocked": true,
    "date": "2017-12-12T02:48:22-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/43e47f5815939abee564daca97df815e67b64b47.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 81.5
   },
   {
    "key": "PLAGUE",
@@ -48,15 +53,18 @@
    "description": "Defeat 3 enemies with Poison in a single combat.",
    "unlocked": true,
    "date": "2017-12-12T04:21:05-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/2897a4cac12fbd380098f6e9d379ddbd2f1c6d31.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/2897a4cac12fbd380098f6e9d379ddbd2f1c6d31.jpg",
+   "rarity": 52.7
   },
   {
    "key": "SLIME_BOSS",
    "name": "The Boss",
+   "description": "Defeated the Slime Boss.",
    "unlocked": true,
    "date": "2017-12-12T04:21:21-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/f50d8cb5f4dda21c02e913ca3449d7b059c56b70.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 78.1
   },
   {
    "key": "SHRUG_IT_OFF",
@@ -64,39 +72,48 @@
    "description": "Win a battle with 1 HP remaining.",
    "unlocked": true,
    "date": "2017-12-12T16:38:13-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/f2b4b55470d774f304b1b41da617955bec09806b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/f2b4b55470d774f304b1b41da617955bec09806b.jpg",
+   "rarity": 58.9
   },
   {
    "key": "AUTOMATON",
    "name": "The Automaton",
+   "description": "Defeated the Bronze Automaton.",
    "unlocked": true,
    "date": "2017-12-12T21:11:37-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/05775d810fc3b0c51bd0b7b2f8c7e4de8a9895a3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 65.8
   },
   {
    "key": "COLLECTOR",
    "name": "The Collector",
+   "description": "Defeated the Collector.",
    "unlocked": true,
    "date": "2017-12-13T00:12:59-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/0f3729a5c031d2dc4914c09b7b3051e797483020.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 64
   },
   {
    "key": "CHAMP",
    "name": "The Champion",
+   "description": "Defeated the Champ.",
    "unlocked": true,
    "date": "2017-12-13T23:59:37-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/62c44786ffa1f24c3ba6d808a1d2d8c9d8739f2a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 70.7
   },
   {
    "key": "CROW",
    "name": "The Crow",
+   "description": "Defeated the Awakened One.",
    "unlocked": true,
    "date": "2017-12-17T22:21:08-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/9e913c9cd7b394a03740ae255e95b94b195f5993.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 54.8
   },
   {
    "key": "RUBY",
@@ -104,7 +121,8 @@
    "description": "Beat the game with the Ironclad.",
    "unlocked": true,
    "date": "2017-12-17T22:21:33-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/e926cbd3e4f886171a18b421cbd2e0f533d8027e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/e926cbd3e4f886171a18b421cbd2e0f533d8027e.jpg",
+   "rarity": 56
   },
   {
    "key": "ASCEND_0",
@@ -112,7 +130,8 @@
    "description": "Unlock Ascension mode.",
    "unlocked": true,
    "date": "2019-03-14T10:51:21-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a24229e0772b333e8e374c22cffd8619998bb19b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a24229e0772b333e8e374c22cffd8619998bb19b.jpg",
+   "rarity": 66.3
   },
   {
    "key": "COME_AT_ME",
@@ -120,7 +139,8 @@
    "description": "Win a combat without playing an Attack.",
    "unlocked": true,
    "date": "2019-03-14T23:05:01-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/950f9fbce0b382bd310b0820cce777426e8ea473.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/950f9fbce0b382bd310b0820cce777426e8ea473.jpg",
+   "rarity": 54
   },
   {
    "key": "THE_PACT",
@@ -128,15 +148,18 @@
    "description": "Exhaust 20 cards in a single combat.",
    "unlocked": true,
    "date": "2019-03-15T11:10:23-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/eb2c5e0a32336fc1a207d37bd9c604ddabda4071.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/eb2c5e0a32336fc1a207d37bd9c604ddabda4071.jpg",
+   "rarity": 61.8
   },
   {
    "key": "TIME_EATER",
    "name": "The Time Eater",
+   "description": "Defeated the Time Eater.",
    "unlocked": true,
    "date": "2019-03-16T14:20:27-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/92a08788e62ec08c84036cacb60524e16d56d9ed.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 49.3
   },
   {
    "key": "PERFECT",
@@ -144,7 +167,8 @@
    "description": "Defeat a boss without taking any damage.",
    "unlocked": true,
    "date": "2019-03-16T19:26:46-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/3c373a93d323ee814635a4189318da049c4318e7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/3c373a93d323ee814635a4189318da049c4318e7.jpg",
+   "rarity": 56.5
   },
   {
    "key": "IMPERVIOUS",
@@ -152,7 +176,8 @@
    "description": "Have 99 or more Block during combat.",
    "unlocked": true,
    "date": "2019-03-17T21:38:52-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/694e604130d436208873a3b7e6dee68ef31eef99.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/694e604130d436208873a3b7e6dee68ef31eef99.jpg",
+   "rarity": 38.3
   },
   {
    "key": "SAPPHIRE",
@@ -160,15 +185,18 @@
    "description": "Beat the game with the Defect.",
    "unlocked": true,
    "date": "2019-03-17T21:39:28-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/25555ae8bb55b62fc14298281a79a0af253470cb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/25555ae8bb55b62fc14298281a79a0af253470cb.jpg",
+   "rarity": 44
   },
   {
    "key": "SHAPES",
    "name": "The Shapes",
+   "description": "Defeated Donu \u0026 Deca.",
    "unlocked": true,
    "date": "2019-03-18T20:20:07-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/9a068a8306d082300b39cf0107c7a942c53cddad.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 55.4
   },
   {
    "key": "EMERALD",
@@ -176,7 +204,8 @@
    "description": "Beat the game with the Silent.",
    "unlocked": true,
    "date": "2019-03-18T20:20:56-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/7766ea775093fa2d9814c3f4ef5636bb18dfb97f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/7766ea775093fa2d9814c3f4ef5636bb18dfb97f.jpg",
+   "rarity": 50.4
   },
   {
    "key": "JAXXED",
@@ -184,7 +213,8 @@
    "description": "Have 50 or more Strength during combat.",
    "unlocked": true,
    "date": "2019-03-18T21:49:53-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/5220d1c554ec293254e53bf09db09ee7084292eb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/5220d1c554ec293254e53bf09db09ee7084292eb.jpg",
+   "rarity": 23.2
   },
   {
    "key": "CATALYST",
@@ -192,15 +222,18 @@
    "description": "Apply 99 or more Poison on a single enemy.",
    "unlocked": true,
    "date": "2023-05-08T20:23:11-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a87d1ba5946edaba49f377f698d4a39af9f327f3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a87d1ba5946edaba49f377f698d4a39af9f327f3.jpg",
+   "rarity": 32.9
   },
   {
    "key": "EMERALD_PLUS",
    "name": "Emerald+",
+   "description": "Complete the Ending with the Silent.",
    "unlocked": true,
    "date": "2024-05-19T08:56:51-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/42ed123a504db738ba5ee0a6e425895651e6aca0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.9
   },
   {
    "key": "DONUT",
@@ -208,7 +241,8 @@
    "description": "Finish Donu with a Feed.",
    "unlocked": true,
    "date": "2025-09-02T21:25:10-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/5c9fb117629ca3e0812a1dec824505fea8982fc9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/5c9fb117629ca3e0812a1dec824505fea8982fc9.jpg",
+   "rarity": 8
   },
   {
    "key": "AMETHYST",
@@ -216,157 +250,182 @@
    "description": "Beat the game with the Watcher.",
    "unlocked": true,
    "date": "2025-09-03T21:40:53-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/96dde519ff925312a9e2bd564e6a89efcea00130.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/96dde519ff925312a9e2bd564e6a89efcea00130.jpg",
+   "rarity": 26
   },
   {
    "key": "SAPPHIRE_PLUS",
    "name": "Sapphire+",
+   "description": "Complete the Ending with the Defect.",
    "unlocked": true,
    "date": "2026-08-13T21:06:15-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/fbadf0310b59be3804493b1f29817dec55a58aa7.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.5
   },
   {
    "key": "RUBY_PLUS",
    "name": "Ruby+",
+   "description": "Complete the Ending with the Ironclad.",
    "unlocked": true,
    "date": "2026-08-23T09:41:33-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/72f6f4f9a7a34f6705e64b448c6f9d32329dcb3c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 17.2
   },
   {
    "key": "THE_ENDING",
    "name": "The End?",
+   "description": "Complete the Ending with the Ironclad, Silent, and Defect.",
    "unlocked": true,
    "date": "2026-08-23T09:41:34-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/57c10f822ec122dd5003281fe35ab7644e4c7a6d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 13.1
   },
   {
    "key": "AMETHYST_PLUS",
    "name": "Amethyst+",
    "description": "Complete the Ending with the Watcher.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/cec37775c256eb18b882b7f199c4f22467251640.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/cec37775c256eb18b882b7f199c4f22467251640.jpg",
+   "rarity": 13.2
   },
   {
    "key": "ASCEND_10",
    "name": "Ascend 10",
    "description": "Complete Ascension Level 10.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/ec78e69e6d880a6f43b7927b6fcaa2ebfc300b8a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/ec78e69e6d880a6f43b7927b6fcaa2ebfc300b8a.jpg",
+   "rarity": 14.9
   },
   {
    "key": "ASCEND_20",
    "name": "Ascend 20",
    "description": "Complete Ascension Level 20.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/8a8023879e187c54002bf9c1ff57ef0d652b15c7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/8a8023879e187c54002bf9c1ff57ef0d652b15c7.jpg",
+   "rarity": 7.3
   },
   {
    "key": "BARRICADED",
    "name": "Barricaded",
    "description": "Have 999 Block during combat.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/766079b21a25b224d6acb29652e85545e42db310.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/766079b21a25b224d6acb29652e85545e42db310.jpg",
+   "rarity": 12.7
   },
   {
    "key": "COMMON_SENSE",
    "name": "Common Sense",
    "description": "Beat the game with a deck containing no uncommons or rares.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/79d0b639392ac752a250393efe000f89355427e1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/79d0b639392ac752a250393efe000f89355427e1.jpg",
+   "rarity": 4.3
   },
   {
    "key": "ETERNAL_ONE",
    "name": "Eternal One",
    "description": "Obtain all other Achievements.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/e503b760dbcd72030f7a0fced686fadce853c4de.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/e503b760dbcd72030f7a0fced686fadce853c4de.jpg",
+   "rarity": 2.8
   },
   {
    "key": "FOCUSED",
    "name": "Focused",
    "description": "Have 25 or more Focus during combat.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/2369c045ee184d3cb7942e289431e989ffc69829.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/2369c045ee184d3cb7942e289431e989ffc69829.jpg",
+   "rarity": 5.4
   },
   {
    "key": "INFINITY",
    "name": "Infinity",
    "description": "Play 25 cards in a single turn.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/37e5a9fc65c915fbd505553d9128559a726fc5bc.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/37e5a9fc65c915fbd505553d9128559a726fc5bc.jpg",
+   "rarity": 23.4
   },
   {
    "key": "LUCKY_DAY",
    "name": "My Lucky Day",
    "description": "Win a Daily Climb.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/ba2b87790372026168d82b5a0796da07d3e0f982.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/ba2b87790372026168d82b5a0796da07d3e0f982.jpg",
+   "rarity": 23.9
   },
   {
    "key": "MINIMALIST",
    "name": "Minimalist",
    "description": "Beat the game with a 5 card deck or smaller.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/259cfb658ff08303c9d03fc6ff1b41e5c39c0d23.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/259cfb658ff08303c9d03fc6ff1b41e5c39c0d23.jpg",
+   "rarity": 4.7
   },
   {
    "key": "NEON",
    "name": "Neon",
    "description": "Channel 9 Plasma in a single turn.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/87985c3620b21f2cbec8ca1e93fa0763d0df57f4.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/87985c3620b21f2cbec8ca1e93fa0763d0df57f4.jpg",
+   "rarity": 5.9
   },
   {
    "key": "NINJA",
    "name": "Ninja",
    "description": "Play 10 Shivs in a single turn.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/b8455f00df2e011dd9c1f56a372a482d6851f756.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/b8455f00df2e011dd9c1f56a372a482d6851f756.jpg",
+   "rarity": 27.8
   },
   {
    "key": "ONE_RELIC",
    "name": "Who Needs Relics?",
    "description": "Beat the game with a single relic.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/0970806e30a2e1c34e5584d19d7e5abcbfd21cc0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/0970806e30a2e1c34e5584d19d7e5abcbfd21cc0.jpg",
+   "rarity": 3.8
   },
   {
    "key": "POWERFUL",
    "name": "Powerful",
    "description": "Have 10 or more buffs during combat.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/12b2e276618623ca16f3fb7dd4f2d1b2687641c7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/12b2e276618623ca16f3fb7dd4f2d1b2687641c7.jpg",
+   "rarity": 32.8
   },
   {
    "key": "PURITY",
    "name": "Purity",
    "description": "Have 3 or fewer cards in hand, draw, and discard pile combined.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/646bb2d70cd11d45fb7c549e1d69a895a3ec92bf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/646bb2d70cd11d45fb7c549e1d69a895a3ec92bf.jpg",
+   "rarity": 18.8
   },
   {
    "key": "SPEED_CLIMBER",
    "name": "Speed Climber",
    "description": "Beat the game in under 20 minutes.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a6f2ca9b978bccab7717002bb84340d404414388.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a6f2ca9b978bccab7717002bb84340d404414388.jpg",
+   "rarity": 6.7
   },
   {
    "key": "TRANSIENT",
    "name": "The Transient",
    "description": "Defeat the Transient before it fades away.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/00f1d84fdda5a160d60a8303dac539e14857083a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/00f1d84fdda5a160d60a8303dac539e14857083a.jpg",
+   "rarity": 14.7
   },
   {
    "key": "YOU_ARE_NOTHING",
    "name": "You Are Nothing",
    "description": "Defeat a boss on turn 1.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/d8ae29eaed56ff506e64ee711f2328408e8eae6d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/d8ae29eaed56ff506e64ee711f2328408e8eae6d.jpg",
+   "rarity": 13
   }
  ],
  "raw": {

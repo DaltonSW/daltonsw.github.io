@@ -120,6 +120,9 @@ type RAAchievement struct {
 	Type               string `json:"Type"`
 	DateEarned         string `json:"DateEarned"`
 	DateEarnedHardcore string `json:"DateEarnedHardcore"`
+	// NumAwarded is how many players have earned it; divide by the game's
+	// NumDistinctPlayers for a rarity percentage.
+	NumAwarded int `json:"NumAwarded"`
 }
 
 // Earned returns the achievement's unlock timestamp, preferring the hardcore
@@ -140,6 +143,7 @@ type RAProgress struct {
 	ConsoleName            string `json:"ConsoleName"`
 	ImageIcon              string `json:"ImageIcon"`
 	NumAchievements        int    `json:"NumAchievements"`
+	NumDistinctPlayers     int    `json:"NumDistinctPlayers"`
 	NumAwardedToUser       int    `json:"NumAwardedToUser"`
 	NumAwardedHardcore     int    `json:"NumAwardedToUserHardcore"`
 	UserCompletion         string `json:"UserCompletion"`
@@ -467,6 +471,9 @@ func FetchRecord(ctx context.Context, client *RAClient, gameID string, recent *R
 			Description: a.Description,
 			Points:      a.Points,
 			Icon:        a.BadgeName,
+		}
+		if progress.NumDistinctPlayers > 0 {
+			entry.Rarity = float64(a.NumAwarded) / float64(progress.NumDistinctPlayers) * 100
 		}
 		if earned, hardcore, ok := a.Earned(); ok {
 			entry.Unlocked = true

@@ -462,6 +462,9 @@ func FetchRecord(ctx context.Context, client *PSNClient, npCommunicationID strin
 			Hidden:      d.TrophyHidden,
 			Group:       d.TrophyGroupID,
 		}
+		if rate, err := strconv.ParseFloat(e.TrophyEarnedRate, 64); err == nil {
+			entry.Rarity = rate
+		}
 		if e.Earned {
 			entry.Unlocked = true
 			if t, err := time.Parse(time.RFC3339, e.EarnedDateTime); err == nil {

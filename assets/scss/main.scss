@@ -439,6 +439,18 @@ $status-aliases: (wip: playing, stable: finished);
 @media (prefers-reduced-motion: reduce) { .ps-meter__fill { transition: none; } }
 .ps-meter__pct { color: var(--dim); font-variant-numeric: tabular-nums; }
 
+// Scaled meters (game list): hue runs red (0%) → green (99%), gold at 100%.
+.ps-meter--scaled {
+  --meter-color: hsl(calc(var(--pct) * 120) 60% 62%);
+  .ps-meter__fill { background: var(--meter-color); }
+  .ps-meter__pct { color: var(--meter-color); }
+}
+.ps-meter--complete { --meter-color: var(--mastered); .ps-meter__pct { font-weight: 600; } }
+@media (prefers-color-scheme: light) {
+  .ps-meter--scaled { --meter-color: hsl(calc(var(--pct) * 120) 65% 34%); }
+  .ps-meter--complete { --meter-color: var(--mastered); }
+}
+
 @media (max-width: 768px) {
   .ps-row {
     grid-template-columns: 9ch minmax(8ch, 1.4fr) minmax(5ch, 0.7fr) 8ch 8ch 7ch minmax(6rem, 0.9fr);
@@ -568,6 +580,7 @@ a.side-row__label:hover { color: var(--accent); text-decoration-color: currentCo
 .ach-row__game { color: var(--accent); }
 .ach-row__game:hover { text-decoration: underline; }
 .ach-row__date--unknown { font-style: italic; }
+.ach-row__rarity { white-space: nowrap; }
 .ach-row__subset { white-space: nowrap; }
 .ach-row__subset::before { content: "["; color: var(--stroke); }
 .ach-row__subset::after  { content: "]"; color: var(--stroke); }

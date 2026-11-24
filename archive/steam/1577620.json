@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Signal State",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "1577620",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 15,
  "platform": "PC",
@@ -15,105 +15,123 @@
    "name": "Open Source",
    "description": "Record a GIF.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/c3af2becae340f128e7723a157e515b8fbec5297.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/c3af2becae340f128e7723a157e515b8fbec5297.jpg",
+   "rarity": 14.6
   },
   {
    "key": "Action_InfiniteLoop",
    "name": "Turing Complete",
+   "description": "Create an infinite loop.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/52c45200fb2fbdd98d6de749f07e8e7ea47a0df1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 29.3
   },
   {
    "key": "Progression_100Percent",
    "name": "Elite Engineer",
    "description": "Complete all required and all optional puzzles.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/bdc1e9bdacd10529347010de3b366e179b63cd5f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/bdc1e9bdacd10529347010de3b366e179b63cd5f.jpg",
+   "rarity": 4.4
   },
   {
    "key": "Progression_Act1Complete",
    "name": "Broadcast",
    "description": "Finish Act 1.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/9f9befc881c06ce7683321b2f6ec6a5e8e68dbcd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/9f9befc881c06ce7683321b2f6ec6a5e8e68dbcd.jpg",
+   "rarity": 44.7
   },
   {
    "key": "Progression_Act2Complete",
    "name": "Outsiders",
    "description": "Finish Act 2.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/cf7f3358ccc3d11c961659048642ed94f59f9343.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/cf7f3358ccc3d11c961659048642ed94f59f9343.jpg",
+   "rarity": 19.3
   },
   {
    "key": "Progression_GameComplete",
    "name": "Future",
    "description": "Finish the story.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/ccfa585b0fe35d5224b5a115249ca6b6b4b22dd6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/ccfa585b0fe35d5224b5a115249ca6b6b4b22dd6.jpg",
+   "rarity": 8.1
   },
   {
    "key": "Progression_TutorialComplete",
    "name": "Work Begins",
    "description": "Complete the tutorial.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/472b10f90266b5398d0a652474aa9c0a4c6b547d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/472b10f90266b5398d0a652474aa9c0a4c6b547d.jpg",
+   "rarity": 76.3
   },
   {
    "key": "Solution_DronePathfinder",
    "name": "Hofstadter's Law",
    "description": "Solve Drone Pathfinder without using any Signal Delays.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/32c543570af836c29587f3066b707282568a1fdd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/32c543570af836c29587f3066b707282568a1fdd.jpg",
+   "rarity": 2.8
   },
   {
    "key": "Solution_DroneProcessor",
    "name": "JIT Compilation",
    "description": "Solve Drone Processor without using any Signal Delays.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/1ad81047df5e9bfa79b99d10a193c44d5c779622.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/1ad81047df5e9bfa79b99d10a193c44d5c779622.jpg",
+   "rarity": 3.2
   },
   {
    "key": "Solution_LogicTest",
    "name": "Does Not Compute",
    "description": "Solve Logic Test without any logic modules.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/8bff5823e96f91bf1c5307e0442a9840bfacf149.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/8bff5823e96f91bf1c5307e0442a9840bfacf149.jpg",
+   "rarity": 3.3
   },
   {
    "key": "Solution_MinAndMaxRedesign",
    "name": "That's Just Lazy",
+   "description": "Solve Min and Max Redesign trivially.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/00f5132e3fda1cf0866522f9a297e1be4d82506c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.1
   },
   {
    "key": "Solution_OptimizedSignalRepeater",
    "name": "Extreme Efficiency",
    "description": "Solve Optimized Signal Repeater in an extremely efficient manner.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/c90d71db2d93375a6fd88f4cdfb53698d9711392.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/c90d71db2d93375a6fd88f4cdfb53698d9711392.jpg",
+   "rarity": 8.5
   },
   {
    "key": "Solution_PowerRegulator",
    "name": "Will This Short Circuit?",
    "description": "Solve Power Regulator using a maximum of 1 VCA.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/6265b327d0f935615ae62e944bc2d2c4a8920b02.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/6265b327d0f935615ae62e944bc2d2c4a8920b02.jpg",
+   "rarity": 6.2
   },
   {
    "key": "Solution_RadioAmplificationCircuit",
    "name": "\"Conditional Logic is overrated anyway\"",
    "description": "Solve Radio Amplification Circuit without using any logic modules.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/02a358d0190b107006b9408aba83d7d29b1fa016.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/02a358d0190b107006b9408aba83d7d29b1fa016.jpg",
+   "rarity": 3.6
   },
   {
    "key": "Solution_SignalDelayImplementation",
    "name": "That's Just Lazy 2",
+   "description": "Solve Signal Delay Implementation trivially.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1577620/0e10a8aa6a8bcac56fef88f53aab856909d7ac73.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.9
   }
  ],
  "raw": {

@@ -1,12 +1,12 @@
 {
  "provider": "steam",
  "title": "Opus Magnum",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "558990",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 2,
- "total": 6,
+ "total": 7,
  "first": "2026-02-04",
  "last": "2026-06-22",
  "platform": "PC",
@@ -24,7 +24,8 @@
    "description": "Win a game of Sigmar's Garden.",
    "unlocked": true,
    "date": "2026-02-04T18:15:02-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/bf1ef9a0ab4430593203bd38247d7cd01a03b738.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/bf1ef9a0ab4430593203bd38247d7cd01a03b738.jpg",
+   "rarity": 50.5
   },
   {
    "key": "SOLITAIRE_2",
@@ -32,35 +33,48 @@
    "description": "Win 10 games of Sigmar's Garden.",
    "unlocked": true,
    "date": "2026-06-22T09:30:57-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/1c2a7eef91cb09e0c27c736614d031c9d38a97c2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/1c2a7eef91cb09e0c27c736614d031c9d38a97c2.jpg",
+   "rarity": 28.5
   },
   {
    "key": "ALL_PUZZLES",
    "name": "The Way of the Alchemist",
    "description": "Solve every puzzle in the main campaign.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/079845730273102b3eb33494c3464ffe1c7c5133.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/079845730273102b3eb33494c3464ffe1c7c5133.jpg",
+   "rarity": 13.9
+  },
+  {
+   "key": "ALL_PUZZLES_DLC",
+   "name": "The Way of the Metallurgist",
+   "description": "Solve every puzzle in the De Re Metallica campaign.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/0bc507ed0db150b760329353e1f07b2de0e6acca.jpg",
+   "rarity": 32.8
   },
   {
    "key": "JOURNAL_24",
    "name": "The Way of the Philosopher",
    "description": "Solve a puzzle from each journal issue.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/7ca073a7ada30f8af093ba15479bc8d1434783cb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/7ca073a7ada30f8af093ba15479bc8d1434783cb.jpg",
+   "rarity": 0.2
   },
   {
    "key": "RESEARCH_10",
    "name": "The Way of the Scholar",
    "description": "Solve 10 puzzles from the journal.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/c5bbd71dec0bcce2cbaff3af221ded4f6c308e5b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/c5bbd71dec0bcce2cbaff3af221ded4f6c308e5b.jpg",
+   "rarity": 3.4
   },
   {
    "key": "SOLITAIRE_3",
    "name": "The Way of the Immortal",
    "description": "Win 100 games of Sigmar's Garden.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/7884d89faded04ea015975287c087f1c66d82d2a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/558990/7884d89faded04ea015975287c087f1c66d82d2a.jpg",
+   "rarity": 7.4
   }
  ],
  "raw": {
@@ -109,6 +123,13 @@
      "unlocktime": 0,
      "name": "The Way of the Philosopher",
      "description": "Solve a puzzle from each journal issue."
+    },
+    {
+     "apiname": "ALL_PUZZLES_DLC",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The Way of the Metallurgist",
+     "description": "Solve every puzzle in the De Re Metallica campaign."
     }
    ],
    "success": true

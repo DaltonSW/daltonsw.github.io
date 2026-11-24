@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Grapple Dog",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "1345860",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 22,
  "platform": "PC",
@@ -13,156 +13,184 @@
   {
    "key": "GD_ACHIEVEMENT_1",
    "name": "Mountain Climber",
+   "description": "Complete World 1",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/b4609f31dc7c7ad08bebde7db94d577e22c8ffcd.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 31
   },
   {
    "key": "GD_ACHIEVEMENT_10",
    "name": "Good Eats",
    "description": "Give a Goat a Carrot",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/9f355dfbd5d14e72332453d37a5448e29c0f7430.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/9f355dfbd5d14e72332453d37a5448e29c0f7430.jpg",
+   "rarity": 67.7
   },
   {
    "key": "GD_ACHIEVEMENT_11",
    "name": "The Palm, The Seed, The Fruit",
    "description": "Knock down a Coconut with your Grapple",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/929fae2b3d5679103c9f0e289a715932b9ccfa60.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/929fae2b3d5679103c9f0e289a715932b9ccfa60.jpg",
+   "rarity": 24.8
   },
   {
    "key": "GD_ACHIEVEMENT_12",
    "name": "Good Boy",
    "description": "Pet the Dog",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/b9f7c41bc0e3ddd1302a06ad501f974536b578be.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/b9f7c41bc0e3ddd1302a06ad501f974536b578be.jpg",
+   "rarity": 41.8
   },
   {
    "key": "GD_ACHIEVEMENT_13",
    "name": "Nap Time",
    "description": "Let Pablo have a nap for a bit",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/7837b8b7c3c3ecc18ed9f601aa195b5cab063881.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/7837b8b7c3c3ecc18ed9f601aa195b5cab063881.jpg",
+   "rarity": 8.1
   },
   {
    "key": "GD_ACHIEVEMENT_14",
    "name": "Isn't There Something You Should Be Doing?",
    "description": "Get a score of 10000 in Boomerang Bandit",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/3c978ae8993a3da2556b4c8fc62caa977cd74039.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/3c978ae8993a3da2556b4c8fc62caa977cd74039.jpg",
+   "rarity": 23.7
   },
   {
    "key": "GD_ACHIEVEMENT_15",
    "name": "Purple Gem Rookie",
    "description": "Collect 25% of all Purple Gems",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a2852fe4cbd4e71fd26fe374ab1ad671620e6d44.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a2852fe4cbd4e71fd26fe374ab1ad671620e6d44.jpg",
+   "rarity": 21
   },
   {
    "key": "GD_ACHIEVEMENT_16",
    "name": "Purple Gem Expert",
    "description": "Collect 50% of all Purple Gems",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a921fb3db67aff0908b1032db2499eb7a889cb89.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a921fb3db67aff0908b1032db2499eb7a889cb89.jpg",
+   "rarity": 13.4
   },
   {
    "key": "GD_ACHIEVEMENT_17",
    "name": "Purple Gem Master",
    "description": "Collect 75% of all Purple Gems",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/bf95eecedc34c58e3b6eca3d1765ce8c0bce02ee.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/bf95eecedc34c58e3b6eca3d1765ce8c0bce02ee.jpg",
+   "rarity": 8.3
   },
   {
    "key": "GD_ACHIEVEMENT_18",
    "name": "Purple Gem Legend",
    "description": "Collect all Purple Gems",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/d24503f4b61c1848d224f1d567c4fc52b22fba20.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/d24503f4b61c1848d224f1d567c4fc52b22fba20.jpg",
+   "rarity": 6.1
   },
   {
    "key": "GD_ACHIEVEMENT_19",
    "name": "Super Speed",
    "description": "Collect 11 Gold Time Trial Medals",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/595788a4dd0e229df9cceea70e0fa83beb8411ac.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/595788a4dd0e229df9cceea70e0fa83beb8411ac.jpg",
+   "rarity": 7
   },
   {
    "key": "GD_ACHIEVEMENT_2",
    "name": "Beach Master",
+   "description": "Complete World 2",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/6ce9c9a06f5001295ae018a9ed3207a3cd068215.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 20.1
   },
   {
    "key": "GD_ACHIEVEMENT_20",
    "name": "Ultra Speed",
    "description": "Collect 22 Gold Time Trial Medals",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/3b318bac43e9c2854a14b10ed378dd92f5aedafa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/3b318bac43e9c2854a14b10ed378dd92f5aedafa.jpg",
+   "rarity": 5.5
   },
   {
    "key": "GD_ACHIEVEMENT_21",
    "name": "Hyper Speed",
    "description": "Collect all Gold Time Trial Medals",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/e9d4f28bd9f8b5d322b91c43c04e1c27f9298927.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/e9d4f28bd9f8b5d322b91c43c04e1c27f9298927.jpg",
+   "rarity": 4.8
   },
   {
    "key": "GD_ACHIEVEMENT_22",
    "name": "Top Dog",
    "description": "Achieve 100% Completion",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/5b629b98978ad11a5f0d26af75f061a2b9f5db1b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/5b629b98978ad11a5f0d26af75f061a2b9f5db1b.jpg",
+   "rarity": 4.8
   },
   {
    "key": "GD_ACHIEVEMENT_3",
    "name": "Hot Dog",
+   "description": "Complete World 3",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/5dd702a6c287928fa24dba47debd34b7dd59c127.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15.3
   },
   {
    "key": "GD_ACHIEVEMENT_4",
    "name": "Dragon Slayer",
+   "description": "Complete World 4",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/f06eaa3b7219b1f50569974516fab2ccb0ba0549.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.7
   },
   {
    "key": "GD_ACHIEVEMENT_5",
    "name": "Nul Defeated",
+   "description": "Complete World 5",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/0bea4195235f1a4a215d7e63a6cdf99241172036.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 10.4
   },
   {
    "key": "GD_ACHIEVEMENT_6",
    "name": "Grapple Dog",
+   "description": "Complete World 6",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/13faa215e19b970d49d2f50fa9488dd0620b40ce.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.1
   },
   {
    "key": "GD_ACHIEVEMENT_7",
    "name": "One Step At A Time...",
    "description": "Complete a Stage",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/d300bc9894f5d3509baa3425db826dff468f165a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/d300bc9894f5d3509baa3425db826dff468f165a.jpg",
+   "rarity": 71.5
   },
   {
    "key": "GD_ACHIEVEMENT_8",
    "name": "A Little Bonus Stage, As A Treat",
    "description": "Complete a Bonus Stage",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a4e9d2cf54ceeb21e3af10a53322d6815a75e342.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a4e9d2cf54ceeb21e3af10a53322d6815a75e342.jpg",
+   "rarity": 45.2
   },
   {
    "key": "GD_ACHIEVEMENT_9",
    "name": "Going For Walkies",
    "description": "Complete a Time Trial",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a852d766c2aecaa5d3fb1568c91db6e86709789a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1345860/a852d766c2aecaa5d3fb1568c91db6e86709789a.jpg",
+   "rarity": 23.1
   }
  ],
  "raw": {

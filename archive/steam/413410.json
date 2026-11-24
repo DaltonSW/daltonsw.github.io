@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Danganronpa: Trigger Happy Havoc",
- "updated": "2026-10-24",
+ "updated": "2026-11-23",
  "id": "413410",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 10,
  "total": 38,
  "first": "2017-08-06",
@@ -21,18 +21,22 @@
   {
    "key": "PROLOGUE",
    "name": "From Zero to Hero",
+   "description": "Finished the Prologue",
    "unlocked": true,
    "date": "2017-08-06T18:07:55-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 78.8
   },
   {
    "key": "CHAPTER1",
    "name": "One Is the Loneliest Number",
+   "description": "Finished Chapter 1",
    "unlocked": true,
    "date": "2017-08-06T22:16:12-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 57.2
   },
   {
    "key": "NO_RETRY",
@@ -40,7 +44,8 @@
    "description": "Cleared a class trial without having to retry a single time",
    "unlocked": true,
    "date": "2017-08-06T22:16:12-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 44.6
   },
   {
    "key": "SKIL_10",
@@ -48,15 +53,18 @@
    "description": "Cleared the 10 SP threshold",
    "unlocked": true,
    "date": "2017-08-07T18:44:20-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 61.8
   },
   {
    "key": "CHAPTER2",
    "name": "Two of a Kind",
+   "description": "Finished Chapter 2",
    "unlocked": true,
    "date": "2017-08-07T22:36:10-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 47
   },
   {
    "key": "NOISE_100",
@@ -64,235 +72,274 @@
    "description": "Destroyed 100 white noise lines across all class trials",
    "unlocked": true,
    "date": "2017-08-09T21:09:39-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 30.3
   },
   {
    "key": "CHAPTER3",
    "name": "Three's a Crowd",
+   "description": "Finished Chapter 3",
    "unlocked": true,
    "date": "2017-08-09T22:00:55-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 41.2
   },
   {
    "key": "CHAPTER4",
    "name": "Four by Gore",
+   "description": "Finished Chapter 4",
    "unlocked": true,
    "date": "2017-08-14T01:00:11-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 38.4
   },
   {
    "key": "CHAPTER5",
    "name": "Five Alive",
+   "description": "Finished Chapter 5",
    "unlocked": true,
    "date": "2017-08-14T21:44:16-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 37.1
   },
   {
    "key": "CHAPTER_ALL",
    "name": "All's Well That Ends...Umm...",
+   "description": "Finished every chapter",
    "unlocked": true,
    "date": "2026-10-05T19:47:03-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 36.3
   },
   {
    "key": "ASAHINA",
    "name": "Mystic Donut",
    "description": "Filled in every page of Aoi's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 10.9
   },
   {
    "key": "ENISHIMA",
    "name": "Memoirs of a Fashionista",
    "description": "Filled in every page of Junko's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 7.8
   },
   {
    "key": "FRIENDSHIP_ALL",
    "name": "Mr. Know-It-All",
    "description": "Filled in every page of every character's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
+   "rarity": 5.1
   },
   {
    "key": "FUJISAKI",
    "name": "GoodFellows",
    "description": "Filled in every page of Chihiro's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 7.8
   },
   {
    "key": "FUKAWA",
    "name": "Strangers in a Brain",
    "description": "Filled in every page of Toko's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 6
   },
   {
    "key": "GALLERY",
    "name": "Rogue's Gallery",
    "description": "Unlocked all gallery items",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
+   "rarity": 2.9
   },
   {
    "key": "HAGAKURE",
    "name": "The Sixth Nonsense",
    "description": "Filled in every page of Yasuhiro's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 6.4
   },
   {
    "key": "ISHIMARU",
    "name": "The Devil Wears a High School Uniform",
    "description": "Filled in every page of Kiyotaka's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 6.5
   },
   {
    "key": "ISLAND_CLEAR",
    "name": "School's Out For Summer",
+   "description": "Cleared School Mode once",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.2
   },
   {
    "key": "ISLAND_CLEAR_ALL",
    "name": "School's Out Forever",
+   "description": "Saw every possible School Mode ending",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.7
   },
   {
    "key": "KIRIGIRI",
    "name": "Hope's Peak Confidential",
    "description": "Filled in every page of Kyoko's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 18.3
   },
   {
    "key": "KUWATA",
    "name": "Almost Almost Famous",
    "description": "Filled in every page of Leon's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 6.6
   },
   {
    "key": "LAST_REWARD",
    "name": "Despair's Last Reward",
    "description": "Earned every other achievement in the game",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/3e35708d08c042d6ecb188ca78939f9ec47f4b6a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/3e35708d08c042d6ecb188ca78939f9ec47f4b6a.jpg",
+   "rarity": 2.4
   },
   {
    "key": "MACHINE",
    "name": "Hey, Big Spender",
    "description": "Enjoyed the exciting excitement of the MonoMono Machine 100 times",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 18.8
   },
   {
    "key": "MAIZONO",
    "name": "Psychic",
    "description": "Filled in every page of Sayaka's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 27.8
   },
   {
    "key": "MEDAL",
    "name": "Nine Coins, Nine Purses, Nine Bears",
    "description": "Collected 999 Monocoins",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg",
+   "rarity": 3.6
   },
   {
    "key": "NOISE_500",
    "name": "Tuned to a Dead Channel",
    "description": "Destroyed 500 white noise lines across all class trials",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg",
+   "rarity": 6.6
   },
   {
    "key": "NO_CONCENTRATE",
    "name": "Not From Concentrate",
    "description": "Cleared a class trial without using your Concentration skill a single time",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 19.6
   },
   {
    "key": "NO_DAMAGE",
    "name": "You Must Acquit",
    "description": "Cleared a class trial without taking any damage",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
+   "rarity": 8
   },
   {
    "key": "OHGAMI",
    "name": "Lovesport",
    "description": "Filled in every page of Sakura's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 7.1
   },
   {
    "key": "OHWADA",
    "name": "Rebel Without a High School Degree",
    "description": "Filled in every page of Mondo's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 6.6
   },
   {
    "key": "PRESENT_ALL",
    "name": "Seriously, You Shouldn't Have",
    "description": "Collected every possible present",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg",
+   "rarity": 2.7
   },
   {
    "key": "PRESENT_HALF",
    "name": "Ooh, For Me?",
    "description": "Collected 50 unique presents",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 28.7
   },
   {
    "key": "SERESU",
    "name": "The French Disconnection",
    "description": "Filled in every page of Celeste's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 9
   },
   {
    "key": "SKIL_20",
    "name": "Skill or Be Skilled",
    "description": "Cleared the 20 SP threshold",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/1d6d373d44bc47d7b92151de3bacd288cceaaae6.jpg",
+   "rarity": 16.6
   },
   {
    "key": "SKIL_30",
    "name": "Ghostface Skillah",
    "description": "Cleared the 30 SP threshold",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/4cee22431dad745696db4062670fbbc2c5875199.jpg",
+   "rarity": 6.8
   },
   {
    "key": "TOGAMI",
    "name": "The Game Hungers",
    "description": "Filled in every page of Byakuya's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 10
   },
   {
    "key": "YAMADA",
    "name": "Lost in Scanslation",
    "description": "Filled in every page of Hifumi's Report Card",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413410/5931391125d622ae55f9e62205c04ba40ecbf42a.jpg",
+   "rarity": 5.9
   }
  ],
  "raw": {

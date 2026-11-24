@@ -1,10 +1,10 @@
 {
  "provider": "xbox",
  "title": "Modern Warfare® 2",
- "updated": "2026-10-24",
+ "updated": "2026-11-23",
  "id": "1096157207",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 9,
  "total": 50,
  "first": "2012-04-01",
@@ -18,21 +18,24 @@
    "name": "The Harder They Fall",
    "description": "Kill 2 rappelling enemies in a row before they land on their feet in Single Player or Special Ops.",
    "unlocked": true,
-   "points": 10
+   "points": 10,
+   "rarity": 36.57
   },
   {
    "key": "125",
    "name": "Desperado",
    "description": "Kill 5 enemies in a row using 5 different weapons or attachments in Single Player or Special Ops.",
    "unlocked": true,
-   "points": 10
+   "points": 10,
+   "rarity": 24.66
   },
   {
    "key": "79",
    "name": "Royale with Cheese",
    "description": "Defend Burger Town.",
    "unlocked": true,
-   "points": 15
+   "points": 15,
+   "rarity": 44.16
   },
   {
    "key": "75",
@@ -40,7 +43,8 @@
    "description": "Help train the local militia.",
    "unlocked": true,
    "date": "2012-04-01T10:54:10-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 58.38
   },
   {
    "key": "128",
@@ -48,7 +52,8 @@
    "description": "Kill at least 3 enemies with a single shot from a grenade launcher in Single Player or Special Ops.",
    "unlocked": true,
    "date": "2012-04-01T10:57:55-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 57.27
   },
   {
    "key": "120",
@@ -56,7 +61,8 @@
    "description": "Kill 2 enemies with a single bullet in Single Player or Special Ops.",
    "unlocked": true,
    "date": "2012-04-01T11:03:30-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 61.88
   },
   {
    "key": "76",
@@ -64,7 +70,8 @@
    "description": "Get hand picked for Shepherd's elite squad.",
    "unlocked": true,
    "date": "2012-04-01T11:07:40-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 54.67
   },
   {
    "key": "99",
@@ -72,7 +79,8 @@
    "description": "Earn 1 star in Special Ops.",
    "unlocked": true,
    "date": "2012-04-20T20:25:28-05:00",
-   "points": 20
+   "points": 20,
+   "rarity": 55.25
   },
   {
    "key": "100",
@@ -80,7 +88,8 @@
    "description": "Earn 4 stars in Special Ops.",
    "unlocked": true,
    "date": "2012-04-20T20:33:02-05:00",
-   "points": 20
+   "points": 20,
+   "rarity": 42.78
   },
   {
    "key": "77",
@@ -88,7 +97,8 @@
    "description": "Infiltrate the snowy mountain side base.",
    "unlocked": true,
    "date": "2012-05-13T13:21:43-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 51.8
   },
   {
    "key": "78",
@@ -96,7 +106,8 @@
    "description": "Find Rojas in the Favelas.",
    "unlocked": true,
    "date": "2012-07-18T13:01:19-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 46.55
   },
   {
    "key": "115",
@@ -104,7 +115,8 @@
    "description": "Kill at least 10 enemies with one Predator missile in Single Player or Special Ops.",
    "unlocked": true,
    "date": "2012-07-18T13:19:26-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 48.43
   }
  ],
  "raw": {
@@ -129,7 +141,7 @@
      "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 36.58
+      "currentPercentage": 36.57
      }
     },
     {
@@ -151,7 +163,7 @@
      "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 24.67
+      "currentPercentage": 24.66
      }
     },
     {
@@ -261,7 +273,7 @@
      "timeUnlocked": "2012-04-21T01:33:02.8230000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 42.79
+      "currentPercentage": 42.78
      }
     },
     {
@@ -283,7 +295,7 @@
      "timeUnlocked": "2012-04-21T01:25:28.5370000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 55.26
+      "currentPercentage": 55.25
      }
     },
     {
@@ -305,7 +317,7 @@
      "timeUnlocked": "2012-04-01T16:07:40.3330000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 54.66
+      "currentPercentage": 54.67
      }
     },
     {
@@ -371,7 +383,7 @@
      "timeUnlocked": "2012-04-01T15:54:10.0900000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 58.37
+      "currentPercentage": 58.38
      }
     }
    ],

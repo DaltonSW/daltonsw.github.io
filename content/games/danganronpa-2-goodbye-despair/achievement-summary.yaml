@@ -11,18 +11,21 @@ providers:
       last_played: "2017-10-20"
 earned:
     - name: Murderous Marooning
+      description: Finished the prologue
       date: "2017-08-26T19:46:01-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Dead Man's Party
+      description: Finished Chapter 1
       date: "2017-08-31T22:00:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Death, Lies, and Video Games
+      description: Finished Chapter 2
       date: "2017-09-03T19:58:54-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
@@ -41,6 +44,7 @@ earned:
       provider: steam
       platform: PC
     - name: Is It Medicine or Social Skill?
+      description: Finished Chapter 3
       date: "2017-09-05T21:12:45-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
@@ -53,6 +57,7 @@ earned:
       provider: steam
       platform: PC
     - name: Bred for Destruction
+      description: Finished Chapter 4
       date: "2017-09-08T19:00:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
@@ -71,6 +76,7 @@ earned:
       provider: steam
       platform: PC
     - name: Abandon All Hope
+      description: Finished Chapter 5
       date: "2017-09-15T19:43:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
@@ -89,6 +95,7 @@ earned:
       provider: steam
       platform: PC
     - name: Goodbye Academy of Despair
+      description: Finished every chapter
       date: "2017-09-15T23:50:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/0fa05b79201e34d4815f6122f078464e2010b5b7.jpg
       provider: steam

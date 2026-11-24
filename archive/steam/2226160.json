@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "ENTROPOLY",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "2226160",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 2,
  "total": 27,
  "first": "2023-08-05",
@@ -23,7 +23,8 @@
    "description": "Beat ANY Nightmare Level",
    "unlocked": true,
    "date": "2023-08-05T15:18:14-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/bdd7bd18a7512ff0ac16d4932228d5f14714e7c2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/bdd7bd18a7512ff0ac16d4932228d5f14714e7c2.jpg",
+   "rarity": 28.4
   },
   {
    "key": "complete_realm0",
@@ -31,182 +32,214 @@
    "description": "Beat ALL 8 Earth Levels",
    "unlocked": true,
    "date": "2023-08-05T15:36:20-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ac66bf4d3c7a0e8639c7dfaa7c676756160fa1d3.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ac66bf4d3c7a0e8639c7dfaa7c676756160fa1d3.jpg",
+   "rarity": 48
   },
   {
    "key": "collect_crystal0",
    "name": "EARTH CRYSTAL",
+   "description": "Found the Earth Crystal",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/c610f1dfc8f5ccf2f435eddaae6b1c3c7c3c33f2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.3
   },
   {
    "key": "collect_crystal1",
    "name": "AIR CRYSTAL",
+   "description": "Found the Air Crystal",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/20299e583987d37350dbf56a5df7d245bb905fe3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7
   },
   {
    "key": "collect_crystal2",
    "name": "WATER CRYSTAL",
+   "description": "Found the Water Crystal",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/889bc7435b48bff756679053d47409a6ec62569c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6
   },
   {
    "key": "collect_crystal3",
    "name": "FIRE CRYSTAL",
+   "description": "Found the Fire Crystal",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/904ab125d31b927e36bccc9296f20088267e73d1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.7
   },
   {
    "key": "collect_crystal4",
    "name": "MIND CRYSTAL",
+   "description": "Found the Mind Crystal",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/342296d630e4d1adced20d840c24919b8e24b8dc.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.1
   },
   {
    "key": "complete_game",
    "name": "Good Nights Sleep",
    "description": "Cleansed the elemental hearts and restored order to the realms",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/b4b48641377a09639fd313de54996f5fbb87f25c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/b4b48641377a09639fd313de54996f5fbb87f25c.jpg",
+   "rarity": 13.7
   },
   {
    "key": "complete_nightmare0",
    "name": "Nightmare Trekker",
    "description": "Beat ALL Nightmare Earth Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/905783d10f591238a12026f9722ad3ed482c73c0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/905783d10f591238a12026f9722ad3ed482c73c0.jpg",
+   "rarity": 6.3
   },
   {
    "key": "complete_nightmare1",
    "name": "Nightmare Glider",
    "description": "Beat ALL Nightmare Air Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/eeb69bbc58fa4cd0a71782e764dbd12bd2c14b84.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/eeb69bbc58fa4cd0a71782e764dbd12bd2c14b84.jpg",
+   "rarity": 3.5
   },
   {
    "key": "complete_nightmare2",
    "name": "Nightmare Surfer",
    "description": "Beat ALL Nightmare Water Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/30e26771dafeb08819539074329c8418dca0a980.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/30e26771dafeb08819539074329c8418dca0a980.jpg",
+   "rarity": 2.1
   },
   {
    "key": "complete_nightmare3",
    "name": "Nightmare Scorcher",
    "description": "Beat ALL Nightmare Fire Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ef50483c29a016c68565dc7140afd50dd939af99.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ef50483c29a016c68565dc7140afd50dd939af99.jpg",
+   "rarity": 2.1
   },
   {
    "key": "complete_nightmare4",
    "name": "Nightmare Psychonaut",
    "description": "Beat ALL Nightmare Mind Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ba0819cb6e85923a7973f8cc402ecd09bcb1ac83.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/ba0819cb6e85923a7973f8cc402ecd09bcb1ac83.jpg",
+   "rarity": 1.6
   },
   {
    "key": "complete_nightmare_all",
    "name": "Nightmare MASTER",
    "description": "Beat ALL Nightmare Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/dd300c0d70d22a882293ec65770caa147a9bc934.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/dd300c0d70d22a882293ec65770caa147a9bc934.jpg",
+   "rarity": 1.6
   },
   {
    "key": "complete_realm1",
    "name": "AIR",
    "description": "Beat ALL 8 Air Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/887c1f8af22f75db3742480a3729dccce8138765.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/887c1f8af22f75db3742480a3729dccce8138765.jpg",
+   "rarity": 31.5
   },
   {
    "key": "complete_realm2",
    "name": "WATER",
    "description": "Beat ALL 8 Water Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/06c107aab69344ac4af978de038bc28cf159349e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/06c107aab69344ac4af978de038bc28cf159349e.jpg",
+   "rarity": 24
   },
   {
    "key": "complete_realm3",
    "name": "FIRE",
    "description": "Beat ALL 8 Fire Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/eed1085c2aa9ac2428725f3767468d047c170830.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/eed1085c2aa9ac2428725f3767468d047c170830.jpg",
+   "rarity": 20.1
   },
   {
    "key": "complete_realm4",
    "name": "MIND",
    "description": "Beat ALL Mind Levels",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/367088389bf2e97976cba6f16193d11425d90a83.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/367088389bf2e97976cba6f16193d11425d90a83.jpg",
+   "rarity": 17
   },
   {
    "key": "freestyle_300000",
    "name": "Pretending I'm a Superman!",
    "description": "Score a 300,000 point combo in freestyle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/90cbd2cdc6f57d8ca909c51b03e945a2743bf93f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/90cbd2cdc6f57d8ca909c51b03e945a2743bf93f.jpg",
+   "rarity": 0.4
   },
   {
    "key": "freestyle_edgecancel",
    "name": "InZain",
    "description": "Edgecancel 15 times in one combo in freestyle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/63177579f0330d4df345e5cbe206fc0742aebc76.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/63177579f0330d4df345e5cbe206fc0742aebc76.jpg",
+   "rarity": 0.4
   },
   {
    "key": "freestyle_every_special",
    "name": "Okay Andy Anderson",
+   "description": "Do every special in one combo in freestyle",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/886c49425b572e81542149bdf0116fb87e64f108.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.3
   },
   {
    "key": "freestyle_multishine",
    "name": "Seizure Warning",
    "description": "Multishine 50 times in one combo in freestyle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/6f994f6e14087007e725b1aa9a146161bb675c9f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/6f994f6e14087007e725b1aa9a146161bb675c9f.jpg",
+   "rarity": 0.9
   },
   {
    "key": "splusrank",
    "name": "S+ Rank",
    "description": "Earn an S+ Rank on any Level",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/fef84797f9f74f8e1082b72aa74cc93957b6fecd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/fef84797f9f74f8e1082b72aa74cc93957b6fecd.jpg",
+   "rarity": 15.3
   },
   {
    "key": "srank",
    "name": "S Rank",
    "description": "Earn an S Rank on any Level",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/c278d591097e6fa812d10680ee376ee814398d3e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/c278d591097e6fa812d10680ee376ee814398d3e.jpg",
+   "rarity": 25.4
   },
   {
    "key": "volley100",
    "name": "Polyball Gods",
    "description": "Achieve 100 consecutive hits in Polyball",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/1b9d6d1763b35b2e94ae237d337aaa557f9f907d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/1b9d6d1763b35b2e94ae237d337aaa557f9f907d.jpg",
+   "rarity": 0.6
   },
   {
    "key": "volley25",
    "name": "Professionals",
    "description": "Achieve 25 consecutive hits in Polyball",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/520fdb3dd5cd8ac29eb897132447f8d0eb1dcaa7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/520fdb3dd5cd8ac29eb897132447f8d0eb1dcaa7.jpg",
+   "rarity": 4
   },
   {
    "key": "volley50",
    "name": "Sweaty Palms",
    "description": "Achieve 50 consecutive hits in Polyball",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/6b7612d7486b1209933335795634f263c4849baa.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2226160/6b7612d7486b1209933335795634f263c4849baa.jpg",
+   "rarity": 2
   }
  ],
  "raw": {

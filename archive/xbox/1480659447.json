@@ -1,10 +1,10 @@
 {
  "provider": "xbox",
  "title": "Minecraft: Xbox 360 Edition",
- "updated": "2026-10-24",
+ "updated": "2026-11-23",
  "id": "1480659447",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 16,
  "total": 93,
  "first": "2012-05-13",
@@ -18,7 +18,8 @@
    "name": "Cow Tipper",
    "description": "Harvest some leather.",
    "unlocked": true,
-   "points": 15
+   "points": 15,
+   "rarity": 62.89
   },
   {
    "key": "2",
@@ -26,7 +27,8 @@
    "description": "Punch a tree until the block of wood pops out.",
    "unlocked": true,
    "date": "2012-05-13T18:51:34-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 72.68
   },
   {
    "key": "1",
@@ -34,7 +36,8 @@
    "description": "Open your inventory.",
    "unlocked": true,
    "date": "2012-05-13T18:58:13-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 75.54
   },
   {
    "key": "3",
@@ -42,7 +45,8 @@
    "description": "Craft a workbench with four blocks of wooden planks.",
    "unlocked": true,
    "date": "2012-05-13T19:10:37-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 67.49
   },
   {
    "key": "5",
@@ -50,7 +54,8 @@
    "description": "Construct a furnace out of eight cobblestone blocks.",
    "unlocked": true,
    "date": "2012-05-13T19:10:56-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 56.37
   },
   {
    "key": "6",
@@ -58,7 +63,8 @@
    "description": "Smelt an iron ingot.",
    "unlocked": true,
    "date": "2012-05-13T19:15:47-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 47.7
   },
   {
    "key": "7",
@@ -66,7 +72,8 @@
    "description": "Use planks and sticks to make a hoe.",
    "unlocked": true,
    "date": "2012-08-12T19:01:37-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 42.51
   },
   {
    "key": "4",
@@ -74,7 +81,8 @@
    "description": "Use planks and sticks to make a pickaxe.",
    "unlocked": true,
    "date": "2012-08-12T19:01:37-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 62.32
   },
   {
    "key": "14",
@@ -82,7 +90,8 @@
    "description": "Use planks and sticks to make a sword.",
    "unlocked": true,
    "date": "2012-08-12T19:01:38-05:00",
-   "points": 10
+   "points": 10,
+   "rarity": 54.89
   },
   {
    "key": "8",
@@ -90,7 +99,8 @@
    "description": "Turn wheat into bread.",
    "unlocked": true,
    "date": "2012-08-12T19:01:38-05:00",
-   "points": 20
+   "points": 20,
+   "rarity": 37.65
   },
   {
    "key": "10",
@@ -98,7 +108,8 @@
    "description": "Construct a better pickaxe.",
    "unlocked": true,
    "date": "2012-08-12T19:01:38-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 56.37
   },
   {
    "key": "11",
@@ -106,7 +117,8 @@
    "description": "Catch and cook a fish!",
    "unlocked": true,
    "date": "2012-08-12T19:01:38-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 24.81
   },
   {
    "key": "12",
@@ -114,7 +126,8 @@
    "description": "Travel by minecart to a point at least 500m in a single direction from where you started.",
    "unlocked": true,
    "date": "2012-08-12T19:01:38-05:00",
-   "points": 40
+   "points": 40,
+   "rarity": 9.17
   },
   {
    "key": "15",
@@ -122,7 +135,8 @@
    "description": "Attack and destroy a monster.",
    "unlocked": true,
    "date": "2012-08-12T19:01:38-05:00",
-   "points": 20
+   "points": 20,
+   "rarity": 60.81
   },
   {
    "key": "21",
@@ -130,7 +144,8 @@
    "description": "Construct a Nether Portal.",
    "unlocked": true,
    "date": "2012-08-12T19:01:39-05:00",
-   "points": 40
+   "points": 40,
+   "rarity": 21.11
   },
   {
    "key": "19",
@@ -138,7 +153,8 @@
    "description": "Construct one type of each tool (one pickaxe, one spade, one axe and one hoe).",
    "unlocked": true,
    "date": "2012-08-12T19:01:39-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 45.93
   },
   {
    "key": "20",
@@ -146,7 +162,8 @@
    "description": "Construct a Dispenser.",
    "unlocked": true,
    "date": "2012-08-12T19:01:39-05:00",
-   "points": 20
+   "points": 20,
+   "rarity": 15.37
   }
  ],
  "raw": {
@@ -369,7 +386,7 @@
      "timeUnlocked": "2012-08-13T00:01:37.7800000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 42.52
+      "currentPercentage": 42.51
      }
     },
     {
@@ -391,7 +408,7 @@
      "timeUnlocked": "2012-08-13T00:01:37.1130000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 62.33
+      "currentPercentage": 62.32
      }
     },
     {

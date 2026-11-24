@@ -1,16 +1,17 @@
 {{/* Retro terminal-style completion meter for achievements — a real styled
      element (bordered track + a percentage-width fill div), not literal
      Unicode block characters, so it stays accessible and font-independent.
-     Context: a dict with "unlocked" and "total". */}}
+     Context: a dict with "unlocked" and "total"; optional "scaled" colors the
+     fill and percentage red→green by completion, gold at 100%. */}}
 {{- $unlocked := .unlocked | default 0 -}}
 {{- $total := .total | default 0 -}}
 {{- $pct := 0 -}}
 {{- if gt $total 0 -}}
   {{- $pct = int (math.Round (div (mul $unlocked 100.0) $total)) -}}
 {{- end -}}
-<span class="ps-meter" role="meter" aria-valuenow="{{ $pct }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $unlocked }} of {{ $total }} achievements unlocked">
+<span class="ps-meter{{ if .scaled }} ps-meter--scaled{{ if ge $pct 100 }} ps-meter--complete{{ end }}{{ end }}" style="--pct: {{ div $pct 100.0 }}" role="meter" aria-valuenow="{{ $pct }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $unlocked }} of {{ $total }} achievements unlocked">
   <span class="ps-meter__track">
-    <span class="ps-meter__fill" style="--pct: {{ div $pct 100.0 }}"></span>
+    <span class="ps-meter__fill"></span>
   </span>
   <span class="ps-meter__pct">{{ $pct }}%</span>
 </span>

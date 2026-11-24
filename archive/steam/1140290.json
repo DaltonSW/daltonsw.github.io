@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Murder by Numbers",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "1140290",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 4,
  "total": 4,
  "first": "2020-06-07",
@@ -24,7 +24,8 @@
    "description": "Complete Case 1",
    "unlocked": true,
    "date": "2020-06-07T17:06:41-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/e24e70b1f4f8b6444b623e749e10937a5f339de0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/e24e70b1f4f8b6444b623e749e10937a5f339de0.jpg",
+   "rarity": 58.9
   },
   {
    "key": "ACH_COMPLETE_CASE_2",
@@ -32,7 +33,8 @@
    "description": "Complete Case 2",
    "unlocked": true,
    "date": "2020-06-17T19:33:35-05:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/4cc4786ef5054d86a420315b46a6d0c9ab50a24a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/4cc4786ef5054d86a420315b46a6d0c9ab50a24a.jpg",
+   "rarity": 42.3
   },
   {
    "key": "ACH_COMPLETE_CASE_3",
@@ -40,7 +42,8 @@
    "description": "Complete Case 3",
    "unlocked": true,
    "date": "2021-03-07T19:32:02-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/a82d1fe8bed23965d2a7783053aa8b02a60a0003.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/a82d1fe8bed23965d2a7783053aa8b02a60a0003.jpg",
+   "rarity": 33.4
   },
   {
    "key": "ACH_COMPLETE_CASE_4",
@@ -48,7 +51,16 @@
    "description": "Complete Case 4",
    "unlocked": true,
    "date": "2021-03-10T21:35:06-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/d99c14d6f7be10915fcb1beec12cdf59a823849b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1140290/d99c14d6f7be10915fcb1beec12cdf59a823849b.jpg",
+   "rarity": 26.9
+  }
+ ],
+ "mastery": [
+  {
+   "scope": "all",
+   "date": "2021-03-10",
+   "unlocked": 4,
+   "basis": "100%"
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Her Story",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "368370",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 13,
  "total": 13,
  "first": "2022-01-02",
@@ -21,34 +21,42 @@
   {
    "key": "Achievement_Clip_Rapunzel",
    "name": "It's a happy ending.",
+   "description": "Rapunzel's story",
    "unlocked": true,
    "date": "2022-01-02T13:30:10-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/fdfe01cf04ff53ed6c10dfbdc49bb1165e70fd1f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 64.5
   },
   {
    "key": "Achievement_Clip_Coffee",
    "name": "Spilt Coffee",
+   "description": "Fuck!",
    "unlocked": true,
    "date": "2022-01-02T14:40:14-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/edd7df201c287c43168a5b2a435aef82712ce294.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 47.2
   },
   {
    "key": "Achievement_Clip_Tattoo",
    "name": "Expressing My Individuality",
+   "description": "It's a snake and an apple",
    "unlocked": true,
    "date": "2022-01-02T15:04:09-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/76281d7f55c9b4eafbfd98fa39c42f9b92c831ca.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 49.2
   },
   {
    "key": "Achievement_Clip_Kiss",
    "name": "Romantic",
+   "description": "He asked me to kiss him",
    "unlocked": true,
    "date": "2022-01-02T15:05:40-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/36988c7b3cd0d9b73b4b8da1f738ca10c8e95eeb.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 44.6
   },
   {
    "key": "Achievement_50Percent",
@@ -56,23 +64,28 @@
    "description": "50% of database accessed",
    "unlocked": true,
    "date": "2022-01-02T15:18:03-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/0de0c49457be31a16233aa380da16f529e55f38d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/0de0c49457be31a16233aa380da16f529e55f38d.jpg",
+   "rarity": 45.2
   },
   {
    "key": "Achievement_Clip_Masterchef",
    "name": "Have you ever eaten fennel?",
+   "description": "Masterchef",
    "unlocked": true,
    "date": "2022-01-02T15:22:13-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/1f850bc1b358ea6193c1c3d82dfb8a8f9131d19e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 61.1
   },
   {
    "key": "Achievement_Clip_Song",
    "name": "A Traditional Ballad",
+   "description": "The Wind and the Rain",
    "unlocked": true,
    "date": "2022-01-02T15:53:40-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/a8a63c8df130bdb01c71951306f0d4fb0b905bb8.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 62.8
   },
   {
    "key": "Achievement_75Percent",
@@ -80,7 +93,8 @@
    "description": "75% of database accessed",
    "unlocked": true,
    "date": "2022-01-02T16:15:51-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/1c990a8b15dc5d3666268826e6dcd25cbb3b051b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/1c990a8b15dc5d3666268826e6dcd25cbb3b051b.jpg",
+   "rarity": 31.7
   },
   {
    "key": "Achievement_100Percent",
@@ -88,23 +102,28 @@
    "description": "100% of database accessed",
    "unlocked": true,
    "date": "2022-01-02T16:55:24-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/d13ced40300486363f8313cd66fd4876408d4bcd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/d13ced40300486363f8313cd66fd4876408d4bcd.jpg",
+   "rarity": 21.3
   },
   {
    "key": "Achievement_GameEnding",
    "name": "The Reflection",
+   "description": "Sarah has logged off and crossed the road",
    "unlocked": true,
    "date": "2022-01-02T16:57:50-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/e2ba214d7011c0f8b94f02707184c55baab3a564.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 48.5
   },
   {
    "key": "Achievement_Unlock",
    "name": "More Than a Guest",
+   "description": "Database unlocked",
    "unlocked": true,
    "date": "2022-01-02T16:58:22-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/717c29f3f792fd7d673a378dc427b12589aa6860.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 23.1
   },
   {
    "key": "Achievement_Random",
@@ -112,7 +131,8 @@
    "description": "Random Access",
    "unlocked": true,
    "date": "2022-01-02T16:58:26-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/3641fdefa5d9994410648effae38bbbfe741c410.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/3641fdefa5d9994410648effae38bbbfe741c410.jpg",
+   "rarity": 25.1
   },
   {
    "key": "Achievement_Game_Draw",
@@ -120,7 +140,16 @@
    "description": "Not all games have winners and losers",
    "unlocked": true,
    "date": "2022-01-02T17:01:54-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/880e9fea413ece04b4c7da7cee4e713b584f31fd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/880e9fea413ece04b4c7da7cee4e713b584f31fd.jpg",
+   "rarity": 13.4
+  }
+ ],
+ "mastery": [
+  {
+   "scope": "all",
+   "date": "2022-01-02",
+   "unlocked": 13,
+   "basis": "100%"
   }
  ],
  "raw": {

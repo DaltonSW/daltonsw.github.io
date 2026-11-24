@@ -1,10 +1,10 @@
 {
  "provider": "xbox",
  "title": "Halo: Reach",
- "updated": "2026-10-24",
+ "updated": "2026-11-23",
  "id": "1297287259",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 13,
  "total": 69,
  "first": "2011-12-16",
@@ -18,7 +18,8 @@
    "name": "Doctor, Doctor",
    "description": "Used a Health Pack to replenish life after taking body damage.",
    "unlocked": true,
-   "points": 5
+   "points": 5,
+   "rarity": 64.9
   },
   {
    "key": "77",
@@ -26,7 +27,8 @@
    "description": "Performed an Assassination on an enemy.",
    "unlocked": true,
    "date": "2011-12-16T19:43:57-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 57.42
   },
   {
    "key": "73",
@@ -34,7 +36,8 @@
    "description": "Killed 2 vehicles at once with the Target Locator during the 3rd mission.",
    "unlocked": true,
    "date": "2011-12-17T09:11:46-06:00",
-   "points": 25
+   "points": 25,
+   "rarity": 22.21
   },
   {
    "key": "76",
@@ -42,7 +45,8 @@
    "description": "Completed the 3rd mission on Normal or harder.",
    "unlocked": true,
    "date": "2011-12-17T09:47:18-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 41.75
   },
   {
    "key": "85",
@@ -50,7 +54,8 @@
    "description": "Reached the rank of Corporal in the UNSC.",
    "unlocked": true,
    "date": "2011-12-17T11:24:45-06:00",
-   "points": 15
+   "points": 15,
+   "rarity": 58.88
   },
   {
    "key": "98",
@@ -58,7 +63,8 @@
    "description": "Earned a First Strike Medal in a Matchmaking game.",
    "unlocked": true,
    "date": "2011-12-19T17:11:41-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 36.4
   },
   {
    "key": "79",
@@ -66,7 +72,8 @@
    "description": "Killed the Elite Zealot before he escaped during the 5th mission.",
    "unlocked": true,
    "date": "2011-12-20T21:02:03-06:00",
-   "points": 25
+   "points": 25,
+   "rarity": 32.23
   },
   {
    "key": "78",
@@ -74,7 +81,8 @@
    "description": "Completed the 4th mission on Normal or harder.",
    "unlocked": true,
    "date": "2011-12-21T16:51:26-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 36.39
   },
   {
    "key": "71",
@@ -82,7 +90,8 @@
    "description": "Killed 10 enemies in a Firefight or Campaign session with the DMR.",
    "unlocked": true,
    "date": "2011-12-21T17:04:01-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 47.2
   },
   {
    "key": "80",
@@ -90,7 +99,8 @@
    "description": "Completed the 5th mission on Normal or harder.",
    "unlocked": true,
    "date": "2011-12-21T17:37:07-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 33.84
   },
   {
    "key": "74",
@@ -98,7 +108,8 @@
    "description": "Traded weapons with an AI ally in Campaign.",
    "unlocked": true,
    "date": "2011-12-21T18:18:09-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 48.14
   },
   {
    "key": "68",
@@ -106,7 +117,8 @@
    "description": "Killed 10 enemies in a Firefight or Campaign session with the M6G pistol.",
    "unlocked": true,
    "date": "2011-12-21T18:26:07-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 36
   },
   {
    "key": "82",
@@ -114,7 +126,8 @@
    "description": "Completed the 6th mission on Normal or harder.",
    "unlocked": true,
    "date": "2011-12-21T18:29:57-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 31.88
   },
   {
    "key": "84",
@@ -122,7 +135,8 @@
    "description": "Completed the 7th mission on Normal or harder.",
    "unlocked": true,
    "date": "2011-12-22T18:45:17-06:00",
-   "points": 10
+   "points": 10,
+   "rarity": 30.17
   }
  ],
  "raw": {
@@ -147,7 +161,7 @@
      "timeUnlocked": "2011-12-23T00:45:17.0270000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 30.18
+      "currentPercentage": 30.17
      }
     },
     {
@@ -191,7 +205,7 @@
      "timeUnlocked": "2011-12-22T00:26:07.4870000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 36.01
+      "currentPercentage": 36
      }
     },
     {
@@ -345,7 +359,7 @@
      "timeUnlocked": "2011-12-17T17:24:45.6870000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 58.89
+      "currentPercentage": 58.88
      }
     },
     {
@@ -433,7 +447,7 @@
      "timeUnlocked": "2011-12-17T01:43:57.7170000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 57.43
+      "currentPercentage": 57.42
      }
     }
    ],

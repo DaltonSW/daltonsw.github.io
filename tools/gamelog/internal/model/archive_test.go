@@ -556,3 +556,13 @@ func TestMergeAchievement_DescribedNameReplacesSlug(t *testing.T) {
 		t.Errorf("merged = %+v, want the described entry", got)
 	}
 }
+
+func TestMergeAchievement_RarityKeepsLastReported(t *testing.T) {
+	old := ArchivedAchievement{Key: "1", Rarity: 12.5}
+	if got := mergeAchievement(old, ArchivedAchievement{Key: "1"}); got.Rarity != 12.5 {
+		t.Errorf("unreported rarity erased the old one: %v", got.Rarity)
+	}
+	if got := mergeAchievement(old, ArchivedAchievement{Key: "1", Rarity: 9}); got.Rarity != 9 {
+		t.Errorf("fresh rarity should replace old: %v", got.Rarity)
+	}
+}

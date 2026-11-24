@@ -158,6 +158,12 @@ type ArchivedAchievement struct {
 	// "002", … for each DLC pack. It's what lets base-game and DLC mastery be
 	// dated separately. No other provider reports anything like it.
 	Group string `json:"group,omitempty"`
+	// Rarity is the percentage (0-100) of the provider's players who have
+	// earned this achievement, as of the fetch that last reported it. It
+	// drifts over time, so a fresh non-zero value replaces the old one; zero
+	// means "not reported", never "nobody has it". Reported by PSN, Xbox and
+	// RetroAchievements; Steam and Exophase don't supply it.
+	Rarity float64 `json:"rarity,omitempty"`
 }
 
 // ProviderRecord is everything one service knows about one game.
@@ -371,6 +377,9 @@ func mergeAchievement(old, fresh ArchivedAchievement) ArchivedAchievement {
 	out.Tier = FirstNonEmpty(fresh.Tier, old.Tier)
 	out.Group = FirstNonEmpty(fresh.Group, old.Group)
 	out.Hidden = fresh.Hidden || old.Hidden
+	if fresh.Rarity == 0 {
+		out.Rarity = old.Rarity
+	}
 	if fresh.Points == 0 {
 		out.Points = old.Points
 	}
@@ -519,6 +528,10 @@ type EarnedAchievement struct {
 	Platform    string `yaml:"platform,omitempty"`
 	Hidden      bool   `yaml:"hidden,omitempty"`
 
+	// Rarity is the percent of players who earned it; omitted when the
+	// provider didn't report one.
+	Rarity float64 `yaml:"rarity,omitempty"`
+
 	// Subset names the RetroAchievements subset this one came from, blank for
 	// the base set. Subset unlocks stay in this one flat list rather than
 	// hiding inside SubsetBreakdown: they were genuinely earned, and the
@@ -648,6 +661,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				Provider:    provider,
 				Platform:    rec.Platform,
 				Hidden:      a.Hidden,
+				Rarity:      a.Rarity,
 				Subset:      subsetName,
 			})
 		}

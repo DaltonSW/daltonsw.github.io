@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Oxenfree",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "388880",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 4,
  "total": 13,
  "first": "2022-01-03",
@@ -23,7 +23,8 @@
    "description": "Jump the crazy chasm in the woods.",
    "unlocked": true,
    "date": "2022-01-03T16:19:06-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/2bdeafbe6877d9a941608666b9acf9ff8ce2ba82.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/2bdeafbe6877d9a941608666b9acf9ff8ce2ba82.jpg",
+   "rarity": 49.6
   },
   {
    "key": "REN_NONA_ALONE",
@@ -31,7 +32,8 @@
    "unlocked": true,
    "date": "2022-01-03T21:50:26-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/9a071bf9f39fb3690550becacaf01da4afb92dea.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 20.2
   },
   {
    "key": "JONAS_BROTHER",
@@ -39,7 +41,8 @@
    "unlocked": true,
    "date": "2022-01-03T21:51:17-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/b6db10315ff72de9ee811efd9c005b8f0a1eda94.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 38.5
   },
   {
    "key": "STORY_COMPLETE",
@@ -47,70 +50,80 @@
    "description": "Complete the story.",
    "unlocked": true,
    "date": "2022-01-03T21:52:32-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/0968daef81491af1066b490ebcd50f9d6b01db67.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/0968daef81491af1066b490ebcd50f9d6b01db67.jpg",
+   "rarity": 44
   },
   {
    "key": "ADLER_PART1",
    "name": "Adler Letters, Pt. 1",
    "description": "Collect 4 of Maggie's letters.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/cdd63638da0555e76354f467a483879574037ab6.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/cdd63638da0555e76354f467a483879574037ab6.jpg",
+   "rarity": 25.7
   },
   {
    "key": "ADLER_PART2",
    "name": "Adler Letters, Pt. 2",
    "description": "Collect 8 of Maggie's letters.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/080d061e4a60a848f12033864b49a19820f915ea.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/080d061e4a60a848f12033864b49a19820f915ea.jpg",
+   "rarity": 14.5
   },
   {
    "key": "ADLER_PART3",
    "name": "Adler Letters, Pt. 3",
    "description": "Collect all of Maggie's letters.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/c0fd8394789ca2c0e384f64952564ca280076817.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/c0fd8394789ca2c0e384f64952564ca280076817.jpg",
+   "rarity": 11.3
   },
   {
    "key": "FRIENDS_HATE",
    "name": "I'm the Firestarter",
    "description": "Make enemies with all of your friends.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/3e84053f4855505d3623926dc31ecb31671f2410.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/3e84053f4855505d3623926dc31ecb31671f2410.jpg",
+   "rarity": 3
   },
   {
    "key": "GHOST_STORIES",
    "name": "Ghost Stories",
    "description": "Find all hidden frequencies.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/097cb86df8d6d237134f5044cb48ec697bb1b645.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/097cb86df8d6d237134f5044cb48ec697bb1b645.jpg",
+   "rarity": 7.5
   },
   {
    "key": "MICHAEL_SAVED",
    "name": "Thicker than Water",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/c8a16eb39823d7ec4731ad94a5f1920d5a1a619e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.1
   },
   {
    "key": "NO_DIALOGUE",
    "name": "The Strong, Silent Type",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/1643bc36ae1ff9bb5e53a92857e9453a1edc4cf7.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.5
   },
   {
    "key": "REN_NONA_TOGETHER",
    "name": "Matchmaker",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/da3e71c12b613125e024f1d0f575329923db6bb0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 29
   },
   {
    "key": "SLAP_REN",
    "name": "Renjamin Spanklin",
    "description": "Slap Ren in the face.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/7676152082ed3f982d961cf06806c436538be023.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/7676152082ed3f982d961cf06806c436538be023.jpg",
+   "rarity": 12.9
   }
  ],
  "raw": {

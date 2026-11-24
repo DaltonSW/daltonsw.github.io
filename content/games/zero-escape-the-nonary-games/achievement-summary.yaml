@@ -11,24 +11,28 @@ providers:
       last_played: "2026-11-09"
 earned:
     - name: We All Die By a Yellow Submarine
+      description: Saw the Submarine ending in 999.
       date: "2022-01-08T08:42:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/477740/75a9471029a5a12376b19f959eb5af074e0157a6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Cut and Run
+      description: Saw the Knife ending in 999.
       date: "2022-01-08T16:54:10-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/477740/75a9471029a5a12376b19f959eb5af074e0157a6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Let Me Ax You a Question
+      description: Saw the Ax ending in 999.
       date: "2022-01-08T17:35:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/477740/75a9471029a5a12376b19f959eb5af074e0157a6.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Chance of Loss is Not Zero
+      description: Saw the Zero Lost ending in 999.
       date: "2022-01-08T22:11:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/477740/75a9471029a5a12376b19f959eb5af074e0157a6.jpg
       provider: steam
@@ -47,6 +51,7 @@ earned:
       provider: steam
       platform: PC
     - name: Don't Forget Your Towel
+      description: Finished all scenarios in 999.
       date: "2022-01-09T14:29:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/477740/fc409ad6ceba9cdc280c04ba22ed784c4aaaadfd.jpg
       provider: steam

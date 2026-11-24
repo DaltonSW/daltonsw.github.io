@@ -19,13 +19,14 @@ func steamStub(t *testing.T, handler http.HandlerFunc) {
 	srv := httptest.NewServer(handler)
 	t.Cleanup(srv.Close)
 
-	oldAch, oldOwned, oldVanity, oldSchema := PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL
+	oldAch, oldOwned, oldVanity, oldSchema, oldGlobal := PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL, GlobalPercentagesURL
 	PlayerAchievementsURL = srv.URL + "/achievements"
 	OwnedGamesURL = srv.URL + "/owned"
 	ResolveVanityURL = srv.URL + "/vanity"
 	SchemaForGameURL = srv.URL + "/schema"
+	GlobalPercentagesURL = srv.URL + "/global"
 	t.Cleanup(func() {
-		PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL = oldAch, oldOwned, oldVanity, oldSchema
+		PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL, GlobalPercentagesURL = oldAch, oldOwned, oldVanity, oldSchema, oldGlobal
 	})
 }
 
@@ -245,7 +246,7 @@ func TestSteamSuggestRange_AchievedButZeroUnlockTimeIgnored(t *testing.T) {
 
 func TestFetchSteamRecord_CapturesPlaytimeBreakdown(t *testing.T) {
 	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Query().Get("l") == "" {
+		if r.URL.Path == "/achievements" && r.URL.Query().Get("l") == "" {
 			t.Error("expected a language parameter so names are returned")
 		}
 		w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
@@ -289,6 +290,8 @@ func TestFetchSteamRecord_AttachesIconsFromSchema(t *testing.T) {
 			w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
 			  {"apiname":"A","achieved":1,"unlocktime":1603510789,"name":"Escaped","description":"d"}
 			]}}`))
+		case "/global":
+			w.Write([]byte(`{"achievementpercentages":{"achievements":[{"name":"A","percent":"12.5"}]}}`))
 		case "/schema":
 			w.Write([]byte(`{"game":{"availableGameStats":{"achievements":[
 			  {"name":"A","displayName":"Escaped","icon":"https://cdn.example/a.jpg","icongray":"https://cdn.example/a-gray.jpg"}
@@ -306,6 +309,9 @@ func TestFetchSteamRecord_AttachesIconsFromSchema(t *testing.T) {
 	if len(rec.Achievements) != 1 || rec.Achievements[0].Icon != "https://cdn.example/a.jpg" {
 		t.Errorf("icon not attached: %+v", rec.Achievements)
 	}
+	if rec.Achievements[0].Rarity != 12.5 {
+		t.Errorf("rarity not attached: %+v", rec.Achievements)
+	}
 }
 
 // A schema fetch failing (a delisted game, a transient error) must not fail
@@ -317,7 +323,7 @@ func TestFetchSteamRecord_SchemaFailureIsNotFatal(t *testing.T) {
 			w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
 			  {"apiname":"A","achieved":1,"unlocktime":1603510789,"name":"Escaped","description":"d"}
 			]}}`))
-		case "/schema":
+		case "/schema", "/global":
 			w.WriteHeader(http.StatusInternalServerError)
 		default:
 			t.Errorf("unexpected path %s", r.URL.Path)
@@ -352,5 +358,20 @@ func TestFetchSteamRecord_FailureIsMarked(t *testing.T) {
 	}
 	if rec.Fetched != "" {
 		t.Error("Fetched must only be set on a successful fetch")
+	}
+}
+
+// Shape taken from a live response: v0002 sends percent as a string.
+func TestGetGlobalPercentages(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{"achievementpercentages":{"achievements":[{"name":"A","percent":"34.5"},{"name":"B","percent":9.0}]}}`))
+	})
+	c := &SteamClient{}
+	got, err := c.GetGlobalPercentages(context.Background(), "1000030")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got["A"] != 34.5 || got["B"] != 9 {
+		t.Errorf("got %v", got)
 	}
 }

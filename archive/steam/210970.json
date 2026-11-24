@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Witness",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "210970",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 1,
  "total": 2,
  "first": "2016-02-07",
@@ -23,14 +23,17 @@
    "description": "Finished.",
    "unlocked": true,
    "date": "2016-02-07T19:17:09-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/210970/8798d84c285cb937acb7daab3d100e6d97f71f09.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/210970/8798d84c285cb937acb7daab3d100e6d97f71f09.jpg",
+   "rarity": 18.8
   },
   {
    "key": "challenge",
    "name": "Challenge",
+   "description": "Completed a certain challenge.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/210970/344505a37b06acf0ce1e877f872acc91d48807dc.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 5.4
   }
  ],
  "raw": {

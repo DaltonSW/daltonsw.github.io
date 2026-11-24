@@ -1,14 +1,14 @@
-unlocked: 40
+unlocked: 41
 total: 56
-playtime_mins: 6008
-last_played: "2026-11-22"
+playtime_mins: 6194
+last_played: "2026-11-23"
 providers:
     - provider: steam
       platform: PC
-      unlocked: 40
+      unlocked: 41
       total: 56
-      playtime_mins: 6008
-      last_played: "2026-11-22"
+      playtime_mins: 6194
+      last_played: "2026-11-23"
 earned:
     - name: Awakened Power
       description: Obtained Orpheus.(Persona 3 Reload main story mode only)
@@ -257,5 +257,11 @@ earned:
       description: Invited Elizabeth to your room.
       date: "2026-11-19T18:42:11-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/eec895da4598ca4112a53ebcc662720154eb1a92.jpg
+      provider: steam
+      platform: PC
+    - name: The Grindset Mindset
+      description: Earned over 50,000 yen total from part-time jobs.
+      date: "2026-11-22T15:25:29-06:00"
+      icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2161700/73ad8f86e6847d8874e7aa9622108132cd71a2af.jpg
       provider: steam
       platform: PC

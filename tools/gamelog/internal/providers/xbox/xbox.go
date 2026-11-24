@@ -143,6 +143,9 @@ type X360Achievement struct {
 	Gamerscore   int    `json:"gamerscore"`
 	Unlocked     bool   `json:"unlocked"`
 	TimeUnlocked string `json:"timeUnlocked"`
+	Rarity       struct {
+		CurrentPercentage float64 `json:"currentPercentage"`
+	} `json:"rarity"`
 }
 
 // X360Achievements fetches the unlocked-achievement list for one legacy
@@ -231,6 +234,7 @@ func FetchRecord(ctx context.Context, client *XBLClient, titleID string) (*model
 			Name:        a.Name,
 			Description: a.Description,
 			Points:      a.Gamerscore,
+			Rarity:      a.Rarity.CurrentPercentage,
 		}
 		if a.Unlocked {
 			entry.Unlocked = true

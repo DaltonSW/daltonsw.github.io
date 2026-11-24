@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Starbound",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "211820",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 51,
  "platform": "PC",
@@ -15,359 +15,461 @@
   {
    "key": "10tenantquests",
    "name": "A Helping Hand",
+   "description": "Complete 10 quests for your colonists. Feel like an asset to the community!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/db6e582b49386f058279c38b4bb496f95ce5ba2a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 5.1
   },
   {
    "key": "25tenantquests",
    "name": "A Cheeky Chore",
+   "description": "Complete 25 quests for your colonists. These guys sure do ask a lot of you don't they...",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/fe18b4392cb800c581e061f8c9359d788de657a0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.5
   },
   {
    "key": "50tenantquests",
    "name": "A Tireless Task",
+   "description": "Complete 50 quests for your colonists. When did this become your full time job?",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/2bf1b14baef311e96582b76bb0786f07c1c6c023.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.4
   },
   {
    "key": "apexmission",
    "name": "The Resilient",
+   "description": "Return Lana Blake to the outpost.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/e85e8575034d23c15e9d84c419c2e1ca24f0f98e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 17.2
   },
   {
    "key": "avianmission",
    "name": "The Devout",
+   "description": "Return Tonauac to the outpost.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/ad3e8525af647282a69d395ec4acacccb0475fc6.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 20.7
   },
   {
    "key": "capturemonster",
    "name": "Monster Whisperer",
+   "description": "Capture a monster. How does it fit in that tiny ball?",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/9076ec4287bcb1466d8bfaeb3ace4a66788e72a2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 22.3
   },
   {
    "key": "catchallbugs",
    "name": "Bug Free",
+   "description": "Catch 42 unique bugs. Give them all funny names.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/2ce048f2e52e3542519c44e2576ee5709d3f97b1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1
   },
   {
    "key": "collectallfruit",
    "name": "Starbound Valley",
+   "description": "Harvest 30 unique crops. Start thinking about who you'd like to romance and that barn extension.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/076a08fafa7c790e1b45e3ca4d54efac4922a22c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15
   },
   {
    "key": "collectcodex",
    "name": "Well Read",
+   "description": "Find 100 unique codex items. Study them all, prepare for a pop quiz.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/32615b91639c6d004ebc2fc079a2853a55272f08.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.2
   },
   {
    "key": "collectionaf",
    "name": "Mint Condition",
+   "description": "Collect at least 50 unique action figures. Insist to your friends they're actually called statuettes.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/87a21eb6fae1925418172d206c7a60d6c3c58c37.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.1
   },
   {
    "key": "completequest",
    "name": "Adventurer Eventuality ",
+   "description": "Complete a quest! Joke's on you, there isn't any XP in this game.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/e8753023cd2715bd881dd1652325fafea12c1116.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 82.1
   },
   {
    "key": "cookallfood",
    "name": "Culinary Century",
+   "description": "Prepare at least 100 unique dishes. Bonus points if they're edible.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/78e3e374a6cb24e028302cc2b74146969d2acf1c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.5
   },
   {
    "key": "craftallarmors",
    "name": "Armour Aficionado",
+   "description": "Collect 210 unique pieces of armour. See how many you can wear at the same time. (Spoiler, it's 3).",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/318bd5d81fed077885364df60cba099a30ad9592.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1
   },
   {
    "key": "craftarmor",
    "name": "Protected Protector",
+   "description": "Obtain an entire set of armour. Now use dye to make your armour fabulous.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/c0395a13f66b7d55710bf42b62ecc31d35aa30b1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 45.7
   },
   {
    "key": "crampedcolony",
    "name": "Cramped Colony",
+   "description": "Build 5 homes in a very small space. This isn't a healthy way for anyone to live.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/cfccf52e570484e609ad20bb8c3c1c32e37a998a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.7
   },
   {
    "key": "destroyruin",
    "name": "The Protector",
+   "description": "Defeat the Ruin.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/50053d80f28db091a0e13a216529c11cf2241181.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 13.7
   },
   {
    "key": "everyspeciescrew",
    "name": "A Motley Crew",
+   "description": "Recruit one crew member from every race. It's like a teeny tiny protectorate.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/5e5ca345b73de124df9287e33ec8db1305879e51.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.2
   },
   {
    "key": "findallfossils",
    "name": "Them Bones",
+   "description": "Unearth 55 unique fossils. Try not to pay attention to the ones that are alarmingly humanoid.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/8a96a0c2829b5c895d1c6766bffa2075d24e70c6.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.1
   },
   {
    "key": "findalpaca",
    "name": "Not a Llama",
+   "description": "Obtain a complete alpaca costume. Use it only for good!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/3842a5800792efa9edf3a7969af17e538fbdb8f3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.5
   },
   {
    "key": "findaugment",
    "name": "Augmented Reality",
+   "description": "Augment your EPP. Now it's an AEPP.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/0b79f188108a1b4d18269af93b00861a4f6bd273.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 38
   },
   {
    "key": "findbike",
    "name": "Traveling in Style",
+   "description": "Obtain a cool vehicle. Pop some sweet wheelies.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/5f853f30d12a2d74cc51263d1df668da5eb65415.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 22.7
   },
   {
    "key": "findbug",
    "name": "Bug Tracker",
+   "description": "Capture your first bug with a bug net. Esther would be proud.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/9ce9e0da4c747229c768b40a82259c450331b6ec.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 10.6
   },
   {
    "key": "findinstrument",
    "name": "Amateur Bard",
+   "description": "Collect your first musical instrument! Keep playing, even when everyone begs you to stop.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/d59abf3be32f619f2b66a9b0be5f92996b44c3bc.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 52
   },
   {
    "key": "findlore",
    "name": "Book Club",
+   "description": "Find a Codex. On Earth it's rude to read other people's diaries.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/1ce2ed6c98b5dc5de5251788f1ee2e9c321fa1f9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 52.6
   },
   {
    "key": "findoutpost",
    "name": "The Wanderer",
+   "description": "Meet Esther.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/14cc5305ff7d0b2f1957383d4c9e52d9d14ed146.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 58
   },
   {
    "key": "findpgi",
    "name": "Perfectly Generic Achievement",
+   "description": "Obtain the mythical perfectly generic item.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/9dc46c70b65a7d387a18e5ab7f279cbbdd3f8b09.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 18.7
   },
   {
    "key": "floranarena",
    "name": "King Barbarian",
+   "description": "Become champion of the arena. Crush your foes like an orange sorbet.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/413e601d0e81867a023137f4f26e706999d62635.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15.8
   },
   {
    "key": "floranmission",
    "name": "The Brave",
+   "description": "Return Nuru to the outpost.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/5762d364168df04fc073d42714721e197798d994.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 33.2
   },
   {
    "key": "gaincrew",
    "name": "First Mate",
+   "description": "Recruit your first crew member. Captain!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/c8013f30f323a237c2e501cf69960cd5413c42b0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 30.3
   },
   {
    "key": "gaintenant",
    "name": "Home Sweet Home",
+   "description": "Attract your first colonist. Make sure you treat them right.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/31ad1fe2eef2397936f07de716df8356e73ce4c9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 17.3
   },
   {
    "key": "glitchmission",
    "name": "The Loyal",
+   "description": "Return the Baron to the outpost.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/7b3df62ea1c6951fb6a806fda366bf9e6a808822.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.8
   },
   {
    "key": "harvestcrop",
    "name": "The Simple Life",
+   "description": "Harvest a crop. See what happens when you eat it.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/33e18e7db5102cbf5e10d3f24cf82b83aea65c15.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 78.4
   },
   {
    "key": "hylotlmission",
    "name": "The Wise",
+   "description": "Return Koichi to the outpost.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/19e85afabe6b5d3c03d271c1e2a3e97e3e422c5d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 25.9
   },
   {
    "key": "killbirds",
    "name": "Sweet Revenge",
+   "description": "Kill 100 small flying monsters. They had it coming.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/8a17faa76d7a1b72d0f11e39511ce9b67df64ea9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16
   },
   {
    "key": "killdreadwing",
    "name": "Ending Prohibition",
+   "description": "Defeat the dastardly Dreadwing. Bring joy to penguins everywhere.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/ab39b7ab52a1dcf0fd3d61cfb217afc2549a9244.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 29.4
   },
   {
    "key": "killinnocent",
    "name": "Villain",
+   "description": "Incapacitate an innocent bystander. You monster.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/e4697a62b514411dbac947f3d73881073665c717.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 26
   },
   {
    "key": "killmotherpoptop",
    "name": "Not in Front of the Children!",
+   "description": "Defeat Mother Poptop. Every Poptop you meet from here on out is a lonely orphan.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/0b1faab92e8eab354f191a0c13e2e1d9dd42901c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 50.4
   },
   {
    "key": "killplayer",
    "name": "Nox's Apprentice",
+   "description": "Kill another player. Unity is overrated anyway.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/66f1a6c296ce00c14563026d173696ab3dbf87c1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.5
   },
   {
    "key": "killrobotchicken",
    "name": "Too Heavy to Kick",
+   "description": "Destroy a robot chicken. Don't try to eat it.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/e9f84dfa41e7530336df8d340b7a6d4550acdbee.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.9
   },
   {
    "key": "killshockhopper",
    "name": "Shock and Awe",
+   "description": "Defeat the Shockhopper MK I. Notice it rarely hops.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/12859cc9b5dd1e6f762eee370f2c9826e3801f3e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 18
   },
   {
    "key": "largecolony",
    "name": "From the Ashes",
+   "description": "Build a large colony. Well done Protector!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/8e1185ac4d8412a28808a6dc846a2d0681da91ac.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 5.3
   },
   {
    "key": "lunarbasemission",
    "name": "The Hopeful",
+   "description": "Fix your ship.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/52d51d8bcc3702ff3583959e63911473b3f593e8.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 52
   },
   {
    "key": "maxcrew",
    "name": "Captain of the Year",
+   "description": "Recruit at least 12 crew members. Consider starting a pension plan.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/3dc9e91833f64c8b50a45f8f569e558e3ccffe09.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.3
   },
   {
    "key": "mazebound",
    "name": "You're aMAZEing!",
+   "description": "Complete Mazebound. You only need to beat it 300,000 times to win a slide whistle.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/add592a51d4fef60f760c04bca205d725eda6eb6.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.8
   },
   {
    "key": "museum",
    "name": "Cosmic Curator",
+   "description": "Complete the Cosmic Museum's cosmic collection.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/0e2aece3780688c4df8f2b84f2a5207b8be78800.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.1
   },
   {
    "key": "penguincrew",
    "name": "Feathered Friend",
+   "description": "Recruit a penguin mercenary from the Beakeasy.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/45888651a6f215a4be1197998fb5b4f0e0a9597c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.5
   },
   {
    "key": "planetblocks",
    "name": "Destroyer of Worlds",
+   "description": "Move a planet's worth of blocks. If you weren't using a Matter Manipulator you'd be ripped.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/8a668e86a25528673edcc05dc0d3509996fcf832.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1
   },
   {
    "key": "preparefood",
    "name": "Just like mum used to make!",
+   "description": "Practice your chef skills. Try not to harm anyone.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/63730461cdf390b19db484579a6a3284415cbafe.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 59.2
   },
   {
    "key": "protectorate",
    "name": "Congratulations on Your Graduation!",
+   "description": "Survive the Protectorate. It could have been worse.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/bb52d4895cdc29b2b3ffa8a66a8e0f3ef381fa92.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 82.1
   },
   {
    "key": "restorefossil",
    "name": "Alien Archaeologist",
+   "description": "Restore a complete fossil. Make wild assumptions about what it used to be.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/0b0f59ffc127f53f4e55ad5975734754d784cb21.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.6
   },
   {
    "key": "uniquetenants",
    "name": "All Walks of Life",
+   "description": "Attract 10 unique tenants. Marvel at their collective peculiarity. ",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/b8c8cf119d82cf42ef9476608241bb9a7015b046.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.6
   }
  ],
  "raw": {

@@ -11,6 +11,7 @@ providers:
       last_played: "2026-09-21"
 earned:
     - name: The Guardian
+      description: Defeated the Guardian.
       date: "2017-12-12T01:37:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/387d8bcb7169cbcef26e66c155eed304d3912237.jpg
       provider: steam
@@ -23,6 +24,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Ghost
+      description: Defeated Hexaghost.
       date: "2017-12-12T02:48:22-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/43e47f5815939abee564daca97df815e67b64b47.jpg
       provider: steam
@@ -35,6 +37,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Boss
+      description: Defeated the Slime Boss.
       date: "2017-12-12T04:21:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/f50d8cb5f4dda21c02e913ca3449d7b059c56b70.jpg
       provider: steam
@@ -47,24 +50,28 @@ earned:
       provider: steam
       platform: PC
     - name: The Automaton
+      description: Defeated the Bronze Automaton.
       date: "2017-12-12T21:11:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/05775d810fc3b0c51bd0b7b2f8c7e4de8a9895a3.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: The Collector
+      description: Defeated the Collector.
       date: "2017-12-13T00:12:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/0f3729a5c031d2dc4914c09b7b3051e797483020.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: The Champion
+      description: Defeated the Champ.
       date: "2017-12-13T23:59:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/62c44786ffa1f24c3ba6d808a1d2d8c9d8739f2a.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: The Crow
+      description: Defeated the Awakened One.
       date: "2017-12-17T22:21:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/9e913c9cd7b394a03740ae255e95b94b195f5993.jpg
       provider: steam
@@ -95,6 +102,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Time Eater
+      description: Defeated the Time Eater.
       date: "2019-03-16T14:20:27-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/92a08788e62ec08c84036cacb60524e16d56d9ed.jpg
       provider: steam
@@ -119,6 +127,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Shapes
+      description: Defeated Donu & Deca.
       date: "2019-03-18T20:20:07-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/9a068a8306d082300b39cf0107c7a942c53cddad.jpg
       provider: steam
@@ -143,6 +152,7 @@ earned:
       provider: steam
       platform: PC
     - name: Emerald+
+      description: Complete the Ending with the Silent.
       date: "2024-05-19T08:56:51-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/42ed123a504db738ba5ee0a6e425895651e6aca0.jpg
       provider: steam
@@ -161,18 +171,21 @@ earned:
       provider: steam
       platform: PC
     - name: Sapphire+
+      description: Complete the Ending with the Defect.
       date: "2026-08-13T21:06:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/fbadf0310b59be3804493b1f29817dec55a58aa7.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Ruby+
+      description: Complete the Ending with the Ironclad.
       date: "2026-08-23T09:41:33-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/72f6f4f9a7a34f6705e64b448c6f9d32329dcb3c.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: The End?
+      description: Complete the Ending with the Ironclad, Silent, and Defect.
       date: "2026-08-23T09:41:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/57c10f822ec122dd5003281fe35ab7644e4c7a6d.jpg
       provider: steam

@@ -11,6 +11,7 @@ providers:
       last_played: "2021-02-20"
 earned:
     - name: Lemons
+      description: Start the game
       date: "2021-02-20T12:00:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/93353170b437b82a3c7152110a0de72bfbec8390.jpg
       provider: steam
@@ -47,6 +48,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Sacrifice
+      description: Appeased the boss' cat with a gift
       date: "2021-02-20T12:43:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/43077fd51bc3f2bb947804036213d64d71a02e43.jpg
       provider: steam
@@ -65,12 +67,14 @@ earned:
       provider: steam
       platform: PC
     - name: Benefactor
+      description: Increase a single world parameter value at least 2 levels in one day
       date: "2021-02-20T12:52:00-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/bd5989de2f04a008ae1d27fb49bcf277578c34fb.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: This Is Fine
+      description: Drop a single world parameter value at least 2 levels in one day
       date: "2021-02-20T13:11:39-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/a644dd7e705dfddf9aa2c269510be2df61509478.jpg
       provider: steam
@@ -89,18 +93,21 @@ earned:
       provider: steam
       platform: PC
     - name: Long Live The King
+      description: Usurp Fate and take over as the new Fate
       date: "2021-02-20T13:49:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/49bd7ae7b8c24fd9382e19067eb815096b9ae8a1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Global Warming
+      description: Finish the game with highest chaos in Ecology
       date: "2021-02-20T13:49:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/ab22c6644eca50f813442e388d8f8d75d9b1dfbf.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Cure Cancer
+      description: Finish the game with lowest chaos in Health
       date: "2021-02-20T13:49:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1166290/46c8af7ac7160467a75b01d22238fb7e00a3fe85.jpg
       provider: steam

@@ -1,10 +1,10 @@
 {
  "provider": "googleplay",
  "title": "Reigns",
- "updated": "2026-10-24",
+ "updated": "2026-11-23",
  "id": "1025705520860",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 2,
  "total": 13,
  "first": "2016-09-09",
@@ -16,16 +16,20 @@
  "achievements": [
   {
    "key": "CgkI3N3Ahu0dEAIQBw",
-   "name": "elder",
+   "name": "Elder",
+   "description": "Govern more than 50 years",
    "unlocked": true,
    "date": "2016-09-09T13:57:50-05:00",
+   "points": 1000,
    "icon": "https://m.exophase.com/android/awards/m/3j13858.png?5ed7c5465857de71cc7de8c7a4fff0b5"
   },
   {
    "key": "CgkI3N3Ahu0dEAIQBA",
-   "name": "shooting-star",
+   "name": "Shooting star",
+   "description": "Govern less than 3 years",
    "unlocked": true,
    "date": "2016-09-09T14:54:52-05:00",
+   "points": 1000,
    "icon": "https://m.exophase.com/android/awards/m/d47j3g4.png?5ed7c5465857de71cc7de8c7a4fff0b5"
   }
  ],

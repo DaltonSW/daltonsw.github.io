@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Utter a Name",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "3213430",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 4,
  "total": 4,
  "first": "2026-01-04",
@@ -21,34 +21,50 @@
   {
    "key": "CLEARED_3",
    "name": "Utter a name",
+   "description": "Clear 3 souls",
    "unlocked": true,
    "date": "2026-01-04T14:01:35-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3213430/6603ed5ab74e51cf41bcf6e99670fb5b9fecb97d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 54.4
   },
   {
    "key": "CLEARED_9",
    "name": "Dusty halls",
+   "description": "Clear 9 souls",
    "unlocked": true,
    "date": "2026-01-04T14:24:45-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3213430/b749925bf8bb4e031aea4550bca4eced410ecc78.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 51.9
   },
   {
    "key": "CLEARED_15",
    "name": "House of souls",
+   "description": "Clear all souls",
    "unlocked": true,
    "date": "2026-01-04T14:47:48-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3213430/c7433a38ce3645293b9c94dc1b0bdd6dded636fa.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 51.6
   },
   {
    "key": "FINISHED_GAME",
    "name": "Farewell",
+   "description": "Tie up loose ends. Leave with the heirloom.",
    "unlocked": true,
    "date": "2026-01-04T14:48:29-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3213430/af130143eca3133b97baaf7252968619caf475a3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 51.5
+  }
+ ],
+ "mastery": [
+  {
+   "scope": "all",
+   "date": "2026-01-04",
+   "unlocked": 4,
+   "basis": "100%"
   }
  ],
  "raw": {

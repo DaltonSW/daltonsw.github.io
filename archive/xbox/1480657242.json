@@ -1,10 +1,10 @@
 {
  "provider": "xbox",
  "title": "Trials HD",
- "updated": "2026-10-24",
+ "updated": "2026-11-23",
  "id": "1480657242",
- "fetched": "2026-10-24",
- "last_attempt": "2026-10-24",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 2,
  "total": 18,
  "first": "2013-06-27",
@@ -18,7 +18,8 @@
    "name": "The Challenger",
    "description": "The player has unlocked the first tournament.",
    "unlocked": true,
-   "points": 10
+   "points": 10,
+   "rarity": 38.58
   },
   {
    "key": "7",
@@ -26,7 +27,8 @@
    "description": "The player has made at least 5 Gold-level performances.",
    "unlocked": true,
    "date": "2013-06-27T09:31:57-05:00",
-   "points": 15
+   "points": 15,
+   "rarity": 31.38
   },
   {
    "key": "9",
@@ -34,7 +36,8 @@
    "description": "The player has  completely destroyed the motorcycle and broken every single bone in a single crash.",
    "unlocked": true,
    "date": "2013-06-27T10:02:57-05:00",
-   "points": 5
+   "points": 5,
+   "rarity": 38.01
   }
  ],
  "raw": {
@@ -59,7 +62,7 @@
      "timeUnlocked": "2013-06-27T15:02:57.6400000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 38
+      "currentPercentage": 38.01
      }
     },
     {
@@ -81,7 +84,7 @@
      "timeUnlocked": "2013-06-27T14:31:57.0830000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 31.37
+      "currentPercentage": 31.38
      }
     },
     {
@@ -103,7 +106,7 @@
      "timeUnlocked": "1753-01-01T00:00:00.0000000Z",
      "rarity": {
       "currentCategory": "Common",
-      "currentPercentage": 38.57
+      "currentPercentage": 38.58
      }
     }
    ],

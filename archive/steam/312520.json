@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Rain World",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "312520",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 47,
  "platform": "PC",
@@ -13,331 +13,414 @@
   {
    "key": "AllGhostsEncountered",
    "name": "Pilgrimage",
+   "description": "The highest enlightenment, achieved by the hardest path. A feat even the guardians must respect.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/c39a98d6d2af6150063c7041a485c5ece284d393.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.7
   },
   {
    "key": "AncientUrban",
    "name": "Pictures of the Past",
+   "description": "Pictures of the Past",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/55b1a272a561316f332152516b1942c25e2e2f7d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.8
   },
   {
    "key": "ArtificerEnding",
    "name": "Closure",
+   "description": "The consequences of your journey have caught up with you",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/e2e09bfe57c130b1d8efac89c22b26e0f9ba1c4e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15.9
   },
   {
    "key": "BadWarp",
    "name": "Bad Warp",
+   "description": "Bad Warp",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/bc35031e301d8c9e18812e4808498ee0b0d25b7f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.8
   },
   {
    "key": "ChallengeMode",
    "name": "Champion",
+   "description": "You completed every challenge laid before you",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/a3b3d36f925a9ae599139ae19b2081650af14f8f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.4
   },
   {
    "key": "GhostCC",
    "name": "Nineteen Spades, Endless Reflections",
+   "description": "You encountered the echo of Nineteen Spades, Endless Reflections",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/c5c26cbb18aa3191477f8de2165f1f01655bed50.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.4
   },
   {
    "key": "GhostLF",
    "name": "A Bell, Eighteen Amber Beads",
+   "description": "You encountered the echo of A Bell, Eighteen Amber Beads",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/b9c41459082f1b1ca816122dc0f1972665f8fa94.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 5.7
   },
   {
    "key": "GhostSB",
    "name": "Two Sprouts, Twelve Brackets",
+   "description": "You encountered the echo of Two Sprouts, Twelve Brackets",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/c6ca4298b9f50f3b336cfb1868ceed8dc473741a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.9
   },
   {
    "key": "GhostSH",
    "name": "Four Needles under Plentiful Leaves",
+   "description": "You encountered the echo of Four Needles under Plentiful Leaves",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/944f3f2180c9a75a563b5a7c4526355381caf7ab.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 4.9
   },
   {
    "key": "GhostSI",
    "name": "Droplets upon Five Large Droplets",
+   "description": "You encountered the echo of Droplets upon Five Large Droplets",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/676ed1b225104e3fe7ee65de9c71ced74f6e7d5a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.5
   },
   {
    "key": "GhostUW",
    "name": "Six Grains of Gravel, Mountains Abound",
+   "description": "You encountered the echo of Six Grains of Gravel, Mountains Abound",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/1a1ae4733ecdc479f112fb97a5d4b401753c6073.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.1
   },
   {
    "key": "GourmandEnding",
    "name": "Migration",
+   "description": "You return from scouting a new land",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/13dacbe5d7df1bb4500123175c264521ddec75f9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.8
   },
   {
    "key": "HunterPayload",
    "name": "A Helping Hand",
+   "description": "A final charitable act",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/cbd102ef509b59b67d68dda6507ff65b6e24454a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.6
   },
   {
    "key": "HunterWin",
    "name": "Within Time",
+   "description": "You have found another way out",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/f177f9b7831c780826d1fd0f90ba6423c8399cc0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 9.5
   },
   {
    "key": "MoonEncounterBad",
    "name": "Stolen Enlightenment",
+   "description": "A significant gain, but at what cost?",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/dd11d7657a9bdf2bc320d9ac6b972e5d7d95613a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.1
   },
   {
    "key": "MoonEncounterGood",
    "name": "A New Friend",
+   "description": "You are not the only lost soul in this world..",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/e5321ca3111d4e0a7b64d6fd200c3e754d78574f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.5
   },
   {
    "key": "PassageChieftain",
    "name": "The Chieftain",
    "description": "Embraced by a new tribe",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/d5b28c8d4281ce7f49ebbe62fcb2b2498317af9d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/d5b28c8d4281ce7f49ebbe62fcb2b2498317af9d.jpg",
+   "rarity": 7
   },
   {
    "key": "PassageDragonSlayer",
    "name": "The Dragon Slayer",
    "description": "Predator has become prey",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/316bc23bd8238a61bf30959298ec42c455dd9515.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/316bc23bd8238a61bf30959298ec42c455dd9515.jpg",
+   "rarity": 6.1
   },
   {
    "key": "PassageFriend",
    "name": "The Friend",
    "description": "One need not travel alone",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/df7c6a263aa1e213fe493e127d645d043e9191c9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/df7c6a263aa1e213fe493e127d645d043e9191c9.jpg",
+   "rarity": 3.5
   },
   {
    "key": "PassageHunter",
    "name": "The Hunter",
    "description": "Path of the carnivore",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/3cc069e14eb93ce51aac0ce1694f717da756bd68.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/3cc069e14eb93ce51aac0ce1694f717da756bd68.jpg",
+   "rarity": 4.6
   },
   {
    "key": "PassageMartyr",
    "name": "The Martyr",
+   "description": "Path of self-sacrifice",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/dc0e36fabcf7a1a64a384b861da6ae64ad285a92.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.3
   },
   {
    "key": "PassageMonk",
    "name": "The Monk",
    "description": "Path of the vegetarian",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/46aed7322859c2c67e9862873737dda44d6e3875.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/46aed7322859c2c67e9862873737dda44d6e3875.jpg",
+   "rarity": 8.3
   },
   {
    "key": "PassageMother",
    "name": "The Mother",
+   "description": "Followed your parental instincts",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/d493eb9f3aa2856c25d186f5e96b62491665909c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 10.8
   },
   {
    "key": "PassageNomad",
    "name": "The Nomad",
+   "description": "Great strides have been made",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/e1c3dbedae22c190babb848d7dbe694ea953cab2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.7
   },
   {
    "key": "PassageOutlaw",
    "name": "The Outlaw",
    "description": "Path of aggression",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/45efdbd411184e3bf3414f3eeac13aad1f9dbb3f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/45efdbd411184e3bf3414f3eeac13aad1f9dbb3f.jpg",
+   "rarity": 6.9
   },
   {
    "key": "PassagePilgrim",
    "name": "The Pilgrim",
+   "description": "Listened to the conflation of echoes",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/5e5937b7f2a5c9945295880e39dffc885ecba330.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.5
   },
   {
    "key": "PassageSaint",
    "name": "The Saint",
    "description": "Path of the pacifist",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/04eabeb93a675985943274a349266e969b7e13ce.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/04eabeb93a675985943274a349266e969b7e13ce.jpg",
+   "rarity": 10.6
   },
   {
    "key": "PassageScholar",
    "name": "The Scholar",
    "description": "History lessons",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/052dab83381533a60d0edb74b48e3c5b64810d1f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/052dab83381533a60d0edb74b48e3c5b64810d1f.jpg",
+   "rarity": 4.7
   },
   {
    "key": "PassageSurvivor",
    "name": "The Survivor",
    "description": "This land has become your home",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/ca16c1da86df59c91ce562268e9def67f3677b13.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/ca16c1da86df59c91ce562268e9def67f3677b13.jpg",
+   "rarity": 23.3
   },
   {
    "key": "PassageTraveller",
    "name": "The Wanderer",
    "description": "Your travels have taken you far",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/f947d8643e8b486c66a42948d4799668b1acd8cd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/f947d8643e8b486c66a42948d4799668b1acd8cd.jpg",
+   "rarity": 3.1
   },
   {
    "key": "PearlReader",
    "name": "Images and sounds",
+   "description": "Images and sounds",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/67a3cf0a38b3903a11409daa77f65508f3e6cdaf.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 8.5
   },
   {
    "key": "PebblesEncounter",
    "name": "The Journey",
+   "description": "“Go west, past the Farm Arrays and then down deep into the earth...”",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/6cba17b9b68a5df2da9effb1984b8d63a7d02d36.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 10.7
   },
   {
    "key": "Quests",
    "name": "Expedition Leader",
+   "description": "You completed every expedition laid before you",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/3fae6ec3e7f1fd12e8dea8fd09c11a4160121c03.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.3
   },
   {
    "key": "RippleCreature",
    "name": "Mindless swimmers and floaters",
+   "description": "Mindless swimmers and floaters",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/bd0c6717abaa447f7a4af3d764f1a72f60e30e6c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 10.8
   },
   {
    "key": "RippleDimension",
    "name": "Through the ripple",
+   "description": "Through the ripple",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/7eb659025877b237e8d9bb88303dc717653247e4.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.5
   },
   {
    "key": "RivuletEnding",
    "name": "An Old Friend",
+   "description": "Fates have been flipped",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/6189d28b4eb65f524831d2724515aed3572e3128.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.4
   },
   {
    "key": "RotPrince",
    "name": "Blossom",
+   "description": "Blossom",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/d543b1ebce6421f3b6d8488ab48ec850022f7db7.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.1
   },
   {
    "key": "RotPrinceEnding",
    "name": "The Prince",
+   "description": "The Prince",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/a3e18be679369e5848b18031a37a49d943fde410.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 8.3
   },
   {
    "key": "SaintEnding",
    "name": "The Cycle",
+   "description": "Everything comes full circle",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/77056134eaedfeecec1cb9540afb894f55034b09.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11
   },
   {
    "key": "SpearmasterEnding",
    "name": "Messenger",
+   "description": "You have delivered your most important message",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/971fdaff12d4eda1b5c9159082f1ad5dcd4fce52.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14
   },
   {
    "key": "SpinningTopEnding",
    "name": "Spinning Top",
+   "description": "Spinning Top",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/197dfb90fa1edb881f688bd16ae357826b6d9925.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.4
   },
   {
    "key": "VoidWeaver",
    "name": "The Weaver",
+   "description": "The Weaver",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/1fbd54665d85dfa53dcda90772bb7ee8fc8f372a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.1
   },
   {
    "key": "VoidWeaverEnding",
    "name": "An understanding.",
+   "description": "An understanding.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/3c8764e6d5b536e30c82ad17a0dd752178d605da.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.9
   },
   {
    "key": "WarpPoint",
    "name": "Astray",
    "description": "Astray",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/df4878913096a384bfc1cabc4247a486c6259266.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/df4878913096a384bfc1cabc4247a486c6259266.jpg",
+   "rarity": 24
   },
   {
    "key": "WatcherAscension",
    "name": "The Choice",
+   "description": "The Choice",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/de6306abe54d3abcff0ea05b4885d7fdfd4acda7.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.6
   },
   {
    "key": "WeaverAbility",
    "name": "A path. A purpose.",
+   "description": "A path. A purpose.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/56c43ead4d5d9937eb944a313c7b987af2aa564e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 8.9
   },
   {
    "key": "Win",
    "name": "Ascension",
+   "description": "You have left this world behind",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/312520/b8d0b50077deeb2e419496d63faf0d72847c8a69.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 9.3
   }
  ],
  "raw": {

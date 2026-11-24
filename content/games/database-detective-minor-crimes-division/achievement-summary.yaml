@@ -17,6 +17,7 @@ providers:
           basis: 100%
 earned:
     - name: Keeping the City Clean
+      description: Arrest the true culprit in the first level.
       date: "2026-10-06T19:01:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/28923569f271f89e8ef99c17f27d9eb33cdd160d.jpg
       provider: steam
@@ -29,24 +30,28 @@ earned:
       provider: steam
       platform: PC
     - name: Environmental Terrorism
+      description: Arrest the true culprit in the second level.
       date: "2026-10-06T19:08:57-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/83eb53be2273318042be36a12c3d619a6efaab6c.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Sandwich Theft
+      description: Arrest the true culprit in the third level.
       date: "2026-10-06T19:17:55-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/33f39be7811f9ac60caad4c0b386ca2ad55568d1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Help a Landlord
+      description: Arrest the true culprit in the fourth level.
       date: "2026-10-06T19:40:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/73f1217c2f359fb35bb79c8382a69b5adb470ce7.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Stop a War Criminal
+      description: Arrest the true culprit in the fifth level.
       date: "2026-10-06T20:06:35-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/4734453c55b97915b240f849a44e87e9c273c736.jpg
       provider: steam
@@ -71,6 +76,7 @@ earned:
       provider: steam
       platform: PC
     - name: Defamation Detective
+      description: Arrest the true culprit in the sixth level.
       date: "2026-10-11T15:08:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/d82dd9dd0ee68d21582cd6be4ed88fe9870d2d69.jpg
       provider: steam
@@ -83,6 +89,7 @@ earned:
       provider: steam
       platform: PC
     - name: 'Legend of New Hampshire '
+      description: Arrest the true culprit in the seventh level.
       date: "2026-10-13T19:23:24-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/7613e80580e78403565c6da189bc79f385492aff.jpg
       provider: steam
@@ -95,6 +102,7 @@ earned:
       provider: steam
       platform: PC
     - name: LMAO PLZ
+      description: Arrest the true culprit in the eighth level.
       date: "2026-10-24T18:22:55-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/1793f630314016b057f6fb9f9ce4860e567b36d9.jpg
       provider: steam
@@ -107,6 +115,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Most Minor of Crimes
+      description: Arrest the true culprit in the ninth level.
       date: "2026-10-25T10:43:29-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/e4e8e8f6de6514cf7c0c181cbcf6f8b29054429f.jpg
       provider: steam
@@ -119,30 +128,35 @@ earned:
       provider: steam
       platform: PC
     - name: honk
+      description: honk da horn
       date: "2026-10-26T18:04:08-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/a04a93bdcb2f7b8129c5b07f503e89e7db5f2bf3.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Busted
+      description: Get your supervisor arrested.
       date: "2026-10-26T18:41:44-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/dd5460490d58371694f6676366b40b95a352ef65.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: The Truth Revealed
+      description: Publish the truth.
       date: "2026-10-26T18:46:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/481d37a5296b9df4e43d64b070b62eb0794dcb8d.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Thanks For Playing!!!
+      description: Finish the game.
       date: "2026-10-26T18:46:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/8e9fa451f58cd80f000b17b2e649fa99e3785dc1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: You're too kind!
+      description: Compliment the developer.
       date: "2026-10-26T18:50:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/094de66d97d89ec05364ec622f2fd24f13afa33a.jpg
       provider: steam
@@ -185,12 +199,14 @@ earned:
       provider: steam
       platform: PC
     - name: Very Funny
+      description: Try to arrest your great leader.
       date: "2026-10-26T19:05:38-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/d7210633a8e68eef1338afe7a20f6f9a10bba805.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Status Quo Enjoyer
+      description: Follow the editor's notes.
       date: "2026-10-26T19:19:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/bbe8cf9c1ddcf488d83cdd6f79e1ce8040433af7.jpg
       provider: steam
@@ -209,6 +225,7 @@ earned:
       provider: steam
       platform: PC
     - name: Sorry...
+      description: Tell the developer his game is bad.
       date: "2026-10-26T19:25:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/3950130/9c92c05008a3762482dee6ead0a44176f28bae7a.jpg
       provider: steam

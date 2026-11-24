@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Curse of the Dead Gods",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "1123770",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 30,
  "platform": "PC",
@@ -15,210 +15,245 @@
    "name": "Diligence",
    "description": "Complete 10 different \"Special Events\"",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/b107229a04b48377cb7a326b46a4048f373eea5e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/b107229a04b48377cb7a326b46a4048f373eea5e.jpg",
+   "rarity": 0.9
   },
   {
    "key": "AchieveVictoryWith50Constitution",
    "name": "Invulnerability",
    "description": "Complete any exploration with 50 or more Constitution",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/0a5e229d993fc49dc54dd8ab95d5b349f6eff935.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/0a5e229d993fc49dc54dd8ab95d5b349f6eff935.jpg",
+   "rarity": 4.1
   },
   {
    "key": "AchieveVictoryWith50Dexterity",
    "name": "Omnipotence",
    "description": "Complete any exploration with 50 or more Dexterity",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/4d8c43906c890d725afd262f3c6284bb399f7ba7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/4d8c43906c890d725afd262f3c6284bb399f7ba7.jpg",
+   "rarity": 5.2
   },
   {
    "key": "AchieveVictoryWith50Greed",
    "name": "Clairvoyance",
    "description": "Complete any exploration with 50 or more Perception",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/325b5b46186c6c7404266d979a66a581ff7ddac9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/325b5b46186c6c7404266d979a66a581ff7ddac9.jpg",
+   "rarity": 4.3
   },
   {
    "key": "CompleteAllExplorations",
    "name": "Deliverance",
+   "description": "Become the new Champion of Death",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/abbd4dc83bf1fb9ea5c721253c8b0376841fa412.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.8
   },
   {
    "key": "CompleteTutorial",
    "name": "Initiation",
    "description": "Complete the room of Trials",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/d029b0abb1f92c4d4c2164da27f4dc5ba1251713.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/d029b0abb1f92c4d4c2164da27f4dc5ba1251713.jpg",
+   "rarity": 85
   },
   {
    "key": "DefeatDeathChampion",
    "name": "Deception",
+   "description": "Defeat Clovis Pardieux, Champion of Death",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/3f590e6aa88ab8b552984af70449b49eb6ca2c61.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.3
   },
   {
    "key": "DefeatEagleBoss",
    "name": "Vanity",
    "description": "Defeat the Dark Avatar of the Eagle",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/5157dfe98614f808cf0ea9c1e18444ba46cde319.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/5157dfe98614f808cf0ea9c1e18444ba46cde319.jpg",
+   "rarity": 13.6
   },
   {
    "key": "DefeatEagleFirstChampion",
    "name": "Nobility",
    "description": "Defeat K'ax taca, High Lord of the Storm",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/913408893f7ad1aafccabb87de40a083b49c707e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/913408893f7ad1aafccabb87de40a083b49c707e.jpg",
+   "rarity": 47.4
   },
   {
    "key": "DefeatEagleSecondChampion",
    "name": "Invention",
    "description": "Defeat Malok paal, the Flesh Monstrosity",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/d39f45a255530707856607485696afe1622242f9.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/d39f45a255530707856607485696afe1622242f9.jpg",
+   "rarity": 28.7
   },
   {
    "key": "DefeatJaguarBoss",
    "name": "Cruelty",
    "description": "Defeat the Dark Avatar of the Jaguar",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/b0d599563d2962e6c3b4d92326c1ef200d5ad6f8.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/b0d599563d2962e6c3b4d92326c1ef200d5ad6f8.jpg",
+   "rarity": 17
   },
   {
    "key": "DefeatJaguarFirstChampion",
    "name": "Strength",
    "description": "Defeat Xak'olchir, the Blood Hunter",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/a0705455fae8d80c78d17724bc7514a2a513f097.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/a0705455fae8d80c78d17724bc7514a2a513f097.jpg",
+   "rarity": 58.8
   },
   {
    "key": "DefeatJaguarSecondChampion",
    "name": "Toughness",
    "description": "Defeat Litz \u0026 Nepac, the Cursed Twins",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/48e671cef49daa028a969aa65bb11dde124c4b23.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/48e671cef49daa028a969aa65bb11dde124c4b23.jpg",
+   "rarity": 34.5
   },
   {
    "key": "DefeatSerpentBoss",
    "name": "Avidity",
    "description": "Defeat the Dark Avatar of the Serpent",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/13368236b46a1ee4a94f0c04f0ef9e919edc42ef.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/13368236b46a1ee4a94f0c04f0ef9e919edc42ef.jpg",
+   "rarity": 12.2
   },
   {
    "key": "DefeatSerpentFirstChampion",
    "name": "Awareness",
    "description": "Defeat Xucat', the Witch",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/476d4a77a34b1aedcef8dce35f3172882537cf38.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/476d4a77a34b1aedcef8dce35f3172882537cf38.jpg",
+   "rarity": 45.2
   },
   {
    "key": "DefeatSerpentSecondChampion",
    "name": "Depravity",
    "description": "Defeat Ratyapu, the Abomination",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/718045c12dba36fe61979fddd11c643cba58c271.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/718045c12dba36fe61979fddd11c643cba58c271.jpg",
+   "rarity": 25.3
   },
   {
    "key": "EquipAllSlotsWithCursedWeapons",
    "name": "Temptation",
+   "description": "Equip the three weapons slots with Cursed weapons",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/5521ec71ea3c20f7b3bc2b13c5d793116be1fb58.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.9
   },
   {
    "key": "EquipBossWeapon",
    "name": "Power",
+   "description": "Equip a hidden Champion weapon",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/d8b7fd7d716870d042c87c6dcbd498d594b206a2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15
   },
   {
    "key": "Get03SuccessfulParriesIn02Seconds",
    "name": "Mastery",
+   "description": "Get 3 successful Parries in less than 2 seconds",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/643478681b706b49b49fbdddc19f53c1120ef111.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.5
   },
   {
    "key": "Get10GreedKill",
    "name": "Greed",
    "description": "Achieve a x10 \"Greed Kill\" series",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/b7e88bafd84275fddf16b8be392b90b172a3bef2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/b7e88bafd84275fddf16b8be392b90b172a3bef2.jpg",
+   "rarity": 43.4
   },
   {
    "key": "Make10BloodOfferingsInARun",
    "name": "Insanity",
    "description": "Make 10 Blood Offerings during a single exploration",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/df2a28e2cd31bb083d29870d46addeeed3a4d44e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/df2a28e2cd31bb083d29870d46addeeed3a4d44e.jpg",
+   "rarity": 3
   },
   {
    "key": "Play01DailyChalenge",
    "name": "Curiosity",
    "description": "Start a \"Special Event\"",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/1275f6c430fbb1e44ede546012ac8cda8ea63b55.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/1275f6c430fbb1e44ede546012ac8cda8ea63b55.jpg",
+   "rarity": 44.3
   },
   {
    "key": "SurviveFinalCurse",
    "name": "Relief",
    "description": "Lift the Final Curse",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/7c9387f7d3ee5653139c6ef623acc1650cefc53c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/7c9387f7d3ee5653139c6ef623acc1650cefc53c.jpg",
+   "rarity": 16.8
   },
   {
    "key": "Unlock01Blessing",
    "name": "Belief",
    "description": "Unlock a Blessing of the Dead Gods",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/1434715c7473aedaff62c7f09586c7c773f0de4c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/1434715c7473aedaff62c7f09586c7c773f0de4c.jpg",
+   "rarity": 69.4
   },
   {
    "key": "Unlock05BestiaryEntries",
    "name": "Essay",
    "description": "Write 5 Bestiary entries",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/ede3d5206fe2ea881ec6db050ac748297a74d1a1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/ede3d5206fe2ea881ec6db050ac748297a74d1a1.jpg",
+   "rarity": 33.9
   },
   {
    "key": "Unlock05Weapons",
    "name": "Exhumation",
    "description": "Unlock 5 Forsaken Weapons",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/dbddc7c811b6ae4ba7372101edded35a115aac4a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/dbddc7c811b6ae4ba7372101edded35a115aac4a.jpg",
+   "rarity": 35.5
   },
   {
    "key": "Unlock20Blessings",
    "name": "Devotion",
    "description": "Unlock 20 Blessings of the Dead Gods",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/03a5b3e7f13d751f70e198a78e8102d7b6579696.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/03a5b3e7f13d751f70e198a78e8102d7b6579696.jpg",
+   "rarity": 5.7
   },
   {
    "key": "Unlock20Weapons",
    "name": "Collection",
    "description": "Unlock 20 Forsaken Weapons",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/f81d6699f1d64150f852095b7cc8ac358a61368d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/f81d6699f1d64150f852095b7cc8ac358a61368d.jpg",
+   "rarity": 14.6
   },
   {
    "key": "UnlockAllBestiaryGoldenEntries",
    "name": "Memoirs",
    "description": "Write all Bestiary entries with their complete sketches",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/e585bf319b488a02ae7c14b873d2a0b763cdec19.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/e585bf319b488a02ae7c14b873d2a0b763cdec19.jpg",
+   "rarity": 0.5
   },
   {
    "key": "UnlockAllStartingWeaponsUpgrades",
    "name": "Restoration",
    "description": "Unlock all Weapon Altars upgrades",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/8969a14899b24818bd4f9aa5a5ad760a4abe3376.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1123770/8969a14899b24818bd4f9aa5a5ad760a4abe3376.jpg",
+   "rarity": 5.7
   }
  ],
  "raw": {

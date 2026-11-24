@@ -17,12 +17,14 @@ providers:
       last_played: "2019-12-24"
 earned:
     - name: This is Sparta!
+      description: Complete the Battle of 300.
       date: "2019-06-25T21:06:17-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/08bdee6fbec196b65f29410ea6f010c867b59831.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: An Odyssey in the Making
+      description: Complete Episode 1.
       date: "2019-06-26T10:17:43-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/c58f97403e0af4b9499ed050a4feba0aa0f735ed.jpg
       provider: steam
@@ -41,6 +43,7 @@ earned:
       provider: steam
       platform: PC
     - name: Past Mistakes
+      description: Complete Episode 2.
       date: "2019-06-26T12:20:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/8e2a784eadfac62a89ae808c18466f49deb619f1.jpg
       provider: steam
@@ -53,6 +56,7 @@ earned:
       provider: steam
       platform: PC
     - name: Evil Unearthed
+      description: Complete Episode 3.
       date: "2019-06-26T13:20:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/60ff1d190e02613f4a54b5192ab9a0485e5d61d6.jpg
       provider: steam
@@ -77,6 +81,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Bright Minds
+      description: Complete Episode 4.
       date: "2019-06-30T19:46:17-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/7c2c1b40626a49c02744dd6ca60a845c3f0301aa.jpg
       provider: steam
@@ -95,12 +100,14 @@ earned:
       provider: steam
       platform: PC
     - name: From the Ashes
+      description: Complete Episode 5.
       date: "2019-07-07T14:52:26-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/55fe4a7f901249547f42eeead46c6d6af2017ee1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Democracy Falls
+      description: Complete Episode 6.
       date: "2019-07-07T15:17:41-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/9a47412ae5495838d4237bf9ae7a7277f9d5fb06.jpg
       provider: steam
@@ -119,6 +126,7 @@ earned:
       provider: steam
       platform: PC
     - name: Birthright
+      description: Discover Atlantis and speak with Pythagoras.
       date: "2019-07-08T10:47:33-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/8ec2ee7f6150bb5682349c93af1b4a23f46f3d01.jpg
       provider: steam
@@ -131,12 +139,14 @@ earned:
       provider: steam
       platform: PC
     - name: The Start of a Legacy
+      description: Discover the truth about Darius' past
       date: "2019-07-09T23:04:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/d03b4a3c71197ce288905aded474c04d193b8cc7.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: One Head Down…
+      description: Defeat a full cluster of Cultists of Kosmos.
       date: "2019-07-10T23:27:40-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/b874d44d8d5110a27c6cb9395b76fa359f077008.jpg
       provider: steam
@@ -161,6 +171,7 @@ earned:
       provider: steam
       platform: PC
     - name: Riddle Me This
+      description: Outwit the Sphinx.
       date: "2019-07-18T10:23:17-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/b8d6fc8988fcfce8ffa4c1d0ac921db70f93bfab.jpg
       provider: steam
@@ -173,12 +184,14 @@ earned:
       provider: steam
       platform: PC
     - name: Going For Gold
+      description: Complete the Olympic questline.
       date: "2019-07-19T20:54:11-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/9c3f103532a7868a66e2b4cc41f55ebd7ed8adf9.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: A-maze-ing Victory!
+      description: Defeat the Minotaur.
       date: "2019-07-19T23:32:35-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/11c6c5dc829ed8dbcbbf2a14508d7a14fe0113ac.jpg
       provider: steam
@@ -197,6 +210,7 @@ earned:
       provider: steam
       platform: PC
     - name: Master of the Hunt
+      description: Complete the Daughters of Artemis questline.
       date: "2019-07-20T18:46:08-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/6226f64a39255371a16d244e02246efd7c17adae.jpg
       provider: steam
@@ -209,24 +223,28 @@ earned:
       provider: steam
       platform: PC
     - name: Eye on the Prize
+      description: Defeat the Cyclops.
       date: "2019-07-20T21:29:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/eb9029ded7346b44c478af07b2a4dd46f79ab9d1.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Wrath of the Amazons
+      description: Cleave a ship while having an all-women crew.
       date: "2019-07-20T22:35:46-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/b6f327fb43540921a7b79a394f063b0e4e6b2a28.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Legend in the Making
+      description: Complete Episode 7.
       date: "2019-07-21T15:02:14-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/ab2bd901b6a1ca19f9b3392e66222276effaa0a7.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Taking Back Athens
+      description: Complete Episode 8.
       date: "2019-07-21T15:54:44-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/4149eeda5f9fcbf6e508ec65d5b34a2f81cf3d6b.jpg
       provider: steam
@@ -239,6 +257,7 @@ earned:
       provider: steam
       platform: PC
     - name: Odyssey's End
+      description: Complete Episode 9 + Epilogue.
       date: "2019-07-21T16:37:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/d338a222e00dcb456eb6d9d94f3bda859b2a821d.jpg
       provider: steam
@@ -257,6 +276,7 @@ earned:
       provider: steam
       platform: PC
     - name: The Cult Unmasked
+      description: Defeat all the Cultists of Kosmos.
       date: "2019-07-21T18:08:49-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/cc619ac9660c750e0ccd53bc7407f8a81d616f82.jpg
       provider: steam
@@ -269,12 +289,14 @@ earned:
       provider: steam
       platform: PC
     - name: In Perseus's Image
+      description: Defeat Medusa.
       date: "2019-07-21T18:39:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/2df5930767f347daee02a886e869a8f457184eb0.jpg
       provider: steam
       platform: PC
       hidden: true
     - name: Legacy Restored
+      description: Upgrade your Spear to Tier 6.
       date: "2019-07-21T18:42:28-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/ccca15a9a1c8655f11ff349f6d693cf1f272a1f2.jpg
       provider: steam
@@ -299,6 +321,7 @@ earned:
       provider: steam
       platform: PC
     - name: Blood of Leonidas
+      description: Continue the bloodline.
       date: "2019-07-29T18:57:31-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/b42a1d3745eee1f1e9b82cb23a31c3f045893213.jpg
       provider: steam
@@ -317,6 +340,7 @@ earned:
       provider: steam
       platform: PC
     - name: Bittersweet Beginnings
+      description: Secure your bloodline
       date: "2019-07-30T11:12:48-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/6ee6edea64593bc697b0e0c2bae79a61129868e0.jpg
       provider: steam
@@ -353,6 +377,7 @@ earned:
       provider: steam
       platform: PC
     - name: In the Face of the Gods
+      description: Remember who you are.
       date: "2019-11-02T18:41:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/e433e46d669bd080c90b8f401c3205fe301e8d9c.jpg
       provider: steam
@@ -389,6 +414,7 @@ earned:
       provider: steam
       platform: PC
     - name: A True Ruler
+      description: Dethrone the king.
       date: "2019-12-15T11:32:09-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/812140/8399797d1aa32de00cc05dd9fa94ca16630a5406.jpg
       provider: steam

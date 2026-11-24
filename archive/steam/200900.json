@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Cave Story+",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "200900",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 10,
  "total": 76,
  "first": "2012-12-22",
@@ -20,7 +20,8 @@
    "description": "Obtained the Polar Star!",
    "unlocked": true,
    "date": "2012-12-22T22:41:33-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/9ddfdaae8951dc2462b16b61761f4eae807bf74e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/9ddfdaae8951dc2462b16b61761f4eae807bf74e.jpg",
+   "rarity": 87.3
   },
   {
    "key": "balrog1",
@@ -28,7 +29,8 @@
    "description": "Defeated Balrog!",
    "unlocked": true,
    "date": "2012-12-22T22:53:32-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/d391d750fbb29511e6b39b5d9556e5d77532eeb5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/d391d750fbb29511e6b39b5d9556e5d77532eeb5.jpg",
+   "rarity": 61.1
   },
   {
    "key": "map",
@@ -36,7 +38,8 @@
    "description": "Obtained the Map System!",
    "unlocked": true,
    "date": "2012-12-23T15:18:46-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/022736d4543b6414c200d64d0e630d7a450d5e43.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/022736d4543b6414c200d64d0e630d7a450d5e43.jpg",
+   "rarity": 67.8
   },
   {
    "key": "missile",
@@ -44,7 +47,8 @@
    "description": "Obtained the Missile Launcher!",
    "unlocked": true,
    "date": "2012-12-23T15:33:27-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/3199456ea38ae3c892ae3f8790937363cc98ec7c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/3199456ea38ae3c892ae3f8790937363cc98ec7c.jpg",
+   "rarity": 64.7
   },
   {
    "key": "igor",
@@ -52,15 +56,18 @@
    "description": "Defeated Igor!",
    "unlocked": true,
    "date": "2012-12-23T15:36:28-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/4c58cdc28233deb5a6928d4b60ea1f4bb06ec7cf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/4c58cdc28233deb5a6928d4b60ea1f4bb06ec7cf.jpg",
+   "rarity": 59.9
   },
   {
    "key": "fireball",
    "name": "A Gift from Santa",
+   "description": "Obtained the Fireball!",
    "unlocked": true,
    "date": "2012-12-23T15:59:26-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/3628a7af724be503371622befeefca0c04016267.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 56.1
   },
   {
    "key": "festivus",
@@ -68,7 +75,8 @@
    "description": "For the rest of us!",
    "unlocked": true,
    "date": "2012-12-27T14:37:37-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/cb661a8d459b0f1495056a108b261fb3321171bf.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/cb661a8d459b0f1495056a108b261fb3321171bf.jpg",
+   "rarity": 28.5
   },
   {
    "key": "balrog2",
@@ -76,7 +84,8 @@
    "description": "Defeated Balrog, again...",
    "unlocked": true,
    "date": "2013-01-16T18:56:16-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/fd98155368665441bd2d31b029e0ad1f3c21bf8e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/fd98155368665441bd2d31b029e0ad1f3c21bf8e.jpg",
+   "rarity": 49.8
   },
   {
    "key": "balfrog",
@@ -84,7 +93,8 @@
    "description": "Defeated Balfrog!",
    "unlocked": true,
    "date": "2013-01-16T19:13:30-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/cef845990fa2814846dd76494ef49115478ac2f5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/cef845990fa2814846dd76494ef49115478ac2f5.jpg",
+   "rarity": 44.9
   },
   {
    "key": "curlyfight",
@@ -92,455 +102,561 @@
    "description": "Defeated Curly...",
    "unlocked": true,
    "date": "2013-01-21T16:11:39-06:00",
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/18117bdf09de5800663664c65cab567b30e34116.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/18117bdf09de5800663664c65cab567b30e34116.jpg",
+   "rarity": 41.8
   },
   {
    "key": "alien",
    "name": "Here's Johnny!",
    "description": "Obtained the Alien Medal!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/9eb11319176b92c17c4b8f149c15e7b30d30bad5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/9eb11319176b92c17c4b8f149c15e7b30d30bad5.jpg",
+   "rarity": 4.9
   },
   {
    "key": "ballos",
    "name": "Hate Made Flesh",
+   "description": "Defeated Ballos!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/797a3bc7162a173fd157b267a824008854524259.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 5.3
   },
   {
    "key": "balrog3",
    "name": "Rock Bustin'",
    "description": "Defeated Balrog, yet again...",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a397b62362c319a29d1f8f416a0c3fedb54cab80.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a397b62362c319a29d1f8f416a0c3fedb54cab80.jpg",
+   "rarity": 33.5
   },
   {
    "key": "bamf",
    "name": "I Like It Hard!",
    "description": "Completed Hard Mode",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2cf80f613dd9a771c799d3f8501d37f92114b2ff.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2cf80f613dd9a771c799d3f8501d37f92114b2ff.jpg",
+   "rarity": 1.2
   },
   {
    "key": "barrier",
    "name": "Arm Bar",
+   "description": "Obtained the Arms Barrier!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a5c4d0f2fddce79c88eaeeaec29944cf52f77f52.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 33.2
   },
   {
    "key": "birthday",
    "name": "Happy Birthday Pixel!",
+   "description": "Played Cave Story on April 29th!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/8af917774ad047ba58e7bd39becdbf159ecad37d.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 3.4
   },
   {
    "key": "blade",
    "name": "A Fine Blade",
+   "description": "Obtained the Blade!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/4f529bb1fcabbcdcf4003afbd9a6d46374790768.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 37.8
   },
   {
    "key": "bossranka",
    "name": "Boss Attack A Rank",
+   "description": "Completed Boss Attack in Less Than 10:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/80671e431ce1f558569b59568316e5e4e316dc87.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.8
   },
   {
    "key": "bossrankb",
    "name": "Boss Attack B Rank",
+   "description": "Completed Boss Attack in Less Than 12:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/b138dae34de0c7483de332edf90d74664500aed8.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.9
   },
   {
    "key": "bossrankc",
    "name": "Boss Attack C Rank",
+   "description": "Completed Boss Attack in Less Than 15:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/f82db8a32e4fbc249e4844b9a3751c5e3f1fda67.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1
   },
   {
    "key": "bossranks",
    "name": "Boss Attack S Rank",
+   "description": "Completed Boss Attack in Less Than 8:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/4ea3398a815f282f70d36281a7e4783f676f1a8f.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.8
   },
   {
    "key": "bossrun",
    "name": "Who's the Boss?",
+   "description": "Completed Boss Attack",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/f2c16eb78096987d5c9bd12d327c32c457ae4995.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.4
   },
   {
    "key": "bubbline",
    "name": "Mr. Clean",
    "description": "Obtained the Bubbline!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/36fafba6d4545d1a4e2046b1f8d3a3ff2a3e22fd.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/36fafba6d4545d1a4e2046b1f8d3a3ff2a3e22fd.jpg",
+   "rarity": 35.1
   },
   {
    "key": "chako",
    "name": "Ladies' Man",
+   "description": "Obtained Chako's Lip Stick!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c71adf1cc2e4872af61ee559ba300be4987933c3.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15
   },
   {
    "key": "core",
    "name": "Heart of the Island",
    "description": "Defeated the Core!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/1e8eb4ffa4f95c76ede461b0cb2d2c21ab6b468d.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/1e8eb4ffa4f95c76ede461b0cb2d2c21ab6b468d.jpg",
+   "rarity": 32.3
   },
   {
    "key": "counter",
    "name": "Count to 290",
+   "description": "Obtained the 290 Counter!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c2aa0cb06b92b94066b22af2900859880b70419a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11
   },
   {
    "key": "doctor1",
    "name": "House Call",
    "description": "Defeated the Doctor!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/33a727282f0ac8749a479066bcc9f9a5925a4987.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/33a727282f0ac8749a479066bcc9f9a5925a4987.jpg",
+   "rarity": 23.3
   },
   {
    "key": "doctor2",
    "name": "Muscle, MD.",
    "description": "Defeated the Muscle Doctor!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2fd4ac01a82800451bd6b4d45bf99be882150885.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2fd4ac01a82800451bd6b4d45bf99be882150885.jpg",
+   "rarity": 22.7
   },
   {
    "key": "eggfish",
    "name": "Fish Preserve",
    "description": "Spared Eggfish",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2ebf6d5e9808158f8ab295dbab809f54de7d9ad0.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2ebf6d5e9808158f8ab295dbab809f54de7d9ad0.jpg",
+   "rarity": 4
   },
   {
    "key": "endbad",
    "name": "Coward",
+   "description": "Bad Ending",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/6025ef026d52240e73c9093a5f3d4530374e7ab9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 14.9
   },
   {
    "key": "endgood",
    "name": "Curse Broken",
+   "description": "Best Ending",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/06b68401920ab95072cba62527ecb7e9b6197322.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.6
   },
   {
    "key": "endmask",
    "name": "Mimiga Hero",
+   "description": "Mask Mimiga Ending",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/bd40623f1f522ee90782758dfe5c67f8285c92e0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 2.6
   },
   {
    "key": "endnorm",
    "name": "Shtuff Happens",
+   "description": "Normal Ending",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/be8d3deb3bc0d25adc60caa5100747f0d9af7371.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.8
   },
   {
    "key": "fulllife",
    "name": "I'm Juggernaut...",
    "description": "Found and collected all Life Capsules",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a2a32a3f2dfb79c3fed53c56779cac1535b07342.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a2a32a3f2dfb79c3fed53c56779cac1535b07342.jpg",
+   "rarity": 15.1
   },
   {
    "key": "fullmissile",
    "name": "Weapons of Mass Destruction",
    "description": "Found and collected all Missile upgrades",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c6ae6d8e928f8c18777052095950d3354a3c68c5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c6ae6d8e928f8c18777052095950d3354a3c68c5.jpg",
+   "rarity": 30.4
   },
   {
    "key": "gclone",
    "name": "Cave Story Clone",
+   "description": "Defeated G-Clone!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/479ae27800aa655829823992f2a254ac2ac669b2.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.8
   },
   {
    "key": "heavypress",
    "name": "Swollen Mech",
+   "description": "Defeated Heavy Press!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/e8f64f85920ace3a71814656fc9adf3780a972e1.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 7.7
   },
   {
    "key": "hellranka",
    "name": "Sanctuary A Rank",
+   "description": "Completed Blood Stained Sanctuary in Less Than 4:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/8694c71de7f769dc63057b0a1be3624a85285381.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.8
   },
   {
    "key": "hellrankb",
    "name": "Sanctuary B Rank",
+   "description": "Completed Blood Stained Sanctuary in Less Than 5:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/40f7d12e08d678bc44c51c2fccf128c194322f55.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.9
   },
   {
    "key": "hellrankc",
    "name": "Sanctuary C Rank",
+   "description": "Completed Blood Stained Sanctuary in Less Than 6:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/f327a723b986146695a84115c24ec60b8fc8826c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.9
   },
   {
    "key": "hellranks",
    "name": "Sanctuary S Rank",
+   "description": "Completed Blood Stained Sanctuary in Less Than 3:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/d6712ca57b79e8acb7ed4f3697074cc9f5d4eeff.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.8
   },
   {
    "key": "hellrun",
    "name": "To Hell and Back",
+   "description": "Completed Blood Stained Sanctuary",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/7dc8be3d5b917aa3fb1fd5f156dd6c34309f66a0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.1
   },
   {
    "key": "homesweet",
    "name": "Home, Sweet Home",
    "description": "Returned Mister Little back home",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/aeb23a2af7d66e344070b8a3e3fe88b07b09c166.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/aeb23a2af7d66e344070b8a3e3fe88b07b09c166.jpg",
+   "rarity": 11.4
   },
   {
    "key": "ironbond",
    "name": "I've Got Your Back",
+   "description": "Obtained the Iron Bond!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/6353b174d1ea1a1206daa5083c944e0f0c39e3c5.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 13.7
   },
   {
    "key": "ironhead",
    "name": "Big Fish",
    "description": "Defeated Ironhead!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/faa5adf29be5bfb7864fb58463bc4b52fe392eda.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/faa5adf29be5bfb7864fb58463bc4b52fe392eda.jpg",
+   "rarity": 31.5
   },
   {
    "key": "lifepot",
    "name": "\u003c3",
    "description": "Obtained the Life Pot!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/b381c4251091702b990931b6ebdc515b712993c2.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/b381c4251091702b990931b6ebdc515b712993c2.jpg",
+   "rarity": 38.7
   },
   {
    "key": "little",
    "name": "Little Man",
+   "description": "Found Mister Little!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/3190283f406028a42a4dc113a36113a120d97dcc.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.5
   },
   {
    "key": "lowhp1",
    "name": "Untouchable",
+   "description": "No Life Capsules (Good Ending)",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/f4fd13db1de1988edac7f505f5b1f4ff6a734d88.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1
   },
   {
    "key": "lowhp2",
    "name": "Unstoppable",
+   "description": "No Life Capsules (Best Ending)",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/6fa5cd5423b980f8208228c585569d8d358b7110.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.8
   },
   {
    "key": "machinegun",
    "name": "Girly Gun",
    "description": "Obtained the Machine Gun!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a9b5a06f82cc25c4b48861f471b6a756e3c84555.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a9b5a06f82cc25c4b48861f471b6a756e3c84555.jpg",
+   "rarity": 34.8
   },
   {
    "key": "misery",
    "name": "Miserable",
    "description": "Defeated Misery!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/b4be6e8e6f3aea8e22157a6f8047caec85e21f1e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/b4be6e8e6f3aea8e22157a6f8047caec85e21f1e.jpg",
+   "rarity": 23.9
   },
   {
    "key": "monsterx",
    "name": "Armored Feline",
    "description": "Defeated Monster X!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/e76a7e323093e8eff4cb652c5a3214548549707a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/e76a7e323093e8eff4cb652c5a3214548549707a.jpg",
+   "rarity": 33.9
   },
   {
    "key": "nemesis",
    "name": "Ducking Awesome",
+   "description": "Obtained the Nemesis!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/62a7bd3467ba5f800655408318581f07855fe20b.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 11.8
   },
   {
    "key": "ogre",
    "name": "Heavy Medal",
    "description": "Defeated the Red Ogre!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2834aba1444df7d9abf1ee09aa06389cdd94e18c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/2834aba1444df7d9abf1ee09aa06389cdd94e18c.jpg",
+   "rarity": 12.6
   },
   {
    "key": "omega",
    "name": "Machine Monster",
    "description": "Defeated Omega!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/e06971607ac860c9689c99171d986e8d8e9933eb.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/e06971607ac860c9689c99171d986e8d8e9933eb.jpg",
+   "rarity": 40.9
   },
   {
    "key": "omegadog",
    "name": "Doggy Style",
+   "description": "Beat Omega with Jenka's Puppy",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/4e24f246f2172f58dba763537f44b17b3e290469.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 26.4
   },
   {
    "key": "panties",
    "name": "Panty Raider",
+   "description": "Obtained Curly's Panties!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/f898b7440dd4529087f9ed7805d4e1081bc0de38.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 15.7
   },
   {
    "key": "pignon",
    "name": "What A Fun Guy!",
    "description": "Obtained Ma Pignon!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/03aea72af6940f4fff6d2bb5ddff9448097fbe9b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/03aea72af6940f4fff6d2bb5ddff9448097fbe9b.jpg",
+   "rarity": 13.7
   },
   {
    "key": "powerkings",
    "name": "Kings of Power",
    "description": "Accumulated 20,000 of damage",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c878138168b30b0237c6d10292f1d59844965b79.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c878138168b30b0237c6d10292f1d59844965b79.jpg",
+   "rarity": 36.4
   },
   {
    "key": "puu",
    "name": "Ghost in the Clinic",
    "description": "Defeated Puu Black!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a1e97a20b53624c8da7a562c2ba0b592535916a7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/a1e97a20b53624c8da7a562c2ba0b592535916a7.jpg",
+   "rarity": 36.2
   },
   {
    "key": "savecurly",
    "name": "Return the Favor",
+   "description": "Saved Curly Brace",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c1aa2074813ada6142e6f7f25eaf4ec3527b6593.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 10.2
   },
   {
    "key": "sisters",
    "name": "Only If You're Greedy...",
+   "description": "Defeated the Twin Dragons!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/5d498477ae1548dbb7b3006e4cad73a98eed93db.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 27.6
   },
   {
    "key": "snake",
    "name": "Cold Hearted Snake",
+   "description": "Obtained the Snake!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/e896cc17b1b5695af2066056933d70093cb1960e.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 12.3
   },
   {
    "key": "spur",
    "name": "Freakin' Laser Beamz",
+   "description": "Obtained the Spur!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/f5061ffde7c8deb12c24be0199faae662ed2cfe6.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 13.3
   },
   {
    "key": "supermissile",
    "name": "Super, thanks for asking!",
+   "description": "Obtained the Super Missile Launcher!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/9b271cfdfec0c0a4289a200f342511c9d4bbd7f0.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 34.2
   },
   {
    "key": "torokostick",
    "name": "Toroko Wins!",
+   "description": "Beat by Toroko",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/24b60043532458e0c19b246d4efbfdcde4fee552.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 6.3
   },
   {
    "key": "towrope",
    "name": "Tow Me A Rope",
+   "description": "Obtained the Tow Rope!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/d531c7035312597ea95e4fc6a50f76ba0c3ba718.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.4
   },
   {
    "key": "tragedy",
    "name": "Ate A Red Flower",
+   "description": "Defeated Toroko...",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c4d5b29fcaf13175917a595ced6252349f91dacf.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 37
   },
   {
    "key": "turbocharge",
    "name": "Turbocharged!",
+   "description": "Obtained the Turbocharge!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/25997dcf79ede906ac403b6c2f93afe2d1767eec.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 27.3
   },
   {
    "key": "undeadcore",
    "name": "Evil to the Core",
    "description": "Defeated the Undead Core!",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/301df6c629cc640e7bde70799e687b80cc093811.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/301df6c629cc640e7bde70799e687b80cc093811.jpg",
+   "rarity": 20.3
   },
   {
    "key": "whimsical",
    "name": "Supa Star!",
+   "description": "Obtained the Whimsical Star!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/19aa4b9a141583d0ba62c508625d01bc886de795.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 8.5
   },
   {
    "key": "wimp",
    "name": "So easy, so so easy!",
    "description": "Completed Easy Mode",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/019dfa89deaedafb3c2ded49d77df2c0056d77c1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/019dfa89deaedafb3c2ded49d77df2c0056d77c1.jpg",
+   "rarity": 10.8
   },
   {
    "key": "windranka",
    "name": "Wind Fortress A Rank",
+   "description": "Completed Wind Fortress in Less Than 4:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c0095e5e5cb6c77157b9891a0eb59326ce7887d9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.2
   },
   {
    "key": "windrankb",
    "name": "Wind Fortress B Rank",
+   "description": "Completed Wind Fortress in Less Than 6:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/c18780a8565350f5157cde191bec9223979f7e67.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.5
   },
   {
    "key": "windrankc",
@@ -548,14 +664,17 @@
    "description": "Completed Wind Fortress in Less Than 7:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/8fcb890030b357db8c0a6805451b6e504833c67c.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 1.6
   },
   {
    "key": "windranks",
    "name": "Wind Fortress S Rank",
+   "description": "Completed Wind Fortress in Less Than 2:00",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/8095ff5b262f31528766a12257fc9513b314ce94.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 0.9
   }
  ],
  "raw": {

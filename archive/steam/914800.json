@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Coffee Talk",
- "updated": "2026-09-25",
+ "updated": "2026-11-23",
  "id": "914800",
- "fetched": "2026-09-25",
- "last_attempt": "2026-09-25",
+ "fetched": "2026-11-23",
+ "last_attempt": "2026-11-23",
  "unlocked": 0,
  "total": 24,
  "platform": "PC",
@@ -15,168 +15,198 @@
    "name": "Barista Trainee",
    "description": "Serve 10 correct drinks in a single session of challenge mode",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/daf5861ac1ef9a0bee1657453fd99072d9b53b26.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/daf5861ac1ef9a0bee1657453fd99072d9b53b26.jpg",
+   "rarity": 20.9
   },
   {
    "key": "ACH_25_DRINK_CHALLENGEMODE",
    "name": "Barista Expert",
    "description": "Serve 25 correct drinks in a single session of challenge  mode",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/3e6491492063c34821472b56f1ddd5daf123dac1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/3e6491492063c34821472b56f1ddd5daf123dac1.jpg",
+   "rarity": 12.3
   },
   {
    "key": "ACH_50_DRINK_CHALLENGEMODE",
    "name": "Barista Guru",
    "description": "Serve 50 correct drinks in a single session of challenge mode",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/65d0c204e59a89e72c0f52d583e67ca1d38ad27f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/65d0c204e59a89e72c0f52d583e67ca1d38ad27f.jpg",
+   "rarity": 7.8
   },
   {
    "key": "ACH_BREW_FIRST_TIME",
    "name": "First Brew",
    "description": "Brew your first drink",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/5c73875e5c721e6be5a231ee52edaa9fa6cae82e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/5c73875e5c721e6be5a231ee52edaa9fa6cae82e.jpg",
+   "rarity": 94.8
   },
   {
    "key": "ACH_BREW_LATTEART_FIRST_TIME",
    "name": "It's a masterpiece!",
    "description": "Create and serve your first latte art",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/7fc2f06690c8b1fbb06d1cdbc8f4cdf7579e538f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/7fc2f06690c8b1fbb06d1cdbc8f4cdf7579e538f.jpg",
+   "rarity": 88.5
   },
   {
    "key": "ACH_FINISH_GALA_HYDE_ARC",
    "name": "There's a spark",
+   "description": "Finish Gala and Hyde's arc",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/d760d34e213ca6ac0a418ffe1a3dfc55aef3e81a.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 36.6
   },
   {
    "key": "ACH_FINISH_LUA_BAILEYS_ARC",
    "name": "Love of my life",
+   "description": "Finish Lua and Baileys' arc",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/e935688fe14b4a7a15a2fb6533cffbe9eb95d102.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 40.9
   },
   {
    "key": "ACH_FINISH_ONCE",
    "name": "Is that it?",
    "description": "Play the story mode to conclusion once",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/cb8202be3f776e6c61b8192ce3e1dcd8d8d3b4c8.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/cb8202be3f776e6c61b8192ce3e1dcd8d8d3b4c8.jpg",
+   "rarity": 39.1
   },
   {
    "key": "ACH_FINISH_RACHEL_HENRY_ARC",
    "name": "Father and Daughter",
+   "description": "Finish Rachel and Hendry's arc",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/31bf6cef98bab7f08c3d79f882d81c0d19dee4bc.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 37.1
   },
   {
    "key": "ACH_LISTEN_ALL_SONG",
    "name": "24/7 a beat to relax/study to",
    "description": "Listen to all of the songs",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/529c2610a8fee15079e980de19b8312051dd2ef1.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/529c2610a8fee15079e980de19b8312051dd2ef1.jpg",
+   "rarity": 26.6
   },
   {
    "key": "ACH_NEIL_BARISTA",
    "name": "Interstellar support",
+   "description": "Help Neil to help you",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/71183fd5e38fec3741bdb14e7df8ba20cb5643d9.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 39.1
   },
   {
    "key": "ACH_NEW_GAME_FIRST_TIME",
    "name": "Welcome to Coffee Talk",
    "description": "Start a new game",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/03b2a1ac778456b79252126906b05d4d208dd51c.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/03b2a1ac778456b79252126906b05d4d208dd51c.jpg",
+   "rarity": 96.4
   },
   {
    "key": "ACH_RACHEL_UNLOCKED",
    "name": "Achievement Unlocked!",
    "description": "Reach a certain point in the story",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/21f6b91e7c83723f2e9e6f967696d2fb75298325.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/21f6b91e7c83723f2e9e6f967696d2fb75298325.jpg",
+   "rarity": 71.6
   },
   {
    "key": "ACH_SECRET_STORY",
    "name": "God of Caffeine",
+   "description": "Find the secret behind the barista",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/b026e036e2a936ac2721aa0fdb38461316d98b62.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 16.1
   },
   {
    "key": "ACH_SERVE_GALAHAD_WEREWOLF",
    "name": "Gala had a fit!",
+   "description": "Serve Gala Had when Gala turns into a werewolf",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/26aff6ca5923b198426d4779963edaef5cd51689.jpg",
-   "hidden": true
+   "hidden": true,
+   "rarity": 38.4
   },
   {
    "key": "ACH_TIME_SPENT_LATTEART",
    "name": "Art takes time",
    "description": "Spent a total of 1 hour making Latte Art",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/4ea15313088ff66d616de0ab5a43aa71a34947d7.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/4ea15313088ff66d616de0ab5a43aa71a34947d7.jpg",
+   "rarity": 8
   },
   {
    "key": "ACH_TRASH_25_DRINKS",
    "name": "Stop it!",
    "description": "Trash a total of 25 drinks",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/c4c75aaab69c119c1250cfb97904c3a101a0bd34.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/c4c75aaab69c119c1250cfb97904c3a101a0bd34.jpg",
+   "rarity": 12.9
   },
   {
    "key": "ACH_TRASH_FIRST_TIME",
    "name": "Let me start over",
    "description": "Trash your drink for the first time",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/af9761a080ec9e76c977078b7099cd4eb692172b.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/af9761a080ec9e76c977078b7099cd4eb692172b.jpg",
+   "rarity": 63.2
   },
   {
    "key": "ACH_UNLOCK_ALL",
    "name": "Coffee and Chill",
    "description": "Unlock all achievements",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/c02a8a08f3f4588d2e11f95ee4f060934b871cf5.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/c02a8a08f3f4588d2e11f95ee4f060934b871cf5.jpg",
+   "rarity": 6.5
   },
   {
    "key": "ACH_UNLOCK_ALL_CHARACTER",
    "name": "We are all friends",
    "description": "Meet all of the main characters",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/4ac748a359c32cae35d1b328da07198dfd1f3594.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/4ac748a359c32cae35d1b328da07198dfd1f3594.jpg",
+   "rarity": 48.7
   },
   {
    "key": "ACH_UNLOCK_ALL_CHARCTER_MAX",
    "name": "Social media fever",
    "description": "Unlock all of the characters social media profile",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/46679a028dd251c6d2333f45915e5bc6526d130f.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/46679a028dd251c6d2333f45915e5bc6526d130f.jpg",
+   "rarity": 24.8
   },
   {
    "key": "ACH_UNLOCK_ALL_DRINK",
    "name": "Master Brewer",
    "description": "Unlock all special drinks",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/bd0fe7e99f2a5fd0e400a62c867593718dd70e98.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/bd0fe7e99f2a5fd0e400a62c867593718dd70e98.jpg",
+   "rarity": 19.8
   },
   {
    "key": "ACH_UNLOCK_GALLERY",
    "name": "Art Connoisseur",
    "description": "Unlock all the artworks in the Gallery",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/29a789680a51905da5fb88dd041d9de3a39f007e.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/29a789680a51905da5fb88dd041d9de3a39f007e.jpg",
+   "rarity": 26
   },
   {
    "key": "ACH_WRONG_BREW_FIRST_TIME",
    "name": "Is this it?",
    "description": "Serve the wrong drink for the first time",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/d599bea9d04092279af771f2a1c24244d7436d4a.jpg"
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/914800/d599bea9d04092279af771f2a1c24244d7436d4a.jpg",
+   "rarity": 64.1
   }
  ],
  "raw": {
