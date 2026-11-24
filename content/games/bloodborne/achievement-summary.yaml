@@ -29,6 +29,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 46.4
     - name: Father Gascoigne
       description: Defeat the beast that once was Father Gascoigne.
       date: "2020-06-20T15:10:33-05:00"
@@ -36,6 +37,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 43.5
     - name: Blood Gem Contact
       description: |-
         Acquire a blood gem that imbues hunter weapons
@@ -44,6 +46,7 @@ earned:
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/F8A95977917F971671FC4836017BBA12B6D5F3D8.PNG
       provider: psn
       platform: PS4
+      rarity: 45.5
     - name: Blood-starved Beast
       description: Defeat Blood-starved Beast.
       date: "2020-06-22T20:04:47-05:00"
@@ -51,6 +54,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 37
     - name: Chalice of Pthumeru
       description: |-
         Acquire the Chalice of Pthumeru that seals the catacombs
@@ -59,18 +63,21 @@ earned:
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/AAF01204F31FCBEBD6C0351944C373522A825205.PNG
       provider: psn
       platform: PS4
+      rarity: 37
     - name: Rune Contact
       description: Acquire a Caryll Rune that endows hunters with special strength.
       date: "2020-06-22T20:18:42-05:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/029B1AF5FFC310E2AE0EEF87CE8FD30E7BF0AD7F.PNG
       provider: psn
       platform: PS4
+      rarity: 37.2
     - name: Rune Master
       description: Acquire an extremely precious Caryll Rune.
       date: "2020-06-25T19:04:10-05:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/56728727C1C6DC6DB4DACA8DE7349CE4CE667D15.PNG
       provider: psn
       platform: PS4
+      rarity: 29.1
     - name: Vicar Amelia
       description: Defeat the beast that once was Vicar Amelia.
       date: "2020-11-27T13:17:00-06:00"
@@ -78,6 +85,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 34.5
     - name: The Witch of Hemwick
       description: Defeat the Witch of Hemwick.
       date: "2020-11-27T22:29:40-06:00"
@@ -85,6 +93,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 32.9
     - name: Darkbeast Paarl
       description: Defeat Darkbeast Paarl.
       date: "2020-11-28T13:23:09-06:00"
@@ -92,6 +101,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 28.9
     - name: The Source of the Dream
       description: |-
         Discover the abandoned old workshop,
@@ -101,6 +111,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 27.1
     - name: Nightmare Lecture Building
       description: |-
         Gain entry into the Byrgenwerth lecture building,
@@ -110,6 +121,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 29.6
     - name: Shadow of Yharnam
       description: Defeat the Shadow of Yharnam.
       date: "2020-11-28T15:53:13-06:00"
@@ -117,6 +129,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 31.2
     - name: Cainhurst
       description: Gain entry to Cainhurst, the lost and ruined castle.
       date: "2020-11-28T16:15:18-06:00"
@@ -124,6 +137,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 24.7
     - name: Rom, the Vacuous Spider
       description: 'Defeat Great One: Rom, the Vacuous Spider.'
       date: "2020-11-28T17:23:53-06:00"
@@ -131,6 +145,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 29.9
     - name: The One Reborn
       description: Defeat the One Reborn.
       date: "2020-11-29T21:02:27-06:00"
@@ -138,6 +153,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 27.5
     - name: The Choir
       description: |-
         Gain entry to the realm of the Choir,
@@ -147,6 +163,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 22.2
     - name: Celestial Emissary
       description: 'Defeat Great One: Celestial Emissary.'
       date: "2020-11-29T21:59:03-06:00"
@@ -154,6 +171,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 21.2
     - name: Ebrietas, Daughter of the Cosmos
       description: 'Defeat Great One: Ebrietas, Daughter of the Cosmos.'
       date: "2020-11-29T22:06:01-06:00"
@@ -161,6 +179,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 19.8
     - name: Chalice of Isz
       description: |-
         Acquire the Great Chalice of Isz that seals
@@ -170,6 +189,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 19.8
     - name: Micolash, Host of the Nightmare
       description: Defeat Micolash, Host of the Nightmare.
       date: "2020-11-30T15:27:41-06:00"
@@ -177,12 +197,14 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 25.5
     - name: Weapon Master
       description: Acquire a weapon of the highest level.
       date: "2020-11-30T15:54:13-06:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/93C655661F8C3D787DD2BFBA411F1E307D22E8F5.PNG
       provider: psn
       platform: PS4
+      rarity: 21.1
     - name: Mergo's Wet Nurse
       description: 'Defeat Great One: Mergo''s Wet Nurse.'
       date: "2020-11-30T17:45:12-06:00"
@@ -190,6 +212,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 24.7
     - name: Ludwig, the Holy Blade
       description: Defeat the beast that was once Ludwig, the Holy Blade.
       date: "2020-11-30T18:34:02-06:00"
@@ -197,6 +220,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 14.2
     - name: Laurence, the First Vicar
       description: Defeat the beast that was once Laurence, the First Vicar.
       date: "2020-11-30T19:43:52-06:00"
@@ -204,12 +228,14 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 10.3
     - name: Blood Gem Master
       description: Acquire an extremely precious blood gem.
       date: "2020-11-30T19:55:46-06:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/CF65FBCC347B74E297D695C36D2F81909766EC38.PNG
       provider: psn
       platform: PS4
+      rarity: 17.8
     - name: Living Failures
       description: Defeat the failed attempts to become Great Ones.
       date: "2020-12-01T18:59:41-06:00"
@@ -217,6 +243,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 13.4
     - name: Lady Maria of the Astral Clocktower
       description: Defeat Lady Maria of the Astral Clocktower.
       date: "2020-12-01T19:26:17-06:00"
@@ -224,6 +251,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 13.2
     - name: Orphan of Kos
       description: 'Defeat Great One: Orphan of Kos.'
       date: "2020-12-02T12:05:00-06:00"
@@ -231,6 +259,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 11.3
     - name: Childhood's Beginning
       description: |-
         You became an infant Great One,
@@ -240,6 +269,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 15.6
     - name: Honouring Wishes
       description: |-
         Captivated by the moon presence,
@@ -249,6 +279,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 14.8
     - name: Yharnam Sunrise
       description: You lived through the hunt, and saw another day.
       date: "2020-12-02T14:06:20-06:00"
@@ -256,6 +287,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 11.5
     - name: Martyr Logarius
       description: Defeat Martyr Logarius.
       date: "2020-12-02T14:25:24-06:00"
@@ -263,6 +295,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 22.5
     - name: Amygdala
       description: 'Defeat Great One: Amygdala.'
       date: "2020-12-02T14:46:45-06:00"
@@ -270,6 +303,7 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 24
     - name: Chalice of Ailing Loran
       description: |-
         Acquire the Chalice of Ailing Loran that seals
@@ -279,18 +313,21 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 24
     - name: Hunter's Craft
       description: Acquire all special hunter tools.
       date: "2020-12-05T13:22:23-06:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/F34AA9C1EFAA94609521282F706BC57F6B0F0E76.PNG
       provider: psn
       platform: PS4
+      rarity: 11.8
     - name: Hunter's Essence
       description: Acquire all hunter weapons.
       date: "2020-12-12T13:49:39-06:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/CC5C66E4C1F89BC3DB8C4E5C3A8567472F7D20EB.PNG
       provider: psn
       platform: PS4
+      rarity: 8.2
     - name: Yharnam, Pthumerian Queen
       description: Defeat Yharnam, Blood Queen of the Old Labyrinth.
       date: "2020-12-12T16:40:52-06:00"
@@ -298,15 +335,18 @@ earned:
       provider: psn
       platform: PS4
       hidden: true
+      rarity: 8.2
     - name: Bloodborne
       description: All trophies acquired. Hats off!
       date: "2020-12-12T16:40:52-06:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/B201254EA5AB07FE42D25FF799A7AF9AE8274A6C.PNG
       provider: psn
       platform: PS4
+      rarity: 6.9
     - name: Old Hunter's Essence
       description: Acquire all old hunter weapons.
       date: "2021-11-13T19:58:09-06:00"
       icon: https://image.api.playstation.com/trophy/np/NPWR05818_00_00347A646D41E9660F4153AD7A0274E2BC597C5A27/0419FAD30357367E4A516403FCBDDE691F542DB6.PNG
       provider: psn
       platform: PS4
+      rarity: 6.3
