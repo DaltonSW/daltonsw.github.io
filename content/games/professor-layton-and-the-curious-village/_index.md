@@ -1,6 +1,6 @@
 ---
 title: Professor Layton and the Curious Village
-platform: Nintendo DS
+platform: DS
 retroachievements_id: 9518
 steam_appid: null
 status: finished

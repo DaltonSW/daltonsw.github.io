@@ -1,6 +1,6 @@
 ---
 title: Super Smash Bros. for Nintendo 3DS
-platform: Nintendo 3DS
+platform: 3DS
 retroachievements_id: null
 steam_appid: null
 status: multiplayer

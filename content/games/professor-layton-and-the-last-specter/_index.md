@@ -1,6 +1,6 @@
 ---
 title: Professor Layton and the Last Specter
-platform: Nintendo DS
+platform: DS
 retroachievements_id: 7601
 retroachievements_subsets:
   - 25709

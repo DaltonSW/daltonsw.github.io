@@ -1,6 +1,6 @@
 ---
 title: 'Mario & Luigi: Bowser''s Inside Story'
-platform: Nintendo DS
+platform: DS
 retroachievements_id: 5323
 steam_appid: null
 status: paused

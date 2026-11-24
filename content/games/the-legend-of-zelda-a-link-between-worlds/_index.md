@@ -1,6 +1,6 @@
 ---
 title: 'The Legend of Zelda: A Link Between Worlds'
-platform: Nintendo 3DS
+platform: 3DS
 retroachievements_id: null
 steam_appid: null
 status: finished

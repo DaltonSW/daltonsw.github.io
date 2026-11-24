@@ -1,6 +1,6 @@
 ---
 title: Professor Layton and the Unwound Future
-platform: Nintendo DS
+platform: DS
 retroachievements_id: 9831
 steam_appid: null
 status: finished

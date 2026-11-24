@@ -1,6 +1,6 @@
 ---
 title: Professor Layton and the Azran Legacy
-platform: Nintendo 3DS
+platform: 3DS
 retroachievements_id: null
 steam_appid: null
 status: finished

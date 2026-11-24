@@ -1,6 +1,6 @@
 ---
 title: Super Mario 64
-platform: Nintendo 64
+platform: N64
 retroachievements_id: 10003
 steam_appid: null
 status: finished

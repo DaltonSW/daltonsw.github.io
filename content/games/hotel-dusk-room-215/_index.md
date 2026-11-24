@@ -1,6 +1,6 @@
 ---
 title: 'Hotel Dusk: Room 215'
-platform: Nintendo DS
+platform: DS
 retroachievements_id: 6032
 steam_appid: null
 status: playing
