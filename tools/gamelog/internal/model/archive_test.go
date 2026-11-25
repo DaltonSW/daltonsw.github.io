@@ -86,6 +86,29 @@ func TestMergeProvider_ActivityLandsWithoutAchievements(t *testing.T) {
 	}
 }
 
+// A successful fetch with no achievements (Steam's "no stats") advances
+// Fetched but leaves achievement data alone; a failed one advances neither.
+func TestMergeProvider_EmptySuccessfulFetchAdvancesFetchedOnly(t *testing.T) {
+	old := &ProviderRecord{
+		ID: "365670", Fetched: "2025-01-01",
+		Achievements: []ArchivedAchievement{unlocked("a", "2024-12-31T20:00:00-06:00")},
+	}
+	old.Summarize()
+
+	got := mergeProvider(old, &ProviderRecord{ID: "365670", LastAttempt: "2026-11-25", Fetched: "2026-11-25"})
+	if got.Fetched != "2026-11-25" {
+		t.Errorf("Fetched = %q, want 2026-11-25", got.Fetched)
+	}
+	if len(got.Achievements) != 1 || got.Unlocked != 1 {
+		t.Errorf("DATA LOSS: achievement data changed: %d achievements, %d unlocked", len(got.Achievements), got.Unlocked)
+	}
+
+	got = mergeProvider(old, &ProviderRecord{ID: "365670", LastAttempt: "2026-11-25", Fetched: "2026-11-25", LastError: "boom"})
+	if got.Fetched != "2025-01-01" {
+		t.Errorf("a failed fetch must not advance Fetched, got %q", got.Fetched)
+	}
+}
+
 // Activity merges can only add: a smaller playtime, an older last-played day
 // or a blank field from a fresh fetch must not replace what's archived.
 func TestMergeProvider_ActivityNeverGoesBackwards(t *testing.T) {

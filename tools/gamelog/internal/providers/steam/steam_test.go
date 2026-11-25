@@ -377,8 +377,11 @@ func TestFetchSteamRecord_NoStatsIsNotAFailure(t *testing.T) {
 	if rec.LastError != "" {
 		t.Errorf("LastError = %q, want none", rec.LastError)
 	}
-	if len(rec.Achievements) != 0 || rec.Fetched != "" {
-		t.Error("no-stats record must carry no achievements and no Fetched date")
+	if len(rec.Achievements) != 0 {
+		t.Error("no-stats record must carry no achievements")
+	}
+	if rec.Fetched == "" {
+		t.Error("no-stats is a successful fetch and must be dated, or every bulk refresh re-requests it")
 	}
 	if rec.PlaytimeMins != 90 {
 		t.Errorf("PlaytimeMins = %d, want the library's 90", rec.PlaytimeMins)

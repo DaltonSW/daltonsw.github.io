@@ -303,10 +303,14 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 
 	// A fetch whose achievement half produced nothing usable updates only the
 	// attempt metadata and the activity fields above; the achievement data is
-	// left entirely alone.
+	// left entirely alone. A successful empty fetch (Steam's "no stats") still
+	// advances Fetched, so a bulk refresh can tell it's current.
 	if fresh.LastError != "" || len(fresh.Achievements) == 0 {
 		if fresh.ID != "" {
 			merged.ID = fresh.ID
+		}
+		if fresh.LastError == "" && fresh.Fetched != "" {
+			merged.Fetched = fresh.Fetched
 		}
 		return &merged
 	}

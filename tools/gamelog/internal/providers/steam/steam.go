@@ -476,9 +476,11 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 	}
 	rec.Raw = res.Raw
 	// "No stats" means the app has no achievements to fetch — an answer, not a
-	// failure, so it isn't recorded as one. The empty achievement list still
-	// keeps a merge from touching anything already archived.
+	// failure, so it's dated like any successful fetch (steamUnchanged needs
+	// that to skip it). The empty achievement list still keeps a merge from
+	// touching anything already archived.
 	if !res.Success && res.Error == noStatsError {
+		rec.Fetched = today()
 		return rec, nil
 	}
 	if !res.Success {

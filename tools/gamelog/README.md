@@ -426,7 +426,8 @@ Either provider is silently skipped (with a one-line reason) if a game has no ma
 credentials aren't configured — a missing provider never aborts the command. Steam reports two
 expected cases as HTTP errors. "Profile is not public" (403) is surfaced as a plain skip reason
 rather than a raw status code. "Requested app has no stats" (400) just means the game has no
-achievements, so it isn't recorded as an error at all and refreshes report "no achievements".
+achievements, so it isn't recorded as an error at all and refreshes report "no achievements". It
+still sets `fetched`, so a bulk refresh skips the game until its playtime moves.
 
 All dates are reported in `America/Chicago`, matching `timezone` in
 `config/_default/hugo.toml`, so a late-evening session isn't attributed to the next day.

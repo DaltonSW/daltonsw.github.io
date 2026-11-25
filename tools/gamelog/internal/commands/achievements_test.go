@@ -196,6 +196,31 @@ func TestSaveAchievements_ListsSteamLibraryOnce(t *testing.T) {
 	}
 }
 
+// A game with no achievements gets a Fetched date, so the next bulk refresh
+// skips it like any other unchanged game instead of re-requesting it forever.
+func TestSaveAchievements_NoStatsGameIsSkippedNextTime(t *testing.T) {
+	const lp = int64(1700000000)
+	calls := ownedStub(t, 600, lp)
+	noStats := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		*calls++
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte(`{"playerstats":{"error":"Requested app has no stats","success":false}}`))
+	}))
+	t.Cleanup(noStats.Close)
+	steam.PlayerAchievementsURL = noStats.URL // steamStub's cleanup restores it
+
+	dir := t.TempDir()
+	creds := Credentials{SteamAPIKey: "k", SteamID: testSteamID64}
+	for range 2 {
+		if _, err := SaveAchievements(context.Background(), dir, "Hades", steamLink("1145360"), creds, SkipUnchanged); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if *calls != 1 {
+		t.Errorf("no-stats game requested %d times, want 1 (then skipped)", *calls)
+	}
+}
+
 func TestSaveAchievements_SkipUnchangedStillFetchesWhenSomethingMoved(t *testing.T) {
 	const lp = int64(1700000000)
 	day := time.Unix(lp, 0).In(model.SiteLocation).Format("2006-01-02")
