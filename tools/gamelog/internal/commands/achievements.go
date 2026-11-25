@@ -311,7 +311,7 @@ func RunAchievements(args []string) error {
 		if p.LastError != "" {
 			fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Label(), p.LastError)
 		} else {
-			fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Label(), p.Unlocked, p.Total, p.First, p.Last)
+			fmt.Printf("  %s: %s\n", s.Label(), DescribeUnlocks(p))
 		}
 		fmt.Printf("Saved %s\n", s.Path)
 	}
@@ -430,7 +430,7 @@ func runAchievementsAll(full bool) error {
 			} else if p.LastError != "" {
 				fmt.Fprintf(os.Stderr, "  %s: %s (existing data kept)\n", s.Label(), p.LastError)
 			} else {
-				fmt.Printf("  %s: %d/%d unlocked, %s to %s\n", s.Label(), p.Unlocked, p.Total, p.First, p.Last)
+				fmt.Printf("  %s: %s\n", s.Label(), DescribeUnlocks(p))
 			}
 		}
 		if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {
@@ -510,4 +510,16 @@ func RunProject(args []string) error {
 		fmt.Printf("%d game statuses updated from their playthroughs\n", statuses)
 	}
 	return nil
+}
+
+// DescribeUnlocks is a record's unlock count for a refresh report. A record
+// with no achievements says so instead of printing "0/0 unlocked".
+func DescribeUnlocks(p *model.ArchiveRecord) string {
+	if p.Total == 0 {
+		return "no achievements"
+	}
+	if p.First == "" {
+		return fmt.Sprintf("%d/%d unlocked", p.Unlocked, p.Total)
+	}
+	return fmt.Sprintf("%d/%d unlocked, %s to %s", p.Unlocked, p.Total, p.First, p.Last)
 }

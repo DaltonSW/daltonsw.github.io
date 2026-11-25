@@ -416,7 +416,7 @@ func (s *server) refreshAchievements(j *job, games []model.GameSummary, o refres
 			case p.LastError != "":
 				lines = append(lines, fmt.Sprintf("%s: %s (existing data kept)", sv.Label(), p.LastError))
 			default:
-				lines = append(lines, fmt.Sprintf("%s: %d/%d unlocked, %s to %s", sv.Label(), p.Unlocked, p.Total, p.First, p.Last))
+				lines = append(lines, fmt.Sprintf("%s: %s", sv.Label(), commands.DescribeUnlocks(p)))
 			}
 		}
 		if _, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links); err != nil {
@@ -446,7 +446,7 @@ func describeChange(label string, before, after *model.ArchiveRecord) string {
 		return fmt.Sprintf("%s: %s (existing data kept)", label, after.LastError)
 	}
 	if before == nil {
-		return fmt.Sprintf("%s: first capture, %d/%d unlocked", label, after.Unlocked, after.Total)
+		return fmt.Sprintf("%s: first capture, %s", label, commands.DescribeUnlocks(after))
 	}
 	var parts []string
 	if d := after.Unlocked - before.Unlocked; d > 0 {

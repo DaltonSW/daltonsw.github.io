@@ -344,12 +344,12 @@ func TestFetchSteamRecord_SchemaFailureIsNotFatal(t *testing.T) {
 // one that looks like an empty success.
 func TestFetchSteamRecord_FailureIsMarked(t *testing.T) {
 	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusBadRequest)
-		w.Write([]byte(`{"playerstats":{"error":"Requested app has no stats","success":false}}`))
+		w.WriteHeader(http.StatusForbidden)
+		w.Write([]byte(`{"playerstats":{"error":"Profile is not public","success":false}}`))
 	})
 
 	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
-	rec, err := FetchRecord(context.Background(), client, "365670", nil)
+	rec, err := FetchRecord(context.Background(), client, "1237970", nil)
 	if err != nil {
 		t.Fatalf("expected no hard error, got %v", err)
 	}
@@ -358,6 +358,30 @@ func TestFetchSteamRecord_FailureIsMarked(t *testing.T) {
 	}
 	if rec.Fetched != "" {
 		t.Error("Fetched must only be set on a successful fetch")
+	}
+}
+
+// A game with no achievements is an answer, not a failure: nothing to report,
+// and nothing that could let a merge touch existing data.
+func TestFetchSteamRecord_NoStatsIsNotAFailure(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte(`{"playerstats":{"error":"Requested app has no stats","success":false}}`))
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchRecord(context.Background(), client, "365670", &SteamOwnedGame{PlaytimeMins: 90})
+	if err != nil {
+		t.Fatalf("expected no hard error, got %v", err)
+	}
+	if rec.LastError != "" {
+		t.Errorf("LastError = %q, want none", rec.LastError)
+	}
+	if len(rec.Achievements) != 0 || rec.Fetched != "" {
+		t.Error("no-stats record must carry no achievements and no Fetched date")
+	}
+	if rec.PlaytimeMins != 90 {
+		t.Errorf("PlaytimeMins = %d, want the library's 90", rec.PlaytimeMins)
 	}
 }
 

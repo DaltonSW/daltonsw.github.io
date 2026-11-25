@@ -123,6 +123,10 @@ type steamPlayerAchievementsResponse struct {
 // SteamAchievementsResult is the outcome of a GetPlayerAchievements call:
 // either a list of achievements, or a reason none are available (private
 // profile, or the game has no achievement schema at all).
+// noStatsError is GetPlayerAchievements' answer (HTTP 400) for an app with no
+// achievements defined.
+const noStatsError = "Requested app has no stats"
+
 type SteamAchievementsResult struct {
 	Achievements []SteamAchievement
 	Success      bool
@@ -467,6 +471,12 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 		return rec, nil
 	}
 	rec.Raw = res.Raw
+	// "No stats" means the app has no achievements to fetch — an answer, not a
+	// failure, so it isn't recorded as one. The empty achievement list still
+	// keeps a merge from touching anything already archived.
+	if !res.Success && res.Error == noStatsError {
+		return rec, nil
+	}
 	if !res.Success {
 		rec.LastError = model.FirstNonEmpty(res.Error, "achievement data unavailable")
 		return rec, nil

@@ -1250,7 +1250,7 @@ func (s *server) handleRefreshAchievements(w http.ResponseWriter, r *http.Reques
 		if p.LastError != "" {
 			parts = append(parts, fmt.Sprintf("%s: %s (existing data kept)", sv.Label(), p.LastError))
 		} else {
-			parts = append(parts, fmt.Sprintf("%s: %d/%d unlocked", sv.Label(), p.Unlocked, p.Total))
+			parts = append(parts, fmt.Sprintf("%s: %s", sv.Label(), commands.DescribeUnlocks(p)))
 		}
 	}
 	sort.Strings(parts)
