@@ -298,9 +298,11 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 	merged.Mastery = unionMastery(old.Mastery, DeriveMastery(old))
 	merged.LastAttempt = fresh.LastAttempt
 	merged.LastError = fresh.LastError
+	mergeActivity(&merged, fresh)
 
-	// A fetch that produced nothing usable updates only the attempt
-	// metadata; the existing record is left entirely alone.
+	// A fetch whose achievement half produced nothing usable updates only the
+	// attempt metadata and the activity fields above; the achievement data is
+	// left entirely alone.
 	if fresh.LastError != "" || len(fresh.Achievements) == 0 {
 		if fresh.ID != "" {
 			merged.ID = fresh.ID
@@ -310,25 +312,12 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 
 	merged.Fetched = fresh.Fetched
 	merged.ID = FirstNonEmpty(fresh.ID, old.ID)
-	merged.Platform = FirstNonEmpty(fresh.Platform, old.Platform)
-	merged.Icon = FirstNonEmpty(fresh.Icon, old.Icon)
-	merged.Completion = FirstNonEmpty(fresh.Completion, old.Completion)
 	// Deliberately assigned, not FirstNonEmpty: a first-party fetch reports
 	// Source "" and must be able to clear an earlier "exophase", otherwise a
 	// record would claim to be relayed forever after a first-party refresh.
 	merged.Source = fresh.Source
 	merged.AwardKind = FirstNonEmpty(fresh.AwardKind, old.AwardKind)
 	merged.AwardDate = FirstNonEmpty(fresh.AwardDate, old.AwardDate)
-	merged.LastPlayed = FirstNonEmpty(fresh.LastPlayed, old.LastPlayed)
-	if fresh.Total > merged.Total {
-		merged.Total = fresh.Total
-	}
-	if fresh.PlaytimeMins > merged.PlaytimeMins {
-		merged.PlaytimeMins = fresh.PlaytimeMins
-	}
-	if len(fresh.Playtime) > 0 {
-		merged.Playtime = fresh.Playtime
-	}
 	if len(fresh.Raw) > 0 {
 		merged.Raw = fresh.Raw
 	}
@@ -358,6 +347,30 @@ func mergeProvider(old, fresh *ProviderRecord) *ProviderRecord {
 	merged.Mastery = unionMastery(merged.Mastery, fresh.Mastery)
 	merged.Summarize()
 	return &merged
+}
+
+// mergeActivity folds in the fields that describe the game rather than its
+// achievement list: playtime, last played, the declared total, platform, icon,
+// completion. Providers read these from a listing separate from the
+// achievement fetch (Steam's owned games, Xbox title history, PSN's and
+// Exophase's title lists, RA's recently played), so they are real even when
+// the achievement half failed or the game has no achievements at all. Every
+// rule here can only add: counts and dates never go backwards, a blank never
+// replaces a value.
+func mergeActivity(merged, fresh *ProviderRecord) {
+	merged.Platform = FirstNonEmpty(fresh.Platform, merged.Platform)
+	merged.Icon = FirstNonEmpty(fresh.Icon, merged.Icon)
+	merged.Completion = FirstNonEmpty(fresh.Completion, merged.Completion)
+	if fresh.LastPlayed > merged.LastPlayed {
+		merged.LastPlayed = fresh.LastPlayed
+	}
+	if fresh.Total > merged.Total {
+		merged.Total = fresh.Total
+	}
+	if fresh.PlaytimeMins > merged.PlaytimeMins {
+		merged.PlaytimeMins = fresh.PlaytimeMins
+	}
+	merged.Playtime = mergeMaxIntMap(merged.Playtime, fresh.Playtime)
 }
 
 // mergeAchievement keeps the union of what's known. An unlock, once seen, is

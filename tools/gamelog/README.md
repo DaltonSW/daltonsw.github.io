@@ -683,7 +683,9 @@ changing.
 goes private, a game is delisted, a key is revoked, a rate limit returns an empty body. Any of
 those would otherwise overwrite years of history with nothing. So writes **merge**: an unlock
 recorded once is never retracted, its original date wins over a later one, and a fetch that
-returns nothing usable updates only `last_attempt`/`last_error` while leaving the data alone.
+returns no usable achievements updates only `last_attempt`/`last_error` and the activity fields
+(playtime, last played, total, platform, icon, completion, which come from a separate listing and
+merge only upward), leaving the achievement data alone.
 `gamelog achievements` reports `(existing data kept)` when that happens, and still exits 0.
 
 **2. Keep everything the API gave us.** Locked achievements are kept (they're the denominator,

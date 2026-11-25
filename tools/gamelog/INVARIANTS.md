@@ -56,9 +56,12 @@ what's load-bearing.
 ### Data safety
 
 - **Achievement refreshes merge, never overwrite.** `mergeProvider` (`internal/model/archive.go`)
-  keeps every unlock once recorded, and a fetch that errors or returns no achievements updates
-  only the attempt metadata. The regression tests in `internal/model/archive_test.go` cover this.
-  Keep them.
+  keeps every unlock once recorded, and a fetch that errors or returns no achievements leaves the
+  achievement data alone. Activity fields (playtime, last played, total, platform, icon,
+  completion) still merge on such a fetch via `mergeActivity`, since providers read them from a
+  separate listing, and only by rules that can't shrink them: max, latest, fill-blank. Gating
+  them on the achievement fetch once froze playtime for every Steam game without achievements.
+  The regression tests in `internal/model/archive_test.go` cover this. Keep them.
 - **Mastery milestones are only ever added.** `ProviderRecord.Mastery` is persisted because it can
   stop being derivable: a DLC turns 50/50 into 50/60, and an RA set revision demotes `award_kind`.
   `mergeProvider` unions in what the *old* record qualified for before applying a fetch, and

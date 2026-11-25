@@ -55,6 +55,55 @@ func TestMergeProvider_NeverRetractsAnUnlock(t *testing.T) {
 		t.Errorf("Unlocked = %d, want 2", got.Unlocked)
 	}
 }
+
+// A game with no achievements (Steam's "no stats") or an achievement fetch
+// that failed still carries real playtime from a separate listing. It must
+// land, while the achievement data stays untouched.
+func TestMergeProvider_ActivityLandsWithoutAchievements(t *testing.T) {
+	old := &ProviderRecord{
+		ID: "365670", Fetched: "2025-01-01", PlaytimeMins: 120, LastPlayed: "2025-01-01",
+		Playtime:     map[string]int{"windows": 100, "deck": 20},
+		Achievements: []ArchivedAchievement{unlocked("a", "2024-12-31T20:00:00-06:00")},
+	}
+	old.Summarize()
+
+	for _, lastError := range []string{"", "Profile is not public"} {
+		fresh := &ProviderRecord{
+			ID: "365670", LastAttempt: "2026-11-24", LastError: lastError,
+			PlaytimeMins: 300, LastPlayed: "2026-11-20",
+			Playtime: map[string]int{"windows": 280},
+		}
+		got := mergeProvider(old, fresh)
+		if got.PlaytimeMins != 300 || got.LastPlayed != "2026-11-20" {
+			t.Errorf("error %q: playtime %d / last played %q, want 300 / 2026-11-20", lastError, got.PlaytimeMins, got.LastPlayed)
+		}
+		if got.Playtime["windows"] != 280 || got.Playtime["deck"] != 20 {
+			t.Errorf("error %q: per-device playtime %v, want windows 280 and deck kept at 20", lastError, got.Playtime)
+		}
+		if len(got.Achievements) != 1 || got.Unlocked != 1 || got.Fetched != "2025-01-01" {
+			t.Errorf("error %q: achievement data changed: %d achievements, %d unlocked, fetched %q", lastError, len(got.Achievements), got.Unlocked, got.Fetched)
+		}
+	}
+}
+
+// Activity merges can only add: a smaller playtime, an older last-played day
+// or a blank field from a fresh fetch must not replace what's archived.
+func TestMergeProvider_ActivityNeverGoesBackwards(t *testing.T) {
+	old := &ProviderRecord{
+		ID: "1", PlaytimeMins: 500, LastPlayed: "2026-06-01", Icon: "icon.png", Total: 40,
+		Achievements: []ArchivedAchievement{unlocked("a", "2026-06-01T12:00:00-05:00")},
+	}
+	old.Summarize()
+	fresh := &ProviderRecord{
+		ID: "1", Fetched: "2026-11-24", PlaytimeMins: 10, LastPlayed: "2020-01-01", Total: 30,
+		Achievements: []ArchivedAchievement{unlocked("a", "2026-06-01T12:00:00-05:00")},
+	}
+	got := mergeProvider(old, fresh)
+	if got.PlaytimeMins != 500 || got.LastPlayed != "2026-06-01" || got.Icon != "icon.png" || got.Total != 40 {
+		t.Errorf("activity regressed: playtime %d, last played %q, icon %q, total %d", got.PlaytimeMins, got.LastPlayed, got.Icon, got.Total)
+	}
+}
+
 func TestSaveRecord_KeepsBothProvidersSeparate(t *testing.T) {
 	dir := t.TempDir()
 	if _, err := SaveRecord(dir, ProviderSteam, "1", "Some Game", &ProviderRecord{
