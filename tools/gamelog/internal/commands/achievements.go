@@ -5,7 +5,9 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"strconv"
+	"strings"
 	"sync"
 	"time"
 
@@ -115,6 +117,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 		opt(&o)
 	}
 	var saved []savedRecord
+	var unconfigured []string // providers skipped for missing credentials
 
 	for _, link := range links {
 		if link.ID == "" {
@@ -127,6 +130,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 		switch link.Provider {
 		case model.ProviderRA:
 			if !creds.RAConfigured() {
+				unconfigured = append(unconfigured, link.Provider)
 				continue
 			}
 			client := raClient(creds)
@@ -134,6 +138,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 				raRecentlyPlayed(ctx, client, creds.RAUsername)[link.ID])
 		case model.ProviderSteam:
 			if !creds.SteamConfigured() {
+				unconfigured = append(unconfigured, link.Provider)
 				continue
 			}
 			steamOwned, lerr := steamOwnedGames(ctx, creds)
@@ -157,6 +162,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			rec, err = steam.FetchRecord(ctx, steamClient(creds), link.ID, owned)
 		case model.ProviderPSN:
 			if !creds.PSNConfigured() {
+				unconfigured = append(unconfigured, link.Provider)
 				continue
 			}
 			titles, lerr := psnTrophyTitles(ctx, creds)
@@ -167,11 +173,13 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			}
 		case model.ProviderUbisoft:
 			if !creds.ExophaseConfigured() {
+				unconfigured = append(unconfigured, link.Provider)
 				continue
 			}
 			rec, err = exophase.FetchUbisoftRecord(ctx, ExophaseClientFor(creds), link.ID)
 		case model.ProviderXbox:
 			if !creds.XBLConfigured() {
+				unconfigured = append(unconfigured, link.Provider)
 				continue
 			}
 			titles, lerr := xboxTitleHistory(ctx, creds)
@@ -182,6 +190,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			}
 		case model.ProviderGooglePlay:
 			if !creds.ExophaseConfigured() {
+				unconfigured = append(unconfigured, link.Provider)
 				continue
 			}
 			rec, err = exophase.FetchGooglePlayRecord(ctx, ExophaseClientFor(creds), link.ID)
@@ -213,7 +222,10 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 	}
 
 	if len(saved) == 0 {
-		return nil, fmt.Errorf("no configured provider for this game")
+		if len(unconfigured) > 0 {
+			return nil, errUnconfigured(unconfigured)
+		}
+		return nil, fmt.Errorf("no provider link on this game")
 	}
 	return saved, nil
 }
@@ -242,6 +254,25 @@ func xboxTitleHistory(ctx context.Context, creds Credentials) (map[string]xbox.T
 	return cachedList("xbox:"+creds.XBLAPIKey, func() (map[string]xbox.Title, error) {
 		return xblClient(creds).TitleHistory(ctx)
 	})
+}
+
+// credentialVars names the .env keys each achievement provider needs.
+var credentialVars = map[string]string{
+	model.ProviderRA:         "RA_USERNAME and RA_API_KEY",
+	model.ProviderSteam:      "STEAM_API_KEY and STEAM_ID",
+	model.ProviderPSN:        "PSN_NPSSO",
+	model.ProviderXbox:       "XBLIO_API_KEY",
+	model.ProviderUbisoft:    "EXOPHASE_USER",
+	model.ProviderGooglePlay: "EXOPHASE_USER",
+}
+
+// errUnconfigured says which linked providers were skipped and what to set.
+func errUnconfigured(providers []string) error {
+	parts := make([]string, 0, len(providers))
+	for _, p := range slices.Compact(providers) {
+		parts = append(parts, fmt.Sprintf("%s (set %s in tools/gamelog/.env)", model.ProviderLabel(p), credentialVars[p]))
+	}
+	return fmt.Errorf("credentials not configured: %s", strings.Join(parts, "; "))
 }
 
 type saveOptions struct{ skipUnchanged bool }

@@ -311,3 +311,24 @@ func TestRARecentlyPlayed_ExpiresAndForgets(t *testing.T) {
 		t.Fatalf("forgotten entry not refetched: %d calls, want 3", tr.calls)
 	}
 }
+
+// A link whose provider has no credentials on this machine must say so, and
+// which keys to set, rather than read as if the game had no link at all.
+func TestSaveAchievements_NamesMissingCredentials(t *testing.T) {
+	links := []model.ProviderLink{
+		{Provider: model.ProviderRA, ID: "1"},
+		{Provider: model.ProviderRA, ID: "2", Subset: true},
+	}
+	_, err := SaveAchievements(context.Background(), t.TempDir(), "Game", links, Credentials{})
+	if err == nil || !strings.Contains(err.Error(), "RA_USERNAME and RA_API_KEY") {
+		t.Fatalf("err = %v, want it to name the missing RA keys", err)
+	}
+	if strings.Count(err.Error(), "RetroAchievements") != 1 {
+		t.Errorf("RetroAchievements listed more than once: %v", err)
+	}
+
+	_, err = SaveAchievements(context.Background(), t.TempDir(), "Game", nil, Credentials{})
+	if err == nil || !strings.Contains(err.Error(), "no provider link") {
+		t.Errorf("err = %v, want the no-link message", err)
+	}
+}
