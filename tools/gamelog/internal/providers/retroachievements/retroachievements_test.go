@@ -23,6 +23,40 @@ func raStub(t *testing.T, handler http.HandlerFunc) {
 	t.Cleanup(func() { GameProgressURL = old })
 }
 
+// RA rate-limits sustained bursts with 429: the client waits and retries, and
+// gives up with an error after its last attempt rather than looping forever.
+func TestDo_RetriesOn429(t *testing.T) {
+	for _, tc := range []struct {
+		name      string
+		failures  int
+		wantCalls int
+		wantErr   bool
+	}{
+		{"recovers", 1, 2, false},
+		{"gives up", 100, 5, true},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			calls := 0
+			raStub(t, func(w http.ResponseWriter, r *http.Request) {
+				calls++
+				if calls <= tc.failures {
+					w.WriteHeader(http.StatusTooManyRequests)
+					return
+				}
+				w.Write([]byte(`{"Title":"Game","NumAchievements":0,"Achievements":{}}`))
+			})
+			client := &RAClient{Username: "u", APIKey: "k", Throttle: time.Nanosecond, Backoff: time.Nanosecond}
+			_, err := client.GetGameProgress(context.Background(), "1")
+			if (err != nil) != tc.wantErr {
+				t.Errorf("err = %v, want error: %v", err, tc.wantErr)
+			}
+			if calls != tc.wantCalls {
+				t.Errorf("made %d calls, want %d", calls, tc.wantCalls)
+			}
+		})
+	}
+}
+
 // Without a=1 the API omits the award fields entirely, which silently
 // downgrades every suggestion to medium confidence.
 func TestGetGameProgress_RequestsAwardMetadata(t *testing.T) {

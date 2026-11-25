@@ -2,6 +2,7 @@ package retroachievements
 
 import (
 	"bytes"
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -46,6 +47,9 @@ type RAClient struct {
 	// Throttle is the minimum gap between requests. Zero means
 	// raMinInterval; set it explicitly in tests to avoid sleeping.
 	Throttle time.Duration
+	// Backoff is the first wait after a 429, doubling per retry. Zero means
+	// 2s; set it explicitly in tests to avoid sleeping.
+	Backoff time.Duration
 	// mu serializes requests so a shared client keeps the throttle across goroutines.
 	mu      sync.Mutex
 	lastReq time.Time
@@ -71,7 +75,7 @@ func (c *RAClient) interval() time.Duration {
 func (c *RAClient) do(ctx context.Context, url string) (body []byte, status int, err error) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
-	backoff := 2 * time.Second
+	backoff := cmp.Or(c.Backoff, 2*time.Second)
 	for attempt := 0; ; attempt++ {
 		if wait := c.interval() - time.Since(c.lastReq); wait > 0 && !c.lastReq.IsZero() {
 			select {

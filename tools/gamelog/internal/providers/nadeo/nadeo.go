@@ -25,6 +25,7 @@ package nadeo
 
 import (
 	"bytes"
+	"cmp"
 	"context"
 	"encoding/base64"
 	"encoding/json"
@@ -89,7 +90,10 @@ type Client struct {
 	// Throttle is the minimum gap between requests. Zero means
 	// nadeoMinInterval; set it explicitly in tests to avoid sleeping.
 	Throttle time.Duration
-	lastReq  time.Time
+	// Backoff is the first wait after a 429, doubling per retry. Zero means
+	// 2s; set it explicitly in tests to avoid sleeping.
+	Backoff time.Duration
+	lastReq time.Time
 
 	// DumpRaw, when set, is a directory every verbatim response body is written
 	// into. It exists so a single scoped live run can produce the fixtures this
@@ -266,7 +270,7 @@ func (c *Client) AccountID(ctx context.Context) (string, error) {
 // backoff. It returns the body and status so callers can interpret the API's
 // several success-shaped failure modes themselves.
 func (c *Client) do(ctx context.Context, method, reqURL, audience string, body []byte, dumpAs string) ([]byte, int, error) {
-	backoff := 2 * time.Second
+	backoff := cmp.Or(c.Backoff, 2*time.Second)
 	for attempt := 0; ; attempt++ {
 		t, err := c.token(ctx, audience)
 		if err != nil {

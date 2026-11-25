@@ -420,9 +420,8 @@ func TestDo_RetriesOn429(t *testing.T) {
 	c := testClient()
 	c.Throttle = time.Nanosecond
 	// Not waiting the real backoff: the point is that it retried at all.
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-	if _, _, err := c.Campaigns(ctx); err != nil {
+	c.Backoff = time.Nanosecond
+	if _, _, err := c.Campaigns(context.Background()); err != nil {
 		t.Fatal(err)
 	}
 	if calls < 2 {
