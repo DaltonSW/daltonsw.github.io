@@ -272,33 +272,49 @@ func (s *server) handleCatchupScan(w http.ResponseWriter, r *http.Request) {
 
 type catchupRunOptions struct {
 	full      bool            // re-fetch unchanged Steam games too
-	providers map[string]bool // the ticked "load" boxes; nothing else is fetched
-	minHours  float64
+	providers map[string]bool // the sources to load; nothing else is fetched
+	// alone is a single own-button source (see catchupOwnButton): no
+	// new-games scan, and the run isn't recorded.
+	alone    bool
+	minHours float64
 }
 
-// catchupRunProvider is one "load" checkbox on the run form.
-type catchupRunProvider struct {
+// catchupOwnButton are the sources played too rarely to load on every run.
+// Each gets its own button, and loading one alone isn't recorded as a run:
+// that would move the "new since" boundary for every other source too.
+// Trackmania is here as well because Nadeo calls run on a real player account.
+var catchupOwnButton = []string{model.ProviderPSN, model.ProviderXbox, model.ProviderUbisoft, model.ProviderNadeo}
+
+// catchupSource is one source the run form offers: a "load" checkbox for
+// a regular source, a button of its own for one in catchupOwnButton.
+type catchupSource struct {
 	Key, Label string
-	Checked    bool   // ticked by default
-	Note       string // shown after the label
+	Note       string // a button's tooltip
 }
 
-// catchupRunProviders is every source a run can load, in run order: the six
-// achievement providers, BTD6, then Trackmania — unticked by default, since
-// Nadeo calls run on a real player account.
-func catchupRunProviders() []catchupRunProvider {
-	var out []catchupRunProvider
-	for _, p := range model.ProviderOrder {
-		out = append(out, catchupRunProvider{Key: p, Label: model.ProviderLabel(p), Checked: true})
+// catchupSources splits every loadable source, in run order, into the
+// regular ones (checkboxes on the main run, ticked by default) and the
+// own-button ones.
+func catchupSources() (regular, own []catchupSource) {
+	add := func(src catchupSource) {
+		if slices.Contains(catchupOwnButton, src.Key) {
+			own = append(own, src)
+		} else {
+			regular = append(regular, src)
+		}
 	}
-	return append(out,
-		catchupRunProvider{Key: model.ProviderNinjaKiwi, Label: "BTD6", Checked: true},
-		catchupRunProvider{Key: model.ProviderNadeo, Label: "Trackmania", Note: "current season; uses your play account"},
-	)
+	for _, p := range model.ProviderOrder {
+		add(catchupSource{Key: p, Label: model.ProviderLabel(p)})
+	}
+	add(catchupSource{Key: model.ProviderNinjaKiwi, Label: "BTD6"})
+	add(catchupSource{Key: model.ProviderNadeo, Label: "Trackmania", Note: "current season; uses your play account"})
+	return regular, own
 }
 
-// RunProviders feeds the run form's checkboxes.
-func (catchupData) RunProviders() []catchupRunProvider { return catchupRunProviders() }
+// RunProviders feeds the run form's checkboxes, OwnButtonSources its
+// separate buttons.
+func (catchupData) RunProviders() []catchupSource     { r, _ := catchupSources(); return r }
+func (catchupData) OwnButtonSources() []catchupSource { _, o := catchupSources(); return o }
 
 // handleCatchupRun starts "Load what's new", or joins the one already running.
 func (s *server) handleCatchupRun(w http.ResponseWriter, r *http.Request) {
@@ -317,20 +333,38 @@ func (s *server) handleCatchupRun(w http.ResponseWriter, r *http.Request) {
 		providers: map[string]bool{},
 		minHours:  atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours),
 	}
-	for _, p := range r.Form["load"] {
-		o.providers[p] = true
-	}
 	back := housekeepingReturnTo(r)
-	// A run with nothing ticked would still be recorded, moving the "since"
-	// boundary past activity that was never loaded.
-	if len(o.providers) == 0 {
-		redirectErr(w, r, back, fmt.Errorf("tick at least one provider to load"))
-		return
+	title := "Catch up — loading what's new"
+	if only := r.FormValue("only"); only != "" {
+		_, own := catchupSources()
+		i := slices.IndexFunc(own, func(src catchupSource) bool { return src.Key == only })
+		if i < 0 {
+			redirectErr(w, r, back, fmt.Errorf("%q can't be loaded on its own", only))
+			return
+		}
+		o.providers[only], o.alone = true, true
+		title = "Catch up — loading " + own[i].Label
+	} else {
+		// Own-button sources are never part of the main run, whatever the
+		// form sent.
+		for _, p := range r.Form["load"] {
+			if !slices.Contains(catchupOwnButton, p) {
+				o.providers[p] = true
+			}
+		}
+		// A run with nothing ticked would still be recorded, moving the
+		// "since" boundary past activity that was never loaded.
+		if len(o.providers) == 0 {
+			redirectErr(w, r, back, fmt.Errorf("tick at least one provider to load"))
+			return
+		}
 	}
-	id, j := s.jobs.create("Catch up — loading what's new", back, "Back to catch up")
+	id, j := s.jobs.create(title, back, "Back to catch up")
 	j.Nav, j.DoneHref = "catchup", back
 	s.catchupJobID = id
-	s.catchupNotes = nil
+	if !o.alone {
+		s.catchupNotes = nil
+	}
 	go s.runCatchupJob(j, o)
 	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
 }
@@ -338,8 +372,10 @@ func (s *server) handleCatchupRun(w http.ResponseWriter, r *http.Request) {
 // runCatchupJob is the whole "what's changed since last time" fetch, in the
 // order the page reads it back: the new-games scan (warming the cache the
 // page's New games section reads), every linked game's achievements, BTD6,
-// and Trackmania when ticked. Every write is the same merge-only archive
-// write the per-game buttons make; nothing touches playthroughs.yaml.
+// and Trackmania, each only when its source is loaded. Every write is the
+// same merge-only archive write the per-game buttons make; nothing touches
+// playthroughs.yaml. A source loaded alone skips the scan and isn't recorded
+// as a run.
 func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 	start := time.Now()
 	ctx := context.Background()
@@ -366,11 +402,15 @@ func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 	// and of those only the ticked ones.
 	var scanOnly []string
 	for _, p := range model.ProviderOrder {
-		if o.providers[p] && !slices.Contains(commands.OnDemandScanProviders, p) {
+		if !o.alone && o.providers[p] && !slices.Contains(commands.OnDemandScanProviders, p) {
 			scanOnly = append(scanOnly, p)
 		}
 	}
-	total := 1 + len(withLinks)
+	steps := 0 // progress steps before the achievements loop
+	if len(scanOnly) > 0 {
+		steps = 1
+	}
+	total := steps + len(withLinks)
 	if btd6 {
 		total++
 	}
@@ -384,26 +424,28 @@ func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 		j.log("  %s", msg)
 	}
 
-	j.progress(1, total, "new games")
-	j.log("New games")
-	commands.ForgetScanCache(creds)
-	if len(scanOnly) == 0 {
-		j.log("  skipped (no scanned provider ticked)")
-	} else if scan, _, err := s.scanCandidates(o.minHours, commands.ScanModePlayed, func(so *commands.ScanOptions) { so.Only = scanOnly }); err != nil {
-		note("scan failed: %v", err)
-	} else {
-		j.log("  %d unlogged or unlinked", len(scan.Candidates))
-		for _, n := range scan.Notices {
-			j.log("  %s", n)
+	if len(scanOnly) > 0 {
+		j.progress(1, total, "new games")
+		j.log("New games")
+		commands.ForgetScanCache(creds)
+		if scan, _, err := s.scanCandidates(o.minHours, commands.ScanModePlayed, func(so *commands.ScanOptions) { so.Only = scanOnly }); err != nil {
+			note("scan failed: %v", err)
+		} else {
+			j.log("  %d unlogged or unlinked", len(scan.Candidates))
+			for _, n := range scan.Notices {
+				j.log("  %s", n)
+			}
 		}
+		j.log("")
 	}
 
-	j.log("")
-	j.log("Achievements")
-	c := s.refreshAchievements(j, withLinks, refreshOptions{full: o.full, only: o.providers, quiet: true, base: 1, total: total})
-	j.log("  %d games checked, %d changed, %d failed", c.refreshed, c.changed, c.failed)
+	if len(withLinks) > 0 {
+		j.log("Achievements")
+		c := s.refreshAchievements(j, withLinks, refreshOptions{full: o.full, only: o.providers, quiet: true, base: steps, total: total})
+		j.log("  %d games checked, %d changed, %d failed", c.refreshed, c.changed, c.failed)
+	}
 
-	done := 1 + len(withLinks)
+	done := steps + len(withLinks)
 	if btd6 {
 		done++
 		j.progress(done, total, "BTD6")
@@ -435,17 +477,24 @@ func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 		}
 	}
 
-	st, err := model.LoadCatchup(archiveDir)
-	if err == nil {
-		st.RecordRun(start)
-		err = model.SaveCatchup(archiveDir, st)
-	}
-	if err != nil {
-		note("could not record this run: %v", err)
+	if !o.alone {
+		st, err := model.LoadCatchup(archiveDir)
+		if err == nil {
+			st.RecordRun(start)
+			err = model.SaveCatchup(archiveDir, st)
+		}
+		if err != nil {
+			note("could not record this run: %v", err)
+		}
 	}
 
 	s.catchupMu.Lock()
-	s.catchupNotes = notes
+	if o.alone {
+		// The main run's notes still stand; this load's are added to them.
+		s.catchupNotes = append(s.catchupNotes, notes...)
+	} else {
+		s.catchupNotes = notes
+	}
 	s.catchupMu.Unlock()
 	j.progress(total, total, "")
 	j.finish(nil)

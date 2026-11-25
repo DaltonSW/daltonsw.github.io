@@ -17,8 +17,8 @@ what's load-bearing.
 - `archive/` holds **529 records (17 MB)**: 434 Steam, 47 RetroAchievements, 23 Xbox 360,
   13 PSN, 5 Google Play, 5 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
 - The day-to-day tool is the web UI (`gamelog serve`). Its home page, Catch up, runs one "Load
-  what's new" job (scan across all six achievement providers, refresh every linked game into the
-  archive, BTD6, and Trackmania only when ticked), then lists what to act on in place: unlogged
+  what's new" job (scan, refresh linked games into the archive, and BTD6, over the ticked regular
+  sources: Steam, RA, Google Play, BTD6), then lists what to act on in place: unlogged
   activity read from the archive, new or unlinked games (including subset attaching), stale-game
   triage, and runs left open. Housekeeping keeps the owned-but-unplayed backlog import, the
   ignore list, achievement completion, and the manual refresh tools. The CLI still has `suggest`, `achievements`,
@@ -100,6 +100,13 @@ what's load-bearing.
   Stale triage does exactly that (`CloseLatestOpenRun`).
 - **Playthrough boundaries are confirmed by hand, never derived.** A gap in achievement unlocks
   marks an activity arc, not a playthrough, so nothing should split entries automatically.
+
+### Catch up runs
+
+- **A source loaded on its own is never recorded as a run.** PSN, Xbox, Ubisoft and Trackmania
+  each have their own button (`catchupOwnButton`), and `RecordRun` moves the "new since" boundary
+  for every source. Recording a one-source load would hide unreviewed activity on all the others.
+  For the same reason, a main run with nothing ticked is refused.
 
 ### Status vocabulary
 

@@ -417,11 +417,11 @@ the pages themselves these are filter fields, checkboxes, and buttons rather tha
 ### Catch up
 
 One **Load what's new** button runs a background job (the same job monitor as refresh-all, which
-sends the browser back to the queue when it finishes). A **load** checkbox per source — the six
-achievement providers, BTD6 and Trackmania — picks what the run touches; untick a provider you
-haven't played on since the last load and it isn't contacted at all. All are ticked by default
-except Trackmania. With nothing ticked the run is refused, since it would still be recorded and
-move the "since" boundary. In order:
+sends the browser back to the queue when it finishes). A **load** checkbox per regular source —
+Steam, RetroAchievements, Google Play and BTD6, all ticked by default — picks what the run
+touches; untick one you haven't played on since the last load and it isn't contacted at all. With
+nothing ticked the run is refused, since it would still be recorded and move the "since" boundary.
+In order:
 
 1. the new-games scan for the ticked default-scan providers (RetroAchievements, Steam), fetched
    fresh — this warms the 10-minute cache the page's New games section reads;
@@ -429,8 +429,13 @@ move the "since" boundary. In order:
    refresh-all (unchanged Steam games skipped unless the re-fetch box is ticked), logging only the
    games that changed;
 3. BTD6, a single unauthenticated request;
-4. Trackmania (current season), opt-in since Nadeo calls run on a real player account;
-5. the run's start time, written to `archive/catchup.yaml`.
+4. the run's start time, written to `archive/catchup.yaml`.
+
+PSN, Xbox 360, Ubisoft and Trackmania are played too rarely for that cadence, so each has a
+**load on its own** button instead (`catchupOwnButton`). One refreshes just that source's linked
+games (Trackmania: the current season, since Nadeo calls run on a real player account), skips the
+new-games scan, and is **not recorded as a run**: recording it would move "new since" for every
+source it didn't load. It shares the run's job slot, so it can't overlap a full load.
 
 Nothing in that run writes `playthroughs.yaml`. The page then reads everything back from disk —
 it renders in a fraction of a second, and works with no credentials at all — in this order,

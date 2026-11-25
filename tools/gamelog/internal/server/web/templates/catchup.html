@@ -6,17 +6,27 @@
   <p>{{if .LastRun}}Last loaded {{.LastRun}} ({{.LastRunAgo}}).{{else}}Not loaded yet.{{end}}
      Scans the ticked providers' libraries for new games, refreshes linked games' achievements and
      last-played dates on them into the archive, and refreshes BTD6 if ticked. Runs in the background (RA throttles to
-     ~1.2s/request) and comes back here when it's done. Everything below is read from what's on disk.</p>
+     ~1.2s/request) and comes back here when it's done. Everything below is read from what's on disk.
+     The sources under "load on its own" are played too rarely for every run: each button refreshes
+     just that one, and doesn't count as a run, so "new since" stays where it was.</p>
   {{with .RunningJob}}<div class="flash flash--ok">A load is running — <a href="/jobs/{{.}}">watch it</a>.</div>{{end}}
   <form method="post" action="/catchup/run">
     {{template "catchup_hidden" .Thresholds}}
     <fieldset class="catchup-load">
       <legend class="dim">load</legend>
-      {{range .RunProviders}}<div class="checkbox-row"><input type="checkbox" id="load-{{.Key}}" name="load" value="{{.Key}}"{{if .Checked}} checked{{end}}><label for="load-{{.Key}}">{{.Label}}{{with .Note}} <span class="dim">({{.}})</span>{{end}}</label></div>
+      {{range .RunProviders}}<div class="checkbox-row"><input type="checkbox" id="load-{{.Key}}" name="load" value="{{.Key}}" checked><label for="load-{{.Key}}">{{.Label}}</label></div>
       {{end}}
     </fieldset>
     <div class="checkbox-row"><input type="checkbox" id="full" name="full" value="1"><label for="full">re-fetch unchanged Steam games (offline unlocks can sync late)</label></div>
     <div class="btn-row"><button type="submit" class="btn--primary">Load what's new</button></div>
+  </form>
+  <form method="post" action="/catchup/run" class="catchup-alone">
+    {{template "catchup_hidden" .Thresholds}}
+    <span class="dim">load on its own</span>
+    <div class="btn-row">
+      {{range .OwnButtonSources}}<button type="submit" name="only" value="{{.Key}}"{{with .Note}} title="{{.}}"{{end}}>{{.Label}}</button>
+      {{end}}
+    </div>
   </form>
   <details class="catchup-options">
     <summary class="dim">thresholds</summary>

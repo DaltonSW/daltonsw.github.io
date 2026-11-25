@@ -394,6 +394,9 @@ div.tui.row--error { border-color: var(--stop); }
 .catchup-older > summary h2 { display: inline; }
 .catchup-load { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; border: 0; padding: 0; margin: 0 0 0.75rem; }
 .catchup-load > legend { padding: 0; margin-bottom: 0.35rem; font-size: 0.85rem; }
+.catchup-alone { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.75rem; margin-top: 0.75rem; }
+.catchup-alone > span { font-size: 0.85rem; }
+.catchup-alone .btn-row { margin: 0; }
 .catchup-options { margin-top: 1rem; }
 .catchup-options > summary { cursor: pointer; font-size: 0.85rem; }
 

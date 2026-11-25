@@ -57,9 +57,11 @@ func TestCatchupRenders(t *testing.T) {
 	for _, want := range []string{
 		`aria-current="page">catch up</a>`,
 		`action="/catchup/run"`,
-		`id="load-xbox" name="load" value="xbox" checked>`,
+		`id="load-steam" name="load" value="steam" checked>`,
 		`id="load-ninjakiwi" name="load" value="ninjakiwi" checked>`,
-		`id="load-nadeo" name="load" value="nadeo">`, // Trackmania stays opt-in
+		// Rarely played sources are buttons of their own, never run-wide boxes.
+		`name="only" value="psn"`, `name="only" value="xbox"`, `name="only" value="ubisoft"`,
+		`name="only" value="nadeo" title="current season; uses your play account">Trackmania</button>`,
 		"Played since 2026-11-03",
 		`id="log-hades"`, `form="log-hades"`, `hx-include="#log-hades"`,
 		`id="dismiss-hades"`, `form="dismiss-hades"`, `hx-post="/catchup/dismiss/hades"`,
@@ -77,6 +79,11 @@ func TestCatchupRenders(t *testing.T) {
 	} {
 		if !strings.Contains(out, want) {
 			t.Errorf("page missing %q", want)
+		}
+	}
+	for _, own := range []string{`id="load-psn"`, `id="load-xbox"`, `id="load-ubisoft"`, `id="load-nadeo"`} {
+		if strings.Contains(out, own) {
+			t.Errorf("%s must be its own button, not a run-wide checkbox", own)
 		}
 	}
 	// Older activity is there but out of the way.
