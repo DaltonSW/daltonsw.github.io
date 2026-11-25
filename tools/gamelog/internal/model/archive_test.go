@@ -645,7 +645,7 @@ func TestWriteAchievementSummary_RoundsRarity(t *testing.T) {
 	gameDir := t.TempDir()
 	achs := nUnlocked("steam", 3)
 	achs[0].Rarity = 61.70302013422819
-	achs[1].Rarity = 0.04
+	achs[1].Rarity = 0.004
 	if _, err := SaveRecord(archiveDir, ProviderSteam, "1145360", "Hades", &ProviderRecord{Total: 3, Achievements: achs}); err != nil {
 		t.Fatal(err)
 	}
@@ -660,7 +660,7 @@ func TestWriteAchievementSummary_RoundsRarity(t *testing.T) {
 	if err := yaml.Unmarshal(raw, &got); err != nil {
 		t.Fatal(err)
 	}
-	want := map[string]float64{achs[0].Key: 61.7, achs[1].Key: 0.1, achs[2].Key: 0}
+	want := map[string]float64{achs[0].Key: 61.7, achs[1].Key: 0.01, achs[2].Key: 0}
 	for _, e := range got.Earned {
 		if e.Rarity != want[e.Key] {
 			t.Errorf("%s rarity = %v, want %v", e.Key, e.Rarity, want[e.Key])

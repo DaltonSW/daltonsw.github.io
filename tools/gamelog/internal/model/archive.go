@@ -750,10 +750,10 @@ func LoadAchievementSummary(gameDir string) (*AchievementSummary, error) {
 	return &s, nil
 }
 
-// summaryRarity rounds to the one decimal the site shows, so drift doesn't rewrite the summary; a nonzero value never rounds away.
+// summaryRarity rounds to the two decimals the site shows, so drift doesn't rewrite the summary; a nonzero value never rounds away.
 func summaryRarity(r float64) float64 {
 	if r <= 0 {
 		return 0
 	}
-	return math.Max(math.Round(r*10)/10, 0.1)
+	return math.Max(math.Round(r*100)/100, 0.01)
 }
