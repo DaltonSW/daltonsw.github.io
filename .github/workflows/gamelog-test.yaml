@@ -1,0 +1,30 @@
+name: GameLog tests
+
+on:
+  push:
+    paths:
+      - "tools/gamelog/**"
+      - ".github/workflows/gamelog-test.yaml"
+  pull_request:
+    paths:
+      - "tools/gamelog/**"
+      - ".github/workflows/gamelog-test.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/gamelog
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: tools/gamelog/go.mod
+          cache-dependency-path: tools/gamelog/go.sum
+      - run: go vet ./...
+      - run: go test ./...

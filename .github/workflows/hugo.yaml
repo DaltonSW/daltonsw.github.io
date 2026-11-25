@@ -32,7 +32,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.163.3
+      HUGO_VERSION: 0.170.1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -44,7 +44,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -54,7 +53,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          TZ: America/Los_Angeles
+          TZ: America/Chicago
         run: |
           hugo \
             --gc \

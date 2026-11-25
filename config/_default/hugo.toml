@@ -5,7 +5,6 @@ defaultContentLanguage = "en"
 
 copyright = "Dalton Williams"
 
-cleanDestinationDir = true
 enableRobotsTXT = true
 
 timezone = "America/Chicago"
@@ -85,3 +84,6 @@ timezone = "America/Chicago"
 [[module.mounts]]
     source = "node_modules/vis-timeline/styles"
     target = "assets/vendor/vis-timeline-styles"
+
+[build.cleanDestinationDir]
+    enable = true
