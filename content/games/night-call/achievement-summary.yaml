@@ -10,56 +10,72 @@ providers:
       playtime_mins: 268
       last_played: "2020-02-29"
 earned:
-    - name: Une étoile
+    - id: "680380"
+      key: "000_01"
+      name: Une étoile
       description: You have discovered 2% of the Passidex (base game).
       date: "2020-02-29T09:23:05-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/4894c48b432929a74304baf958d1b9e91ed3123d.jpg
       provider: steam
       platform: PC
       rarity: 75.4
-    - name: Le Chat
+    - id: "680380"
+      key: "040_01"
+      name: Le Chat
       date: "2020-02-29T09:26:28-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/aa5af169b056c2edf502aad525059b623000d9e1.jpg
       provider: steam
       platform: PC
       hidden: true
       rarity: 39.4
-    - name: La Vieille dame au flingue
+    - id: "680380"
+      key: "028_01"
+      name: La Vieille dame au flingue
       date: "2020-02-29T09:42:44-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/62b09601facc114213c52c1adda6eedbfd444579.jpg
       provider: steam
       platform: PC
       hidden: true
       rarity: 14.8
-    - name: Le Pick-Up Artist
+    - id: "680380"
+      key: "034_01"
+      name: Le Pick-Up Artist
       date: "2020-02-29T10:55:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/c7525b0f8226d6ee945850547a53866250c15684.jpg
       provider: steam
       platform: PC
       hidden: true
       rarity: 15.5
-    - name: Le Prêtre
+    - id: "680380"
+      key: "012_01"
+      name: Le Prêtre
       date: "2020-02-29T13:17:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/cefcaf16eaf426e655b68e1088f3b8e9cddfe5ee.jpg
       provider: steam
       platform: PC
       hidden: true
       rarity: 12.2
-    - name: Deux étoiles
+    - id: "680380"
+      key: "000_02"
+      name: Deux étoiles
       description: You have discovered 10% of the Passidex (base game).
       date: "2020-02-29T13:17:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/85e7eeb6a3afa611238266ed92b6e05fa1c21360.jpg
       provider: steam
       platform: PC
       rarity: 43.1
-    - name: Le Juge
+    - id: "680380"
+      key: "999_01"
+      name: Le Juge
       description: You discovered the Judge's identity.
       date: "2020-02-29T15:05:50-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/80bf1bc4d81b04efd548b40d75211d95617510ef.jpg
       provider: steam
       platform: PC
       rarity: 30.3
-    - name: Le Sans-abri
+    - id: "680380"
+      key: "019_01"
+      name: Le Sans-abri
       date: "2020-02-29T15:11:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/680380/abc80732ecf5976eaf31bbcf37c744303cf1ad6a.jpg
       provider: steam

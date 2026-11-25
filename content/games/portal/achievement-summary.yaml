@@ -10,84 +10,108 @@ providers:
       playtime_mins: 671
       last_played: "2026-01-10"
 earned:
-    - name: Lab Rat
+    - id: "400"
+      key: PORTAL_GET_PORTALGUNS
+      name: Lab Rat
       description: Acquire the fully powered Aperture Science Handheld Portal Device.
       date: "2012-08-12T22:34:55-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_getportalguns.jpg
       provider: steam
       platform: PC
       rarity: 80.9
-    - name: Friendly Fire
+    - id: "400"
+      key: PORTAL_HIT_TURRET_WITH_TURRET
+      name: Friendly Fire
       description: Knock down a turret with another turret.
       date: "2012-08-13T13:50:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_hit_turret_with_turret.jpg
       provider: steam
       platform: PC
       rarity: 48.5
-    - name: Fratricide
+    - id: "400"
+      key: PORTAL_KILL_COMPANIONCUBE
+      name: Fratricide
       description: Do whatever it takes to survive.
       date: "2012-09-30T02:03:04-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_kill_companioncube.jpg
       provider: steam
       platform: PC
       rarity: 63.1
-    - name: Partygoer
+    - id: "400"
+      key: PORTAL_ESCAPE_TESTCHAMBERS
+      name: Partygoer
       description: Make the correct party escort submission position decision.
       date: "2012-10-20T23:48:33-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_escape_testchambers.jpg
       provider: steam
       platform: PC
       rarity: 55.4
-    - name: Heartbreaker
+    - id: "400"
+      key: PORTAL_BEAT_GAME
+      name: Heartbreaker
       description: Complete Portal.
       date: "2012-10-21T00:52:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_game.jpg
       provider: steam
       platform: PC
       rarity: 52.1
-    - name: Terminal Velocity
+    - id: "400"
+      key: PORTAL_INFINITEFALL
+      name: Terminal Velocity
       description: Fall 30,000 feet.
       date: "2026-01-07T20:45:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_infinitefall.jpg
       provider: steam
       platform: PC
       rarity: 9
-    - name: Camera Shy
+    - id: "400"
+      key: PORTAL_DETACH_ALL_CAMERAS
+      name: Camera Shy
       description: Detach security cameras from the walls.
       date: "2026-01-08T21:18:38-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_detach_all_cameras.jpg
       provider: steam
       platform: PC
       rarity: 4.1
-    - name: Transmission Received
+    - id: "400"
+      key: PORTAL_TRANSMISSION_RECEIVED
+      name: Transmission Received
       description: ..?
       date: "2026-01-09T19:19:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/cfc27e918907ca28d9a4b77f7f4537cf52b4bfa2.jpg
       provider: steam
       platform: PC
       rarity: 4.4
-    - name: Long Jump
+    - id: "400"
+      key: PORTAL_LONGJUMP
+      name: Long Jump
       description: Jump 300 feet.
       date: "2026-01-09T19:21:15-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_longjump.jpg
       provider: steam
       platform: PC
       rarity: 14.2
-    - name: Cupcake
+    - id: "400"
+      key: PORTAL_BEAT_2ADVANCEDMAPS
+      name: Cupcake
       description: Beat two Portal advanced maps.
       date: "2026-01-09T19:47:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_2advancedmaps.jpg
       provider: steam
       platform: PC
       rarity: 18.1
-    - name: Fruitcake
+    - id: "400"
+      key: PORTAL_BEAT_4ADVANCEDMAPS
+      name: Fruitcake
       description: Beat four Portal advanced maps.
       date: "2026-01-10T12:58:35-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_4advancedmaps.jpg
       provider: steam
       platform: PC
       rarity: 12
-    - name: Vanilla Crazy Cake
+    - id: "400"
+      key: PORTAL_BEAT_6ADVANCEDMAPS
+      name: Vanilla Crazy Cake
       description: Beat all six Portal advanced maps.
       date: "2026-01-10T13:16:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_beat_6advancedmaps.jpg

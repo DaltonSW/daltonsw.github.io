@@ -10,42 +10,54 @@ providers:
       playtime_mins: 580
       last_played: "2022-11-19"
 earned:
-    - name: Spoil-Sport
+    - id: "1371720"
+      key: ACHIEVEMENT25
+      name: Spoil-Sport
       description: Find the Queen in the introduction to Three Card Monte.
       date: "2022-11-14T18:22:00-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/eea37c5fa3f22f2089601828021e81a11529086f.jpg
       provider: steam
       platform: PC
       rarity: 23.5
-    - name: Party Trick
+    - id: "1371720"
+      key: ACHIEVEMENT50
+      name: Party Trick
       description: Master the Ineffective Shuffle.
       date: "2022-11-14T18:27:36-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/db409e0fdc8aa93920143f508f90d13cee2a6ea0.jpg
       provider: steam
       platform: PC
       rarity: 86.7
-    - name: Cake Costs Covered
+    - id: "1371720"
+      key: ACHIEVEMENT10
+      name: Cake Costs Covered
       description: Spare money for the camp fund.
       date: "2022-11-14T18:52:47-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/939f56320b0098de8adbd4432286fa0916f08626.jpg
       provider: steam
       platform: PC
       rarity: 75.2
-    - name: Earning Your Keep
+    - id: "1371720"
+      key: ACHIEVEMENT2
+      name: Earning Your Keep
       description: Pull off the first scam of your journey.
       date: "2022-11-14T21:07:58-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/5d0abe9adff7b205cfebdbd84980ded1a7daaa1d.jpg
       provider: steam
       platform: PC
       rarity: 79.6
-    - name: A Slippery Slope
+    - id: "1371720"
+      key: ACHIEVEMENT5
+      name: A Slippery Slope
       description: Increase the bet at least twice.
       date: "2022-11-14T21:20:58-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/901766c1adce634384385eda9b695fa868b22be2.jpg
       provider: steam
       platform: PC
       rarity: 64.8
-    - name: Look At Me. I Am The Comte Now!
+    - id: "1371720"
+      key: ACHIEVEMENT17
+      name: Look At Me. I Am The Comte Now!
       description: You got the stronger hand, for once.
       date: "2022-11-14T21:43:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/9a3db48b91b3f68b8f4520801d772d157cc00b14.jpg
@@ -53,7 +65,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 42.1
-    - name: The Hedgehog
+    - id: "1371720"
+      key: ACHIEVEMENT19
+      name: The Hedgehog
       description: Injog 5 times in the same deck.
       date: "2022-11-15T16:51:30-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/cad64f2b68928fe6acc370b5593cf89b4903da2e.jpg
@@ -61,7 +75,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 15.8
-    - name: The Sticky Card
+    - id: "1371720"
+      key: ACHIEVEMENT18
+      name: The Sticky Card
       description: Give yourself the card you kept back in Sticky Hand.
       date: "2022-11-15T16:51:47-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/5f418ed3c3b2923b69eb3981b16ce702aafee7c3.jpg
@@ -69,7 +85,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 30
-    - name: The Tardy Optimist
+    - id: "1371720"
+      key: ACHIEVEMENT1
+      name: The Tardy Optimist
       description: Loiter mid-game in a backroom or cellar.
       date: "2022-11-15T17:07:55-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/d8b8ef3626aaa6555dde93aa96fe6f43653113c0.jpg
@@ -77,28 +95,36 @@ earned:
       platform: PC
       hidden: true
       rarity: 46.5
-    - name: Pearl Stirrer
+    - id: "1371720"
+      key: ACHIEVEMENT48
+      name: Pearl Stirrer
       description: 'Turn the bandits against each other. '
       date: "2022-11-15T17:08:46-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/fbbb4a7804c541a48ef0582cc6cfd9822eeb7ca2.jpg
       provider: steam
       platform: PC
       rarity: 40.1
-    - name: Hat Trick
+    - id: "1371720"
+      key: ACHIEVEMENT14
+      name: Hat Trick
       description: Complete 3 card tosses in a row.
       date: "2022-11-15T17:25:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/c1e909118eb26f23718df1050095e1e5708ee273.jpg
       provider: steam
       platform: PC
       rarity: 38.4
-    - name: A Lucky Streak?
+    - id: "1371720"
+      key: ACHIEVEMENT20
+      name: A Lucky Streak?
       description: Win 7 tables in a row.
       date: "2022-11-15T18:18:02-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/b9dd3ca6b2ae3e51331176e62423558826ccb62d.jpg
       provider: steam
       platform: PC
       rarity: 20.6
-    - name: Hot Seat
+    - id: "1371720"
+      key: ACHIEVEMENT27
+      name: Hot Seat
       description: Fling a card on the Colonel's seat.
       date: "2022-11-15T20:11:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/81b504d5899e4af76ac29dc47d83dc79ee4df8c3.jpg
@@ -106,7 +132,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 31.6
-    - name: Mortal Usurper
+    - id: "1371720"
+      key: ACHIEVEMENT12
+      name: Mortal Usurper
       description: Take a seat in the Lady of Bones’ throne.
       date: "2022-11-16T17:27:29-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/7f41f05cfc626b600b9b0d59fca68a4747f5a110.jpg
@@ -114,7 +142,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 32.2
-    - name: Back From The Brink
+    - id: "1371720"
+      key: ACHIEVEMENT22
+      name: Back From The Brink
       description: Return to the world of the living for the first time.
       date: "2022-11-16T17:28:43-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/51497417be2d77ebae65d8c8f80f29bac5d70e47.jpg
@@ -122,14 +152,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 44.2
-    - name: Not For Sale
+    - id: "1371720"
+      key: ACHIEVEMENT31
+      name: Not For Sale
       description: Inspect all the paintings in Belle's workshop.
       date: "2022-11-16T17:42:04-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/86c5d8da7590898232aee27f79b6905e3ce25c64.jpg
       provider: steam
       platform: PC
       rarity: 26.4
-    - name: Brains And Brawn
+    - id: "1371720"
+      key: ACHIEVEMENT30
+      name: Brains And Brawn
       description: Train with the Chevalier without making a mistake.
       date: "2022-11-17T20:09:57-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/94bb28a57983f6adf7030243a3badb743c5ccfeb.jpg
@@ -137,7 +171,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 26.2
-    - name: Early Pointillism
+    - id: "1371720"
+      key: ACHIEVEMENT28
+      name: Early Pointillism
       description: Mark a card with 8 or more paint marks.
       date: "2022-11-17T20:20:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/d7df2bfe3646ea24f509ea353cd905d0e98a8e8a.jpg
@@ -145,14 +181,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 3.6
-    - name: Croupier For Hire
+    - id: "1371720"
+      key: ACHIEVEMENT34
+      name: Croupier For Hire
       description: Perfectly time your deal.
       date: "2022-11-17T20:21:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/cee97157d134650a9dca14367f75dcd48d77229b.jpg
       provider: steam
       platform: PC
       rarity: 24.3
-    - name: Comeback Kid
+    - id: "1371720"
+      key: ACHIEVEMENT36
+      name: Comeback Kid
       description: Beat Theodore at his game.
       date: "2022-11-17T21:26:28-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/bc16c3e5595603b0a7592ebcb7a8305c8d6b757f.jpg
@@ -160,14 +200,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 24.2
-    - name: From Rags To Riches
+    - id: "1371720"
+      key: ACHIEVEMENT4
+      name: From Rags To Riches
       description: Hold on to 1500 coins.
       date: "2022-11-17T21:31:03-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/f97d99140899dd34d25d59d98f9635094720de4d.jpg
       provider: steam
       platform: PC
       rarity: 21.2
-    - name: This Casino Ain't Big Enough For The Two Of Us
+    - id: "1371720"
+      key: ACHIEVEMENT32
+      name: This Casino Ain't Big Enough For The Two Of Us
       description: Sabotage the other cheat's ploy.
       date: "2022-11-18T19:10:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/09c0bad1bc760637f116aa69b49f2453a88b7eb1.jpg
@@ -175,7 +219,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 20.8
-    - name: The Rambling Man
+    - id: "1371720"
+      key: ACHIEVEMENT15
+      name: The Rambling Man
       description: Walk a total of 1000 steps.
       date: "2022-11-18T19:18:25-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/67ddd86e205df14b0ea3031d27b220994e0acaf3.jpg
@@ -183,7 +229,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 27.1
-    - name: Ms Porterhouse Avenged
+    - id: "1371720"
+      key: ACHIEVEMENT49
+      name: Ms Porterhouse Avenged
       description: Ridicule Colonel Gabriel.
       date: "2022-11-18T19:23:43-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/63a6113bfee90c681aad5cc1538e3efac06c4da9.jpg
@@ -191,7 +239,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 19.9
-    - name: The Camp's Caretaker
+    - id: "1371720"
+      key: ACHIEVEMENT55
+      name: The Camp's Caretaker
       description: Teach Kepplinger a lesson.
       date: "2022-11-18T20:10:28-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/8b8911560cd84466680a22cbe32fa42984d3fa01.jpg
@@ -199,28 +249,36 @@ earned:
       platform: PC
       hidden: true
       rarity: 14.5
-    - name: Now For A Lie Down
+    - id: "1371720"
+      key: ACHIEVEMENT47
+      name: Now For A Lie Down
       description: Complete the last tutorial of the game.
       date: "2022-11-19T08:47:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/2a2346b82e3acc30b9a583b01dc389f632faa0c2.jpg
       provider: steam
       platform: PC
       rarity: 16.5
-    - name: What Goes Around Comes Around
+    - id: "1371720"
+      key: ACHIEVEMENT37
+      name: What Goes Around Comes Around
       description: Put the Red Lion in a cage.
       date: "2022-11-19T09:03:04-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/d09788fdf91ccc4e5bb89beb99e2b590530a8fae.jpg
       provider: steam
       platform: PC
       rarity: 15.7
-    - name: Jack Of All Trades
+    - id: "1371720"
+      key: ACHIEVEMENT3
+      name: Jack Of All Trades
       description: Earn every Strategy Card in the game.
       date: "2022-11-19T09:08:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/9962cc2520ce275d2854b8c648b5cd95d4f8e80c.jpg
       provider: steam
       platform: PC
       rarity: 11.2
-    - name: Striking Out
+    - id: "1371720"
+      key: ACHIEVEMENT39
+      name: Striking Out
       description: Cheat for yourself during the final round in Versailles.
       date: "2022-11-19T09:13:41-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/e8943559d7d635606e2ab17a1044cc91d4f22fc6.jpg
@@ -228,14 +286,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 7.9
-    - name: Social Butterfly
+    - id: "1371720"
+      key: ACHIEVEMENT13
+      name: Social Butterfly
       description: Encounter every character in the game.
       date: "2022-11-19T09:14:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/a886db0e6736f9cb4a6a2fb29eb2778d98b61e8b.jpg
       provider: steam
       platform: PC
       rarity: 11.1
-    - name: The Hero With A Thousand Faces
+    - id: "1371720"
+      key: ACHIEVEMENT41
+      name: The Hero With A Thousand Faces
       description: Cheat for Erdnase during the final round in Versailles.
       date: "2022-11-19T09:18:16-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/ff907f24d331a874a602f5d15fe3296e8b948b1b.jpg
@@ -243,7 +305,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 5
-    - name: Long Live The King
+    - id: "1371720"
+      key: ACHIEVEMENT38
+      name: Long Live The King
       description: Cheat for the King during the final round in Versailles.
       date: "2022-11-19T09:24:40-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/dc19a859b497f1f9e7fcacbaf21fb6bfec23b47c.jpg
@@ -251,7 +315,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 4.1
-    - name: Vive La Révolution
+    - id: "1371720"
+      key: ACHIEVEMENT40
+      name: Vive La Révolution
       description: Cheat for the Comte during the final round in Versailles.
       date: "2022-11-19T09:28:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1371720/0aec20abc5f375f6ad9a93e6c67f2d5248953687.jpg

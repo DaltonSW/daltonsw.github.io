@@ -10,56 +10,72 @@ providers:
       playtime_mins: 283
       last_played: "2022-11-19"
 earned:
-    - name: Station A-45
+    - id: "435530"
+      key: AchAct1AllPassengers
+      name: Station A-45
       description: Take 3 passengers to Emergency Station A-45
       date: "2022-11-19T14:01:40-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/6b01b3420baa2a119d8d80f72b0009c889621462.jpg
       provider: steam
       platform: PC
       rarity: 74.2
-    - name: Push Back
+    - id: "435530"
+      key: Ach10KillThrow
+      name: Push Back
       description: Kill 10 enemies by throwing objects at them
       date: "2022-11-19T14:27:50-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/dffc7f2e164003938b1adcfaf653ec07c7afec49.jpg
       provider: steam
       platform: PC
       rarity: 66.5
-    - name: City of The Factories
+    - id: "435530"
+      key: AchAct2AllPassengers
+      name: City of The Factories
       description: Take 6 passengers to Ristol
       date: "2022-11-19T15:01:38-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/1982be3c8705ff1c57289fda96a3c7885590f3d7.jpg
       provider: steam
       platform: PC
       rarity: 26
-    - name: Side Effects
+    - id: "435530"
+      key: Ach3KillBoomZombie
+      name: Side Effects
       description: Destroy 3 other enemies by shooting an exploding enemy
       date: "2022-11-19T15:46:51-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/c64ec8438f89ab10ac544a37d612d8866911e2c4.jpg
       provider: steam
       platform: PC
       rarity: 53.4
-    - name: The L-abs Bunker
+    - id: "435530"
+      key: AchAct3AllPassengers
+      name: The L-abs Bunker
       description: Take 6 passengers to the L-abs Bunker
       date: "2022-11-19T16:22:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/9cd6d10baff463386501e1389dd0ee0ad91a795d.jpg
       provider: steam
       platform: PC
       rarity: 26
-    - name: Yes You Can
+    - id: "435530"
+      key: AchShootBirds
+      name: Yes You Can
       description: Shoot a bird
       date: "2022-11-19T18:30:56-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/d2e5b040424d3ddc7f311fcae42efbad0108bcef.jpg
       provider: steam
       platform: PC
       rarity: 17.5
-    - name: Collateral Damager
+    - id: "435530"
+      key: Ach4KillBoomBarrel
+      name: Collateral Damager
       description: Take out 4 enemies with one exploding barrel
       date: "2022-11-19T18:48:10-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/5fb2c3c6043c9835d542da1d55336e0dd63c31ea.jpg
       provider: steam
       platform: PC
       rarity: 33.5
-    - name: Following Orders
+    - id: "435530"
+      key: AchAct4AllPassengers
+      name: Following Orders
       description: Take 6 passengers to Metropole
       date: "2022-11-19T19:30:56-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/435530/9f6592499f3bbbfcec70be03e8a1409cf844cae7.jpg

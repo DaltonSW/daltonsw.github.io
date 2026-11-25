@@ -8,35 +8,45 @@ providers:
       total: 37
       last_played: "2022-01-01"
 earned:
-    - name: Phalanx's Trophy
+    - id: NPWR20277_00
+      key: "1"
+      name: Phalanx's Trophy
       description: Slayer of Demon "Phalanx"
       date: "2021-10-25T20:44:35-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/65c7984a-351d-4859-941b-d072f200e354.png
       provider: psn
       platform: PS5
       rarity: 47.5
-    - name: Tower Knight's Trophy
+    - id: NPWR20277_00
+      key: "2"
+      name: Tower Knight's Trophy
       description: Slayer of Demon "Tower Knight"
       date: "2021-10-26T20:55:48-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/535de6c5-5040-4992-a2d3-0da29af11941.png
       provider: psn
       platform: PS5
       rarity: 35.8
-    - name: Armor Spider's Trophy
+    - id: NPWR20277_00
+      key: "5"
+      name: Armor Spider's Trophy
       description: Slayer of Demon "Armor Spider"
       date: "2021-10-27T20:19:40-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/c80c72fc-f5d0-45f6-bb73-6b175ef96559.png
       provider: psn
       platform: PS5
       rarity: 32.6
-    - name: Fool's Idol's Trophy
+    - id: NPWR20277_00
+      key: "8"
+      name: Fool's Idol's Trophy
       description: Slayer of Demon "Fool's Idol"
       date: "2021-10-28T21:19:32-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/a7dc578e-89bb-4485-9826-b2e058ce0a9c.png
       provider: psn
       platform: PS5
       rarity: 27.1
-    - name: A Dash of Sage
+    - id: NPWR20277_00
+      key: "27"
+      name: A Dash of Sage
       description: Rescue Sage Freke the Visionary
       date: "2021-10-28T21:39:00-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/1c3129e4-8b37-4cf0-aac7-fa803e0dcff8.png
@@ -44,35 +54,45 @@ earned:
       platform: PS5
       hidden: true
       rarity: 23.7
-    - name: Flamelurker's Trophy
+    - id: NPWR20277_00
+      key: "6"
+      name: Flamelurker's Trophy
       description: Slayer of Demon "Flamelurker"
       date: "2021-10-29T22:50:35-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/5f1aef30-dcba-44db-b4e3-239f91abf267.png
       provider: psn
       platform: PS5
       rarity: 26.7
-    - name: Adjudicator's Trophy
+    - id: NPWR20277_00
+      key: "11"
+      name: Adjudicator's Trophy
       description: Slayer of the Demon "Adjudicator"
       date: "2021-10-30T16:34:58-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/a6b6ed23-da82-4015-86c4-9c5d564384a6.png
       provider: psn
       platform: PS5
       rarity: 27.3
-    - name: Leechmonger's Trophy
+    - id: NPWR20277_00
+      key: "14"
+      name: Leechmonger's Trophy
       description: Slayer of the Demon "Leechmonger"
       date: "2021-10-30T17:11:36-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/f15beabf-ec6f-47d7-b13f-97aacc5b6419.png
       provider: psn
       platform: PS5
       rarity: 25.1
-    - name: Maneater's Trophy
+    - id: NPWR20277_00
+      key: "9"
+      name: Maneater's Trophy
       description: Slayer of Demon "Maneater"
       date: "2021-10-30T21:15:40-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/0bd954de-1d58-4f09-8b73-93df308f0281.png
       provider: psn
       platform: PS5
       rarity: 23.4
-    - name: Umbasa
+    - id: NPWR20277_00
+      key: "28"
+      name: Umbasa
       description: Rescue Saint Urbain
       date: "2021-10-31T10:35:22-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/fe3ed62d-155a-4305-9fca-23ad13ccf498.png
@@ -80,21 +100,27 @@ earned:
       platform: PS5
       hidden: true
       rarity: 24.3
-    - name: Old Hero's Trophy
+    - id: NPWR20277_00
+      key: "12"
+      name: Old Hero's Trophy
       description: Slayer of the Demon "Old Hero"
       date: "2021-10-31T10:57:58-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/0b29ca52-3978-4dc8-b0c8-c2311c089b2b.png
       provider: psn
       platform: PS5
       rarity: 23.2
-    - name: Dirty Colossus' Trophy
+    - id: NPWR20277_00
+      key: "15"
+      name: Dirty Colossus' Trophy
       description: Slayer of the Demon "Dirty Colossus"
       date: "2021-10-31T12:13:37-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/a4c7311c-2aa1-4155-a1f8-7749d41d180b.png
       provider: psn
       platform: PS5
       rarity: 22.2
-    - name: Dragon God's Trophy
+    - id: NPWR20277_00
+      key: "7"
+      name: Dragon God's Trophy
       description: Slayer of Demon "Dragon God"
       date: "2021-10-31T12:30:45-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/79d2415c-2821-48c7-82a4-e72e8b430783.png
@@ -102,7 +128,9 @@ earned:
       platform: PS5
       hidden: true
       rarity: 25.4
-    - name: Old Monk's Trophy
+    - id: NPWR20277_00
+      key: "10"
+      name: Old Monk's Trophy
       description: Slayer of the Demon "Old Monk"
       date: "2021-10-31T12:44:56-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/99ddbcef-84d2-4910-8315-0dcd26c44091.png
@@ -110,7 +138,9 @@ earned:
       platform: PS5
       hidden: true
       rarity: 22.9
-    - name: Storm King's Trophy
+    - id: NPWR20277_00
+      key: "13"
+      name: Storm King's Trophy
       description: Slayer of the Demon "Storm King"
       date: "2021-10-31T12:51:17-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/c115fda1-c2ca-4ba0-aef2-d3dbd4c6c767.png
@@ -118,7 +148,9 @@ earned:
       platform: PS5
       hidden: true
       rarity: 22.8
-    - name: Maiden Astraea's Trophy
+    - id: NPWR20277_00
+      key: "16"
+      name: Maiden Astraea's Trophy
       description: Slayer of the Demon "Maiden Astraea"
       date: "2021-10-31T13:04:16-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/a8e11fa9-348f-4d7e-bd98-18d742d4af2c.png
@@ -126,7 +158,9 @@ earned:
       platform: PS5
       hidden: true
       rarity: 21.9
-    - name: May you be unharmed
+    - id: NPWR20277_00
+      key: "25"
+      name: May you be unharmed
       description: Vanquish Maiden Astraea without killing Garl Vinland
       date: "2021-10-31T13:04:16-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/0a0c421d-5558-4721-a9bf-eab429643368.png
@@ -134,14 +168,18 @@ earned:
       platform: PS5
       hidden: true
       rarity: 8.3
-    - name: Penetrator's Trophy
+    - id: NPWR20277_00
+      key: "3"
+      name: Penetrator's Trophy
       description: Slayer of Demon "Penetrator"
       date: "2021-10-31T18:24:34-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/0f08f3e8-5305-4d91-87af-a92810e62498.png
       provider: psn
       platform: PS5
       rarity: 23.5
-    - name: False King's Trophy
+    - id: NPWR20277_00
+      key: "4"
+      name: False King's Trophy
       description: Slayer of Demon "False King"
       date: "2021-10-31T18:52:16-05:00"
       icon: https://psnobj.prod.dl.playstation.net/psnobj/NPWR20277_00/d462b095-bcbc-442d-817b-5cb173cdccf2.png

@@ -16,14 +16,18 @@ providers:
           unlocked: 20
           basis: 100%
 earned:
-    - name: EXPLORER
+    - id: "813230"
+      key: COLLECT_MAP
+      name: EXPLORER
       description: Find the map
       date: "2026-01-24T13:53:12-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/4bbbed9216852d1eb0ff7a9958cda1faff07bd95.jpg
       provider: steam
       platform: PC
       rarity: 92
-    - name: SECRET EGG
+    - id: "813230"
+      key: COLLECT_EGG
+      name: SECRET EGG
       description: Find a secret egg
       date: "2026-01-24T14:04:59-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/931bc11f79bb2dd4d2031887ca25b83b24e993fd.jpg
@@ -31,7 +35,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 93.2
-    - name: EGG ENJOYER
+    - id: "813230"
+      key: COLLECT_8_EGGS
+      name: EGG ENJOYER
       description: Find 8 secret eggs
       date: "2026-01-24T15:17:00-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/67666b8dffd5821527b45bbc3700d2a96b228599.jpg
@@ -39,7 +45,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 55.8
-    - name: EGG HOBBYIST
+    - id: "813230"
+      key: COLLECT_16_EGGS
+      name: EGG HOBBYIST
       description: Find 16 secret eggs
       date: "2026-01-25T09:06:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/705f4a039a16f1f1fb360afc0bb42112bff665d9.jpg
@@ -47,7 +55,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.6
-    - name: GOOD ENDING
+    - id: "813230"
+      key: GET_CRUSHED_BY_CHINCHILLA
+      name: GOOD ENDING
       description: Get crushed by a chinchilla
       date: "2026-01-25T09:32:27-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/56c7443888119e60b29017a724119edf4386e05a.jpg
@@ -55,7 +65,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 24.2
-    - name: WALK THE DOG
+    - id: "813230"
+      key: YOYO_RIDE
+      name: WALK THE DOG
       description: Find a different way to get around
       date: "2026-01-25T09:36:27-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/27cb14fe24e211ca7c8b694660a5e4ead36085a6.jpg
@@ -63,7 +75,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.3
-    - name: CHAMELEON
+    - id: "813230"
+      key: DEFEAT_CHAMELEON
+      name: CHAMELEON
       description: Find the V. flame
       date: "2026-01-25T09:41:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/77b9c8684d6655207398681c47cbe91a2ace0f10.jpg
@@ -71,7 +85,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 44.7
-    - name: BACK AND FORTH FOREVER
+    - id: "813230"
+      key: RIDE_FRISBEE
+      name: BACK AND FORTH FOREVER
       description: Find a new way to get around
       date: "2026-01-25T10:00:22-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/00a015b4b1b16658f63daf1e08dc68b489e5dc0f.jpg
@@ -79,7 +95,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 59
-    - name: TRAVEL FLUTE
+    - id: "813230"
+      key: FLUTE_WARP
+      name: TRAVEL FLUTE
       description: Find another way to get around
       date: "2026-01-25T10:10:40-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/6b669c974a60b4554799ee4311d54d269d1e0f17.jpg
@@ -87,7 +105,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 39.1
-    - name: GHOST
+    - id: "813230"
+      key: DEFEAT_GHOST_DOG
+      name: GHOST
       description: Find the P. flame
       date: "2026-01-25T11:54:34-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/72213dca4480c51f821b5da5e8b0ace552213ba0.jpg
@@ -95,7 +115,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 41
-    - name: OSTRICH
+    - id: "813230"
+      key: DEFEAT_OSTRICH
+      name: OSTRICH
       description: Find the G. flame
       date: "2026-01-25T12:18:39-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/953f5501f27eb91fdc2caf246a1eebc175afaaea.jpg
@@ -103,7 +125,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 44.7
-    - name: SEAHORSE
+    - id: "813230"
+      key: DEFEAT_SEAHORSE
+      name: SEAHORSE
       description: Find the B. flame
       date: "2026-01-25T12:47:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/c552dad4473ef810557def44365bfa0d63ac4adc.jpg
@@ -111,7 +135,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 44.3
-    - name: EGG LORD
+    - id: "813230"
+      key: COLLECT_32_EGGS
+      name: EGG LORD
       description: Find 32 secret eggs
       date: "2026-01-25T13:24:53-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/6c79fe492b58f6d8fea24c9ec54234e8a4c2fce5.jpg
@@ -119,7 +145,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 32.9
-    - name: MANTICORE
+    - id: "813230"
+      key: DEFEAT_MANTICORE
+      name: MANTICORE
       description: Release the Manticore
       date: "2026-01-25T19:41:05-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/b2445d174dbf192475d426ac54400413a72fb25c.jpg
@@ -127,7 +155,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 36.9
-    - name: CANDLE BRIGHT
+    - id: "813230"
+      key: LIGHT_ALL_CANDLES
+      name: CANDLE BRIGHT
       description: Light all candles
       date: "2026-01-25T20:05:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/4031f8ca0e462cf80eead1560d27b1be38c14989.jpg
@@ -135,7 +165,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 22.5
-    - name: BUBBLE ECSTASY
+    - id: "813230"
+      key: POP_BUBBLES
+      name: BUBBLE ECSTASY
       description: Pop 1000 bubbles
       date: "2026-01-25T21:39:41-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/e9188bf7f7ba2a6595e9c75c49b90e3b97a573a0.jpg
@@ -143,7 +175,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 31
-    - name: SECRET RABBIT
+    - id: "813230"
+      key: FIND_RABBIT
+      name: SECRET RABBIT
       description: Find a secret rabbit
       date: "2026-01-27T20:04:40-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/a2ca0d439c080e2fe2c95c1e8c43b2ccd325cb4b.jpg
@@ -151,7 +185,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 32.5
-    - name: EGG WELL
+    - id: "813230"
+      key: COLLECT_ALL_EGGS
+      name: EGG WELL
       description: Find all secret eggs
       date: "2026-01-28T19:15:44-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/8af0fbfaf4360a574eee911c978ee182db7d9f9f.jpg
@@ -159,7 +195,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 17
-    - name: EXIT
+    - id: "813230"
+      key: LEAVE_WELL
+      name: EXIT
       description: Leave the well
       date: "2026-01-28T19:45:43-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/b67e348882bab4d3519b915f4d332dec65a5b3c7.jpg
@@ -167,7 +205,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 15.6
-    - name: SNEAK
+    - id: "813230"
+      key: TOUCH_SQUIRREL
+      name: SNEAK
       description: Sneak up on a squirrel
       date: "2026-01-30T19:10:46-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/c7aaac0e7bf1507298427f0f0d74c1c6ee54dd03.jpg

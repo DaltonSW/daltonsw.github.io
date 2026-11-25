@@ -10,63 +10,81 @@ providers:
       playtime_mins: 280
       last_played: "2023-08-05"
 earned:
-    - name: Beginnings
+    - id: "1574580"
+      key: Beginnings
+      name: Beginnings
       description: Handle your first customer
       date: "2023-08-04T19:18:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/5ecfc49e841c73abf7a9ab2055a61a8919c28908.jpg
       provider: steam
       platform: PC
       rarity: 96.2
-    - name: Back from the Brink
+    - id: "1574580"
+      key: BackFromTheBrink
+      name: Back from the Brink
       description: Recover from Rising Dread
       date: "2023-08-04T19:27:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/aae09a9cbc362cca556abadf57c7ed669c48167f.jpg
       provider: steam
       platform: PC
       rarity: 68.7
-    - name: On the Map
+    - id: "1574580"
+      key: OnTheMap
+      name: On the Map
       description: Solve your first clue card
       date: "2023-08-04T19:32:49-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/9eb53279bd010496faf0258da3b2efad27b765c5.jpg
       provider: steam
       platform: PC
       rarity: 85.4
-    - name: Apprentice
+    - id: "1574580"
+      key: Apprentice
+      name: Apprentice
       description: Identify 10 plants
       date: "2023-08-04T19:46:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/53a5f75572ea627f027d608a32dadce952178a44.jpg
       provider: steam
       platform: PC
       rarity: 84.6
-    - name: Cat Lover
+    - id: "1574580"
+      key: CatLover
+      name: Cat Lover
       description: Pet Hellebore 13 times
       date: "2023-08-04T20:34:49-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/807d7d22d788fd7450c8045ec6e88a0e634e5df5.jpg
       provider: steam
       platform: PC
       rarity: 48.7
-    - name: Explorer
+    - id: "1574580"
+      key: Explorer
+      name: Explorer
       description: Visit 20 map locations
       date: "2023-08-04T20:53:07-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/79804ebd59c300af3a8baf41df00b53141fef31f.jpg
       provider: steam
       platform: PC
       rarity: 76.4
-    - name: Extreme Consequences
+    - id: "1574580"
+      key: ExtremeConsequences
+      name: Extreme Consequences
       description: Murder Burbidge
       date: "2023-08-04T21:01:28-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/78e03ee86fa219802a93d9983b958f26e8344835.jpg
       provider: steam
       platform: PC
       rarity: 11.1
-    - name: Hidden Texts
+    - id: "1574580"
+      key: HiddenTexts
+      name: Hidden Texts
       description: Activate the viewing device
       date: "2023-08-05T10:10:01-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/547e57e13b8608cffa4bcde655872b80ece1ca75.jpg
       provider: steam
       platform: PC
       rarity: 66.6
-    - name: Secrets
+    - id: "1574580"
+      key: Secrets
+      name: Secrets
       description: Open the secret drawer
       date: "2023-08-05T10:16:32-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/2ccf250476667c90379e650bd6c23322d767876d.jpg
@@ -74,42 +92,54 @@ earned:
       platform: PC
       hidden: true
       rarity: 64
-    - name: A Mystery Solved
+    - id: "1574580"
+      key: MysterySolved
+      name: A Mystery Solved
       description: Find a Bryer's Disc location
       date: "2023-08-05T10:22:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/618a0690107dfc9e1085adc63e3ca96603426b25.jpg
       provider: steam
       platform: PC
       rarity: 65.9
-    - name: Master Brewer
+    - id: "1574580"
+      key: MasterBrewer
+      name: Master Brewer
       description: Create an Elixir
       date: "2023-08-05T10:54:32-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/cd0fadaf3c8a440545989e1c593d056f6c1ce3d7.jpg
       provider: steam
       platform: PC
       rarity: 59.7
-    - name: Guardian of the Forest
+    - id: "1574580"
+      key: Guardian
+      name: Guardian of the Forest
       description: Save the Sisterhood
       date: "2023-08-05T12:06:23-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/594f242c75be01ec0bc8d349627ef61b4ae957da.jpg
       provider: steam
       platform: PC
       rarity: 36.4
-    - name: Ending
+    - id: "1574580"
+      key: Ending
+      name: Ending
       description: Complete the game
       date: "2023-08-05T13:09:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/516eca86c1ac6aef79d569e14591ee25615ee21f.jpg
       provider: steam
       platform: PC
       rarity: 51.2
-    - name: Experienced Horticulturist
+    - id: "1574580"
+      key: ExperiencedHorticulturist
+      name: Experienced Horticulturist
       description: Identify all the plants
       date: "2023-08-05T13:36:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/27812d8269d432ae7f47b13624863ec83b3d6700.jpg
       provider: steam
       platform: PC
       rarity: 37.7
-    - name: Banished
+    - id: "1574580"
+      key: Banished
+      name: Banished
       description: Perform the ritual
       date: "2023-08-05T13:55:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/5a8bb9b4f1ad2582a97d782fbd1f77ad29ac9af9.jpg

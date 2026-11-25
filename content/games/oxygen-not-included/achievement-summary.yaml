@@ -10,70 +10,90 @@ providers:
       playtime_mins: 4272
       last_played: "2026-08-02"
 earned:
-    - name: One Bed One Bath
+    - id: "457140"
+      key: BASIC_COMFORTS
+      name: One Bed One Bath
       description: Have at least one bed and one toilet for each Duplicant in the colony.
       date: "2019-09-11T18:07:55-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/117f0440652be67218a1a98b69fe322e4b384c7a.jpg
       provider: steam
       platform: PC
       rarity: 70.7
-    - name: Good Egg
+    - id: "457140"
+      key: HATCH_A_CRITTER
+      name: Good Egg
       description: Hatch a new critter morph from an egg.
       date: "2019-09-14T18:21:10-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/6cea686af30cef00b643ac68660483785f0cb22c.jpg
       provider: steam
       platform: PC
       rarity: 42.7
-    - name: To Pay the Bills
+    - id: "457140"
+      key: COMPLETED_SKILL_BRANCH
+      name: To Pay the Bills
       description: Use a Duplicant's Skill Points to buy out an entire branch of the Skill Tree.
       date: "2019-09-14T18:37:08-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/9cc2ee55f19e05fd6f6fee53088130f83a731e64.jpg
       provider: steam
       platform: PC
       rarity: 51.4
-    - name: Outdoor Renovations
+    - id: "457140"
+      key: BUILD_OUTSIDE_BIOME
+      name: Outdoor Renovations
       description: Construct a building outside the initial starting biome.
       date: "2019-09-14T18:51:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/b6a5517b2360e0610918cb9deb974183ece6bcb4.jpg
       provider: steam
       platform: PC
       rarity: 51.8
-    - name: Royal Flush
+    - id: "457140"
+      key: PLUMBED_WASHROOMS
+      name: Royal Flush
       description: Replace all the Outhouses and Wash Basins in your colony with Lavatories and Sinks.
       date: "2019-09-14T19:06:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/fe3c750c7da024c7e1953fd83cc01c34b6adaecf.jpg
       provider: steam
       platform: PC
       rarity: 35.5
-    - name: It's Not Raw
+    - id: "457140"
+      key: COOKED_FOOD
+      name: It's Not Raw
       description: Have a Duplicant eat any cooked meal prepared at an Electrical Grill or Gas Range.
       date: "2019-09-14T20:47:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/d26ccd31f965c03004b91f670011caf230653073.jpg
       provider: steam
       platform: PC
       rarity: 44.8
-    - name: Red Light, Green Light
+    - id: "457140"
+      key: AUTOMATE_A_BUILDING
+      name: Red Light, Green Light
       description: Automate a building using sensors or switches from the Automation tab in the Build Menu.
       date: "2019-09-18T20:50:16-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/0e4fb0d730d4d6e6f42a8e49f1ca5ab3f4f49c86.jpg
       provider: steam
       platform: PC
       rarity: 27.1
-    - name: Ghosts of Gravitas
+    - id: "457140"
+      key: INSPECT_POI
+      name: Ghosts of Gravitas
       description: Recover a Database entry by inspecting facility ruins.
       date: "2024-10-11T19:31:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/305995367bddb4958d77864fa5d636ea5c4a8db9.jpg
       provider: steam
       platform: PC
       rarity: 23.7
-    - name: Art Underground
+    - id: "457140"
+      key: MASTERPIECE_PAINTING
+      name: Art Underground
       description: Have a Duplicant with the Masterworks skill paint a Masterpiece quality painting.
       date: "2024-10-18T17:39:41-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/d46b2ecf73fd7f21f0817c26fce567b3ac915608.jpg
       provider: steam
       platform: PC
       rarity: 11.8
-    - name: Turn of the Century
+    - id: "457140"
+      key: SURVIVE_HUNDRED_CYCLES
+      name: Turn of the Century
       description: Reach cycle 100 with at least one living Duplicant.
       date: "2024-10-18T17:46:35-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/457140/e1748510f1d438ed8320e3ca4109cdfab9c7c981.jpg

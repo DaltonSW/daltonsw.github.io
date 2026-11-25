@@ -8,35 +8,45 @@ providers:
       total: 56
       last_played: "2018-10-25"
 earned:
-    - name: That's a Bingo
+    - id: "21093003863"
+      key: CggI1-T2yU4QAhAD
+      name: That's a Bingo
       description: Get a hole in one
       date: "2016-09-23T10:09:48-05:00"
       points: 1000
       icon: https://m.exophase.com/android/awards/m/8ed5e51.png?da80ac51d981b6a6f53330202073b89a
       provider: googleplay
       platform: Google Play
-    - name: The Trio
+    - id: "21093003863"
+      key: CggI1-T2yU4QAhAM
+      name: The Trio
       description: Bag three hole in ones in a row
       date: "2016-09-23T10:10:27-05:00"
       points: 500
       icon: https://m.exophase.com/android/awards/m/3j17j78.png?da80ac51d981b6a6f53330202073b89a
       provider: googleplay
       platform: Google Play
-    - name: Eagle
+    - id: "21093003863"
+      key: CggI1-T2yU4QAhAE
+      name: Eagle
       description: Get an Eagle
       date: "2016-09-23T10:12:16-05:00"
       points: 500
       icon: https://m.exophase.com/android/awards/m/e60363e.png?da80ac51d981b6a6f53330202073b89a
       provider: googleplay
       platform: Google Play
-    - name: Nothin But Net
+    - id: "21093003863"
+      key: CggI1-T2yU4QAhAF
+      name: Nothin But Net
       description: Get a hole in one without touching the green
       date: "2016-11-11T11:40:05-06:00"
       points: 500
       icon: https://m.exophase.com/android/awards/m/447e4ee.png?da80ac51d981b6a6f53330202073b89a
       provider: googleplay
       platform: Google Play
-    - name: Nil Score
+    - id: "21093003863"
+      key: CggI1-T2yU4QAhAN
+      name: Nil Score
       description: Score a zero on a hole
       date: "2016-11-11T11:40:06-06:00"
       points: 500

@@ -10,21 +10,27 @@ providers:
       playtime_mins: 130
       last_played: "2013-01-22"
 earned:
-    - name: Make it Yours
+    - id: "218680"
+      key: ACH_USE_OBJECT_EDITOR
+      name: Make it Yours
       description: Make a new object using the Object Editor
       date: "2012-12-22T23:11:53-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/218680/51bfaba8f67d3450ecba24258bea4e9e033e653e.jpg
       provider: steam
       platform: PC
       rarity: 70.8
-    - name: Helping Hand
+    - id: "218680"
+      key: ACH_ALL_STARITES_IN_A_LEVEL
+      name: Helping Hand
       description: Get all the Starites in any level
       date: "2012-12-22T23:30:10-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/218680/4d9be2bed4245dd3e97bd97fcd028d470ba211b1.jpg
       provider: steam
       platform: PC
       rarity: 62.5
-    - name: Magical Globe for Rent
+    - id: "218680"
+      key: ACH_3_STARITES_TO_LILY
+      name: Magical Globe for Rent
       description: Bring 3 Starites to Lily and unlock the world map
       date: "2012-12-22T23:37:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/218680/bf5cd5fffb70af11e5255ca54bced5f53adddf74.jpg

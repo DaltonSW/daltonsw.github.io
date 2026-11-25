@@ -10,161 +10,207 @@ providers:
       playtime_mins: 26922
       last_played: "2026-11-23"
 earned:
-    - name: First Win
+    - id: "960090"
+      key: "7"
+      name: First Win
       description: 1 Non-Tutorial Beginner map Win
       date: "2022-07-15T21:13:17-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/4a2ab59b7fc916400fe5b4c626a693941cbf782c.jpg
       provider: steam
       platform: PC
       rarity: 86.1
-    - name: Big Monkey
+    - id: "960090"
+      key: "13"
+      name: Big Monkey
       description: Deploy a tier 4 monkey tower
       date: "2022-07-15T21:13:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/daff4f3c044942a80541b673248d2f1bca12ade8.jpg
       provider: steam
       platform: PC
       rarity: 83.9
-    - name: Hero Time
+    - id: "960090"
+      key: "15"
+      name: Hero Time
       description: Deploy a Hero on a non-tutorial map
       date: "2022-07-15T21:13:22-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/aebb0d9d5b3f08092cd3fc957fcf49e57f3c42cf.jpg
       provider: steam
       platform: PC
       rarity: 88
-    - name: Hero Powers Activate
+    - id: "960090"
+      key: "16"
+      name: Hero Powers Activate
       description: Use any Hero Level 3 Ability
       date: "2022-07-15T21:13:23-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/14a6294547ba08c15201a962fa48d006dabba61f.jpg
       provider: steam
       platform: PC
       rarity: 85.2
-    - name: Monkey Fan Club
+    - id: "960090"
+      key: "106"
+      name: Monkey Fan Club
       description: Create or Login to your Ninja Kiwi account to cloud save your progress
       date: "2022-07-15T21:13:27-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/a387c0b4943507c7c9ac73e8a16ac17cc6989956.jpg
       provider: steam
       platform: PC
       rarity: 74.7
-    - name: Student
+    - id: "960090"
+      key: "23"
+      name: Student
       description: Apply your first Monkey Knowledge point
       date: "2022-11-16T20:57:58-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/ca9b00893706389bb348d06131e1f98f049d2d13.jpg
       provider: steam
       platform: PC
       rarity: 72.2
-    - name: Mega Monkey
+    - id: "960090"
+      key: "14"
+      name: Mega Monkey
       description: Deploy a tier 5 monkey tower
       date: "2022-11-20T13:37:10-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/f7b4af35d8eaad1611f5a219dbc3b088ca3622a7.jpg
       provider: steam
       platform: PC
       rarity: 71.9
-    - name: Bigger, Badder
+    - id: "960090"
+      key: "17"
+      name: Bigger, Badder
       description: Use any Hero Level 10 Ability
       date: "2022-11-20T13:37:17-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/df3ccb809e7052ea5e5897b58e94548a5e707047.jpg
       provider: steam
       platform: PC
       rarity: 78.5
-    - name: Epic Hero
+    - id: "960090"
+      key: "18"
+      name: Epic Hero
       description: Level any Hero to level 20
       date: "2022-11-20T13:37:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/a36d86bdcbb90e923867531bfb2c790884f8da47.jpg
       provider: steam
       platform: PC
       rarity: 64.4
-    - name: Scholar
+    - id: "960090"
+      key: "24"
+      name: Scholar
       description: Apply 10 Monkey Knowledge points
       date: "2022-11-21T17:13:05-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/8cf49c1cbf1d63cf7fe5600218fbaff4e4b7ed64.jpg
       provider: steam
       platform: PC
       rarity: 65.1
-    - name: Role Reverser
+    - id: "960090"
+      key: "36"
+      name: Role Reverser
       description: Win a game in Reverse mode
       date: "2022-11-27T15:59:49-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/f82ced827618986346e6c7d6aa0221bb9c97c7f6.jpg
       provider: steam
       platform: PC
       rarity: 42.5
-    - name: Rainbow is Magic
+    - id: "960090"
+      key: "82"
+      name: Rainbow is Magic
       description: Pop 20,000 Rainbow Bloons with Magic Monkeys
       date: "2022-11-28T19:29:41-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/4fb744f414bb5135b6e9104a4659630103711e78.jpg
       provider: steam
       platform: PC
       rarity: 57.7
-    - name: Infrared
+    - id: "960090"
+      key: "40"
+      name: Infrared
       description: Pop 250,000 Camo bloons
       date: "2022-11-30T18:42:12-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/ae5775d8488ddd164f1dae2fa041b48ab70076b9.jpg
       provider: steam
       platform: PC
       rarity: 55.7
-    - name: I'll Be Back
+    - id: "960090"
+      key: "142"
+      name: I'll Be Back
       description: Spend 1,000 MM on Continues or Checkpoints
       date: "2022-12-03T09:55:16-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/23fadd1e9b13a5a8fe8835226b0f0cb66158d474.jpg
       provider: steam
       platform: PC
       rarity: 30.1
-    - name: Monkey Avenger League
+    - id: "960090"
+      key: "19"
+      name: Monkey Avenger League
       description: Win a game for 4 different Heroes
       date: "2022-12-03T20:00:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/7b2ed13c725a15f4e8c6461aa608c22ab1a51a1e.jpg
       provider: steam
       platform: PC
       rarity: 53.5
-    - name: You've Got The Power
+    - id: "960090"
+      key: "20"
+      name: You've Got The Power
       description: Use Powers for the first time
       date: "2022-12-04T09:25:16-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/5fd29166af174b4c77e2d07105f4002a743b7757.jpg
       provider: steam
       platform: PC
       rarity: 57.9
-    - name: Decorated Hero
+    - id: "960090"
+      key: "38"
+      name: Decorated Hero
       description: Get 36 medals on Beginner maps
       date: "2022-12-04T22:01:26-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d64762bca8d4daa2b7d2251340d319d5449351c4.jpg
       provider: steam
       platform: PC
       rarity: 32.5
-    - name: Grasshopper
+    - id: "960090"
+      key: "8"
+      name: Grasshopper
       description: Wins on 9 different Beginner maps
       date: "2022-12-05T12:42:14-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/a547c102e6bec33312a9a5fa34f1332ba66e09f1.jpg
       provider: steam
       platform: PC
       rarity: 57
-    - name: Our Powers Combined
+    - id: "960090"
+      key: "41"
+      name: Our Powers Combined
       description: Collect at least 12 different Powers
       date: "2022-12-08T19:00:46-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/074e3e8b117e519c5aaee8a36ac56c79e04b8be5.jpg
       provider: steam
       platform: PC
       rarity: 43.7
-    - name: So Shiny!
+    - id: "960090"
+      key: "121"
+      name: So Shiny!
       description: Pop 20 Golden Bloons
       date: "2022-12-10T21:53:24-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d038a7dc736e08a9a3d9ebf3272ec0abcf1bd410.jpg
       provider: steam
       platform: PC
       rarity: 7.6
-    - name: Medal Winner
+    - id: "960090"
+      key: "37"
+      name: Medal Winner
       description: Get all medals for a map
       date: "2023-01-15T15:52:01-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d312d149f68c552f3d489221cc2900584ef878cf.jpg
       provider: steam
       platform: PC
       rarity: 24.3
-    - name: Bloons Master
+    - id: "960090"
+      key: "47"
+      name: Bloons Master
       description: Beat 1 map in CHIMPS mode
       date: "2023-01-15T15:52:03-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/3aecadbbbf0f1b0739884e2b49d143588061f575.jpg
       provider: steam
       platform: PC
       rarity: 28.4
-    - name: Not Lacking Critical Information
+    - id: "960090"
+      key: "138"
+      name: Not Lacking Critical Information
       description: Get 25,000 Critical hits
       date: "2023-01-21T08:52:22-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/96c04a7e3631b0101c5de559b407221d4499c0a9.jpg
@@ -172,70 +218,90 @@ earned:
       platform: PC
       hidden: true
       rarity: 35
-    - name: MOAB Assassin
+    - id: "960090"
+      key: "2"
+      name: MOAB Assassin
       description: Destroy 25,000 MOABs
       date: "2023-01-21T09:25:51-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/682fe438d114eefd6c9b4e0941322ab42a6c67dc.jpg
       provider: steam
       platform: PC
       rarity: 51.7
-    - name: Invigoration
+    - id: "960090"
+      key: "147"
+      name: Invigoration
       description: Have 75 buffs active on your Monkeys at once
       date: "2023-01-21T09:34:31-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/01324b7da2fbf699f3240fe29e88ddcef0ebb5b9.jpg
       provider: steam
       platform: PC
       rarity: 51.1
-    - name: Next Level
+    - id: "960090"
+      key: "9"
+      name: Next Level
       description: 'Win 1 game on an Intermediate map '
       date: "2023-01-23T20:15:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/f70247e7c57548ccd24268ec8e238801395ff8a8.jpg
       provider: steam
       platform: PC
       rarity: 59.6
-    - name: Challenger
+    - id: "960090"
+      key: "42"
+      name: Challenger
       description: Win 1 Daily Challenge
       date: "2023-01-25T16:55:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/a94b49cb05f2e31df7af37effd6c27412dfe635d.jpg
       provider: steam
       platform: PC
       rarity: 43.1
-    - name: Inflated
+    - id: "960090"
+      key: "30"
+      name: Inflated
       description: Beat round 100 in Deflation mode
       date: "2023-01-30T18:02:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/4864f57cbf375dbc5624e0ee246f7822440fe1ec.jpg
       provider: steam
       platform: PC
       rarity: 5.5
-    - name: Acolyte
+    - id: "960090"
+      key: "10"
+      name: Acolyte
       description: Win games on 5 different Intermediate maps
       date: "2023-02-01T16:57:28-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/4a79522694d5d6237a074c38036546c7c802dd97.jpg
       provider: steam
       platform: PC
       rarity: 38.9
-    - name: What is this new Bloonery?
+    - id: "960090"
+      key: "128"
+      name: What is this new Bloonery?
       description: Defeat a Tier 1 Boss
       date: "2023-02-01T16:57:44-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d73d6f0c58d96c2ebb854524a1d9eaaf755318c2.jpg
       provider: steam
       platform: PC
       rarity: 31.8
-    - name: Adventurer
+    - id: "960090"
+      key: "93"
+      name: Adventurer
       description: Complete an Odyssey
       date: "2023-02-02T21:46:52-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0e9865894b3bc012b14234e453fda73c957a3538.jpg
       provider: steam
       platform: PC
       rarity: 30.3
-    - name: Full Speed Ahead!
+    - id: "960090"
+      key: "99"
+      name: Full Speed Ahead!
       description: Complete an Odyssey in under 1 hour
       date: "2023-02-02T21:46:54-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0ef3550074731859867dde5b8f3f9d7a17df1f8f.jpg
       provider: steam
       platform: PC
       rarity: 24.7
-    - name: Golden Ticket
+    - id: "960090"
+      key: "92"
+      name: Golden Ticket
       description: Bloompa-loompa-doompa-dee-doo!
       date: "2023-02-03T21:06:38-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/8035f44f94a8bd6ab53cdcf9b91763e536598da9.jpg
@@ -243,77 +309,99 @@ earned:
       platform: PC
       hidden: true
       rarity: 10.7
-    - name: Seasoned Adventurer
+    - id: "960090"
+      key: "94"
+      name: Seasoned Adventurer
       description: Complete a Hard Odyssey
       date: "2023-02-04T17:45:39-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/551f1642b7a10b91ab5a1455536a4c0459412d19.jpg
       provider: steam
       platform: PC
       rarity: 13.1
-    - name: No Stone Left Unturned
+    - id: "960090"
+      key: "95"
+      name: No Stone Left Unturned
       description: Complete all 3 difficulties of a single Odyssey
       date: "2023-02-04T17:45:42-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/af08bcbbac06e891b4067e3a163bc274b6dc4a9c.jpg
       provider: steam
       platform: PC
       rarity: 6.2
-    - name: Achievement of Achievements
+    - id: "960090"
+      key: "117"
+      name: Achievement of Achievements
       description: Collect 35 achievements
       date: "2023-02-04T17:47:26-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/24f34714f8d52fcb5366939156e61815bcc7fae9.jpg
       provider: steam
       platform: PC
       rarity: 36.2
-    - name: Tetrimino
+    - id: "960090"
+      key: "78"
+      name: Tetrimino
       description: Place 50 Monkeys on a map at once
       date: "2023-02-05T21:54:15-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/97c73a8915f948eceae270f845efa9025edcafe5.jpg
       provider: steam
       platform: PC
       rarity: 56.6
-    - name: Who's the Boss?
+    - id: "960090"
+      key: "129"
+      name: Who's the Boss?
       description: Defeat a Tier 5 Boss
       date: "2023-02-05T21:54:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/f34600007de2d05afc01830cb32fa41d56e43b50.jpg
       provider: steam
       platform: PC
       rarity: 18.7
-    - name: BFB Brawler
+    - id: "960090"
+      key: "3"
+      name: BFB Brawler
       description: Destroy 10,000 BFBs
       date: "2023-02-06T18:43:01-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/36ef20154c369ce7e07b030621a07cea0a2e4d52.jpg
       provider: steam
       platform: PC
       rarity: 42.9
-    - name: Superior Bloons Master
+    - id: "960090"
+      key: "48"
+      name: Superior Bloons Master
       description: Beat 5 maps in CHIMPS mode
       date: "2023-02-10T17:33:09-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0da911e720c04c4e2c3cb78723e3f4d6df1d5bff.jpg
       provider: steam
       platform: PC
       rarity: 13.7
-    - name: All About That Bling
+    - id: "960090"
+      key: "100"
+      name: All About That Bling
       description: Purchase a Trophy Store item
       date: "2023-02-10T19:09:27-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d8fbac164dc36529b274d5645ddea3f1f91f8281.jpg
       provider: steam
       platform: PC
       rarity: 32.6
-    - name: Coupon Crazy
+    - id: "960090"
+      key: "111"
+      name: Coupon Crazy
       description: Spend at least 50 Trophies in the Trophy Store
       date: "2023-02-10T19:09:31-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/37b8e22c6a64dee835d87874cfe5a860523ec650.jpg
       provider: steam
       platform: PC
       rarity: 18
-    - name: I see you
+    - id: "960090"
+      key: "77"
+      name: I see you
       description: Reveal 10,000 Bloons using Shimmer
       date: "2023-02-12T19:55:54-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/623f3cc5306d03157acbb2eb15efc1b1de6f9833.jpg
       provider: steam
       platform: PC
       rarity: 35.4
-    - name: Big Bloons
+    - id: "960090"
+      key: "64"
+      name: Big Bloons
       description: Pat likes hugging Big Bloons even more
       date: "2023-02-13T16:15:02-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/fb72b75dccfbe77bc83c0c9bf2346f7b1ae43377.jpg
@@ -321,161 +409,207 @@ earned:
       platform: PC
       hidden: true
       rarity: 8.1
-    - name: Thrifty
+    - id: "960090"
+      key: "34"
+      name: Thrifty
       description: Win 10 games in Half Cash mode
       date: "2023-02-19T09:54:54-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/cdc073ba36e2e69dc49f58487ab9303c1c5322fa.jpg
       provider: steam
       platform: PC
       rarity: 7.2
-    - name: Red And Blue Makes...
+    - id: "960090"
+      key: "39"
+      name: Red And Blue Makes...
       description: Pop 100,000 Purple bloons
       date: "2023-02-26T20:09:11-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/603f50bad7ae45ef4d8faadb38afafc20d836c96.jpg
       provider: steam
       platform: PC
       rarity: 23.2
-    - name: Survivor
+    - id: "960090"
+      key: "31"
+      name: Survivor
       description: Beat round 100 in Apopalypse mode
       date: "2023-02-26T20:09:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/3ed3d0cc58a7904e1571c02df381a889dd4cec33.jpg
       provider: steam
       platform: PC
       rarity: 12.6
-    - name: Oathbreakers
+    - id: "960090"
+      key: "103"
+      name: Oathbreakers
       description: Reanimate 250,000 bloons to fight on your side using the Necromancer Wizard
       date: "2023-02-28T21:59:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d875221063adfa950144b0df8d50bd5ac4752caa.jpg
       provider: steam
       platform: PC
       rarity: 12
-    - name: Side Quest
+    - id: "960090"
+      key: "146"
+      name: Side Quest
       description: Complete a Quest
       date: "2023-12-29T20:59:29-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/9e54dc86d7e58a72dbfdae397f6a6bb47bb30982.jpg
       provider: steam
       platform: PC
       rarity: 47.1
-    - name: Limited Run
+    - id: "960090"
+      key: "114"
+      name: Limited Run
       description: Purchase at least 1 new Limited Time item in the Trophy Store
       date: "2023-12-30T10:50:15-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/c897a4def360bf85bd8e8392b0c882f373352bb3.jpg
       provider: steam
       platform: PC
       rarity: 12.7
-    - name: Collaborate!
+    - id: "960090"
+      key: "54"
+      name: Collaborate!
       description: Have 4 Heroes on screen at once
       date: "2023-12-31T08:10:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/7b2ed13c725a15f4e8c6461aa608c22ab1a51a1e.jpg
       provider: steam
       platform: PC
       rarity: 37.1
-    - name: Tools to Darwin
+    - id: "960090"
+      key: "115"
+      name: Tools to Darwin
       description: Upgrade towers 20,000 times
       date: "2023-12-31T21:33:03-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0d192dd3383f1c5dc6d62fd8f2944d14a41fea06.jpg
       provider: steam
       platform: PC
       rarity: 16.3
-    - name: Regifted
+    - id: "960090"
+      key: "110"
+      name: Regifted
       description: Pop 1,000,000 Bloons with Dartling Gunners
       date: "2024-01-05T22:24:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/359a16429a889ecedd18c05b1f347267b7dda2e0.jpg
       provider: steam
       platform: PC
       rarity: 26.5
-    - name: Ultimate Bloons Master
+    - id: "960090"
+      key: "49"
+      name: Ultimate Bloons Master
       description: Beat 15 maps in CHIMPS mode
       date: "2024-10-19T17:55:23-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/c639791a3273416bb6130619facafe54f8a5f69d.jpg
       provider: steam
       platform: PC
       rarity: 6.1
-    - name: Life Experience
+    - id: "960090"
+      key: "149"
+      name: Life Experience
       description: Earn 5,368,709 experience for any tower
       date: "2024-10-19T18:26:35-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/8bf157df2cda8d69ada3ceb6cbb22d2af6f0690b.jpg
       provider: steam
       platform: PC
       rarity: 11.2
-    - name: Knowledgeable Primate
+    - id: "960090"
+      key: "46"
+      name: Knowledgeable Primate
       description: Unlock all Monkey Knowledge in one branch
       date: "2024-10-20T18:46:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/ca9b00893706389bb348d06131e1f98f049d2d13.jpg
       provider: steam
       platform: PC
       rarity: 19.8
-    - name: Therpopylae
+    - id: "960090"
+      key: "75"
+      name: Therpopylae
       description: Pop 200,000 Bloons on Peninsula
       date: "2024-10-25T18:31:23-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/e80d2e27bb8fe3d92ae4791a717264bc36a732eb.jpg
       provider: steam
       platform: PC
       rarity: 15.9
-    - name: Advanced Player
+    - id: "960090"
+      key: "11"
+      name: Advanced Player
       description: 'Win 1 game on an Advanced map '
       date: "2024-10-26T19:17:09-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/83e0e56520ac57e931c576e3aa6a8b1823ffe533.jpg
       provider: steam
       platform: PC
       rarity: 44.4
-    - name: 2TC
+    - id: "960090"
+      key: "66"
+      name: 2TC
       description: Complete a game in CHIMPS Difficulty with only 2 towers
       date: "2024-10-31T20:55:46-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/667957d74636bdf112ffcb081aa0da62c4067932.jpg
       provider: steam
       platform: PC
       rarity: 7.7
-    - name: Me Did A Job On DDT
+    - id: "960090"
+      key: "5"
+      name: Me Did A Job On DDT
       description: Destroy 5,000 DDTs
       date: "2025-02-12T21:57:49-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/4641c613a690f779e491ccc333470015232b2e54.jpg
       provider: steam
       platform: PC
       rarity: 35.2
-    - name: War Monkeys
+    - id: "960090"
+      key: "27"
+      name: War Monkeys
       description: Win 10 games using only Military monkeys
       date: "2025-02-23T10:03:25-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/abcb017fafe6fdc52a551c84d5109022b6756bc1.jpg
       provider: steam
       platform: PC
       rarity: 17.1
-    - name: Tower Keeper
+    - id: "960090"
+      key: "89"
+      name: Tower Keeper
       description: Have 200 insta-monkeys in your inventory at one time
       date: "2025-03-08T21:32:55-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/da7638d3899d923e5bbc064cde7cc55dc8d91561.jpg
       provider: steam
       platform: PC
       rarity: 10.5
-    - name: Indie
+    - id: "960090"
+      key: "32"
+      name: Indie
       description: Win 25 games with Alternate Bloon Rounds
       date: "2025-03-16T16:29:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d969487b64a6dcb1177f179f264f2081485e8bb8.jpg
       provider: steam
       platform: PC
       rarity: 6.2
-    - name: Bloonzilla!
+    - id: "960090"
+      key: "35"
+      name: Bloonzilla!
       description: Win 25 games against Double HP MOABs
       date: "2025-03-29T18:56:58-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/7b3ae1c134d77e3ccff78545e6979004c9d0b29a.jpg
       provider: steam
       platform: PC
       rarity: 4
-    - name: Abracadabmonkey
+    - id: "960090"
+      key: "28"
+      name: Abracadabmonkey
       description: Win 10 games using only Magic monkeys
       date: "2025-04-02T18:24:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/aecc2cafc35ff49c7e27a9c64fc0c5b423d2dcc2.jpg
       provider: steam
       platform: PC
       rarity: 14.6
-    - name: World League Training
+    - id: "960090"
+      key: "148"
+      name: World League Training
       description: Acquire 150,000 Beast Handler XP
       date: "2025-04-04T18:57:46-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/b117e75b6b7f4a0879b6e4913bfa30e465f05f7e.jpg
       provider: steam
       platform: PC
       rarity: 9.8
-    - name: Mo Heroes, Mo Problems
+    - id: "960090"
+      key: "101"
+      name: Mo Heroes, Mo Problems
       description: Complete an Odyssey without a Hero
       date: "2025-04-12T15:12:12-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/5772d0fe43bf71d531e82e8fc13be06295ea0fc7.jpg
@@ -483,70 +617,90 @@ earned:
       platform: PC
       hidden: true
       rarity: 7.3
-    - name: Challenge Apprentice
+    - id: "960090"
+      key: "43"
+      name: Challenge Apprentice
       description: Win 10 Daily Challenges
       date: "2025-04-14T20:12:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d9f264fcef58774de5893f9f777acf725e58a702.jpg
       provider: steam
       platform: PC
       rarity: 16.1
-    - name: Poppable
+    - id: "960090"
+      key: "33"
+      name: Poppable
       description: Win 25 games on Impoppable Difficulty
       date: "2025-04-16T18:41:09-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/29822354fdac684eb54acc5f5af3d84459935b22.jpg
       provider: steam
       platform: PC
       rarity: 6.5
-    - name: Dr. Monkey
+    - id: "960090"
+      key: "25"
+      name: Dr. Monkey
       description: Spend 106 Monkey Knowledge points
       date: "2025-04-20T18:08:11-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/115df60dd813a1b671532a6632ea5e9fe9abb200.jpg
       provider: steam
       platform: PC
       rarity: 8.8
-    - name: Master of Life
+    - id: "960090"
+      key: "81"
+      name: Master of Life
       description: Have 1000 lives at once in a single game
       date: "2025-04-20T18:08:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/82b72c17a012b8f9fc467111a42c085b96a260db.jpg
       provider: steam
       platform: PC
       rarity: 44.1
-    - name: ZOMGinator
+    - id: "960090"
+      key: "4"
+      name: ZOMGinator
       description: Destroy 5,000 ZOMGs
       date: "2025-04-26T13:46:30-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/b510fb50454b242dda6786034dff7203d1ec39b7.jpg
       provider: steam
       platform: PC
       rarity: 26.9
-    - name: Unsung Monkeys
+    - id: "960090"
+      key: "29"
+      name: Unsung Monkeys
       description: Win 10 games using only Support monkeys
       date: "2025-04-27T20:11:29-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/bc01341c3a557a618aed626af7809616f4f8cf73.jpg
       provider: steam
       platform: PC
       rarity: 8.3
-    - name: Co-operation
+    - id: "960090"
+      key: "51"
+      name: Co-operation
       description: Beat 1 map in Co-op mode
       date: "2025-04-28T20:35:32-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0feed328d4da8bff3777a305889a80845c074c76.jpg
       provider: steam
       platform: PC
       rarity: 58.7
-    - name: Apotheosis
+    - id: "960090"
+      key: "131"
+      name: Apotheosis
       description: Upgrade to a Monkey Paragon Tower
       date: "2025-04-29T19:35:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/0236543f20f08d7ec68be53fa9fab704bff4ae7d.jpg
       provider: steam
       platform: PC
       rarity: 31.5
-    - name: First Monkeys First
+    - id: "960090"
+      key: "26"
+      name: First Monkeys First
       description: Win 10 games using only Primary monkeys
       date: "2025-04-29T21:27:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/b4de8c0bf9ad146e4cc7b92966d346b1da08bef0.jpg
       provider: steam
       platform: PC
       rarity: 18.6
-    - name: Alchermistman and Bloonacleboy
+    - id: "960090"
+      key: "65"
+      name: Alchermistman and Bloonacleboy
       description: You have it set to M for mini, when it should be W for wumbo
       date: "2025-05-02T20:44:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/3da0a3bfcfe21c5cbc6c70bbf9a227e606eb6665.jpg
@@ -554,42 +708,54 @@ earned:
       platform: PC
       hidden: true
       rarity: 11.8
-    - name: Impoppable
+    - id: "960090"
+      key: "1"
+      name: Impoppable
       description: Pop 100,000,000 bloons
       date: "2025-05-02T21:37:33-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/90aa0cd9af634ae6eba6f4d804cdcef1234e61eb.jpg
       provider: steam
       platform: PC
       rarity: 7.8
-    - name: A Crate Time
+    - id: "960090"
+      key: "87"
+      name: A Crate Time
       description: Open a Diamond Crate in any Collection Event
       date: "2025-05-03T19:55:48-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/d914e4bac75e0596b2fb3bb0fddb34801ffdaa62.jpg
       provider: steam
       platform: PC
       rarity: 6.1
-    - name: Perfect Week
+    - id: "960090"
+      key: "45"
+      name: Perfect Week
       description: Complete all Daily Challenges in a week
       date: "2025-05-03T20:20:24-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/6b0ba11c6001c890313a16a9228381e99a014d26.jpg
       provider: steam
       platform: PC
       rarity: 6.3
-    - name: Sticky Situation
+    - id: "960090"
+      key: "139"
+      name: Sticky Situation
       description: Glue 500,000 Bloons
       date: "2025-05-04T09:53:05-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/93fe3f11525d39588a24c4d96f1df754c200f114.jpg
       provider: steam
       platform: PC
       rarity: 9.2
-    - name: Axis of Havoc
+    - id: "960090"
+      key: "88"
+      name: Axis of Havoc
       description: Have one of each T5 sniper in one game of CHIMPS
       date: "2025-05-08T20:45:10-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/82313ca787979022fce539a0f9f6c82f762bad8c.jpg
       provider: steam
       platform: PC
       rarity: 4.1
-    - name: Stubborn Strategy
+    - id: "960090"
+      key: "116"
+      name: Stubborn Strategy
       description: Just because a thing can be done, does not mean that it should be done
       date: "2025-05-10T11:08:38-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/8f7ad4c215f6fa1232ab0f4949a2c77ac302a06b.jpg
@@ -597,63 +763,81 @@ earned:
       platform: PC
       hidden: true
       rarity: 5.2
-    - name: All for one and one for one
+    - id: "960090"
+      key: "80"
+      name: All for one and one for one
       description: Win a game with only 1 Monkey on screen at any one time in any Hard Difficulty game
       date: "2025-05-17T20:10:42-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/c0de295104594c1662ca9b4d6b23121e6acb1533.jpg
       provider: steam
       platform: PC
       rarity: 9.7
-    - name: Big Spender
+    - id: "960090"
+      key: "140"
+      name: Big Spender
       description: Spend 1,000,000 cash in one round
       date: "2025-05-17T20:10:44-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/ead49b8841b3e1773aeb4b1e88ba634a9787f048.jpg
       provider: steam
       platform: PC
       rarity: 21.3
-    - name: Heavy Investment
+    - id: "960090"
+      key: "151"
+      name: Heavy Investment
       description: Invest at least $401,626 extra when creating any Paragon
       date: "2025-05-17T20:10:48-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/f9729a81252e85999598a478a4f8d167c7805fdd.jpg
       provider: steam
       platform: PC
       rarity: 17.8
-    - name: 2 MegaPops
+    - id: "960090"
+      key: "86"
+      name: 2 MegaPops
       description: Complete a game of CHIMPS with more than 2 million damage dealt by one tower
       date: "2025-05-25T11:59:17-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/6e267da53a6749ccb84ed7e7af50204638150213.jpg
       provider: steam
       platform: PC
       rarity: 4.7
-    - name: 12 Tasks of Monk-ules
+    - id: "960090"
+      key: "96"
+      name: 12 Tasks of Monk-ules
       description: Complete 12 different Odysseys
       date: "2025-06-15T11:03:43-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/fadd5d5745565ea7603cce797cb3d42bff455344.jpg
       provider: steam
       platform: PC
       rarity: 4.2
-    - name: First Steps
+    - id: "960090"
+      key: "156"
+      name: First Steps
       description: Complete the First Time Tutorial Quest
       date: "2025-09-01T19:08:59-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/1300c36a838b31ddd6fa46e8558243272b3d8624.jpg
       provider: steam
       platform: PC
       rarity: 10.1
-    - name: Triple threat
+    - id: "960090"
+      key: "53"
+      name: Triple threat
       description: Beat 1 map in 3-player Co-op mode
       date: "2025-09-07T21:01:12-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/367d8bdc34c1cbaa459fbb19f3caa4bd18e14faf.jpg
       provider: steam
       platform: PC
       rarity: 40.5
-    - name: Season Starts
+    - id: "960090"
+      key: "157"
+      name: Season Starts
       description: Achieve Tier 1 in any Stage in a Social Season
       date: "2026-05-07T17:47:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/51a69a128a9e3247e3235accb7c4766e3cfb60af.jpg
       provider: steam
       platform: PC
       rarity: 6
-    - name: Chunky Monkeys
+    - id: "960090"
+      key: "102"
+      name: Chunky Monkeys
       description: I like 'em big, I like 'em chunkay
       date: "2026-06-04T19:21:30-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/79f96b8d07bfd697d666d74c891b30226d115094.jpg
@@ -661,70 +845,90 @@ earned:
       platform: PC
       hidden: true
       rarity: 4.8
-    - name: Kind Benefactor
+    - id: "960090"
+      key: "56"
+      name: Kind Benefactor
       description: Give 10,000 Cash in Co-op mode
       date: "2026-06-09T17:19:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/9c9c7c0cae3fda7d3ae32da03e337de78c1a67cf.jpg
       provider: steam
       platform: PC
       rarity: 47.1
-    - name: Four times the fun
+    - id: "960090"
+      key: "52"
+      name: Four times the fun
       description: Beat 1 map in 4-player Co-op mode
       date: "2026-06-09T17:20:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/67cac964219376891ace8b9a6c2da6186ad5cfcb.jpg
       provider: steam
       platform: PC
       rarity: 31.8
-    - name: Power User
+    - id: "960090"
+      key: "21"
+      name: Power User
       description: Use Powers 25 times
       date: "2026-06-13T16:55:35-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/050353cdcc1ebb3d30d69d48863afe497077c767.jpg
       provider: steam
       platform: PC
       rarity: 29.1
-    - name: Challenge Master
+    - id: "960090"
+      key: "44"
+      name: Challenge Master
       description: Win 100 Daily Challenges
       date: "2026-06-28T10:40:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/a731207ef3f879273cc0ff64db0d845230c2e28a.jpg
       provider: steam
       platform: PC
       rarity: 4.3
-    - name: Living on the Edge
+    - id: "960090"
+      key: "104"
+      name: Living on the Edge
       description: Win any non-CHIMPS/Impoppable game with only 1 life remaining
       date: "2026-06-28T21:47:11-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/f2450915ac4a449865c77050b01858cf0b29195e.jpg
       provider: steam
       platform: PC
       rarity: 9.6
-    - name: Davids vs Goliath
+    - id: "960090"
+      key: "134"
+      name: Davids vs Goliath
       description: Win a boss battle without using a Hero
       date: "2026-07-05T16:16:46-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/eb270caa94f3170c125deaa29244d67bc6c992be.jpg
       provider: steam
       platform: PC
       rarity: 6.4
-    - name: Generous Benefactor
+    - id: "960090"
+      key: "57"
+      name: Generous Benefactor
       description: Give 50,000 Cash in Co-op mode
       date: "2026-07-19T08:19:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/cba3b7394eb0e5b91cb06b843e86261273221bb8.jpg
       provider: steam
       platform: PC
       rarity: 41.9
-    - name: 25 to Life
+    - id: "960090"
+      key: "152"
+      name: 25 to Life
       description: Defeat 5 unique Bosses at Tier 5 (Can be in Boss Event or Challenge Mode)
       date: "2026-08-15T13:18:37-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/576a51ba7ae5030af1e9a08e06d7f6f6fc0d652c.jpg
       provider: steam
       platform: PC
       rarity: 3.2
-    - name: Mid Season
+    - id: "960090"
+      key: "158"
+      name: Mid Season
       description: Earn 7,500 Stars in any Social Season
       date: "2026-09-10T18:16:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/45b9e6c494f376ee4b4bb13e58b1501510af2275.jpg
       provider: steam
       platform: PC
       rarity: 0.7
-    - name: The greatest challenge
+    - id: "960090"
+      key: "73"
+      name: The greatest challenge
       description: Create or Play 200 Challenges
       date: "2026-10-28T21:17:29-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/960090/9b78e763053706195a666d335ea334c8a04e6235.jpg

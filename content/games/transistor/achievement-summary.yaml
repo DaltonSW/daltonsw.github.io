@@ -10,14 +10,18 @@ providers:
       playtime_mins: 66
       last_played: "2020-06-09"
 earned:
-    - name: Drive()
+    - id: "237930"
+      key: AchCompleteIntro
+      name: Drive()
       description: Reach the Goldwalk District.
       date: "2020-06-09T19:10:48-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/615b34d738ae719a9a28453031f132e709a159d8.jpg
       provider: steam
       platform: PC
       rarity: 81
-    - name: Reisz()
+    - id: "237930"
+      key: AchDefeatSybil
+      name: Reisz()
       description: Confront Sybil at the Empty Set.
       date: "2020-06-09T19:55:24-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/237930/b923e4588c6031de6b6b1b8a13245ceab51f8c4d.jpg

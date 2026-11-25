@@ -8,28 +8,36 @@ providers:
       total: 5
       last_played: "2020-04-16"
 earned:
-    - name: Clear Screen
+    - id: "1019197458330"
+      key: CgkImo-c59QdEAIQAQ
+      name: Clear Screen
       description: Remove every block on the screen
       date: "2020-04-09T12:51:03-05:00"
       points: 10000
       icon: https://m.exophase.com/android/awards/m/76g7175.png?a738953f2b98ce9076e044769a6e08bb
       provider: googleplay
       platform: Google Play
-    - name: Saved by the ball
+    - id: "1019197458330"
+      key: CgkImo-c59QdEAIQBA
+      name: Saved by the ball
       description: Get an extra ball that removes a block that would have ended the game
       date: "2020-04-12T13:05:25-05:00"
       points: 10000
       icon: https://m.exophase.com/android/awards/m/8bej3jb.png?a738953f2b98ce9076e044769a6e08bb
       provider: googleplay
       platform: Google Play
-    - name: It's not cricket
+    - id: "1019197458330"
+      key: CgkImo-c59QdEAIQBQ
+      name: It's not cricket
       description: Have a ball bounce for more than sixteen seconds
       date: "2020-04-12T16:01:53-05:00"
       points: 10000
       icon: https://m.exophase.com/android/awards/m/ej6ebe4.png?a738953f2b98ce9076e044769a6e08bb
       provider: googleplay
       platform: Google Play
-    - name: That was on purpose
+    - id: "1019197458330"
+      key: CgkImo-c59QdEAIQAg
+      name: That was on purpose
       description: Miss all blocks while the warning line is visible
       date: "2020-04-16T19:33:24-05:00"
       points: 10000

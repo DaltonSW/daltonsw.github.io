@@ -10,7 +10,9 @@ providers:
       playtime_mins: 2012
       last_played: "2017-10-20"
 earned:
-    - name: Murderous Marooning
+    - id: "413420"
+      key: PROLOGUE
+      name: Murderous Marooning
       description: Finished the prologue
       date: "2017-08-26T19:46:01-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
@@ -18,7 +20,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 72.9
-    - name: Dead Man's Party
+    - id: "413420"
+      key: CHAPTER1
+      name: Dead Man's Party
       description: Finished Chapter 1
       date: "2017-08-31T22:00:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
@@ -26,7 +30,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 62.2
-    - name: Death, Lies, and Video Games
+    - id: "413420"
+      key: CHAPTER2
+      name: Death, Lies, and Video Games
       description: Finished Chapter 2
       date: "2017-09-03T19:58:54-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
@@ -34,21 +40,27 @@ earned:
       platform: PC
       hidden: true
       rarity: 54.3
-    - name: Co-Op Partner
+    - id: "413420"
+      key: NANAMI
+      name: Co-Op Partner
       description: Filled in every page of Chiaki's Report Card
       date: "2017-09-04T19:27:40-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       rarity: 29.6
-    - name: Blowin' Through My Screen
+    - id: "413420"
+      key: NOISE_100
+      name: Blowin' Through My Screen
       description: Destroyed 100 white noise lines across all class trials
       date: "2017-09-05T18:51:51-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       rarity: 37.2
-    - name: Is It Medicine or Social Skill?
+    - id: "413420"
+      key: CHAPTER3
+      name: Is It Medicine or Social Skill?
       description: Finished Chapter 3
       date: "2017-09-05T21:12:45-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
@@ -56,14 +68,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 49.6
-    - name: Case Closed
+    - id: "413420"
+      key: NO_RETRY
+      name: Case Closed
       description: Cleared a class trial without having to retry once
       date: "2017-09-08T18:43:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       rarity: 47.2
-    - name: Bred for Destruction
+    - id: "413420"
+      key: CHAPTER4
+      name: Bred for Destruction
       description: Finished Chapter 4
       date: "2017-09-08T19:00:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
@@ -71,21 +87,27 @@ earned:
       platform: PC
       hidden: true
       rarity: 46.1
-    - name: Be Beary, Beary Quiet...
+    - id: "413420"
+      key: MONOKUMA_HALF
+      name: Be Beary, Beary Quiet...
       description: Found half of the Hidden Monokumas
       date: "2017-09-14T21:31:17-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       rarity: 35.7
-    - name: Can We Keep Him?
+    - id: "413420"
+      key: PET
+      name: Can We Keep Him?
       description: Fully raised one type of pet
       date: "2017-09-14T21:56:50-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       rarity: 35.2
-    - name: Abandon All Hope
+    - id: "413420"
+      key: CHAPTER5
+      name: Abandon All Hope
       description: Finished Chapter 5
       date: "2017-09-15T19:43:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
@@ -93,21 +115,27 @@ earned:
       platform: PC
       hidden: true
       rarity: 44
-    - name: Halfway There!
+    - id: "413420"
+      key: LEVEL_50
+      name: Halfway There!
       description: Hajime Hinata breaks through level 50
       date: "2017-09-15T20:07:25-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/309fa2ac170ca604e1cfae663929a825facc7954.jpg
       provider: steam
       platform: PC
       rarity: 40
-    - name: The Airborne Static Event
+    - id: "413420"
+      key: NOISE_500
+      name: The Airborne Static Event
       description: Destroyed 500 white noise lines across all class trials
       date: "2017-09-15T22:48:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/e2ad39c64512dcb36f42a069dcd5b3ee071652a1.jpg
       provider: steam
       platform: PC
       rarity: 19.1
-    - name: Goodbye Academy of Despair
+    - id: "413420"
+      key: CHAPTER_ALL
+      name: Goodbye Academy of Despair
       description: Finished every chapter
       date: "2017-09-15T23:50:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413420/0fa05b79201e34d4815f6122f078464e2010b5b7.jpg

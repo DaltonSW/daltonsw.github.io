@@ -10,77 +10,99 @@ providers:
       playtime_mins: 218
       last_played: "2019-07-11"
 earned:
-    - name: Ready for Ranked
+    - id: "207140"
+      key: ranked_matches
+      name: Ready for Ranked
       description: Unlock Ranked matches.
       date: "2019-05-03T16:44:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/4495f9fea165fbf991d04f9e37df1368aa5be7d9.jpg
       provider: steam
       platform: PC
       rarity: 62.5
-    - name: Two Birds, One Stone
+    - id: "207140"
+      key: bomb_multiple_opponents
+      name: Two Birds, One Stone
       date: "2019-05-03T17:11:28-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/ff11941ea2988b82bab1d91d9b76875d37e806b5.jpg
       provider: steam
       platform: PC
       hidden: true
       rarity: 53
-    - name: Backfired
+    - id: "207140"
+      key: rocket_suicide
+      name: Backfired
       date: "2019-05-03T17:27:29-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/e593f58c2410eccbd682e455a5f589a747078524.jpg
       provider: steam
       platform: PC
       hidden: true
       rarity: 69.9
-    - name: Mind Your Head!
+    - id: "207140"
+      key: dropped_crates_on_heads
+      name: Mind Your Head!
       description: Drop a Crate on an opponent's head 10 times.
       date: "2019-05-03T17:44:13-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/23db83e3513de7efe6386715d78fbfc81222a53f.jpg
       provider: steam
       platform: PC
       rarity: 58.1
-    - name: King of Swing
+    - id: "207140"
+      key: in_air_5
+      name: King of Swing
       description: Don't touch the floor for 5 seconds.
       date: "2019-05-03T17:55:06-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/3e63171477425a9a8cf354d6777ac2005d76c70d.jpg
       provider: steam
       platform: PC
       rarity: 66.7
-    - name: Sultan of Swing
+    - id: "207140"
+      key: in_air_10
+      name: Sultan of Swing
       description: Don't touch the floor for 10 seconds.
       date: "2019-05-04T12:48:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/25816f81676791f94fa31d8ad3a1ab1175d00fb8.jpg
       provider: steam
       platform: PC
       rarity: 28.9
-    - name: Triple Freeze!
+    - id: "207140"
+      key: triple_freeze
+      name: Triple Freeze!
       description: Freeze 3 opponents with one ray.
       date: "2019-05-04T13:30:01-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/c6423a78e0d0cc6e6fd8d58ed2a3dd1747513858.jpg
       provider: steam
       platform: PC
       rarity: 23.1
-    - name: Strike!
+    - id: "207140"
+      key: fireball_strike
+      name: Strike!
       description: Hit 3 opponents with one fireball.
       date: "2019-05-04T13:31:33-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/a494ed618469197f6b6e2140c2680d5b14f2bd4a.jpg
       provider: steam
       platform: PC
       rarity: 25.4
-    - name: See Ya!
+    - id: "207140"
+      key: overtaken_opponent
+      name: See Ya!
       description: Overtake 1000 opponents.
       date: "2019-07-11T14:19:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/8d0202b1c9336b13214a46be6a7398b201060124.jpg
       provider: steam
       platform: PC
       rarity: 42.2
-    - name: Deflected!
+    - id: "207140"
+      key: fireball_reflect
+      name: Deflected!
       description: Deflect a fireball with a shockwave.
       date: "2019-07-11T14:38:55-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/b1d2bcc3785cb7fe438964b596461ea9161d02fd.jpg
       provider: steam
       platform: PC
       rarity: 21
-    - name: Gotcha!
+    - id: "207140"
+      key: grappled_opponent
+      name: Gotcha!
       description: Grapple 100 opponents using the golden hook.
       date: "2019-07-11T14:54:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207140/366a785d852bc3f9ea34c3e43ae7ae785b70b23b.jpg

@@ -10,49 +10,63 @@ providers:
       playtime_mins: 64
       last_played: "2016-02-16"
 earned:
-    - name: Biscuit Buddies
+    - id: "271670"
+      key: Biscuit
+      name: Biscuit Buddies
       description: Fiddle around with the settings.
       date: "2014-06-22T21:15:32-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/063b49f95c3c9d4d49fc87d4f302a7f59d4e5ac3.jpg
       provider: steam
       platform: PC
       rarity: 65.8
-    - name: 'Ugh! Let Me Play! '
+    - id: "271670"
+      key: CutsceneSkip
+      name: 'Ugh! Let Me Play! '
       description: Skip a cutscene.
       date: "2014-06-22T21:15:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/504ea32ce4417f26e15cb8b440b7bc066f0faa22.jpg
       provider: steam
       platform: PC
       rarity: 58.2
-    - name: It Begins
+    - id: "271670"
+      key: FirstStar
+      name: It Begins
       description: 'Get your first star rating. '
       date: "2014-06-22T21:17:10-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/96f97341da1992b5f30bbb84fe0f2375d7559591.jpg
       provider: steam
       platform: PC
       rarity: 80.5
-    - name: S***t Just Got Real
+    - id: "271670"
+      key: Tutorial
+      name: S***t Just Got Real
       description: Complete the tutorial.
       date: "2014-06-22T21:17:10-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/a47b6d05682a34ac3be1ff17e7d361ad3e687f3b.jpg
       provider: steam
       platform: PC
       rarity: 79.1
-    - name: Two Birds With One Stone
+    - id: "271670"
+      key: TwoBirds
+      name: Two Birds With One Stone
       description: Kill two enemies with one shuriken
       date: "2014-06-22T21:19:21-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/b49d6cd939bf501822b77ff210df1e28aa2c48f8.jpg
       provider: steam
       platform: PC
       rarity: 59.3
-    - name: Spikes... Spikes Spikes Spikes Spikes
+    - id: "271670"
+      key: Spikes
+      name: Spikes... Spikes Spikes Spikes Spikes
       description: Shots... Shots Shots Shots Shots - die on spikes five times in a row
       date: "2014-06-22T21:20:15-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/3c991624cd9207816d08824f83636152c0cf0c84.jpg
       provider: steam
       platform: PC
       rarity: 62.3
-    - name: Out of Ammo
+    - id: "271670"
+      key: Ammo
+      name: Out of Ammo
       description: Try firing your shurikens in a boss fight.
       date: "2014-06-22T21:21:23-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/ab8f2d7556e8aaa5eaa4f206c7fa98944b577918.jpg
@@ -60,77 +74,99 @@ earned:
       platform: PC
       hidden: true
       rarity: 43
-    - name: BWAAAAAAAAGH!
+    - id: "271670"
+      key: Laser
+      name: BWAAAAAAAAGH!
       description: Go into the light.
       date: "2014-06-22T21:21:31-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/4162908c3258c458776482f7e92dbcd9b55e02d3.jpg
       provider: steam
       platform: PC
       rarity: 45.2
-    - name: Real Power - Forest
+    - id: "271670"
+      key: RPForest
+      name: Real Power - Forest
       description: Finish the first world
       date: "2014-06-22T21:21:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/be7cf03ef0161558a2b6b2475196fbfa9b05a0ff.jpg
       provider: steam
       platform: PC
       rarity: 45.5
-    - name: If It Ain't Hurtin', It Ain't Workin'
+    - id: "271670"
+      key: AintHurtin
+      name: If It Ain't Hurtin', It Ain't Workin'
       description: Die over 50 times
       date: "2016-02-16T19:23:02-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/d193f0be22e4134c12a814d5a65bba77c09fe890.jpg
       provider: steam
       platform: PC
       rarity: 46.3
-    - name: FUUUUUUUUUU-
+    - id: "271670"
+      key: FU
+      name: FUUUUUUUUUU-
       description: Finish a level with 0.03 or less from your next star rating (or 3 star the entire game)
       date: "2016-02-16T19:30:34-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/0e4b18dfb6c595704d01016b04c9146b420ba0bb.jpg
       provider: steam
       platform: PC
       rarity: 42.5
-    - name: Double Tap
+    - id: "271670"
+      key: DoubleTap
+      name: Double Tap
       description: Press restart before the timer has even begun
       date: "2016-02-16T19:31:21-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/0282c3d6d334e23765fa514294ac91d039e7f7d7.jpg
       provider: steam
       platform: PC
       rarity: 49.7
-    - name: Block Party
+    - id: "271670"
+      key: BlockParty
+      name: Block Party
       description: Drop a falling block on an enemy's head
       date: "2016-02-16T19:35:52-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/5ee8ff71d339af6ec8726091a41d6a18b1659c5c.jpg
       provider: steam
       platform: PC
       rarity: 36
-    - name: Real Power - Canyon
+    - id: "271670"
+      key: RPCanyon
+      name: Real Power - Canyon
       description: Finish the second world
       date: "2016-02-16T19:38:12-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/5c6723a1b7c459555a5ba73470befff1ed0a3f62.jpg
       provider: steam
       platform: PC
       rarity: 26.5
-    - name: ICE to see you! ...ICE! Ahahaha
+    - id: "271670"
+      key: Ice
+      name: ICE to see you! ...ICE! Ahahaha
       description: Make an icicle fall on an enemy's head
       date: "2016-02-16T19:42:46-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/b9c0765ca55318835d807dbdb37fc49c6cb1ca49.jpg
       provider: steam
       platform: PC
       rarity: 25.1
-    - name: Real Power - Ice
+    - id: "271670"
+      key: RPIce
+      name: Real Power - Ice
       description: Finish the third world
       date: "2016-02-16T19:51:26-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/9c72160cf8bbbfec9488e70fbf9690ff7d694a0a.jpg
       provider: steam
       platform: PC
       rarity: 19.8
-    - name: Still Alive
+    - id: "271670"
+      key: StillAlive
+      name: Still Alive
       description: Spend 5 seconds or more without touching the ground
       date: "2016-02-16T20:00:57-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/c710fe65f34594df107143c03eb658ba0c31c8f8.jpg
       provider: steam
       platform: PC
       rarity: 20.4
-    - name: Real Power - Deathcube
+    - id: "271670"
+      key: RPDeathcube
+      name: Real Power - Deathcube
       description: Finish the fourth world
       date: "2016-02-16T20:00:57-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/0745a95dd7eb0e76e79ce2d30ba8430636b09da8.jpg

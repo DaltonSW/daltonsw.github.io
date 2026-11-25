@@ -10,28 +10,36 @@ providers:
       playtime_mins: 3162
       last_played: "2023-04-01"
 earned:
-    - name: Ace
+    - id: "1533420"
+      key: ACE_FIRST
+      name: Ace
       description: Earn your first Ace medal
       date: "2022-12-10T15:15:19-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/bf27fa0a8e5ed69c7422c6436ece1c61e1c9331e.jpg
       provider: steam
       platform: PC
       rarity: 86.8
-    - name: Mission 1 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_1
+      name: Mission 1 Complete
       description: Complete Mission 1
       date: "2022-12-10T15:57:13-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/3420c61c5002e0d75827f8df4661796812840571.jpg
       provider: steam
       platform: PC
       rarity: 86.9
-    - name: How thoughtful
+    - id: "1533420"
+      key: GIFT_GIVE_FIRST
+      name: How thoughtful
       description: Give your first gift
       date: "2022-12-10T17:28:11-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/a6f49a284ea07d0553996aca680427fa51976078.jpg
       provider: steam
       platform: PC
       rarity: 69.5
-    - name: Heavenly Delight
+    - id: "1533420"
+      key: HEAVENLYDELIGHT_FIRST
+      name: Heavenly Delight
       description: Redeem a Heavenly Delight Ticket
       date: "2022-12-10T17:39:45-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/156c5fda3f750128e6400902698c428eb7f583e4.jpg
@@ -39,28 +47,36 @@ earned:
       platform: PC
       hidden: true
       rarity: 69.4
-    - name: Parry
+    - id: "1533420"
+      key: PARRY
+      name: Parry
       description: Kill an enemy by parrying a bullet at them using the Katana card
       date: "2022-12-10T18:50:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/7b1250e583cd6fda31ab5cb6dabcef62de4e133e.jpg
       provider: steam
       platform: PC
       rarity: 74
-    - name: Mission 2 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_2
+      name: Mission 2 Complete
       description: Complete Mission 2
       date: "2022-12-10T19:23:11-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/fd7a26fa7ba847a255b3b19ccba30bb841590e23.jpg
       provider: steam
       platform: PC
       rarity: 70.4
-    - name: Not very effective...
+    - id: "1533420"
+      key: FIST
+      name: Not very effective...
       description: Use the Fists card
       date: "2022-12-11T08:07:34-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/f058cff58571422182d1dfff3bd1fba12e6361a1.jpg
       provider: steam
       platform: PC
       rarity: 49.3
-    - name: Bloody Knuckles
+    - id: "1533420"
+      key: FIST_DEATH
+      name: Bloody Knuckles
       description: Deplete the Fists card
       date: "2022-12-11T08:09:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/980e3371483a368693ede00de92b2a52c307291e.jpg
@@ -68,14 +84,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 42.4
-    - name: Mission 3 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_3
+      name: Mission 3 Complete
       description: Complete Mission 3
       date: "2022-12-11T08:42:00-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/ec53ff7917c61b48169e5e0576cb255f2f0f35fe.jpg
       provider: steam
       platform: PC
       rarity: 59
-    - name: Clocktower
+    - id: "1533420"
+      key: BOSS_CLOCKTOWER
+      name: Clocktower
       description: Defeat Green at the Clocktower
       date: "2022-12-11T09:20:35-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/4bb8e01227617fce0f4ab275931c9b3823bd76aa.jpg
@@ -83,56 +103,72 @@ earned:
       platform: PC
       hidden: true
       rarity: 54.5
-    - name: Mission 4 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_4
+      name: Mission 4 Complete
       description: Complete Mission 4
       date: "2022-12-11T09:23:34-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/a81260ca6a84b92e37c865556dc0941d073dfffb.jpg
       provider: steam
       platform: PC
       rarity: 54.4
-    - name: Vending Machine
+    - id: "1533420"
+      key: VENDOR
+      name: Vending Machine
       description: Collect ten cards from vending machines
       date: "2022-12-11T12:27:25-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/ecbd0ca79b361b375d8897a64fcf456db47e4a47.jpg
       provider: steam
       platform: PC
       rarity: 55.6
-    - name: Mission 5 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_5
+      name: Mission 5 Complete
       description: Complete Mission 5
       date: "2022-12-11T13:55:55-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/1a33428af87416dbfcec22a0167b9f8af9828a69.jpg
       provider: steam
       platform: PC
       rarity: 48.6
-    - name: Cannonball
+    - id: "1533420"
+      key: STOMP
+      name: Cannonball
       description: Stomp off of the edge of a level
       date: "2022-12-11T16:12:19-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/3330e282ea67a2fdf09b51c18da8b66336d478e6.jpg
       provider: steam
       platform: PC
       rarity: 56.4
-    - name: Trippy
+    - id: "1533420"
+      key: TRIPWIRE
+      name: Trippy
       description: Get killed by a Tripwire
       date: "2022-12-11T16:14:27-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/223a07727d54af0ed464fe23a209230613b63b25.jpg
       provider: steam
       platform: PC
       rarity: 48
-    - name: Mission 6 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_6
+      name: Mission 6 Complete
       description: Complete Mission 6
       date: "2022-12-11T17:03:34-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/e7ee3f900aa6b8af72b1cdb83cc85c2cbb19eb74.jpg
       provider: steam
       platform: PC
       rarity: 42.4
-    - name: Mikey's Pet
+    - id: "1533420"
+      key: ACE_HALF
+      name: Mikey's Pet
       description: Earn 50% of the total Ace medals
       date: "2022-12-11T20:16:10-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/728843819973c1f48ccc0e6c3fa729f4bde81a9f.jpg
       provider: steam
       platform: PC
       rarity: 33.1
-    - name: Idiot
+    - id: "1533420"
+      key: IDIOTISLAND
+      name: Idiot
       description: Discovered Idiot Island
       date: "2022-12-11T21:00:54-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/35fe4f42c79d8f30c94e3e9c05cc3ccad00584ff.jpg
@@ -140,70 +176,90 @@ earned:
       platform: PC
       hidden: true
       rarity: 34.6
-    - name: Vault
+    - id: "1533420"
+      key: VIOLET_MEMORY
+      name: Vault
       description: Unlock one of Violet's memories
       date: "2022-12-11T21:04:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/c841fda49fd4183eef07edecb439c73266a4e4b7.jpg
       provider: steam
       platform: PC
       rarity: 35.6
-    - name: Trinity
+    - id: "1533420"
+      key: YELLOW_MEMORY
+      name: Trinity
       description: Unlock one of Yellow's memories
       date: "2022-12-11T21:06:38-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/06977a0d050cfe17fa043bd890e1cce59c95dc02.jpg
       provider: steam
       platform: PC
       rarity: 37
-    - name: Sweet Dreams
+    - id: "1533420"
+      key: RED_MEMORY
+      name: Sweet Dreams
       description: Unlock one of Red's memories
       date: "2022-12-11T21:13:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/9d69a97247de526d78a61285afd6e20ae511ffc1.jpg
       provider: steam
       platform: PC
       rarity: 35.1
-    - name: Gift Collector
+    - id: "1533420"
+      key: GIFT_COLLECT_HALF
+      name: Gift Collector
       description: Collect 50% of the total gifts
       date: "2022-12-11T21:34:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/94ff6a13b0018d03b24cd233f19a3d849fdc486a.jpg
       provider: steam
       platform: PC
       rarity: 32.5
-    - name: Mimic
+    - id: "1533420"
+      key: MIMIC_DEATH
+      name: Mimic
       description: Die from a Mimic's bullet
       date: "2022-12-12T20:42:48-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/58bc919b5cee85d67e0ecaa5827a6b06e00e42fd.jpg
       provider: steam
       platform: PC
       rarity: 39.8
-    - name: Mission 7 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_7
+      name: Mission 7 Complete
       description: Complete Mission 7
       date: "2022-12-12T21:25:33-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/8f2561dfca6e62107664325174c6648a886738c9.jpg
       provider: steam
       platform: PC
       rarity: 38.8
-    - name: Souvenir
+    - id: "1533420"
+      key: COIN
+      name: Souvenir
       description: Find a Strange Coin
       date: "2022-12-13T18:44:41-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/bf9a06021e81302564b4a6b80346cf22e30e431a.jpg
       provider: steam
       platform: PC
       rarity: 29
-    - name: Mission 8 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_8
+      name: Mission 8 Complete
       description: Complete Mission 8
       date: "2022-12-14T17:28:11-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/0f7a0214a205418a93fd1790d50cf52984d9e107.jpg
       provider: steam
       platform: PC
       rarity: 35
-    - name: Mission 9 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_9
+      name: Mission 9 Complete
       description: Complete Mission 9
       date: "2022-12-16T17:22:24-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/3b47ee4c3c1b4f8ded7809adcc3c39e3b24aad5d.jpg
       provider: steam
       platform: PC
       rarity: 31.1
-    - name: Third Temple
+    - id: "1533420"
+      key: BOSS_TEMPLE
+      name: Third Temple
       description: Defeat Green at the Third Temple
       date: "2022-12-16T18:59:25-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/5fc294332c30c27b02c81d882b8ca72d48b7c745.jpg
@@ -211,14 +267,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 30.4
-    - name: Mission 10 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_10
+      name: Mission 10 Complete
       description: Complete Mission 10
       date: "2022-12-16T19:01:01-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/c1bd7082d5694b31bb3f56ccdef17700d24ff265.jpg
       provider: steam
       platform: PC
       rarity: 30.4
-    - name: Lousy Keychain
+    - id: "1533420"
+      key: HEAVENLYDELIGHT_ALL
+      name: Lousy Keychain
       description: Redeem every Heavenly Delight Ticket
       date: "2022-12-16T19:06:50-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/08e05f0e677cd21063085ba7e392094c1471be71.jpg
@@ -226,7 +286,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 28
-    - name: Surprise!
+    - id: "1533420"
+      key: MIMIC_BOOKOFLIFE
+      name: Surprise!
       description: Use the Book of Life Card on a Mimic
       date: "2022-12-16T19:20:03-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/c8edcb424b8d44443344cdadba0a28800758795f.jpg
@@ -234,14 +296,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 29.7
-    - name: Mission 11 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_11
+      name: Mission 11 Complete
       description: Complete Mission 11
       date: "2022-12-16T20:21:25-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/7ae40288aed9c5780080abd9fadb22351c14fb57.jpg
       provider: steam
       platform: PC
       rarity: 29.3
-    - name: Hand of God
+    - id: "1533420"
+      key: BOSS_HANDOFGOD
+      name: Hand of God
       description: Defeat Green at the Hand of God
       date: "2022-12-16T20:57:46-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/0d705cd477ed532573be9692fd5de24ddfe3f3ee.jpg
@@ -249,7 +315,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 28.9
-    - name: Book of Death
+    - id: "1533420"
+      key: BOOKOFDEATH
+      name: Book of Death
       description: Write Green into the Book of Death
       date: "2022-12-16T21:01:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/a2dbb9c48e8e8d15c95908f4bf2f0d4d25196516.jpg
@@ -257,14 +325,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 22
-    - name: Mission 12 Complete
+    - id: "1533420"
+      key: MISSIONCOMPLETE_12
+      name: Mission 12 Complete
       description: Complete Mission 12
       date: "2022-12-16T21:01:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/e15e593dbb5419e9ee5d2686c7bb8e75ab898239.jpg
       provider: steam
       platform: PC
       rarity: 28.9
-    - name: Absolution
+    - id: "1533420"
+      key: BEATGAME
+      name: Absolution
       description: Restore Heaven
       date: "2022-12-16T21:02:37-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/a63fb6f1902e20e643ad406f4440dfe3781c9ba5.jpg
@@ -272,7 +344,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 28.8
-    - name: Clockwork
+    - id: "1533420"
+      key: BOSS_CLOCKTOWER_EARLY
+      name: Clockwork
       description: Defeat Green at the Clocktower before he reaches the top floor
       date: "2022-12-17T08:55:11-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/822709182ec27d86828f279579d67f766766207d.jpg
@@ -280,70 +354,90 @@ earned:
       platform: PC
       hidden: true
       rarity: 9.3
-    - name: Straight A's
+    - id: "1533420"
+      key: ACE_ALL
+      name: Straight A's
       description: Earn an Ace medal on every level
       date: "2022-12-17T09:13:01-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/99795ed6f9fa13b273ef392ce76abdeb9238a377.jpg
       provider: steam
       platform: PC
       rarity: 18.8
-    - name: Rigged Game
+    - id: "1533420"
+      key: VIOLET_SIDEQUEST
+      name: Rigged Game
       description: Complete Violet's Sidequests
       date: "2022-12-17T11:10:41-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/a1a439358aee4192af8c89ceb2d7d618f199c694.jpg
       provider: steam
       platform: PC
       rarity: 22.9
-    - name: Don't Think
+    - id: "1533420"
+      key: YELLOW_SIDEQUEST
+      name: Don't Think
       description: Complete Yellow's Sidequests
       date: "2022-12-17T11:17:43-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/275bb3d8a9e77c2f3d9b56496c0c704f6f8b800b.jpg
       provider: steam
       platform: PC
       rarity: 22.7
-    - name: Mikey
+    - id: "1533420"
+      key: MIKEY_RELATIONSHIP
+      name: Mikey
       description: Complete your relationship with Mikey
       date: "2022-12-17T12:33:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/1f55d01a78b81204bace851103194b296693f24c.jpg
       provider: steam
       platform: PC
       rarity: 21.8
-    - name: Raz
+    - id: "1533420"
+      key: RAZ_RELATIONSHIP
+      name: Raz
       description: Complete your relationship with Raz
       date: "2022-12-17T12:33:51-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/4cd74c80295c27862fd2e9bb07ebe71eae879a12.jpg
       provider: steam
       platform: PC
       rarity: 21.8
-    - name: Solitary Grace
+    - id: "1533420"
+      key: RED_SIDEQUEST
+      name: Solitary Grace
       description: Complete Red's Sidequests
       date: "2022-12-17T13:02:29-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/cf8976dfbdf4095146ce87b64a0721df206f4d49.jpg
       provider: steam
       platform: PC
       rarity: 22.3
-    - name: Red
+    - id: "1533420"
+      key: RED_RELATIONSHIP
+      name: Red
       description: Complete your relationship with Red
       date: "2022-12-17T13:03:15-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/e3974ee7ef1be9bf8312043a48f79d87177e3c8f.jpg
       provider: steam
       platform: PC
       rarity: 22.1
-    - name: Yellow
+    - id: "1533420"
+      key: YELLOW_RELATIONSHIP
+      name: Yellow
       description: Complete your relationship with Yellow
       date: "2022-12-17T13:05:38-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/af09d2dec7ac37454cadcae39f21c48f185060a9.jpg
       provider: steam
       platform: PC
       rarity: 22.1
-    - name: Violet
+    - id: "1533420"
+      key: VIOLET_RELATIONSHIP
+      name: Violet
       description: Complete your relationship with Violet
       date: "2022-12-17T13:09:35-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/cc0d5b1bbbbfeaf07cf1804f66615622c1dfec68.jpg
       provider: steam
       platform: PC
       rarity: 22
-    - name: Green
+    - id: "1533420"
+      key: GREEN_RELATIONSHIP
+      name: Green
       description: Complete your relationship with Green
       date: "2022-12-17T13:26:40-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/be86cbe97af5517220cd87f8efd2c7128f46d018.jpg
@@ -351,35 +445,45 @@ earned:
       platform: PC
       hidden: true
       rarity: 22.2
-    - name: Whole again
+    - id: "1533420"
+      key: ALLMEMORIES
+      name: Whole again
       description: Unlock all of White's memories
       date: "2022-12-17T13:28:24-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/d7e032c2cdae358d4374e2f2f9c09194d65df49a.jpg
       provider: steam
       platform: PC
       rarity: 21.7
-    - name: Gift Hunter
+    - id: "1533420"
+      key: GIFT_COLLECT_ALL
+      name: Gift Hunter
       description: Collect all gifts
       date: "2022-12-17T13:31:54-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/494eac1cc4be02e50e7552994cfce66ac000a369.jpg
       provider: steam
       platform: PC
       rarity: 19.5
-    - name: 100%
+    - id: "1533420"
+      key: 100_PERCENT
+      name: 100%
       description: Complete 100% of the game
       date: "2022-12-17T13:31:54-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/037c9df33999facd8bbe46ebf54462c25f81f57a.jpg
       provider: steam
       platform: PC
       rarity: 17.7
-    - name: Red's Heaven Rush Complete
+    - id: "1533420"
+      key: LEVELRUSH_RED_HEAVEN
+      name: Red's Heaven Rush Complete
       description: Complete Red's Heaven Rush
       date: "2022-12-17T19:20:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/ca33b3144bc182817941519c6e10462e5cd6bcfc.jpg
       provider: steam
       platform: PC
       rarity: 11.5
-    - name: Book of Life
+    - id: "1533420"
+      key: BOOKOFLIFE
+      name: Book of Life
       description: Write Green into the Book of Life
       date: "2022-12-18T08:24:52-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/d5e25707366b893af15ca146a5aa068ee0f05105.jpg
@@ -387,7 +491,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 20.5
-    - name: Cheese!
+    - id: "1533420"
+      key: GOODENDING
+      name: Cheese!
       description: Unlock one last memory
       date: "2022-12-18T08:28:07-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/d39fab59f75adea3204667939e84015e7c8b604c.jpg
@@ -395,35 +501,45 @@ earned:
       platform: PC
       hidden: true
       rarity: 20.5
-    - name: Red's Hell Rush Complete
+    - id: "1533420"
+      key: LEVELRUSH_RED_HELL
+      name: Red's Hell Rush Complete
       description: Complete Red's Hell Rush
       date: "2022-12-18T08:35:31-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/ae4ac3820fa870e72510066d435aafc38619a04a.jpg
       provider: steam
       platform: PC
       rarity: 8.7
-    - name: Violet's Heaven Rush Complete
+    - id: "1533420"
+      key: LEVELRUSH_VIOLET_HEAVEN
+      name: Violet's Heaven Rush Complete
       description: Complete Violet's Heaven Rush
       date: "2022-12-18T08:46:14-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/00e3670db347a834141e24b0c031ec0d58b9f5e2.jpg
       provider: steam
       platform: PC
       rarity: 10
-    - name: Violet's Hell Rush Complete
+    - id: "1533420"
+      key: LEVELRUSH_VIOLET_HELL
+      name: Violet's Hell Rush Complete
       description: Complete Violet's Hell Rush
       date: "2022-12-18T09:39:24-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/a0164afc272033b485af772cbe59fcdf8b4c89e5.jpg
       provider: steam
       platform: PC
       rarity: 7.6
-    - name: Yellow's Heaven Rush Complete
+    - id: "1533420"
+      key: LEVELRUSH_YELLOW_HEAVEN
+      name: Yellow's Heaven Rush Complete
       description: Complete Yellow's Heaven Rush
       date: "2022-12-19T21:01:52-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/81f103eebc838d44b1af912d983be78709ed0bdc.jpg
       provider: steam
       platform: PC
       rarity: 9.7
-    - name: Divine Intervention
+    - id: "1533420"
+      key: BOSS_TEMPLE_EARLY
+      name: Divine Intervention
       description: Defeat Green at the Third Temple before he reaches the final stage
       date: "2023-04-01T11:44:12-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/6962fe2ce1bd8fd39adbd1e87a88dfb9b6e0c2bb.jpg

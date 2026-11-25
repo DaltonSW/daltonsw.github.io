@@ -15,21 +15,27 @@ providers:
       total: 72
       last_played: "2013-08-24"
 earned:
-    - name: Vault 101 Citizenship Award
+    - id: "1112737750"
+      key: "1"
+      name: Vault 101 Citizenship Award
       description: Got the Pip-Boy 3000
       date: ""
       points: 10
       provider: xbox
       platform: Xbox 360
       rarity: 28.72
-    - name: The G.O.A.T. Whisperer
+    - id: "1112737750"
+      key: "2"
+      name: The G.O.A.T. Whisperer
       description: Took the G.O.A.T.
       date: "2013-08-19T20:11:15-05:00"
       points: 10
       provider: xbox
       platform: Xbox 360
       rarity: 24.04
-    - name: Escape!
+    - id: "1112737750"
+      key: "3"
+      name: Escape!
       description: Completed "Escape!"
       date: "2013-08-19T20:24:05-05:00"
       points: 20

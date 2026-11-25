@@ -10,217 +10,279 @@ providers:
       playtime_mins: 4403
       last_played: "2026-08-02"
 earned:
-    - name: Escaped Tartarus
+    - id: "1145360"
+      key: AchClearTartarus
+      name: Escaped Tartarus
       description: Clear Tartarus
       date: "2020-10-23T22:39:49-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/062a2b7bdc156af9438bdc440a19833addd2ae38.jpg
       provider: steam
       platform: PC
       rarity: 81.8
-    - name: Friends in High Places
+    - id: "1145360"
+      key: AchGreaterCall
+      name: Friends in High Places
       description: Use Greater Call to invoke an Olympian's aid
       date: "2020-10-24T21:58:24-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/7e1ab5c124e5dd635afa5fe19f473c68fcd6c7a0.jpg
       provider: steam
       platform: PC
       rarity: 62.2
-    - name: Escaped Asphodel
+    - id: "1145360"
+      key: AchClearAsphodel
+      name: Escaped Asphodel
       description: Clear Asphodel
       date: "2020-10-24T22:02:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/202d5cd97dd3b727e0eaa8ffc02a62dcf67cd5d7.jpg
       provider: steam
       platform: PC
       rarity: 72.2
-    - name: Three-Headed Boy
+    - id: "1145360"
+      key: AchCerberusPets
+      name: Three-Headed Boy
       description: Pet Cerberus 10 times
       date: "2020-10-25T11:47:31-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/e29db983a563aef28a1ba6a82517f0c6a837d97c.jpg
       provider: steam
       platform: PC
       rarity: 35.2
-    - name: Escaped Elysium
+    - id: "1145360"
+      key: AchClearElysium
+      name: Escaped Elysium
       description: Clear Elysium
       date: "2020-10-25T18:39:16-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/88462d92e0873977f421761575c97d64a35c7519.jpg
       provider: steam
       platform: PC
       rarity: 58.8
-    - name: Chthonic Colleagues
+    - id: "1145360"
+      key: AchMeetChthonicGods
+      name: Chthonic Colleagues
       description: Fulfill the 'Chthonic Colleagues' Prophecy
       date: "2020-10-25T20:38:56-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/b76ca2f12ea9979c95ae86963f667652d43681a3.jpg
       provider: steam
       platform: PC
       rarity: 56
-    - name: Arms Collector
+    - id: "1145360"
+      key: AchUnlockedAllWeapons
+      name: Arms Collector
       description: Unlock each of the Infernal Arms
       date: "2020-10-25T20:59:58-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/c44928fe7cd58ab1de32bedc19ad8742e7fbd46b.jpg
       provider: steam
       platform: PC
       rarity: 62.3
-    - name: Bad Call
+    - id: "1145360"
+      key: AchGreaterCallSpurned
+      name: Bad Call
       description: Use an Olympian's Greater Call against them in a Trial
       date: "2020-11-02T19:56:02-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/03cec4faf34c7e6f36206622e52c81bc4879e993.jpg
       provider: steam
       platform: PC
       rarity: 12.7
-    - name: Thanks, But No Thanks
+    - id: "1145360"
+      key: AchPurgedLegendBoon
+      name: Thanks, But No Thanks
       description: Purge a Legendary Boon
       date: "2020-12-29T21:42:47-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/138da3abcf890220c6807afb13642cc950282466.jpg
       provider: steam
       platform: PC
       rarity: 12.1
-    - name: Is There No Escape?
+    - id: "1145360"
+      key: AchClearAnyRun
+      name: Is There No Escape?
       description: Clear an escape attempt
       date: "2020-12-29T22:32:23-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/1e04b5827b4aaf83024c2fb4a4f442dca3662e84.jpg
       provider: steam
       platform: PC
       rarity: 46.7
-    - name: Skelly Slayer
+    - id: "1145360"
+      key: AchSkellyKills
+      name: Skelly Slayer
       description: Slay Skelly 15 times
       date: "2021-01-03T22:41:51-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/a43007a0bc3131c5eff646d2826a8aed25f46572.jpg
       provider: steam
       platform: PC
       rarity: 40.3
-    - name: River Denizens
+    - id: "1145360"
+      key: AchFishFromEachBiome
+      name: River Denizens
       description: Catch a fish from each region
       date: "2021-01-03T23:50:42-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/a55792a3a2608483e8eef70455a9607b97c87bf9.jpg
       provider: steam
       platform: PC
       rarity: 25.2
-    - name: Urge to Sing
+    - id: "1145360"
+      key: AchOrpheusSingsAgain
+      name: Urge to Sing
       description: Compel Orpheus to sing again
       date: "2021-01-04T16:03:20-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/3cdb7ffbc8fa9cef4e0e46fc7fcd0f41063eaa65.jpg
       provider: steam
       platform: PC
       rarity: 31.5
-    - name: Blessed by the Gods
+    - id: "1145360"
+      key: AchPickedManyBoons
+      name: Blessed by the Gods
       description: Choose 100 different Olympian Boon effects
       date: "2021-01-04T16:08:02-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/c1643a221427393ed8219c07dc0f9f3d7c03ad6f.jpg
       provider: steam
       platform: PC
       rarity: 33
-    - name: Back to Work
+    - id: "1145360"
+      key: AchAccessAdminChamber
+      name: Back to Work
       description: Earn access to and enter the Administrative Chamber
       date: "2021-01-05T16:48:06-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/1776a30454aa801d3399011caad961405ec9f002.jpg
       provider: steam
       platform: PC
       rarity: 34.4
-    - name: Death Dealer
+    - id: "1145360"
+      key: AchCrushedThanatos
+      name: Death Dealer
       description: Beat Thanatos by 15 kills or more
       date: "2021-01-07T18:19:24-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/7967d292c27c0648e858de0a732e95e261b0ecd7.jpg
       provider: steam
       platform: PC
       rarity: 42.7
-    - name: Blood Bound
+    - id: "1145360"
+      key: AchMaxedAnyAspect
+      name: Blood Bound
       description: Max any Weapon Aspect
       date: "2021-01-07T20:05:08-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/e3bb07b7634343df913679d4339d30ada76b92c9.jpg
       provider: steam
       platform: PC
       rarity: 31.7
-    - name: Day-or-Night Trader
+    - id: "1145360"
+      key: AchManyBrokerTrades
+      name: Day-or-Night Trader
       description: Trade 20 times with the Wretched Broker
       date: "2021-01-08T11:39:50-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/4b7482ff88a54dc9b4a45caa47dead8d1974420f.jpg
       provider: steam
       platform: PC
       rarity: 34.8
-    - name: Master of Arms
+    - id: "1145360"
+      key: AchWeaponClears
+      name: Master of Arms
       description: Fulfill the 'Master of Arms' Prophecy
       date: "2021-01-08T12:44:55-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/abcab80ccd1d60a51fc5a0f395f882d324d937f6.jpg
       provider: steam
       platform: PC
       rarity: 19.5
-    - name: The Family Secret
+    - id: "1145360"
+      key: AchReachedEnding
+      name: The Family Secret
       description: Complete the main quest in the story
       date: "2021-01-08T14:28:56-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/003c20be2db8daa201cff8f3273d2f8fcf0b3c4a.jpg
       provider: steam
       platform: PC
       rarity: 23.3
-    - name: Tools of the Architect
+    - id: "1145360"
+      key: AchPickedManyHammers
+      name: Tools of the Architect
       description: Choose 50 different Daedalus Hammer enchantments
       date: "2021-01-14T17:35:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/5cc8c6f4c07269c501cc94d15008bfe935a80036.jpg
       provider: steam
       platform: PC
       rarity: 20.2
-    - name: Something From Everyone
+    - id: "1145360"
+      key: AchFoundKeepsakes
+      name: Something From Everyone
       description: Unlock each standard Keepsake
       date: "2021-01-14T19:18:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/d817eec3019bbcc10a17195fd202fb4509a13835.jpg
       provider: steam
       platform: PC
       rarity: 17.4
-    - name: Home Makeover
+    - id: "1145360"
+      key: AchManyCosmetics
+      name: Home Makeover
       description: Pay for 50 jobs from the House Contractor
       date: "2021-01-14T20:47:32-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/4c17f85a0562d743eff491f27a29e80a43267e4d.jpg
       provider: steam
       platform: PC
       rarity: 23.7
-    - name: Had to Happen
+    - id: "1145360"
+      key: AchManyQuests
+      name: Had to Happen
       description: Fulfill any 15 Prophecies
       date: "2021-01-14T20:47:43-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/9fc644bf5aa2091bc5f1f660e69c4eb5a27c66fd.jpg
       provider: steam
       platform: PC
       rarity: 22.1
-    - name: Nyx's Mirror
+    - id: "1145360"
+      key: AchMirrorAllUnlocked
+      name: Nyx's Mirror
       description: Have at least one rank in each Mirror of Night Talent
       date: "2021-01-14T20:48:00-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/e8a52646444bacaaf3899bc7bb22f05ab2e5223f.jpg
       provider: steam
       platform: PC
       rarity: 11.7
-    - name: Well Stocked
+    - id: "1145360"
+      key: AchWellShopItems
+      name: Well Stocked
       description: Buy 9 'Well of Charon' items in one escape attempt
       date: "2021-09-30T19:38:52-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/8f2852034f35b54ad9bfa0724edb99e035d4000f.jpg
       provider: steam
       platform: PC
       rarity: 39.7
-    - name: Well Versed
+    - id: "1145360"
+      key: AchOlympiansCodex
+      name: Well Versed
       description: Fully Unlock the Olympians' Codex entries
       date: "2021-09-30T22:09:18-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/9b59e00276851d852f7b88ed065d47c4e3d5ca59.jpg
       provider: steam
       platform: PC
       rarity: 15.6
-    - name: Rare Collectible
+    - id: "1145360"
+      key: AchFoundSummon
+      name: Rare Collectible
       description: Equip a Chthonic Companion
       date: "2021-10-01T20:30:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/880d43e5490ecfb7ad5ba2f8c1b2b32911dcfd36.jpg
       provider: steam
       platform: PC
       rarity: 19.9
-    - name: Grown Close
+    - id: "1145360"
+      key: AchForgedBond
+      name: Grown Close
       description: Forge a bond with any character
       date: "2022-12-19T20:35:53-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/e60877f10cbb1e5e39d20d11dbbb5d18e241bf23.jpg
       provider: steam
       platform: PC
       rarity: 26.3
-    - name: Haste of Hermes
+    - id: "1145360"
+      key: AchBuffedPlume
+      name: Haste of Hermes
       description: Get 20% dodge chance with the Lambent Plume
       date: "2022-12-20T16:38:18-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/5dbe89eed58da232615918addfc856441465ca04.jpg
       provider: steam
       platform: PC
       rarity: 12.9
-    - name: War-God's Bloodlust
+    - id: "1145360"
+      key: AchAresKills
+      name: War-God's Bloodlust
       description: Fulfill the 'War-God's Bloodlust' Prophecy
       date: "2022-12-20T17:06:33-06:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1145360/c6cb9013e2ff24fa967d60e339c7a1bf2cf3b0c7.jpg

@@ -16,7 +16,9 @@ providers:
           unlocked: 33
           basis: 100%
 earned:
-    - name: Beginning of the End
+    - id: "311240"
+      key: Beginning_of_the_End
+      name: Beginning of the End
       description: 'Finish CQD-END: 1.'
       date: "2017-06-10T17:18:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/cb673b7ae64029c39d59177f88bd10f818584441.jpg
@@ -24,42 +26,54 @@ earned:
       platform: PC
       hidden: true
       rarity: 79.3
-    - name: A Grain of Sand
+    - id: "311240"
+      key: A_Grain_of_Sand
+      name: A Grain of Sand
       description: Gain 1 Cinema File.
       date: "2017-06-10T17:29:38-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/97296a318e820a35ef135a7c4062f076aab7ad29.jpg
       provider: steam
       platform: PC
       rarity: 76.2
-    - name: Crib Sheet
+    - id: "311240"
+      key: Crib_Sheet
+      name: Crib Sheet
       description: Obtain 1 Quest File.
       date: "2017-06-10T23:31:12-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/de61aa17cc2030fcc97d88158aa858995bb97cd4.jpg
       provider: steam
       platform: PC
       rarity: 63
-    - name: Still a Rookie
+    - id: "311240"
+      key: Still_a_Rookie
+      name: Still a Rookie
       description: Complete 1 quest.
       date: "2017-06-10T23:37:04-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/a8b218ba56550e3852462e0edf2be0e491d3f111.jpg
       provider: steam
       platform: PC
       rarity: 61.8
-    - name: Gotta Go Back in Time
+    - id: "311240"
+      key: Gotta_Go_Back_in_Time
+      name: Gotta Go Back in Time
       description: Go through your first bad ending.
       date: "2017-06-10T23:48:16-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/f8d38dfa73550b24748e552d9e322eac81b48d94.jpg
       provider: steam
       platform: PC
       rarity: 61.2
-    - name: Coming Up on 90 Minutes
+    - id: "311240"
+      key: Coming_Up_on_90_Minutes
+      name: Coming Up on 90 Minutes
       description: Watch all the cinematics in a fragment.
       date: "2017-06-26T12:56:35-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/59b2d3a349075b1c526233cd57ea7144579552b0.jpg
       provider: steam
       platform: PC
       rarity: 63
-    - name: Virtue's True Reward
+    - id: "311240"
+      key: Virtues_True_Reward
+      name: Virtue's True Reward
       description: No one presses the button, everyone lives.
       date: "2017-06-26T16:48:02-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/98c188bb551279998c3e3641185340fcb7dbd9bc.jpg
@@ -67,7 +81,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 50.8
-    - name: What Are Ya, Chicken?
+    - id: "311240"
+      key: What_Are_Ya_Chicken
+      name: What Are Ya, Chicken?
       description: Resist temptation to press the button.
       date: "2017-06-26T17:26:01-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/86db425612bfb741dd4f2ee55fb5e0a8ac1c8515.jpg
@@ -75,7 +91,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 54
-    - name: Tell Them What They Won
+    - id: "311240"
+      key: Tell_Them_What_They_Won
+      name: Tell Them What They Won
       description: Correctly answer the Monty Hall Problem.
       date: "2017-06-27T13:30:59-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/f8590f1313aa463c05a57a8b23bf3e2e16ee7b5e.jpg
@@ -83,7 +101,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 52.8
-    - name: Down the Hatch
+    - id: "311240"
+      key: Down_the_Hatch
+      name: Down the Hatch
       description: Drink the real antidote.
       date: "2017-06-27T14:02:38-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/3620cbd87b370d8f06e8d0944febb8c7c1d58499.jpg
@@ -91,7 +111,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 54.3
-    - name: In the Big Leagues Now
+    - id: "311240"
+      key: In_the_Big_Leagues_Now
+      name: In the Big Leagues Now
       description: Complete 6 quests.
       date: "2017-06-27T14:37:30-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/dc193394eb7f854c3793e911aeb4c9e2f883125b.jpg
@@ -99,7 +121,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 53.1
-    - name: What is Love? Don't Hurt Me
+    - id: "311240"
+      key: What_is_Love_Dont_Hurt_Me
+      name: What is Love? Don't Hurt Me
       description: 'Finish Q-END: 1.'
       date: "2017-06-27T14:55:27-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/99df7dc7d40125d435907b63c36db8dc03549543.jpg
@@ -107,7 +131,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 52.7
-    - name: Calculated Risk
+    - id: "311240"
+      key: Calculated_Risk
+      name: Calculated Risk
       description: Shoot a blank, everyone lives.
       date: "2017-07-12T00:46:24-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/2fe0e4191a721857d25843b6a1bf947054784c8d.jpg
@@ -115,14 +141,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 52.4
-    - name: All-Seeing Wisdom
+    - id: "311240"
+      key: All_Seeing_Wisdom
+      name: All-Seeing Wisdom
       description: Obtain all Quest Files.
       date: "2017-07-12T15:17:44-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/a179fe34cfdf5b8ea65b441330fe0c681c374dc8.jpg
       provider: steam
       platform: PC
       rarity: 37.2
-    - name: A Rabbit in My Future
+    - id: "311240"
+      key: A_Rabbit_in_My_Future
+      name: A Rabbit in My Future
       description: 'Finish D-END: 1.'
       date: "2017-07-13T20:01:06-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/764c3ce9a4c0e4c1db6f46415cd227e276e326fd.jpg
@@ -130,7 +160,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 49.8
-    - name: Blessed by Lady Luck
+    - id: "311240"
+      key: Blessed_by_Lady_Luck
+      name: Blessed by Lady Luck
       description: All the dice roll 1s.
       date: "2017-07-13T20:18:10-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/9c5aefba277933d7e0701cdbc0b6fac40607901f.jpg
@@ -138,7 +170,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 52.7
-    - name: The Go-To Guy
+    - id: "311240"
+      key: The_Go_To_Guy
+      name: The Go-To Guy
       description: Complete all quests.
       date: "2017-07-13T20:58:53-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/6165ad4872aa28e25d056cc305d776ba37f44f0a.jpg
@@ -146,7 +180,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.7
-    - name: Geronimo
+    - id: "311240"
+      key: Geronimo
+      name: Geronimo
       description: Protect Akane and obtain the X-Passes.
       date: "2017-07-13T21:48:27-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/02bf024e0e5e1cb02f3816bc36a767b9081397d8.jpg
@@ -154,7 +190,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.9
-    - name: Virtual Reality
+    - id: "311240"
+      key: Virtual_Reality
+      name: Virtual Reality
       description: Live a happy virtual life.
       date: "2017-07-13T22:08:04-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/6c7420bdb40fd003baa90aaa0d19cc1851b17c84.jpg
@@ -162,7 +200,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.6
-    - name: A Silver Lining
+    - id: "311240"
+      key: A_Silver_Lining
+      name: A Silver Lining
       description: 'Finish D-END: 2.'
       date: "2017-07-13T22:59:04-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/df4f8c4da645990c86a0663ffd18e0f26a31ded2.jpg
@@ -170,7 +210,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.5
-    - name: Unforgettable
+    - id: "311240"
+      key: Unforgettable
+      name: Unforgettable
       description: Answer with the correct date.
       date: "2017-07-13T23:04:47-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/cbf0a74ceaa279a1a811edf73061888efbcb51fd.jpg
@@ -178,7 +220,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 48.3
-    - name: Fly Me to the Moon
+    - id: "311240"
+      key: Fly_Me_to_the_Moon
+      name: Fly Me to the Moon
       description: 'Finish C-END: 1.'
       date: "2017-07-14T00:12:03-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/9f197b5617eb322495e707179e91dad10b79c4a6.jpg
@@ -186,7 +230,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.8
-    - name: Schrödinger's Cat
+    - id: "311240"
+      key: Schrodingers_Cat
+      name: Schrödinger's Cat
       description: Successfully remove the helmet.
       date: "2017-07-14T00:18:38-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/3350b8b3a0c5faff07023bf04ba135ccfe5f740d.jpg
@@ -194,7 +240,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47
-    - name: Wrinkle in Time
+    - id: "311240"
+      key: Wrinkle_in_Time
+      name: Wrinkle in Time
       description: Shoot that person.
       date: "2017-07-14T00:25:34-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/2e8cbb40e897b91fab91905ed75902db879ebc0f.jpg
@@ -202,7 +250,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.6
-    - name: It Came From Within
+    - id: "311240"
+      key: It_Came_From_Within
+      name: It Came From Within
       description: 'Finish Q-END: 2.'
       date: "2017-07-14T00:37:12-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/dee5b006dc2e93713b1e6082470402ec0993a6ad.jpg
@@ -210,7 +260,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47
-    - name: Bigger on the Inside
+    - id: "311240"
+      key: Bigger_on_the_Inside
+      name: Bigger on the Inside
       description: Successfully activate the Force Quit Box.
       date: "2017-07-14T01:06:16-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/6af8ef10c2caeed1d9f9611e73a77cb655ca0e1f.jpg
@@ -218,7 +270,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.7
-    - name: D-Team Subject Report
+    - id: "311240"
+      key: D_Team_Subject_Report
+      name: D-Team Subject Report
       description: Clear all D-Team fragments.
       date: "2017-07-14T01:39:43-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/04339b3dde2a357d364dd5093f36c59c2c4d5342.jpg
@@ -226,7 +280,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 44.2
-    - name: C-Team Subject Report
+    - id: "311240"
+      key: C_Team_Subject_Report
+      name: C-Team Subject Report
       description: Clear all C-Team fragments.
       date: "2017-07-14T01:39:43-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/5c9c59bdbc9a3e377353822f3859cfe4638947f1.jpg
@@ -234,14 +290,18 @@ earned:
       platform: PC
       hidden: true
       rarity: 44.2
-    - name: Mountain of Knowledge
+    - id: "311240"
+      key: Mountain_of_Knowledge
+      name: Mountain of Knowledge
       description: Gain all Cinema Files.
       date: "2017-07-14T01:51:38-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/ab872e5cd191a8242004ac9f1a1303092dd9b227.jpg
       provider: steam
       platform: PC
       rarity: 44.7
-    - name: The Final Decision
+    - id: "311240"
+      key: The_Final_Decision
+      name: The Final Decision
       description: 'Finish CQD-END: 2.'
       date: "2017-07-14T01:56:41-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/37aed67eabcd8b728513b03511af394c3b334620.jpg
@@ -249,7 +309,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 47.4
-    - name: Q-Team Subject Report
+    - id: "311240"
+      key: Q_Team_Subject_Report
+      name: Q-Team Subject Report
       description: Clear all Q-Team fragments.
       date: "2017-07-14T02:00:19-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/a3ea7693b31d7c8512779683fa77004a87ad92d5.jpg
@@ -257,7 +319,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 42.9
-    - name: SHIFTer
+    - id: "311240"
+      key: SHIFTer
+      name: SHIFTer
       description: Clear all fragments.
       date: "2017-07-14T02:00:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/4a849e9fbc5f2a9677159b4bcb0ba60f35ffd8aa.jpg
@@ -265,7 +329,9 @@ earned:
       platform: PC
       hidden: true
       rarity: 42.8
-    - name: Zero Escape
+    - id: "311240"
+      key: Zero_Escape
+      name: Zero Escape
       description: Collect all trophies.
       date: "2017-07-14T02:00:20-05:00"
       icon: https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311240/87915f6e2f1cef371b88fd4cb786a50937829497.jpg
