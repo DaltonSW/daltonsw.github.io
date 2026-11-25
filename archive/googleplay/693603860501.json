@@ -1,11 +1,10 @@
 {
  "provider": "googleplay",
  "title": "Doodle God",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "id": "693603860501",
- "fetched": "2026-11-22",
- "last_attempt": "2026-11-23",
- "last_error": "exophase: https://www.exophase.com/user/DaltonSW/: unexpected status 403 Forbidden",
+ "fetched": "2026-11-24",
+ "last_attempt": "2026-11-24",
  "unlocked": 9,
  "total": 25,
  "first": "2025-10-28",
@@ -17,65 +16,83 @@
  "achievements": [
   {
    "key": "CgkIlYCM8JcUEAIQAg",
-   "name": "good-start",
+   "name": "Good Start",
+   "description": "6 elements created",
    "unlocked": true,
    "date": "2025-10-28T14:13:10-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/e60g1bb.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQEg",
-   "name": "practice-makes-perfect",
+   "name": "Practice Makes Perfect",
+   "description": "Element created 3 or more times",
    "unlocked": true,
    "date": "2025-10-28T14:21:21-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/447b1dd.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQAw",
-   "name": "creator-of-diversity",
+   "name": "Creator of Diversity",
+   "description": "10 groups created",
    "unlocked": true,
    "date": "2025-10-28T15:33:00-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/447b1gd.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQEQ",
-   "name": "half-the-kingdom",
+   "name": "Half the Kingdom",
+   "description": "Save the Princess quest passed",
    "unlocked": true,
    "date": "2025-10-28T15:58:18-05:00",
+   "points": 3000,
    "icon": "https://m.exophase.com/android/awards/m/e60g15b.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQBA",
-   "name": "creator-of-life",
+   "name": "Creator of Life",
+   "description": "Life created",
    "unlocked": true,
    "date": "2025-10-28T22:26:38-05:00",
+   "points": 1000,
    "icon": "https://m.exophase.com/android/awards/m/6b435j4.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQEw",
-   "name": "similar-to-similar",
+   "name": "Similar to Similar",
+   "description": "Similar elements reacted",
    "unlocked": true,
    "date": "2025-10-29T07:52:42-05:00",
+   "points": 500,
    "icon": "https://m.exophase.com/android/awards/m/6b43514.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQBQ",
-   "name": "creator-of-humanity",
+   "name": "Creator of Humanity",
+   "description": "Human created",
    "unlocked": true,
    "date": "2025-10-30T10:23:46-05:00",
+   "points": 2000,
    "icon": "https://m.exophase.com/android/awards/m/bed4617.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQBg",
-   "name": "creator-of-civilization",
+   "name": "Creator of Civilization",
+   "description": "Episode One passed",
    "unlocked": true,
    "date": "2025-10-30T21:42:48-05:00",
+   "points": 3000,
    "icon": "https://m.exophase.com/android/awards/m/ggb534j.png?d470fff4f9645e7b9404e016be07a06b"
   },
   {
    "key": "CgkIlYCM8JcUEAIQBw",
-   "name": "creator-of-technology",
+   "name": "Creator of Technology",
+   "description": "Episode Two passed",
    "unlocked": true,
    "date": "2025-11-02T17:37:23-06:00",
+   "points": 4000,
    "icon": "https://m.exophase.com/android/awards/m/d47b1e0.png?d470fff4f9645e7b9404e016be07a06b"
   }
  ],

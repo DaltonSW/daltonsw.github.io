@@ -1,11 +1,10 @@
 {
  "provider": "googleplay",
  "title": "Dr. Mario World",
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "id": "419844773443",
- "fetched": "2026-11-22",
- "last_attempt": "2026-11-23",
- "last_error": "exophase: https://www.exophase.com/user/DaltonSW/: unexpected status 403 Forbidden",
+ "fetched": "2026-11-24",
+ "last_attempt": "2026-11-24",
  "unlocked": 3,
  "total": 19,
  "first": "2019-07-09",
@@ -17,23 +16,29 @@
  "achievements": [
   {
    "key": "CgkIw6zLhZwMEAIQAQ",
-   "name": "50-clear-stars",
+   "name": "50 Clear Stars",
+   "description": "In stage mode, collected 50 clear stars.",
    "unlocked": true,
    "date": "2019-07-09T23:42:52-05:00",
+   "points": 1000,
    "icon": "https://m.exophase.com/android/awards/m/4366084.png?a91e16f27b658b08ee56a63f849b881c"
   },
   {
    "key": "CgkIw6zLhZwMEAIQAg",
-   "name": "100-clear-stars",
+   "name": "100 Clear Stars",
+   "description": "In stage mode, collected 100 clear stars.",
    "unlocked": true,
    "date": "2019-07-14T23:20:06-05:00",
+   "points": 2000,
    "icon": "https://m.exophase.com/android/awards/m/66ggd8e.png?a91e16f27b658b08ee56a63f849b881c"
   },
   {
    "key": "CgkIw6zLhZwMEAIQCA",
-   "name": "clear-world-1",
+   "name": "Clear World 1",
+   "description": "World 1 cleared.",
    "unlocked": true,
    "date": "2019-07-19T17:27:02-05:00",
+   "points": 1000,
    "icon": "https://m.exophase.com/android/awards/m/jj110dg.png?a91e16f27b658b08ee56a63f849b881c"
   }
  ],

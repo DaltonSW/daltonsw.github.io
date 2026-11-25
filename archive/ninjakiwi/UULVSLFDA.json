@@ -2,20 +2,20 @@
  "provider": "ninjakiwi",
  "title": "Bloons TD 6",
  "id": "UULVSLFDA",
- "updated": "2026-11-23",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
- "monkey_money": 3107,
+ "updated": "2026-11-24",
+ "fetched": "2026-11-24",
+ "last_attempt": "2026-11-24",
+ "monkey_money": 3197,
  "trophies": 150,
  "xp": 114609087,
  "rank": 149,
  "lifetime_trophies": 1535,
  "highest_seen_round": 163,
  "games_played": 2326,
- "daily_reward_count": 358,
- "total_daily_challenges_completed": 178,
+ "daily_reward_count": 359,
+ "total_daily_challenges_completed": 179,
  "total_races_entered": 4,
- "challenges_played": 213,
+ "challenges_played": 214,
  "total_completed_odysseys": 30,
  "continues_used": 473,
  "collection_event_crates_opened": 131,
@@ -1300,7 +1300,7 @@
    "010": 2,
    "011": 1,
    "031": 1,
-   "100": 1,
+   "100": 2,
    "101": 1,
    "102": 1,
    "110": 1,
@@ -1656,7 +1656,8 @@
    "quantity": 21
   },
   "MonkeyBoost": {
-   "quantity": 44
+   "quantity": 45,
+   "is_new": true
   },
   "MonkeyBoostPro": {
    "quantity": 1
@@ -8033,7 +8034,7 @@
     "001": 2
    },
    "GlueGunner": {
-    "100": 1,
+    "100": 2,
     "101": 1,
     "102": 1,
     "110": 1,
@@ -8119,7 +8120,7 @@
     "010": 1
    }
   },
-  "monkeyMoney": 3107,
+  "monkeyMoney": 3197,
   "xp": 114609087,
   "rank": 149,
   "veteranXp": 0,
@@ -8243,8 +8244,8 @@
     "isNew": false
    },
    "MonkeyBoost": {
-    "quantity": 44,
-    "isNew": false
+    "quantity": 45,
+    "isNew": true
    },
    "BananaFarmer": {
     "quantity": 19,
@@ -8351,11 +8352,11 @@
    }
   },
   "highestSeenRound": 163,
-  "dailyRewardCount": 358,
-  "totalDailyChallengesCompleted": 178,
+  "dailyRewardCount": 359,
+  "totalDailyChallengesCompleted": 179,
   "consecutiveDailyChallengesCompleted": 1,
   "totalRacesEntered": 4,
-  "challengesPlayed": 213,
+  "challengesPlayed": 214,
   "challengesShared": 0,
   "totalCompletedOdysseys": 30,
   "unlockedBigBloons": true,
