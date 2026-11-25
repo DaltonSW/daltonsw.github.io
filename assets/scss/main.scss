@@ -1342,17 +1342,25 @@ $timeline-status-colors: (
 }
 
 /* ── Provenance modal (Games page: "Where does the info come from?") ────── */
-.games-subhead { display: flex; justify-content: flex-end; margin: -0.75rem 0 0.5rem; }
-
-.games-subhead__provenance-btn {
-  font-family: $font-ui; font-size: 0.8rem; color: var(--dim);
-  background: none; border: 1px solid var(--stroke); border-radius: 6px;
-  padding: 0.2rem 0.6rem; cursor: pointer;
+// title, blurb and controls share one row, wrapping on narrow screens
+.games-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem;
+  margin: 0 0 0.75rem;
 }
-.games-subhead__provenance-btn::before { content: "["; color: var(--stroke); }
-.games-subhead__provenance-btn::after  { content: "]"; color: var(--stroke); }
-.games-subhead__provenance-btn:hover,
-.games-subhead__provenance-btn:focus-visible { color: var(--accent); border-color: var(--accent); }
+.games-head__title { margin: 0; font-size: 1.4rem; }
+.games-head__blurb { flex: 1 1 22rem; color: var(--dim); font-size: 0.85rem; line-height: 1.4; }
+.games-head__blurb p { margin: 0; }
+.games-head__controls { display: flex; gap: 0.4rem; margin-left: auto; }
+
+.games-head__btn {
+  font-family: $font-ui; font-size: 0.75rem; color: var(--dim); white-space: nowrap;
+  background: none; border: 1px solid var(--stroke); border-radius: 6px;
+  padding: 0.15rem 0.5rem; cursor: pointer;
+}
+.games-head__btn::before { content: "["; color: var(--stroke); }
+.games-head__btn::after  { content: "]"; color: var(--stroke); }
+.games-head__btn:hover,
+.games-head__btn:focus-visible { color: var(--accent); border-color: var(--accent); }
 
 .provenance-modal {
   background: var(--panel); color: var(--fg);

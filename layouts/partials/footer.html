@@ -2,7 +2,10 @@
   <div class="wrap site-footer__row">
     <span>© {{ now.Year }} {{ or site.Copyright site.Params.author }}</span>
     <span>built with <a href="https://gohugo.io" rel="noopener">Hugo</a></span>
+    {{- /* the Games page carries this toggle in its header instead */}}
+    {{- if not (and (eq .Kind "taxonomy") (eq .Type "games")) }}
     <button type="button" class="spoilers-toggle" data-spoilers-toggle aria-pressed="false" hidden></button>
+    {{- end }}
     <span>have a nice day, or don't - I'm not your dad</span>
   </div>
 </footer>

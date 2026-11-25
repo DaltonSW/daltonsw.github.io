@@ -1,13 +1,14 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
-
-<div class="games-subhead">
-  <button type="button" class="games-subhead__provenance-btn" data-provenance-open hidden
-    aria-haspopup="dialog" aria-controls="games-provenance-modal">
-    Where does the info come from?
-  </button>
-</div>
+<header class="games-head">
+  <h1 class="games-head__title">{{ .Title }}</h1>
+  {{- with .Content }}<div class="games-head__blurb">{{ . }}</div>{{ end }}
+  <div class="games-head__controls">
+    {{/* site-wide setting; the footer script wires it and the footer omits its own copy here */}}
+    <button type="button" class="games-head__btn spoilers-toggle" data-spoilers-toggle aria-pressed="false" hidden></button>
+    <button type="button" class="games-head__btn" data-provenance-open hidden
+      aria-haspopup="dialog" aria-controls="games-provenance-modal">Where does the info come from?</button>
+  </div>
+</header>
 {{ partial "games-provenance-modal.html" . }}
 
 <div class="tabs" data-tabs>
