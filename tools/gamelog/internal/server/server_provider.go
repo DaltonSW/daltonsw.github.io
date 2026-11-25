@@ -356,8 +356,9 @@ func (s *server) runAchievementsAllJob(j *job, full bool, provider string) {
 
 // refreshOptions tunes refreshAchievements.
 type refreshOptions struct {
-	full     bool   // re-fetch Steam games whose playtime/last-played haven't moved
-	provider string // only this provider's links, when set
+	full     bool            // re-fetch Steam games whose playtime/last-played haven't moved
+	provider string          // only this provider's links, when set
+	only     map[string]bool // only these providers' links, when non-nil
 	// quiet logs only the games whose archive actually changed (and failures),
 	// with what changed, instead of a line per provider per game — Catch up
 	// walks 400+ games and wants the dozen that moved.
@@ -384,6 +385,9 @@ func (s *server) refreshAchievements(j *job, games []model.GameSummary, o refres
 	for i, g := range games {
 		links := g.ProviderLinks()
 		fetch := fetchLinks(links, o.provider)
+		if o.only != nil {
+			fetch = slices.DeleteFunc(slices.Clone(fetch), func(l model.ProviderLink) bool { return !o.only[l.Provider] })
+		}
 		j.progress(o.base+i+1, o.total, g.Title)
 
 		var before map[string]*model.ArchiveRecord

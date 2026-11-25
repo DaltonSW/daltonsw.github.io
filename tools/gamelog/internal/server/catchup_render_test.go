@@ -57,7 +57,9 @@ func TestCatchupRenders(t *testing.T) {
 	for _, want := range []string{
 		`aria-current="page">catch up</a>`,
 		`action="/catchup/run"`,
-		`name="nadeo" value="1">`,
+		`id="load-xbox" name="load" value="xbox" checked>`,
+		`id="load-ninjakiwi" name="load" value="ninjakiwi" checked>`,
+		`id="load-nadeo" name="load" value="nadeo">`, // Trackmania stays opt-in
 		"Played since 2026-11-03",
 		`id="log-hades"`, `form="log-hades"`, `hx-include="#log-hades"`,
 		`id="dismiss-hades"`, `form="dismiss-hades"`, `hx-post="/catchup/dismiss/hades"`,

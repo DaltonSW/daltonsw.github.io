@@ -417,15 +417,19 @@ the pages themselves these are filter fields, checkboxes, and buttons rather tha
 ### Catch up
 
 One **Load what's new** button runs a background job (the same job monitor as refresh-all, which
-sends the browser back to the queue when it finishes):
+sends the browser back to the queue when it finishes). A **load** checkbox per source — the six
+achievement providers, BTD6 and Trackmania — picks what the run touches; untick a provider you
+haven't played on since the last load and it isn't contacted at all. All are ticked by default
+except Trackmania. With nothing ticked the run is refused, since it would still be recorded and
+move the "since" boundary. In order:
 
-1. the new-games scan, with every provider's list fetched fresh — this warms the 10-minute cache
-   the page's New games section reads;
-2. every linked game's achievements, through the same fetch-and-merge as refresh-all (unchanged
-   Steam games skipped unless the re-fetch box is ticked), logging only the games that changed;
+1. the new-games scan for the ticked default-scan providers (RetroAchievements, Steam), fetched
+   fresh — this warms the 10-minute cache the page's New games section reads;
+2. linked games' achievements on the ticked providers, through the same fetch-and-merge as
+   refresh-all (unchanged Steam games skipped unless the re-fetch box is ticked), logging only the
+   games that changed;
 3. BTD6, a single unauthenticated request;
-4. Trackmania (current season) **only when its box is ticked**, since Nadeo calls run on a real
-   player account;
+4. Trackmania (current season), opt-in since Nadeo calls run on a real player account;
 5. the run's start time, written to `archive/catchup.yaml`.
 
 Nothing in that run writes `playthroughs.yaml`. The page then reads everything back from disk —
