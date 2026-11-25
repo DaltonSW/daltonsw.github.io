@@ -335,21 +335,22 @@ type trophiesResponse struct {
 // TrophyDefinitions fetches every trophy's static metadata for one title.
 // npServiceName should be the value TrophyTitles reported for this title;
 // leaving it empty only works for trophy2 (PS5/PC) titles. No limit is
-// passed, so the API returns every trophy in the title in one response.
-func (c *PSNClient) TrophyDefinitions(ctx context.Context, npCommunicationID, npServiceName string) ([]Trophy, error) {
+// passed, so the API returns every trophy in the title in one response. The
+// verbatim body is returned too, for the archive's raw.
+func (c *PSNClient) TrophyDefinitions(ctx context.Context, npCommunicationID, npServiceName string) ([]Trophy, json.RawMessage, error) {
 	reqURL := fmt.Sprintf("%s/npCommunicationIds/%s/trophyGroups/all/trophies", TrophyBaseURL, npCommunicationID)
 	if npServiceName != "" {
 		reqURL += "?npServiceName=" + url.QueryEscape(npServiceName)
 	}
 	body, err := c.get(ctx, reqURL)
 	if err != nil {
-		return nil, fmt.Errorf("psn: trophy definitions for %s: %w", npCommunicationID, err)
+		return nil, nil, fmt.Errorf("psn: trophy definitions for %s: %w", npCommunicationID, err)
 	}
 	var parsed trophiesResponse
 	if err := json.Unmarshal(body, &parsed); err != nil {
-		return nil, fmt.Errorf("psn: decoding trophy definitions for %s: %w", npCommunicationID, err)
+		return nil, nil, fmt.Errorf("psn: decoding trophy definitions for %s: %w", npCommunicationID, err)
 	}
-	return parsed.Trophies, nil
+	return parsed.Trophies, json.RawMessage(body), nil
 }
 
 // EarnedTrophy is one trophy's earned status for the account — no name or
@@ -421,11 +422,11 @@ func stamp(t time.Time) string {
 
 // combinedRaw is what's actually stored under ProviderRecord.Raw for a PSN
 // record: unlike the other providers, no single Sony response carries both
-// trophy metadata and earned status, so the two responses this fetch needed
-// are kept together.
+// trophy metadata and earned status, so both verbatim bodies are kept
+// together, including any field the typed structs don't model.
 type combinedRaw struct {
-	Definitions []Trophy       `json:"definitions"`
-	Earned      []EarnedTrophy `json:"earned"`
+	Definitions json.RawMessage `json:"definitions"`
+	Earned      json.RawMessage `json:"earned"`
 }
 
 // FetchRecord builds an archive record for one PSN title. Source is left ""
@@ -445,7 +446,7 @@ func FetchRecord(ctx context.Context, client *PSNClient, npCommunicationID strin
 	rec.Icon = title.TrophyTitleIconURL
 	rec.Completion = fmt.Sprintf("%d%%", title.Progress)
 
-	defs, err := client.TrophyDefinitions(ctx, npCommunicationID, title.NpServiceName)
+	defs, defsRaw, err := client.TrophyDefinitions(ctx, npCommunicationID, title.NpServiceName)
 	if err != nil {
 		rec.LastError = err.Error()
 		return rec, nil
@@ -498,7 +499,7 @@ func FetchRecord(ctx context.Context, client *PSNClient, npCommunicationID strin
 		rec.AwardDate = platinumDate[:10]
 	}
 
-	if raw, err := json.Marshal(combinedRaw{Definitions: defs, Earned: earned.Trophies}); err == nil {
+	if raw, err := json.Marshal(combinedRaw{Definitions: defsRaw, Earned: earned.Raw}); err == nil {
 		rec.Raw = raw
 	}
 

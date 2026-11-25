@@ -950,7 +950,8 @@ Three calls make up a fetch, all under `/api/trophy/v1` on `m.np.playstation.com
 3. `users/me/npCommunicationIds/{id}/trophyGroups/all/trophies` — the account's earned status per
    trophy: unlocked or not, and when.
 
-The client joins 2 and 3 on `trophyId` client-side — no single Sony response carries both. A
+The client joins 2 and 3 on `trophyId` client-side — no single Sony response carries both, so
+`raw` holds both verbatim bodies as `{"definitions": …, "earned": …}`. A
 platinum unlock sets `AwardKind`/`AwardDate` on the record, matching how Steam reports "all
 achievements". Trophy tier (bronze/silver/gold/platinum) is stored in each achievement's `Tier`
 field — a real API field, not a derived guess, and one no other provider has an equivalent for.

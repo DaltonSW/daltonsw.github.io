@@ -1,7 +1,9 @@
 package psn
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
@@ -203,7 +205,7 @@ func TestTrophyDefinitions_ForwardsNpServiceName(t *testing.T) {
 	})
 
 	c := &PSNClient{Npsso: "test-npsso", Throttle: time.Nanosecond}
-	if _, err := c.TrophyDefinitions(context.Background(), "NPWR00001_00", "trophy"); err != nil {
+	if _, _, err := c.TrophyDefinitions(context.Background(), "NPWR00001_00", "trophy"); err != nil {
 		t.Fatal(err)
 	}
 	if sawServiceName != "trophy" {
@@ -215,6 +217,16 @@ func TestTrophyDefinitions_ForwardsNpServiceName(t *testing.T) {
 // status (unlocked/date) on trophyId, and reports a platinum unlock as
 // AwardKind.
 func TestFetchRecord_JoinsDefinitionsAndEarnedStatus(t *testing.T) {
+	// trophyRewardName and progressRate aren't modelled by the typed structs;
+	// raw must keep them anyway.
+	const defsBody = `{"trophySetVersion":"01.00","trophies":[
+				{"trophyId":0,"trophyType":"platinum","trophyName":"Everything","trophyDetail":"Found it all","trophyRewardName":"Avatar"},
+				{"trophyId":1,"trophyType":"bronze","trophyName":"First Step","trophyDetail":"Take one"}
+			]}`
+	const earnedBody = `{"lastUpdatedDateTime":"2020-11-21T10:45:19Z","trophies":[
+				{"trophyId":0,"earned":true,"earnedDateTime":"2020-11-21T10:45:19Z","trophyType":"platinum","progressRate":100},
+				{"trophyId":1,"earned":false,"trophyType":"bronze"}
+			]}`
 	psnStub(t, func(w http.ResponseWriter, r *http.Request) {
 		if authAndToken(t, w, r) {
 			return
@@ -229,15 +241,9 @@ func TestFetchRecord_JoinsDefinitionsAndEarnedStatus(t *testing.T) {
 				"progress":100
 			}],"totalItemCount":1}`))
 		case strings.HasPrefix(r.URL.Path, "/trophy/v1/npCommunicationIds/"):
-			w.Write([]byte(`{"trophies":[
-				{"trophyId":0,"trophyType":"platinum","trophyName":"Everything","trophyDetail":"Found it all"},
-				{"trophyId":1,"trophyType":"bronze","trophyName":"First Step","trophyDetail":"Take one"}
-			]}`))
+			w.Write([]byte(defsBody))
 		case strings.HasPrefix(r.URL.Path, "/trophy/v1/users/me/npCommunicationIds/"):
-			w.Write([]byte(`{"lastUpdatedDateTime":"2020-11-21T10:45:19Z","trophies":[
-				{"trophyId":0,"earned":true,"earnedDateTime":"2020-11-21T10:45:19Z","trophyType":"platinum"},
-				{"trophyId":1,"earned":false,"trophyType":"bronze"}
-			]}`))
+			w.Write([]byte(earnedBody))
 		default:
 			t.Fatalf("unexpected path %s", r.URL.Path)
 		}
@@ -292,6 +298,21 @@ func TestFetchRecord_JoinsDefinitionsAndEarnedStatus(t *testing.T) {
 	}
 	if bronze == nil || bronze.Name != "First Step" || bronze.Tier != "bronze" || bronze.Unlocked {
 		t.Errorf("bronze trophy not joined correctly: %+v", bronze)
+	}
+
+	var raw struct{ Definitions, Earned json.RawMessage }
+	if err := json.Unmarshal(rec.Raw, &raw); err != nil {
+		t.Fatal(err)
+	}
+	compact := func(s string) string {
+		var b bytes.Buffer
+		if err := json.Compact(&b, []byte(s)); err != nil {
+			t.Fatal(err)
+		}
+		return b.String()
+	}
+	if string(raw.Definitions) != compact(defsBody) || string(raw.Earned) != compact(earnedBody) {
+		t.Errorf("raw should hold Sony's verbatim bodies, got %s", rec.Raw)
 	}
 }
 
