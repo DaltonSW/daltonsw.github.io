@@ -3,6 +3,7 @@ package model
 import (
 	"encoding/json"
 	"fmt"
+	"math"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -686,7 +687,7 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				Provider:    provider,
 				Platform:    rec.Platform,
 				Hidden:      a.Hidden,
-				Rarity:      a.Rarity,
+				Rarity:      summaryRarity(a.Rarity),
 				Subset:      subsetName,
 			})
 		}
@@ -747,4 +748,12 @@ func LoadAchievementSummary(gameDir string) (*AchievementSummary, error) {
 		return nil, fmt.Errorf("%s: %w", path, err)
 	}
 	return &s, nil
+}
+
+// summaryRarity rounds to the one decimal the site shows, so drift doesn't rewrite the summary; a nonzero value never rounds away.
+func summaryRarity(r float64) float64 {
+	if r <= 0 {
+		return 0
+	}
+	return math.Max(math.Round(r*10)/10, 0.1)
 }

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"gopkg.in/yaml.v3"
@@ -636,5 +637,36 @@ func TestMergeAchievement_RarityKeepsLastReported(t *testing.T) {
 	}
 	if got := mergeAchievement(old, ArchivedAchievement{Key: "1", Rarity: 9}); got.Rarity != 9 {
 		t.Errorf("fresh rarity should replace old: %v", got.Rarity)
+	}
+}
+
+func TestWriteAchievementSummary_RoundsRarity(t *testing.T) {
+	archiveDir := t.TempDir()
+	gameDir := t.TempDir()
+	achs := nUnlocked("steam", 3)
+	achs[0].Rarity = 61.70302013422819
+	achs[1].Rarity = 0.04
+	if _, err := SaveRecord(archiveDir, ProviderSteam, "1145360", "Hades", &ProviderRecord{Total: 3, Achievements: achs}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := WriteAchievementSummary(archiveDir, gameDir, BuildProviderLinks(map[string]string{ProviderSteam: "1145360"})); err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(achievementSummaryPath(gameDir))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got AchievementSummary
+	if err := yaml.Unmarshal(raw, &got); err != nil {
+		t.Fatal(err)
+	}
+	want := map[string]float64{achs[0].Key: 61.7, achs[1].Key: 0.1, achs[2].Key: 0}
+	for _, e := range got.Earned {
+		if e.Rarity != want[e.Key] {
+			t.Errorf("%s rarity = %v, want %v", e.Key, e.Rarity, want[e.Key])
+		}
+	}
+	if strings.Count(string(raw), "rarity:") != 2 {
+		t.Errorf("want two rarity lines (zero omitted):\n%s", raw)
 	}
 }
