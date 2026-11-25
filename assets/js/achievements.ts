@@ -39,4 +39,21 @@ function initAchievementReveal(root: HTMLElement): void {
   });
 }
 
+// Tooltips are set on hover rather than rendered per row, which cost ~740 KB on /games.
+function addHoverTitles(): void {
+  document.addEventListener("mouseover", (e) => {
+    const el = e.target instanceof Element ? e.target : null;
+    const desc = el?.closest<HTMLElement>(".ach-row__desc");
+    if (desc) {
+      const truncated = desc.scrollWidth > desc.clientWidth;
+      const hidden = desc.closest(".ach-row--hidden:not(.ach-row--revealed)") && !desc.closest(".ach-reveal-all, .spoilers-shown");
+      desc.title = truncated && !hidden ? (desc.textContent ?? "") : "";
+      return;
+    }
+    const rarity = el?.closest<HTMLElement>(".ach-row__rarity");
+    if (rarity && !rarity.title) rarity.title = "Percent of players who earned this";
+  });
+}
+
 document.querySelectorAll<HTMLElement>("[data-ach-root]").forEach(initAchievementReveal);
+addHoverTitles();
