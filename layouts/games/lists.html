@@ -1,0 +1,91 @@
+{{/* Curated lists from data/game-lists.yaml (written by the gamelog tool's Lists page).
+     An item is a game, or with `key` one of its achievements by provider + record id + key. */}}
+{{ define "main" }}
+<header class="games-head">
+  <h1 class="games-head__title">{{ .Title }}</h1>
+  {{- with .Description }}<div class="games-head__blurb"><p>{{ . }}</p></div>{{ end }}
+  <div class="games-head__controls">
+    <a class="games-head__btn" href="{{ "/games/" | relURL }}">All games</a>
+  </div>
+</header>
+
+{{- $lists := slice }}
+{{- range (index hugo.Data "game-lists").lists }}{{ if .items }}{{ $lists = $lists | append . }}{{ end }}{{ end }}
+{{- if gt (len $lists) 1 }}
+<nav class="picks-toc" aria-label="Lists on this page">
+  {{- range $lists }}<a href="#{{ .id }}">{{ .title }}</a>{{ end }}
+</nav>
+{{- end }}
+
+{{- range $lists }}
+{{- $list := . }}
+<section class="picks" id="{{ .id }}" data-ach-root>
+  <h2 class="picks__title"><a href="#{{ .id }}">{{ .title }}</a></h2>
+  {{- with .description }}<p class="picks__blurb">{{ . }}</p>{{ end }}
+  <ol class="picks__items">
+    {{- $rank := 0 }}{{/* counts rendered items, so a skipped stale one leaves no gap */}}
+    {{- range $i, $it := .items }}
+    {{- $page := site.GetPage (printf "/games/%s" $it.game) }}
+    {{- $summary := dict }}
+    {{- with $page }}{{ with .Resources.Get "achievement-summary.yaml" }}{{ $summary = . | transform.Unmarshal }}{{ end }}{{ end }}
+    {{- if not $page }}
+      {{- warnf "game-lists: %q #%d names game %q, which has no page" $list.id (add $i 1) $it.game }}
+    {{- else if $it.key }}
+      {{- $row := index (where (where (where ($summary.earned | default slice) "provider" $it.provider) "id" $it.id) "key" $it.key) 0 }}
+      {{- if not $row }}
+      {{- warnf "game-lists: %q #%d names achievement %s/%s/%s (%q) on %q, not in its summary" $list.id (add $i 1) $it.provider $it.id $it.key $it.name $it.game }}
+      {{- else }}
+    {{- $rank = add $rank 1 }}
+    <li class="pick pick--ach">
+      <span class="pick__rank" aria-hidden="true">{{ $rank }}</span>
+      <div class="pick__body">
+        {{ partial "achievement-row.html" (dict "row" $row "page" $page) }}
+        {{- with $it.note }}<div class="pick__note prose">{{ . | markdownify }}</div>{{ end }}
+      </div>
+    </li>
+      {{- end }}
+    {{- else }}
+    {{- $status := $page.Params.status | default "" }}
+    {{- $mastered := (partial "game-mastery.html" $page).date }}
+    {{- $planned := false }}
+    {{- range partial "playthrough-entries.html" $page }}{{ if eq .status "planned" }}{{ $planned = true }}{{ end }}{{ end }}
+    {{- $last := partial "game-last-played.html" $page }}
+    {{- $rank = add $rank 1 }}
+    <li class="pick{{ with $status }} pick--{{ . }}{{ end }}">
+      <span class="pick__rank" aria-hidden="true">{{ $rank }}</span>
+      <div class="pick__body">
+        <div class="pick__head">
+          <span class="pick__icon">{{ partial "game-status-icon.html" $status }}</span>
+          <a class="pick__title{{ if $mastered }} pick__title--mastered{{ end }}" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+          {{- with $mastered }}<span class="ps-row__mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}" aria-label="mastered">&#xf005;</span>{{ end }}
+          {{ partial "game-status-tag.html" $status }}
+          {{- if partial "game-unplayed.html" $page }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
+          {{- if $planned }} {{ partial "game-status-tag.html" "planned" }}{{ end }}
+          {{- with $page.Params.rating }}<span class="pick__rating">{{ . }}/10</span>{{ end }}
+        </div>
+        <div class="pick__meta">
+          {{- with $page.Params.platform }}<span>{{ . }}</span>{{ end }}
+          {{- with $summary.playtime_mins }}<span>{{ printf "%.1fh" (div . 60.0) }} played</span>{{ end }}
+          {{- with $last }}<span>last played {{ . | time.Format "Jan 2006" }}</span>{{ end }}
+          {{- with $summary.total }}{{ partial "achievement-meter.html" (dict "unlocked" $summary.unlocked "total" . "scaled" true "counts" true) }}{{ end }}
+        </div>
+        {{- with $it.note }}<div class="pick__note prose">{{ . | markdownify }}</div>{{ end }}
+      </div>
+    </li>
+    {{- end }}
+    {{- end }}
+  </ol>
+</section>
+{{- else }}
+<p class="picks__empty">Nothing curated yet.</p>
+{{- end }}
+
+{{- $achJSOpts := dict
+    "targetPath" "js/achievements.js"
+    "format"     "iife"
+    "minify"     hugo.IsProduction
+    "sourceMap"  (cond hugo.IsProduction "none" "inline")
+-}}
+{{- $achJS := resources.Get "js/achievements.ts" | js.Build $achJSOpts | fingerprint -}}
+<script src="{{ $achJS.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $achJS.Data.Integrity }}"{{ end }} defer></script>
+{{ end }}

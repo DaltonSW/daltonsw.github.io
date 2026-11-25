@@ -272,7 +272,11 @@ type gameDetailData struct {
 	Started       string
 	FirstFinished string
 	StatusDerived bool
-	Achievements  []model.EarnedAchievement
+	Achievements  []achievementView
+	// Lists feed the add-to-list selects; ListRanks is where this game itself is ranked.
+	Lists        []model.GameList
+	ListRanks    []model.ListRank
+	SelectedList string // preselects the selectors after an add (?list=)
 	// Provider ID fields, rendered as strings regardless of how the YAML
 	// scalar underneath decoded — see model.GameSummary's fields of the
 	// same name.
@@ -297,6 +301,12 @@ type gameDetailData struct {
 	AutoSuggest bool
 }
 
+// achievementView is one earned achievement on a game's page, plus the lists it's on.
+type achievementView struct {
+	model.EarnedAchievement
+	Ranks []model.ListRank
+}
+
 func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, pf *model.PlaythroughsFile) gameDetailData {
 	var planned []model.Playthrough
 	for _, p := range pf.Views() {
@@ -313,16 +323,20 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
 	canDelete := g.NumPlaythroughs == 0 && !commands.HasArchiveRecord(model.FindArchiveDir(s.gamesDir), g.ProviderLinks())
 
-	var achievements []model.EarnedAchievement
+	lists, _ := model.LoadLists(s.gamesDir) // a broken lists file shouldn't block editing a game
+	var achievements []achievementView
 	var subsets []model.SubsetBreakdown
 	if summary, err := model.LoadAchievementSummary(doc.GameDir()); err == nil && summary != nil {
 		subsets = summary.Subsets
 		// Display newest-first; the stored file is oldest-first (see
 		// AchievementSummary.Earned's doc comment) since display order is a
 		// reader's choice, not the archive's.
-		achievements = make([]model.EarnedAchievement, len(summary.Earned))
+		achievements = make([]achievementView, len(summary.Earned))
 		for i, a := range summary.Earned {
-			achievements[len(summary.Earned)-1-i] = a
+			achievements[len(summary.Earned)-1-i] = achievementView{
+				EarnedAchievement: a,
+				Ranks:             lists.AchievementRanks(slug, a.Provider, a.ID, a.Key),
+			}
 		}
 	}
 
@@ -341,6 +355,9 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		FirstFinished:    g.FirstFinished,
 		StatusDerived:    g.StatusDerived,
 		Achievements:     achievements,
+		Lists:            lists.Lists,
+		ListRanks:        lists.GameRanks(slug),
+		SelectedList:     r.URL.Query().Get("list"),
 		RAGameID:         g.RAGameID,
 		SteamAppID:       g.SteamAppID,
 		PSNID:            g.PSNID,

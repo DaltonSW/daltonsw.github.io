@@ -1,0 +1,102 @@
+{{define "content"}}
+<h1>Lists</h1>
+<p class="lead">Hand-ordered lists for the site's <code>/games/lists/</code> page, kept in <code>data/game-lists.yaml</code>.</p>
+<p class="hint">Add achievements from a game's page (the + beside each one in its achievements panel). Empty lists aren't shown on the site.</p>
+
+<datalist id="list-games">
+  {{range .Games}}<option value="{{.Slug}}">{{.Title}}</option>{{end}}
+</datalist>
+
+{{range .Lists}}
+{{$list := .}}
+<div class="tui list-panel" id="list-{{.ID}}">
+  <span class="tui__title">{{.Title}} ({{len .Items}})</span>
+
+  {{if .Items}}
+  <ol class="list-items">
+    {{range .Items}}
+    <li class="list-item{{if .Missing}} list-item--missing{{end}}">
+      <span class="list-item__rank">{{.Rank}}</span>
+      <div class="list-item__body">
+        <div class="list-item__head">
+          {{if .Item.IsAchievement}}
+          <span class="list-item__name">{{.Item.Name}}</span>
+          <span class="dim">· <a href="/games/{{.Item.Game}}">{{.GameTitle}}</a> · {{providerLabel .Item.Provider}}</span>
+          {{else}}
+          <a class="list-item__name" href="/games/{{.Item.Game}}">{{.GameTitle}}</a>
+          {{end}}
+          {{with .Missing}}<span class="pill pill--missing" title="Remove it by hand if it's gone for good">{{.}}</span>{{end}}
+        </div>
+        {{with .Desc}}<div class="list-item__desc dim">{{.}}</div>{{end}}
+        <form method="post" action="/lists/{{$list.ID}}/items/{{.Idx}}" class="row list-item__note">
+          <input type="hidden" name="ref" value="{{.Ref}}">
+          <input type="text" name="note" value="{{.Item.Note}}" placeholder="note (optional)">
+          <button type="submit">Save note</button>
+        </form>
+      </div>
+      <div class="list-item__actions">
+        <form method="post" action="/lists/{{$list.ID}}/items/{{.Idx}}/move">
+          <input type="hidden" name="ref" value="{{.Ref}}">
+          <button type="submit" name="dir" value="up" class="btn--icon" title="Move up"{{if eq .Rank 1}} disabled{{end}}>↑</button>
+          <button type="submit" name="dir" value="down" class="btn--icon" title="Move down"{{if eq .Rank (len $list.Items)}} disabled{{end}}>↓</button>
+        </form>
+        <form method="post" action="/lists/{{$list.ID}}/items/{{.Idx}}/move" class="list-item__moveto">
+          <input type="hidden" name="ref" value="{{.Ref}}">
+          <input type="number" name="to" min="1" max="{{len $list.Items}}" placeholder="#" aria-label="Move to position">
+          <button type="submit">Move</button>
+        </form>
+        <form method="post" action="/lists/{{$list.ID}}/items/{{.Idx}}/delete">
+          <input type="hidden" name="ref" value="{{.Ref}}">
+          <button type="submit" class="btn--danger btn--icon" title="Remove from list">✕</button>
+        </form>
+      </div>
+    </li>
+    {{end}}
+  </ol>
+  {{else}}
+  <p class="empty">Nothing on this list yet.</p>
+  {{end}}
+
+  <form method="post" action="/lists/add" class="row">
+    <input type="hidden" name="list" value="{{.ID}}">
+    <input type="text" name="game" list="list-games" placeholder="add a game (slug or exact title)" required>
+    <input type="text" name="note" placeholder="note (optional)">
+    <button type="submit" class="btn--primary">Add</button>
+  </form>
+
+  <details class="list-settings">
+    <summary class="dim">list settings</summary>
+    <form method="post" action="/lists/{{.ID}}" class="field-grid">
+      <div class="field"><label>Title</label><input type="text" name="title" value="{{.Title}}" required></div>
+      <div class="field field--wide"><label>Description (shown under the title on the site)</label><input type="text" name="description" value="{{.Description}}"></div>
+      <div class="btn-row"><button type="submit" class="btn--primary">Save</button></div>
+    </form>
+    <div class="row">
+      <span class="dim">id <code>{{.ID}}</code> · position {{.Pos}} of {{len $.Lists}}</span>
+      <form method="post" action="/lists/{{.ID}}/move" class="row">
+        <button type="submit" name="dir" value="up" class="btn--icon" title="Move list up"{{if eq .Pos 1}} disabled{{end}}>↑</button>
+        <button type="submit" name="dir" value="down" class="btn--icon" title="Move list down"{{if eq .Pos (len $.Lists)}} disabled{{end}}>↓</button>
+      </form>
+      {{if not .Items}}
+      <form method="post" action="/lists/{{.ID}}/delete" onsubmit="return confirm('Delete this empty list?')">
+        <button type="submit" class="btn--danger">Delete list</button>
+      </form>
+      {{else}}
+      <span class="dim">A list can be deleted once it's empty.</span>
+      {{end}}
+    </div>
+  </details>
+</div>
+{{else}}
+<p class="empty">No lists yet. Make one below.</p>
+{{end}}
+
+<div class="tui">
+  <span class="tui__title">new list</span>
+  <form method="post" action="/lists" class="field-grid">
+    <div class="field"><label>Title</label><input type="text" name="title" placeholder="Favorites" required></div>
+    <div class="field field--wide"><label>Description (optional)</label><input type="text" name="description"></div>
+    <div class="btn-row"><button type="submit" class="btn--primary">Create</button></div>
+  </form>
+</div>
+{{end}}

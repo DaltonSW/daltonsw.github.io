@@ -162,20 +162,49 @@
     {{end}}
   </div>
 
+  <div class="tui" id="lists">
+    <span class="tui__title">lists</span>
+    {{range .ListRanks}}
+    <div><a href="/lists#list-{{.ListID}}">{{.Title}}</a> <span class="dim">#{{.Rank}}</span></div>
+    {{else}}
+    <p class="dim">Not on any list.</p>
+    {{end}}
+    {{if .Lists}}
+    <form method="post" action="/lists/add" class="row list-add">
+      <input type="hidden" name="game" value="{{.Slug}}">
+      <input type="hidden" name="back" value="/games/{{.Slug}}#lists">
+      {{template "list_select" .}}
+      <button type="submit">Add game</button>
+    </form>
+    {{else}}
+    <p class="hint"><a href="/lists">Make a list</a> to add this game to it.</p>
+    {{end}}
+  </div>
+
   <div class="tui achv-panel">
     <span class="tui__title">achievements{{if .Achievements}} ({{len .Achievements}}){{end}}</span>
     {{if .Achievements}}
+    {{/* one form: the selector picks the list, each + button posts its own achievement */}}
+    <form method="post" action="/lists/add" class="achv-form">
+      <input type="hidden" name="game" value="{{.Slug}}">
+      <input type="hidden" name="back" value="/games/{{.Slug}}">
+      {{if .Lists}}<div class="row list-add"><span class="dim">+ adds to</span>{{template "list_select" .}}</div>{{end}}
     <div class="achv-list">
       {{range .Achievements}}
       <div class="achv-item">
         <div class="achv-item__meta">
           <span title="{{.Date}}">{{dateOnly .Date}}</span> · {{.Provider}}{{with .Platform}} · {{.}}{{end}}{{with .Subset}} · {{.}}{{end}}
+          {{range .Ranks}}<span class="achv-item__listed" title="On {{.Title}} at #{{.Rank}}">★ {{.Title}} #{{.Rank}}</span>{{end}}
         </div>
-        <div class="achv-item__name">{{.Name}}</div>
+        <div class="achv-item__line">
+          <div class="achv-item__name">{{.Name}}</div>
+          {{if and $.Lists .Key}}<button type="submit" name="ach" value="{{.Provider}}|{{.ID}}|{{.Key}}" class="btn--icon achv-item__add" title="Add to the selected list">+</button>{{end}}
+        </div>
         {{with .Description}}<div class="achv-item__desc dim">{{.}}</div>{{end}}
       </div>
       {{end}}
     </div>
+    </form>
     {{else}}
     <p class="empty">None captured yet.</p>
     {{end}}
@@ -183,4 +212,8 @@
 </aside>
 
 </div>
+{{end}}
+
+{{define "list_select"}}
+<select name="list" aria-label="List">{{$sel := .SelectedList}}{{range .Lists}}<option value="{{.ID}}"{{if eq .ID $sel}} selected{{end}}>{{.Title}}</option>{{end}}</select>
 {{end}}

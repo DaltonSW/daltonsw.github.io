@@ -1427,3 +1427,49 @@ $timeline-status-colors: (
   .social { margin-left: 0; width: 100%; }
   .entry__meta { margin-left: 0; }
 }
+
+/* ── Curated lists (/games/lists/, data/game-lists.yaml) ─────────────────── */
+.picks-toc { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; margin: 0 0 0.5rem; font-family: $font-ui; font-size: 0.85rem; }
+.picks-toc a { color: var(--dim); }
+.picks-toc a:hover { color: var(--accent); }
+.picks { margin: 2rem 0 0; scroll-margin-top: 1rem; }
+.picks__title { margin: 0; font-size: 1.15rem; }
+.picks__title a { color: var(--accent); }
+.picks__blurb { margin: 0.25rem 0 0; color: var(--dim); font-size: 0.85rem; max-width: $measure; }
+.picks__items { list-style: none; padding: 0; margin: 0.9rem 0 0; display: grid; gap: 0.5rem; }
+.picks__empty { color: var(--dim); font-style: italic; }
+.pick { display: flex; align-items: flex-start; gap: 0.8rem; }
+.pick__rank {
+  flex: none; width: 2.2ch; padding-top: 0.45rem; text-align: right;
+  font-family: $font-ui; font-size: 1.1rem; font-weight: 600; color: var(--dim);
+}
+.pick__body { flex: 1; min-width: 0; }
+// game picks get the same bordered box and status wash as Game list rows; achievement picks reuse .ach-row's box
+.pick:not(.pick--ach) .pick__body {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--stroke); border-radius: var(--radius);
+  background: var(--panel);
+  font-family: $font-ui; font-size: 0.85rem;
+}
+@each $status, $color in $status-colors {
+  .pick--#{$status} .pick__body { @include status-wash($color); }
+}
+@each $alias, $canonical in $status-aliases {
+  .pick--#{$alias} .pick__body { @include status-wash(map.get($status-colors, $canonical)); }
+}
+.pick:not(.pick--ach) .pick__body:hover { border-color: var(--accent); }
+.pick__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; }
+.pick__icon { flex: none; width: 1.2em; text-align: center; }
+.pick__title { color: var(--fg); font-weight: 600; font-size: 0.95rem; }
+.pick__title:hover { color: var(--accent); }
+.pick__title--mastered { color: var(--mastered); }
+.pick__rating { color: var(--dim); font-size: 0.8rem; }
+.pick__meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 1.1rem;
+  margin-top: 0.35rem; padding-left: calc(1.2em + 0.5rem); // line up under the title, past the icon slot
+  color: var(--dim); font-size: 0.78rem;
+}
+.pick__note { margin: 0.45rem 0 0; font-size: 0.85rem; color: var(--fg); }
+.pick:not(.pick--ach) .pick__note { padding-left: calc(1.2em + 0.5rem); }
+.pick--ach .pick__note { padding: 0 0.7rem; color: var(--dim); }
+.pick__note p { margin: 0; }

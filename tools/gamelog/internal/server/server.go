@@ -119,6 +119,8 @@ type server struct {
 	catchupMu    sync.Mutex
 	catchupJobID string
 	catchupNotes []string
+
+	listsMu sync.Mutex // serializes read-modify-write of data/game-lists.yaml
 }
 
 func (s *server) registerRoutes(mux *http.ServeMux) {
@@ -159,6 +161,16 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("POST /games/{slug}/nadeo", s.handleRefreshNadeo)
 	mux.HandleFunc("POST /games/{slug}/ninjakiwi", s.handleRefreshNinjaKiwi)
 	mux.HandleFunc("GET /games/{slug}/suggest", s.handleSuggestFragment)
+
+	mux.HandleFunc("GET /lists", s.handleLists)
+	mux.HandleFunc("POST /lists", s.handleCreateList)
+	mux.HandleFunc("POST /lists/add", s.handleAddToList)
+	mux.HandleFunc("POST /lists/{id}", s.handleEditList)
+	mux.HandleFunc("POST /lists/{id}/delete", s.handleDeleteList)
+	mux.HandleFunc("POST /lists/{id}/move", s.handleMoveList)
+	mux.HandleFunc("POST /lists/{id}/items/{idx}", s.handleSetListNote)
+	mux.HandleFunc("POST /lists/{id}/items/{idx}/move", s.handleMoveListItem)
+	mux.HandleFunc("POST /lists/{id}/items/{idx}/delete", s.handleRemoveListItem)
 
 	mux.HandleFunc("GET /housekeeping", s.handleHousekeeping)
 	mux.HandleFunc("POST /scan", s.handleScanCreate)
@@ -299,6 +311,7 @@ var pageSpecs = map[string]struct {
 	"game_detail":  {"game_detail.html", []string{"web/templates/playthrough_fragments.html"}},
 	"housekeeping": {"housekeeping.html", []string{"web/templates/scan_actions.html"}},
 	"job":          {"job.html", []string{"web/templates/job_progress.html"}},
+	"lists":        {"lists.html", nil},
 }
 
 // catchupFragmentFiles are what Catch up's htmx fragments (an activity card

@@ -40,6 +40,8 @@ Consequences that should drive design decisions:
   projections beside `_index.md` (`achievement-summary.yaml`, plus `campaigns.yaml` and
   `btd6-summary.yaml` for the two non-achievement providers), which are regenerable from `archive/`
   and never published either.
+- **Curated lists** (`/games/lists/`) live in `data/game-lists.yaml`: authored through the tool's
+  Lists page, order is rank, games by slug and achievements by provider + record id + key.
 - **`tools/gamelog/INVARIANTS.md` lists the invariants not to undo.** Read it before editing
   `internal/model/playthroughs.go` or
   `internal/model/archive.go` — the inline `Extra` catch-all, the string-typed dates, and the

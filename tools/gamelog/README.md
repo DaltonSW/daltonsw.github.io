@@ -70,6 +70,11 @@ archive/
   catchup.yaml                     Catch up's state: when "Load what's new" last ran,
                                    and activity reviewed and left unlogged (by
                                    provider ID, through a day). Rewritten whole.
+
+data/
+  game-lists.yaml                  the curated lists on /games/lists/. Authored on the
+                                   web UI's Lists page; rewritten whole, order is rank.
+                                   See "Curated lists" below.
 ```
 
 **The archive is keyed by provider ID, not by slug, and lives outside `content/`.** A slug is a
@@ -344,6 +349,41 @@ entry at the true end of the slice specifically so no existing entry's index —
 path into a later entry's own nested `sessions:` — ever moves. A stale planned placeholder can be
 deleted by hand; `playthroughs.yaml`'s own generated banner already says the file is safe to edit
 that way.
+
+## Curated lists
+
+`data/game-lists.yaml` holds hand-ordered lists (favorites, up next, achievements worth showing
+off) that the site renders at `/games/lists/` (`content/games/lists.md` +
+`layouts/games/lists.html`). Unlike everything else the tool writes, none of it is derived: the
+order and the notes exist only because someone chose them, so the file is never sorted, and
+every level carries an inline `Extra` so a hand-added key survives the rewrite.
+
+They're edited on the web UI's **Lists** page (create, rename, reorder lists and items, notes,
+remove) and from a game's page (add the game, or `+` an achievement from its achievements
+panel). Each item is either a game or one of its achievements:
+
+```yaml
+lists:
+  - id: favorites               # slug from the title; the page anchor; never changes on rename
+    title: Favorites
+    items:
+      - game: hollow-knight     # a game, by slug
+        note: optional, markdown on the site
+      - game: hollow-knight     # an achievement: provider + record id + the provider's key
+        provider: steam
+        id: "367520"
+        key: FK_DEFEAT
+        name: Falsehood         # snapshot when added, a readable label only
+```
+
+Achievements are addressed by provider IDs, not names, because providers rename things (Exophase's
+Ubisoft names were rewritten in place). `id` is part of the address because one game can link two
+records from the same provider, whose keys can collide. `achievement-summary.yaml`'s `earned`
+rows carry the same `id` and `key` for the site to match on.
+
+A reference that stops resolving (a deleted game, an achievement gone from the summary) is never
+pruned: the Lists page tags it "missing" for you to remove, and the Hugo build skips it with a
+`warnf`. A list can only be deleted once it's empty, so one click can't discard written notes.
 
 ## `gamelog suggest` — playtime date suggestions
 

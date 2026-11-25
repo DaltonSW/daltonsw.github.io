@@ -3,6 +3,7 @@
   <h1 class="games-head__title">{{ .Title }}</h1>
   {{- with .Content }}<div class="games-head__blurb">{{ . }}</div>{{ end }}
   <div class="games-head__controls">
+    {{- with site.GetPage "/games/lists" }}<a class="games-head__btn" href="{{ .RelPermalink }}">Lists</a>{{ end }}
     {{/* site-wide setting; the footer script wires it and the footer omits its own copy here */}}
     <button type="button" class="games-head__btn spoilers-toggle" data-spoilers-toggle aria-pressed="false" hidden></button>
     <button type="button" class="games-head__btn" data-provenance-open hidden

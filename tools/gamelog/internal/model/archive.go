@@ -532,6 +532,11 @@ type AchievementSummary struct {
 // provider records for display. Locked achievements aren't included here —
 // this is a "what did I earn" projection, not a duplicate of the archive.
 type EarnedAchievement struct {
+	// ID is the provider record (archive/<provider>/<id>.json) and Key the
+	// achievement's provider-stable id within it: together the address a
+	// curated list uses, since names can be rewritten by a provider.
+	ID          string `yaml:"id,omitempty"`
+	Key         string `yaml:"key,omitempty"`
 	Name        string `yaml:"name"`
 	Description string `yaml:"description,omitempty"`
 	Date        string `yaml:"date"`
@@ -666,6 +671,8 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 				continue
 			}
 			earned = append(earned, EarnedAchievement{
+				ID:          id,
+				Key:         a.Key,
 				Name:        a.Name,
 				Description: a.Description,
 				Date:        a.Date,

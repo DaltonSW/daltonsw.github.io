@@ -419,6 +419,31 @@ div.tui.row--error { border-color: var(--stop); }
 }
 .achv-item__name { font-weight: 500; margin-top: 0.15rem; }
 .achv-item__desc { font-size: 0.82rem; margin-top: 0.1rem; }
+.achv-item__line { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+.achv-item__add { padding: 0.1rem 0.5rem; flex: none; }
+.achv-item__listed { color: var(--mastered); margin-left: 0.4rem; }
+.list-add select { flex: 1 1 140px; }
+.achv-form .list-add { margin-bottom: 0.6rem; }
+
+/* ── Curated lists (/lists) ─────────────────────────────────────────────── */
+.list-items { list-style: none; margin: 0 0 1rem; padding: 0; }
+.list-item { display: flex; gap: 0.9rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid var(--stroke); }
+.list-item--missing .list-item__name { text-decoration: line-through; color: var(--dim); }
+.list-item__rank {
+  flex: none; width: 2rem; text-align: right; color: var(--accent);
+  font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace;
+}
+.list-item__body { flex: 1 1 auto; min-width: 0; }
+.list-item__name { font-weight: 500; }
+.list-item__desc { font-size: 0.82rem; margin-top: 0.1rem; }
+.list-item__note { margin-top: 0.4rem; }
+.list-item__note input[name="note"] { flex: 1 1 200px; padding: 0.3rem 0.5rem; font-size: 0.88rem; }
+.list-item__actions { flex: none; display: flex; gap: 0.4rem; align-items: center; }
+.list-item__actions form { display: flex; gap: 0.25rem; }
+.list-item__moveto input { width: 4rem; padding: 0.3rem 0.4rem; }
+.list-settings { margin-top: 1rem; }
+.list-settings > summary { cursor: pointer; font-size: 0.85rem; }
+.pill--missing { color: var(--stop); }
 
 /* ── Full-height pages ────────────────────────────────────────────────────
    Opt-in via <body class="body--fixed"> (Page.BodyClass). The page stops
