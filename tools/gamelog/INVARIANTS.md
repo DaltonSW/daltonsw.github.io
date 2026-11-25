@@ -273,6 +273,13 @@ what's load-bearing.
   on logged activity only, because stretching a bar or a year span to an archive date would draw
   play that has no session behind it.
 
+### Tests
+
+- **Tests never reach the internet.** Every package that makes HTTP calls runs its tests through
+  `testutil.RunOffline` (`main_test.go`). It refuses non-loopback requests and fails the run even
+  when the code swallowed the error. If it fires, stub the endpoint it names. Don't loosen the
+  guard. Live checks belong outside `go test ./...`.
+
 ---
 
 ## History

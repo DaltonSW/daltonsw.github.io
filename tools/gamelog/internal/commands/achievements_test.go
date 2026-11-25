@@ -28,8 +28,9 @@ func resetProviderCaches(t *testing.T) {
 	t.Cleanup(reset)
 }
 
-// steamStub points the per-game achievements endpoint at handler and the
-// library listing at an empty library (ownedStub replaces that with a game).
+// steamStub points the per-game achievements endpoint at handler, the library
+// listing at an empty library (ownedStub replaces that with a game), and the
+// schema and global-percentage endpoints at empty answers.
 func steamStub(t *testing.T, handler http.HandlerFunc) {
 	t.Helper()
 	resetProviderCaches(t)
@@ -39,10 +40,23 @@ func steamStub(t *testing.T, handler http.HandlerFunc) {
 		w.Write([]byte(`{"response":{"games":[]}}`))
 	}))
 	t.Cleanup(owned.Close)
+	empty := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{}`))
+	}))
+	t.Cleanup(empty.Close)
 
-	old, oldOwned := steam.PlayerAchievementsURL, steam.OwnedGamesURL
+	urls := []*string{&steam.PlayerAchievementsURL, &steam.OwnedGamesURL, &steam.SchemaForGameURL, &steam.GlobalPercentagesURL}
+	saved := make([]string, len(urls))
+	for i, u := range urls {
+		saved[i] = *u
+	}
+	t.Cleanup(func() {
+		for i, u := range urls {
+			*u = saved[i]
+		}
+	})
 	steam.PlayerAchievementsURL, steam.OwnedGamesURL = srv.URL, owned.URL
-	t.Cleanup(func() { steam.PlayerAchievementsURL, steam.OwnedGamesURL = old, oldOwned })
+	steam.SchemaForGameURL, steam.GlobalPercentagesURL = empty.URL, empty.URL
 }
 
 func unlocked(key, date string) model.ArchivedAchievement {

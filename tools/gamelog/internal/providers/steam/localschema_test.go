@@ -5,12 +5,14 @@ import (
 	"net/http"
 	"os"
 	"testing"
+
+	"go.dalton.dog/gamelog/internal/testutil"
 )
 
-// Keep tests off the developer's real Steam cache.
+// Keep tests off the developer's real Steam cache, and off the internet.
 func TestMain(m *testing.M) {
 	LocalStatsDir = "/nonexistent-steam-stats"
-	os.Exit(m.Run())
+	os.Exit(testutil.RunOffline(m))
 }
 
 // Fixture is a real UserGameStatsSchema file (appid 1392820), not hand-built.
