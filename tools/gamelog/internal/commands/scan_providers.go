@@ -319,7 +319,8 @@ func cachedList[T any](key string, fetch func() (T, error)) (T, error) {
 	return v, nil
 }
 
-// ForgetScanCache drops every memoized provider list and shared client,
+// ForgetScanCache drops every memoized provider list (RA's recently played
+// too) and shared client,
 // including the Exophase client's memo, so the next scan reads every provider
 // fresh.
 func ForgetScanCache(creds Credentials) {
@@ -327,6 +328,7 @@ func ForgetScanCache(creds Credentials) {
 	scanCache.entries = map[string]scanCacheEntry{}
 	scanCache.Unlock()
 	forgetClients()
+	forgetRARecent()
 	if creds.ExophaseConfigured() {
 		ExophaseClientFor(creds).Forget()
 	}

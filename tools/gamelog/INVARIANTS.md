@@ -144,7 +144,8 @@ what's load-bearing.
   `FetchRecord` divides by 60. It's client-tracked and only exists from late 2025, so its absence
   on older games is legitimate.
 - **`last_played` comes from a second endpoint on purpose.** `API_GetUserRecentlyPlayedGames` is
-  fetched once per process and cached (`raRecentlyPlayed` in the retroachievements package).
+  fetched once per run and cached for 10 minutes, or until `ForgetScanCache` (`raRecentlyPlayed`
+  in `internal/commands/achievements.go`). A failure is cached the same way, so it warns once.
   Don't collapse it into the per-game fetch, because the ~1.2s throttle multiplies. Don't drop it
   as redundant with the newest unlock date either, because that equivalence was the bug it fixed.
   `c` is capped at 50 server-side, so the paging loop is required.

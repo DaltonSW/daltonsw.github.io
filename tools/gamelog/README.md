@@ -786,10 +786,10 @@ Steam's `rtime_last_played`, PSN's, and — since it needs a second endpoint —
 RetroAchievements' `API_GetUserRecentlyPlayedGames`. RA's progress endpoint has no such field, so
 before that list was walked an RA game's most recent date was whatever it last unlocked, which
 sits still for as long as a playthrough is stuck on one achievement. That list is user-level, not
-per game, so it's fetched **once per process** and cached (`raRecentlyPlayed` in
-`internal/providers/retroachievements`) — at RA's ~1 request/1.2s throttle, re-walking its pages
-for every game would cost more than the refresh itself. A failure to fetch it is warned about
-and ignored: `last_played` falls back to the newest unlock, same as before.
+per game, so it's fetched **once per run** and cached for 10 minutes or until Load what's new
+(`raRecentlyPlayed` in `internal/commands/achievements.go`) — at RA's ~1 request/1.2s throttle,
+re-walking its pages for every game would cost more than the refresh itself. A failure to fetch it
+is warned about once per run and ignored: `last_played` falls back to the newest unlock.
 
 This is why history is kept per-achievement rather than collapsed to a start/finish pair: a game
 returned to over years (Spelunky's unlocks run 2013 → 2020 with multi-year gaps) has a shape two

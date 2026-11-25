@@ -3,8 +3,10 @@ package commands
 import (
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 	"time"
 
@@ -21,12 +23,7 @@ const testSteamID64 = "76561198066238038"
 // after a test, so neither leaks between tests that reuse the same credentials.
 func resetProviderCaches(t *testing.T) {
 	t.Helper()
-	reset := func() {
-		ForgetScanCache(Credentials{})
-		raRecentCache.Lock()
-		clear(raRecentCache.byUser)
-		raRecentCache.Unlock()
-	}
+	reset := func() { ForgetScanCache(Credentials{}) }
 	reset()
 	t.Cleanup(reset)
 }
@@ -116,7 +113,7 @@ func raStubProgress(t *testing.T, body string) {
 	// Pre-seed the user-level last-played memo so the fetch doesn't reach for
 	// the live recently-played endpoint, which has no stub of its own.
 	raRecentCache.Lock()
-	raRecentCache.byUser["u"] = map[string]*retroachievements.RARecentGame{}
+	raRecentCache.byUser["u"] = raRecentEntry{at: time.Now(), byID: map[string]*retroachievements.RARecentGame{}}
 	raRecentCache.Unlock()
 }
 
@@ -235,4 +232,43 @@ func TestSaveAchievements_SkipUnchangedStillFetchesWhenSomethingMoved(t *testing
 			t.Errorf("expected a fetch, got %d calls", *calls)
 		}
 	})
+}
+
+// countingTransport answers every request with an empty JSON list.
+type countingTransport struct{ calls int }
+
+func (c *countingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
+	c.calls++
+	return &http.Response{StatusCode: http.StatusOK, Body: io.NopCloser(strings.NewReader(`[]`)), Request: r}, nil
+}
+
+// The recently-played list is reused within a run, but refetched once it's
+// older than the TTL or after ForgetScanCache, so a long serve doesn't freeze it.
+func TestRARecentlyPlayed_ExpiresAndForgets(t *testing.T) {
+	resetProviderCaches(t)
+	tr := &countingTransport{}
+	client := &retroachievements.RAClient{Username: "u", APIKey: "k", HTTP: &http.Client{Transport: tr}, Throttle: time.Nanosecond}
+	ctx := context.Background()
+
+	raRecentlyPlayed(ctx, client, "u")
+	raRecentlyPlayed(ctx, client, "u")
+	if tr.calls != 1 {
+		t.Fatalf("fresh entry refetched: %d calls, want 1", tr.calls)
+	}
+
+	raRecentCache.Lock()
+	e := raRecentCache.byUser["u"]
+	e.at = time.Now().Add(-scanCacheTTL - time.Second)
+	raRecentCache.byUser["u"] = e
+	raRecentCache.Unlock()
+	raRecentlyPlayed(ctx, client, "u")
+	if tr.calls != 2 {
+		t.Fatalf("expired entry not refetched: %d calls, want 2", tr.calls)
+	}
+
+	ForgetScanCache(Credentials{})
+	raRecentlyPlayed(ctx, client, "u")
+	if tr.calls != 3 {
+		t.Fatalf("forgotten entry not refetched: %d calls, want 3", tr.calls)
+	}
 }

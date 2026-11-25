@@ -22,26 +22,31 @@ import (
 )
 
 // raRecentCache memoizes the user-level GetUserRecentlyPlayedGames list for
-// the process — at RA's ~1.2s throttle, re-walking its pages per game would
-// dominate an `--all` run.
+// scanCacheTTL (and until ForgetScanCache): at RA's ~1.2s throttle, re-walking
+// its pages per game would dominate a bulk run, but a long-running serve must
+// not freeze last_played at its first fetch.
 var raRecentCache = struct {
 	sync.Mutex
-	byUser map[string]map[string]*retroachievements.RARecentGame
-}{byUser: map[string]map[string]*retroachievements.RARecentGame{}}
+	byUser map[string]raRecentEntry
+}{byUser: map[string]raRecentEntry{}}
 
-// raRecentlyPlayed returns last-played dates keyed by RA game id, fetching
-// them on first use. A failure isn't fatal: last_played just falls back to the
-// newest unlock, as it did before this existed.
+type raRecentEntry struct {
+	at   time.Time
+	byID map[string]*retroachievements.RARecentGame
+}
+
+// raRecentlyPlayed returns last-played dates keyed by RA game id. A failure
+// isn't fatal: last_played just falls back to the newest unlock.
 func raRecentlyPlayed(ctx context.Context, client *retroachievements.RAClient, username string) map[string]*retroachievements.RARecentGame {
 	raRecentCache.Lock()
 	defer raRecentCache.Unlock()
-	if byID, ok := raRecentCache.byUser[username]; ok {
-		return byID
+	if e, ok := raRecentCache.byUser[username]; ok && time.Since(e.at) < scanCacheTTL {
+		return e.byID
 	}
 
 	games, err := client.GetRecentlyPlayed(ctx)
 	if err != nil {
-		// Cached anyway, so this warns once per run rather than per game.
+		// Cached anyway (for the TTL only), so this warns once per run rather than per game.
 		fmt.Fprintf(os.Stderr, "  (retroachievements last-played unavailable: %v)\n", err)
 	}
 	byID := map[string]*retroachievements.RARecentGame{}
@@ -49,8 +54,15 @@ func raRecentlyPlayed(ctx context.Context, client *retroachievements.RAClient, u
 		g := games[i]
 		byID[g.ID()] = &g
 	}
-	raRecentCache.byUser[username] = byID
+	raRecentCache.byUser[username] = raRecentEntry{at: time.Now(), byID: byID}
 	return byID
+}
+
+// forgetRARecent drops every memoized recently-played list.
+func forgetRARecent() {
+	raRecentCache.Lock()
+	clear(raRecentCache.byUser)
+	raRecentCache.Unlock()
 }
 
 // savedRecord is one provider's outcome from a fetch-and-archive run.
