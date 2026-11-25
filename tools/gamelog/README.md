@@ -935,15 +935,15 @@ front-matter field was needed.
 key.** Get one by logging into `store.playstation.com`, then in the same browser visiting
 `https://ca.account.sony.com/api/v1/ssocookie`; the response is `{"npsso":"<value>"}`. That value
 goes in `PSN_NPSSO` (a real secret, unlike `EXOPHASE_USER` below) and is good for ~2 months. Each
-`PSNClient` exchanges it for an OAuth access token (valid ~60 minutes) once, on first use, and
-reuses that token for the rest of the process — there's no refresh-token persistence across runs,
-since a CLI invocation finishes well inside the token's lifetime.
+`PSNClient` exchanges it for an OAuth access token (valid ~60 minutes) on first use and reuses it.
+The client is shared for the process (`psnClient` in `internal/commands/clients.go`), so a 401
+drops the token and exchanges again once; nothing is persisted across runs.
 
 Three calls make up a fetch, all under `/api/trophy/v1` on `m.np.playstation.com`:
 
 1. `users/me/trophyTitles` — every title on the account, including each one's `npServiceName`
    (`"trophy"` for PS3/PS4/Vita, `"trophy2"` for PS5/PC — **required** on the other two calls for
-   a `"trophy"` title). Fetched once per run and cached by `npCommunicationId`; this is also what
+   a `"trophy"` title). Fetched once per run through the scan cache and passed to `FetchRecord`; this is also what
    backs `gamelog psn list`.
 2. `npCommunicationIds/{id}/trophyGroups/all/trophies` — each trophy's static metadata: name,
    description, icon, tier (bronze/silver/gold/platinum).

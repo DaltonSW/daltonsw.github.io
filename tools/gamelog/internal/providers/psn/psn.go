@@ -58,11 +58,11 @@ type PSNClient struct {
 	// Throttle is the minimum gap between requests. Zero means
 	// psnMinInterval; set it explicitly in tests to avoid sleeping.
 	Throttle time.Duration
-	lastReq  time.Time
 
-	tokenOnce   sync.Once
+	// mu serializes requests on a shared client and guards the fields below.
+	mu          sync.Mutex
+	lastReq     time.Time
 	accessToken string
-	tokenErr    error
 }
 
 func (c *PSNClient) httpClient() *http.Client {
@@ -90,13 +90,18 @@ func (c *PSNClient) throttle(ctx context.Context) error {
 	return nil
 }
 
-// token returns the bearer token for this client, exchanging npsso for one on
-// first use and reusing it for the rest of the client's lifetime.
+// token returns the bearer token, exchanging npsso for one when none is held.
+// A failed exchange isn't kept, so the next request tries again. Callers hold mu.
 func (c *PSNClient) token(ctx context.Context) (string, error) {
-	c.tokenOnce.Do(func() {
-		c.accessToken, c.tokenErr = c.exchangeToken(ctx)
-	})
-	return c.accessToken, c.tokenErr
+	if c.accessToken != "" {
+		return c.accessToken, nil
+	}
+	tok, err := c.exchangeToken(ctx)
+	if err != nil {
+		return "", err
+	}
+	c.accessToken = tok
+	return tok, nil
 }
 
 // exchangeToken performs the two-step npsso -> code -> access_token dance.
@@ -195,37 +200,53 @@ func (c *PSNClient) tokenFromCode(ctx context.Context, code string) (string, err
 	return parsed.AccessToken, nil
 }
 
-// get issues a throttled, bearer-authenticated GET against the trophy API.
+// get issues a throttled, bearer-authenticated GET against the trophy API. A
+// 401 drops the held token and retries once: a shared client outlives Sony's
+// short-lived access tokens.
 func (c *PSNClient) get(ctx context.Context, reqURL string) ([]byte, error) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	for attempt := 0; ; attempt++ {
+		body, status, err := c.getOnce(ctx, reqURL)
+		if status == http.StatusUnauthorized && attempt == 0 {
+			c.accessToken = ""
+			continue
+		}
+		return body, err
+	}
+}
+
+// getOnce is one request of get. Callers hold mu.
+func (c *PSNClient) getOnce(ctx context.Context, reqURL string) ([]byte, int, error) {
 	if err := c.throttle(ctx); err != nil {
-		return nil, err
+		return nil, 0, err
 	}
 	token, err := c.token(ctx)
 	if err != nil {
-		return nil, err
+		return nil, 0, err
 	}
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, reqURL, nil)
 	if err != nil {
-		return nil, err
+		return nil, 0, err
 	}
 	req.Header.Set("Authorization", "Bearer "+token)
 
 	resp, err := c.httpClient().Do(req)
 	c.lastReq = time.Now()
 	if err != nil {
-		return nil, fmt.Errorf("psn: %s: %w", reqURL, err)
+		return nil, 0, fmt.Errorf("psn: %s: %w", reqURL, err)
 	}
 	defer resp.Body.Close()
 
 	respBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("psn: reading %s: %w", reqURL, err)
+		return nil, resp.StatusCode, fmt.Errorf("psn: reading %s: %w", reqURL, err)
 	}
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("psn: %s: unexpected status %s", reqURL, resp.Status)
+		return nil, resp.StatusCode, fmt.Errorf("psn: %s: unexpected status %s", reqURL, resp.Status)
 	}
-	return respBody, nil
+	return respBody, resp.StatusCode, nil
 }
 
 // TrophyCounts is a title's or trophy group's trophy count, broken down by
@@ -411,14 +432,10 @@ type combinedRaw struct {
 // (the zero value) since this is a first-party fetch — mergeProvider
 // deliberately assigns rather than FirstNonEmpty's Source, so this correctly
 // clears an earlier "exophase" marker on a game migrated off the mirror.
-func FetchRecord(ctx context.Context, client *PSNClient, npCommunicationID string) (*model.ProviderRecord, error) {
+// titles is the account's TrophyTitles, passed in so a bulk run lists it once.
+func FetchRecord(ctx context.Context, client *PSNClient, npCommunicationID string, titles map[string]TrophyTitle) (*model.ProviderRecord, error) {
 	rec := &model.ProviderRecord{ID: npCommunicationID, LastAttempt: today()}
 
-	titles, err := client.TrophyTitles(ctx)
-	if err != nil {
-		rec.LastError = err.Error()
-		return rec, nil
-	}
 	title, ok := titles[npCommunicationID]
 	if !ok {
 		rec.LastError = fmt.Sprintf("no trophy title %s on this account", npCommunicationID)

@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"regexp"
 	"strconv"
+	"sync"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/model"
@@ -30,7 +31,8 @@ type SteamClient struct {
 	SteamID string // a SteamID64, or a vanity name resolved on first use
 	HTTP    *http.Client
 
-	resolvedID string // cache for resolveSteamID
+	mu         sync.Mutex // guards resolvedID on a shared client
+	resolvedID string     // cache for resolveSteamID
 }
 
 var steamID64Pattern = regexp.MustCompile(`^\d{17}$`)
@@ -42,6 +44,8 @@ func (c *SteamClient) resolveSteamID(ctx context.Context) (string, error) {
 	if steamID64Pattern.MatchString(c.SteamID) {
 		return c.SteamID, nil
 	}
+	c.mu.Lock()
+	defer c.mu.Unlock()
 	if c.resolvedID != "" {
 		return c.resolvedID, nil
 	}

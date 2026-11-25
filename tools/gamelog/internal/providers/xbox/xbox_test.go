@@ -56,7 +56,12 @@ func TestFetchRecordBuildsArchiveRecord(t *testing.T) {
 	defer srv.Close()
 	defer swapXboxURLs(srv.URL)()
 
-	rec, err := FetchRecord(context.Background(), &XBLClient{APIKey: "test-key"}, "1480657033")
+	c := &XBLClient{APIKey: "test-key"}
+	titles, err := c.TitleHistory(context.Background())
+	if err != nil {
+		t.Fatal(err)
+	}
+	rec, err := FetchRecord(context.Background(), c, "1480657033", titles)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -116,7 +121,12 @@ func TestFetchRecordUnknownTitleIsAnError(t *testing.T) {
 	defer srv.Close()
 	defer swapXboxURLs(srv.URL)()
 
-	rec, err := FetchRecord(context.Background(), &XBLClient{APIKey: "test-key"}, "999999")
+	c := &XBLClient{APIKey: "test-key"}
+	titles, err := c.TitleHistory(context.Background())
+	if err != nil {
+		t.Fatal(err)
+	}
+	rec, err := FetchRecord(context.Background(), c, "999999", titles)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -125,6 +135,27 @@ func TestFetchRecordUnknownTitleIsAnError(t *testing.T) {
 	}
 	if len(rec.Achievements) != 0 {
 		t.Error("a miss must not invent achievements")
+	}
+}
+
+// A shared client asks for the account once, not once per game.
+func TestXUIDIsMemoized(t *testing.T) {
+	calls := 0
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		calls++
+		fmt.Fprint(w, `{"content":{"profileUsers":[{"id":"2533274922308637"}]},"code":200}`)
+	}))
+	defer srv.Close()
+	defer swapXboxURLs(srv.URL)()
+
+	c := &XBLClient{APIKey: "test-key"}
+	for range 3 {
+		if id, err := c.XUID(context.Background()); err != nil || id != "2533274922308637" {
+			t.Fatalf("XUID = %q, %v", id, err)
+		}
+	}
+	if calls != 1 {
+		t.Errorf("account requested %d times, want 1", calls)
 	}
 }
 

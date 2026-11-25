@@ -23,7 +23,7 @@ func RunPSN(args []string) error {
 		return fmt.Errorf("PSN_NPSSO not set")
 	}
 
-	client := &psn.PSNClient{Npsso: creds.PSNNpsso}
+	client := psnClient(creds)
 	titles, err := client.TrophyTitles(context.Background())
 	if err != nil {
 		return err

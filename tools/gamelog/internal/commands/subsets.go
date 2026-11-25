@@ -72,7 +72,7 @@ func RAClientFor(creds Credentials) RAParentLookup {
 	if !creds.RAConfigured() {
 		return nil
 	}
-	return &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
+	return raClient(creds)
 }
 
 // raParentCache memoizes subset id -> parent id for the process. A subset's

@@ -107,6 +107,11 @@ what's load-bearing.
   each have their own button (`catchupOwnButton`), and `RecordRun` moves the "new since" boundary
   for every source. Recording a one-source load would hide unreviewed activity on all the others.
   For the same reason, a main run with nothing ticked is refused.
+- **Provider clients are shared per process** (`internal/commands/clients.go`, plus
+  `ExophaseClientFor`). Don't build one per game: that repeats library listings and logins, and
+  defeats the RA throttle. Any state on a client needs a mutex, because the scan and the server use
+  them concurrently. Account-wide title lists go through `cachedList`. `ForgetScanCache` resets
+  the lists and the clients.
 
 ### Status vocabulary
 
@@ -205,7 +210,7 @@ what's load-bearing.
 - **`npServiceName` must be `"trophy"` on every per-title call for PS3/PS4/Vita titles**, or the
   API answers as if the title doesn't exist. The client always sends what `trophyTitles` reported.
 - **The npsso→token exchange is in-memory only, per client.** There is deliberately no refresh
-  token cached across runs.
+  token cached across runs. The client is shared for the process, so a 401 re-exchanges once.
 - The PSN records that predate this client were captured via Exophase. They were deleted and
   refetched, not merged: the two sources key trophies differently (slug vs numeric `trophyId`),
   and merging would have kept every trophy twice.

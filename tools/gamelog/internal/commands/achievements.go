@@ -102,12 +102,7 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 	for _, opt := range opts {
 		opt(&o)
 	}
-	var (
-		raClient    *retroachievements.RAClient
-		steamClient *steam.SteamClient
-		steamOwned  []steam.SteamOwnedGame
-		saved       []savedRecord
-	)
+	var saved []savedRecord
 
 	for _, link := range links {
 		if link.ID == "" {
@@ -122,18 +117,16 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			if !creds.RAConfigured() {
 				continue
 			}
-			if raClient == nil {
-				raClient = &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
-			}
-			rec, err = retroachievements.FetchRecord(ctx, raClient, link.ID,
-				raRecentlyPlayed(ctx, raClient, creds.RAUsername)[link.ID])
+			client := raClient(creds)
+			rec, err = retroachievements.FetchRecord(ctx, client, link.ID,
+				raRecentlyPlayed(ctx, client, creds.RAUsername)[link.ID])
 		case model.ProviderSteam:
 			if !creds.SteamConfigured() {
 				continue
 			}
-			if steamClient == nil {
-				steamClient = &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
-				steamOwned, _ = steamClient.GetOwnedGames(ctx)
+			steamOwned, lerr := steamOwnedGames(ctx, creds)
+			if lerr != nil {
+				return nil, fmt.Errorf("steam library listing: %w", lerr)
 			}
 			var owned *steam.SteamOwnedGame
 			for i := range steamOwned {
@@ -149,12 +142,17 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 					continue
 				}
 			}
-			rec, err = steam.FetchRecord(ctx, steamClient, link.ID, owned)
+			rec, err = steam.FetchRecord(ctx, steamClient(creds), link.ID, owned)
 		case model.ProviderPSN:
 			if !creds.PSNConfigured() {
 				continue
 			}
-			rec, err = psn.FetchRecord(ctx, &psn.PSNClient{Npsso: creds.PSNNpsso}, link.ID)
+			titles, lerr := psnTrophyTitles(ctx, creds)
+			if lerr != nil {
+				rec = listingFailed(link.ID, lerr)
+			} else {
+				rec, err = psn.FetchRecord(ctx, psnClient(creds), link.ID, titles)
+			}
 		case model.ProviderUbisoft:
 			if !creds.ExophaseConfigured() {
 				continue
@@ -164,7 +162,12 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 			if !creds.XBLConfigured() {
 				continue
 			}
-			rec, err = xbox.FetchRecord(ctx, &xbox.XBLClient{APIKey: creds.XBLAPIKey}, link.ID)
+			titles, lerr := xboxTitleHistory(ctx, creds)
+			if lerr != nil {
+				rec = listingFailed(link.ID, lerr)
+			} else {
+				rec, err = xbox.FetchRecord(ctx, xblClient(creds), link.ID, titles)
+			}
 		case model.ProviderGooglePlay:
 			if !creds.ExophaseConfigured() {
 				continue
@@ -201,6 +204,32 @@ func SaveAchievements(ctx context.Context, archiveDir, title string, links []mod
 		return nil, fmt.Errorf("no configured provider for this game")
 	}
 	return saved, nil
+}
+
+// listingFailed is the record for a game whose provider's title list couldn't
+// be read: an attempt with an error, which the merge keeps away from the data.
+func listingFailed(id string, err error) *model.ProviderRecord {
+	return &model.ProviderRecord{ID: id, LastAttempt: time.Now().In(model.SiteLocation).Format("2006-01-02"), LastError: err.Error()}
+}
+
+// The account-wide title lists, shared with the scan through cachedList so a
+// Catch up run reads each once.
+func steamOwnedGames(ctx context.Context, creds Credentials) ([]steam.SteamOwnedGame, error) {
+	return cachedList("steam:"+creds.SteamID, func() ([]steam.SteamOwnedGame, error) {
+		return steamClient(creds).GetOwnedGames(ctx)
+	})
+}
+
+func psnTrophyTitles(ctx context.Context, creds Credentials) (map[string]psn.TrophyTitle, error) {
+	return cachedList("psn:"+creds.PSNNpsso, func() (map[string]psn.TrophyTitle, error) {
+		return psnClient(creds).TrophyTitles(ctx)
+	})
+}
+
+func xboxTitleHistory(ctx context.Context, creds Credentials) (map[string]xbox.Title, error) {
+	return cachedList("xbox:"+creds.XBLAPIKey, func() (map[string]xbox.Title, error) {
+		return xblClient(creds).TitleHistory(ctx)
+	})
 }
 
 type saveOptions struct{ skipUnchanged bool }

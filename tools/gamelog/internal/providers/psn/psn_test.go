@@ -2,6 +2,7 @@ package psn
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -113,6 +114,38 @@ func TestToken_ExchangedOnce(t *testing.T) {
 	}
 }
 
+// An expired access token (a 401) is exchanged again once, then the request
+// is retried with the new one.
+func TestToken_ReexchangedOn401(t *testing.T) {
+	var tokenCalls int
+	psnStub(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/authorize":
+			w.Header().Set("Location", "com.scee.psxandroid.scecompcall://redirect?code=v3.abc123")
+			w.WriteHeader(http.StatusFound)
+		case "/token":
+			tokenCalls++
+			fmt.Fprintf(w, `{"access_token":"tok%d"}`, tokenCalls)
+		case "/trophy/v1/users/me/trophyTitles":
+			if r.Header.Get("Authorization") != "Bearer tok2" {
+				w.WriteHeader(http.StatusUnauthorized)
+				return
+			}
+			w.Write([]byte(`{"trophyTitles":[],"totalItemCount":0}`))
+		default:
+			t.Fatalf("unexpected path %s", r.URL.Path)
+		}
+	})
+
+	c := &PSNClient{Npsso: "test-npsso", Throttle: time.Nanosecond}
+	if _, err := c.TrophyTitles(context.Background()); err != nil {
+		t.Fatalf("expected the retry with a fresh token to succeed, got %v", err)
+	}
+	if tokenCalls != 2 {
+		t.Errorf("token exchanged %d times, want 2", tokenCalls)
+	}
+}
+
 // A missing/expired npsso means no Location header comes back — that must
 // surface as a readable error, not a panic or a silent empty token.
 func TestAuthorize_NoRedirectIsAnError(t *testing.T) {
@@ -211,7 +244,11 @@ func TestFetchRecord_JoinsDefinitionsAndEarnedStatus(t *testing.T) {
 	})
 
 	c := &PSNClient{Npsso: "test-npsso", Throttle: time.Nanosecond}
-	rec, err := FetchRecord(context.Background(), c, "NPWR00001_00")
+	titles, err := c.TrophyTitles(context.Background())
+	if err != nil {
+		t.Fatal(err)
+	}
+	rec, err := FetchRecord(context.Background(), c, "NPWR00001_00", titles)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -269,7 +306,11 @@ func TestFetchRecord_UnknownTitleIsNotAHardError(t *testing.T) {
 	})
 
 	c := &PSNClient{Npsso: "test-npsso", Throttle: time.Nanosecond}
-	rec, err := FetchRecord(context.Background(), c, "NPWR99999_00")
+	titles, err := c.TrophyTitles(context.Background())
+	if err != nil {
+		t.Fatal(err)
+	}
+	rec, err := FetchRecord(context.Background(), c, "NPWR99999_00", titles)
 	if err != nil {
 		t.Fatalf("expected no hard error, got %v", err)
 	}

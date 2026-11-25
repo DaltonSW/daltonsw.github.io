@@ -17,16 +17,35 @@ const testSteamID64 = "76561198066238038"
 
 // steamStub points the Steam achievements endpoint at a local server for the
 // duration of a test — the cross-package equivalent of steam package's own
-// steamStub, needed here because saveAchievements constructs its own
-// steam.SteamClient rather than accepting one.
+// resetProviderCaches drops the shared clients and memoized lists before and
+// after a test, so neither leaks between tests that reuse the same credentials.
+func resetProviderCaches(t *testing.T) {
+	t.Helper()
+	reset := func() {
+		ForgetScanCache(Credentials{})
+		raRecentCache.Lock()
+		clear(raRecentCache.byUser)
+		raRecentCache.Unlock()
+	}
+	reset()
+	t.Cleanup(reset)
+}
+
+// steamStub points the per-game achievements endpoint at handler and the
+// library listing at an empty library (ownedStub replaces that with a game).
 func steamStub(t *testing.T, handler http.HandlerFunc) {
 	t.Helper()
+	resetProviderCaches(t)
 	srv := httptest.NewServer(handler)
 	t.Cleanup(srv.Close)
+	owned := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{"response":{"games":[]}}`))
+	}))
+	t.Cleanup(owned.Close)
 
-	old := steam.PlayerAchievementsURL
-	steam.PlayerAchievementsURL = srv.URL
-	t.Cleanup(func() { steam.PlayerAchievementsURL = old })
+	old, oldOwned := steam.PlayerAchievementsURL, steam.OwnedGamesURL
+	steam.PlayerAchievementsURL, steam.OwnedGamesURL = srv.URL, owned.URL
+	t.Cleanup(func() { steam.PlayerAchievementsURL, steam.OwnedGamesURL = old, oldOwned })
 }
 
 func unlocked(key, date string) model.ArchivedAchievement {
@@ -84,6 +103,7 @@ func steamLink(id string) []model.ProviderLink {
 // the only seam — same shape as steamStub above.
 func raStubProgress(t *testing.T, body string) {
 	t.Helper()
+	resetProviderCaches(t)
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(body))
 	}))
@@ -98,17 +118,18 @@ func raStubProgress(t *testing.T, body string) {
 	raRecentCache.Lock()
 	raRecentCache.byUser["u"] = map[string]*retroachievements.RARecentGame{}
 	raRecentCache.Unlock()
-	t.Cleanup(func() {
-		raRecentCache.Lock()
-		delete(raRecentCache.byUser, "u")
-		raRecentCache.Unlock()
-	})
 }
 
 // ownedStub serves a one-game Steam library and counts achievement requests,
 // so a test can tell whether SaveAchievements went to the per-game endpoint.
 func ownedStub(t *testing.T, playtime int, lastPlayed int64) *int {
 	t.Helper()
+	calls := new(int)
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		*calls++
+		w.Write([]byte(`{"playerstats":{"success":true,"achievements":[{"apiname":"A","achieved":1,"unlocktime":1700000000}]}}`))
+	})
+
 	owned := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, `{"response":{"games":[{"appid":1145360,"name":"Hades","playtime_forever":%d,"rtime_last_played":%d}]}}`, playtime, lastPlayed)
 	}))
@@ -116,12 +137,6 @@ func ownedStub(t *testing.T, playtime int, lastPlayed int64) *int {
 	old := steam.OwnedGamesURL
 	steam.OwnedGamesURL = owned.URL
 	t.Cleanup(func() { steam.OwnedGamesURL = old })
-
-	calls := new(int)
-	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
-		*calls++
-		w.Write([]byte(`{"playerstats":{"success":true,"achievements":[{"apiname":"A","achieved":1,"unlocktime":1700000000}]}}`))
-	})
 	return calls
 }
 
@@ -154,6 +169,33 @@ func TestSaveAchievements_SkipUnchangedSteam(t *testing.T) {
 	SaveAchievements(context.Background(), dir, "Hades", steamLink("1145360"), creds)
 	if *calls != 1 {
 		t.Errorf("a plain refresh must always fetch, got %d calls", *calls)
+	}
+}
+
+// A bulk run lists the Steam library once, not once per game.
+func TestSaveAchievements_ListsSteamLibraryOnce(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{"playerstats":{"success":true,"achievements":[{"apiname":"A","achieved":0}]}}`))
+	})
+	listings := 0
+	owned := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		listings++
+		w.Write([]byte(`{"response":{"games":[{"appid":1,"name":"One"},{"appid":2,"name":"Two"}]}}`))
+	}))
+	t.Cleanup(owned.Close)
+	old := steam.OwnedGamesURL
+	steam.OwnedGamesURL = owned.URL
+	t.Cleanup(func() { steam.OwnedGamesURL = old })
+
+	dir := t.TempDir()
+	creds := Credentials{SteamAPIKey: "k", SteamID: testSteamID64}
+	for _, id := range []string{"1", "2"} {
+		if _, err := SaveAchievements(context.Background(), dir, "Game "+id, steamLink(id), creds); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if listings != 1 {
+		t.Errorf("library listed %d times, want 1", listings)
 	}
 }
 

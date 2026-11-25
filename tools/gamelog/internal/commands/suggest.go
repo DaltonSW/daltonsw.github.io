@@ -234,7 +234,7 @@ func FetchRAResult(ctx context.Context, raID string, creds Credentials) Provider
 	if !creds.RAConfigured() {
 		return ProviderResult{Skipped: true, Reason: "RA_USERNAME/RA_API_KEY not set"}
 	}
-	client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
+	client := raClient(creds)
 	progress, err := client.GetGameProgress(ctx, raID)
 	if err != nil {
 		return ProviderResult{Errored: true, Err: err}
@@ -253,7 +253,7 @@ func FetchSteamResult(ctx context.Context, appID string, creds Credentials) Prov
 	if !creds.SteamConfigured() {
 		return ProviderResult{Skipped: true, Reason: "STEAM_API_KEY/STEAM_ID not set"}
 	}
-	client := &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
+	client := steamClient(creds)
 	result, err := client.GetPlayerAchievements(ctx, appID)
 	if err != nil {
 		return ProviderResult{Errored: true, Err: err}

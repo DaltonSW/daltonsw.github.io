@@ -13,8 +13,6 @@ import (
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
 	"go.dalton.dog/gamelog/internal/providers/exophase"
-	"go.dalton.dog/gamelog/internal/providers/psn"
-	"go.dalton.dog/gamelog/internal/providers/xbox"
 )
 
 // Scan covers every provider with a bulk "what has this account played" list
@@ -143,9 +141,7 @@ func Scan(ctx context.Context, creds Credentials, index loggedIndex, opts ScanOp
 
 // ScanPSN lists every trophy title on the account that isn't linked yet.
 func ScanPSN(ctx context.Context, creds Credentials, index loggedIndex) ([]Candidate, error) {
-	titles, err := cachedList("psn:"+creds.PSNNpsso, func() (map[string]psn.TrophyTitle, error) {
-		return (&psn.PSNClient{Npsso: creds.PSNNpsso}).TrophyTitles(ctx)
-	})
+	titles, err := psnTrophyTitles(ctx, creds)
 	if err != nil {
 		return nil, err
 	}
@@ -190,9 +186,7 @@ func ScanPSN(ctx context.Context, creds Credentials, index loggedIndex) ([]Candi
 // capture reads the x360-only endpoint (see xbox.FetchRecord), so creating one
 // would archive an empty record that looks like a real zero.
 func ScanXbox(ctx context.Context, creds Credentials, index loggedIndex) ([]Candidate, []ScanNotice, error) {
-	titles, err := cachedList("xbox:"+creds.XBLAPIKey, func() (map[string]xbox.Title, error) {
-		return (&xbox.XBLClient{APIKey: creds.XBLAPIKey}).TitleHistory(ctx)
-	})
+	titles, err := xboxTitleHistory(ctx, creds)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -325,12 +319,14 @@ func cachedList[T any](key string, fetch func() (T, error)) (T, error) {
 	return v, nil
 }
 
-// ForgetScanCache drops every memoized provider list, including the Exophase
-// client's, so the next scan reads every provider fresh.
+// ForgetScanCache drops every memoized provider list and shared client,
+// including the Exophase client's memo, so the next scan reads every provider
+// fresh.
 func ForgetScanCache(creds Credentials) {
 	scanCache.Lock()
 	scanCache.entries = map[string]scanCacheEntry{}
 	scanCache.Unlock()
+	forgetClients()
 	if creds.ExophaseConfigured() {
 		ExophaseClientFor(creds).Forget()
 	}

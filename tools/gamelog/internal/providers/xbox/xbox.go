@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"sync"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/model"
@@ -40,6 +41,9 @@ var (
 type XBLClient struct {
 	APIKey string
 	HTTP   *http.Client
+
+	mu   sync.Mutex // guards xuid on a shared client
+	xuid string     // memoized XUID; failures aren't kept
 }
 
 func (c *XBLClient) httpClient() *http.Client {
@@ -72,8 +76,21 @@ func (c *XBLClient) get(ctx context.Context, url string) ([]byte, error) {
 	return body, nil
 }
 
-// XUID resolves the API key owner's Xbox User ID.
+// XUID resolves the API key owner's Xbox User ID, once per client.
 func (c *XBLClient) XUID(ctx context.Context) (string, error) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	if c.xuid != "" {
+		return c.xuid, nil
+	}
+	id, err := c.fetchXUID(ctx)
+	if err == nil {
+		c.xuid = id
+	}
+	return id, err
+}
+
+func (c *XBLClient) fetchXUID(ctx context.Context) (string, error) {
 	body, err := c.get(ctx, AccountURL)
 	if err != nil {
 		return "", err
@@ -197,16 +214,12 @@ func parseXboxTime(s string) (string, bool) {
 
 // FetchRecord builds an archive record for one Xbox 360 title. Both API
 // calls are scoped to the caller's own account — there's no equivalent of
-// Exophase's "any public profile" for Xbox.
-func FetchRecord(ctx context.Context, client *XBLClient, titleID string) (*model.ProviderRecord, error) {
+// Exophase's "any public profile" for Xbox. titles is the account's
+// TitleHistory, passed in so a bulk run lists it once rather than per game.
+func FetchRecord(ctx context.Context, client *XBLClient, titleID string, titles map[string]Title) (*model.ProviderRecord, error) {
 	rec := &model.ProviderRecord{ID: titleID, LastAttempt: today(), Source: "openxbl"}
 
 	xuid, err := client.XUID(ctx)
-	if err != nil {
-		rec.LastError = err.Error()
-		return rec, nil
-	}
-	titles, err := client.TitleHistory(ctx)
 	if err != nil {
 		rec.LastError = err.Error()
 		return rec, nil

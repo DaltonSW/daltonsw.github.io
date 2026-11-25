@@ -13,7 +13,6 @@ import (
 
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/providers/retroachievements"
-	"go.dalton.dog/gamelog/internal/providers/steam"
 )
 
 // DefaultMinHours is the Steam playtime floor for a game to be worth
@@ -286,8 +285,7 @@ func normalizeTitle(s string) string {
 
 func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candidate, error) {
 	played, err := cachedList("ra:"+creds.RAUsername, func() ([]retroachievements.RAPlayedGame, error) {
-		client := &retroachievements.RAClient{Username: creds.RAUsername, APIKey: creds.RAAPIKey}
-		return client.GetUserCompletionProgress(ctx)
+		return raClient(creds).GetUserCompletionProgress(ctx)
 	})
 	if err != nil {
 		return nil, err
@@ -331,10 +329,7 @@ func ScanRA(ctx context.Context, creds Credentials, index loggedIndex) ([]Candid
 }
 
 func ScanSteam(ctx context.Context, creds Credentials, index loggedIndex, opts ScanOptions) ([]Candidate, error) {
-	owned, err := cachedList("steam:"+creds.SteamID, func() ([]steam.SteamOwnedGame, error) {
-		client := &steam.SteamClient{APIKey: creds.SteamAPIKey, SteamID: creds.SteamID}
-		return client.GetOwnedGames(ctx)
-	})
+	owned, err := steamOwnedGames(ctx, creds)
 	if err != nil {
 		return nil, err
 	}
