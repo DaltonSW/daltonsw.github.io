@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "TY the Tasmanian Tiger",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "411960",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 37,
  "total": 39,
  "first": "2025-07-04",
@@ -47,6 +47,7 @@
   {
    "key": "NineLives",
    "name": "Breaker Living",
+   "description": "Get 9 lives",
    "unlocked": true,
    "date": "2025-07-04T12:57:50-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/f41ec166950bd7df4e46da8499a5bc6c8197eee6.jpg",
@@ -65,6 +66,7 @@
   {
    "key": "DefeatBull",
    "name": "That's Using Your Head!",
+   "description": "Defeat Bull The Razorback",
    "unlocked": true,
    "date": "2025-07-04T14:19:53-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/5b959696400abb9a1efec06a1ca76e74ad1d18f4.jpg",
@@ -83,6 +85,7 @@
   {
    "key": "DennisAnsweringMachine",
    "name": "Leave a Message",
+   "description": "Listen to Dennis' answering machine",
    "unlocked": true,
    "date": "2025-07-04T15:33:10-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/00f090afaf9ddc8a9e20222a7c6d3c2c2625e3cc.jpg",
@@ -110,6 +113,7 @@
   {
    "key": "DefeatCrikey",
    "name": "Free Crikey!",
+   "description": "Defeat Crikey the Tiger Shark",
    "unlocked": true,
    "date": "2025-07-04T20:34:00-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/f69ad63ca56714dcbaaa867cf4763a5eee2e990c.jpg",
@@ -128,6 +132,7 @@
   {
    "key": "DefeatSly",
    "name": "Brotherly Love",
+   "description": "Defeat Sly the Tasmanian Tiger",
    "unlocked": true,
    "date": "2025-07-05T09:25:02-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/f99420298cea360b515276859321b70d6b6a1c6f.jpg",
@@ -137,6 +142,7 @@
   {
    "key": "JustSayNo",
    "name": "Just Say No",
+   "description": "Say no to a friend asking you to help. Bad Tassie Tiger!",
    "unlocked": true,
    "date": "2025-07-05T10:41:58-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/2e87183785a286e81264a62be4dc1c8189814d2c.jpg",
@@ -173,6 +179,7 @@
   {
    "key": "DefeatFluffy",
    "name": "Foil Fluffy",
+   "description": "Defeat Fluffy and her robot, Fluffy",
    "unlocked": true,
    "date": "2025-07-05T11:32:40-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/713d1591792306d901cc2a8e97eb9cb7291abedc.jpg",
@@ -209,6 +216,7 @@
   {
    "key": "DieInRainbowCliffs",
    "name": "Not Your Proudest Moment",
+   "description": "Die in Rainbow Cliffs",
    "unlocked": true,
    "date": "2025-07-05T11:38:39-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/f707bf8425f4ff2d3f8a6844cd868616ed84bc50.jpg",
@@ -236,6 +244,7 @@
   {
    "key": "DefeatShadow",
    "name": "From the Shadows",
+   "description": "You defeated Shadow!",
    "unlocked": true,
    "date": "2025-07-05T12:10:58-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/23c564af5e3a1423666d72fc319858dfef547ba4.jpg",
@@ -263,6 +272,7 @@
   {
    "key": "DefeatBossCass",
    "name": "Boss Cass Smacked",
+   "description": "You defeated Boss Cass!",
    "unlocked": true,
    "date": "2025-07-05T12:25:13-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/09359fe5e50c8a6e50c54500de38398342a373be.jpg",
@@ -272,6 +282,7 @@
   {
    "key": "SecretEnding",
    "name": "CY Lives",
+   "description": "Watch the secret ending",
    "unlocked": true,
    "date": "2025-07-05T12:28:49-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/eb83057cd51697126873ec929ab915405603765c.jpg",
@@ -361,6 +372,7 @@
   {
    "key": "HC_GameAnyComplete",
    "name": "Boss Cass Smacked (HardCore)",
+   "description": "You defeated Boss Cass! (HardCore)",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/411960/fe1946edab22ae0f44429f682d7b7fad0ef137f2.jpg",
    "hidden": true,
