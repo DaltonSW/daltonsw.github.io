@@ -259,11 +259,17 @@ func TestParseGameAwardsReadsNameDescriptionAndPoints(t *testing.T) {
 	}
 	got := ParseGameAwards(page)
 	want := map[int]AwardDetail{
-		4576792: {Name: "Novice Treasure Hunter", Description: "Collect 250 gold in one game", Points: 500},
-		2603576: {Name: "Prison Warden", Description: "Defeat the boss at the end of the prison", Points: 1000},
+		4576792: {Name: "Novice Treasure Hunter", Description: "Collect 250 gold in one game", Points: 500,
+			Rarity: 75.06, Slug: "novice-treasure-hunter",
+			Icon: "https://m.exophase.com/android/awards/s/64357e4.png?af08decea0c0f102213c26c8a8fbbef1"},
+		2603576: {Name: "Prison Warden", Description: "Defeat the boss at the end of the prison", Points: 1000,
+			Rarity: 35.04, Slug: "prison-warden",
+			Icon: "https://m.exophase.com/android/awards/s/8b1513j.png?af08decea0c0f102213c26c8a8fbbef1"},
 		// From Animal Crossing: Pocket Camp, where the title carries an
 		// "Unobtainable" <svg> before its link.
-		2564685: {Name: "Planting the Seed", Description: "You reached level 5!", Points: 500},
+		2564685: {Name: "Planting the Seed", Description: "You reached level 5!", Points: 500,
+			Rarity: 100, Slug: "planting-the-seed",
+			Icon: "https://m.exophase.com/android/awards/s/3jgb6ej.png?817b8f72bc52d941b6310260dfd3e155"},
 	}
 	if len(got) != len(want) {
 		t.Fatalf("parsed %d awards, want %d: %+v", len(got), len(want), got)
@@ -275,12 +281,100 @@ func TestParseGameAwardsReadsNameDescriptionAndPoints(t *testing.T) {
 	}
 }
 
-func TestAwardGameSlugComesFromItsEndpoint(t *testing.T) {
-	a := Award{Endpoint: "/achievement/shattered-pixel-dungeon-android/641630-novice-treasure-hunter"}
-	if got := a.gameSlug(); got != "shattered-pixel-dungeon-android" {
-		t.Errorf("gameSlug = %q", got)
+// Google Play awards live under /achievement/ and Ubisoft's under /challenge/;
+// each game's page is named for its kind (checked live: Ubisoft's
+// /achievements/ path redirects away).
+func TestAwardGamePageComesFromItsEndpoint(t *testing.T) {
+	for endpoint, want := range map[string]string{
+		"/achievement/shattered-pixel-dungeon-android/641630-novice-treasure-hunter": "/game/shattered-pixel-dungeon-android/achievements/",
+		"/challenge/far-cry-6-uplay/6780-reclaimer":                                  "/game/far-cry-6-uplay/challenges/",
+		"": "",
+	} {
+		if got := (Award{Endpoint: endpoint}).gamePage(); got != want {
+			t.Errorf("gamePage(%q) = %q, want %q", endpoint, got, want)
+		}
 	}
-	if got := (Award{}).gameSlug(); got != "" {
-		t.Errorf("gameSlug with no endpoint = %q, want empty", got)
+}
+
+// testdata/ubisoft_challenges.html is two rows cut from the live
+// /game/far-cry-6-uplay/challenges/ page: Reclaimer (earned on this profile)
+// and Grenadier (locked). The locked one is archived under the slug the feed
+// will use once it's earned, with the page's name and description.
+func TestFetchUbisoftRecordArchivesLockedAwards(t *testing.T) {
+	page, err := os.ReadFile("testdata/ubisoft_challenges.html")
+	if err != nil {
+		t.Fatal(err)
+	}
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch {
+		case strings.Contains(r.URL.Path, "/user/"):
+			fmt.Fprint(w, uplayProfileHTML(182258, "67890"))
+		case strings.HasSuffix(r.URL.Path, "/earned"):
+			fmt.Fprint(w, `{"list":[{"masterAwardId":4118719,"slug":"reclaimer",
+			  "endpoint":"/challenge/far-cry-6-uplay/6780-reclaimer","timestamp":1697310060}]}`)
+		case strings.HasSuffix(r.URL.Path, "/games"):
+			fmt.Fprint(w, `{"success":true,"games":[{"master_id":182258,"earned_awards":1,
+			  "total_awards":2,"meta":{"title":"Far Cry 6","platforms":[{"name":"PC"}]}}]}`)
+		case r.URL.Path == "/game/far-cry-6-uplay/challenges/":
+			w.Write(page)
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	defer srv.Close()
+	defer swapExophaseURLs(srv.URL)()
+
+	rec, err := FetchUbisoftRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "67890")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastError != "" {
+		t.Fatalf("unexpected error: %s", rec.LastError)
+	}
+	if rec.Unlocked != 1 || rec.Total != 2 || len(rec.Achievements) != 2 {
+		t.Fatalf("got %d/%d with %d achievements, want 1/2 with 2", rec.Unlocked, rec.Total, len(rec.Achievements))
+	}
+	earned, locked := rec.Achievements[0], rec.Achievements[1]
+	if earned.Key != "reclaimer" || earned.Name != "Reclaimer" || !earned.Unlocked || earned.Rarity != 21.64 {
+		t.Errorf("earned award = %+v", earned)
+	}
+	if locked.Key != "grenadier" || locked.Name != "Grenadier" || locked.Unlocked ||
+		locked.Description != "Kill 15 soldiers with explosives" || locked.Rarity != 62.47 || locked.Icon == "" {
+		t.Errorf("locked award = %+v", locked)
+	}
+}
+
+// Google Play keys on Google's own achievement id, which the page doesn't
+// carry, so a locked award there has no key that would match it once earned.
+func TestFetchGooglePlayRecordLeavesLockedAwardsOut(t *testing.T) {
+	page, err := os.ReadFile("testdata/game_achievements.html")
+	if err != nil {
+		t.Fatal(err)
+	}
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch {
+		case strings.Contains(r.URL.Path, "/user/"):
+			fmt.Fprint(w, strings.ReplaceAll(uplayProfileHTML(1, "111"), "uplay", "android"))
+		case strings.HasSuffix(r.URL.Path, "/earned"):
+			fmt.Fprint(w, `{"list":[{"masterAwardId":4576792,"slug":"novice-treasure-hunter","canonical_id":"CgkI95DFk5AREAIQCQ",
+			  "endpoint":"/achievement/shattered-pixel-dungeon-android/641630-novice-treasure-hunter","timestamp":1740058101}]}`)
+		case strings.HasSuffix(r.URL.Path, "/games"):
+			fmt.Fprint(w, `{"success":true,"games":[{"master_id":712725,"earned_awards":1,"total_awards":45,
+			  "meta":{"title":"Shattered Pixel Dungeon","platforms":[{"name":"Google Play"}]}}]}`)
+		case r.URL.Path == "/game/shattered-pixel-dungeon-android/achievements/":
+			w.Write(page)
+		default:
+			http.NotFound(w, r)
+		}
+	}))
+	defer srv.Close()
+	defer swapExophaseURLs(srv.URL)()
+
+	rec, err := FetchGooglePlayRecord(context.Background(), &ExophaseClient{User: "DaltonSW"}, "588451498103")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rec.Achievements) != 1 || rec.Achievements[0].Name != "Novice Treasure Hunter" {
+		t.Errorf("achievements = %+v, want only the earned one, named from the page", rec.Achievements)
 	}
 }

@@ -177,6 +177,11 @@ what's load-bearing.
 - **Google Play achievements are keyed on Google's achievement id, Ubisoft's on Exophase's slug.**
   Don't switch Ubisoft over: its archive is already slug-keyed, and changing the key would count
   every unlock twice on merge.
+- **Locked awards come from the game's page, and only Ubisoft archives them.** The earned feed
+  lists only earned awards. A Ubisoft row's link tail is the slug the feed reports once it's
+  earned, so the two merge. No page carries Google's id, so a locked Google Play award would get a
+  key that never matches its unlock, and be counted twice. Leave those out rather than inventing a
+  key. Ubisoft's page is `/game/<slug>/challenges/`, not `/achievements/`.
 - **The canonical-ID map only covers the first 50 games per service.** The embedded
   `window.playerGames` payload isn't paginated, and `?page=2` returns the same 50. Google Play
   gets past it by decoding the app id out of a game's award ids (see the README's Google Play

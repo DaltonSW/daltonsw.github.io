@@ -938,6 +938,14 @@ Ubisoft Connect linked to it. Records are written with `source: exophase` and ar
 exactly the same never-lose rules as every other provider — a private profile or a failed fetch
 updates `last_attempt`/`last_error` and leaves the history alone.
 
+Names, descriptions and locked awards come from the game's page of every award, the same way as
+Google Play (see below), except that Ubisoft awards live under `/challenge/` and the page is
+`/game/<slug>/challenges/`; `/achievements/` redirects away. Unlike Google Play, **locked Ubisoft
+awards are archived**: Ubisoft keys on the award slug, and the tail of each row's link
+(`/challenge/<game>/<n>-<slug>`) is that slug, checked live against every earned Far Cry 6 award.
+So a locked award and its later unlock merge into one entry. A game with nothing earned has no
+award endpoint to find its page from, and gets no locked awards until its first unlock.
+
 Three quirks, all found against live responses:
 
 - Cloudflare serves an interstitial to Go's default `Go-http-client/1.1` User-Agent. Requests
@@ -988,8 +996,10 @@ next to it, and Scan offers every unlinked one. Achievements are keyed on Google
 id (`CgkI…`) rather than Exophase's slug. The earned feed has only the slug (same as Ubisoft), so
 each refresh also reads the game's `/game/<slug>/achievements/` page (`GameAwards`; the game slug
 is in each award's `endpoint`) and joins its rows on `masterAwardId` for the real name,
-description and points. The page lists locked awards too, but only earned ones are archived — a
-locked one has no `CgkI…` key to file it under. It's best effort: if the page fetch fails the slug
+description, points and rarity (`data-average`: the share of Exophase's players tracking the game
+who earned it). The page lists locked awards too, but only earned ones are archived — a locked one
+has no `CgkI…` key to file it under. Neither the game page nor an award's own page carries Google's
+id (checked live). It's best effort: if the page fetch fails the slug
 stays as the name, `mergeAchievement` won't let a description-less entry replace a described
 one's name, and the next refresh tries again. Parsing is by regexp against live markup
 (`testdata/game_achievements.html`), so a layout change shows up as slug names, not lost data.

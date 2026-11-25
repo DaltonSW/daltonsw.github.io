@@ -44,9 +44,6 @@ var (
 	exophaseBaseURL   = "https://www.exophase.com"
 	exophaseGamesURL  = "https://api.exophase.com/public/player/%s/games"
 	exophaseEarnedURL = "https://api.exophase.com/public/player/%s/game/%s/earned"
-	// exophaseGameAwardsURL is a game's page of every award, earned or not,
-	// with its display name and description. The JSON feed above has neither.
-	exophaseGameAwardsURL = "%s/game/%s/achievements/"
 	// exophaseMediaBaseURL serves award/trophy icons — a different host than
 	// the site itself (exophaseBaseURL 404s on these paths). Confirmed
 	// against the profile page's own embedded config, which names it
@@ -410,21 +407,37 @@ func (c *ExophaseClient) Earned(ctx context.Context, playerID string, masterID i
 }
 
 // AwardDetail is what a game's page says about one award that the earned feed
-// doesn't: its real name and description, and its points.
+// doesn't: its real name and description, points and rarity. Slug and Icon are
+// what a locked award needs to be archived at all, since the feed lists only
+// earned ones.
 type AwardDetail struct {
 	Name        string
 	Description string
 	Points      int
+	// Rarity is the page's data-average: the percentage of Exophase's
+	// players tracking the game who have earned it.
+	Rarity float64
+	// Slug is the tail of the award's own link, /<kind>/<game>/<n>-<slug>.
+	// Checked live against every earned Far Cry 6 award: it equals the feed's
+	// slug, which is what Ubisoft records key on.
+	Slug string
+	Icon string
 }
 
 var (
 	awardRowRe    = regexp.MustCompile(`<li class="[^"]*\baward\b[^"]*"([^>]*)>`)
 	awardMasterRe = regexp.MustCompile(`data-master="(\d+)"`)
 	awardPointsRe = regexp.MustCompile(`data-points="(\d+)"`)
+	awardRarityRe = regexp.MustCompile(`data-average="(\d+(?:\.\d+)?)"`)
 	// An unobtainable award has an <svg> badge between the title div and its link.
-	awardTitleRe = regexp.MustCompile(`(?s)award-title[^>]*>.*?<a [^>]*>([^<]*)</a>`)
+	awardTitleRe = regexp.MustCompile(`(?s)award-title[^>]*>.*?<a [^>]*?href="([^"]*)"[^>]*>([^<]*)</a>`)
 	awardDescRe  = regexp.MustCompile(`(?s)award-description[^>]*>\s*<p>(.*?)</p>`)
-	awardGameRe  = regexp.MustCompile(`^/achievement/([^/]+)/`)
+	awardIconRe  = regexp.MustCompile(`award-image[^"]*"\s+src="([^"]+)"`)
+	awardSlugRe  = regexp.MustCompile(`/\d+-([^/]+)/?$`)
+	// Google Play awards live under /achievement/, Ubisoft's under /challenge/,
+	// and each game's page of every award is named for its kind:
+	// /game/<slug>/achievements/ or /game/<slug>/challenges/.
+	awardGameRe = regexp.MustCompile(`^/(achievement|challenge)/([^/]+)/`)
 )
 
 // ParseGameAwards reads a game's achievements page into details keyed by
@@ -446,7 +459,16 @@ func ParseGameAwards(page []byte) map[int]AwardDetail {
 			continue
 		}
 		var d AwardDetail
-		d.Name = strings.TrimSpace(html.UnescapeString(title[1]))
+		d.Name = strings.TrimSpace(html.UnescapeString(title[2]))
+		if m := awardSlugRe.FindStringSubmatch(title[1]); m != nil {
+			d.Slug = m[1]
+		}
+		if m := awardIconRe.FindStringSubmatch(body); m != nil {
+			d.Icon = html.UnescapeString(m[1])
+		}
+		if m := awardRarityRe.FindStringSubmatch(attrs); m != nil {
+			d.Rarity, _ = strconv.ParseFloat(m[1], 64)
+		}
 		if m := awardDescRe.FindStringSubmatch(body); m != nil {
 			d.Description = strings.TrimSpace(html.UnescapeString(m[1]))
 		}
@@ -461,23 +483,25 @@ func ParseGameAwards(page []byte) map[int]AwardDetail {
 	return out
 }
 
-// GameAwards fetches a game's page of every award by its Exophase slug.
-func (c *ExophaseClient) GameAwards(ctx context.Context, gameSlug string) (map[int]AwardDetail, error) {
-	body, err := c.get(ctx, fmt.Sprintf(exophaseGameAwardsURL, exophaseBaseURL, gameSlug))
+// GameAwards fetches a game's page of every award, by its path from
+// Award.gamePage.
+func (c *ExophaseClient) GameAwards(ctx context.Context, pagePath string) (map[int]AwardDetail, error) {
+	body, err := c.get(ctx, exophaseBaseURL+pagePath)
 	if err != nil {
 		return nil, err
 	}
 	details := ParseGameAwards(body)
 	if len(details) == 0 {
-		return nil, fmt.Errorf("exophase: no awards found on the page for %q", gameSlug)
+		return nil, fmt.Errorf("exophase: no awards found on %s", pagePath)
 	}
 	return details, nil
 }
 
-// gameSlug is the Exophase slug of the game an earned award belongs to, or "".
-func (a Award) gameSlug() string {
+// gamePage is the path of the page listing every award of the game an earned
+// award belongs to, or "" when its endpoint doesn't say.
+func (a Award) gamePage() string {
 	if m := awardGameRe.FindStringSubmatch(a.Endpoint); m != nil {
-		return m[1]
+		return "/game/" + m[2] + "/" + m[1] + "s/"
 	}
 	return ""
 }
@@ -620,11 +644,12 @@ func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id str
 	// got, so the next refresh simply tries again.
 	var details map[int]AwardDetail
 	for _, a := range awards {
-		if slug := a.gameSlug(); slug != "" {
-			details, _ = client.GameAwards(ctx, slug)
+		if page := a.gamePage(); page != "" {
+			details, _ = client.GameAwards(ctx, page)
 			break
 		}
 	}
+	earned := make(map[int]bool, len(awards))
 	for _, a := range awards {
 		if a.Timestamp <= 0 {
 			continue
@@ -648,9 +673,27 @@ func fetchRecord(ctx context.Context, client *ExophaseClient, env, label, id str
 			Icon:     a.IconURL(),
 		}
 		if d, ok := details[a.MasterAwardID]; ok {
-			ach.Name, ach.Description, ach.Points = d.Name, d.Description, d.Points
+			ach.Name, ach.Description, ach.Points, ach.Rarity = d.Name, d.Description, d.Points, d.Rarity
 		}
+		earned[a.MasterAwardID] = true
 		rec.Achievements = append(rec.Achievements, ach)
+	}
+	// The feed lists only earned awards; the page lists every one. Ubisoft
+	// locked awards are archived under the slug the feed will report once
+	// they're earned, so the two merge into one entry. Google Play's key is
+	// Google's id, which neither the page nor an award's own page carries
+	// (checked live), so its locked awards would be stored under a key that
+	// can never match and counted twice on unlock; they're left out.
+	if env == EnvUbisoft {
+		for id, d := range details {
+			if earned[id] || d.Slug == "" {
+				continue
+			}
+			rec.Achievements = append(rec.Achievements, model.ArchivedAchievement{
+				Key: d.Slug, Name: d.Name, Description: d.Description,
+				Points: d.Points, Rarity: d.Rarity, Icon: d.Icon,
+			})
+		}
 	}
 	rec.Raw = raw
 	rec.Fetched = today()

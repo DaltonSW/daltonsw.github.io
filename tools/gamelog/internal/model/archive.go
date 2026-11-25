@@ -161,8 +161,9 @@ type ArchivedAchievement struct {
 	// Rarity is the percentage (0-100) of the provider's players who have
 	// earned this achievement, as of the fetch that last reported it. It
 	// drifts over time, so a fresh non-zero value replaces the old one; zero
-	// means "not reported", never "nobody has it". Reported by PSN, Xbox and
-	// RetroAchievements; Steam and Exophase don't supply it.
+	// means "not reported", never "nobody has it". Every provider reports it;
+	// Exophase's figure is over its own players who track the game, not the
+	// service's whole player base.
 	Rarity float64 `json:"rarity,omitempty"`
 }
 
