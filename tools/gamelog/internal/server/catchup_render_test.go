@@ -48,7 +48,7 @@ func TestCatchupRenders(t *testing.T) {
 		Older:      []activityCard{newActivityCard(sampleActivity("celeste", "2019-01-01"), th)},
 		Problems:   []commands.RecordProblem{{Provider: "psn", Error: "npsso expired", Games: []string{"A", "B", "C", "D"}}},
 		Stale: staleRows([]commands.StaleCandidate{{
-			Game: model.GameSummary{Slug: "tunic", Title: "Tunic", SteamAppID: "553420"}, LastPlayed: "2026-09-01",
+			Game: model.GameSummary{Slug: "tunic", Title: "Tunic", IDs: map[string]string{model.ProviderSteam: "553420"}}, LastPlayed: "2026-09-01",
 			DaysSince: 82, SuggestedStatus: "dropped", Confidence: "medium",
 		}}),
 		Drafts: 2,

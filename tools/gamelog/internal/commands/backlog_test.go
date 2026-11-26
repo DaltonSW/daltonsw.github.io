@@ -80,13 +80,13 @@ func TestFindIncomplete_FiltersToGamesWithSomethingLeft(t *testing.T) {
 	save("6", "Paused", 10, 6)
 
 	games := []model.GameSummary{
-		{Slug: "partial", Title: "Partial", Status: "playing", SteamAppID: "1"},
-		{Slug: "complete", Title: "Complete", Status: "playing", SteamAppID: "2"},
-		{Slug: "none", Title: "No Achievements", Status: "playing", SteamAppID: "3"},
-		{Slug: "endless", Title: "Endless", Status: "endless", SteamAppID: "4"},
-		{Slug: "finished", Title: "Finished", Status: "finished", SteamAppID: "5"},
-		{Slug: "paused", Title: "Paused", Status: "paused", SteamAppID: "6"},
-		{Slug: "unarchived", Title: "Unarchived", Status: "playing", SteamAppID: "999"},
+		{Slug: "partial", Title: "Partial", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1"}},
+		{Slug: "complete", Title: "Complete", Status: "playing", IDs: map[string]string{model.ProviderSteam: "2"}},
+		{Slug: "none", Title: "No Achievements", Status: "playing", IDs: map[string]string{model.ProviderSteam: "3"}},
+		{Slug: "endless", Title: "Endless", Status: "endless", IDs: map[string]string{model.ProviderSteam: "4"}},
+		{Slug: "finished", Title: "Finished", Status: "finished", IDs: map[string]string{model.ProviderSteam: "5"}},
+		{Slug: "paused", Title: "Paused", Status: "paused", IDs: map[string]string{model.ProviderSteam: "6"}},
+		{Slug: "unarchived", Title: "Unarchived", Status: "playing", IDs: map[string]string{model.ProviderSteam: "999"}},
 	}
 
 	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{})
@@ -116,7 +116,7 @@ func TestFindIncomplete_IncludeDone(t *testing.T) {
 	}); err != nil {
 		t.Fatal(err)
 	}
-	games := []model.GameSummary{{Slug: "finished", Title: "Finished", Status: "finished", SteamAppID: "1"}}
+	games := []model.GameSummary{{Slug: "finished", Title: "Finished", Status: "finished", IDs: map[string]string{model.ProviderSteam: "1"}}}
 
 	if got, err := FindIncomplete(archiveDir, games, IncompleteOptions{}); err != nil || len(got) != 0 {
 		t.Fatalf("finished game should be excluded by default, got %+v (err %v)", got, err)
@@ -137,7 +137,7 @@ func TestFindIncomplete_MinPct(t *testing.T) {
 	}); err != nil {
 		t.Fatal(err)
 	}
-	games := []model.GameSummary{{Slug: "barely", Title: "Barely Started", Status: "playing", SteamAppID: "1"}}
+	games := []model.GameSummary{{Slug: "barely", Title: "Barely Started", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1"}}}
 
 	if got, err := FindIncomplete(archiveDir, games, IncompleteOptions{MinPct: DefaultIncompletePct}); err != nil || len(got) != 0 {
 		t.Fatalf("4%% should fall below the default floor, got %+v (err %v)", got, err)
@@ -161,7 +161,7 @@ func TestFindIncomplete_RowPerProvider(t *testing.T) {
 	}); err != nil {
 		t.Fatal(err)
 	}
-	games := []model.GameSummary{{Slug: "both", Title: "Both", Status: "playing", SteamAppID: "1", RAGameID: "2"}}
+	games := []model.GameSummary{{Slug: "both", Title: "Both", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1", model.ProviderRA: "2"}}}
 
 	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{})
 	if err != nil {
@@ -192,9 +192,9 @@ func TestFindIncomplete_SortsClosestToDoneFirst(t *testing.T) {
 		}
 	}
 	games := []model.GameSummary{
-		{Slug: "a", Title: "A", Status: "playing", SteamAppID: "1"},
-		{Slug: "b", Title: "B", Status: "playing", SteamAppID: "2"},
-		{Slug: "c", Title: "C", Status: "playing", SteamAppID: "3"},
+		{Slug: "a", Title: "A", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1"}},
+		{Slug: "b", Title: "B", Status: "playing", IDs: map[string]string{model.ProviderSteam: "2"}},
+		{Slug: "c", Title: "C", Status: "playing", IDs: map[string]string{model.ProviderSteam: "3"}},
 	}
 
 	got, err := FindIncomplete(archiveDir, games, IncompleteOptions{})

@@ -41,11 +41,11 @@ func TestFindStaleCandidates_FiltersToEligibleGames(t *testing.T) {
 	}
 
 	games := []model.GameSummary{
-		{Slug: "quiet", Title: "Quiet Game", Status: "playing", SteamAppID: "1"},
-		{Slug: "draft-game", Title: "Draft Game", Status: "playing", SteamAppID: "1", Draft: true},
-		{Slug: "finished-game", Title: "Finished Game", Status: "finished", SteamAppID: "1"},
-		{Slug: "session-game", Title: "Session Game", Status: "endless", SteamAppID: "1"},
-		{Slug: "ra-only", Title: "RA Only Game", Status: "playing", RAGameID: "4650"},
+		{Slug: "quiet", Title: "Quiet Game", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1"}},
+		{Slug: "draft-game", Title: "Draft Game", Status: "playing", Draft: true, IDs: map[string]string{model.ProviderSteam: "1"}},
+		{Slug: "finished-game", Title: "Finished Game", Status: "finished", IDs: map[string]string{model.ProviderSteam: "1"}},
+		{Slug: "session-game", Title: "Session Game", Status: "endless", IDs: map[string]string{model.ProviderSteam: "1"}},
+		{Slug: "ra-only", Title: "RA Only Game", Status: "playing", IDs: map[string]string{model.ProviderRA: "4650"}},
 	}
 
 	got, err := FindStaleCandidates(archiveDir, games, 30)
@@ -74,7 +74,7 @@ func TestFindStaleCandidates_RecentlyPlayedIsExcluded(t *testing.T) {
 	}); err != nil {
 		t.Fatal(err)
 	}
-	games := []model.GameSummary{{Slug: "recent", Status: "playing", SteamAppID: "1"}}
+	games := []model.GameSummary{{Slug: "recent", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1"}}}
 
 	got, err := FindStaleCandidates(archiveDir, games, 30)
 	if err != nil {
@@ -109,7 +109,7 @@ func TestFindStaleCandidates_SuggestsByCompletion(t *testing.T) {
 			}); err != nil {
 				t.Fatal(err)
 			}
-			games := []model.GameSummary{{Slug: "g", Status: "playing", SteamAppID: "1"}}
+			games := []model.GameSummary{{Slug: "g", Status: "playing", IDs: map[string]string{model.ProviderSteam: "1"}}}
 
 			got, err := FindStaleCandidates(archiveDir, games, 30)
 			if err != nil {
@@ -128,7 +128,7 @@ func TestFindStaleCandidates_SuggestsByCompletion(t *testing.T) {
 
 func TestFormatStaleCard_ShowsSuggestionAndConfidence(t *testing.T) {
 	c := StaleCandidate{
-		Game:       model.GameSummary{Title: "Hades", SteamAppID: "1145360"},
+		Game:       model.GameSummary{Title: "Hades", IDs: map[string]string{model.ProviderSteam: "1145360"}},
 		LastPlayed: "2026-01-01", DaysSince: 47,
 		Unlocked: 12, Total: 40, PlaytimeMins: 300,
 		SuggestedStatus: "dropped", Confidence: "medium",
@@ -148,7 +148,7 @@ func TestFormatStaleCard_ShowsSuggestionAndConfidence(t *testing.T) {
 // a suggestion here pre-classifies a backlog entry, not a published game.
 func TestFormatStaleCard_TagsDraftGames(t *testing.T) {
 	c := StaleCandidate{
-		Game:            model.GameSummary{Title: "Hades", SteamAppID: "1145360", Draft: true},
+		Game:            model.GameSummary{Title: "Hades", Draft: true, IDs: map[string]string{model.ProviderSteam: "1145360"}},
 		SuggestedStatus: "dropped", Confidence: "medium",
 	}
 	if card := FormatStaleCard(c); !strings.Contains(card, "[draft]") {

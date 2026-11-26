@@ -73,20 +73,56 @@ const (
 	ProviderGooglePlay = "googleplay"
 )
 
-// providerLabels are the names a reader knows each provider by.
-var providerLabels = map[string]string{
-	ProviderRA:         "RetroAchievements",
-	ProviderSteam:      "Steam",
-	ProviderPSN:        "PSN",
-	ProviderUbisoft:    "Ubisoft",
-	ProviderXbox:       "Xbox",
-	ProviderGooglePlay: "Google Play",
+// ProviderInfo is everything the rest of the tool needs to know about one
+// achievement provider, kept in one table (providerTable) so adding a provider
+// is one row here, not a hunt for parallel lists. The site's own list is
+// data/providers.yaml; TestProvidersYAMLMatchesTable keeps the two in step.
+type ProviderInfo struct {
+	Key   string // archive key and `provider:` value, e.g. "steam"
+	Label string // the name a reader knows it by
+	// FMKey is the front-matter field holding a game's id on this provider.
+	FMKey string
+	// FormLabel and Placeholder label this provider's input in the provider-IDs
+	// form. NumericID means the field takes a bare number or the URL it came
+	// from (externalid.ParseExternalID); the rest are free text.
+	FormLabel   string
+	Placeholder string
+	NumericID   bool
+}
+
+// providerTable lists the achievement providers in ProviderOrder. Nadeo and
+// Ninja Kiwi are absent on purpose — see ProviderOrder.
+var providerTable = []ProviderInfo{
+	{Key: ProviderRA, Label: "RetroAchievements", FMKey: "retroachievements_id",
+		FormLabel: "RetroAchievements ID", Placeholder: "numeric ID or game URL", NumericID: true},
+	{Key: ProviderSteam, Label: "Steam", FMKey: "steam_appid",
+		FormLabel: "Steam appid", Placeholder: "numeric appid or store URL", NumericID: true},
+	{Key: ProviderPSN, Label: "PSN", FMKey: "psn_id",
+		FormLabel: "PSN trophy-set ID", Placeholder: "NPWR…"},
+	{Key: ProviderUbisoft, Label: "Ubisoft", FMKey: "ubisoft_id",
+		FormLabel: "Ubisoft (Exophase) ID"},
+	{Key: ProviderXbox, Label: "Xbox", FMKey: "xbox_id",
+		FormLabel: "Xbox title ID"},
+	{Key: ProviderGooglePlay, Label: "Google Play", FMKey: "googleplay_id",
+		FormLabel: "Google Play app ID", Placeholder: "package name, e.g. com.example.game"},
+}
+
+// Providers returns the provider table in ProviderOrder.
+func Providers() []ProviderInfo { return append([]ProviderInfo(nil), providerTable...) }
+
+func providerInfo(provider string) (ProviderInfo, bool) {
+	for _, p := range providerTable {
+		if p.Key == provider {
+			return p, true
+		}
+	}
+	return ProviderInfo{}, false
 }
 
 // ProviderLabel names a provider for display, falling back to its key.
 func ProviderLabel(provider string) string {
-	if l, ok := providerLabels[provider]; ok {
-		return l
+	if p, ok := providerInfo(provider); ok {
+		return p.Label
 	}
 	return provider
 }
@@ -115,7 +151,13 @@ type ProviderLink struct {
 // and everything driven by this list assumes an Unlocked/Total pair it can sum.
 // Adding it here would fold ~625 Trackmania campaign tracks into that game's
 // achievement denominator. See the ProviderNadeo doc comment in nadeo.go.
-var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox, ProviderGooglePlay}
+var ProviderOrder = func() []string {
+	keys := make([]string, len(providerTable))
+	for i, p := range providerTable {
+		keys[i] = p.Key
+	}
+	return keys
+}()
 
 // raSubsetTitle matches RetroAchievements' subset naming convention, which is
 // the *only* thing distinguishing a subset in the bulk endpoints — e.g.

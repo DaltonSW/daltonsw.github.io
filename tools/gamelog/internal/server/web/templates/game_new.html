@@ -13,13 +13,13 @@
     <input type="text" id="platform" name="platform" value="{{.Platform}}">
   </div>
   <div class="field">
-    <label for="ra_id">RetroAchievements game ID or URL</label>
-    <input type="text" id="ra_id" name="ra_id" value="{{.RetroAchievementsID}}">
+    <label for="retroachievements">RetroAchievements game ID or URL</label>
+    <input type="text" id="retroachievements" name="retroachievements" value="{{index .IDs "retroachievements"}}">
     <p class="hint">blank if none</p>
   </div>
   <div class="field">
-    <label for="steam_id">Steam appid or store URL</label>
-    <input type="text" id="steam_id" name="steam_id" value="{{.SteamAppID}}">
+    <label for="steam">Steam appid or store URL</label>
+    <input type="text" id="steam" name="steam" value="{{index .IDs "steam"}}">
     <p class="hint">blank if none</p>
   </div>
   <div class="field">

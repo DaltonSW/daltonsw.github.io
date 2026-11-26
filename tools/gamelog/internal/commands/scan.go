@@ -219,8 +219,8 @@ func NewLoggedIndex(games []model.GameSummary) loggedIndex {
 		for p, id := range g.ProviderIDs() {
 			cover(p, id)
 		}
-		if g.RAGameID != "" {
-			idx.raGames[g.RAGameID] = g
+		if raID := g.IDs[model.ProviderRA]; raID != "" {
+			idx.raGames[raID] = g
 		}
 		// An attached subset is covered by the game it hangs off, so the scan
 		// must stop offering it as an unlogged game of its own — the whole

@@ -1,0 +1,16 @@
+# The achievement providers, in display order (the Providers sidebar, the Log
+# tab's filter and stats). `key` is the archive's `provider:` value and
+# `label` the name shown. tools/gamelog's provider table is the other copy of
+# this list; its TestProvidersYAMLMatchesTable fails if they drift.
+- key: retroachievements
+  label: RetroAchievements
+- key: steam
+  label: Steam
+- key: psn
+  label: PSN
+- key: ubisoft
+  label: Ubisoft
+- key: xbox
+  label: Xbox
+- key: googleplay
+  label: Google Play

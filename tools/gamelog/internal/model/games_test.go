@@ -5,6 +5,8 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"gopkg.in/yaml.v3"
 )
 
 func TestSlugify(t *testing.T) {
@@ -109,7 +111,7 @@ func TestCreateGameFileWritesTheGameDirectory(t *testing.T) {
 func TestLoadDocReadsBareExternalIDs(t *testing.T) {
 	dir := t.TempDir()
 	path, err := CreateGameFile(dir, "hades", NewGameFields{
-		Title: "Hades", Status: "playing", SteamAppID: "1145360", RetroAchievementsID: "4650",
+		Title: "Hades", Status: "playing", IDs: map[string]string{ProviderSteam: "1145360", ProviderRA: "4650"},
 	})
 	if err != nil {
 		t.Fatal(err)
@@ -161,5 +163,69 @@ func TestFormatNewGameFile_DraftFlag(t *testing.T) {
 	normal := formatNewGameFile(NewGameFields{Title: "X", Status: "playing"}, "x")
 	if !strings.Contains(normal, "draft: false") {
 		t.Errorf("expected draft: false by default\n%s", normal)
+	}
+}
+
+// Every provider in the table has a front-matter key that is really the yaml
+// tag of the field providerField points at, a unique one, and a new game's
+// file carries it, in table order.
+func TestProviderTable_FrontMatterKeysAreRealFields(t *testing.T) {
+	seen := map[string]bool{}
+	for _, p := range providerTable {
+		if seen[p.FMKey] {
+			t.Errorf("%s: duplicate front-matter key %s", p.Key, p.FMKey)
+		}
+		seen[p.FMKey] = true
+
+		d := &Doc{}
+		if err := d.SetProviderID(p.Key, "42"); err != nil {
+			t.Fatalf("%s: %v", p.Key, err)
+		}
+		fm, err := d.EncodeFM()
+		if err != nil {
+			t.Fatal(err)
+		}
+		if !strings.Contains(string(fm), p.FMKey+": 42") {
+			t.Errorf("%s: FMKey %q isn't the yaml key of its field:\n%s", p.Key, p.FMKey, fm)
+		}
+	}
+
+	ids := map[string]string{}
+	for _, p := range providerTable {
+		ids[p.Key] = "7"
+	}
+	file := formatNewGameFile(NewGameFields{Title: "X", Status: "playing", IDs: ids}, "x")
+	last := -1
+	for _, p := range providerTable {
+		i := strings.Index(file, "\n"+p.FMKey+": 7\n")
+		if i < 0 || i < last {
+			t.Errorf("new game file missing %s or out of order:\n%s", p.FMKey, file)
+		}
+		last = i
+	}
+}
+
+// data/providers.yaml is the site's copy of the provider list (Hugo can't read
+// the Go table). It must name the same providers, labels and order.
+func TestProvidersYAMLMatchesTable(t *testing.T) {
+	gamesDir, err := FindGamesDir()
+	if err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(filepath.Join(gamesDir, "..", "..", "data", "providers.yaml"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var site []struct{ Key, Label string }
+	if err := yaml.Unmarshal(raw, &site); err != nil {
+		t.Fatal(err)
+	}
+	if len(site) != len(providerTable) {
+		t.Fatalf("data/providers.yaml lists %d providers, the table has %d", len(site), len(providerTable))
+	}
+	for i, p := range providerTable {
+		if site[i].Key != p.Key || site[i].Label != p.Label {
+			t.Errorf("data/providers.yaml[%d] = %+v, want {%s %s}", i, site[i], p.Key, p.Label)
+		}
 	}
 }

@@ -34,12 +34,9 @@ type GameSummary struct {
 	Platform        string
 	Rating          string
 	NumPlaythroughs int
-	RAGameID        string
-	SteamAppID      string
-	PSNID           string
-	UbisoftID       string
-	XboxID          string
-	GooglePlayID    string
+	// IDs is this game's id on each provider it's linked to, keyed by provider
+	// (ProviderOrder), blank ones left out.
+	IDs map[string]string
 	// NadeoAccountID links this game to a Trackmania campaign archive. It is
 	// not part of ProviderLinks — see FrontMatter.NadeoAccountID.
 	NadeoAccountID string
@@ -61,22 +58,7 @@ func (g GameSummary) ProviderLinks() []ProviderLink {
 
 // ProviderIDs is every provider id this game has set, keyed by provider —
 // Doc.ProviderIDs' counterpart for a summary.
-func (g GameSummary) ProviderIDs() map[string]string {
-	all := map[string]string{
-		ProviderRA:         g.RAGameID,
-		ProviderSteam:      g.SteamAppID,
-		ProviderPSN:        g.PSNID,
-		ProviderUbisoft:    g.UbisoftID,
-		ProviderXbox:       g.XboxID,
-		ProviderGooglePlay: g.GooglePlayID,
-	}
-	for p, id := range all {
-		if id == "" {
-			delete(all, p)
-		}
-	}
-	return all
-}
+func (g GameSummary) ProviderIDs() map[string]string { return g.IDs }
 
 // FindGamesDir locates content/games, walking up from the current
 // directory so the tool works whether it's launched from the repo root or
@@ -105,11 +87,6 @@ func FindGamesDir() (string, error) {
 // playthroughs-first started/finished fallback below) instead of a second,
 // possibly-drifting copy of them.
 func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSummary {
-	raID, steamAppID := doc.ExternalIDs()
-	psnID := scalarString(doc.FM.PSNID)
-	ubisoftID := scalarString(doc.FM.UbisoftID)
-	xboxID := scalarString(doc.FM.XboxID)
-	googlePlayID := scalarString(doc.FM.GooglePlayID)
 	// Every date is derived from playthroughs.yaml — see gameDateRange and
 	// firstFinished. Front matter carries none.
 	views := pf.Views()
@@ -128,12 +105,7 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		Platform:        doc.FM.Platform,
 		Rating:          doc.FM.RatingString(),
 		NumPlaythroughs: len(pf.Playthroughs),
-		RAGameID:        raID,
-		SteamAppID:      steamAppID,
-		PSNID:           psnID,
-		UbisoftID:       ubisoftID,
-		XboxID:          xboxID,
-		GooglePlayID:    googlePlayID,
+		IDs:             doc.ProviderIDs(),
 		NadeoAccountID:  doc.NadeoAccountIDString(),
 		NinjaKiwiUserID: doc.NinjaKiwiUserIDString(),
 		RASubsets:       doc.RASubsetIDs(),
@@ -254,15 +226,11 @@ func trimTrailingBlanks(lines []string) []string {
 
 // NewGameFields holds the values for a brand-new game's _index.md.
 type NewGameFields struct {
-	Title               string
-	Platform            string
-	RetroAchievementsID string
-	SteamAppID          string
-	PSNID               string
-	UbisoftID           string
-	XboxID              string
-	GooglePlayID        string
-	Status              string // backlog|playing|finished|dropped|unfinished
+	Title    string
+	Platform string
+	// IDs is the game's id on each provider, keyed by provider; see SetProviderID.
+	IDs    map[string]string
+	Status string // backlog|playing|finished|dropped|unfinished
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
 	Subgames []string
@@ -280,20 +248,10 @@ type NewGameFields struct {
 // SetProviderID fills the id field for one provider — what the scan uses, since
 // a candidate knows its provider as a key rather than as a field to set.
 func (f *NewGameFields) SetProviderID(provider, id string) {
-	switch provider {
-	case ProviderRA:
-		f.RetroAchievementsID = id
-	case ProviderSteam:
-		f.SteamAppID = id
-	case ProviderPSN:
-		f.PSNID = id
-	case ProviderUbisoft:
-		f.UbisoftID = id
-	case ProviderXbox:
-		f.XboxID = id
-	case ProviderGooglePlay:
-		f.GooglePlayID = id
+	if f.IDs == nil {
+		f.IDs = map[string]string{}
 	}
+	f.IDs[provider] = id
 }
 
 func formatNewGameFile(f NewGameFields, slug string) string {
@@ -301,15 +259,14 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 		"---",
 		fmt.Sprintf("title: %q", f.Title),
 		fmt.Sprintf("platform: %q", f.Platform),
-		"retroachievements_id: " + f.RetroAchievementsID,
-		"steam_appid: " + f.SteamAppID,
-		"psn_id: " + f.PSNID,
-		"ubisoft_id: " + f.UbisoftID,
-		"xbox_id: " + f.XboxID,
-		"googleplay_id: " + f.GooglePlayID,
+	}
+	for _, p := range providerTable {
+		lines = append(lines, p.FMKey+": "+f.IDs[p.Key])
+	}
+	lines = append(lines,
 		fmt.Sprintf("status: %q", f.Status),
 		"subgames:",
-	}
+	)
 	for _, sg := range f.Subgames {
 		lines = append(lines, fmt.Sprintf("  - %q", sg))
 	}

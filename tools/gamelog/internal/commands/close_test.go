@@ -218,7 +218,7 @@ func TestFindOpenEntries_PrefersTheLaterOfArchiveAndLoggedStart(t *testing.T) {
 	}
 
 	g := writeGameWithPlaythroughs(t, dir, "sandbox", "endless", openSessionsYAML)
-	g.SteamAppID = "7"
+	g.IDs = map[string]string{model.ProviderSteam: "7"}
 	got, err := FindOpenEntries(archiveDir, dir, []model.GameSummary{g}, 30, false)
 	if err != nil {
 		t.Fatal(err)

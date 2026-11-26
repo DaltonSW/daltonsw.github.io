@@ -51,10 +51,11 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 	now := time.Now().In(model.SiteLocation)
 	var out []StaleCandidate
 	for _, g := range games {
-		if g.SteamAppID == "" || g.Status != "playing" {
+		steamID := g.IDs[model.ProviderSteam]
+		if steamID == "" || g.Status != "playing" {
 			continue
 		}
-		rec, err := model.LoadRecord(archiveDir, model.ProviderSteam, g.SteamAppID)
+		rec, err := model.LoadRecord(archiveDir, model.ProviderSteam, steamID)
 		if err != nil {
 			return nil, err
 		}
@@ -129,7 +130,7 @@ func FormatStaleCard(c StaleCandidate) string {
 	if c.Game.Draft {
 		draftTag = "  [draft]"
 	}
-	s := fmt.Sprintf("%s  [Steam %s]%s\n", c.Game.Title, c.Game.SteamAppID, draftTag)
+	s := fmt.Sprintf("%s  [Steam %s]%s\n", c.Game.Title, c.Game.IDs[model.ProviderSteam], draftTag)
 	s += fmt.Sprintf("  last played %s (%d days ago)\n", c.LastPlayed, c.DaysSince)
 	if c.Total > 0 {
 		pct := float64(c.Unlocked) / float64(c.Total) * 100

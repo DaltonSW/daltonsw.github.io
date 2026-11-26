@@ -839,10 +839,13 @@ can link it to an existing game in one click.
 Everything that walks a game's archive takes `[]model.ProviderLink` (from `Doc.ProviderLinks` or
 `GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, and ids are
 passed around as a provider-keyed map (`ProviderIDs`), so another achievement provider is a client
-package, an entry in `model.ProviderOrder` and `providerLabels`, its front-matter field (wired in
-`Doc.providerField`, `GameSummary`, `NewGameFields` and the provider-IDs form), a case in
-`SaveAchievements`, and a scan function in `commands.Scan` — not an edit to every signature that
-touches the archive. Nadeo and Ninja Kiwi are deliberately *not* in that list
+package, a row in `providerTable` (`model/archive.go`: key, label, front-matter key, and the
+provider-IDs form's label and placeholder, which also fixes `ProviderOrder`), the matching field
+in `FrontMatter` and its case in `Doc.providerField`, an entry in `data/providers.yaml` for Hugo
+(`TestProvidersYAMLMatchesTable` fails if it differs from the table), a case in
+`SaveAchievements`, and a scan function in `commands.Scan`. `GameSummary`, `NewGameFields`, the
+provider-IDs form and the new-game file all read the table and carry ids as a provider-keyed `IDs`
+map, so they need no edit. Nadeo and Ninja Kiwi are deliberately *not* in that list
 (see their sections).
 
 ### RetroAchievements subsets

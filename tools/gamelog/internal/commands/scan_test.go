@@ -36,7 +36,7 @@ func TestNormalizeTitle(t *testing.T) {
 func TestLoggedIndex_OffersLinkWhenTitleMatchesAndProviderUnlinked(t *testing.T) {
 	idx := NewLoggedIndex([]model.GameSummary{
 		{Slug: "hades-ii", Title: "Hades II"},
-		{Slug: "balatro", Title: "Balatro", SteamAppID: "2379780"},
+		{Slug: "balatro", Title: "Balatro", IDs: map[string]string{model.ProviderSteam: "2379780"}},
 	})
 
 	c := Candidate{Provider: model.ProviderGooglePlay, ID: "588451498103", Title: "BALATRO"}
@@ -62,7 +62,7 @@ func TestLoggedIndex_OffersLinkWhenTitleMatchesAndProviderUnlinked(t *testing.T)
 // with a note — never a link, which would overwrite the existing id.
 func TestLoggedIndex_NotesTitleClashWithDifferentID(t *testing.T) {
 	idx := NewLoggedIndex([]model.GameSummary{
-		{Slug: "persona-5-royal", Title: "Persona 5 Royal", PSNID: "NPWR19151_00"},
+		{Slug: "persona-5-royal", Title: "Persona 5 Royal", IDs: map[string]string{model.ProviderPSN: "NPWR19151_00"}},
 	})
 	c := Candidate{Provider: model.ProviderPSN, ID: "PPSA01234_00", Title: "Persona 5 Royal"}
 	idx.place(&c)
@@ -76,7 +76,7 @@ func TestLoggedIndex_NotesTitleClashWithDifferentID(t *testing.T) {
 
 func TestLoggedIndex_CoversExternalIDs(t *testing.T) {
 	idx := NewLoggedIndex([]model.GameSummary{
-		{Slug: "some-game", Title: "Renamed Locally", RAGameID: "104", SteamAppID: "1145360", GooglePlayID: "588451498103", RASubsets: []string{"25709"}},
+		{Slug: "some-game", Title: "Renamed Locally", RASubsets: []string{"25709"}, IDs: map[string]string{model.ProviderRA: "104", model.ProviderSteam: "1145360", model.ProviderGooglePlay: "588451498103"}},
 	})
 
 	for _, tc := range []struct{ provider, id string }{

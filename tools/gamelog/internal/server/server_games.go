@@ -136,15 +136,13 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 		fail("title is required")
 		return
 	}
-	raID, err := externalid.ParseExternalID(r.FormValue("ra_id"))
-	if err != nil {
-		fail("RetroAchievements ID: " + err.Error())
-		return
-	}
-	steamID, err := externalid.ParseExternalID(r.FormValue("steam_id"))
-	if err != nil {
-		fail("Steam appid: " + err.Error())
-		return
+	for _, key := range []string{model.ProviderRA, model.ProviderSteam} {
+		id, err := externalid.ParseExternalID(r.FormValue(key))
+		if err != nil {
+			fail(model.ProviderLabel(key) + " ID: " + err.Error())
+			return
+		}
+		f.SetProviderID(key, id)
 	}
 	if err := model.ValidateDate(false)(f.Started); err != nil {
 		fail("started: " + err.Error())
@@ -158,8 +156,6 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 		fail("rating: " + err.Error())
 		return
 	}
-	f.RetroAchievementsID, f.SteamAppID = raID, steamID
-
 	slug := model.Slugify(f.Title)
 	path, err := model.CreateGameFile(s.gamesDir, slug, f)
 	if err != nil {
@@ -168,6 +164,19 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Printf("Created %s\n", path)
 	redirectOK(w, r, gamePath(slug), "Created.")
+}
+
+// providerField is one input of the provider-IDs form.
+type providerField struct {
+	Key, Label, Placeholder, Value string
+}
+
+func providerFields(ids map[string]string) []providerField {
+	var out []providerField
+	for _, p := range model.Providers() {
+		out = append(out, providerField{Key: p.Key, Label: p.FormLabel, Placeholder: p.Placeholder, Value: ids[p.Key]})
+	}
+	return out
 }
 
 // ── Game detail ─────────────────────────────────────────────────────────────
@@ -259,15 +268,11 @@ type gameDetailData struct {
 	Lists        []model.GameList
 	ListRanks    []model.ListRank
 	SelectedList string // preselects the selectors after an add (?list=)
-	// Provider ID fields, rendered as strings regardless of how the YAML
-	// scalar underneath decoded — see model.GameSummary's fields of the
-	// same name.
-	RAGameID     string
-	SteamAppID   string
-	PSNID        string
-	UbisoftID    string
-	XboxID       string
-	GooglePlayID string
+	// IDs is this game's provider ids as strings, whatever the YAML scalar
+	// underneath decoded to, and ProviderFields is the provider-IDs form built
+	// from them — one input per model.Providers() entry.
+	IDs            map[string]string
+	ProviderFields []providerField
 	// NadeoAccountID/NinjaKiwiUserID are the non-achievement links (see
 	// INVARIANTS.md: they stay out of ProviderLinks); each gets its own
 	// refresh button.
@@ -356,12 +361,8 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		Lists:            lists.Lists,
 		ListRanks:        lists.GameRanks(slug),
 		SelectedList:     r.URL.Query().Get("list"),
-		RAGameID:         g.RAGameID,
-		SteamAppID:       g.SteamAppID,
-		PSNID:            g.PSNID,
-		UbisoftID:        g.UbisoftID,
-		XboxID:           g.XboxID,
-		GooglePlayID:     g.GooglePlayID,
+		IDs:              g.IDs,
+		ProviderFields:   providerFields(g.IDs),
 		NadeoAccountID:   doc.NadeoAccountIDString(),
 		NinjaKiwiUserID:  doc.NinjaKiwiUserIDString(),
 		NadeoSeasons:     nadeoSeasons,
@@ -452,14 +453,13 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	redirectOK(w, r, gamePath(slug), "Saved.")
 }
 
-// handleUpdateProviders edits the game's provider IDs — RetroAchievements,
-// Steam, PSN, Ubisoft, Xbox, Google Play — the fields that drive both achievement-fetch
-// linking (Doc.ProviderLinks) and the `suggest` picker. Split out from
-// handleEditInfo since these fields have their own validation (RA/Steam
-// accept a pasted URL or bare ID; the rest are free text since PSN's NPWR…
-// ids aren't numeric) and their own field-loss story: PSNID/UbisoftID/
-// XboxID/GooglePlayID are `omitempty`, so clearing one is a real key removal that must be
-// declared, unlike every field handleEditInfo touches.
+// handleUpdateProviders edits the game's provider IDs (model.Providers) — the
+// fields that drive both achievement-fetch linking (Doc.ProviderLinks) and the
+// `suggest` picker. Split out from handleEditInfo since these fields have their
+// own validation (RA/Steam accept a pasted URL or bare ID; the rest are free
+// text since PSN's NPWR… ids aren't numeric) and their own field-loss story:
+// the later providers are `omitempty`, so clearing one is a real key removal
+// that must be declared, unlike every field handleEditInfo touches.
 func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
 	doc, _, ok := s.gameOr404(w, r, slug)
@@ -471,41 +471,29 @@ func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	raID, err := externalid.ParseExternalID(r.FormValue("ra_id"))
-	if err != nil {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("RetroAchievements ID: %w", err))
-		return
-	}
-	steamID, err := externalid.ParseExternalID(r.FormValue("steam_id"))
-	if err != nil {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("bad Steam appid: %w", err))
-		return
-	}
-	psnID := strings.TrimSpace(r.FormValue("psn_id"))
-	ubisoftID := strings.TrimSpace(r.FormValue("ubisoft_id"))
-	xboxID := strings.TrimSpace(r.FormValue("xbox_id"))
-	googlePlayID := strings.TrimSpace(r.FormValue("googleplay_id"))
-
+	// Every provider's input is named by its key. A cleared field that was set
+	// drops its key (psn_id and the later ones are omitempty), which the loss
+	// check must be told about; for RA and Steam the key stays and this is moot.
 	var allowedRemovals []string
-	if psnID == "" && doc.FM.PSNID != nil {
-		allowedRemovals = append(allowedRemovals, "psn_id")
+	for _, p := range model.Providers() {
+		raw := r.FormValue(p.Key)
+		id := strings.TrimSpace(raw)
+		if p.NumericID {
+			parsed, err := externalid.ParseExternalID(raw)
+			if err != nil {
+				redirectErr(w, r, gamePath(slug), fmt.Errorf("%s: %w", p.FormLabel, err))
+				return
+			}
+			id = parsed
+		}
+		if id == "" && doc.ProviderID(p.Key) != "" {
+			allowedRemovals = append(allowedRemovals, p.FMKey)
+		}
+		if err := doc.SetProviderID(p.Key, id); err != nil {
+			redirectErr(w, r, gamePath(slug), err)
+			return
+		}
 	}
-	if ubisoftID == "" && doc.FM.UbisoftID != nil {
-		allowedRemovals = append(allowedRemovals, "ubisoft_id")
-	}
-	if xboxID == "" && doc.FM.XboxID != nil {
-		allowedRemovals = append(allowedRemovals, "xbox_id")
-	}
-	if googlePlayID == "" && doc.FM.GooglePlayID != nil {
-		allowedRemovals = append(allowedRemovals, "googleplay_id")
-	}
-
-	doc.FM.RetroAchievementsID = model.ScalarFromInput(raID)
-	doc.FM.SteamAppID = model.ScalarFromInput(steamID)
-	doc.FM.PSNID = model.ScalarFromInput(psnID)
-	doc.FM.UbisoftID = model.ScalarFromInput(ubisoftID)
-	doc.FM.XboxID = model.ScalarFromInput(xboxID)
-	doc.FM.GooglePlayID = model.ScalarFromInput(googlePlayID)
 
 	if err := mutate.WriteFrontMatter(doc, allowedRemovals...); err != nil {
 		redirectErr(w, r, gamePath(slug), err)

@@ -6,15 +6,13 @@
      event already covers that day. A sidebar holds the filters
      (assets/js/games-log.ts) and the aggregate achievement stats.
      Included from layouts/games/taxonomy.html. */}}
-{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" "googleplay" -}}
-{{- $providerNames := dict
-    "retroachievements" "RetroAchievements"
-    "steam"             "Steam"
-    "xbox"              "Xbox"
-    "psn"               "PSN"
-    "ubisoft"           "Ubisoft"
-    "googleplay"        "Google Play"
--}}
+{{/* provider keys, order and names come from data/providers.yaml */}}
+{{- $providerOrder := slice -}}
+{{- $providerNames := dict -}}
+{{- range site.Data.providers -}}
+  {{- $providerOrder = $providerOrder | append .key -}}
+  {{- $providerNames = merge $providerNames (dict .key .label) -}}
+{{- end -}}
 
 {{/* sortKey = "<day>|<rank>|<time>", sorted desc: within a day, mastery (3) and
      a run ending, a run beating the game, or a provider's last-played (2) read

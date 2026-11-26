@@ -51,7 +51,7 @@ func resetSubsetCache(t *testing.T) {
 func TestResolveSubsets_LinksToTheLoggedBaseGame(t *testing.T) {
 	resetSubsetCache(t)
 	index := NewLoggedIndex([]model.GameSummary{
-		{Slug: "professor-layton-and-the-last-specter", Title: "Professor Layton and the Last Specter", RAGameID: "7601"},
+		{Slug: "professor-layton-and-the-last-specter", Title: "Professor Layton and the Last Specter", IDs: map[string]string{model.ProviderRA: "7601"}},
 	})
 	ra := &fakeRA{byID: map[string]retroachievements.RAProgress{"25709": subsetProgress(7601)}}
 
@@ -115,7 +115,7 @@ func TestResolveSubsets_LeavesOrdinaryCandidatesAlone(t *testing.T) {
 func TestLoggedIndex_SkipsAttachedSubsets(t *testing.T) {
 	idx := NewLoggedIndex([]model.GameSummary{{
 		Slug: "professor-layton-and-the-last-specter", Title: "Professor Layton and the Last Specter",
-		RAGameID: "7601", RASubsets: []string{"25709"},
+		IDs: map[string]string{model.ProviderRA: "7601"}, RASubsets: []string{"25709"},
 	}})
 	if !idx.covered(model.ProviderRA, "25709") {
 		t.Error("an attached subset should be filtered out of the scan")

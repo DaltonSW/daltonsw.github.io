@@ -77,7 +77,7 @@
 </form>
 {{end}}
 
-{{if or .RAGameID .SteamAppID .PSNID .UbisoftID .XboxID .GooglePlayID}}
+{{if .IDs}}
 <div class="tui" id="suggest">
   <span class="tui__title">suggested dates</span>
   <div id="suggest-panel">
@@ -168,12 +168,9 @@
   <div class="tui">
     <span class="tui__title">provider IDs</span>
     <form method="post" action="/games/{{.Slug}}/providers" class="field-grid">
-      <div class="field"><label>RetroAchievements ID</label><input type="text" name="ra_id" value="{{.RAGameID}}" placeholder="numeric ID or game URL"></div>
-      <div class="field"><label>Steam appid</label><input type="text" name="steam_id" value="{{.SteamAppID}}" placeholder="numeric appid or store URL"></div>
-      <div class="field"><label>PSN trophy-set ID</label><input type="text" name="psn_id" value="{{.PSNID}}" placeholder="NPWR…"></div>
-      <div class="field"><label>Ubisoft (Exophase) ID</label><input type="text" name="ubisoft_id" value="{{.UbisoftID}}"></div>
-      <div class="field"><label>Xbox title ID</label><input type="text" name="xbox_id" value="{{.XboxID}}"></div>
-      <div class="field"><label>Google Play app ID</label><input type="text" name="googleplay_id" value="{{.GooglePlayID}}" placeholder="package name, e.g. com.example.game"></div>
+      {{range .ProviderFields}}
+      <div class="field"><label>{{.Label}}</label><input type="text" name="{{.Key}}" value="{{.Value}}"{{with .Placeholder}} placeholder="{{.}}"{{end}}></div>
+      {{end}}
       <div class="btn-row"><button type="submit" class="btn--primary">Save</button></div>
     </form>
     {{/* Read-only: a subset is attached from Housekeeping, where the parent

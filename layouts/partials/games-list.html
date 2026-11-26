@@ -3,15 +3,13 @@
      data-* sort/filter keys read by assets/js/games-list.ts, which reveals the
      controls, re-orders rows, and turns the Status/Platforms rows into filters.
      Included from layouts/games/taxonomy.html. */}}
-{{- $providerOrder := slice "retroachievements" "steam" "xbox" "psn" "ubisoft" "googleplay" -}}
-{{- $providerNames := dict
-    "retroachievements" "RetroAchievements"
-    "steam"             "Steam"
-    "xbox"              "Xbox"
-    "psn"               "PSN"
-    "ubisoft"           "Ubisoft"
-    "googleplay"        "Google Play"
--}}
+{{/* provider keys, order and names come from data/providers.yaml */}}
+{{- $providerOrder := slice -}}
+{{- $providerNames := dict -}}
+{{- range site.Data.providers -}}
+  {{- $providerOrder = $providerOrder | append .key -}}
+  {{- $providerNames = merge $providerNames (dict .key .label) -}}
+{{- end -}}
 {{- $rows := slice -}}
 {{- $statusCounts := dict -}}
 {{- $platformCounts := dict -}}
