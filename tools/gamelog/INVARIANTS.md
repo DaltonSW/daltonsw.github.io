@@ -70,6 +70,12 @@ what's load-bearing.
 - **`Extra map[string]any` with `yaml:",inline"` is load-bearing** on `PlaythroughEntry`,
   `SessionEntry` and `FrontMatter`. It's the only thing keeping a hand-added field from being
   deleted by the next whole-file rewrite.
+- **Every run's dates are a `sessions:` list; nothing writes a flat `started`/`finished`.** A flat
+  pair typed by hand is moved into one session on load (`convertFlat`), and the loss check lets
+  those flat paths go only when `sessions[0]` holds the value (`PlaythroughsFile.ConvertedMoves`).
+  The "latest" session is the one with the greatest `started` (`latestSession`), never the last by
+  position, because Hugo sorts by `started` and takes the last. An entry with no sessions is not
+  open. `TestLoadPlaythroughs_ConvertsFlatEntriesToSessions` pins the conversion.
 - **Dates in `playthroughs.yaml` are typed as `string` on purpose.** YAML resolves an unquoted
   `2026-01-04` to a timestamp, and re-encoding that rewrites every date in the file as RFC3339.
 - **Every playthrough write goes through the pre-write loss check.** `mutate.VerifyNoLoss` diffs
@@ -289,8 +295,8 @@ Kept only because the invariants above point back to these. The details are in g
 - **Front-matter line-splicing destroyed or misattributed fields.** Guessed YAML field boundaries
   deleted or re-parented data while producing valid YAML and exiting 0. Retired by moving
   playthroughs to a whole-file `playthroughs.yaml`, which is where the loss check, `Extra` and
-  string dates come from. `TestAddSession_ConvertsWithoutDisturbingSiblings` and
-  `TestAddSession_LeavesTheEarlierSessionAlone` carry the original repros.
+  string dates come from. `TestAddSession_ConvertsWithoutDisturbingSiblings` (now a hand-typed flat file
+  converting on load) and `TestAddSession_LeavesTheEarlierSessionAlone` carry the original repros.
 - **The archive used to live at `content/games/<slug>/achievements.json`.** Renames moved it,
   deletes destroyed it, and Hugo published it, `raw` and all. It moved to
   `archive/<provider>/<id>.json`.

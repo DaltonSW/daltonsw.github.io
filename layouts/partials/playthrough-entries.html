@@ -10,6 +10,9 @@
 {{- end -}}
 
 {{- range $logged }}
+  {{/* Every logged run is a sessions: list (the tool never writes a flat pair).
+       .started/.finished are read only as a fallback for a flat pair typed by hand
+       and not yet rewritten by the tool. */}}
   {{- $started := .started }}
   {{- $finished := .finished }}
   {{- with .sessions }}

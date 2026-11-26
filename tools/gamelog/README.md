@@ -97,8 +97,17 @@ under `retroachievements/` — see "RetroAchievements subsets" below.
 replacement for the line-splice editor this tool used to patch front matter with, which computed
 line ranges from a `yaml.Node` tree and produced the two worst bugs in the project's history —
 one deleted every field written between `started:` and `finished:`, the other reattached a
-trailing field to the wrong session. Both wrote valid YAML and exited 0. Converting a playthrough
-to `sessions:` is now a slice assignment, so neither failure has anywhere left to live.
+trailing field to the wrong session. Both wrote valid YAML and exited 0. Dates now live in a
+slice, so neither failure has anywhere left to live.
+
+**Every run's dates are a `sessions:` list**, even a single day: `{started, finished}` pairs, with
+`finished: ""` while a session is open. The tool never writes a flat `started`/`finished` on an
+entry. A flat pair typed by hand is still accepted: `LoadPlaythroughs` moves it into one session in
+memory (a finish with no start becomes a one-day session on that finish date), and the next write
+saves it that way. An entry with no sessions at all (an undated run, a planned placeholder) is
+legal and is never an open run. When an entry has several sessions its **latest** is the one with
+the greatest `started`, whatever the order in the file. That matches Hugo, which sorts by `started`
+and takes the last. A run's finish date, last activity and open/closed state all read that session.
 
 Whole-file encoding has its own way to lose data: the encoder drops any key the struct doesn't
 model. Three things prevent that, and all three matter:
@@ -115,9 +124,11 @@ model. Three things prevent that, and all three matter:
     playthroughs[0].status: "playing"
   ```
 
-  An operation that legitimately removes a path declares it — converting to `sessions:` moves the
-  flat date pair, and clearing a field drops its key. Anything else tripping this check means the
-  operation is wrong; fix it rather than widening the allowlist.
+  An operation that legitimately removes a path declares it, such as a deleted session or a
+  cleared field dropping its key. The one automatic allowance is a hand-typed flat date pair
+  that load moved into `sessions[0]`: its flat path may vanish only if the session path holding
+  the value is in the rewrite, so dropping the dates altogether is still refused. Anything else
+  tripping this check means the operation is wrong; fix it rather than widening the allowlist.
 - **Writes are atomic** (temp file + rename). This is the only copy of the playthrough data and
   it's rewritten whole, so a crash partway through must not be able to truncate it.
 
@@ -304,13 +315,14 @@ in place on 2026-11-21, which removed the special cases that resolved them.)
 ## Planned replays
 
 A `status: planned` entry in `playthroughs.yaml` is a dateless placeholder — "I intend to (re)play
-this," with no `started` yet:
+this," with no sessions yet:
 
 ```yaml
 playthroughs:
-  - started: "2021-05-01"
-    finished: "2021-05-15"
-    status: finished
+  - status: finished
+    sessions:
+      - started: "2021-05-01"
+        finished: "2021-05-15"
   - status: planned
     platform: PC
     notes: Try NG+ mode this time
@@ -323,7 +335,7 @@ isn't itself part of
 that family (`forms.IsOneShot` returns `false` for it, and it's deliberately absent from
 `forms.PlaythroughStatuses` — see below).
 
-Because a blank `started` is what every date-based partial (`games-timeline.html`,
+Because an entry with no sessions has no `started`, which is what every date-based partial (`games-timeline.html`,
 `games-log.html`) already guards on before turning an entry into a bar or a log event, a planned
 entry is automatically invisible to both. `games-list.html` surfaces it explicitly instead: the
 game gets a `[planned]` tag, and the Game list sidebar's `[backlog]` filter includes it alongside
@@ -331,8 +343,8 @@ game gets a `[planned]` tag, and the Game list sidebar's `[backlog]` filter incl
 renders any entry's `status` as a plain pill and leaves a blank meta row when dates are empty.
 
 "Planned replays" on a game's page lists each placeholder with two forms: **Start now** graduates it
-— `GraduatePlannedPlaythrough` fills in `Started`/`Finished`/`Status`/etc. **in place**, at the same
-array index, rather than replacing the entry — and **Save** edits its platform/subgame/notes
+— `GraduatePlannedPlaythrough` adds its first session and fills in `Status`/etc. **in place**, at the
+same array index, rather than replacing the entry — and **Save** edits its platform/subgame/notes
 (`EditPlanned`) without touching status or dates. Graduating in place matters for the loss-check:
 every field it sets was previously empty, so `mutate.VerifyNoLoss` sees a pure addition and no
 allowed-removals declaration is needed.
