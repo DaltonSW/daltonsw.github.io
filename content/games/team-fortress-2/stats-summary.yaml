@@ -1,0 +1,499 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: Scout.accum.iDamageDealt
+          value: 1120
+        - key: Scout.accum.iNumberOfKills
+          value: 7
+        - key: Scout.accum.iPlayTime
+          value: 757
+        - key: Scout.accum.iPointCaptures
+          value: 10
+        - key: Scout.accum.iPointsScored
+          value: 27
+        - key: Scout.max.iDamageDealt
+          value: 266
+        - key: Scout.max.iNumberOfKills
+          value: 2
+        - key: Scout.max.iPlayTime
+          value: 83
+        - key: Scout.max.iPointCaptures
+          value: 3
+        - key: Scout.max.iPointsScored
+          value: 8
+        - key: Soldier.accum.iBuildingsDestroyed
+          value: 16
+        - key: Soldier.accum.iDamageDealt
+          value: 22787
+        - key: Soldier.accum.iDominations
+          value: 1
+        - key: Soldier.accum.iKillAssists
+          value: 13
+        - key: Soldier.accum.iNumberOfKills
+          value: 109
+        - key: Soldier.accum.iPlayTime
+          value: 8479
+        - key: Soldier.accum.iPointCaptures
+          value: 13
+        - key: Soldier.accum.iPointDefenses
+          value: 5
+        - key: Soldier.accum.iPointsScored
+          value: 163
+        - key: Soldier.accum.iRevenge
+          value: 5
+        - key: Soldier.max.iBuildingsDestroyed
+          value: 4
+        - key: Soldier.max.iDamageDealt
+          value: 861
+        - key: Soldier.max.iDominations
+          value: 1
+        - key: Soldier.max.iKillAssists
+          value: 3
+        - key: Soldier.max.iNumberOfKills
+          value: 5
+        - key: Soldier.max.iPlayTime
+          value: 289
+        - key: Soldier.max.iPointCaptures
+          value: 2
+        - key: Soldier.max.iPointDefenses
+          value: 2
+        - key: Soldier.max.iPointsScored
+          value: 10
+        - key: Soldier.max.iRevenge
+          value: 2
+        - key: Spy.accum.iDamageDealt
+          value: 3254
+        - key: Spy.accum.iKillAssists
+          value: 2
+        - key: Spy.accum.iNumberOfKills
+          value: 15
+        - key: Spy.accum.iPlayTime
+          value: 5001
+        - key: Spy.accum.iPointCaptures
+          value: 1
+        - key: Spy.accum.iPointsScored
+          value: 26
+        - key: Spy.accum.iRevenge
+          value: 1
+        - key: Spy.max.iDamageDealt
+          value: 262
+        - key: Spy.max.iKillAssists
+          value: 1
+        - key: Spy.max.iNumberOfKills
+          value: 2
+        - key: Spy.max.iPlayTime
+          value: 413
+        - key: Spy.max.iPointCaptures
+          value: 1
+        - key: Spy.max.iPointsScored
+          value: 3
+        - key: Spy.max.iRevenge
+          value: 1
+        - key: Pyro.accum.iBuildingsDestroyed
+          value: 1
+        - key: Pyro.accum.iDamageDealt
+          value: 5392
+        - key: Pyro.accum.iKillAssists
+          value: 8
+        - key: Pyro.accum.iNumberOfKills
+          value: 26
+        - key: Pyro.accum.iPlayTime
+          value: 2204
+        - key: Pyro.accum.iPointCaptures
+          value: 21
+        - key: Pyro.accum.iPointDefenses
+          value: 9
+        - key: Pyro.accum.iPointsScored
+          value: 80
+        - key: Pyro.accum.iRevenge
+          value: 1
+        - key: Pyro.max.iBuildingsDestroyed
+          value: 1
+        - key: Pyro.max.iDamageDealt
+          value: 450
+        - key: Pyro.max.iKillAssists
+          value: 3
+        - key: Pyro.max.iNumberOfKills
+          value: 3
+        - key: Pyro.max.iPlayTime
+          value: 217
+        - key: Pyro.max.iPointCaptures
+          value: 5
+        - key: Pyro.max.iPointDefenses
+          value: 2
+        - key: Pyro.max.iPointsScored
+          value: 12
+        - key: Pyro.max.iRevenge
+          value: 1
+        - key: Demoman.accum.iDamageDealt
+          value: 1116
+        - key: Demoman.accum.iKillAssists
+          value: 3
+        - key: Demoman.accum.iNumberOfKills
+          value: 6
+        - key: Demoman.accum.iPlayTime
+          value: 888
+        - key: Demoman.accum.iPointsScored
+          value: 8
+        - key: Demoman.accum.iRevenge
+          value: 1
+        - key: Demoman.max.iDamageDealt
+          value: 199
+        - key: Demoman.max.iKillAssists
+          value: 2
+        - key: Demoman.max.iNumberOfKills
+          value: 1
+        - key: Demoman.max.iPlayTime
+          value: 99
+        - key: Demoman.max.iPointsScored
+          value: 2
+        - key: Demoman.max.iRevenge
+          value: 1
+        - key: Heavy.accum.iBuildingsDestroyed
+          value: 2
+        - key: Heavy.accum.iDamageDealt
+          value: 6751
+        - key: Heavy.accum.iKillAssists
+          value: 9
+        - key: Heavy.accum.iNumberOfKills
+          value: 27
+        - key: Heavy.accum.iPlayTime
+          value: 2526
+        - key: Heavy.accum.iPointCaptures
+          value: 3
+        - key: Heavy.accum.iPointDefenses
+          value: 2
+        - key: Heavy.accum.iPointsScored
+          value: 40
+        - key: Heavy.accum.iRevenge
+          value: 2
+        - key: Heavy.max.iBuildingsDestroyed
+          value: 2
+        - key: Heavy.max.iDamageDealt
+          value: 400
+        - key: Heavy.max.iKillAssists
+          value: 2
+        - key: Heavy.max.iNumberOfKills
+          value: 2
+        - key: Heavy.max.iPlayTime
+          value: 144
+        - key: Heavy.max.iPointCaptures
+          value: 1
+        - key: Heavy.max.iPointDefenses
+          value: 1
+        - key: Heavy.max.iPointsScored
+          value: 3
+        - key: Heavy.max.iRevenge
+          value: 1
+        - key: Engineer.accum.iDamageDealt
+          value: 7429
+        - key: Engineer.accum.iDominations
+          value: 5
+        - key: Engineer.accum.iKillAssists
+          value: 11
+        - key: Engineer.accum.iNumberOfKills
+          value: 48
+        - key: Engineer.accum.iPlayTime
+          value: 6336
+        - key: Engineer.accum.iPointDefenses
+          value: 1
+        - key: Engineer.accum.iPointsScored
+          value: 61
+        - key: Engineer.accum.iRevenge
+          value: 2
+        - key: Engineer.max.iDamageDealt
+          value: 2020
+        - key: Engineer.max.iDominations
+          value: 3
+        - key: Engineer.max.iKillAssists
+          value: 4
+        - key: Engineer.max.iNumberOfKills
+          value: 16
+        - key: Engineer.max.iPlayTime
+          value: 954
+        - key: Engineer.max.iPointDefenses
+          value: 1
+        - key: Engineer.max.iPointsScored
+          value: 20
+        - key: Engineer.max.iRevenge
+          value: 1
+        - key: Sniper.accum.iBuildingsDestroyed
+          value: 5
+        - key: Sniper.accum.iDamageDealt
+          value: 23541
+        - key: Sniper.accum.iDominations
+          value: 1
+        - key: Sniper.accum.iKillAssists
+          value: 34
+        - key: Sniper.accum.iNumberOfKills
+          value: 99
+        - key: Sniper.accum.iPlayTime
+          value: 12176
+        - key: Sniper.accum.iPointDefenses
+          value: 5
+        - key: Sniper.accum.iPointsScored
+          value: 136
+        - key: Sniper.accum.iRevenge
+          value: 16
+        - key: Sniper.max.iBuildingsDestroyed
+          value: 1
+        - key: Sniper.max.iDamageDealt
+          value: 1178
+        - key: Sniper.max.iDominations
+          value: 1
+        - key: Sniper.max.iKillAssists
+          value: 5
+        - key: Sniper.max.iNumberOfKills
+          value: 7
+        - key: Sniper.max.iPlayTime
+          value: 374
+        - key: Sniper.max.iPointDefenses
+          value: 2
+        - key: Sniper.max.iPointsScored
+          value: 8
+        - key: Sniper.max.iRevenge
+          value: 2
+        - key: Spy.accum.iBackstabs
+          value: 8
+        - key: Spy.max.iBackstabs
+          value: 1
+        - key: Engineer.accum.iBuildingsBuilt
+          value: 45
+        - key: Engineer.max.iBuildingsBuilt
+          value: 7
+        - key: Sniper.accum.iHeadshots
+          value: 30
+        - key: Sniper.max.iHeadshots
+          value: 2
+        - key: Spy.accum.iHealthPointsLeached
+          value: 18
+        - key: Spy.max.iHealthPointsLeached
+          value: 18
+        - key: Engineer.accum.iNumTeleports
+          value: 2
+        - key: Engineer.max.iNumTeleports
+          value: 2
+        - key: Engineer.max.iSentryKills
+          value: 5
+        - key: TF_PYRO_FORCE_WATERJUMP_STAT
+          value: 1
+        - key: TF_PYRO_KILL_POSTDEATH_STAT
+          value: 4
+        - key: TF_PYRO_REVEAL_SPIES_STAT
+          value: 7
+        - key: TF_PYRO_BURN_SPIES_AS_YOU_STAT
+          value: 5
+        - key: TF_PYRO_DESTROY_BUILDINGS_STAT
+          value: 1
+        - key: TF_PYRO_KILL_GRIND_STAT
+          value: 36
+        - key: TF_PYRO_KILL_FROM_BEHIND_STAT
+          value: 4
+        - key: TF_PYRO_KILL_GRIND_LARGE_STAT
+          value: 36
+        - key: Pyro.accum.iFireDamage
+          value: 5264
+        - key: TF_HEAVY_ASSIST_HEAVY_GRIND_STAT
+          value: 3
+        - key: TF_HEAVY_CLEAR_STICKYBOMBS_STAT
+          value: 1
+        - key: TF_HEAVY_KILL_DOMINATED_STAT
+          value: 1
+        - key: TF_HEAVY_ASSIST_GRIND_STAT
+          value: 13
+        - key: TF_HEAVY_KILL_MIDAIR_MINIGUN_STAT
+          value: 10
+        - key: TF_HEAVY_KILL_CAPPING_ENEMIES_STAT
+          value: 1
+        - key: TF_HEAVY_REVENGE_ASSIST_STAT
+          value: 1
+        - key: TF_SCOUT_LIFETIME_KILLS_STAT
+          value: 9
+        - key: TF_SCOUT_DOUBLE_JUMPS_STAT
+          value: 14
+        - key: TF_SCOUT_START_AND_FINISH_CAP_STAT
+          value: 1
+        - key: TF_SCOUT_LONG_DISTANCE_RUNNER_STAT
+          value: 77
+        - key: TF_SNIPER_KILL_GRIND_STAT
+          value: 124
+        - key: TF_SNIPER_HEADSHOT_SNIPERS_STAT
+          value: 10
+        - key: TF_SNIPER_DESTROY_SENTRYGUNS_STAT
+          value: 3
+        - key: TF_SNIPER_KILL_SPIES_MELEE_STAT
+          value: 2
+        - key: TF_SNIPER_KILL_UNSCOPED_STAT
+          value: 2
+        - key: TF_SNIPER_GET_BACKSTABBED_STAT
+          value: 43
+        - key: TF_SPY_BACKSTAB_FRIENDS_STAT
+          value: 1
+        - key: TF_SPY_BACKSTAB_GRIND_STAT
+          value: 11
+        - key: TF_SOLDIER_KILL_DEMOMAN_GRIND_STAT
+          value: 10
+        - key: TF_SOLDIER_DESTROY_SENTRY_OUT_OF_RANGE_STAT
+          value: 5
+        - key: TF_SOLDIER_DUO_SOLDIER_KILLS_STAT
+          value: 5
+        - key: TF_SOLDIER_KILL_ON_FIRE_STAT
+          value: 7
+        - key: TF_SOLDIER_GIB_GRIND_STAT
+          value: 121
+        - key: TF_SOLDIER_KILL_TWENTY_FROM_ABOVE_STAT
+          value: 20
+        - key: TF_SOLDIER_DEFEND_CAP_THIRTY_TIMES_STAT
+          value: 5
+        - key: TF_DEMOMAN_KILL_SOLDIER_GRIND_STAT
+          value: 5
+        - key: TF_DEMOMAN_KILL_X_WITH_DIRECTPIPE_STAT
+          value: 9
+        - key: TF_DEMOMAN_DUO_DEMOMAN_KILLS_STAT
+          value: 2
+        - key: TF_DEMOMAN_KILL_X_DEFENDING_STAT
+          value: 1
+        - key: TF_DEMOMAN_KILL_X_SCOUTS_PYROS_STAT
+          value: 3
+        - key: TF_ENGINEER_SENTRY_KILL_CAPS_STAT
+          value: 2
+        - key: TF_ENGINEER_DESTROY_SAPPERS_STAT
+          value: 6
+        - key: TF_ENGINEER_TELEPORT_GRIND_STAT
+          value: 2
+        - key: TF_ENGINEER_UPGRADE_BUILDINGS_STAT
+          value: 9
+        - key: TF_ENGINEER_SENTRY_KILL_LIFETIME_GRIND_STAT
+          value: 28
+        - key: TF_ENGINEER_WASTE_METAL_GRIND_STAT
+          value: 383
+        - key: TF_ENGINEER_BUILDING_CARRY_STAT
+          value: 61
+        - key: TF_ENGINEER_KILL_ASSIST_STAT
+          value: 10
+        - key: TF_ENGINEER_DISPENSER_HEAL_GRIND_STAT
+          value: 2206
+        - key: TF_ENGINEER_REPAIR_TEAM_GRIND_STAT
+          value: 1
+        - key: TF_CHRISTMAS_COLLECT_GIFTS_STAT
+          value: 3
+        - key: Scout.mvm.accum.iDamageDealt
+          value: 259
+        - key: Scout.mvm.accum.iKillAssists
+          value: 1
+        - key: Scout.mvm.accum.iNumberOfKills
+          value: 1
+        - key: Scout.mvm.accum.iPlayTime
+          value: 148
+        - key: Scout.mvm.accum.iPointsScored
+          value: 1
+        - key: Scout.mvm.max.iDamageDealt
+          value: 156
+        - key: Scout.mvm.max.iKillAssists
+          value: 1
+        - key: Scout.mvm.max.iNumberOfKills
+          value: 1
+        - key: Scout.mvm.max.iPlayTime
+          value: 109
+        - key: Scout.mvm.max.iPointsScored
+          value: 1
+        - key: Soldier.mvm.accum.iDamageDealt
+          value: 8427
+        - key: Soldier.mvm.accum.iKillAssists
+          value: 19
+        - key: Soldier.mvm.accum.iNumberOfKills
+          value: 32
+        - key: Soldier.mvm.accum.iPlayTime
+          value: 1635
+        - key: Soldier.mvm.accum.iPointDefenses
+          value: 5
+        - key: Soldier.mvm.accum.iPointsScored
+          value: 45
+        - key: Soldier.mvm.max.iDamageDealt
+          value: 2575
+        - key: Soldier.mvm.max.iKillAssists
+          value: 7
+        - key: Soldier.mvm.max.iNumberOfKills
+          value: 9
+        - key: Soldier.mvm.max.iPlayTime
+          value: 422
+        - key: Soldier.mvm.max.iPointDefenses
+          value: 2
+        - key: Soldier.mvm.max.iPointsScored
+          value: 13
+        - key: Engineer.mvm.accum.iDamageDealt
+          value: 45805
+        - key: Engineer.mvm.accum.iKillAssists
+          value: 53
+        - key: Engineer.mvm.accum.iNumberOfKills
+          value: 170
+        - key: Engineer.mvm.accum.iPlayTime
+          value: 3961
+        - key: Engineer.mvm.accum.iPointDefenses
+          value: 46
+        - key: Engineer.mvm.accum.iPointsScored
+          value: 502
+        - key: Engineer.mvm.max.iDamageDealt
+          value: 8507
+        - key: Engineer.mvm.max.iKillAssists
+          value: 7
+        - key: Engineer.mvm.max.iNumberOfKills
+          value: 26
+        - key: Engineer.mvm.max.iPlayTime
+          value: 615
+        - key: Engineer.mvm.max.iPointDefenses
+          value: 9
+        - key: Engineer.mvm.max.iPointsScored
+          value: 77
+        - key: Sniper.mvm.accum.iDamageDealt
+          value: 1127
+        - key: Sniper.mvm.accum.iKillAssists
+          value: 1
+        - key: Sniper.mvm.accum.iNumberOfKills
+          value: 4
+        - key: Sniper.mvm.accum.iPlayTime
+          value: 317
+        - key: Sniper.mvm.accum.iPointDefenses
+          value: 2
+        - key: Sniper.mvm.accum.iPointsScored
+          value: 11
+        - key: Sniper.mvm.max.iDamageDealt
+          value: 1029
+        - key: Sniper.mvm.max.iKillAssists
+          value: 1
+        - key: Sniper.mvm.max.iNumberOfKills
+          value: 4
+        - key: Sniper.mvm.max.iPlayTime
+          value: 179
+        - key: Sniper.mvm.max.iPointDefenses
+          value: 2
+        - key: Sniper.mvm.max.iPointsScored
+          value: 11
+        - key: Engineer.mvm.accum.iBuildingsBuilt
+          value: 54
+        - key: Engineer.mvm.max.iBuildingsBuilt
+          value: 7
+        - key: Sniper.mvm.accum.iHeadshots
+          value: 3
+        - key: Sniper.mvm.max.iHeadshots
+          value: 3
+        - key: Engineer.mvm.accum.iNumTeleports
+          value: 20
+        - key: Engineer.mvm.max.iNumTeleports
+          value: 4
+        - key: Engineer.mvm.max.iSentryKills
+          value: 28
+        - key: TF_MVM_COLLECT_MONEY_GRIND_STAT
+          value: 112
+        - key: TF_MVM_KILL_ROBOT_GRIND_STAT
+          value: 209
+        - key: TF_MVM_KILL_ROBOT_MEGA_GRIND_STAT
+          value: 209
+        - key: cp_dustbowl.accum.iPlayTime
+          value: 791
+        - key: cp_mountainlab.accum.iPlayTime
+          value: 3205
+        - key: koth_viaduct.accum.iPlayTime
+          value: 62

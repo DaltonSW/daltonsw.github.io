@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Stardew Valley",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "413150",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 28,
  "total": 49,
  "first": "2016-03-05",
@@ -439,6 +439,42 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/413150/cb59574016b73e80f11a25b5d8e1ed10f6738fd6.jpg",
    "rarity": 4.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "money",
+   "name": "Total Money Earned"
+  },
+  {
+   "key": "crops",
+   "name": "Crops Harvested",
+   "value": 594
+  },
+  {
+   "key": "forage",
+   "name": "Items Foraged",
+   "value": 135
+  },
+  {
+   "key": "fish",
+   "name": "Fish Caught",
+   "value": 23
+  },
+  {
+   "key": "monsters",
+   "name": "Monsters Killed",
+   "value": 300
+  },
+  {
+   "key": "board_quests",
+   "name": "Help Wanted Quests Completed",
+   "value": 5
+  },
+  {
+   "key": "loved_gifts",
+   "name": "Loved Gifts Given",
+   "value": 10
   }
  ],
  "raw": {

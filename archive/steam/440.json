@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Team Fortress 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "440",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 63,
  "total": 520,
  "first": "2012-07-23",
@@ -4236,6 +4236,3116 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/440/tf_win_well_minimumtime.jpg",
    "rarity": 12.5
+  }
+ ],
+ "stats": [
+  {
+   "key": "Scout.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Scout.accum.iDamageDealt",
+   "value": 1120
+  },
+  {
+   "key": "Scout.accum.iDominations"
+  },
+  {
+   "key": "Scout.accum.iKillAssists"
+  },
+  {
+   "key": "Scout.accum.iNumberOfKills",
+   "value": 7
+  },
+  {
+   "key": "Scout.accum.iNumDeaths"
+  },
+  {
+   "key": "Scout.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Scout.accum.iNumShotsFired"
+  },
+  {
+   "key": "Scout.accum.iNumShotsHit"
+  },
+  {
+   "key": "Scout.accum.iPlayTime",
+   "value": 757
+  },
+  {
+   "key": "Scout.accum.iPointCaptures",
+   "value": 10
+  },
+  {
+   "key": "Scout.accum.iPointDefenses"
+  },
+  {
+   "key": "Scout.accum.iPointsScored",
+   "value": 27
+  },
+  {
+   "key": "Scout.accum.iRevenge"
+  },
+  {
+   "key": "Scout.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Scout.max.iDamageDealt",
+   "value": 266
+  },
+  {
+   "key": "Scout.max.iDominations"
+  },
+  {
+   "key": "Scout.max.iKillAssists"
+  },
+  {
+   "key": "Scout.max.iNumberOfKills",
+   "value": 2
+  },
+  {
+   "key": "Scout.max.iNumDeaths"
+  },
+  {
+   "key": "Scout.max.iNumInvulnerable"
+  },
+  {
+   "key": "Scout.max.iNumShotsFired"
+  },
+  {
+   "key": "Scout.max.iNumShotsHit"
+  },
+  {
+   "key": "Scout.max.iPlayTime",
+   "value": 83
+  },
+  {
+   "key": "Scout.max.iPointCaptures",
+   "value": 3
+  },
+  {
+   "key": "Scout.max.iPointDefenses"
+  },
+  {
+   "key": "Scout.max.iPointsScored",
+   "value": 8
+  },
+  {
+   "key": "Scout.max.iRevenge"
+  },
+  {
+   "key": "Soldier.accum.iBuildingsDestroyed",
+   "value": 16
+  },
+  {
+   "key": "Soldier.accum.iDamageDealt",
+   "value": 22787
+  },
+  {
+   "key": "Soldier.accum.iDominations",
+   "value": 1
+  },
+  {
+   "key": "Soldier.accum.iKillAssists",
+   "value": 13
+  },
+  {
+   "key": "Soldier.accum.iNumberOfKills",
+   "value": 109
+  },
+  {
+   "key": "Soldier.accum.iNumDeaths"
+  },
+  {
+   "key": "Soldier.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Soldier.accum.iNumShotsFired"
+  },
+  {
+   "key": "Soldier.accum.iNumShotsHit"
+  },
+  {
+   "key": "Soldier.accum.iPlayTime",
+   "value": 8479
+  },
+  {
+   "key": "Soldier.accum.iPointCaptures",
+   "value": 13
+  },
+  {
+   "key": "Soldier.accum.iPointDefenses",
+   "value": 5
+  },
+  {
+   "key": "Soldier.accum.iPointsScored",
+   "value": 163
+  },
+  {
+   "key": "Soldier.accum.iRevenge",
+   "value": 5
+  },
+  {
+   "key": "Soldier.max.iBuildingsDestroyed",
+   "value": 4
+  },
+  {
+   "key": "Soldier.max.iDamageDealt",
+   "value": 861
+  },
+  {
+   "key": "Soldier.max.iDominations",
+   "value": 1
+  },
+  {
+   "key": "Soldier.max.iKillAssists",
+   "value": 3
+  },
+  {
+   "key": "Soldier.max.iNumberOfKills",
+   "value": 5
+  },
+  {
+   "key": "Soldier.max.iNumDeaths"
+  },
+  {
+   "key": "Soldier.max.iNumInvulnerable"
+  },
+  {
+   "key": "Soldier.max.iNumShotsFired"
+  },
+  {
+   "key": "Soldier.max.iNumShotsHit"
+  },
+  {
+   "key": "Soldier.max.iPlayTime",
+   "value": 289
+  },
+  {
+   "key": "Soldier.max.iPointCaptures",
+   "value": 2
+  },
+  {
+   "key": "Soldier.max.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Soldier.max.iPointsScored",
+   "value": 10
+  },
+  {
+   "key": "Soldier.max.iRevenge",
+   "value": 2
+  },
+  {
+   "key": "Spy.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Spy.accum.iDamageDealt",
+   "value": 3254
+  },
+  {
+   "key": "Spy.accum.iDominations"
+  },
+  {
+   "key": "Spy.accum.iKillAssists",
+   "value": 2
+  },
+  {
+   "key": "Spy.accum.iNumberOfKills",
+   "value": 15
+  },
+  {
+   "key": "Spy.accum.iNumDeaths"
+  },
+  {
+   "key": "Spy.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Spy.accum.iNumShotsFired"
+  },
+  {
+   "key": "Spy.accum.iNumShotsHit"
+  },
+  {
+   "key": "Spy.accum.iPlayTime",
+   "value": 5001
+  },
+  {
+   "key": "Spy.accum.iPointCaptures",
+   "value": 1
+  },
+  {
+   "key": "Spy.accum.iPointDefenses"
+  },
+  {
+   "key": "Spy.accum.iPointsScored",
+   "value": 26
+  },
+  {
+   "key": "Spy.accum.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Spy.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Spy.max.iDamageDealt",
+   "value": 262
+  },
+  {
+   "key": "Spy.max.iDominations"
+  },
+  {
+   "key": "Spy.max.iKillAssists",
+   "value": 1
+  },
+  {
+   "key": "Spy.max.iNumberOfKills",
+   "value": 2
+  },
+  {
+   "key": "Spy.max.iNumDeaths"
+  },
+  {
+   "key": "Spy.max.iNumInvulnerable"
+  },
+  {
+   "key": "Spy.max.iNumShotsFired"
+  },
+  {
+   "key": "Spy.max.iNumShotsHit"
+  },
+  {
+   "key": "Spy.max.iPlayTime",
+   "value": 413
+  },
+  {
+   "key": "Spy.max.iPointCaptures",
+   "value": 1
+  },
+  {
+   "key": "Spy.max.iPointDefenses"
+  },
+  {
+   "key": "Spy.max.iPointsScored",
+   "value": 3
+  },
+  {
+   "key": "Spy.max.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Pyro.accum.iBuildingsDestroyed",
+   "value": 1
+  },
+  {
+   "key": "Pyro.accum.iDamageDealt",
+   "value": 5392
+  },
+  {
+   "key": "Pyro.accum.iDominations"
+  },
+  {
+   "key": "Pyro.accum.iKillAssists",
+   "value": 8
+  },
+  {
+   "key": "Pyro.accum.iNumberOfKills",
+   "value": 26
+  },
+  {
+   "key": "Pyro.accum.iNumDeaths"
+  },
+  {
+   "key": "Pyro.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Pyro.accum.iNumShotsFired"
+  },
+  {
+   "key": "Pyro.accum.iNumShotsHit"
+  },
+  {
+   "key": "Pyro.accum.iPlayTime",
+   "value": 2204
+  },
+  {
+   "key": "Pyro.accum.iPointCaptures",
+   "value": 21
+  },
+  {
+   "key": "Pyro.accum.iPointDefenses",
+   "value": 9
+  },
+  {
+   "key": "Pyro.accum.iPointsScored",
+   "value": 80
+  },
+  {
+   "key": "Pyro.accum.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Pyro.max.iBuildingsDestroyed",
+   "value": 1
+  },
+  {
+   "key": "Pyro.max.iDamageDealt",
+   "value": 450
+  },
+  {
+   "key": "Pyro.max.iDominations"
+  },
+  {
+   "key": "Pyro.max.iKillAssists",
+   "value": 3
+  },
+  {
+   "key": "Pyro.max.iNumberOfKills",
+   "value": 3
+  },
+  {
+   "key": "Pyro.max.iNumDeaths"
+  },
+  {
+   "key": "Pyro.max.iNumInvulnerable"
+  },
+  {
+   "key": "Pyro.max.iNumShotsFired"
+  },
+  {
+   "key": "Pyro.max.iNumShotsHit"
+  },
+  {
+   "key": "Pyro.max.iPlayTime",
+   "value": 217
+  },
+  {
+   "key": "Pyro.max.iPointCaptures",
+   "value": 5
+  },
+  {
+   "key": "Pyro.max.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Pyro.max.iPointsScored",
+   "value": 12
+  },
+  {
+   "key": "Pyro.max.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Medic.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Medic.accum.iDamageDealt"
+  },
+  {
+   "key": "Medic.accum.iDominations"
+  },
+  {
+   "key": "Medic.accum.iKillAssists"
+  },
+  {
+   "key": "Medic.accum.iNumberOfKills"
+  },
+  {
+   "key": "Medic.accum.iNumDeaths"
+  },
+  {
+   "key": "Medic.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Medic.accum.iNumShotsFired"
+  },
+  {
+   "key": "Medic.accum.iNumShotsHit"
+  },
+  {
+   "key": "Medic.accum.iPlayTime"
+  },
+  {
+   "key": "Medic.accum.iPointCaptures"
+  },
+  {
+   "key": "Medic.accum.iPointDefenses"
+  },
+  {
+   "key": "Medic.accum.iPointsScored"
+  },
+  {
+   "key": "Medic.accum.iRevenge"
+  },
+  {
+   "key": "Medic.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Medic.max.iDamageDealt"
+  },
+  {
+   "key": "Medic.max.iDominations"
+  },
+  {
+   "key": "Medic.max.iKillAssists"
+  },
+  {
+   "key": "Medic.max.iNumberOfKills"
+  },
+  {
+   "key": "Medic.max.iNumDeaths"
+  },
+  {
+   "key": "Medic.max.iNumInvulnerable"
+  },
+  {
+   "key": "Medic.max.iNumShotsFired"
+  },
+  {
+   "key": "Medic.max.iNumShotsHit"
+  },
+  {
+   "key": "Medic.max.iPlayTime"
+  },
+  {
+   "key": "Medic.max.iPointCaptures"
+  },
+  {
+   "key": "Medic.max.iPointDefenses"
+  },
+  {
+   "key": "Medic.max.iPointsScored"
+  },
+  {
+   "key": "Medic.max.iRevenge"
+  },
+  {
+   "key": "Demoman.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Demoman.accum.iDamageDealt",
+   "value": 1116
+  },
+  {
+   "key": "Demoman.accum.iDominations"
+  },
+  {
+   "key": "Demoman.accum.iKillAssists",
+   "value": 3
+  },
+  {
+   "key": "Demoman.accum.iNumberOfKills",
+   "value": 6
+  },
+  {
+   "key": "Demoman.accum.iNumDeaths"
+  },
+  {
+   "key": "Demoman.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Demoman.accum.iNumShotsFired"
+  },
+  {
+   "key": "Demoman.accum.iNumShotsHit"
+  },
+  {
+   "key": "Demoman.accum.iPlayTime",
+   "value": 888
+  },
+  {
+   "key": "Demoman.accum.iPointCaptures"
+  },
+  {
+   "key": "Demoman.accum.iPointDefenses"
+  },
+  {
+   "key": "Demoman.accum.iPointsScored",
+   "value": 8
+  },
+  {
+   "key": "Demoman.accum.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Demoman.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Demoman.max.iDamageDealt",
+   "value": 199
+  },
+  {
+   "key": "Demoman.max.iDominations"
+  },
+  {
+   "key": "Demoman.max.iKillAssists",
+   "value": 2
+  },
+  {
+   "key": "Demoman.max.iNumberOfKills",
+   "value": 1
+  },
+  {
+   "key": "Demoman.max.iNumDeaths"
+  },
+  {
+   "key": "Demoman.max.iNumInvulnerable"
+  },
+  {
+   "key": "Demoman.max.iNumShotsFired"
+  },
+  {
+   "key": "Demoman.max.iNumShotsHit"
+  },
+  {
+   "key": "Demoman.max.iPlayTime",
+   "value": 99
+  },
+  {
+   "key": "Demoman.max.iPointCaptures"
+  },
+  {
+   "key": "Demoman.max.iPointDefenses"
+  },
+  {
+   "key": "Demoman.max.iPointsScored",
+   "value": 2
+  },
+  {
+   "key": "Demoman.max.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Heavy.accum.iBuildingsDestroyed",
+   "value": 2
+  },
+  {
+   "key": "Heavy.accum.iDamageDealt",
+   "value": 6751
+  },
+  {
+   "key": "Heavy.accum.iDominations"
+  },
+  {
+   "key": "Heavy.accum.iKillAssists",
+   "value": 9
+  },
+  {
+   "key": "Heavy.accum.iNumberOfKills",
+   "value": 27
+  },
+  {
+   "key": "Heavy.accum.iNumDeaths"
+  },
+  {
+   "key": "Heavy.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Heavy.accum.iNumShotsFired"
+  },
+  {
+   "key": "Heavy.accum.iNumShotsHit"
+  },
+  {
+   "key": "Heavy.accum.iPlayTime",
+   "value": 2526
+  },
+  {
+   "key": "Heavy.accum.iPointCaptures",
+   "value": 3
+  },
+  {
+   "key": "Heavy.accum.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Heavy.accum.iPointsScored",
+   "value": 40
+  },
+  {
+   "key": "Heavy.accum.iRevenge",
+   "value": 2
+  },
+  {
+   "key": "Heavy.max.iBuildingsDestroyed",
+   "value": 2
+  },
+  {
+   "key": "Heavy.max.iDamageDealt",
+   "value": 400
+  },
+  {
+   "key": "Heavy.max.iDominations"
+  },
+  {
+   "key": "Heavy.max.iKillAssists",
+   "value": 2
+  },
+  {
+   "key": "Heavy.max.iNumberOfKills",
+   "value": 2
+  },
+  {
+   "key": "Heavy.max.iNumDeaths"
+  },
+  {
+   "key": "Heavy.max.iNumInvulnerable"
+  },
+  {
+   "key": "Heavy.max.iNumShotsFired"
+  },
+  {
+   "key": "Heavy.max.iNumShotsHit"
+  },
+  {
+   "key": "Heavy.max.iPlayTime",
+   "value": 144
+  },
+  {
+   "key": "Heavy.max.iPointCaptures",
+   "value": 1
+  },
+  {
+   "key": "Heavy.max.iPointDefenses",
+   "value": 1
+  },
+  {
+   "key": "Heavy.max.iPointsScored",
+   "value": 3
+  },
+  {
+   "key": "Heavy.max.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Engineer.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Engineer.accum.iDamageDealt",
+   "value": 7429
+  },
+  {
+   "key": "Engineer.accum.iDominations",
+   "value": 5
+  },
+  {
+   "key": "Engineer.accum.iKillAssists",
+   "value": 11
+  },
+  {
+   "key": "Engineer.accum.iNumberOfKills",
+   "value": 48
+  },
+  {
+   "key": "Engineer.accum.iNumDeaths"
+  },
+  {
+   "key": "Engineer.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Engineer.accum.iNumShotsFired"
+  },
+  {
+   "key": "Engineer.accum.iNumShotsHit"
+  },
+  {
+   "key": "Engineer.accum.iPlayTime",
+   "value": 6336
+  },
+  {
+   "key": "Engineer.accum.iPointCaptures"
+  },
+  {
+   "key": "Engineer.accum.iPointDefenses",
+   "value": 1
+  },
+  {
+   "key": "Engineer.accum.iPointsScored",
+   "value": 61
+  },
+  {
+   "key": "Engineer.accum.iRevenge",
+   "value": 2
+  },
+  {
+   "key": "Engineer.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Engineer.max.iDamageDealt",
+   "value": 2020
+  },
+  {
+   "key": "Engineer.max.iDominations",
+   "value": 3
+  },
+  {
+   "key": "Engineer.max.iKillAssists",
+   "value": 4
+  },
+  {
+   "key": "Engineer.max.iNumberOfKills",
+   "value": 16
+  },
+  {
+   "key": "Engineer.max.iNumDeaths"
+  },
+  {
+   "key": "Engineer.max.iNumInvulnerable"
+  },
+  {
+   "key": "Engineer.max.iNumShotsFired"
+  },
+  {
+   "key": "Engineer.max.iNumShotsHit"
+  },
+  {
+   "key": "Engineer.max.iPlayTime",
+   "value": 954
+  },
+  {
+   "key": "Engineer.max.iPointCaptures"
+  },
+  {
+   "key": "Engineer.max.iPointDefenses",
+   "value": 1
+  },
+  {
+   "key": "Engineer.max.iPointsScored",
+   "value": 20
+  },
+  {
+   "key": "Engineer.max.iRevenge",
+   "value": 1
+  },
+  {
+   "key": "Sniper.accum.iBuildingsDestroyed",
+   "value": 5
+  },
+  {
+   "key": "Sniper.accum.iDamageDealt",
+   "value": 23541
+  },
+  {
+   "key": "Sniper.accum.iDominations",
+   "value": 1
+  },
+  {
+   "key": "Sniper.accum.iKillAssists",
+   "value": 34
+  },
+  {
+   "key": "Sniper.accum.iNumberOfKills",
+   "value": 99
+  },
+  {
+   "key": "Sniper.accum.iNumDeaths"
+  },
+  {
+   "key": "Sniper.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Sniper.accum.iNumShotsFired"
+  },
+  {
+   "key": "Sniper.accum.iNumShotsHit"
+  },
+  {
+   "key": "Sniper.accum.iPlayTime",
+   "value": 12176
+  },
+  {
+   "key": "Sniper.accum.iPointCaptures"
+  },
+  {
+   "key": "Sniper.accum.iPointDefenses",
+   "value": 5
+  },
+  {
+   "key": "Sniper.accum.iPointsScored",
+   "value": 136
+  },
+  {
+   "key": "Sniper.accum.iRevenge",
+   "value": 16
+  },
+  {
+   "key": "Sniper.max.iBuildingsDestroyed",
+   "value": 1
+  },
+  {
+   "key": "Sniper.max.iDamageDealt",
+   "value": 1178
+  },
+  {
+   "key": "Sniper.max.iDominations",
+   "value": 1
+  },
+  {
+   "key": "Sniper.max.iKillAssists",
+   "value": 5
+  },
+  {
+   "key": "Sniper.max.iNumberOfKills",
+   "value": 7
+  },
+  {
+   "key": "Sniper.max.iNumDeaths"
+  },
+  {
+   "key": "Sniper.max.iNumInvulnerable"
+  },
+  {
+   "key": "Sniper.max.iNumShotsFired"
+  },
+  {
+   "key": "Sniper.max.iNumShotsHit"
+  },
+  {
+   "key": "Sniper.max.iPlayTime",
+   "value": 374
+  },
+  {
+   "key": "Sniper.max.iPointCaptures"
+  },
+  {
+   "key": "Sniper.max.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Sniper.max.iPointsScored",
+   "value": 8
+  },
+  {
+   "key": "Sniper.max.iRevenge",
+   "value": 2
+  },
+  {
+   "key": "Spy.accum.iBackstabs",
+   "value": 8
+  },
+  {
+   "key": "Spy.max.iBackstabs",
+   "value": 1
+  },
+  {
+   "key": "Engineer.accum.iBuildingsBuilt",
+   "value": 45
+  },
+  {
+   "key": "Engineer.max.iBuildingsBuilt",
+   "value": 7
+  },
+  {
+   "key": "Sniper.accum.iHeadshots",
+   "value": 30
+  },
+  {
+   "key": "Sniper.max.iHeadshots",
+   "value": 2
+  },
+  {
+   "key": "Spy.accum.iHealthPointsLeached",
+   "value": 18
+  },
+  {
+   "key": "Spy.max.iHealthPointsLeached",
+   "value": 18
+  },
+  {
+   "key": "Medic.accum.iHealthPointsHealed"
+  },
+  {
+   "key": "Medic.max.iHealthPointsHealed"
+  },
+  {
+   "key": "Engineer.accum.iNumTeleports",
+   "value": 2
+  },
+  {
+   "key": "Engineer.max.iNumTeleports",
+   "value": 2
+  },
+  {
+   "key": "Engineer.accum.iSentryKills"
+  },
+  {
+   "key": "Engineer.max.iSentryKills",
+   "value": 5
+  },
+  {
+   "key": "TF_PYRO_KILL_MULTIWEAPONS_STAT_BUSTED",
+   "name": "TF_PYRO_KILL_MULTIWEAPONS_STAT_UNUSED"
+  },
+  {
+   "key": "TF_PYRO_FORCE_WATERJUMP_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_PYRO_KILL_POSTDEATH_STAT",
+   "value": 4
+  },
+  {
+   "key": "TF_PYRO_KILL_SPIES_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_CARRIERS_STAT"
+  },
+  {
+   "key": "TF_PYRO_REVEAL_SPIES_STAT",
+   "value": 7
+  },
+  {
+   "key": "TF_PYRO_BURN_SPIES_AS_YOU_STAT",
+   "value": 5
+  },
+  {
+   "key": "TF_PYRO_BURN_SNIPERS_ZOOMED_STAT"
+  },
+  {
+   "key": "TF_PYRO_BURN_MEDICS_CHARGED_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_HEAVIES_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_UNDERWATER_STAT"
+  },
+  {
+   "key": "TF_PYRO_DESTROY_BUILDINGS_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_PYRO_DEFEND_POINTS_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_GRIND_STAT",
+   "value": 36
+  },
+  {
+   "key": "TF_PYRO_DAMAGE_GRIND_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_TAUNTERS_STAT"
+  },
+  {
+   "key": "TF_PYRO_CAMP_TELEPORTERS_STAT"
+  },
+  {
+   "key": "TF_PYRO_FREEZECAM_TAUNTS_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_FROM_BEHIND_STAT",
+   "value": 4
+  },
+  {
+   "key": "TF_PYRO_KILL_GRIND_LARGE_STAT",
+   "value": 36
+  },
+  {
+   "key": "TF_PYRO_IGNITE_FLAREGUN_STAT"
+  },
+  {
+   "key": "Pyro.accum.iFireDamage",
+   "value": 5264
+  },
+  {
+   "key": "TF_HEAVY_DEFEND_MEDIC_STAT"
+  },
+  {
+   "key": "TF_HEAVY_KILL_FLAG_CARRIERS_STAT"
+  },
+  {
+   "key": "TF_HEAVY_BLOCK_CART_STAT"
+  },
+  {
+   "key": "TF_HEAVY_RECEIVE_UBER_GRIND_STAT"
+  },
+  {
+   "key": "TF_HEAVY_STAND_NEAR_DISPENSER_STAT"
+  },
+  {
+   "key": "TF_HEAVY_ASSIST_HEAVY_GRIND_STAT",
+   "value": 3
+  },
+  {
+   "key": "TF_HEAVY_CLEAR_STICKYBOMBS_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_HEAVY_KILL_UNDERWATER_STAT"
+  },
+  {
+   "key": "TF_HEAVY_KILL_DOMINATED_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_HEAVY_ASSIST_GRIND_STAT",
+   "value": 13
+  },
+  {
+   "key": "TF_HEAVY_UNCOVER_SPIES_STAT"
+  },
+  {
+   "key": "TF_HEAVY_PAYLOAD_CAP_GRIND_STAT"
+  },
+  {
+   "key": "TF_HEAVY_KILL_MIDAIR_MINIGUN_STAT",
+   "value": 10
+  },
+  {
+   "key": "TF_HEAVY_DEFEND_CONTROL_POINT_STAT"
+  },
+  {
+   "key": "TF_HEAVY_KILL_CAPPING_ENEMIES_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_HEAVY_REVENGE_ASSIST_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_HEAVY_EAT_SANDWICHES_STAT"
+  },
+  {
+   "key": "TF_HEAVY_KILL_SCOUTS_STAT"
+  },
+  {
+   "key": "TF_HEAVY_KILL_HEAVIES_GLOVES_STAT"
+  },
+  {
+   "key": "TF_PYRO_KILL_MULTIWEAPONS_STAT"
+  },
+  {
+   "key": "TF_SCOUT_FIRST_BLOOD_KILL_STAT"
+  },
+  {
+   "key": "TF_SCOUT_LIFETIME_KILLS_STAT",
+   "value": 9
+  },
+  {
+   "key": "TF_SCOUT_DESTROY_TELEPORTERS_STAT"
+  },
+  {
+   "key": "TF_SCOUT_DESTROY_BUILDINGS_BEING_BUILT_STAT"
+  },
+  {
+   "key": "TF_SCOUT_DESTROY_SENTRY_WITH_PISTOL_STAT"
+  },
+  {
+   "key": "TF_SCOUT_DOUBLE_JUMPS_STAT",
+   "value": 14
+  },
+  {
+   "key": "TF_SCOUT_KILL_CHARGED_MEDICS_STAT"
+  },
+  {
+   "key": "TF_SCOUT_DOUBLEJUMP_KILL_STAT"
+  },
+  {
+   "key": "TF_SCOUT_FLAG_CAP_GRIND_STAT"
+  },
+  {
+   "key": "TF_SCOUT_KILL_STUNNED_STAT"
+  },
+  {
+   "key": "TF_SCOUT_STUN_UBER_ENEMIES_STAT"
+  },
+  {
+   "key": "TF_SCOUT_STUN_CAPPING_ENEMIES_STAT"
+  },
+  {
+   "key": "TF_SCOUT_MAX_STUNS_STAT"
+  },
+  {
+   "key": "TF_SCOUT_KILL_IN_DODGE_COOLDOWN_STAT"
+  },
+  {
+   "key": "TF_SCOUT_KILL_FROM_BEHIND_STAT"
+  },
+  {
+   "key": "TF_SCOUT_START_AND_FINISH_CAP_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_SCOUT_BLOCK_CAPS_STAT"
+  },
+  {
+   "key": "TF_SCOUT_LONG_DISTANCE_RUNNER_STAT",
+   "value": 77
+  },
+  {
+   "key": "TF_SNIPER_KILL_GRIND_STAT",
+   "value": 124
+  },
+  {
+   "key": "TF_SNIPER_HEADSHOT_SNIPERS_STAT",
+   "value": 10
+  },
+  {
+   "key": "TF_SNIPER_DESTROY_SENTRYGUNS_STAT",
+   "value": 3
+  },
+  {
+   "key": "TF_SNIPER_KILL_SPIES_MELEE_STAT",
+   "value": 2
+  },
+  {
+   "key": "TF_SNIPER_KILL_UNSCOPED_STAT",
+   "value": 2
+  },
+  {
+   "key": "TF_SNIPER_GET_BACKSTABBED_STAT",
+   "value": 43
+  },
+  {
+   "key": "TF_SNIPER_TOP_SCOREBOARD_GRIND_STAT"
+  },
+  {
+   "key": "TF_SPY_BACKSTAB_FRIENDS_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_SPY_KILL_CP_DEFENDERS_STAT"
+  },
+  {
+   "key": "TF_SPY_BACKSTAB_GRIND_STAT",
+   "value": 11
+  },
+  {
+   "key": "TF_SPY_BACKSTAB_CAPPING_ENEMIES_STAT"
+  },
+  {
+   "key": "TF_SPY_AMBASSADOR_GRIND_STAT"
+  },
+  {
+   "key": "TF_SPY_AMBASSADOR_SNIPER_GRIND_STAT"
+  },
+  {
+   "key": "TF_SPY_AMBASSADOR_SCOUT_GRIND_STAT"
+  },
+  {
+   "key": "TF_SPY_SAPPER_GRIND_STAT"
+  },
+  {
+   "key": "TF_SPY_KILL_WORKING_ENGY_STAT"
+  },
+  {
+   "key": "Engineer.accum.iHealthPointsHealed"
+  },
+  {
+   "key": "Engineer.max.iHealthPointsHealed"
+  },
+  {
+   "key": "Pyro.max.iFireDamage"
+  },
+  {
+   "key": "Spy.accum.iHeadshots"
+  },
+  {
+   "key": "Spy.max.iHeadshots"
+  },
+  {
+   "key": "TF_HALLOWEEN_COLLECT_PUMPKINS_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_KILL_SCARED_PLAYER_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_PUMPKIN_KILL_STAT"
+  },
+  {
+   "key": "TF_SOLDIER_KILL_DEMOMAN_GRIND_STAT",
+   "value": 10
+  },
+  {
+   "key": "TF_SOLDIER_KILL_WITH_EQUALIZER_WHILE_HURT_STAT"
+  },
+  {
+   "key": "TF_SOLDIER_KILL_AIRBORNE_WITH_DIRECT_HIT_STAT"
+  },
+  {
+   "key": "TF_SOLDIER_DESTROY_SENTRY_OUT_OF_RANGE_STAT",
+   "value": 5
+  },
+  {
+   "key": "TF_SOLDIER_DUO_SOLDIER_KILLS_STAT",
+   "value": 5
+  },
+  {
+   "key": "TF_SOLDIER_MVP_STAT"
+  },
+  {
+   "key": "TF_SOLDIER_KILL_ON_FIRE_STAT",
+   "value": 7
+  },
+  {
+   "key": "TF_SOLDIER_GIB_GRIND_STAT",
+   "value": 121
+  },
+  {
+   "key": "TF_SOLDIER_KILL_TWENTY_FROM_ABOVE_STAT",
+   "value": 20
+  },
+  {
+   "key": "TF_SOLDIER_KILL_FIVE_STUNNED_STAT"
+  },
+  {
+   "key": "TF_SOLDIER_DEFEND_CAP_THIRTY_TIMES_STAT",
+   "value": 5
+  },
+  {
+   "key": "TF_DEMOMAN_KILL_SOLDIER_GRIND_STAT",
+   "value": 5
+  },
+  {
+   "key": "TF_DEMOMAN_KILL_X_WITH_DIRECTPIPE_STAT",
+   "value": 9
+  },
+  {
+   "key": "TF_DEMOMAN_DOMINATE_THREE_ENGINEERS_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_DECAPITATE_PLAYERS_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_DUO_DEMOMAN_KILLS_STAT",
+   "value": 2
+  },
+  {
+   "key": "TF_DEMOMAN_DAMAGE_GRIND_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_KILL_X_CAPPING_ONEDET_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_KILL_X_DEFENDING_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_DEMOMAN_DESTROY_BUILDINGS_GRIND_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_KILL_X_HEAVIES_FULLHP_ONEDET_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_KILL_X_SCOUTS_PYROS_STAT",
+   "value": 3
+  },
+  {
+   "key": "TF_DEMOMAN_DESTROY_X_STICKYBOMBS_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_CRIT_SWORD_KILL_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_AIR_BURST_KILLS_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_KILLXSAPPINGSPIES_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_MANUAL_SENTRY_KILLS_BEYOND_RANGE_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_SENTRY_KILL_CAPS_STAT",
+   "value": 2
+  },
+  {
+   "key": "TF_ENGINEER_DESTROY_SAPPERS_STAT",
+   "value": 6
+  },
+  {
+   "key": "TF_ENGINEER_HELP_MANUAL_SENTRY_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_TELEPORT_GRIND_STAT",
+   "value": 2
+  },
+  {
+   "key": "TF_ENGINEER_DISPENSER_EXTINGUISH_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_MANUAL_CLOAKED_SPY_KILL_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_UPGRADE_BUILDINGS_STAT",
+   "value": 9
+  },
+  {
+   "key": "TF_ENGINEER_SENTRY_KILL_LIFETIME_GRIND_STAT",
+   "value": 28
+  },
+  {
+   "key": "TF_ENGINEER_WASTE_METAL_GRIND_STAT",
+   "value": 383
+  },
+  {
+   "key": "TF_ENGINEER_KILL_FLAG_CARRIERS_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_DESTROY_STICKIES_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_KILL_SNIPERS_SENTRY_STAT"
+  },
+  {
+   "key": "TF_ENGINEER_BUILDING_CARRY_STAT",
+   "value": 61
+  },
+  {
+   "key": "TF_ENGINEER_KILL_ASSIST_STAT",
+   "value": 10
+  },
+  {
+   "key": "TF_ENGINEER_DISPENSER_HEAL_GRIND_STAT",
+   "value": 2206
+  },
+  {
+   "key": "TF_ENGINEER_REPAIR_TEAM_GRIND_STAT",
+   "value": 1
+  },
+  {
+   "key": "TF_COMPLETE_TRAINING_STAT"
+  },
+  {
+   "key": "TF_REPLAY_YOUTUBE_VIEWS_STAT"
+  },
+  {
+   "key": "TF_CHRISTMAS_COLLECT_GIFTS_STAT",
+   "value": 3
+  },
+  {
+   "key": "TF_MAPS_FOUNDRY_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "Scout.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Scout.mvm.accum.iDamageDealt",
+   "value": 259
+  },
+  {
+   "key": "Scout.mvm.accum.iDominations"
+  },
+  {
+   "key": "Scout.mvm.accum.iKillAssists",
+   "value": 1
+  },
+  {
+   "key": "Scout.mvm.accum.iNumberOfKills",
+   "value": 1
+  },
+  {
+   "key": "Scout.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Scout.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Scout.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Scout.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Scout.mvm.accum.iPlayTime",
+   "value": 148
+  },
+  {
+   "key": "Scout.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Scout.mvm.accum.iPointDefenses"
+  },
+  {
+   "key": "Scout.mvm.accum.iPointsScored",
+   "value": 1
+  },
+  {
+   "key": "Scout.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Scout.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Scout.mvm.max.iDamageDealt",
+   "value": 156
+  },
+  {
+   "key": "Scout.mvm.max.iDominations"
+  },
+  {
+   "key": "Scout.mvm.max.iKillAssists",
+   "value": 1
+  },
+  {
+   "key": "Scout.mvm.max.iNumberOfKills",
+   "value": 1
+  },
+  {
+   "key": "Scout.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Scout.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Scout.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Scout.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Scout.mvm.max.iPlayTime",
+   "value": 109
+  },
+  {
+   "key": "Scout.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Scout.mvm.max.iPointDefenses"
+  },
+  {
+   "key": "Scout.mvm.max.iPointsScored",
+   "value": 1
+  },
+  {
+   "key": "Scout.mvm.max.iRevenge"
+  },
+  {
+   "key": "Soldier.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Soldier.mvm.accum.iDamageDealt",
+   "value": 8427
+  },
+  {
+   "key": "Soldier.mvm.accum.iDominations"
+  },
+  {
+   "key": "Soldier.mvm.accum.iKillAssists",
+   "value": 19
+  },
+  {
+   "key": "Soldier.mvm.accum.iNumberOfKills",
+   "value": 32
+  },
+  {
+   "key": "Soldier.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Soldier.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Soldier.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Soldier.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Soldier.mvm.accum.iPlayTime",
+   "value": 1635
+  },
+  {
+   "key": "Soldier.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Soldier.mvm.accum.iPointDefenses",
+   "value": 5
+  },
+  {
+   "key": "Soldier.mvm.accum.iPointsScored",
+   "value": 45
+  },
+  {
+   "key": "Soldier.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Soldier.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Soldier.mvm.max.iDamageDealt",
+   "value": 2575
+  },
+  {
+   "key": "Soldier.mvm.max.iDominations"
+  },
+  {
+   "key": "Soldier.mvm.max.iKillAssists",
+   "value": 7
+  },
+  {
+   "key": "Soldier.mvm.max.iNumberOfKills",
+   "value": 9
+  },
+  {
+   "key": "Soldier.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Soldier.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Soldier.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Soldier.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Soldier.mvm.max.iPlayTime",
+   "value": 422
+  },
+  {
+   "key": "Soldier.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Soldier.mvm.max.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Soldier.mvm.max.iPointsScored",
+   "value": 13
+  },
+  {
+   "key": "Soldier.mvm.max.iRevenge"
+  },
+  {
+   "key": "Spy.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Spy.mvm.accum.iDamageDealt"
+  },
+  {
+   "key": "Spy.mvm.accum.iDominations"
+  },
+  {
+   "key": "Spy.mvm.accum.iKillAssists"
+  },
+  {
+   "key": "Spy.mvm.accum.iNumberOfKills"
+  },
+  {
+   "key": "Spy.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Spy.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Spy.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Spy.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Spy.mvm.accum.iPlayTime"
+  },
+  {
+   "key": "Spy.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Spy.mvm.accum.iPointDefenses"
+  },
+  {
+   "key": "Spy.mvm.accum.iPointsScored"
+  },
+  {
+   "key": "Spy.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Spy.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Spy.mvm.max.iDamageDealt"
+  },
+  {
+   "key": "Spy.mvm.max.iDominations"
+  },
+  {
+   "key": "Spy.mvm.max.iKillAssists"
+  },
+  {
+   "key": "Spy.mvm.max.iNumberOfKills"
+  },
+  {
+   "key": "Spy.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Spy.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Spy.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Spy.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Spy.mvm.max.iPlayTime"
+  },
+  {
+   "key": "Spy.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Spy.mvm.max.iPointDefenses"
+  },
+  {
+   "key": "Spy.mvm.max.iPointsScored"
+  },
+  {
+   "key": "Spy.mvm.max.iRevenge"
+  },
+  {
+   "key": "Pyro.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Pyro.mvm.accum.iDamageDealt"
+  },
+  {
+   "key": "Pyro.mvm.accum.iDominations"
+  },
+  {
+   "key": "Pyro.mvm.accum.iKillAssists"
+  },
+  {
+   "key": "Pyro.mvm.accum.iNumberOfKills"
+  },
+  {
+   "key": "Pyro.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Pyro.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Pyro.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Pyro.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Pyro.mvm.accum.iPlayTime"
+  },
+  {
+   "key": "Pyro.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Pyro.mvm.accum.iPointDefenses"
+  },
+  {
+   "key": "Pyro.mvm.accum.iPointsScored"
+  },
+  {
+   "key": "Pyro.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Pyro.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Pyro.mvm.max.iDamageDealt"
+  },
+  {
+   "key": "Pyro.mvm.max.iDominations"
+  },
+  {
+   "key": "Pyro.mvm.max.iKillAssists"
+  },
+  {
+   "key": "Pyro.mvm.max.iNumberOfKills"
+  },
+  {
+   "key": "Pyro.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Pyro.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Pyro.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Pyro.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Pyro.mvm.max.iPlayTime"
+  },
+  {
+   "key": "Pyro.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Pyro.mvm.max.iPointDefenses"
+  },
+  {
+   "key": "Pyro.mvm.max.iPointsScored"
+  },
+  {
+   "key": "Pyro.mvm.max.iRevenge"
+  },
+  {
+   "key": "Medic.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Medic.mvm.accum.iDamageDealt"
+  },
+  {
+   "key": "Medic.mvm.accum.iDominations"
+  },
+  {
+   "key": "Medic.mvm.accum.iKillAssists"
+  },
+  {
+   "key": "Medic.mvm.accum.iNumberOfKills"
+  },
+  {
+   "key": "Medic.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Medic.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Medic.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Medic.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Medic.mvm.accum.iPlayTime"
+  },
+  {
+   "key": "Medic.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Medic.mvm.accum.iPointDefenses"
+  },
+  {
+   "key": "Medic.mvm.accum.iPointsScored"
+  },
+  {
+   "key": "Medic.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Medic.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Medic.mvm.max.iDamageDealt"
+  },
+  {
+   "key": "Medic.mvm.max.iDominations"
+  },
+  {
+   "key": "Medic.mvm.max.iKillAssists"
+  },
+  {
+   "key": "Medic.mvm.max.iNumberOfKills"
+  },
+  {
+   "key": "Medic.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Medic.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Medic.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Medic.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Medic.mvm.max.iPlayTime"
+  },
+  {
+   "key": "Medic.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Medic.mvm.max.iPointDefenses"
+  },
+  {
+   "key": "Medic.mvm.max.iPointsScored"
+  },
+  {
+   "key": "Medic.mvm.max.iRevenge"
+  },
+  {
+   "key": "Demoman.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Demoman.mvm.accum.iDamageDealt"
+  },
+  {
+   "key": "Demoman.mvm.accum.iDominations"
+  },
+  {
+   "key": "Demoman.mvm.accum.iKillAssists"
+  },
+  {
+   "key": "Demoman.mvm.accum.iNumberOfKills"
+  },
+  {
+   "key": "Demoman.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Demoman.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Demoman.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Demoman.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Demoman.mvm.accum.iPlayTime"
+  },
+  {
+   "key": "Demoman.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Demoman.mvm.accum.iPointDefenses"
+  },
+  {
+   "key": "Demoman.mvm.accum.iPointsScored"
+  },
+  {
+   "key": "Demoman.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Demoman.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Demoman.mvm.max.iDamageDealt"
+  },
+  {
+   "key": "Demoman.mvm.max.iDominations"
+  },
+  {
+   "key": "Demoman.mvm.max.iKillAssists"
+  },
+  {
+   "key": "Demoman.mvm.max.iNumberOfKills"
+  },
+  {
+   "key": "Demoman.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Demoman.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Demoman.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Demoman.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Demoman.mvm.max.iPlayTime"
+  },
+  {
+   "key": "Demoman.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Demoman.mvm.max.iPointDefenses"
+  },
+  {
+   "key": "Demoman.mvm.max.iPointsScored"
+  },
+  {
+   "key": "Demoman.mvm.max.iRevenge"
+  },
+  {
+   "key": "Heavy.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Heavy.mvm.accum.iDamageDealt"
+  },
+  {
+   "key": "Heavy.mvm.accum.iDominations"
+  },
+  {
+   "key": "Heavy.mvm.accum.iKillAssists"
+  },
+  {
+   "key": "Heavy.mvm.accum.iNumberOfKills"
+  },
+  {
+   "key": "Heavy.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Heavy.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Heavy.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Heavy.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Heavy.mvm.accum.iPlayTime"
+  },
+  {
+   "key": "Heavy.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Heavy.mvm.accum.iPointDefenses"
+  },
+  {
+   "key": "Heavy.mvm.accum.iPointsScored"
+  },
+  {
+   "key": "Heavy.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Heavy.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Heavy.mvm.max.iDamageDealt"
+  },
+  {
+   "key": "Heavy.mvm.max.iDominations"
+  },
+  {
+   "key": "Heavy.mvm.max.iKillAssists"
+  },
+  {
+   "key": "Heavy.mvm.max.iNumberOfKills"
+  },
+  {
+   "key": "Heavy.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Heavy.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Heavy.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Heavy.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Heavy.mvm.max.iPlayTime"
+  },
+  {
+   "key": "Heavy.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Heavy.mvm.max.iPointDefenses"
+  },
+  {
+   "key": "Heavy.mvm.max.iPointsScored"
+  },
+  {
+   "key": "Heavy.mvm.max.iRevenge"
+  },
+  {
+   "key": "Engineer.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Engineer.mvm.accum.iDamageDealt",
+   "value": 45805
+  },
+  {
+   "key": "Engineer.mvm.accum.iDominations"
+  },
+  {
+   "key": "Engineer.mvm.accum.iKillAssists",
+   "value": 53
+  },
+  {
+   "key": "Engineer.mvm.accum.iNumberOfKills",
+   "value": 170
+  },
+  {
+   "key": "Engineer.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Engineer.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Engineer.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Engineer.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Engineer.mvm.accum.iPlayTime",
+   "value": 3961
+  },
+  {
+   "key": "Engineer.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Engineer.mvm.accum.iPointDefenses",
+   "value": 46
+  },
+  {
+   "key": "Engineer.mvm.accum.iPointsScored",
+   "value": 502
+  },
+  {
+   "key": "Engineer.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Engineer.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Engineer.mvm.max.iDamageDealt",
+   "value": 8507
+  },
+  {
+   "key": "Engineer.mvm.max.iDominations"
+  },
+  {
+   "key": "Engineer.mvm.max.iKillAssists",
+   "value": 7
+  },
+  {
+   "key": "Engineer.mvm.max.iNumberOfKills",
+   "value": 26
+  },
+  {
+   "key": "Engineer.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Engineer.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Engineer.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Engineer.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Engineer.mvm.max.iPlayTime",
+   "value": 615
+  },
+  {
+   "key": "Engineer.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Engineer.mvm.max.iPointDefenses",
+   "value": 9
+  },
+  {
+   "key": "Engineer.mvm.max.iPointsScored",
+   "value": 77
+  },
+  {
+   "key": "Engineer.mvm.max.iRevenge"
+  },
+  {
+   "key": "Sniper.mvm.accum.iBuildingsDestroyed"
+  },
+  {
+   "key": "Sniper.mvm.accum.iDamageDealt",
+   "value": 1127
+  },
+  {
+   "key": "Sniper.mvm.accum.iDominations"
+  },
+  {
+   "key": "Sniper.mvm.accum.iKillAssists",
+   "value": 1
+  },
+  {
+   "key": "Sniper.mvm.accum.iNumberOfKills",
+   "value": 4
+  },
+  {
+   "key": "Sniper.mvm.accum.iNumDeaths"
+  },
+  {
+   "key": "Sniper.mvm.accum.iNumInvulnerable"
+  },
+  {
+   "key": "Sniper.mvm.accum.iNumShotsFired"
+  },
+  {
+   "key": "Sniper.mvm.accum.iNumShotsHit"
+  },
+  {
+   "key": "Sniper.mvm.accum.iPlayTime",
+   "value": 317
+  },
+  {
+   "key": "Sniper.mvm.accum.iPointCaptures"
+  },
+  {
+   "key": "Sniper.mvm.accum.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Sniper.mvm.accum.iPointsScored",
+   "value": 11
+  },
+  {
+   "key": "Sniper.mvm.accum.iRevenge"
+  },
+  {
+   "key": "Sniper.mvm.max.iBuildingsDestroyed"
+  },
+  {
+   "key": "Sniper.mvm.max.iDamageDealt",
+   "value": 1029
+  },
+  {
+   "key": "Sniper.mvm.max.iDominations"
+  },
+  {
+   "key": "Sniper.mvm.max.iKillAssists",
+   "value": 1
+  },
+  {
+   "key": "Sniper.mvm.max.iNumberOfKills",
+   "value": 4
+  },
+  {
+   "key": "Sniper.mvm.max.iNumDeaths"
+  },
+  {
+   "key": "Sniper.mvm.max.iNumInvulnerable"
+  },
+  {
+   "key": "Sniper.mvm.max.iNumShotsFired"
+  },
+  {
+   "key": "Sniper.mvm.max.iNumShotsHit"
+  },
+  {
+   "key": "Sniper.mvm.max.iPlayTime",
+   "value": 179
+  },
+  {
+   "key": "Sniper.mvm.max.iPointCaptures"
+  },
+  {
+   "key": "Sniper.mvm.max.iPointDefenses",
+   "value": 2
+  },
+  {
+   "key": "Sniper.mvm.max.iPointsScored",
+   "value": 11
+  },
+  {
+   "key": "Sniper.mvm.max.iRevenge"
+  },
+  {
+   "key": "Spy.mvm.accum.iBackstabs"
+  },
+  {
+   "key": "Spy.mvm.max.iBackstabs"
+  },
+  {
+   "key": "Engineer.mvm.accum.iBuildingsBuilt",
+   "value": 54
+  },
+  {
+   "key": "Engineer.mvm.max.iBuildingsBuilt",
+   "value": 7
+  },
+  {
+   "key": "Sniper.mvm.accum.iHeadshots",
+   "value": 3
+  },
+  {
+   "key": "Sniper.mvm.max.iHeadshots",
+   "value": 3
+  },
+  {
+   "key": "Spy.mvm.accum.iHealthPointsLeached"
+  },
+  {
+   "key": "Spy.mvm.max.iHealthPointsLeached"
+  },
+  {
+   "key": "Medic.mvm.accum.iHealthPointsHealed"
+  },
+  {
+   "key": "Medic.mvm.max.iHealthPointsHealed"
+  },
+  {
+   "key": "Engineer.mvm.accum.iNumTeleports",
+   "value": 20
+  },
+  {
+   "key": "Engineer.mvm.max.iNumTeleports",
+   "value": 4
+  },
+  {
+   "key": "Engineer.mvm.accum.iSentryKills"
+  },
+  {
+   "key": "Engineer.mvm.max.iSentryKills",
+   "value": 28
+  },
+  {
+   "key": "Pyro.mvm.accum.iFireDamage"
+  },
+  {
+   "key": "Engineer.mvm.accum.iHealthPointsHealed"
+  },
+  {
+   "key": "Engineer.mvm.max.iHealthPointsHealed"
+  },
+  {
+   "key": "Pyro.mvm.max.iFireDamage"
+  },
+  {
+   "key": "Spy.mvm.accum.iHeadshots"
+  },
+  {
+   "key": "Spy.mvm.max.iHeadshots"
+  },
+  {
+   "key": "TF_MAPS_DOOMSDAY_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "TF_KILL_BALLOONICORN_OWNERS_STAT"
+  },
+  {
+   "key": "TF_MVM_COLLECT_MONEY_GRIND_STAT",
+   "value": 112
+  },
+  {
+   "key": "TF_MVM_KILL_ROBOT_GRIND_STAT",
+   "value": 209
+  },
+  {
+   "key": "TF_MVM_KILL_ROBOT_MEGA_GRIND_STAT",
+   "value": 209
+  },
+  {
+   "key": "cp_dustbowl.accum.iPlayTime",
+   "value": 791
+  },
+  {
+   "key": "cp_egypt_final.accum.iPlayTime"
+  },
+  {
+   "key": "cp_gorge.accum.iPlayTime"
+  },
+  {
+   "key": "cp_gravelpit.accum.iPlayTime"
+  },
+  {
+   "key": "cp_junction_final.accum.iPlayTime"
+  },
+  {
+   "key": "cp_mountainlab.accum.iPlayTime",
+   "value": 3205
+  },
+  {
+   "key": "cp_steel.accum.iPlayTime"
+  },
+  {
+   "key": "cp_gullywash_final1.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_2fort.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_doublecross.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_sawmill.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_turbine.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_well.accum.iPlayTime"
+  },
+  {
+   "key": "cp_5gorge.accum.iPlayTime"
+  },
+  {
+   "key": "cp_badlands.accum.iPlayTime"
+  },
+  {
+   "key": "cp_coldfront.accum.iPlayTime"
+  },
+  {
+   "key": "cp_fastlane.accum.iPlayTime"
+  },
+  {
+   "key": "cp_freight_final1.accum.iPlayTime"
+  },
+  {
+   "key": "cp_granary.accum.iPlayTime"
+  },
+  {
+   "key": "cp_well.accum.iPlayTime"
+  },
+  {
+   "key": "cp_yukon_final.accum.iPlayTime"
+  },
+  {
+   "key": "cp_foundry.accum.iPlayTime"
+  },
+  {
+   "key": "koth_badlands.accum.iPlayTime"
+  },
+  {
+   "key": "koth_harvest_final.accum.iPlayTime"
+  },
+  {
+   "key": "koth_lakeside_final.accum.iPlayTime"
+  },
+  {
+   "key": "koth_nucleus.accum.iPlayTime"
+  },
+  {
+   "key": "koth_sawmill.accum.iPlayTime"
+  },
+  {
+   "key": "koth_viaduct.accum.iPlayTime",
+   "value": 62
+  },
+  {
+   "key": "koth_king.accum.iPlayTime"
+  },
+  {
+   "key": "pl_badwater.accum.iPlayTime"
+  },
+  {
+   "key": "pl_frontier_final.accum.iPlayTime"
+  },
+  {
+   "key": "pl_goldrush.accum.iPlayTime"
+  },
+  {
+   "key": "pl_hoodoo_final.accum.iPlayTime"
+  },
+  {
+   "key": "pl_thundermountain.accum.iPlayTime"
+  },
+  {
+   "key": "pl_upward.accum.iPlayTime"
+  },
+  {
+   "key": "pl_barnblitz.accum.iPlayTime"
+  },
+  {
+   "key": "plr_hightower.accum.iPlayTime"
+  },
+  {
+   "key": "plr_pipeline.accum.iPlayTime"
+  },
+  {
+   "key": "plr_nightfall_final.accum.iPlayTime"
+  },
+  {
+   "key": "sd_doomsday.accum.iPlayTime"
+  },
+  {
+   "key": "arena_watchtower.accum.iPlayTime"
+  },
+  {
+   "key": "arena_offblast_final.accum.iPlayTime"
+  },
+  {
+   "key": "koth_lakeside_event.accum.iPlayTime"
+  },
+  {
+   "key": "koth_viaduct_event.accum.iPlayTime"
+  },
+  {
+   "key": "cp_manor_event.accum.iPlayTime"
+  },
+  {
+   "key": "koth_harvest_event.accum.iPlayTime"
+  },
+  {
+   "key": "TF_HALLOWEEN_HELLTOWER_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_HELLTOWER_ENVIRONMENTAL_KILLS_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_HELLTOWER_SKELETON_GRIND_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_HELLTOWER_KILL_GRIND_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_HELLTOWER_KILL_BROTHERS_STAT"
+  },
+  {
+   "key": "TF_MAPS_STANDIN_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "TF_MAPS_PROCESS_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "TF_MAPS_SNAKEWATER_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "TF_MVM_MAPS_MANNHATTAN_BOMB_BOT_GRIND_STAT"
+  },
+  {
+   "key": "TF_MVM_MAPS_ROTTENBURG_PIT_GRIND_STAT"
+  },
+  {
+   "key": "TF_MAPS_SNAKEWATER_KILL_ENEMIES_IN_MIDDLE_STAT"
+  },
+  {
+   "key": "TF_MVM_ROCKET_SPECIALIST_STUN_GRIND_STAT"
+  },
+  {
+   "key": "TF_PARACHUTE_KILL_GRIND_STAT"
+  },
+  {
+   "key": "TF_MELEE_KILL_CLASSIC_RIFLE_SNIPER_STAT"
+  },
+  {
+   "key": "TF_SOLDIER_PARACHUTE_DISTANCE_STAT"
+  },
+  {
+   "key": "TF_DEMOMAN_PARACHUTE_DISTANCE_STAT"
+  },
+  {
+   "key": "TF_SCOUT_BACKSCATTER_KILL_FRIENDS_GRIND_STAT"
+  },
+  {
+   "key": "TF_SCOUT_BACKSCATTER_KILL_SPY_GRIND_STAT"
+  },
+  {
+   "key": "TF_SNIPER_CLASSIC_RIFLE_NOSCOPE_HEADSHOT_STAT"
+  },
+  {
+   "key": "TF_SNIPER_PARACHUTE_GRIND_STAT"
+  },
+  {
+   "key": "TF_TAUNT_DOSIDO_MELLE_KILL_STAT"
+  },
+  {
+   "key": "TF_TAUNT_WHILE_CAPPING_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_DOOMSDAY_KILL_KARTS_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_DOOMSDAY_COLLECT_DUCKS_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_DOOMSDAY_SCORE_GOALS_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_DOOMSDAY_RESPAWN_TEAMMATES_STAT"
+  },
+  {
+   "key": "TF_HALLOWEEN_DOOMSDAY_TINY_SMASHER_STAT"
+  },
+  {
+   "key": "TF_MAPS_POWERHOUSE_WIN_ROUNDS_STAT"
+  },
+  {
+   "key": "TF_MAPS_POWERHOUSE_KILL_CAPPING_PLAYER_STAT"
+  },
+  {
+   "key": "TF_MAPS_POWERHOUSE_KILL_ENEMY_IN_WATER_STAT"
+  },
+  {
+   "key": "TF_PASS_TIME_GRIND_STAT"
+  },
+  {
+   "key": "GCStat.MatchPoints_Casual",
+   "name": "Casual Mode Per Five Points Scored"
+  },
+  {
+   "key": "GCStat.MatchCompletion_Casual",
+   "name": "Casual Matches Completed"
+  },
+  {
+   "key": "GCStat.MatchWins_Casual",
+   "name": "Casual Matches Won"
+  },
+  {
+   "key": "GCStat.MatchPoints_Competitive",
+   "name": "Competitive Mode Per Five Points Scored"
+  },
+  {
+   "key": "GCStat.MatchCompletion_Competitive",
+   "name": "Competitive Matches Completed"
+  },
+  {
+   "key": "GCStat.MatchWins_Competitive",
+   "name": "Competitive Matches Won"
+  },
+  {
+   "key": "GCStat.MannUp_Victories",
+   "name": "Mann Up Victories"
+  },
+  {
+   "key": "cp_vanguard.accum.iPlayTime"
+  },
+  {
+   "key": "cp_snakewater_final1.accum.iPlayTime"
+  },
+  {
+   "key": "tc_hydro.accum.iPlayTime"
+  },
+  {
+   "key": "cp_degrootkeep.accum.iPlayTime"
+  },
+  {
+   "key": "cp_standin_final.accum.iPlayTime"
+  },
+  {
+   "key": "cp_process_final.accum.iPlayTime"
+  },
+  {
+   "key": "cp_sunshine.accum.iPlayTime"
+  },
+  {
+   "key": "cp_metalworks.accum.iPlayTime"
+  },
+  {
+   "key": "pl_swiftwater_final1.accum.iPlayTime"
+  },
+  {
+   "key": "pass_brickyard.accum.iPlayTime"
+  },
+  {
+   "key": "pass_timbertown.accum.iPlayTime"
+  },
+  {
+   "key": "pass_district.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_landfall.accum.iPlayTime"
+  },
+  {
+   "key": "cp_snowplow.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_2fort_invasion.accum.iPlayTime"
+  },
+  {
+   "key": "cp_powerhouse.accum.iPlayTime"
+  },
+  {
+   "key": "koth_suijin.accum.iPlayTime"
+  },
+  {
+   "key": "koth_probed.accum.iPlayTime"
+  },
+  {
+   "key": "koth_highpass.accum.iPlayTime"
+  },
+  {
+   "key": "pl_cactuscanyon.accum.iPlayTime"
+  },
+  {
+   "key": "pl_borneo.accum.iPlayTime"
+  },
+  {
+   "key": "pl_snowycoast.accum.iPlayTime"
+  },
+  {
+   "key": "pd_watergate.accum.iPlayTime"
+  },
+  {
+   "key": "arena_badlands.accum.iPlayTime"
+  },
+  {
+   "key": "arena_granary.accum.iPlayTime"
+  },
+  {
+   "key": "arena_lumberyard.accum.iPlayTime"
+  },
+  {
+   "key": "arena_nucleus.accum.iPlayTime"
+  },
+  {
+   "key": "arena_ravine.accum.iPlayTime"
+  },
+  {
+   "key": "arena_sawmill.accum.iPlayTime"
+  },
+  {
+   "key": "arena_well.accum.iPlayTime"
+  },
+  {
+   "key": "arena_byre.accum.iPlayTime"
+  },
+  {
+   "key": "cp_gorge_event.accum.iPlayTime"
+  },
+  {
+   "key": "cp_sunshine_event.accum.iPlayTime"
+  },
+  {
+   "key": "koth_moonshine_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_millstone_event.accum.iPlayTime"
+  },
+  {
+   "key": "plr_hightower_event.accum.iPlayTime"
+  },
+  {
+   "key": "sd_doomsday_event.accum.iPlayTime"
+  },
+  {
+   "key": "rd_asteroid.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_foundry.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_gorge.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_thundermountain.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_hellfire.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_ghost_town.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_mannhattan.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_rottenburg.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_bigrock.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_decoy.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_coaltown.accum.iPlayTime"
+  },
+  {
+   "key": "mvm_mannworks.accum.iPlayTime"
+  },
+  {
+   "key": "tr_dustbowl.accum.iPlayTime"
+  },
+  {
+   "key": "tr_target.accum.iPlayTime"
+  },
+  {
+   "key": "koth_maple_ridge_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_fifthcurve_event.accum.iPlayTime"
+  },
+  {
+   "key": "pd_pit_of_death_event.accum.iPlayTime"
+  },
+  {
+   "key": "cp_mercenarypark.accum.iPlayTime"
+  },
+  {
+   "key": "cp_mossrock.accum.iPlayTime"
+  },
+  {
+   "key": "koth_lazarus.accum.iPlayTime"
+  },
+  {
+   "key": "plr_bananabay.accum.iPlayTime"
+  },
+  {
+   "key": "pl_enclosure_final.accum.iPlayTime"
+  },
+  {
+   "key": "koth_brazil.accum.iPlayTime"
+  },
+  {
+   "key": "koth_bagel_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_rumble_event.accum.iPlayTime"
+  },
+  {
+   "key": "pd_monster_bash.accum.iPlayTime"
+  },
+  {
+   "key": "koth_slasher.accum.iPlayTime"
+  },
+  {
+   "key": "pd_cursed_cove_event.accum.iPlayTime"
+  },
+  {
+   "key": "koth_slaughter_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_precipice_event_final.accum.iPlayTime"
+  },
+  {
+   "key": "koth_megalo.accum.iPlayTime"
+  },
+  {
+   "key": "pl_hasslecastle.accum.iPlayTime"
+  },
+  {
+   "key": "pl_bloodwater.accum.iPlayTime"
+  },
+  {
+   "key": "koth_undergrove_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_pier.accum.iPlayTime"
+  },
+  {
+   "key": "pd_snowville_event.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_snowfall_final.accum.iPlayTime"
+  },
+  {
+   "key": "pl_wutville_event.accum.iPlayTime"
+  },
+  {
+   "key": "pd_farmageddon.accum.iPlayTime"
+  },
+  {
+   "key": "koth_los_muertos.accum.iPlayTime"
+  },
+  {
+   "key": "cp_ambush_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_terror_event.accum.iPlayTime"
+  },
+  {
+   "key": "arena_lumberyard_event.accum.iPlayTime"
+  },
+  {
+   "key": "koth_synthetic_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_coal_event.accum.iPlayTime"
+  },
+  {
+   "key": "pl_breadspace.accum.iPlayTime"
+  },
+  {
+   "key": "pl_chilly.accum.iPlayTime"
+  },
+  {
+   "key": "koth_cascade.accum.iPlayTime"
+  },
+  {
+   "key": "cp_altitude.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_doublecross_snowy.accum.iPlayTime"
+  },
+  {
+   "key": "koth_sawmill_event.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_helltrain_event.accum.iPlayTime"
+  },
+  {
+   "key": "plr_hacksaw_event.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_crasher.accum.iPlayTime"
+  },
+  {
+   "key": "pl_sludgepit_event.accum.iPlayTime"
+  },
+  {
+   "key": "cp_spookeyridge.accum.iPlayTime"
+  },
+  {
+   "key": "cp_frostwatch.accum.iPlayTime"
+  },
+  {
+   "key": "pl_frostcliff.accum.iPlayTime"
+  },
+  {
+   "key": "pl_rumford_event.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_frosty.accum.iPlayTime"
+  },
+  {
+   "key": "cp_gravelpit_snowy.accum.iPlayTime"
+  },
+  {
+   "key": "koth_sharkbay.accum.iPlayTime"
+  },
+  {
+   "key": "koth_rotunda.accum.iPlayTime"
+  },
+  {
+   "key": "pl_phoenix.accum.iPlayTime"
+  },
+  {
+   "key": "pl_cashworks.accum.iPlayTime"
+  },
+  {
+   "key": "pl_venice.accum.iPlayTime"
+  },
+  {
+   "key": "cp_reckoner.accum.iPlayTime"
+  },
+  {
+   "key": "cp_sulfur.accum.iPlayTime"
+  },
+  {
+   "key": "cp_hardwood_final.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_pelican_peak.accum.iPlayTime"
+  },
+  {
+   "key": "pd_selbyen.accum.iPlayTime"
+  },
+  {
+   "key": "vsh_tinyrock.accum.iPlayTime"
+  },
+  {
+   "key": "vsh_distillery.accum.iPlayTime"
+  },
+  {
+   "key": "vsh_skirmish.accum.iPlayTime"
+  },
+  {
+   "key": "vsh_nucleus.accum.iPlayTime"
+  },
+  {
+   "key": "arena_perks.accum.iPlayTime"
+  },
+  {
+   "key": "koth_slime.accum.iPlayTime"
+  },
+  {
+   "key": "cp_lavapit_final.accum.iPlayTime"
+  },
+  {
+   "key": "pd_mannsylvania.accum.iPlayTime"
+  },
+  {
+   "key": "cp_degrootkeep_rats.accum.iPlayTime"
+  },
+  {
+   "key": "pl_spineyard.accum.iPlayTime"
+  },
+  {
+   "key": "pl_corruption.accum.iPlayTime"
+  },
+  {
+   "key": "zi_murky.accum.iPlayTime"
+  },
+  {
+   "key": "zi_atoll.accum.iPlayTime"
+  },
+  {
+   "key": "zi_woods.accum.iPlayTime"
+  },
+  {
+   "key": "zi_sanitarium.accum.iPlayTime"
+  },
+  {
+   "key": "zi_devastation_final1.accum.iPlayTime"
+  },
+  {
+   "key": "koth_snowtower.accum.iPlayTime"
+  },
+  {
+   "key": "koth_krampus.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_haarp.accum.iPlayTime"
+  },
+  {
+   "key": "cp_brew.accum.iPlayTime"
+  },
+  {
+   "key": "plr_hacksaw.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_turbine_winter.accum.iPlayTime"
+  },
+  {
+   "key": "cp_carrier.accum.iPlayTime"
+  },
+  {
+   "key": "pd_galleria.accum.iPlayTime"
+  },
+  {
+   "key": "pl_emerge.accum.iPlayTime"
+  },
+  {
+   "key": "pl_camber.accum.iPlayTime"
+  },
+  {
+   "key": "pl_embargo.accum.iPlayTime"
+  },
+  {
+   "key": "pl_odyssey.accum.iPlayTime"
+  },
+  {
+   "key": "koth_megaton.accum.iPlayTime"
+  },
+  {
+   "key": "koth_cachoeira.accum.iPlayTime"
+  },
+  {
+   "key": "cp_overgrown.accum.iPlayTime"
+  },
+  {
+   "key": "cp_hadal.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_applejack.accum.iPlayTime"
+  },
+  {
+   "key": "pd_atom_smash.accum.iPlayTime"
+  },
+  {
+   "key": "cp_canaveral_5cp.accum.iPlayTime"
+  },
+  {
+   "key": "cp_burghausen.accum.iPlayTime"
+  },
+  {
+   "key": "koth_toxic.accum.iPlayTime"
+  },
+  {
+   "key": "cp_darkmarsh.accum.iPlayTime"
+  },
+  {
+   "key": "cp_freaky_fair.accum.iPlayTime"
+  },
+  {
+   "key": "tow_dynamite.accum.iPlayTime"
+  },
+  {
+   "key": "pd_circus.accum.iPlayTime"
+  },
+  {
+   "key": "vsh_outburst.accum.iPlayTime"
+  },
+  {
+   "key": "zi_blazehattan.accum.iPlayTime"
+  },
+  {
+   "key": "koth_overcast_final.accum.iPlayTime"
+  },
+  {
+   "key": "cp_fortezza.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_penguin_peak.accum.iPlayTime"
+  },
+  {
+   "key": "pl_patagonia.accum.iPlayTime"
+  },
+  {
+   "key": "plr_cutter.accum.iPlayTime"
+  },
+  {
+   "key": "vsh_maul.accum.iPlayTime"
+  },
+  {
+   "key": "pl_citadel.accum.iPlayTime"
+  },
+  {
+   "key": "pl_aquarius.accum.iPlayTime"
+  },
+  {
+   "key": "cp_fulgur.accum.iPlayTime"
+  },
+  {
+   "key": "cp_cargo.accum.iPlayTime"
+  },
+  {
+   "key": "cp_conifer.accum.iPlayTime"
+  },
+  {
+   "key": "koth_boardwalk.accum.iPlayTime"
+  },
+  {
+   "key": "koth_blowout.accum.iPlayTime"
+  },
+  {
+   "key": "koth_mannhole.accum.iPlayTime"
+  },
+  {
+   "key": "koth_demolition.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_pressure.accum.iPlayTime"
+  },
+  {
+   "key": "cp_cowerhouse.accum.iPlayTime"
+  },
+  {
+   "key": "koth_dusker.accum.iPlayTime"
+  },
+  {
+   "key": "arena_afterlife.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_doublecross_event.accum.iPlayTime"
+  },
+  {
+   "key": "htf_marshlands.accum.iPlayTime"
+  },
+  {
+   "key": "pd_nutcracker.accum.iPlayTime"
+  },
+  {
+   "key": "cppl_gavle.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_sidewinder.accum.iPlayTime"
+  },
+  {
+   "key": "2koth_abbey.accum.iPlayTime"
+  },
+  {
+   "key": "koth_winter_ridge.accum.iPlayTime"
+  },
+  {
+   "key": "plr_matterhorn.accum.iPlayTime"
+  },
+  {
+   "key": "koth_dryfield.accum.iPlayTime"
+  },
+  {
+   "key": "koth_camp_saxton.accum.iPlayTime"
+  },
+  {
+   "key": "koth_shorelight.accum.iPlayTime"
+  },
+  {
+   "key": "pl_redwood.accum.iPlayTime"
+  },
+  {
+   "key": "cp_premuda.accum.iPlayTime"
+  },
+  {
+   "key": "cp_mojave.accum.iPlayTime"
+  },
+  {
+   "key": "cp_holyhell.accum.iPlayTime"
+  },
+  {
+   "key": "pl_aridpass_event.accum.iPlayTime"
+  },
+  {
+   "key": "koth_trainsawlaser.accum.iPlayTime"
+  },
+  {
+   "key": "ctf_medi_evil.accum.iPlayTime"
+  },
+  {
+   "key": "cp_wildcat_event.accum.iPlayTime"
+  },
+  {
+   "key": "Demoman.accum.iBlastDamage"
+  },
+  {
+   "key": "Demoman.max.iBlastDamage"
+  },
+  {
+   "key": "Demoman.mvm.accum.iBlastDamage"
+  },
+  {
+   "key": "Demoman.mvm.max.iBlastDamage"
   }
  ],
  "raw": {

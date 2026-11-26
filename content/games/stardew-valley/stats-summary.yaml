@@ -1,0 +1,23 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: crops
+          name: Crops Harvested
+          value: 594
+        - key: forage
+          name: Items Foraged
+          value: 135
+        - key: fish
+          name: Fish Caught
+          value: 23
+        - key: monsters
+          name: Monsters Killed
+          value: 300
+        - key: board_quests
+          name: Help Wanted Quests Completed
+          value: 5
+        - key: loved_gifts
+          name: Loved Gifts Given
+          value: 10
