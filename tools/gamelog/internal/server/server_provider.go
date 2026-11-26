@@ -15,24 +15,6 @@ import (
 
 // ── Suggest (read-only) ──────────────────────────────────────────────────
 
-// suggestPath is where a game's suggestion lives: its own detail page, with
-// the panel fetched on arrival — so every entry point (the games list's
-// Suggest button, old /suggest/{slug} links) lands where the suggestion can be
-// logged, not on a read-only report that has to be retyped somewhere else.
-func suggestPath(slug string) string { return gamePath(slug) + "?suggest=1#suggest" }
-
-// handleSuggestReport keeps old /suggest/{slug} links working now that the
-// suggestion is shown on the game's own page.
-func (s *server) handleSuggestReport(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, suggestPath(r.PathValue("slug")), http.StatusSeeOther)
-}
-
-// handleSuggestIndex keeps /suggest working now that its whole-library sweep
-// is Catch up's unlogged-activity list.
-func (s *server) handleSuggestIndex(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/", http.StatusSeeOther)
-}
-
 // suggestionFor runs the suggest panel's provider fetches for one game. It returns the loaded doc and playthroughs too, since every caller
 // needs them to decide what to pre-fill.
 func (s *server) suggestionFor(ctx context.Context, slug string) (commands.SuggestionReport, *model.Doc, *model.PlaythroughsFile, error) {

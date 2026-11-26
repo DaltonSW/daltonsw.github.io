@@ -399,8 +399,7 @@ The way in is the **Suggest** button on every linked row of the games list. The 
 version — every game with provider activity on a day its `playthroughs.yaml` doesn't cover — is
 Catch up's activity list (see "Catch up" below), which applies the same coverage rules to the
 archive instead of fetching again, across every provider rather than just these two, and offers the
-forms right on the list. Old `/suggest` and `/suggest/<slug>` links redirect to Catch up and the
-game page respectively.
+forms right on the list.
 
 RetroAchievements achievement-unlock dates are close to ground truth (RA is achievement-first).
 A game with a finishing award — `mastered`, `completed`, `beaten-hardcore`, or

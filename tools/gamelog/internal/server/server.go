@@ -179,9 +179,6 @@ func (s *server) registerRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET /jobs/{id}", s.handleJobStatus)
 	mux.HandleFunc("GET /jobs/{id}/progress", s.handleJobProgress)
 
-	mux.HandleFunc("GET /suggest", s.handleSuggestIndex)
-	mux.HandleFunc("GET /suggest/{slug}", s.handleSuggestReport)
-
 	mux.HandleFunc("POST /project", s.handleProject)
 }
 
