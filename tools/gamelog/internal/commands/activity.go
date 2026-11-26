@@ -33,7 +33,10 @@ type ProviderActivity struct {
 type ActivityGuess struct {
 	// Target is the playthrough index to add a session to, or -1 for a new
 	// playthrough.
-	Target       int
+	Target int
+	// Extend means stretch ActivityItem.Extend[0] over the activity instead.
+	// It wins over Target.
+	Extend       bool
 	Status       string // for a new playthrough
 	Started      string
 	Finished     string
@@ -60,8 +63,34 @@ type ActivityItem struct {
 
 	// Runs are the game's non-planned playthroughs, the targets a card's
 	// "add as session" choice can point at.
-	Runs  []model.Playthrough
-	Guess ActivityGuess
+	Runs []model.Playthrough
+	// Extend are logged sessions the uncovered activity borders — one ending
+	// the day before First, or starting the day after Last — which a card can
+	// stretch to cover it instead of logging a separate one-day span.
+	Extend []SessionExtension
+	Guess  ActivityGuess
+}
+
+// SessionExtension is one logged session an activity card can stretch: run
+// Run's session Session, as it stands now.
+type SessionExtension struct {
+	Run, Session      int
+	Started, Finished string
+}
+
+// Extended is the session's range once it covers started → finished as well:
+// the union of the two, so extending never shrinks a session or reopens it.
+func (x SessionExtension) Extended(started, finished string) (string, string) {
+	s, f := x.Started, x.Finished
+	if started != "" && started < s {
+		s = started
+	}
+	for _, d := range []string{started, finished} {
+		if d > f {
+			f = d
+		}
+	}
+	return s, f
 }
 
 // IsNew reports whether any of the uncovered activity happened on or after
@@ -238,6 +267,7 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 				item.Runs = append(item.Runs, p)
 			}
 		}
+		item.Extend = borderingSessions(item, spans)
 		item.Guess = guessActivity(item, staleCutoff)
 		rep.Items = append(rep.Items, item)
 	}
@@ -251,6 +281,8 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 
 // guessActivity picks the card's pre-filled answer. In order:
 //
+//   - activity bordering a logged session (see borderingSessions): that
+//     session, extended to cover it;
 //   - a one-shot game (endless/multiplayer/software) with a run of that kind:
 //     a session on it, spanning the uncovered activity — the run's sessions
 //     list is the record, so a new playthrough would fragment it;
@@ -265,6 +297,12 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 //     usual default status.
 func guessActivity(it ActivityItem, staleCutoff string) ActivityGuess {
 	g := ActivityGuess{Target: -1, Started: it.First}
+	if len(it.Extend) > 0 {
+		// Play the day after (or before) a logged session is that session
+		// carrying on, not a run of its own.
+		g.Extend, g.Finished = true, it.Last
+		return g
+	}
 	if model.IsOneShot(it.Game.Status) {
 		best := -1
 		for i, r := range it.Runs {
@@ -300,6 +338,49 @@ func guessActivity(it ActivityItem, staleCutoff string) ActivityGuess {
 		g.Status, g.FinishedHint = model.DefaultPlaythroughStatus(it.Game.Status), it.Last
 	}
 	return g
+}
+
+// borderingSessions finds the closed, fully dated sessions the uncovered
+// activity touches end to end: one finishing the day before it.First, or
+// starting the day after it.Last. One whose extended range would run into
+// another logged span isn't offered — that stretch is someone else's run.
+// Sessions extended forward come first.
+func borderingSessions(it ActivityItem, spans spanList) []SessionExtension {
+	before, after := shiftDay(it.First, -1), shiftDay(it.Last, 1)
+	var fwd, back []SessionExtension
+	for _, r := range it.Runs {
+		for _, s := range r.Sessions {
+			if len(s.Started) != 10 || len(s.Finished) != 10 {
+				continue
+			}
+			x := SessionExtension{Run: r.Index, Session: s.Index, Started: s.Started, Finished: s.Finished}
+			switch {
+			case s.Finished == before:
+			case s.Started == after:
+			default:
+				continue
+			}
+			start, end := x.Extended(it.First, it.Last)
+			if spans.overlapsOther(start, end, x) {
+				continue
+			}
+			if s.Finished == before {
+				fwd = append(fwd, x)
+			} else {
+				back = append(back, x)
+			}
+		}
+	}
+	return append(fwd, back...)
+}
+
+// shiftDay moves a YYYY-MM-DD day by n days, "" for anything else.
+func shiftDay(d string, n int) string {
+	t, err := time.ParseInLocation("2006-01-02", d, model.SiteLocation)
+	if err != nil {
+		return ""
+	}
+	return t.AddDate(0, 0, n).Format("2006-01-02")
 }
 
 // activityLabel names a record on a card: the provider, plus the subset's own

@@ -199,6 +199,26 @@ func (l spanList) covers(d string) int {
 	return open
 }
 
+// overlapsOther reports whether start → end (a closed range) touches any
+// logged span other than session x itself.
+func (l spanList) overlapsOther(start, end string, x SessionExtension) bool {
+	for _, s := range l {
+		if s.pth == x.Run && s.start == x.Started && s.end == x.Finished {
+			continue
+		}
+		if prefixCmp(end, s.start) < 0 {
+			continue
+		}
+		switch {
+		case !s.open && prefixCmp(start, s.end) <= 0:
+			return true
+		case s.open && (s.bound == "" || prefixCmp(start, s.bound) < 0):
+			return true
+		}
+	}
+	return false
+}
+
 // prefixCmp compares a full day against a possibly-partial logged date at the
 // logged date's precision, so "2018-09-14" is neither before nor after
 // "2018-09".

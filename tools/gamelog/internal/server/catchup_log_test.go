@@ -110,6 +110,31 @@ func TestCatchupLog_Session(t *testing.T) {
 	}
 }
 
+// Extending a bordering session widens it in place — no new session, and a
+// started date inside it doesn't pull its start forward.
+func TestCatchupLog_ExtendSession(t *testing.T) {
+	gamesDir := filepath.Join(t.TempDir(), "content", "games")
+	writeActivityGame(t, gamesDir, "hades", "playing",
+		"playthroughs:\n  - status: paused\n    sessions:\n      - started: \"2026-11-10\"\n        finished: \"2026-11-14\"\n        title: first stint\n",
+		"2026-11-15")
+	s := &server{gamesDir: gamesDir}
+
+	rec := postCatchup(t, s.handleCatchupLog, "/catchup/log/hades", "hades", url.Values{
+		"target": {"extend:0:0"}, "started": {"2026-11-15"}, "finished": {"2026-11-15"},
+	})
+	if !strings.Contains(rec.Body.String(), "row--saved") {
+		t.Fatalf("want a saved result, got %s", rec.Body.String())
+	}
+	pf, err := model.LoadPlaythroughs(filepath.Join(gamesDir, "hades"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	ss := pf.Playthroughs[0].Sessions
+	if len(ss) != 1 || ss[0].Started != "2026-11-10" || ss[0].Finished != "2026-11-15" || ss[0].Title != "first stint" {
+		t.Fatalf("sessions = %+v, want one 2026-11-10 → 2026-11-15 keeping its title", ss)
+	}
+}
+
 // A refused write re-renders the card with what was typed and the reason,
 // rather than swapping it for a one-line error that throws the form away.
 func TestCatchupLog_ErrorKeepsTheCard(t *testing.T) {

@@ -489,9 +489,12 @@ leaving out empty sections:
   subsets — read from the archive the run just refreshed, not fetched again. Coverage follows the
   suggest panel's rules (`loggedSpans`/`coverageOf` in `coverage.go`): sessions, or a playthrough's
   own range; an open run covers everything until the next logged span; planned entries cover
-  nothing. Each card carries one pre-filled form — **log as** a new playthrough or a session on an
-  existing run, started/finished/beaten/status/notes — whose guess is, in order: a session on a one-shot
-  game's run; a `finished` run ending on the last activity day when there's an uncovered award (with
+  nothing. Each card carries one pre-filled form — **log as** a new playthrough, a new session on an
+  existing run, or an extension of a closed session the activity borders (one ending the day before
+  it starts, or starting the day after it ends, offered only when the stretched session wouldn't run
+  into another logged span; extending is a union, so it never shrinks or reopens the session) —
+  started/finished/beaten/status/notes — whose guess is, in order: extending a bordering session;
+  a session on a one-shot game's run; a `finished` run ending on the last activity day when there's an uncovered award (with
   the award as its `beaten:` date when it's an RA beaten award earlier than that — a mastery or
   platinum date isn't a beaten date); an `unfinished` run closed on the last
   day for activity older than the Gone quiet threshold; otherwise an open run with the game's

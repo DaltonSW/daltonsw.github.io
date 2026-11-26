@@ -11,6 +11,7 @@ import (
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/model"
+	"go.dalton.dog/gamelog/internal/mutate"
 	"go.dalton.dog/gamelog/internal/providers/nadeo"
 )
 
@@ -70,7 +71,9 @@ func newActivityCard(it commands.ActivityItem, th catchupThresholds) activityCar
 		ActivityItem: it, Started: g.Started, Finished: g.Finished, FinishedHint: g.FinishedHint,
 		Beaten: g.Beaten, Status: g.Status, Target: "new", Thresholds: th,
 	}
-	if g.Target >= 0 {
+	if g.Extend && len(it.Extend) > 0 {
+		c.Target = extendTarget(it.Extend[0])
+	} else if g.Target >= 0 {
 		c.Target = strconv.Itoa(g.Target)
 	}
 	if c.Status == "" {
@@ -82,10 +85,36 @@ func newActivityCard(it commands.ActivityItem, th catchupThresholds) activityCar
 
 func (c *activityCard) setTargets() {
 	c.Targets = []activityTarget{{Value: "new", Label: "new playthrough", Selected: c.Target == "new"}}
+	for _, x := range c.Extend {
+		v := extendTarget(x)
+		label := fmt.Sprintf("extend session %s → %s on #%d", x.Started, x.Finished, x.Run+1)
+		c.Targets = append(c.Targets, activityTarget{Value: v, Label: label, Selected: c.Target == v})
+	}
 	for _, p := range c.Runs {
 		v := strconv.Itoa(p.Index)
-		c.Targets = append(c.Targets, activityTarget{Value: v, Label: "session on " + runLabel(p), Selected: c.Target == v})
+		c.Targets = append(c.Targets, activityTarget{Value: v, Label: "new session on " + runLabel(p), Selected: c.Target == v})
 	}
+}
+
+// extendTarget is the "log as" value for stretching a bordering session:
+// "extend:<run>:<session>".
+func extendTarget(x commands.SessionExtension) string {
+	return fmt.Sprintf("extend:%d:%d", x.Run, x.Session)
+}
+
+// parseExtendTarget undoes extendTarget.
+func parseExtendTarget(v string) (run, session int, ok bool) {
+	rest, found := strings.CutPrefix(v, "extend:")
+	if !found {
+		return 0, 0, false
+	}
+	a, b, found := strings.Cut(rest, ":")
+	if !found {
+		return 0, 0, false
+	}
+	run, err1 := strconv.Atoi(a)
+	session, err2 := strconv.Atoi(b)
+	return run, session, err1 == nil && err2 == nil
 }
 
 // IsSession reports whether the card is set to add a session, which is what
@@ -564,7 +593,11 @@ func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {
 	beaten := strings.TrimSpace(r.FormValue("beaten"))
 
 	var msg string
-	if target == "new" {
+	if run, sess, ok := parseExtendTarget(target); ok {
+		var from, to string
+		from, to, err = extendSession(pf, run, sess, started, finished)
+		msg = fmt.Sprintf("%s: extended a session on #%d to %s → %s.", doc.FM.Title, run+1, from, to)
+	} else if target == "new" {
 		err = logNewPlaythrough(doc, pf, model.PlaythroughFields{Started: started, Finished: finished, Beaten: beaten, Status: status, Notes: notes})
 		msg = fmt.Sprintf("%s: logged a %s playthrough from %s", doc.FM.Title, status, started)
 	} else {
@@ -592,14 +625,42 @@ func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {
 		s.renderFragment(w, catchupFragmentsCache, "catchup_fragments.html", "activity_card", c, catchupFragmentFiles[1:]...)
 		return
 	}
-	if finished != "" {
-		msg += " to " + finished
+	if !strings.HasSuffix(msg, ".") {
+		if finished != "" {
+			msg += " to " + finished
+		}
+		msg += "."
 	}
-	msg += "."
 	if it, _, _ := s.activityFor(slug, th); it != nil {
 		msg += fmt.Sprintf(" %d more unlogged day(s) remain — they'll be on the next load.", it.Days)
 	}
 	s.respondHousekeepingOK(w, r, housekeepingReturnTo(r), msg)
+}
+
+// extendSession stretches run idx's session j to cover started → finished as
+// well — a union, so it never shrinks the session or reopens it — through the
+// same validation and pre-write loss check as the game page's session edit.
+// Returns the session's new range.
+func extendSession(pf *model.PlaythroughsFile, idx, j int, started, finished string) (string, string, error) {
+	if idx < 0 || idx >= len(pf.Playthroughs) || j < 0 || j >= len(pf.Playthroughs[idx].Sessions) {
+		return "", "", fmt.Errorf("no such session")
+	}
+	if err := model.ValidateDate(true)(started); err != nil {
+		return "", "", err
+	}
+	if err := model.ValidateDate(false)(finished); err != nil {
+		return "", "", err
+	}
+	cur := pf.Playthroughs[idx].Sessions[j]
+	if cur.Finished == "" {
+		return "", "", fmt.Errorf("that session is still open — it already covers this")
+	}
+	x := commands.SessionExtension{Run: idx, Session: j, Started: cur.Started, Finished: cur.Finished}
+	from, to := x.Extended(started, finished)
+	if err := pf.EditSession(idx, j, from, to, cur.Title); err != nil {
+		return "", "", err
+	}
+	return from, to, mutate.WriteEntry(pf)
 }
 
 // handleCatchupDismiss marks a card's activity reviewed: each provider record

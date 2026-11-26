@@ -327,3 +327,50 @@ func TestActivityDay(t *testing.T) {
 		}
 	}
 }
+
+// Activity the day after (or before) a closed session is offered as that
+// session extended, and pre-selected — unless stretching it would run into
+// another logged span.
+func TestFindUnloggedActivity_BorderingSession(t *testing.T) {
+	f := newActivityFixture(t)
+	f.game("after", "playing", []string{"steam_appid: 30"},
+		"playthroughs:\n  - status: paused\n    sessions:\n      - started: \"2026-11-10\"\n        finished: \"2026-11-14\"\n")
+	f.record("steam", "30", nil, "2026-11-15")
+
+	f.game("before", "playing", []string{"steam_appid: 31"},
+		"playthroughs:\n  - status: paused\n    sessions:\n      - started: \"2026-11-10\"\n        finished: \"2026-11-14\"\n")
+	f.record("steam", "31", nil, "2026-11-09")
+
+	// A day's gap: not bordering, so the usual guess.
+	f.game("gap", "playing", []string{"steam_appid: 32"},
+		"playthroughs:\n  - status: paused\n    sessions:\n      - started: \"2026-11-10\"\n        finished: \"2026-11-14\"\n")
+	f.record("steam", "32", nil, "2026-11-16")
+
+	// Borders run #1, but the activity reaches past run #2's session.
+	f.game("blocked", "playing", []string{"steam_appid: 33"},
+		"playthroughs:\n  - status: dropped\n    sessions:\n      - started: \"2026-11-01\"\n        finished: \"2026-11-04\"\n"+
+			"  - status: dropped\n    sessions:\n      - started: \"2026-11-08\"\n        finished: \"2026-11-09\"\n")
+	f.record("steam", "33", nil, "2026-11-05", "2026-11-12")
+
+	rep := f.find(ActivityOptions{})
+	after := f.item(rep, "after")
+	if len(after.Extend) != 1 || !after.Guess.Extend || after.Guess.Finished != "2026-11-15" {
+		t.Fatalf("after: extend = %+v, guess = %+v", after.Extend, after.Guess)
+	}
+	if s, e := after.Extend[0].Extended(after.Guess.Started, after.Guess.Finished); s != "2026-11-10" || e != "2026-11-15" {
+		t.Errorf("after: extended to %s → %s, want 2026-11-10 → 2026-11-15", s, e)
+	}
+	before := f.item(rep, "before")
+	if len(before.Extend) != 1 || !before.Guess.Extend {
+		t.Fatalf("before: extend = %+v, guess = %+v", before.Extend, before.Guess)
+	}
+	if s, e := before.Extend[0].Extended(before.Guess.Started, before.Guess.Finished); s != "2026-11-09" || e != "2026-11-14" {
+		t.Errorf("before: extended to %s → %s, want 2026-11-09 → 2026-11-14", s, e)
+	}
+	if g := f.item(rep, "gap"); len(g.Extend) != 0 || g.Guess.Extend {
+		t.Errorf("gap: extend = %+v, guess = %+v; a day's gap isn't bordering", g.Extend, g.Guess)
+	}
+	if b := f.item(rep, "blocked"); len(b.Extend) != 0 {
+		t.Errorf("blocked: extend = %+v; must not stretch over another run", b.Extend)
+	}
+}

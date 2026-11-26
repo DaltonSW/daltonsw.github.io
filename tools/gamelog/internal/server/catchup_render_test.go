@@ -66,7 +66,7 @@ func TestCatchupRenders(t *testing.T) {
 		`id="log-hades"`, `form="log-hades"`, `hx-include="#log-hades"`,
 		`id="dismiss-hades"`, `form="dismiss-hades"`, `hx-post="/catchup/dismiss/hades"`,
 		`<option value="new" selected>new playthrough</option>`,
-		`<option value="0">session on #1 · finished</option>`,
+		`<option value="0">new session on #1 · finished</option>`,
 		`value="2026-11-01"`,
 		`placeholder="last activity 2026-11-20"`,
 		"+4 achievements since last catch-up",
@@ -118,7 +118,7 @@ func TestActivityCard_SessionGuessDisablesStatus(t *testing.T) {
 	it := sampleActivity("spelunky", "2026-11-20")
 	it.Guess = commands.ActivityGuess{Target: 0, Started: "2026-11-01", Finished: "2026-11-20"}
 	out := renderCatchup(t, catchupData{New: []activityCard{newActivityCard(it, catchupThresholds{})}})
-	if !strings.Contains(out, `<option value="0" selected>session on #1`) {
+	if !strings.Contains(out, `<option value="0" selected>new session on #1`) {
 		t.Error("the session target should be preselected")
 	}
 	if !strings.Contains(out, `aria-label="status" disabled`) {
