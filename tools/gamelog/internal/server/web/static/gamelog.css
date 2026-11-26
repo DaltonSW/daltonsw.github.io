@@ -565,6 +565,42 @@ body.body--fixed .site-footer { display: none; }
 .row input[name="rating"] { flex: 0 1 90px; }
 .row input[name="notes"], .row input[name="title"] { flex: 2 1 200px; }
 .row select[name="status"], .row select[name="new_status"] { flex: 1 1 130px; }
+/* Session rows: the action cell is a wrapping set of groups (edit · split
+   session · split after) so a narrow window drops a group onto a second line
+   instead of pushing the table past its panel. Each group stays on one line,
+   and the date/title inputs keep enough width to show a whole value. */
+.sess-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+.sess-actions__group { display: flex; flex-wrap: nowrap; align-items: center; gap: 0.4rem; }
+.sess-actions__group input[type="text"] { width: 6.5rem; flex: none; }
+.sess-actions__group select { width: auto; flex: none; }
+/* Split controls stay folded away until asked for. The trigger sits in the
+   edit group's line; opened, the controls float below it as a popover
+   (anchored to the trigger's right edge) so the row never grows taller. */
+.sess-more { position: relative; }
+.sess-more > summary { display: inline-flex; cursor: pointer; list-style: none; user-select: none; white-space: nowrap; }
+.sess-more > summary::-webkit-details-marker { display: none; }
+.sess-more[open] > summary { color: var(--accent); border-color: var(--accent); }
+.sess-more__body {
+  position: absolute; top: calc(100% + 0.3rem); right: 0; z-index: 5;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  padding: 0.6rem; background: var(--panel); border: 1px solid var(--stroke); border-radius: var(--radius);
+}
+.sess-actions button, .sess-more > summary { padding: 0.35rem 0.6rem; }
+/* The icon buttons (and the <summary> standing in for one) are all the same
+   square, so differing line boxes can't make one taller than the rest. */
+.sess-actions .btn--icon, .sess-more > summary.btn--icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; padding: 0; line-height: 1;
+}
+.sess-actions button { white-space: nowrap; }
+/* Dates are always YYYY-MM-DD in a monospace font: 10ch of text plus the
+   input's padding and border, so the box fits the value and no more. */
+.sessions-table input[name="started"], .sessions-table input[name="finished"] { width: calc(10ch + 1.6rem); }
+/* Every column shrinks to its content (1% + nowrap) except Title, which takes
+   whatever width is left. */
+.sessions-table th, .sessions-table tr:not(.row-error) > td { width: 1%; white-space: nowrap; }
+.sessions-table th:nth-child(4), .sessions-table tr:not(.row-error) > td:nth-child(4) { width: auto; }
+.sessions-table input[name="title"] { width: 100%; min-width: 6rem; }
 .flash { border-radius: var(--radius); padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.92rem; }
 .flash--error { border: 1px solid var(--stop); color: var(--stop); }
 .flash--ok { border: 1px solid var(--ok); color: var(--ok); }

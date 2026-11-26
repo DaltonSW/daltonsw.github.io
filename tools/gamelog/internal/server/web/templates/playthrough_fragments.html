@@ -30,32 +30,27 @@ playthroughsSectionView and the handlers that render these. */}}
   <td><input type="text" name="started" value="{{.Started}}"></td>
   <td><input type="text" name="finished" value="{{.Finished}}"></td>
   <td><input type="text" name="title" value="{{.Title}}"></td>
-  <td class="row row--nowrap">
-    {{if gt .Index 0}}
-    <button type="button" class="btn--icon" title="Move up"
-      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/move-up"
-      hx-target="#sessions-{{.PthIndex}}"
-      hx-swap="outerHTML">&uarr;</button>
-    {{end}}
-    {{if lt (add1 .Index) .NumSessions}}
-    <button type="button" class="btn--icon" title="Move down"
-      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/move-down"
-      hx-target="#sessions-{{.PthIndex}}"
-      hx-swap="outerHTML">&darr;</button>
-    {{end}}
-    <button type="button"
+  <td><div class="sess-actions">
+    <div class="sess-actions__group">
+    <button type="button" class="btn--icon" title="Save" aria-label="Save"
       hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}"
       hx-include="closest tr"
       hx-target="#sess-{{.PthIndex}}-{{.Index}}"
-      hx-swap="outerHTML">Save</button>
+      hx-swap="outerHTML">&#xF0C7;</button>
     {{if gt .NumSessions 1}}
-    <button type="button" class="btn--danger"
+    <button type="button" class="btn--icon btn--danger" title="Delete" aria-label="Delete"
       hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/delete"
       hx-target="#sessions-{{.PthIndex}}"
       hx-swap="outerHTML"
-      hx-confirm="Delete this session?">Delete</button>
+      hx-confirm="Delete this session?">&#xF1F8;</button>
+    {{end}}
+    {{if or .Finished (lt (add1 .Index) .NumSessions)}}
+    <details class="sess-more">
+    <summary class="btn btn--icon" title="Split this session, or the playthrough after it" aria-label="Split">&#xF418;</summary>
+    <div class="sess-more__body">
     {{end}}
     {{if .Finished}}
+    <div class="sess-actions__group">
     <input type="text" name="split_end" placeholder="1st ends" size="10" title="Split this session in two: the first part ends on this day">
     <input type="text" name="split_start" placeholder="2nd starts" size="10" title="…and the second part starts on this day and runs to the current finish">
     <button type="button"
@@ -63,8 +58,10 @@ playthroughsSectionView and the handlers that render these. */}}
       hx-include="closest tr"
       hx-target="#sessions-{{.PthIndex}}"
       hx-swap="outerHTML">Split session</button>
+    </div>
     {{end}}
     {{if lt (add1 .Index) .NumSessions}}
+    <div class="sess-actions__group">
     <input type="hidden" name="keep_last" value="{{.Index}}">
     <select name="new_status">{{range pthStatuses}}<option value="{{.}}">{{.}}</option>{{end}}</select>
     <button type="button"
@@ -72,8 +69,26 @@ playthroughsSectionView and the handlers that render these. */}}
       hx-include="closest tr"
       hx-target="#playthroughs-section"
       hx-swap="outerHTML">Split after here</button>
+    </div>
     {{end}}
-  </td>
+    {{if or .Finished (lt (add1 .Index) .NumSessions)}}
+    </div>
+    </details>
+    {{end}}
+    {{if gt .Index 0}}
+    <button type="button" class="btn--icon" title="Move up"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/move-up"
+      hx-target="#sessions-{{.PthIndex}}"
+      hx-swap="outerHTML">&#xF062;</button>
+    {{end}}
+    {{if lt (add1 .Index) .NumSessions}}
+    <button type="button" class="btn--icon" title="Move down"
+      hx-post="/games/{{.Slug}}/playthroughs/{{.PthIndex}}/sessions/{{.Index}}/move-down"
+      hx-target="#sessions-{{.PthIndex}}"
+      hx-swap="outerHTML">&#xF063;</button>
+    {{end}}
+    </div>
+  </div></td>
 </tr>
 {{if .Error}}
 <tr class="row-error"><td colspan="5">{{.Error}}</td></tr>
@@ -81,7 +96,7 @@ playthroughsSectionView and the handlers that render these. */}}
 {{end}}
 
 {{define "sessions_table"}}
-<table id="sessions-{{.Index}}">
+<table id="sessions-{{.Index}}" class="sessions-table">
   <thead><tr><th>#</th><th>Started</th><th>Finished</th><th>Title</th><th></th></tr></thead>
   <tbody>
   {{if .Error}}<tr class="row-error"><td colspan="5">{{.Error}}</td></tr>{{end}}
