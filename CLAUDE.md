@@ -40,6 +40,9 @@ Consequences that should drive design decisions:
   projections beside `_index.md` (`achievement-summary.yaml`, plus `campaigns.yaml` and
   `btd6-summary.yaml` for the two non-achievement providers, and `stats-summary.yaml` for Steam's
   per-game stats), which are regenerable from `archive/` and never published either.
+- **Tags** are free-form labels beside the status: `tags:` in a game's front matter (a Hugo
+  taxonomy) and optionally on a single run in `playthroughs.yaml`. `multiplayer` is a tag, not a
+  status. Display labels and colors live in `data/game-tags.yaml`.
 - **Curated lists** (`/games/lists/`) live in `data/game-lists.yaml`: authored through the tool's
   Lists page, order is rank, games by slug and achievements by provider + record id + key.
 - Credentials live in `tools/gamelog/.env` (gitignored). `.env.example` is the template.

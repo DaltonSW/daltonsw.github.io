@@ -224,8 +224,8 @@ eleven of the thirteen dates were already in the Steam archive record, and the o
   `playing`, and an on-hold run reads `paused`.
 - **Otherwise:** `finished` if any run was finished, since a later dropped attempt or co-op session
   doesn't un-finish a game. Failing that, the status of the run that ended last.
-- **Runs that don't count:** `planned`, `misc_launch`, and `endless`/`multiplayer` side modes.
-- **Stays hand-set:** one-shot games (`endless`/`multiplayer`/`software`), because those describe
+- **Runs that don't count:** `planned`, `misc_launch`, and `endless` side modes.
+- **Stays hand-set:** one-shot games (`endless`/`software`), because those describe
   the kind of game rather than an outcome (Hades is `endless` even though its run is `finished`),
   and any game with no counted runs (`backlog`, mostly).
 
@@ -272,28 +272,27 @@ it can repeat freely, and it isn't one of the one-shot statuses below.
 game with no playthrough entries — logged or written, `planned` excluded — and no captured
 `playtime_mins`, and shows it as an extra tag beside whatever the status is. There's nothing to set.
 
-`endless`, `multiplayer`, and `software` are the three **one-shot** statuses — an entry with
-no meaningful start/finish narrative, used in an open-ended series of sessions with no state that
-ends play. They're separate statuses because the *reason* differs: `endless` is a replay-loop
-design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `software` isn't a game at
+`endless` and `software` are the two **one-shot** statuses — an entry with no meaningful
+start/finish narrative, used in an open-ended series of sessions with no state that ends play.
+They're separate statuses because the *reason* differs: `endless` is a replay-loop design
+(roguelike/sandbox/idle, or a competitive game with no end), and `software` isn't a game at
 all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
 through the same new-games scan and need somewhere to go that isn't a completion state.
 
 A one-shot entry's `sessions:` list is usually the whole record, and Catch up's guess for activity
 on a one-shot game is a session on its existing run. That's a default, not a rule: there's no cap on
-entries. A second `multiplayer` entry on the same platform (a different group, a different season)
-or a second `endless` run is logged like any other playthrough. An earlier version allowed only one
-entry per one-shot status per platform (`mutate.OneShotConflict`), and was removed on 2026-11-26.
+entries. A second `endless` entry on the same platform (a different group, a different season) is
+logged like any other playthrough. An earlier version allowed only one entry per one-shot status per
+platform (`mutate.OneShotConflict`), and was removed on 2026-11-26.
 
-Since `endless` and `multiplayer` are also entry-level statuses (`model.PlaythroughStatuses`), a
-game with genuinely distinct modes (Hitman's story campaign, its Freelancer roguelike, and its
-multiplayer contracts) carries an entry per mode. `software` is
-game-level only — it describes the whole record, not a mode, so a software game's entries say
+Since `endless` is also an entry-level status (`model.PlaythroughStatuses`), a game with
+genuinely distinct modes (Hitman's story campaign and its Freelancer roguelike) carries an entry
+per mode. `software` is game-level only — it describes the whole record, not a mode, so a software game's entries say
 `playing` and the site reads them as software. Every other entry carries its own status and is shown
 as such: Hades' finished run is drawn as finished even though the game is `endless`. (Older
 endless/multiplayer entries once said `playing` and leaned on the game's status. They were rewritten
 in place on 2026-11-21, which removed the special cases that resolved them. Don't write a `playing`
-entry meaning endless/multiplayer again.)
+entry meaning endless again.)
 
 Stale triage (`FindStaleCandidates`) only looks at game-level `playing`, so one-shot games are never
 offered for finished/dropped triage, whatever their entries say.
@@ -303,6 +302,31 @@ makes it hand-set, never derived), `GameStatuses`, and if it's a real per-entry 
 `PlaythroughStatuses`, `DefaultPlaythroughStatus` and `countsForStatus` (all in
 `internal/model/status.go`); `NO_CONNECTOR_CLASSES` in `assets/js/games-timeline.ts`; and the status
 colour maps in `assets/scss/main.scss` and `_vars.scss`.
+
+### Tags
+
+**Multiplayer is a tag, not a status.** It was a third one-shot status until 2026-11-26, but
+playing with other people says nothing about whether a game can be finished: Castle Crashers can,
+Rocket League can't. Tags are free-form labels that sit beside the status, as many as apply:
+
+- **On a game:** front matter `tags: [multiplayer]` (`FrontMatter.Tags`). Hugo reads it as the
+  `tags` taxonomy, so each tag gets a `/tags/<tag>/` page.
+- **On a run:** `tags:` on a `playthroughs.yaml` entry, for a run that differs from the rest (Portal
+  2's co-op runs). A run's effective tags are the game's plus its own. A split-off entry inherits
+  its source's tags.
+- **Normalized** by `model.ParseTags`: comma- or newline-separated, lowercased, deduped. Every form
+  that edits a game or a run has a tags field, with tags already in use as suggestions.
+- **Shortening a list is a declared removal.** The loss check sees `tags[1]` vanish, so the edit
+  handlers declare the dropped tail (`model.ShrunkListPaths`). The game-info form does the same for
+  `subgames`.
+- **Display only** lives in `data/game-tags.yaml`: an optional short label and color per tag. A
+  tag with no entry still works, shown under its own name in the neutral color.
+
+The migration turned every `multiplayer` game into `endless` + the tag, and every `multiplayer` run
+into an `endless` run tagged `multiplayer`. Games that really can be finished want their runs
+changed (and, where the game is hand-set `endless`, its status). `IsOneShot`, `countsForStatus` and
+`DefaultPlaythroughStatus` still recognize a hand-typed `multiplayer`, but nothing offers or writes
+it.
 
 **Playthrough boundaries are confirmed by hand, never derived.** A gap in achievement unlocks marks
 an activity arc, not a playthrough, so nothing splits entries automatically.
@@ -631,7 +655,7 @@ Backlog above. One row per provider, not per game: a game linked to both Steam a
 RetroAchievements has two unrelated denominators, and merging them would invent a number that's
 true of neither. A RetroAchievements subset is another such denominator, so it gets its own row
 too, named (`retroachievements · Mouse Alley`) rather than repeating the bare provider on two rows
-with different numbers. The one-shot statuses (`endless`, `multiplayer`, `software`) never appear
+with different numbers. The one-shot statuses (`endless`, `software`) never appear
 — there's no completion for them to be short of — and `finished`/`dropped`/`unfinished`
 games are opt-in via a checkbox (`incomplete_all`), since leaving achievements on a game you've called finished (or
 unfinished) is a decision, not an oversight. `paused` and `backlog` games *are* listed: both mean
@@ -652,8 +676,8 @@ active open run (`CloseLatestOpenRun`), closing it on the last-played date unles
 front-matter status set directly. You can accept the guess, pick one of the other statuses it might
 have guessed instead, open the game's page (**Edit before applying**) to change it by hand, or
 leave it and it'll
-surface again next time it's still `playing` and still quiet. None of the one-shot statuses
-(`endless`, `multiplayer`, `software`) ever shows up here — they aren't `status: playing` by
+surface again next time it's still `playing` and still quiet. Neither of the one-shot statuses
+(`endless`, `software`) ever shows up here — they aren't `status: playing` by
 definition (see above), and something used in indefinite session bursts has no "done" to detect
 from staleness alone.
 
