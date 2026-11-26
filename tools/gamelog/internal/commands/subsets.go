@@ -197,7 +197,7 @@ func AttachSubset(ctx context.Context, gamesDir, slug, subsetID string, ra RAPar
 	}
 
 	// Capture the subset's own history. A failure here costs the history, not
-	// the link — `gamelog achievements <slug>` picks it up on the next run,
+	// the link — the next achievements refresh picks it up,
 	// since the link is what puts it in ProviderLinks. No title is passed: a
 	// subset record is titled by RetroAchievements, from the fetch itself.
 	archiveDir := model.FindArchiveDir(gamesDir)

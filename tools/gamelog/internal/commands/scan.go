@@ -471,7 +471,7 @@ func CreateFromCandidates(gamesDir string, candidates []Candidate, chosen []int,
 
 		// Capture the unlock history into the archive. A failure here costs
 		// the history, not the game, so it's reported and stepped over —
-		// `gamelog achievements <slug>` can retry later.
+		// the game's achievements refresh can retry later.
 		links := []model.ProviderLink{{Provider: c.Provider, ID: c.ID}}
 		if _, err := SaveAchievements(ctx, archiveDir, c.Title, links, creds); err != nil {
 			fmt.Fprintf(os.Stderr, "    (no achievements saved: %v)\n", err)

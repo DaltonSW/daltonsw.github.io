@@ -23,8 +23,7 @@ var templateFiles embed.FS
 //go:embed web/static
 var staticFiles embed.FS
 
-// DefaultPort is the port `gamelog serve` binds when no --port is given, and
-// what bare `gamelog` (no subcommand) serves on.
+// DefaultPort is the port the server binds when no --port is given.
 const DefaultPort = 8080
 
 // devMode is true when internal/server/web/templates exists on disk relative
@@ -83,11 +82,10 @@ func init() {
 	}
 }
 
-// Run starts the local web UI: a same-process, no-build-step alternative
-// to the huh-based TUI, reusing the same data/write functions (and therefore
-// the same never-lose-data safety net — see README.md/INVARIANTS.md) that
-// the TUI does. Binds to 127.0.0.1 only; this is a personal local tool, never
-// meant to be reachable off the machine it runs on.
+// Run starts the local web UI. Every write goes through model/mutate, and so
+// through the never-lose-data safety net (see README.md/INVARIANTS.md).
+// Binds to 127.0.0.1 only; this is a personal local tool, never meant to be
+// reachable off the machine it runs on.
 func Run(port int) error {
 	gamesDir, err := model.FindGamesDir()
 	if err != nil {
@@ -99,7 +97,7 @@ func Run(port int) error {
 	s.registerRoutes(mux)
 
 	addr := fmt.Sprintf("127.0.0.1:%d", port)
-	fmt.Printf("gamelog serve — http://%s  (Ctrl+C to stop)\n", addr)
+	fmt.Printf("gamelog — http://%s  (Ctrl+C to stop)\n", addr)
 	if devMode {
 		fmt.Println("dev mode: web/templates and web/static served live from disk — refresh to see edits")
 	}
@@ -107,7 +105,7 @@ func Run(port int) error {
 }
 
 // server holds the state every handler needs. gamesDir is resolved once at
-// startup, same as the TUI resolves it once per `run()` call.
+// startup.
 type server struct {
 	gamesDir string
 	jobs     *jobRegistry
@@ -430,11 +428,10 @@ func (s *server) render(w http.ResponseWriter, name string, data any) {
 	}
 }
 
-// redirectOK/redirectErr are this UI's stand-in for the TUI's ConfirmWrite
-// prompt and printed result: the submitted form is already the user's
-// confirmation (see mutate.WriteEntry/WriteSplit/WriteFrontMatter), and
-// the outcome is reported via a flash query param on the page it lands back
-// on instead of a terminal line.
+// redirectOK/redirectErr report a write's outcome: the submitted form is
+// already the user's confirmation (see mutate.WriteEntry/WriteSplit/
+// WriteFrontMatter), and the outcome is a flash query param on the page it
+// lands back on.
 func redirectOK(w http.ResponseWriter, r *http.Request, path, msg string) {
 	http.Redirect(w, r, withFlash(path, "ok", msg), http.StatusSeeOther)
 }

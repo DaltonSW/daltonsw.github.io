@@ -151,26 +151,6 @@ func TestListGamesPopulatesDraft(t *testing.T) {
 	}
 }
 
-func TestGameSummary_SuggestLabel(t *testing.T) {
-	base := GameSummary{Title: "Hades", Status: "finished", FirstFinished: "2026-03-20"}
-
-	linkedBoth := base
-	linkedBoth.RAGameID, linkedBoth.SteamAppID = "4650", "1145360"
-	if got := linkedBoth.SuggestLabel(); got != "Hades — finished 2026-03-20  [RA+Steam]" {
-		t.Errorf("both linked: got %q", got)
-	}
-
-	steamOnly := base
-	steamOnly.SteamAppID = "1145360"
-	if got := steamOnly.SuggestLabel(); got != "Hades — finished 2026-03-20  [Steam]" {
-		t.Errorf("steam only: got %q", got)
-	}
-
-	if got := base.SuggestLabel(); got != "Hades — finished 2026-03-20  [not linked]" {
-		t.Errorf("unlinked: got %q", got)
-	}
-}
-
 // Generated entries must not publish to the live site unreviewed.
 func TestFormatNewGameFile_DraftFlag(t *testing.T) {
 	drafted := formatNewGameFile(NewGameFields{Title: "X", Status: "playing", Draft: true}, "x")

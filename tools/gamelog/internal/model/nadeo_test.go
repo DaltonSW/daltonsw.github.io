@@ -206,7 +206,7 @@ func TestMergeNadeoRecord_KeepsATimeTheProviderNoLongerReports(t *testing.T) {
 	}
 }
 
-// A --season fetch reports only the season it was asked for. That must not read
+// A one-season fetch reports only the season it was asked for. That must not read
 // as "every other season was deleted".
 func TestMergeNadeoRecord_PartialFetchKeepsOtherSeasons(t *testing.T) {
 	old := record(
@@ -275,8 +275,8 @@ func TestMergeNadeoRecord_KeepsMetadataAZeroFetchDidNotReport(t *testing.T) {
 	}
 }
 
-// Two sequential single-season fetches through the real save path — this is
-// what `gamelog nadeo fetch --season` does twice, and the union is the only
+// Two sequential single-season fetches through the real save path — what
+// ticking one season in the picker twice does, and the union is the only
 // thing making it safe.
 func TestSaveNadeoRecord_SequentialSeasonFetchesAccumulate(t *testing.T) {
 	dir := t.TempDir()

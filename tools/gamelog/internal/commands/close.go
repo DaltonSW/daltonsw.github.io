@@ -46,7 +46,7 @@ func FindOpenEntries(archiveDir, gamesDir string, games []model.GameSummary, thr
 		// "paused" means on hold, not abandoned — you mean to come back to it.
 		// Setting a closing date on one is exactly what reviewStale refuses to
 		// do, and an open-ended bar is the honest render for a game you intend
-		// to resume. Skipped unconditionally; --all doesn't reach these.
+		// to resume. Skipped unconditionally; including playing games doesn't reach these.
 		if g.Status == "paused" {
 			continue
 		}

@@ -19,8 +19,7 @@ import (
 	"go.dalton.dog/gamelog/internal/providers/nadeo"
 )
 
-// loadGame loads a game's Doc and PlaythroughsFile by slug, the web
-// equivalent of what the TUI's SelectGame + logForGame do together.
+// loadGame loads a game's Doc and PlaythroughsFile by slug.
 func (s *server) loadGame(slug string) (*model.Doc, *model.PlaythroughsFile, error) {
 	path := filepath.Join(s.gamesDir, slug, "_index.md")
 	doc, err := model.LoadDoc(path)
@@ -1345,7 +1344,7 @@ func (s *server) runNadeoJob(j *job, opts nadeo.FetchOptions) {
 		}
 	}
 
-	res, err := commands.SaveNadeo(ctx, s.gamesDir, opts, "")
+	res, err := commands.SaveNadeo(ctx, s.gamesDir, opts)
 	if err != nil {
 		j.finish(err)
 		return

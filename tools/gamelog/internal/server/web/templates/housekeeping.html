@@ -162,7 +162,8 @@
 
 <div class="tui">
   <span class="tui__title">regenerate summaries</span>
-  <p>Rebuilds every game's achievement-summary.yaml from what's already archived on disk. No API
+  <p>Rebuilds every game's achievement-summary.yaml (and Trackmania's campaigns.yaml) from what's
+     already archived on disk, and re-derives each game's status from its playthroughs. No API
      calls — safe and fast to re-run any time.</p>
   <form method="post" action="/project">
     <input type="hidden" name="tab" value="achievements">

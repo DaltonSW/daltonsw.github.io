@@ -34,9 +34,3 @@ func ParseExternalID(s string) (string, error) {
 	}
 	return "", fmt.Errorf("expected a numeric ID or the game's URL")
 }
-
-// ValidateExternalID adapts ParseExternalID for huh's Validate hook.
-func ValidateExternalID(s string) error {
-	_, err := ParseExternalID(s)
-	return err
-}

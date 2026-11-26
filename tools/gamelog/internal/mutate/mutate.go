@@ -1,14 +1,11 @@
-// Package mutate is the confirm/write/loss-check layer for playthrough and
-// front-matter edits, shared by the local web server and the achievements
-// command's own-session nudge (the only remaining CLI caller of the
-// confirm-prompting path).
+// Package mutate is the write/loss-check layer for playthrough and
+// front-matter edits.
 package mutate
 
 import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
@@ -103,39 +100,6 @@ func WriteFrontMatter(doc *model.Doc, allowedRemovals ...string) error {
 	return nil
 }
 
-// AddSessionAndWrite logs a session against an existing playthrough and
-// writes it.
-func AddSessionAndWrite(pf *model.PlaythroughsFile, idx int, started, finished, title string) error {
-	if err := pf.AddSession(idx, started, finished, title); err != nil {
-		return err
-	}
-	return ConfirmAndWrite(pf, idx)
-}
-
-// confirmAndWrite previews the affected entry, and on confirmation proves the
-// rewrite loses nothing before letting it reach disk. allowedRemovals names
-// the paths this particular operation means to drop; every other field
-// present beforehand must still be there afterwards.
-//
-// The check compares against the bytes actually on disk, not against the
-// in-memory entries, which the operation has already mutated in place.
-func ConfirmAndWrite(pf *model.PlaythroughsFile, focus int, allowedRemovals ...string) error {
-	preview, err := PreviewEntry(pf, focus)
-	if err != nil {
-		return err
-	}
-	ok, err := forms.ConfirmWrite(pf.Path, preview)
-	if err != nil {
-		return err
-	}
-	if !ok {
-		fmt.Println("Discarded.")
-		return nil
-	}
-
-	return WriteEntry(pf, allowedRemovals...)
-}
-
 // writeEntry is confirmAndWrite's no-prompt tail: verify-no-loss, save,
 // report. Split out so a caller that has already gotten its confirmation some
 // other way — a submitted web form, say — can reach the same safety net
@@ -187,20 +151,6 @@ func SyncGameStatus(pf *model.PlaythroughsFile) (bool, error) {
 	}
 	doc.FM.Status = status
 	return true, WriteFrontMatter(doc)
-}
-
-// previewEntry renders just the entry being changed. Showing the whole file
-// would bury a one-line edit in a game with a dozen playthroughs.
-func PreviewEntry(pf *model.PlaythroughsFile, focus int) ([]string, error) {
-	if focus < 0 || focus >= len(pf.Playthroughs) {
-		return nil, fmt.Errorf("no playthrough %d to preview", focus+1)
-	}
-	one := &model.PlaythroughsFile{Playthroughs: pf.Playthroughs[focus : focus+1]}
-	out, err := one.Encode()
-	if err != nil {
-		return nil, err
-	}
-	return strings.Split(strings.TrimRight(string(out), "\n"), "\n"), nil
 }
 
 // verifyNoLoss compares the pending rewrite against the entries as they were

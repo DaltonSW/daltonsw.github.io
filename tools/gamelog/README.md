@@ -1,49 +1,41 @@
 # gamelog
 
-A CLI + local web UI for maintaining this site's `content/games/<slug>/_index.md` playthrough log.
+A local web UI for maintaining this site's `content/games/<slug>/_index.md` playthrough log.
 
-Run with no arguments (or `gamelog serve`) to serve the local web UI over `content/games`. Its home
+`go run .` serves it over `content/games`. Its home
 page, **Catch up**, is the "I'm back, what's changed?" flow: one button fetches everything new
 from every provider, then lists what to act on in place — unlogged play to log as a run or
 session, new games to create or link, games gone quiet, runs left open. Beyond that you can pick or
 create a game, edit its info, log or update playthroughs and sessions, and use Housekeeping for the
-whole-library lists (backlog, ignored, achievement completion) and manual refreshes. Everything
-that touches the log is done there now — the rest of the CLI is a handful of capture and
-read-only commands (see `gamelog help`).
+whole-library lists (backlog, ignored, achievement completion) and manual refreshes.
 
 ```
-go run .                      # serve the web UI (default port 8080, 127.0.0.1 only)
-go run . serve --port 8081    # same, on another port
-go run . help                 # usage summary
+go run .                # serve the web UI (default port 8080, 127.0.0.1 only)
+go run . --port 8081    # same, on another port
 ```
-
-The entry point is `main.go` in this directory; `cmd/` is the cobra command tree it calls.
 
 ## Code layout
 
-`main.go` + `cmd/` + `internal/`. `cmd/main.go` is just command dispatch (spf13/cobra);
-everything else lives under `internal/`, one package per concern:
+`main.go` + `internal/`. `main.go` only parses `--port` and starts the server; everything else
+lives under `internal/`, one package per concern:
 
 ```
 internal/model         domain types + storage: front matter, playthroughs.yaml, the archive
-internal/forms         the shared validation/status vocabulary, plus the couple of huh prompts
-                        the CLI still uses (suggest's game picker, achievements' session nudge)
-internal/mutate        write-with-loss-check, shared by the web server and the achievements
-                        command's own-session nudge
+internal/forms         the shared validation/status vocabulary
+internal/mutate        write-with-loss-check for playthroughs.yaml and front matter
 internal/providers/*   one package per API client (retroachievements, steam, psn, exophase,
                         xbox, nadeo, ninjakiwi)
 internal/dotenv        the tool's own minimal .env reader
 internal/externalid    parses a pasted RA/Steam ID or URL into a bare ID
-internal/commands      the CLI commands (suggest, achievements, project, psn, exophase, nadeo,
-                        ninjakiwi), plus the scan/backlog/stale/close/subset/activity
-                        library functions internal/server calls
-internal/server        the local web UI (`gamelog serve`, also what bare `gamelog` runs)
+internal/commands      the fetch/scan/report/apply functions internal/server calls: achievements
+                        capture, suggest, projection, scan/backlog/stale/close/subset/activity,
+                        Trackmania and BTD6
+internal/server        the local web UI
 ```
 
-`server` is the maintained frontend over the `model`/`forms`/`mutate` layer. `commands` used to
-also hold interactive CLI walkthroughs for scan/stale/close/review; those were sunset once the
-web UI covered the same ground, but their underlying report/apply functions stayed — `server`
-still imports and calls them directly.
+`server` is the only frontend, over the `model`/`forms`/`mutate` layer, and `commands` holds the
+operations it runs. There used to be a cobra CLI too. It was removed once the web UI covered
+everything it did.
 
 ## Where things live
 
@@ -116,7 +108,7 @@ model. Three things prevent that, and all three matter:
 - **`Extra map[string]any` with `yaml:",inline"`** on both the entry and session structs captures
   unrecognised keys and re-emits them. Without it, a hand-added `mood: obsessive` disappears on
   the next write.
-- **`mutate.ConfirmAndWrite` re-encodes the pending result and diffs it against the bytes on disk.**
+- **`mutate.WriteEntry` (through `VerifyNoLoss`) re-encodes the pending result and diffs it against the bytes on disk.**
   Anything present beforehand that would vanish aborts the write:
 
   ```
@@ -165,7 +157,7 @@ It's `omitempty`, and **blank means "inherit the game's `platform:`"** rather th
 is what makes every file written before the field existed still mean what it did, and it's why the
 form offers the game's platform as a *label* on the blank option instead of prefilling it —
 prefilling would freeze a copy, so a later correction to the game would silently fail to reach its
-runs. Clearing the field in `gamelog serve` therefore declares `playthroughs[N].platform` as an allowed
+runs. Clearing the field in the web UI therefore declares `playthroughs[N].platform` as an allowed
 removal: handing a run back to the game is the intent, not loss.
 
 The games list and timeline render it per row, but only when a game's runs actually differ.
@@ -175,7 +167,7 @@ counts distinct platforms across the entries and shows the column only when ther
 
 Note this is a *human* judgement, deliberately, and not the same thing as per-playthrough provider
 attribution — which is still not implemented, because the API data genuinely can't support it (see
-`gamelog suggest`). You know you played it on PS4; Steam's achievement history can't tell you.
+the suggested-dates panel). You know you played it on PS4; Steam's achievement history can't tell you.
 
 Game directory names come from `Slugify`, which folds accents to ASCII (`Ōkami` → `okami`,
 `Pokémon Red` → `pokemon-red`) and drops symbols like `™`/`®`. A title that yields no slug at all
@@ -238,12 +230,12 @@ else.
   and any game with no counted runs (`backlog`, mostly).
 
 `mutate.SyncGameStatus` writes the derived value into front matter after every playthrough write,
-and `gamelog project` does it for every game. The site's status pages, counts and filters therefore
+and Housekeeping's **Regenerate summaries** does it for every game. The site's status pages, counts and filters therefore
 keep reading `status:` as before. The edit forms show a derived status read-only: change a run to
 change it.
 
 Title, platform, status (when hand-set), subgames, rating, and `draft` are editable through the "edit game
-info" form on a game's page in `gamelog serve`. Provider IDs (`retroachievements_id`,
+info" form on a game's page in the web UI. Provider IDs (`retroachievements_id`,
 `steam_appid`, `psn_id`, `ubisoft_id`, `xbox_id`) have their own form in that page's sidebar, kept
 separate because RA/Steam accept a pasted URL and because clearing one of the `omitempty` IDs is a
 real key removal that has to be declared to the loss check. `retroachievements_subsets` is only
@@ -295,7 +287,7 @@ saves don't cross consoles: Spelunky 2 on PS4 and on Steam is two separate recor
 separate achievement sets, which is not the fragmentation the cap exists to prevent.
 
 `forms.IsOneShot` is the predicate for the status; `mutate.OneShotConflict` enforces the
-per-platform half when a playthrough is created (`handleNewPlaythrough` in `gamelog serve`), which
+per-platform half when a playthrough is created (`handleNewPlaythrough` in the web UI), which
 can only be checked once the form has collected the platform — so a same-platform second entry is
 refused on submit rather than hidden from the form. `model.EffectivePlatform` resolves blank to the
 game's platform, so an entry predating the field still compares equal to its own game.
@@ -329,7 +321,7 @@ playthroughs:
     notes: Try NG+ mode this time
 ```
 
-"Add a planned replay" (always offered on a game's page in `gamelog serve`) creates one; it
+"Add a planned replay" (always offered on a game's page in the web UI) creates one; it
 refuses a second placeholder for the same effective platform, the same "don't fragment into two
 bookmarks for one intent" reasoning as the one-shot statuses' per-platform cap, though `planned`
 isn't itself part of
@@ -398,18 +390,11 @@ A reference that stops resolving (a deleted game, an achievement gone from the s
 pruned: the Lists page tags it "missing" for you to remove, and the Hugo build skips it with a
 `warnf`. A list can only be deleted once it's empty, so one click can't discard written notes.
 
-## `gamelog suggest` — playtime date suggestions
+## Suggested dates — playtime date suggestions
 
-`gamelog suggest [slug]` queries RetroAchievements and Steam for a game and prints suggested
-`started`/`finished` dates to the terminal. **It never writes to any file.**
-
-```
-go run . suggest okami        # direct, by slug
-go run . suggest              # interactive game picker
-```
-
-In `gamelog serve` the same fetch lives on each game's own page, in a **suggested dates** panel
-shown for any RA- or Steam-linked game. It fetches on demand (a button, or automatically when you
+Each game's own page has a **suggested dates** panel, shown for any RA- or Steam-linked game. It
+queries RetroAchievements and Steam for suggested `started`/`finished` dates. **Fetching never
+writes to any file.** It fetches on demand (a button, or automatically when you
 arrive via a Suggest link — `/games/<slug>?suggest=1`), never on every page view, since RA throttles
 to ~1.2s/request. Each provider that found dates gets pre-filled copies of the page's own forms —
 **Log as new playthrough** and **Add as session** to an existing playthrough — posting to the same
@@ -436,7 +421,7 @@ Steam has no playtime-history API at all — its suggestion is a guess derived f
 **low** confidence.
 
 Either provider is silently skipped (with a one-line reason) if a game has no matching ID or
-credentials aren't configured — a missing provider never aborts the command. Steam reports two
+credentials aren't configured — a missing provider never aborts the fetch. Steam reports two
 expected cases as HTTP errors. "Profile is not public" (403) is surfaced as a plain skip reason
 rather than a raw status code. "Requested app has no stats" (400) just means the game has no
 achievements, so it isn't recorded as an error at all and refreshes report "no achievements". It
@@ -457,16 +442,16 @@ with no finish date, names it as a finish-date candidate there. An award (RA) or
 logged run drops the leftover activity to medium confidence. The remaining days can still span
 more than one run, so a game with several playthroughs still gets a cross-reference hint.
 
-## `gamelog serve` — the web UI: Catch up and Housekeeping
+## The web UI: Catch up and Housekeeping
 
-`gamelog serve` (also what bare `gamelog` runs) serves a local web UI over `content/games`:
+The web UI covers everything over `content/games`:
 create/edit/delete games (the games list is at `/games`), log playthroughs and sessions, manage
 planned replays, reorder or split sessions, edit provider IDs, and log suggested dates (see
-`gamelog suggest` above). Two pages hold the bulk flows. **Catch up** (`/`, the home page) is the
+"Suggested dates" above). Two pages hold the bulk flows. **Catch up** (`/`, the home page) is the
 "what's changed since I last looked" queue: New games, unlogged activity, Gone quiet and Left open.
 **Housekeeping** keeps the whole-library lists that aren't about what changed — Backlog, Ignored,
 Incomplete — and the manual Achievements tools. Each list is described below by what it does; on
-the pages themselves these are filter fields, checkboxes, and buttons rather than CLI flags.
+the pages themselves these are filter fields, checkboxes, and buttons.
 
 ### Catch up
 
@@ -688,32 +673,27 @@ the list and confirming it is left alone rather than overwritten.
 
 **Achievements** (on Housekeeping) has two buttons. **Refresh all** runs the achievements fetch-and-merge (below)
 across every game with a provider link, in the background — the page redirects to a job status
-view while it runs. **Regenerate summaries** is `gamelog project` (below): no API calls, just
-rebuilding every `achievement-summary.yaml` from what's already archived.
+view while it runs. **Regenerate summaries** is the projection step (see "Projections" below): no
+API calls, just rebuilding every summary from what's already archived.
 
-## `gamelog achievements` — full unlock history
+## Achievements — full unlock history
 
-`gamelog achievements [slug]` writes every achievement, with its unlock timestamp, to
+An achievements refresh writes every achievement, with its unlock timestamp, to
 `archive/<provider>/<id>.json` — one file per linked provider, resolved from the game's
 provider IDs (see "Linking a game to external IDs"). New games and Backlog do this
 automatically for each entry they create, and a game's page has a **Refresh achievements from
-providers** button; run the command directly to refresh a game or backfill one that predates it.
+providers** button for refreshing a game or backfilling one that predates them.
 
-```
-go run . achievements spelunky
-go run . achievements --all    # refresh every game with a provider link
-```
+Refresh all (Catch up's "Load what's new", or Housekeeping → Achievements) is the same
+fetch-and-merge call as the single-game path, just looped over every game `ListGames` returns that
+has a provider link — it inherits the merge-only guarantees below rather than needing its own.
 
-`--all` is the same fetch-and-merge call as the single-slug path, just looped over every game
-`ListGames` returns that has a provider link — it inherits the merge-only guarantees below rather
-than needing its own, which is what makes it safe to point an unattended, scheduled run at.
-
-`--all` skips Steam games that haven't moved: the library listing is fetched once per run anyway, and
+A refresh-all skips Steam games that haven't moved: the library listing is fetched once per run anyway, and
 if a game's `playtime_forever` and last-played day match the archive (and its last fetch succeeded),
 the per-game achievements/schema requests are left out. Anything uncertain — nothing archived, no
 successful fetch yet, a failed last attempt, the game missing from the listing — is fetched as
-usual. Offline unlocks can sync later without moving either value, so `--all --full` (or the
-re-fetch box on Catch up or Housekeeping → Achievements) forces everything; worth
+usual. Offline unlocks can sync later without moving either value, so the re-fetch box on Catch up
+or Housekeeping → Achievements forces everything; worth
 doing now and then. Single-game refreshes and Scan/Backlog always fetch. Other providers aren't
 skipped yet.
 
@@ -724,19 +704,10 @@ Everything above only touches `archive/` and `achievement-summary.yaml` — neve
 `playthroughs.yaml` alone (see `layouts/partials/playthrough-entries.html`); `achievement-summary.yaml`
 only feeds counts, the earned-achievement lists, and a game's `last_played`. Refreshing a game's achievements can therefore leave the
 archive fully up to date while the timeline shows nothing new — the fix isn't a rebuild, it's that
-nobody logged a session for the activity that just got captured.
+nobody logged a session for the activity that just got captured. Catch up's unlogged-activity list
+is where that gap shows up, with forms to log it.
 
-For the one-shot statuses (`endless`/`multiplayer`/`software` — see above), where the whole
-playthrough record *is* its `sessions:` list, the single-slug `gamelog achievements <slug>` closes
-that gap itself: if the refresh pulled in playtime or an unlock date past what's already logged, it
-offers to log a session right then, prefilled with the activity date the provider reported (that's
-all a playtime/last-unlock signal can tell you — a real multi-day range is still yours to correct).
-Declining leaves nothing written. This only fires for a game with exactly one playthrough entry; a
-rarer multi-platform one-shot game is left to "Log a new session" by hand, same as before.
-`gamelog achievements --all` never prompts — it's meant for unattended runs, so a one-shot game
-refreshed that way still needs a manual session log afterward.
-
-The archive itself is deliberately not reachable from templates — see `gamelog project` below for
+The archive itself is deliberately not reachable from templates — see "Projections" below for
 how a slice of it (counts and the earned-achievement list) reaches the site without that
 changing.
 
@@ -749,7 +720,7 @@ recorded once is never retracted, its original date wins over a later one, and a
 returns no usable achievements updates only `last_attempt`/`last_error` and the activity fields
 (playtime, last played, total, platform, icon, completion, which come from a separate listing and
 merge only upward), leaving the achievement data alone.
-`gamelog achievements` reports `(existing data kept)` when that happens, and still exits 0.
+A refresh reports `(existing data kept)` when that happens.
 
 **2. Keep everything the API gave us.** Locked achievements are kept (they're the denominator,
 and a game gaining achievements later is itself a fact worth having). So are badges, points,
@@ -865,10 +836,12 @@ xbox_id: 1480657033             # Xbox titleId, via OpenXBL (see below)
 googleplay_id: 588451498103     # Google Play Games application id, via Exophase (see below)
 ```
 
-Set them from `gamelog serve`: the new-game form takes RA/Steam IDs, and the provider-IDs form in a
+Set them from the web UI: the new-game form takes RA/Steam IDs, and the provider-IDs form in a
 game page's sidebar takes all six. RA/Steam fields accept either the bare number or the full URL
 you copied it from (`retroachievements.org/game/4650`, `store.steampowered.com/app/1145360/Hades/`)
-and store the bare ID. `suggest` accepts a pasted URL in front matter too.
+and store the bare ID. The suggest panel accepts a pasted URL in front matter too. To find an ID,
+Catch up's **New games** list shows every unlinked game on each provider's library with its ID, and
+can link it to an existing game in one click.
 
 Everything that walks a game's archive takes `[]model.ProviderLink` (from `Doc.ProviderLinks` or
 `GameSummary.ProviderLinks`) rather than a positional `(raID, steamAppID)` pair, and ids are
@@ -896,8 +869,8 @@ retroachievements_subsets:
 That's the only place in the schema where one game has two ids on one provider.
 `BuildProviderLinks` emits each subset as its own `ProviderLink` with `Subset: true`,
 immediately behind the base RA link, so **capture, refresh and projection all pick subsets up
-for free** — `gamelog achievements <slug>` fetches and merges each set into its own
-`archive/retroachievements/<id>.json`, and `--all` inherits that without knowing subsets exist.
+for free** — a game's achievements refresh fetches and merges each set into its own
+`archive/retroachievements/<id>.json`, and refresh-all inherits that without knowing subsets exist.
 The archive needed no change at all: a subset was always just another game id to it.
 
 **Only the counts are kept apart.** `achievement-summary.yaml` puts a subset on its own
@@ -946,7 +919,7 @@ In New games a subset row keeps the usual three parts but swaps the primary butt
 isn't (which creates the base game from RA's own report of *it*, as a draft, like everything else
 Scan creates), and an ordinary *Correct — create …* only when the parent couldn't be resolved at
 all. *Create as* and *Never log this* stay put either way. Attaching a subset also takes it out
-of future scans, and the game's page in `gamelog serve` lists what's attached to it.
+of future scans, and the game's page in the web UI lists what's attached to it.
 
 Subsets are display-and-capture only: nothing about them touches `playthroughs.yaml`. They're
 deliberately *not* wired into the `subgames:` roster either — a subset is a second achievement
@@ -977,7 +950,7 @@ Three calls make up a fetch, all under `/api/trophy/v1` on `m.np.playstation.com
 1. `users/me/trophyTitles` — every title on the account, including each one's `npServiceName`
    (`"trophy"` for PS3/PS4/Vita, `"trophy2"` for PS5/PC — **required** on the other two calls for
    a `"trophy"` title). Fetched once per run through the scan cache and passed to `FetchRecord`; this is also what
-   backs `gamelog psn list`.
+   Catch up's New games scan lists.
 2. `npCommunicationIds/{id}/trophyGroups/all/trophies` — each trophy's static metadata: name,
    description, icon, tier (bronze/silver/gold/platinum).
 3. `users/me/npCommunicationIds/{id}/trophyGroups/all/trophies` — the account's earned status per
@@ -989,9 +962,8 @@ platinum unlock sets `AwardKind`/`AwardDate` on the record, matching how Steam r
 achievements". Trophy tier (bronze/silver/gold/platinum) is stored in each achievement's `Tier`
 field — a real API field, not a derived guess, and one no other provider has an equivalent for.
 
-There's no lookup UI for `npCommunicationId` in Sony's own apps, so run `gamelog psn list`: it
-prints every trophy title on the account next to its ID and current unlock count, sorted by title,
-ready to paste into `psn_id`.
+There's no lookup UI for `npCommunicationId` in Sony's own apps. Catch up's New games list shows
+every unlinked trophy title on the account with its ID, and links it from there.
 
 Records are merged by exactly the same never-lose rules as every other provider — a bad fetch (an
 expired `npsso`, a title never launched on this account) updates `last_attempt`/`last_error` and
@@ -1011,9 +983,8 @@ survive the mirror going away.
 
 The ID isn't shown anywhere in Exophase's own UI — `canonical_id` only exists in a JS payload
 embedded in the profile page's HTML (see `ExophaseClient.canonicalIDs`). Rather than view-source-diving for
-it, run `gamelog exophase list ubisoft`: it prints every game on the configured `EXOPHASE_USER`
-profile next to its canonical ID and current unlock count, sorted by title, ready to paste into
-`ubisoft_id`.
+it, use Catch up's New games list: it shows every unlinked game on the configured `EXOPHASE_USER`
+profile with its canonical ID, and links it from there.
 
 There are no secrets involved: `EXOPHASE_USER` (`EXOPHASE_PSN_USER` still works as an alias, from
 when this also covered PSN) is a public profile name, and the profile just has to be public, with
@@ -1074,8 +1045,8 @@ Ubisoft — Google Play history is read from the public Exophase profile, where 
 exophase` on the record.
 
 `googleplay_id` is the **Play Games application id** — a 12-digit number (Balatro is
-`588451498103`), Google's own and permanent. `gamelog exophase list googleplay` prints every game
-next to it, and Scan offers every unlinked one. Achievements are keyed on Google's own achievement
+`588451498103`), Google's own and permanent. Catch up's New games scan offers every unlinked one
+with its id. Achievements are keyed on Google's own achievement
 id (`CgkI…`) rather than Exophase's slug. The earned feed has only the slug (same as Ubisoft), so
 each refresh also reads the game's `/game/<slug>/achievements/` page (`GameAwards`; the game slug
 is in each award's `endpoint`) and joins its rows on `masterAwardId` for the real name,
@@ -1136,10 +1107,14 @@ campaigns archived so far — and there is no way to express that as unlocked/to
 **not** part of `ProviderLinks`/`ProviderOrder`. Folding it in would restate Trackmania's headline
 meter as hundreds of "achievements" from a set that doesn't exist.
 
-`gamelog nadeo whoami` prints the account id for `nadeo_account_id`; `gamelog nadeo seasons` lists
-every campaign next to what's archived; `gamelog nadeo fetch` captures — the current season by
-default, `--season <name>` (repeatable) for specific ones, `--since <year>` for every campaign from
-that year on, or `--all`.
+`nadeo_account_id` is the account the service account acts as; it's also the name of the archive
+file, `archive/nadeo/<accountId>.json`. The Trackmania game page has a **trackmania seasons**
+panel that lists every official campaign next to how much of it is archived, and fetches the
+ticked ones as a background job. Only "Current season" is ticked by default. The list is read from
+the archive's `raw.campaigns` (every fetch captures the whole campaign list, even a one-season
+fetch), so opening the page makes no request. A season newer than the last fetch only appears
+after a fetch, which is what the "Current season" box is for. Catch up's Trackmania button fetches
+the current season only.
 
 The API is documented (unofficially, by the community) at <https://webservices.openplanet.dev>.
 Things worth knowing before touching `providers/nadeo`:
@@ -1225,8 +1200,8 @@ Things worth knowing before touching `providers/nadeo`:
 - `seasonUid` and `groupUid` are the same identifier for official campaigns. They are not for
   club campaigns, which this doesn't capture.
 
-`--dump-raw <dir>` writes every verbatim response body to disk. That's how `testdata/` fixtures
-are produced: run one scoped season, not a backfill.
+The `testdata/` fixtures are verbatim response bodies from one scoped season, saved by hand and
+trimmed. Re-capture one the same way rather than editing it.
 
 ### BTD6, via Ninja Kiwi's data API
 
@@ -1243,7 +1218,7 @@ the OAK token in the URL. There's no discovery call: the stable id this tool key
 (`ninjakiwi_user_id` in front matter) is a Ninja Kiwi player id obtained separately, not derived
 from the OAK token itself — the token is a rotating credential, not an identifier.
 
-`gamelog ninjakiwi fetch` captures. Things worth knowing:
+The BTD6 game page's refresh button and Catch up's BTD6 button capture it. Things worth knowing:
 
 - **Almost every field is a full snapshot, not an event log.** One response is the player's entire
   current save state, which is why the merge is per-field rather than a union of new entries the
@@ -1261,9 +1236,9 @@ from the OAK token itself — the token is a rotating credential, not an identif
 
 ### Credentials
 
-Copy `.env.example` to `.env` (gitignored) and fill it in. Every command (and `gamelog serve`)
-finds that file whether it's run from this directory or the repo root. Real environment variables
-always take precedence, so `RA_API_KEY=... go run . suggest x` still overrides the file.
+Copy `.env.example` to `.env` (gitignored) and fill it in. The tool finds that file whether it's
+run from this directory or the repo root. Real environment variables always take precedence, so
+`RA_API_KEY=... go run .` still overrides the file.
 
 | Variable | What it is |
 |---|---|
@@ -1321,10 +1296,10 @@ The committed `testdata/*.json` fixtures were corrected against live responses �
 way, since a fixture written from the documentation is what let all of the above pass tests
 while being broken in practice.
 
-## `gamelog project` — achievement counts for the site
+## Projections — achievement counts for the site
 
 The archive lives outside `content/` on purpose (see above), so Hugo can never read it directly.
-`gamelog project` is the projection step: it walks every game with a provider link, sums that
+Housekeeping's **Regenerate summaries** (`commands.Project`) is the projection step: it walks every game with a provider link, sums that
 game's `unlocked`/`total` across whichever providers it's linked to (RA 12/40 + Steam 46/54 →
 58/94) while also recording each provider separately under `providers:` (and each RA subset under
 `subsets:`), plus total playtime summed across whichever providers report it (Steam always has; RA
@@ -1340,22 +1315,18 @@ achievements, only what the site displays: the games list's meters, each game's 
 section (`layouts/partials/game-achievements.html`), and the site-wide feed
 (`games-achievements.html`).
 
-```
-go run . project
-```
-
 It also re-derives every game's `status:` from its playthroughs (`mutate.SyncGameStatus`, see "How
 front matter is edited"). That's how a hand edit to a `playthroughs.yaml` reaches the game's status.
 
 Trackmania and BTD6 have projections of their own (`campaigns.yaml`, `btd6-summary.yaml`), written
-by their own fetch commands.
+by their own fetches. Regenerate summaries also rebuilds `campaigns.yaml`.
 
 It only ever reads what's already in `archive/` — **no API calls**, so it's safe and fast to
-re-run any time the projection needs rebuilding (after `gamelog achievements` refreshes a game, or
-after the summary's shape changes) without touching credentials or rate limits. New games/Backlog,
-the per-game refresh button, and `gamelog achievements` already call the same write for whichever
-game they just touched, so a full `project` run (also Housekeeping's **Regenerate summaries**) is
-only needed for a bulk backfill or to pick up an archive edited by hand.
+re-run any time the projection needs rebuilding (after the summary's shape changes) without
+touching credentials or rate limits. New games/Backlog, the per-game refresh button, and
+refresh-all already call the same write for whichever game they just touched, so a full run is
+only needed after a change to what a summary contains, or to pick up an archive or
+`playthroughs.yaml` edited by hand.
 
 A game with nothing archived for any provider gets no file — not a `0/0` one — and any stale
 file left over from a cleared or relinked provider ID is removed rather than shown. A Steam game
@@ -1368,7 +1339,6 @@ to the public site.
 
 ### Not implemented (by design)
 
-No editing the markdown body from within the tool after creation, no `--json` output, no
-per-playthrough attribution (see above — the API data doesn't support it), no CLI-flag credential
-overrides, and no direct reads of `archive/` from Hugo (everything the site shows goes through a
+No editing the markdown body from within the tool after creation, no
+per-playthrough attribution (see above — the API data doesn't support it), and no direct reads of `archive/` from Hugo (everything the site shows goes through a
 projection). The invariants not to undo are in `INVARIANTS.md`.

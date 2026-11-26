@@ -34,8 +34,7 @@ func (s *server) handleSuggestIndex(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-// suggestionFor runs the same provider fetches as `gamelog suggest` for one
-// game. It returns the loaded doc and playthroughs too, since every caller
+// suggestionFor runs the suggest panel's provider fetches for one game. It returns the loaded doc and playthroughs too, since every caller
 // needs them to decide what to pre-fill.
 func (s *server) suggestionFor(ctx context.Context, slug string) (commands.SuggestionReport, *model.Doc, *model.PlaythroughsFile, error) {
 	doc, pf, err := s.loadGame(slug)
@@ -633,34 +632,21 @@ func (s *server) handleJobProgress(w http.ResponseWriter, r *http.Request) {
 
 // ── Project ──────────────────────────────────────────────────────────────
 
-// handleProject regenerates every game's achievement-summary.yaml purely
-// from what's already archived — no API calls (see runProject in
-// achievements.go), so unlike achievements/all this is fast enough to run
-// synchronously.
+// handleProject rebuilds every game's projections from what's on disk (see
+// commands.Project). No API calls, so unlike achievements/all it's fast
+// enough to run synchronously.
 func (s *server) handleProject(w http.ResponseWriter, r *http.Request) {
 	backTo := housekeepingReturnTo(r)
-	games, err := model.ListGames(s.gamesDir)
+	res, err := commands.Project(s.gamesDir)
 	if err != nil {
 		redirectErr(w, r, backTo, err)
 		return
 	}
-	archiveDir := model.FindArchiveDir(s.gamesDir)
-
-	var written, empty, failed int
-	for _, g := range games {
-		links := g.ProviderLinks()
-		if len(links) == 0 {
-			continue
-		}
-		wrote, err := model.WriteAchievementSummary(archiveDir, filepath.Dir(g.Path), links)
-		switch {
-		case err != nil:
-			failed++
-		case wrote:
-			written++
-		default:
-			empty++
-		}
+	msg := fmt.Sprintf("%d summaries written, %d with nothing archived yet, %d campaign summaries written, %d game statuses updated from playthroughs",
+		res.Summaries, res.Empty, res.Campaigns, res.Statuses)
+	if len(res.Errors) > 0 {
+		redirectErr(w, r, backTo, fmt.Errorf("%s; %d failed: %s", msg, len(res.Errors), strings.Join(res.Errors, "; ")))
+		return
 	}
-	redirectOK(w, r, backTo, fmt.Sprintf("%d summaries written, %d with nothing archived yet, %d failed", written, empty, failed))
+	redirectOK(w, r, backTo, msg)
 }

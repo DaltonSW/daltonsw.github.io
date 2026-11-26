@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"sort"
-	"strconv"
 	"strings"
 	"time"
 
@@ -53,8 +52,6 @@ type FetchOptions struct {
 	Current bool
 	// All fetches every official campaign.
 	All bool
-	// Since fetches every campaign starting in this year or later. Zero is off.
-	Since int
 
 	OnEvent func(Event)
 }
@@ -107,18 +104,6 @@ func selectCampaigns(all []Campaign, opts FetchOptions) ([]Campaign, error) {
 		}
 		return out, nil
 
-	case opts.Since > 0:
-		var out []Campaign
-		for _, c := range all {
-			if c.StartTimestamp > 0 && time.Unix(c.StartTimestamp, 0).In(model.SiteLocation).Year() >= opts.Since {
-				out = append(out, c)
-			}
-		}
-		if len(out) == 0 {
-			return nil, fmt.Errorf("no official campaign starts in %d or later", opts.Since)
-		}
-		return out, nil
-
 	default:
 		// Campaigns comes back oldest-first, so the current season is the last.
 		if len(all) == 0 {
@@ -134,7 +119,7 @@ func selectCampaigns(all []Campaign, opts FetchOptions) ([]Campaign, error) {
 // an error. It records LastError on the returned record and returns (rec, nil),
 // leaving SaveNadeoRecord to keep whatever is already archived. A non-nil error
 // is reserved for things that should abort the run — bad credentials, or a
-// --season that names no real campaign.
+// requested season that names no real campaign.
 func FetchRecord(ctx context.Context, c *Client, opts FetchOptions) (*model.NadeoRecord, error) {
 	rec := &model.NadeoRecord{
 		Provider:    model.ProviderNadeo,
@@ -352,17 +337,4 @@ func SeasonLabel(c Campaign) string {
 // leaves a boundary unscheduled.
 func CampaignDates(c Campaign) (started, ended string) {
 	return unixDay(c.StartTimestamp), unixDay(c.EndTimestamp)
-}
-
-// DescribeCampaign renders one campaign for `gamelog nadeo seasons`.
-func DescribeCampaign(c Campaign) string {
-	span := ""
-	if s, e := unixDay(c.StartTimestamp), unixDay(c.EndTimestamp); s != "" {
-		span = s
-		if e != "" {
-			span += " – " + e
-		}
-	}
-	return strings.TrimSpace(fmt.Sprintf("%-16s %-24s %s tracks",
-		SeasonLabel(c), span, strconv.Itoa(len(c.Playlist))))
 }

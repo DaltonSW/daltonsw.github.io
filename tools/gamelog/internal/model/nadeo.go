@@ -56,7 +56,7 @@ type NadeoRecord struct {
 	// batched across season boundaries (150 maps and every season's records per
 	// request), so there is no verbatim slice of a response that belongs to one
 	// campaign; attaching the batch to each campaign it touched would store the
-	// same payload once per season. That means a --season fetch narrows `raw` to
+	// same payload once per season. That means a one-season fetch narrows `raw` to
 	// that season's scope. Nothing decoded is lost when it does — the merge
 	// guarantees that separately — and `raw` is a safety net for a field this
 	// tool doesn't model yet, which a re-fetch restores.
@@ -226,7 +226,7 @@ func (t NadeoTrack) Driven() bool { return t.PersonalBestMs > 0 }
 //     is more history. A lap time is better when it's *smaller*, so a personal
 //     best merges by minimum. Taking the max here would silently replace every
 //     record with the worst time ever seen for it.
-//   - A fetch may legitimately cover one season (gamelog nadeo fetch --season),
+//   - A fetch may legitimately cover one season (the game page's season picker),
 //     so "this season is missing from the response" cannot mean "delete it".
 //     Campaigns and tracks are unioned by id, never replaced wholesale, which
 //     is also what makes a rate-limited or partial response harmless.

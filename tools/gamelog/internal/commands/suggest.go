@@ -4,13 +4,10 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"path/filepath"
 	"strings"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/dotenv"
-	"go.dalton.dog/gamelog/internal/externalid"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/providers/retroachievements"
 	"go.dalton.dog/gamelog/internal/providers/steam"
@@ -91,7 +88,7 @@ func day(t time.Time) string {
 }
 
 // Day is day for callers outside this package — the web UI's pre-filled
-// suggestion forms must land on the same calendar date the CLI report prints.
+// suggestion forms must land on the same calendar date as everything else.
 func Day(t time.Time) string { return day(t) }
 
 func (c Credentials) RAConfigured() bool    { return c.RAUsername != "" && c.RAAPIKey != "" }
@@ -134,7 +131,7 @@ type ProviderResult struct {
 	Coverage *Coverage
 }
 
-// SuggestionReport is the full result of `gamelog suggest` for one game.
+// SuggestionReport is the suggested-dates panel's result for one game.
 type SuggestionReport struct {
 	Title           string
 	Slug            string
@@ -144,87 +141,6 @@ type SuggestionReport struct {
 	RA              ProviderResult
 	SteamAppID      string
 	Steam           ProviderResult
-}
-
-func RunSuggest(args []string) error {
-	gamesDir, err := model.FindGamesDir()
-	if err != nil {
-		return err
-	}
-	games, err := model.ListGames(gamesDir)
-	if err != nil {
-		return err
-	}
-
-	slug, err := resolveSuggestSlug(args, games)
-	if err != nil {
-		return err
-	}
-
-	var summary model.GameSummary
-	found := false
-	for _, g := range games {
-		if g.Slug == slug {
-			summary = g
-			found = true
-			break
-		}
-	}
-	if !found {
-		return fmt.Errorf("no game %q found. Known games: %s", slug, joinSlugs(games))
-	}
-
-	doc, err := model.LoadDoc(summary.Path)
-	if err != nil {
-		return err
-	}
-	pf, err := model.LoadPlaythroughs(filepath.Dir(summary.Path))
-	if err != nil {
-		return err
-	}
-	raID, steamAppID := doc.ExternalIDs()
-	// Front matter may have been hand-edited with a pasted URL rather than a
-	// bare ID; normalise so both work. A value that parses as neither is left
-	// as-is and allowed to fail loudly at the provider.
-	if id, err := externalid.ParseExternalID(raID); err == nil {
-		raID = id
-	}
-	if id, err := externalid.ParseExternalID(steamAppID); err == nil {
-		steamAppID = id
-	}
-	creds := LoadCredentials()
-
-	report := SuggestionReport{
-		Title:           summary.Title,
-		Slug:            slug,
-		NumPlaythroughs: summary.NumPlaythroughs,
-		RAGameID:        raID,
-		RAUsername:      creds.RAUsername,
-		SteamAppID:      steamAppID,
-	}
-
-	ctx := context.Background()
-	report.RA = FetchRAResult(ctx, raID, creds)
-	report.Steam = FetchSteamResult(ctx, steamAppID, creds)
-	report = WithCoverage(report, pf)
-
-	fmt.Print(FormatSuggestionReport(report))
-	return nil
-}
-
-func resolveSuggestSlug(args []string, games []model.GameSummary) (string, error) {
-	if len(args) > 0 {
-		return args[0], nil
-	}
-	return forms.SelectExistingGame(games)
-}
-
-func joinSlugs(games []model.GameSummary) string {
-	slugs := make([]string, len(games))
-	for i, g := range games {
-		slugs[i] = g.Slug
-	}
-	return strings.Join(slugs, ", ")
 }
 
 func FetchRAResult(ctx context.Context, raID string, creds Credentials) ProviderResult {
@@ -286,109 +202,11 @@ func FetchSteamResult(ctx context.Context, appID string, creds Credentials) Prov
 	return pr
 }
 
-func FormatSuggestionReport(r SuggestionReport) string {
-	var b strings.Builder
-	plural := "s"
-	if r.NumPlaythroughs == 1 {
-		plural = ""
-	}
-	fmt.Fprintf(&b, "Suggestions for %q (%s) — %d playthrough%s logged\n\n", r.Title, r.Slug, r.NumPlaythroughs, plural)
-
-	b.WriteString(formatRABlock(r))
-	b.WriteString("\n")
-	b.WriteString(formatSteamBlock(r))
-	b.WriteString("\n")
-
-	if r.NumPlaythroughs > 1 {
-		b.WriteString("Note: this game has multiple playthroughs logged. Activity already inside\n")
-		b.WriteString("one of them is left out, but what remains may still span more than one\n")
-		b.WriteString("run — cross-reference manually before entering it via `gamelog`.\n\n")
-	}
-
-	fmt.Fprintf(&b, "Enter these manually: run `gamelog`, pick %s, then \"Log a new session\"\n", r.Title)
-	b.WriteString("or \"Update a playthrough\".\n")
-	return b.String()
-}
-
-func formatRABlock(r SuggestionReport) string {
-	var b strings.Builder
-	if r.RAGameID == "" {
-		b.WriteString("RetroAchievements\n")
-	} else {
-		fmt.Fprintf(&b, "RetroAchievements (game %s, user %s)\n", r.RAGameID, r.RAUsername)
-	}
-
-	switch {
-	case r.RA.Errored:
-		fmt.Fprintf(&b, "  request failed (%v), skipping.\n", r.RA.Err)
-	case r.RA.Skipped:
-		fmt.Fprintf(&b, "  %s, skipping.\n", r.RA.Reason)
-	case r.RA.RA != nil && allCovered(r.RA.Coverage):
-		b.WriteString(coveredLines(r.RA.Coverage))
-	case r.RA.RA != nil:
-		s := r.RA.RA
-		b.WriteString(uncoveredLine(r.RA.Coverage))
-		confidenceLabel := "high (award earned)"
-		if s.AwardKind != "" {
-			confidenceLabel = fmt.Sprintf("high (%s)", s.AwardKind)
-		}
-		lastLineLabel := "award date                  : "
-		if s.Confidence != "high" {
-			confidenceLabel = "medium (last known activity, not confirmed complete)"
-			lastLineLabel = "latest achievement earned   : "
-		}
-		fmt.Fprintf(&b, "  confidence: %s\n", confidenceLabel)
-		fmt.Fprintf(&b, "  earliest achievement earned : %s\n", day(s.Started))
-		fmt.Fprintf(&b, "  %s%s\n", lastLineLabel, day(s.Finished))
-		fmt.Fprintf(&b, "  -> suggested started : %s\n", day(s.Started))
-		fmt.Fprintf(&b, "  -> suggested finished: %s\n", day(s.Finished))
-	}
-	return b.String()
-}
-
-func formatSteamBlock(r SuggestionReport) string {
-	var b strings.Builder
-	if r.SteamAppID == "" {
-		b.WriteString("Steam\n")
-	} else {
-		fmt.Fprintf(&b, "Steam (appid %s)\n", r.SteamAppID)
-	}
-
-	switch {
-	case r.Steam.Errored:
-		fmt.Fprintf(&b, "  request failed (%v), skipping.\n", r.Steam.Err)
-	case r.Steam.Skipped:
-		fmt.Fprintf(&b, "  %s, skipping.\n", r.Steam.Reason)
-	case r.Steam.Steam != nil && allCovered(r.Steam.Coverage):
-		b.WriteString(coveredLines(r.Steam.Coverage))
-	case r.Steam.Steam != nil:
-		s := r.Steam.Steam
-		b.WriteString(uncoveredLine(r.Steam.Coverage))
-		b.WriteString("  confidence: low (guess from achievement unlock times, not a real playtime timeline)\n")
-		fmt.Fprintf(&b, "  achievements unlocked        : %d / %d\n", s.UnlockedCount, s.TotalCount)
-		fmt.Fprintf(&b, "  earliest unlock              : %s\n", day(s.Started))
-		fmt.Fprintf(&b, "  latest unlock                : %s\n", day(s.Finished))
-		if r.Steam.SteamPlaytimeKnown {
-			fmt.Fprintf(&b, "  total playtime (all-time)    : %s\n", FormatHours(r.Steam.SteamPlaytimeMinutes))
-		}
-		fmt.Fprintf(&b, "  -> suggested started : %s\n", day(s.Started))
-		weak := ""
-		if s.UnlockedCount < s.TotalCount || (r.Steam.Coverage != nil && r.Steam.Coverage.FinishCovered) {
-			weak = "  (weak — not all achievements earned, may still be playing)"
-		}
-		fmt.Fprintf(&b, "  -> suggested finished: %s%s\n", day(s.Finished), weak)
-	}
-	return b.String()
-}
-
 func FormatHours(minutes int) string {
 	return fmt.Sprintf("%.1fh", float64(minutes)/60.0)
 }
 
-func allCovered(c *Coverage) bool { return c != nil && c.Uncovered == 0 }
-
-// CoveredSummary is the "nothing new to log" line shared by the CLI report
-// and the web panel.
+// CoveredSummary is the suggest panel's "nothing new to log" line.
 func CoveredSummary(c *Coverage) string {
 	out := fmt.Sprintf("All %d activity day(s) fall inside logged playthroughs.", c.Days)
 	if c.LatestOpenIn >= 0 {
@@ -396,15 +214,4 @@ func CoveredSummary(c *Coverage) string {
 			c.Latest, c.LatestOpenIn+1)
 	}
 	return out
-}
-
-func coveredLines(c *Coverage) string {
-	return "  " + CoveredSummary(c) + "\n"
-}
-
-func uncoveredLine(c *Coverage) string {
-	if c == nil || c.Uncovered == c.Days {
-		return ""
-	}
-	return fmt.Sprintf("  not yet logged               : %d of %d activity days (the rest fall inside logged playthroughs)\n", c.Uncovered, c.Days)
 }

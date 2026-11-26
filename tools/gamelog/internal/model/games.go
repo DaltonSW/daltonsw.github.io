@@ -78,49 +78,6 @@ func (g GameSummary) ProviderIDs() map[string]string {
 	return all
 }
 
-func (g GameSummary) Label() string {
-	switch g.Status {
-	case "finished":
-		return fmt.Sprintf("%s — finished %s", g.Title, g.FirstFinished)
-	case "playing":
-		return fmt.Sprintf("%s — playing since %s", g.Title, g.Started)
-	default:
-		return fmt.Sprintf("%s — %s", g.Title, g.Status)
-	}
-}
-
-// SuggestLabel is Label plus which external services this game is linked to,
-// so the `suggest` picker doesn't invite you to choose a game that can't
-// produce a suggestion.
-func (g GameSummary) SuggestLabel() string {
-	var linked []string
-	if g.RAGameID != "" {
-		linked = append(linked, "RA")
-	}
-	if g.SteamAppID != "" {
-		linked = append(linked, "Steam")
-	}
-	if g.PSNID != "" {
-		linked = append(linked, "PSN")
-	}
-	if g.UbisoftID != "" {
-		linked = append(linked, "Ubisoft")
-	}
-	if g.XboxID != "" {
-		linked = append(linked, "Xbox")
-	}
-	if g.GooglePlayID != "" {
-		linked = append(linked, "Google Play")
-	}
-	// NadeoAccountID is deliberately absent: this label exists to stop the
-	// picker offering a game that can't produce a date suggestion, and a
-	// campaign archive produces none.
-	if len(linked) == 0 {
-		return g.Label() + "  [not linked]"
-	}
-	return fmt.Sprintf("%s  [%s]", g.Label(), strings.Join(linked, "+"))
-}
-
 // FindGamesDir locates content/games, walking up from the current
 // directory so the tool works whether it's launched from the repo root or
 // a subdirectory of it.

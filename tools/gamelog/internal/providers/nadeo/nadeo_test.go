@@ -509,20 +509,10 @@ func TestSelectCampaigns_UnknownSeasonIsAnError(t *testing.T) {
 	}
 }
 
-func TestSelectCampaigns_AllAndSince(t *testing.T) {
-	all := campaigns("A", "B", "C") // 2020, 2021, 2022
-
-	got, err := selectCampaigns(all, FetchOptions{All: true})
+func TestSelectCampaigns_All(t *testing.T) {
+	got, err := selectCampaigns(campaigns("A", "B", "C"), FetchOptions{All: true})
 	if err != nil || len(got) != 3 {
 		t.Errorf("All: got %d, %v; want 3", len(got), err)
-	}
-
-	got, err = selectCampaigns(all, FetchOptions{Since: 2021})
-	if err != nil {
-		t.Fatal(err)
-	}
-	if len(got) != 2 || got[0].Name != "B" {
-		t.Errorf("Since 2021: got %+v", got)
 	}
 }
 

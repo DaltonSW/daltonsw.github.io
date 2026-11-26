@@ -27,7 +27,7 @@ Consequences that should drive design decisions:
 - Run `npm install` before `hugo server` on a fresh clone — the timeline depends on
   `vis-timeline` from `node_modules`, mounted into `assets/` by `config/_default/hugo.toml`.
 - `tools/gamelog/` is the Go tool that maintains the game log: a local web UI (`go run .` from
-  that directory) plus a few CLI commands. Its README documents the storage layout and each
+  that directory). Its README documents the storage layout and each
   provider's API quirks that are easy to regress — read it before touching any client.
 - **Storage is split three ways, on purpose.** `content/games/<slug>/_index.md` is authored by
   hand; the tool creates it and afterwards only splices individual front-matter fields, never the

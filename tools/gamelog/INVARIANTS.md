@@ -16,14 +16,14 @@ what's load-bearing.
   and the games list's "drafts only" filter is how to walk them.
 - `archive/` holds **529 records (17 MB)**: 434 Steam, 47 RetroAchievements, 23 Xbox 360,
   13 PSN, 5 Google Play, 5 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
-- The day-to-day tool is the web UI (`gamelog serve`). Its home page, Catch up, runs one "Load
+- The tool is the web UI (`go run .`); there is no CLI any more. Its home page, Catch up, runs one "Load
   what's new" job (scan, refresh linked games into the archive, and BTD6, over the ticked regular
   sources: Steam, RA, Google Play, BTD6), then lists what to act on in place: unlogged
   activity read from the archive, new or unlinked games (including subset attaching), stale-game
   triage, and runs left open. Housekeeping keeps the owned-but-unplayed backlog import, the
-  ignore list, achievement completion, and the manual refresh tools. The CLI still has `suggest`, `achievements`,
-  `project`, `exophase`, `psn`, `nadeo` and `ninjakiwi`. The old CLI `scan`, `stale` and `review`
-  flows are gone, so don't go looking for them.
+  ignore list, achievement completion, and the manual refresh tools. The Trackmania game page has
+  the season picker. The old cobra CLI (`suggest`, `achievements`, `project`, `psn list`,
+  `exophase list`, `nadeo …`, `ninjakiwi fetch`) is gone, so don't go looking for it.
 - The status vocabulary is split in two on purpose (see `internal/forms/forms.go`):
   `GameStatuses` (front matter, 9 values, including `backlog` and `software`) and
   `PlaythroughStatuses` (entries in `playthroughs.yaml`, 8 values, including `misc_launch`).
@@ -80,7 +80,7 @@ what's load-bearing.
   `2026-01-04` to a timestamp, and re-encoding that rewrites every date in the file as RFC3339.
 - **Every playthrough write goes through the pre-write loss check.** `mutate.VerifyNoLoss` diffs
   the pending rewrite against the bytes on disk and refuses if a field would vanish. It's reached
-  via `WriteEntry`/`WriteSplit`/`ConfirmAndWrite`/`WriteFrontMatter`. Operations that
+  via `WriteEntry`/`WriteSplit`/`WriteFrontMatter`. Operations that
   legitimately remove a path declare it (`RemoveSessionAllowedPaths`, `MoveSessionAllowedPaths`,
   `TruncateSessionAllowedPaths`, or explicit lists in the handlers). If a new operation trips the
   check, the operation is wrong. Don't widen the allowlist to silence it.
@@ -100,8 +100,8 @@ what's load-bearing.
   `content/games/_index.md`.
 - **Status flows from runs to the game, never the other way.** `model.DeriveGameStatus` decides
   the game's status, and `mutate.SyncGameStatus` writes it into front matter after every
-  playthrough write (`WriteEntry`/`WriteSplit`, so `close.go` and `AddSessionAndWrite` too) and for
-  every game in `gamelog project`. The old `SyncStatus`, which pushed a game status onto its sole
+  playthrough write (`WriteEntry`/`WriteSplit`, so `close.go` too) and for
+  every game in Housekeeping's Regenerate summaries (`commands.Project`). The old `SyncStatus`, which pushed a game status onto its sole
   entry, is gone. Don't add a path that edits a derived game status directly: change a run.
   Stale triage does exactly that (`CloseLatestOpenRun`).
 - **Playthrough boundaries are confirmed by hand, never derived.** A gap in achievement unlocks
@@ -172,7 +172,7 @@ what's load-bearing.
   provider id and survives either way.
 - **A subset's parent lookup is memoized per process, not persisted.** `raParentCache` in
   `internal/commands/subsets.go` saves Housekeeping a ~1.2s RA call per unattached subset row on
-  each render, but every restart of `gamelog serve` pays it again. Fine at one subset; it needs a
+  each render, but every restart of the server pays it again. Fine at one subset; it needs a
   persisted cache before the count grows much.
 
 ### Steam
@@ -260,9 +260,10 @@ what's load-bearing.
     current trophies, insta-monkey and power inventory) take the fresh value. Unlock maps merge by
     OR (`mergeNinjaKiwiRecord`).
 - **`mergeNadeoRecord` unions campaigns by `SeasonUID` and tracks by `MapUID`,** which is the only
-  thing that makes a single-season `nadeo fetch` safe.
-- **Nadeo credentials belong to a real player's account.** `fetch` defaults to the current season,
-  `nadeoMinInterval` is 500ms, and `--all` is a deliberate, rare choice.
+  thing that makes a single-season fetch safe.
+- **Nadeo credentials belong to a real player's account.** The season picker ticks only the current
+  season by default, a second submit joins a running fetch instead of starting another, and
+  `nadeoMinInterval` is 500ms. A full backfill is a deliberate, rare choice.
 - **Trackmania times are captured at two scopes, `season_best_ms` and `personal_best_ms`, via two
   requests.** `mapIdList` and `seasonIdList` intersect if sent together, and results must be
   filtered on `scopeType` regardless.
@@ -314,7 +315,7 @@ Kept only because the invariants above point back to these. The details are in g
   `_index.md`). `Slugify` now folds accents, and `validateSlug` rejects empty slugs and path
   separators inside `CreateGameFile`. `TestSlugify` pins the `™`/`®` cases.
 - **`raw` responses are kept in full.** This was a decision, not a code change.
-- **Nothing used to render the archive.** `gamelog project` now projects it into
+- **Nothing used to render the archive.** The projection step (`commands.Project`) now projects it into
   `achievement-summary.yaml` (totals, per-provider breakdown, subsets, and the `earned` list),
   which the games list and each game's page read.
 - **Every game had exactly one playthrough entry.** The split/session tools now exist and have

@@ -7,7 +7,7 @@
 // store.playstation.com, then visiting ca.account.sony.com/api/v1/ssocookie)
 // exchanged for a short-lived OAuth bearer token. The npsso value is good for
 // ~2 months; the exchanged access token for ~60 minutes, which is longer than
-// any single CLI run needs, so the exchange happens once per PSNClient and is
+// any single refresh needs, so the exchange happens once per PSNClient and is
 // never persisted or refreshed across runs.
 package psn
 
@@ -46,7 +46,7 @@ const (
 
 // psnMinInterval throttles requests against Sony's rate limit, reported
 // (unconfirmed) at ~300 requests per 15 minutes. Generous for a handful of
-// PSN games, but --all refreshing a couple dozen at 2-3 calls each is worth
+// PSN games, but a refresh-all of a couple dozen at 2-3 calls each is worth
 // pacing.
 const psnMinInterval = 250 * time.Millisecond
 
@@ -290,7 +290,7 @@ const trophyTitlesPageSize = 800
 // TrophyTitles lists every title the account has trophies for, keyed by
 // npCommunicationId. This is the discovery call: it's what resolves which
 // npServiceName a title needs for every other endpoint, and it's also what
-// backs `gamelog psn list`.
+// Catch up's new-games scan lists.
 func (c *PSNClient) TrophyTitles(ctx context.Context) (map[string]TrophyTitle, error) {
 	out := map[string]TrophyTitle{}
 	offset := 0

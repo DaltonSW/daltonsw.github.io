@@ -483,7 +483,7 @@ func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 		j.progress(done, total, "Trackmania")
 		j.log("")
 		j.log("Trackmania")
-		res, err := commands.SaveNadeo(ctx, s.gamesDir, nadeo.FetchOptions{}, "")
+		res, err := commands.SaveNadeo(ctx, s.gamesDir, nadeo.FetchOptions{})
 		switch {
 		case err != nil:
 			note("Trackmania: %v", err)

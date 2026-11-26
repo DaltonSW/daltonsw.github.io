@@ -7,8 +7,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/huh"
-
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -42,26 +40,6 @@ func ValidateRating(s string) error {
 // form matches the day the rest of the tool would report.
 func Today() string {
 	return time.Now().In(model.SiteLocation).Format("2006-01-02")
-}
-
-// SelectExistingGame prompts for one of an existing set of games, with no
-// "+ New game" option — for read-only flows (like `gamelog suggest`) where
-// creating a new game makes no sense.
-func SelectExistingGame(games []model.GameSummary) (string, error) {
-	if len(games) == 0 {
-		return "", fmt.Errorf("no games found to choose from")
-	}
-	options := make([]huh.Option[string], len(games))
-	for i, g := range games {
-		options[i] = huh.NewOption(g.SuggestLabel(), g.Slug)
-	}
-	var slug string
-	err := huh.NewForm(
-		huh.NewGroup(
-			huh.NewSelect[string]().Title("Which game?").Options(options...).Value(&slug),
-		),
-	).Run()
-	return slug, err
 }
 
 // "endless", "multiplayer", and "software" all mark an entry that
@@ -149,7 +127,7 @@ const StaleAccept = "accept"
 const StaleMarkPrefix = "mark_"
 
 // StaleQuickStatuses are offered as one-click corrections alongside
-// whichever status `gamelog serve`'s Housekeeping page actually guessed.
+// whichever status Catch up's quiet-games list actually guessed.
 // "paused" and "unfinished" are never themselves a guess (there's no signal
 // for "meant to keep playing" or "no idea"), but they're always offered:
 // distinguishing an intentional pause, or a genuinely unknown "it just
@@ -186,51 +164,4 @@ func OrDash(s string) string {
 		return "ongoing"
 	}
 	return s
-}
-
-// OrNone is OrDash's counterpart for fields where a blank value doesn't mean
-// "ongoing" — a start date, a status, a platform. OrDash's "ongoing" only
-// reads correctly next to a *finish* date (blank there genuinely means still
-// being played); reusing it for these would print nonsense like
-// "started: ongoing" or "platform: ongoing".
-func OrNone(s string) string {
-	if s == "" {
-		return "-"
-	}
-	return s
-}
-
-// SessionForm prompts for a new session's date range and an optional title,
-// for a session worth telling apart from the others on the playthrough bar
-// (a DLC release, "wrapping up achievements", and so on). defaultStarted and
-// defaultFinished prefill the two date fields — the manual "log a session"
-// flow defaults to today/ongoing, while a nudge triggered by a provider
-// refresh prefills both with the activity date that triggered it, since
-// that's all a playtime/last-unlock signal can tell you.
-func SessionForm(defaultStarted, defaultFinished string) (started, finished, title string, err error) {
-	started, finished = defaultStarted, defaultFinished
-	err = huh.NewForm(
-		huh.NewGroup(
-			huh.NewInput().Title("Session started (YYYY-MM-DD)").Value(&started).Validate(ValidateDate(true)),
-			huh.NewInput().Title("Session finished (YYYY-MM-DD, blank if still ongoing)").Value(&finished).Validate(ValidateDate(false)),
-			huh.NewInput().Title("Session title (optional)").Value(&title),
-		),
-	).Run()
-	return started, finished, title, err
-}
-
-// ConfirmWrite shows the lines that will be written and asks for confirmation.
-func ConfirmWrite(path string, newLines []string) (bool, error) {
-	fmt.Printf("\nAbout to update %s:\n\n", path)
-	for _, l := range newLines {
-		fmt.Println("  " + l)
-	}
-	fmt.Println()
-	var ok bool
-	err := huh.NewForm(
-		huh.NewGroup(
-			huh.NewConfirm().Title("Write this change?").Value(&ok),
-		),
-	).Run()
-	return ok, err
 }

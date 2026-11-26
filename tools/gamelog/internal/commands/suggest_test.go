@@ -1,14 +1,11 @@
 package commands
 
 import (
-	"errors"
-	"strings"
 	"testing"
 	"time"
 
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/providers/retroachievements"
-	"go.dalton.dog/gamelog/internal/providers/steam"
 )
 
 func TestCredentials_Configured(t *testing.T) {
@@ -69,85 +66,5 @@ func TestDay_ConvertsParsedRADate(t *testing.T) {
 	}
 	if got := day(parsed); got != "2026-01-05" {
 		t.Errorf("day() = %s, want 2026-01-05", got)
-	}
-}
-
-func TestFormatSuggestionReport_BothProvidersSucceed(t *testing.T) {
-	r := SuggestionReport{
-		Title: "Hades II", Slug: "hades-ii", NumPlaythroughs: 2,
-		RAGameID: "4650", RAUsername: "daltonsw",
-		RA: ProviderResult{RA: &retroachievements.RASuggestion{
-			Started: date("2026-01-05"), Finished: date("2026-03-20"),
-			Confidence: "high", AwardKind: "mastered", OK: true,
-		}},
-		SteamAppID: "1145360",
-		Steam: ProviderResult{
-			Steam: &steam.SteamSuggestion{
-				Started: date("2026-01-04"), Finished: date("2026-03-19"),
-				UnlockedCount: 12, TotalCount: 40, OK: true,
-			},
-			SteamPlaytimeMinutes: 3660, SteamPlaytimeKnown: true,
-		},
-	}
-	out := FormatSuggestionReport(r)
-
-	for _, want := range []string{
-		`Suggestions for "Hades II" (hades-ii) — 2 playthroughs logged`,
-		"RetroAchievements (game 4650, user daltonsw)",
-		"confidence: high (mastered)",
-		"suggested started : 2026-01-05",
-		"suggested finished: 2026-03-20",
-		"Steam (appid 1145360)",
-		"confidence: low (guess from achievement unlock times, not a real playtime timeline)",
-		"achievements unlocked        : 12 / 40",
-		"total playtime (all-time)    : 61.0h",
-		"suggested finished: 2026-03-19  (weak — not all achievements earned, may still be playing)",
-		"this game has multiple playthroughs logged",
-	} {
-		if !strings.Contains(out, want) {
-			t.Errorf("report missing %q\n---\n%s", want, out)
-		}
-	}
-}
-
-func TestFormatSuggestionReport_SkippedForMissingID(t *testing.T) {
-	r := SuggestionReport{
-		Title: "Solo Game", Slug: "solo-game", NumPlaythroughs: 1,
-		RA:    ProviderResult{Skipped: true, Reason: "no retroachievements_id set on this game"},
-		Steam: ProviderResult{Skipped: true, Reason: "no steam_appid set on this game"},
-	}
-	out := FormatSuggestionReport(r)
-	if !strings.Contains(out, "no retroachievements_id set on this game, skipping.") {
-		t.Errorf("missing RA skip message:\n%s", out)
-	}
-	if !strings.Contains(out, "no steam_appid set on this game, skipping.") {
-		t.Errorf("missing Steam skip message:\n%s", out)
-	}
-	if strings.Contains(out, "multiple playthroughs") {
-		t.Errorf("should not warn about multiple playthroughs with only 1 logged:\n%s", out)
-	}
-}
-
-func TestFormatSuggestionReport_SkippedForMissingCreds(t *testing.T) {
-	r := SuggestionReport{
-		Title: "Solo Game", Slug: "solo-game", NumPlaythroughs: 1,
-		RAGameID: "123",
-		RA:       ProviderResult{Skipped: true, Reason: "RA_USERNAME/RA_API_KEY not set"},
-	}
-	out := FormatSuggestionReport(r)
-	if !strings.Contains(out, "RA_USERNAME/RA_API_KEY not set, skipping.") {
-		t.Errorf("missing creds skip message:\n%s", out)
-	}
-}
-
-func TestFormatSuggestionReport_ProviderErrored(t *testing.T) {
-	r := SuggestionReport{
-		Title: "Solo Game", Slug: "solo-game", NumPlaythroughs: 1,
-		RAGameID: "123",
-		RA:       ProviderResult{Errored: true, Err: errors.New("network unreachable")},
-	}
-	out := FormatSuggestionReport(r)
-	if !strings.Contains(out, "request failed (network unreachable), skipping.") {
-		t.Errorf("missing errored message:\n%s", out)
 	}
 }

@@ -10,7 +10,7 @@ package model
 //     existed.
 //
 // The tool writes the derived value back into front matter (mutate.
-// SyncGameStatus, and `gamelog project` for every game) so the site's status
+// SyncGameStatus, and Housekeeping's Regenerate summaries for every game) so the site's status
 // taxonomy, counts and filters keep reading .Params.status unchanged.
 
 // IsHandSetStatus reports whether a game status is never derived.

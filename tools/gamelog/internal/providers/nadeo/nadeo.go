@@ -33,8 +33,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"os"
-	"path/filepath"
 	"sort"
 	"strconv"
 	"strings"
@@ -95,15 +93,8 @@ type Client struct {
 	Backoff time.Duration
 	lastReq time.Time
 
-	// DumpRaw, when set, is a directory every verbatim response body is written
-	// into. It exists so a single scoped live run can produce the fixtures this
-	// package's tests are built from, without anyone having to re-run the API
-	// to inspect a response shape.
-	DumpRaw string
-
 	mu     sync.Mutex
 	tokens map[string]*token
-	dumped map[string]int
 }
 
 type token struct {
@@ -269,7 +260,7 @@ func (c *Client) AccountID(ctx context.Context) (string, error) {
 // do issues a throttled, token-authenticated request, retrying on 429 with
 // backoff. It returns the body and status so callers can interpret the API's
 // several success-shaped failure modes themselves.
-func (c *Client) do(ctx context.Context, method, reqURL, audience string, body []byte, dumpAs string) ([]byte, int, error) {
+func (c *Client) do(ctx context.Context, method, reqURL, audience string, body []byte) ([]byte, int, error) {
 	backoff := cmp.Or(c.Backoff, 2*time.Second)
 	for attempt := 0; ; attempt++ {
 		t, err := c.token(ctx, audience)
@@ -314,31 +305,8 @@ func (c *Client) do(ctx context.Context, method, reqURL, audience string, body [
 			backoff *= 2
 			continue
 		}
-		c.dump(dumpAs, raw)
 		return raw, resp.StatusCode, nil
 	}
-}
-
-// dump writes a verbatim response body into DumpRaw, numbering repeats so a
-// paged or batched call keeps every page.
-func (c *Client) dump(name string, raw []byte) {
-	if c.DumpRaw == "" || name == "" {
-		return
-	}
-	c.mu.Lock()
-	if c.dumped == nil {
-		c.dumped = map[string]int{}
-	}
-	n := c.dumped[name]
-	c.dumped[name]++
-	c.mu.Unlock()
-
-	if err := os.MkdirAll(c.DumpRaw, 0o755); err != nil {
-		return
-	}
-	path := filepath.Join(c.DumpRaw, fmt.Sprintf("%s-%02d.json", name, n))
-	// Best-effort: dumping fixtures must never fail a capture.
-	_ = os.WriteFile(path, raw, 0o644)
 }
 
 // ── Campaigns ───────────────────────────────────────────────────────────────
@@ -377,7 +345,7 @@ func (c *Client) Campaigns(ctx context.Context) ([]Campaign, []json.RawMessage, 
 		q.Set("offset", strconv.Itoa(offset))
 
 		raw, status, err := c.do(ctx, http.MethodGet,
-			LiveBaseURL+"/api/campaign/official?"+q.Encode(), AudienceLive, nil, "campaigns")
+			LiveBaseURL+"/api/campaign/official?"+q.Encode(), AudienceLive, nil)
 		if err != nil {
 			return nil, nil, err
 		}
@@ -465,7 +433,7 @@ func (c *Client) MapInfos(ctx context.Context, uids []string, onProgress func(do
 		q := url.Values{}
 		q.Set("mapUidList", strings.Join(batch, ","))
 		raw, status, err := c.do(ctx, http.MethodGet,
-			CoreBaseURL+"/maps/by-uid/?"+q.Encode(), AudienceCore, nil, "maps")
+			CoreBaseURL+"/maps/by-uid/?"+q.Encode(), AudienceCore, nil)
 		if err != nil {
 			return nil, nil, err
 		}
@@ -551,7 +519,7 @@ const (
 // SeasonRecords fetches the account's times as they stood within the given
 // campaigns — the frozen, season-scoped leaderboard.
 func (c *Client) SeasonRecords(ctx context.Context, accountID string, seasonUIDs []string, onProgress func(done int)) (map[string]AccountRecord, []json.RawMessage, error) {
-	return c.accountRecords(ctx, accountID, "seasonIdList", seasonUIDs, seasonIDBatchSize, ScopeSeason, "season-records", onProgress)
+	return c.accountRecords(ctx, accountID, "seasonIdList", seasonUIDs, seasonIDBatchSize, ScopeSeason, onProgress)
 }
 
 // AllTimeRecords fetches the account's current best on each map, regardless of
@@ -560,7 +528,7 @@ func (c *Client) SeasonRecords(ctx context.Context, accountID string, seasonUIDs
 // Note this takes mapIds, not mapUids — the two are different identifiers, and
 // the map-metadata call is what translates between them.
 func (c *Client) AllTimeRecords(ctx context.Context, accountID string, mapIDs []string, onProgress func(done int)) (map[string]AccountRecord, []json.RawMessage, error) {
-	return c.accountRecords(ctx, accountID, "mapIdList", mapIDs, mapInfoBatchSize, ScopePersonalBest, "alltime-records", onProgress)
+	return c.accountRecords(ctx, accountID, "mapIdList", mapIDs, mapInfoBatchSize, ScopePersonalBest, onProgress)
 }
 
 // accountRecords fetches records for the authenticated account, keyed by mapId
@@ -583,7 +551,7 @@ func (c *Client) AllTimeRecords(ctx context.Context, accountID string, mapIDs []
 //     map with clones), and a wrong filter returns an empty list while no
 //     filter returns everything — harmless, since results are filtered by
 //     scope and indexed by mapId against the maps actually asked for.
-func (c *Client) accountRecords(ctx context.Context, accountID, param string, values []string, batchSize int, scope, dumpAs string, onProgress func(done int)) (map[string]AccountRecord, []json.RawMessage, error) {
+func (c *Client) accountRecords(ctx context.Context, accountID, param string, values []string, batchSize int, scope string, onProgress func(done int)) (map[string]AccountRecord, []json.RawMessage, error) {
 	out := make(map[string]AccountRecord)
 	var raws []json.RawMessage
 
@@ -594,7 +562,7 @@ func (c *Client) accountRecords(ctx context.Context, accountID, param string, va
 		q.Set(param, strings.Join(values[start:end], ","))
 		raw, status, err := c.do(ctx, http.MethodGet,
 			fmt.Sprintf("%s/v2/accounts/%s/mapRecords?%s", CoreBaseURL, url.PathEscape(accountID), q.Encode()),
-			AudienceCore, nil, dumpAs)
+			AudienceCore, nil)
 		if err != nil {
 			return nil, nil, err
 		}
@@ -706,7 +674,7 @@ func (c *Client) recordBatch(ctx context.Context, batch []MapRef) ([]Record, []j
 			return nil, nil, err
 		}
 		raw, status, err := c.do(ctx, http.MethodPost,
-			LiveBaseURL+"/api/token/leaderboard/group/map", AudienceLive, body, "records")
+			LiveBaseURL+"/api/token/leaderboard/group/map", AudienceLive, body)
 		if err != nil {
 			return nil, nil, err
 		}

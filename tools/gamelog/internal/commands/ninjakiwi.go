@@ -3,7 +3,6 @@ package commands
 import (
 	"context"
 	"fmt"
-	"os"
 	"path/filepath"
 	"strings"
 
@@ -20,31 +19,6 @@ func ninjaKiwiClient(creds Credentials) (*ninjakiwi.Client, error) {
 	return &ninjakiwi.Client{OAK: creds.NinjaKiwiOAK}, nil
 }
 
-// RunNinjaKiwiFetch captures a BTD6 save into archive/ninjakiwi/<userId>.json
-// and refreshes the game's btd6-summary.yaml projection.
-func RunNinjaKiwiFetch() error {
-	gamesDir, err := model.FindGamesDir()
-	if err != nil {
-		return err
-	}
-
-	ctx, stop := interruptContext()
-	defer stop()
-
-	res, err := SaveNinjaKiwi(ctx, gamesDir)
-	if err != nil {
-		return err
-	}
-	if res.LastError != "" {
-		fmt.Fprintf(os.Stderr, "  ninjakiwi: %s (existing data kept)\n", res.LastError)
-	}
-	fmt.Printf("%s\nSaved %s\n", DescribeNinjaKiwiRecord(res.Stored), res.Path)
-	if res.SummaryErr != nil {
-		fmt.Fprintf(os.Stderr, "  (btd6 summary not updated: %v)\n", res.SummaryErr)
-	}
-	return nil
-}
-
 // NinjaKiwiSaveResult is what one fetch-and-merge left behind.
 type NinjaKiwiSaveResult struct {
 	Game       model.GameSummary
@@ -54,7 +28,7 @@ type NinjaKiwiSaveResult struct {
 	SummaryErr error  // btd6-summary.yaml couldn't be rebuilt; the archive is still saved
 }
 
-// SaveNinjaKiwi is the fetch → merge → project sequence shared by the CLI and
+// SaveNinjaKiwi is the fetch → merge → project sequence shared by Catch up and
 // the web UI, for the game owning ninjakiwi_user_id.
 func SaveNinjaKiwi(ctx context.Context, gamesDir string) (NinjaKiwiSaveResult, error) {
 	c, err := ninjaKiwiClient(LoadCredentials())
@@ -86,7 +60,7 @@ func SaveNinjaKiwi(ctx context.Context, gamesDir string) (NinjaKiwiSaveResult, e
 	}, nil
 }
 
-// DescribeNinjaKiwiRecord is the one-line summary the CLI ends with and the
+// DescribeNinjaKiwiRecord is the one-line summary Catch up logs and the
 // web UI flashes after a refresh.
 func DescribeNinjaKiwiRecord(rec *model.BTD6Record) string {
 	if rec == nil {

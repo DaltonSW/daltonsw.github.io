@@ -12,9 +12,9 @@ import (
 	"go.dalton.dog/gamelog/internal/model"
 )
 
-// These tests run against **real Nadeo response bodies**, captured with
-// `gamelog nadeo fetch --season "Summer 2020" --dump-raw` and trimmed to three
-// tracks. Nothing here is written from documentation — that is the whole point
+// These tests run against **real Nadeo response bodies**, captured from a
+// live fetch of Summer 2020 and trimmed to three tracks. To re-capture one,
+// save the verbatim body of a single scoped request by hand. Nothing here is written from documentation — that is the whole point
 // of the file, and the reason the fixtures should be re-captured rather than
 // hand-edited if the API ever changes shape.
 //

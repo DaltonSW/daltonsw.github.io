@@ -11,7 +11,7 @@ import (
 // enough (RA throttles to ~1.2s/call, and there can be 200+ linked games)
 // that they can't run inside a single HTTP request. In-memory only: this is
 // a single-user local tool, so a job doesn't need to survive a restart of
-// `gamelog serve`.
+// the server.
 //
 // Title/BackHref/BackLabel describe the job's monitor page. They're set once
 // in create, before the worker goroutine starts, and never mutated after —
