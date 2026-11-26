@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "60 Seconds! Reatomized",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1012880",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 60,
  "first": "2020-01-24",
@@ -321,7 +321,7 @@
    "description": "Get rescued by the military.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/de8a62655437ac342084a247d952fd0b45d94af2.jpg",
-   "rarity": 22.8
+   "rarity": 22.7
   },
   {
    "key": "ACH_HARD",
@@ -409,7 +409,7 @@
    "description": "Survival is overrated. Stay to see the fireworks!",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/fec70db93b17a13917b7ba93d5873a7189a517c0.jpg",
-   "rarity": 58.9
+   "rarity": 58.8
   },
   {
    "key": "ACH_PANZER",
@@ -506,6 +506,185 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1012880/437683049630635a3605ae42f5f4c991366e6b4d.jpg",
    "rarity": 8.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "Pankrowa"
+  },
+  {
+   "key": "EasyModesDone"
+  },
+  {
+   "key": "NormalModesDone"
+  },
+  {
+   "key": "HardModesDone"
+  },
+  {
+   "key": "Collisions"
+  },
+  {
+   "key": "SoupCount"
+  },
+  {
+   "key": "WaterCount"
+  },
+  {
+   "key": "ScavengeCount"
+  },
+  {
+   "key": "SurvivalCount"
+  },
+  {
+   "key": "NukePerished"
+  },
+  {
+   "key": "InsanityPerished"
+  },
+  {
+   "key": "InjuryPerished"
+  },
+  {
+   "key": "SicknessPerished"
+  },
+  {
+   "key": "ThirstPerished",
+   "value": 3
+  },
+  {
+   "key": "HungerPerished"
+  },
+  {
+   "key": "ExpeditionsSuccessful",
+   "value": 3
+  },
+  {
+   "key": "TotalSurvival",
+   "value": 33
+  },
+  {
+   "key": "ExpeditionsUndertaken",
+   "value": 4
+  },
+  {
+   "key": "TotalItemsCollected",
+   "value": 13
+  },
+  {
+   "key": "MostItemsCollected",
+   "value": 13
+  },
+  {
+   "key": "PerishedSurvival",
+   "value": 1
+  },
+  {
+   "key": "SurvivedSurvival"
+  },
+  {
+   "key": "PerishedScavenge"
+  },
+  {
+   "key": "SurvivedScavenge",
+   "value": 1
+  },
+  {
+   "key": "LongestSurvival",
+   "value": 33
+  },
+  {
+   "key": "ItemsCollected"
+  },
+  {
+   "key": "checkers"
+  },
+  {
+   "key": "cards"
+  },
+  {
+   "key": "ammo"
+  },
+  {
+   "key": "axe"
+  },
+  {
+   "key": "firstaid"
+  },
+  {
+   "key": "gasmask"
+  },
+  {
+   "key": "rifle"
+  },
+  {
+   "key": "map"
+  },
+  {
+   "key": "handbook"
+  },
+  {
+   "key": "radio"
+  },
+  {
+   "key": "spray"
+  },
+  {
+   "key": "torch"
+  },
+  {
+   "key": "DadExpeditions"
+  },
+  {
+   "key": "MomExpeditions"
+  },
+  {
+   "key": "SonExpeditions"
+  },
+  {
+   "key": "DaughterExpeditions"
+  },
+  {
+   "key": "MomRescued"
+  },
+  {
+   "key": "SonRescued"
+  },
+  {
+   "key": "DaughterRescued"
+  },
+  {
+   "key": "Sacrifice"
+  },
+  {
+   "key": "Playtime"
+  },
+  {
+   "key": "TradeCount"
+  },
+  {
+   "key": "DefendThree"
+  },
+  {
+   "key": "padlock"
+  },
+  {
+   "key": "suitcase",
+   "default": 1
+  },
+  {
+   "key": "SoupConsumed",
+   "value": 6.25
+  },
+  {
+   "key": "WaterConsumed",
+   "value": 7
+  },
+  {
+   "key": "AverageSurvivalTime"
+  },
+  {
+   "key": "WinRatio"
   }
  ],
  "raw": {

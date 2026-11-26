@@ -1,0 +1,41 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: STAT_101
+          name: STAT_101 Name
+          value: 1
+        - key: STAT_103
+          name: STAT_103 Name
+          value: 26
+        - key: STAT_104
+          name: STAT_104 Name
+          value: 99
+        - key: STAT_105
+          name: STAT_105 Name
+          value: 5
+        - key: STAT_203
+          name: STAT_203 Name
+          value: 42
+        - key: STAT_204
+          name: STAT_204 Name
+          value: 28
+        - key: STAT_205
+          name: STAT_205 Name
+          value: 5
+        - key: STAT_301
+          name: STAT_301 Name
+          value: 5
+        - key: STAT_302
+          name: STAT_302 Name
+          value: 16
+        - key: STAT_303
+          name: STAT_303 Name
+          value: 27
+        - key: STAT_304
+          name: STAT_304 Name
+          value: 5
+        - key: STAT_305
+          name: STAT_305 Name
+          value: 5

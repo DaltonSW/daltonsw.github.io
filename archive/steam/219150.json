@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Hotline Miami",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "219150",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 35,
  "platform": "PC",
@@ -298,6 +298,25 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/219150/ef719707a9fbbe7ea9d374473e0eec42e085433a.jpg",
    "rarity": 8.1
+  }
+ ],
+ "stats": [
+  {
+   "key": "Windows",
+   "name": "Broken windows"
+  },
+  {
+   "key": "Deaths"
+  },
+  {
+   "key": "Kills"
+  },
+  {
+   "key": "Car",
+   "name": "Return to car"
+  },
+  {
+   "key": "Dogs"
   }
  ],
  "raw": {

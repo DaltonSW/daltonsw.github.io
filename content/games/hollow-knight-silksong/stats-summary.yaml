@@ -1,0 +1,41 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: ALL_TOOLS_STAT
+          name: Arsenal
+          value: 51
+        - key: ALL_SILK_SKILLS_STAT
+          name: Woven
+          value: 6
+        - key: ALL_CRESTS_STAT
+          name: Consumed
+          value: 7
+        - key: FIRST_MASK_STAT
+          name: Protected
+          value: 4
+        - key: ALL_MASKS_STAT
+          name: Masked
+          value: 20
+        - key: FIRST_SILK_SPOOL_STAT
+          name: Restored
+          value: 2
+        - key: ALL_SILK_SPOOLS_STAT
+          name: Extended
+          value: 18
+        - key: ALL_SILK_HEARTS_STAT
+          name: Regenerated
+          value: 3
+        - key: ALL_MAPS_STAT
+          name: Cartographer
+          value: 28
+        - key: BELLWAYS_FULL_STAT
+          name: Connected
+          value: 10
+        - key: TUBES_FULL_STAT
+          name: Transported
+          value: 6
+        - key: FLEAS_HALF_STAT
+          name: Flea Finder
+          value: 15

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "A Virus Named TOM",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "207650",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 4,
  "total": 47,
  "first": "2013-09-20",
@@ -393,6 +393,24 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/207650/e1c8bd345d4d9a62e905215af8e3b95b39256b26.jpg",
    "rarity": 1.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "CompletedAreaOneSPStat",
+   "name": "Area One Completed Stat (SP)"
+  },
+  {
+   "key": "TimePlayedStat",
+   "name": "Time Played"
+  },
+  {
+   "key": "CompletedAreaOneMPStat",
+   "name": "Area One Completed Stat (MP)"
+  },
+  {
+   "key": "CompletedAreaOneStat",
+   "name": "For Backward Compatibility - Don't Use"
   }
  ],
  "raw": {

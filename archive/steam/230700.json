@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "La-Mulana",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "230700",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 64,
  "platform": "PC",
@@ -572,6 +572,789 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/230700/b9582827054409ecbd6a3aa15f00a4a08049f145.jpg",
    "hidden": true,
    "rarity": 10.1
+  }
+ ],
+ "stats": [
+  {
+   "key": "SpaCount",
+   "name": "Spa"
+  },
+  {
+   "key": "ObjectCount",
+   "name": "Relics"
+  },
+  {
+   "key": "MulburkCount",
+   "name": "Mulburk"
+  },
+  {
+   "key": "XelpudCount",
+   "name": "Xelpud",
+   "value": 1
+  },
+  {
+   "key": "CurryCount",
+   "name": "Curry"
+  },
+  {
+   "key": "STA_MLBLK_00"
+  },
+  {
+   "key": "STA_MLBLK_01"
+  },
+  {
+   "key": "STA_MLBLK_02"
+  },
+  {
+   "key": "STA_MLBLK_03"
+  },
+  {
+   "key": "STA_MLBLK_04"
+  },
+  {
+   "key": "STA_MLBLK_05"
+  },
+  {
+   "key": "STA_MLBLK_06"
+  },
+  {
+   "key": "STA_MLBLK_07"
+  },
+  {
+   "key": "STA_MLBLK_08"
+  },
+  {
+   "key": "STA_MLBLK_09"
+  },
+  {
+   "key": "STA_MLBLK_10"
+  },
+  {
+   "key": "STA_MLBLK_11"
+  },
+  {
+   "key": "STA_MLBLK_12"
+  },
+  {
+   "key": "STA_MLBLK_13"
+  },
+  {
+   "key": "STA_MLBLK_14"
+  },
+  {
+   "key": "STA_MLBLK_15"
+  },
+  {
+   "key": "STA_MLBLK_16"
+  },
+  {
+   "key": "STA_MLBLK_17"
+  },
+  {
+   "key": "STA_MLBLK_18"
+  },
+  {
+   "key": "STA_MLBLK_19"
+  },
+  {
+   "key": "STA_MLBLK_20"
+  },
+  {
+   "key": "STA_MLBLK_21"
+  },
+  {
+   "key": "STA_MLBLK_22"
+  },
+  {
+   "key": "STA_MLBLK_23"
+  },
+  {
+   "key": "STA_MLBLK_24"
+  },
+  {
+   "key": "STA_MLBLK_25"
+  },
+  {
+   "key": "STA_MLBLK_26"
+  },
+  {
+   "key": "STA_MLBLK_27"
+  },
+  {
+   "key": "STA_MLBLK_28"
+  },
+  {
+   "key": "STA_MLBLK_29"
+  },
+  {
+   "key": "STA_MLBLK_30"
+  },
+  {
+   "key": "STA_MLBLK_31"
+  },
+  {
+   "key": "STA_MLBLK_32"
+  },
+  {
+   "key": "STA_MLBLK_33"
+  },
+  {
+   "key": "STA_MLBLK_34"
+  },
+  {
+   "key": "STA_MLBLK_35"
+  },
+  {
+   "key": "STA_MLBLK_36"
+  },
+  {
+   "key": "STA_MLBLK_37"
+  },
+  {
+   "key": "STA_MLBLK_38"
+  },
+  {
+   "key": "STA_MLBLK_39"
+  },
+  {
+   "key": "STA_MLBLK_40"
+  },
+  {
+   "key": "STA_MLBLK_41"
+  },
+  {
+   "key": "STA_MLBLK_42"
+  },
+  {
+   "key": "STA_MLBLK_43"
+  },
+  {
+   "key": "STA_MLBLK_44"
+  },
+  {
+   "key": "STA_MLBLK_45"
+  },
+  {
+   "key": "STA_MLBLK_46"
+  },
+  {
+   "key": "STA_MLBLK_47"
+  },
+  {
+   "key": "STA_MLBLK_48"
+  },
+  {
+   "key": "STA_MLBLK_49"
+  },
+  {
+   "key": "STA_MLBLK_50"
+  },
+  {
+   "key": "STA_MLBLK_51"
+  },
+  {
+   "key": "STA_MLBLK_52"
+  },
+  {
+   "key": "STA_MLBLK_53"
+  },
+  {
+   "key": "STA_MLBLK_54"
+  },
+  {
+   "key": "STA_MLBLK_55"
+  },
+  {
+   "key": "STA_XELPUD_00",
+   "value": 1
+  },
+  {
+   "key": "STA_XELPUD_01"
+  },
+  {
+   "key": "STA_XELPUD_02"
+  },
+  {
+   "key": "STA_XELPUD_03"
+  },
+  {
+   "key": "STA_XELPUD_04"
+  },
+  {
+   "key": "STA_XELPUD_05"
+  },
+  {
+   "key": "STA_XELPUD_06"
+  },
+  {
+   "key": "STA_XELPUD_07"
+  },
+  {
+   "key": "STA_XELPUD_08"
+  },
+  {
+   "key": "STA_XELPUD_09"
+  },
+  {
+   "key": "STA_XELPUD_10"
+  },
+  {
+   "key": "STA_XELPUD_11"
+  },
+  {
+   "key": "STA_XELPUD_12"
+  },
+  {
+   "key": "STA_XELPUD_13"
+  },
+  {
+   "key": "STA_XELPUD_14"
+  },
+  {
+   "key": "STA_XELPUD_15"
+  },
+  {
+   "key": "STA_XELPUD_16"
+  },
+  {
+   "key": "STA_XELPUD_17"
+  },
+  {
+   "key": "STA_XELPUD_18"
+  },
+  {
+   "key": "STA_XELPUD_19"
+  },
+  {
+   "key": "STA_XELPUD_20"
+  },
+  {
+   "key": "STA_XELPUD_21"
+  },
+  {
+   "key": "STA_XELPUD_22"
+  },
+  {
+   "key": "STA_XELPUD_23"
+  },
+  {
+   "key": "STA_XELPUD_24"
+  },
+  {
+   "key": "STA_XELPUD_25"
+  },
+  {
+   "key": "STA_XELPUD_26"
+  },
+  {
+   "key": "STA_XELPUD_27"
+  },
+  {
+   "key": "STA_XELPUD_28"
+  },
+  {
+   "key": "STA_XELPUD_29"
+  },
+  {
+   "key": "STA_XELPUD_30"
+  },
+  {
+   "key": "STA_XELPUD_31"
+  },
+  {
+   "key": "STA_XELPUD_32"
+  },
+  {
+   "key": "STA_XELPUD_33"
+  },
+  {
+   "key": "STA_XELPUD_34"
+  },
+  {
+   "key": "STA_XELPUD_35"
+  },
+  {
+   "key": "STA_XELPUD_36"
+  },
+  {
+   "key": "STA_XELPUD_37"
+  },
+  {
+   "key": "STA_XELPUD_38"
+  },
+  {
+   "key": "STA_XELPUD_39"
+  },
+  {
+   "key": "STA_XELPUD_40"
+  },
+  {
+   "key": "STA_XELPUD_41"
+  },
+  {
+   "key": "STA_XELPUD_42"
+  },
+  {
+   "key": "STA_XELPUD_43"
+  },
+  {
+   "key": "STA_XELPUD_44"
+  },
+  {
+   "key": "STA_XELPUD_45"
+  },
+  {
+   "key": "STA_XELPUD_46"
+  },
+  {
+   "key": "STA_XELPUD_47"
+  },
+  {
+   "key": "STA_XELPUD_48"
+  },
+  {
+   "key": "STA_XELPUD_49"
+  },
+  {
+   "key": "STA_XELPUD_50"
+  },
+  {
+   "key": "STA_XELPUD_51"
+  },
+  {
+   "key": "STA_XELPUD_52"
+  },
+  {
+   "key": "STA_XELPUD_53"
+  },
+  {
+   "key": "STA_XELPUD_54"
+  },
+  {
+   "key": "STA_XELPUD_55"
+  },
+  {
+   "key": "STA_XELPUD_56"
+  },
+  {
+   "key": "STA_CURRY_00"
+  },
+  {
+   "key": "STA_CURRY_01"
+  },
+  {
+   "key": "STA_CURRY_02"
+  },
+  {
+   "key": "STA_CURRY_03"
+  },
+  {
+   "key": "STA_CURRY_04"
+  },
+  {
+   "key": "STA_CURRY_05"
+  },
+  {
+   "key": "STA_CURRY_06"
+  },
+  {
+   "key": "STA_CURRY_07"
+  },
+  {
+   "key": "STA_CURRY_08"
+  },
+  {
+   "key": "STA_CURRY_09"
+  },
+  {
+   "key": "STA_OBJECTS_00"
+  },
+  {
+   "key": "STA_OBJECTS_01"
+  },
+  {
+   "key": "STA_OBJECTS_02"
+  },
+  {
+   "key": "STA_OBJECTS_03"
+  },
+  {
+   "key": "STA_OBJECTS_04"
+  },
+  {
+   "key": "STA_OBJECTS_05"
+  },
+  {
+   "key": "STA_OBJECTS_06"
+  },
+  {
+   "key": "STA_OBJECTS_07"
+  },
+  {
+   "key": "STA_OBJECTS_08"
+  },
+  {
+   "key": "STA_OBJECTS_09"
+  },
+  {
+   "key": "STA_OBJECTS_10"
+  },
+  {
+   "key": "STA_OBJECTS_11"
+  },
+  {
+   "key": "STA_OBJECTS_12"
+  },
+  {
+   "key": "STA_OBJECTS_13"
+  },
+  {
+   "key": "STA_OBJECTS_14"
+  },
+  {
+   "key": "STA_OBJECTS_15"
+  },
+  {
+   "key": "STA_OBJECTS_16"
+  },
+  {
+   "key": "STA_OBJECTS_17"
+  },
+  {
+   "key": "STA_OBJECTS_18"
+  },
+  {
+   "key": "STA_OBJECTS_19"
+  },
+  {
+   "key": "STA_OBJECTS_20"
+  },
+  {
+   "key": "STA_OBJECTS_21"
+  },
+  {
+   "key": "STA_OBJECTS_22"
+  },
+  {
+   "key": "STA_OBJECTS_23"
+  },
+  {
+   "key": "STA_OBJECTS_24"
+  },
+  {
+   "key": "STA_OBJECTS_25"
+  },
+  {
+   "key": "STA_OBJECTS_26"
+  },
+  {
+   "key": "STA_OBJECTS_27"
+  },
+  {
+   "key": "STA_OBJECTS_28"
+  },
+  {
+   "key": "STA_OBJECTS_29"
+  },
+  {
+   "key": "STA_OBJECTS_30"
+  },
+  {
+   "key": "STA_OBJECTS_31"
+  },
+  {
+   "key": "STA_OBJECTS_32"
+  },
+  {
+   "key": "STA_OBJECTS_33"
+  },
+  {
+   "key": "STA_OBJECTS_34"
+  },
+  {
+   "key": "STA_OBJECTS_35"
+  },
+  {
+   "key": "STA_OBJECTS_36"
+  },
+  {
+   "key": "STA_OBJECTS_37"
+  },
+  {
+   "key": "STA_OBJECTS_38"
+  },
+  {
+   "key": "STA_OBJECTS_39"
+  },
+  {
+   "key": "STA_OBJECTS_40"
+  },
+  {
+   "key": "STA_OBJECTS_41"
+  },
+  {
+   "key": "STA_OBJECTS_43"
+  },
+  {
+   "key": "STA_OBJECTS_44"
+  },
+  {
+   "key": "STA_OBJECTS_45"
+  },
+  {
+   "key": "STA_OBJECTS_46"
+  },
+  {
+   "key": "STA_OBJECTS_47"
+  },
+  {
+   "key": "STA_OBJECTS_48"
+  },
+  {
+   "key": "STA_OBJECTS_49"
+  },
+  {
+   "key": "STA_OBJECTS_50"
+  },
+  {
+   "key": "STA_OBJECTS_51"
+  },
+  {
+   "key": "STA_OBJECTS_52"
+  },
+  {
+   "key": "STA_OBJECTS_53"
+  },
+  {
+   "key": "STA_OBJECTS_54"
+  },
+  {
+   "key": "STA_OBJECTS_55"
+  },
+  {
+   "key": "STA_OBJECTS_56"
+  },
+  {
+   "key": "STA_OBJECTS_57"
+  },
+  {
+   "key": "STA_OBJECTS_58"
+  },
+  {
+   "key": "STA_OBJECTS_59"
+  },
+  {
+   "key": "STA_OBJECTS_60"
+  },
+  {
+   "key": "STA_OBJECTS_61"
+  },
+  {
+   "key": "STA_OBJECTS_62"
+  },
+  {
+   "key": "STA_OBJECTS_63"
+  },
+  {
+   "key": "STA_OBJECTS_64"
+  },
+  {
+   "key": "STA_OBJECTS_65"
+  },
+  {
+   "key": "STA_OBJECTS_66"
+  },
+  {
+   "key": "STA_OBJECTS_67"
+  },
+  {
+   "key": "STA_OBJECTS_68"
+  },
+  {
+   "key": "STA_OBJECTS_69"
+  },
+  {
+   "key": "STA_OBJECTS_70"
+  },
+  {
+   "key": "STA_OBJECTS_71"
+  },
+  {
+   "key": "STA_OBJECTS_72"
+  },
+  {
+   "key": "STA_OBJECTS_73"
+  },
+  {
+   "key": "STA_OBJECTS_74"
+  },
+  {
+   "key": "STA_OBJECTS_75"
+  },
+  {
+   "key": "STA_OBJECTS_76"
+  },
+  {
+   "key": "STA_OBJECTS_77"
+  },
+  {
+   "key": "STA_OBJECTS_78"
+  },
+  {
+   "key": "STA_OBJECTS_79"
+  },
+  {
+   "key": "STA_OBJECTS_80"
+  },
+  {
+   "key": "STA_OBJECTS_81"
+  },
+  {
+   "key": "STA_OBJECTS_82"
+  },
+  {
+   "key": "STA_OBJECTS_83"
+  },
+  {
+   "key": "STA_OBJECTS_84"
+  },
+  {
+   "key": "STA_OBJECTS_85"
+  },
+  {
+   "key": "STA_OBJECTS_86"
+  },
+  {
+   "key": "STA_OBJECTS_87"
+  },
+  {
+   "key": "STA_OBJECTS_88"
+  },
+  {
+   "key": "STA_OBJECTS_89"
+  },
+  {
+   "key": "STA_OBJECTS_90"
+  },
+  {
+   "key": "STA_OBJECTS_91"
+  },
+  {
+   "key": "STA_OBJECTS_92"
+  },
+  {
+   "key": "STA_OBJECTS_93"
+  },
+  {
+   "key": "STA_OBJECTS_94"
+  },
+  {
+   "key": "STA_OBJECTS_95"
+  },
+  {
+   "key": "STA_OBJECTS_96"
+  },
+  {
+   "key": "STA_OBJECTS_97"
+  },
+  {
+   "key": "STA_OBJECTS_98"
+  },
+  {
+   "key": "STA_OBJECTS_99"
+  },
+  {
+   "key": "STA_OBJECTS_100"
+  },
+  {
+   "key": "STA_OBJECTS_101"
+  },
+  {
+   "key": "STA_OBJECTS_102"
+  },
+  {
+   "key": "STA_OBJECTS_103"
+  },
+  {
+   "key": "STA_OBJECTS_104"
+  },
+  {
+   "key": "STA_OBJECTS_105"
+  },
+  {
+   "key": "STA_OBJECTS_106"
+  },
+  {
+   "key": "STA_OBJECTS_107"
+  },
+  {
+   "key": "STA_OBJECTS_108"
+  },
+  {
+   "key": "STA_OBJECTS_109"
+  },
+  {
+   "key": "STA_OBJECTS_110"
+  },
+  {
+   "key": "STA_OBJECTS_111"
+  },
+  {
+   "key": "STA_OBJECTS_112"
+  },
+  {
+   "key": "STA_OBJECTS_113"
+  },
+  {
+   "key": "STA_OBJECTS_114"
+  },
+  {
+   "key": "STA_OBJECTS_115"
+  },
+  {
+   "key": "STA_OBJECTS_116"
+  },
+  {
+   "key": "STA_OBJECTS_117"
+  },
+  {
+   "key": "STA_OBJECTS_118"
+  },
+  {
+   "key": "STA_OBJECTS_119"
+  },
+  {
+   "key": "STA_OBJECTS_120"
+  },
+  {
+   "key": "STA_OBJECTS_121"
+  },
+  {
+   "key": "STA_OBJECTS_122"
+  },
+  {
+   "key": "STA_OBJECTS_123"
+  },
+  {
+   "key": "STA_OBJECTS_124"
+  },
+  {
+   "key": "STA_OBJECTS_125"
+  },
+  {
+   "key": "STA_OBJECTS_126"
+  },
+  {
+   "key": "STA_OBJECTS_127"
+  },
+  {
+   "key": "STA_OBJECTS_128"
+  },
+  {
+   "key": "STA_OBJECTS_129"
+  },
+  {
+   "key": "STA_OBJECTS_130"
   }
  ],
  "raw": {

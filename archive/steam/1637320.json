@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Dome Keeper",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1637320",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 17,
  "total": 47,
  "first": "2022-10-01",
@@ -409,6 +409,18 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1637320/51f78ef3ec50de87ba9f2903291b6bf0dfa8c2f3.jpg",
    "rarity": 32.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "run_wins",
+   "name": "wins",
+   "value": 7
+  },
+  {
+   "key": "run_losses",
+   "name": "losses",
+   "value": 5
   }
  ],
  "raw": {

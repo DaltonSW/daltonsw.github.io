@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Sunless Skies",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "596970",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 3,
  "total": 31,
  "first": "2021-01-11",
@@ -268,6 +268,30 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/596970/8ca34a79a65ea121adc72358b349b5a41f24e307.jpg",
    "rarity": 1.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_lvl",
+   "name": "Who are you in the Dark?",
+   "value": 5
+  },
+  {
+   "key": "stat_reach_ports",
+   "name": "The Garden of Heaven",
+   "value": 9
+  },
+  {
+   "key": "stat_albion_ports",
+   "name": "The Clockwise Kingdom"
+  },
+  {
+   "key": "stat_eleutheria_ports",
+   "name": "The Midnight Groves"
+  },
+  {
+   "key": "stat_bluekingdom_ports",
+   "name": "The Distrcits of the Dead"
   }
  ],
  "raw": {

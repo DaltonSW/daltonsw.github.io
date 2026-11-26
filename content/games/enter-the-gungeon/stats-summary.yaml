@@ -1,0 +1,47 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: META_SPENT_AT_STORE
+          name: Hegemony Credits Spent at Acquisitions Department
+          value: 140
+        - key: FLOOR_ONE_CLEARS
+          name: First Chamber Clears
+          value: 15
+        - key: FLOOR_TWO_CLEARS
+          name: Second Chamber Clears
+          value: 12
+        - key: FLOOR_THREE_CLEARS
+          name: Third Chamber Clears
+          value: 11
+        - key: FLOOR_FOUR_CLEARS
+          name: Fourth Chamber Clears
+          value: 3
+        - key: FRIFLE_CORE_COMPLETED
+          name: Frifle's Core Challenges Completed
+          value: 1
+        - key: WINCHESTER_ACED
+          name: Winchester Games Aced
+          value: 1
+        - key: GUNSLING_COMPLETED
+          name: Gunsling King Challenges Completed
+          value: 1
+        - key: BREACH_POPULATION
+          name: Breach Population
+          value: 7
+        - key: ITEMS_STOLEN
+          name: Items Stolen
+          value: 1
+        - key: CHANDELIER_KILLS
+          name: Chandelier Kills
+          value: 9
+        - key: MINECART_KILLS
+          name: Minecart Kills
+          value: 6
+        - key: PIT_KILLS
+          name: Pit Kills
+          value: 37
+        - key: TABLES_FLIPPED
+          name: Tables Flipped
+          value: 91

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Portal",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "400",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 12,
  "total": 15,
  "first": "2012-08-12",
@@ -148,6 +148,12 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/400/portal_get_allsilver.jpg",
    "rarity": 2.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "PORTAL_TRANSMISSION_RECEIVED_STAT",
+   "value": 26
   }
  ],
  "raw": {

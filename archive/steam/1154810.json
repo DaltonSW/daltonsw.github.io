@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Going Under",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1154810",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 17,
  "total": 23,
  "first": "2021-02-01",
@@ -227,6 +227,48 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1154810/ba047becfaa40de765c22745aac9e2ad9b66be83.jpg",
    "rarity": 5.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "unlockAllSkills",
+   "name": "Skills Unlocked",
+   "value": 73
+  },
+  {
+   "key": "rayMaxLevel",
+   "name": "Ray Mentorship Level",
+   "value": 4
+  },
+  {
+   "key": "swompMaxLevel",
+   "name": "Swomp Mentorship Level",
+   "value": 4
+  },
+  {
+   "key": "tappiMaxLevel",
+   "name": "Tappi Mentorship Level",
+   "value": 4
+  },
+  {
+   "key": "fernMaxLevel",
+   "name": "Fern Mentorship Level",
+   "value": 4
+  },
+  {
+   "key": "karaMaxLevel",
+   "name": "Kara Mentorship Level",
+   "value": 4
+  },
+  {
+   "key": "openCubes",
+   "name": "Cubes Opened",
+   "value": 100
+  },
+  {
+   "key": "getCursed",
+   "name": "Curses Obtained",
+   "value": 13
   }
  ],
  "raw": {

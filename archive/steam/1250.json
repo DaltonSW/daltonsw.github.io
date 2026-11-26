@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Killing Floor",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1250",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 285,
  "first": "2017-03-29",
@@ -2303,6 +2303,217 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/6b39802f14939ae1d3be1d43b42a4b83001c67a7.jpg",
    "rarity": 2.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "Kills",
+   "value": 209
+  },
+  {
+   "key": "DamageHealed",
+   "name": "Damage Healed"
+  },
+  {
+   "key": "WeldingPoints",
+   "name": "Welding Points",
+   "value": 2754
+  },
+  {
+   "key": "ShotgunDamage",
+   "name": "Shotgun Damage"
+  },
+  {
+   "key": "HeadshotKills",
+   "name": "Sniper Headshot Kills",
+   "value": 31
+  },
+  {
+   "key": "StalkerKills",
+   "name": "Stalkers Killed"
+  },
+  {
+   "key": "BullpupDamage",
+   "name": "Bullpup Damage"
+  },
+  {
+   "key": "MeleeDamage",
+   "name": "Melee Damage",
+   "value": 316
+  },
+  {
+   "key": "FlameThrowerDamage",
+   "name": "Flame Thrower Damage"
+  },
+  {
+   "key": "SelfHeals",
+   "name": "Self Heals"
+  },
+  {
+   "key": "SoleSurvivorWaves",
+   "name": "Sole Survivor Waves"
+  },
+  {
+   "key": "CashDonated",
+   "name": "Cash Donated",
+   "value": 10250
+  },
+  {
+   "key": "FeedingKills",
+   "name": "Feeding Kills"
+  },
+  {
+   "key": "BurningCrossbowKills",
+   "name": "Burning Crossbow Kills"
+  },
+  {
+   "key": "GibbedFleshpounds",
+   "name": "Gibbed Fleshpounds",
+   "value": 1
+  },
+  {
+   "key": "StalkersKilledWithExplosives",
+   "name": "Stalkers Killed with Explosives",
+   "value": 1
+  },
+  {
+   "key": "GibbedEnemies",
+   "name": "Gibbed Enemies",
+   "value": 7
+  },
+  {
+   "key": "BloatKills",
+   "name": "Bloat Kills",
+   "value": 9
+  },
+  {
+   "key": "TotalZedTime",
+   "name": "Total Zed Time",
+   "value": 78
+  },
+  {
+   "key": "SirenKills",
+   "name": "Siren Kills",
+   "value": 3
+  },
+  {
+   "key": "ExplosivesDamage",
+   "name": "Explosives Damage",
+   "value": 1858
+  },
+  {
+   "key": "DemolitionsPipebombKills",
+   "name": "Demolitions Pipebomb Kills"
+  },
+  {
+   "key": "EnemiesGibbedWithM79",
+   "name": "Enemies Gibbed with M79"
+  },
+  {
+   "key": "EnemiesKilledWithSCAR",
+   "name": "Enemies Killed With SCAR"
+  },
+  {
+   "key": "TeammatesHealedWithMP7",
+   "name": "Teammates Healed With MP7 Medic Gun"
+  },
+  {
+   "key": "FleshpoundsKilledWithAA12",
+   "name": "Fleshpounds Killed With AA12 Shotgun"
+  },
+  {
+   "key": "CrawlersKilledInMidair",
+   "name": "Crawlers Killed in Midair"
+  },
+  {
+   "key": "Mac10BurnDamage",
+   "name": "Mac10 Burn Damage"
+  },
+  {
+   "key": "DroppedTier3Weapons",
+   "name": "Dropped Tier3 Weapons"
+  },
+  {
+   "key": "HalloweenKills",
+   "name": "Stat 30"
+  },
+  {
+   "key": "HalloweenScrakeKills",
+   "name": "Stat 31"
+  },
+  {
+   "key": "Testing1",
+   "name": "Stat XX"
+  },
+  {
+   "key": "XMasHusksKilledWithHuskCannon",
+   "name": "Stat 32"
+  },
+  {
+   "key": "XMasPointsHealedWithMP5",
+   "name": "Stat 33"
+  },
+  {
+   "key": "MedicPrestige",
+   "name": "Stat 34"
+  },
+  {
+   "key": "SupportPrestige",
+   "name": "Stat 35"
+  },
+  {
+   "key": "SharpshooterPrestige",
+   "name": "Stat 36"
+  },
+  {
+   "key": "CommandoPrestige",
+   "name": "Stat 37"
+  },
+  {
+   "key": "BerserkerPrestige",
+   "name": "Stat 38"
+  },
+  {
+   "key": "FirebugPrestige",
+   "name": "Stat 39"
+  },
+  {
+   "key": "DemoPrestige",
+   "name": "Stat 40"
+  },
+  {
+   "key": "EnemiesKilledWithFNFal",
+   "name": "Stat 41"
+  },
+  {
+   "key": "EnemiesKilledWithBullpup",
+   "name": "Stat 42"
+  },
+  {
+   "key": "ZedKilledDuringHillbilly",
+   "name": "stat 44",
+   "value": 209
+  },
+  {
+   "key": "FleshPoundsKilledWithAxe",
+   "name": "stat 47"
+  },
+  {
+   "key": "ZedsKilledWhileAirborne",
+   "name": "stat 48"
+  },
+  {
+   "key": "ZedsKilledWhileZapped",
+   "name": "stat 49"
+  },
+  {
+   "key": "Stat46",
+   "name": "stat46",
+   "default": 2
+  },
+  {
+   "key": "HillbillyAchievementsCompleted",
+   "name": "stat 45"
   }
  ],
  "raw": {

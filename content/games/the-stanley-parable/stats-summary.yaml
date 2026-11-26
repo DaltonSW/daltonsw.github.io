@@ -1,0 +1,17 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: TSP_PLAYTHROUGHS
+          name: internal num playthroughs
+          value: 8
+        - key: TSP_STARTUPS
+          name: internal startup count
+          value: 6
+        - key: TSP_LASTSTARTUP
+          name: internal last startup
+          value: 3.657398926e+09
+        - key: TSP_JUMPS
+          name: internal jump count
+          value: 86

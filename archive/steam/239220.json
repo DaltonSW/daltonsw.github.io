@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Mighty Quest For Epic Loot",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "239220",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 36,
  "platform": "PC",
@@ -299,6 +299,72 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239220/420da1eacc86f2b2532d07d9150cf52a1576aabc.jpg",
    "rarity": 8.5
+  }
+ ],
+ "stats": [
+  {
+   "key": "NumberOfCreaturesKilled",
+   "name": "Creatures Killed"
+  },
+  {
+   "key": "NumberOfHigherLevelCastlesDefeated",
+   "name": "Higher Level Castles Defeated"
+  },
+  {
+   "key": "NumberOfLowerLevelCastlesDefeated",
+   "name": "Lower Level Castles Defeated"
+  },
+  {
+   "key": "NumberOfSameLevelCastlesDefeated",
+   "name": "Same Level Castles Defeated"
+  },
+  {
+   "key": "NumberOfPotionsUsed",
+   "name": "Potions Used"
+  },
+  {
+   "key": "NumberOfSpidersKilled",
+   "name": "Spiders Killed"
+  },
+  {
+   "key": "NumberOfVampiresKilled",
+   "name": "Vampires Killed"
+  },
+  {
+   "key": "NumberOfBossesKilled",
+   "name": "Bosses Killed"
+  },
+  {
+   "key": "CreaturesPlacedInCastle",
+   "name": "Creatures Placed"
+  },
+  {
+   "key": "NumberOfCastleRooms",
+   "name": "Number of Rooms"
+  },
+  {
+   "key": "NumberOfHeroesDefeated",
+   "name": "Heroes Killed"
+  },
+  {
+   "key": "AmountOfGoldCollected",
+   "name": "Gold Collected"
+  },
+  {
+   "key": "NumberOfFriends",
+   "name": "Number of Friends"
+  },
+  {
+   "key": "NumberOfFriendCastlesDefeated",
+   "name": "Friend Castles Defeated"
+  },
+  {
+   "key": "NumberOfCastlesDefeatedConsecutively",
+   "name": "Consecutive castles beaten"
+  },
+  {
+   "key": "NumberOfItemsLooted",
+   "name": "Items looted"
   }
  ],
  "raw": {

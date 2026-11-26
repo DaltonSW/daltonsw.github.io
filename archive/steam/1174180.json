@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Red Dead Redemption 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1174180",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 2,
  "total": 51,
  "first": "2020-02-02",
@@ -20,6 +20,7 @@
   {
    "key": "Achievement2",
    "name": "Just a Scratch",
+   "description": "Complete 'Enter, Pursued by a Memory'.",
    "unlocked": true,
    "date": "2020-02-02T15:28:03-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/1d0bdc25d376a74b0ee37355ee32f9eb308dd90c.jpg",
@@ -29,6 +30,7 @@
   {
    "key": "Achievement1",
    "name": "Back in the Mud",
+   "description": "Complete Chapter 1.",
    "unlocked": true,
    "date": "2020-02-02T17:42:50-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/3f5b6b4295a58d39b7619e5723f94b8f475dd81e.jpg",
@@ -38,6 +40,7 @@
   {
    "key": "Achievement10",
    "name": "Endless Summer",
+   "description": "Complete the Epilogue.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/caca2e3bed70ec5ce18c7d7e9a261aef5cf55737.jpg",
    "hidden": true,
@@ -158,6 +161,7 @@
   {
    "key": "Achievement25",
    "name": "Paying Respects",
+   "description": "Find the graves of each of your fallen companions.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/901fc090f41e93f4f798e81e06ab226d06fb158c.jpg",
    "hidden": true,
@@ -174,6 +178,7 @@
   {
    "key": "Achievement27",
    "name": "It's Art",
+   "description": "Find a permanent home for the squirrel statue.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/d31cc96a1ae81d5c9859d2a782268dfe86e917b1.jpg",
    "hidden": true,
@@ -198,6 +203,7 @@
   {
    "key": "Achievement3",
    "name": "To Greener Pastures",
+   "description": "Complete Chapter 2.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/cede247d21de983c4d0d8aed8b75d1324cac9bf3.jpg",
    "hidden": true,
@@ -286,6 +292,7 @@
   {
    "key": "Achievement4",
    "name": "Settling Feuds",
+   "description": "Complete Chapter 3.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/ab025f0eacc998f62125d7a7bb186e9fbdd95d24.jpg",
    "hidden": true,
@@ -374,6 +381,7 @@
   {
    "key": "Achievement5",
    "name": "Washed Ashore",
+   "description": "Complete Chapter 4.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/a07e4dac160f638c24ac851ffc0aea19bc51f12d.jpg",
    "hidden": true,
@@ -398,6 +406,7 @@
   {
    "key": "Achievement6",
    "name": "No Traitors",
+   "description": "Complete Chapter 5.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/79a6c1cb5ac1f88150802768ab8c6a7078d272c1.jpg",
    "hidden": true,
@@ -406,6 +415,7 @@
   {
    "key": "Achievement7",
    "name": "Third Time Lucky",
+   "description": "Complete 'Goodbye, Dear Friend'.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/70286589047c58568477e6ba124161d6047cd023.jpg",
    "hidden": true,
@@ -414,6 +424,7 @@
   {
    "key": "Achievement8",
    "name": "Redemption",
+   "description": "Complete 'Red Dead Redemption'.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/94fa0722da3453c6cd222b97b77880c29f7dc97c.jpg",
    "hidden": true,
@@ -422,10 +433,327 @@
   {
    "key": "Achievement9",
    "name": "Cowboy Builder",
+   "description": "Complete 'A New Jerusalem'.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1174180/d2fdc9461799c466b1ff7a9f3666cd2dbb4f61e3.jpg",
    "hidden": true,
    "rarity": 21.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "AchievementStat_1",
+   "value": 100
+  },
+  {
+   "key": "AchievementStat_2",
+   "value": 100
+  },
+  {
+   "key": "AchievementStat_3"
+  },
+  {
+   "key": "AchievementStat_4"
+  },
+  {
+   "key": "AchievementStat_5"
+  },
+  {
+   "key": "AchievementStat_6"
+  },
+  {
+   "key": "AchievementStat_7"
+  },
+  {
+   "key": "AchievementStat_8"
+  },
+  {
+   "key": "AchievementStat_9"
+  },
+  {
+   "key": "AchievementStat_10"
+  },
+  {
+   "key": "AchievementStat_11",
+   "value": 20
+  },
+  {
+   "key": "AchievementStat_12",
+   "value": 16
+  },
+  {
+   "key": "AchievementStat_13",
+   "value": 2
+  },
+  {
+   "key": "AchievementStat_14",
+   "value": 33
+  },
+  {
+   "key": "AchievementStat_15",
+   "value": 75
+  },
+  {
+   "key": "AchievementStat_16",
+   "value": 25
+  },
+  {
+   "key": "AchievementStat_17"
+  },
+  {
+   "key": "AchievementStat_18",
+   "value": 5
+  },
+  {
+   "key": "AchievementStat_19",
+   "value": 28
+  },
+  {
+   "key": "AchievementStat_20"
+  },
+  {
+   "key": "AchievementStat_21"
+  },
+  {
+   "key": "AchievementStat_22"
+  },
+  {
+   "key": "AchievementStat_23"
+  },
+  {
+   "key": "AchievementStat_24"
+  },
+  {
+   "key": "AchievementStat_25"
+  },
+  {
+   "key": "AchievementStat_26"
+  },
+  {
+   "key": "AchievementStat_27"
+  },
+  {
+   "key": "AchievementStat_28",
+   "value": 6
+  },
+  {
+   "key": "AchievementStat_29",
+   "value": 2
+  },
+  {
+   "key": "AchievementStat_30"
+  },
+  {
+   "key": "AchievementStat_31"
+  },
+  {
+   "key": "AchievementStat_32"
+  },
+  {
+   "key": "AchievementStat_33"
+  },
+  {
+   "key": "AchievementStat_34"
+  },
+  {
+   "key": "AchievementStat_35"
+  },
+  {
+   "key": "AchievementStat_36"
+  },
+  {
+   "key": "AchievementStat_37"
+  },
+  {
+   "key": "AchievementStat_38"
+  },
+  {
+   "key": "AchievementStat_39"
+  },
+  {
+   "key": "AchievementStat_40"
+  },
+  {
+   "key": "AchievementStat_41"
+  },
+  {
+   "key": "AchievementStat_42",
+   "value": 20
+  },
+  {
+   "key": "AchievementStat_43",
+   "value": 4
+  },
+  {
+   "key": "AchievementStat_44"
+  },
+  {
+   "key": "AchievementStat_45"
+  },
+  {
+   "key": "AchievementStat_46"
+  },
+  {
+   "key": "AchievementStat_47"
+  },
+  {
+   "key": "AchievementStat_48"
+  },
+  {
+   "key": "AchievementStat_49"
+  },
+  {
+   "key": "AchievementStat_50"
+  },
+  {
+   "key": "AchievementStat_51"
+  },
+  {
+   "key": "AchievementStat_52"
+  },
+  {
+   "key": "AchievementStat_53"
+  },
+  {
+   "key": "AchievementStat_54"
+  },
+  {
+   "key": "AchievementStat_55"
+  },
+  {
+   "key": "AchievementStat_56"
+  },
+  {
+   "key": "AchievementStat_57"
+  },
+  {
+   "key": "AchievementStat_58"
+  },
+  {
+   "key": "AchievementStat_59"
+  },
+  {
+   "key": "AchievementStat_60"
+  },
+  {
+   "key": "AchievementStat_61"
+  },
+  {
+   "key": "AchievementStat_62"
+  },
+  {
+   "key": "AchievementStat_63"
+  },
+  {
+   "key": "AchievementStat_64"
+  },
+  {
+   "key": "AchievementStat_65"
+  },
+  {
+   "key": "AchievementStat_66"
+  },
+  {
+   "key": "AchievementStat_67"
+  },
+  {
+   "key": "AchievementStat_68"
+  },
+  {
+   "key": "AchievementStat_69"
+  },
+  {
+   "key": "AchievementStat_70"
+  },
+  {
+   "key": "AchievementStat_71"
+  },
+  {
+   "key": "AchievementStat_72"
+  },
+  {
+   "key": "AchievementStat_73"
+  },
+  {
+   "key": "AchievementStat_74"
+  },
+  {
+   "key": "AchievementStat_75"
+  },
+  {
+   "key": "AchievementStat_76"
+  },
+  {
+   "key": "AchievementStat_77"
+  },
+  {
+   "key": "AchievementStat_78"
+  },
+  {
+   "key": "AchievementStat_79"
+  },
+  {
+   "key": "AchievementStat_80"
+  },
+  {
+   "key": "AchievementStat_81"
+  },
+  {
+   "key": "AchievementStat_82"
+  },
+  {
+   "key": "AchievementStat_83"
+  },
+  {
+   "key": "AchievementStat_84"
+  },
+  {
+   "key": "AchievementStat_85"
+  },
+  {
+   "key": "AchievementStat_86"
+  },
+  {
+   "key": "AchievementStat_87"
+  },
+  {
+   "key": "AchievementStat_88"
+  },
+  {
+   "key": "AchievementStat_89"
+  },
+  {
+   "key": "AchievementStat_90"
+  },
+  {
+   "key": "AchievementStat_91"
+  },
+  {
+   "key": "AchievementStat_92"
+  },
+  {
+   "key": "AchievementStat_93"
+  },
+  {
+   "key": "AchievementStat_94"
+  },
+  {
+   "key": "AchievementStat_95"
+  },
+  {
+   "key": "AchievementStat_96"
+  },
+  {
+   "key": "AchievementStat_97"
+  },
+  {
+   "key": "AchievementStat_98"
+  },
+  {
+   "key": "AchievementStat_99"
+  },
+  {
+   "key": "AchievementStat_100"
   }
  ],
  "raw": {

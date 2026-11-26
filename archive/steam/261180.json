@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Lethal League",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "261180",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 23,
  "platform": "PC",
@@ -193,6 +193,72 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/261180/3f90ed22f35b79303d94ad6ed7e442a39b13ffa4.jpg",
    "rarity": 17.2
+  }
+ ],
+ "stats": [
+  {
+   "key": "hits_count",
+   "name": "Hits"
+  },
+  {
+   "key": "outs_count",
+   "name": "Outs"
+  },
+  {
+   "key": "ball_hit_count",
+   "name": "Ball Hit Count"
+  },
+  {
+   "key": "deflect_count",
+   "name": "Deflect Count"
+  },
+  {
+   "key": "parry_count",
+   "name": "Parry Count"
+  },
+  {
+   "key": "matches_played",
+   "name": "Matches Played"
+  },
+  {
+   "key": "matches_won",
+   "name": "Matches Won"
+  },
+  {
+   "key": "matches_lost",
+   "name": "Matches Lost"
+  },
+  {
+   "key": "matchmaking_matches_played",
+   "name": "Matchmaking Matches Played"
+  },
+  {
+   "key": "matchmaking_matches_won",
+   "name": "Matchmaking Matches Won"
+  },
+  {
+   "key": "matchmaking_matches_lost",
+   "name": "Matchmaking Matches Lost"
+  },
+  {
+   "key": "matchmaking_queue_time",
+   "name": "Matchmaking Queue Time"
+  },
+  {
+   "key": "player_level",
+   "name": "Player Level"
+  },
+  {
+   "key": "player_rank",
+   "name": "Player Rank"
+  },
+  {
+   "key": "player_experience",
+   "name": "Player Experience"
+  },
+  {
+   "key": "player_experience_new",
+   "name": "Player Experience New"
   }
  ],
  "raw": {

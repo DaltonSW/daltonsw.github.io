@@ -1,0 +1,35 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: STAT_BUCKETS_OF_BOLTS
+          name: Mechanical bosses slain
+          value: 3
+        - key: STAT_GELATIN_WORLD_TOUR
+          name: Types of slime slain
+          value: 21
+        - key: STAT_BULLDOZER
+          name: Tiles destroyed
+          value: 10000
+        - key: STAT_FREQUENT_FLYER
+          name: Money spent at nurse
+          value: 10000
+        - key: STAT_MARATHON_MEDALIST
+          name: Distance traveled
+          value: 1.106688e+06
+        - key: STAT_GOOD_LITTLE_SLAVE
+          name: Angler quests completed
+          value: 10
+        - key: STAT_TROUT_MONKEY
+          name: Angler quests completed
+          value: 25
+        - key: STAT_FAST_AND_FISHIOUS
+          name: Angler quests completed
+          value: 46
+        - key: STAT_SUPREME_HELPER_MINION
+          name: Angler quests completed
+          value: 46
+        - key: STAT_SLAYER_OF_WORLDS
+          name: Unique bosses defeated
+          value: 12

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Golfie",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1579020",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 21,
  "platform": "PC",
@@ -183,6 +183,32 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1579020/bbe4316c4cb39cace95fe0c5cacc90c7a0ff8760.jpg",
    "rarity": 0.5
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_COINS_COLLECTED_TOTAL",
+   "name": "Coins Collected"
+  },
+  {
+   "key": "STAT_BEACH_LEVELS_COMPLETED",
+   "name": "Beach Levels Played"
+  },
+  {
+   "key": "STAT_CAVERUINS_LEVELS_COMPLETED",
+   "name": "Cave Ruin Levels Played"
+  },
+  {
+   "key": "STAT_FLOATINGISLANDS_LEVELS_COMPLETED",
+   "name": "Floating Islands Levels Played"
+  },
+  {
+   "key": "STAT_DUNGEON_LEVELS_COMPLETED",
+   "name": "Dungeon Levels Played"
+  },
+  {
+   "key": "STAT_CHERRYGARDEN_LEVELS_COMPLETED",
+   "name": "Cherry Garden Levels Played"
   }
  ],
  "raw": {

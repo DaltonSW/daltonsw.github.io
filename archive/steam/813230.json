@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "ANIMAL WELL",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "813230",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 20,
  "total": 20,
  "first": "2026-01-24",
@@ -216,6 +216,13 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/813230/c7aaac0e7bf1507298427f0f0d74c1c6ee54dd03.jpg",
    "hidden": true,
    "rarity": 8.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "VERSION",
+   "name": "achievement version",
+   "default": 1
   }
  ],
  "mastery": [

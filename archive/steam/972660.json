@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Spiritfarer®: Farewell Edition",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "972660",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 39,
  "platform": "PC",
@@ -337,6 +337,48 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/972660/b4cbdc8a5a3eec27436a6399897e2d8c76044403.jpg",
    "rarity": 14.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "SPIRITS_RELEASED",
+   "name": "Spirits Released"
+  },
+  {
+   "key": "COLLECTION_ITEMS",
+   "name": "Collections Completed"
+  },
+  {
+   "key": "RECIPES_COOKED",
+   "name": "Reciped Cooked"
+  },
+  {
+   "key": "BUILDINGS",
+   "name": "Buildings"
+  },
+  {
+   "key": "ABILITIES",
+   "name": "Abilities"
+  },
+  {
+   "key": "LIGHTHOUSES_LIT",
+   "name": "Lighthouses Lit"
+  },
+  {
+   "key": "SHEEP_COLLECTED",
+   "name": "Sheeps Collected"
+  },
+  {
+   "key": "FIGURE_HEADS_PURCHASED",
+   "name": "Figure Heads Purchased"
+  },
+  {
+   "key": "ITEMS_BOUGHT",
+   "name": "Items Bought"
+  },
+  {
+   "key": "ITEMS_SOLD",
+   "name": "Items Sold"
   }
  ],
  "raw": {

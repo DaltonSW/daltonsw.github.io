@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Crypt of the NecroDancer",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "247080",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 61,
  "platform": "PC",
@@ -499,6 +499,264 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/247080/bdfe0cc8de2309165990d95bd8735c5faca48ef1.jpg",
    "rarity": 4.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "NumGreenBatKills",
+   "name": "Green Bat Kills"
+  },
+  {
+   "key": "NumDeaths",
+   "name": "Deaths"
+  },
+  {
+   "key": "NumShopkeeperKills",
+   "name": "Shopkeeper Kills"
+  },
+  {
+   "key": "MaxHeartContainers",
+   "name": "Maximum Heart Containers"
+  },
+  {
+   "key": "MaxCoins",
+   "name": "Maximum Coins"
+  },
+  {
+   "key": "NumZone1Completions",
+   "name": "Zone 1 Completions"
+  },
+  {
+   "key": "NumZone2Completions",
+   "name": "Zone 2 Completions"
+  },
+  {
+   "key": "NumZone3Completions",
+   "name": "Zone 3 Completions"
+  },
+  {
+   "key": "NumHardcoreCompletionsCadence",
+   "name": "Hardcore Completions with Cadence"
+  },
+  {
+   "key": "NumHardcoreCompletionsAria",
+   "name": "Hardcore Completions with Aria"
+  },
+  {
+   "key": "NumHardcoreCompletionsBard",
+   "name": "Hardcore Completions with Bard"
+  },
+  {
+   "key": "NumHardcoreCompletionsBolt",
+   "name": "Hardcore Completions with Bolt"
+  },
+  {
+   "key": "NumHardcoreCompletionsCoop",
+   "name": "Hardcore Completions in Co-op Mode"
+  },
+  {
+   "key": "NumHardcoreCompletionsMonk",
+   "name": "Hardcore Completions with Monk"
+  },
+  {
+   "key": "NumDailyChallengeCompletions",
+   "name": "Daily Challenge Completions"
+  },
+  {
+   "key": "NumSub8CadenceSpeedruns",
+   "name": "Sub 8-minute Cadence Speedruns"
+  },
+  {
+   "key": "NumAriaLowPercentCompletions",
+   "name": "Aria Completions with No Items or Shrines"
+  },
+  {
+   "key": "NumHardcoreCompletionsDove",
+   "name": "Hardcore Completions with Dove"
+  },
+  {
+   "key": "NumHardcoreCompletionsEli",
+   "name": "Hardcore Completions with Eli"
+  },
+  {
+   "key": "NumHardcoreCompletionsMelody",
+   "name": "Hardcore Completions with Melody"
+  },
+  {
+   "key": "NumHardcoreCompletionsDorian",
+   "name": "Hardcore Completions with Dorian"
+  },
+  {
+   "key": "NumHardcoreCompletionsCoda",
+   "name": "Hardcore Completions with Coda"
+  },
+  {
+   "key": "NumKillsByGreenSlime",
+   "name": "Deaths to Green Slime"
+  },
+  {
+   "key": "Num8EnemyBombKills",
+   "name": "8 Enemy Kills with 1 Bomb"
+  },
+  {
+   "key": "NumRedDragonMinibossKills",
+   "name": "Miniboss Kills by Red Dragon Fire"
+  },
+  {
+   "key": "MaxCadenceDeathlessStreak",
+   "name": "Maximum Deathless Streak with Cadence"
+  },
+  {
+   "key": "NumAllCharsCompletions",
+   "name": "All Chars Completions"
+  },
+  {
+   "key": "NumAllCharsLowPercentCompletions",
+   "name": "All Chars Completions with No Items or Shrines"
+  },
+  {
+   "key": "NumZone4Completions",
+   "name": "Zone 4 Completions"
+  },
+  {
+   "key": "NumHardcoreCompletionsNocturna",
+   "name": "Hardcore Completions with Nocturna"
+  },
+  {
+   "key": "NumZone5Completions",
+   "name": "Zone 5 Completions"
+  },
+  {
+   "key": "NumHardcoreCompletionsDiagonal",
+   "name": "Hardcore Completions with Diamond"
+  },
+  {
+   "key": "NumHardcoreCompletionsReaper",
+   "name": "Hardcore Completions with Mary"
+  },
+  {
+   "key": "NumHardcoreCompletionsTempo",
+   "name": "Hardcore Completions with Tempo"
+  },
+  {
+   "key": "NumNoReturnCompletionsCadence",
+   "name": "No return Completions with Cadence"
+  },
+  {
+   "key": "NumHardModeCompletionsNocturna",
+   "name": "Hard mode Completions with Nocturna"
+  },
+  {
+   "key": "MaxCoinsNocturna",
+   "name": "Maximum coins with Nocturna"
+  },
+  {
+   "key": "NumSub10NocturnaSpeedruns",
+   "name": "Sub 10-minute Nocturna Speedruns"
+  },
+  {
+   "key": "NumStoryModeCompletions",
+   "name": "Story mode Completions"
+  },
+  {
+   "key": "Num8EnemyElectricityKills",
+   "name": "8 Enemy kills with Electricity"
+  },
+  {
+   "key": "AllModeCompletion",
+   "name": "All mode Completions"
+  },
+  {
+   "key": "NumPhasingModeCompletions",
+   "name": "Phasing mode Completions"
+  },
+  {
+   "key": "NumRandomizerModeCompletions",
+   "name": "Randomizer mode Completions"
+  },
+  {
+   "key": "NumMysteryModeCompletions",
+   "name": "Mystery mode Completions"
+  },
+  {
+   "key": "NumAllCharsDLCCompletions",
+   "name": "All Chars (DLC) Completions"
+  },
+  {
+   "key": "NumNoReturnCompletions",
+   "name": "No Return completions with any character"
+  },
+  {
+   "key": "NumHardModeCompletions",
+   "name": "Hard mode completions with any character"
+  },
+  {
+   "key": "HardcoreCompletionsKlarinetta",
+   "name": "Hardcore completions with Klarinetta"
+  },
+  {
+   "key": "HardcoreCompletionsChaunter",
+   "name": "Hardcore completions with Chaunter"
+  },
+  {
+   "key": "HardcoreCompletionsSuzu",
+   "name": "Hardcore completions with Suzu"
+  },
+  {
+   "key": "Num4KillsZweihaender",
+   "name": "Quadruple kills with Klarinetta's sword"
+  },
+  {
+   "key": "NumSameEntityPossessionKills",
+   "name": "Same-entity possession kills"
+  },
+  {
+   "key": "Sub10SuzuSpeedruns",
+   "name": "Sub-10 minute Suzu speedruns"
+  },
+  {
+   "key": "NoBeatCompletionsAria",
+   "name": "No-Beat Mode completions with Aria"
+  },
+  {
+   "key": "NumEnPassantCaptures",
+   "name": "En Passant captures"
+  },
+  {
+   "key": "DoubleTempoCompletionsBolt",
+   "name": "Double Tempo completions with Bolt"
+  },
+  {
+   "key": "MaxEquippedItemSlots",
+   "name": "Maximum number of filled item slots"
+  },
+  {
+   "key": "CoopCompletionsFamily",
+   "name": "Co-op completions with Cadence, Melody, Aria and Dorian"
+  },
+  {
+   "key": "NumDeepBluesDirectKingKills",
+   "name": "Number of Deep Blues King kills without harming other pieces"
+  },
+  {
+   "key": "NumDeadRingerReflectKills",
+   "name": "Number of Dead Ringer kills using Reflective Shield"
+  },
+  {
+   "key": "NumUrnsPossessed",
+   "name": "Number of possessed Urns as Chaunter"
+  },
+  {
+   "key": "NumPawnbrokerSpecialOffers",
+   "name": "Maximum number of items sold to the Pawnbroker"
+  },
+  {
+   "key": "NumHardcoreCompletionsActuallyReaper",
+   "name": "Hardcore completions with Reaper"
+  },
+  {
+   "key": "EnsembleCompletions",
+   "name": "Ensemble Mode Completions"
   }
  ],
  "raw": {

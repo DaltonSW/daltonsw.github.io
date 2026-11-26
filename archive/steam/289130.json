@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "ENDLESS Legend™",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "289130",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 2,
  "total": 139,
  "first": "2015-12-22",
@@ -1127,6 +1127,356 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/289130/a49688ad5a5e32baaa734d486aa15fd3369176ad.jpg",
    "rarity": 7
+  }
+ ],
+ "stats": [
+  {
+   "key": "TURNS_PLAYED",
+   "value": 28
+  },
+  {
+   "key": "MINOR_FACTIONS_ASSIMILATED_PER_GAME",
+   "value": 1
+  },
+  {
+   "key": "QUESTS_COMPLETED",
+   "value": 8
+  },
+  {
+   "key": "VILLAGES_PACIFIED",
+   "value": 3
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONBROKENLORDS"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONRAGEWIZARDS"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONMADFAIRIES"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONNECROPHAGES"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONROVINGCLANS"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONVAULTERS"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONDRAKKENS"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_FACTIONCULTISTS"
+  },
+  {
+   "key": "FINAL_QUEST_COMPLETED_COUNT"
+  },
+  {
+   "key": "HERO_COUNT",
+   "value": 1
+  },
+  {
+   "key": "CITIES_COUNT_TURN_15",
+   "value": 1
+  },
+  {
+   "key": "MAX_NET_CITY_DUST",
+   "value": 25
+  },
+  {
+   "key": "MAX_NET_CITY_SCIENCE",
+   "value": 31
+  },
+  {
+   "key": "MAX_NET_CITY_INDUSTRY",
+   "value": 14
+  },
+  {
+   "key": "MAX_NET_CITY_FOOD",
+   "value": 16
+  },
+  {
+   "key": "MAX_NET_CITY_INFLUENCE",
+   "value": 2
+  },
+  {
+   "key": "MAX_HERO_LEVEL",
+   "value": 2
+  },
+  {
+   "key": "BOOSTERLUXURY1_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY2_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY3_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY4_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY5_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY6_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY7_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY8_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY9_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY10_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY11_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY12_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY13_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY14_USED"
+  },
+  {
+   "key": "BOOSTERLUXURY15_USED"
+  },
+  {
+   "key": "LUXURY_BOOSTER_USED_COUNT"
+  },
+  {
+   "key": "LUXURY_BOOSTERS_ACTIVE"
+  },
+  {
+   "key": "UNITS_KILLED",
+   "value": 1
+  },
+  {
+   "key": "DUST_GAINED",
+   "value": 2385.349853515625
+  },
+  {
+   "key": "MAX_CITY_LEVELED_BOROUGHS_COUNT"
+  },
+  {
+   "key": "TILES_EXPLORED",
+   "value": 276
+  },
+  {
+   "key": "STRATEGIC_EXTRACTOR_COUNT"
+  },
+  {
+   "key": "IMPROVEMENTS_BUILT_PER_GAME",
+   "value": 1
+  },
+  {
+   "key": "TRADE_ROUTES"
+  },
+  {
+   "key": "BROKEN_LORDS_MAX_DUST_DISTRICT"
+  },
+  {
+   "key": "CULTISTS_CONVERTED_VILLAGES"
+  },
+  {
+   "key": "ARDENT_MAGES_PILLARS_COUNT",
+   "value": 1
+  },
+  {
+   "key": "NECROPHAGES_CADAVER_BOOSTER_USED_PER_GAME"
+  },
+  {
+   "key": "VAULTERS_UNIT_COUNT_TELEPORTED_TO_BESIEGED_CITY"
+  },
+  {
+   "key": "ROVING_CLANS_MARKETPLACE_TAXES"
+  },
+  {
+   "key": "WILD_WALKERS_UNDAMAGED_UNITS_AFTER_BATTLE"
+  },
+  {
+   "key": "GAMES_PLAYED",
+   "value": 2
+  },
+  {
+   "key": "CURRENT_WINTER_CITY_CONQUERED"
+  },
+  {
+   "key": "LONGEST_UNBROKEN_ALLIANCE"
+  },
+  {
+   "key": "DRAKKEN_EXPLOITED_RUINS_COUNT"
+  },
+  {
+   "key": "QUEST_COMPLETED_SIDEQUESTBEGINTURN0001"
+  },
+  {
+   "key": "DIFFERENT_COLOSSI"
+  },
+  {
+   "key": "DIFFERENT_WONDERS"
+  },
+  {
+   "key": "MEDALS_COMPLETED"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA1MILITARY"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA1MILITARYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA1RESOURCES"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA1RESOURCESALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA2MILITARYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA2DIPLOMACY"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA2DIPLOMACYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA3ECONOMY"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA3ECONOMYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA3HEROES"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA3HEROESALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA4MILITARY"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA4MILITARYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA4ECONOMY"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA4ECONOMYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA5ECONOMY"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA5ECONOMYALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA5HEROESALT"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA5HEROES"
+  },
+  {
+   "key": "QUEST_COMPLETED_MEDALERA2MILITARY"
+  },
+  {
+   "key": "HERO_CAPTURE_COUNT"
+  },
+  {
+   "key": "SPY_ACTION_SERIES_COUNT"
+  },
+  {
+   "key": "PILLAGE_DUST_LOOT_COUNT"
+  },
+  {
+   "key": "STEAL_TECHNOLOGIES_COUNT"
+  },
+  {
+   "key": "PILLAGE_BUILDINGS_COUNT"
+  },
+  {
+   "key": "COLLECT_ORBS_OVERALL_COUNT"
+  },
+  {
+   "key": "CAST_VOTES_OVERALL_COUNT"
+  },
+  {
+   "key": "FORCE_SHIFT_OVERALL_COUNT"
+  },
+  {
+   "key": "MANTA_EXTRACTION_OVERALL_COUNT"
+  },
+  {
+   "key": "UNIQUE_FACILITIES_OWNED"
+  },
+  {
+   "key": "FOMORIAN_FORTRESS_CAPTURE_COUNT"
+  },
+  {
+   "key": "TILES_TERRAFORMED_OVERALL_COUNT"
+  },
+  {
+   "key": "MAD_FAIRIES_TILES_TRAVELED"
+  },
+  {
+   "key": "BROKEN_LORDS_DUST_CONSUMER_OVERALL_COUNT"
+  },
+  {
+   "key": "VAULTERS_UNITS_TELEPORTED_TO_SIEGING_HERO"
+  },
+  {
+   "key": "NECROPHAGES_BATTLEBORNS_CREATED_COUNT"
+  },
+  {
+   "key": "RAGE_WIZARDS_CRITICAL_DAMAGE_DONE"
+  },
+  {
+   "key": "ROVING_CLANS_SETSEKE_HERO_KILLS_COUNT"
+  },
+  {
+   "key": "DRAKKENS_EMPIRE_PEACE_RESTORED_COUNT"
+  },
+  {
+   "key": "CULTISTS_MINOR_ARMY_BATTLES_WON"
+  },
+  {
+   "key": "MAD_SEASON_SEARCHED_TEMPLE_COUNT"
+  },
+  {
+   "key": "NODES_BUILT_OVERALL_COUNT"
+  },
+  {
+   "key": "CURRENT_NODES_COUNT"
+  },
+  {
+   "key": "INTEGRATED_FACTIONS_COUNT"
+  },
+  {
+   "key": "OVERGROWN_CITIES_COUNT"
+  },
+  {
+   "key": "TAMED_KAIJU_COUNT"
+  },
+  {
+   "key": "AFFECTING_KAIJU_COUNT"
+  },
+  {
+   "key": "LICE_KILLED_OVERALL_COUNT"
+  },
+  {
+   "key": "TREMOR_DAMAGE_OVERALL_COUNT"
   }
  ],
  "raw": {

@@ -1,0 +1,46 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: ClassesUnlocked
+          name: Classes Unlocked
+          value: 7
+        - key: BestLevel
+          name: Best Level
+          value: 20
+        - key: BestFame
+          name: Best Fame
+          value: 49
+        - key: NumStars
+          name: Stars
+          value: 4
+        - key: TilesUncovered
+          value: 200011
+        - key: QuestsCompleted
+          name: Quests Completed
+          value: 20
+        - key: RogueUnlocked
+          name: Rogue Unlocked
+          value: 1
+        - key: ArcherUnlocked
+          name: Archer Unlocked
+          value: 1
+        - key: PriestUnlocked
+          name: Priest Unlocked
+          value: 1
+        - key: WarriorUnlocked
+          name: Warrior Unlocked
+          value: 1
+        - key: KnightUnlocked
+          name: Knight Unlocked
+          value: 1
+        - key: PirateCavesCompleted
+          name: Pirate Caves Completed
+          value: 6
+        - key: SpiderDensCompleted
+          name: Spider Dens Completed
+          value: 1
+        - key: DungeonTypesComplete
+          name: Dungeon Types Completed
+          value: 2

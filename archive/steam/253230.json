@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "A Hat in Time",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "253230",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 30,
  "total": 46,
  "first": "2017-12-25",
@@ -411,6 +411,39 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/253230/2a80a0627ffe86c28effa6b912f5a6be548f3903.jpg",
    "rarity": 9.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_num_timepieces",
+   "name": "Stat_Num_TimePieces",
+   "value": 50
+  },
+  {
+   "key": "stat_num_badges",
+   "name": "Stat_Num_Badges",
+   "value": 13
+  },
+  {
+   "key": "stat_num_orbs",
+   "name": "Stat_Num_Orbs",
+   "value": 1419
+  },
+  {
+   "key": "stat_vanessacurse_win_curse",
+   "name": "Vanessa Curse - Curse Wins"
+  },
+  {
+   "key": "stat_vanessacurse_win_kiddo",
+   "name": "Vanessa Curse - Kiddo Wins"
+  },
+  {
+   "key": "stat_vanessacurse_caught_kiddo",
+   "name": "Vanessa Curse - Kiddo Caught"
+  },
+  {
+   "key": "stat_deathwish_deaths",
+   "name": "Death Wish - Deaths"
   }
  ],
  "raw": {

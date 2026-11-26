@@ -1,0 +1,11 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: STAT_HITS
+          name: Hits
+          value: 219
+        - key: STAT_COMPLETE_GAME_WINS
+          name: Complete Game Wins
+          value: 1

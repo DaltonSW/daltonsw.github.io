@@ -1,0 +1,14 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: GMA_X_STARTUPS_STAT
+          name: Startups
+          value: 3
+        - key: GMA_X_MINUTES_STAT
+          name: Minutes Played
+          value: 7
+        - key: GMA_X_MAPS_STAT
+          name: Maps Played
+          value: 2

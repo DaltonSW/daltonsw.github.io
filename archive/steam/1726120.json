@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Cursed to Golf",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1726120",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 8,
  "total": 13,
  "first": "2022-09-24",
@@ -130,6 +130,12 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1726120/23bf90bcc4f3752354f7483eccd012857a4457b1.jpg",
    "rarity": 1.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "test_stat_1",
+   "name": "Test Stat"
   }
  ],
  "raw": {

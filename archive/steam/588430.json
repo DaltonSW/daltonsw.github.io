@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Fallout Shelter",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "588430",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 1,
  "total": 35,
  "first": "2018-03-05",
@@ -294,6 +294,98 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/588430/e9a6f3a4c6294968888e67d70d8c415db7c52293.jpg",
    "rarity": 7.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "TotalNumberOfRoomsRushed",
+   "name": "Total Rooms Rushed",
+   "value": 4
+  },
+  {
+   "key": "TotalRoomsBuilt",
+   "name": "Total Rooms Built",
+   "value": 8
+  },
+  {
+   "key": "TotalCapsCollected",
+   "name": "Total Number of Caps Collected",
+   "value": 1418
+  },
+  {
+   "key": "TotalUniqueRoomsBuilt",
+   "name": "Total Unique Rooms Built",
+   "value": 4
+  },
+  {
+   "key": "TotalLegendaryWeaponsCollected",
+   "name": "Total Legendary Weapons Collected",
+   "value": 1
+  },
+  {
+   "key": "TotalLegendaryOutfitsCollected",
+   "name": "Total Legendary Outfits Collected"
+  },
+  {
+   "key": "TotalLegendaryDwellersCollected",
+   "name": "Total Legendary Dwellers Collected"
+  },
+  {
+   "key": "TotalRaiderAttacksStopped",
+   "name": "Total Raider Attacks Stopped"
+  },
+  {
+   "key": "TotalObjectivesCompleted",
+   "name": "Total Objectives Completed",
+   "value": 9
+  },
+  {
+   "key": "TotalBabiesBorn",
+   "name": "Total Babies Born"
+  },
+  {
+   "key": "TotalLevel3Rooms",
+   "name": "Total Level 3 Rooms"
+  },
+  {
+   "key": "TotalDialogueChoicesMade",
+   "name": "Total Dialog Choices Made"
+  },
+  {
+   "key": "TotalBossesKilled",
+   "name": "Total Bosses Killed"
+  },
+  {
+   "key": "TotalQuestsCompleted",
+   "name": "Total Quests Completed"
+  },
+  {
+   "key": "TotalThemesCollected",
+   "name": "Total Themes Collected"
+  },
+  {
+   "key": "TotalEnemiesKilledOnQuest",
+   "name": "Total Enemies Killed On Quests"
+  },
+  {
+   "key": "TotalItemsScrapped",
+   "name": "Total Items Scrapped"
+  },
+  {
+   "key": "TotalWeaponsCrafted",
+   "name": "Total Weapons Crafted"
+  },
+  {
+   "key": "TotalOutfitsCrafted",
+   "name": "Total Outfits Crafted"
+  },
+  {
+   "key": "TotalBarbershopCustomizations",
+   "name": "Total Barbershop Customizations"
+  },
+  {
+   "key": "TotalThemesCrafted",
+   "name": "Total Themes Crafted"
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Terraria",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "105600",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 85,
  "total": 137,
  "first": "2015-08-16",
@@ -1198,6 +1198,58 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/105600/3b575ae17236ef4fda976015685e0e2c55b4c2e4.jpg",
    "rarity": 13.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_BUCKETS_OF_BOLTS",
+   "name": "Mechanical bosses slain",
+   "value": 3
+  },
+  {
+   "key": "STAT_GELATIN_WORLD_TOUR",
+   "name": "Types of slime slain",
+   "value": 21
+  },
+  {
+   "key": "STAT_BULLDOZER",
+   "name": "Tiles destroyed",
+   "value": 10000
+  },
+  {
+   "key": "STAT_FREQUENT_FLYER",
+   "name": "Money spent at nurse",
+   "value": 10000
+  },
+  {
+   "key": "STAT_MARATHON_MEDALIST",
+   "name": "Distance traveled",
+   "value": 1106688
+  },
+  {
+   "key": "STAT_GOOD_LITTLE_SLAVE",
+   "name": "Angler quests completed",
+   "value": 10
+  },
+  {
+   "key": "STAT_TROUT_MONKEY",
+   "name": "Angler quests completed",
+   "value": 25
+  },
+  {
+   "key": "STAT_FAST_AND_FISHIOUS",
+   "name": "Angler quests completed",
+   "value": 46
+  },
+  {
+   "key": "STAT_SUPREME_HELPER_MINION",
+   "name": "Angler quests completed",
+   "value": 46
+  },
+  {
+   "key": "STAT_SLAYER_OF_WORLDS",
+   "name": "Unique bosses defeated",
+   "value": 12
   }
  ],
  "raw": {

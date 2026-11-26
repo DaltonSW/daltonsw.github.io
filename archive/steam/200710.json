@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Torchlight II",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "200710",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 8,
  "total": 119,
  "first": "2013-01-02",
@@ -236,7 +236,7 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/095ab70a44e6eba9488448b00a5e854e7f930a0e.jpg",
    "hidden": true,
-   "rarity": 19.9
+   "rarity": 20
   },
   {
    "key": "BOSS_NETHERKING_ALLCLASSES",
@@ -973,6 +973,106 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200710/f7996a3dfc73c3a2516ce53e19fb415f079910dc.jpg",
    "rarity": 1.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_BOSS_NETHERKING_BERSERKER"
+  },
+  {
+   "key": "STAT_BOSS_NETHERKING_EMBERMAGE"
+  },
+  {
+   "key": "STAT_BOSS_NETHERKING_ENGINEER"
+  },
+  {
+   "key": "STAT_BOSS_NETHERKING_OUTLANDER"
+  },
+  {
+   "key": "STAT_BREAKABLESCOUNT",
+   "value": 52
+  },
+  {
+   "key": "STAT_CHAMPKILLCOUNT",
+   "value": 12
+  },
+  {
+   "key": "STAT_CHESTSOPENEDCOUNT",
+   "value": 21
+  },
+  {
+   "key": "STAT_CRITCOUNT",
+   "value": 70
+  },
+  {
+   "key": "STAT_ENCHANTCOUNT",
+   "value": 2
+  },
+  {
+   "key": "STAT_EXPLODEENEMYCOUNT",
+   "value": 83
+  },
+  {
+   "key": "STAT_FISHINGCOUNT",
+   "value": 6
+  },
+  {
+   "key": "STAT_FRIENDCOUNT",
+   "value": 1
+  },
+  {
+   "key": "STAT_GAMBLECOUNT"
+  },
+  {
+   "key": "STAT_HARDCOREDEATHCOUNT"
+  },
+  {
+   "key": "STAT_ITEMSELLCOUNT",
+   "value": 74
+  },
+  {
+   "key": "STAT_MAPSUSEDCOUNT"
+  },
+  {
+   "key": "STAT_MAXDAMAGE",
+   "value": 155
+  },
+  {
+   "key": "STAT_MAXINVENTORYGOLD",
+   "value": 8546
+  },
+  {
+   "key": "STAT_POTIONSCONSUMEDCOUNT",
+   "value": 9
+  },
+  {
+   "key": "STAT_RECOVEREDGEMCOUNT"
+  },
+  {
+   "key": "STAT_RECOVEREDITEMCOUNT"
+  },
+  {
+   "key": "STAT_SECRETROOMCOUNT"
+  },
+  {
+   "key": "STAT_SOCKETEDGEMCOUNT",
+   "value": 6
+  },
+  {
+   "key": "STAT_STEPCOUNT",
+   "value": 4500
+  },
+  {
+   "key": "STAT_GOLD",
+   "value": 0
+  },
+  {
+   "key": "STAT_KILLCOUNT",
+   "value": 924
+  },
+  {
+   "key": "STAT_SQUISHES",
+   "value": 10
   }
  ],
  "raw": {

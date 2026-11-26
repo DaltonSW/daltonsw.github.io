@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Cities: Skylines",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "255710",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 17,
  "total": 135,
  "first": "2015-03-10",
@@ -1103,6 +1103,20 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/255710/f82890ced87e60c824ae0b6e9b4e1e05fcaa42ce.jpg",
    "rarity": 0.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "TestState_INT",
+   "name": "Test Stat Int"
+  },
+  {
+   "key": "TestState_FLOAT",
+   "name": "Test Stat Float"
+  },
+  {
+   "key": "TestState_AVGRATE",
+   "name": "Test Stat AvgRate"
   }
  ],
  "raw": {

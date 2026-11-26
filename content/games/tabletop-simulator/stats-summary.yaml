@@ -1,0 +1,26 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: STAT_CHANGE_COLOR
+          name: Wishy Washy
+          value: 55
+        - key: STAT_FLIP_TABLE
+          name: Flip Table
+          value: 264
+        - key: STAT_SPAWN_CHIPS
+          name: Money, Money, Money
+          value: 539
+        - key: STAT_SAVE_ITEMS_TO_CHEST
+          name: Treasure Trove
+          value: 8
+        - key: STAT_LOCK_ITEMS
+          name: Don’t Touch!
+          value: 62
+        - key: STAT_TINT_OBJECTS
+          name: Color me pretty
+          value: 25
+        - key: STAT_HOURS_PLAYED
+          name: Hours Played
+          value: 3734

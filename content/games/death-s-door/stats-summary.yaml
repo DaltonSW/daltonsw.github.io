@@ -1,0 +1,23 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: stat_spend
+          name: Stats Upgraded
+          value: 12
+        - key: stat_trinkets
+          name: Shiny Things
+          value: 24
+        - key: stat_weapons
+          name: Weapons
+          value: 5
+        - key: stat_shrines
+          name: Shrines
+          value: 8
+        - key: stat_plants
+          name: Plants & Seeds
+          value: 42
+        - key: stat_owls
+          name: Owls Met
+          value: 1

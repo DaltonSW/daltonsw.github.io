@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "METAL GEAR SOLID V: GROUND ZEROES",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "311340",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 16,
  "platform": "PC",
@@ -72,7 +72,7 @@
    "description": "Clear the \"Ground Zeroes\" mission",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311340/814b58ecb92f12cd5ba1c0c67b2d99410db89d9e.jpg",
-   "rarity": 66
+   "rarity": 66.1
   },
   {
    "key": "TROPHY_CLEAR_RANKS",
@@ -137,6 +137,11 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/311340/faa63ed700232d8c9e970ee4528348e20e576295.jpg",
    "rarity": 9.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "TEST"
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "AirMech",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "206500",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 1,
  "total": 91,
  "first": "2014-04-13",
@@ -381,7 +381,7 @@
    "description": "Reach Level 10 in any AirMech in an online or offline game.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/206500/54a08d5660e259c13b55f24f374d482ef02e2de3.jpg",
-   "rarity": 37.5
+   "rarity": 37.6
   },
   {
    "key": "MaxLevel2",
@@ -742,6 +742,137 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/206500/92a545e95831a6795970a28a21103fb3af9e6aae.jpg",
    "rarity": 15.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "KillTanks"
+  },
+  {
+   "key": "OnlineMatchWon"
+  },
+  {
+   "key": "MineDisarmed"
+  },
+  {
+   "key": "KillHmAM"
+  },
+  {
+   "key": "RookKillMissile"
+  },
+  {
+   "key": "KillCreep",
+   "value": 5
+  },
+  {
+   "key": "ArtilleryKills"
+  },
+  {
+   "key": "KillAAs"
+  },
+  {
+   "key": "BombTurretKills"
+  },
+  {
+   "key": "GrinderKills",
+   "value": 13
+  },
+  {
+   "key": "KillMMs"
+  },
+  {
+   "key": "CapturedOutpost",
+   "value": 1
+  },
+  {
+   "key": "ReCapturedOutpost",
+   "value": 1
+  },
+  {
+   "key": "AMDmgToFort"
+  },
+  {
+   "key": "KillHmAMInj"
+  },
+  {
+   "key": "RookDamageDealt",
+   "value": 44033
+  },
+  {
+   "key": "AbductUnit"
+  },
+  {
+   "key": "StrikerSwordKills"
+  },
+  {
+   "key": "MineKills"
+  },
+  {
+   "key": "RocketKills"
+  },
+  {
+   "key": "HealSeconds"
+  },
+  {
+   "key": "max_PLvl"
+  },
+  {
+   "key": "seq_OnlineWin"
+  },
+  {
+   "key": "KillHmAMInt"
+  },
+  {
+   "key": "AMDmgToFortKB"
+  },
+  {
+   "key": "KillTanksWA"
+  },
+  {
+   "key": "KillCreepWA"
+  },
+  {
+   "key": "KillAMWa2g"
+  },
+  {
+   "key": "KillAMWg2a"
+  },
+  {
+   "key": "CTFRet"
+  },
+  {
+   "key": "CTFScr"
+  },
+  {
+   "key": "CTFFSD"
+  },
+  {
+   "key": "MMPlay"
+  },
+  {
+   "key": "MMWon"
+  },
+  {
+   "key": "Cakes"
+  },
+  {
+   "key": "max_TeamHSpirit"
+  },
+  {
+   "key": "max_TeamStyle"
+  },
+  {
+   "key": "max_TeamTroll"
+  },
+  {
+   "key": "max_TeamSwifter"
+  },
+  {
+   "key": "max_TeamFoodP"
+  },
+  {
+   "key": "max_ChalStars",
+   "value": 18
   }
  ],
  "raw": {

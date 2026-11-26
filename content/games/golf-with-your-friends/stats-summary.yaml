@@ -1,0 +1,90 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: shotsTaken
+          name: Shots Taken
+          value: 3003
+        - key: gamesPlayed
+          name: Games Played
+          value: 36
+        - key: ballsSunk
+          name: Balls Sunk
+          value: 658
+        - key: forestBestScoreClassic
+          name: Forest Best Score Classic
+          value: 1
+        - key: oasisBestScoreClassic
+          name: Oasis Best Score Classic
+          value: 2
+        - key: holeInOnes
+          name: Hole In Ones
+          value: 34
+        - key: maxHitsReached
+          name: Max Hits Reached
+          value: 6
+        - key: outOfTime
+          name: Out of Time
+          value: 7
+        - key: albatross
+          name: Albatross
+          value: 8
+        - key: birdies
+          name: Birdies
+          value: 120
+        - key: bogey
+          name: Bogey
+          value: 136
+        - key: doubleBogey
+          name: DoubleBogey
+          value: 72
+        - key: eagles
+          name: Eagles
+          value: 20
+        - key: pars
+          name: Pars
+          value: 185
+        - key: twilightBestScoreClassic
+          name: Twilight Best Score Classic
+          value: 87
+        - key: hauntedBestScoreClassic
+          name: Haunted Best Score Classic
+          value: 76
+        - key: candylandBestScoreClassic
+          name: Candyland Best Score Classic
+          value: 68
+        - key: ancientBestScoreClassic
+          name: Ancient Best Score Classic
+          value: 80
+        - key: oasisBestScoreHoops
+          name: Oasis Best Score Hoops
+          value: 82
+        - key: forestOnPar
+          name: Forest On Par
+          value: 1
+        - key: pirateBestScoreClassic
+          name: Pirate Best Score Classic
+          value: 69
+        - key: wormsBestScoreClassic
+          name: Worms Best Score Classic
+          value: 99
+        - key: museumBestScoreClassic
+          name: Museum Best Score Classic
+          value: 68
+        - key: volcanoBestScoreClassic
+          name: Volcano Best Score Classic
+          value: 88
+        - key: museumOnPar
+          name: Museum On Par
+          value: 1
+        - key: escapistsBestScoreClassic
+          name: The Escapists Best Score Classic
+          value: 1
+        - key: multiplayerGamesPlayed
+          value: 1
+        - key: outOfBounds
+          value: 69
+        - key: deepBestScoreClassic
+          name: The Deep Best Score Classic
+          value: 81

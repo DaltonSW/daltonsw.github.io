@@ -1,0 +1,39 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: jumpCount
+          name: Jumps
+          value: 1960
+        - key: levelUnlock
+          name: Levels Unlocked
+          value: 50
+        - key: die
+          name: Deaths
+          value: 133
+        - key: bounce
+          name: Bounces
+          value: 884
+        - key: sach0a
+          value: 1
+        - key: sach0b
+          value: 1
+        - key: sach1a
+          value: 1
+        - key: sach1b
+          value: 1
+        - key: sach2a
+          value: 1
+        - key: sach2b
+          value: 1
+        - key: sach3a
+          value: 1
+        - key: sach3b
+          value: 1
+        - key: sach4a
+          value: 1
+        - key: sach4b
+          value: 1
+        - key: sach5a
+          value: 1

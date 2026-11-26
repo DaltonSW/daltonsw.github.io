@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Sid Meier's Civilization V",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "8930",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 7,
  "total": 286,
  "first": "2013-11-16",
@@ -2308,6 +2308,591 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/8930/5cbdb90ef54e5512eb8e941315c07151cb73dfd5.jpg",
    "rarity": 0.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "ESTEAMSTAT_TOTAL_WINS",
+   "name": "Total Games Won."
+  },
+  {
+   "key": "ESTEAMSTAT_ARCHER",
+   "name": "Total Number of Archers built.",
+   "value": 9
+  },
+  {
+   "key": "ESTEAMSTAT_CHARIOTARCHER",
+   "name": "Total Number of Chariot Archers  built.",
+   "value": 4
+  },
+  {
+   "key": "ESTEAMSTAT_HOPLITE",
+   "name": "Total Number of Hoplites built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_IMMORTAL",
+   "name": "Total Number of Immortals built."
+  },
+  {
+   "key": "ESTEAMSTAT_JAGUAR",
+   "name": "Total Number of Jaguars built."
+  },
+  {
+   "key": "ESTEAMSTAT_SCOUT",
+   "name": "Total Number of Scouts built.",
+   "value": 39
+  },
+  {
+   "key": "ESTEAMSTAT_SETTLER",
+   "name": "Total Number of Settlers built.",
+   "value": 37
+  },
+  {
+   "key": "ESTEAMSTAT_SPEARMAN",
+   "name": "Total Number of Spearmen built.",
+   "value": 10
+  },
+  {
+   "key": "ESTEAMSTAT_TRIREME",
+   "name": "Total Number of Triremes built.",
+   "value": 23
+  },
+  {
+   "key": "ESTEAMSTAT_WARCHARIOT",
+   "name": "Total Number of War Chariots built."
+  },
+  {
+   "key": "ESTEAMSTAT_WARELEPHANT",
+   "name": "Total Number of War Elephants built."
+  },
+  {
+   "key": "ESTEAMSTAT_WARRIOR",
+   "name": "Total Number of Warriors built.",
+   "value": 27
+  },
+  {
+   "key": "ESTEAMSTAT_WORKBOAT",
+   "name": "Total Number of Work Boats built.",
+   "value": 16
+  },
+  {
+   "key": "ESTEAMSTAT_WORKER",
+   "name": "Total Number of Workers built.",
+   "value": 41
+  },
+  {
+   "key": "ESTEAMSTAT_BALLISTA",
+   "name": "Total Number of Ballistas built."
+  },
+  {
+   "key": "ESTEAMSTAT_CATAPULT",
+   "name": "Total Number of Catapults built.",
+   "value": 7
+  },
+  {
+   "key": "ESTEAMSTAT_COMPANIONCAVALRY",
+   "name": "Total Number of Companion Cavalries built."
+  },
+  {
+   "key": "ESTEAMSTAT_HORSEMAN",
+   "name": "Total Number of Horsemen built.",
+   "value": 4
+  },
+  {
+   "key": "ESTEAMSTAT_LEGION",
+   "name": "Total Number of Legions built."
+  },
+  {
+   "key": "ESTEAMSTAT_MOHAWKWARRIOR",
+   "name": "Total Number of Mohawk Warriors built."
+  },
+  {
+   "key": "ESTEAMSTAT_SWORDSMAN",
+   "name": "Total Number of Swordsmen built.",
+   "value": 10
+  },
+  {
+   "key": "ESTEAMSTAT_CAMELARCHER",
+   "name": "Total Number of Camel Arachers built."
+  },
+  {
+   "key": "ESTEAMSTAT_CHUKONU",
+   "name": "Total Number of Chu-Ko-Nus built."
+  },
+  {
+   "key": "ESTEAMSTAT_CROSSBOWMAN",
+   "name": "Total Number of Crossbowmen built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_KNIGHT",
+   "name": "Total Number of Knights built.",
+   "value": 5
+  },
+  {
+   "key": "ESTEAMSTAT_LANDSKNECHT",
+   "name": "Total Number of Landsknechts built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_LONGBOWMAN",
+   "name": "Total Number of Longbowmen built."
+  },
+  {
+   "key": "ESTEAMSTAT_LONGSWORDSMAN",
+   "name": "Total Number of Longswordsmen built."
+  },
+  {
+   "key": "ESTEAMSTAT_MANDEKALUCAVALRY",
+   "name": "Total Number of Mankealu Cavalries built."
+  },
+  {
+   "key": "ESTEAMSTAT_PIKEMAN",
+   "name": "Total Number of Pikemen built.",
+   "value": 8
+  },
+  {
+   "key": "ESTEAMSTAT_NARESUANSELEPHANT",
+   "name": "Total Number of Naresuan's Elephants built."
+  },
+  {
+   "key": "ESTEAMSTAT_SAMURAI",
+   "name": "Total Number of Samurai built."
+  },
+  {
+   "key": "ESTEAMSTAT_TREBUCHET",
+   "name": "Total Number of Trebuchets built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_CANNON",
+   "name": "Total Number of Cannons built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_CARAVEL",
+   "name": "Total Number of Caravels built.",
+   "value": 8
+  },
+  {
+   "key": "ESTEAMSTAT_COSSACK",
+   "name": "Total Number of Cossacks built."
+  },
+  {
+   "key": "ESTEAMSTAT_FRIGATE",
+   "name": "Total Number of Frigates built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_JANISSARY",
+   "name": "Total Number of Janissaries built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_LANCER",
+   "name": "Total Number of Lancers built."
+  },
+  {
+   "key": "ESTEAMSTAT_MINUTEMAN",
+   "name": "Total Number of Minutemen built."
+  },
+  {
+   "key": "ESTEAMSTAT_MUSKETEER",
+   "name": "Total Number of Musketeers built."
+  },
+  {
+   "key": "ESTEAMSTAT_MUSKETMAN",
+   "name": "Total Number of Musketmen built."
+  },
+  {
+   "key": "ESTEAMSTAT_RIFLEMAN",
+   "name": "Total Number of Riflemen built.",
+   "value": 4
+  },
+  {
+   "key": "ESTEAMSTAT_SHIPOFTHELINE",
+   "name": "Total Number of Ships of the Lines built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_SIPAHI",
+   "name": "Total Number of Sipahis built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_ANTIAIRCRAFTGUN",
+   "name": "Total Number of Anti-Aircraft Guns built."
+  },
+  {
+   "key": "ESTEAMSTAT_ANTITANKGUN",
+   "name": "Total Number of Anti-Tank Guns built."
+  },
+  {
+   "key": "ESTEAMSTAT_ARTILLERY",
+   "name": "Total Number of Artilleries built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_BATTLESHIP",
+   "name": "Total Number of Battleships built."
+  },
+  {
+   "key": "ESTEAMSTAT_CARRIER",
+   "name": "Total Number of Carriers built."
+  },
+  {
+   "key": "ESTEAMSTAT_DESTROYER",
+   "name": "Total Number of Destroyers built."
+  },
+  {
+   "key": "ESTEAMSTAT_FIGHTER",
+   "name": "Total Number of Fighters built.",
+   "value": 2
+  },
+  {
+   "key": "ESTEAMSTAT_FOREIGNLEGION",
+   "name": "Total Number of Foreign Legions built."
+  },
+  {
+   "key": "ESTEAMSTAT_INFANTRY",
+   "name": "Total Number of Infantries built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_IRONCLAD",
+   "name": "Total Number of Ironclads built."
+  },
+  {
+   "key": "ESTEAMSTAT_PANZER",
+   "name": "Total Number of Panzers built."
+  },
+  {
+   "key": "ESTEAMSTAT_SUBMARINE",
+   "name": "Total Number of Submarines built."
+  },
+  {
+   "key": "ESTEAMSTAT_TANK",
+   "name": "Total Number of Tanks built."
+  },
+  {
+   "key": "ESTEAMSTAT_ZERO",
+   "name": "Total Number of Zeroes built."
+  },
+  {
+   "key": "ESTEAMSTAT_ATOMICBOMB",
+   "name": "Total Number of Atomic Bombs built."
+  },
+  {
+   "key": "ESTEAMSTAT_B17",
+   "name": "Total Number of B17s built."
+  },
+  {
+   "key": "ESTEAMSTAT_BOMBER",
+   "name": "Total Number of Bombers built."
+  },
+  {
+   "key": "ESTEAMSTAT_GUIDEDMISSILE",
+   "name": "Total Number of Guided Missile built."
+  },
+  {
+   "key": "ESTEAMSTAT_HELICOPTERGUNSHIP",
+   "name": "Total Number of Helicopter Gunships built."
+  },
+  {
+   "key": "ESTEAMSTAT_JETFIGHTER",
+   "name": "Total Number of Jet Fighters built."
+  },
+  {
+   "key": "ESTEAMSTAT_MECHANIZEDINFANTRY",
+   "name": "Total Number of Mechanized Infantries built."
+  },
+  {
+   "key": "ESTEAMSTAT_MISSILECRUISER",
+   "name": "Total Number of Missile Cruisers built."
+  },
+  {
+   "key": "ESTEAMSTAT_MOBILESAM",
+   "name": "Total Number of Mobile Sams built."
+  },
+  {
+   "key": "ESTEAMSTAT_MODERNARMOR",
+   "name": "Total Number of Modern Armors built."
+  },
+  {
+   "key": "ESTEAMSTAT_NUCLEARMISSILE",
+   "name": "Total Number of Nuclear Missiles built."
+  },
+  {
+   "key": "ESTEAMSTAT_NUCLEARSUBMARINE",
+   "name": "Total Number of Nuclear Submarines built."
+  },
+  {
+   "key": "ESTEAMSTAT_PARATROOPER",
+   "name": "Total Number of Paratroopers built."
+  },
+  {
+   "key": "ESTEAMSTAT_ROCKETARTILLERY",
+   "name": "Total Number of Rocket Artilleries built."
+  },
+  {
+   "key": "ESTEAMSTAT_SSBOOSTER",
+   "name": "Total Number of SS Boosters built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_SSCOCKPIT",
+   "name": "Total Number of SS Cockpits built.",
+   "value": 1
+  },
+  {
+   "key": "ESTEAMSTAT_STEALTHBOMBER",
+   "name": "Total Number of Stealth Bombters built."
+  },
+  {
+   "key": "ESTEAMSTAT_GIANTDEATHROBOT",
+   "name": "Total Number of Giant Death Robots built."
+  },
+  {
+   "key": "ESTEAMSTAT_SSENGINE",
+   "name": "Total Number of SS Engines built.",
+   "value": 1
+  },
+  {
+   "key": "ESTEAMSTAT_SSSTASISCHAMBER",
+   "name": "Total Number of SS Stasis Chambers built.",
+   "value": 1
+  },
+  {
+   "key": "ESTEAMSTAT_ANGKORWAT",
+   "name": "Total Number of Angkor Wats built."
+  },
+  {
+   "key": "ESTEAMSTAT_BIGBEN",
+   "name": "Total Number of Big Bens built."
+  },
+  {
+   "key": "ESTEAMSTAT_BRANDENBURGGATE",
+   "name": "Total Number of Brandenburg Gates built."
+  },
+  {
+   "key": "ESTEAMSTAT_CHICHENITZA",
+   "name": "Total Number of Chichen Itzas built."
+  },
+  {
+   "key": "ESTEAMSTAT_CRISTOREDENTOR",
+   "name": "Total Number of Cristo Redentors built."
+  },
+  {
+   "key": "ESTEAMSTAT_EIFFELTOWER",
+   "name": "Total Number of Eiffel Towers built."
+  },
+  {
+   "key": "ESTEAMSTAT_HIMEJICASTLE",
+   "name": "Total Number of Himaji Castles built."
+  },
+  {
+   "key": "ESTEAMSTAT_MACHUPICCHU",
+   "name": "Total Number of Machu Picchus built."
+  },
+  {
+   "key": "ESTEAMSTAT_NOTREDAME",
+   "name": "Total Number of Notre Dames built."
+  },
+  {
+   "key": "ESTEAMSTAT_PENTAGON",
+   "name": "Total Number of Petagons built."
+  },
+  {
+   "key": "ESTEAMSTAT_SISTINECHAPEL",
+   "name": "Total Number of Sistine Chapels built."
+  },
+  {
+   "key": "ESTEAMSTAT_STATUEOFLIBERTY",
+   "name": "Total Number of Statues of Liberty built."
+  },
+  {
+   "key": "ESTEAMSTAT_STONEHENGE",
+   "name": "Total Number of Stonehenges built."
+  },
+  {
+   "key": "ESTEAMSTAT_SYDNEYOPERAHOUSE",
+   "name": "Total Number of Sydney Opera Houses built."
+  },
+  {
+   "key": "ESTEAMSTAT_TAJMAHAL",
+   "name": "Total Number of Taj Mahals built."
+  },
+  {
+   "key": "ESTEAMSTAT_COLOSSUS",
+   "name": "Total Number of Colossuses built."
+  },
+  {
+   "key": "ESTEAMSTAT_FORBIDDENPALACE",
+   "name": "Total Number of Frobidden Palaces built."
+  },
+  {
+   "key": "ESTEAMSTAT_GREATLIBRARY",
+   "name": "Total Number of Great Libraries built."
+  },
+  {
+   "key": "ESTEAMSTAT_GREATLIGHTHOUSE",
+   "name": "Total Number of Great Lighthouses built."
+  },
+  {
+   "key": "ESTEAMSTAT_GREATWALL",
+   "name": "Total Number of Great Walls built."
+  },
+  {
+   "key": "ESTEAMSTAT_HAGIASOPHIA",
+   "name": "Total Number of Hagia Sophias built."
+  },
+  {
+   "key": "ESTEAMSTAT_HANGINGGARDENS",
+   "name": "Total Number of Hanging Gardens built."
+  },
+  {
+   "key": "ESTEAMSTAT_KREMLIN",
+   "name": "Total Number of Kremlins built."
+  },
+  {
+   "key": "ESTEAMSTAT_LOUVRE",
+   "name": "Total Number of Louvres built."
+  },
+  {
+   "key": "ESTEAMSTAT_ORACLE",
+   "name": "Total Number of Oracles built."
+  },
+  {
+   "key": "ESTEAMSTAT_PORCELAINTOWER",
+   "name": "Total Number of Porcelain Towers built."
+  },
+  {
+   "key": "ESTEAMSTAT_PYRAMIDS",
+   "name": "Total Number of Pyramics built."
+  },
+  {
+   "key": "ESTEAMSTAT_UNITEDNATION",
+   "name": "Total Number of United Nations built."
+  },
+  {
+   "key": "ESTEAMSTAT_HERMITAGE",
+   "name": "Total Number of Hermitages built."
+  },
+  {
+   "key": "ESTEAMSTAT_HEROICEPIC",
+   "name": "Total Number of Heroic Epics built."
+  },
+  {
+   "key": "ESTEAMSTAT_IRONWORKS",
+   "name": "Total Number of Iron Works built."
+  },
+  {
+   "key": "ESTEAMSTAT_NATIONALCOLLEGE",
+   "name": "Total Number of National Colleges built."
+  },
+  {
+   "key": "ESTEAMSTAT_NATIONALEPIC",
+   "name": "Total Number of National Epics built."
+  },
+  {
+   "key": "ESTEAMSTAT_OXFORDUNIVERSITY",
+   "name": "Total Number of Oxford Universities built."
+  },
+  {
+   "key": "ESTEAMSTAT_BARBARIANCAMPS",
+   "name": "Number of Barbarian Camps razed."
+  },
+  {
+   "key": "ESTEAMSTAT_BEATWONDERS",
+   "name": "Number of times another Civ has completed a Wonder before you.",
+   "value": 75
+  },
+  {
+   "key": "ESTEAMSTAT_NATURALWONDERS",
+   "name": "Total number of Natural Wonders discovered."
+  },
+  {
+   "key": "ESTEAMSTAT_ROADS",
+   "name": "Number of roads constructed."
+  },
+  {
+   "key": "ESTEAMSTAT_MINES",
+   "name": "Number of mines constructed."
+  },
+  {
+   "key": "ESTEAMSTAT_RESOURCESTRADED",
+   "name": "Number of resources traded to another Civ."
+  },
+  {
+   "key": "ESTEAMSTAT_FORESTS",
+   "name": "Number of forests cleared."
+  },
+  {
+   "key": "ESTEAMSTAT_TEMPLES",
+   "name": "Number of temples built.",
+   "value": 4
+  },
+  {
+   "key": "ESTEAMSTAT_PEDIA",
+   "name": "Number of Civilopedia articles read."
+  },
+  {
+   "key": "ESTEAMSTAT_GREATGENERALS",
+   "name": "Number of Great Generals Spawned."
+  },
+  {
+   "key": "ESTEAMSTAT_STANDINGARMY",
+   "name": "Largest Army maintained."
+  },
+  {
+   "key": "ESTEAMSTAT_CAVALRY",
+   "name": "Total numver of Cavalry units built.",
+   "value": 3
+  },
+  {
+   "key": "ESTEAMSTAT_TILESPURCHASED",
+   "name": "Total number of tiles purchased."
+  },
+  {
+   "key": "ESTEAMSTAT_TILESDISCOVERED",
+   "name": "Number of tiles explored."
+  },
+  {
+   "key": "ESTEAMSTAT_BARBSCONVERTED",
+   "name": "Number of Barbarian units converted."
+  },
+  {
+   "key": "ESTEAMSTAT_BRITISHNAVY",
+   "name": "Number of naval vessels defeated as Elizabeth."
+  },
+  {
+   "key": "ESTEAMSTAT_BARBSNAVALCONVERTED",
+   "name": "Number of Barbarian naval units converted."
+  },
+  {
+   "key": "ESTEAMSTAT_STATUEOFZEUS",
+   "name": "Number of times the Statue of Zeus is built."
+  },
+  {
+   "key": "ESTEAMSTAT_TEMPLEOFARTEMIS",
+   "name": "Number of times the Temple of Artemis is built."
+  },
+  {
+   "key": "ESTEAMSTAT_MAUSOLEUMOFHALICARNASSUS",
+   "name": "Number of times the Mausoleum of Halicarnassus is built."
+  },
+  {
+   "key": "ESTEAMSTAT_HALICARNASSUSGOLDEARNED",
+   "name": "Amount of gold earned from Halicarnassus special ability."
+  },
+  {
+   "key": "ESTEAMSTAT_HWACHAKILLS",
+   "name": "Number of units defeated by using a Hwacha."
+  },
+  {
+   "key": "ESTEAMSTAT_BULLIEDGOLD",
+   "name": "Amount of Gold bullied."
   }
  ],
  "raw": {

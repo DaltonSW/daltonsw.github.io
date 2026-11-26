@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Oregon Trail",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "2013360",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 17,
  "total": 83,
  "first": "2023-08-18",
@@ -697,6 +697,66 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2013360/cc26f2a2652817fecc5a0d403f6203c3fbcca4c8.jpg",
    "hidden": true,
    "rarity": 20.5
+  }
+ ],
+ "stats": [
+  {
+   "key": "Guidebook_Achievement_Name_RobertNewell_stat",
+   "name": "Guidebook_Achievement_Name_RobertNewell",
+   "value": 100
+  },
+  {
+   "key": "Guidebook_Achievement_Name_Bison_stat",
+   "name": "Guidebook_Achievement_Name_Bison",
+   "value": 300
+  },
+  {
+   "key": "Guidebook_Achievement_Name_Wagons_stat",
+   "name": "Guidebook_Achievement_Name_Wagons",
+   "value": 1
+  },
+  {
+   "key": "Guidebook_Achievement_Name_TrailFood_stat",
+   "name": "Guidebook_Achievement_Name_TrailFood",
+   "value": 1000
+  },
+  {
+   "key": "Guidebook_Achievement_Name_LewisAndClark_stat",
+   "name": "Guidebook_Achievement_Name_LewisAndClark",
+   "value": 2000
+  },
+  {
+   "key": "Guidebook_Achievement_Name_JohnJacobAstor_stat",
+   "name": "Guidebook_Achievement_Name_JohnJacobAstor"
+  },
+  {
+   "key": "Guidebook_Achievement_Name_MarcusWhitman_stat",
+   "name": "Guidebook_Achievement_Name_MarcusWhitman",
+   "value": 20
+  },
+  {
+   "key": "Guidebook_Achievement_Name_GoingForGold_stat",
+   "name": "Guidebook_Achievement_Name_GoingForGold"
+  },
+  {
+   "key": "Guidebook_Achievement_Name_SailOn_stat",
+   "name": "Guidebook_Achievement_Name_SailOn"
+  },
+  {
+   "key": "Guidebook_Achievement_Name_GiveAManAFish_stat",
+   "name": "Guidebook_Achievement_Name_GiveAManAFish"
+  },
+  {
+   "key": "Guidebook_Achievement_Name_RufusPorter_stat",
+   "name": "Guidebook_Achievement_Name_RufusPorter"
+  },
+  {
+   "key": "Guidebook_Achievement_Name_SagerOrphans_stat",
+   "name": "Guidebook_Achievement_Name_SagerOrphans"
+  },
+  {
+   "key": "Guidebook_Achievement_Name_AbigailScottDuniway_stat",
+   "name": "Guidebook_Achievement_Name_AbigailScottDuniway"
   }
  ],
  "raw": {

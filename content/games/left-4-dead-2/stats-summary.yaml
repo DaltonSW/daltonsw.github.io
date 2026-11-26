@@ -1,0 +1,749 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: Stat.GamesPlayed.Total
+          name: txt.Stat.GamesPlayed.Total
+          value: 12
+        - key: Stat.TotalPlayTime.Total
+          name: txt.Stat.TotalPlayTime.Total
+          value: 26287
+        - key: Stat.InfectedKilled.Total
+          name: txt.Stat.InfectedKilled.Total
+          value: 1354
+        - key: Stat.KitsUsed.Total
+          name: txt.Stat.KitsUsed.Total
+          value: 60
+        - key: Stat.PillsUsed.Total
+          name: txt.Stat.PillsUsed.Total
+          value: 11
+        - key: Stat.KitsShared.Total
+          name: txt.Stat.KitsShared.Total
+          value: 4
+        - key: Stat.TeamRevivedMost.Total
+          name: txt.Stat.TeamRevivedMost.Total
+          value: 5
+        - key: Stat.TeamProtectedMost.Total
+          name: txt.Stat.TeamProtectedMost.Total
+          value: 46
+        - key: Stat.WasRevived.Total
+          name: txt.Stat.WasRevived.Total
+          value: 38
+        - key: Stat.WasProtected.Total
+          name: txt.Stat.WasProtected.Total
+          value: 227
+        - key: Stat.FFDamage.Total
+          name: txt.Stat.FFDamage.Total
+          value: 3468
+        - key: Stat.FFDamageGameMost.Total
+          name: txt.Stat.FFDamageGameMost.Total
+          value: 3102
+        - key: Stat.HighestSurvivorScore.Total
+          name: txt.Stat.HighestSurvivorScore.Total
+          value: 2130
+        - key: Stat.KitsUsed.Avg
+          name: txt.Stat.KitsUsed.Avg
+          value: 5
+        - key: Stat.PillsUsed.Avg
+          name: txt.Stat.PillsUsed.Avg
+          value: 0.9166666865348816
+        - key: Stat.KitsShared.Avg
+          name: txt.Stat.KitsShared.Avg
+          value: 0.3333333432674408
+        - key: Stat.WasRevived.Avg
+          name: txt.Stat.WasRevived.Avg
+          value: 3.1666667461395264
+        - key: Stat.WasProtected.Avg
+          name: txt.Stat.WasProtected.Avg
+          value: 18.91666603088379
+        - key: Stat.FFDamageGame.Avg
+          name: txt.Stat.FFDamageGame.Avg
+          value: 289
+        - key: Stat.TeamRevivedMost.Diff
+          name: txt.Stat.TeamRevivedMost.Diff
+          value: 1
+        - key: Stat.TeamProtectedMost.Diff
+          name: txt.Stat.TeamProtectedMost.Diff
+          value: 3
+        - key: Stat.FFDamageGameMost.Diff
+          name: txt.Stat.FFDamageGameMost.Diff
+          value: 3
+        - key: Stat.PlayTime.Recent
+          name: txt.Stat.PlayTime.Recent
+          value: 2310
+        - key: Stat.Difficulty.Recent
+          name: txt.Stat.Difficulty.Recent
+          value: 0
+        - key: Stat.GamesPlayed.Versus
+          name: txt.Stat.GamesPlayed.Versus
+          value: 5
+        - key: Stat.PointsMost.Versus
+          name: txt.Stat.PointsMost.Versus
+          value: 432
+        - key: Stat.GamesWon.Versus
+          name: txt.Stat.GamesWon.Versus
+          value: 2
+        - key: Stat.GamesLost.Versus
+          name: txt.Stat.GamesLost.Versus
+          value: 3
+        - key: Stat.PointsMostID.Versus
+          name: txt.Stat.PointsMostID.Versus
+          value: 3
+        - key: Stat.KillPercentLvl1.Fav
+          name: txt.Stat.KillPercentLvl1.Fav
+          value: 36
+        - key: Stat.WeaponIDLvl2.Fav
+          name: txt.Stat.WeaponIDLvl2.Fav
+          value: 6
+        - key: Stat.KillPercentLvl2.Fav
+          name: txt.Stat.KillPercentLvl2.Fav
+          value: 37
+        - key: Stat.CampaignID.Fav
+          name: txt.Stat.CampaignID.Fav
+          value: 1
+        - key: Stat.CharacterID.Fav
+          name: txt.Stat.CharacterID.Fav
+          value: 1
+        - key: Stat.CharacterPlayedPercent.Fav
+          name: txt.Stat.CharacterPlayedPercent.Fav
+          value: 50
+        - key: Stat.pistol.Shots.Total
+          name: txt.Stat.Pistol.Shots.Total
+          value: 1861
+        - key: Stat.smg.Shots.Total
+          name: txt.Stat.Smg.Shots.Total
+          value: 1327
+        - key: Stat.pumpshotgun.Shots.Total
+          name: txt.Stat.Shotgun.Shots.Total
+          value: 179
+        - key: Stat.autoshotgun.Shots.Total
+          name: txt.Stat.AutoShotgun.Shots.Total
+          value: 799
+        - key: Stat.rifle.Shots.Total
+          name: txt.Stat.Rifle.Shots.Total
+          value: 824
+        - key: Stat.hunting_rifle.Shots.Total
+          name: txt.Stat.Sniper.Shots.Total
+          value: 78
+        - key: Stat.molotov.Shots.Total
+          name: txt.Stat.Molotov.Shots.Total
+          value: 8
+        - key: Stat.pipe_bomb.Shots.Total
+          name: txt.Stat.PipeBomb.Shots.Total
+          value: 5
+        - key: Stat.pistol.Head.Total
+          name: txt.Stat.Pistol.Head.Total
+          value: 53
+        - key: Stat.smg.Head.Total
+          name: txt.Stat.Smg.Head.Total
+          value: 42
+        - key: Stat.pumpshotgun.Head.Total
+          name: txt.Stat.Shotgun.Head.Total
+          value: 31
+        - key: Stat.autoshotgun.Head.Total
+          name: txt.Stat.AutoShotgun.Head.Total
+          value: 191
+        - key: Stat.rifle.Head.Total
+          name: txt.Stat.Rifle.Head.Total
+          value: 44
+        - key: Stat.hunting_rifle.Head.Total
+          name: txt.Stat.Sniper.Head.Total
+          value: 4
+        - key: Stat.pistol.Kills.Total
+          name: txt.Stat.Pistol.Kills.Total
+          value: 246
+        - key: Stat.smg.Kills.Total
+          name: txt.Stat.Smg.Kills.Total
+          value: 127
+        - key: Stat.pumpshotgun.Kills.Total
+          name: txt.Stat.Shotgun.Kills.Total
+          value: 109
+        - key: Stat.autoshotgun.Kills.Total
+          name: txt.Stat.AutoShotgun.Kills.Total
+          value: 441
+        - key: Stat.rifle.Kills.Total
+          name: txt.Stat.Rifle.Kills.Total
+          value: 128
+        - key: Stat.hunting_rifle.Kills.Total
+          name: txt.Stat.Sniper.Kills.Total
+          value: 36
+        - key: Stat.molotov.Kills.Total
+          name: txt.Stat.Molotov.Kills.Total
+          value: 68
+        - key: Stat.pipe_bomb.Kills.Total
+          name: txt.Stat.PipeBomb.Kills.Total
+          value: 29
+        - key: Stat.MostDamage1Life.Boomer
+          name: txt.Stat.MostDamage1Life.Boomer
+          value: 16
+        - key: Stat.AvgLifeSpan.Boomer
+          name: txt.Stat.AvgLifeSpan.Boomer
+          value: 20
+        - key: Stat.TotalSpawns.Boomer
+          name: txt.Stat.TotalSpawns.Boomer
+          value: 21
+        - key: Stat.TotalLifeSpan.Boomer
+          name: txt.Stat.TotalLifeSpan.Boomer
+          value: 422
+        - key: Stat.SpecAttack.Boomer
+          name: txt.Stat.SpecAttack.Boomer
+          value: 16
+        - key: Stat.MostDamage1Life.Hunter
+          name: txt.Stat.MostDamage1Life.Hunter
+          value: 359
+        - key: Stat.AvgLifeSpan.Hunter
+          name: txt.Stat.AvgLifeSpan.Hunter
+          value: 29
+        - key: Stat.TotalSpawns.Hunter
+          name: txt.Stat.TotalSpawns.Hunter
+          value: 26
+        - key: Stat.TotalLifeSpan.Hunter
+          name: txt.Stat.TotalLifeSpan.Hunter
+          value: 774
+        - key: Stat.SpecAttack.Hunter
+          name: txt.Stat.SpecAttack.Hunter
+          value: 14
+        - key: Stat.MostDamage1Life.Smoker
+          name: txt.Stat.MostDamage1Life.Smoker
+          value: 352
+        - key: Stat.AvgLifeSpan.Smoker
+          name: txt.Stat.AvgLifeSpan.Smoker
+          value: 30
+        - key: Stat.TotalSpawns.Smoker
+          name: txt.Stat.TotalSpawns.Smoker
+          value: 22
+        - key: Stat.TotalLifeSpan.Smoker
+          name: txt.Stat.TotalLifeSpan.Smoker
+          value: 673
+        - key: Stat.SpecAttack.Smoker
+          name: txt.Stat.SpecAttack.Smoker
+          value: 17
+        - key: Stat.MostDamage1Life.Tank
+          name: txt.Stat.MostDamage1Life.Tank
+          value: 432
+        - key: Stat.AvgLifeSpan.Tank
+          name: txt.Stat.AvgLifeSpan.Tank
+          value: 38
+        - key: Stat.TotalSpawns.Tank
+          name: txt.Stat.TotalSpawns.Tank
+          value: 9
+        - key: Stat.TotalLifeSpan.Tank
+          name: txt.Stat.TotalLifeSpan.Tank
+          value: 348
+        - key: Stat.SpecAttack.Tank
+          name: txt.Stat.SpecAttack.Tank
+          value: 5
+        - key: Stat.pistol.Accuracy.Total
+          name: txt.Stat.Pistol.Accuracy.Total
+          value: 50
+        - key: Stat.pistol.HeadAccuracy.Total
+          name: txt.Stat.Pistol.HeadAccuracy.Total
+          value: 2
+        - key: Stat.smg.Accuracy.Total
+          name: txt.Stat.Smg.Accuracy.Total
+          value: 53
+        - key: Stat.smg.HeadAccuracy.Total
+          name: txt.Stat.Smg.HeadAccuracy.Total
+          value: 3
+        - key: Stat.pumpshotgun.Accuracy.Total
+          name: txt.Stat.Shotgun.Accuracy.Total
+          value: 29
+        - key: Stat.pumpshotgun.HeadAccuracy.Total
+          name: txt.Stat.Shotgun.HeadAccuracy.Total
+          value: 2
+        - key: Stat.autoshotgun.Accuracy.Total
+          name: txt.Stat.AutoShotgun.Accuracy.Total
+          value: 26
+        - key: Stat.autoshotgun.HeadAccuracy.Total
+          name: txt.Stat.AutoShotgun.HeadAccuracy.Total
+          value: 2
+        - key: Stat.rifle.Accuracy.Total
+          name: txt.Stat.Rifle.Accuracy.Total
+          value: 80
+        - key: Stat.rifle.HeadAccuracy.Total
+          name: txt.Stat.Rifle.HeadAccuracy.Total
+          value: 5
+        - key: Stat.hunting_rifle.Accuracy.Total
+          name: txt.Stat.Sniper.Accuracy.Total
+          value: 46
+        - key: Stat.hunting_rifle.HeadAccuracy.Total
+          name: txt.Stat.Sniper.HeadAccuracy.Total
+          value: 5
+        - key: Stat.PillsShared.Avg
+          name: txt.Stat.PillsShared.Avg
+          value: 0.1666666716337204
+        - key: Stat.TeamRevived.Avg
+          name: txt.Stat.TeamRevived.Avg
+          value: 1.3333333730697632
+        - key: Stat.TeamProtected.Avg
+          name: txt.Stat.TeamProtected.Avg
+          value: 11.75
+        - key: Stat.PillsShared.Total
+          name: txt.Stat.PillsShared.Total
+          value: 2
+        - key: Stat.TeamRevived.Total
+          name: txt.Stat.TeamRevived.Total
+          value: 16
+        - key: Stat.TeamProtected.Total
+          name: txt.Stat.TeamProtected.Total
+          value: 141
+        - key: Stat.pistol.Hit.Total
+          name: txt.Stat.Pistol.Hit.Total
+          value: 948
+        - key: Stat.smg.Hit.Total
+          name: txt.Stat.Smg.Hit.Total
+          value: 714
+        - key: Stat.pumpshotgun.Hit.Total
+          name: txt.Stat.Shotgun.Hit.Total
+          value: 429
+        - key: Stat.autoshotgun.Hit.Total
+          name: txt.Stat.AutoShotgun.Hit.Total
+          value: 1881
+        - key: Stat.rifle.Hit.Total
+          name: txt.Stat.Rifle.Hit.Total
+          value: 660
+        - key: Stat.hunting_rifle.Hit.Total
+          name: txt.Stat.Sniper.Hit.Total
+          value: 36
+        - key: Stat.smg_silenced.Shots.Total
+          name: txt.Stat.Smg_silenced.Shots.Total
+          value: 373
+        - key: Stat.smg_silenced.Head.Total
+          name: txt.Stat.Smg_silenced.Head.Total
+          value: 20
+        - key: Stat.smg_silenced.Kills.Total
+          name: txt.Stat.Smg_silenced.Kills.Total
+          value: 25
+        - key: Stat.smg_silenced.Accuracy.Total
+          name: txt.Stat.Smg_silenced.Accuracy.Total
+          value: 44
+        - key: Stat.smg_silenced.HeadAccuracy.Total
+          name: txt.Stat.Smg_silenced.HeadAccuracy.Total
+          value: 5
+        - key: Stat.smg_silenced.Hit.Total
+          name: txt.Stat.Smg_silenced.Hit.Total
+          value: 165
+        - key: Stat.shotgun_chrome.Shots.Total
+          name: txt.Stat.Shotgun_chrome.Shots.Total
+          value: 268
+        - key: Stat.shotgun_chrome.Head.Total
+          name: txt.Stat.Shotgun_chrome.Head.Total
+          value: 59
+        - key: Stat.shotgun_chrome.Kills.Total
+          name: txt.Stat.Shotgun_chrome.Kills.Total
+          value: 176
+        - key: Stat.shotgun_chrome.Accuracy.Total
+          name: txt.Stat.Shotgun_chrome.Accuracy.Total
+          value: 26
+        - key: Stat.shotgun_chrome.HeadAccuracy.Total
+          name: txt.Stat.Shotgun_chrome.HeadAccuracy.Total
+          value: 2
+        - key: Stat.shotgun_chrome.Hit.Total
+          name: txt.Stat.Shotgun_chrome.Hit.Total
+          value: 573
+        - key: Stat.shotgun_spas.Shots.Total
+          name: txt.Stat.Shotgun_SPAS.Shots.Total
+          value: 1360
+        - key: Stat.shotgun_spas.Head.Total
+          name: txt.Stat.Shotgun_SPAS.Head.Total
+          value: 204
+        - key: Stat.shotgun_spas.Kills.Total
+          name: txt.Stat.Shotgun_SPAS.Kills.Total
+          value: 655
+        - key: Stat.shotgun_spas.Accuracy.Total
+          name: txt.Stat.Shotgun_SPAS.Accuracy.Total
+          value: 22
+        - key: Stat.shotgun_spas.HeadAccuracy.Total
+          name: txt.Stat.Shotgun_SPAS.HeadAccuracy.Total
+          value: 1
+        - key: Stat.shotgun_spas.Hit.Total
+          name: txt.Stat.Shotgun_SPAS.Hit.Total
+          value: 2778
+        - key: Stat.rifle_desert.Shots.Total
+          name: txt.Stat.Rifle_Desert.Shots.Total
+          value: 434
+        - key: Stat.rifle_desert.Head.Total
+          name: txt.Stat.Rifle_Desert.Head.Total
+          value: 30
+        - key: Stat.rifle_desert.Kills.Total
+          name: txt.Stat.Rifle_Desert.Kills.Total
+          value: 125
+        - key: Stat.rifle_desert.Accuracy.Total
+          name: txt.Stat.Rifle_Desert.Accuracy.Total
+          value: 97
+        - key: Stat.rifle_desert.HeadAccuracy.Total
+          name: txt.Stat.Rifle_Desert.HeadAccuracy.Total
+          value: 6
+        - key: Stat.rifle_desert.Hit.Total
+          name: txt.Stat.Rifle_Desert.Hit.Total
+          value: 423
+        - key: Stat.rifle_ak47.Shots.Total
+          name: txt.Stat.Rifle_AK47.Shots.Total
+          value: 217
+        - key: Stat.rifle_ak47.Head.Total
+          name: txt.Stat.Rifle_AK47.Head.Total
+          value: 10
+        - key: Stat.rifle_ak47.Kills.Total
+          name: txt.Stat.Rifle_AK47.Kills.Total
+          value: 41
+        - key: Stat.rifle_ak47.Accuracy.Total
+          name: txt.Stat.Rifle_AK47.Accuracy.Total
+          value: 59
+        - key: Stat.rifle_ak47.HeadAccuracy.Total
+          name: txt.Stat.Rifle_AK47.HeadAccuracy.Total
+          value: 4
+        - key: Stat.rifle_ak47.Hit.Total
+          name: txt.Stat.Rifle_AK47.Hit.Total
+          value: 130
+        - key: Stat.sniper_military.Shots.Total
+          name: txt.Stat.Sniper_Military.Shots.Total
+          value: 180
+        - key: Stat.sniper_military.Head.Total
+          name: txt.Stat.Sniper_Military.Head.Total
+          value: 10
+        - key: Stat.sniper_military.Kills.Total
+          name: txt.Stat.Sniper_Military.Kills.Total
+          value: 86
+        - key: Stat.sniper_military.Accuracy.Total
+          name: txt.Stat.Sniper_Military.Accuracy.Total
+          value: 52
+        - key: Stat.sniper_military.HeadAccuracy.Total
+          name: txt.Stat.Sniper_Military.HeadAccuracy.Total
+          value: 5
+        - key: Stat.sniper_military.Hit.Total
+          name: txt.Stat.Sniper_Military.Hit.Total
+          value: 94
+        - key: Stat.SurvivalGamesPlayed.Total
+          name: txt.Stat.SurvivalGamesPlayed.Total
+          value: 3
+        - key: Stat.MostDamage1Life.Spitter
+          name: txt.Stat.MostDamage1Life.Spitter
+          value: 214
+        - key: Stat.AvgLifeSpan.Spitter
+          name: txt.Stat.AvgLifeSpan.Spitter
+          value: 59
+        - key: Stat.TotalSpawns.Spitter
+          name: txt.Stat.TotalSpawns.Spitter
+          value: 23
+        - key: Stat.TotalLifeSpan.Spitter
+          name: txt.Stat.TotalLifeSpan.Spitter
+          value: 1371
+        - key: Stat.SpecAttack.Spitter
+          name: txt.Stat.SpecAttack.Spitter
+          value: 36
+        - key: Stat.MostDamage1Life.Jockey
+          name: txt.Stat.MostDamage1Life.Jockey
+          value: 214
+        - key: Stat.AvgLifeSpan.Jockey
+          name: txt.Stat.AvgLifeSpan.Jockey
+          value: 24
+        - key: Stat.TotalSpawns.Jockey
+          name: txt.Stat.TotalSpawns.Jockey
+          value: 24
+        - key: Stat.TotalLifeSpan.Jockey
+          name: txt.Stat.TotalLifeSpan.Jockey
+          value: 580
+        - key: Stat.SpecAttack.Jockey
+          name: txt.Stat.SpecAttack.Jockey
+          value: 18
+        - key: Stat.MostDamage1Life.Charger
+          name: txt.Stat.MostDamage1Life.Charger
+          value: 115
+        - key: Stat.AvgLifeSpan.Charger
+          name: txt.Stat.AvgLifeSpan.Charger
+          value: 24
+        - key: Stat.TotalSpawns.Charger
+          name: txt.Stat.TotalSpawns.Charger
+          value: 24
+        - key: Stat.TotalLifeSpan.Charger
+          name: txt.Stat.TotalLifeSpan.Charger
+          value: 590
+        - key: Stat.SpecAttack.Charger
+          name: txt.Stat.SpecAttack.Charger
+          value: 13
+        - key: Stat.vomitjar.Shots.Total
+          name: txt.Stat.VomitJar.Shots.Total
+          value: 3
+        - key: Stat.vomitjar.Kills.Total
+          name: txt.Stat.VomitJar.Kills.Total
+          value: 6
+        - key: TD2.COUNT.ACH_CUT_OFF_HEADS_MELEE
+          name: txt.TD2.COUNT.ACH_CUT_OFF_HEADS_MELEE
+          value: 7
+        - key: TD2.COUNT.ACH_KILL_WITH_EVERY_MELEE
+          name: txt.TD2.COUNT.ACH_KILL_WITH_EVERY_MELEE
+          value: 3
+        - key: TD2.COUNT.ACH_IGNITE_INFECTED_FIRE_AMMO
+          name: txt.TD2.COUNT.ACH_IGNITE_INFECTED_FIRE_AMMO
+          value: 13
+        - key: TD2.COUNT.ACH_KILL_EVERY_UNCOMMON_INFECTED
+          name: txt.TD2.COUNT.ACH_KILL_EVERY_UNCOMMON_INFECTED
+          value: 3
+        - key: TD2.COMP.ACH_KILL_WITH_EVERY_MELEE
+          name: txt.TD2.COMP.ACH_KILL_WITH_EVERY_MELEE
+          value: 37
+        - key: TD2.COMP.ACH_KILL_EVERY_UNCOMMON_INFECTED
+          name: txt.TD2.COMP.ACH_KILL_EVERY_UNCOMMON_INFECTED
+          value: 13
+        - key: TD2.COUNT.ACH_HONK_A_CLOWNS_NOSE
+          name: txt.TD2.COUNT.ACH_HONK_A_CLOWNS_NOSE
+          value: 1
+        - key: TD2.COUNT.ZOMBIE_PANEL_INTRO
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_INTRO
+          value: 5
+        - key: TD2.COUNT.ZOMBIE_PANEL_SMOKER
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_SMOKER
+          value: 5
+        - key: TD2.COUNT.ZOMBIE_PANEL_BOOMER
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_BOOMER
+          value: 5
+        - key: TD2.COUNT.ZOMBIE_PANEL_HUNTER
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_HUNTER
+          value: 5
+        - key: TD2.COUNT.ZOMBIE_PANEL_SPITTER
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_SPITTER
+          value: 5
+        - key: TD2.COUNT.ZOMBIE_PANEL_JOCKEY
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_JOCKEY
+          value: 5
+        - key: TD2.COUNT.ZOMBIE_PANEL_CHARGER
+          name: txt.TD2.COUNT.ZOMBIE_PANEL_CHARGER
+          value: 5
+        - key: Stat.AdrenalineShared.Avg
+          name: txt.Stat.AdrenalineShared.Avg
+          value: 0.1666666716337204
+        - key: Stat.AdrenalineShared.Total
+          name: txt.Stat.AdrenalineShared.Total
+          value: 2
+        - key: Stat.AdrenalineUsed.Avg
+          name: txt.Stat.AdrenalineUsed.Avg
+          value: 0.6666666865348816
+        - key: Stat.AdrenalineUsed.Total
+          name: txt.Stat.AdrenalineUsed.Total
+          value: 8
+        - key: Stat.DefibrillatorsUsed.Avg
+          name: txt.Stat.DefibrillatorsUsed.Avg
+          value: 0.0833333358168602
+        - key: Stat.DefibrillatorsUsed.Total
+          name: txt.Stat.DefibrillatorsUsed.Total
+          value: 1
+        - key: Stat.pistol_magnum.Shots.Total
+          name: txt.Stat.pistol_magnum.Shots.Total
+          value: 521
+        - key: Stat.pistol_magnum.Head.Total
+          name: txt.Stat.pistol_magnum.Head.Total
+          value: 7
+        - key: Stat.pistol_magnum.Kills.Total
+          name: txt.Stat.pistol_magnum.Kills.Total
+          value: 202
+        - key: Stat.pistol_magnum.Accuracy.Total
+          name: txt.Stat.pistol_magnum.Accuracy.Total
+          value: 41
+        - key: Stat.pistol_magnum.HeadAccuracy.Total
+          name: txt.Stat.pistol_magnum.HeadAccuracy.Total
+          value: 1
+        - key: Stat.pistol_magnum.Hit.Total
+          name: txt.Stat.pistol_magnum.Hit.Total
+          value: 215
+        - key: Stat.pistol.Damage.Total
+          name: txt.Stat.pistol.Damage.Total
+          value: 5231
+        - key: Stat.smg.Damage.Total
+          name: txt.Stat.smg.Damage.Total
+          value: 846
+        - key: Stat.smg_silenced.Damage.Total
+          name: txt.Stat.smg_silenced.Damage.Total
+          value: 318
+        - key: Stat.pumpshotgun.Damage.Total
+          name: txt.Stat.pumpshotgun.Damage.Total
+          value: 1407
+        - key: Stat.shotgun_chrome.Damage.Total
+          name: txt.Stat.shotgun_chrome.Damage.Total
+          value: 711
+        - key: Stat.autoshotgun.Damage.Total
+          name: txt.Stat.autoshotgun.Damage.Total
+          value: 1778
+        - key: Stat.shotgun_spas.Damage.Total
+          name: txt.Stat.shotgun_spas.Damage.Total
+          value: 4360
+        - key: Stat.rifle.Damage.Total
+          name: txt.Stat.rifle.Damage.Total
+          value: 1135
+        - key: Stat.rifle_desert.Damage.Total
+          name: txt.Stat.rifle_desert.Damage.Total
+          value: 914
+        - key: Stat.rifle_ak47.Damage.Total
+          name: txt.Stat.rifle_ak47.Damage.Total
+          value: 392
+        - key: Stat.hunting_rifle.Damage.Total
+          name: txt.Stat.hunting_rifle.Damage.Total
+          value: 155
+        - key: Stat.sniper_military.Damage.Total
+          name: txt.Stat.sniper_military.Damage.Total
+          value: 629
+        - key: Stat.pistol_magnum.Damage.Total
+          name: txt.Stat.pistol_magnum.Damage.Total
+          value: 2429
+        - key: Stat.grenade_launcher.Shots.Total
+          name: txt.Stat.grenade_launcher.Shots.Total
+          value: 9
+        - key: Stat.grenade_launcher.Head.Total
+          name: txt.Stat.grenade_launcher.Head.Total
+          value: 2
+        - key: Stat.grenade_launcher.Kills.Total
+          name: txt.Stat.grenade_launcher.Kills.Total
+          value: 49
+        - key: Stat.grenade_launcher.Accuracy.Total
+          name: txt.Stat.grenade_launcher.Accuracy.Total
+          value: 211
+        - key: Stat.grenade_launcher.HeadAccuracy.Total
+          name: txt.Stat.grenade_launcher.HeadAccuracy.Total
+          value: 22
+        - key: Stat.baseball_bat.Shots.Total
+          name: txt.Stat.baseball_bat.Shots.Total
+          value: 5
+        - key: Stat.baseball_bat.Kills.Total
+          name: txt.Stat.baseball_bat.Kills.Total
+          value: 2
+        - key: Stat.baseball_bat.Accuracy.Total
+          name: txt.Stat.baseball_bat.Accuracy.Total
+          value: 40
+        - key: Stat.cricket_bat.Shots.Total
+          name: txt.Stat.cricket_bat.Shots.Total
+          value: 30
+        - key: Stat.cricket_bat.Head.Total
+          name: txt.Stat.cricket_bat.Head.Total
+          value: 5
+        - key: Stat.cricket_bat.Kills.Total
+          name: txt.Stat.cricket_bat.Kills.Total
+          value: 14
+        - key: Stat.cricket_bat.Accuracy.Total
+          name: txt.Stat.cricket_bat.Accuracy.Total
+          value: 63
+        - key: Stat.cricket_bat.HeadAccuracy.Total
+          name: txt.Stat.cricket_bat.HeadAccuracy.Total
+          value: 16
+        - key: Stat.electric_guitar.Shots.Total
+          name: txt.Stat.electric_guitar.Shots.Total
+          value: 18
+        - key: Stat.electric_guitar.Kills.Total
+          name: txt.Stat.electric_guitar.Kills.Total
+          value: 6
+        - key: Stat.electric_guitar.Accuracy.Total
+          name: txt.Stat.electric_guitar.Accuracy.Total
+          value: 33
+        - key: Stat.frying_pan.Shots.Total
+          name: txt.Stat.frying_pan.Shots.Total
+          value: 5
+        - key: Stat.frying_pan.Accuracy.Total
+          name: txt.Stat.frying_pan.Accuracy.Total
+          value: 160
+        - key: Stat.katana.Shots.Total
+          name: txt.Stat.katana.Shots.Total
+          value: 46
+        - key: Stat.katana.Head.Total
+          name: txt.Stat.katana.Head.Total
+          value: 2
+        - key: Stat.katana.Kills.Total
+          name: txt.Stat.katana.Kills.Total
+          value: 14
+        - key: Stat.katana.Accuracy.Total
+          name: txt.Stat.katana.Accuracy.Total
+          value: 30
+        - key: Stat.katana.HeadAccuracy.Total
+          name: txt.Stat.katana.HeadAccuracy.Total
+          value: 4
+        - key: Stat.grenade_launcher.Hit.Total
+          name: txt.Stat.grenade_launcher.Hit.Total
+          value: 19
+        - key: Stat.baseball_bat.Hit.Total
+          name: txt.Stat.baseball_bat.Hit.Total
+          value: 2
+        - key: Stat.cricket_bat.Hit.Total
+          name: txt.Stat.cricket_bat.Hit.Total
+          value: 19
+        - key: Stat.electric_guitar.Hit.Total
+          name: txt.Stat.electric_guitar.Hit.Total
+          value: 6
+        - key: Stat.frying_pan.Hit.Total
+          name: txt.Stat.frying_pan.Hit.Total
+          value: 8
+        - key: Stat.katana.Hit.Total
+          name: txt.Stat.katana.Hit.Total
+          value: 14
+        - key: Stat.grenade_launcher.Damage.Total
+          name: txt.Stat.grenade_launcher.Damage.Total
+          value: 6
+        - key: Stat.baseball_bat.Damage.Total
+          name: txt.Stat.baseball_bat.Damage.Total
+          value: 100
+        - key: Stat.cricket_bat.Damage.Total
+          name: txt.Stat.cricket_bat.Damage.Total
+          value: 309
+        - key: Stat.electric_guitar.Damage.Total
+          name: txt.Stat.electric_guitar.Damage.Total
+          value: 208
+        - key: Stat.frying_pan.Damage.Total
+          name: txt.Stat.frying_pan.Damage.Total
+          value: 10
+        - key: Stat.katana.Damage.Total
+          name: txt.Stat.katana.Damage.Total
+          value: 296
+        - key: Stat.Defibrillated.Total
+          name: txt.Stat.Defibrillated.Total
+          value: 2
+        - key: Stat.PlayedNick.Total
+          name: txt.Stat.PlayedNick.Total
+          value: 1
+        - key: Stat.PlayedRochelle.Total
+          name: txt.Stat.PlayedRochelle.Total
+          value: 6
+        - key: Stat.PlayedCoach.Total
+          name: txt.Stat.PlayedCoach.Total
+          value: 3
+        - key: Stat.PlayedEllis.Total
+          name: txt.Stat.PlayedEllis.Total
+          value: 2
+        - key: Stat.TeamFailVersus.VoteRematch
+          name: txt.Stat.TeamFailVersus.VoteRematch
+          value: 5
+        - key: Stat.MyFailVersus.VoteRematch
+          name: txt.Stat.MyFailVersus.VoteRematch
+          value: 4
+        - key: Stat.incendiary_ammo.Shots.Total
+          name: txt.Stat.incendiary_ammo.Shots.Total
+          value: 29
+        - key: Stat.incendiary_ammo.Kills.Total
+          name: txt.Stat.incendiary_ammo.Kills.Total
+          value: 14
+        - key: Stat.incendiary_ammo.Accuracy.Total
+          name: txt.Stat.incendiary_ammo.Accuracy.Total
+          value: 65
+        - key: Stat.incendiary_ammo.Hit.Total
+          name: txt.Stat.incendiary_ammo.Hit.Total
+          value: 19
+        - key: Stat.incendiary_ammo.Damage.Total
+          name: txt.Stat.incendiary_ammo.Damage.Total
+          value: 71
+        - key: Stat.explosive_ammo.Shots.Total
+          name: txt.Stat.explosive_ammo.Shots.Total
+          value: 10
+        - key: Stat.explosive_ammo.Accuracy.Total
+          name: txt.Stat.explosive_ammo.Accuracy.Total
+          value: 110
+        - key: Stat.explosive_ammo.Hit.Total
+          name: txt.Stat.explosive_ammo.Hit.Total
+          value: 11
+        - key: Stat.explosive_ammo.Damage.Total
+          name: txt.Stat.explosive_ammo.Damage.Total
+          value: 254
+        - key: TD1.VS.COUNT
+          name: txt.TD1.VS.COUNT
+          value: 25
+        - key: TD1.VS.WINS
+          name: txt.TD1.VS.WINS
+          value: 10
+        - key: TD1.VS.STREAK01.0
+          name: txt.TD1.VS.STREAK01.0
+          value: 774310

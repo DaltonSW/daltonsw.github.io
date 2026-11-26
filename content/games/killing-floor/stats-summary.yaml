@@ -1,0 +1,43 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: Kills
+          value: 209
+        - key: WeldingPoints
+          name: Welding Points
+          value: 2754
+        - key: HeadshotKills
+          name: Sniper Headshot Kills
+          value: 31
+        - key: MeleeDamage
+          name: Melee Damage
+          value: 316
+        - key: CashDonated
+          name: Cash Donated
+          value: 10250
+        - key: GibbedFleshpounds
+          name: Gibbed Fleshpounds
+          value: 1
+        - key: StalkersKilledWithExplosives
+          name: Stalkers Killed with Explosives
+          value: 1
+        - key: GibbedEnemies
+          name: Gibbed Enemies
+          value: 7
+        - key: BloatKills
+          name: Bloat Kills
+          value: 9
+        - key: TotalZedTime
+          name: Total Zed Time
+          value: 78
+        - key: SirenKills
+          name: Siren Kills
+          value: 3
+        - key: ExplosivesDamage
+          name: Explosives Damage
+          value: 1858
+        - key: ZedKilledDuringHillbilly
+          name: stat 44
+          value: 209

@@ -1,0 +1,13 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: Parries
+          value: 3240
+        - key: ARanks
+          name: A Ranks Achieved
+          value: 25
+        - key: BossesDefeatedNormal
+          name: Contracts Obtained
+          value: 17

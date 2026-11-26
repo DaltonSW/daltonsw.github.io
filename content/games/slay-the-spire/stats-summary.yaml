@@ -1,0 +1,16 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: test_stat
+          name: heart_damage_key
+          value: 12869
+        - key: win_streak_ironclad
+          value: 0
+        - key: win_streak_silent
+          value: 0
+        - key: win_streak_defect
+          value: 1
+        - key: win_streak_watcher
+          value: 1

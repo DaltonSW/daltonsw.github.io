@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Portal 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "620",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 34,
  "total": 51,
  "first": "2012-11-17",
@@ -455,6 +455,397 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/620/STAYING_ALIVE.jpg",
    "rarity": 2.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "PS3.SP.progress"
+  },
+  {
+   "key": "PS3.bitfield_01_004"
+  },
+  {
+   "key": "PS3.bitfield_01_008"
+  },
+  {
+   "key": "PS3.bitfield_01_018"
+  },
+  {
+   "key": "PS3.bitfield_01_020"
+  },
+  {
+   "key": "PS3.bitfield_02_000"
+  },
+  {
+   "key": "PS3.bitfield_02_004"
+  },
+  {
+   "key": "PS3.bitfield_02_008"
+  },
+  {
+   "key": "PS3.bitfield_02_00C"
+  },
+  {
+   "key": "PS3.bitfield_02_010"
+  },
+  {
+   "key": "PS3.bitfield_03_03C"
+  },
+  {
+   "key": "PS3.bitfield_03_0A0"
+  },
+  {
+   "key": "PS3.bitfield_03_104"
+  },
+  {
+   "key": "PS3.bitfield_02_238"
+  },
+  {
+   "key": "PS3.CFG.sys.version"
+  },
+  {
+   "key": "PS3.CFG.sys.volume"
+  },
+  {
+   "key": "PS3.CFG.sys.snd_musicvolume"
+  },
+  {
+   "key": "PS3.CFG.sys.mat_monitorgamma"
+  },
+  {
+   "key": "PS3.CFG.sys.cloud_saves"
+  },
+  {
+   "key": "PS3.CFG.sys.ss_splitmode"
+  },
+  {
+   "key": "PS3.CFG.usr.version"
+  },
+  {
+   "key": "PS3.CFG.usr.joy_pitchsensitivity"
+  },
+  {
+   "key": "PS3.CFG.usr.joy_yawsensitivity"
+  },
+  {
+   "key": "PS3.CFG.usr.joy_cfg_preset"
+  },
+  {
+   "key": "PS3.CFG.usr.joy_cfg_custom_bindingsA"
+  },
+  {
+   "key": "PS3.CFG.usr.joy_cfg_custom_bindingsB"
+  },
+  {
+   "key": "PS3.CFG.usrSS.version"
+  },
+  {
+   "key": "PS3.CFG.usrSS.joy_pitchsensitivity"
+  },
+  {
+   "key": "PS3.CFG.usrSS.joy_yawsensitivity"
+  },
+  {
+   "key": "PS3.CFG.usrSS.joy_cfg_preset"
+  },
+  {
+   "key": "PS3.CFG.usrSS.joy_cfg_custom_bindingsA"
+  },
+  {
+   "key": "PS3.CFG.usrSS.joy_cfg_custom_bindingsB"
+  },
+  {
+   "key": "PS3.GI.lesson.version_number"
+  },
+  {
+   "key": "PS3.GI.lesson.return_to_hub"
+  },
+  {
+   "key": "PS3.GI.lesson.create_left_portal"
+  },
+  {
+   "key": "PS3.GI.lesson.create_right_portal"
+  },
+  {
+   "key": "PS3.GI.lesson.movement"
+  },
+  {
+   "key": "PS3.GI.lesson.push_button"
+  },
+  {
+   "key": "PS3.GI.lesson.countdown_timer"
+  },
+  {
+   "key": "PS3.GI.lesson.air_taunt"
+  },
+  {
+   "key": "PS3.GI.lesson.new_taunt_earned"
+  },
+  {
+   "key": "PS3.GI.lesson.teach_auto_bounce_suppression"
+  },
+  {
+   "key": "PS3.GI.lesson.zoom"
+  },
+  {
+   "key": "PS3.GI.lesson.unzoom"
+  },
+  {
+   "key": "PS3.GI.lesson.jump"
+  },
+  {
+   "key": "PS3.GI.lesson.movement_sp"
+  },
+  {
+   "key": "PS3.GI.lesson.drop_object"
+  },
+  {
+   "key": "PS3.GI.lesson.pick_up_object"
+  },
+  {
+   "key": "PS3.GI.lesson.partner_view"
+  },
+  {
+   "key": "PS3.GI.lesson.serverside_hint"
+  },
+  {
+   "key": "PS3.ACH.SPREAD_THE_LOVE[1].0"
+  },
+  {
+   "key": "PS3.ACH.SPREAD_THE_LOVE[1].1"
+  },
+  {
+   "key": "PS3.ACH.SPREAD_THE_LOVE[2].0"
+  },
+  {
+   "key": "PS3.ACH.SPREAD_THE_LOVE[2].1"
+  },
+  {
+   "key": "PS3.ACH.SPREAD_THE_LOVE[3].0"
+  },
+  {
+   "key": "PS3.ACH.SPREAD_THE_LOVE[3].1"
+  },
+  {
+   "key": "PS3.ACH.SPEED_RUN_COOP[1]"
+  },
+  {
+   "key": "PS3.ACH.SPEED_RUN_COOP[2]"
+  },
+  {
+   "key": "PS3.ACH.SPEED_RUN_COOP[3]"
+  },
+  {
+   "key": "PS3.GAME.stat_player_steps"
+  },
+  {
+   "key": "PS3.GAME.stat_portals_placed"
+  },
+  {
+   "key": "PS3.GAME.stat_portals_traveled"
+  },
+  {
+   "key": "SP.progress",
+   "value": 10
+  },
+  {
+   "key": "bitfield_01_004",
+   "value": 4294967293
+  },
+  {
+   "key": "bitfield_01_008",
+   "value": 511
+  },
+  {
+   "key": "bitfield_01_018",
+   "value": 255
+  },
+  {
+   "key": "bitfield_01_020",
+   "value": 173
+  },
+  {
+   "key": "bitfield_02_000"
+  },
+  {
+   "key": "bitfield_02_004"
+  },
+  {
+   "key": "bitfield_02_008",
+   "value": 64
+  },
+  {
+   "key": "bitfield_02_00C",
+   "value": 255
+  },
+  {
+   "key": "bitfield_02_010",
+   "value": 31
+  },
+  {
+   "key": "GI.lesson.version_number",
+   "value": 16
+  },
+  {
+   "key": "GI.lesson.return_to_hub",
+   "value": 1
+  },
+  {
+   "key": "GI.lesson.create_left_portal",
+   "value": 16
+  },
+  {
+   "key": "GI.lesson.create_right_portal",
+   "value": 16
+  },
+  {
+   "key": "GI.lesson.movement",
+   "value": 32
+  },
+  {
+   "key": "GI.lesson.push_button",
+   "value": 16
+  },
+  {
+   "key": "GI.lesson.countdown_timer",
+   "value": 32
+  },
+  {
+   "key": "GI.lesson.air_taunt",
+   "value": 32
+  },
+  {
+   "key": "GI.lesson.new_taunt_earned",
+   "value": 32
+  },
+  {
+   "key": "GI.lesson.teach_auto_bounce_suppression",
+   "value": 4
+  },
+  {
+   "key": "GI.lesson.zoom",
+   "value": 64
+  },
+  {
+   "key": "GI.lesson.unzoom",
+   "value": 48
+  },
+  {
+   "key": "GI.lesson.jump",
+   "value": 3
+  },
+  {
+   "key": "GI.lesson.movement_sp"
+  },
+  {
+   "key": "GI.lesson.drop_object",
+   "value": 48
+  },
+  {
+   "key": "GI.lesson.pick_up_object",
+   "value": 48
+  },
+  {
+   "key": "GI.lesson.partner_view"
+  },
+  {
+   "key": "GI.lesson.serverside_hint"
+  },
+  {
+   "key": "ACH.SPREAD_THE_LOVE[1].0",
+   "value": 84473312
+  },
+  {
+   "key": "ACH.SPREAD_THE_LOVE[1].1",
+   "value": 17825793
+  },
+  {
+   "key": "ACH.SPREAD_THE_LOVE[2].0",
+   "value": 13595476
+  },
+  {
+   "key": "ACH.SPREAD_THE_LOVE[2].1",
+   "value": 17825793
+  },
+  {
+   "key": "ACH.SPREAD_THE_LOVE[3].0"
+  },
+  {
+   "key": "ACH.SPREAD_THE_LOVE[3].1"
+  },
+  {
+   "key": "ACH.SPEED_RUN_COOP[1]",
+   "value": 43
+  },
+  {
+   "key": "ACH.SPEED_RUN_COOP[2]",
+   "value": 41
+  },
+  {
+   "key": "ACH.SPEED_RUN_COOP[3]",
+   "value": 42
+  },
+  {
+   "key": "GAME.stat_player_steps",
+   "value": 32573
+  },
+  {
+   "key": "GAME.stat_portals_placed",
+   "value": 1720
+  },
+  {
+   "key": "GAME.stat_portals_traveled",
+   "value": 1247
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_sensitivity_level",
+   "default": 1
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_heading_multiplier"
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_pitch_multiplier"
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_accel_band_exponent"
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_accel_band_size"
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_max_speed"
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_dead_zone_radius"
+  },
+  {
+   "key": "PS3.CFG.usr.sixense_aim_freeaim_pitch_offset"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_sensitivity_level",
+   "default": 1
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_heading_multiplier"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_pitch_multiplier"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_accel_band_exponent"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_accel_band_size"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_max_speed"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_dead_zone_radius"
+  },
+  {
+   "key": "PS3.CFG.usrSS.sixense_aim_freeaim_pitch_offset"
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Orcs Must Die!",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "102600",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 27,
  "platform": "PC",
@@ -225,6 +225,2568 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/102600/fa9ed2f3061fe362efcb43b6989946acfeef44cd.jpg",
    "rarity": 6.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "totalkills",
+   "name": "Total Kills"
+  },
+  {
+   "key": "totalkillsdev",
+   "name": "Total Kills Dev"
+  },
+  {
+   "key": "Chaos Chamber_won",
+   "name": "Chaos Chamber Won"
+  },
+  {
+   "key": "Chaos Chamber_failed",
+   "name": "Chaos Chamber Failed"
+  },
+  {
+   "key": "Chaos Chamber_restarted",
+   "name": "Chaos Chamber Restarted"
+  },
+  {
+   "key": "Chaos Chamber_played",
+   "name": "Chaos Chamber Played"
+  },
+  {
+   "key": "Chaos Chamber_wonnightmare",
+   "name": "Chaos Chamber Nightmare Won"
+  },
+  {
+   "key": "Chaos Chamber_failednightmare",
+   "name": "Chaos Chamber Nightmare Failed"
+  },
+  {
+   "key": "Chaos Chamber_restartednightmare",
+   "name": "Chaos Chamber Nightmare Restarted"
+  },
+  {
+   "key": "Chaos Chamber_playednightmare",
+   "name": "Chaos Chamber Nightmare Played"
+  },
+  {
+   "key": "Chaos Chamber_skulls",
+   "name": "Chaos Chamber Skulls"
+  },
+  {
+   "key": "Chaos Chamber_skullsnightmare",
+   "name": "Chaos Chamber Nightmare Skulls"
+  },
+  {
+   "key": "Chaos Chamber_score",
+   "name": "Chaos Chamber Score"
+  },
+  {
+   "key": "Chaos Chamber_scorenightmare",
+   "name": "Chaos Chamber Nightmare Score"
+  },
+  {
+   "key": "Chaos Chamber_riftpointslost",
+   "name": "Chaos Chamber Rift Points Lost"
+  },
+  {
+   "key": "Chaos Chamber_riftpointslostnightmare",
+   "name": "Chaos Chamber Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Chaos Chamber_time",
+   "name": "Chaos Chamber Completion Time (s)"
+  },
+  {
+   "key": "Chaos Chamber_timenightmare",
+   "name": "Chaos Chamber Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Chaos Chamber_combatkills",
+   "name": "Chaos Chamber Combat Kills"
+  },
+  {
+   "key": "Chaos Chamber_combatkillsnightmare",
+   "name": "Chaos Chamber Nightmare Combat Kills"
+  },
+  {
+   "key": "Chaos Chamber_trapkills",
+   "name": "Chaos Chamber Trap/Minion Kills"
+  },
+  {
+   "key": "Chaos Chamber_trapkillsnightmare",
+   "name": "Chaos Chamber Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Chaos Chamber_killstreak",
+   "name": "Chaos Chamber Largest Kill Streak"
+  },
+  {
+   "key": "Chaos Chamber_killstreaknightmare",
+   "name": "Chaos Chamber Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Chokepoint_won",
+   "name": "Chokepoint Won"
+  },
+  {
+   "key": "Chokepoint_failed",
+   "name": "Chokepoint Failed"
+  },
+  {
+   "key": "Chokepoint_restarted",
+   "name": "Chokepoint Restarted"
+  },
+  {
+   "key": "Chokepoint_played",
+   "name": "Chokepoint Played"
+  },
+  {
+   "key": "Chokepoint_wonnightmare",
+   "name": "Chokepoint Nightmare Won"
+  },
+  {
+   "key": "Chokepoint_failednightmare",
+   "name": "Chokepoint Nightmare Failed"
+  },
+  {
+   "key": "Chokepoint_restartednightmare",
+   "name": "Chokepoint Nightmare Restarted"
+  },
+  {
+   "key": "Chokepoint_playednightmare",
+   "name": "Chokepoint Nightmare Played"
+  },
+  {
+   "key": "Chokepoint_skulls",
+   "name": "Chokepoint Skulls"
+  },
+  {
+   "key": "Chokepoint_skullsnightmare",
+   "name": "Chokepoint Nightmare Skulls"
+  },
+  {
+   "key": "Chokepoint_score",
+   "name": "Chokepoint Score"
+  },
+  {
+   "key": "Chokepoint_scorenightmare",
+   "name": "Chokepoint Nightmare Score"
+  },
+  {
+   "key": "Chokepoint_riftpointslost",
+   "name": "Chokepoint Rift Points Lost"
+  },
+  {
+   "key": "Chokepoint_riftpointslostnightmare",
+   "name": "Chokepoint Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Chokepoint_time",
+   "name": "Chokepoint Completion Time (s)"
+  },
+  {
+   "key": "Chokepoint_timenightmare",
+   "name": "Chokepoint Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Chokepoint_combatkills",
+   "name": "Chokepoint Combat Kills"
+  },
+  {
+   "key": "Chokepoint_combatkillsnightmare",
+   "name": "Chokepoint Nightmare Combat Kills"
+  },
+  {
+   "key": "Chokepoint_trapkills",
+   "name": "Chokepoint Trap/Minion Kills"
+  },
+  {
+   "key": "Chokepoint_trapkillsnightmare",
+   "name": "Chokepoint Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Chokepoint_killstreak",
+   "name": "Chokepoint Largest Kill Streak"
+  },
+  {
+   "key": "Chokepoint_killstreaknightmare",
+   "name": "Chokepoint Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Corner_won",
+   "name": "Corner Won"
+  },
+  {
+   "key": "Corner_failed",
+   "name": "Corner Failed"
+  },
+  {
+   "key": "Corner_restarted",
+   "name": "Corner Restarted"
+  },
+  {
+   "key": "Corner_played",
+   "name": "Corner Played"
+  },
+  {
+   "key": "Corner_wonnightmare",
+   "name": "Corner Nightmare Won"
+  },
+  {
+   "key": "Corner_failednightmare",
+   "name": "Corner Nightmare Failed"
+  },
+  {
+   "key": "Corner_restartednightmare",
+   "name": "Corner Nightmare Restarted"
+  },
+  {
+   "key": "Corner_playednightmare",
+   "name": "Corner Nightmare Played"
+  },
+  {
+   "key": "Corner_skulls",
+   "name": "Corner Skulls"
+  },
+  {
+   "key": "Corner_skullsnightmare",
+   "name": "Corner Nightmare Skulls"
+  },
+  {
+   "key": "Corner_score",
+   "name": "Corner Score"
+  },
+  {
+   "key": "Corner_scorenightmare",
+   "name": "Corner Nightmare Score"
+  },
+  {
+   "key": "Corner_riftpointslost",
+   "name": "Corner Rift Points Lost"
+  },
+  {
+   "key": "Corner_riftpointslostnightmare",
+   "name": "Corner Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Corner_time",
+   "name": "Corner Completion Time (s)"
+  },
+  {
+   "key": "Corner_timenightmare",
+   "name": "Corner Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Corner_combatkills",
+   "name": "Corner Combat Kills"
+  },
+  {
+   "key": "Corner_combatkillsnightmare",
+   "name": "Corner Nightmare Combat Kills"
+  },
+  {
+   "key": "Corner_trapkills",
+   "name": "Corner Trap/Minion Kills"
+  },
+  {
+   "key": "Corner_trapkillsnightmare",
+   "name": "Corner Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Corner_killstreak",
+   "name": "Corner Largest Kill Streak"
+  },
+  {
+   "key": "Corner_killstreaknightmare",
+   "name": "Corner Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_won",
+   "name": "DLC020_DoubleTrouble Won"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_failed",
+   "name": "DLC020_DoubleTrouble Failed"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_restarted",
+   "name": "DLC020_DoubleTrouble Restarted"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_played",
+   "name": "DLC020_DoubleTrouble Played"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_wonnightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Won"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_failednightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Failed"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_restartednightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Restarted"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_playednightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Played"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_skulls",
+   "name": "DLC020_DoubleTrouble Skulls"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_skullsnightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Skulls"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_score",
+   "name": "DLC020_DoubleTrouble Score"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_scorenightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Score"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_riftpointslost",
+   "name": "DLC020_DoubleTrouble Rift Points Lost"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_riftpointslostnightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Rift Points Lost"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_time",
+   "name": "DLC020_DoubleTrouble Completion Time (s)"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_timenightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Completion Time (s)"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_combatkills",
+   "name": "DLC020_DoubleTrouble Combat Kills"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_combatkillsnightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Combat Kills"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_trapkills",
+   "name": "DLC020_DoubleTrouble Trap/Minion Kills"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_trapkillsnightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_killstreak",
+   "name": "DLC020_DoubleTrouble Largest Kill Streak"
+  },
+  {
+   "key": "DLC020_DoubleTrouble_killstreaknightmare",
+   "name": "DLC020_DoubleTrouble Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "DLC021_GreatGorge_won",
+   "name": "DLC021_GreatGorge Won"
+  },
+  {
+   "key": "DLC021_GreatGorge_failed",
+   "name": "DLC021_GreatGorge Failed"
+  },
+  {
+   "key": "DLC021_GreatGorge_restarted",
+   "name": "DLC021_GreatGorge Restarted"
+  },
+  {
+   "key": "DLC021_GreatGorge_played",
+   "name": "DLC021_GreatGorge Played"
+  },
+  {
+   "key": "DLC021_GreatGorge_wonnightmare",
+   "name": "DLC021_GreatGorge Nightmare Won"
+  },
+  {
+   "key": "DLC021_GreatGorge_failednightmare",
+   "name": "DLC021_GreatGorge Nightmare Failed"
+  },
+  {
+   "key": "DLC021_GreatGorge_restartednightmare",
+   "name": "DLC021_GreatGorge Nightmare Restarted"
+  },
+  {
+   "key": "DLC021_GreatGorge_playednightmare",
+   "name": "DLC021_GreatGorge Nightmare Played"
+  },
+  {
+   "key": "DLC021_GreatGorge_skulls",
+   "name": "DLC021_GreatGorge Skulls"
+  },
+  {
+   "key": "DLC021_GreatGorge_skullsnightmare",
+   "name": "DLC021_GreatGorge Nightmare Skulls"
+  },
+  {
+   "key": "DLC021_GreatGorge_score",
+   "name": "DLC021_GreatGorge Score"
+  },
+  {
+   "key": "DLC021_GreatGorge_scorenightmare",
+   "name": "DLC021_GreatGorge Nightmare Score"
+  },
+  {
+   "key": "DLC021_GreatGorge_riftpointslost",
+   "name": "DLC021_GreatGorge Rift Points Lost"
+  },
+  {
+   "key": "DLC021_GreatGorge_riftpointslostnightmare",
+   "name": "DLC021_GreatGorge Nightmare Rift Points Lost"
+  },
+  {
+   "key": "DLC021_GreatGorge_time",
+   "name": "DLC021_GreatGorge Completion Time (s)"
+  },
+  {
+   "key": "DLC021_GreatGorge_timenightmare",
+   "name": "DLC021_GreatGorge Nightmare Completion Time (s)"
+  },
+  {
+   "key": "DLC021_GreatGorge_combatkills",
+   "name": "DLC021_GreatGorge Combat Kills"
+  },
+  {
+   "key": "DLC021_GreatGorge_combatkillsnightmare",
+   "name": "DLC021_GreatGorge Nightmare Combat Kills"
+  },
+  {
+   "key": "DLC021_GreatGorge_trapkills",
+   "name": "DLC021_GreatGorge Trap/Minion Kills"
+  },
+  {
+   "key": "DLC021_GreatGorge_trapkillsnightmare",
+   "name": "DLC021_GreatGorge Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "DLC021_GreatGorge_killstreak",
+   "name": "DLC021_GreatGorge Largest Kill Streak"
+  },
+  {
+   "key": "DLC021_GreatGorge_killstreaknightmare",
+   "name": "DLC021_GreatGorge Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "DLC022_ReverseTower_won",
+   "name": "DLC022_ReverseTower Won"
+  },
+  {
+   "key": "DLC022_ReverseTower_failed",
+   "name": "DLC022_ReverseTower Failed"
+  },
+  {
+   "key": "DLC022_ReverseTower_restarted",
+   "name": "DLC022_ReverseTower Restarted"
+  },
+  {
+   "key": "DLC022_ReverseTower_played",
+   "name": "DLC022_ReverseTower Played"
+  },
+  {
+   "key": "DLC022_ReverseTower_wonnightmare",
+   "name": "DLC022_ReverseTower Nightmare Won"
+  },
+  {
+   "key": "DLC022_ReverseTower_failednightmare",
+   "name": "DLC022_ReverseTower Nightmare Failed"
+  },
+  {
+   "key": "DLC022_ReverseTower_restartednightmare",
+   "name": "DLC022_ReverseTower Nightmare Restarted"
+  },
+  {
+   "key": "DLC022_ReverseTower_playednightmare",
+   "name": "DLC022_ReverseTower Nightmare Played"
+  },
+  {
+   "key": "DLC022_ReverseTower_skulls",
+   "name": "DLC022_ReverseTower Skulls"
+  },
+  {
+   "key": "DLC022_ReverseTower_skullsnightmare",
+   "name": "DLC022_ReverseTower Nightmare Skulls"
+  },
+  {
+   "key": "DLC022_ReverseTower_score",
+   "name": "DLC022_ReverseTower Score"
+  },
+  {
+   "key": "DLC022_ReverseTower_scorenightmare",
+   "name": "DLC022_ReverseTower Nightmare Score"
+  },
+  {
+   "key": "DLC022_ReverseTower_riftpointslost",
+   "name": "DLC022_ReverseTower Rift Points Lost"
+  },
+  {
+   "key": "DLC022_ReverseTower_riftpointslostnightmare",
+   "name": "DLC022_ReverseTower Nightmare Rift Points Lost"
+  },
+  {
+   "key": "DLC022_ReverseTower_time",
+   "name": "DLC022_ReverseTower Completion Time (s)"
+  },
+  {
+   "key": "DLC022_ReverseTower_timenightmare",
+   "name": "DLC022_ReverseTower Nightmare Completion Time (s)"
+  },
+  {
+   "key": "DLC022_ReverseTower_combatkills",
+   "name": "DLC022_ReverseTower Combat Kills"
+  },
+  {
+   "key": "DLC022_ReverseTower_combatkillsnightmare",
+   "name": "DLC022_ReverseTower Nightmare Combat Kills"
+  },
+  {
+   "key": "DLC022_ReverseTower_trapkills",
+   "name": "DLC022_ReverseTower Trap/Minion Kills"
+  },
+  {
+   "key": "DLC022_ReverseTower_trapkillsnightmare",
+   "name": "DLC022_ReverseTower Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "DLC022_ReverseTower_killstreak",
+   "name": "DLC022_ReverseTower Largest Kill Streak"
+  },
+  {
+   "key": "DLC022_ReverseTower_killstreaknightmare",
+   "name": "DLC022_ReverseTower Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "DLC023_ThePit_won",
+   "name": "DLC023_ThePit Won"
+  },
+  {
+   "key": "DLC023_ThePit_failed",
+   "name": "DLC023_ThePit Failed"
+  },
+  {
+   "key": "DLC023_ThePit_restarted",
+   "name": "DLC023_ThePit Restarted"
+  },
+  {
+   "key": "DLC023_ThePit_played",
+   "name": "DLC023_ThePit Played"
+  },
+  {
+   "key": "DLC023_ThePit_wonnightmare",
+   "name": "DLC023_ThePit Nightmare Won"
+  },
+  {
+   "key": "DLC023_ThePit_failednightmare",
+   "name": "DLC023_ThePit Nightmare Failed"
+  },
+  {
+   "key": "DLC023_ThePit_restartednightmare",
+   "name": "DLC023_ThePit Nightmare Restarted"
+  },
+  {
+   "key": "DLC023_ThePit_playednightmare",
+   "name": "DLC023_ThePit Nightmare Played"
+  },
+  {
+   "key": "DLC023_ThePit_skulls",
+   "name": "DLC023_ThePit Skulls"
+  },
+  {
+   "key": "DLC023_ThePit_skullsnightmare",
+   "name": "DLC023_ThePit Nightmare Skulls"
+  },
+  {
+   "key": "DLC023_ThePit_score",
+   "name": "DLC023_ThePit Score"
+  },
+  {
+   "key": "DLC023_ThePit_scorenightmare",
+   "name": "DLC023_ThePit Nightmare Score"
+  },
+  {
+   "key": "DLC023_ThePit_riftpointslost",
+   "name": "DLC023_ThePit Rift Points Lost"
+  },
+  {
+   "key": "DLC023_ThePit_riftpointslostnightmare",
+   "name": "DLC023_ThePit Nightmare Rift Points Lost"
+  },
+  {
+   "key": "DLC023_ThePit_time",
+   "name": "DLC023_ThePit Completion Time (s)"
+  },
+  {
+   "key": "DLC023_ThePit_timenightmare",
+   "name": "DLC023_ThePit Nightmare Completion Time (s)"
+  },
+  {
+   "key": "DLC023_ThePit_combatkills",
+   "name": "DLC023_ThePit Combat Kills"
+  },
+  {
+   "key": "DLC023_ThePit_combatkillsnightmare",
+   "name": "DLC023_ThePit Nightmare Combat Kills"
+  },
+  {
+   "key": "DLC023_ThePit_trapkills",
+   "name": "DLC023_ThePit Trap/Minion Kills"
+  },
+  {
+   "key": "DLC023_ThePit_trapkillsnightmare",
+   "name": "DLC023_ThePit Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "DLC023_ThePit_killstreak",
+   "name": "DLC023_ThePit Largest Kill Streak"
+  },
+  {
+   "key": "DLC023_ThePit_killstreaknightmare",
+   "name": "DLC023_ThePit Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "DLC024_TripleDown_won",
+   "name": "DLC024_TripleDown Won"
+  },
+  {
+   "key": "DLC024_TripleDown_failed",
+   "name": "DLC024_TripleDown Failed"
+  },
+  {
+   "key": "DLC024_TripleDown_restarted",
+   "name": "DLC024_TripleDown Restarted"
+  },
+  {
+   "key": "DLC024_TripleDown_played",
+   "name": "DLC024_TripleDown Played"
+  },
+  {
+   "key": "DLC024_TripleDown_wonnightmare",
+   "name": "DLC024_TripleDown Nightmare Won"
+  },
+  {
+   "key": "DLC024_TripleDown_failednightmare",
+   "name": "DLC024_TripleDown Nightmare Failed"
+  },
+  {
+   "key": "DLC024_TripleDown_restartednightmare",
+   "name": "DLC024_TripleDown Nightmare Restarted"
+  },
+  {
+   "key": "DLC024_TripleDown_playednightmare",
+   "name": "DLC024_TripleDown Nightmare Played"
+  },
+  {
+   "key": "DLC024_TripleDown_skulls",
+   "name": "DLC024_TripleDown Skulls"
+  },
+  {
+   "key": "DLC024_TripleDown_skullsnightmare",
+   "name": "DLC024_TripleDown Nightmare Skulls"
+  },
+  {
+   "key": "DLC024_TripleDown_score",
+   "name": "DLC024_TripleDown Score"
+  },
+  {
+   "key": "DLC024_TripleDown_scorenightmare",
+   "name": "DLC024_TripleDown Nightmare Score"
+  },
+  {
+   "key": "DLC024_TripleDown_riftpointslost",
+   "name": "DLC024_TripleDown Rift Points Lost"
+  },
+  {
+   "key": "DLC024_TripleDown_riftpointslostnightmare",
+   "name": "DLC024_TripleDown Nightmare Rift Points Lost"
+  },
+  {
+   "key": "DLC024_TripleDown_time",
+   "name": "DLC024_TripleDown Completion Time (s)"
+  },
+  {
+   "key": "DLC024_TripleDown_timenightmare",
+   "name": "DLC024_TripleDown Nightmare Completion Time (s)"
+  },
+  {
+   "key": "DLC024_TripleDown_combatkills",
+   "name": "DLC024_TripleDown Combat Kills"
+  },
+  {
+   "key": "DLC024_TripleDown_combatkillsnightmare",
+   "name": "DLC024_TripleDown Nightmare Combat Kills"
+  },
+  {
+   "key": "DLC024_TripleDown_trapkills",
+   "name": "DLC024_TripleDown Trap/Minion Kills"
+  },
+  {
+   "key": "DLC024_TripleDown_trapkillsnightmare",
+   "name": "DLC024_TripleDown Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "DLC024_TripleDown_killstreak",
+   "name": "DLC024_TripleDown Largest Kill Streak"
+  },
+  {
+   "key": "DLC024_TripleDown_killstreaknightmare",
+   "name": "DLC024_TripleDown Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Finale_won",
+   "name": "Finale Won"
+  },
+  {
+   "key": "Finale_failed",
+   "name": "Finale Failed"
+  },
+  {
+   "key": "Finale_restarted",
+   "name": "Finale Restarted"
+  },
+  {
+   "key": "Finale_played",
+   "name": "Finale Played"
+  },
+  {
+   "key": "Finale_wonnightmare",
+   "name": "Finale Nightmare Won"
+  },
+  {
+   "key": "Finale_failednightmare",
+   "name": "Finale Nightmare Failed"
+  },
+  {
+   "key": "Finale_restartednightmare",
+   "name": "Finale Nightmare Restarted"
+  },
+  {
+   "key": "Finale_playednightmare",
+   "name": "Finale Nightmare Played"
+  },
+  {
+   "key": "Finale_skulls",
+   "name": "Finale Skulls"
+  },
+  {
+   "key": "Finale_skullsnightmare",
+   "name": "Finale Nightmare Skulls"
+  },
+  {
+   "key": "Finale_score",
+   "name": "Finale Score"
+  },
+  {
+   "key": "Finale_scorenightmare",
+   "name": "Finale Nightmare Score"
+  },
+  {
+   "key": "Finale_riftpointslost",
+   "name": "Finale Rift Points Lost"
+  },
+  {
+   "key": "Finale_riftpointslostnightmare",
+   "name": "Finale Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Finale_time",
+   "name": "Finale Completion Time (s)"
+  },
+  {
+   "key": "Finale_timenightmare",
+   "name": "Finale Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Finale_combatkills",
+   "name": "Finale Combat Kills"
+  },
+  {
+   "key": "Finale_combatkillsnightmare",
+   "name": "Finale Nightmare Combat Kills"
+  },
+  {
+   "key": "Finale_trapkills",
+   "name": "Finale Trap/Minion Kills"
+  },
+  {
+   "key": "Finale_trapkillsnightmare",
+   "name": "Finale Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Finale_killstreak",
+   "name": "Finale Largest Kill Streak"
+  },
+  {
+   "key": "Finale_killstreaknightmare",
+   "name": "Finale Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Gateway_won",
+   "name": "Gateway Won"
+  },
+  {
+   "key": "Gateway_failed",
+   "name": "Gateway Failed"
+  },
+  {
+   "key": "Gateway_restarted",
+   "name": "Gateway Restarted"
+  },
+  {
+   "key": "Gateway_played",
+   "name": "Gateway Played"
+  },
+  {
+   "key": "Gateway_wonnightmare",
+   "name": "Gateway Nightmare Won"
+  },
+  {
+   "key": "Gateway_failednightmare",
+   "name": "Gateway Nightmare Failed"
+  },
+  {
+   "key": "Gateway_restartednightmare",
+   "name": "Gateway Nightmare Restarted"
+  },
+  {
+   "key": "Gateway_playednightmare",
+   "name": "Gateway Nightmare Played"
+  },
+  {
+   "key": "Gateway_skulls",
+   "name": "Gateway Skulls"
+  },
+  {
+   "key": "Gateway_skullsnightmare",
+   "name": "Gateway Nightmare Skulls"
+  },
+  {
+   "key": "Gateway_score",
+   "name": "Gateway Score"
+  },
+  {
+   "key": "Gateway_scorenightmare",
+   "name": "Gateway Nightmare Score"
+  },
+  {
+   "key": "Gateway_riftpointslost",
+   "name": "Gateway Rift Points Lost"
+  },
+  {
+   "key": "Gateway_riftpointslostnightmare",
+   "name": "Gateway Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Gateway_time",
+   "name": "Gateway Completion Time (s)"
+  },
+  {
+   "key": "Gateway_timenightmare",
+   "name": "Gateway Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Gateway_combatkills",
+   "name": "Gateway Combat Kills"
+  },
+  {
+   "key": "Gateway_combatkillsnightmare",
+   "name": "Gateway Nightmare Combat Kills"
+  },
+  {
+   "key": "Gateway_trapkills",
+   "name": "Gateway Trap/Minion Kills"
+  },
+  {
+   "key": "Gateway_trapkillsnightmare",
+   "name": "Gateway Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Gateway_killstreak",
+   "name": "Gateway Largest Kill Streak"
+  },
+  {
+   "key": "Gateway_killstreaknightmare",
+   "name": "Gateway Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Hallway_won",
+   "name": "Hallway Won"
+  },
+  {
+   "key": "Hallway_failed",
+   "name": "Hallway Failed"
+  },
+  {
+   "key": "Hallway_restarted",
+   "name": "Hallway Restarted"
+  },
+  {
+   "key": "Hallway_played",
+   "name": "Hallway Played"
+  },
+  {
+   "key": "Hallway_wonnightmare",
+   "name": "Hallway Nightmare Won"
+  },
+  {
+   "key": "Hallway_failednightmare",
+   "name": "Hallway Nightmare Failed"
+  },
+  {
+   "key": "Hallway_restartednightmare",
+   "name": "Hallway Nightmare Restarted"
+  },
+  {
+   "key": "Hallway_playednightmare",
+   "name": "Hallway Nightmare Played"
+  },
+  {
+   "key": "Hallway_skulls",
+   "name": "Hallway Skulls"
+  },
+  {
+   "key": "Hallway_skullsnightmare",
+   "name": "Hallway Nightmare Skulls"
+  },
+  {
+   "key": "Hallway_score",
+   "name": "Hallway Score"
+  },
+  {
+   "key": "Hallway_scorenightmare",
+   "name": "Hallway Nightmare Score"
+  },
+  {
+   "key": "Hallway_riftpointslost",
+   "name": "Hallway Rift Points Lost"
+  },
+  {
+   "key": "Hallway_riftpointslostnightmare",
+   "name": "Hallway Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Hallway_time",
+   "name": "Hallway Completion Time (s)"
+  },
+  {
+   "key": "Hallway_timenightmare",
+   "name": "Hallway Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Hallway_combatkills",
+   "name": "Hallway Combat Kills"
+  },
+  {
+   "key": "Hallway_combatkillsnightmare",
+   "name": "Hallway Nightmare Combat Kills"
+  },
+  {
+   "key": "Hallway_trapkills",
+   "name": "Hallway Trap/Minion Kills"
+  },
+  {
+   "key": "Hallway_trapkillsnightmare",
+   "name": "Hallway Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Hallway_killstreak",
+   "name": "Hallway Largest Kill Streak"
+  },
+  {
+   "key": "Hallway_killstreaknightmare",
+   "name": "Hallway Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Hard Climb_won",
+   "name": "Hard Climb Won"
+  },
+  {
+   "key": "Hard Climb_failed",
+   "name": "Hard Climb Failed"
+  },
+  {
+   "key": "Hard Climb_restarted",
+   "name": "Hard Climb Restarted"
+  },
+  {
+   "key": "Hard Climb_played",
+   "name": "Hard Climb Played"
+  },
+  {
+   "key": "Hard Climb_wonnightmare",
+   "name": "Hard Climb Nightmare Won"
+  },
+  {
+   "key": "Hard Climb_failednightmare",
+   "name": "Hard Climb Nightmare Failed"
+  },
+  {
+   "key": "Hard Climb_restartednightmare",
+   "name": "Hard Climb Nightmare Restarted"
+  },
+  {
+   "key": "Hard Climb_playednightmare",
+   "name": "Hard Climb Nightmare Played"
+  },
+  {
+   "key": "Hard Climb_skulls",
+   "name": "Hard Climb Skulls"
+  },
+  {
+   "key": "Hard Climb_skullsnightmare",
+   "name": "Hard Climb Nightmare Skulls"
+  },
+  {
+   "key": "Hard Climb_score",
+   "name": "Hard Climb Score"
+  },
+  {
+   "key": "Hard Climb_scorenightmare",
+   "name": "Hard Climb Nightmare Score"
+  },
+  {
+   "key": "Hard Climb_riftpointslost",
+   "name": "Hard Climb Rift Points Lost"
+  },
+  {
+   "key": "Hard Climb_riftpointslostnightmare",
+   "name": "Hard Climb Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Hard Climb_time",
+   "name": "Hard Climb Completion Time (s)"
+  },
+  {
+   "key": "Hard Climb_timenightmare",
+   "name": "Hard Climb Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Hard Climb_combatkills",
+   "name": "Hard Climb Combat Kills"
+  },
+  {
+   "key": "Hard Climb_combatkillsnightmare",
+   "name": "Hard Climb Nightmare Combat Kills"
+  },
+  {
+   "key": "Hard Climb_trapkills",
+   "name": "Hard Climb Trap/Minion Kills"
+  },
+  {
+   "key": "Hard Climb_trapkillsnightmare",
+   "name": "Hard Climb Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Hard Climb_killstreak",
+   "name": "Hard Climb Largest Kill Streak"
+  },
+  {
+   "key": "Hard Climb_killstreaknightmare",
+   "name": "Hard Climb Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Killing Fields_won",
+   "name": "Killing Fields Won"
+  },
+  {
+   "key": "Killing Fields_failed",
+   "name": "Killing Fields Failed"
+  },
+  {
+   "key": "Killing Fields_restarted",
+   "name": "Killing Fields Restarted"
+  },
+  {
+   "key": "Killing Fields_played",
+   "name": "Killing Fields Played"
+  },
+  {
+   "key": "Killing Fields_wonnightmare",
+   "name": "Killing Fields Nightmare Won"
+  },
+  {
+   "key": "Killing Fields_failednightmare",
+   "name": "Killing Fields Nightmare Failed"
+  },
+  {
+   "key": "Killing Fields_restartednightmare",
+   "name": "Killing Fields Nightmare Restarted"
+  },
+  {
+   "key": "Killing Fields_playednightmare",
+   "name": "Killing Fields Nightmare Played"
+  },
+  {
+   "key": "Killing Fields_skulls",
+   "name": "Killing Fields Skulls"
+  },
+  {
+   "key": "Killing Fields_skullsnightmare",
+   "name": "Killing Fields Nightmare Skulls"
+  },
+  {
+   "key": "Killing Fields_score",
+   "name": "Killing Fields Score"
+  },
+  {
+   "key": "Killing Fields_scorenightmare",
+   "name": "Killing Fields Nightmare Score"
+  },
+  {
+   "key": "Killing Fields_riftpointslost",
+   "name": "Killing Fields Rift Points Lost"
+  },
+  {
+   "key": "Killing Fields_riftpointslostnightmare",
+   "name": "Killing Fields Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Killing Fields_time",
+   "name": "Killing Fields Completion Time (s)"
+  },
+  {
+   "key": "Killing Fields_timenightmare",
+   "name": "Killing Fields Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Killing Fields_combatkills",
+   "name": "Killing Fields Combat Kills"
+  },
+  {
+   "key": "Killing Fields_combatkillsnightmare",
+   "name": "Killing Fields Nightmare Combat Kills"
+  },
+  {
+   "key": "Killing Fields_trapkills",
+   "name": "Killing Fields Trap/Minion Kills"
+  },
+  {
+   "key": "Killing Fields_trapkillsnightmare",
+   "name": "Killing Fields Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Killing Fields_killstreak",
+   "name": "Killing Fields Largest Kill Streak"
+  },
+  {
+   "key": "Killing Fields_killstreaknightmare",
+   "name": "Killing Fields Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Library_won",
+   "name": "Library Won"
+  },
+  {
+   "key": "Library_failed",
+   "name": "Library Failed"
+  },
+  {
+   "key": "Library_restarted",
+   "name": "Library Restarted"
+  },
+  {
+   "key": "Library_played",
+   "name": "Library Played"
+  },
+  {
+   "key": "Library_wonnightmare",
+   "name": "Library Nightmare Won"
+  },
+  {
+   "key": "Library_failednightmare",
+   "name": "Library Nightmare Failed"
+  },
+  {
+   "key": "Library_restartednightmare",
+   "name": "Library Nightmare Restarted"
+  },
+  {
+   "key": "Library_playednightmare",
+   "name": "Library Nightmare Played"
+  },
+  {
+   "key": "Library_skulls",
+   "name": "Library Skulls"
+  },
+  {
+   "key": "Library_skullsnightmare",
+   "name": "Library Nightmare Skulls"
+  },
+  {
+   "key": "Library_score",
+   "name": "Library Score"
+  },
+  {
+   "key": "Library_scorenightmare",
+   "name": "Library Nightmare Score"
+  },
+  {
+   "key": "Library_riftpointslost",
+   "name": "Library Rift Points Lost"
+  },
+  {
+   "key": "Library_riftpointslostnightmare",
+   "name": "Library Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Library_time",
+   "name": "Library Completion Time (s)"
+  },
+  {
+   "key": "Library_timenightmare",
+   "name": "Library Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Library_combatkills",
+   "name": "Library Combat Kills"
+  },
+  {
+   "key": "Library_combatkillsnightmare",
+   "name": "Library Nightmare Combat Kills"
+  },
+  {
+   "key": "Library_trapkills",
+   "name": "Library Trap/Minion Kills"
+  },
+  {
+   "key": "Library_trapkillsnightmare",
+   "name": "Library Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Library_killstreak",
+   "name": "Library Largest Kill Streak"
+  },
+  {
+   "key": "Library_killstreaknightmare",
+   "name": "Library Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Lunch Break_won",
+   "name": "Lunch Break Won"
+  },
+  {
+   "key": "Lunch Break_failed",
+   "name": "Lunch Break Failed"
+  },
+  {
+   "key": "Lunch Break_restarted",
+   "name": "Lunch Break Restarted"
+  },
+  {
+   "key": "Lunch Break_played",
+   "name": "Lunch Break Played"
+  },
+  {
+   "key": "Lunch Break_wonnightmare",
+   "name": "Lunch Break Nightmare Won"
+  },
+  {
+   "key": "Lunch Break_failednightmare",
+   "name": "Lunch Break Nightmare Failed"
+  },
+  {
+   "key": "Lunch Break_restartednightmare",
+   "name": "Lunch Break Nightmare Restarted"
+  },
+  {
+   "key": "Lunch Break_playednightmare",
+   "name": "Lunch Break Nightmare Played"
+  },
+  {
+   "key": "Lunch Break_skulls",
+   "name": "Lunch Break Skulls"
+  },
+  {
+   "key": "Lunch Break_skullsnightmare",
+   "name": "Lunch Break Nightmare Skulls"
+  },
+  {
+   "key": "Lunch Break_score",
+   "name": "Lunch Break Score"
+  },
+  {
+   "key": "Lunch Break_scorenightmare",
+   "name": "Lunch Break Nightmare Score"
+  },
+  {
+   "key": "Lunch Break_riftpointslost",
+   "name": "Lunch Break Rift Points Lost"
+  },
+  {
+   "key": "Lunch Break_riftpointslostnightmare",
+   "name": "Lunch Break Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Lunch Break_time",
+   "name": "Lunch Break Completion Time (s)"
+  },
+  {
+   "key": "Lunch Break_timenightmare",
+   "name": "Lunch Break Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Lunch Break_combatkills",
+   "name": "Lunch Break Combat Kills"
+  },
+  {
+   "key": "Lunch Break_combatkillsnightmare",
+   "name": "Lunch Break Nightmare Combat Kills"
+  },
+  {
+   "key": "Lunch Break_trapkills",
+   "name": "Lunch Break Trap/Minion Kills"
+  },
+  {
+   "key": "Lunch Break_trapkillsnightmare",
+   "name": "Lunch Break Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Lunch Break_killstreak",
+   "name": "Lunch Break Largest Kill Streak"
+  },
+  {
+   "key": "Lunch Break_killstreaknightmare",
+   "name": "Lunch Break Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Overpass_won",
+   "name": "Overpass Won"
+  },
+  {
+   "key": "Overpass_failed",
+   "name": "Overpass Failed"
+  },
+  {
+   "key": "Overpass_restarted",
+   "name": "Overpass Restarted"
+  },
+  {
+   "key": "Overpass_played",
+   "name": "Overpass Played"
+  },
+  {
+   "key": "Overpass_wonnightmare",
+   "name": "Overpass Nightmare Won"
+  },
+  {
+   "key": "Overpass_failednightmare",
+   "name": "Overpass Nightmare Failed"
+  },
+  {
+   "key": "Overpass_restartednightmare",
+   "name": "Overpass Nightmare Restarted"
+  },
+  {
+   "key": "Overpass_playednightmare",
+   "name": "Overpass Nightmare Played"
+  },
+  {
+   "key": "Overpass_skulls",
+   "name": "Overpass Skulls"
+  },
+  {
+   "key": "Overpass_skullsnightmare",
+   "name": "Overpass Nightmare Skulls"
+  },
+  {
+   "key": "Overpass_score",
+   "name": "Overpass Score"
+  },
+  {
+   "key": "Overpass_scorenightmare",
+   "name": "Overpass Nightmare Score"
+  },
+  {
+   "key": "Overpass_riftpointslost",
+   "name": "Overpass Rift Points Lost"
+  },
+  {
+   "key": "Overpass_riftpointslostnightmare",
+   "name": "Overpass Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Overpass_time",
+   "name": "Overpass Completion Time (s)"
+  },
+  {
+   "key": "Overpass_timenightmare",
+   "name": "Overpass Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Overpass_combatkills",
+   "name": "Overpass Combat Kills"
+  },
+  {
+   "key": "Overpass_combatkillsnightmare",
+   "name": "Overpass Nightmare Combat Kills"
+  },
+  {
+   "key": "Overpass_trapkills",
+   "name": "Overpass Trap/Minion Kills"
+  },
+  {
+   "key": "Overpass_trapkillsnightmare",
+   "name": "Overpass Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Overpass_killstreak",
+   "name": "Overpass Largest Kill Streak"
+  },
+  {
+   "key": "Overpass_killstreaknightmare",
+   "name": "Overpass Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Rebirth_won",
+   "name": "Rebirth Won"
+  },
+  {
+   "key": "Rebirth_failed",
+   "name": "Rebirth Failed"
+  },
+  {
+   "key": "Rebirth_restarted",
+   "name": "Rebirth Restarted"
+  },
+  {
+   "key": "Rebirth_played",
+   "name": "Rebirth Played"
+  },
+  {
+   "key": "Rebirth_wonnightmare",
+   "name": "Rebirth Nightmare Won"
+  },
+  {
+   "key": "Rebirth_failednightmare",
+   "name": "Rebirth Nightmare Failed"
+  },
+  {
+   "key": "Rebirth_restartednightmare",
+   "name": "Rebirth Nightmare Restarted"
+  },
+  {
+   "key": "Rebirth_playednightmare",
+   "name": "Rebirth Nightmare Played"
+  },
+  {
+   "key": "Rebirth_skulls",
+   "name": "Rebirth Skulls"
+  },
+  {
+   "key": "Rebirth_skullsnightmare",
+   "name": "Rebirth Nightmare Skulls"
+  },
+  {
+   "key": "Rebirth_score",
+   "name": "Rebirth Score"
+  },
+  {
+   "key": "Rebirth_scorenightmare",
+   "name": "Rebirth Nightmare Score"
+  },
+  {
+   "key": "Rebirth_riftpointslost",
+   "name": "Rebirth Rift Points Lost"
+  },
+  {
+   "key": "Rebirth_riftpointslostnightmare",
+   "name": "Rebirth Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Rebirth_time",
+   "name": "Rebirth Completion Time (s)"
+  },
+  {
+   "key": "Rebirth_timenightmare",
+   "name": "Rebirth Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Rebirth_combatkills",
+   "name": "Rebirth Combat Kills"
+  },
+  {
+   "key": "Rebirth_combatkillsnightmare",
+   "name": "Rebirth Nightmare Combat Kills"
+  },
+  {
+   "key": "Rebirth_trapkills",
+   "name": "Rebirth Trap/Minion Kills"
+  },
+  {
+   "key": "Rebirth_trapkillsnightmare",
+   "name": "Rebirth Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Rebirth_killstreak",
+   "name": "Rebirth Largest Kill Streak"
+  },
+  {
+   "key": "Rebirth_killstreaknightmare",
+   "name": "Rebirth Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Sludge Hole_won",
+   "name": "Sludge Hole Won"
+  },
+  {
+   "key": "Sludge Hole_failed",
+   "name": "Sludge Hole Failed"
+  },
+  {
+   "key": "Sludge Hole_restarted",
+   "name": "Sludge Hole Restarted"
+  },
+  {
+   "key": "Sludge Hole_played",
+   "name": "Sludge Hole Played"
+  },
+  {
+   "key": "Sludge Hole_wonnightmare",
+   "name": "Sludge Hole Nightmare Won"
+  },
+  {
+   "key": "Sludge Hole_failednightmare",
+   "name": "Sludge Hole Nightmare Failed"
+  },
+  {
+   "key": "Sludge Hole_restartednightmare",
+   "name": "Sludge Hole Nightmare Restarted"
+  },
+  {
+   "key": "Sludge Hole_playednightmare",
+   "name": "Sludge Hole Nightmare Played"
+  },
+  {
+   "key": "Sludge Hole_skulls",
+   "name": "Sludge Hole Skulls"
+  },
+  {
+   "key": "Sludge Hole_skullsnightmare",
+   "name": "Sludge Hole Nightmare Skulls"
+  },
+  {
+   "key": "Sludge Hole_score",
+   "name": "Sludge Hole Score"
+  },
+  {
+   "key": "Sludge Hole_scorenightmare",
+   "name": "Sludge Hole Nightmare Score"
+  },
+  {
+   "key": "Sludge Hole_riftpointslost",
+   "name": "Sludge Hole Rift Points Lost"
+  },
+  {
+   "key": "Sludge Hole_riftpointslostnightmare",
+   "name": "Sludge Hole Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Sludge Hole_time",
+   "name": "Sludge Hole Completion Time (s)"
+  },
+  {
+   "key": "Sludge Hole_timenightmare",
+   "name": "Sludge Hole Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Sludge Hole_combatkills",
+   "name": "Sludge Hole Combat Kills"
+  },
+  {
+   "key": "Sludge Hole_combatkillsnightmare",
+   "name": "Sludge Hole Nightmare Combat Kills"
+  },
+  {
+   "key": "Sludge Hole_trapkills",
+   "name": "Sludge Hole Trap/Minion Kills"
+  },
+  {
+   "key": "Sludge Hole_trapkillsnightmare",
+   "name": "Sludge Hole Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Sludge Hole_killstreak",
+   "name": "Sludge Hole Largest Kill Streak"
+  },
+  {
+   "key": "Sludge Hole_killstreaknightmare",
+   "name": "Sludge Hole Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Stairs of Doom_won",
+   "name": "Stairs of Doom Won"
+  },
+  {
+   "key": "Stairs of Doom_failed",
+   "name": "Stairs of Doom Failed"
+  },
+  {
+   "key": "Stairs of Doom_restarted",
+   "name": "Stairs of Doom Restarted"
+  },
+  {
+   "key": "Stairs of Doom_played",
+   "name": "Stairs of Doom Played"
+  },
+  {
+   "key": "Stairs of Doom_wonnightmare",
+   "name": "Stairs of Doom Nightmare Won"
+  },
+  {
+   "key": "Stairs of Doom_failednightmare",
+   "name": "Stairs of Doom Nightmare Failed"
+  },
+  {
+   "key": "Stairs of Doom_restartednightmare",
+   "name": "Stairs of Doom Nightmare Restarted"
+  },
+  {
+   "key": "Stairs of Doom_playednightmare",
+   "name": "Stairs of Doom Nightmare Played"
+  },
+  {
+   "key": "Stairs of Doom_skulls",
+   "name": "Stairs of Doom Skulls"
+  },
+  {
+   "key": "Stairs of Doom_skullsnightmare",
+   "name": "Stairs of Doom Nightmare Skulls"
+  },
+  {
+   "key": "Stairs of Doom_score",
+   "name": "Stairs of Doom Score"
+  },
+  {
+   "key": "Stairs of Doom_scorenightmare",
+   "name": "Stairs of Doom Nightmare Score"
+  },
+  {
+   "key": "Stairs of Doom_riftpointslost",
+   "name": "Stairs of Doom Rift Points Lost"
+  },
+  {
+   "key": "Stairs of Doom_riftpointslostnightmare",
+   "name": "Stairs of Doom Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Stairs of Doom_time",
+   "name": "Stairs of Doom Completion Time (s)"
+  },
+  {
+   "key": "Stairs of Doom_timenightmare",
+   "name": "Stairs of Doom Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Stairs of Doom_combatkills",
+   "name": "Stairs of Doom Combat Kills"
+  },
+  {
+   "key": "Stairs of Doom_combatkillsnightmare",
+   "name": "Stairs of Doom Nightmare Combat Kills"
+  },
+  {
+   "key": "Stairs of Doom_trapkills",
+   "name": "Stairs of Doom Trap/Minion Kills"
+  },
+  {
+   "key": "Stairs of Doom_trapkillsnightmare",
+   "name": "Stairs of Doom Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Stairs of Doom_killstreak",
+   "name": "Stairs of Doom Largest Kill Streak"
+  },
+  {
+   "key": "Stairs of Doom_killstreaknightmare",
+   "name": "Stairs of Doom Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Stream_won",
+   "name": "Stream Won"
+  },
+  {
+   "key": "Stream_failed",
+   "name": "Stream Failed"
+  },
+  {
+   "key": "Stream_restarted",
+   "name": "Stream Restarted"
+  },
+  {
+   "key": "Stream_played",
+   "name": "Stream Played"
+  },
+  {
+   "key": "Stream_wonnightmare",
+   "name": "Stream Nightmare Won"
+  },
+  {
+   "key": "Stream_failednightmare",
+   "name": "Stream Nightmare Failed"
+  },
+  {
+   "key": "Stream_restartednightmare",
+   "name": "Stream Nightmare Restarted"
+  },
+  {
+   "key": "Stream_playednightmare",
+   "name": "Stream Nightmare Played"
+  },
+  {
+   "key": "Stream_skulls",
+   "name": "Stream Skulls"
+  },
+  {
+   "key": "Stream_skullsnightmare",
+   "name": "Stream Nightmare Skulls"
+  },
+  {
+   "key": "Stream_score",
+   "name": "Stream Score"
+  },
+  {
+   "key": "Stream_scorenightmare",
+   "name": "Stream Nightmare Score"
+  },
+  {
+   "key": "Stream_riftpointslost",
+   "name": "Stream Rift Points Lost"
+  },
+  {
+   "key": "Stream_riftpointslostnightmare",
+   "name": "Stream Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Stream_time",
+   "name": "Stream Completion Time (s)"
+  },
+  {
+   "key": "Stream_timenightmare",
+   "name": "Stream Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Stream_combatkills",
+   "name": "Stream Combat Kills"
+  },
+  {
+   "key": "Stream_combatkillsnightmare",
+   "name": "Stream Nightmare Combat Kills"
+  },
+  {
+   "key": "Stream_trapkills",
+   "name": "Stream Trap/Minion Kills"
+  },
+  {
+   "key": "Stream_trapkillsnightmare",
+   "name": "Stream Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Stream_killstreak",
+   "name": "Stream Largest Kill Streak"
+  },
+  {
+   "key": "Stream_killstreaknightmare",
+   "name": "Stream Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Arena_won",
+   "name": "The Arena Won"
+  },
+  {
+   "key": "The Arena_failed",
+   "name": "The Arena Failed"
+  },
+  {
+   "key": "The Arena_restarted",
+   "name": "The Arena Restarted"
+  },
+  {
+   "key": "The Arena_played",
+   "name": "The Arena Played"
+  },
+  {
+   "key": "The Arena_wonnightmare",
+   "name": "The Arena Nightmare Won"
+  },
+  {
+   "key": "The Arena_failednightmare",
+   "name": "The Arena Nightmare Failed"
+  },
+  {
+   "key": "The Arena_restartednightmare",
+   "name": "The Arena Nightmare Restarted"
+  },
+  {
+   "key": "The Arena_playednightmare",
+   "name": "The Arena Nightmare Played"
+  },
+  {
+   "key": "The Arena_skulls",
+   "name": "The Arena Skulls"
+  },
+  {
+   "key": "The Arena_skullsnightmare",
+   "name": "The Arena Nightmare Skulls"
+  },
+  {
+   "key": "The Arena_score",
+   "name": "The Arena Score"
+  },
+  {
+   "key": "The Arena_scorenightmare",
+   "name": "The Arena Nightmare Score"
+  },
+  {
+   "key": "The Arena_riftpointslost",
+   "name": "The Arena Rift Points Lost"
+  },
+  {
+   "key": "The Arena_riftpointslostnightmare",
+   "name": "The Arena Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Arena_time",
+   "name": "The Arena Completion Time (s)"
+  },
+  {
+   "key": "The Arena_timenightmare",
+   "name": "The Arena Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Arena_combatkills",
+   "name": "The Arena Combat Kills"
+  },
+  {
+   "key": "The Arena_combatkillsnightmare",
+   "name": "The Arena Nightmare Combat Kills"
+  },
+  {
+   "key": "The Arena_trapkills",
+   "name": "The Arena Trap/Minion Kills"
+  },
+  {
+   "key": "The Arena_trapkillsnightmare",
+   "name": "The Arena Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Arena_killstreak",
+   "name": "The Arena Largest Kill Streak"
+  },
+  {
+   "key": "The Arena_killstreaknightmare",
+   "name": "The Arena Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Balcony_won",
+   "name": "The Balcony Won"
+  },
+  {
+   "key": "The Balcony_failed",
+   "name": "The Balcony Failed"
+  },
+  {
+   "key": "The Balcony_restarted",
+   "name": "The Balcony Restarted"
+  },
+  {
+   "key": "The Balcony_played",
+   "name": "The Balcony Played"
+  },
+  {
+   "key": "The Balcony_wonnightmare",
+   "name": "The Balcony Nightmare Won"
+  },
+  {
+   "key": "The Balcony_failednightmare",
+   "name": "The Balcony Nightmare Failed"
+  },
+  {
+   "key": "The Balcony_restartednightmare",
+   "name": "The Balcony Nightmare Restarted"
+  },
+  {
+   "key": "The Balcony_playednightmare",
+   "name": "The Balcony Nightmare Played"
+  },
+  {
+   "key": "The Balcony_skulls",
+   "name": "The Balcony Skulls"
+  },
+  {
+   "key": "The Balcony_skullsnightmare",
+   "name": "The Balcony Nightmare Skulls"
+  },
+  {
+   "key": "The Balcony_score",
+   "name": "The Balcony Score"
+  },
+  {
+   "key": "The Balcony_scorenightmare",
+   "name": "The Balcony Nightmare Score"
+  },
+  {
+   "key": "The Balcony_riftpointslost",
+   "name": "The Balcony Rift Points Lost"
+  },
+  {
+   "key": "The Balcony_riftpointslostnightmare",
+   "name": "The Balcony Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Balcony_time",
+   "name": "The Balcony Completion Time (s)"
+  },
+  {
+   "key": "The Balcony_timenightmare",
+   "name": "The Balcony Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Balcony_combatkills",
+   "name": "The Balcony Combat Kills"
+  },
+  {
+   "key": "The Balcony_combatkillsnightmare",
+   "name": "The Balcony Nightmare Combat Kills"
+  },
+  {
+   "key": "The Balcony_trapkills",
+   "name": "The Balcony Trap/Minion Kills"
+  },
+  {
+   "key": "The Balcony_trapkillsnightmare",
+   "name": "The Balcony Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Balcony_killstreak",
+   "name": "The Balcony Largest Kill Streak"
+  },
+  {
+   "key": "The Balcony_killstreaknightmare",
+   "name": "The Balcony Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Baths_won",
+   "name": "The Baths Won"
+  },
+  {
+   "key": "The Baths_failed",
+   "name": "The Baths Failed"
+  },
+  {
+   "key": "The Baths_restarted",
+   "name": "The Baths Restarted"
+  },
+  {
+   "key": "The Baths_played",
+   "name": "The Baths Played"
+  },
+  {
+   "key": "The Baths_wonnightmare",
+   "name": "The Baths Nightmare Won"
+  },
+  {
+   "key": "The Baths_failednightmare",
+   "name": "The Baths Nightmare Failed"
+  },
+  {
+   "key": "The Baths_restartednightmare",
+   "name": "The Baths Nightmare Restarted"
+  },
+  {
+   "key": "The Baths_playednightmare",
+   "name": "The Baths Nightmare Played"
+  },
+  {
+   "key": "The Baths_skulls",
+   "name": "The Baths Skulls"
+  },
+  {
+   "key": "The Baths_skullsnightmare",
+   "name": "The Baths Nightmare Skulls"
+  },
+  {
+   "key": "The Baths_score",
+   "name": "The Baths Score"
+  },
+  {
+   "key": "The Baths_scorenightmare",
+   "name": "The Baths Nightmare Score"
+  },
+  {
+   "key": "The Baths_riftpointslost",
+   "name": "The Baths Rift Points Lost"
+  },
+  {
+   "key": "The Baths_riftpointslostnightmare",
+   "name": "The Baths Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Baths_time",
+   "name": "The Baths Completion Time (s)"
+  },
+  {
+   "key": "The Baths_timenightmare",
+   "name": "The Baths Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Baths_combatkills",
+   "name": "The Baths Combat Kills"
+  },
+  {
+   "key": "The Baths_combatkillsnightmare",
+   "name": "The Baths Nightmare Combat Kills"
+  },
+  {
+   "key": "The Baths_trapkills",
+   "name": "The Baths Trap/Minion Kills"
+  },
+  {
+   "key": "The Baths_trapkillsnightmare",
+   "name": "The Baths Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Baths_killstreak",
+   "name": "The Baths Largest Kill Streak"
+  },
+  {
+   "key": "The Baths_killstreaknightmare",
+   "name": "The Baths Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Bridge_won",
+   "name": "The Bridge Won"
+  },
+  {
+   "key": "The Bridge_failed",
+   "name": "The Bridge Failed"
+  },
+  {
+   "key": "The Bridge_restarted",
+   "name": "The Bridge Restarted"
+  },
+  {
+   "key": "The Bridge_played",
+   "name": "The Bridge Played"
+  },
+  {
+   "key": "The Bridge_wonnightmare",
+   "name": "The Bridge Nightmare Won"
+  },
+  {
+   "key": "The Bridge_failednightmare",
+   "name": "The Bridge Nightmare Failed"
+  },
+  {
+   "key": "The Bridge_restartednightmare",
+   "name": "The Bridge Nightmare Restarted"
+  },
+  {
+   "key": "The Bridge_playednightmare",
+   "name": "The Bridge Nightmare Played"
+  },
+  {
+   "key": "The Bridge_skulls",
+   "name": "The Bridge Skulls"
+  },
+  {
+   "key": "The Bridge_skullsnightmare",
+   "name": "The Bridge Nightmare Skulls"
+  },
+  {
+   "key": "The Bridge_score",
+   "name": "The Bridge Score"
+  },
+  {
+   "key": "The Bridge_scorenightmare",
+   "name": "The Bridge Nightmare Score"
+  },
+  {
+   "key": "The Bridge_riftpointslost",
+   "name": "The Bridge Rift Points Lost"
+  },
+  {
+   "key": "The Bridge_riftpointslostnightmare",
+   "name": "The Bridge Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Bridge_time",
+   "name": "The Bridge Completion Time (s)"
+  },
+  {
+   "key": "The Bridge_timenightmare",
+   "name": "The Bridge Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Bridge_combatkills",
+   "name": "The Bridge Combat Kills"
+  },
+  {
+   "key": "The Bridge_combatkillsnightmare",
+   "name": "The Bridge Nightmare Combat Kills"
+  },
+  {
+   "key": "The Bridge_trapkills",
+   "name": "The Bridge Trap/Minion Kills"
+  },
+  {
+   "key": "The Bridge_trapkillsnightmare",
+   "name": "The Bridge Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Bridge_killstreak",
+   "name": "The Bridge Largest Kill Streak"
+  },
+  {
+   "key": "The Bridge_killstreaknightmare",
+   "name": "The Bridge Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Corner 2_won",
+   "name": "The Corner 2 Won"
+  },
+  {
+   "key": "The Corner 2_failed",
+   "name": "The Corner 2 Failed"
+  },
+  {
+   "key": "The Corner 2_restarted",
+   "name": "The Corner 2 Restarted"
+  },
+  {
+   "key": "The Corner 2_played",
+   "name": "The Corner 2 Played"
+  },
+  {
+   "key": "The Corner 2_wonnightmare",
+   "name": "The Corner 2 Nightmare Won"
+  },
+  {
+   "key": "The Corner 2_failednightmare",
+   "name": "The Corner 2 Nightmare Failed"
+  },
+  {
+   "key": "The Corner 2_restartednightmare",
+   "name": "The Corner 2 Nightmare Restarted"
+  },
+  {
+   "key": "The Corner 2_playednightmare",
+   "name": "The Corner 2 Nightmare Played"
+  },
+  {
+   "key": "The Corner 2_skulls",
+   "name": "The Corner 2 Skulls"
+  },
+  {
+   "key": "The Corner 2_skullsnightmare",
+   "name": "The Corner 2 Nightmare Skulls"
+  },
+  {
+   "key": "The Corner 2_score",
+   "name": "The Corner 2 Score"
+  },
+  {
+   "key": "The Corner 2_scorenightmare",
+   "name": "The Corner 2 Nightmare Score"
+  },
+  {
+   "key": "The Corner 2_riftpointslost",
+   "name": "The Corner 2 Rift Points Lost"
+  },
+  {
+   "key": "The Corner 2_riftpointslostnightmare",
+   "name": "The Corner 2 Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Corner 2_time",
+   "name": "The Corner 2 Completion Time (s)"
+  },
+  {
+   "key": "The Corner 2_timenightmare",
+   "name": "The Corner 2 Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Corner 2_combatkills",
+   "name": "The Corner 2 Combat Kills"
+  },
+  {
+   "key": "The Corner 2_combatkillsnightmare",
+   "name": "The Corner 2 Nightmare Combat Kills"
+  },
+  {
+   "key": "The Corner 2_trapkills",
+   "name": "The Corner 2 Trap/Minion Kills"
+  },
+  {
+   "key": "The Corner 2_trapkillsnightmare",
+   "name": "The Corner 2 Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Corner 2_killstreak",
+   "name": "The Corner 2 Largest Kill Streak"
+  },
+  {
+   "key": "The Corner 2_killstreaknightmare",
+   "name": "The Corner 2 Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Fork_won",
+   "name": "The Fork Won"
+  },
+  {
+   "key": "The Fork_failed",
+   "name": "The Fork Failed"
+  },
+  {
+   "key": "The Fork_restarted",
+   "name": "The Fork Restarted"
+  },
+  {
+   "key": "The Fork_played",
+   "name": "The Fork Played"
+  },
+  {
+   "key": "The Fork_wonnightmare",
+   "name": "The Fork Nightmare Won"
+  },
+  {
+   "key": "The Fork_failednightmare",
+   "name": "The Fork Nightmare Failed"
+  },
+  {
+   "key": "The Fork_restartednightmare",
+   "name": "The Fork Nightmare Restarted"
+  },
+  {
+   "key": "The Fork_playednightmare",
+   "name": "The Fork Nightmare Played"
+  },
+  {
+   "key": "The Fork_skulls",
+   "name": "The Fork Skulls"
+  },
+  {
+   "key": "The Fork_skullsnightmare",
+   "name": "The Fork Nightmare Skulls"
+  },
+  {
+   "key": "The Fork_score",
+   "name": "The Fork Score"
+  },
+  {
+   "key": "The Fork_scorenightmare",
+   "name": "The Fork Nightmare Score"
+  },
+  {
+   "key": "The Fork_riftpointslost",
+   "name": "The Fork Rift Points Lost"
+  },
+  {
+   "key": "The Fork_riftpointslostnightmare",
+   "name": "The Fork Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Fork_time",
+   "name": "The Fork Completion Time (s)"
+  },
+  {
+   "key": "The Fork_timenightmare",
+   "name": "The Fork Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Fork_combatkills",
+   "name": "The Fork Combat Kills"
+  },
+  {
+   "key": "The Fork_combatkillsnightmare",
+   "name": "The Fork Nightmare Combat Kills"
+  },
+  {
+   "key": "The Fork_trapkills",
+   "name": "The Fork Trap/Minion Kills"
+  },
+  {
+   "key": "The Fork_trapkillsnightmare",
+   "name": "The Fork Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Fork_killstreak",
+   "name": "The Fork Largest Kill Streak"
+  },
+  {
+   "key": "The Fork_killstreaknightmare",
+   "name": "The Fork Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "The Squeeze_won",
+   "name": "The Squeeze Won"
+  },
+  {
+   "key": "The Squeeze_failed",
+   "name": "The Squeeze Failed"
+  },
+  {
+   "key": "The Squeeze_restarted",
+   "name": "The Squeeze Restarted"
+  },
+  {
+   "key": "The Squeeze_played",
+   "name": "The Squeeze Played"
+  },
+  {
+   "key": "The Squeeze_wonnightmare",
+   "name": "The Squeeze Nightmare Won"
+  },
+  {
+   "key": "The Squeeze_failednightmare",
+   "name": "The Squeeze Nightmare Failed"
+  },
+  {
+   "key": "The Squeeze_restartednightmare",
+   "name": "The Squeeze Nightmare Restarted"
+  },
+  {
+   "key": "The Squeeze_playednightmare",
+   "name": "The Squeeze Nightmare Played"
+  },
+  {
+   "key": "The Squeeze_skulls",
+   "name": "The Squeeze Skulls"
+  },
+  {
+   "key": "The Squeeze_skullsnightmare",
+   "name": "The Squeeze Nightmare Skulls"
+  },
+  {
+   "key": "The Squeeze_score",
+   "name": "The Squeeze Score"
+  },
+  {
+   "key": "The Squeeze_scorenightmare",
+   "name": "The Squeeze Nightmare Score"
+  },
+  {
+   "key": "The Squeeze_riftpointslost",
+   "name": "The Squeeze Rift Points Lost"
+  },
+  {
+   "key": "The Squeeze_riftpointslostnightmare",
+   "name": "The Squeeze Nightmare Rift Points Lost"
+  },
+  {
+   "key": "The Squeeze_time",
+   "name": "The Squeeze Completion Time (s)"
+  },
+  {
+   "key": "The Squeeze_timenightmare",
+   "name": "The Squeeze Nightmare Completion Time (s)"
+  },
+  {
+   "key": "The Squeeze_combatkills",
+   "name": "The Squeeze Combat Kills"
+  },
+  {
+   "key": "The Squeeze_combatkillsnightmare",
+   "name": "The Squeeze Nightmare Combat Kills"
+  },
+  {
+   "key": "The Squeeze_trapkills",
+   "name": "The Squeeze Trap/Minion Kills"
+  },
+  {
+   "key": "The Squeeze_trapkillsnightmare",
+   "name": "The Squeeze Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "The Squeeze_killstreak",
+   "name": "The Squeeze Largest Kill Streak"
+  },
+  {
+   "key": "The Squeeze_killstreaknightmare",
+   "name": "The Squeeze Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Tower_won",
+   "name": "Tower Won"
+  },
+  {
+   "key": "Tower_failed",
+   "name": "Tower Failed"
+  },
+  {
+   "key": "Tower_restarted",
+   "name": "Tower Restarted"
+  },
+  {
+   "key": "Tower_played",
+   "name": "Tower Played"
+  },
+  {
+   "key": "Tower_wonnightmare",
+   "name": "Tower Nightmare Won"
+  },
+  {
+   "key": "Tower_failednightmare",
+   "name": "Tower Nightmare Failed"
+  },
+  {
+   "key": "Tower_restartednightmare",
+   "name": "Tower Nightmare Restarted"
+  },
+  {
+   "key": "Tower_playednightmare",
+   "name": "Tower Nightmare Played"
+  },
+  {
+   "key": "Tower_skulls",
+   "name": "Tower Skulls"
+  },
+  {
+   "key": "Tower_skullsnightmare",
+   "name": "Tower Nightmare Skulls"
+  },
+  {
+   "key": "Tower_score",
+   "name": "Tower Score"
+  },
+  {
+   "key": "Tower_scorenightmare",
+   "name": "Tower Nightmare Score"
+  },
+  {
+   "key": "Tower_riftpointslost",
+   "name": "Tower Rift Points Lost"
+  },
+  {
+   "key": "Tower_riftpointslostnightmare",
+   "name": "Tower Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Tower_time",
+   "name": "Tower Completion Time (s)"
+  },
+  {
+   "key": "Tower_timenightmare",
+   "name": "Tower Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Tower_combatkills",
+   "name": "Tower Combat Kills"
+  },
+  {
+   "key": "Tower_combatkillsnightmare",
+   "name": "Tower Nightmare Combat Kills"
+  },
+  {
+   "key": "Tower_trapkills",
+   "name": "Tower Trap/Minion Kills"
+  },
+  {
+   "key": "Tower_trapkillsnightmare",
+   "name": "Tower Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Tower_killstreak",
+   "name": "Tower Largest Kill Streak"
+  },
+  {
+   "key": "Tower_killstreaknightmare",
+   "name": "Tower Nightmare Largest Kill Streak"
+  },
+  {
+   "key": "Twin Halls_won",
+   "name": "Twin Halls Won"
+  },
+  {
+   "key": "Twin Halls_failed",
+   "name": "Twin Halls Failed"
+  },
+  {
+   "key": "Twin Halls_restarted",
+   "name": "Twin Halls Restarted"
+  },
+  {
+   "key": "Twin Halls_played",
+   "name": "Twin Halls Played"
+  },
+  {
+   "key": "Twin Halls_wonnightmare",
+   "name": "Twin Halls Nightmare Won"
+  },
+  {
+   "key": "Twin Halls_failednightmare",
+   "name": "Twin Halls Nightmare Failed"
+  },
+  {
+   "key": "Twin Halls_restartednightmare",
+   "name": "Twin Halls Nightmare Restarted"
+  },
+  {
+   "key": "Twin Halls_playednightmare",
+   "name": "Twin Halls Nightmare Played"
+  },
+  {
+   "key": "Twin Halls_skulls",
+   "name": "Twin Halls Skulls"
+  },
+  {
+   "key": "Twin Halls_skullsnightmare",
+   "name": "Twin Halls Nightmare Skulls"
+  },
+  {
+   "key": "Twin Halls_score",
+   "name": "Twin Halls Score"
+  },
+  {
+   "key": "Twin Halls_scorenightmare",
+   "name": "Twin Halls Nightmare Score"
+  },
+  {
+   "key": "Twin Halls_riftpointslost",
+   "name": "Twin Halls Rift Points Lost"
+  },
+  {
+   "key": "Twin Halls_riftpointslostnightmare",
+   "name": "Twin Halls Nightmare Rift Points Lost"
+  },
+  {
+   "key": "Twin Halls_time",
+   "name": "Twin Halls Completion Time (s)"
+  },
+  {
+   "key": "Twin Halls_timenightmare",
+   "name": "Twin Halls Nightmare Completion Time (s)"
+  },
+  {
+   "key": "Twin Halls_combatkills",
+   "name": "Twin Halls Combat Kills"
+  },
+  {
+   "key": "Twin Halls_combatkillsnightmare",
+   "name": "Twin Halls Nightmare Combat Kills"
+  },
+  {
+   "key": "Twin Halls_trapkills",
+   "name": "Twin Halls Trap/Minion Kills"
+  },
+  {
+   "key": "Twin Halls_trapkillsnightmare",
+   "name": "Twin Halls Nightmare Trap/Minion Kills"
+  },
+  {
+   "key": "Twin Halls_killstreak",
+   "name": "Twin Halls Largest Kill Streak"
+  },
+  {
+   "key": "Twin Halls_killstreaknightmare",
+   "name": "Twin Halls Nightmare Largest Kill Streak"
   }
  ],
  "raw": {

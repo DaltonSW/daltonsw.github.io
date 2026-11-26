@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Vampire Survivors",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1794680",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 5,
  "total": 243,
  "first": "2022-11-02",
@@ -1965,6 +1965,16 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1794680/3733efd1ced3ac65f794098b5d1ebf6e196ce0f3.jpg",
    "rarity": 35.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "Adv_Start_MS",
+   "name": "Test_Start_MS"
+  },
+  {
+   "key": "Adv_End_MS",
+   "name": "Test_End_MS"
   }
  ],
  "raw": {

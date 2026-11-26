@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "SOULCALIBUR VI",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "544750",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 2,
  "total": 49,
  "first": "2020-12-08",
@@ -410,6 +410,16 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/544750/f8bd7f1730ed5ad951901134cf94735d10dacc9e.jpg",
    "rarity": 3.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "RankmatchWorld_Score",
+   "name": "PlayerPoint"
+  },
+  {
+   "key": "Class",
+   "name": "PlayerClass"
   }
  ],
  "raw": {

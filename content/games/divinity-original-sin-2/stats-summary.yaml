@@ -1,0 +1,17 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: SaveGameError_SaveSucceeded
+          name: Save Succeeded
+          value: 217
+        - key: SaveGameError_LoadSucceeded
+          name: Load Succeeded
+          value: 87
+        - key: DOS2_Quest40_STAT
+          name: DOS2_Quest40
+          value: 1
+        - key: DOS2_Quest81_STAT
+          name: DOS2_Quest81
+          value: 1

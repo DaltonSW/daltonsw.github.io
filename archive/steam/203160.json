@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Tomb Raider",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "203160",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 50,
  "platform": "PC",
@@ -120,7 +120,7 @@
    "description": "Kill 35 enemies with the pistol. ",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/99dc58ae0f4f014df74a27d8cbff7eb70d382bb8.jpg",
-   "rarity": 48.9
+   "rarity": 49
   },
   {
    "key": "NEW_ACHIEVEMENT_2_21",
@@ -412,6 +412,12 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/203160/ff27adec28e9028700b285f54097737340c27498.jpg",
    "rarity": 1.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_score",
+   "name": "Score"
   }
  ],
  "raw": {

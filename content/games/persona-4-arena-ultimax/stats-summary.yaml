@@ -1,0 +1,19 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: stat_AchievementCount
+          value: 3
+        - key: stat_WelcomP4U2
+          value: 1
+        - key: stat_Clear1Lesson
+          value: 1
+        - key: stat_Clear20Lesson
+          value: 20
+        - key: stat_ReversalAction100
+          value: 4
+        - key: stat_UltimateFinish30
+          value: 2
+        - key: stat_FatalCounter10
+          value: 2

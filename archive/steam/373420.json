@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Divinity: Original Sin Enhanced Edition",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "373420",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 35,
  "total": 54,
  "first": "2020-09-27",
@@ -483,6 +483,411 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/373420/7e1a3b812d3de953c98f84a1db68731fe5f5efbf.jpg",
    "rarity": 7.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "SaveGameError_SaveSucceeded",
+   "name": "Save Succeeded"
+  },
+  {
+   "key": "SaveGameError_LoadSucceeded",
+   "name": "Load Succeeded",
+   "value": 2
+  },
+  {
+   "key": "SaveGameError_LoadClearLevelCache"
+  },
+  {
+   "key": "SaveGameError_LoadGlobalsFile"
+  },
+  {
+   "key": "SaveGameError_LoadOsirisVariableHelper"
+  },
+  {
+   "key": "SaveGameError_LoadAlignmentManager"
+  },
+  {
+   "key": "SaveGameError_LoadPropertyDisputeManager"
+  },
+  {
+   "key": "SaveGameError_LoadCacheTemplateManager"
+  },
+  {
+   "key": "SaveGameError_LoadCDivinityStats"
+  },
+  {
+   "key": "SaveGameError_LoadEoCTriggerFactory"
+  },
+  {
+   "key": "SaveGameError_LoadInventoryFactory"
+  },
+  {
+   "key": "SaveGameError_LoadCharacterFactory"
+  },
+  {
+   "key": "SaveGameError_LoadItemFactory"
+  },
+  {
+   "key": "SaveGameError_LoadWaypointManager"
+  },
+  {
+   "key": "SaveGameError_LoadCustomBookManager"
+  },
+  {
+   "key": "SaveGameError_LoadJournalManager"
+  },
+  {
+   "key": "SaveGameError_LoadTutorialManager"
+  },
+  {
+   "key": "SaveGameError_LoadFlagManager"
+  },
+  {
+   "key": "SaveGameError_LoadStoryImplementation"
+  },
+  {
+   "key": "SaveGameError_LoadStoryPatchImplementation"
+  },
+  {
+   "key": "SaveGameError_LoadGameControl"
+  },
+  {
+   "key": "SaveGameError_LoadCopyFilesFromDir"
+  },
+  {
+   "key": "SaveGameError_LoadLevelCacheEmpty"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_CacheFile"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_InventoryFactory"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_CharacterManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_ItemManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_ProjectileManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_TurnManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_SurfaceManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_GameActionManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_AtmosphereOverrider"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_EnvironmentalStatusManager"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_KeywordControl"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_OverheadTextManager"
+  },
+  {
+   "key": "SaveGameError_LoadCharacters_TemplateNotFound"
+  },
+  {
+   "key": "SaveGameError_LoadCharacters_CountMismatch"
+  },
+  {
+   "key": "SaveGameError_LoadItems_TemplateNotFound"
+  },
+  {
+   "key": "SaveGameError_LoadItems_CountMismatch"
+  },
+  {
+   "key": "SaveGameError_LoadLoadStoryFailed"
+  },
+  {
+   "key": "SaveGameError_LoadCharacters_LocalTemplateNotFound"
+  },
+  {
+   "key": "SaveGameError_LoadItems_LocalTemplateNotFound"
+  },
+  {
+   "key": "SaveGameError_SaveClearTemporaryDir"
+  },
+  {
+   "key": "SaveGameError_SaveClearSavegameLevelCache"
+  },
+  {
+   "key": "SaveGameError_SaveCopyLevelCaches"
+  },
+  {
+   "key": "SaveGameError_SaveClearRealSaveDir"
+  },
+  {
+   "key": "SaveGameError_SaveCopyFinalSaveGame"
+  },
+  {
+   "key": "SaveGameError_SaveMetaData"
+  },
+  {
+   "key": "SaveGameError_SaveDumpMiniLog"
+  },
+  {
+   "key": "SaveGameError_SaveOsirisVariableHelper"
+  },
+  {
+   "key": "SaveGameError_SaveAlignmentManager"
+  },
+  {
+   "key": "SaveGameError_SavePropertyDisputeManager"
+  },
+  {
+   "key": "SaveGameError_SaveCacheTemplateManager"
+  },
+  {
+   "key": "SaveGameError_SaveEoCTriggerFactory"
+  },
+  {
+   "key": "SaveGameError_SaveInventoryFactory"
+  },
+  {
+   "key": "SaveGameError_SaveCharacterFactory"
+  },
+  {
+   "key": "SaveGameError_SaveItemFactory"
+  },
+  {
+   "key": "SaveGameError_SaveCustomBookManager"
+  },
+  {
+   "key": "SaveGameError_SaveStoryImplementation"
+  },
+  {
+   "key": "SaveGameError_SaveWaypointManager"
+  },
+  {
+   "key": "SaveGameError_SaveJournalManager"
+  },
+  {
+   "key": "SaveGameError_SaveTutorialManager"
+  },
+  {
+   "key": "SaveGameError_SaveGameControl"
+  },
+  {
+   "key": "SaveGameError_SaveFlagManager"
+  },
+  {
+   "key": "SaveGameError_SaveCDivinityStats"
+  },
+  {
+   "key": "SaveGameError_SaveMetaDataFile"
+  },
+  {
+   "key": "SaveGameError_SaveGlobalsFile"
+  },
+  {
+   "key": "SaveGameError_SaveLevelCache"
+  },
+  {
+   "key": "SaveGameError_SavePackingAddFile"
+  },
+  {
+   "key": "SaveGameError_SavePackingAddSanity"
+  },
+  {
+   "key": "SaveGameError_SaveSanityFile"
+  },
+  {
+   "key": "SaveGameError_SaveRemoveOriginals"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_InventoryFactory"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_CharacterManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_ItemManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_ProjectileManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_TurnManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_SurfaceManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_GameActionManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_ShroudManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_AtmosphereOverrider"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_EnvironmentalStatusManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_KeywordControl"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_OverheadTextManager"
+  },
+  {
+   "key": "SaveGameError_SaveLevel_SaveFile"
+  },
+  {
+   "key": "SaveGameError_SaveCharacters_CountMismatch"
+  },
+  {
+   "key": "SaveGameError_SaveItems_CountMismatch"
+  },
+  {
+   "key": "SaveGameError_LoadLevel_ShroudManager"
+  },
+  {
+   "key": "SaveGameError_SavePacking"
+  },
+  {
+   "key": "Cyseal",
+   "value": 1
+  },
+  {
+   "key": "CYS_BlackCove",
+   "value": 1
+  },
+  {
+   "key": "LucullaForest",
+   "value": 1
+  },
+  {
+   "key": "LUC_Mines",
+   "value": 1
+  },
+  {
+   "key": "ThePrisonGardenOfStoneKing",
+   "value": 1
+  },
+  {
+   "key": "DarkForest",
+   "value": 1
+  },
+  {
+   "key": "DAF_King_Tomb",
+   "value": 1
+  },
+  {
+   "key": "DAF_Druid_Dungeon",
+   "value": 1
+  },
+  {
+   "key": "DAF_InnerSanctum",
+   "value": 1
+  },
+  {
+   "key": "Homestead",
+   "value": 1
+  },
+  {
+   "key": "SaveGameError_LoadScriptParam_OsiTypeMismatch"
+  },
+  {
+   "key": "SaveGameError_SaveWarnings"
+  },
+  {
+   "key": "SaveGameError_LoadWarnings"
+  },
+  {
+   "key": "SaveGameError_SaveFailed"
+  },
+  {
+   "key": "SaveGameError_LoadFailed"
+  },
+  {
+   "key": "SaveGameError_LoadEnvironmentalStatusFactory"
+  },
+  {
+   "key": "SaveGameError_SaveEnvironmentalStatusFactory"
+  },
+  {
+   "key": "EarlyQuest_UnderLevel"
+  },
+  {
+   "key": "EarlyQuest_IntendedLevel"
+  },
+  {
+   "key": "EarlyQuest_SlightOverLevel"
+  },
+  {
+   "key": "EarlyQuest_StrongOverLevel"
+  },
+  {
+   "key": "MidQuest_UnderLevel"
+  },
+  {
+   "key": "MidQuest_IntendedLevel"
+  },
+  {
+   "key": "MidQuest_SlightOverLevel"
+  },
+  {
+   "key": "MidQuest_StrongOverLevel"
+  },
+  {
+   "key": "LateQuest_UnderLevel"
+  },
+  {
+   "key": "LateQuest_IntendedLevel"
+  },
+  {
+   "key": "LateQuest_SlightOverLevel"
+  },
+  {
+   "key": "LateQuest_StrongOverLevel"
+  },
+  {
+   "key": "EndQuest_UnderLevel"
+  },
+  {
+   "key": "EndQuest_IntendedLevel"
+  },
+  {
+   "key": "EndQuest_SlightOverLevel"
+  },
+  {
+   "key": "EndQuest_StrongOverLevel"
+  },
+  {
+   "key": "questee6_STAT",
+   "name": "Read Between the Lies"
+  },
+  {
+   "key": "questee11_STAT",
+   "name": "Mama Mia"
+  },
+  {
+   "key": "questee13_STAT",
+   "name": "Ice Ice Baby"
+  },
+  {
+   "key": "questee14_STAT",
+   "name": "Stone Cold Stunner"
+  },
+  {
+   "key": "questee15_STAT",
+   "name": "Raise 'Em Up"
+  },
+  {
+   "key": "questee16_STAT",
+   "name": "American Pie"
   }
  ],
  "raw": {

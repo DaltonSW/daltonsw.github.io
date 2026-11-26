@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Realm of the Mad God Exalt",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "200210",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 170,
  "platform": "PC",
@@ -1377,6 +1377,460 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200210/92afe65b49c8e252bab150095813424921f2bd6b.jpg",
    "rarity": 0.1
+  }
+ ],
+ "stats": [
+  {
+   "key": "ClassesUnlocked",
+   "name": "Classes Unlocked",
+   "value": 7
+  },
+  {
+   "key": "BestLevel",
+   "name": "Best Level",
+   "value": 20
+  },
+  {
+   "key": "BestFame",
+   "name": "Best Fame",
+   "value": 49
+  },
+  {
+   "key": "NumStars",
+   "name": "Stars",
+   "value": 4
+  },
+  {
+   "key": "OryxKills",
+   "name": "Oyrx Kills"
+  },
+  {
+   "key": "TilesUncovered",
+   "value": 200011
+  },
+  {
+   "key": "LevelUpAssists",
+   "name": "Level Up Assists"
+  },
+  {
+   "key": "QuestsCompleted",
+   "name": "Quests Completed",
+   "value": 20
+  },
+  {
+   "key": "GodKills"
+  },
+  {
+   "key": "RogueUnlocked",
+   "name": "Rogue Unlocked",
+   "value": 1
+  },
+  {
+   "key": "ArcherUnlocked",
+   "name": "Archer Unlocked",
+   "value": 1
+  },
+  {
+   "key": "PriestUnlocked",
+   "name": "Priest Unlocked",
+   "value": 1
+  },
+  {
+   "key": "WarriorUnlocked",
+   "name": "Warrior Unlocked",
+   "value": 1
+  },
+  {
+   "key": "KnightUnlocked",
+   "name": "Knight Unlocked",
+   "value": 1
+  },
+  {
+   "key": "PaladinUnlocked",
+   "name": "Paladin Unlocked"
+  },
+  {
+   "key": "AssassinUnlocked",
+   "name": "Assassin Unlocked"
+  },
+  {
+   "key": "NecromancerUnlocked",
+   "name": "Necromancer Unlocked"
+  },
+  {
+   "key": "HuntressUnlocked",
+   "name": "Huntress Unlocked"
+  },
+  {
+   "key": "MysticUnlocked",
+   "name": "Mystic Unlocked"
+  },
+  {
+   "key": "TricksterUnlocked",
+   "name": "Trickster Unlocked"
+  },
+  {
+   "key": "SorcererUnlocked",
+   "name": "Sorcerer Unlocked"
+  },
+  {
+   "key": "PirateCavesCompleted",
+   "name": "Pirate Caves Completed",
+   "value": 6
+  },
+  {
+   "key": "UndeadLairsCompleted",
+   "name": "Undead Lairs Completed"
+  },
+  {
+   "key": "AbyssOfDemonsCompleted",
+   "name": "Abyss of Demons Completed"
+  },
+  {
+   "key": "SnakePitsCompleted",
+   "name": "Snake Pits Completed"
+  },
+  {
+   "key": "SpiderDensCompleted",
+   "name": "Spider Dens Completed",
+   "value": 1
+  },
+  {
+   "key": "SpriteWorldsCompleted",
+   "name": "Sprite Worlds Completed"
+  },
+  {
+   "key": "TombsCompleted",
+   "name": "Tombs Completed"
+  },
+  {
+   "key": "DungeonTypesComplete",
+   "name": "Dungeon Types Completed",
+   "value": 2
+  },
+  {
+   "key": "TutorialCompletedCount"
+  },
+  {
+   "key": "ClassesUnlockedCount"
+  },
+  {
+   "key": "WizardUnlocked"
+  },
+  {
+   "key": "NinjaUnlocked"
+  },
+  {
+   "key": "SamuraiUnlocked"
+  },
+  {
+   "key": "BardUnlocked"
+  },
+  {
+   "key": "SummonerUnlocked"
+  },
+  {
+   "key": "KenseiUnlocked"
+  },
+  {
+   "key": "DruidUnlocked"
+  },
+  {
+   "key": "ClassesExaltedCount"
+  },
+  {
+   "key": "DungeonsCompleted"
+  },
+  {
+   "key": "HighDifficultyDungeonsCompleted"
+  },
+  {
+   "key": "DungeonCompletedPirateCave"
+  },
+  {
+   "key": "DungeonCompletedForestMaze"
+  },
+  {
+   "key": "DungeonCompletedSpiderDen"
+  },
+  {
+   "key": "DungeonCompletedForbiddenJungle"
+  },
+  {
+   "key": "DungeonCompletedTheHive"
+  },
+  {
+   "key": "DungeonCompletedSnakePit"
+  },
+  {
+   "key": "DungeonCompletedSpriteWorld"
+  },
+  {
+   "key": "DungeonCompletedCaveOfAThousandTreasures"
+  },
+  {
+   "key": "DungeonCompletedAncientRuins"
+  },
+  {
+   "key": "DungeonCompletedMagicWoods"
+  },
+  {
+   "key": "DungeonCompletedCandylandHuntingGrounds"
+  },
+  {
+   "key": "DungeonCompletedUndeadLair"
+  },
+  {
+   "key": "DungeonCompletedPuppetMasterSTheatre"
+  },
+  {
+   "key": "DungeonCompletedToxicSewers"
+  },
+  {
+   "key": "DungeonCompletedCursedLibrary"
+  },
+  {
+   "key": "DungeonCompletedMadLab"
+  },
+  {
+   "key": "DungeonCompletedAbyssOfDemons"
+  },
+  {
+   "key": "DungeonCompletedManorOfTheImmortals"
+  },
+  {
+   "key": "DungeonCompletedHauntedCemetery"
+  },
+  {
+   "key": "DungeonCompletedTheMachine"
+  },
+  {
+   "key": "DungeonCompletedDavyJonesLocker"
+  },
+  {
+   "key": "DungeonCompletedOceanTrench"
+  },
+  {
+   "key": "DungeonCompletedTheCrawlingDepths"
+  },
+  {
+   "key": "DungeonCompletedWoodlandLabyrinth"
+  },
+  {
+   "key": "DungeonCompletedDeadwaterDocks"
+  },
+  {
+   "key": "DungeonCompletedPuppetMasterSEncore"
+  },
+  {
+   "key": "DungeonCompletedCnidarianReef"
+  },
+  {
+   "key": "DungeonCompletedParasiteChambers"
+  },
+  {
+   "key": "DungeonCompletedTheTavern"
+  },
+  {
+   "key": "DungeonCompletedSulfurousWetlands"
+  },
+  {
+   "key": "DungeonCompletedMountainTemple"
+  },
+  {
+   "key": "DungeonCompletedLairOfDraconis"
+  },
+  {
+   "key": "DungeonCompletedTombOfTheAncients"
+  },
+  {
+   "key": "DungeonCompletedTheThirdDimension"
+  },
+  {
+   "key": "DungeonCompletedLairOfShaitan"
+  },
+  {
+   "key": "DungeonCompletedHighTechTerror"
+  },
+  {
+   "key": "DungeonCompletedMoonlightVillage"
+  },
+  {
+   "key": "DungeonCompletedIceCitadel"
+  },
+  {
+   "key": "DungeonCompletedBeachzone"
+  },
+  {
+   "key": "DungeonCompletedTheNest"
+  },
+  {
+   "key": "DungeonCompletedCultistHideout"
+  },
+  {
+   "key": "DungeonCompletedFungalCavern"
+  },
+  {
+   "key": "DungeonCompletedCrystalCavern"
+  },
+  {
+   "key": "DungeonCompletedSpectralPenitentiary"
+  },
+  {
+   "key": "DungeonCompletedKogboldSteamworks"
+  },
+  {
+   "key": "DungeonCompletedLostHalls"
+  },
+  {
+   "key": "DungeonCompletedTheVoid"
+  },
+  {
+   "key": "DungeonCompletedTheShatters"
+  },
+  {
+   "key": "DungeonCompletedHeroicUndeadLair"
+  },
+  {
+   "key": "DungeonCompletedInfernalAbyssOfDemons"
+  },
+  {
+   "key": "DungeonCompletedPlaguedNest"
+  },
+  {
+   "key": "DungeonCompletedAdvancedKogboldSteamworks"
+  },
+  {
+   "key": "DungeonCompletedOryxSCastle"
+  },
+  {
+   "key": "DungeonCompletedSecludedThicket"
+  },
+  {
+   "key": "EnemyKillsWineInspector"
+  },
+  {
+   "key": "EnemyKillsGodSlayer"
+  },
+  {
+   "key": "RealmGodKills"
+  },
+  {
+   "key": "BeaconGuardianKills"
+  },
+  {
+   "key": "RealmBossKills"
+  },
+  {
+   "key": "PetsOwned"
+  },
+  {
+   "key": "PetFeedCount"
+  },
+  {
+   "key": "PetMaxedSkillCount"
+  },
+  {
+   "key": "PetFuseCount"
+  },
+  {
+   "key": "EquipmentSnapshotGarmentsOfAChampion"
+  },
+  {
+   "key": "EquipmentSnapshotFullyEquipped"
+  },
+  {
+   "key": "DivineItemsAcquired"
+  },
+  {
+   "key": "EnchantCount"
+  },
+  {
+   "key": "ForgeCount"
+  },
+  {
+   "key": "DismantleCount"
+  },
+  {
+   "key": "ShinyItemsAcquired"
+  },
+  {
+   "key": "EquipmentSnapshotDazzling"
+  },
+  {
+   "key": "AccountLevel"
+  },
+  {
+   "key": "GuildJoinedCount"
+  },
+  {
+   "key": "EnemyKillsExpertTrimmer"
+  },
+  {
+   "key": "EnemyKillsHeartbreaker"
+  },
+  {
+   "key": "EnemyKillsWitchSeeker"
+  },
+  {
+   "key": "EnemyKillsMeltedSnow"
+  },
+  {
+   "key": "EnemyKillsWintersEnd"
+  },
+  {
+   "key": "DungeonCompletedMalogia"
+  },
+  {
+   "key": "DungeonCompletedUntaris"
+  },
+  {
+   "key": "DungeonCompletedKatalund"
+  },
+  {
+   "key": "DungeonCompletedForax"
+  },
+  {
+   "key": "EnemyKillsBuffedBunny"
+  },
+  {
+   "key": "EnemyKillsTastyBattle"
+  },
+  {
+   "key": "EnemyKillsKeyKeeper"
+  },
+  {
+   "key": "EnemyKillsFrozenThrone"
+  },
+  {
+   "key": "SkinsEquippedCount"
+  },
+  {
+   "key": "MaxedStatsCount"
+  },
+  {
+   "key": "SkinsAcquiredCount"
+  },
+  {
+   "key": "DungeonCompletedNeoMalogia"
+  },
+  {
+   "key": "DungeonCompletedNeoUntaris"
+  },
+  {
+   "key": "DungeonCompletedNeoForax"
+  },
+  {
+   "key": "DungeonCompletedNeoKatalund"
+  },
+  {
+   "key": "DungeonCompletedWSI1"
+  },
+  {
+   "key": "DungeonCompletedWSI2"
+  },
+  {
+   "key": "DungeonCompletedWSI3"
   }
  ],
  "raw": {

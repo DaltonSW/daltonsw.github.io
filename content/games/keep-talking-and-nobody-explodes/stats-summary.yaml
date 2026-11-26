@@ -1,0 +1,23 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: totalbombsdefused
+          name: Bombs Defused
+          value: 5
+        - key: totalbombsexploded
+          name: Bombs Exploded
+          value: 2
+        - key: totalmodulesdisarmed
+          name: Modules Disarmed
+          value: 22
+        - key: totalstrikes
+          name: Strikes
+          value: 8
+        - key: thebasicsprogress
+          name: The Basics
+          value: 4
+        - key: moduletypeprogress
+          name: Module Types Disarmed
+          value: 7

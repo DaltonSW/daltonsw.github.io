@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Nidhogg",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "94400",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 1,
  "total": 12,
  "first": "2018-02-15",
@@ -113,6 +113,48 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/94400/0e987e66a5281da9dc8cc78af077619b501d88a4.jpg",
    "rarity": 1.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "beatLevel",
+   "name": "Beat Level"
+  },
+  {
+   "key": "kills",
+   "name": "Kills",
+   "value": 101
+  },
+  {
+   "key": "playedCastle",
+   "name": "Castle Plays",
+   "value": 1
+  },
+  {
+   "key": "playedWilds",
+   "name": "Wilds Plays"
+  },
+  {
+   "key": "playedMines",
+   "name": "Mines Plays"
+  },
+  {
+   "key": "playedClouds",
+   "name": "Clouds Plays",
+   "value": 1
+  },
+  {
+   "key": "playedMatch",
+   "name": "Matches Played",
+   "value": 2
+  },
+  {
+   "key": "beatMatchmaking",
+   "name": "Matchmaking Games Won"
+  },
+  {
+   "key": "chat",
+   "name": "Intelligence"
   }
  ],
  "raw": {

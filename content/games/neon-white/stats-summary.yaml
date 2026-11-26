@@ -1,0 +1,20 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: VENDING_MACHINE_USES
+          name: Vending Machine Uses
+          value: 74
+        - key: COLLECTIBLES
+          name: Collectibles
+          value: 93
+        - key: MEMORIES
+          name: Memories
+          value: 10
+        - key: ACE_MEDALS
+          name: Ace Medals
+          value: 97
+        - key: HIGH_PERFORMER_COUNT
+          name: Top Performer Awards
+          value: 10

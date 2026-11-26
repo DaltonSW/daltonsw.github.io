@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "XCOM 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "268500",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 19,
  "total": 88,
  "first": "2018-10-13",
@@ -736,6 +736,50 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/268500/b0b91740b8dbf7f1f4f246f68305450307b0a373.jpg",
    "rarity": 15.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "alien_kills"
+  },
+  {
+   "key": "explode_kills"
+  },
+  {
+   "key": "17_1",
+   "name": "Test Int"
+  },
+  {
+   "key": "19_2",
+   "name": "Ranked Deathmatch Matches Won"
+  },
+  {
+   "key": "19_3",
+   "name": "Ranked Deathmatch Matches Lost"
+  },
+  {
+   "key": "19_4",
+   "name": "Ranked Deathmatch Disconnects"
+  },
+  {
+   "key": "19_1",
+   "name": "Ranked Deathmatch Game Started Flag"
+  },
+  {
+   "key": "20_2",
+   "name": "EW Ranked DM Won"
+  },
+  {
+   "key": "20_3",
+   "name": "EW Ranked DM Lost"
+  },
+  {
+   "key": "20_4",
+   "name": "EW Ranked DM Disconnects"
+  },
+  {
+   "key": "20_1",
+   "name": "EW Ranked DM Started Flag"
   }
  ],
  "raw": {

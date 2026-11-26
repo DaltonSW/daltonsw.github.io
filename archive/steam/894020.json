@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Death's Door",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "894020",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 14,
  "total": 24,
  "first": "2022-08-22",
@@ -225,6 +225,42 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/894020/ce9a2231ba1cb12e8c37d45ec7416edccca906e1.jpg",
    "rarity": 4.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_spend",
+   "name": "Stats Upgraded",
+   "value": 12
+  },
+  {
+   "key": "stat_trinkets",
+   "name": "Shiny Things",
+   "value": 24
+  },
+  {
+   "key": "stat_weapons",
+   "name": "Weapons",
+   "value": 5
+  },
+  {
+   "key": "stat_shrines",
+   "name": "Shrines",
+   "value": 8
+  },
+  {
+   "key": "stat_plants",
+   "name": "Plants \u0026 Seeds",
+   "value": 42
+  },
+  {
+   "key": "stat_crows",
+   "name": "Crows Talked To"
+  },
+  {
+   "key": "stat_owls",
+   "name": "Owls Met",
+   "value": 1
   }
  ],
  "raw": {

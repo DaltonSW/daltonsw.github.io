@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Borderlands 3",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "397540",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 3,
  "total": 81,
  "first": "2020-03-13",
@@ -667,6 +667,345 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/397540/f10c0f74b4b223f0cfe16d68d11c971a0b22b1f6.jpg",
    "rarity": 22.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "TestLeaderboard_TestColumnInt",
+   "name": "Leaderboard Test INT Stat"
+  },
+  {
+   "key": "TestLeaderboard_TestColumnFloat",
+   "name": "Leaderboard Test FLOAT Stat"
+  },
+  {
+   "key": "Achievement_1_Stat",
+   "name": "Reach Level 2",
+   "value": 2
+  },
+  {
+   "key": "Achievement_2_Stat",
+   "name": "Reach Level 10"
+  },
+  {
+   "key": "Achievement_3_Stat",
+   "name": "Reach Level 25"
+  },
+  {
+   "key": "Achievement_4_Stat",
+   "name": "Reach Level 50"
+  },
+  {
+   "key": "Achievement_5_Stat",
+   "name": "10 Heads or Skins",
+   "value": 3
+  },
+  {
+   "key": "Achievement_6_Stat",
+   "name": "10 Vehicle Parts"
+  },
+  {
+   "key": "Achievement_7_Stat",
+   "name": "Tip Moxxi"
+  },
+  {
+   "key": "Achievement_8_Stat",
+   "name": "Win Duel"
+  },
+  {
+   "key": "Achievement_9_Stat",
+   "name": "Revive Player",
+   "value": 1
+  },
+  {
+   "key": "Achievement_10_Stat",
+   "name": "Send Item"
+  },
+  {
+   "key": "Achievement_11_Stat",
+   "name": "Win Live Grenade"
+  },
+  {
+   "key": "Achievement_12_Stat",
+   "name": "Firing Range"
+  },
+  {
+   "key": "Achievement_13_Stat",
+   "name": "Crazy Earl"
+  },
+  {
+   "key": "Achievement_14_Stat",
+   "name": "Complete Raid"
+  },
+  {
+   "key": "Achievement_15_Stat",
+   "name": "Complete Circle of Slaughters"
+  },
+  {
+   "key": "Achievement_16_Stat",
+   "name": "Discover Locations Pandora"
+  },
+  {
+   "key": "Achievement_17_Stat",
+   "name": "Discover Eden-6 Locations"
+  },
+  {
+   "key": "Achievement_18_Stat",
+   "name": "Discover Promethea Locations"
+  },
+  {
+   "key": "Achievement_19_Stat",
+   "name": "Discover Nekrotephayo Locations"
+  },
+  {
+   "key": "Achievement_20_Stat",
+   "name": "Discover All Locations"
+  },
+  {
+   "key": "Achievement_21_Stat",
+   "name": "Complete 20 Side Missions",
+   "value": 4
+  },
+  {
+   "key": "Achievement_22_Stat",
+   "name": "Complete All Side Missions"
+  },
+  {
+   "key": "Achievement_23_Stat",
+   "name": "Complete Proving Grounds"
+  },
+  {
+   "key": "Achievement_24_Stat",
+   "name": "Complete Legendary Hunts"
+  },
+  {
+   "key": "Achievement_25_Stat",
+   "name": "Complete Targets of Opportunity"
+  },
+  {
+   "key": "Achievement_26_Stat",
+   "name": "Exploding Barrel Kill"
+  },
+  {
+   "key": "Achievement_27_Stat",
+   "name": "Gun Blade Kill"
+  },
+  {
+   "key": "Achievement_28_Stat",
+   "name": "Sticky Grenade Kill"
+  },
+  {
+   "key": "Achievement_29_Stat",
+   "name": "Equip Purple Gear"
+  },
+  {
+   "key": "Achievement_30_Stat",
+   "name": "Loyalty Package"
+  },
+  {
+   "key": "Achievement_31_Stat",
+   "name": "Mission 1",
+   "value": 1
+  },
+  {
+   "key": "Achievement_32_Stat",
+   "name": "Mission 2"
+  },
+  {
+   "key": "Achievement_33_Stat",
+   "name": "Mission 3"
+  },
+  {
+   "key": "Achievement_34_Stat",
+   "name": "Mission 4"
+  },
+  {
+   "key": "Achievement_35_Stat",
+   "name": "Mission 5"
+  },
+  {
+   "key": "Achievement_36_Stat",
+   "name": "Mission 6"
+  },
+  {
+   "key": "Achievement_37_Stat",
+   "name": "Mission 7"
+  },
+  {
+   "key": "Achievement_38_Stat",
+   "name": "Mission 8"
+  },
+  {
+   "key": "Achievement_39_Stat",
+   "name": "Mission 9"
+  },
+  {
+   "key": "Achievement_40_Stat",
+   "name": "Mission 10"
+  },
+  {
+   "key": "Achievement_41_Stat",
+   "name": "Mission 11"
+  },
+  {
+   "key": "Achievement_42_Stat",
+   "name": "Mission 12"
+  },
+  {
+   "key": "Achievement_43_Stat",
+   "name": "Mission 13"
+  },
+  {
+   "key": "Achievement_44_Stat",
+   "name": "Mission 14"
+  },
+  {
+   "key": "Achievement_45_Stat",
+   "name": "Ultimate Vault Hunter"
+  },
+  {
+   "key": "Achievement_46_Stat",
+   "name": "DLC1: VIP Mission"
+  },
+  {
+   "key": "Achievement_47_Stat",
+   "name": "DLC1: Ember"
+  },
+  {
+   "key": "Achievement_48_Stat",
+   "name": "DLC1: Mayor"
+  },
+  {
+   "key": "Achievement_49_Stat",
+   "name": "DLC1: Torgue"
+  },
+  {
+   "key": "Achievement_50_Stat",
+   "name": "DLC1: Blackjack"
+  },
+  {
+   "key": "Achievement_51_Stat",
+   "name": "DLC1: Clapstructor"
+  },
+  {
+   "key": "Achievement_52_Stat",
+   "name": "DLC1: Debt"
+  },
+  {
+   "key": "Achievement_53_Stat",
+   "name": "DLC2: Mission1"
+  },
+  {
+   "key": "Achievement_54_Stat",
+   "name": "DLC2: FinalMission"
+  },
+  {
+   "key": "Achievement_55_Stat",
+   "name": "DLC2: Wendigo"
+  },
+  {
+   "key": "Achievement_56_Stat",
+   "name": "DLC2: Deathtrap"
+  },
+  {
+   "key": "Achievement_57_Stat",
+   "name": "DLC2: Crew"
+  },
+  {
+   "key": "Achievement_58_Stat",
+   "name": "DLC2: ECHO"
+  },
+  {
+   "key": "Achievement_59_Stat",
+   "name": "DLC2: Rare"
+  },
+  {
+   "key": "Achievement_60_Stat",
+   "name": "DLC2: Fish"
+  },
+  {
+   "key": "Achievement_61_Stat",
+   "name": "DLC3: West"
+  },
+  {
+   "key": "Achievement_62_Stat",
+   "name": "DLC3: Challenging"
+  },
+  {
+   "key": "Achievement_63_Stat",
+   "name": "DLC3: Hunter"
+  },
+  {
+   "key": "Achievement_64_Stat",
+   "name": "DLC3: Stone"
+  },
+  {
+   "key": "Achievement_65_Stat",
+   "name": "DLC3: Wash"
+  },
+  {
+   "key": "Achievement_66_Stat",
+   "name": "DLC3: Track"
+  },
+  {
+   "key": "Achievement_67_Stat",
+   "name": "DLC3: Ruin"
+  },
+  {
+   "key": "Achievement_68_Stat",
+   "name": "DLC3: Bounty"
+  },
+  {
+   "key": "Achievement_69_Stat",
+   "name": "DLC4: 69"
+  },
+  {
+   "key": "Achievement_70_Stat",
+   "name": "DCL4: 70"
+  },
+  {
+   "key": "Achievement_71_Stat",
+   "name": "DLC4: 71"
+  },
+  {
+   "key": "Achievement_72_Stat",
+   "name": "DLC4: 72"
+  },
+  {
+   "key": "Achievement_73_Stat",
+   "name": "DLC4: 73"
+  },
+  {
+   "key": "Achievement_74_Stat",
+   "name": "DLC4: 74"
+  },
+  {
+   "key": "Achievement_75_Stat",
+   "name": "DLC4: 75"
+  },
+  {
+   "key": "Achievement_76_Stat",
+   "name": "DLC5: 76"
+  },
+  {
+   "key": "Achievement_77_Stat",
+   "name": "DLC5: 77"
+  },
+  {
+   "key": "Achievement_78_Stat",
+   "name": "DLC5: 78"
+  },
+  {
+   "key": "Achievement_79_Stat",
+   "name": "DLC6: 79"
+  },
+  {
+   "key": "Achievement_80_Stat",
+   "name": "DLC6: 80"
+  },
+  {
+   "key": "Achievement_81_Stat",
+   "name": "DLC6: 81"
   }
  ],
  "raw": {

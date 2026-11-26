@@ -1,0 +1,14 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: catPets
+          name: Times Hellebore Petted
+          value: 17
+        - key: locationsVisited
+          name: Locations Visited
+          value: 88
+        - key: plantsIdentified
+          name: Plants Identified
+          value: 77

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Tabletop Simulator",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "286160",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 26,
  "first": "2015-06-16",
@@ -236,6 +236,47 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/286160/28760e896bab8b99fbc4113bc313276e13a25708.jpg",
    "rarity": 0.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_CHANGE_COLOR",
+   "name": "Wishy Washy",
+   "value": 55
+  },
+  {
+   "key": "STAT_FLIP_TABLE",
+   "name": "Flip Table",
+   "value": 264
+  },
+  {
+   "key": "STAT_SPAWN_CHIPS",
+   "name": "Money, Money, Money",
+   "value": 539
+  },
+  {
+   "key": "STAT_SAVE_ITEMS_TO_CHEST",
+   "name": "Treasure Trove",
+   "value": 8
+  },
+  {
+   "key": "STAT_LOCK_ITEMS",
+   "name": "Don’t Touch!",
+   "value": 62
+  },
+  {
+   "key": "STAT_TINT_OBJECTS",
+   "name": "Color me pretty",
+   "value": 25
+  },
+  {
+   "key": "STAT_UPLOAD_STEAM_WORKSHOP_ITEMS",
+   "name": "Sharing is Caring"
+  },
+  {
+   "key": "STAT_HOURS_PLAYED",
+   "name": "Hours Played",
+   "value": 3734
   }
  ],
  "raw": {

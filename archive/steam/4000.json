@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Garry's Mod",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "4000",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 2,
  "total": 29,
  "first": "2012-12-28",
@@ -247,6 +247,75 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/f4bc0f96a846eeaa63a9ea92d11757b342376374.jpg",
    "rarity": 3.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "GMA_X_STARTUPS_STAT",
+   "name": "Startups",
+   "value": 3
+  },
+  {
+   "key": "GMA_X_MINUTES_STAT",
+   "name": "Minutes Played",
+   "value": 7
+  },
+  {
+   "key": "GMA_X_MAPS_STAT",
+   "name": "Maps Played",
+   "value": 2
+  },
+  {
+   "key": "GMA_BADDIES_STAT",
+   "name": "Baddies Killed"
+  },
+  {
+   "key": "GMA_BYSTANDER_STAT",
+   "name": "Bystanders Killed"
+  },
+  {
+   "key": "GMA_GOODIES_STAT",
+   "name": "Goodies Killed"
+  },
+  {
+   "key": "GMA_BALLEATER_STAT",
+   "name": "Balls Eaten"
+  },
+  {
+   "key": "GMA_PROPSPAWNER_STAT",
+   "name": "Props Spawned"
+  },
+  {
+   "key": "GMA_BALLOONPOPPER_STAT",
+   "name": "Balloons Spawned"
+  },
+  {
+   "key": "GMA_REMOVER_STAT",
+   "name": "Entities Removed"
+  },
+  {
+   "key": "GMA_SPAWNMENUER_STAT",
+   "name": "Spawnmenus Opened"
+  },
+  {
+   "key": "GMA_BADCODER_STAT",
+   "name": "Lua Errors Seen"
+  },
+  {
+   "key": "GMA_NPCSPAWNER_STAT",
+   "name": "NPCs Spawned"
+  },
+  {
+   "key": "GMA_RAGDOLLSPAWNER_STAT",
+   "name": "Ragdolls Spawned"
+  },
+  {
+   "key": "NUM_WORKSHOP_THUMBS",
+   "name": "Thumbs Earned"
+  },
+  {
+   "key": "MOST_WORKSHOP_THUMBS",
+   "name": "Most Thumbs"
   }
  ],
  "raw": {

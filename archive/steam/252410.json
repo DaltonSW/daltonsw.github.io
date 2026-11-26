@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "SteamWorld Dig",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "252410",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 13,
  "total": 24,
  "first": "2013-12-28",
@@ -218,6 +218,33 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/252410/cb165aa2bafe8361db9e23f5bae93dbb2345229c.jpg",
    "rarity": 22.5
+  }
+ ],
+ "stats": [
+  {
+   "key": "cntr_destroy_blocks",
+   "name": "Destroyed blocks",
+   "value": 4851
+  },
+  {
+   "key": "cntr_suicide_enemy_trilobite_wall",
+   "name": "Defeated sleeping trilobites",
+   "value": 10
+  },
+  {
+   "key": "cntr_suicide_enemy_shiner",
+   "name": "Defeated sleeping shiners",
+   "value": 10
+  },
+  {
+   "key": "cntr_suicide_enemy_trilobite_mecha_wall",
+   "name": "Defeated sleeping mecha trilobites",
+   "value": 6
+  },
+  {
+   "key": "cntr_crushed_enemies",
+   "name": "Enemies crushed",
+   "value": 4
   }
  ],
  "raw": {

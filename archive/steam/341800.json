@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Keep Talking and Nobody Explodes",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "341800",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 2,
  "total": 10,
  "first": "2022-11-05",
@@ -98,6 +98,58 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/341800/ac0f40573c5b9c833664dab13cef430fe9abbe02.jpg",
    "rarity": 30.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "totalbombsdefused",
+   "name": "Bombs Defused",
+   "value": 5
+  },
+  {
+   "key": "totalbombsexploded",
+   "name": "Bombs Exploded",
+   "value": 2
+  },
+  {
+   "key": "totalmodulesdisarmed",
+   "name": "Modules Disarmed",
+   "value": 22
+  },
+  {
+   "key": "totalstrikes",
+   "name": "Strikes",
+   "value": 8
+  },
+  {
+   "key": "thebasicsprogress",
+   "name": "The Basics",
+   "value": 4
+  },
+  {
+   "key": "moderateprogress",
+   "name": "Moderate"
+  },
+  {
+   "key": "needyprogress",
+   "name": "Needy"
+  },
+  {
+   "key": "challengingprogress",
+   "name": "Challenging"
+  },
+  {
+   "key": "extremeprogress",
+   "name": "Extreme"
+  },
+  {
+   "key": "exoticprogress",
+   "name": "Exotic"
+  },
+  {
+   "key": "moduletypeprogress",
+   "name": "Module Types Disarmed",
+   "value": 7
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Starbound",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "211820",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 51,
  "platform": "PC",
@@ -470,6 +470,36 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/211820/b8c8cf119d82cf42ef9476608241bb9a7015b046.jpg",
    "hidden": true,
    "rarity": 2.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "killInnocent",
+   "name": "Innocents Killed"
+  },
+  {
+   "key": "killMonster.monsterType.nutmidge",
+   "name": "Nutmidges Killed"
+  },
+  {
+   "key": "killNpcSpecies.species.novakid",
+   "name": "Novakids Killed"
+  },
+  {
+   "key": "useItem.itemType.soda",
+   "name": "Sodas drunk"
+  },
+  {
+   "key": "kill.monsterClass.rare",
+   "name": "Rare monsters killed"
+  },
+  {
+   "key": "quest.generated.true",
+   "name": "Generated quests completed"
+  },
+  {
+   "key": "bountyQuest.targetType.npc",
+   "name": "Criminals captured"
   }
  ],
  "raw": {

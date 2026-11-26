@@ -1,0 +1,49 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: ClearCount_00
+          name: ClearCount Quest 01
+          value: 2
+        - key: LevelupCount_00
+          name: LevelupCount Quest 01
+          value: 8
+        - key: ClearCount_01
+          name: ClearCount Quest 02
+          value: 1
+        - key: GivingGold_01
+          name: GivingGold Quest 02
+          value: 100
+        - key: LevelupCount_01
+          name: LevelupCount Quest 02
+          value: 5
+        - key: ClearCount_03
+          name: ClearCount Quest 04
+          value: 1
+        - key: GivingGold_03
+          name: GivingGold Quest 04
+          value: 300
+        - key: LevelupCount_03
+          name: LevelupCount Quest 04
+          value: 13
+        - key: ClearCount_04
+          name: ClearCount Quest 05
+          value: 1
+        - key: GivingGold_04
+          name: GivingGold Quest 05
+          value: 300
+        - key: LevelupCount_04
+          name: LevelupCount Quest 05
+          value: 11
+        - key: ClearCount_05
+          name: ClearCount Quest 06
+          value: 1
+        - key: GivingGold_05
+          name: GivingGold Quest 06
+          value: 300
+        - key: LevelupCount_05
+          name: LevelupCount Quest 06
+          value: 10
+        - key: TotalPlayNum
+          value: 1

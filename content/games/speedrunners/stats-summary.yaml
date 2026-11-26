@@ -1,0 +1,89 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: weapon_hook_shot
+          name: Golden Hooks Shot
+          value: 146
+        - key: weapon_hook_hit
+          name: Golden Hook Hits
+          value: 106
+        - key: weapon_bomb_planted
+          name: Bombs Planted
+          value: 36
+        - key: weapon_bomb_victims
+          name: Bomb Victims
+          value: 45
+        - key: weapon_bomb_suicides
+          name: Bomb Suicides
+          value: 10
+        - key: weapon_shockwave_fired
+          name: Shockwaves Fired
+          value: 57
+        - key: weapon_shockwave_obstacles_removed
+          name: Obstacles Knocked Over With A Shockwave
+          value: 66
+        - key: weapon_shockwave_victims
+          name: Shockwave Victims
+          value: 68
+        - key: weapon_crate_dropped
+          name: Crates Dropped
+          value: 262
+        - key: weapon_crate_suicide
+          name: Walked Into Your Own Crate
+          value: 24
+        - key: weapon_crate_victims
+          name: Crate Victims
+          value: 180
+        - key: weapon_crate_air_victims
+          name: Crate Victims While The Crate Is Falling Down
+          value: 53
+        - key: weapon_rocket_shot
+          name: Rockets Shot
+          value: 76
+        - key: weapon_rocket_victims
+          name: Rocket Victims
+          value: 46
+        - key: weapon_rocket_suicide
+          name: Rocket Suicides
+          value: 10
+        - key: weapon_drill_used
+          name: InvinciDrills Used
+          value: 30
+        - key: weapon_drill_victims
+          name: InvinciDrill Victims
+          value: 37
+        - key: weapon_drill_obstacles_removed
+          name: Obstacles Knocked Over With The InvinciDrill
+          value: 53
+        - key: speed_avg
+          name: Average Speed
+          value: 0
+        - key: distance_traveled
+          name: Distance Traveled
+          value: 290078.28125
+        - key: slide_tackles
+          name: Tackles
+          value: 40
+        - key: jumps
+          name: Jumps Made
+          value: 8193
+        - key: obstacles_hit
+          name: Obstacles Hit
+          value: 1046
+        - key: hooks_shot
+          name: Hooks Shot
+          value: 2089
+        - key: hooks_hit
+          name: Hooks Locked (to white ceilings)
+          value: 1529
+        - key: slide_tackles_in_air
+          name: Mid Air Tackles
+          value: 1
+        - key: overtakes
+          name: Overtaken An Opponent
+          value: 1413
+        - key: blocked_bullet_hook
+          name: Hooks blocked by Crates
+          value: 2

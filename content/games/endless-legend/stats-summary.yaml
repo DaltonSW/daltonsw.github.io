@@ -1,0 +1,41 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: TURNS_PLAYED
+          value: 28
+        - key: MINOR_FACTIONS_ASSIMILATED_PER_GAME
+          value: 1
+        - key: QUESTS_COMPLETED
+          value: 8
+        - key: VILLAGES_PACIFIED
+          value: 3
+        - key: HERO_COUNT
+          value: 1
+        - key: CITIES_COUNT_TURN_15
+          value: 1
+        - key: MAX_NET_CITY_DUST
+          value: 25
+        - key: MAX_NET_CITY_SCIENCE
+          value: 31
+        - key: MAX_NET_CITY_INDUSTRY
+          value: 14
+        - key: MAX_NET_CITY_FOOD
+          value: 16
+        - key: MAX_NET_CITY_INFLUENCE
+          value: 2
+        - key: MAX_HERO_LEVEL
+          value: 2
+        - key: UNITS_KILLED
+          value: 1
+        - key: DUST_GAINED
+          value: 2385.349853515625
+        - key: TILES_EXPLORED
+          value: 276
+        - key: IMPROVEMENTS_BUILT_PER_GAME
+          value: 1
+        - key: ARDENT_MAGES_PILLARS_COUNT
+          value: 1
+        - key: GAMES_PLAYED
+          value: 2

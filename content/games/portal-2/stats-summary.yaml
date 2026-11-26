@@ -1,0 +1,71 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: SP.progress
+          value: 10
+        - key: bitfield_01_004
+          value: 4.294967293e+09
+        - key: bitfield_01_008
+          value: 511
+        - key: bitfield_01_018
+          value: 255
+        - key: bitfield_01_020
+          value: 173
+        - key: bitfield_02_008
+          value: 64
+        - key: bitfield_02_00C
+          value: 255
+        - key: bitfield_02_010
+          value: 31
+        - key: GI.lesson.version_number
+          value: 16
+        - key: GI.lesson.return_to_hub
+          value: 1
+        - key: GI.lesson.create_left_portal
+          value: 16
+        - key: GI.lesson.create_right_portal
+          value: 16
+        - key: GI.lesson.movement
+          value: 32
+        - key: GI.lesson.push_button
+          value: 16
+        - key: GI.lesson.countdown_timer
+          value: 32
+        - key: GI.lesson.air_taunt
+          value: 32
+        - key: GI.lesson.new_taunt_earned
+          value: 32
+        - key: GI.lesson.teach_auto_bounce_suppression
+          value: 4
+        - key: GI.lesson.zoom
+          value: 64
+        - key: GI.lesson.unzoom
+          value: 48
+        - key: GI.lesson.jump
+          value: 3
+        - key: GI.lesson.drop_object
+          value: 48
+        - key: GI.lesson.pick_up_object
+          value: 48
+        - key: ACH.SPREAD_THE_LOVE[1].0
+          value: 8.4473312e+07
+        - key: ACH.SPREAD_THE_LOVE[1].1
+          value: 1.7825793e+07
+        - key: ACH.SPREAD_THE_LOVE[2].0
+          value: 1.3595476e+07
+        - key: ACH.SPREAD_THE_LOVE[2].1
+          value: 1.7825793e+07
+        - key: ACH.SPEED_RUN_COOP[1]
+          value: 43
+        - key: ACH.SPEED_RUN_COOP[2]
+          value: 41
+        - key: ACH.SPEED_RUN_COOP[3]
+          value: 42
+        - key: GAME.stat_player_steps
+          value: 32573
+        - key: GAME.stat_portals_placed
+          value: 1720
+        - key: GAME.stat_portals_traveled
+          value: 1247

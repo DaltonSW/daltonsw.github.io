@@ -1,0 +1,35 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: "30_6"
+          name: STAT_GOOD_DAY_MR_WALKER
+          value: 31
+        - key: "30_7"
+          name: STAT_MACH_5
+          value: 80
+        - key: "30_14"
+          name: STAT_BIG_GUYS_REQUIRE_BIG_GUNS
+          value: 4
+        - key: "30_18"
+          name: STAT_ALL_IS_DUST
+          value: 25
+        - key: "30_19"
+          name: STAT_ALL_PRO
+          value: 4
+        - key: "30_20"
+          name: STAT_TERMINATED
+          value: 19
+        - key: "30_21"
+          name: STAT_AIRBORNE_ASSAULT
+          value: 2
+        - key: "30_22"
+          name: STAT_GIANT_ENEMY_CRAB
+          value: 72
+        - key: "30_34"
+          name: STAT_IF_YOU_REPLACE_THE_WORKING_PARTS
+          value: 3
+        - key: "30_39"
+          name: STAT_REANIMATOR
+          value: 8

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Rivals of Aether",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "383980",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 36,
  "platform": "PC",
@@ -299,6 +299,641 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/383980/98f57144030c3be258ee6287773c6c85b3201a16.jpg",
    "rarity": 48.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "ranked_score",
+   "name": "Ranked Score",
+   "default": 1000
+  },
+  {
+   "key": "ranked_wins",
+   "name": "Ranked Wins"
+  },
+  {
+   "key": "ranked_losses",
+   "name": "Ranked Losses"
+  },
+  {
+   "key": "ranked_started",
+   "name": "Ranked Started"
+  },
+  {
+   "key": "ranked_finished",
+   "name": "Ranked Finished"
+  },
+  {
+   "key": "ea_score",
+   "name": "Ranked Score",
+   "default": 1000
+  },
+  {
+   "key": "ea_wins",
+   "name": "Ranked Wins"
+  },
+  {
+   "key": "ea_losses",
+   "name": "Ranked Losses"
+  },
+  {
+   "key": "ea_started",
+   "name": "Ranked Started"
+  },
+  {
+   "key": "ea_finished",
+   "name": "Ranked Finished"
+  },
+  {
+   "key": "abwave_furthest",
+   "name": "Furthest Abyss Wave"
+  },
+  {
+   "key": "abwave_zetterburn",
+   "name": "Zetterburn Abyss Waves"
+  },
+  {
+   "key": "abwave_orcane",
+   "name": "Orcane Abyss Waves"
+  },
+  {
+   "key": "abwave_wrastor",
+   "name": "Wrastor Abyss Waves"
+  },
+  {
+   "key": "abwave_kragg",
+   "name": "Kragg Abyss Waves"
+  },
+  {
+   "key": "abwave_forsburn",
+   "name": "Forsburn Abyss Waves"
+  },
+  {
+   "key": "abwave_maypul",
+   "name": "Maypul Abyss Waves"
+  },
+  {
+   "key": "abwave_absa",
+   "name": "Absa Abyss Waves"
+  },
+  {
+   "key": "abwave_etalus",
+   "name": "Etalus Abyss Waves"
+  },
+  {
+   "key": "abwave_two",
+   "name": "Two Player Abyss Waves"
+  },
+  {
+   "key": "abwave_three",
+   "name": "Three Player Abyss Waves"
+  },
+  {
+   "key": "abwave_four",
+   "name": "Four Player Abyss Waves"
+  },
+  {
+   "key": "num_matches",
+   "name": "Total Matches"
+  },
+  {
+   "key": "TutLessons_all",
+   "name": "Tutorial Lessons Complete"
+  },
+  {
+   "key": "stfast_all",
+   "name": "Fast Story Modes"
+  },
+  {
+   "key": "coins_collected",
+   "name": "All Coins Collected"
+  },
+  {
+   "key": "ablevels_all",
+   "name": "Level 10 Abyss Characters"
+  },
+  {
+   "key": "story_zet_time",
+   "name": "Story Zetterburn Time"
+  },
+  {
+   "key": "story_orc_time",
+   "name": "Story Orcane Time"
+  },
+  {
+   "key": "story_wra_time",
+   "name": "Story Wrastor Time"
+  },
+  {
+   "key": "story_kra_time",
+   "name": "Story Kragg Time"
+  },
+  {
+   "key": "story_for_time",
+   "name": "Story Forsburn Time"
+  },
+  {
+   "key": "story_may_time",
+   "name": "Story Maypul Time"
+  },
+  {
+   "key": "story_epi_time",
+   "name": "Story Epilogue Time"
+  },
+  {
+   "key": "coins_current",
+   "name": "Current Coins"
+  },
+  {
+   "key": "ranked2_score",
+   "name": "Ranked Score",
+   "default": 1000
+  },
+  {
+   "key": "ranked2_wins",
+   "name": "Ranked Wins"
+  },
+  {
+   "key": "ranked2_losses",
+   "name": "Ranked Losses"
+  },
+  {
+   "key": "ranked2_started",
+   "name": "Ranked Started"
+  },
+  {
+   "key": "ranked2_finished",
+   "name": "Ranked Finished"
+  },
+  {
+   "key": "ranked3_score",
+   "name": "Ranked Score",
+   "default": 1000
+  },
+  {
+   "key": "ranked3_wins",
+   "name": "Ranked Wins"
+  },
+  {
+   "key": "ranked3_losses",
+   "name": "Ranked Losses"
+  },
+  {
+   "key": "ranked3_started",
+   "name": "Ranked Started"
+  },
+  {
+   "key": "ranked3_finished",
+   "name": "Ranked Finished"
+  },
+  {
+   "key": "icon_unlocks1",
+   "name": "Icon Unlocks"
+  },
+  {
+   "key": "icon_unlocks0",
+   "name": "Icon Unlocks"
+  },
+  {
+   "key": "character1_wins",
+   "name": "Random Character Wins"
+  },
+  {
+   "key": "character2_wins",
+   "name": "Zetterburn Wins"
+  },
+  {
+   "key": "character3_wins",
+   "name": "Orcane Wins"
+  },
+  {
+   "key": "character4_wins",
+   "name": "Wrastor Wins"
+  },
+  {
+   "key": "character5_wins",
+   "name": "Kragg Wins"
+  },
+  {
+   "key": "character6_wins",
+   "name": "Forsburn Wins"
+  },
+  {
+   "key": "character7_wins",
+   "name": "Maypul Wins"
+  },
+  {
+   "key": "character8_wins",
+   "name": "Absa Wins"
+  },
+  {
+   "key": "character9_wins",
+   "name": "Etalus Wins"
+  },
+  {
+   "key": "character10_wins",
+   "name": "Ori Wins"
+  },
+  {
+   "key": "character11_wins",
+   "name": "Ranno Wins"
+  },
+  {
+   "key": "character12_wins",
+   "name": "Clairen Wins"
+  },
+  {
+   "key": "character13_wins",
+   "name": "Sylvanos Wins"
+  },
+  {
+   "key": "character14_wins",
+   "name": "Elliana Wins"
+  },
+  {
+   "key": "character15_wins",
+   "name": "Shovel Knight Wins"
+  },
+  {
+   "key": "character1_losses",
+   "name": "Random Character Losses"
+  },
+  {
+   "key": "character2_losses",
+   "name": "Zetterburn Losses"
+  },
+  {
+   "key": "character3_losses",
+   "name": "Orcane Losses"
+  },
+  {
+   "key": "character4_losses",
+   "name": "Wrastor Losses"
+  },
+  {
+   "key": "character5_losses",
+   "name": "Kragg Losses"
+  },
+  {
+   "key": "character6_losses",
+   "name": "Forsburn Losses"
+  },
+  {
+   "key": "character7_losses",
+   "name": "Maypul Losses"
+  },
+  {
+   "key": "character8_losses",
+   "name": "Absa Losses"
+  },
+  {
+   "key": "character9_losses",
+   "name": "Etalus Losses"
+  },
+  {
+   "key": "character10_losses",
+   "name": "Ori Losses"
+  },
+  {
+   "key": "character11_losses",
+   "name": "Ranno Losses"
+  },
+  {
+   "key": "character12_losses",
+   "name": "Clairen Losses"
+  },
+  {
+   "key": "character13_losses",
+   "name": "Sylvanos Losses"
+  },
+  {
+   "key": "character14_losses",
+   "name": "Elliana Losses"
+  },
+  {
+   "key": "character15_losses",
+   "name": "Shovel Knight Losses"
+  },
+  {
+   "key": "ranked_stars",
+   "name": "Ranked Stars"
+  },
+  {
+   "key": "ranked_winstreak",
+   "name": "Ranked Winstreak"
+  },
+  {
+   "key": "stored_season",
+   "name": "Stored Ranked Season"
+  },
+  {
+   "key": "highest_stars",
+   "name": "Highest Stars Ever"
+  },
+  {
+   "key": "pet_unlocks",
+   "name": "Pet Unlocks"
+  },
+  {
+   "key": "character1_stars",
+   "name": "Random Character Stars"
+  },
+  {
+   "key": "character2_stars",
+   "name": "Zetterburn Stars"
+  },
+  {
+   "key": "character3_stars",
+   "name": "Orcane Stars"
+  },
+  {
+   "key": "character4_stars",
+   "name": "Wrastor Stars"
+  },
+  {
+   "key": "character5_stars",
+   "name": "Kragg Stars"
+  },
+  {
+   "key": "character6_stars",
+   "name": "Forsburn Stars"
+  },
+  {
+   "key": "character7_stars",
+   "name": "Maypul Stars"
+  },
+  {
+   "key": "character8_stars",
+   "name": "Absa Stars"
+  },
+  {
+   "key": "character9_stars",
+   "name": "Etalus Stars"
+  },
+  {
+   "key": "character10_stars",
+   "name": "Ori Stars"
+  },
+  {
+   "key": "character11_stars",
+   "name": "Ranno Stars"
+  },
+  {
+   "key": "character12_stars",
+   "name": "Clairen Stars"
+  },
+  {
+   "key": "character13_stars",
+   "name": "Sylvanos Stars"
+  },
+  {
+   "key": "character14_stars",
+   "name": "Elliana Stars"
+  },
+  {
+   "key": "character15_stars",
+   "name": "Shovel Knight Stars"
+  },
+  {
+   "key": "character1_kills",
+   "name": "Zetterburn Kills"
+  },
+  {
+   "key": "character2_kills",
+   "name": "Orcane Kills"
+  },
+  {
+   "key": "character3_kills",
+   "name": "Wrastor Kills"
+  },
+  {
+   "key": "character4_kills",
+   "name": "Kragg Kills"
+  },
+  {
+   "key": "character5_kills",
+   "name": "Forsburn Kills"
+  },
+  {
+   "key": "character6_kills",
+   "name": "Maypul Kills"
+  },
+  {
+   "key": "character7_kills",
+   "name": "Absa Kills"
+  },
+  {
+   "key": "character8_kills",
+   "name": "Etalus Kills"
+  },
+  {
+   "key": "character9_kills",
+   "name": "Ori Kills"
+  },
+  {
+   "key": "character10_kills",
+   "name": "Ranno Kills"
+  },
+  {
+   "key": "character11_kills",
+   "name": "Clairen Kills"
+  },
+  {
+   "key": "character12_kills",
+   "name": "Sylvanos Kills"
+  },
+  {
+   "key": "character13_kills",
+   "name": "Elliana Kills"
+  },
+  {
+   "key": "character14_kills",
+   "name": "Shovel Knight Kills"
+  },
+  {
+   "key": "character1_deaths",
+   "name": "Zetterburn Deaths"
+  },
+  {
+   "key": "character2_deaths",
+   "name": "Orcane Deaths"
+  },
+  {
+   "key": "character3_deaths",
+   "name": "Wrastor Deaths"
+  },
+  {
+   "key": "character4_deaths",
+   "name": "Kragg Deaths"
+  },
+  {
+   "key": "character5_deaths",
+   "name": "Forsburn Deaths"
+  },
+  {
+   "key": "character6_deaths",
+   "name": "Maypul Deaths"
+  },
+  {
+   "key": "character7_deaths",
+   "name": "Absa Deaths"
+  },
+  {
+   "key": "character8_deaths",
+   "name": "Etalus Deaths"
+  },
+  {
+   "key": "character9_deaths",
+   "name": "Ori Deaths"
+  },
+  {
+   "key": "character10_deaths",
+   "name": "Ranno Deaths"
+  },
+  {
+   "key": "character11_deaths",
+   "name": "Clairen Deaths"
+  },
+  {
+   "key": "character12_deaths",
+   "name": "Sylvanos Deaths"
+  },
+  {
+   "key": "character13_deaths",
+   "name": "Elliana Deaths"
+  },
+  {
+   "key": "character14_deaths",
+   "name": "Shovel Knight Deaths"
+  },
+  {
+   "key": "casual_elo",
+   "name": "Casual ELO",
+   "default": 1000
+  },
+  {
+   "key": "abwave_ori",
+   "name": "Ori Abyss Waves"
+  },
+  {
+   "key": "abwave_ranno",
+   "name": "Ranno Abyss Waves"
+  },
+  {
+   "key": "abwave_clairen",
+   "name": "Clairen Abyss Waves"
+  },
+  {
+   "key": "abwave_sylvanos",
+   "name": "Sylvanos Abyss Waves"
+  },
+  {
+   "key": "abwave_elliana",
+   "name": "Elliana Abyss Waves"
+  },
+  {
+   "key": "abwave_shovelknight",
+   "name": "Shovel Knight Abyss Waves"
+  },
+  {
+   "key": "character16_wins",
+   "name": "Mollo Wins"
+  },
+  {
+   "key": "character17_wins",
+   "name": "Hodan Wins"
+  },
+  {
+   "key": "character18_wins",
+   "name": "Pomme Wins"
+  },
+  {
+   "key": "character19_wins",
+   "name": "Olympia Wins"
+  },
+  {
+   "key": "character16_losses",
+   "name": "Mollo Losses"
+  },
+  {
+   "key": "character17_losses",
+   "name": "Hodan Losses"
+  },
+  {
+   "key": "character18_losses",
+   "name": "Pomme Losses"
+  },
+  {
+   "key": "character19_losses",
+   "name": "Olympia Losses"
+  },
+  {
+   "key": "character16_stars",
+   "name": "Mollo Stars"
+  },
+  {
+   "key": "character17_stars",
+   "name": "Hodan Stars"
+  },
+  {
+   "key": "character18_stars",
+   "name": "Pomme Stars"
+  },
+  {
+   "key": "character19_stars",
+   "name": "Olympia Stars"
+  },
+  {
+   "key": "character15_kills",
+   "name": "Mollo Kills"
+  },
+  {
+   "key": "character16_kills",
+   "name": "Hodan Kills"
+  },
+  {
+   "key": "character17_kills",
+   "name": "Pomme Kills"
+  },
+  {
+   "key": "character18_kills",
+   "name": "Olympia Kills"
+  },
+  {
+   "key": "character15_deaths",
+   "name": "Mollo Deaths"
+  },
+  {
+   "key": "character16_deaths",
+   "name": "Hodan Deaths"
+  },
+  {
+   "key": "character17_deaths",
+   "name": "Pomme Deaths"
+  },
+  {
+   "key": "character18_deaths",
+   "name": "Olympia Deaths"
+  },
+  {
+   "key": "abwave_mollo",
+   "name": "Mollo Abyss Waves"
+  },
+  {
+   "key": "abwave_hodan",
+   "name": "Hodan Abyss Waves"
+  },
+  {
+   "key": "abwave_pomme",
+   "name": "Pomme Abyss Waves"
+  },
+  {
+   "key": "abwave_olympia",
+   "name": "Olympia Abyss Waves"
+  },
+  {
+   "key": "saved_version",
+   "name": "Saved Version"
   }
  ],
  "raw": {

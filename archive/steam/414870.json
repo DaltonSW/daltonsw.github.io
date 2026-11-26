@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Super Mega Baseball 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "414870",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 42,
  "first": "2020-05-30",
@@ -362,6 +362,18 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/414870/a9befb3c2965ce0b09ba2d7ca7d3a81f70b4306a.jpg",
    "rarity": 20.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_HITS",
+   "name": "Hits",
+   "value": 219
+  },
+  {
+   "key": "STAT_COMPLETE_GAME_WINS",
+   "name": "Complete Game Wins",
+   "value": 1
   }
  ],
  "raw": {

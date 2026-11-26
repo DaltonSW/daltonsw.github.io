@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Factorio",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "427520",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 88,
  "platform": "PC",
@@ -713,6 +713,60 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/427520/2ca27722d29fdaa5d1bec9fe30fbf2347504e0c0.jpg",
    "rarity": 28.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "constructed-by-robots",
+   "name": "Constructed by robots"
+  },
+  {
+   "key": "deconstructed-by-robots",
+   "name": "Deconstructed by robots"
+  },
+  {
+   "key": "advanced-circuits-per-hour",
+   "name": "Advanced circuits per hour"
+  },
+  {
+   "key": "processing-units-per-hour",
+   "name": "Processing units per hour"
+  },
+  {
+   "key": "delivered-by-robots",
+   "name": "Delivered by robots"
+  },
+  {
+   "key": "surived-damage-in-one-hit",
+   "name": "Biggest damage in one hit that didn't kill you."
+  },
+  {
+   "key": "iron-plates-per-hour",
+   "name": "Iron plates per hour"
+  },
+  {
+   "key": "electronic-circuits-production-overall",
+   "name": "Electronic circuit production overall"
+  },
+  {
+   "key": "combat-robots",
+   "name": "Combat robots"
+  },
+  {
+   "key": "trees-destroyed-by-fire",
+   "name": "Trees destroyed by fire"
+  },
+  {
+   "key": "trees-destroyed-by-impact",
+   "name": "Trees destroyed by impact"
+  },
+  {
+   "key": "spawners-killed-by-impact",
+   "name": "Spawners killed by impact"
+  },
+  {
+   "key": "longest-train-path",
+   "name": "Longest train path"
   }
  ],
  "raw": {

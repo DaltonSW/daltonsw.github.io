@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Strange Horticulture",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1574580",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 15,
  "total": 18,
  "first": "2023-08-04",
@@ -179,6 +179,23 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1574580/a56076da8dbca9cef7b607d7e40d960c18fa4ccb.jpg",
    "hidden": true,
    "rarity": 7.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "catPets",
+   "name": "Times Hellebore Petted",
+   "value": 17
+  },
+  {
+   "key": "locationsVisited",
+   "name": "Locations Visited",
+   "value": 88
+  },
+  {
+   "key": "plantsIdentified",
+   "name": "Plants Identified",
+   "value": 77
   }
  ],
  "raw": {

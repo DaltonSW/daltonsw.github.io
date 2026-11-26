@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Her Story",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "368370",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 13,
  "total": 13,
  "first": "2022-01-02",
@@ -142,6 +142,18 @@
    "date": "2022-01-02T17:01:54-06:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/368370/880e9fea413ece04b4c7da7cee4e713b584f31fd.jpg",
    "rarity": 13.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_searches",
+   "name": "Searches Performed",
+   "value": 137
+  },
+  {
+   "key": "stat_clips",
+   "name": "Clips Seen",
+   "value": 271
   }
  ],
  "mastery": [

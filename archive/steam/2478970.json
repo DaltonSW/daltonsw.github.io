@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Tomb Raider I-III Remastered Starring Lara Croft",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "2478970",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 284,
  "platform": "PC",
@@ -2361,6 +2361,44 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2478970/ab8323b21f010ef5e40f68f615811ea34dbd87f5.jpg",
    "rarity": 0.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "TR1_WAYS_TO_DIE"
+  },
+  {
+   "key": "TR1_MUMMIES_LOOKED"
+  },
+  {
+   "key": "TR1_TIME_DEVICES_LOOKED"
+  },
+  {
+   "key": "TR1_BEARS_LOOKED"
+  },
+  {
+   "key": "TR2_FIRES_CATCHED"
+  },
+  {
+   "key": "TR3_ZIPLINES_USED"
+  },
+  {
+   "key": "TR3_TRAPS_USED"
+  },
+  {
+   "key": "TR3_ROCKETS_FOUND"
+  },
+  {
+   "key": "TR3_UPVS_USED"
+  },
+  {
+   "key": "TR3_LA_HIDDEN_ITEMS_FOUND"
+  },
+  {
+   "key": "TRX_CR_RAIDER_OF_TOMBS_FOUND"
+  },
+  {
+   "key": "TRX_CR_APEX_PREDATOR_FOUND"
   }
  ],
  "raw": {

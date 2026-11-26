@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Witcher 3: Wild Hunt",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "292030",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 1,
  "total": 78,
  "first": "2017-06-25",
@@ -638,6 +638,245 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/292030/46b0b574e6334d81211e0c3db1539d3a76364144.jpg",
    "hidden": true,
    "rarity": 23.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "sc_hr",
+   "name": "horse_riding",
+   "value": 24
+  },
+  {
+   "key": "sc_slng",
+   "name": "sailing"
+  },
+  {
+   "key": "sc_at",
+   "name": "aim_throw",
+   "value": 1
+  },
+  {
+   "key": "sc_cmbt",
+   "name": "combat",
+   "value": 45
+  },
+  {
+   "key": "sc_xp",
+   "name": "exploring",
+   "value": 148
+  },
+  {
+   "key": "sc_dlg",
+   "name": "dialog",
+   "value": 72
+  },
+  {
+   "key": "sc_swm",
+   "name": "swimming",
+   "value": 4
+  },
+  {
+   "key": "ha_ft",
+   "name": "fast_travel",
+   "value": 12
+  },
+  {
+   "key": "ha_nlg",
+   "name": "new_level_gained"
+  },
+  {
+   "key": "ha_ee",
+   "name": "exp_earned",
+   "value": 3067
+  },
+  {
+   "key": "ha_spg",
+   "name": "skill_point_gained",
+   "value": 3
+  },
+  {
+   "key": "ha_si",
+   "name": "skill_improved",
+   "value": 19
+  },
+  {
+   "key": "ha_cc",
+   "name": "cash_changed",
+   "value": 77
+  },
+  {
+   "key": "ha_hs",
+   "name": "hero_spawned"
+  },
+  {
+   "key": "sc_fon",
+   "name": "focus_mode_on"
+  },
+  {
+   "key": "sc_foff",
+   "name": "focus_mode_off"
+  },
+  {
+   "key": "ha_hhsl",
+   "name": "hero_health_segment_lost"
+  },
+  {
+   "key": "ha_hhsr",
+   "name": "hero_health_segment_regained"
+  },
+  {
+   "key": "ha_mu",
+   "name": "mutagen_used",
+   "value": 1
+  },
+  {
+   "key": "ha_au",
+   "name": "achievement_unlocked"
+  },
+  {
+   "key": "f_pd",
+   "name": "player_dies",
+   "value": 2
+  },
+  {
+   "key": "f_pa",
+   "name": "player_attacks",
+   "value": 294
+  },
+  {
+   "key": "f_pus",
+   "name": "player_uses_sign",
+   "value": 35
+  },
+  {
+   "key": "f_egh",
+   "name": "enemy_gets_hit",
+   "value": 21316
+  },
+  {
+   "key": "f_edi",
+   "name": "enemy_dies"
+  },
+  {
+   "key": "f_hgh",
+   "name": "hero_gets_hit",
+   "value": 29540
+  },
+  {
+   "key": "f_htb",
+   "name": "hero_throws_a_bomb",
+   "value": 2
+  },
+  {
+   "key": "a_pc",
+   "name": "potion_created",
+   "value": 2
+  },
+  {
+   "key": "a_eu",
+   "name": "elixir_used",
+   "value": 1
+  },
+  {
+   "key": "iv_ie",
+   "name": "item_equipped",
+   "value": 1660
+  },
+  {
+   "key": "iv_iue",
+   "name": "item_unequipped",
+   "value": 1494
+  },
+  {
+   "key": "iv_ipu",
+   "name": "item_picked_up",
+   "value": 323
+  },
+  {
+   "key": "iv_id",
+   "name": "item_dropped"
+  },
+  {
+   "key": "iv_is",
+   "name": "item_sold"
+  },
+  {
+   "key": "iv_ib",
+   "name": "item_bought",
+   "value": 17
+  },
+  {
+   "key": "mv_pm",
+   "name": "player_movement"
+  },
+  {
+   "key": "mv_pp",
+   "name": "player_position"
+  },
+  {
+   "key": "ss_ed",
+   "name": "end_session"
+  },
+  {
+   "key": "ss_glo",
+   "name": "game_loaded"
+  },
+  {
+   "key": "ss_gs",
+   "name": "game_saved"
+  },
+  {
+   "key": "ss_glu",
+   "name": "game_launched"
+  },
+  {
+   "key": "ss_gp",
+   "name": "game_pause"
+  },
+  {
+   "key": "ss_gup",
+   "name": "game_unpause"
+  },
+  {
+   "key": "ss_gprs",
+   "name": "game_progress"
+  },
+  {
+   "key": "q_qa",
+   "name": "quest_activated",
+   "value": 56
+  },
+  {
+   "key": "q_qfn",
+   "name": "quest_finished",
+   "value": 12
+  },
+  {
+   "key": "q_qfl",
+   "name": "quest_failed"
+  },
+  {
+   "key": "er_unk",
+   "name": "unknown_event"
+  },
+  {
+   "key": "f_edi_real",
+   "name": "Enemy Deaths (Real)",
+   "value": 51
+  },
+  {
+   "key": "ha_nlg_max",
+   "value": 4
+  },
+  {
+   "key": "ha_gms",
+   "name": "start_match_gwent",
+   "value": 2
+  },
+  {
+   "key": "ha_gme",
+   "name": "win_match_gwent",
+   "value": 1
   }
  ],
  "raw": {

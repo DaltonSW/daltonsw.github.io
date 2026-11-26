@@ -1,12 +1,12 @@
 {
  "provider": "steam",
  "title": "Dead by Daylight",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "381210",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
- "total": 311,
+ "total": 318,
  "platform": "PC",
  "icon": "aa152097a700fd6f4707397ce41794ea30874790",
  "achievements": [
@@ -1826,15 +1826,15 @@
   },
   {
    "key": "NEW_ACHIEVEMENT_245_24",
-   "name": "Joke’s On You",
-   "description": "In public matches, hit a Survivor within 3 seconds of performing a Scamper 10 times.",
+   "name": "Pulling at Scabs",
+   "description": "In public matches, injure a Survivor within 10 seconds of them becoming healthy 10 times.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/644d841e17fe9a6583928b77f83ce251b9cf5f0e.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/ca10679e8c2ba75beeb1df448698ddffa3586352.jpg",
    "rarity": 1
   },
   {
    "key": "NEW_ACHIEVEMENT_245_25",
-   "name": "Outta Nowhere",
+   "name": "Keep 'em Guessing",
    "description": "In public matches, hit 40 Survivors with a basic attack while you are Undetectable.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/d056e249d6823ad7db349eda0a45c435dcde7922.jpg",
@@ -1842,10 +1842,10 @@
   },
   {
    "key": "NEW_ACHIEVEMENT_245_26",
-   "name": "Adept Good Guy",
-   "description": "Achieve a merciless victory with The Good Guy using only his 3 unique perks in a public match.",
+   "name": "Rack 'em Up",
+   "description": "In a public match, hook 2 different survivors on Sacrificial Hooks within 45 seconds.",
    "unlocked": false,
-   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/1cd0ab2ec042ed9eb186dc6dfadf67b333afd5d6.jpg",
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/8c834da90d24a2a8610fbba9140a3670cdb7335d.jpg",
    "rarity": 1.1
   },
   {
@@ -2418,9 +2418,58 @@
    "rarity": 0.5
   },
   {
+   "key": "NEW_ACHIEVEMENT_334_10",
+   "name": "Insult to Injury",
+   "description": "In public matches, Taunt 12 Terrified Survivors as The Terrifier.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/8d2daf77136cb882d0eb14a2fe4678e2546c0033.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_334_11",
+   "name": "Better Late Than Never",
+   "description": "In a public match, kill a Survivor while they are within the Exit Threshold.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/671eb7b3dd3bf2b490679ffc132ea66ccd713ea6.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_334_12",
+   "name": "Adept Terrifier",
+   "description": "Achieve a merciless victory with The Terrifier using only his 3 unique perks in a public match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/941a9f232e0f0b128b721ab9b1b452399e3af139.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_334_13",
+   "name": "Good Over Evil",
+   "description": "Be chased by the Killer for 90s and stun them 3 times in a public match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/4db8decc941a42870ec21ad690f177fb971b6ff3.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_334_14",
+   "name": "Guardian Angel",
+   "description": "Take a protection hit for each of the other 3 Survivors in a public match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/2630c7f87ff22a679028156588054c6dad05c392.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_334_15",
+   "name": "Adept Sienna",
+   "description": "Escape with Sienna using only her 3 unique perks in a public match.",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/6b8a347ab88315d6cb9967e0f2c47cd43329132d.jpg"
+  },
+  {
+   "key": "NEW_ACHIEVEMENT_334_16",
+   "name": "Waste Not, Want Not",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/23eddd8ba9ab4ee1239f3bf221e55e6eb00d1283.jpg",
+   "hidden": true
+  },
+  {
    "key": "NEW_ACHIEVEMENT_334_2",
    "name": "Under my Dominion",
-   "description": "In public matches, As The Judgment, hit 15 Survivors with Divine Light from at least 16 meters away.",
+   "description": "In public matches, as The Judgment, hit 15 Survivors with Divine Light from at least 16 meters away.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/ac0b8e5334bbfc3182796a24a17bcd17420b59d1.jpg",
    "rarity": 0.9
@@ -2453,7 +2502,7 @@
   {
    "key": "NEW_ACHIEVEMENT_334_6",
    "name": "Above Judgment",
-   "description": "In a public match, escape The Judgment's Exile without being hit by Seeds of Punishment.",
+   "description": "In a public match against The Judgment, escape Exile without being hit by a Seed of Punishment.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/3498f43e7e28602424d8d890f0055f5a3613cbbc.jpg",
    "rarity": 5.6
@@ -2506,6 +2555,967 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/381210/f4ac8dddaafb459c412e5327a6fd4858d0c3e7f2.jpg",
    "rarity": 4.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "DBD_KillerSkulls"
+  },
+  {
+   "key": "DBD_CamperSkulls"
+  },
+  {
+   "key": "DBD_ProfileStatsVersion"
+  },
+  {
+   "key": "DBD_KilledCampers"
+  },
+  {
+   "key": "DBD_SacrificedCampers"
+  },
+  {
+   "key": "DBD_TrapPickup"
+  },
+  {
+   "key": "DBD_ChainsawHit"
+  },
+  {
+   "key": "DBD_GeneratorPct_float"
+  },
+  {
+   "key": "DBD_HealPct_float"
+  },
+  {
+   "key": "DBD_EscapeKO"
+  },
+  {
+   "key": "DBD_Escape"
+  },
+  {
+   "key": "DBD_SkillCheckSuccess"
+  },
+  {
+   "key": "DBD_SacrificedCampers_iam"
+  },
+  {
+   "key": "DBD_KilledCampers_iam"
+  },
+  {
+   "key": "DBD_HookedAndEscape"
+  },
+  {
+   "key": "DBD_UnhookOrHeal"
+  },
+  {
+   "key": "DBD_UnhookOrHeal_PostExit"
+  },
+  {
+   "key": "DBD_BloodwebMaxLevel",
+   "default": 1
+  },
+  {
+   "key": "DBD_BloodwebPoints"
+  },
+  {
+   "key": "DBD_CamperMaxScoreByCategory"
+  },
+  {
+   "key": "DBD_SlasherMaxScoreByCategory"
+  },
+  {
+   "key": "DBD_BloodwebMaxPrestigeLevel"
+  },
+  {
+   "key": "DBD_UncloakAttack"
+  },
+  {
+   "key": "DBD_BloodwebPrestige3MaxLevel",
+   "default": 1
+  },
+  {
+   "key": "DBD_EscapeThroughHatch"
+  },
+  {
+   "key": "DBD_PerksCount_Idx0"
+  },
+  {
+   "key": "DBD_PerksCount_Idx1"
+  },
+  {
+   "key": "DBD_PerksCount_Idx2"
+  },
+  {
+   "key": "DBD_PerksCount_Idx3"
+  },
+  {
+   "key": "DBD_PerksCount_Idx268435456"
+  },
+  {
+   "key": "DBD_PerksCount_Idx268435457"
+  },
+  {
+   "key": "DBD_PerksCount_Idx268435458"
+  },
+  {
+   "key": "DBD_BloodwebPerkMaxLevel"
+  },
+  {
+   "key": "DBD_MaxBloodwebPointsOneCategory"
+  },
+  {
+   "key": "DBD_BurnOffering_UltraRare"
+  },
+  {
+   "key": "DBD_CamperFullLoadout"
+  },
+  {
+   "key": "DBD_SlasherFullLoadout"
+  },
+  {
+   "key": "DBD_CamperNewItem"
+  },
+  {
+   "key": "DBD_CamperKeepUltraRare"
+  },
+  {
+   "key": "DBD_AllEscapeThroughHatch"
+  },
+  {
+   "key": "DBD_CamperEscapeWithItemFrom"
+  },
+  {
+   "key": "DBD_UnlockRanking"
+  },
+  {
+   "key": "DBD_SaveCounter"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx4"
+  },
+  {
+   "key": "DBD_EscapeNoBlood_MapAsy_Asylum"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapAsy_Asylum"
+  },
+  {
+   "key": "DBD_SlasherChainAttack"
+  },
+  {
+   "key": "DBD_SlasherChainInterruptAfter3"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435459"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435461"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx5"
+  },
+  {
+   "key": "DBD_SlasherTierIncrement"
+  },
+  {
+   "key": "DBD_SlasherPowerKillAllCampers"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapSub_Street"
+  },
+  {
+   "key": "DBD_EscapeNoBlood_Obsession"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435460"
+  },
+  {
+   "key": "DBD_DLC3_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC3_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx6"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapSwp_PaleRose"
+  },
+  {
+   "key": "DBD_DLC3_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx7"
+  },
+  {
+   "key": "DBD_HitNearHook"
+  },
+  {
+   "key": "DBD_LastSurvivorGeneratorEscape"
+  },
+  {
+   "key": "DBD_Camper8_Stat1"
+  },
+  {
+   "key": "DBD_Camper8_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx8"
+  },
+  {
+   "key": "DBD_DLC4_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC4_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435462"
+  },
+  {
+   "key": "DBD_Camper9_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx9"
+  },
+  {
+   "key": "DBD_DLC5_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC5_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435463"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapBrl_MaHouse"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435464"
+  },
+  {
+   "key": "DBD_DLC6_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_DLC6_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC7_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC7_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_DLC7_Camper_Stat1"
+  },
+  {
+   "key": "DBD_DLC7_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx11"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435465"
+  },
+  {
+   "key": "DBD_DLC8_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC8_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_DLC8_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Event1_Stat1"
+  },
+  {
+   "key": "DBD_Event1_Stat2"
+  },
+  {
+   "key": "DBD_Event1_Stat3"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx12"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435466"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapFin_Hideout"
+  },
+  {
+   "key": "DBD_DLC9_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_DLC9_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_DLC9_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapAsy_Chapel"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx10"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435467"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx0"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx3"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435456"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435457"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435458"
+  },
+  {
+   "key": "DBD_Chapter9_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter9_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_Chapter9_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapHti_Manor"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx13"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435468"
+  },
+  {
+   "key": "DBD_Chapter10_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter10_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435469"
+  },
+  {
+   "key": "DBD_Chapter10_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapKny_Cottage"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx14"
+  },
+  {
+   "key": "DBD_Chapter11_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter11_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435470"
+  },
+  {
+   "key": "DBD_Chapter11_Camper_Stat1_float"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapBrl_Temple"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx15"
+  },
+  {
+   "key": "DBD_Chapter12_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter12_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435471"
+  },
+  {
+   "key": "DBD_Chapter12_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter12_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx16"
+  },
+  {
+   "key": "DBD_Chapter13_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter13_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435472"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapQat_Lab"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx17"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx18"
+  },
+  {
+   "key": "DBD_Chapter14_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter14_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435473"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapHti_Shrine"
+  },
+  {
+   "key": "DBD_Chapter14_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx19"
+  },
+  {
+   "key": "DBD_Chapter15_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter15_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435474"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapUkr_Saloon"
+  },
+  {
+   "key": "DBD_Chapter15_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx20"
+  },
+  {
+   "key": "DBD_Chapter16_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter16_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435475"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapWal_Level_01"
+  },
+  {
+   "key": "DBD_Chapter16_Camper_Stat1_float"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx21"
+  },
+  {
+   "key": "DBD_Chapter17_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter17_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435476"
+  },
+  {
+   "key": "DBD_Chapter17_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter17_Camper_Stat2_float"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx22"
+  },
+  {
+   "key": "DBD_Chapter18_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter18_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_Chapter18_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter18_Camper_Stat2_float"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx23"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435477"
+  },
+  {
+   "key": "DBD_Chapter19_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter19_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435478"
+  },
+  {
+   "key": "DBD_Chapter19_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter19_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx24"
+  },
+  {
+   "key": "DBD_Chapter20_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter20_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435479"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapEcl_Level_01"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx26"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx25"
+  },
+  {
+   "key": "DBD_Chapter21_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter21_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435480"
+  },
+  {
+   "key": "DBD_Chapter21_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter21_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx27"
+  },
+  {
+   "key": "DBD_Chapter22_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter22_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435481"
+  },
+  {
+   "key": "DBD_Chapter22_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapIon_Level_01"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx28"
+  },
+  {
+   "key": "DBD_Chapter23_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter23_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435482"
+  },
+  {
+   "key": "DBD_Chapter23_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter23_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx29"
+  },
+  {
+   "key": "DBD_Chapter24_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter24_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435483"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapMtr_Level_1"
+  },
+  {
+   "key": "DBD_Chapter24_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx30"
+  },
+  {
+   "key": "DBD_Chapter25_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter25_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435484"
+  },
+  {
+   "key": "DBD_Chapter25_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx31"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx32"
+  },
+  {
+   "key": "DBD_Chapter26_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter26_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435485"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapQtm_Level_01"
+  },
+  {
+   "key": "DBD_Chapter26_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx33"
+  },
+  {
+   "key": "DBD_Chapter27_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter27_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435486"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapInd_Forest"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx34"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx35"
+  },
+  {
+   "key": "DBD_Chapter28_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter28_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435487"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapUba_Level_01"
+  },
+  {
+   "key": "DBD_Chapter28_Slasher_Stat3"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx36"
+  },
+  {
+   "key": "DBD_Camper38_Stat1"
+  },
+  {
+   "key": "DBD_Camper38_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx37"
+  },
+  {
+   "key": "DBD_Chapter29_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter29_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435488"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapWrm_Level_01"
+  },
+  {
+   "key": "DBD_Chapter29_Slasher_Stat3"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx38"
+  },
+  {
+   "key": "DBD_Chapter30_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter30_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_Chapter30_Slasher_Stat3"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435489"
+  },
+  {
+   "key": "DBD_Camper40_Stat1"
+  },
+  {
+   "key": "DBD_Camper40_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx39"
+  },
+  {
+   "key": "DBD_Chapter31_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter31_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435490"
+  },
+  {
+   "key": "DBD_FixSecondFloorGeneratorMapApl_Level_01"
+  },
+  {
+   "key": "DBD_Chapter31_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx40"
+  },
+  {
+   "key": "DBD_Racoon_Dog_Triggered"
+  },
+  {
+   "key": "DBD_Chapter32_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter32_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435491"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapQtm_Level_02"
+  },
+  {
+   "key": "DBD_Chapter32_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx41"
+  },
+  {
+   "key": "DBD_Camper43_Stat1"
+  },
+  {
+   "key": "DBD_Camper43_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx42"
+  },
+  {
+   "key": "DBD_Chapter33_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter33_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435492"
+  },
+  {
+   "key": "DBD_Chapter33_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter33_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx43"
+  },
+  {
+   "key": "DBD_Chapter34_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter34_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435493"
+  },
+  {
+   "key": "DBD_Chapter34_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter34_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx44"
+  },
+  {
+   "key": "DBD_Chapter35_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter35_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435494"
+  },
+  {
+   "key": "DBD_Chapter35_Survivor_Stat1"
+  },
+  {
+   "key": "DBD_Chapter35_Survivor_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx45"
+  },
+  {
+   "key": "DBD_Chapter36_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter36_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435495"
+  },
+  {
+   "key": "DBD_FixSecondFloorGenerator_MapApl_Shack"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx46"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx47"
+  },
+  {
+   "key": "DBD_Chapter37_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter37_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435496"
+  },
+  {
+   "key": "DBD_Chapter37_Survivor_Stat1"
+  },
+  {
+   "key": "DBD_Chapter37_Survivor_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx48"
+  },
+  {
+   "key": "DBD_Chapter38_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter38_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435497"
+  },
+  {
+   "key": "DBD_Chapter38_Camper_Stat1"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx49"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx50"
+  },
+  {
+   "key": "DBD_Chapter39_Survivor_Stat1"
+  },
+  {
+   "key": "DBD_Chapter39_Survivor_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx51"
+  },
+  {
+   "key": "DBD_Chapter40_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter40_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435498"
+  },
+  {
+   "key": "DBD_Chapter40_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter40_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx52"
+  },
+  {
+   "key": "DBD_Chapter41_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter41_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435499"
+  },
+  {
+   "key": "DBD_Chapter41_Slasher_Stat4"
+  },
+  {
+   "key": "DBD_Chapter41_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter41_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx53"
+  },
+  {
+   "key": "DBD_Chapter41_Camper_Stat4"
+  },
+  {
+   "key": "DBD_Chapter42_Slasher_Stat1"
+  },
+  {
+   "key": "DBD_Chapter42_Slasher_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx268435500"
+  },
+  {
+   "key": "DBD_Chapter42_Camper_Stat1"
+  },
+  {
+   "key": "DBD_Chapter42_Camper_Stat2"
+  },
+  {
+   "key": "DBD_FinishWithPerks_Idx54"
+  },
+  {
+   "key": "DBD_Chapter42_Camper_Stat3"
   }
  ],
  "raw": {
@@ -4169,22 +5179,22 @@
      "apiname": "NEW_ACHIEVEMENT_245_24",
      "achieved": 0,
      "unlocktime": 0,
-     "name": "Joke’s On You",
-     "description": "In public matches, hit a Survivor within 3 seconds of performing a Scamper 10 times."
+     "name": "Pulling at Scabs",
+     "description": "In public matches, injure a Survivor within 10 seconds of them becoming healthy 10 times."
     },
     {
      "apiname": "NEW_ACHIEVEMENT_245_25",
      "achieved": 0,
      "unlocktime": 0,
-     "name": "Outta Nowhere",
+     "name": "Keep 'em Guessing",
      "description": "In public matches, hit 40 Survivors with a basic attack while you are Undetectable."
     },
     {
      "apiname": "NEW_ACHIEVEMENT_245_26",
      "achieved": 0,
      "unlocktime": 0,
-     "name": "Adept Good Guy",
-     "description": "Achieve a merciless victory with The Good Guy using only his 3 unique perks in a public match."
+     "name": "Rack 'em Up",
+     "description": "In a public match, hook 2 different survivors on Sacrificial Hooks within 45 seconds."
     },
     {
      "apiname": "NEW_ACHIEVEMENT_245_27",
@@ -4639,7 +5649,7 @@
      "achieved": 0,
      "unlocktime": 0,
      "name": "Under my Dominion",
-     "description": "In public matches, As The Judgment, hit 15 Survivors with Divine Light from at least 16 meters away."
+     "description": "In public matches, as The Judgment, hit 15 Survivors with Divine Light from at least 16 meters away."
     },
     {
      "apiname": "NEW_ACHIEVEMENT_334_3",
@@ -4667,7 +5677,7 @@
      "achieved": 0,
      "unlocktime": 0,
      "name": "Above Judgment",
-     "description": "In a public match, escape The Judgment's Exile without being hit by Seeds of Punishment."
+     "description": "In a public match against The Judgment, escape Exile without being hit by a Seed of Punishment."
     },
     {
      "apiname": "NEW_ACHIEVEMENT_334_7",
@@ -4688,6 +5698,55 @@
      "achieved": 0,
      "unlocktime": 0,
      "name": "Sacrilege",
+     "description": ""
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_10",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Insult to Injury",
+     "description": "In public matches, Taunt 12 Terrified Survivors as The Terrifier."
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_11",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Better Late Than Never",
+     "description": "In a public match, kill a Survivor while they are within the Exit Threshold."
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_12",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adept Terrifier",
+     "description": "Achieve a merciless victory with The Terrifier using only his 3 unique perks in a public match."
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_13",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Good Over Evil",
+     "description": "Be chased by the Killer for 90s and stun them 3 times in a public match."
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_14",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Guardian Angel",
+     "description": "Take a protection hit for each of the other 3 Survivors in a public match."
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_15",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Adept Sienna",
+     "description": "Escape with Sienna using only her 3 unique perks in a public match."
+    },
+    {
+     "apiname": "NEW_ACHIEVEMENT_334_16",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Waste Not, Want Not",
      "description": ""
     }
    ],

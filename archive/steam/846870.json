@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Yooka-Laylee and the Impossible Lair",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "846870",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 47,
  "platform": "PC",
@@ -385,6 +385,28 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/846870/ec1f79b156cdddff803c8558f555a38b99a86ede.jpg",
    "rarity": 44.6
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_BEES",
+   "name": "How may bee guards are rescued"
+  },
+  {
+   "key": "STAT_COINS",
+   "name": "How many Trowzer coins are collected"
+  },
+  {
+   "key": "STAT_TONICS",
+   "name": "How many Tonics have been collected"
+  },
+  {
+   "key": "STAT_BADDIEROOM",
+   "name": "How many Baddie Rooms are completed on the Overworld"
+  },
+  {
+   "key": "STAT_QUILLS",
+   "name": "How many Quills have been collected"
   }
  ],
  "raw": {

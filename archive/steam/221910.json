@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "The Stanley Parable",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "221910",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 8,
  "total": 10,
  "first": "2014-05-17",
@@ -101,6 +101,39 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/221910/671256af6348e71800a3b1a512cfe49bcc99b592.jpg",
    "rarity": 6.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "TSP_LASTENDING",
+   "name": "internal last ending",
+   "default": 4294967295
+  },
+  {
+   "key": "TSP_HEYHEYSTOPLOOKINGATTHECDR"
+  },
+  {
+   "key": "TSP_PLAYTHROUGHS",
+   "name": "internal num playthroughs",
+   "value": 8
+  },
+  {
+   "key": "TSP_STARTUPS",
+   "name": "internal startup count",
+   "value": 6
+  },
+  {
+   "key": "TSP_LASTSTARTUP",
+   "name": "internal last startup",
+   "value": 3657398926
+  },
+  {
+   "key": "TSP_JUMPS",
+   "name": "internal jump count",
+   "value": 86
+  },
+  {
+   "key": "TSP_LOL_888888"
   }
  ],
  "raw": {

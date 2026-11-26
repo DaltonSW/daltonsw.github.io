@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Turmoil",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "361280",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 39,
  "first": "2018-05-11",
@@ -335,6 +335,38 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/361280/4791d8822489ea611d63d858fa6830ce4c27cb60.jpg",
    "rarity": 1.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "global.num_single_1"
+  },
+  {
+   "key": "global.num_single_2"
+  },
+  {
+   "key": "global.num_single_3"
+  },
+  {
+   "key": "global.num_single_4"
+  },
+  {
+   "key": "global.num_single_5"
+  },
+  {
+   "key": "global.num_campaign_won"
+  },
+  {
+   "key": "global.num_campaign_finished"
+  },
+  {
+   "key": "global.num_expert_won"
+  },
+  {
+   "key": "global.num_expert_finished"
+  },
+  {
+   "key": "global.num_weekly"
   }
  ],
  "raw": {

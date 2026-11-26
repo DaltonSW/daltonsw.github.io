@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Ori and the Blind Forest: Definitive Edition",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "387290",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 49,
  "total": 57,
  "first": "2017-01-27",
@@ -518,6 +518,49 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/387290/277a00cb5de386c8876b20eb5bf7329371ec8a32.jpg",
    "rarity": 30.5
+  }
+ ],
+ "stats": [
+  {
+   "key": "soulLinkCountStat",
+   "name": "Soul Link Count"
+  },
+  {
+   "key": "mapStonesCount",
+   "name": "Map Stones Count"
+  },
+  {
+   "key": "energyCollectedCount",
+   "name": "Energy Collected Count"
+  },
+  {
+   "key": "enemiesKilledBySpiritFlame",
+   "name": "Spirit Flame Killed Enemies"
+  },
+  {
+   "key": "enemiesKilledByChargeFlame",
+   "name": "Charge Flame Killed Enemies"
+  },
+  {
+   "key": "enemiesKilledByStomp",
+   "name": "Stomp Killed Enemies"
+  },
+  {
+   "key": "enemiesKilledByReflectedBashProjectiles",
+   "name": "Reflected Bash Killed Enemies"
+  },
+  {
+   "key": "TestStatFloat",
+   "name": "test float"
+  },
+  {
+   "key": "TestStatInt",
+   "name": "test int",
+   "default": 321
+  },
+  {
+   "key": "secretsCount",
+   "name": "Secrets Count"
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Disco Elysium",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "632470",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 13,
  "total": 45,
  "first": "2020-07-22",
@@ -34,7 +34,7 @@
    "unlocked": true,
    "date": "2020-07-24T21:06:59-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632470/ed4547abeed771ed49eb7cbcffd841ddd9f80863.jpg",
-   "rarity": 26.9
+   "rarity": 27
   },
   {
    "key": "ACH_COP_LIBERAL",
@@ -247,7 +247,7 @@
    "description": "Pour one out for social democracy",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632470/414656605f7fb38a3476ac6c0d6532c59777059e.jpg",
-   "rarity": 7.8
+   "rarity": 7.9
   },
   {
    "key": "ACH_ICEBREAKER",
@@ -394,6 +394,20 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/632470/ec621e2a03d41c951a72ba9e42a04ac1d0ed738f.jpg",
    "rarity": 0.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_int",
+   "name": "Integer Stat"
+  },
+  {
+   "key": "stat_float_aggregated",
+   "name": "Aggregated Float Stat"
+  },
+  {
+   "key": "stat_int_incr",
+   "name": "Stat Int Increment Only"
   }
  ],
  "raw": {

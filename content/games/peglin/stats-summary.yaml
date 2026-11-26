@@ -1,0 +1,11 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: encounters_beaten
+          value: 332
+        - key: enemies_beaten
+          value: 1878
+        - key: t_died
+          value: 26

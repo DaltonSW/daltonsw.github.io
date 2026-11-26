@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Ship of Fools",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1286580",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 47,
  "platform": "PC",
@@ -416,6 +416,12 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1286580/6fd7d20fbfafab59591c8c51ad0f5dee9e51c984.jpg",
    "hidden": true,
    "rarity": 5
+  }
+ ],
+ "stats": [
+  {
+   "key": "Enemies_Defeated",
+   "name": "EnemiesDefeated"
   }
  ],
  "raw": {

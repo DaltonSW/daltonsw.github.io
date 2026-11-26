@@ -1,0 +1,20 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: cntr_destroy_blocks
+          name: Destroyed blocks
+          value: 4851
+        - key: cntr_suicide_enemy_trilobite_wall
+          name: Defeated sleeping trilobites
+          value: 10
+        - key: cntr_suicide_enemy_shiner
+          name: Defeated sleeping shiners
+          value: 10
+        - key: cntr_suicide_enemy_trilobite_mecha_wall
+          name: Defeated sleeping mecha trilobites
+          value: 6
+        - key: cntr_crushed_enemies
+          name: Enemies crushed
+          value: 4

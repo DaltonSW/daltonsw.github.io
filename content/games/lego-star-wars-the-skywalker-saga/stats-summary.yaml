@@ -1,0 +1,11 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: stat_DESTROY_100_TIE_FIGHTERS
+          value: 25
+        - key: stat_SHOOT_50_ENEMIES_HATS
+          value: 14
+        - key: stat_CREATE_25_REBEL_DISGUISES
+          value: 2

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Cuphead",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "268910",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 42,
  "total": 42,
  "first": "2021-07-02",
@@ -395,6 +395,22 @@
    "date": "2022-08-09T21:44:29-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/268910/827f4bc7c3ec86103af98b1484313e0199136f13.jpg",
    "rarity": 2.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "Parries",
+   "value": 3240
+  },
+  {
+   "key": "ARanks",
+   "name": "A Ranks Achieved",
+   "value": 25
+  },
+  {
+   "key": "BossesDefeatedNormal",
+   "name": "Contracts Obtained",
+   "value": 17
   }
  ],
  "mastery": [

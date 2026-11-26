@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "LEGO® Star Wars™: The Skywalker Saga",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "920210",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 5,
  "total": 45,
  "first": "2023-01-17",
@@ -381,6 +381,20 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/920210/c384a1ab5e706059db4b3175fe4375dcdee137f8.jpg",
    "rarity": 4.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "stat_DESTROY_100_TIE_FIGHTERS",
+   "value": 25
+  },
+  {
+   "key": "stat_SHOOT_50_ENEMIES_HATS",
+   "value": 14
+  },
+  {
+   "key": "stat_CREATE_25_REBEL_DISGUISES",
+   "value": 2
   }
  ],
  "raw": {

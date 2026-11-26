@@ -1,0 +1,26 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: DEATHS
+          name: Deaths
+          value: 9472
+        - key: DASHES
+          name: Dashes
+          value: 43293
+        - key: BERRIES
+          name: Strawberries Collected
+          value: 419
+        - key: GOLDBERRIES
+          name: Golden Strawberries Collected
+          value: 1
+        - key: PICO_DEATHS
+          name: PICO-8 Deaths
+          value: 142
+        - key: PICO_COMPLETES
+          name: PICO-8 Completes
+          value: 1
+        - key: PICO_BERRIES
+          name: PICO-8 Stawberries Collected
+          value: 20

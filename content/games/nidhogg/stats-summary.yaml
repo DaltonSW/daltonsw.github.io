@@ -1,0 +1,17 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: kills
+          name: Kills
+          value: 101
+        - key: playedCastle
+          name: Castle Plays
+          value: 1
+        - key: playedClouds
+          name: Clouds Plays
+          value: 1
+        - key: playedMatch
+          name: Matches Played
+          value: 2

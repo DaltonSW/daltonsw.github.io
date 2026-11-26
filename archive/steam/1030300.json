@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Hollow Knight: Silksong",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1030300",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 52,
  "total": 52,
  "first": "2025-09-04",
@@ -502,6 +502,68 @@
    "date": "2025-10-03T21:23:02-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1030300/1587857823d216422f7566872eb963484758fb10.jpg",
    "rarity": 3.1
+  }
+ ],
+ "stats": [
+  {
+   "key": "ALL_TOOLS_STAT",
+   "name": "Arsenal",
+   "value": 51
+  },
+  {
+   "key": "ALL_SILK_SKILLS_STAT",
+   "name": "Woven",
+   "value": 6
+  },
+  {
+   "key": "ALL_CRESTS_STAT",
+   "name": "Consumed",
+   "value": 7
+  },
+  {
+   "key": "FIRST_MASK_STAT",
+   "name": "Protected",
+   "value": 4
+  },
+  {
+   "key": "ALL_MASKS_STAT",
+   "name": "Masked",
+   "value": 20
+  },
+  {
+   "key": "FIRST_SILK_SPOOL_STAT",
+   "name": "Restored",
+   "value": 2
+  },
+  {
+   "key": "ALL_SILK_SPOOLS_STAT",
+   "name": "Extended",
+   "value": 18
+  },
+  {
+   "key": "ALL_SILK_HEARTS_STAT",
+   "name": "Regenerated",
+   "value": 3
+  },
+  {
+   "key": "ALL_MAPS_STAT",
+   "name": "Cartographer",
+   "value": 28
+  },
+  {
+   "key": "BELLWAYS_FULL_STAT",
+   "name": "Connected",
+   "value": 10
+  },
+  {
+   "key": "TUBES_FULL_STAT",
+   "name": "Transported",
+   "value": 6
+  },
+  {
+   "key": "FLEAS_HALF_STAT",
+   "name": "Flea Finder",
+   "value": 15
   }
  ],
  "mastery": [

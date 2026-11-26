@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Oxenfree",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "388880",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 4,
  "total": 13,
  "first": "2022-01-03",
@@ -124,6 +124,22 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/388880/7676152082ed3f982d961cf06806c436538be023.jpg",
    "rarity": 12.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "NoteCollected",
+   "name": "Adler Letters Found",
+   "value": 0
+  },
+  {
+   "key": "SecretFound",
+   "name": "Hidden Frequencies Found",
+   "value": 0
+  },
+  {
+   "key": "GameProgress",
+   "name": "Game Progress"
   }
  ],
  "raw": {

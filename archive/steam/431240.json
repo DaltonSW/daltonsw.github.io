@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Golf With Your Friends",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "431240",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 26,
  "total": 83,
  "first": "2016-08-19",
@@ -706,6 +706,378 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431240/9acc7a956a34e8d6eac1cd770727923b82bf5e20.jpg",
    "rarity": 0.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "shotsTaken",
+   "name": "Shots Taken",
+   "value": 3003
+  },
+  {
+   "key": "playersIngame",
+   "name": "Players Ingame"
+  },
+  {
+   "key": "gamesPlayed",
+   "name": "Games Played",
+   "value": 36
+  },
+  {
+   "key": "ballsSunk",
+   "name": "Balls Sunk",
+   "value": 658
+  },
+  {
+   "key": "forestBestScoreClassic",
+   "name": "Forest Best Score Classic",
+   "value": 1
+  },
+  {
+   "key": "oasisBestScoreClassic",
+   "name": "Oasis Best Score Classic",
+   "value": 2
+  },
+  {
+   "key": "holeInOnes",
+   "name": "Hole In Ones",
+   "value": 34
+  },
+  {
+   "key": "maxHitsReached",
+   "name": "Max Hits Reached",
+   "value": 6
+  },
+  {
+   "key": "outOfTime",
+   "name": "Out of Time",
+   "value": 7
+  },
+  {
+   "key": "albatross",
+   "name": "Albatross",
+   "value": 8
+  },
+  {
+   "key": "birdies",
+   "name": "Birdies",
+   "value": 120
+  },
+  {
+   "key": "bogey",
+   "name": "Bogey",
+   "value": 136
+  },
+  {
+   "key": "doubleBogey",
+   "name": "DoubleBogey",
+   "value": 72
+  },
+  {
+   "key": "eagles",
+   "name": "Eagles",
+   "value": 20
+  },
+  {
+   "key": "pars",
+   "name": "Pars",
+   "value": 185
+  },
+  {
+   "key": "twilightBestScoreClassic",
+   "name": "Twilight Best Score Classic",
+   "value": 87
+  },
+  {
+   "key": "hauntedBestScoreClassic",
+   "name": "Haunted Best Score Classic",
+   "value": 76
+  },
+  {
+   "key": "candylandBestScoreClassic",
+   "name": "Candyland Best Score Classic",
+   "value": 68
+  },
+  {
+   "key": "ancientBestScoreClassic",
+   "name": "Ancient Best Score Classic",
+   "value": 80
+  },
+  {
+   "key": "forestBestScoreHoops",
+   "name": "Forest Best Score Hoops"
+  },
+  {
+   "key": "oasisBestScoreHoops",
+   "name": "Oasis Best Score Hoops",
+   "value": 82
+  },
+  {
+   "key": "twilightBestScoreHoops",
+   "name": "Twilight Best Score Hoops"
+  },
+  {
+   "key": "hauntedBestScoreHoops",
+   "name": "Haunted Best Score Hoops"
+  },
+  {
+   "key": "candylandBestScoreHoops",
+   "name": "Candyland Best Score Hoops"
+  },
+  {
+   "key": "ancientBestScoreHoops",
+   "name": "Ancient Best Score Hoops"
+  },
+  {
+   "key": "globalGamesPlayed",
+   "name": "Global Games Played"
+  },
+  {
+   "key": "globalShotsTaken",
+   "name": "Global Shots Taken"
+  },
+  {
+   "key": "forestOnPar",
+   "name": "Forest On Par",
+   "value": 1
+  },
+  {
+   "key": "oasisOnPar",
+   "name": "Oasis On Par"
+  },
+  {
+   "key": "twilightOnPar",
+   "name": "Twilight On Par"
+  },
+  {
+   "key": "hauntedOnPar",
+   "name": "Haunted On Par"
+  },
+  {
+   "key": "candylandOnPar",
+   "name": "Candyland On Par"
+  },
+  {
+   "key": "ancientOnPar",
+   "name": "Ancient On Par"
+  },
+  {
+   "key": "pirateBestScoreHoops",
+   "name": "Pirate Best Score Hoops"
+  },
+  {
+   "key": "pirateOnPar",
+   "name": "Pirate On Par"
+  },
+  {
+   "key": "pirateBestScoreClassic",
+   "name": "Pirate Best Score Classic",
+   "value": 69
+  },
+  {
+   "key": "forestBestScoreHockey",
+   "name": "Forest Best Score Hockey"
+  },
+  {
+   "key": "oasisBestScoreHockey",
+   "name": "Oasis Best Score Hockey"
+  },
+  {
+   "key": "twilightBestScoreHockey",
+   "name": "Twilight Best Score Hockey"
+  },
+  {
+   "key": "hauntedBestScoreHockey",
+   "name": "Haunted Best Score Hockey"
+  },
+  {
+   "key": "candylandBestScoreHockey",
+   "name": "Candyland Best Score Hockey"
+  },
+  {
+   "key": "ancientBestScoreHockey",
+   "name": "Ancient Best Score Hockey"
+  },
+  {
+   "key": "pirateBestScoreHockey",
+   "name": "Pirate Best Score Hockey"
+  },
+  {
+   "key": "spaceBestScoreClassic",
+   "name": "Space Best Score Classic"
+  },
+  {
+   "key": "wormsBestScoreClassic",
+   "name": "Worms Best Score Classic",
+   "value": 99
+  },
+  {
+   "key": "museumBestScoreClassic",
+   "name": "Museum Best Score Classic",
+   "value": 68
+  },
+  {
+   "key": "volcanoBestScoreClassic",
+   "name": "Volcano Best Score Classic",
+   "value": 88
+  },
+  {
+   "key": "spaceBestScoreHockey",
+   "name": "Space Station  Best Score Hockey"
+  },
+  {
+   "key": "wormsBestScoreHockey",
+   "name": "Worms Best Score Hockey"
+  },
+  {
+   "key": "museumBestScoreHockey",
+   "name": "Museum Best Score Hockey"
+  },
+  {
+   "key": "volcanoBestScoreHockey",
+   "name": "Volcano Best Score Hockey"
+  },
+  {
+   "key": "spaceBestScoreHoops",
+   "name": "Space Station  Best Score Hoops"
+  },
+  {
+   "key": "wormsBestScoreHoops",
+   "name": "Space Station  Best Score Hoops"
+  },
+  {
+   "key": "museumBestScoreHoops",
+   "name": "Museum Best Score Hoops"
+  },
+  {
+   "key": "volcanoBestScoreHoops",
+   "name": "Volcano Best Score Hoops"
+  },
+  {
+   "key": "spaceOnPar",
+   "name": "Space Station  On Par"
+  },
+  {
+   "key": "wormsOnPar",
+   "name": "Worms On Par"
+  },
+  {
+   "key": "museumOnPar",
+   "name": "Museum On Par",
+   "value": 1
+  },
+  {
+   "key": "volcanoOnPar",
+   "name": "Volcano On  Par"
+  },
+  {
+   "key": "escapistsBestScoreClassic",
+   "name": "The Escapists Best Score Classic",
+   "value": 1
+  },
+  {
+   "key": "escapistsBestScoreHockey",
+   "name": "The Escapists Best Score Hockey"
+  },
+  {
+   "key": "escapistsBestScoreHoops",
+   "name": "The Escapists Best Score Hoops"
+  },
+  {
+   "key": "escapistsOnPar",
+   "name": "The Escapists On Par"
+  },
+  {
+   "key": "multiplayerGamesPlayed",
+   "value": 1
+  },
+  {
+   "key": "eatenByGingy"
+  },
+  {
+   "key": "outOfBounds",
+   "value": 69
+  },
+  {
+   "key": "deepBestScoreClassic",
+   "name": "The Deep Best Score Classic",
+   "value": 81
+  },
+  {
+   "key": "deepBestScoreHockey",
+   "name": "The Deep Best Score Hockey"
+  },
+  {
+   "key": "deepBestScoreHoops",
+   "name": "The Deep Best Score Hoops"
+  },
+  {
+   "key": "deepOnPar",
+   "name": "The Deep On Par"
+  },
+  {
+   "key": "bouncycastleBestScoreClassic",
+   "name": "Bouncy Castle Best Score Classic"
+  },
+  {
+   "key": "bouncycastleBestScoreHoops",
+   "name": "Bouncy Castle Best Score Hoops"
+  },
+  {
+   "key": "bouncycastleOnPar",
+   "name": "Bouncy Castle On Par"
+  },
+  {
+   "key": "bouncycastleBestScoreHockey",
+   "name": "Bouncy Castle Best Score Hockey"
+  },
+  {
+   "key": "corruptedforestBestScoreClassic",
+   "name": "Corrupted Forest Best Score Classic"
+  },
+  {
+   "key": "corruptedforestBestScoreHoops",
+   "name": "Corrupted Forest Best Score Hoops"
+  },
+  {
+   "key": "corruptedforestOnPar",
+   "name": "Corrupted Forest On Par"
+  },
+  {
+   "key": "corruptedforestBestScoreHockey",
+   "name": "Corrupted Forest Best Score Hockey"
+  },
+  {
+   "key": "peacefulpinesBestScoreClassic",
+   "name": "Peaceful Pines Best Score Classic"
+  },
+  {
+   "key": "peacefulpinesBestScoreHoops",
+   "name": "Peaceful Pines Best Score Hoops"
+  },
+  {
+   "key": "peacefulpinesOnPar",
+   "name": "Peaceful Pines On Par"
+  },
+  {
+   "key": "peacefulpinesBestScoreHockey",
+   "name": "Peaceful Pines Best Score Hockey"
+  },
+  {
+   "key": "olympusodysseyBestScoreClassic",
+   "name": "Olympus Odyssey Best Score Classic"
+  },
+  {
+   "key": "olympusodysseyBestScoreHoops",
+   "name": "Olympus Odyssey Best Score Hoops"
+  },
+  {
+   "key": "olympusodysseyOnPar",
+   "name": "Olympus Odyssey On Par"
+  },
+  {
+   "key": "olympusodysseyBestScoreHockey",
+   "name": "Olympus Odyssey Best Score Hockey"
   }
  ],
  "raw": {

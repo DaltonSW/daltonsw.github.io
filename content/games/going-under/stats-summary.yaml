@@ -1,0 +1,29 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: unlockAllSkills
+          name: Skills Unlocked
+          value: 73
+        - key: rayMaxLevel
+          name: Ray Mentorship Level
+          value: 4
+        - key: swompMaxLevel
+          name: Swomp Mentorship Level
+          value: 4
+        - key: tappiMaxLevel
+          name: Tappi Mentorship Level
+          value: 4
+        - key: fernMaxLevel
+          name: Fern Mentorship Level
+          value: 4
+        - key: karaMaxLevel
+          name: Kara Mentorship Level
+          value: 4
+        - key: openCubes
+          name: Cubes Opened
+          value: 100
+        - key: getCursed
+          name: Curses Obtained
+          value: 13

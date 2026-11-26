@@ -1,0 +1,39 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: STAT_BREAKABLESCOUNT
+          value: 52
+        - key: STAT_CHAMPKILLCOUNT
+          value: 12
+        - key: STAT_CHESTSOPENEDCOUNT
+          value: 21
+        - key: STAT_CRITCOUNT
+          value: 70
+        - key: STAT_ENCHANTCOUNT
+          value: 2
+        - key: STAT_EXPLODEENEMYCOUNT
+          value: 83
+        - key: STAT_FISHINGCOUNT
+          value: 6
+        - key: STAT_FRIENDCOUNT
+          value: 1
+        - key: STAT_ITEMSELLCOUNT
+          value: 74
+        - key: STAT_MAXDAMAGE
+          value: 155
+        - key: STAT_MAXINVENTORYGOLD
+          value: 8546
+        - key: STAT_POTIONSCONSUMEDCOUNT
+          value: 9
+        - key: STAT_SOCKETEDGEMCOUNT
+          value: 6
+        - key: STAT_STEPCOUNT
+          value: 4500
+        - key: STAT_GOLD
+          value: 0
+        - key: STAT_KILLCOUNT
+          value: 924
+        - key: STAT_SQUISHES
+          value: 10

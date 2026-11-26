@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Sanctum",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "91600",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 1,
  "total": 100,
  "first": "2013-12-14",
@@ -557,7 +557,7 @@
    "description": "Kill 1000 Hoverers.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/91600/d6cdc081fa102497dfd0bd3e767867c002f7270a.jpg",
-   "rarity": 1.9
+   "rarity": 2
   },
   {
    "key": "SAFE_AT_LAST",
@@ -814,6 +814,182 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/91600/7780d83f2530f8843a78d545c4bb330b9e051888.jpg",
    "rarity": 22.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "30_6",
+   "name": "STAT_GOOD_DAY_MR_WALKER",
+   "value": 31
+  },
+  {
+   "key": "30_7",
+   "name": "STAT_MACH_5",
+   "value": 80
+  },
+  {
+   "key": "30_8",
+   "name": "STAT_RYMDHAEST"
+  },
+  {
+   "key": "30_9",
+   "name": "STAT_SHOOT_EM_IN_THE_HEAD"
+  },
+  {
+   "key": "30_10",
+   "name": "STAT_THE_BIGGER_THEY_ARE"
+  },
+  {
+   "key": "30_11",
+   "name": "STAT_TURBO_AIM"
+  },
+  {
+   "key": "30_12",
+   "name": "STAT_FLYSWATTER"
+  },
+  {
+   "key": "30_13",
+   "name": "STAT_POLLEN_ALLERGY"
+  },
+  {
+   "key": "30_14",
+   "name": "STAT_BIG_GUYS_REQUIRE_BIG_GUNS",
+   "value": 4
+  },
+  {
+   "key": "30_15",
+   "name": "STAT_LOCKDOWN"
+  },
+  {
+   "key": "30_16",
+   "name": "STAT_TOO_FAST"
+  },
+  {
+   "key": "30_17",
+   "name": "STAT_TIME_TO_EXPAND"
+  },
+  {
+   "key": "30_18",
+   "name": "STAT_ALL_IS_DUST",
+   "value": 25
+  },
+  {
+   "key": "30_19",
+   "name": "STAT_ALL_PRO",
+   "value": 4
+  },
+  {
+   "key": "30_20",
+   "name": "STAT_TERMINATED",
+   "value": 19
+  },
+  {
+   "key": "30_21",
+   "name": "STAT_AIRBORNE_ASSAULT",
+   "value": 2
+  },
+  {
+   "key": "30_22",
+   "name": "STAT_GIANT_ENEMY_CRAB",
+   "value": 72
+  },
+  {
+   "key": "30_34",
+   "name": "STAT_IF_YOU_REPLACE_THE_WORKING_PARTS",
+   "value": 3
+  },
+  {
+   "key": "30_39",
+   "name": "STAT_REANIMATOR",
+   "value": 8
+  },
+  {
+   "key": "30_47",
+   "name": "STAT_BIG_GAME_HUNTER_COUNT"
+  },
+  {
+   "key": "30_100",
+   "name": "STAT_BIG_GAME_HUNTER"
+  },
+  {
+   "key": "30_54",
+   "name": "PREDATOR"
+  },
+  {
+   "key": "30_59",
+   "name": "POACHER"
+  },
+  {
+   "key": "666_0",
+   "name": "Cheaters",
+   "default": 4294967295
+  },
+  {
+   "key": "1001_0",
+   "name": "MineLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1002_0",
+   "name": "BridgeLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1003_0",
+   "name": "ArcLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1004_0",
+   "name": "GladeLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1005_0",
+   "name": "ComplexLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1006_0",
+   "name": "FacilityLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "30_74",
+   "name": "STAT_SKEET_SHOOTER"
+  },
+  {
+   "key": "30_75",
+   "name": "STAT_BUCK_AND_BALL"
+  },
+  {
+   "key": "1007_0",
+   "name": "AftermathLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1008_0",
+   "name": "AftershockLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1009_0",
+   "name": "CavernLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "1010_0",
+   "name": "SlumsLeaderboard",
+   "default": 4294967295
+  },
+  {
+   "key": "30_88",
+   "name": "STAT_FESTIVUS_BIGGER_THAN_CHRISTMAS"
+  },
+  {
+   "key": "1011_0",
+   "name": "ChristmasLeaderboard",
+   "default": 4294967295
   }
  ],
  "raw": {

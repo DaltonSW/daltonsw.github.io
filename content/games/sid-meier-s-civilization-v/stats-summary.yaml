@@ -1,0 +1,110 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: ESTEAMSTAT_ARCHER
+          name: Total Number of Archers built.
+          value: 9
+        - key: ESTEAMSTAT_CHARIOTARCHER
+          name: Total Number of Chariot Archers  built.
+          value: 4
+        - key: ESTEAMSTAT_HOPLITE
+          name: Total Number of Hoplites built.
+          value: 2
+        - key: ESTEAMSTAT_SCOUT
+          name: Total Number of Scouts built.
+          value: 39
+        - key: ESTEAMSTAT_SETTLER
+          name: Total Number of Settlers built.
+          value: 37
+        - key: ESTEAMSTAT_SPEARMAN
+          name: Total Number of Spearmen built.
+          value: 10
+        - key: ESTEAMSTAT_TRIREME
+          name: Total Number of Triremes built.
+          value: 23
+        - key: ESTEAMSTAT_WARRIOR
+          name: Total Number of Warriors built.
+          value: 27
+        - key: ESTEAMSTAT_WORKBOAT
+          name: Total Number of Work Boats built.
+          value: 16
+        - key: ESTEAMSTAT_WORKER
+          name: Total Number of Workers built.
+          value: 41
+        - key: ESTEAMSTAT_CATAPULT
+          name: Total Number of Catapults built.
+          value: 7
+        - key: ESTEAMSTAT_HORSEMAN
+          name: Total Number of Horsemen built.
+          value: 4
+        - key: ESTEAMSTAT_SWORDSMAN
+          name: Total Number of Swordsmen built.
+          value: 10
+        - key: ESTEAMSTAT_CROSSBOWMAN
+          name: Total Number of Crossbowmen built.
+          value: 3
+        - key: ESTEAMSTAT_KNIGHT
+          name: Total Number of Knights built.
+          value: 5
+        - key: ESTEAMSTAT_LANDSKNECHT
+          name: Total Number of Landsknechts built.
+          value: 2
+        - key: ESTEAMSTAT_PIKEMAN
+          name: Total Number of Pikemen built.
+          value: 8
+        - key: ESTEAMSTAT_TREBUCHET
+          name: Total Number of Trebuchets built.
+          value: 2
+        - key: ESTEAMSTAT_CANNON
+          name: Total Number of Cannons built.
+          value: 2
+        - key: ESTEAMSTAT_CARAVEL
+          name: Total Number of Caravels built.
+          value: 8
+        - key: ESTEAMSTAT_FRIGATE
+          name: Total Number of Frigates built.
+          value: 3
+        - key: ESTEAMSTAT_JANISSARY
+          name: Total Number of Janissaries built.
+          value: 2
+        - key: ESTEAMSTAT_RIFLEMAN
+          name: Total Number of Riflemen built.
+          value: 4
+        - key: ESTEAMSTAT_SHIPOFTHELINE
+          name: Total Number of Ships of the Lines built.
+          value: 3
+        - key: ESTEAMSTAT_SIPAHI
+          name: Total Number of Sipahis built.
+          value: 3
+        - key: ESTEAMSTAT_ARTILLERY
+          name: Total Number of Artilleries built.
+          value: 2
+        - key: ESTEAMSTAT_FIGHTER
+          name: Total Number of Fighters built.
+          value: 2
+        - key: ESTEAMSTAT_INFANTRY
+          name: Total Number of Infantries built.
+          value: 3
+        - key: ESTEAMSTAT_SSBOOSTER
+          name: Total Number of SS Boosters built.
+          value: 3
+        - key: ESTEAMSTAT_SSCOCKPIT
+          name: Total Number of SS Cockpits built.
+          value: 1
+        - key: ESTEAMSTAT_SSENGINE
+          name: Total Number of SS Engines built.
+          value: 1
+        - key: ESTEAMSTAT_SSSTASISCHAMBER
+          name: Total Number of SS Stasis Chambers built.
+          value: 1
+        - key: ESTEAMSTAT_BEATWONDERS
+          name: Number of times another Civ has completed a Wonder before you.
+          value: 75
+        - key: ESTEAMSTAT_TEMPLES
+          name: Number of temples built.
+          value: 4
+        - key: ESTEAMSTAT_CAVALRY
+          name: Total numver of Cavalry units built.
+          value: 3

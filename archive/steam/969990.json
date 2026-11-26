@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "969990",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 32,
  "total": 32,
  "first": "2020-06-27",
@@ -305,6 +305,37 @@
    "date": "2020-06-28T20:38:46-05:00",
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/969990/561dc937456e33583b18a82a62223b95ad111de8.jpg",
    "rarity": 10.4
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_SPATULA_COLLECTED",
+   "name": "Spatulas Collected",
+   "value": 100
+  },
+  {
+   "key": "STAT_ENEMIES_KILLED_SB",
+   "name": "Robots Destroyed as SpongeBob",
+   "value": 655
+  },
+  {
+   "key": "STAT_ENEMIES_KILLED_PAT",
+   "name": "Robots Destroyed as Patrick",
+   "value": 132
+  },
+  {
+   "key": "STAT_ENEMIES_KILLED_SANDY",
+   "name": "Robots Destroyed as Sandy",
+   "value": 155
+  },
+  {
+   "key": "STAT_SOCK_COLLECTED",
+   "value": 80
+  },
+  {
+   "key": "STAT_ANNOYED_SQUIDWARD",
+   "name": "Times Squidward was annoyed by SpongeBob, Patrick or Sandy",
+   "value": 19
   }
  ],
  "mastery": [

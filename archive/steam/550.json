@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Left 4 Dead 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "550",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 6,
  "total": 101,
  "first": "2017-03-21",
@@ -466,7 +466,7 @@
    "description": "Revive an incapacitated teammate while a Tank is nearby.",
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/6b4a0772e54be50ff072b8ff2fc55047221fadda.jpg",
-   "rarity": 33.8
+   "rarity": 33.9
   },
   {
    "key": "ACH_RUN_ALL_GENERATORS",
@@ -827,6 +827,3166 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/550/81522571f3f42048be3e9985a05f7206f7d35e5e.jpg",
    "rarity": 70
+  }
+ ],
+ "stats": [
+  {
+   "key": "Stat.GamesPlayed.Total",
+   "name": "txt.Stat.GamesPlayed.Total",
+   "value": 12
+  },
+  {
+   "key": "Stat.FinaleFinished.Total",
+   "name": "txt.Stat.FinaleFinished.Total"
+  },
+  {
+   "key": "Stat.TotalPlayTime.Total",
+   "name": "txt.Stat.TotalPlayTime.Total",
+   "value": 26287
+  },
+  {
+   "key": "Stat.InfectedKilled.Total",
+   "name": "txt.Stat.InfectedKilled.Total",
+   "value": 1354
+  },
+  {
+   "key": "Stat.KitsUsed.Total",
+   "name": "txt.Stat.KitsUsed.Total",
+   "value": 60
+  },
+  {
+   "key": "Stat.PillsUsed.Total",
+   "name": "txt.Stat.PillsUsed.Total",
+   "value": 11
+  },
+  {
+   "key": "Stat.KitsShared.Total",
+   "name": "txt.Stat.KitsShared.Total",
+   "value": 4
+  },
+  {
+   "key": "Stat.TeamRevivedMost.Total",
+   "name": "txt.Stat.TeamRevivedMost.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.TeamProtectedMost.Total",
+   "name": "txt.Stat.TeamProtectedMost.Total",
+   "value": 46
+  },
+  {
+   "key": "Stat.WasRevived.Total",
+   "name": "txt.Stat.WasRevived.Total",
+   "value": 38
+  },
+  {
+   "key": "Stat.WasProtected.Total",
+   "name": "txt.Stat.WasProtected.Total",
+   "value": 227
+  },
+  {
+   "key": "Stat.FFDamage.Total",
+   "name": "txt.Stat.FFDamage.Total",
+   "value": 3468
+  },
+  {
+   "key": "Stat.FFDamageGameMost.Total",
+   "name": "txt.Stat.FFDamageGameMost.Total",
+   "value": 3102
+  },
+  {
+   "key": "Stat.HighestSurvivorScore.Total",
+   "name": "txt.Stat.HighestSurvivorScore.Total",
+   "value": 2130
+  },
+  {
+   "key": "Stat.KitsUsed.Avg",
+   "name": "txt.Stat.KitsUsed.Avg",
+   "value": 5
+  },
+  {
+   "key": "Stat.PillsUsed.Avg",
+   "name": "txt.Stat.PillsUsed.Avg",
+   "value": 0.9166666865348816
+  },
+  {
+   "key": "Stat.KitsShared.Avg",
+   "name": "txt.Stat.KitsShared.Avg",
+   "value": 0.3333333432674408
+  },
+  {
+   "key": "Stat.WasRevived.Avg",
+   "name": "txt.Stat.WasRevived.Avg",
+   "value": 3.1666667461395264
+  },
+  {
+   "key": "Stat.WasProtected.Avg",
+   "name": "txt.Stat.WasProtected.Avg",
+   "value": 18.91666603088379
+  },
+  {
+   "key": "Stat.FFDamageGame.Avg",
+   "name": "txt.Stat.FFDamageGame.Avg",
+   "value": 289
+  },
+  {
+   "key": "Stat.TeamRevivedMost.Diff",
+   "name": "txt.Stat.TeamRevivedMost.Diff",
+   "value": 1
+  },
+  {
+   "key": "Stat.TeamProtectedMost.Diff",
+   "name": "txt.Stat.TeamProtectedMost.Diff",
+   "value": 3
+  },
+  {
+   "key": "Stat.FFDamageGameMost.Diff",
+   "name": "txt.Stat.FFDamageGameMost.Diff",
+   "value": 3
+  },
+  {
+   "key": "Stat.Escaped.Recent",
+   "name": "txt.Stat.Escaped.Recent"
+  },
+  {
+   "key": "Stat.PlayTime.Recent",
+   "name": "txt.Stat.PlayTime.Recent",
+   "value": 2310
+  },
+  {
+   "key": "Stat.CampaignID.Recent",
+   "name": "txt.Stat.CampaignID.Recent"
+  },
+  {
+   "key": "Stat.Difficulty.Recent",
+   "name": "txt.Stat.Difficulty.Recent",
+   "value": 0
+  },
+  {
+   "key": "Stat.GamesPlayed.Versus",
+   "name": "txt.Stat.GamesPlayed.Versus",
+   "value": 5
+  },
+  {
+   "key": "Stat.FinaleFinished.Versus",
+   "name": "txt.Stat.FinaleFinished.Versus"
+  },
+  {
+   "key": "Stat.PointsMost.Versus",
+   "name": "txt.Stat.PointsMost.Versus",
+   "value": 432
+  },
+  {
+   "key": "Stat.GamesWon.Versus",
+   "name": "txt.Stat.GamesWon.Versus",
+   "value": 2
+  },
+  {
+   "key": "Stat.GamesLost.Versus",
+   "name": "txt.Stat.GamesLost.Versus",
+   "value": 3
+  },
+  {
+   "key": "Stat.PointsMostID.Versus",
+   "name": "txt.Stat.PointsMostID.Versus",
+   "value": 3
+  },
+  {
+   "key": "Stat.WeaponIDLvl1.Fav",
+   "name": "txt.Stat.WeaponIDLvl1.Fav"
+  },
+  {
+   "key": "Stat.KillPercentLvl1.Fav",
+   "name": "txt.Stat.KillPercentLvl1.Fav",
+   "value": 36
+  },
+  {
+   "key": "Stat.WeaponIDLvl2.Fav",
+   "name": "txt.Stat.WeaponIDLvl2.Fav",
+   "value": 6
+  },
+  {
+   "key": "Stat.KillPercentLvl2.Fav",
+   "name": "txt.Stat.KillPercentLvl2.Fav",
+   "value": 37
+  },
+  {
+   "key": "Stat.CampaignID.Fav",
+   "name": "txt.Stat.CampaignID.Fav",
+   "value": 1
+  },
+  {
+   "key": "Stat.CharacterID.Fav",
+   "name": "txt.Stat.CharacterID.Fav",
+   "value": 1
+  },
+  {
+   "key": "Stat.PlayTimePercent.Fav",
+   "name": "txt.Stat.PlayTimePercent.Fav"
+  },
+  {
+   "key": "Stat.CharacterPlayedPercent.Fav",
+   "name": "txt.Stat.CharacterPlayedPercent.Fav",
+   "value": 50
+  },
+  {
+   "key": "Stat.pistol.Shots.Total",
+   "name": "txt.Stat.Pistol.Shots.Total",
+   "value": 1861
+  },
+  {
+   "key": "Stat.smg.Shots.Total",
+   "name": "txt.Stat.Smg.Shots.Total",
+   "value": 1327
+  },
+  {
+   "key": "Stat.pumpshotgun.Shots.Total",
+   "name": "txt.Stat.Shotgun.Shots.Total",
+   "value": 179
+  },
+  {
+   "key": "Stat.autoshotgun.Shots.Total",
+   "name": "txt.Stat.AutoShotgun.Shots.Total",
+   "value": 799
+  },
+  {
+   "key": "Stat.rifle.Shots.Total",
+   "name": "txt.Stat.Rifle.Shots.Total",
+   "value": 824
+  },
+  {
+   "key": "Stat.hunting_rifle.Shots.Total",
+   "name": "txt.Stat.Sniper.Shots.Total",
+   "value": 78
+  },
+  {
+   "key": "Stat.molotov.Shots.Total",
+   "name": "txt.Stat.Molotov.Shots.Total",
+   "value": 8
+  },
+  {
+   "key": "Stat.pipe_bomb.Shots.Total",
+   "name": "txt.Stat.PipeBomb.Shots.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.machinegun.Shots.Total",
+   "name": "txt.Stat.Minigun.Shots.Total"
+  },
+  {
+   "key": "Stat.pistol.Head.Total",
+   "name": "txt.Stat.Pistol.Head.Total",
+   "value": 53
+  },
+  {
+   "key": "Stat.smg.Head.Total",
+   "name": "txt.Stat.Smg.Head.Total",
+   "value": 42
+  },
+  {
+   "key": "Stat.pumpshotgun.Head.Total",
+   "name": "txt.Stat.Shotgun.Head.Total",
+   "value": 31
+  },
+  {
+   "key": "Stat.autoshotgun.Head.Total",
+   "name": "txt.Stat.AutoShotgun.Head.Total",
+   "value": 191
+  },
+  {
+   "key": "Stat.rifle.Head.Total",
+   "name": "txt.Stat.Rifle.Head.Total",
+   "value": 44
+  },
+  {
+   "key": "Stat.hunting_rifle.Head.Total",
+   "name": "txt.Stat.Sniper.Head.Total",
+   "value": 4
+  },
+  {
+   "key": "Stat.machinegun.Head.Total",
+   "name": "txt.Stat.Minigun.Head.Total"
+  },
+  {
+   "key": "Stat.pistol.Kills.Total",
+   "name": "txt.Stat.Pistol.Kills.Total",
+   "value": 246
+  },
+  {
+   "key": "Stat.smg.Kills.Total",
+   "name": "txt.Stat.Smg.Kills.Total",
+   "value": 127
+  },
+  {
+   "key": "Stat.pumpshotgun.Kills.Total",
+   "name": "txt.Stat.Shotgun.Kills.Total",
+   "value": 109
+  },
+  {
+   "key": "Stat.autoshotgun.Kills.Total",
+   "name": "txt.Stat.AutoShotgun.Kills.Total",
+   "value": 441
+  },
+  {
+   "key": "Stat.rifle.Kills.Total",
+   "name": "txt.Stat.Rifle.Kills.Total",
+   "value": 128
+  },
+  {
+   "key": "Stat.hunting_rifle.Kills.Total",
+   "name": "txt.Stat.Sniper.Kills.Total",
+   "value": 36
+  },
+  {
+   "key": "Stat.molotov.Kills.Total",
+   "name": "txt.Stat.Molotov.Kills.Total",
+   "value": 68
+  },
+  {
+   "key": "Stat.pipe_bomb.Kills.Total",
+   "name": "txt.Stat.PipeBomb.Kills.Total",
+   "value": 29
+  },
+  {
+   "key": "Stat.machinegun.Kills.Total",
+   "name": "txt.Stat.Minigun.Kills.Total"
+  },
+  {
+   "key": "Stat.MostDamage1Life.Boomer",
+   "name": "txt.Stat.MostDamage1Life.Boomer",
+   "value": 16
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Boomer",
+   "name": "txt.Stat.AvgLifeSpan.Boomer",
+   "value": 20
+  },
+  {
+   "key": "Stat.TotalSpawns.Boomer",
+   "name": "txt.Stat.TotalSpawns.Boomer",
+   "value": 21
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Boomer",
+   "name": "txt.Stat.TotalLifeSpan.Boomer",
+   "value": 422
+  },
+  {
+   "key": "Stat.SpecAttack.Boomer",
+   "name": "txt.Stat.SpecAttack.Boomer",
+   "value": 16
+  },
+  {
+   "key": "Stat.MostDamage1Life.Hunter",
+   "name": "txt.Stat.MostDamage1Life.Hunter",
+   "value": 359
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Hunter",
+   "name": "txt.Stat.AvgLifeSpan.Hunter",
+   "value": 29
+  },
+  {
+   "key": "Stat.TotalSpawns.Hunter",
+   "name": "txt.Stat.TotalSpawns.Hunter",
+   "value": 26
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Hunter",
+   "name": "txt.Stat.TotalLifeSpan.Hunter",
+   "value": 774
+  },
+  {
+   "key": "Stat.SpecAttack.Hunter",
+   "name": "txt.Stat.SpecAttack.Hunter",
+   "value": 14
+  },
+  {
+   "key": "Stat.MostDamage1Life.Smoker",
+   "name": "txt.Stat.MostDamage1Life.Smoker",
+   "value": 352
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Smoker",
+   "name": "txt.Stat.AvgLifeSpan.Smoker",
+   "value": 30
+  },
+  {
+   "key": "Stat.TotalSpawns.Smoker",
+   "name": "txt.Stat.TotalSpawns.Smoker",
+   "value": 22
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Smoker",
+   "name": "txt.Stat.TotalLifeSpan.Smoker",
+   "value": 673
+  },
+  {
+   "key": "Stat.SpecAttack.Smoker",
+   "name": "txt.Stat.SpecAttack.Smoker",
+   "value": 17
+  },
+  {
+   "key": "Stat.MostDamage1Life.Tank",
+   "name": "txt.Stat.MostDamage1Life.Tank",
+   "value": 432
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Tank",
+   "name": "txt.Stat.AvgLifeSpan.Tank",
+   "value": 38
+  },
+  {
+   "key": "Stat.TotalSpawns.Tank",
+   "name": "txt.Stat.TotalSpawns.Tank",
+   "value": 9
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Tank",
+   "name": "txt.Stat.TotalLifeSpan.Tank",
+   "value": 348
+  },
+  {
+   "key": "Stat.SpecAttack.Tank",
+   "name": "txt.Stat.SpecAttack.Tank",
+   "value": 5
+  },
+  {
+   "key": "Stat.pistol.Accuracy.Total",
+   "name": "txt.Stat.Pistol.Accuracy.Total",
+   "value": 50
+  },
+  {
+   "key": "Stat.pistol.HeadAccuracy.Total",
+   "name": "txt.Stat.Pistol.HeadAccuracy.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.smg.Accuracy.Total",
+   "name": "txt.Stat.Smg.Accuracy.Total",
+   "value": 53
+  },
+  {
+   "key": "Stat.smg.HeadAccuracy.Total",
+   "name": "txt.Stat.Smg.HeadAccuracy.Total",
+   "value": 3
+  },
+  {
+   "key": "Stat.pumpshotgun.Accuracy.Total",
+   "name": "txt.Stat.Shotgun.Accuracy.Total",
+   "value": 29
+  },
+  {
+   "key": "Stat.pumpshotgun.HeadAccuracy.Total",
+   "name": "txt.Stat.Shotgun.HeadAccuracy.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.autoshotgun.Accuracy.Total",
+   "name": "txt.Stat.AutoShotgun.Accuracy.Total",
+   "value": 26
+  },
+  {
+   "key": "Stat.autoshotgun.HeadAccuracy.Total",
+   "name": "txt.Stat.AutoShotgun.HeadAccuracy.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.rifle.Accuracy.Total",
+   "name": "txt.Stat.Rifle.Accuracy.Total",
+   "value": 80
+  },
+  {
+   "key": "Stat.rifle.HeadAccuracy.Total",
+   "name": "txt.Stat.Rifle.HeadAccuracy.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.hunting_rifle.Accuracy.Total",
+   "name": "txt.Stat.Sniper.Accuracy.Total",
+   "value": 46
+  },
+  {
+   "key": "Stat.hunting_rifle.HeadAccuracy.Total",
+   "name": "txt.Stat.Sniper.HeadAccuracy.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.machinegun.Accuracy.Total",
+   "name": "txt.Stat.Minigun.Accuracy.Total"
+  },
+  {
+   "key": "Stat.machinegun.HeadAccuracy.Total",
+   "name": "txt.Stat.Minigun.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.PillsShared.Avg",
+   "name": "txt.Stat.PillsShared.Avg",
+   "value": 0.1666666716337204
+  },
+  {
+   "key": "Stat.TeamRevived.Avg",
+   "name": "txt.Stat.TeamRevived.Avg",
+   "value": 1.3333333730697632
+  },
+  {
+   "key": "Stat.TeamProtected.Avg",
+   "name": "txt.Stat.TeamProtected.Avg",
+   "value": 11.75
+  },
+  {
+   "key": "Stat.PillsShared.Total",
+   "name": "txt.Stat.PillsShared.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.TeamRevived.Total",
+   "name": "txt.Stat.TeamRevived.Total",
+   "value": 16
+  },
+  {
+   "key": "Stat.TeamProtected.Total",
+   "name": "txt.Stat.TeamProtected.Total",
+   "value": 141
+  },
+  {
+   "key": "Stat.pistol.Hit.Total",
+   "name": "txt.Stat.Pistol.Hit.Total",
+   "value": 948
+  },
+  {
+   "key": "Stat.smg.Hit.Total",
+   "name": "txt.Stat.Smg.Hit.Total",
+   "value": 714
+  },
+  {
+   "key": "Stat.pumpshotgun.Hit.Total",
+   "name": "txt.Stat.Shotgun.Hit.Total",
+   "value": 429
+  },
+  {
+   "key": "Stat.autoshotgun.Hit.Total",
+   "name": "txt.Stat.AutoShotgun.Hit.Total",
+   "value": 1881
+  },
+  {
+   "key": "Stat.rifle.Hit.Total",
+   "name": "txt.Stat.Rifle.Hit.Total",
+   "value": 660
+  },
+  {
+   "key": "Stat.hunting_rifle.Hit.Total",
+   "name": "txt.Stat.Sniper.Hit.Total",
+   "value": 36
+  },
+  {
+   "key": "Stat.machinegun.Hit.Total",
+   "name": "txt.Stat.Minigun.Hit.Total"
+  },
+  {
+   "key": "Stat.smg_silenced.Shots.Total",
+   "name": "txt.Stat.Smg_silenced.Shots.Total",
+   "value": 373
+  },
+  {
+   "key": "Stat.smg_silenced.Head.Total",
+   "name": "txt.Stat.Smg_silenced.Head.Total",
+   "value": 20
+  },
+  {
+   "key": "Stat.smg_silenced.Kills.Total",
+   "name": "txt.Stat.Smg_silenced.Kills.Total",
+   "value": 25
+  },
+  {
+   "key": "Stat.smg_silenced.Accuracy.Total",
+   "name": "txt.Stat.Smg_silenced.Accuracy.Total",
+   "value": 44
+  },
+  {
+   "key": "Stat.smg_silenced.HeadAccuracy.Total",
+   "name": "txt.Stat.Smg_silenced.HeadAccuracy.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.smg_silenced.Hit.Total",
+   "name": "txt.Stat.Smg_silenced.Hit.Total",
+   "value": 165
+  },
+  {
+   "key": "Stat.shotgun_chrome.Shots.Total",
+   "name": "txt.Stat.Shotgun_chrome.Shots.Total",
+   "value": 268
+  },
+  {
+   "key": "Stat.shotgun_chrome.Head.Total",
+   "name": "txt.Stat.Shotgun_chrome.Head.Total",
+   "value": 59
+  },
+  {
+   "key": "Stat.shotgun_chrome.Kills.Total",
+   "name": "txt.Stat.Shotgun_chrome.Kills.Total",
+   "value": 176
+  },
+  {
+   "key": "Stat.shotgun_chrome.Accuracy.Total",
+   "name": "txt.Stat.Shotgun_chrome.Accuracy.Total",
+   "value": 26
+  },
+  {
+   "key": "Stat.shotgun_chrome.HeadAccuracy.Total",
+   "name": "txt.Stat.Shotgun_chrome.HeadAccuracy.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.shotgun_chrome.Hit.Total",
+   "name": "txt.Stat.Shotgun_chrome.Hit.Total",
+   "value": 573
+  },
+  {
+   "key": "Stat.shotgun_spas.Shots.Total",
+   "name": "txt.Stat.Shotgun_SPAS.Shots.Total",
+   "value": 1360
+  },
+  {
+   "key": "Stat.shotgun_spas.Head.Total",
+   "name": "txt.Stat.Shotgun_SPAS.Head.Total",
+   "value": 204
+  },
+  {
+   "key": "Stat.shotgun_spas.Kills.Total",
+   "name": "txt.Stat.Shotgun_SPAS.Kills.Total",
+   "value": 655
+  },
+  {
+   "key": "Stat.shotgun_spas.Accuracy.Total",
+   "name": "txt.Stat.Shotgun_SPAS.Accuracy.Total",
+   "value": 22
+  },
+  {
+   "key": "Stat.shotgun_spas.HeadAccuracy.Total",
+   "name": "txt.Stat.Shotgun_SPAS.HeadAccuracy.Total",
+   "value": 1
+  },
+  {
+   "key": "Stat.shotgun_spas.Hit.Total",
+   "name": "txt.Stat.Shotgun_SPAS.Hit.Total",
+   "value": 2778
+  },
+  {
+   "key": "Stat.rifle_desert.Shots.Total",
+   "name": "txt.Stat.Rifle_Desert.Shots.Total",
+   "value": 434
+  },
+  {
+   "key": "Stat.rifle_desert.Head.Total",
+   "name": "txt.Stat.Rifle_Desert.Head.Total",
+   "value": 30
+  },
+  {
+   "key": "Stat.rifle_desert.Kills.Total",
+   "name": "txt.Stat.Rifle_Desert.Kills.Total",
+   "value": 125
+  },
+  {
+   "key": "Stat.rifle_desert.Accuracy.Total",
+   "name": "txt.Stat.Rifle_Desert.Accuracy.Total",
+   "value": 97
+  },
+  {
+   "key": "Stat.rifle_desert.HeadAccuracy.Total",
+   "name": "txt.Stat.Rifle_Desert.HeadAccuracy.Total",
+   "value": 6
+  },
+  {
+   "key": "Stat.rifle_desert.Hit.Total",
+   "name": "txt.Stat.Rifle_Desert.Hit.Total",
+   "value": 423
+  },
+  {
+   "key": "Stat.rifle_ak47.Shots.Total",
+   "name": "txt.Stat.Rifle_AK47.Shots.Total",
+   "value": 217
+  },
+  {
+   "key": "Stat.rifle_ak47.Head.Total",
+   "name": "txt.Stat.Rifle_AK47.Head.Total",
+   "value": 10
+  },
+  {
+   "key": "Stat.rifle_ak47.Kills.Total",
+   "name": "txt.Stat.Rifle_AK47.Kills.Total",
+   "value": 41
+  },
+  {
+   "key": "Stat.rifle_ak47.Accuracy.Total",
+   "name": "txt.Stat.Rifle_AK47.Accuracy.Total",
+   "value": 59
+  },
+  {
+   "key": "Stat.rifle_ak47.HeadAccuracy.Total",
+   "name": "txt.Stat.Rifle_AK47.HeadAccuracy.Total",
+   "value": 4
+  },
+  {
+   "key": "Stat.rifle_ak47.Hit.Total",
+   "name": "txt.Stat.Rifle_AK47.Hit.Total",
+   "value": 130
+  },
+  {
+   "key": "Stat.sniper_military.Shots.Total",
+   "name": "txt.Stat.Sniper_Military.Shots.Total",
+   "value": 180
+  },
+  {
+   "key": "Stat.sniper_military.Head.Total",
+   "name": "txt.Stat.Sniper_Military.Head.Total",
+   "value": 10
+  },
+  {
+   "key": "Stat.sniper_military.Kills.Total",
+   "name": "txt.Stat.Sniper_Military.Kills.Total",
+   "value": 86
+  },
+  {
+   "key": "Stat.sniper_military.Accuracy.Total",
+   "name": "txt.Stat.Sniper_Military.Accuracy.Total",
+   "value": 52
+  },
+  {
+   "key": "Stat.sniper_military.HeadAccuracy.Total",
+   "name": "txt.Stat.Sniper_Military.HeadAccuracy.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.sniper_military.Hit.Total",
+   "name": "txt.Stat.Sniper_Military.Hit.Total",
+   "value": 94
+  },
+  {
+   "key": "Stat.SurvivalGamesPlayed.Total",
+   "name": "txt.Stat.SurvivalGamesPlayed.Total",
+   "value": 3
+  },
+  {
+   "key": "Stat.ScavengeGamesPlayed.Total",
+   "name": "txt.Stat.ScavengeGamesPlayed.Total"
+  },
+  {
+   "key": "Stat.MostDamage1Life.Spitter",
+   "name": "txt.Stat.MostDamage1Life.Spitter",
+   "value": 214
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Spitter",
+   "name": "txt.Stat.AvgLifeSpan.Spitter",
+   "value": 59
+  },
+  {
+   "key": "Stat.TotalSpawns.Spitter",
+   "name": "txt.Stat.TotalSpawns.Spitter",
+   "value": 23
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Spitter",
+   "name": "txt.Stat.TotalLifeSpan.Spitter",
+   "value": 1371
+  },
+  {
+   "key": "Stat.SpecAttack.Spitter",
+   "name": "txt.Stat.SpecAttack.Spitter",
+   "value": 36
+  },
+  {
+   "key": "Stat.MostDamage1Life.Jockey",
+   "name": "txt.Stat.MostDamage1Life.Jockey",
+   "value": 214
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Jockey",
+   "name": "txt.Stat.AvgLifeSpan.Jockey",
+   "value": 24
+  },
+  {
+   "key": "Stat.TotalSpawns.Jockey",
+   "name": "txt.Stat.TotalSpawns.Jockey",
+   "value": 24
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Jockey",
+   "name": "txt.Stat.TotalLifeSpan.Jockey",
+   "value": 580
+  },
+  {
+   "key": "Stat.SpecAttack.Jockey",
+   "name": "txt.Stat.SpecAttack.Jockey",
+   "value": 18
+  },
+  {
+   "key": "Stat.MostDamage1Life.Charger",
+   "name": "txt.Stat.MostDamage1Life.Charger",
+   "value": 115
+  },
+  {
+   "key": "Stat.AvgLifeSpan.Charger",
+   "name": "txt.Stat.AvgLifeSpan.Charger",
+   "value": 24
+  },
+  {
+   "key": "Stat.TotalSpawns.Charger",
+   "name": "txt.Stat.TotalSpawns.Charger",
+   "value": 24
+  },
+  {
+   "key": "Stat.TotalLifeSpan.Charger",
+   "name": "txt.Stat.TotalLifeSpan.Charger",
+   "value": 590
+  },
+  {
+   "key": "Stat.SpecAttack.Charger",
+   "name": "txt.Stat.SpecAttack.Charger",
+   "value": 13
+  },
+  {
+   "key": "Stat.vomitjar.Shots.Total",
+   "name": "txt.Stat.VomitJar.Shots.Total",
+   "value": 3
+  },
+  {
+   "key": "Stat.vomitjar.Kills.Total",
+   "name": "txt.Stat.VomitJar.Kills.Total",
+   "value": 6
+  },
+  {
+   "key": "TD2.COUNT.ACH_CUT_OFF_HEADS_MELEE",
+   "name": "txt.TD2.COUNT.ACH_CUT_OFF_HEADS_MELEE",
+   "value": 7
+  },
+  {
+   "key": "TD2.COUNT.ACH_KILL_WITH_EVERY_MELEE",
+   "name": "txt.TD2.COUNT.ACH_KILL_WITH_EVERY_MELEE",
+   "value": 3
+  },
+  {
+   "key": "TD2.COUNT.ACH_KILL_INFECTED_WITH_CHAINSAW",
+   "name": "txt.TD2.COUNT.ACH_KILL_INFECTED_WITH_CHAINSAW"
+  },
+  {
+   "key": "TD2.COUNT.ACH_RES_SURVIVORS_WITH_DEFIB",
+   "name": "txt.TD2.COUNT.ACH_RES_SURVIVORS_WITH_DEFIB"
+  },
+  {
+   "key": "TD2.COUNT.ACH_SPEED_REVIVE_WITH_ADRENALINE",
+   "name": "txt.TD2.COUNT.ACH_SPEED_REVIVE_WITH_ADRENALINE"
+  },
+  {
+   "key": "TD2.COUNT.ACH_IGNITE_INFECTED_FIRE_AMMO",
+   "name": "txt.TD2.COUNT.ACH_IGNITE_INFECTED_FIRE_AMMO",
+   "value": 13
+  },
+  {
+   "key": "TD2.COUNT.ACH_KILL_EVERY_UNCOMMON_INFECTED",
+   "name": "txt.TD2.COUNT.ACH_KILL_EVERY_UNCOMMON_INFECTED",
+   "value": 3
+  },
+  {
+   "key": "TD2.COUNT.ACH_KILL_SUBMERGED_MUDMEN",
+   "name": "txt.TD2.COUNT.ACH_KILL_SUBMERGED_MUDMEN"
+  },
+  {
+   "key": "TD2.COUNT.ACH_COLLECT_CEDA_VIALS",
+   "name": "txt.TD2.COUNT.ACH_COLLECT_CEDA_VIALS"
+  },
+  {
+   "key": "TD2.COUNT.ACH_SCAVENGE_COLLECT_CAN_GRIND",
+   "name": "txt.TD2.COUNT.ACH_SCAVENGE_COLLECT_CAN_GRIND"
+  },
+  {
+   "key": "TD2.COUNT.ACH_SCAVENGE_CAN_DROP_GRIND",
+   "name": "txt.TD2.COUNT.ACH_SCAVENGE_CAN_DROP_GRIND"
+  },
+  {
+   "key": "TD2.COMP.ACH_BEAT_CAMPAIGNS_EXPERT_MODE",
+   "name": "txt.TD2.COMP.ACH_BEAT_CAMPAIGNS_EXPERT_MODE"
+  },
+  {
+   "key": "TD2.COMP.ACH_KILL_WITH_EVERY_MELEE",
+   "name": "txt.TD2.COMP.ACH_KILL_WITH_EVERY_MELEE",
+   "value": 37
+  },
+  {
+   "key": "TD2.COMP.ACH_KILL_EVERY_UNCOMMON_INFECTED",
+   "name": "txt.TD2.COMP.ACH_KILL_EVERY_UNCOMMON_INFECTED",
+   "value": 13
+  },
+  {
+   "key": "TD2.COUNT.ACH_HONK_A_CLOWNS_NOSE",
+   "name": "txt.TD2.COUNT.ACH_HONK_A_CLOWNS_NOSE",
+   "value": 1
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_INTRO",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_INTRO",
+   "value": 5
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_SMOKER",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_SMOKER",
+   "value": 5
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_BOOMER",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_BOOMER",
+   "value": 5
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_HUNTER",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_HUNTER",
+   "value": 5
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_SPITTER",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_SPITTER",
+   "value": 5
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_JOCKEY",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_JOCKEY",
+   "value": 5
+  },
+  {
+   "key": "TD2.COUNT.ZOMBIE_PANEL_CHARGER",
+   "name": "txt.TD2.COUNT.ZOMBIE_PANEL_CHARGER",
+   "value": 5
+  },
+  {
+   "key": "Stat.AdrenalineShared.Avg",
+   "name": "txt.Stat.AdrenalineShared.Avg",
+   "value": 0.1666666716337204
+  },
+  {
+   "key": "Stat.AdrenalineShared.Total",
+   "name": "txt.Stat.AdrenalineShared.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.AdrenalineUsed.Avg",
+   "name": "txt.Stat.AdrenalineUsed.Avg",
+   "value": 0.6666666865348816
+  },
+  {
+   "key": "Stat.AdrenalineUsed.Total",
+   "name": "txt.Stat.AdrenalineUsed.Total",
+   "value": 8
+  },
+  {
+   "key": "Stat.DefibrillatorsUsed.Avg",
+   "name": "txt.Stat.DefibrillatorsUsed.Avg",
+   "value": 0.0833333358168602
+  },
+  {
+   "key": "Stat.DefibrillatorsUsed.Total",
+   "name": "txt.Stat.DefibrillatorsUsed.Total",
+   "value": 1
+  },
+  {
+   "key": "Stat.RealismGamesPlayed.Total",
+   "name": "txt.Stat.RealismGamesPlayed.Total"
+  },
+  {
+   "key": "Stat.DeadCenterPlayTime.Total",
+   "name": "txt.Stat.DeadCenterPlayTime.Total"
+  },
+  {
+   "key": "Stat.DarkCarnivalPlayTime.Total",
+   "name": "txt.Stat.DarkCarnivalPlayTime.Total"
+  },
+  {
+   "key": "Stat.SwampFeverPlayTime.Total",
+   "name": "txt.Stat.SwampFeverPlayTime.Total"
+  },
+  {
+   "key": "Stat.HardRainPlayTime.Total",
+   "name": "txt.Stat.HardRainPlayTime.Total"
+  },
+  {
+   "key": "Stat.TheParishPlayTime.Total",
+   "name": "txt.Stat.TheParishPlayTime.Total"
+  },
+  {
+   "key": "Stat.pistol_magnum.Shots.Total",
+   "name": "txt.Stat.pistol_magnum.Shots.Total",
+   "value": 521
+  },
+  {
+   "key": "Stat.pistol_magnum.Head.Total",
+   "name": "txt.Stat.pistol_magnum.Head.Total",
+   "value": 7
+  },
+  {
+   "key": "Stat.pistol_magnum.Kills.Total",
+   "name": "txt.Stat.pistol_magnum.Kills.Total",
+   "value": 202
+  },
+  {
+   "key": "Stat.pistol_magnum.Accuracy.Total",
+   "name": "txt.Stat.pistol_magnum.Accuracy.Total",
+   "value": 41
+  },
+  {
+   "key": "Stat.pistol_magnum.HeadAccuracy.Total",
+   "name": "txt.Stat.pistol_magnum.HeadAccuracy.Total",
+   "value": 1
+  },
+  {
+   "key": "Stat.pistol_magnum.Hit.Total",
+   "name": "txt.Stat.pistol_magnum.Hit.Total",
+   "value": 215
+  },
+  {
+   "key": "Stat.pistol.Damage.Total",
+   "name": "txt.Stat.pistol.Damage.Total",
+   "value": 5231
+  },
+  {
+   "key": "Stat.smg.Damage.Total",
+   "name": "txt.Stat.smg.Damage.Total",
+   "value": 846
+  },
+  {
+   "key": "Stat.smg_silenced.Damage.Total",
+   "name": "txt.Stat.smg_silenced.Damage.Total",
+   "value": 318
+  },
+  {
+   "key": "Stat.pumpshotgun.Damage.Total",
+   "name": "txt.Stat.pumpshotgun.Damage.Total",
+   "value": 1407
+  },
+  {
+   "key": "Stat.shotgun_chrome.Damage.Total",
+   "name": "txt.Stat.shotgun_chrome.Damage.Total",
+   "value": 711
+  },
+  {
+   "key": "Stat.autoshotgun.Damage.Total",
+   "name": "txt.Stat.autoshotgun.Damage.Total",
+   "value": 1778
+  },
+  {
+   "key": "Stat.shotgun_spas.Damage.Total",
+   "name": "txt.Stat.shotgun_spas.Damage.Total",
+   "value": 4360
+  },
+  {
+   "key": "Stat.rifle.Damage.Total",
+   "name": "txt.Stat.rifle.Damage.Total",
+   "value": 1135
+  },
+  {
+   "key": "Stat.rifle_desert.Damage.Total",
+   "name": "txt.Stat.rifle_desert.Damage.Total",
+   "value": 914
+  },
+  {
+   "key": "Stat.rifle_ak47.Damage.Total",
+   "name": "txt.Stat.rifle_ak47.Damage.Total",
+   "value": 392
+  },
+  {
+   "key": "Stat.hunting_rifle.Damage.Total",
+   "name": "txt.Stat.hunting_rifle.Damage.Total",
+   "value": 155
+  },
+  {
+   "key": "Stat.sniper_military.Damage.Total",
+   "name": "txt.Stat.sniper_military.Damage.Total",
+   "value": 629
+  },
+  {
+   "key": "Stat.pistol_magnum.Damage.Total",
+   "name": "txt.Stat.pistol_magnum.Damage.Total",
+   "value": 2429
+  },
+  {
+   "key": "Stat.machinegun.Damage.Total",
+   "name": "txt.Stat.machinegun.Damage.Total"
+  },
+  {
+   "key": "Stat.grenade_launcher.Shots.Total",
+   "name": "txt.Stat.grenade_launcher.Shots.Total",
+   "value": 9
+  },
+  {
+   "key": "Stat.grenade_launcher.Head.Total",
+   "name": "txt.Stat.grenade_launcher.Head.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.grenade_launcher.Kills.Total",
+   "name": "txt.Stat.grenade_launcher.Kills.Total",
+   "value": 49
+  },
+  {
+   "key": "Stat.grenade_launcher.Accuracy.Total",
+   "name": "txt.Stat.grenade_launcher.Accuracy.Total",
+   "value": 211
+  },
+  {
+   "key": "Stat.grenade_launcher.HeadAccuracy.Total",
+   "name": "txt.Stat.grenade_launcher.HeadAccuracy.Total",
+   "value": 22
+  },
+  {
+   "key": "Stat.baseball_bat.Shots.Total",
+   "name": "txt.Stat.baseball_bat.Shots.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.baseball_bat.Head.Total",
+   "name": "txt.Stat.baseball_bat.Head.Total"
+  },
+  {
+   "key": "Stat.baseball_bat.Kills.Total",
+   "name": "txt.Stat.baseball_bat.Kills.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.baseball_bat.Accuracy.Total",
+   "name": "txt.Stat.baseball_bat.Accuracy.Total",
+   "value": 40
+  },
+  {
+   "key": "Stat.baseball_bat.HeadAccuracy.Total",
+   "name": "txt.Stat.baseball_bat.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.chainsaw.Shots.Total",
+   "name": "txt.Stat.chainsaw.Shots.Total"
+  },
+  {
+   "key": "Stat.chainsaw.Head.Total",
+   "name": "txt.Stat.chainsaw.Head.Total"
+  },
+  {
+   "key": "Stat.chainsaw.Kills.Total",
+   "name": "txt.Stat.chainsaw.Kills.Total"
+  },
+  {
+   "key": "Stat.chainsaw.Accuracy.Total",
+   "name": "txt.Stat.chainsaw.Accuracy.Total"
+  },
+  {
+   "key": "Stat.chainsaw.HeadAccuracy.Total",
+   "name": "txt.Stat.chainsaw.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.cricket_bat.Shots.Total",
+   "name": "txt.Stat.cricket_bat.Shots.Total",
+   "value": 30
+  },
+  {
+   "key": "Stat.cricket_bat.Head.Total",
+   "name": "txt.Stat.cricket_bat.Head.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.cricket_bat.Kills.Total",
+   "name": "txt.Stat.cricket_bat.Kills.Total",
+   "value": 14
+  },
+  {
+   "key": "Stat.cricket_bat.Accuracy.Total",
+   "name": "txt.Stat.cricket_bat.Accuracy.Total",
+   "value": 63
+  },
+  {
+   "key": "Stat.cricket_bat.HeadAccuracy.Total",
+   "name": "txt.Stat.cricket_bat.HeadAccuracy.Total",
+   "value": 16
+  },
+  {
+   "key": "Stat.crowbar.Shots.Total",
+   "name": "txt.Stat.crowbar.Shots.Total"
+  },
+  {
+   "key": "Stat.crowbar.Head.Total",
+   "name": "txt.Stat.crowbar.Head.Total"
+  },
+  {
+   "key": "Stat.crowbar.Kills.Total",
+   "name": "txt.Stat.crowbar.Kills.Total"
+  },
+  {
+   "key": "Stat.crowbar.Accuracy.Total",
+   "name": "txt.Stat.crowbar.Accuracy.Total"
+  },
+  {
+   "key": "Stat.crowbar.HeadAccuracy.Total",
+   "name": "txt.Stat.crowbar.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.electric_guitar.Shots.Total",
+   "name": "txt.Stat.electric_guitar.Shots.Total",
+   "value": 18
+  },
+  {
+   "key": "Stat.electric_guitar.Head.Total",
+   "name": "txt.Stat.electric_guitar.Head.Total"
+  },
+  {
+   "key": "Stat.electric_guitar.Kills.Total",
+   "name": "txt.Stat.electric_guitar.Kills.Total",
+   "value": 6
+  },
+  {
+   "key": "Stat.electric_guitar.Accuracy.Total",
+   "name": "txt.Stat.electric_guitar.Accuracy.Total",
+   "value": 33
+  },
+  {
+   "key": "Stat.electric_guitar.HeadAccuracy.Total",
+   "name": "txt.Stat.electric_guitar.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.fireaxe.Shots.Total",
+   "name": "txt.Stat.fireaxe.Shots.Total"
+  },
+  {
+   "key": "Stat.fireaxe.Head.Total",
+   "name": "txt.Stat.fireaxe.Head.Total"
+  },
+  {
+   "key": "Stat.fireaxe.Kills.Total",
+   "name": "txt.Stat.fireaxe.Kills.Total"
+  },
+  {
+   "key": "Stat.fireaxe.Accuracy.Total",
+   "name": "txt.Stat.fireaxe.Accuracy.Total"
+  },
+  {
+   "key": "Stat.fireaxe.HeadAccuracy.Total",
+   "name": "txt.Stat.fireaxe.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.frying_pan.Shots.Total",
+   "name": "txt.Stat.frying_pan.Shots.Total",
+   "value": 5
+  },
+  {
+   "key": "Stat.frying_pan.Head.Total",
+   "name": "txt.Stat.frying_pan.Head.Total"
+  },
+  {
+   "key": "Stat.frying_pan.Kills.Total",
+   "name": "txt.Stat.frying_pan.Kills.Total"
+  },
+  {
+   "key": "Stat.frying_pan.Accuracy.Total",
+   "name": "txt.Stat.frying_pan.Accuracy.Total",
+   "value": 160
+  },
+  {
+   "key": "Stat.frying_pan.HeadAccuracy.Total",
+   "name": "txt.Stat.frying_pan.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.katana.Shots.Total",
+   "name": "txt.Stat.katana.Shots.Total",
+   "value": 46
+  },
+  {
+   "key": "Stat.katana.Head.Total",
+   "name": "txt.Stat.katana.Head.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.katana.Kills.Total",
+   "name": "txt.Stat.katana.Kills.Total",
+   "value": 14
+  },
+  {
+   "key": "Stat.katana.Accuracy.Total",
+   "name": "txt.Stat.katana.Accuracy.Total",
+   "value": 30
+  },
+  {
+   "key": "Stat.katana.HeadAccuracy.Total",
+   "name": "txt.Stat.katana.HeadAccuracy.Total",
+   "value": 4
+  },
+  {
+   "key": "Stat.machete.Shots.Total",
+   "name": "txt.Stat.machete.Shots.Total"
+  },
+  {
+   "key": "Stat.machete.Head.Total",
+   "name": "txt.Stat.machete.Head.Total"
+  },
+  {
+   "key": "Stat.machete.Kills.Total",
+   "name": "txt.Stat.machete.Kills.Total"
+  },
+  {
+   "key": "Stat.machete.Accuracy.Total",
+   "name": "txt.Stat.machete.Accuracy.Total"
+  },
+  {
+   "key": "Stat.machete.HeadAccuracy.Total",
+   "name": "txt.Stat.machete.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.tonfa.Shots.Total",
+   "name": "txt.Stat.tonfa.Shots.Total"
+  },
+  {
+   "key": "Stat.tonfa.Head.Total",
+   "name": "txt.Stat.tonfa.Head.Total"
+  },
+  {
+   "key": "Stat.tonfa.Kills.Total",
+   "name": "txt.Stat.tonfa.Kills.Total"
+  },
+  {
+   "key": "Stat.tonfa.Accuracy.Total",
+   "name": "txt.Stat.tonfa.Accuracy.Total"
+  },
+  {
+   "key": "Stat.tonfa.HeadAccuracy.Total",
+   "name": "txt.Stat.tonfa.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.grenade_launcher.Hit.Total",
+   "name": "txt.Stat.grenade_launcher.Hit.Total",
+   "value": 19
+  },
+  {
+   "key": "Stat.baseball_bat.Hit.Total",
+   "name": "txt.Stat.baseball_bat.Hit.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.chainsaw.Hit.Total",
+   "name": "txt.Stat.chainsaw.Hit.Total"
+  },
+  {
+   "key": "Stat.cricket_bat.Hit.Total",
+   "name": "txt.Stat.cricket_bat.Hit.Total",
+   "value": 19
+  },
+  {
+   "key": "Stat.crowbar.Hit.Total",
+   "name": "txt.Stat.crowbar.Hit.Total"
+  },
+  {
+   "key": "Stat.electric_guitar.Hit.Total",
+   "name": "txt.Stat.electric_guitar.Hit.Total",
+   "value": 6
+  },
+  {
+   "key": "Stat.fireaxe.Hit.Total",
+   "name": "txt.Stat.fireaxe.Hit.Total"
+  },
+  {
+   "key": "Stat.frying_pan.Hit.Total",
+   "name": "txt.Stat.frying_pan.Hit.Total",
+   "value": 8
+  },
+  {
+   "key": "Stat.katana.Hit.Total",
+   "name": "txt.Stat.katana.Hit.Total",
+   "value": 14
+  },
+  {
+   "key": "Stat.machete.Hit.Total",
+   "name": "txt.Stat.machete.Hit.Total"
+  },
+  {
+   "key": "Stat.tonfa.Hit.Total",
+   "name": "txt.Stat.tonfa.Hit.Total"
+  },
+  {
+   "key": "Stat.grenade_launcher.Damage.Total",
+   "name": "txt.Stat.grenade_launcher.Damage.Total",
+   "value": 6
+  },
+  {
+   "key": "Stat.baseball_bat.Damage.Total",
+   "name": "txt.Stat.baseball_bat.Damage.Total",
+   "value": 100
+  },
+  {
+   "key": "Stat.chainsaw.Damage.Total",
+   "name": "txt.Stat.chainsaw.Damage.Total"
+  },
+  {
+   "key": "Stat.cricket_bat.Damage.Total",
+   "name": "txt.Stat.cricket_bat.Damage.Total",
+   "value": 309
+  },
+  {
+   "key": "Stat.crowbar.Damage.Total",
+   "name": "txt.Stat.crowbar.Damage.Total"
+  },
+  {
+   "key": "Stat.electric_guitar.Damage.Total",
+   "name": "txt.Stat.electric_guitar.Damage.Total",
+   "value": 208
+  },
+  {
+   "key": "Stat.fireaxe.Damage.Total",
+   "name": "txt.Stat.fireaxe.Damage.Total"
+  },
+  {
+   "key": "Stat.frying_pan.Damage.Total",
+   "name": "txt.Stat.frying_pan.Damage.Total",
+   "value": 10
+  },
+  {
+   "key": "Stat.katana.Damage.Total",
+   "name": "txt.Stat.katana.Damage.Total",
+   "value": 296
+  },
+  {
+   "key": "Stat.machete.Damage.Total",
+   "name": "txt.Stat.machete.Damage.Total"
+  },
+  {
+   "key": "Stat.tonfa.Damage.Total",
+   "name": "txt.Stat.tonfa.Damage.Total"
+  },
+  {
+   "key": "Stat.Defibrillated.Total",
+   "name": "txt.Stat.Defibrillated.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.PlayedNick.Total",
+   "name": "txt.Stat.PlayedNick.Total",
+   "value": 1
+  },
+  {
+   "key": "Stat.PlayedRochelle.Total",
+   "name": "txt.Stat.PlayedRochelle.Total",
+   "value": 6
+  },
+  {
+   "key": "Stat.PlayedCoach.Total",
+   "name": "txt.Stat.PlayedCoach.Total",
+   "value": 3
+  },
+  {
+   "key": "Stat.PlayedEllis.Total",
+   "name": "txt.Stat.PlayedEllis.Total",
+   "value": 2
+  },
+  {
+   "key": "Stat.TeamSuccessVersus.VoteRematch",
+   "name": "txt.Stat.TeamSuccessVersus.VoteRematch"
+  },
+  {
+   "key": "Stat.TeamSuccessScavenge.VoteRematch",
+   "name": "txt.Stat.TeamSuccessScavenge.VoteRematch"
+  },
+  {
+   "key": "Stat.TeamFailVersus.VoteRematch",
+   "name": "txt.Stat.TeamFailVersus.VoteRematch",
+   "value": 5
+  },
+  {
+   "key": "Stat.TeamFailScavenge.VoteRematch",
+   "name": "txt.Stat.TeamFailScavenge.VoteRematch"
+  },
+  {
+   "key": "Stat.MySuccessVersus.VoteRematch",
+   "name": "txt.Stat.MySuccessVersus.VoteRematch"
+  },
+  {
+   "key": "Stat.MySuccessScavenge.VoteRematch",
+   "name": "txt.Stat.MySuccessScavenge.VoteRematch"
+  },
+  {
+   "key": "Stat.MyFailVersus.VoteRematch",
+   "name": "txt.Stat.MyFailVersus.VoteRematch",
+   "value": 4
+  },
+  {
+   "key": "Stat.MyFailScavenge.VoteRematch",
+   "name": "txt.Stat.MyFailScavenge.VoteRematch"
+  },
+  {
+   "key": "Stat.incendiary_ammo.Shots.Total",
+   "name": "txt.Stat.incendiary_ammo.Shots.Total",
+   "value": 29
+  },
+  {
+   "key": "Stat.incendiary_ammo.Head.Total",
+   "name": "txt.Stat.incendiary_ammo.Head.Total"
+  },
+  {
+   "key": "Stat.incendiary_ammo.Kills.Total",
+   "name": "txt.Stat.incendiary_ammo.Kills.Total",
+   "value": 14
+  },
+  {
+   "key": "Stat.incendiary_ammo.Accuracy.Total",
+   "name": "txt.Stat.incendiary_ammo.Accuracy.Total",
+   "value": 65
+  },
+  {
+   "key": "Stat.incendiary_ammo.HeadAccuracy.Total",
+   "name": "txt.Stat.incendiary_ammo.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.incendiary_ammo.Hit.Total",
+   "name": "txt.Stat.incendiary_ammo.Hit.Total",
+   "value": 19
+  },
+  {
+   "key": "Stat.incendiary_ammo.Damage.Total",
+   "name": "txt.Stat.incendiary_ammo.Damage.Total",
+   "value": 71
+  },
+  {
+   "key": "Stat.explosive_ammo.Shots.Total",
+   "name": "txt.Stat.explosive_ammo.Shots.Total",
+   "value": 10
+  },
+  {
+   "key": "Stat.explosive_ammo.Head.Total",
+   "name": "txt.Stat.explosive_ammo.Head.Total"
+  },
+  {
+   "key": "Stat.explosive_ammo.Kills.Total",
+   "name": "txt.Stat.explosive_ammo.Kills.Total"
+  },
+  {
+   "key": "Stat.explosive_ammo.Accuracy.Total",
+   "name": "txt.Stat.explosive_ammo.Accuracy.Total",
+   "value": 110
+  },
+  {
+   "key": "Stat.explosive_ammo.HeadAccuracy.Total",
+   "name": "txt.Stat.explosive_ammo.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.explosive_ammo.Hit.Total",
+   "name": "txt.Stat.explosive_ammo.Hit.Total",
+   "value": 11
+  },
+  {
+   "key": "Stat.explosive_ammo.Damage.Total",
+   "name": "txt.Stat.explosive_ammo.Damage.Total",
+   "value": 254
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.RoundsWon.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.RoundsLost.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.RoundsTied.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.MatchesWon.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.MatchesLost.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.TotalTime.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.TotalRounds.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.TotalPoints.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c2m1_highway",
+   "name": "txt.Stat.RoundsWon.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c2m1_highway",
+   "name": "txt.Stat.RoundsLost.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c2m1_highway",
+   "name": "txt.Stat.RoundsTied.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c2m1_highway",
+   "name": "txt.Stat.MatchesWon.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c2m1_highway",
+   "name": "txt.Stat.MatchesLost.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c2m1_highway",
+   "name": "txt.Stat.TotalTime.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c2m1_highway",
+   "name": "txt.Stat.TotalRounds.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c2m1_highway",
+   "name": "txt.Stat.TotalPoints.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c2m1_highway",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c2m1_highway",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c2m1_highway",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.RoundsWon.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.RoundsLost.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.RoundsTied.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.MatchesWon.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.MatchesLost.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.TotalTime.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.TotalRounds.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.TotalPoints.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.RoundsWon.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.RoundsLost.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.RoundsTied.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.MatchesWon.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.MatchesLost.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.TotalTime.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.TotalRounds.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.TotalPoints.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.RoundsWon.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.RoundsLost.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.RoundsTied.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.MatchesWon.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.MatchesLost.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.TotalTime.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.TotalRounds.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.TotalPoints.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c5m2_park",
+   "name": "txt.Stat.RoundsWon.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c5m2_park",
+   "name": "txt.Stat.RoundsLost.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c5m2_park",
+   "name": "txt.Stat.RoundsTied.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c5m2_park",
+   "name": "txt.Stat.MatchesWon.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c5m2_park",
+   "name": "txt.Stat.MatchesLost.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c5m2_park",
+   "name": "txt.Stat.TotalTime.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c5m2_park",
+   "name": "txt.Stat.TotalRounds.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c5m2_park",
+   "name": "txt.Stat.TotalPoints.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c5m2_park",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c5m2_park",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c5m2_park",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.unknown",
+   "name": "txt.Stat.RoundsWon.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.unknown",
+   "name": "txt.Stat.RoundsLost.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.unknown",
+   "name": "txt.Stat.RoundsTied.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.unknown",
+   "name": "txt.Stat.MatchesWon.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.unknown",
+   "name": "txt.Stat.MatchesLost.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.unknown",
+   "name": "txt.Stat.TotalTime.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.unknown",
+   "name": "txt.Stat.TotalRounds.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.unknown",
+   "name": "txt.Stat.TotalPoints.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.unknown",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.unknown",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.unknown",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.PerfectGames.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c2m1_highway",
+   "name": "txt.Stat.PerfectGames.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.PerfectGames.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.PerfectGames.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.PerfectGames.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c5m2_park",
+   "name": "txt.Stat.PerfectGames.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.unknown",
+   "name": "txt.Stat.PerfectGames.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c1m4_atrium",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c1m4_atrium"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c2m1_highway",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c2m1_highway"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c3m1_plankcountry",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c3m1_plankcountry"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c4m1_milltown_a",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c4m1_milltown_a"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c4m2_sugarmill_a",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c4m2_sugarmill_a"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c5m2_park",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c5m2_park"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.unknown",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.unknown"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Boomer",
+   "name": "txt.Stat.SpecAttackInScavenge.Boomer"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Smoker",
+   "name": "txt.Stat.SpecAttackInScavenge.Smoker"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Hunter",
+   "name": "txt.Stat.SpecAttackInScavenge.Hunter"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Spitter",
+   "name": "txt.Stat.SpecAttackInScavenge.Spitter"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Charger",
+   "name": "txt.Stat.SpecAttackInScavenge.Charger"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Jockey",
+   "name": "txt.Stat.SpecAttackInScavenge.Jockey"
+  },
+  {
+   "key": "Stat.SpecAttackInScavenge.Tank",
+   "name": "txt.Stat.SpecAttackInScavenge.Tank"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Boomer",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Boomer"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Smoker",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Smoker"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Hunter",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Hunter"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Spitter",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Spitter"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Charger",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Charger"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Jockey",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Jockey"
+  },
+  {
+   "key": "Stat.MostDamage1LifeInScavenge.Tank",
+   "name": "txt.Stat.MostDamage1LifeInScavenge.Tank"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Boomer",
+   "name": "txt.Stat.MostPoursInterrupted.Boomer"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Smoker",
+   "name": "txt.Stat.MostPoursInterrupted.Smoker"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Hunter",
+   "name": "txt.Stat.MostPoursInterrupted.Hunter"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Spitter",
+   "name": "txt.Stat.MostPoursInterrupted.Spitter"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Charger",
+   "name": "txt.Stat.MostPoursInterrupted.Charger"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Jockey",
+   "name": "txt.Stat.MostPoursInterrupted.Jockey"
+  },
+  {
+   "key": "Stat.MostPoursInterrupted.Tank",
+   "name": "txt.Stat.MostPoursInterrupted.Tank"
+  },
+  {
+   "key": "TD2.COUNT.ACH_BEAT_CAMPAIGNS_EXPERT_MODE",
+   "name": "txt.TD2.COUNT.ACH_BEAT_CAMPAIGNS_EXPERT_MODE"
+  },
+  {
+   "key": "TD2.COUNT.ACH_SCAVENGE_FALLEN_SURVIVOR",
+   "name": "txt.TD2.COUNT.ACH_SCAVENGE_FALLEN_SURVIVOR"
+  },
+  {
+   "key": "TD2.COUNT.ACH_COMPLETE_CHALLENGE_MODES",
+   "name": "txt.TD2.COUNT.ACH_COMPLETE_CHALLENGE_MODES"
+  },
+  {
+   "key": "TD2.COMP.ACH_COMPLETE_CHALLENGE_MODES",
+   "name": "txt.TD2.COMP.ACH_COMPLETE_CHALLENGE_MODES"
+  },
+  {
+   "key": "Stat.rifle_m60.Shots.Total",
+   "name": "txt.Stat.rifle_m60.Shots.Total"
+  },
+  {
+   "key": "Stat.rifle_m60.Head.Total",
+   "name": "txt.Stat.rifle_m60.Head.Total"
+  },
+  {
+   "key": "Stat.rifle_m60.Kills.Total",
+   "name": "txt.Stat.rifle_m60.Kills.Total"
+  },
+  {
+   "key": "Stat.rifle_m60.Accuracy.Total",
+   "name": "txt.Stat.rifle_m60.Accuracy.Total"
+  },
+  {
+   "key": "Stat.rifle_m60.HeadAccuracy.Total",
+   "name": "txt.Stat.rifle_m60.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.golfclub.Shots.Total",
+   "name": "txt.Stat.golfclub.Shots.Total"
+  },
+  {
+   "key": "Stat.golfclub.Head.Total",
+   "name": "txt.Stat.golfclub.Head.Total"
+  },
+  {
+   "key": "Stat.golfclub.Kills.Total",
+   "name": "txt.Stat.golfclub.Kills.Total"
+  },
+  {
+   "key": "Stat.golfclub.Accuracy.Total",
+   "name": "txt.Stat.golfclub.Accuracy.Total"
+  },
+  {
+   "key": "Stat.golfclub.HeadAccuracy.Total",
+   "name": "txt.Stat.golfclub.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.rifle_m60.Hit.Total",
+   "name": "txt.Stat.rifle_m60.Hit.Total"
+  },
+  {
+   "key": "Stat.rifle_m60.Damage.Total",
+   "name": "txt.Stat.rifle_m60.Damage.Total"
+  },
+  {
+   "key": "Stat.golfclub.Hit.Total",
+   "name": "txt.Stat.golfclub.Hit.Total"
+  },
+  {
+   "key": "Stat.golfclub.Damage.Total",
+   "name": "txt.Stat.golfclub.Damage.Total"
+  },
+  {
+   "key": "TD2.COUNT.ASSET_L4D2_HAT",
+   "name": "txt.TD2.COUNT.ASSET_L4D2_HAT"
+  },
+  {
+   "key": "TD2.BLOGPOST.SEENVERSION",
+   "name": "txt.TD2.BLOGPOST.SEENVERSION"
+  },
+  {
+   "key": "TD2.BLOGPOST.VOTECASTVER",
+   "name": "txt.TD2.BLOGPOST.VOTECASTVER"
+  },
+  {
+   "key": "TD1.VS.COUNT",
+   "name": "txt.TD1.VS.COUNT",
+   "value": 25
+  },
+  {
+   "key": "TD1.VS.WINS",
+   "name": "txt.TD1.VS.WINS",
+   "value": 10
+  },
+  {
+   "key": "TD1.VS.STREAK01.0",
+   "name": "txt.TD1.VS.STREAK01.0",
+   "value": 774310
+  },
+  {
+   "key": "TD1.VS.STREAK01.1",
+   "name": "txt.TD1.VS.STREAK01.1"
+  },
+  {
+   "key": "TD2.COUNT.ACH_HEADS_WITH_GOLF_CLUB",
+   "name": "txt.TD2.COUNT.ACH_HEADS_WITH_GOLF_CLUB"
+  },
+  {
+   "key": "TD2.COUNT.ACH_OPEN_FOOT_LOCKERS",
+   "name": "txt.TD2.COUNT.ACH_OPEN_FOOT_LOCKERS"
+  },
+  {
+   "key": "TD2.COUNT.ACH_SCAVENGE_PLAY_C6_FINALE",
+   "name": "txt.TD2.COUNT.ACH_SCAVENGE_PLAY_C6_FINALE"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.PerfectGames.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.HighestRoundScore.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.RoundsWon.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.RoundsLost.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.RoundsTied.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.MatchesWon.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.MatchesLost.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.TotalTime.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.TotalRounds.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.TotalPoints.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c6m1_riverbank",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c6m1_riverbank"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.PerfectGames.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.HighestRoundScore.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.RoundsWon.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.RoundsLost.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.RoundsTied.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.MatchesWon.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.MatchesLost.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.TotalTime.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.TotalRounds.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.TotalPoints.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c6m2_bedlam",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c6m2_bedlam"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c6m3_port",
+   "name": "txt.Stat.PerfectGames.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c6m3_port",
+   "name": "txt.Stat.HighestRoundScore.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c6m3_port",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c6m3_port",
+   "name": "txt.Stat.RoundsWon.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c6m3_port",
+   "name": "txt.Stat.RoundsLost.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c6m3_port",
+   "name": "txt.Stat.RoundsTied.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c6m3_port",
+   "name": "txt.Stat.MatchesWon.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c6m3_port",
+   "name": "txt.Stat.MatchesLost.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c6m3_port",
+   "name": "txt.Stat.TotalTime.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c6m3_port",
+   "name": "txt.Stat.TotalRounds.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c6m3_port",
+   "name": "txt.Stat.TotalPoints.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c6m3_port",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c6m3_port",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c6m3_port"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c6m3_port",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c6m3_port"
+  },
+  {
+   "key": "TD2.COUNT.ACH_COLLECT_HOLIDAY_GIFTS",
+   "name": "txt.TD2.COUNT.ACH_COLLECT_HOLIDAY_GIFTS"
+  },
+  {
+   "key": "TD2.COUNT.ACH_COLLECT_GOLDEN_CROWBARS",
+   "name": "txt.TD2.COUNT.ACH_COLLECT_GOLDEN_CROWBARS"
+  },
+  {
+   "key": "TD2.COMP.ACH_COLLECT_GOLDEN_CROWBARS",
+   "name": "txt.TD2.COMP.ACH_COLLECT_GOLDEN_CROWBARS"
+  },
+  {
+   "key": "TD2.COUNT.ACH_VS_SPIT_ON_GAS_CANS",
+   "name": "txt.TD2.COUNT.ACH_VS_SPIT_ON_GAS_CANS"
+  },
+  {
+   "key": "TD2.COUNT.ACH_KILL_X_JOCKEYS_WITH_MELEE",
+   "name": "txt.TD2.COUNT.ACH_KILL_X_JOCKEYS_WITH_MELEE"
+  },
+  {
+   "key": "TD2.COUNT.ACH_KILL_X_INFECTED_LIFETIME",
+   "name": "txt.TD2.COUNT.ACH_KILL_X_INFECTED_LIFETIME"
+  },
+  {
+   "key": "TD2.COUNT.ACH_EARN_ALL_BRONZE_MEDALS",
+   "name": "txt.TD2.COUNT.ACH_EARN_ALL_BRONZE_MEDALS"
+  },
+  {
+   "key": "TD2.COMP.ACH_EARN_ALL_BRONZE_MEDALS.0",
+   "name": "txt.TD2.COMP.ACH_EARN_ALL_BRONZE_MEDALS.0"
+  },
+  {
+   "key": "TD2.COMP.ACH_EARN_ALL_BRONZE_MEDALS.1",
+   "name": "txt.TD2.COMP.ACH_EARN_ALL_BRONZE_MEDALS.1"
+  },
+  {
+   "key": "TD2.COUNT.ACH_EARN_ALL_SILVER_MEDALS",
+   "name": "txt.TD2.COUNT.ACH_EARN_ALL_SILVER_MEDALS"
+  },
+  {
+   "key": "TD2.COMP.ACH_EARN_ALL_SILVER_MEDALS.0",
+   "name": "txt.TD2.COMP.ACH_EARN_ALL_SILVER_MEDALS.0"
+  },
+  {
+   "key": "TD2.COMP.ACH_EARN_ALL_SILVER_MEDALS.1",
+   "name": "txt.TD2.COMP.ACH_EARN_ALL_SILVER_MEDALS.1"
+  },
+  {
+   "key": "TD2.COUNT.ACH_EARN_ALL_GOLD_MEDALS",
+   "name": "txt.TD2.COUNT.ACH_EARN_ALL_GOLD_MEDALS"
+  },
+  {
+   "key": "TD2.COMP.ACH_EARN_ALL_GOLD_MEDALS.0",
+   "name": "txt.TD2.COMP.ACH_EARN_ALL_GOLD_MEDALS.0"
+  },
+  {
+   "key": "TD2.COMP.ACH_EARN_ALL_GOLD_MEDALS.1",
+   "name": "txt.TD2.COMP.ACH_EARN_ALL_GOLD_MEDALS.1"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.RoundsWon.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.RoundsLost.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.RoundsTied.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.MatchesWon.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.MatchesLost.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.TotalTime.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.TotalRounds.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.TotalPoints.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c4m5_milltown_escape",
+   "name": "txt.Stat.PerfectGames.Scavenge.c4m5_milltown_escape"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.RoundsWon.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.RoundsLost.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.RoundsTied.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.MatchesWon.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.MatchesLost.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.TotalTime.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.TotalRounds.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.TotalPoints.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c9m1_alleys",
+   "name": "txt.Stat.PerfectGames.Scavenge.c9m1_alleys"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.RoundsWon.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.RoundsLost.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.RoundsTied.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.MatchesWon.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.MatchesLost.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.TotalTime.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.TotalRounds.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.TotalPoints.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c14m1_junkyard",
+   "name": "txt.Stat.PerfectGames.Scavenge.c14m1_junkyard"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.RoundsWon.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.RoundsLost.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.RoundsTied.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.MatchesWon.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.MatchesLost.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.TotalTime.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.TotalRounds.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.TotalPoints.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c14m2_lighthouse",
+   "name": "txt.Stat.PerfectGames.Scavenge.c14m2_lighthouse"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c7m1_docks",
+   "name": "txt.Stat.RoundsWon.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c7m1_docks",
+   "name": "txt.Stat.RoundsLost.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c7m1_docks",
+   "name": "txt.Stat.RoundsTied.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c7m1_docks",
+   "name": "txt.Stat.MatchesWon.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c7m1_docks",
+   "name": "txt.Stat.MatchesLost.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c7m1_docks",
+   "name": "txt.Stat.TotalTime.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c7m1_docks",
+   "name": "txt.Stat.TotalRounds.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c7m1_docks",
+   "name": "txt.Stat.TotalPoints.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c7m1_docks",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c7m1_docks",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c7m1_docks",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c7m1_docks",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c7m1_docks",
+   "name": "txt.Stat.PerfectGames.Scavenge.c7m1_docks"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c7m2_barge",
+   "name": "txt.Stat.RoundsWon.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c7m2_barge",
+   "name": "txt.Stat.RoundsLost.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c7m2_barge",
+   "name": "txt.Stat.RoundsTied.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c7m2_barge",
+   "name": "txt.Stat.MatchesWon.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c7m2_barge",
+   "name": "txt.Stat.MatchesLost.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c7m2_barge",
+   "name": "txt.Stat.TotalTime.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c7m2_barge",
+   "name": "txt.Stat.TotalRounds.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c7m2_barge",
+   "name": "txt.Stat.TotalPoints.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c7m2_barge",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c7m2_barge",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c7m2_barge",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c7m2_barge",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c7m2_barge",
+   "name": "txt.Stat.PerfectGames.Scavenge.c7m2_barge"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.RoundsWon.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.RoundsLost.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.RoundsTied.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.MatchesWon.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.MatchesLost.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.TotalTime.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.TotalRounds.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.TotalPoints.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c8m1_apartment",
+   "name": "txt.Stat.PerfectGames.Scavenge.c8m1_apartment"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.RoundsWon.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.RoundsLost.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.RoundsTied.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.MatchesWon.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.MatchesLost.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.TotalTime.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.TotalRounds.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.TotalPoints.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c8m5_rooftop",
+   "name": "txt.Stat.PerfectGames.Scavenge.c8m5_rooftop"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.RoundsWon.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.RoundsLost.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.RoundsTied.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.MatchesWon.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.MatchesLost.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.TotalTime.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.TotalRounds.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.TotalPoints.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c10m3_ranchhouse",
+   "name": "txt.Stat.PerfectGames.Scavenge.c10m3_ranchhouse"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.RoundsWon.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.RoundsLost.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.RoundsTied.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.MatchesWon.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.MatchesLost.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.TotalTime.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.TotalRounds.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.TotalPoints.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c11m4_terminal",
+   "name": "txt.Stat.PerfectGames.Scavenge.c11m4_terminal"
+  },
+  {
+   "key": "Stat.RoundsWon.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.RoundsWon.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.RoundsLost.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.RoundsLost.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.RoundsTied.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.RoundsTied.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.MatchesWon.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.MatchesWon.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.MatchesLost.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.MatchesLost.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.TotalTime.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.TotalTime.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.TotalRounds.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.TotalRounds.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.TotalPoints.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.TotalPoints.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.GasCanDestroyedSurvivor.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.GasCanDestroyedSurvivor.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.GasCanDestroyedInfected.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.GasCanDestroyedInfected.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.TotalForceDrops.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.TotalForceDrops.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.HighestRoundScore.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.HighestMatchScore.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.HighestMatchScore.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.PerfectGames.Scavenge.c12m5_cornfield",
+   "name": "txt.Stat.PerfectGames.Scavenge.c12m5_cornfield"
+  },
+  {
+   "key": "Stat.pitchfork.Shots.Total",
+   "name": "txt.Stat.pitchfork.Shots.Total"
+  },
+  {
+   "key": "Stat.pitchfork.Head.Total",
+   "name": "txt.Stat.pitchfork.Head.Total"
+  },
+  {
+   "key": "Stat.pitchfork.Kills.Total",
+   "name": "txt.Stat.pitchfork.Kills.Total"
+  },
+  {
+   "key": "Stat.pitchfork.Accuracy.Total",
+   "name": "txt.Stat.pitchfork.Accuracy.Total"
+  },
+  {
+   "key": "Stat.pitchfork.HeadAccuracy.Total",
+   "name": "txt.Stat.pitchfork.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.pitchfork.Hit.Total",
+   "name": "txt.Stat.pitchfork.Hit.Total"
+  },
+  {
+   "key": "Stat.pitchfork.Damage.Total",
+   "name": "txt.Stat.pitchfork.Damage.Total"
+  },
+  {
+   "key": "Stat.shovel.Shots.Total",
+   "name": "txt.Stat.shovel.Shots.Total"
+  },
+  {
+   "key": "Stat.shovel.Head.Total",
+   "name": "txt.Stat.shovel.Head.Total"
+  },
+  {
+   "key": "Stat.shovel.Kills.Total",
+   "name": "txt.Stat.shovel.Kills.Total"
+  },
+  {
+   "key": "Stat.shovel.Accuracy.Total",
+   "name": "txt.Stat.shovel.Accuracy.Total"
+  },
+  {
+   "key": "Stat.shovel.HeadAccuracy.Total",
+   "name": "txt.Stat.shovel.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.shovel.Hit.Total",
+   "name": "txt.Stat.shovel.Hit.Total"
+  },
+  {
+   "key": "Stat.shovel.Damage.Total",
+   "name": "txt.Stat.shovel.Damage.Total"
+  },
+  {
+   "key": "Stat.knife.Shots.Total",
+   "name": "txt.Stat.knife.Shots.Total"
+  },
+  {
+   "key": "Stat.knife.Head.Total",
+   "name": "txt.Stat.knife.Head.Total"
+  },
+  {
+   "key": "Stat.knife.Kills.Total",
+   "name": "txt.Stat.knife.Kills.Total"
+  },
+  {
+   "key": "Stat.knife.Accuracy.Total",
+   "name": "txt.Stat.knife.Accuracy.Total"
+  },
+  {
+   "key": "Stat.knife.HeadAccuracy.Total",
+   "name": "txt.Stat.knife.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.knife.Hit.Total",
+   "name": "txt.Stat.knife.Hit.Total"
+  },
+  {
+   "key": "Stat.knife.Damage.Total",
+   "name": "txt.Stat.knife.Damage.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.Shots.Total",
+   "name": "txt.Stat.smg_mp5.Shots.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.Head.Total",
+   "name": "txt.Stat.smg_mp5.Head.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.Kills.Total",
+   "name": "txt.Stat.smg_mp5.Kills.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.Accuracy.Total",
+   "name": "txt.Stat.smg_mp5.Accuracy.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.Hit.Total",
+   "name": "txt.Stat.smg_mp5.Hit.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.Shots.Total",
+   "name": "txt.Stat.rifle_sg552.Shots.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.Head.Total",
+   "name": "txt.Stat.rifle_sg552.Head.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.Kills.Total",
+   "name": "txt.Stat.rifle_sg552.Kills.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.Accuracy.Total",
+   "name": "txt.Stat.rifle_sg552.Accuracy.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.Hit.Total",
+   "name": "txt.Stat.rifle_sg552.Hit.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.Shots.Total",
+   "name": "txt.Stat.sniper_awp.Shots.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.Head.Total",
+   "name": "txt.Stat.sniper_awp.Head.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.Kills.Total",
+   "name": "txt.Stat.sniper_awp.Kills.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.Accuracy.Total",
+   "name": "txt.Stat.sniper_awp.Accuracy.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.Hit.Total",
+   "name": "txt.Stat.sniper_awp.Hit.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.Shots.Total",
+   "name": "txt.Stat.sniper_scout.Shots.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.Head.Total",
+   "name": "txt.Stat.sniper_scout.Head.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.Kills.Total",
+   "name": "txt.Stat.sniper_scout.Kills.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.Accuracy.Total",
+   "name": "txt.Stat.sniper_scout.Accuracy.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.HeadAccuracy.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.Hit.Total",
+   "name": "txt.Stat.sniper_scout.Hit.Total"
+  },
+  {
+   "key": "Stat.smg_mp5.Damage.Total",
+   "name": "txt.Stat.smg_mp5.Damage.Total"
+  },
+  {
+   "key": "Stat.rifle_sg552.Damage.Total",
+   "name": "txt.Stat.rifle_sg552.Damage.Total"
+  },
+  {
+   "key": "Stat.sniper_awp.Damage.Total",
+   "name": "txt.Stat.sniper_awp.Damage.Total"
+  },
+  {
+   "key": "Stat.sniper_scout.Damage.Total",
+   "name": "txt.Stat.sniper_scout.Damage.Total"
   }
  ],
  "raw": {

@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Neon White",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "1533420",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 58,
  "total": 63,
  "first": "2022-12-10",
@@ -595,6 +595,37 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1533420/3982380d40932def2de65cb8645d4fe8c999c80f.jpg",
    "rarity": 7.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "VENDING_MACHINE_USES",
+   "name": "Vending Machine Uses",
+   "value": 74
+  },
+  {
+   "key": "COLLECTIBLES",
+   "name": "Collectibles",
+   "value": 93
+  },
+  {
+   "key": "MEMORIES",
+   "name": "Memories",
+   "value": 10
+  },
+  {
+   "key": "SIDEQUESTS",
+   "name": "Sidequests"
+  },
+  {
+   "key": "ACE_MEDALS",
+   "name": "Ace Medals",
+   "value": 97
+  },
+  {
+   "key": "HIGH_PERFORMER_COUNT",
+   "name": "Top Performer Awards",
+   "value": 10
   }
  ],
  "raw": {

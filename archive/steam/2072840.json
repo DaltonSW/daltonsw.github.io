@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Word Factori",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "2072840",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 31,
  "platform": "PC",
@@ -263,6 +263,72 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2072840/9940450c5633cabdc65b55e64bc539cbcf143a7d.jpg",
    "rarity": 5.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "beaten_levels",
+   "name": "Beaten Levels"
+  },
+  {
+   "key": "recipes",
+   "name": "Recipes"
+  },
+  {
+   "key": "stamps_found",
+   "name": "Stamps Found"
+  },
+  {
+   "key": "words",
+   "name": "Words"
+  },
+  {
+   "key": "words_of_the_day",
+   "name": "Words of the Day"
+  },
+  {
+   "key": "boxes",
+   "name": "Boxes"
+  },
+  {
+   "key": "buildings_placed",
+   "name": "Buildings Placed"
+  },
+  {
+   "key": "secret_recipes",
+   "name": "Secret Recipes"
+  },
+  {
+   "key": "special_character_recipes",
+   "name": "Special Character Recipes"
+  },
+  {
+   "key": "numeric_recipes",
+   "name": "Numeric Recipes"
+  },
+  {
+   "key": "challenge_levels",
+   "name": "Challenge Levels"
+  },
+  {
+   "key": "record_swings",
+   "name": "Record Swinging Loops"
+  },
+  {
+   "key": "non_secret_beaten_levels",
+   "name": "Non Secret Beaten Levels"
+  },
+  {
+   "key": "secret_beaten_levels",
+   "name": "Secret Beaten Levels"
+  },
+  {
+   "key": "letters_found",
+   "name": "Number of letter where with at least 1 recipe"
+  },
+  {
+   "key": "letter_recipes",
+   "name": "Letter Recipes Found"
   }
  ],
  "raw": {

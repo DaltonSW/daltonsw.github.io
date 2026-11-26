@@ -1,0 +1,28 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: SaveGameError_LoadSucceeded
+          name: Load Succeeded
+          value: 2
+        - key: Cyseal
+          value: 1
+        - key: CYS_BlackCove
+          value: 1
+        - key: LucullaForest
+          value: 1
+        - key: LUC_Mines
+          value: 1
+        - key: ThePrisonGardenOfStoneKing
+          value: 1
+        - key: DarkForest
+          value: 1
+        - key: DAF_King_Tomb
+          value: 1
+        - key: DAF_Druid_Dungeon
+          value: 1
+        - key: DAF_InnerSanctum
+          value: 1
+        - key: Homestead
+          value: 1

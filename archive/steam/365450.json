@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Hacknet",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "365450",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 11,
  "first": "2018-02-10",
@@ -111,6 +111,12 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/365450/fb047a4666cd44ddfc0c936013d9d2081c1fb24f.jpg",
    "rarity": 7
+  }
+ ],
+ "stats": [
+  {
+   "key": "commands_run",
+   "name": "Commands Run"
   }
  ],
  "raw": {

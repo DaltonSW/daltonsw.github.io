@@ -1,0 +1,11 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: stat_searches
+          name: Searches Performed
+          value: 137
+        - key: stat_clips
+          name: Clips Seen
+          value: 271

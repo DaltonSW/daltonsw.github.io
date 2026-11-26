@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Orcs Must Die! 2",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "201790",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 27,
  "platform": "PC",
@@ -225,6 +225,963 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/201790/6ace2040cf5693998036b7fa35d44cdcdb6ad9d9.jpg",
    "rarity": 2.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "TotalKillsDev",
+   "name": "Total Kills"
+  },
+  {
+   "key": "TotalKills",
+   "name": "Total Kills"
+  },
+  {
+   "key": "SkullsEarned",
+   "name": "Skulls Earned"
+  },
+  {
+   "key": "SkullsSpent",
+   "name": "Skulls Spent"
+  },
+  {
+   "key": "Respecs"
+  },
+  {
+   "key": "TheEdge_won",
+   "name": "TheEdge Won"
+  },
+  {
+   "key": "TheEdge_failed",
+   "name": "TheEdge Failed"
+  },
+  {
+   "key": "TheEdge_restarted",
+   "name": "TheEdge Restarted"
+  },
+  {
+   "key": "TheEdge_played",
+   "name": "TheEdge Played"
+  },
+  {
+   "key": "TheEdge_wonnightmare",
+   "name": "TheEdge Nightmare Won"
+  },
+  {
+   "key": "TheEdge_failednightmare",
+   "name": "TheEdge Nightmare Failed"
+  },
+  {
+   "key": "TheEdge_restartednightmare",
+   "name": "TheEdge Nightmare Restarted"
+  },
+  {
+   "key": "TheEdge_playednightmare",
+   "name": "TheEdge Nightmare Played"
+  },
+  {
+   "key": "TheTunnels_won",
+   "name": "TheTunnels Won"
+  },
+  {
+   "key": "TheTunnels_failed",
+   "name": "TheTunnels Failed"
+  },
+  {
+   "key": "TheTunnels_restarted",
+   "name": "TheTunnels Restarted"
+  },
+  {
+   "key": "TheTunnels_played",
+   "name": "TheTunnels Played"
+  },
+  {
+   "key": "TheTunnels_wonnightmare",
+   "name": "TheTunnels Nightmare Won"
+  },
+  {
+   "key": "TheTunnels_failednightmare",
+   "name": "TheTunnels Nightmare Failed"
+  },
+  {
+   "key": "TheTunnels_restartednightmare",
+   "name": "TheTunnels Nightmare Restarted"
+  },
+  {
+   "key": "TheTunnels_playednightmare",
+   "name": "TheTunnels Nightmare Played"
+  },
+  {
+   "key": "TheChasm_won",
+   "name": "TheChasm Won"
+  },
+  {
+   "key": "TheChasm_failed",
+   "name": "TheChasm Failed"
+  },
+  {
+   "key": "TheChasm_restarted",
+   "name": "TheChasm Restarted"
+  },
+  {
+   "key": "TheChasm_played",
+   "name": "TheChasm Played"
+  },
+  {
+   "key": "TheChasm_wonnightmare",
+   "name": "TheChasm Nightmare Won"
+  },
+  {
+   "key": "TheChasm_failednightmare",
+   "name": "TheChasm Nightmare Failed"
+  },
+  {
+   "key": "TheChasm_restartednightmare",
+   "name": "TheChasm Nightmare Restarted"
+  },
+  {
+   "key": "TheChasm_playednightmare",
+   "name": "TheChasm Nightmare Played"
+  },
+  {
+   "key": "TheCrossing_won",
+   "name": "TheCrossing Won"
+  },
+  {
+   "key": "TheCrossing_failed",
+   "name": "TheCrossing Failed"
+  },
+  {
+   "key": "TheCrossing_restarted",
+   "name": "TheCrossing Restarted"
+  },
+  {
+   "key": "TheCrossing_played",
+   "name": "TheCrossing Played"
+  },
+  {
+   "key": "TheCrossing_wonnightmare",
+   "name": "TheCrossing Nightmare Won"
+  },
+  {
+   "key": "TheCrossing_failednightmare",
+   "name": "TheCrossing Nightmare Failed"
+  },
+  {
+   "key": "TheCrossing_restartednightmare",
+   "name": "TheCrossing Nightmare Restarted"
+  },
+  {
+   "key": "TheCrossing_playednightmare",
+   "name": "TheCrossing Nightmare Played"
+  },
+  {
+   "key": "Valleys_won",
+   "name": "Valleys Won"
+  },
+  {
+   "key": "Valleys_failed",
+   "name": "Valleys Failed"
+  },
+  {
+   "key": "Valleys_restarted",
+   "name": "Valleys Restarted"
+  },
+  {
+   "key": "Valleys_played",
+   "name": "Valleys Played"
+  },
+  {
+   "key": "Valleys_wonnightmare",
+   "name": "Valleys Nightmare Won"
+  },
+  {
+   "key": "Valleys_failednightmare",
+   "name": "Valleys Nightmare Failed"
+  },
+  {
+   "key": "Valleys_restartednightmare",
+   "name": "Valleys Nightmare Restarted"
+  },
+  {
+   "key": "Valleys_playednightmare",
+   "name": "Valleys Nightmare Played"
+  },
+  {
+   "key": "HiddenGulch_won",
+   "name": "HiddenGulch Won"
+  },
+  {
+   "key": "HiddenGulch_failed",
+   "name": "HiddenGulch Failed"
+  },
+  {
+   "key": "HiddenGulch_restarted",
+   "name": "HiddenGulch Restarted"
+  },
+  {
+   "key": "HiddenGulch_played",
+   "name": "HiddenGulch Played"
+  },
+  {
+   "key": "HiddenGulch_wonnightmare",
+   "name": "HiddenGulch Nightmare Won"
+  },
+  {
+   "key": "HiddenGulch_failednightmare",
+   "name": "HiddenGulch Nightmare Failed"
+  },
+  {
+   "key": "HiddenGulch_restartednightmare",
+   "name": "HiddenGulch Nightmare Restarted"
+  },
+  {
+   "key": "HiddenGulch_playednightmare",
+   "name": "HiddenGulch Nightmare Played"
+  },
+  {
+   "key": "Precipice_won",
+   "name": "Precipice Won"
+  },
+  {
+   "key": "Precipice_failed",
+   "name": "Precipice Failed"
+  },
+  {
+   "key": "Precipice_restarted",
+   "name": "Precipice Restarted"
+  },
+  {
+   "key": "Precipice_played",
+   "name": "Precipice Played"
+  },
+  {
+   "key": "Precipice_wonnightmare",
+   "name": "Precipice Nightmare Won"
+  },
+  {
+   "key": "Precipice_failednightmare",
+   "name": "Precipice Nightmare Failed"
+  },
+  {
+   "key": "Precipice_restartednightmare",
+   "name": "Precipice Nightmare Restarted"
+  },
+  {
+   "key": "Precipice_playednightmare",
+   "name": "Precipice Nightmare Played"
+  },
+  {
+   "key": "UpAndDown_won",
+   "name": "UpAndDown Won"
+  },
+  {
+   "key": "UpAndDown_failed",
+   "name": "UpAndDown Failed"
+  },
+  {
+   "key": "UpAndDown_restarted",
+   "name": "UpAndDown Restarted"
+  },
+  {
+   "key": "UpAndDown_played",
+   "name": "UpAndDown Played"
+  },
+  {
+   "key": "UpAndDown_wonnightmare",
+   "name": "UpAndDown Nightmare Won"
+  },
+  {
+   "key": "UpAndDown_failednightmare",
+   "name": "UpAndDown Nightmare Failed"
+  },
+  {
+   "key": "UpAndDown_restartednightmare",
+   "name": "UpAndDown Nightmare Restarted"
+  },
+  {
+   "key": "UpAndDown_playednightmare",
+   "name": "UpAndDown Nightmare Played"
+  },
+  {
+   "key": "Passages_won",
+   "name": "Passages Won"
+  },
+  {
+   "key": "Passages_failed",
+   "name": "Passages Failed"
+  },
+  {
+   "key": "Passages_restarted",
+   "name": "Passages Restarted"
+  },
+  {
+   "key": "Passages_played",
+   "name": "Passages Played"
+  },
+  {
+   "key": "Passages_wonnightmare",
+   "name": "Passages Nightmare Won"
+  },
+  {
+   "key": "Passages_failednightmare",
+   "name": "Passages Nightmare Failed"
+  },
+  {
+   "key": "Passages_restartednightmare",
+   "name": "Passages Nightmare Restarted"
+  },
+  {
+   "key": "Passages_playednightmare",
+   "name": "Passages Nightmare Played"
+  },
+  {
+   "key": "Corridors_won",
+   "name": "Corridors Won"
+  },
+  {
+   "key": "Corridors_failed",
+   "name": "Corridors Failed"
+  },
+  {
+   "key": "Corridors_restarted",
+   "name": "Corridors Restarted"
+  },
+  {
+   "key": "Corridors_played",
+   "name": "Corridors Played"
+  },
+  {
+   "key": "Corridors_wonnightmare",
+   "name": "Corridors Nightmare Won"
+  },
+  {
+   "key": "Corridors_failednightmare",
+   "name": "Corridors Nightmare Failed"
+  },
+  {
+   "key": "Corridors_restartednightmare",
+   "name": "Corridors Nightmare Restarted"
+  },
+  {
+   "key": "Corridors_playednightmare",
+   "name": "Corridors Nightmare Played"
+  },
+  {
+   "key": "UpstairsDownstairs_won",
+   "name": "UpstairsDownstairs Won"
+  },
+  {
+   "key": "UpstairsDownstairs_failed",
+   "name": "UpstairsDownstairs Failed"
+  },
+  {
+   "key": "UpstairsDownstairs_restarted",
+   "name": "UpstairsDownstairs Restarted"
+  },
+  {
+   "key": "UpstairsDownstairs_played",
+   "name": "UpstairsDownstairs Played"
+  },
+  {
+   "key": "UpstairsDownstairs_wonnightmare",
+   "name": "UpstairsDownstairs Nightmare Won"
+  },
+  {
+   "key": "UpstairsDownstairs_failednightmare",
+   "name": "UpstairsDownstairs Nightmare Failed"
+  },
+  {
+   "key": "UpstairsDownstairs_restartednightmare",
+   "name": "UpstairsDownstairs Nightmare Restarted"
+  },
+  {
+   "key": "UpstairsDownstairs_playednightmare",
+   "name": "UpstairsDownstairs Nightmare Played"
+  },
+  {
+   "key": "TheCrunch_won",
+   "name": "TheCrunch Won"
+  },
+  {
+   "key": "TheCrunch_failed",
+   "name": "TheCrunch Failed"
+  },
+  {
+   "key": "TheCrunch_restarted",
+   "name": "TheCrunch Restarted"
+  },
+  {
+   "key": "TheCrunch_played",
+   "name": "TheCrunch Played"
+  },
+  {
+   "key": "TheCrunch_wonnightmare",
+   "name": "TheCrunch Nightmare Won"
+  },
+  {
+   "key": "TheCrunch_failednightmare",
+   "name": "TheCrunch Nightmare Failed"
+  },
+  {
+   "key": "TheCrunch_restartednightmare",
+   "name": "TheCrunch Nightmare Restarted"
+  },
+  {
+   "key": "TheCrunch_playednightmare",
+   "name": "TheCrunch Nightmare Played"
+  },
+  {
+   "key": "MirrorImage_won",
+   "name": "MirrorImage Won"
+  },
+  {
+   "key": "MirrorImage_failed",
+   "name": "MirrorImage Failed"
+  },
+  {
+   "key": "MirrorImage_restarted",
+   "name": "MirrorImage Restarted"
+  },
+  {
+   "key": "MirrorImage_played",
+   "name": "MirrorImage Played"
+  },
+  {
+   "key": "MirrorImage_wonnightmare",
+   "name": "MirrorImage Nightmare Won"
+  },
+  {
+   "key": "MirrorImage_failednightmare",
+   "name": "MirrorImage Nightmare Failed"
+  },
+  {
+   "key": "MirrorImage_restartednightmare",
+   "name": "MirrorImage Nightmare Restarted"
+  },
+  {
+   "key": "MirrorImage_playednightmare",
+   "name": "MirrorImage Nightmare Played"
+  },
+  {
+   "key": "Winddown_won",
+   "name": "Winddown Won"
+  },
+  {
+   "key": "Winddown_failed",
+   "name": "Winddown Failed"
+  },
+  {
+   "key": "Winddown_restarted",
+   "name": "Winddown Restarted"
+  },
+  {
+   "key": "Winddown_played",
+   "name": "Winddown Played"
+  },
+  {
+   "key": "Winddown_wonnightmare",
+   "name": "Winddown Nightmare Won"
+  },
+  {
+   "key": "Winddown_failednightmare",
+   "name": "Winddown Nightmare Failed"
+  },
+  {
+   "key": "Winddown_restartednightmare",
+   "name": "Winddown Nightmare Restarted"
+  },
+  {
+   "key": "Winddown_playednightmare",
+   "name": "Winddown Nightmare Played"
+  },
+  {
+   "key": "TwistedHalls_won",
+   "name": "TwistedHalls Won"
+  },
+  {
+   "key": "TwistedHalls_failed",
+   "name": "TwistedHalls Failed"
+  },
+  {
+   "key": "TwistedHalls_restarted",
+   "name": "TwistedHalls Restarted"
+  },
+  {
+   "key": "TwistedHalls_played",
+   "name": "TwistedHalls Played"
+  },
+  {
+   "key": "TwistedHalls_wonnightmare",
+   "name": "TwistedHalls Nightmare Won"
+  },
+  {
+   "key": "TwistedHalls_failednightmare",
+   "name": "TwistedHalls Nightmare Failed"
+  },
+  {
+   "key": "TwistedHalls_restartednightmare",
+   "name": "TwistedHalls Nightmare Restarted"
+  },
+  {
+   "key": "TwistedHalls_playednightmare",
+   "name": "TwistedHalls Nightmare Played"
+  },
+  {
+   "key": "Twin Halls_won",
+   "name": "Twin Halls Won"
+  },
+  {
+   "key": "Twin Halls_failed",
+   "name": "Twin Halls Failed"
+  },
+  {
+   "key": "Twin Halls_restarted",
+   "name": "Twin Halls Restarted"
+  },
+  {
+   "key": "Twin Halls_played",
+   "name": "Twin Halls Played"
+  },
+  {
+   "key": "Twin Halls_wonnightmare",
+   "name": "Twin Halls Nightmare Won"
+  },
+  {
+   "key": "Twin Halls_failednightmare",
+   "name": "Twin Halls Nightmare Failed"
+  },
+  {
+   "key": "Twin Halls_restartednightmare",
+   "name": "Twin Halls Nightmare Restarted"
+  },
+  {
+   "key": "Twin Halls_playednightmare",
+   "name": "Twin Halls Nightmare Played"
+  },
+  {
+   "key": "Lunch Break_won",
+   "name": "Lunch Break Won"
+  },
+  {
+   "key": "Lunch Break_failed",
+   "name": "Lunch Break Failed"
+  },
+  {
+   "key": "Lunch Break_restarted",
+   "name": "Lunch Break Restarted"
+  },
+  {
+   "key": "Lunch Break_played",
+   "name": "Lunch Break Played"
+  },
+  {
+   "key": "Lunch Break_wonnightmare",
+   "name": "Lunch Break Nightmare Won"
+  },
+  {
+   "key": "Lunch Break_failednightmare",
+   "name": "Lunch Break Nightmare Failed"
+  },
+  {
+   "key": "Lunch Break_restartednightmare",
+   "name": "Lunch Break Nightmare Restarted"
+  },
+  {
+   "key": "Lunch Break_playednightmare",
+   "name": "Lunch Break Nightmare Played"
+  },
+  {
+   "key": "Sludge Hole_won",
+   "name": "Sludge Hole Won"
+  },
+  {
+   "key": "Sludge Hole_failed",
+   "name": "Sludge Hole Failed"
+  },
+  {
+   "key": "Sludge Hole_restarted",
+   "name": "Sludge Hole Restarted"
+  },
+  {
+   "key": "Sludge Hole_played",
+   "name": "Sludge Hole Played"
+  },
+  {
+   "key": "Sludge Hole_wonnightmare",
+   "name": "Sludge Hole Nightmare Won"
+  },
+  {
+   "key": "Sludge Hole_failednightmare",
+   "name": "Sludge Hole Nightmare Failed"
+  },
+  {
+   "key": "Sludge Hole_restartednightmare",
+   "name": "Sludge Hole Nightmare Restarted"
+  },
+  {
+   "key": "Sludge Hole_playednightmare",
+   "name": "Sludge Hole Nightmare Played"
+  },
+  {
+   "key": "Chaos Chamber_won",
+   "name": "Chaos Chamber Won"
+  },
+  {
+   "key": "Chaos Chamber_failed",
+   "name": "Chaos Chamber Failed"
+  },
+  {
+   "key": "Chaos Chamber_restarted",
+   "name": "Chaos Chamber Restarted"
+  },
+  {
+   "key": "Chaos Chamber_played",
+   "name": "Chaos Chamber Played"
+  },
+  {
+   "key": "Chaos Chamber_wonnightmare",
+   "name": "Chaos Chamber Nightmare Won"
+  },
+  {
+   "key": "Chaos Chamber_failednightmare",
+   "name": "Chaos Chamber Nightmare Failed"
+  },
+  {
+   "key": "Chaos Chamber_restartednightmare",
+   "name": "Chaos Chamber Nightmare Restarted"
+  },
+  {
+   "key": "Chaos Chamber_playednightmare",
+   "name": "Chaos Chamber Nightmare Played"
+  },
+  {
+   "key": "The Arena_won",
+   "name": "The Arena Won"
+  },
+  {
+   "key": "The Arena_failed",
+   "name": "The Arena Failed"
+  },
+  {
+   "key": "The Arena_restarted",
+   "name": "The Arena Restarted"
+  },
+  {
+   "key": "The Arena_played",
+   "name": "The Arena Played"
+  },
+  {
+   "key": "The Arena_wonnightmare",
+   "name": "The Arena Nightmare Won"
+  },
+  {
+   "key": "The Arena_failednightmare",
+   "name": "The Arena Nightmare Failed"
+  },
+  {
+   "key": "The Arena_restartednightmare",
+   "name": "The Arena Nightmare Restarted"
+  },
+  {
+   "key": "The Arena_playednightmare",
+   "name": "The Arena Nightmare Played"
+  },
+  {
+   "key": "Library_won",
+   "name": "Library Won"
+  },
+  {
+   "key": "Library_failed",
+   "name": "Library Failed"
+  },
+  {
+   "key": "Library_restarted",
+   "name": "Library Restarted"
+  },
+  {
+   "key": "Library_played",
+   "name": "Library Played"
+  },
+  {
+   "key": "Library_wonnightmare",
+   "name": "Library Nightmare Won"
+  },
+  {
+   "key": "Library_failednightmare",
+   "name": "Library Nightmare Failed"
+  },
+  {
+   "key": "Library_restartednightmare",
+   "name": "Library Nightmare Restarted"
+  },
+  {
+   "key": "Library_playednightmare",
+   "name": "Library Nightmare Played"
+  },
+  {
+   "key": "Hard Climb_won",
+   "name": "Hard Climb Won"
+  },
+  {
+   "key": "Hard Climb_failed",
+   "name": "Hard Climb Failed"
+  },
+  {
+   "key": "Hard Climb_restarted",
+   "name": "Hard Climb Restarted"
+  },
+  {
+   "key": "Hard Climb_played",
+   "name": "Hard Climb Played"
+  },
+  {
+   "key": "Hard Climb_wonnightmare",
+   "name": "Hard Climb Nightmare Won"
+  },
+  {
+   "key": "Hard Climb_failednightmare",
+   "name": "Hard Climb Nightmare Failed"
+  },
+  {
+   "key": "Hard Climb_restartednightmare",
+   "name": "Hard Climb Nightmare Restarted"
+  },
+  {
+   "key": "Hard Climb_playednightmare",
+   "name": "Hard Climb Nightmare Played"
+  },
+  {
+   "key": "The Squeeze_won",
+   "name": "The Squeeze Won"
+  },
+  {
+   "key": "The Squeeze_failed",
+   "name": "The Squeeze Failed"
+  },
+  {
+   "key": "The Squeeze_restarted",
+   "name": "The Squeeze Restarted"
+  },
+  {
+   "key": "The Squeeze_played",
+   "name": "The Squeeze Played"
+  },
+  {
+   "key": "The Squeeze_wonnightmare",
+   "name": "The Squeeze Nightmare Won"
+  },
+  {
+   "key": "The Squeeze_failednightmare",
+   "name": "The Squeeze Nightmare Failed"
+  },
+  {
+   "key": "The Squeeze_restartednightmare",
+   "name": "The Squeeze Nightmare Restarted"
+  },
+  {
+   "key": "The Squeeze_playednightmare",
+   "name": "The Squeeze Nightmare Played"
+  },
+  {
+   "key": "Stairs of Doom_won",
+   "name": "Stairs of Doom Won"
+  },
+  {
+   "key": "Stairs of Doom_failed",
+   "name": "Stairs of Doom Failed"
+  },
+  {
+   "key": "Stairs of Doom_restarted",
+   "name": "Stairs of Doom Restarted"
+  },
+  {
+   "key": "Stairs of Doom_played",
+   "name": "Stairs of Doom Played"
+  },
+  {
+   "key": "Stairs of Doom_wonnightmare",
+   "name": "Stairs of Doom Nightmare Won"
+  },
+  {
+   "key": "Stairs of Doom_failednightmare",
+   "name": "Stairs of Doom Nightmare Failed"
+  },
+  {
+   "key": "Stairs of Doom_restartednightmare",
+   "name": "Stairs of Doom Nightmare Restarted"
+  },
+  {
+   "key": "Stairs of Doom_playednightmare",
+   "name": "Stairs of Doom Nightmare Played"
+  },
+  {
+   "key": "Finale_won",
+   "name": "Finale Won"
+  },
+  {
+   "key": "Finale_failed",
+   "name": "Finale Failed"
+  },
+  {
+   "key": "Finale_restarted",
+   "name": "Finale Restarted"
+  },
+  {
+   "key": "Finale_played",
+   "name": "Finale Played"
+  },
+  {
+   "key": "Finale_wonnightmare",
+   "name": "Finale Nightmare Won"
+  },
+  {
+   "key": "Finale_failednightmare",
+   "name": "Finale Nightmare Failed"
+  },
+  {
+   "key": "Finale_restartednightmare",
+   "name": "Finale Nightmare Restarted"
+  },
+  {
+   "key": "Finale_playednightmare",
+   "name": "Finale Nightmare Played"
+  },
+  {
+   "key": "TheTunnels_wonendless",
+   "name": "TheTunnels Won"
+  },
+  {
+   "key": "TheTunnels_restartedendless",
+   "name": "TheTunnels Restarted"
+  },
+  {
+   "key": "TheTunnels_playedendless",
+   "name": "TheTunnels Played"
+  },
+  {
+   "key": "HiddenGulch_wonendless",
+   "name": "HiddenGulch Won"
+  },
+  {
+   "key": "HiddenGulch_restartedendless",
+   "name": "HiddenGulch Restarted"
+  },
+  {
+   "key": "HiddenGulch_playedendless",
+   "name": "HiddenGulch Played"
+  },
+  {
+   "key": "Precipice_wonendless",
+   "name": "Precipice Won"
+  },
+  {
+   "key": "Precipice_restartedendless",
+   "name": "Precipice Restarted"
+  },
+  {
+   "key": "Precipice_playedendless",
+   "name": "Precipice Played"
+  },
+  {
+   "key": "TheCrunch_wonendless",
+   "name": "TheCrunch Won"
+  },
+  {
+   "key": "TheCrunch_restartedendless",
+   "name": "TheCrunch Restarted"
+  },
+  {
+   "key": "TheCrunch_playedendless",
+   "name": "TheCrunch Played"
+  },
+  {
+   "key": "WindDown_wonendless",
+   "name": "WindDown Won"
+  },
+  {
+   "key": "WindDown_restartedendless",
+   "name": "WindDown Restarted"
+  },
+  {
+   "key": "WindDown_playedendless",
+   "name": "WindDown Played"
+  },
+  {
+   "key": "Crossfire_wonendless",
+   "name": "Crossfire Won"
+  },
+  {
+   "key": "Crossfire_restartedendless",
+   "name": "Crossfire Restarted"
+  },
+  {
+   "key": "Crossfire_playedendless",
+   "name": "Crossfire Played"
+  },
+  {
+   "key": "CloseCliff_wonendless",
+   "name": "CloseCliff Won"
+  },
+  {
+   "key": "CloseCliff_restartedendless",
+   "name": "CloseCliff Restarted"
+  },
+  {
+   "key": "CloseCliff_playedendless",
+   "name": "CloseCliff Played"
+  },
+  {
+   "key": "TripleBridge_wonendless",
+   "name": "TripleBridge Won"
+  },
+  {
+   "key": "TripleBridge_restartedendless",
+   "name": "TripleBridge Restarted"
+  },
+  {
+   "key": "TripleBridge_playedendless",
+   "name": "TripleBridge Played"
+  },
+  {
+   "key": "Caldera_wonendless",
+   "name": "Caldera Won"
+  },
+  {
+   "key": "Caldera_restartedendless",
+   "name": "Caldera Restarted"
+  },
+  {
+   "key": "Caldera_playedendless",
+   "name": "Caldera Played"
+  },
+  {
+   "key": "KingOfTheHill_wonendless",
+   "name": "KingOfTheHill Won"
+  },
+  {
+   "key": "KingOfTheHill_restartedendless",
+   "name": "KingOfTheHill Restarted"
+  },
+  {
+   "key": "KingOfTheHill_playedendless",
+   "name": "KingOfTheHill Played"
+  },
+  {
+   "key": "levels_played",
+   "name": "Levels Played"
+  },
+  {
+   "key": "levels_played_coop",
+   "name": "Coop Levels Played"
+  },
+  {
+   "key": "has_played",
+   "name": "Has Played"
+  },
+  {
+   "key": "has_played_coop",
+   "name": "Has Played Coop"
   }
  ],
  "raw": {

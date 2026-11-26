@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "2552440",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 69,
  "platform": "PC",
@@ -561,6 +561,16 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/2552440/eb5a33df75637471ca6875fa263a65f6b0e8fbc8.jpg",
    "rarity": 4.3
+  }
+ ],
+ "stats": [
+  {
+   "key": "RebellisTimePlayed",
+   "name": "Rebellis Play Time"
+  },
+  {
+   "key": "Rebellis3D",
+   "name": "Rebellis 3D Percent"
   }
  ],
  "raw": {

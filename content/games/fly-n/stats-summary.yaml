@@ -1,0 +1,14 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: glideTime
+          name: Glide Time
+          value: 101088
+        - key: singTime
+          name: Sing Time
+          value: 13392
+        - key: backCount
+          name: Back Count
+          value: 2

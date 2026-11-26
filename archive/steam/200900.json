@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Cave Story+",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "200900",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 10,
  "total": 76,
  "first": "2012-12-22",
@@ -675,6 +675,22 @@
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/200900/8095ff5b262f31528766a12257fc9513b314ce94.jpg",
    "hidden": true,
    "rarity": 0.9
+  }
+ ],
+ "stats": [
+  {
+   "key": "powerkings_stat",
+   "name": "Total Damage",
+   "value": 7966
+  },
+  {
+   "key": "fulllife_stat",
+   "name": "Max HP",
+   "default": 3
+  },
+  {
+   "key": "fullmissile_stat",
+   "name": "Missile Capacity"
   }
  ],
  "raw": {

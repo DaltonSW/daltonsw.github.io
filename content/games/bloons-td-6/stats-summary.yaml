@@ -1,0 +1,104 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: bloonsPopped
+          name: Bloons Popped
+          value: 1e+08
+        - key: moabsPopped
+          name: Moabs Popped
+          value: 25000
+        - key: bfbsPopped
+          name: Bfbs Popped
+          value: 10000
+        - key: zomgsPopped
+          name: Zomgs Popped
+          value: 5000
+        - key: ddtsPopped
+          name: Ddts Popped
+          value: 5000
+        - key: badsPopped
+          name: Bads Popped
+          value: 250
+        - key: fortifiedPopped
+          name: Fortified Popped
+          value: 767568
+        - key: purplesPopped
+          name: Purples Popped
+          value: 100000
+        - key: camosPopped
+          name: Camos Popped
+          value: 250000
+        - key: totalPowersActivated
+          name: Total Powers Activated
+          value: 40
+        - key: differentBeginnerWins
+          name: Different Beginner Track Wins
+          value: 9
+        - key: differentIntermediateWins
+          name: Different Intermediate Track Wins
+          value: 5
+        - key: differentHeroWins
+          name: Different Hero Wins
+          value: 4
+        - key: knowledgePointsApplied
+          name: Monkey Knowledge Points Applied
+          value: 106
+        - key: onlyPrimaryWins
+          name: Wins With Only Primary Towers
+          value: 10
+        - key: onlyMilitaryWins
+          name: Wins With Only Military Towers
+          value: 10
+        - key: onlyMagicWins
+          name: Wins With Only Magic Towers
+          value: 10
+        - key: onlySupportWins
+          name: Wins With Only Support Towers
+          value: 10
+        - key: alternateBloonRoundsWins
+          name: Alternate Bloon Rounds Wins
+          value: 25
+        - key: impoppableWins
+          name: Impoppable Wins
+          value: 25
+        - key: halfCashWins
+          name: Half Cash Wins
+          value: 10
+        - key: doubleHpWins
+          name: Double HP Wins
+          value: 25
+        - key: differentPowersCollected
+          name: Different Powers Collected
+          value: 12
+        - key: dailyChallengeWins
+          name: Daily Challenge Wins
+          value: 100
+        - key: chimpsWins
+          name: CHIMPS Wins
+          value: 15
+        - key: beginnerMapMedals
+          name: Beginner Map Medals
+          value: 36
+        - key: challengesCreatedOrPlayed
+          name: Challenges Created or Played
+          value: 200
+        - key: peninsulaBloonsPopped
+          name: Bloons Popped on Peninsula
+          value: 200000
+        - key: masterAlchemistDamage
+          name: Master Alchemist Damage
+          value: 9.925189e+06
+        - key: shimmeredBloons
+          name: Shimmered Bloons Popped
+          value: 10000
+        - key: rainbowPopsWithMagic
+          name: Rainbow Bloons Popped
+          value: 20000
+        - key: dailyChestsOpened
+          name: Daily Chests Opened
+          value: 359
+        - key: differentTowersSacrificed
+          name: Different Towers Sacrificed
+          value: 5

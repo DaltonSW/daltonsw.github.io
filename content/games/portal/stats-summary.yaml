@@ -1,0 +1,7 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: PORTAL_TRANSMISSION_RECEIVED_STAT
+          value: 26

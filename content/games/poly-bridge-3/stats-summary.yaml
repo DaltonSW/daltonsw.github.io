@@ -1,0 +1,13 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: BeatWorld_CR_Stat
+          value: 11
+        - key: BeatWorld_MM_Stat
+          value: 12
+        - key: BeatWorld_LL_Stat
+          value: 13
+        - key: BeatWorld_VT_Stat
+          value: 4

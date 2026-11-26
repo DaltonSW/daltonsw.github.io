@@ -1,0 +1,27 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: ThirstPerished
+          value: 3
+        - key: ExpeditionsSuccessful
+          value: 3
+        - key: TotalSurvival
+          value: 33
+        - key: ExpeditionsUndertaken
+          value: 4
+        - key: TotalItemsCollected
+          value: 13
+        - key: MostItemsCollected
+          value: 13
+        - key: PerishedSurvival
+          value: 1
+        - key: SurvivedScavenge
+          value: 1
+        - key: LongestSurvival
+          value: 33
+        - key: SoupConsumed
+          value: 6.25
+        - key: WaterConsumed
+          value: 7

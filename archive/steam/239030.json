@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Papers, Please",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "239030",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 2,
  "total": 13,
  "first": "2014-04-12",
@@ -119,6 +119,32 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/239030/acd4a680d7b9248e6033ac0c3ed0a58951a9d1cf.jpg",
    "rarity": 14.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "STAT_PLAYTIME",
+   "name": "Play Time (Seconds)"
+  },
+  {
+   "key": "STAT_NUMPROCESSED",
+   "name": "Total Processed Travelers"
+  },
+  {
+   "key": "STAT_NUMAPPROVED",
+   "name": "Total Approved Travelers"
+  },
+  {
+   "key": "STAT_NUMDENIED",
+   "name": "Total Denied Travelers"
+  },
+  {
+   "key": "STAT_NUMDETAINED",
+   "name": "Total Detained Travelers"
+  },
+  {
+   "key": "STAT_NUMCITATIONS",
+   "name": "Total Citations"
   }
  ],
  "raw": {

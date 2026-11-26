@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "FLY'N",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "223730",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 19,
  "platform": "PC",
@@ -163,6 +163,35 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/223730/47f35616e0f302f511c19d1f9ae8d8550e99d7c7.jpg",
    "rarity": 8.2
+  }
+ ],
+ "stats": [
+  {
+   "key": "glideTime",
+   "name": "Glide Time",
+   "value": 101088
+  },
+  {
+   "key": "singTime",
+   "name": "Sing Time",
+   "value": 13392
+  },
+  {
+   "key": "stuckTime",
+   "name": "Stuck Time"
+  },
+  {
+   "key": "bounceCount",
+   "name": "Bounce Count"
+  },
+  {
+   "key": "dashCount",
+   "name": "Dash Count"
+  },
+  {
+   "key": "backCount",
+   "name": "Back Count",
+   "value": 2
   }
  ],
  "raw": {

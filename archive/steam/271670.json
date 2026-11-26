@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "10 Second Ninja",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "271670",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 18,
  "total": 30,
  "first": "2014-06-22",
@@ -273,6 +273,48 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271670/a2a55d72649602bc68178142fe109e6348d60844.jpg",
    "rarity": 25.7
+  }
+ ],
+ "stats": [
+  {
+   "key": "ForestPlaytime",
+   "name": "Forest Playtime"
+  },
+  {
+   "key": "StatCount",
+   "name": "Stat Count"
+  },
+  {
+   "key": "CanyonPlaytime",
+   "name": "Canyon Playtime"
+  },
+  {
+   "key": "IcePlaytime",
+   "name": "Ice Playtime"
+  },
+  {
+   "key": "WarshipPlaytime",
+   "name": "Warship Playtime"
+  },
+  {
+   "key": "BonusPlaytime",
+   "name": "Bonus Playtime"
+  },
+  {
+   "key": "HardModePlaytime",
+   "name": "Hard Mode Playtime"
+  },
+  {
+   "key": "TotalPlaytime",
+   "name": "Total Playtime"
+  },
+  {
+   "key": "InGamePlaytime",
+   "name": "In Game Playtime"
+  },
+  {
+   "key": "MenuPlaytime",
+   "name": "Menu Playtime"
   }
  ],
  "raw": {

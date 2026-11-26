@@ -1,0 +1,23 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: TotalNumberOfRoomsRushed
+          name: Total Rooms Rushed
+          value: 4
+        - key: TotalRoomsBuilt
+          name: Total Rooms Built
+          value: 8
+        - key: TotalCapsCollected
+          name: Total Number of Caps Collected
+          value: 1418
+        - key: TotalUniqueRoomsBuilt
+          name: Total Unique Rooms Built
+          value: 4
+        - key: TotalLegendaryWeaponsCollected
+          name: Total Legendary Weapons Collected
+          value: 1
+        - key: TotalObjectivesCompleted
+          name: Total Objectives Completed
+          value: 9

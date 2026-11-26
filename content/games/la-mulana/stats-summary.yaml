@@ -1,0 +1,10 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: XelpudCount
+          name: Xelpud
+          value: 1
+        - key: STA_XELPUD_00
+          value: 1

@@ -1,0 +1,11 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: NoteCollected
+          name: Adler Letters Found
+          value: 0
+        - key: SecretFound
+          name: Hidden Frequencies Found
+          value: 0

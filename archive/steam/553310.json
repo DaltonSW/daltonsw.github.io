@@ -1,10 +1,10 @@
 {
  "provider": "steam",
  "title": "Lethal League Blaze",
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "id": "553310",
- "fetched": "2026-11-23",
- "last_attempt": "2026-11-23",
+ "fetched": "2026-11-25",
+ "last_attempt": "2026-11-25",
  "unlocked": 0,
  "total": 15,
  "platform": "PC",
@@ -129,6 +129,267 @@
    "unlocked": false,
    "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/553310/9cdfef6354a58ad856d61ce1720cda610a3674b5.jpg",
    "rarity": 1.8
+  }
+ ],
+ "stats": [
+  {
+   "key": "numMatchesPlayed",
+   "name": "Ranked Matches Played"
+  },
+  {
+   "key": "numMatchesWon",
+   "name": "Ranked Matches Won"
+  },
+  {
+   "key": "numMatchesLost"
+  },
+  {
+   "key": "numMatchesPlayed_KID"
+  },
+  {
+   "key": "numMatchesPlayed_ROBOT"
+  },
+  {
+   "key": "numMatchesPlayed_CANDY"
+  },
+  {
+   "key": "numMatchesPlayed_BOOM"
+  },
+  {
+   "key": "numMatchesPlayed_CROC"
+  },
+  {
+   "key": "numMatchesPlayed_PONG"
+  },
+  {
+   "key": "numMatchesPlayed_BOSS"
+  },
+  {
+   "key": "numMatchesPlayed_COP"
+  },
+  {
+   "key": "numMatchesPlayed_ELECTRO"
+  },
+  {
+   "key": "numMatchesPlayed_SKATE"
+  },
+  {
+   "key": "lastMatchCompleted",
+   "default": 1
+  },
+  {
+   "key": "global_NumMatchesPlayed"
+  },
+  {
+   "key": "global_NumMatchesPlayed_KID"
+  },
+  {
+   "key": "global_NumMatchesPlayed_ROBOT"
+  },
+  {
+   "key": "global_NumMatchesPlayed_CANDY"
+  },
+  {
+   "key": "global_NumMatchesPlayed_BOOM"
+  },
+  {
+   "key": "global_NumMatchesPlayed_CROC"
+  },
+  {
+   "key": "global_NumMatchesPlayed_PONG"
+  },
+  {
+   "key": "global_NumMatchesPlayed_BOSS"
+  },
+  {
+   "key": "global_NumMatchesPlayed_COP"
+  },
+  {
+   "key": "global_NumMatchesPlayed_ELECTRO"
+  },
+  {
+   "key": "global_NumMatchesPlayed_SKATE"
+  },
+  {
+   "key": "numOfDisconnects"
+  },
+  {
+   "key": "currentVictoryStreak"
+  },
+  {
+   "key": "highestVictoryStreak",
+   "name": "Longest Winning Streak in Ranked"
+  },
+  {
+   "key": "numMatchesWon_KID"
+  },
+  {
+   "key": "numMatchesWon_ROBOT"
+  },
+  {
+   "key": "numMatchesWon_CANDY"
+  },
+  {
+   "key": "numMatchesWon_BOOM"
+  },
+  {
+   "key": "numMatchesWon_CROC"
+  },
+  {
+   "key": "numMatchesWon_PONG"
+  },
+  {
+   "key": "numMatchesWon_BOSS"
+  },
+  {
+   "key": "numMatchesWon_COP"
+  },
+  {
+   "key": "numMatchesWon_ELECTRO"
+  },
+  {
+   "key": "numMatchesWon_SKATE"
+  },
+  {
+   "key": "global_NumMatchesWon_KID"
+  },
+  {
+   "key": "global_NumMatchesWon_ROBOT"
+  },
+  {
+   "key": "global_NumMatchesWon_CANDY"
+  },
+  {
+   "key": "global_NumMatchesWon_BOOM"
+  },
+  {
+   "key": "global_NumMatchesWon_CROC"
+  },
+  {
+   "key": "global_NumMatchesWon_PONG"
+  },
+  {
+   "key": "global_NumMatchesWon_BOSS"
+  },
+  {
+   "key": "global_NumMatchesWon_COP"
+  },
+  {
+   "key": "global_NumMatchesWon_ELECTRO"
+  },
+  {
+   "key": "global_NumMatchesWon_SKATE"
+  },
+  {
+   "key": "numMatchesLost_KID"
+  },
+  {
+   "key": "numMatchesLost_ROBOT"
+  },
+  {
+   "key": "numMatchesLost_CANDY"
+  },
+  {
+   "key": "numMatchesLost_BOOM"
+  },
+  {
+   "key": "numMatchesLost_CROC"
+  },
+  {
+   "key": "numMatchesLost_PONG"
+  },
+  {
+   "key": "numMatchesLost_BOSS"
+  },
+  {
+   "key": "numMatchesLost_COP"
+  },
+  {
+   "key": "numMatchesLost_ELECTRO"
+  },
+  {
+   "key": "numMatchesLost_SKATE"
+  },
+  {
+   "key": "numMatchesLost_RANDOM"
+  },
+  {
+   "key": "global_NumMatchesLost_KID"
+  },
+  {
+   "key": "global_NumMatchesLost_ROBOT"
+  },
+  {
+   "key": "global_NumMatchesLost_CANDY"
+  },
+  {
+   "key": "global_NumMatchesLost_BOOM"
+  },
+  {
+   "key": "global_NumMatchesLost_CROC"
+  },
+  {
+   "key": "global_NumMatchesLost_PONG"
+  },
+  {
+   "key": "global_NumMatchesLost_BOSS"
+  },
+  {
+   "key": "global_NumMatchesLost_COP"
+  },
+  {
+   "key": "global_NumMatchesLost_ELECTRO"
+  },
+  {
+   "key": "global_NumMatchesLost_SKATE"
+  },
+  {
+   "key": "numMatchesWon_RANDOM"
+  },
+  {
+   "key": "numMatchesPlayed_RANDOM"
+  },
+  {
+   "key": "global_NumMatchesPlayed_RANDOM"
+  },
+  {
+   "key": "lossStreak"
+  },
+  {
+   "key": "global_NumMatchesLost_BAG"
+  },
+  {
+   "key": "global_NumMatchesWon_BAG"
+  },
+  {
+   "key": "global_NumMatchesPlayed_BAG"
+  },
+  {
+   "key": "numMatchesPlayed_BAG"
+  },
+  {
+   "key": "numMatchesWon_BAG"
+  },
+  {
+   "key": "numMatchesLost_BAG"
+  },
+  {
+   "key": "numMatchesPlayed_GRAF"
+  },
+  {
+   "key": "numMatchesWon_GRAF"
+  },
+  {
+   "key": "numMatchesLost_GRAF"
+  },
+  {
+   "key": "global_NumMatchesPlayed_GRAF"
+  },
+  {
+   "key": "global_NumMatchesWon_GRAF"
+  },
+  {
+   "key": "global_NumMatchesLost_GRAF"
   }
  ],
  "raw": {

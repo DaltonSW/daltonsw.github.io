@@ -1,0 +1,14 @@
+providers:
+    - provider: steam
+      platform: PC
+      fetched: "2026-11-25"
+      stats:
+        - key: stat_num_timepieces
+          name: Stat_Num_TimePieces
+          value: 50
+        - key: stat_num_badges
+          name: Stat_Num_Badges
+          value: 13
+        - key: stat_num_orbs
+          name: Stat_Num_Orbs
+          value: 1419
