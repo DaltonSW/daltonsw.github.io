@@ -661,7 +661,7 @@ func validateBeaten(beaten, started, finished string) error {
 
 func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
-	doc, pf, ok := s.gameOr404(w, r, slug)
+	_, pf, ok := s.gameOr404(w, r, slug)
 	if !ok {
 		return
 	}
@@ -669,7 +669,7 @@ func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	if err := logNewPlaythrough(doc, pf, parsePlaythroughFields(r)); err != nil {
+	if err := logNewPlaythrough(pf, parsePlaythroughFields(r)); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
@@ -680,14 +680,9 @@ func (s *server) handleNewPlaythrough(w http.ResponseWriter, r *http.Request) {
 // through the pre-write loss check (the game's status follows via
 // SyncGameStatus). Shared by the game page and Catch up's activity cards, so
 // there's one path that can add a run.
-func logNewPlaythrough(doc *model.Doc, pf *model.PlaythroughsFile, f model.PlaythroughFields) error {
+func logNewPlaythrough(pf *model.PlaythroughsFile, f model.PlaythroughFields) error {
 	if err := validatePlaythroughFields(f, true); err != nil {
 		return err
-	}
-	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, f.Subgame); conflict != nil {
-		want := model.EffectivePlatform(f.Platform, doc.FM.Platform)
-		return fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
-			doc.FM.Title, f.Status, model.OrDash(want))
 	}
 	pf.AddPlaythrough(f)
 	return mutate.WriteEntry(pf)

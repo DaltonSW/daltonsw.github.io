@@ -121,7 +121,7 @@ func TestActivityCard_SessionGuessDisablesStatus(t *testing.T) {
 	if !strings.Contains(out, `<option value="0" selected>new session on #1`) {
 		t.Error("the session target should be preselected")
 	}
-	if !strings.Contains(out, `aria-label="status" disabled`) {
+	if !strings.Contains(out, `id="status-spelunky" disabled`) {
 		t.Error("status select should start disabled for a session")
 	}
 }

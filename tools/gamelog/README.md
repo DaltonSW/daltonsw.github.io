@@ -265,9 +265,8 @@ default guess when there's no achievement signal at all to guess `dropped` from.
 `status: misc_launch` (entry-level only, not a `gameStatuses` value) covers a playthrough entry
 that isn't a real attempt at all — booted up just to check dates, or a launch that never got past a
 broken platform port (e.g. a Linux build that wouldn't run) — as distinct from `dropped`, which
-implies play was actually attempted and abandoned. Unlike the one-shot statuses below, a second
-`misc_launch` entry on the same platform is *not* fragmentation — each launch is its own unrelated
-occasion — so it's excluded from `model.IsOneShot` and can repeat freely.
+implies play was actually attempted and abandoned. Each launch is its own unrelated occasion, so
+it can repeat freely, and it isn't one of the one-shot statuses below.
 
 "Unplayed" is not a status. The site derives it (`layouts/partials/game-unplayed.html`) for any
 game with no playthrough entries — logged or written, `planned` excluded — and no captured
@@ -280,21 +279,15 @@ design (roguelike/sandbox/idle), `multiplayer` is inherently social, and `softwa
 all — Steam sells tools alongside games and reports playtime for them identically, so they arrive
 through the same new-games scan and need somewhere to go that isn't a completion state.
 
-Any of the three gets exactly one `playthroughs.yaml` entry **per platform**, whose `sessions:`
-list *is* the record — so there's nothing to accidentally fragment into a second discrete
-playthrough on the same platform later. The cap is per-platform rather than absolute because
-saves don't cross consoles: Spelunky 2 on PS4 and on Steam is two separate records with two
-separate achievement sets, which is not the fragmentation the cap exists to prevent.
+A one-shot entry's `sessions:` list is usually the whole record, and Catch up's guess for activity
+on a one-shot game is a session on its existing run. That's a default, not a rule: there's no cap on
+entries. A second `multiplayer` entry on the same platform (a different group, a different season)
+or a second `endless` run is logged like any other playthrough. An earlier version allowed only one
+entry per one-shot status per platform (`mutate.OneShotConflict`), and was removed on 2026-11-26.
 
-`model.IsOneShot` is the predicate for the status; `mutate.OneShotConflict` enforces the
-per-platform half when a playthrough is created (`handleNewPlaythrough` in the web UI), which
-can only be checked once the form has collected the platform — so a same-platform second entry is
-refused on submit rather than hidden from the form. `model.EffectivePlatform` resolves blank to the
-game's platform, so an entry predating the field still compares equal to its own game.
-
-The cap is per *status*, too: a game with genuinely distinct modes (Hitman's story campaign, its
-Freelancer roguelike, and its multiplayer contracts) can carry one entry per mode, since `endless`
-and `multiplayer` are also entry-level statuses (`model.PlaythroughStatuses`). `software` is
+Since `endless` and `multiplayer` are also entry-level statuses (`model.PlaythroughStatuses`), a
+game with genuinely distinct modes (Hitman's story campaign, its Freelancer roguelike, and its
+multiplayer contracts) carries an entry per mode. `software` is
 game-level only — it describes the whole record, not a mode, so a software game's entries say
 `playing` and the site reads them as software. Every other entry carries its own status and is shown
 as such: Hades' finished run is drawn as finished even though the game is `endless`. (Older
@@ -322,10 +315,8 @@ playthroughs:
 ```
 
 "Add a planned replay" (always offered on a game's page in the web UI) creates one; it
-refuses a second placeholder for the same effective platform, the same "don't fragment into two
-bookmarks for one intent" reasoning as the one-shot statuses' per-platform cap, though `planned`
-isn't itself part of
-that family (`model.IsOneShot` returns `false` for it, and it's deliberately absent from
+refuses a second placeholder for the same effective platform — two bookmarks for one intent would
+just be fragmentation. `planned` isn't one of the one-shot statuses (`model.IsOneShot` returns `false` for it, and it's deliberately absent from
 `model.PlaythroughStatuses` — see below).
 
 Because an entry with no sessions has no `started`, which is what every date-based partial (`games-timeline.html`,
@@ -499,7 +490,7 @@ leaving out empty sections:
   platinum date isn't a beaten date); an `unfinished` run closed on the last
   day for activity older than the Gone quiet threshold; otherwise an open run with the game's
   default status. **Log** goes through the same helpers as the game page's forms
-  (`logNewPlaythrough`/`logSession`, so the same validation, one-shot cap and pre-write loss check),
+  (`logNewPlaythrough`/`logSession`, so the same validation and pre-write loss check),
   and an error re-renders the card with what was typed. Nothing is logged without a submit:
   playthrough boundaries stay a human call.
 - **New games**: the scan rows (below), loaded after the page so it doesn't wait on the APIs. PSN, Xbox, Ubisoft and Google Play

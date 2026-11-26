@@ -121,10 +121,10 @@ what's load-bearing.
 
 ### Status vocabulary
 
-- **One-shot statuses gate per entry-status, per platform.** `model.IsOneShot` (endless,
-  multiplayer, software) is enforced by `mutate.OneShotConflict`: at most one entry of a given
-  one-shot status per platform, while a *different*-status entry is a real second mode and is
-  allowed. **Every entry carries its own status.** The 57 old endless/multiplayer entries that said
+- **One-shot statuses don't cap entries.** `model.IsOneShot` (endless, multiplayer, software)
+  makes a game's status hand-set; it does not limit how many entries of that status a game has.
+  The old one-per-platform cap (`mutate.OneShotConflict`) was removed on 2026-11-26 on purpose —
+  repeat multiplayer/endless runs are real — so don't reinstate it. **Every entry carries its own status.** The 57 old endless/multiplayer entries that said
   `playing` and leaned on the game's status were rewritten on 2026-11-21, and the code and template
   special cases that resolved them were deleted. Don't write a `playing` entry meaning
   endless/multiplayer again. The one exception is `software`: it's game-level only, so a software

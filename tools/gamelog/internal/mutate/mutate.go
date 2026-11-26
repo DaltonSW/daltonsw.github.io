@@ -25,34 +25,6 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 	return false
 }
 
-// OneShotConflict reports the existing entry that already covers a one-shot
-// status (endless/multiplayer) on the given platform and subgame, if any —
-// that's the case the web UI's handleNewPlaythrough refuses. None of the one-shot statuses has
-// a save file or finish line, so a *second* entry of the same one-shot
-// status on the same platform *and subgame* would be fragmentation, not a
-// distinct mode; a differently-statused entry (a finished campaign alongside
-// an endless sandbox mode, say) is a real second mode and is allowed to
-// coexist. A second platform is never a conflict either way — saves don't
-// cross consoles, so that's a genuinely separate record. Likewise a second
-// subgame: two compilation entries each with their own endless mode on the
-// same platform are two real modes, not fragmentation of one.
-//
-// Every entry carries its own status. Entries on endless/multiplayer games
-// that once said "playing" and leaned on the game's status were rewritten on
-// 2026-11-21, so nothing here consults the game's status any more.
-func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, subgame string) *model.PlaythroughEntry {
-	if !model.IsOneShot(status) {
-		return nil
-	}
-	want := model.EffectivePlatform(entryPlatform, gamePlatform)
-	for i, e := range playthroughs {
-		if e.Status == status && model.EffectivePlatform(e.Platform, gamePlatform) == want && e.Subgame == subgame {
-			return &playthroughs[i]
-		}
-	}
-	return nil
-}
-
 func SameGameInfo(a, b model.FrontMatter) bool {
 	return a.Title == b.Title && a.Platform == b.Platform && a.Status == b.Status &&
 		a.Draft == b.Draft &&

@@ -135,6 +135,30 @@ func TestCatchupLog_ExtendSession(t *testing.T) {
 	}
 }
 
+// One-shot games aren't capped at one entry per status: a second endless run
+// on the same platform is logged like any other.
+func TestCatchupLog_SecondOneShotEntry(t *testing.T) {
+	gamesDir := filepath.Join(t.TempDir(), "content", "games")
+	writeActivityGame(t, gamesDir, "hades", "endless",
+		"playthroughs:\n  - started: \"2024-01-01\"\n    finished: \"2024-01-03\"\n    status: endless\n",
+		"2026-11-01")
+	s := &server{gamesDir: gamesDir}
+
+	rec := postCatchup(t, s.handleCatchupLog, "/catchup/log/hades", "hades", url.Values{
+		"target": {"new"}, "started": {"2026-11-01"}, "finished": {"2026-11-01"}, "status": {"endless"},
+	})
+	if !strings.Contains(rec.Body.String(), "row--saved") {
+		t.Fatalf("want a saved result, got %s", rec.Body.String())
+	}
+	pf, err := model.LoadPlaythroughs(filepath.Join(gamesDir, "hades"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(pf.Playthroughs) != 2 || pf.Playthroughs[1].Status != "endless" {
+		t.Fatalf("want a second endless entry, got %+v", pf.Playthroughs)
+	}
+}
+
 // A refused write re-renders the card with what was typed and the reason,
 // rather than swapping it for a one-line error that throws the form away.
 func TestCatchupLog_ErrorKeepsTheCard(t *testing.T) {
@@ -144,12 +168,12 @@ func TestCatchupLog_ErrorKeepsTheCard(t *testing.T) {
 		"2026-11-01")
 	s := &server{gamesDir: gamesDir}
 
-	// A second endless entry on the same platform is a one-shot conflict.
+	// A malformed date is refused.
 	rec := postCatchup(t, s.handleCatchupLog, "/catchup/log/hades", "hades", url.Values{
-		"target": {"new"}, "started": {"2026-11-01"}, "status": {"endless"}, "notes": {"typed by hand"},
+		"target": {"new"}, "started": {"2026-11-01"}, "finished": {"soon"}, "status": {"endless"}, "notes": {"typed by hand"},
 	})
 	body := rec.Body.String()
-	for _, want := range []string{"row--error", "log a new session instead", `value="typed by hand"`, `id="log-hades"`} {
+	for _, want := range []string{"row--error", `value="typed by hand"`, `value="soon"`, `id="log-hades"`} {
 		if !strings.Contains(body, want) {
 			t.Errorf("errored card missing %q:\n%s", want, body)
 		}

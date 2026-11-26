@@ -112,10 +112,8 @@ func (f *PlaythroughsFile) CloseLatestOpenRun(status, closedOn string) bool {
 // all of them. "software" stays game-level only: it describes the whole
 // record, not a mode a game can also have alongside others.
 //
-// Each one-shot status still gets at most one entry per platform — see
-// IsOneShot and mutate.OneShotConflict — since none of the three has a save file or
-// finish line, a second entry of the *same* one-shot status on the same
-// platform would be fragmentation, not a second mode.
+// There's no cap on entries of a one-shot status: a second multiplayer entry
+// on the same platform (another group, another season) is a real record.
 //
 // "unplayed" is deliberately not here: the site derives it for any game with
 // no playthrough entries and no captured playtime (layouts/partials/
@@ -134,8 +132,8 @@ var GameStatuses = []string{"backlog", "playing", "finished", "dropped", "unfini
 
 // IsOneShot reports whether a status is one of the one-shot statuses
 // documented above. On a game it means the status is hand-set, never derived
-// from runs (see DeriveGameStatus); on an entry, or a game, it forbids a
-// second playthrough entry of that same status on the same platform.
+// from runs (see DeriveGameStatus). It doesn't limit how many entries of
+// that status a game can have.
 func IsOneShot(status string) bool {
 	return status == "endless" || status == "multiplayer" || status == "software"
 }
@@ -153,10 +151,9 @@ func DefaultPlaythroughStatus(gameStatus string) string {
 // "misc_launch" covers an entry that isn't a real attempt at all — booted up
 // just to check dates, or a launch that never got past a broken platform
 // port (e.g. a Linux build that wouldn't run) — as distinct from "dropped",
-// which implies play was actually attempted and abandoned. Unlike
-// endless/multiplayer, a second misc_launch entry on the same platform isn't
-// fragmentation: each launch is its own unrelated occasion, so it's not
-// one-shot (see IsOneShot).
+// which implies play was actually attempted and abandoned. Each launch is
+// its own unrelated occasion, so it repeats freely; it isn't one-shot (see
+// IsOneShot).
 var PlaythroughStatuses = []string{"playing", "finished", "dropped", "unfinished", "paused", "endless", "multiplayer", "misc_launch"}
 
 // IsGameStatus reports whether s is a status a game may actually be created

@@ -285,7 +285,7 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 //     session, extended to cover it;
 //   - a one-shot game (endless/multiplayer/software) with a run of that kind:
 //     a session on it, spanning the uncovered activity — the run's sessions
-//     list is the record, so a new playthrough would fragment it;
+//     list is usually the record (a second entry is allowed, just not guessed);
 //   - an uncovered finishing award: a new finished playthrough ending on the
 //     last activity day (the run's end), with a beaten date when the award is
 //     a RetroAchievements beaten award earlier than that — a mastery or

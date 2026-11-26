@@ -598,7 +598,7 @@ func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {
 		from, to, err = extendSession(pf, run, sess, started, finished)
 		msg = fmt.Sprintf("%s: extended a session on #%d to %s → %s.", doc.FM.Title, run+1, from, to)
 	} else if target == "new" {
-		err = logNewPlaythrough(doc, pf, model.PlaythroughFields{Started: started, Finished: finished, Beaten: beaten, Status: status, Notes: notes})
+		err = logNewPlaythrough(pf, model.PlaythroughFields{Started: started, Finished: finished, Beaten: beaten, Status: status, Notes: notes})
 		msg = fmt.Sprintf("%s: logged a %s playthrough from %s", doc.FM.Title, status, started)
 	} else {
 		idx, aerr := strconv.Atoi(target)
