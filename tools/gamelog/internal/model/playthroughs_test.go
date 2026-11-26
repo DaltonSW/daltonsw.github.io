@@ -171,8 +171,8 @@ func TestUnknownFieldsSurviveARewrite(t *testing.T) {
 func TestDatesRoundTripUnchanged(t *testing.T) {
 	pf := loadFixture(t, "playthroughs:\n  - started: 2026-01-04\n    finished: 2026-02-11\n")
 	got := saveAndReload(t, pf).Playthroughs[0]
-	if got.Started != "2026-01-04" || got.Finished != "2026-02-11" {
-		t.Fatalf("dates changed: %q/%q", got.Started, got.Finished)
+	if len(got.Sessions) != 1 || got.Sessions[0].Started != "2026-01-04" || got.Sessions[0].Finished != "2026-02-11" {
+		t.Fatalf("dates changed: %+v", got.Sessions)
 	}
 }
 
@@ -230,10 +230,16 @@ func TestSaveRemovesTheFileWhenEmpty(t *testing.T) {
 	}
 }
 
-func TestAddSessionRejectsAnEntryWithNoStartDate(t *testing.T) {
+// An undated entry (status only) has no sessions; logging one gives it its
+// first, rather than failing for want of a flat start to convert.
+func TestAddSessionOnAnUndatedEntryIsItsFirstSession(t *testing.T) {
 	pf := loadFixture(t, "playthroughs:\n  - status: backlog\n")
-	if err := pf.AddSession(0, "2026-05-19", "", ""); err == nil {
-		t.Fatal("expected an error rather than a session with no origin")
+	if err := pf.AddSession(0, "2026-05-19", "", ""); err != nil {
+		t.Fatal(err)
+	}
+	got := pf.Playthroughs[0]
+	if len(got.Sessions) != 1 || got.Sessions[0].Started != "2026-05-19" {
+		t.Errorf("sessions = %+v", got.Sessions)
 	}
 }
 
@@ -259,7 +265,7 @@ func TestPlaythroughsCarrySeparatePlatforms(t *testing.T) {
 	if got[0].Platform != "PS4" || got[1].Platform != "PC" {
 		t.Errorf("platforms = %q / %q, want PS4 / PC", got[0].Platform, got[1].Platform)
 	}
-	if got[0].Finished != "2020-10-17" || got[1].Finished != "2023-05-14" {
+	if got[0].Sessions[0].Finished != "2020-10-17" || got[1].Sessions[0].Finished != "2023-05-14" {
 		t.Errorf("dates disturbed: %+v", got)
 	}
 }
@@ -322,11 +328,11 @@ func TestViewsRenderEveryFieldAsText(t *testing.T) {
 	if len(views) != 2 {
 		t.Fatalf("got %d views", len(views))
 	}
-	if views[0].Rating != "9" || views[0].Started != "2026-01-04" {
+	if views[0].Rating != "9" || views[0].EarliestDate() != "2026-01-04" {
 		t.Errorf("flat view wrong: %+v", views[0])
 	}
-	if views[0].HasSessions() || views[0].IsOpen() {
-		t.Error("a finished flat entry is neither sessioned nor open")
+	if !views[0].HasSessions() || views[0].IsOpen() {
+		t.Error("a hand-typed flat entry reads as one finished session, not open")
 	}
 	if !views[1].HasSessions() || !views[1].IsOpen() {
 		t.Error("an entry whose last session has no finish date is open")
@@ -741,7 +747,7 @@ func TestSplitPlaythrough_AppendsAfterExistingLaterEntries(t *testing.T) {
 		t.Fatalf("expected the new entry at index 2, got %d", newIdx)
 	}
 	middle := pf.Playthroughs[1]
-	if middle.Started != "2020-01-01" || middle.Platform != "Switch" {
+	if middle.Sessions[0].Started != "2020-01-01" || middle.Platform != "Switch" {
 		t.Errorf("the entry after idx must be undisturbed: %+v", middle)
 	}
 }
@@ -847,17 +853,17 @@ func TestGraduatePlannedPlaythrough_FillsFieldsInPlace(t *testing.T) {
 		t.Fatalf("graduate must not add or remove entries, got %d", len(pf.Playthroughs))
 	}
 	e := pf.Playthroughs[1]
-	if e.Status != "playing" || e.Started != "2026-07-28" || e.Platform != "PC" || e.Notes != "try NG+" {
+	if e.Status != "playing" || e.Sessions[0].Started != "2026-07-28" || e.Platform != "PC" || e.Notes != "try NG+" {
 		t.Errorf("unexpected entry after graduate: %+v", e)
 	}
 
 	out := saveAndReload(t, pf)
-	if out.Playthroughs[1].Status != "playing" || out.Playthroughs[1].Started != "2026-07-28" {
+	if out.Playthroughs[1].Status != "playing" || out.Playthroughs[1].Sessions[0].Started != "2026-07-28" {
 		t.Errorf("graduated fields did not survive a round trip: %+v", out.Playthroughs[1])
 	}
 	// The original "finished" entry at index 0 must be untouched — graduate
 	// only ever mutates the one index it's given.
-	if out.Playthroughs[0].Status != "finished" || out.Playthroughs[0].Started != "2021-05-01" {
+	if out.Playthroughs[0].Status != "finished" || out.Playthroughs[0].Sessions[0].Started != "2021-05-01" {
 		t.Errorf("graduate must not disturb other entries: %+v", out.Playthroughs[0])
 	}
 }
@@ -936,12 +942,12 @@ func TestEffectivePlatformTreatsBlankAsTheGames(t *testing.T) {
 }
 
 func TestSplitSession(t *testing.T) {
-	f := &PlaythroughsFile{Playthroughs: []PlaythroughEntry{{Started: "2026-02-04", Finished: "2026-06-22", Status: "finished"}}}
+	f := &PlaythroughsFile{Playthroughs: []PlaythroughEntry{{Sessions: []SessionEntry{{Started: "2026-02-04", Finished: "2026-06-22"}}, Status: "finished"}}}
 	if err := f.SplitSession(0, 0, "2026-02-08", "2026-06-18"); err != nil {
 		t.Fatal(err)
 	}
 	got := f.Playthroughs[0]
-	if got.Started != "" || len(got.Sessions) != 2 ||
+	if len(got.Sessions) != 2 ||
 		got.Sessions[0].Started != "2026-02-04" || got.Sessions[0].Finished != "2026-02-08" ||
 		got.Sessions[1].Started != "2026-06-18" || got.Sessions[1].Finished != "2026-06-22" {
 		t.Fatalf("unexpected result: %+v", got)
@@ -951,5 +957,116 @@ func TestSplitSession(t *testing.T) {
 	}
 	if err := f.SplitSession(0, 1, "2026-06-18", "2026-06-23"); err == nil {
 		t.Fatal("expected error when second start is past the finish")
+	}
+}
+
+// A flat pair typed by hand is moved into one session when the file loads, so
+// nothing downstream ever sees a flat entry. An open run keeps its `finished`
+// key as an empty value, and a finish with no start becomes a one-day session
+// rather than losing the date.
+func TestLoadPlaythroughs_ConvertsFlatEntriesToSessions(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - started: "2020-01-01"
+    finished: "2020-02-01"
+    status: finished
+    mood: obsessive
+  - started: "2024-11-24"
+    finished: ""
+    status: paused
+  - finished: "2020-04-07"
+    status: dropped
+  - status: finished
+`)
+	got := pf.Playthroughs
+	for i, want := range [][2]string{{"2020-01-01", "2020-02-01"}, {"2024-11-24", ""}, {"2020-04-07", "2020-04-07"}} {
+		e := got[i]
+		if len(e.Sessions) != 1 || e.Sessions[0].Started != want[0] || e.Sessions[0].Finished != want[1] {
+			t.Errorf("entry %d sessions = %+v, want %v", i, e.Sessions, want)
+		}
+		if e.Started != "" || e.Finished != "" {
+			t.Errorf("entry %d kept its flat pair: %+v", i, e)
+		}
+	}
+	if got[0].Extra["mood"] != "obsessive" {
+		t.Errorf("unknown field lost in conversion: %v", got[0].Extra)
+	}
+	if len(got[3].Sessions) != 0 {
+		t.Errorf("an undated entry has nothing to convert, got %+v", got[3].Sessions)
+	}
+	if want := 6; len(pf.ConvertedMoves()) != want {
+		t.Errorf("converted moves = %v, want the pair for each of 3 entries", pf.ConvertedMoves())
+	}
+
+	raw, err := saveAndReload(t, pf).Encode()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(string(raw), "finished: \"\"") {
+		t.Errorf("the open run must keep an empty finished key:\n%s", raw)
+	}
+}
+
+// Sessions aren't guaranteed to be in date order. "Latest" is the greatest
+// start, as in Hugo (sort by started, take the last), not the last position.
+func TestLatestSessionIsByDateNotPosition(t *testing.T) {
+	pf := loadFixture(t, `playthroughs:
+  - status: playing
+    sessions:
+      - started: "2024-06-01"
+        finished: ""
+      - started: "2024-01-01"
+        finished: "2024-01-05"
+`)
+	v := pf.Views()[0]
+	if !v.IsOpen() {
+		t.Error("the June session is the latest and is open, wherever it sits in the list")
+	}
+	if v.LatestDate() != "2024-06-01" || v.FinishDate() != "" {
+		t.Errorf("LatestDate/FinishDate = %q/%q", v.LatestDate(), v.FinishDate())
+	}
+	if err := pf.UpdatePlaythrough(0, "2024-06-09", "finished", "", "", "", ""); err != nil {
+		t.Fatal(err)
+	}
+	if got := pf.Playthroughs[0].Sessions[0].Finished; got != "2024-06-09" {
+		t.Errorf("the finish must land on the latest session, got sessions %+v", pf.Playthroughs[0].Sessions)
+	}
+	if pf.Playthroughs[0].Sessions[1].Finished != "2024-01-05" {
+		t.Error("the earlier session was disturbed")
+	}
+}
+
+// An entry with no sessions (undated, or a planned placeholder) is not an open
+// run: nothing says it is still going. It also can't be given a finish date.
+func TestEntryWithNoSessionsIsNotOpen(t *testing.T) {
+	pf := loadFixture(t, "playthroughs:\n  - status: finished\n")
+	v := pf.Views()[0]
+	if v.IsOpen() || v.LatestDate() != "" || v.FinishDate() != "" {
+		t.Errorf("undated entry = open %v, latest %q, finish %q", v.IsOpen(), v.LatestDate(), v.FinishDate())
+	}
+	if got, ok := DeriveGameStatus("finished", pf.Views()); !ok || got != "finished" {
+		t.Errorf("DeriveGameStatus = %q, %v; want finished, true", got, ok)
+	}
+	if pf.CloseLatestOpenRun("dropped", "2024-01-01") {
+		t.Error("there is no open run to close")
+	}
+	if err := pf.UpdatePlaythrough(0, "2024-01-01", "finished", "", "", "", ""); err == nil {
+		t.Error("a finish date has no session to land on, expected an error")
+	}
+}
+
+func TestAddPlaythroughWritesASession(t *testing.T) {
+	var f PlaythroughsFile
+	f.AddPlaythrough(PlaythroughFields{Started: "2026-01-01", Finished: "2026-01-09", Status: "finished"})
+	f.AddPlaythrough(PlaythroughFields{Started: "2026-02-01", Status: "playing"})
+	f.AddPlaythrough(PlaythroughFields{Finished: "2026-03-01", Status: "unfinished"})
+	f.AddPlaythrough(PlaythroughFields{Status: "planned"})
+	for i, want := range []int{1, 1, 1, 0} {
+		e := f.Playthroughs[i]
+		if len(e.Sessions) != want || e.Started != "" || e.Finished != "" {
+			t.Errorf("entry %d = %+v, want %d session(s) and no flat dates", i, e, want)
+		}
+	}
+	if s := f.Playthroughs[2].Sessions[0]; s.Started != "2026-03-01" || s.Finished != "2026-03-01" {
+		t.Errorf("a finish-only entry is a one-day session, got %+v", s)
 	}
 }

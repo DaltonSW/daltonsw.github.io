@@ -45,8 +45,9 @@ type SessionEntry struct {
 
 // PlaythroughEntry is one run through a game.
 //
-// Started/Finished are omitempty here because they legitimately disappear:
-// converting a playthrough to `sessions:` moves the pair into the list.
+// Started/Finished exist only so a flat pair typed by hand can be read:
+// LoadPlaythroughs moves it into `sessions:` and blanks these, so nothing the
+// tool writes ever carries them (omitempty keeps the keys out of the file).
 //
 // Platform is per-playthrough because the same game is genuinely played on
 // more than one of them — Persona 5 Royal on PS4 and again on Steam, Octopath
@@ -102,6 +103,10 @@ type PlaythroughsFile struct {
 	// checked against what is really on disk. Comparing against the decoded
 	// struct instead would miss anything already lost on the way in.
 	raw []byte
+
+	// converted maps each flat started/finished path LoadPlaythroughs moved to
+	// the session path now holding it, for the loss check (see ConvertedMoves).
+	converted map[string]string
 }
 
 // RatingString renders the rating as the form the TUI edits. YAML decodes a
@@ -146,8 +151,49 @@ func LoadPlaythroughs(gameDir string) (*PlaythroughsFile, error) {
 	}
 	f.Path = path
 	f.raw = raw
+	f.convertFlat()
 	return f, nil
 }
+
+// convertFlat moves a hand-typed flat started/finished pair into a single
+// session, in memory. Entries with no dates at all (an undated or planned
+// placeholder) have nothing to move and stay without sessions.
+func (f *PlaythroughsFile) convertFlat() {
+	for i := range f.Playthroughs {
+		e := &f.Playthroughs[i]
+		if len(e.Sessions) > 0 || (e.Started == "" && e.Finished == "") {
+			continue
+		}
+		e.Sessions = sessionFromDates(e.Started, e.Finished)
+		e.Started, e.Finished = "", ""
+		if f.converted == nil {
+			f.converted = map[string]string{}
+		}
+		for _, name := range []string{"started", "finished"} {
+			f.converted[fmt.Sprintf("playthroughs[%d].%s", i, name)] = SessionPath(i, 0, name)
+		}
+	}
+}
+
+// sessionFromDates is the one session a started/finished pair becomes. No dates
+// means no session (an undated or planned entry). A finish with no start is a
+// one-day session on that finish date: a session needs a start (the site sorts
+// and plots by it), and dropping the finish would lose a date.
+func sessionFromDates(started, finished string) []SessionEntry {
+	if started == "" {
+		started = finished
+	}
+	if started == "" {
+		return nil
+	}
+	return []SessionEntry{{Started: started, Finished: finished}}
+}
+
+// ConvertedMoves maps the flat date paths that LoadPlaythroughs moved into a
+// session to the session path that now holds each. The pre-write loss check
+// lets a flat path vanish only if its destination is present in the rewrite,
+// so a write that drops the dates altogether is still refused.
+func (f *PlaythroughsFile) ConvertedMoves() map[string]string { return f.converted }
 
 // Raw is the file as it was read, empty for a game that has none yet.
 func (f *PlaythroughsFile) Raw() []byte { return f.raw }
@@ -220,8 +266,6 @@ type Session struct {
 // which is the shape the forms edit in.
 type Playthrough struct {
 	Index    int
-	Started  string
-	Finished string
 	Beaten   string
 	Status   string
 	Platform string
@@ -233,46 +277,69 @@ type Playthrough struct {
 
 func (p Playthrough) HasSessions() bool { return len(p.Sessions) > 0 }
 
+// latestSession picks the session that counts as the run's latest: the one
+// with the greatest start, the later position winning a tie. Hugo sorts
+// sessions by start and takes the last (entry-last-activity.html), so choosing
+// by date here keeps the two in agreement however the sessions are ordered.
+// Returns -1 when there are none.
+func latestSession[S interface{ start() string }](sessions []S) int {
+	best := -1
+	for i, s := range sessions {
+		if best < 0 || s.start() >= sessions[best].start() {
+			best = i
+		}
+	}
+	return best
+}
+
+func (s Session) start() string      { return s.Started }
+func (s SessionEntry) start() string { return s.Started }
+
+// LatestSessionIndex is the index of the entry's latest session, or -1.
+func (e PlaythroughEntry) LatestSessionIndex() int { return latestSession(e.Sessions) }
+
 // LatestDate is the most recent date this playthrough is known to have
-// touched — the last session's end (or start, if that session is still
-// open), or the flat started/finished pair for an entry that predates
-// sessions entirely. Used to tell whether freshly fetched provider activity
-// is already reflected here or represents a session nothing has logged yet.
+// touched: its latest session's end (or start, if that session is still
+// open). Used to tell whether freshly fetched provider activity is already
+// reflected here or represents a session nothing has logged yet.
 func (p Playthrough) LatestDate() string {
-	if p.HasSessions() {
-		last := p.Sessions[len(p.Sessions)-1]
-		return FirstNonEmpty(last.Finished, last.Started)
+	i := latestSession(p.Sessions)
+	if i < 0 {
+		return ""
 	}
-	return FirstNonEmpty(p.Finished, p.Started)
+	return FirstNonEmpty(p.Sessions[i].Finished, p.Sessions[i].Started)
 }
 
-// FinishDate is the day this playthrough ended: its last session's
-// `finished`, or the flat `finished` for an entry without sessions. Blank
-// while it's still open.
+// LatestStart is the start of the latest session, blank with none.
+func (p Playthrough) LatestStart() string {
+	if i := latestSession(p.Sessions); i >= 0 {
+		return p.Sessions[i].Started
+	}
+	return ""
+}
+
+// FinishDate is the day this playthrough ended: its latest session's
+// `finished`. Blank while it's still open, and for an entry with no sessions.
 func (p Playthrough) FinishDate() string {
-	if p.HasSessions() {
-		return p.Sessions[len(p.Sessions)-1].Finished
+	i := latestSession(p.Sessions)
+	if i < 0 {
+		return ""
 	}
-	return p.Finished
+	return p.Sessions[i].Finished
 }
 
-// IsOpen reports whether this playthrough (or, if it has sessions, its most
-// recent session) has a blank `finished` field.
+// IsOpen reports whether the latest session has a blank `finished`. An entry
+// with no sessions (an undated run, a planned placeholder) isn't open: nothing
+// says it is still going.
 func (p Playthrough) IsOpen() bool {
-	if p.HasSessions() {
-		return p.Sessions[len(p.Sessions)-1].Finished == ""
-	}
-	return p.Finished == ""
+	i := latestSession(p.Sessions)
+	return i >= 0 && p.Sessions[i].Finished == ""
 }
 
 // EarliestDate is the first date this playthrough is known to have started —
-// the minimum of every session's Started once it has any, since sessions
-// aren't guaranteed to be logged in chronological order, or the entry's own
-// Started for one that predates sessions entirely.
+// the minimum of every session's Started, since sessions aren't guaranteed to
+// be logged in chronological order.
 func (p Playthrough) EarliestDate() string {
-	if !p.HasSessions() {
-		return p.Started
-	}
 	earliest := ""
 	for _, s := range p.Sessions {
 		if s.Started != "" && (earliest == "" || s.Started < earliest) {
@@ -338,8 +405,6 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 	for i, e := range f.Playthroughs {
 		p := Playthrough{
 			Index:    i,
-			Started:  e.Started,
-			Finished: e.Finished,
 			Beaten:   e.Beaten,
 			Status:   e.Status,
 			Platform: e.Platform,
@@ -355,11 +420,10 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 	return out
 }
 
-// AddPlaythrough appends a new entry.
+// AddPlaythrough appends a new entry. Its dates become a single session (see
+// sessionFromDates); with no dates there is none (a planned placeholder).
 func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 	e := PlaythroughEntry{
-		Started:  pf.Started,
-		Finished: pf.Finished,
 		Beaten:   pf.Beaten,
 		Status:   pf.Status,
 		Platform: pf.Platform,
@@ -367,36 +431,23 @@ func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 		Notes:    pf.Notes,
 	}
 	e.SetRating(pf.Rating)
+	e.Sessions = sessionFromDates(pf.Started, pf.Finished)
 	f.Playthroughs = append(f.Playthroughs, e)
 }
 
-// AddSession logs another date range against an existing playthrough,
-// converting a flat started/finished pair into a `sessions:` list the first
-// time one is needed.
-//
-// This is the operation that used to destroy data. As a line splice it had to
-// locate and rewrite two possibly non-adjacent ranges without disturbing
-// anything between them; here it moves two strings into a slice.
+// AddSession logs another date range against an existing playthrough.
 func (f *PlaythroughsFile) AddSession(idx int, started, finished, title string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to add a session to", idx+1)
 	}
 	e := &f.Playthroughs[idx]
-
-	if len(e.Sessions) == 0 {
-		if e.Started == "" {
-			return fmt.Errorf("playthrough %d has no start date to convert into a session", idx+1)
-		}
-		e.Sessions = []SessionEntry{{Started: e.Started, Finished: e.Finished}}
-		e.Started, e.Finished = "", ""
-	}
 	e.Sessions = append(e.Sessions, SessionEntry{Started: started, Finished: finished, Title: title})
 	return nil
 }
 
 // RemoveSession deletes session j from playthrough idx, shifting later
-// sessions down. Refuses to leave zero sessions — there is no flat
-// started/finished to fall back to once an entry has been converted.
+// sessions down. Refuses to leave zero sessions — an entry's dates live only
+// in its sessions, so removing the last would erase them.
 func (f *PlaythroughsFile) RemoveSession(idx, j int) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to remove a session from", idx+1)
@@ -430,23 +481,11 @@ func (f *PlaythroughsFile) MoveSession(idx, p int) error {
 }
 
 // EditSession applies edited started/finished/title to session j in place.
-// Editing session 0 of an entry that has never been converted (still a flat
-// started/finished pair) performs that conversion in place — the UI shows
-// that pair as an implicit session 1 before any explicit sessions: list
-// exists, so saving edits to it needs to land the same way AddSession's
-// first-time conversion does.
 func (f *PlaythroughsFile) EditSession(idx, j int, started, finished, title string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to edit a session on", idx+1)
 	}
 	e := &f.Playthroughs[idx]
-	if j == 0 && len(e.Sessions) == 0 {
-		if e.Started == "" {
-			return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
-		}
-		e.Sessions = []SessionEntry{{}}
-		e.Started, e.Finished = "", ""
-	}
 	if j < 0 || j >= len(e.Sessions) {
 		return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
 	}
@@ -459,8 +498,7 @@ func (f *PlaythroughsFile) EditSession(idx, j int, started, finished, title stri
 // SplitSession turns session j into two: the first keeps its start and
 // title (and any Extra keys) and ends on firstEnd; a new session after it
 // starts on secondStart and ends on the original finish. Needs a finished
-// session with started <= firstEnd < secondStart <= finished. Like
-// EditSession, session 0 of a never-converted flat entry is converted first.
+// session with started <= firstEnd < secondStart <= finished.
 // Later sessions shift down one index, which callers declare to the loss
 // check with InsertSessionAllowedPaths.
 func (f *PlaythroughsFile) SplitSession(idx, j int, firstEnd, secondStart string) error {
@@ -468,13 +506,6 @@ func (f *PlaythroughsFile) SplitSession(idx, j int, firstEnd, secondStart string
 		return fmt.Errorf("no playthrough %d to split a session on", idx+1)
 	}
 	e := &f.Playthroughs[idx]
-	if j == 0 && len(e.Sessions) == 0 {
-		if e.Started == "" {
-			return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
-		}
-		e.Sessions = []SessionEntry{{Started: e.Started, Finished: e.Finished}}
-		e.Started, e.Finished = "", ""
-	}
 	if j < 0 || j >= len(e.Sessions) {
 		return fmt.Errorf("no session %d on playthrough %d", j+1, idx+1)
 	}
@@ -542,7 +573,7 @@ func (f *PlaythroughsFile) SplitPlaythrough(idx, j int, newStatus string) (int, 
 }
 
 // GraduatePlannedPlaythrough turns a bare "planned" placeholder into a real
-// entry, in place — idx must not yet have a Started date, so every field
+// entry, in place — idx must not yet have any sessions, so every field
 // this sets was previously empty. That makes it a pure addition as far as
 // the loss-check is concerned, unlike removing a playthrough entirely (which
 // this file deliberately has no operation for — see the package comment on
@@ -552,11 +583,10 @@ func (f *PlaythroughsFile) GraduatePlannedPlaythrough(idx int, pf PlaythroughFie
 		return fmt.Errorf("no playthrough %d to start", idx+1)
 	}
 	e := &f.Playthroughs[idx]
-	if e.Status != "planned" || e.Started != "" {
+	if e.Status != "planned" || len(e.Sessions) > 0 {
 		return fmt.Errorf("playthrough %d is not a planned placeholder", idx+1)
 	}
-	e.Started = pf.Started
-	e.Finished = pf.Finished
+	e.Sessions = sessionFromDates(pf.Started, pf.Finished)
 	e.Beaten = pf.Beaten
 	e.Status = pf.Status
 	e.Platform = pf.Platform
@@ -656,18 +686,17 @@ func SessionPath(idx, j int, field string) string {
 }
 
 // UpdatePlaythrough applies edited field values. The finished date belongs to
-// the last session once an entry has sessions, matching where the TUI showed
-// it.
+// the latest session; an entry with no sessions has nowhere to put one.
 func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform, subgame, rating, notes string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to update", idx+1)
 	}
 	e := &f.Playthroughs[idx]
 
-	if len(e.Sessions) > 0 {
-		e.Sessions[len(e.Sessions)-1].Finished = finished
-	} else {
-		e.Finished = finished
+	if i := e.LatestSessionIndex(); i >= 0 {
+		e.Sessions[i].Finished = finished
+	} else if finished != "" {
+		return fmt.Errorf("playthrough %d has no session to finish — log one first", idx+1)
 	}
 	e.Status = status
 	e.Platform = platform

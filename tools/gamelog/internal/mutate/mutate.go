@@ -103,26 +103,13 @@ func WriteFrontMatter(doc *model.Doc, allowedRemovals ...string) error {
 	return nil
 }
 
-// addSessionAndWrite logs a session against an existing playthrough and
-// writes it. hadSessions must reflect the entry's state *before* this call —
-// converting a flat started/finished pair into a sessions list is this
-// call's own doing, not data loss, so the check needs to know whether that
-// conversion is about to happen.
-func AddSessionAndWrite(pf *model.PlaythroughsFile, idx int, hadSessions bool, started, finished, title string) error {
+// AddSessionAndWrite logs a session against an existing playthrough and
+// writes it.
+func AddSessionAndWrite(pf *model.PlaythroughsFile, idx int, started, finished, title string) error {
 	if err := pf.AddSession(idx, started, finished, title); err != nil {
 		return err
 	}
-
-	// Converting to sessions moves the flat date pair into the list rather
-	// than dropping it, so those two paths are expected to disappear.
-	var allowed []string
-	if !hadSessions {
-		allowed = []string{
-			fmt.Sprintf("playthroughs[%d].started", idx),
-			fmt.Sprintf("playthroughs[%d].finished", idx),
-		}
-	}
-	return ConfirmAndWrite(pf, idx, allowed...)
+	return ConfirmAndWrite(pf, idx)
 }
 
 // confirmAndWrite previews the affected entry, and on confirmation proves the
@@ -220,6 +207,10 @@ func PreviewEntry(pf *model.PlaythroughsFile, focus int) ([]string, error) {
 // read. The file is now encoded whole rather than patched, so the failure
 // mode is a field the struct doesn't model being dropped on the way through —
 // `Extra` is what catches those, and this is what proves it did.
+//
+// A flat started/finished pair typed by hand is moved into a session when the
+// file is loaded (pf.ConvertedMoves). Such a flat path may vanish, but only if
+// the session path now holding its value is in the rewrite.
 func VerifyNoLoss(pf *model.PlaythroughsFile, allowedRemovals []string) error {
 	newBytes, err := pf.Encode()
 	if err != nil {
@@ -233,5 +224,11 @@ func VerifyNoLoss(pf *model.PlaythroughsFile, allowedRemovals []string) error {
 	if err != nil {
 		return fmt.Errorf("refusing to write %s — the result would not parse: %w", pf.Path, err)
 	}
-	return model.CheckNoFieldLoss(oldFields, newFields, allowedRemovals)
+	allowed := append([]string(nil), allowedRemovals...)
+	for from, to := range pf.ConvertedMoves() {
+		if _, kept := newFields[to]; kept {
+			allowed = append(allowed, from)
+		}
+	}
+	return model.CheckNoFieldLoss(oldFields, newFields, allowed)
 }

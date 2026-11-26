@@ -38,7 +38,7 @@ func finishedOf(t *testing.T, gamesDir, slug string) string {
 	if err != nil {
 		t.Fatal(err)
 	}
-	return pf.Playthroughs[0].Finished
+	return pf.Views()[0].FinishDate()
 }
 
 func postClose(t *testing.T, s *server, entries ...string) *httptest.ResponseRecorder {

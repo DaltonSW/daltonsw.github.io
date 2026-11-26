@@ -3,7 +3,11 @@ package model
 import "testing"
 
 func run(status, started, finished string) Playthrough {
-	return Playthrough{Status: status, Started: started, Finished: finished}
+	p := Playthrough{Status: status}
+	if started != "" {
+		p.Sessions = []Session{{Started: started, Finished: finished}}
+	}
+	return p
 }
 
 func TestDeriveGameStatus(t *testing.T) {
@@ -57,7 +61,7 @@ func TestCloseLatestOpenRun(t *testing.T) {
 	if !pf.CloseLatestOpenRun("dropped", "2024-06-03") {
 		t.Fatal("expected the open run to be closed")
 	}
-	if e := pf.Playthroughs[0]; e.Status != "finished" || e.Finished != "2023-02-01" {
+	if e := pf.Playthroughs[0]; e.Status != "finished" || e.Sessions[0].Finished != "2023-02-01" {
 		t.Errorf("a closed run must not be touched: %+v", e)
 	}
 	e := pf.Playthroughs[1]
@@ -71,7 +75,7 @@ func TestCloseLatestOpenRun_PausedLeavesItOpen(t *testing.T) {
 	if !pf.CloseLatestOpenRun("paused", "") {
 		t.Fatal("expected a change")
 	}
-	if e := pf.Playthroughs[0]; e.Status != "paused" || e.Finished != "" {
+	if e := pf.Playthroughs[0]; e.Status != "paused" || e.Sessions[0].Finished != "" {
 		t.Errorf("pausing must relabel without closing: %+v", e)
 	}
 }

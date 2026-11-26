@@ -29,7 +29,7 @@ func sampleActivity(slug string, last string) commands.ActivityItem {
 			{Provider: "steam", ID: "1", Label: "Steam", Platform: "PC", Days: 3, First: "2026-11-01", Last: last, LastPlayed: last},
 		},
 		Days: 3, First: "2026-11-01", Last: last, NewUnlocks: 4,
-		Runs:  []model.Playthrough{{Index: 0, Started: "2024-01-01", Finished: "2024-02-01", Status: "finished"}},
+		Runs:  []model.Playthrough{{Index: 0, Status: "finished", Sessions: []model.Session{{Started: "2024-01-01", Finished: "2024-02-01"}}}},
 		Guess: commands.ActivityGuess{Target: -1, Status: "playing", Started: "2026-11-01", FinishedHint: last},
 	}
 }

@@ -75,7 +75,7 @@ func TestCatchupLog_NewPlaythrough(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(pf.Playthroughs) != 1 || pf.Playthroughs[0].Started != "2026-10-01" || pf.Playthroughs[0].Finished != "2026-10-09" {
+	if len(pf.Playthroughs) != 1 || len(pf.Playthroughs[0].Sessions) != 1 || pf.Playthroughs[0].Sessions[0].Started != "2026-10-01" || pf.Playthroughs[0].Sessions[0].Finished != "2026-10-09" {
 		t.Fatalf("playthroughs = %+v", pf.Playthroughs)
 	}
 	// The game's status follows its new run (WriteEntry → SyncGameStatus).
@@ -158,7 +158,7 @@ func TestCatchupDismiss_WritesReviewed(t *testing.T) {
 	}
 	// Nothing in the game's own files changed.
 	pf, _ := model.LoadPlaythroughs(filepath.Join(gamesDir, "celeste"))
-	if len(pf.Playthroughs) != 1 || pf.Playthroughs[0].Finished != "2020-02-01" {
+	if len(pf.Playthroughs) != 1 || pf.Views()[0].FinishDate() != "2020-02-01" {
 		t.Error("dismissing must not touch playthroughs.yaml")
 	}
 }

@@ -10,11 +10,11 @@ import (
 
 func TestLoggedSpansCovers(t *testing.T) {
 	pf := logged(
-		model.PlaythroughEntry{Started: "2018-09", Finished: "2018-10"},  // partial dates
-		model.PlaythroughEntry{Started: "2020-01-01", Status: "dropped"}, // open, bounded by the next run
-		model.PlaythroughEntry{Started: "2021-06-01", Finished: "2021-06-30"},
-		model.PlaythroughEntry{Started: "2025-01-01", Status: "planned"}, // hasn't happened
-		model.PlaythroughEntry{Started: "2023-02-01"},                    // open, newest: unbounded
+		model.PlaythroughEntry{Sessions: []model.SessionEntry{{Started: "2018-09", Finished: "2018-10"}}},  // partial dates
+		model.PlaythroughEntry{Status: "dropped", Sessions: []model.SessionEntry{{Started: "2020-01-01"}}}, // open, bounded by the next run
+		model.PlaythroughEntry{Sessions: []model.SessionEntry{{Started: "2021-06-01", Finished: "2021-06-30"}}},
+		model.PlaythroughEntry{Status: "planned", Sessions: []model.SessionEntry{{Started: "2025-01-01"}}}, // hasn't happened
+		model.PlaythroughEntry{Sessions: []model.SessionEntry{{Started: "2023-02-01"}}},                    // open, newest: unbounded
 	)
 	spans := loggedSpans(pf)
 	cases := map[string]bool{
@@ -41,7 +41,7 @@ func TestWithCoverage_RAAwardInsideLoggedRunDowngrades(t *testing.T) {
 		Started: date("2020-01-02"), Finished: date("2020-01-20"), Confidence: "high", AwardKind: "mastered", OK: true,
 		Unlocks: []time.Time{date("2020-01-02"), date("2020-01-19"), date("2022-05-05")},
 	}}}
-	pf := logged(model.PlaythroughEntry{Started: "2020-01-01", Finished: "2020-01-31"})
+	pf := logged(model.PlaythroughEntry{Sessions: []model.SessionEntry{{Started: "2020-01-01", Finished: "2020-01-31"}}})
 
 	got := WithCoverage(r, pf)
 	s, c := got.RA.RA, got.RA.Coverage
@@ -61,7 +61,7 @@ func TestWithCoverage_RAAwardOutsideLoggedRunsStaysHigh(t *testing.T) {
 		Started: date("2023-03-01"), Finished: date("2023-04-10"), Confidence: "high", AwardKind: "beaten-hardcore", OK: true,
 		Unlocks: []time.Time{date("2019-02-02"), date("2023-03-01"), date("2023-04-09")},
 	}}}
-	pf := logged(model.PlaythroughEntry{Started: "2019-02-01", Finished: "2019-02-28"})
+	pf := logged(model.PlaythroughEntry{Sessions: []model.SessionEntry{{Started: "2019-02-01", Finished: "2019-02-28"}}})
 
 	s := WithCoverage(r, pf).RA.RA
 	if s.Confidence != "high" || day(s.Started) != "2023-03-01" || day(s.Finished) != "2023-04-10" {

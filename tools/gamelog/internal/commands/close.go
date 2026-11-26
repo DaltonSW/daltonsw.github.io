@@ -68,10 +68,7 @@ func FindOpenEntries(archiveDir, gamesDir string, games []model.GameSummary, thr
 			// hand-logged session — but a game with no archived date still
 			// has the day the open session started, which for a one-evening
 			// party game is exactly the right answer.
-			lastLogged := p.Started
-			if p.HasSessions() {
-				lastLogged = p.Sessions[len(p.Sessions)-1].Started
-			}
+			lastLogged := p.LatestStart()
 			closeOn, source := lastLogged, "logged start"
 			if d := archiveLastPlayed(archiveDir, g); d > closeOn {
 				closeOn, source = d, "archive"
@@ -133,18 +130,11 @@ func CloseEntry(e OpenEntry) (bool, error) {
 	}
 	entry := &pf.Playthroughs[e.Index]
 
-	if len(entry.Sessions) > 0 {
-		last := &entry.Sessions[len(entry.Sessions)-1]
-		if last.Finished != "" {
-			return false, nil // already closed since the list was built
-		}
-		last.Finished = e.CloseOn
-	} else {
-		if entry.Finished != "" {
-			return false, nil
-		}
-		entry.Finished = e.CloseOn
+	i := entry.LatestSessionIndex()
+	if i < 0 || entry.Sessions[i].Finished != "" {
+		return false, nil // closed (or emptied) since the list was built
 	}
+	entry.Sessions[i].Finished = e.CloseOn
 
 	// The same write every other playthrough change goes through: the
 	// pre-write loss check (only a date is added, so no removal is declared),

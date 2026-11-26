@@ -78,6 +78,9 @@ func TestCloseEntry_ClosesTrailingSession(t *testing.T) {
 	}
 }
 
+// A flat started/finished pair typed by hand is converted to a session on
+// load, so closing it lands on that session and the write passes the loss
+// check without declaring anything.
 func TestCloseEntry_ClosesFlatEntry(t *testing.T) {
 	dir := t.TempDir()
 	g := writeGameWithPlaythroughs(t, dir, "flat", "multiplayer", openFlatYAML)
@@ -89,11 +92,12 @@ func TestCloseEntry_ClosesFlatEntry(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if got := pf.Playthroughs[0].Finished; got != "2020-07-16" {
-		t.Errorf("finished = %q, want 2020-07-16", got)
+	e := pf.Playthroughs[0]
+	if len(e.Sessions) != 1 || e.Sessions[0].Finished != "2020-07-16" {
+		t.Errorf("want one session finished 2020-07-16, got %+v", e.Sessions)
 	}
-	if len(pf.Playthroughs[0].Sessions) != 0 {
-		t.Errorf("a flat entry must not gain a sessions list: %+v", pf.Playthroughs[0])
+	if e.Started != "" || e.Finished != "" {
+		t.Errorf("the flat pair must be gone after the write: %+v", e)
 	}
 }
 
@@ -117,7 +121,7 @@ func TestCloseEntry_NeverOverwritesAnExistingDate(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if got := pf.Playthroughs[0].Finished; got != "2019-04-01" {
+	if got := pf.Views()[0].FinishDate(); got != "2019-04-01" {
 		t.Errorf("finished = %q, want the original 2019-04-01", got)
 	}
 }

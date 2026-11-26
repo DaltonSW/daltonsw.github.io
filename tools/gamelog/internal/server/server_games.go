@@ -205,23 +205,8 @@ type playthroughsSectionView struct {
 	Error        string
 }
 
-// buildSessionRows renders a playthrough's sessions table rows. An entry
-// that predates sessions entirely (a flat started/finished pair, never
-// converted) is shown as an implicit session 1 rather than an empty table —
-// EditSession and sessionIndices know how to convert it in place if that row
-// is ever saved.
+// buildSessionRows renders a playthrough's sessions table rows.
 func buildSessionRows(slug string, p model.Playthrough) []sessionRowView {
-	if !p.HasSessions() {
-		if p.Started == "" {
-			return nil
-		}
-		return []sessionRowView{{
-			Session:     model.Session{Started: p.Started, Finished: p.Finished},
-			Slug:        slug,
-			PthIndex:    p.Index,
-			NumSessions: 1,
-		}}
-	}
 	rows := make([]sessionRowView, len(p.Sessions))
 	for i, sess := range p.Sessions {
 		rows[i] = sessionRowView{Session: sess, Slug: slug, PthIndex: p.Index, NumSessions: len(p.Sessions)}
@@ -230,13 +215,9 @@ func buildSessionRows(slug string, p model.Playthrough) []sessionRowView {
 }
 
 func buildPthUpdateView(slug, gamePlatform string, gameSubgames []string, p model.Playthrough) pthUpdateView {
-	displayFinished := p.Finished
-	if p.HasSessions() {
-		displayFinished = p.Sessions[len(p.Sessions)-1].Finished
-	}
 	return pthUpdateView{
 		Playthrough:     p,
-		DisplayFinished: displayFinished,
+		DisplayFinished: p.FinishDate(),
 		Slug:            slug,
 		GamePlatform:    gamePlatform,
 		GameSubgames:    gameSubgames,
@@ -713,10 +694,7 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	p := pf.Views()[idx]
-	displayFinished := p.Finished
-	if p.HasSessions() {
-		displayFinished = p.Sessions[len(p.Sessions)-1].Finished
-	}
+	displayFinished := p.FinishDate()
 
 	finished, status := r.FormValue("finished"), r.FormValue("status")
 	platform, subgame, rating, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("rating"), r.FormValue("notes")
@@ -777,10 +755,6 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	}
 	if beaten == "" {
 		allowed = append(allowed, base+".beaten")
-	}
-	if strings.TrimSpace(finished) == "" {
-		allowed = append(allowed, base+".finished",
-			fmt.Sprintf("%s.sessions[%d].finished", base, len(p.Sessions)-1))
 	}
 	if err := mutate.WriteEntry(pf, allowed...); err != nil {
 		fail(err)
@@ -865,9 +839,7 @@ func (s *server) handleAddSession(w http.ResponseWriter, r *http.Request) {
 }
 
 // logSession validates and appends one session to playthrough idx, then
-// writes it through the loss check. The first session on an entry moves its
-// flat started/finished pair into the session, so those two paths are the
-// declared removals in that case. Shared with Catch up's activity cards.
+// writes it through the loss check. Shared with Catch up's activity cards.
 func logSession(pf *model.PlaythroughsFile, idx int, started, finished, title string) error {
 	if idx < 0 || idx >= len(pf.Playthroughs) {
 		return fmt.Errorf("no such playthrough")
@@ -878,18 +850,10 @@ func logSession(pf *model.PlaythroughsFile, idx int, started, finished, title st
 	if err := forms.ValidateDate(false)(finished); err != nil {
 		return err
 	}
-	hadSessions := pf.Views()[idx].HasSessions()
 	if err := pf.AddSession(idx, started, finished, title); err != nil {
 		return err
 	}
-	var allowed []string
-	if !hadSessions {
-		allowed = []string{
-			fmt.Sprintf("playthroughs[%d].started", idx),
-			fmt.Sprintf("playthroughs[%d].finished", idx),
-		}
-	}
-	return mutate.WriteEntry(pf, allowed...)
+	return mutate.WriteEntry(pf)
 }
 
 // handleEditSession answers with just the one session_row fragment it
@@ -910,17 +874,8 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	e := pf.Playthroughs[idx]
-	hadSessions := len(e.Sessions) > 0
-	var orig model.SessionEntry
+	orig := e.Sessions[j]
 	numSessions := len(e.Sessions)
-	if hadSessions {
-		orig = e.Sessions[j]
-	} else {
-		// The flat started/finished pair shown as an implicit session 1 —
-		// see EditSession and sessionIndices.
-		orig = model.SessionEntry{Started: e.Started, Finished: e.Finished}
-		numSessions = 1
-	}
 	started, finished, title := r.FormValue("started"), r.FormValue("finished"), r.FormValue("title")
 
 	fail := func(err error) {
@@ -955,14 +910,6 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	var allowed []string
-	if !hadSessions {
-		// Converting the flat pair to sessions[0] moves those two paths
-		// rather than dropping them — same allowance as AddSession's own
-		// first-time conversion in handleAddSession.
-		allowed = append(allowed,
-			fmt.Sprintf("playthroughs[%d].started", idx),
-			fmt.Sprintf("playthroughs[%d].finished", idx))
-	}
 	if strings.TrimSpace(title) == "" && orig.Title != "" {
 		allowed = append(allowed, model.SessionPath(idx, j, "title"))
 	}
@@ -1010,18 +957,12 @@ func (s *server) handleSplitSession(w http.ResponseWriter, r *http.Request) {
 		fail(fmt.Errorf("second session start: %w", err))
 		return
 	}
-	hadSessions := len(pf.Playthroughs[idx].Sessions) > 0
 	before := append([]model.SessionEntry(nil), pf.Playthroughs[idx].Sessions...)
 	if err := pf.SplitSession(idx, j, firstEnd, secondStart); err != nil {
 		fail(err)
 		return
 	}
 	allowed := model.InsertSessionAllowedPaths(idx, before, pf.Playthroughs[idx].Sessions)
-	if !hadSessions {
-		allowed = append(allowed,
-			fmt.Sprintf("playthroughs[%d].started", idx),
-			fmt.Sprintf("playthroughs[%d].finished", idx))
-	}
 	if err := mutate.WriteEntry(pf, allowed...); err != nil {
 		fail(err)
 		return
@@ -1123,13 +1064,7 @@ func (s *server) sessionIndices(r *http.Request, pf *model.PlaythroughsFile) (id
 	if err != nil || j < 0 {
 		return 0, 0, false
 	}
-	e := pf.Playthroughs[idx]
-	if j < len(e.Sessions) {
-		return idx, j, true
-	}
-	// j==0 on an entry with no sessions: yet is the flat started/finished
-	// pair the UI shows as an implicit session 1 — see EditSession.
-	if j == 0 && len(e.Sessions) == 0 && e.Started != "" {
+	if j < len(pf.Playthroughs[idx].Sessions) {
 		return idx, j, true
 	}
 	return 0, 0, false

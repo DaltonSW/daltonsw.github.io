@@ -454,7 +454,7 @@ func maybePromptNewSession(gameDir, title string, saved []savedRecord) error {
 	if err != nil {
 		return err
 	}
-	return mutate.AddSessionAndWrite(pf, 0, views[0].HasSessions(), started, finished, sessTitle)
+	return mutate.AddSessionAndWrite(pf, 0, started, finished, sessTitle)
 }
 
 // runAchievementsAll refreshes every game that has a provider link, in the

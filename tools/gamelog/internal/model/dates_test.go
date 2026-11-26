@@ -11,13 +11,13 @@ import (
 // shape is a dropped attempt, then finished runs, then a later replay.
 func TestFirstFinished_EarliestFinishedRunOnly(t *testing.T) {
 	views := []Playthrough{
-		{Status: "dropped", Started: "2022-01-01", Finished: "2022-02-01"},
+		{Status: "dropped", Sessions: []Session{{Started: "2022-01-01", Finished: "2022-02-01"}}},
 		{Status: "finished", Sessions: []Session{
 			{Started: "2023-10-15", Finished: "2023-11-11"},
 			{Started: "2023-12-31", Finished: "2024-02-11"},
 		}},
-		{Status: "finished", Started: "2024-11-02", Finished: "2024-12-25"},
-		{Status: "playing", Started: "2026-08-29"},
+		{Status: "finished", Sessions: []Session{{Started: "2024-11-02", Finished: "2024-12-25"}}},
+		{Status: "playing", Sessions: []Session{{Started: "2026-08-29"}}},
 	}
 	if got := firstFinished(views); got != "2024-02-11" {
 		t.Errorf("firstFinished = %q, want the session-ended 2024-02-11", got)
@@ -32,8 +32,8 @@ func TestFirstFinished_EarliestFinishedRunOnly(t *testing.T) {
 // first-finished reads, whatever the run's status.
 func TestFirstFinished_BeatenOverridesTheRunsEnd(t *testing.T) {
 	views := []Playthrough{
-		{Status: "finished", Started: "2024-01-01", Finished: "2024-06-30", Beaten: "2024-02-10"},
-		{Status: "finished", Started: "2024-03-01", Finished: "2024-03-20"},
+		{Status: "finished", Beaten: "2024-02-10", Sessions: []Session{{Started: "2024-01-01", Finished: "2024-06-30"}}},
+		{Status: "finished", Sessions: []Session{{Started: "2024-03-01", Finished: "2024-03-20"}}},
 	}
 	if got := firstFinished(views); got != "2024-02-10" {
 		t.Errorf("firstFinished = %q, want the beaten date 2024-02-10", got)
@@ -43,7 +43,7 @@ func TestFirstFinished_BeatenOverridesTheRunsEnd(t *testing.T) {
 		t.Errorf("without beaten, firstFinished = %q, want the earliest finish 2024-03-20", got)
 	}
 	// Still playing for mastery, but already beaten.
-	playing := []Playthrough{{Status: "playing", Started: "2026-10-01", Beaten: "2026-10-20"}}
+	playing := []Playthrough{{Status: "playing", Beaten: "2026-10-20", Sessions: []Session{{Started: "2026-10-01"}}}}
 	if got := firstFinished(playing); got != "2026-10-20" {
 		t.Errorf("an open run with a beaten date = %q, want 2026-10-20", got)
 	}
@@ -63,7 +63,7 @@ func TestBeaten_RoundTripsAndClears(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if v := got.Views()[0]; v.Beaten != "2024-02-10" || v.Finished != "2024-06-30" {
+	if v := got.Views()[0]; v.Beaten != "2024-02-10" || v.FinishDate() != "2024-06-30" {
 		t.Fatalf("round trip = %+v", v)
 	}
 	if err := got.SetBeaten(0, ""); err != nil {
@@ -97,8 +97,9 @@ func TestCreateGameFile_DatesBecomeTheFirstPlaythrough(t *testing.T) {
 		t.Fatalf("want one playthrough, got %+v", pf.Playthroughs)
 	}
 	e := pf.Playthroughs[0]
-	if e.Started != "2016-01-14" || e.Finished != "2016-01-17" || e.Status != "finished" {
-		t.Errorf("entry = %+v", e)
+	if len(e.Sessions) != 1 || e.Sessions[0].Started != "2016-01-14" || e.Sessions[0].Finished != "2016-01-17" ||
+		e.Status != "finished" || e.Started != "" || e.Finished != "" {
+		t.Errorf("entry = %+v, want one session and no flat dates", e)
 	}
 }
 

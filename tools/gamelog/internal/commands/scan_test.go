@@ -296,7 +296,7 @@ func TestCandidate_CreateFileRoundTrips(t *testing.T) {
 			}
 			got := ""
 			if len(pf.Playthroughs) > 0 {
-				got = pf.Playthroughs[0].Finished
+				got = pf.Views()[0].FinishDate()
 			}
 			if got != tc.candidate.FinishedOn {
 				t.Errorf("first playthrough finished = %q, want %q", got, tc.candidate.FinishedOn)

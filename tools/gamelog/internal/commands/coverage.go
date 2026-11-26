@@ -158,13 +158,9 @@ func loggedSpans(pf *model.PlaythroughsFile) spanList {
 		if p.Status == "planned" {
 			continue
 		}
-		if p.HasSessions() {
-			for _, s := range p.Sessions {
-				add(p.Index, s.Started, s.Finished)
-			}
-			continue
+		for _, s := range p.Sessions {
+			add(p.Index, s.Started, s.Finished)
 		}
-		add(p.Index, p.Started, p.Finished)
 	}
 	sort.SliceStable(out, func(i, j int) bool { return out[i].start < out[j].start })
 	for i := range out {

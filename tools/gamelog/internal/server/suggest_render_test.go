@@ -128,7 +128,7 @@ func TestSuggestPanelAllCovered(t *testing.T) {
 	doc := &model.Doc{FM: model.FrontMatter{Title: "Celeste"}}
 	pf := &model.PlaythroughsFile{Playthroughs: []model.PlaythroughEntry{
 		{Status: "finished", Sessions: []model.SessionEntry{{Started: "2018-09-03", Finished: "2018-10-01"}}},
-		{Status: "finished", Started: "2024-11-24"},
+		{Status: "finished", Sessions: []model.SessionEntry{{Started: "2024-11-24"}}},
 	}}
 	report := commands.SuggestionReport{
 		Slug: "celeste", NumPlaythroughs: 2,
@@ -155,8 +155,8 @@ func TestSuggestPanelAllCovered(t *testing.T) {
 func TestSuggestPanelPartiallyCovered(t *testing.T) {
 	doc := &model.Doc{FM: model.FrontMatter{Title: "Tunic"}}
 	pf := &model.PlaythroughsFile{Playthroughs: []model.PlaythroughEntry{
-		{Status: "finished", Started: "2022-03-01", Finished: "2022-03-20"},
-		{Status: "finished", Started: "2024-01-01", Finished: "2024-01-31"},
+		{Status: "finished", Sessions: []model.SessionEntry{{Started: "2022-03-01", Finished: "2022-03-20"}}},
+		{Status: "finished", Sessions: []model.SessionEntry{{Started: "2024-01-01", Finished: "2024-01-31"}}},
 	}}
 	report := commands.SuggestionReport{
 		Slug: "tunic",

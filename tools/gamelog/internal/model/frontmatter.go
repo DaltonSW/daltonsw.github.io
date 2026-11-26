@@ -416,9 +416,8 @@ func scalarStrings(vs []any) []string {
 }
 
 // CheckNoFieldLoss reports every path present in before but gone from after.
-// allowedRemovals names the paths the caller knows it is removing — converting
-// a playthrough to `sessions:` moves the flat date pair, and clearing a field
-// drops the key. Anything else disappearing is a bug in the operation, and the
+// allowedRemovals names the paths the caller knows it is removing — a
+// session deleted or reordered, say, or a cleared field dropping its key. Anything else disappearing is a bug in the operation, and the
 // write must not happen.
 //
 // A path whose value was already empty is not a loss: nothing was there to

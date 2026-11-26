@@ -93,11 +93,7 @@ func (f *PlaythroughsFile) CloseLatestOpenRun(status, closedOn string) bool {
 	e := &f.Playthroughs[idx]
 	e.Status = status
 	if closedOn != "" {
-		if len(e.Sessions) > 0 {
-			e.Sessions[len(e.Sessions)-1].Finished = closedOn
-		} else {
-			e.Finished = closedOn
-		}
+		e.Sessions[e.LatestSessionIndex()].Finished = closedOn
 	}
 	return true
 }
