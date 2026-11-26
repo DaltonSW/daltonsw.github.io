@@ -404,7 +404,7 @@ func (c *PSNClient) EarnedTrophies(ctx context.Context, npCommunicationID, npSer
 }
 
 // today formats the current instant as a calendar date in the site's
-// timezone, matching forms.Today's convention.
+// timezone, matching model.Today's convention.
 func today() string {
 	return time.Now().In(model.SiteLocation).Format("2006-01-02")
 }

@@ -10,7 +10,6 @@ import (
 	"strings"
 
 	"go.dalton.dog/gamelog/internal/commands"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
 )
@@ -145,7 +144,7 @@ func (s *server) createFromScan(w http.ResponseWriter, r *http.Request, mode com
 		status = r.FormValue("status")
 		// Validated because it goes straight into front matter, and a
 		// submitted form value is not a trusted one.
-		if !forms.IsGameStatus(status) {
+		if !model.IsGameStatus(status) {
 			s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("unknown status %q", status))
 			return
 		}
@@ -354,7 +353,7 @@ type scanRow struct {
 }
 
 // scanRows pairs each candidate with the alternatives to its guessed status.
-// quick is the mode's plausible set — see forms.ScanQuickStatuses.
+// quick is the mode's plausible set — see model.ScanQuickStatuses.
 func scanRows(candidates []commands.Candidate, quick []string, action string, minHours float64, tab string) []scanRow {
 	rows := make([]scanRow, len(candidates))
 	for i, c := range candidates {
@@ -436,7 +435,7 @@ func (s *server) handleHousekeeping(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		data.BacklogError = err.Error()
 	} else {
-		data.BacklogCandidates = scanRows(backlog.Candidates, forms.BacklogQuickStatuses, "/backlog", minHours, "backlog")
+		data.BacklogCandidates = scanRows(backlog.Candidates, model.BacklogQuickStatuses, "/backlog", minHours, "backlog")
 		data.BacklogNotices = backlog.Notices
 	}
 
@@ -471,7 +470,7 @@ func staleRows(candidates []commands.StaleCandidate) []staleRow {
 	rows := make([]staleRow, len(candidates))
 	for i, c := range candidates {
 		var others []string
-		for _, st := range forms.StaleQuickStatuses {
+		for _, st := range model.StaleQuickStatuses {
 			if st != c.SuggestedStatus {
 				others = append(others, st)
 			}
@@ -513,7 +512,7 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	action := r.FormValue("action")
-	if action != forms.StaleAccept && !isStaleMarkAction(action) {
+	if action != commands.StaleAccept && !isStaleMarkAction(action) {
 		s.respondHousekeepingErr(w, r, backTo, fmt.Errorf("unknown action %q", action))
 		return
 	}
@@ -530,7 +529,7 @@ func (s *server) handleStaleAction(w http.ResponseWriter, r *http.Request) {
 }
 
 func isStaleMarkAction(action string) bool {
-	return len(action) > len(forms.StaleMarkPrefix) && action[:len(forms.StaleMarkPrefix)] == forms.StaleMarkPrefix
+	return len(action) > len(commands.StaleMarkPrefix) && action[:len(commands.StaleMarkPrefix)] == commands.StaleMarkPrefix
 }
 
 func (s *server) handleCloseSelected(w http.ResponseWriter, r *http.Request) {

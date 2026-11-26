@@ -447,7 +447,7 @@ type CreatedGame struct {
 //
 // status overrides the guessed status for every game created in this call —
 // the "create as X instead" correction. Blank keeps each candidate's own
-// guess. Callers must have validated it (forms.IsGameStatus): it goes
+// guess. Callers must have validated it (model.IsGameStatus): it goes
 // straight into front matter.
 //
 // creds is passed in rather than loaded here so a caller that already has them

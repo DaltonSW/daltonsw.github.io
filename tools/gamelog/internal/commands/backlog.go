@@ -4,7 +4,6 @@ import (
 	"sort"
 	"time"
 
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -86,7 +85,7 @@ func FindIncomplete(archiveDir string, games []model.GameSummary, opts Incomplet
 	var out []IncompleteCandidate
 	for _, g := range games {
 		// endless/multiplayer/software have no completion to be short of.
-		if forms.IsOneShot(g.Status) {
+		if model.IsOneShot(g.Status) {
 			continue
 		}
 		if !opts.IncludeDone && doneStatuses[g.Status] {

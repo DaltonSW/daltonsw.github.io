@@ -10,7 +10,6 @@ import (
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/externalid"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -97,7 +96,7 @@ type suggestView struct {
 	Error           string
 }
 
-// buildSuggestView turns a report into the suggest panel's pre-filled forms.
+// buildSuggestView turns a report into the suggest panel's pre-filled model.
 // defaultStatus is the status used when the provider doesn't signal a finish
 // — the same game-aware default the "start a new playthrough" form uses.
 func buildSuggestView(report commands.SuggestionReport, doc *model.Doc, pf *model.PlaythroughsFile, defaultStatus string) suggestView {
@@ -229,7 +228,7 @@ func (s *server) handleSuggestFragment(w http.ResponseWriter, r *http.Request) {
 		s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", suggestView{Slug: slug, Error: err.Error()})
 		return
 	}
-	status := forms.DefaultPlaythroughStatus(doc.FM.Status)
+	status := model.DefaultPlaythroughStatus(doc.FM.Status)
 	v := buildSuggestView(report, doc, pf, status)
 	v.Providers = append(v.Providers, s.archiveSuggestion(slug, doc, pf, status))
 	s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", v)

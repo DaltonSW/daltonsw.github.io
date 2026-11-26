@@ -6,9 +6,16 @@ import (
 	"strings"
 	"time"
 
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
+
+// StaleAccept is the action value for taking a stale candidate's suggested
+// status as-is.
+const StaleAccept = "accept"
+
+// StaleMarkPrefix + a status (e.g. "mark_finished") is the action value for
+// one "it's actually X" quick correction, applied by ApplyStaleAction.
+const StaleMarkPrefix = "mark_"
 
 // DefaultStaleDays is how long since a Steam game's last recorded session
 // before it's worth asking about. A month is long enough that "still
@@ -103,7 +110,7 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 // logged before runs existed — gets its front-matter status set directly.
 func ApplyStaleAction(doc *model.Doc, pf *model.PlaythroughsFile, c StaleCandidate, action string) (runChanged bool) {
 	status := c.SuggestedStatus
-	if s, ok := strings.CutPrefix(action, forms.StaleMarkPrefix); ok {
+	if s, ok := strings.CutPrefix(action, StaleMarkPrefix); ok {
 		status = s
 	}
 	closedOn := c.LastPlayed

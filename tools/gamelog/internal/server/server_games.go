@@ -13,7 +13,6 @@ import (
 
 	"go.dalton.dog/gamelog/internal/commands"
 	"go.dalton.dog/gamelog/internal/externalid"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/mutate"
 	"go.dalton.dog/gamelog/internal/providers/nadeo"
@@ -106,7 +105,7 @@ type gameNewData struct {
 func (s *server) handleNewGameForm(w http.ResponseWriter, r *http.Request) {
 	data := gameNewData{
 		Page:          newPage(r, "New game", "games"),
-		NewGameFields: model.NewGameFields{Status: "playing", Started: forms.Today()},
+		NewGameFields: model.NewGameFields{Status: "playing", Started: model.Today()},
 	}
 	s.render(w, "game_new", data)
 }
@@ -120,7 +119,7 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 		Title:    strings.TrimSpace(r.FormValue("title")),
 		Platform: r.FormValue("platform"),
 		Status:   r.FormValue("status"),
-		Subgames: forms.ParseSubgames(r.FormValue("subgames")),
+		Subgames: model.ParseSubgames(r.FormValue("subgames")),
 		Started:  r.FormValue("started"),
 		Finished: r.FormValue("finished"),
 		Rating:   r.FormValue("rating"),
@@ -147,15 +146,15 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 		fail("Steam appid: " + err.Error())
 		return
 	}
-	if err := forms.ValidateDate(false)(f.Started); err != nil {
+	if err := model.ValidateDate(false)(f.Started); err != nil {
 		fail("started: " + err.Error())
 		return
 	}
-	if err := forms.ValidateDate(false)(f.Finished); err != nil {
+	if err := model.ValidateDate(false)(f.Finished); err != nil {
 		fail("finished: " + err.Error())
 		return
 	}
-	if err := forms.ValidateRating(f.Rating); err != nil {
+	if err := model.ValidateRating(f.Rating); err != nil {
 		fail("rating: " + err.Error())
 		return
 	}
@@ -304,7 +303,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		}
 	}
 
-	defaultStatus := forms.DefaultPlaythroughStatus(doc.FM.Status)
+	defaultStatus := model.DefaultPlaythroughStatus(doc.FM.Status)
 
 	// Same rule as the (now-removed) review flow's delete action: a game
 	// with captured playthroughs or archive history isn't a stub, and
@@ -347,7 +346,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		HasProviderLink:  len(doc.ProviderLinks()) > 0,
 		Planned:          planned,
 		Playthroughs:     buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf),
-		Today:            forms.Today(),
+		Today:            model.Today(),
 		DefaultPthStatus: defaultStatus,
 		CanDelete:        canDelete,
 		Started:          g.Started,
@@ -422,7 +421,7 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 
 	g := model.GameSummaryFor(slug, doc.Path, doc, pf)
 	rating := r.FormValue("rating")
-	if err := forms.ValidateRating(rating); err != nil {
+	if err := model.ValidateRating(rating); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
@@ -433,7 +432,7 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 	if !g.StatusDerived { // a derived status follows the runs; a posted one is ignored
 		updated.Status = r.FormValue("status")
 	}
-	updated.Subgames = forms.ParseSubgames(r.FormValue("subgames"))
+	updated.Subgames = model.ParseSubgames(r.FormValue("subgames"))
 	updated.SetRating(rating)
 	updated.Draft = r.FormValue("draft") == "1"
 
@@ -546,7 +545,7 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 	if g := model.GameSummaryFor(slug, doc.Path, doc, pf); g.StatusDerived {
 		status = doc.FM.Status // follows the runs; a posted value is ignored
 	}
-	if err := forms.ValidateRating(rating); err != nil {
+	if err := model.ValidateRating(rating); err != nil {
 		fail(fmt.Errorf("rating: %w", err))
 		return
 	}
@@ -624,13 +623,13 @@ func parsePlaythroughFields(r *http.Request) model.PlaythroughFields {
 }
 
 func validatePlaythroughFields(f model.PlaythroughFields, requireStarted bool) error {
-	if err := forms.ValidateDate(requireStarted)(f.Started); err != nil {
+	if err := model.ValidateDate(requireStarted)(f.Started); err != nil {
 		return fmt.Errorf("started: %w", err)
 	}
-	if err := forms.ValidateDate(false)(f.Finished); err != nil {
+	if err := model.ValidateDate(false)(f.Finished); err != nil {
 		return fmt.Errorf("finished: %w", err)
 	}
-	if err := forms.ValidateRating(f.Rating); err != nil {
+	if err := model.ValidateRating(f.Rating); err != nil {
 		return fmt.Errorf("rating: %w", err)
 	}
 	return validateBeaten(f.Beaten, f.Started, f.Finished)
@@ -644,7 +643,7 @@ func validateBeaten(beaten, started, finished string) error {
 	if beaten == "" {
 		return nil
 	}
-	if err := forms.ValidateDate(false)(beaten); err != nil {
+	if err := model.ValidateDate(false)(beaten); err != nil {
 		return fmt.Errorf("beaten: %w", err)
 	}
 	cmp := func(a, b string) int {
@@ -688,7 +687,7 @@ func logNewPlaythrough(doc *model.Doc, pf *model.PlaythroughsFile, f model.Playt
 	if conflict := mutate.OneShotConflict(pf.Playthroughs, f.Status, f.Platform, doc.FM.Platform, f.Subgame); conflict != nil {
 		want := model.EffectivePlatform(f.Platform, doc.FM.Platform)
 		return fmt.Errorf("%s already has a %s playthrough on %s — log a new session instead",
-			doc.FM.Title, f.Status, forms.OrDash(want))
+			doc.FM.Title, f.Status, model.OrDash(want))
 	}
 	pf.AddPlaythrough(f)
 	return mutate.WriteEntry(pf)
@@ -729,11 +728,11 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		s.renderPlaythroughFragment(w, "playthrough_header", view)
 	}
 
-	if err := forms.ValidateDate(false)(finished); err != nil {
+	if err := model.ValidateDate(false)(finished); err != nil {
 		fail(err)
 		return
 	}
-	if err := forms.ValidateRating(rating); err != nil {
+	if err := model.ValidateRating(rating); err != nil {
 		fail(err)
 		return
 	}
@@ -865,10 +864,10 @@ func logSession(pf *model.PlaythroughsFile, idx int, started, finished, title st
 	if idx < 0 || idx >= len(pf.Playthroughs) {
 		return fmt.Errorf("no such playthrough")
 	}
-	if err := forms.ValidateDate(true)(started); err != nil {
+	if err := model.ValidateDate(true)(started); err != nil {
 		return err
 	}
-	if err := forms.ValidateDate(false)(finished); err != nil {
+	if err := model.ValidateDate(false)(finished); err != nil {
 		return err
 	}
 	if err := pf.AddSession(idx, started, finished, title); err != nil {
@@ -909,11 +908,11 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	if err := forms.ValidateDate(true)(started); err != nil {
+	if err := model.ValidateDate(true)(started); err != nil {
 		fail(err)
 		return
 	}
-	if err := forms.ValidateDate(false)(finished); err != nil {
+	if err := model.ValidateDate(false)(finished); err != nil {
 		fail(err)
 		return
 	}
@@ -970,11 +969,11 @@ func (s *server) handleSplitSession(w http.ResponseWriter, r *http.Request) {
 		s.renderPlaythroughFragment(w, "sessions_table", view)
 	}
 	firstEnd, secondStart := r.FormValue("split_end"), r.FormValue("split_start")
-	if err := forms.ValidateDate(true)(firstEnd); err != nil {
+	if err := model.ValidateDate(true)(firstEnd); err != nil {
 		fail(fmt.Errorf("first session end: %w", err))
 		return
 	}
-	if err := forms.ValidateDate(true)(secondStart); err != nil {
+	if err := model.ValidateDate(true)(secondStart); err != nil {
 		fail(fmt.Errorf("second session start: %w", err))
 		return
 	}
@@ -1106,7 +1105,7 @@ func (s *server) handleAddPlanned(w http.ResponseWriter, r *http.Request) {
 	platform, subgame, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("notes")
 	if mutate.HasPlannedFor(pf.Playthroughs, platform, doc.FM.Platform, subgame) {
 		want := model.EffectivePlatform(platform, doc.FM.Platform)
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s already has a planned replay on %s", doc.FM.Title, forms.OrDash(want)))
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("%s already has a planned replay on %s", doc.FM.Title, model.OrDash(want)))
 		return
 	}
 	pf.AddPlaythrough(model.PlaythroughFields{Status: "planned", Platform: platform, Subgame: subgame, Notes: notes})

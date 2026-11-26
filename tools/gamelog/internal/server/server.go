@@ -13,7 +13,6 @@ import (
 	"sync"
 
 	"go.dalton.dog/gamelog/internal/commands"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -229,11 +228,11 @@ var funcMap = template.FuncMap{
 		}
 		return "pill pill--" + status
 	},
-	"dash":         forms.OrDash,
+	"dash":         model.OrDash,
 	"joinLines":    func(ss []string) string { return strings.Join(ss, "\n") },
-	"gameStatuses": func() []string { return forms.GameStatuses },
-	"pthStatuses":  func() []string { return forms.PlaythroughStatuses },
-	"staleQuick":   func() []string { return forms.StaleQuickStatuses },
+	"gameStatuses": func() []string { return model.GameStatuses },
+	"pthStatuses":  func() []string { return model.PlaythroughStatuses },
+	"staleQuick":   func() []string { return model.StaleQuickStatuses },
 	"add1":         func(i int) int { return i + 1 },
 	// achievementProviders is every provider a refresh can target, in
 	// ProviderOrder, for the per-provider refresh buttons.

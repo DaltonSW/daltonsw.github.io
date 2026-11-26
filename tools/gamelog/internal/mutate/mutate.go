@@ -7,7 +7,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -42,7 +41,7 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 // that once said "playing" and leaned on the game's status were rewritten on
 // 2026-11-21, so nothing here consults the game's status any more.
 func OneShotConflict(playthroughs []model.PlaythroughEntry, status, entryPlatform, gamePlatform, subgame string) *model.PlaythroughEntry {
-	if !forms.IsOneShot(status) {
+	if !model.IsOneShot(status) {
 		return nil
 	}
 	want := model.EffectivePlatform(entryPlatform, gamePlatform)

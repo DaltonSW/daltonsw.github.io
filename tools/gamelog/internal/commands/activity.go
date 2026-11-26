@@ -6,7 +6,6 @@ import (
 	"strings"
 	"time"
 
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -266,10 +265,10 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 //     usual default status.
 func guessActivity(it ActivityItem, staleCutoff string) ActivityGuess {
 	g := ActivityGuess{Target: -1, Started: it.First}
-	if forms.IsOneShot(it.Game.Status) {
+	if model.IsOneShot(it.Game.Status) {
 		best := -1
 		for i, r := range it.Runs {
-			if !forms.IsOneShot(r.Status) && !(it.Game.Status == "software" && r.Status == "playing") {
+			if !model.IsOneShot(r.Status) && !(it.Game.Status == "software" && r.Status == "playing") {
 				continue
 			}
 			if best < 0 || r.LatestDate() > it.Runs[best].LatestDate() {
@@ -281,7 +280,7 @@ func guessActivity(it ActivityItem, staleCutoff string) ActivityGuess {
 			g.Finished = it.Last
 			return g
 		}
-		g.Status = forms.DefaultPlaythroughStatus(it.Game.Status)
+		g.Status = model.DefaultPlaythroughStatus(it.Game.Status)
 		if it.Last < staleCutoff {
 			g.Finished = it.Last
 		} else {
@@ -298,7 +297,7 @@ func guessActivity(it ActivityItem, staleCutoff string) ActivityGuess {
 	case it.Last < staleCutoff:
 		g.Status, g.Finished = "unfinished", it.Last
 	default:
-		g.Status, g.FinishedHint = forms.DefaultPlaythroughStatus(it.Game.Status), it.Last
+		g.Status, g.FinishedHint = model.DefaultPlaythroughStatus(it.Game.Status), it.Last
 	}
 	return g
 }

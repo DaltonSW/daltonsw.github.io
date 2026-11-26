@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"go.dalton.dog/gamelog/internal/commands"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 	"go.dalton.dog/gamelog/internal/providers/nadeo"
 )
@@ -75,7 +74,7 @@ func newActivityCard(it commands.ActivityItem, th catchupThresholds) activityCar
 		c.Target = strconv.Itoa(g.Target)
 	}
 	if c.Status == "" {
-		c.Status = forms.DefaultPlaythroughStatus(it.Game.Status)
+		c.Status = model.DefaultPlaythroughStatus(it.Game.Status)
 	}
 	c.setTargets()
 	return c
@@ -253,7 +252,7 @@ func (s *server) handleCatchupScan(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		data.Error = err.Error()
 	} else {
-		data.Rows = scanRows(scan.Candidates, forms.ScanQuickStatuses, "/scan", th.MinHours, "scan")
+		data.Rows = scanRows(scan.Candidates, model.ScanQuickStatuses, "/scan", th.MinHours, "scan")
 		for i := range data.Rows {
 			data.Rows[i].From = "catchup"
 		}
@@ -545,7 +544,7 @@ func (s *server) activityFor(slug string, th catchupThresholds) (*commands.Activ
 
 // handleCatchupLog logs a card's activity as a new playthrough or as a session
 // on an existing one, through the same helpers (and so the same validation
-// and pre-write loss check) as the game page's own forms. Success swaps the
+// and pre-write loss check) as the game page's own model. Success swaps the
 // card for a one-line result; an error re-renders the card with what was
 // typed, so nothing has to be retyped.
 func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {

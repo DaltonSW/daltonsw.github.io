@@ -20,8 +20,8 @@ go run . --port 8081    # same, on another port
 lives under `internal/`, one package per concern:
 
 ```
-internal/model         domain types + storage: front matter, playthroughs.yaml, the archive
-internal/forms         the shared validation/status vocabulary
+internal/model         domain types + storage: front matter, playthroughs.yaml, the archive,
+                        plus the status vocabulary and form validation
 internal/mutate        write-with-loss-check for playthroughs.yaml and front matter
 internal/providers/*   one package per API client (retroachievements, steam, psn, exophase,
                         xbox, nadeo, ninjakiwi)
@@ -33,7 +33,7 @@ internal/commands      the fetch/scan/report/apply functions internal/server cal
 internal/server        the local web UI
 ```
 
-`server` is the only frontend, over the `model`/`forms`/`mutate` layer, and `commands` holds the
+`server` is the only frontend, over the `model`/`mutate` layer, and `commands` holds the
 operations it runs. There used to be a cobra CLI too. It was removed once the web UI covered
 everything it did.
 
@@ -267,7 +267,7 @@ that isn't a real attempt at all — booted up just to check dates, or a launch 
 broken platform port (e.g. a Linux build that wouldn't run) — as distinct from `dropped`, which
 implies play was actually attempted and abandoned. Unlike the one-shot statuses below, a second
 `misc_launch` entry on the same platform is *not* fragmentation — each launch is its own unrelated
-occasion — so it's excluded from `forms.IsOneShot` and can repeat freely.
+occasion — so it's excluded from `model.IsOneShot` and can repeat freely.
 
 "Unplayed" is not a status. The site derives it (`layouts/partials/game-unplayed.html`) for any
 game with no playthrough entries — logged or written, `planned` excluded — and no captured
@@ -286,7 +286,7 @@ playthrough on the same platform later. The cap is per-platform rather than abso
 saves don't cross consoles: Spelunky 2 on PS4 and on Steam is two separate records with two
 separate achievement sets, which is not the fragmentation the cap exists to prevent.
 
-`forms.IsOneShot` is the predicate for the status; `mutate.OneShotConflict` enforces the
+`model.IsOneShot` is the predicate for the status; `mutate.OneShotConflict` enforces the
 per-platform half when a playthrough is created (`handleNewPlaythrough` in the web UI), which
 can only be checked once the form has collected the platform — so a same-platform second entry is
 refused on submit rather than hidden from the form. `model.EffectivePlatform` resolves blank to the
@@ -294,7 +294,7 @@ game's platform, so an entry predating the field still compares equal to its own
 
 The cap is per *status*, too: a game with genuinely distinct modes (Hitman's story campaign, its
 Freelancer roguelike, and its multiplayer contracts) can carry one entry per mode, since `endless`
-and `multiplayer` are also entry-level statuses (`forms.PlaythroughStatuses`). `software` is
+and `multiplayer` are also entry-level statuses (`model.PlaythroughStatuses`). `software` is
 game-level only — it describes the whole record, not a mode, so a software game's entries say
 `playing` and the site reads them as software. Every other entry carries its own status and is shown
 as such: Hades' finished run is drawn as finished even though the game is `endless`. (Older
@@ -325,8 +325,8 @@ playthroughs:
 refuses a second placeholder for the same effective platform, the same "don't fragment into two
 bookmarks for one intent" reasoning as the one-shot statuses' per-platform cap, though `planned`
 isn't itself part of
-that family (`forms.IsOneShot` returns `false` for it, and it's deliberately absent from
-`forms.PlaythroughStatuses` — see below).
+that family (`model.IsOneShot` returns `false` for it, and it's deliberately absent from
+`model.PlaythroughStatuses` — see below).
 
 Because an entry with no sessions has no `started`, which is what every date-based partial (`games-timeline.html`,
 `games-log.html`) already guards on before turning an entry into a bar or a log event, a planned
@@ -342,7 +342,7 @@ same array index, rather than replacing the entry — and **Save** edits its pla
 every field it sets was previously empty, so `mutate.VerifyNoLoss` sees a pure addition and no
 allowed-removals declaration is needed.
 
-`planned` is deliberately **not** in `forms.PlaythroughStatuses` — that list feeds every status
+`planned` is deliberately **not** in `model.PlaythroughStatuses` — that list feeds every status
 dropdown on the game page (new playthrough, which requires a `started` date; update; split), none of
 which should ever produce or accept a dateless entry. The only two code paths that can set or clear
 `planned` are `handleAddPlanned` (creating a placeholder, `AddPlaythrough` with `status: planned`)
@@ -576,7 +576,7 @@ whatever the dropdown was left showing — hence the `use_status` flag its butto
 
 Overriding to a status that doesn't assert the game is over drops the inferred finish date with it
 — the date only existed to justify the guess, and keeping it under `status: playing` would write a
-self-contradicting entry. A submitted status is validated against `forms.GameStatuses` before it
+self-contradicting entry. A submitted status is validated against `model.GameStatuses` before it
 reaches front matter.
 
 **A RetroAchievements subset gets a different primary button** — *Attach to \<base game\>* rather

@@ -7,7 +7,6 @@ import (
 	"testing"
 
 	"go.dalton.dog/gamelog/internal/commands"
-	"go.dalton.dog/gamelog/internal/forms"
 	"go.dalton.dog/gamelog/internal/model"
 )
 
@@ -39,7 +38,7 @@ func TestHousekeepingRenders(t *testing.T) {
 		MinHours: 5,
 		BacklogCandidates: scanRows([]commands.Candidate{
 			{Provider: model.ProviderSteam, Title: "Tunic", ID: "553420", Status: "backlog"},
-		}, forms.BacklogQuickStatuses, "/backlog", 5, "backlog"),
+		}, model.BacklogQuickStatuses, "/backlog", 5, "backlog"),
 		Ignored: []model.IgnoredGame{{Provider: "steam", ID: "440", Title: "X", IgnoredOn: "2026-08-15"}},
 	}
 	var buf bytes.Buffer
@@ -48,7 +47,7 @@ func TestHousekeepingRenders(t *testing.T) {
 	}
 	scanned := scanRows([]commands.Candidate{
 		{Provider: model.ProviderRA, Title: "Banjo", ID: "10210", Status: "finished", Finished: true, AwardKind: "beaten-hardcore", FinishedOn: "2026-01-02", AchievementsA: 12, AchievementsB: 189},
-	}, forms.ScanQuickStatuses, "/scan", 5, "scan")
+	}, model.ScanQuickStatuses, "/scan", 5, "scan")
 	scanned[0].From = "catchup"
 	out := buf.String() + renderScan(t, catchupScanData{Rows: scanned, Thresholds: catchupThresholds{MinHours: 5}})
 	if !strings.Contains(out, `<input type="hidden" name="from" value="catchup">`) {
@@ -154,7 +153,7 @@ func TestScanRenders_SubsetRowOffersAttach(t *testing.T) {
 				Provider: model.ProviderRA, Title: "Mystery [Subset - Huh]", ID: "77", Status: "playing",
 				Subset: &commands.SubsetInfo{Name: "Huh", BaseTitle: "Mystery", Err: "no parent game"},
 			},
-		}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
+		}, model.ScanQuickStatuses, "/scan", 5, "scan"),
 	}
 	out := renderScan(t, data)
 
@@ -196,7 +195,7 @@ func TestScanRendersLinkRow(t *testing.T) {
 			Provider: model.ProviderGooglePlay, Title: "Balatro", ID: "588451498103", Platform: "Android",
 			Status: "playing", AchievementsA: 16, AchievementsB: 31,
 			LinkTo: &commands.LinkTarget{Slug: "balatro", Title: "Balatro"},
-		}}, forms.ScanQuickStatuses, "/scan", 5, "scan"),
+		}}, model.ScanQuickStatuses, "/scan", 5, "scan"),
 	}
 	out := renderScan(t, data)
 	for _, want := range []string{

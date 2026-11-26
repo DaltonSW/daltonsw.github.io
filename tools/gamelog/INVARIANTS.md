@@ -24,7 +24,7 @@ what's load-bearing.
   ignore list, achievement completion, and the manual refresh tools. The Trackmania game page has
   the season picker. The old cobra CLI (`suggest`, `achievements`, `project`, `psn list`,
   `exophase list`, `nadeo …`, `ninjakiwi fetch`) is gone, so don't go looking for it.
-- The status vocabulary is split in two on purpose (see `internal/forms/forms.go`):
+- The status vocabulary is split in two on purpose (see `internal/model/status.go`):
   `GameStatuses` (front matter, 9 values, including `backlog` and `software`) and
   `PlaythroughStatuses` (entries in `playthroughs.yaml`, 8 values, including `misc_launch`).
   `planned` is a third, placeholder-only entry status for planned replays. `software` is
@@ -121,7 +121,7 @@ what's load-bearing.
 
 ### Status vocabulary
 
-- **One-shot statuses gate per entry-status, per platform.** `forms.IsOneShot` (endless,
+- **One-shot statuses gate per entry-status, per platform.** `model.IsOneShot` (endless,
   multiplayer, software) is enforced by `mutate.OneShotConflict`: at most one entry of a given
   one-shot status per platform, while a *different*-status entry is a real second mode and is
   allowed. **Every entry carries its own status.** The 57 old endless/multiplayer entries that said
@@ -132,10 +132,11 @@ what's load-bearing.
 - **Stale triage only looks at game-level `playing`** (`FindStaleCandidates` in
   `internal/commands/stale.go`), so endless/multiplayer/software games are never offered for
   finished/dropped triage, whatever their entries say.
-- **Adding another one-shot status means changing four places together:** `forms.IsOneShot`,
-  `PlaythroughStatuses` (only if it's a real per-entry mode), `NO_CONNECTOR_CLASSES` in
-  `assets/js/games-timeline.ts`, and the status colour maps in `assets/scss/main.scss` and
-  `_vars.scss`.
+- **Adding another one-shot status means changing these together:** `model.IsOneShot` (which also
+  makes it hand-set, never derived), `GameStatuses`, and if it's a real per-entry mode,
+  `PlaythroughStatuses`, `DefaultPlaythroughStatus` and `countsForStatus` (all in
+  `internal/model/status.go`); `NO_CONNECTOR_CLASSES` in `assets/js/games-timeline.ts`; and the
+  status colour maps in `assets/scss/main.scss` and `_vars.scss`.
 
 ### RetroAchievements
 
