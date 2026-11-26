@@ -385,12 +385,9 @@ func (c *Client) Campaigns(ctx context.Context) ([]Campaign, []json.RawMessage, 
 			return nil, nil, fmt.Errorf("nadeo: campaigns: status %s: %s", http.StatusText(status), strings.TrimSpace(string(raw)))
 		}
 
-		var page struct {
-			ItemCount    int        `json:"itemCount"`
-			CampaignList []Campaign `json:"campaignList"`
-		}
-		if err := json.Unmarshal(raw, &page); err != nil {
-			return nil, nil, fmt.Errorf("nadeo: decoding campaigns: %w", err)
+		page, err := decodeCampaignPage(raw)
+		if err != nil {
+			return nil, nil, err
 		}
 		raws = append(raws, json.RawMessage(raw))
 		all = append(all, page.CampaignList...)
@@ -402,8 +399,41 @@ func (c *Client) Campaigns(ctx context.Context) ([]Campaign, []json.RawMessage, 
 		}
 	}
 
-	sort.SliceStable(all, func(i, j int) bool { return all[i].StartTimestamp < all[j].StartTimestamp })
+	sortCampaigns(all)
 	return all, raws, nil
+}
+
+type campaignPage struct {
+	ItemCount    int        `json:"itemCount"`
+	CampaignList []Campaign `json:"campaignList"`
+}
+
+func decodeCampaignPage(raw []byte) (campaignPage, error) {
+	var page campaignPage
+	if err := json.Unmarshal(raw, &page); err != nil {
+		return page, fmt.Errorf("nadeo: decoding campaigns: %w", err)
+	}
+	return page, nil
+}
+
+func sortCampaigns(all []Campaign) {
+	sort.SliceStable(all, func(i, j int) bool { return all[i].StartTimestamp < all[j].StartTimestamp })
+}
+
+// DecodeCampaigns reads back the verbatim campaign pages a fetch stored in
+// the archive's raw.campaigns, oldest first — the same list Campaigns
+// returned at the time, without making a request.
+func DecodeCampaigns(raws []json.RawMessage) ([]Campaign, error) {
+	var all []Campaign
+	for _, raw := range raws {
+		page, err := decodeCampaignPage(raw)
+		if err != nil {
+			return nil, err
+		}
+		all = append(all, page.CampaignList...)
+	}
+	sortCampaigns(all)
+	return all, nil
 }
 
 // ── Map metadata ────────────────────────────────────────────────────────────

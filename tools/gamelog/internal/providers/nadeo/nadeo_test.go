@@ -476,6 +476,28 @@ func TestSelectCampaigns_ByNameAndUID(t *testing.T) {
 	}
 }
 
+// The picker sends ticked seasons plus "current", and the current season may
+// also be one of the ticked ones: it must be fetched once.
+func TestSelectCampaigns_CurrentJoinsNamedSeasons(t *testing.T) {
+	all := campaigns("Summer 2020", "Fall 2020", "Winter 2021")
+
+	got, err := selectCampaigns(all, FetchOptions{Seasons: []string{"uid-Summer 2020"}, Current: true})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(got) != 2 || got[0].Name != "Summer 2020" || got[1].Name != "Winter 2021" {
+		t.Errorf("got %+v, want Summer 2020 then Winter 2021", got)
+	}
+
+	got, err = selectCampaigns(all, FetchOptions{Seasons: []string{"uid-Winter 2021", "Winter 2021"}, Current: true})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(got) != 1 {
+		t.Errorf("got %d campaigns, want the current season once", len(got))
+	}
+}
+
 // A typo'd season must abort rather than quietly fetching something else.
 func TestSelectCampaigns_UnknownSeasonIsAnError(t *testing.T) {
 	_, err := selectCampaigns(campaigns("Fall 2024"), FetchOptions{Seasons: []string{"Fall 2025"}})

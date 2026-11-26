@@ -47,6 +47,10 @@ type Event struct {
 type FetchOptions struct {
 	// Seasons names campaigns to fetch, by name ("Fall 2024") or season UID.
 	Seasons []string
+	// Current adds the newest campaign to Seasons. It's how a caller asks for
+	// "these seasons and whatever's running now" without knowing the current
+	// season's name — it may be newer than anything the caller has seen.
+	Current bool
 	// All fetches every official campaign.
 	All bool
 	// Since fetches every campaign starting in this year or later. Zero is off.
@@ -71,8 +75,8 @@ func selectCampaigns(all []Campaign, opts FetchOptions) ([]Campaign, error) {
 		return all, nil
 
 	case len(opts.Seasons) > 0:
-		// Match on UID first, then case-insensitively on name, so both
-		// `--season "Fall 2024"` and a pasted UID work.
+		// Match on UID first, then case-insensitively on name, so both a name
+		// ("Fall 2024") and a UID work.
 		byUID := make(map[string]Campaign, len(all))
 		byName := make(map[string]Campaign, len(all))
 		for _, c := range all {
@@ -80,16 +84,26 @@ func selectCampaigns(all []Campaign, opts FetchOptions) ([]Campaign, error) {
 			byName[strings.ToLower(c.Name)] = c
 		}
 		var out []Campaign
+		picked := map[string]bool{}
+		add := func(c Campaign) {
+			if !picked[c.SeasonUID] {
+				picked[c.SeasonUID] = true
+				out = append(out, c)
+			}
+		}
 		for _, want := range opts.Seasons {
 			if c, ok := byUID[want]; ok {
-				out = append(out, c)
+				add(c)
 				continue
 			}
 			if c, ok := byName[strings.ToLower(strings.TrimSpace(want))]; ok {
-				out = append(out, c)
+				add(c)
 				continue
 			}
-			return nil, fmt.Errorf("no official campaign named %q — run `gamelog nadeo seasons` to list them", want)
+			return nil, fmt.Errorf("no official campaign named %q", want)
+		}
+		if opts.Current && len(all) > 0 {
+			add(all[len(all)-1])
 		}
 		return out, nil
 
@@ -332,6 +346,12 @@ func SeasonLabel(c Campaign) string {
 		return c.Name
 	}
 	return c.SeasonUID
+}
+
+// CampaignDates is a campaign's start and end as YYYY-MM-DD, "" where the API
+// leaves a boundary unscheduled.
+func CampaignDates(c Campaign) (started, ended string) {
+	return unixDay(c.StartTimestamp), unixDay(c.EndTimestamp)
 }
 
 // DescribeCampaign renders one campaign for `gamelog nadeo seasons`.

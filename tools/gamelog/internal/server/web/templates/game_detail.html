@@ -39,9 +39,36 @@
 {{end}}
 
 {{if .NadeoAccountID}}
-<form method="post" action="/games/{{.Slug}}/nadeo" class="row">
-  <button type="submit" title="Fetches the current season only — a full backfill is `gamelog nadeo fetch --all`">Refresh Trackmania times (current season)</button>
-</form>
+<div class="tui">
+  <span class="tui__title">trackmania seasons</span>
+  <p class="hint">Fetches the ticked seasons into the archive as a background job. Every request runs on your
+     play account, so only the current season is ticked by default. Fetching a season never discards
+     another, and a personal best only ever gets faster. The list is the one the last fetch saw, so a
+     season newer than that only shows up here after a fetch. "Current season" always covers it.</p>
+  {{with .NadeoJob}}<div class="flash flash--ok">A Trackmania fetch is running. <a href="/jobs/{{.}}">Watch it</a>.</div>{{end}}
+  {{with .NadeoSeasonsErr}}<div class="flash flash--error">Season list unavailable: {{.}}</div>{{end}}
+  <form method="post" action="/games/{{.Slug}}/nadeo">
+    <div class="checkbox-row"><input type="checkbox" id="nadeo-current" name="current" value="1" checked><label for="nadeo-current">Current season</label></div>
+    {{if .NadeoSeasons}}
+    <div class="table-wrap table-wrap--scroll">
+    <table>
+      <thead><tr><th></th><th>Season</th><th>Dates</th><th>Archived</th></tr></thead>
+      <tbody>
+      {{range .NadeoSeasons}}
+      <tr>
+        <td><input type="checkbox" id="season-{{.SeasonUID}}" name="season" value="{{.SeasonUID}}" aria-label="fetch {{.Name}}"></td>
+        <td><label for="season-{{.SeasonUID}}">{{.Name}}</label></td>
+        <td class="dim">{{or .Started "—"}}{{with .Ended}} to {{.}}{{end}}</td>
+        <td>{{if .Archived}}{{.Driven}}/{{.Tracks}} driven{{else}}<span class="dim">not fetched</span>{{end}}</td>
+      </tr>
+      {{end}}
+      </tbody>
+    </table>
+    </div>
+    {{end}}
+    <div class="btn-row"><button type="submit" class="btn--primary">Fetch ticked seasons</button></div>
+  </form>
+</div>
 {{end}}
 
 {{if .NinjaKiwiUserID}}

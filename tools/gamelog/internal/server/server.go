@@ -120,6 +120,12 @@ type server struct {
 	catchupJobID string
 	catchupNotes []string
 
+	// nadeoJobID is the in-flight (or last) Trackmania season fetch, so a
+	// second submit joins it: two fetches would each pace their own requests
+	// and double the rate against a real player's account.
+	nadeoMu    sync.Mutex
+	nadeoJobID string
+
 	listsMu sync.Mutex // serializes read-modify-write of data/game-lists.yaml
 }
 

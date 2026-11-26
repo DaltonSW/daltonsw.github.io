@@ -1,9 +1,12 @@
 package server
 
 import (
+	"context"
 	"fmt"
 	"net/http"
+	"net/url"
 	"path/filepath"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -272,6 +275,12 @@ type gameDetailData struct {
 	// refresh button.
 	NadeoAccountID  string
 	NinjaKiwiUserID string
+	// NadeoSeasons feeds the Trackmania season picker, read from the archive
+	// (no request); NadeoSeasonsErr says why it's empty when it couldn't be
+	// read. NadeoJob is a season fetch still running, if any.
+	NadeoSeasons    []commands.NadeoSeason
+	NadeoSeasonsErr string
+	NadeoJob        string
 	// Subsets are the RetroAchievements subsets attached to this game, with
 	// the counts the summary keeps separate from the game's own. Read-only
 	// here: attaching one is Housekeeping's job, because it needs the parent
@@ -321,6 +330,16 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		}
 	}
 
+	var nadeoSeasons []commands.NadeoSeason
+	var nadeoSeasonsErr, nadeoJob string
+	if doc.NadeoAccountIDString() != "" {
+		var err error
+		if nadeoSeasons, err = commands.NadeoSeasons(s.gamesDir); err != nil {
+			nadeoSeasonsErr = err.Error()
+		}
+		nadeoJob = s.runningNadeoJob()
+	}
+
 	return gameDetailData{
 		Page:             newPage(r, doc.FM.Title, "games"),
 		Slug:             slug,
@@ -347,6 +366,9 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		GooglePlayID:     g.GooglePlayID,
 		NadeoAccountID:   doc.NadeoAccountIDString(),
 		NinjaKiwiUserID:  doc.NinjaKiwiUserIDString(),
+		NadeoSeasons:     nadeoSeasons,
+		NadeoSeasonsErr:  nadeoSeasonsErr,
+		NadeoJob:         nadeoJob,
 		Subsets:          subsets,
 		AutoSuggest:      r.URL.Query().Get("suggest") == "1",
 	}
@@ -1212,10 +1234,11 @@ func (s *server) handleRefreshAchievements(w http.ResponseWriter, r *http.Reques
 // ── Per-game Trackmania / BTD6 refresh ──────────────────────────────────
 //
 // Neither is an achievement provider, so neither rides the achievements
-// button. Both run inline like it: Nadeo fetches only the current season (the
-// provider's zero-value default, a handful of throttled requests against a
-// real player's account), and a full backfill stays a deliberate CLI choice
-// (`gamelog nadeo fetch --all`). Ninja Kiwi is a single save request.
+// button. Trackmania fetches the seasons ticked in the page's picker as a
+// background job: every request is throttled and made against a real
+// player's account, and a backfill of several seasons takes a while. Only the
+// current season is ticked by default. Ninja Kiwi is a single save request
+// and runs inline.
 
 func (s *server) handleRefreshNadeo(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
@@ -1227,12 +1250,116 @@ func (s *server) handleRefreshNadeo(w http.ResponseWriter, r *http.Request) {
 		redirectErr(w, r, gamePath(slug), fmt.Errorf("this game has no nadeo_account_id"))
 		return
 	}
-	res, err := commands.SaveNadeo(r.Context(), s.gamesDir, nadeo.FetchOptions{}, "")
+	if err := r.ParseForm(); err != nil {
+		redirectErr(w, r, gamePath(slug), err)
+		return
+	}
+	rows, _ := commands.NadeoSeasons(s.gamesDir) // an unreadable list still allows "current season"
+	opts, n, err := nadeoOptionsFromForm(r.Form, rows)
 	if err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
-	redirectRefreshed(w, r, slug, commands.DescribeNadeoRecord(res.Stored), res.LastError, res.SummaryErr, "campaigns.yaml")
+
+	s.nadeoMu.Lock()
+	defer s.nadeoMu.Unlock()
+	if s.jobs.running(s.nadeoJobID) {
+		http.Redirect(w, r, "/jobs/"+s.nadeoJobID, http.StatusSeeOther)
+		return
+	}
+	title := "Trackmania: fetch current season"
+	if n > 1 || len(opts.Seasons) > 0 {
+		title = fmt.Sprintf("Trackmania: fetch %d season%s", n, pluralS(n))
+	}
+	id, j := s.jobs.create(title, gamePath(slug), "Back to "+doc.FM.Title)
+	j.Nav = "games"
+	s.nadeoJobID = id
+	go s.runNadeoJob(j, opts)
+	http.Redirect(w, r, "/jobs/"+id, http.StatusSeeOther)
+}
+
+// runningNadeoJob is the id of a Trackmania fetch still in flight, or "".
+func (s *server) runningNadeoJob() string {
+	s.nadeoMu.Lock()
+	defer s.nadeoMu.Unlock()
+	if s.jobs != nil && s.jobs.running(s.nadeoJobID) {
+		return s.nadeoJobID
+	}
+	return ""
+}
+
+// nadeoOptionsFromForm turns the season picker's ticks into fetch options,
+// and how many seasons that is. Ticking nothing is an error rather than
+// quietly meaning "current season": the zero options fetch the current
+// season, so an empty form must not reach them by accident. A season UID the
+// picker didn't offer is refused before any request is made.
+func nadeoOptionsFromForm(form url.Values, rows []commands.NadeoSeason) (nadeo.FetchOptions, int, error) {
+	current := form.Get("current") == "1"
+	known := make(map[string]bool, len(rows))
+	for _, row := range rows {
+		known[row.SeasonUID] = true
+	}
+	var opts nadeo.FetchOptions
+	for _, uid := range form["season"] {
+		if !known[uid] {
+			return nadeo.FetchOptions{}, 0, fmt.Errorf("unknown season %q", uid)
+		}
+		if !slices.Contains(opts.Seasons, uid) {
+			opts.Seasons = append(opts.Seasons, uid)
+		}
+	}
+	switch {
+	case len(opts.Seasons) == 0 && !current:
+		return nadeo.FetchOptions{}, 0, fmt.Errorf("tick at least one season to fetch")
+	case len(opts.Seasons) == 0:
+		return nadeo.FetchOptions{}, 1, nil // the zero value is the current season
+	}
+	opts.Current = current
+	n := len(opts.Seasons)
+	if current {
+		n++ // an upper bound: the current season may be one of the ticked ones
+	}
+	return opts, n, nil
+}
+
+// runNadeoJob is one season fetch: the same fetch → merge → project sequence
+// as Catch up's Trackmania step, with the provider's progress events turned
+// into the job's progress bar and log.
+func (s *server) runNadeoJob(j *job, opts nadeo.FetchOptions) {
+	// Not the request's context: that ends with the redirect to the monitor.
+	ctx := context.Background()
+	stageLabel := map[nadeo.Stage]string{
+		nadeo.StageAuth:      "signing in",
+		nadeo.StageCampaigns: "listing campaigns",
+		nadeo.StageMaps:      "track details",
+		nadeo.StageRecords:   "personal bests",
+	}
+	opts.OnEvent = func(e nadeo.Event) {
+		switch {
+		case e.Stage == nadeo.StageSeason:
+			j.log("Captured %s", e.Detail)
+		case e.Detail != "":
+			j.log("%s", e.Detail)
+		default:
+			j.progress(e.Done, e.Total, stageLabel[e.Stage])
+		}
+	}
+
+	res, err := commands.SaveNadeo(ctx, s.gamesDir, opts, "")
+	if err != nil {
+		j.finish(err)
+		return
+	}
+	j.progress(1, 1, "")
+	j.log("")
+	if res.LastError != "" {
+		j.log("%s (existing data kept)", res.LastError)
+	}
+	j.log("Archive now: %s", commands.DescribeNadeoRecord(res.Stored))
+	if res.SummaryErr != nil {
+		j.log("campaigns.yaml not updated: %v", res.SummaryErr)
+	}
+	j.finish(nil)
 }
 
 func (s *server) handleRefreshNinjaKiwi(w http.ResponseWriter, r *http.Request) {

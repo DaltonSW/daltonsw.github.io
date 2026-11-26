@@ -59,6 +59,21 @@ func fixtureStub(t *testing.T) {
 	})
 }
 
+// DecodeCampaigns reads the pages back out of an archive's raw.campaigns, so
+// the season picker can list them without a request.
+func TestDecodeCampaigns_FromStoredPages(t *testing.T) {
+	got, err := DecodeCampaigns([]json.RawMessage{fixture(t, "campaigns_official.json")})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(got) != 2 || got[0].Name != "Summer 2020" || got[1].Name != "Fall 2020" {
+		t.Errorf("got %d campaigns, want Summer 2020 then Fall 2020", len(got))
+	}
+	if _, err := DecodeCampaigns([]json.RawMessage{json.RawMessage("not json")}); err == nil {
+		t.Error("want an error for an undecodable page")
+	}
+}
+
 func TestDecode_CampaignsFromRealResponse(t *testing.T) {
 	var page struct {
 		ItemCount    int        `json:"itemCount"`
