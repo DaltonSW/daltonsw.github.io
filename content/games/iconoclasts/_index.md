@@ -3,7 +3,7 @@ title: Iconoclasts
 platform: PC
 retroachievements_id: null
 steam_appid: 393520
-status: backlog
+status: unfinished
 rating: null
 draft: false
 cascade:

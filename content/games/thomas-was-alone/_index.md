@@ -3,7 +3,7 @@ title: Thomas Was Alone
 platform: PC
 retroachievements_id: null
 steam_appid: 220780
-status: dropped
+status: unfinished
 rating: null
 draft: false
 cascade:
