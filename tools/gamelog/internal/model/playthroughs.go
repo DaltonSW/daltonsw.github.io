@@ -82,7 +82,7 @@ type PlaythroughEntry struct {
 }
 
 // PlaythroughFields holds the values a form collects for one new entry. It
-// stays all-strings because that's what the TUI edits in; SetRating converts.
+// stays all-strings because that's what the web UI edits in; SetRating converts.
 type PlaythroughFields struct {
 	Started  string
 	Finished string
@@ -109,7 +109,7 @@ type PlaythroughsFile struct {
 	converted map[string]string
 }
 
-// RatingString renders the rating as the form the TUI edits. YAML decodes a
+// RatingString renders the rating as the form the web UI edits. YAML decodes a
 // bare `rating: 9` as an int, so it can't simply be typed as a string.
 func (e PlaythroughEntry) RatingString() string { return scalarString(e.Rating) }
 
@@ -254,7 +254,7 @@ func writeFileAtomic(path string, data []byte, perm os.FileMode) error {
 	return os.Rename(name, path)
 }
 
-// Session is a read-only view of one session, as the TUI shows it.
+// Session is a read-only view of one session, as the web UI shows it.
 type Session struct {
 	Index    int
 	Started  string
@@ -351,13 +351,8 @@ func (p Playthrough) EarliestDate() string {
 
 // gameDateRange folds EarliestDate/LatestDate across every playthrough a
 // game has logged, mirroring layouts/partials/game-first-played.html and
-// game-last-played.html — the site itself never reads a game's front-matter
-// started/finished once anything is logged in playthroughs.yaml, since that's
-// where the real per-run dates live (front matter's own started/finished is
-// largely a vestige of games created before playthroughs.yaml existed, or of
-// Housekeeping's scan, which only ever fills in Finished, never Started). Returns
-// "", "" when nothing is logged, so the caller can fall back to front matter
-// the same way those partials do.
+// game-last-played.html. A game's front matter carries no dates, so this is
+// the only source; it returns "", "" when nothing is logged.
 func gameDateRange(views []Playthrough) (earliest, latest string) {
 	for _, p := range views {
 		if d := p.EarliestDate(); d != "" && (earliest == "" || d < earliest) {
@@ -399,7 +394,7 @@ func firstFinished(views []Playthrough) string {
 	return first
 }
 
-// Views renders every entry in the form the TUI consumes.
+// Views renders every entry in the form the web UI consumes.
 func (f *PlaythroughsFile) Views() []Playthrough {
 	out := make([]Playthrough, 0, len(f.Playthroughs))
 	for i, e := range f.Playthroughs {

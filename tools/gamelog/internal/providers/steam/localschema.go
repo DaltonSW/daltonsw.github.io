@@ -101,8 +101,7 @@ var errBadVDF = errors.New("malformed binary VDF")
 
 func parseBinaryVDF(b []byte) (vdfObject, error) {
 	pos := 0
-	var cstr func() (string, error)
-	cstr = func() (string, error) {
+	cstr := func() (string, error) {
 		for i := pos; i < len(b); i++ {
 			if b[i] == 0 {
 				s := string(b[pos:i])

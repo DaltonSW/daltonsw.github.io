@@ -113,7 +113,7 @@ type ProviderLink struct {
 //
 // ProviderNadeo is absent on purpose — it records lap times, not achievements,
 // and everything driven by this list assumes an Unlocked/Total pair it can sum.
-// Adding it here would fold ~450 Trackmania campaign tracks into that game's
+// Adding it here would fold ~625 Trackmania campaign tracks into that game's
 // achievement denominator. See the ProviderNadeo doc comment in nadeo.go.
 var ProviderOrder = []string{ProviderRA, ProviderSteam, ProviderPSN, ProviderUbisoft, ProviderXbox, ProviderGooglePlay}
 
@@ -558,7 +558,7 @@ const achievementSummaryFilename = "achievement-summary.yaml"
 // AchievementSummary is the per-game stat rollup Hugo reads at build time:
 // combined unlocked/total across every provider a game is linked to (e.g.
 // RetroAchievements 12/40 + Steam 46/54 -> 58/94), total playtime, and the
-// most recent activity date — both Steam-only stats, surfaced the same way.
+// most recent activity date across every linked record.
 type AchievementSummary struct {
 	Unlocked     int    `yaml:"unlocked"`
 	Total        int    `yaml:"total"`
@@ -766,11 +766,10 @@ func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (
 		// bonus set is playing the game, and hiding that would make the site's
 		// "last active" older than the archive knows it to be.
 		//
-		// RetroAchievements has no "last played" signal — the closest proxy
-		// is the most recent achievement unlock, already tracked as Last.
-		// Steam's LastPlayed (rtime_last_played) and PSN's are the real
-		// thing when present, so prefer them, but fall back to Last for a
-		// record captured before playtime was linked in.
+		// LastPlayed is the provider's own "last played" (Steam's
+		// rtime_last_played, RA's GetUserRecentlyPlayedGames, PSN's) when
+		// it reports one. Last, the newest unlock, covers a record without
+		// it, and wins when it's later.
 		for _, d := range []string{rec.LastPlayed, rec.Last} {
 			if d != "" && d > lastPlayed {
 				lastPlayed = d

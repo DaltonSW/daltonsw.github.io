@@ -1,8 +1,8 @@
 {{/* Context: a game's term Page. Returns the most recent known activity date as a
      "2006-01-02" string: the max of each entry's last known touch-point and
-     achievement-summary.yaml's last_played (Steam's real timestamp, or RA's
-     last-unlock date as its only proxy — see writeAchievementSummary in
-     tools/gamelog). "" when neither exists — a game's front matter carries no dates. */}}
+     achievement-summary.yaml's last_played (the providers' own last-played
+     dates, or the newest unlock where a record has none — see
+     WriteAchievementSummary in tools/gamelog). "" when neither exists — a game's front matter carries no dates. */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $latest := "" -}}
 {{- range $entries -}}

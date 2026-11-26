@@ -71,10 +71,6 @@ func unlocked(key, date string) model.ArchivedAchievement {
 	return model.ArchivedAchievement{Key: key, Name: key, Unlocked: true, Date: date}
 }
 
-func locked(key string) model.ArchivedAchievement {
-	return model.ArchivedAchievement{Key: key, Name: key}
-}
-
 // The exact regression that motivated this: a private profile used to wipe
 // the archive and report success.
 func TestSaveAchievements_PrivateProfileKeepsExistingData(t *testing.T) {

@@ -33,10 +33,9 @@ type FrontMatter struct {
 
 	SteamAppID any `yaml:"steam_appid"`
 
-	// PSNID is the game's NPWR… trophy-set id. PlayStation has no public API,
-	// so the archive fills this from a public Exophase profile — but the ID
-	// itself is Sony's and permanent, which is what the archive needs to key
-	// on. See exophase.go.
+	// PSNID is the game's NPWR… trophy-set id: Sony's own and permanent,
+	// which is what the archive needs to key on. Records come from Sony's
+	// trophy API through an npsso token; see providers/psn.
 	PSNID any `yaml:"psn_id,omitempty"`
 
 	// UbisoftID is the game's Exophase canonical id on the "uplay" (Ubisoft
@@ -45,7 +44,7 @@ type FrontMatter struct {
 	// exophase.go.
 	UbisoftID any `yaml:"ubisoft_id,omitempty"`
 
-	// XboxID is the game's Xbox titleId, from a public OpenXBL export. See
+	// XboxID is the game's Xbox titleId, fetched through OpenXBL. See
 	// the ProviderXbox doc comment in archive.go for why those records are
 	// shaped differently from every other provider's.
 	XboxID any `yaml:"xbox_id,omitempty"`
@@ -61,7 +60,7 @@ type FrontMatter struct {
 	//
 	// Unlike every other id here it is *not* part of ProviderLinks: Nadeo
 	// records lap times rather than achievements, and the achievement path
-	// would fold ~450 campaign tracks into this game's unlock denominator. See
+	// would fold ~625 campaign tracks into this game's unlock denominator. See
 	// the ProviderNadeo doc comment in nadeo.go.
 	NadeoAccountID any `yaml:"nadeo_account_id,omitempty"`
 
@@ -102,7 +101,7 @@ type FrontMatter struct {
 	Extra map[string]any `yaml:",inline"`
 }
 
-// RatingString renders the rating as the form the TUI edits.
+// RatingString renders the rating as the form the web UI edits.
 func (f FrontMatter) RatingString() string { return scalarString(f.Rating) }
 
 // SetRating stores a rating typed as text, as a number when it is one, so

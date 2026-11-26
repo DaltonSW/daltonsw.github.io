@@ -478,7 +478,7 @@ func (s *server) handleUpdateProviders(w http.ResponseWriter, r *http.Request) {
 	}
 	steamID, err := externalid.ParseExternalID(r.FormValue("steam_id"))
 	if err != nil {
-		redirectErr(w, r, gamePath(slug), fmt.Errorf("Steam appid: %w", err))
+		redirectErr(w, r, gamePath(slug), fmt.Errorf("bad Steam appid: %w", err))
 		return
 	}
 	psnID := strings.TrimSpace(r.FormValue("psn_id"))

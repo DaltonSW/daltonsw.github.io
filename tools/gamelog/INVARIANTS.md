@@ -8,14 +8,14 @@ a durable archive of gameplay history, and losing captured data is the worst thi
 happen.** `README.md` documents the provider APIs in more depth; this file is the short list of
 what's load-bearing.
 
-## Current state (checked 2026-11-08)
+## Current state (checked 2026-11-26)
 
-- `content/games/` holds **540 game bundles**. 492 have an `achievement-summary.yaml` and 358
+- `content/games/` holds **554 game bundles**. 507 have an `achievement-summary.yaml` and 437
   have a `playthroughs.yaml`. A missing `playthroughs.yaml` is legal: `LoadPlaythroughs` returns
-  an empty file, and "nothing logged yet" is a real state. 123 games are still `draft: true`,
-  and the games list's "drafts only" filter is how to walk them.
-- `archive/` holds **529 records (17 MB)**: 434 Steam, 47 RetroAchievements, 23 Xbox 360,
-  13 PSN, 5 Google Play, 5 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
+  an empty file, and "nothing logged yet" is a real state. No games are `draft: true` right now;
+  the games list's "drafts only" filter is how to walk them when there are.
+- `archive/` holds **544 records (18 MB)**: 435 Steam, 48 RetroAchievements, 23 Xbox 360,
+  13 PSN, 18 Google Play, 5 Ubisoft, 1 Trackmania (Nadeo), 1 BTD6 (Ninja Kiwi).
 - The tool is the web UI (`go run .`); there is no CLI any more. Its home page, Catch up, runs one "Load
   what's new" job (scan, refresh linked games into the archive, and BTD6, over the ticked regular
   sources: Steam, RA, Google Play, BTD6), then lists what to act on in place: unlogged
@@ -168,11 +168,11 @@ what's load-bearing.
   one case of two ids on one provider, so a `map[provider]id` would drop all but the last. It also
   passes a blank title for a subset record, so RA's name for the set isn't overwritten with the
   game's.
-- **Nothing detaches a subset from the tool.** Attaching is a Housekeeping button. Undoing it
+- **Nothing detaches a subset from the tool.** Attaching is a button on Catch up's New games. Undoing it
   means deleting the id from `retroachievements_subsets:` by hand. The archive record is keyed by
   provider id and survives either way.
 - **A subset's parent lookup is memoized per process, not persisted.** `raParentCache` in
-  `internal/commands/subsets.go` saves Housekeeping a ~1.2s RA call per unattached subset row on
+  `internal/commands/subsets.go` saves Catch up's New games a ~1.2s RA call per unattached subset row on
   each render, but every restart of the server pays it again. Fine at one subset; it needs a
   persisted cache before the count grows much.
 

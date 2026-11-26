@@ -20,8 +20,8 @@ import (
 // can sum. Nadeo records per-track *times*, which are neither.
 //
 // Folding them in would do real damage rather than just reading oddly:
-// Trackmania's headline meter is 21/30 from its Ubisoft record, and adding ~450
-// campaign tracks to that denominator would restate the game as 433/480 of an
+// Trackmania's headline meter is 21/30 from its Ubisoft record, and adding ~625
+// campaign tracks to that denominator would restate the game against an
 // achievement set that doesn't exist. And mergeProvider merges numbers upward
 // (`if fresh.Total > merged.Total`), which is exactly backwards for a lap time.
 //

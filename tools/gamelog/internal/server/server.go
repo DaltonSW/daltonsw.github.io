@@ -34,7 +34,7 @@ const DefaultPort = 8080
 // refresh with no server restart (and no re-embed) needed.
 //
 // The path is rooted at internal/server, not the working directory itself:
-// go:embed above is anchored to this package's source directory, and devMode
+// the embed directive above is anchored to this package's source directory, and devMode
 // mirrors that so the two agree on where web/ lives regardless of which
 // directory `go run`/the binary is invoked from.
 var devMode bool

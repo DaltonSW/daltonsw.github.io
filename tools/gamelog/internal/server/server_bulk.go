@@ -2,6 +2,7 @@ package server
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"net/http"
 	"net/url"
@@ -56,7 +57,7 @@ func (s *server) scanCandidates(minHours float64, mode commands.ScanMode, opts .
 	}
 	creds := commands.LoadCredentials()
 	if mode == commands.ScanModeBacklog && !creds.SteamConfigured() {
-		return commands.ScanResult{}, len(existing), fmt.Errorf("Steam credentials not configured; see tools/gamelog/README.md")
+		return commands.ScanResult{}, len(existing), errors.New("no Steam credentials configured; see tools/gamelog/README.md")
 	}
 	ignored, err := model.LoadIgnored(model.FindArchiveDir(s.gamesDir))
 	if err != nil {
