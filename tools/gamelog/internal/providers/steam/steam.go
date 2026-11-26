@@ -3,6 +3,7 @@ package steam
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -23,6 +24,7 @@ var (
 	ResolveVanityURL      = "https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/"
 	SchemaForGameURL      = "https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/"
 	GlobalPercentagesURL  = "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/"
+	UserStatsURL          = "https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/"
 )
 
 // SteamClient talks to the Steam Web API.
@@ -124,6 +126,56 @@ type steamPlayerAchievementsResponse struct {
 	} `json:"playerstats"`
 }
 
+var errNoSchema = errors.New("steam: schema not requested")
+
+// buildStats joins the player's readings to the game's stat definitions. The
+// definitions come first, in the game's order, so a stat the game tracks but
+// Steam reported nothing for is still on record with its display name; a
+// reading with no definition (or no schema at all) is kept under its own key.
+func buildStats(readings []SteamUserStat, defs []SteamSchemaStat) []model.ArchivedStat {
+	values := make(map[string]float64, len(readings))
+	for _, r := range readings {
+		values[r.Name] = r.Value
+	}
+	var out []model.ArchivedStat
+	seen := make(map[string]bool, len(defs)+len(readings))
+	add := func(key, name string, def float64) {
+		if seen[key] {
+			return
+		}
+		seen[key] = true
+		st := model.ArchivedStat{Key: key, Default: def}
+		// Steam fills a blank display name with the key; storing it again
+		// would only make a blank look like a name.
+		if name != key {
+			st.Name = name
+		}
+		if v, ok := values[key]; ok {
+			st.Value = &v
+		}
+		out = append(out, st)
+	}
+	for _, d := range defs {
+		add(d.Name, d.DisplayName, d.DefaultValue)
+	}
+	for _, r := range readings {
+		add(r.Name, "", 0)
+	}
+	return out
+}
+
+// StatusError is a response whose status the caller has no contract for. It
+// keeps the code so a caller can tell an outage from a refusal.
+type StatusError struct {
+	What   string // what was being fetched, e.g. "appid 219740"
+	Code   int
+	Status string
+}
+
+func (e *StatusError) Error() string {
+	return fmt.Sprintf("steam: %s: unexpected status %s", e.What, e.Status)
+}
+
 // SteamAchievementsResult is the outcome of a GetPlayerAchievements call:
 // either a list of achievements, or a reason none are available (private
 // profile, or the game has no achievement schema at all).
@@ -174,18 +226,19 @@ func (c *SteamClient) GetPlayerAchievements(ctx context.Context, appID string) (
 	// (400) and a profile that isn't public (403) — are reported as HTTP
 	// errors carrying a useful JSON explanation, so the body is worth more
 	// than the status. Anything else is a genuine failure.
+	statusErr := &StatusError{What: "appid " + appID, Code: resp.StatusCode, Status: resp.Status}
 	if resp.StatusCode != http.StatusOK &&
 		resp.StatusCode != http.StatusBadRequest &&
 		resp.StatusCode != http.StatusForbidden {
-		return SteamAchievementsResult{}, fmt.Errorf("steam: appid %s: unexpected status %s", appID, resp.Status)
+		return SteamAchievementsResult{}, statusErr
 	}
 
 	var parsed steamPlayerAchievementsResponse
 	if err := json.Unmarshal(body, &parsed); err != nil {
-		return SteamAchievementsResult{}, fmt.Errorf("steam: appid %s: unexpected status %s", appID, resp.Status)
+		return SteamAchievementsResult{}, statusErr
 	}
 	if resp.StatusCode != http.StatusOK && parsed.PlayerStats.Error == "" {
-		return SteamAchievementsResult{}, fmt.Errorf("steam: appid %s: unexpected status %s", appID, resp.Status)
+		return SteamAchievementsResult{}, statusErr
 	}
 
 	return SteamAchievementsResult{
@@ -208,10 +261,26 @@ type SteamSchemaAchievement struct {
 	Hidden int `json:"hidden"`
 }
 
+// SteamSchemaStat is one stat a game defines. DisplayName is frequently blank
+// or just the key repeated; DefaultValue is what the player has until the game
+// writes something else.
+type SteamSchemaStat struct {
+	Name         string  `json:"name"`
+	DefaultValue float64 `json:"defaultvalue"`
+	DisplayName  string  `json:"displayName"`
+}
+
+// SteamSchema is a game's static definitions.
+type SteamSchema struct {
+	Achievements []SteamSchemaAchievement
+	Stats        []SteamSchemaStat
+}
+
 type steamSchemaResponse struct {
 	Game struct {
 		AvailableGameStats struct {
 			Achievements []SteamSchemaAchievement `json:"achievements"`
+			Stats        []SteamSchemaStat        `json:"stats"`
 		} `json:"availableGameStats"`
 	} `json:"game"`
 }
@@ -221,6 +290,12 @@ type steamSchemaResponse struct {
 // GetPlayerAchievements with "l=english" set. Not player-specific: no
 // SteamID needed, and it works even against a private profile.
 func (c *SteamClient) GetSchemaForGame(ctx context.Context, appID string) ([]SteamSchemaAchievement, error) {
+	schema, err := c.GetGameSchema(ctx, appID)
+	return schema.Achievements, err
+}
+
+// GetGameSchema is GetSchemaForGame with the stat definitions kept too.
+func (c *SteamClient) GetGameSchema(ctx context.Context, appID string) (SteamSchema, error) {
 	q := url.Values{}
 	q.Set("key", c.APIKey)
 	q.Set("appid", appID)
@@ -228,27 +303,109 @@ func (c *SteamClient) GetSchemaForGame(ctx context.Context, appID string) ([]Ste
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, SchemaForGameURL+"?"+q.Encode(), nil)
 	if err != nil {
-		return nil, err
+		return SteamSchema{}, err
 	}
 	resp, err := c.httpClient().Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("steam: schema request for appid %s: %w", appID, err)
+		return SteamSchema{}, fmt.Errorf("steam: schema request for appid %s: %w", appID, err)
 	}
 	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("steam: reading schema response for appid %s: %w", appID, err)
+		return SteamSchema{}, fmt.Errorf("steam: reading schema response for appid %s: %w", appID, err)
 	}
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("steam: schema for appid %s: unexpected status %s", appID, resp.Status)
+		return SteamSchema{}, fmt.Errorf("steam: schema for appid %s: unexpected status %s", appID, resp.Status)
 	}
 
 	var parsed steamSchemaResponse
 	if err := json.Unmarshal(body, &parsed); err != nil {
-		return nil, fmt.Errorf("steam: decoding schema response for appid %s: %w", appID, err)
+		return SteamSchema{}, fmt.Errorf("steam: decoding schema response for appid %s: %w", appID, err)
 	}
-	return parsed.Game.AvailableGameStats.Achievements, nil
+	return SteamSchema{
+		Achievements: parsed.Game.AvailableGameStats.Achievements,
+		Stats:        parsed.Game.AvailableGameStats.Stats,
+	}, nil
+}
+
+// SteamUserStat is one reading from GetUserStatsForGame.
+type SteamUserStat struct {
+	Name  string  `json:"name"`
+	Value float64 `json:"value"`
+}
+
+// SteamUserStatsResult is the player's stats for one app. Available is false
+// when Steam has no stats for the app at all (a 400 with an empty body).
+// HasAchievements reports whether the response lists any achievements, which is
+// how an app with stats but none of them is told apart from one whose
+// achievement fetch failed.
+type SteamUserStatsResult struct {
+	Available       bool
+	HasAchievements bool
+	Stats           []SteamUserStat
+	Error           string
+}
+
+type steamUserStatsResponse struct {
+	PlayerStats struct {
+		Error        string            `json:"error"`
+		Stats        []SteamUserStat   `json:"stats"`
+		Achievements []json.RawMessage `json:"achievements"`
+	} `json:"playerstats"`
+}
+
+// GetUserStats fetches the caller's per-game stats. Steam omits any stat still
+// at its default, so an app can answer 200 with nothing in it. A private
+// profile is a 403 carrying a reason, reported in Error like the achievement
+// call does; a 400 means the app defines no stats.
+func (c *SteamClient) GetUserStats(ctx context.Context, appID string) (SteamUserStatsResult, error) {
+	steamID, err := c.resolveSteamID(ctx)
+	if err != nil {
+		return SteamUserStatsResult{}, err
+	}
+
+	q := url.Values{}
+	q.Set("appid", appID)
+	q.Set("key", c.APIKey)
+	q.Set("steamid", steamID)
+	q.Set("l", "english")
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, UserStatsURL+"?"+q.Encode(), nil)
+	if err != nil {
+		return SteamUserStatsResult{}, err
+	}
+	resp, err := c.httpClient().Do(req)
+	if err != nil {
+		return SteamUserStatsResult{}, fmt.Errorf("steam: stats request for appid %s: %w", appID, err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return SteamUserStatsResult{}, fmt.Errorf("steam: reading stats response for appid %s: %w", appID, err)
+	}
+	statusErr := &StatusError{What: "stats for appid " + appID, Code: resp.StatusCode, Status: resp.Status}
+
+	var parsed steamUserStatsResponse
+	switch resp.StatusCode {
+	case http.StatusOK:
+		if err := json.Unmarshal(body, &parsed); err != nil {
+			return SteamUserStatsResult{}, statusErr
+		}
+		return SteamUserStatsResult{
+			Available:       true,
+			HasAchievements: len(parsed.PlayerStats.Achievements) > 0,
+			Stats:           parsed.PlayerStats.Stats,
+		}, nil
+	case http.StatusBadRequest:
+		return SteamUserStatsResult{}, nil
+	case http.StatusForbidden:
+		if json.Unmarshal(body, &parsed) == nil && parsed.PlayerStats.Error != "" {
+			return SteamUserStatsResult{Error: parsed.PlayerStats.Error}, nil
+		}
+	}
+	return SteamUserStatsResult{}, statusErr
 }
 
 type steamGlobalPercentagesResponse struct {
@@ -470,7 +627,34 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 	}
 
 	res, err := client.GetPlayerAchievements(ctx, appID)
+
+	// Per-game stats are read for every app, whatever the achievement fetch did:
+	// a game can have stats and no achievements, and a failed achievement call
+	// says nothing about whether the stats call works. A failure here is
+	// best-effort and never the record's error, since it is the second half of
+	// what the record carries.
+	us, usErr := client.GetUserStats(ctx, appID)
+	var schema SteamSchema
+	var schemaErr error = errNoSchema
+	if (usErr == nil && us.Available) || (err == nil && len(res.Achievements) > 0) {
+		schema, schemaErr = client.GetGameSchema(ctx, appID)
+	}
+	if usErr == nil && us.Available {
+		rec.Stats = buildStats(us.Stats, schema.Stats)
+	}
+
 	if err != nil {
+		// An app that defines stats but no achievements answers the achievement
+		// call with a bare 500 rather than the 400 "no stats" an app with
+		// neither gets. The stats call settles it: if that worked and lists
+		// no achievements, there are none to fetch. Without that evidence a
+		// 500 is a real outage and stays an error.
+		var se *StatusError
+		if errors.As(err, &se) && se.Code == http.StatusInternalServerError &&
+			usErr == nil && us.Available && !us.HasAchievements {
+			rec.Fetched = today()
+			return rec, nil
+		}
 		rec.LastError = err.Error()
 		return rec, nil
 	}
@@ -507,9 +691,9 @@ func FetchRecord(ctx context.Context, client *SteamClient, appID string, owned *
 	// the static schema carries them. Best-effort: a game whose schema call
 	// fails (or a very old/delisted title with no schema) still keeps its
 	// unlock data, just without icons or hidden-status.
-	if schema, err := client.GetSchemaForGame(ctx, appID); err == nil {
-		byName := make(map[string]SteamSchemaAchievement, len(schema))
-		for _, a := range schema {
+	if schemaErr == nil {
+		byName := make(map[string]SteamSchemaAchievement, len(schema.Achievements))
+		for _, a := range schema.Achievements {
 			byName[a.APIName] = a
 		}
 		for i := range rec.Achievements {

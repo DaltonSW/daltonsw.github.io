@@ -38,8 +38,8 @@ Consequences that should drive design decisions:
   never change and kept outside `content/` so a rename or delete can't destroy it — and so Hugo
   never parses or publishes it. The site reads captured data only through tool-generated
   projections beside `_index.md` (`achievement-summary.yaml`, plus `campaigns.yaml` and
-  `btd6-summary.yaml` for the two non-achievement providers), which are regenerable from `archive/`
-  and never published either.
+  `btd6-summary.yaml` for the two non-achievement providers, and `stats-summary.yaml` for Steam's
+  per-game stats), which are regenerable from `archive/` and never published either.
 - **Curated lists** (`/games/lists/`) live in `data/game-lists.yaml`: authored through the tool's
   Lists page, order is rank, games by slug and achievements by provider + record id + key.
 - **`tools/gamelog/INVARIANTS.md` lists the invariants not to undo.** Read it before editing

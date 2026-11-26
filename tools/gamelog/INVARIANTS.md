@@ -183,6 +183,16 @@ what's load-bearing.
   blanks it; `LoadLocalSchema` reads `UserGameStatsSchema_<appid>.bin`. A missing or unparseable
   file must fall back silently to the API result, never fail the fetch or overwrite API text.
 
+- **Per-game stats merge by key and are never dropped, but a value is the latest reading.**
+  `mergeStats` runs in `mergeActivity`, not the achievement merge, because a game can have stats and
+  no achievements. A lower fresh value replaces a higher archived one on purpose (games reset and
+  spend stats); a key or a value a fetch didn't mention is kept. A `nil` `Value` means Steam reported
+  nothing for a stat still at its default, so don't turn it into 0.
+- **A 500 from `GetPlayerAchievements` is "no achievements" only with the stats call vouching for it.**
+  Apps with stats but no achievements answer 500 rather than 400. `FetchRecord` accepts that only when
+  `GetUserStatsForGame` returned 200 listing no achievements. Don't widen it to all 500s: that call
+  is also how a real outage looks.
+
 ### Exophase (Ubisoft, Google Play)
 
 - **Exophase 403s Go's default User-Agent** (Cloudflare), so requests must send a browser one.

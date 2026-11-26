@@ -45,7 +45,14 @@ func steamStub(t *testing.T, handler http.HandlerFunc) {
 	}))
 	t.Cleanup(empty.Close)
 
-	urls := []*string{&steam.PlayerAchievementsURL, &steam.OwnedGamesURL, &steam.SchemaForGameURL, &steam.GlobalPercentagesURL}
+	// Steam answers the per-game stats call with a bare 400 for an app that has none.
+	noUserStats := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte(`{}`))
+	}))
+	t.Cleanup(noUserStats.Close)
+
+	urls := []*string{&steam.PlayerAchievementsURL, &steam.OwnedGamesURL, &steam.SchemaForGameURL, &steam.GlobalPercentagesURL, &steam.UserStatsURL}
 	saved := make([]string, len(urls))
 	for i, u := range urls {
 		saved[i] = *u
@@ -57,6 +64,7 @@ func steamStub(t *testing.T, handler http.HandlerFunc) {
 	})
 	steam.PlayerAchievementsURL, steam.OwnedGamesURL = srv.URL, owned.URL
 	steam.SchemaForGameURL, steam.GlobalPercentagesURL = empty.URL, empty.URL
+	steam.UserStatsURL = noUserStats.URL
 }
 
 func unlocked(key, date string) model.ArchivedAchievement {

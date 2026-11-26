@@ -55,6 +55,7 @@ content/games/<slug>/
                      select fields afterwards (see "How front matter is edited")
                      without ever touching the markdown body below it.
   playthroughs.yaml  tool-owned. Encoded whole on every write.
+  stats-summary.yaml tool-owned projection of Steam's per-game stats, regenerable from archive/.
 
 archive/
   retroachievements/4650.json      captured from the API. Merge-on-write, never
@@ -786,6 +787,25 @@ Steam client's own cache, `appcache/stats/UserGameStatsSchema_<appid>.bin` — b
 for games the client has fetched a schema for; when it's missing or unreadable the record is just
 what the API returned, and descriptions already archived are kept by the merge. API text is never
 overwritten, and it needs no extra request, so a refresh-all sweep backfills existing games.
+
+**Steam per-game stats.** Steam games can define stats beside (or instead of) achievements: Don't
+Starve's `furlongs_travelled`, Stardew's `crops`, Team Fortress 2's 247 per-class counters. Each
+Steam fetch also calls `GetUserStatsForGame` and `GetSchemaForGame` and stores the result as
+`stats` on the record: `key`, the game's `name` (often blank), the player's `value`, and the
+schema's `default`. Verified against live responses: Steam leaves out any stat still at its
+default, so a stat the schema defines but the player has no reading for keeps a `null` value —
+"not reported", never zero. The merge (`mergeStats`) unions by key and never drops a key or
+blanks a value, but a reported value is the *latest reading*, even a lower one, since games reset
+and spend stats. Only reported values are projected to `stats-summary.yaml`, which
+`layouts/partials/game-stats.html` shows; it is written by `WriteAchievementSummary` alongside
+`achievement-summary.yaml` and carries no achievement counts.
+
+**A game with stats but no achievements answers `GetPlayerAchievements` with a bare HTTP 500**
+(`{"error":"Internal server error"}`), not the 400 "Requested app has no stats" a game with neither
+gets. Don't Starve and Totally Accurate Battlegrounds did this, and the tool recorded every refresh
+as `unexpected status 500`. `FetchRecord` now takes a 500 as "no achievements" only when the stats
+call succeeded and listed none; with no such evidence a 500 is still an error. TABG reports no
+stat values at all for this account, so its stats are on record but nothing is projected or shown.
 
 Trackmania and BTD6 records (`archive/nadeo/`, `archive/ninjakiwi/`) have their own shapes — see
 their sections below.

@@ -168,6 +168,20 @@ type ArchivedAchievement struct {
 	Rarity float64 `json:"rarity,omitempty"`
 }
 
+// ArchivedStat is one per-game stat a provider tracks for the player — Steam's
+// "furlongs travelled", "crops shipped", Team Fortress 2's per-class damage.
+// These are counters and gauges, not unlocks, so they sit beside Achievements
+// rather than in it, and no achievement count is derived from them.
+type ArchivedStat struct {
+	Key  string `json:"key"`            // provider-stable id: Steam's stat name
+	Name string `json:"name,omitempty"` // the game's display name; often blank, in which case Key is what there is
+	// Value is nil when the game defines the stat but the provider reported
+	// nothing for the player. Steam omits stats still at their default, so
+	// nil is "not reported", never "zero".
+	Value   *float64 `json:"value,omitempty"`
+	Default float64  `json:"default,omitempty"`
+}
+
 // ProviderRecord is everything one service knows about one game.
 type ProviderRecord struct {
 	ID      string `json:"id"`
@@ -207,6 +221,10 @@ type ProviderRecord struct {
 	LastPlayed   string         `json:"last_played,omitempty"`
 
 	Achievements []ArchivedAchievement `json:"achievements"`
+
+	// Stats is every per-game stat the provider has reported or defined for
+	// this game. Merged by key and never shrunk — see mergeStats.
+	Stats []ArchivedStat `json:"stats,omitempty"`
 
 	// Mastery is every mastery milestone ever observed on this record. It is
 	// persisted rather than only derived because it can stop being derivable:
@@ -377,6 +395,53 @@ func mergeActivity(merged, fresh *ProviderRecord) {
 		merged.PlaytimeMins = fresh.PlaytimeMins
 	}
 	merged.Playtime = mergeMaxIntMap(merged.Playtime, fresh.Playtime)
+	merged.Stats = mergeStats(merged.Stats, fresh.Stats)
+}
+
+// mergeStats unions stats by key, keeping the old order and appending new
+// keys. It lives with the activity fields rather than the achievement merge
+// because a game can have stats and no achievements at all, and a fetch whose
+// achievement half failed can still have read them.
+//
+// A reported value is taken from the fresh fetch even when it is lower: unlike
+// achievements, a stat is a live reading that games reset, rescale or spend,
+// and Steam's current answer is the truth about it. What a refresh can never
+// do is drop a stat or blank its value — a key the fetch didn't mention, or
+// mentioned without a value, keeps what was captured.
+func mergeStats(old, fresh []ArchivedStat) []ArchivedStat {
+	if len(fresh) == 0 {
+		return old
+	}
+	byKey := make(map[string]ArchivedStat, len(old)+len(fresh))
+	order := make([]string, 0, len(old)+len(fresh))
+	for _, s := range old {
+		if _, seen := byKey[s.Key]; !seen {
+			order = append(order, s.Key)
+		}
+		byKey[s.Key] = s
+	}
+	for _, f := range fresh {
+		prev, seen := byKey[f.Key]
+		if !seen {
+			order = append(order, f.Key)
+			byKey[f.Key] = f
+			continue
+		}
+		out := f
+		out.Name = FirstNonEmpty(f.Name, prev.Name)
+		if f.Value == nil {
+			out.Value = prev.Value
+		}
+		if f.Default == 0 {
+			out.Default = prev.Default
+		}
+		byKey[f.Key] = out
+	}
+	merged := make([]ArchivedStat, 0, len(order))
+	for _, k := range order {
+		merged = append(merged, byKey[k])
+	}
+	return merged
 }
 
 // mergeAchievement keeps the union of what's known. An unlock, once seen, is
@@ -610,6 +675,12 @@ func achievementSummaryPath(gameDir string) string {
 // A game with nothing archived gets no file; a stale one is removed. wrote
 // reports whether a file now exists, so callers can tally writes vs. no-ops.
 func WriteAchievementSummary(archiveDir, gameDir string, links []ProviderLink) (wrote bool, err error) {
+	// Stats are a separate projection but ride along on every call, so each
+	// path that already refreshes a summary keeps stats-summary.yaml current.
+	if err := writeStatsSummary(archiveDir, gameDir, links); err != nil {
+		return false, err
+	}
+
 	var unlocked, total, playtimeMins int
 	var lastPlayed string
 	var breakdown []ProviderBreakdown

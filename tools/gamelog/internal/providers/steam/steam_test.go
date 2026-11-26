@@ -19,14 +19,15 @@ func steamStub(t *testing.T, handler http.HandlerFunc) {
 	srv := httptest.NewServer(handler)
 	t.Cleanup(srv.Close)
 
-	oldAch, oldOwned, oldVanity, oldSchema, oldGlobal := PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL, GlobalPercentagesURL
+	oldAch, oldOwned, oldVanity, oldSchema, oldGlobal, oldStats := PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL, GlobalPercentagesURL, UserStatsURL
 	PlayerAchievementsURL = srv.URL + "/achievements"
 	OwnedGamesURL = srv.URL + "/owned"
 	ResolveVanityURL = srv.URL + "/vanity"
 	SchemaForGameURL = srv.URL + "/schema"
 	GlobalPercentagesURL = srv.URL + "/global"
+	UserStatsURL = srv.URL + "/userstats"
 	t.Cleanup(func() {
-		PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL, GlobalPercentagesURL = oldAch, oldOwned, oldVanity, oldSchema, oldGlobal
+		PlayerAchievementsURL, OwnedGamesURL, ResolveVanityURL, SchemaForGameURL, GlobalPercentagesURL, UserStatsURL = oldAch, oldOwned, oldVanity, oldSchema, oldGlobal, oldStats
 	})
 }
 
@@ -290,6 +291,8 @@ func TestFetchSteamRecord_AttachesIconsFromSchema(t *testing.T) {
 			w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
 			  {"apiname":"A","achieved":1,"unlocktime":1603510789,"name":"Escaped","description":"d"}
 			]}}`))
+		case "/userstats":
+			w.Write([]byte(`{"playerstats":{"achievements":[{"name":"A","achieved":1}]}}`))
 		case "/global":
 			w.Write([]byte(`{"achievementpercentages":{"achievements":[{"name":"A","percent":"12.5"}]}}`))
 		case "/schema":
@@ -323,6 +326,8 @@ func TestFetchSteamRecord_SchemaFailureIsNotFatal(t *testing.T) {
 			w.Write([]byte(`{"playerstats":{"success":true,"achievements":[
 			  {"apiname":"A","achieved":1,"unlocktime":1603510789,"name":"Escaped","description":"d"}
 			]}}`))
+		case "/userstats":
+			w.Write([]byte(`{"playerstats":{"achievements":[{"name":"A","achieved":1}]}}`))
 		case "/schema", "/global":
 			w.WriteHeader(http.StatusInternalServerError)
 		default:
@@ -400,5 +405,140 @@ func TestGetGlobalPercentages(t *testing.T) {
 	}
 	if got["A"] != 34.5 || got["B"] != 9 {
 		t.Errorf("got %v", got)
+	}
+}
+
+// Shapes below are from live responses. Don't Starve defines two stats and
+// reports one (Steam leaves out a stat still at its default); the schema names
+// both. Its achievement call answers 500, not 400.
+func TestFetchSteamRecord_CapturesStatsOfAGameWithNoAchievements(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/achievements":
+			w.WriteHeader(http.StatusInternalServerError)
+			w.Write([]byte(`{"playerstats":{"error":"Internal server error","success":false}}`))
+		case "/userstats":
+			w.Write([]byte(`{"playerstats":{"steamID":"76561198066238038","gameName":"Don't Starve","stats":[{"name":"furlongs_travelled","value":0.79998779296875}]}}`))
+		case "/schema":
+			w.Write([]byte(`{"game":{"gameName":"ValveTestApp219740","availableGameStats":{"stats":[
+			  {"name":"furlongs_travelled","defaultvalue":0,"displayName":"Furlongs Travelled"},
+			  {"name":"deaths","defaultvalue":0,"displayName":"Deaths"}]}}}`))
+		default:
+			t.Errorf("unexpected path %s", r.URL.Path)
+		}
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchRecord(context.Background(), client, "219740", &SteamOwnedGame{PlaytimeMins: 820})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastError != "" {
+		t.Errorf("LastError = %q: stats but no achievements is an answer, not a failure", rec.LastError)
+	}
+	if rec.Fetched == "" {
+		t.Error("must be dated, or every bulk refresh re-requests it")
+	}
+	if len(rec.Stats) != 2 {
+		t.Fatalf("Stats = %+v, want both defined stats", rec.Stats)
+	}
+	if got := rec.Stats[0]; got.Key != "furlongs_travelled" || got.Name != "Furlongs Travelled" || got.Value == nil || *got.Value != 0.79998779296875 {
+		t.Errorf("reported stat wrong: %+v", got)
+	}
+	if got := rec.Stats[1]; got.Key != "deaths" || got.Value != nil {
+		t.Errorf("an unreported stat must keep a nil value, not 0: %+v", got)
+	}
+}
+
+// Without the stats call vouching that there are no achievements, a 500 is an
+// outage and has to stay an error.
+func TestFetchSteamRecord_ServerErrorWithoutStatsEvidenceStillFails(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusInternalServerError)
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchRecord(context.Background(), client, "1", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastError == "" || rec.Fetched != "" {
+		t.Errorf("an outage must be recorded as one: error %q, fetched %q", rec.LastError, rec.Fetched)
+	}
+}
+
+// A 500 on the achievement call for a game that does list achievements is not
+// the stats-only case, whatever stats it also has.
+func TestFetchSteamRecord_ServerErrorWithAchievementsStillFails(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/achievements":
+			w.WriteHeader(http.StatusInternalServerError)
+		case "/userstats":
+			w.Write([]byte(`{"playerstats":{"achievements":[{"name":"A","achieved":0}],"stats":[{"name":"s","value":3}]}}`))
+		default:
+			w.WriteHeader(http.StatusInternalServerError)
+		}
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchRecord(context.Background(), client, "1", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rec.LastError == "" || rec.Fetched != "" {
+		t.Errorf("must stay an error: error %q, fetched %q", rec.LastError, rec.Fetched)
+	}
+	if len(rec.Stats) != 1 {
+		t.Errorf("the stats it did read should still be kept: %+v", rec.Stats)
+	}
+}
+
+// With the schema down, readings are still kept under their own keys.
+func TestFetchSteamRecord_StatsSurviveASchemaFailure(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/achievements":
+			w.WriteHeader(http.StatusBadRequest)
+			w.Write([]byte(`{"playerstats":{"error":"Requested app has no stats","success":false}}`))
+		case "/userstats":
+			w.Write([]byte(`{"playerstats":{"stats":[{"name":"crops","value":594}]}}`))
+		default:
+			w.WriteHeader(http.StatusInternalServerError)
+		}
+	})
+
+	client := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	rec, err := FetchRecord(context.Background(), client, "1", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rec.Stats) != 1 || rec.Stats[0].Key != "crops" || *rec.Stats[0].Value != 594 {
+		t.Errorf("Stats = %+v", rec.Stats)
+	}
+}
+
+// Don't Starve Together: no stats at all, answered 400 with an empty object.
+func TestGetUserStats_NoStatsIsNotAnError(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusBadRequest)
+		w.Write([]byte(`{}`))
+	})
+	c := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	got, err := c.GetUserStats(context.Background(), "322330")
+	if err != nil || got.Available {
+		t.Errorf("got %+v, %v; want unavailable and no error", got, err)
+	}
+}
+
+func TestGetUserStats_PrivateProfileCarriesItsReason(t *testing.T) {
+	steamStub(t, func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusForbidden)
+		w.Write([]byte(`{"playerstats":{"error":"Profile is not public","success":false}}`))
+	})
+	c := &SteamClient{APIKey: "k", SteamID: testSteamID64}
+	got, err := c.GetUserStats(context.Background(), "1")
+	if err != nil || got.Error != "Profile is not public" {
+		t.Errorf("got %+v, %v", got, err)
 	}
 }
