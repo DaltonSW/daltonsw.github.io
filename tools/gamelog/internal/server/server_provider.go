@@ -363,12 +363,20 @@ type refreshOptions struct {
 	// with what changed, instead of a line per provider per game — Catch up
 	// walks 400+ games and wants the dozen that moved.
 	quiet bool
+	// verbose, with quiet, adds a line for every record that didn't move too —
+	// skipped without a request, or fetched with nothing new — so the log shows
+	// each game as it is walked. Changed games are still the only ones counted
+	// as changed.
+	verbose bool
 	// base and total place this loop's games within the job's progress bar,
 	// for a job that does other work around it.
 	base, total int
 }
 
-type refreshCounts struct{ refreshed, changed, failed int }
+// refreshCounts tallies a refresh loop. skipped counts records left alone
+// without a request because the library listing showed nothing had moved, a
+// subset of unchanged; failed is games where a fetch errored outright.
+type refreshCounts struct{ refreshed, changed, unchanged, skipped, failed int }
 
 // refreshAchievements is the fetch-and-merge loop behind both refresh-all
 // and Catch up: SaveAchievements per game (every write a merge that can only
@@ -408,11 +416,21 @@ func (s *server) refreshAchievements(j *job, games []model.GameSummary, o refres
 			continue
 		}
 		var lines []string
+		moved := false // a real change, as opposed to a verbose "nothing new" line
 		for _, sv := range saved {
 			p := sv.Record
+			if sv.Skipped {
+				c.skipped++
+			}
 			switch {
 			case o.quiet:
-				if line := describeChange(sv.Label(), before[sv.Provider+"/"+sv.ID], p); line != "" {
+				line := describeChange(sv.Label(), before[sv.Provider+"/"+sv.ID], p)
+				if line != "" {
+					moved = true
+				} else if o.verbose {
+					line = describeUnmoved(sv.Label(), sv.Skipped, p)
+				}
+				if line != "" {
 					lines = append(lines, line)
 				}
 			case sv.Skipped:
@@ -427,8 +445,11 @@ func (s *server) refreshAchievements(j *job, games []model.GameSummary, o refres
 			lines = append(lines, fmt.Sprintf("(achievement summary not updated: %v)", err))
 		}
 		c.refreshed++
+		if o.quiet && !moved {
+			c.unchanged++
+		}
 		if len(lines) > 0 {
-			if o.quiet {
+			if o.quiet && moved {
 				c.changed++
 			}
 			j.log("%s", g.Title)
@@ -441,7 +462,8 @@ func (s *server) refreshAchievements(j *job, games []model.GameSummary, o refres
 }
 
 // describeChange is one record's line in Catch up's quiet log: what a refresh
-// added, or why it couldn't, or "" when nothing moved.
+// added, or why it couldn't, or "" when nothing moved. Detail beats brevity
+// here because only the games that moved get a line at all.
 func describeChange(label string, before, after *model.ArchiveRecord) string {
 	if after == nil {
 		return ""
@@ -454,15 +476,104 @@ func describeChange(label string, before, after *model.ArchiveRecord) string {
 	}
 	var parts []string
 	if d := after.Unlocked - before.Unlocked; d > 0 {
-		parts = append(parts, fmt.Sprintf("+%d (%d/%d)", d, after.Unlocked, after.Total))
+		part := fmt.Sprintf("+%d (%d/%d)", d, after.Unlocked, after.Total)
+		if names := newlyUnlocked(before, after); len(names) > 0 {
+			part += ": " + strings.Join(names, ", ")
+		}
+		parts = append(parts, part)
+	}
+	if d := after.Total - before.Total; d > 0 {
+		parts = append(parts, fmt.Sprintf("%d new achievement%s in the set", d, pluralS(d)))
+	}
+	if d := after.PlaytimeMins - before.PlaytimeMins; d > 0 {
+		parts = append(parts, fmt.Sprintf("+%s played (%s total)", hoursMins(d), hoursMins(after.PlaytimeMins)))
 	}
 	if after.LastPlayed != "" && after.LastPlayed != before.LastPlayed {
 		parts = append(parts, "last played "+after.LastPlayed)
+	}
+	if n := changedStats(before, after); n > 0 {
+		parts = append(parts, fmt.Sprintf("%d stat%s changed", n, pluralS(n)))
 	}
 	if len(parts) == 0 {
 		return ""
 	}
 	return label + ": " + strings.Join(parts, ", ")
+}
+
+// describeUnmoved is a record's line in the verbose log when describeChange had
+// nothing to say: why nothing was fetched, or that a fetch found nothing new.
+func describeUnmoved(label string, skipped bool, p *model.ArchiveRecord) string {
+	switch {
+	case p == nil:
+		return ""
+	case skipped:
+		return fmt.Sprintf("%s: skipped, playtime and last played unchanged", label)
+	case p.LastError != "":
+		return fmt.Sprintf("%s: still failing, %s (existing data kept)", label, p.LastError)
+	default:
+		return fmt.Sprintf("%s: checked, nothing new (%s)", label, commands.DescribeUnlocks(p))
+	}
+}
+
+func pluralS(n int) string {
+	if n == 1 {
+		return ""
+	}
+	return "s"
+}
+
+// hoursMins renders minutes the way a log reads best: 40m, 1.5h.
+func hoursMins(mins int) string {
+	if mins < 60 {
+		return fmt.Sprintf("%dm", mins)
+	}
+	return fmt.Sprintf("%.1fh", float64(mins)/60)
+}
+
+// newlyUnlocked names what a refresh unlocked, oldest first, capped so one
+// 100-achievement catch-up doesn't bury the log.
+func newlyUnlocked(before, after *model.ArchiveRecord) []string {
+	had := make(map[string]bool, len(before.Achievements))
+	for _, a := range before.Achievements {
+		if a.Unlocked {
+			had[a.Key] = true
+		}
+	}
+	const show = 3
+	var names []string
+	more := 0
+	for _, a := range after.Achievements {
+		if !a.Unlocked || had[a.Key] {
+			continue
+		}
+		if len(names) < show {
+			names = append(names, model.FirstNonEmpty(a.Name, a.Key))
+		} else {
+			more++
+		}
+	}
+	if more > 0 {
+		names = append(names, fmt.Sprintf("and %d more", more))
+	}
+	return names
+}
+
+// changedStats counts stats whose reported value is new or differs from before.
+func changedStats(before, after *model.ArchiveRecord) int {
+	prev := make(map[string]*float64, len(before.Stats))
+	for _, st := range before.Stats {
+		prev[st.Key] = st.Value
+	}
+	n := 0
+	for _, st := range after.Stats {
+		if st.Value == nil {
+			continue
+		}
+		if old := prev[st.Key]; old == nil || *old != *st.Value {
+			n++
+		}
+	}
+	return n
 }
 
 type jobData struct {

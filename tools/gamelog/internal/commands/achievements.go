@@ -587,11 +587,36 @@ func RunProject(args []string) error {
 // DescribeUnlocks is a record's unlock count for a refresh report. A record
 // with no achievements says so instead of printing "0/0 unlocked".
 func DescribeUnlocks(p *model.ArchiveRecord) string {
-	if p.Total == 0 {
-		return "no achievements"
+	var out string
+	switch {
+	case p.Total == 0:
+		out = "no achievements"
+	case p.First == "":
+		out = fmt.Sprintf("%d/%d unlocked", p.Unlocked, p.Total)
+	default:
+		out = fmt.Sprintf("%d/%d unlocked, %s to %s", p.Unlocked, p.Total, p.First, p.Last)
 	}
-	if p.First == "" {
-		return fmt.Sprintf("%d/%d unlocked", p.Unlocked, p.Total)
+	if n := ReportedStats(p); n > 0 {
+		out += fmt.Sprintf(", %d stat%s", n, plural(n))
 	}
-	return fmt.Sprintf("%d/%d unlocked, %s to %s", p.Unlocked, p.Total, p.First, p.Last)
+	return out
+}
+
+// ReportedStats counts a record's stats that carry a value. A stat the game
+// defines but the provider reported nothing for isn't one a refresh captured.
+func ReportedStats(p *model.ArchiveRecord) int {
+	n := 0
+	for _, s := range p.Stats {
+		if s.Value != nil {
+			n++
+		}
+	}
+	return n
+}
+
+func plural(n int) string {
+	if n == 1 {
+		return ""
+	}
+	return "s"
 }

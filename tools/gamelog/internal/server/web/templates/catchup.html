@@ -18,6 +18,7 @@
       {{end}}
     </fieldset>
     <div class="checkbox-row"><input type="checkbox" id="full" name="full" value="1"><label for="full">re-fetch unchanged Steam games (offline unlocks can sync late)</label></div>
+    <div class="checkbox-row"><input type="checkbox" id="verbose" name="verbose" value="1"><label for="verbose">log every game, including ones that didn't change</label></div>
     <div class="btn-row"><button type="submit" class="btn--primary">Load what's new</button></div>
   </form>
   <form method="post" action="/catchup/run" class="catchup-alone">

@@ -272,6 +272,7 @@ func (s *server) handleCatchupScan(w http.ResponseWriter, r *http.Request) {
 
 type catchupRunOptions struct {
 	full      bool            // re-fetch unchanged Steam games too
+	verbose   bool            // log every game walked, not only the ones that changed
 	providers map[string]bool // the sources to load; nothing else is fetched
 	// alone is a single own-button source (see catchupOwnButton): no
 	// new-games scan, and the run isn't recorded.
@@ -330,6 +331,7 @@ func (s *server) handleCatchupRun(w http.ResponseWriter, r *http.Request) {
 	}
 	o := catchupRunOptions{
 		full:      r.FormValue("full") == "1",
+		verbose:   r.FormValue("verbose") == "1",
 		providers: map[string]bool{},
 		minHours:  atoiFloatOr(r.FormValue("min_hours"), commands.DefaultMinHours),
 	}
@@ -431,7 +433,15 @@ func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 		if scan, _, err := s.scanCandidates(o.minHours, commands.ScanModePlayed, func(so *commands.ScanOptions) { so.Only = scanOnly }); err != nil {
 			note("scan failed: %v", err)
 		} else {
-			j.log("  %d unlogged or unlinked", len(scan.Candidates))
+			j.log("  scanned %s: %d unlogged or unlinked", providerNames(scanOnly), len(scan.Candidates))
+			const show = 10
+			for i, cand := range scan.Candidates {
+				if i == show {
+					j.log("    …and %d more", len(scan.Candidates)-show)
+					break
+				}
+				j.log("    %s (%s%s)", cand.Title, model.ProviderLabel(cand.Provider), candidatePlaytime(cand.PlaytimeMins))
+			}
 			for _, n := range scan.Notices {
 				j.log("  %s", n)
 			}
@@ -441,8 +451,15 @@ func (s *server) runCatchupJob(j *job, o catchupRunOptions) {
 
 	if len(withLinks) > 0 {
 		j.log("Achievements")
-		c := s.refreshAchievements(j, withLinks, refreshOptions{full: o.full, only: o.providers, quiet: true, base: steps, total: total})
-		j.log("  %d games checked, %d changed, %d failed", c.refreshed, c.changed, c.failed)
+		j.log("  checking %d games: %s", len(withLinks), linkedBreakdown(withLinks, o.providers))
+		if o.full {
+			j.log("  re-fetching every Steam game, whether or not its playtime moved")
+		} else {
+			j.log("  Steam games whose playtime and last-played date haven't moved are skipped without a request")
+		}
+		c := s.refreshAchievements(j, withLinks, refreshOptions{full: o.full, only: o.providers, quiet: true, verbose: o.verbose, base: steps, total: total})
+		j.log("  %d games checked: %d changed, %d unchanged (%d records skipped without a request), %d failed",
+			c.refreshed, c.changed, c.unchanged, c.skipped, c.failed)
 	}
 
 	done := steps + len(withLinks)
@@ -618,4 +635,40 @@ func (s *server) handleCatchupDismiss(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	s.respondHousekeepingOK(w, r, backTo, fmt.Sprintf("%s: dismissed activity through %s. Anything newer will show up again.", it.Game.Title, through))
+}
+
+// linkedBreakdown counts the games each ticked provider will be asked about,
+// e.g. "Steam 412, RetroAchievements 47". A game linked to two providers counts
+// under both, so the numbers can add up to more than the games being checked.
+func linkedBreakdown(games []model.GameSummary, ticked map[string]bool) string {
+	counts := map[string]int{}
+	for _, g := range games {
+		for _, l := range g.ProviderLinks() {
+			if ticked[l.Provider] {
+				counts[l.Provider]++
+			}
+		}
+	}
+	var parts []string
+	for _, p := range model.ProviderOrder {
+		if n := counts[p]; n > 0 {
+			parts = append(parts, fmt.Sprintf("%s %d", model.ProviderLabel(p), n))
+		}
+	}
+	return strings.Join(parts, ", ")
+}
+
+func providerNames(providers []string) string {
+	names := make([]string, len(providers))
+	for i, p := range providers {
+		names[i] = model.ProviderLabel(p)
+	}
+	return strings.Join(names, ", ")
+}
+
+func candidatePlaytime(mins int) string {
+	if mins <= 0 {
+		return ""
+	}
+	return ", " + hoursMins(mins)
 }
