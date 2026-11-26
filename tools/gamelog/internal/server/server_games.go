@@ -264,6 +264,9 @@ type gameDetailData struct {
 	FirstFinished string
 	StatusDerived bool
 	Achievements  []achievementView
+	// Overview is the read-only completion/playtime/stats panel; nil when the
+	// game has no captured achievements or stats.
+	Overview *gameOverview
 	// Lists feed the add-to-list selects; ListRanks is where this game itself is ranked.
 	Lists        []model.GameList
 	ListRanks    []model.ListRank
@@ -358,6 +361,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		FirstFinished:    g.FirstFinished,
 		StatusDerived:    g.StatusDerived,
 		Achievements:     achievements,
+		Overview:         buildGameOverview(doc.GameDir()),
 		Lists:            lists.Lists,
 		ListRanks:        lists.GameRanks(slug),
 		SelectedList:     r.URL.Query().Get("list"),

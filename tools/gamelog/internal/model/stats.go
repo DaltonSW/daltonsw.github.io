@@ -1,6 +1,7 @@
 package model
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -99,4 +100,22 @@ func writeStatsSummary(archiveDir, gameDir string, links []ProviderLink) error {
 		return err
 	}
 	return writeFileAtomic(path, out, 0o644)
+}
+
+// LoadStatsSummary reads back the projection writeStatsSummary wrote, returning
+// nil (not an error) when the game has no reported stats.
+func LoadStatsSummary(gameDir string) (*StatsSummary, error) {
+	path := statsSummaryPath(gameDir)
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil, nil
+		}
+		return nil, err
+	}
+	var s StatsSummary
+	if err := yaml.Unmarshal(raw, &s); err != nil {
+		return nil, fmt.Errorf("%s: %w", path, err)
+	}
+	return &s, nil
 }

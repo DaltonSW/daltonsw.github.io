@@ -32,6 +32,36 @@
   </form>
 </div>
 
+{{with .Overview}}
+<div class="tui" id="overview">
+  <span class="tui__title">overview</span>
+  <div class="ov-grid">
+    {{if .Total}}<div class="ov-stat"><span class="ov-stat__value">{{.Percent}}</span><span class="ov-stat__label">{{.Unlocked}}/{{.Total}} achievements</span></div>{{end}}
+    {{with .Playtime}}<div class="ov-stat"><span class="ov-stat__value">{{.}}</span><span class="ov-stat__label">played</span></div>{{end}}
+    {{with .LastPlayed}}<div class="ov-stat"><span class="ov-stat__value">{{.}}</span><span class="ov-stat__label">last played</span></div>{{end}}
+    {{with .Mastered}}<div class="ov-stat"><span class="ov-stat__value">{{.}}</span><span class="ov-stat__label">mastered</span></div>{{end}}
+  </div>
+  {{with .Providers}}
+  <table class="ov-table">
+    <thead><tr><th>Provider</th><th>Achievements</th><th>Played</th><th>Last played</th></tr></thead>
+    <tbody>{{range .}}<tr><td>{{.Label}}</td><td>{{.Unlocked}}/{{.Total}}{{with .Percent}} <span class="dim">· {{.}}</span>{{end}}</td><td>{{or .Playtime "—"}}</td><td>{{or .LastPlayed "—"}}</td></tr>{{end}}</tbody>
+  </table>
+  {{end}}
+  {{with .Rarest}}
+  <div class="ov-rarest">
+    <span class="subset-list__label">Rarest earned</span>
+    {{range .}}<div class="subset-list__item">{{printf "%.2f" .Rarity}}% <span class="dim">·</span> {{.Name}}</div>{{end}}
+  </div>
+  {{end}}
+  {{range .Stats}}
+  <details class="ov-stats">
+    <summary class="subset-list__label">{{len .Rows}} stat{{if ne (len .Rows) 1}}s{{end}}{{with .Label}} · {{.}}{{end}}{{with .Fetched}} · captured {{dateOnly .}}{{end}}</summary>
+    <table class="ov-table"><tbody>{{range .Rows}}<tr><th scope="row" title="{{.Key}}">{{.Label}}</th><td>{{.Value}}</td></tr>{{end}}</tbody></table>
+  </details>
+  {{end}}
+</div>
+{{end}}
+
 {{if .HasProviderLink}}
 <form method="post" action="/games/{{.Slug}}/achievements" class="row">
   <button type="submit">Refresh achievements from providers</button>
@@ -217,7 +247,7 @@
       {{range .Achievements}}
       <div class="achv-item">
         <div class="achv-item__meta">
-          <span title="{{.Date}}">{{dateOnly .Date}}</span> · {{.Provider}}{{with .Platform}} · {{.}}{{end}}{{with .Subset}} · {{.}}{{end}}
+          <span title="{{.Date}}">{{dateOnly .Date}}</span> · {{.Provider}}{{with .Platform}} · {{.}}{{end}}{{with .Subset}} · {{.}}{{end}}{{with .Rarity}} · <span title="Share of players who have earned this">{{printf "%.2f" .}}%</span>{{end}}
           {{range .Ranks}}<span class="achv-item__listed" title="On {{.Title}} at #{{.Rank}}">★ {{.Title}} #{{.Rank}}</span>{{end}}
         </div>
         <div class="achv-item__line">
