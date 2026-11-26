@@ -389,7 +389,26 @@ div.tui.row--error { border-color: var(--stop); }
    form. The older-activity section is a <details> whose summary is the h2. */
 .activity__summary { margin: 0 0 0.3rem; }
 .activity__providers { margin: 0 0 0.4rem; padding-left: 1.2rem; color: var(--dim); font-size: 0.85rem; }
-.activity__form select { width: auto; }
+/* The form is a labelled grid rather than one flex row: six fields on one
+   line truncated every placeholder and the "extend session …" label. Four
+   columns, "log as" and notes two wide: log as · started · finished, then
+   beaten · status · notes. Two columns, then one, as the page narrows. */
+.activity__form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem 1.1rem;
+  margin-top: 1rem;
+}
+.activity__field--wide { grid-column: span 2; }
+.activity__field label { margin: 0 0 0.3rem; font-size: 0.75rem; }
+.activity__field:has(:disabled) label { opacity: 0.5; }
+@media (max-width: 960px) {
+  .activity__form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .activity__form { grid-template-columns: minmax(0, 1fr); }
+  .activity__field--wide { grid-column: auto; }
+}
 .catchup-older > summary { cursor: pointer; list-style: revert; }
 .catchup-older > summary h2 { display: inline; }
 .catchup-load { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; border: 0; padding: 0; margin: 0 0 0.75rem; }

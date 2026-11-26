@@ -44,21 +44,39 @@
     {{- else}}Nothing logged yet{{if eq .Game.Status "backlog"}} (status: backlog){{end}}.{{end -}}
   </p>
   {{with .Error}}<p class="error-text">{{.}}</p>{{end}}
-  <form method="post" action="/catchup/log/{{$slug}}" id="log-{{$slug}}" class="row activity__form">
+  <form method="post" action="/catchup/log/{{$slug}}" id="log-{{$slug}}" class="activity__form">
     {{template "catchup_hidden" .Thresholds}}
     <input type="hidden" name="tab" value="activity">
-    <select name="target" aria-label="Log {{.Game.Title}} as" onchange="this.form.elements.status.disabled = this.form.elements.beaten.disabled = this.value !== 'new'">
-      {{range .Targets}}<option value="{{.Value}}"{{if .Selected}} selected{{end}}>{{.Label}}</option>{{end}}
-    </select>
-    <input type="text" name="started" required value="{{.Started}}" placeholder="started (YYYY-MM-DD)" aria-label="started">
-    <input type="text" name="finished" value="{{.Finished}}" aria-label="finished"
-      placeholder="{{with .FinishedHint}}last activity {{.}}{{else}}finished (blank if ongoing){{end}}">
-    <input type="text" name="beaten" value="{{.Beaten}}" aria-label="beaten" placeholder="beaten (if before finished)"{{if .IsSession}} disabled{{end}}
-      title="The day this run beat the game, when it carried on afterwards. The game's first-finished date uses this instead of the run's finish.">
-    <select name="status" aria-label="status"{{if .IsSession}} disabled{{end}}>
-      {{$st := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $st}} selected{{end}}>{{.}}</option>{{end}}
-    </select>
-    <input type="text" name="notes" value="{{.Notes}}" placeholder="notes" aria-label="notes">
+    <div class="activity__field activity__field--wide">
+      <label for="target-{{$slug}}">log as</label>
+      <select name="target" id="target-{{$slug}}" onchange="this.form.elements.status.disabled = this.form.elements.beaten.disabled = this.value !== 'new'">
+        {{range .Targets}}<option value="{{.Value}}"{{if .Selected}} selected{{end}}>{{.Label}}</option>{{end}}
+      </select>
+    </div>
+    <div class="activity__field">
+      <label for="started-{{$slug}}">started</label>
+      <input type="text" name="started" id="started-{{$slug}}" required value="{{.Started}}" placeholder="YYYY-MM-DD">
+    </div>
+    <div class="activity__field">
+      <label for="finished-{{$slug}}">finished</label>
+      <input type="text" name="finished" id="finished-{{$slug}}" value="{{.Finished}}"
+        placeholder="{{with .FinishedHint}}last activity {{.}}{{else}}blank if ongoing{{end}}">
+    </div>
+    <div class="activity__field">
+      <label for="beaten-{{$slug}}">beaten</label>
+      <input type="text" name="beaten" id="beaten-{{$slug}}" value="{{.Beaten}}" placeholder="if before finished"{{if .IsSession}} disabled{{end}}
+        title="The day this run beat the game, when it carried on afterwards. The game's first-finished date uses this instead of the run's finish.">
+    </div>
+    <div class="activity__field">
+      <label for="status-{{$slug}}">status</label>
+      <select name="status" id="status-{{$slug}}"{{if .IsSession}} disabled{{end}}>
+        {{$st := .Status}}{{range pthStatuses}}<option value="{{.}}"{{if eq . $st}} selected{{end}}>{{.}}</option>{{end}}
+      </select>
+    </div>
+    <div class="activity__field activity__field--wide">
+      <label for="notes-{{$slug}}">notes</label>
+      <input type="text" name="notes" id="notes-{{$slug}}" value="{{.Notes}}">
+    </div>
   </form>
   <form method="post" action="/catchup/dismiss/{{$slug}}" id="dismiss-{{$slug}}" class="form--hidden">
     {{template "catchup_hidden" .Thresholds}}
