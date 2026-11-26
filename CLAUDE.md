@@ -42,11 +42,48 @@ Consequences that should drive design decisions:
   per-game stats), which are regenerable from `archive/` and never published either.
 - **Curated lists** (`/games/lists/`) live in `data/game-lists.yaml`: authored through the tool's
   Lists page, order is rank, games by slug and achievements by provider + record id + key.
-- **`tools/gamelog/INVARIANTS.md` lists the invariants not to undo.** Read it before editing
-  `internal/model/playthroughs.go` or
-  `internal/model/archive.go` — the inline `Extra` catch-all, the string-typed dates, and the
-  pre-write loss check each prevent a specific silent data loss that has already happened once.
 - Credentials live in `tools/gamelog/.env` (gitignored). `.env.example` is the template.
+
+## GameLog: don't undo these
+
+Each prevents a silent data loss that already happened once. Before changing the code behind one,
+read the README section it names; the code comments carry the details. API quirks per provider
+(User-Agent 403s, undocumented params, key choices) are in the README, so read the provider's
+section before touching its client.
+
+- **Refreshes merge, never overwrite.** `mergeProvider` / `mergeActivity` in
+  `internal/model/archive.go` only grow the archive: a fetch that errors or comes back empty leaves
+  achievements alone, and activity fields merge by rules that can't shrink them (max, latest,
+  fill-blank). The regression tests in `archive_test.go` cover this; keep them.
+- **Mastery milestones are only added** (`ProviderRecord.Mastery`, `unionMastery`). A DLC or an RA
+  set revision can make a mastery stop being derivable, so never recompute it from the current list.
+- **`Extra map[string]any` with `yaml:",inline"`** on `PlaythroughEntry`, `SessionEntry` and
+  `FrontMatter` is what keeps a hand-added field from vanishing on the next whole-file rewrite.
+- **Dates in `playthroughs.yaml` are `string`s.** An unquoted `2026-01-04` is a YAML timestamp, and
+  re-encoding it rewrites every date in the file.
+- **Every run's dates are a `sessions:` list.** Nothing writes a flat `started`/`finished`; a
+  hand-typed flat pair is moved into one session on load. The latest session is the one with the
+  greatest `started`, never the last by position.
+- **Every playthrough write goes through `mutate.VerifyNoLoss`** (via `WriteEntry` /
+  `WriteFrontMatter`). If a new operation trips it, the operation is wrong: declare the paths it
+  legitimately removes, never widen the allowlist to silence it.
+- **Playthrough writes are atomic** (temp file + rename in `PlaythroughsFile.Save`).
+- **Nothing removes an entry from `playthroughs[]` by index.** `SplitPlaythrough` appends at the
+  end so no existing entry's path ever shifts.
+- **The archive is keyed by provider ID, not slug, and lives outside `content/`.** Slugs change and
+  everything in `content/` gets published.
+- **Status flows from runs to the game, never back** (`model.DeriveGameStatus`,
+  `mutate.SyncGameStatus`). Don't edit a derived game status directly; change a run. A game's front
+  matter carries no dates, so don't reintroduce `started`/`finished` on `FrontMatter`.
+- **Playthrough boundaries are confirmed by hand**, never derived from achievement gaps.
+- **Account-wide Catch up loads only.** A source loaded on its own is never recorded as a run
+  (`RecordRun` moves the "new since" boundary for every source). Provider clients are shared per
+  process (`internal/commands/clients.go`); don't build one per game, and guard any client state
+  with a mutex.
+- **Nadeo credentials belong to a real player's account.** Never make live Trackmania requests
+  while developing; the user runs those.
+- **Tests never reach the internet.** Packages that make HTTP calls run through
+  `testutil.RunOffline`; stub the endpoint it names rather than loosening the guard.
 
 ## Working style
 

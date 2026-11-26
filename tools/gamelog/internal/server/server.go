@@ -72,7 +72,7 @@ func init() {
 }
 
 // Run starts the local web UI. Every write goes through model/mutate, and so
-// through the never-lose-data safety net (see README.md/INVARIANTS.md).
+// through the never-lose-data safety net (see README.md and CLAUDE.md).
 // Binds to 127.0.0.1 only; this is a personal local tool, never meant to be
 // reachable off the machine it runs on.
 func Run(port int) error {

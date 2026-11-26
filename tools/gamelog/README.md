@@ -292,7 +292,20 @@ game-level only — it describes the whole record, not a mode, so a software gam
 `playing` and the site reads them as software. Every other entry carries its own status and is shown
 as such: Hades' finished run is drawn as finished even though the game is `endless`. (Older
 endless/multiplayer entries once said `playing` and leaned on the game's status. They were rewritten
-in place on 2026-11-21, which removed the special cases that resolved them.)
+in place on 2026-11-21, which removed the special cases that resolved them. Don't write a `playing`
+entry meaning endless/multiplayer again.)
+
+Stale triage (`FindStaleCandidates`) only looks at game-level `playing`, so one-shot games are never
+offered for finished/dropped triage, whatever their entries say.
+
+**Adding another one-shot status means changing these together:** `model.IsOneShot` (which also
+makes it hand-set, never derived), `GameStatuses`, and if it's a real per-entry mode,
+`PlaythroughStatuses`, `DefaultPlaythroughStatus` and `countsForStatus` (all in
+`internal/model/status.go`); `NO_CONNECTOR_CLASSES` in `assets/js/games-timeline.ts`; and the status
+colour maps in `assets/scss/main.scss` and `_vars.scss`.
+
+**Playthrough boundaries are confirmed by hand, never derived.** A gap in achievement unlocks marks
+an activity arc, not a playthrough, so nothing splits entries automatically.
 
 `status: backlog` is the game-level marker for "not played yet" — a game with this status and no
 `playthroughs.yaml` at all. It shows in the Games page's "Game list" tab like every other game
@@ -1300,7 +1313,8 @@ game's `unlocked`/`total` across whichever providers it's linked to (RA 12/40 + 
 58/94) while also recording each provider separately under `providers:` (and each RA subset under
 `subsets:`), plus total playtime summed across whichever providers report it (Steam always has; RA
 added `UserTotalPlaytime` in late 2025, so older archived RA records may predate it and simply have
-none), and `last_played`. It also flattens every *unlocked* achievement across those providers into
+none), and `last_played`. Subset playtime is left out, since RA reports it per game id and summing
+it double-counts; a subset's `last_played` *is* folded in. It also flattens every *unlocked* achievement across those providers into
 an `earned:` list (name, description, date, points, hardcore, icon, provider, platform, hidden,
 subset), oldest first. Each provider and subset carries its `mastery:` milestones, and the top-level
 `mastered:` is the earliest `base` or `all` milestone across the game's providers (subsets
@@ -1337,4 +1351,46 @@ to the public site.
 
 No editing the markdown body from within the tool after creation, no
 per-playthrough attribution (see above — the API data doesn't support it), and no direct reads of `archive/` from Hugo (everything the site shows goes through a
-projection). The invariants not to undo are in `INVARIANTS.md`.
+projection). The rules not to undo are in the repo's `CLAUDE.md`.
+
+### Known gaps
+
+Things that don't exist yet, as distinct from things left out on purpose:
+
+- **Ubisoft games past Exophase's first 50 are skipped.** The `window.playerGames` payload that
+  carries `canonical_id` isn't paginated, and Ubisoft has no fallback (Google Play decodes the app
+  id out of its award ids). A game whose canonical id can't be resolved is skipped, never guessed.
+- **Nintendo is on the Exophase profile but not archived.** Switch has no achievements, only
+  playtime and last-played, so it needs a record shape that doesn't pretend otherwise (as Nadeo and
+  Ninja Kiwi each got) before it's added.
+- **Only Xbox 360 titles are captured.** Scan leaves other Xbox titles out with a notice, because
+  the x360 endpoint would archive an empty record that looks like a real 0/N. Modern titles need a
+  second fetch path in `providers/xbox`, verified against a live modern title first.
+- **Nothing detaches a subset.** Attaching is a button on Catch up's New games; undoing it means
+  deleting the id from `retroachievements_subsets:` by hand. The archive record survives either way.
+- **Planned replays have no delete path.** Removing one is a hand edit, which the file's generated
+  banner allows. (It stays that way because nothing removes an entry from `playthroughs[]` by index.)
+- **`raParentCache` (a subset's parent lookup) is memoized per process, not persisted.** Every
+  server restart pays the ~1.2s RA call again per unattached subset row. Fine at one subset; it
+  needs a persisted cache before the count grows much.
+- **`legacy_last_played:` is still on 13 games.** It's inert and preserved via `Extra`. Don't
+  reintroduce `started`/`finished` on `FrontMatter`.
+- **First-finished is computed twice**, in `firstFinished` (Go) and
+  `layouts/partials/game-first-finished.html`, kept in step by hand.
+
+### Rules that live on the Hugo side
+
+- The per-entry "last activity" rule (the latest session's finish or start, otherwise the entry's
+  own) lives only in `layouts/partials/entry-last-activity.html`. `game-last-played.html`,
+  `games-timeline.html` and `games-log.html` all call it; don't inline it again.
+- Only `game-last-played.html` maxes `achievement-summary.yaml`'s `last_played` against logged
+  playthroughs, on purpose: a refreshed archive can be more recent than any logged session. The
+  timeline and year rows stay on logged activity only, because stretching a bar to an archive date
+  would draw play with no session behind it.
+
+### Tests
+
+Tests never reach the internet. Every package that makes HTTP calls runs through
+`testutil.RunOffline` (`main_test.go`), which refuses non-loopback requests and fails the run even
+if the code swallowed the error. If it fires, stub the endpoint it names; don't loosen the guard.
+Live checks belong outside `go test ./...`.

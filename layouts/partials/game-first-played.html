@@ -1,6 +1,6 @@
 {{/* Context: a game's term Page. Returns the earliest playthrough start as a
      "2006-01-02" string, "" when nothing's logged. A game's front matter carries
-     no dates (see tools/gamelog/INVARIANTS.md). */}}
+     no dates (see CLAUDE.md). */}}
 {{- $entries := partial "playthrough-entries.html" . -}}
 {{- $earliest := "" -}}
 {{- range $entries -}}

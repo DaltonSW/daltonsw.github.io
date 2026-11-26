@@ -29,7 +29,7 @@
       {{- $status := $entry.status | default $gameStatus -}}
       {{/* "software" is game-level only, so a software game's runs say "playing" and
            mean software; every other run's own status is the truth (endless and
-           multiplayer are real per-run statuses — see tools/gamelog/INVARIANTS.md) */}}
+           multiplayer are real per-run statuses — see tools/gamelog/README.md) */}}
       {{- if and (eq $gameStatus "software") (eq $status "playing") -}}
         {{- $status = $gameStatus -}}
       {{- end -}}

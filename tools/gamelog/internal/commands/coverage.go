@@ -124,7 +124,7 @@ func coverageOf(dates []time.Time, spans spanList) (cov *Coverage, first, last t
 }
 
 // loggedSpan is one stretch of logged play. Dates stay strings (see
-// INVARIANTS.md) and may be partial ("2018-09"); comparisons are by prefix.
+// CLAUDE.md) and may be partial ("2018-09"); comparisons are by prefix.
 type loggedSpan struct {
 	start, end string
 	// open: no finish date. The span then runs until the next logged span

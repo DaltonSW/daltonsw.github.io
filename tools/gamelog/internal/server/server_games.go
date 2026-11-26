@@ -274,7 +274,7 @@ type gameDetailData struct {
 	IDs            map[string]string
 	ProviderFields []providerField
 	// NadeoAccountID/NinjaKiwiUserID are the non-achievement links (see
-	// INVARIANTS.md: they stay out of ProviderLinks); each gets its own
+	// README's Trackmania and BTD6 sections: they stay out of ProviderLinks); each gets its own
 	// refresh button.
 	NadeoAccountID  string
 	NinjaKiwiUserID string
