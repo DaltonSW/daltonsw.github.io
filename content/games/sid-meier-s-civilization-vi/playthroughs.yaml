@@ -1,19 +1,24 @@
 # Written by tools/gamelog. Safe to edit by hand, but comments are not
 # preserved: the tool rewrites this file whole. Prose belongs in _index.md.
 playthroughs:
-  - started: "2018-05-22"
-    finished: "2018-05-26"
-    status: endless
-  - started: "2019-02-12"
-    finished: "2019-02-12"
-    status: endless
-  - started: "2021-07-23"
-    finished: "2021-07-27"
-    status: endless
-  - started: "2023-05-29"
-    finished: "2023-06-11"
-    status: endless
-  - started: "2019-01-27"
-    finished: "2019-02-06"
-    status: multiplayer
+  - status: endless
+    sessions:
+      - started: "2018-05-22"
+        finished: "2018-05-26"
+  - status: endless
+    sessions:
+      - started: "2019-02-12"
+        finished: "2019-02-12"
+  - status: endless
+    sessions:
+      - started: "2021-07-23"
+        finished: "2021-07-27"
+  - status: endless
+    sessions:
+      - started: "2023-05-29"
+        finished: "2023-06-11"
+  - status: multiplayer
     platform: Switch
+    sessions:
+      - started: "2019-01-27"
+        finished: "2019-02-06"

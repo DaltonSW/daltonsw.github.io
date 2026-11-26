@@ -6,10 +6,12 @@ playthroughs:
       - started: "2018-05-21"
         finished: "2018-05-21"
         title: First Souls Experience, died to Iudex Gundyr for 3 hours and gave up
-  - started: "2021-05-01"
-    finished: "2021-05-15"
-    status: finished
-  - started: "2026-04-16"
-    finished: "2026-04-16"
-    status: misc_launch
+  - status: finished
+    sessions:
+      - started: "2021-05-01"
+        finished: "2021-05-15"
+  - status: misc_launch
     notes: Considering for archipelago, decided against
+    sessions:
+      - started: "2026-04-16"
+        finished: "2026-04-16"

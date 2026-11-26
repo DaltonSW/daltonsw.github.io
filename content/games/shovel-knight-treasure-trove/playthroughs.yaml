@@ -1,14 +1,18 @@
 # Written by tools/gamelog. Safe to edit by hand, but comments are not
 # preserved: the tool rewrites this file whole. Prose belongs in _index.md.
 playthroughs:
-  - started: "2014-08-03"
-    finished: "2014-08-25"
-    status: finished
+  - status: finished
+    sessions:
+      - started: "2014-08-03"
+        finished: "2014-08-25"
     subgame: Shovel of Hope
-  - started: "2022-01-01"
-    finished: "2022-01-05"
-    status: finished
+  - status: finished
+    sessions:
+      - started: "2022-01-01"
+        finished: "2022-01-05"
     subgame: Shovel of Hope
-  - started: "2024-09-17"
-    status: paused
+  - status: paused
+    sessions:
+      - started: "2024-09-17"
+        finished: ""
     subgame: Specter of Torment

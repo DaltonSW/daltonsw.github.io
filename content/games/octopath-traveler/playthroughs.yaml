@@ -8,10 +8,11 @@ playthroughs:
         finished: "2022-06-19"
       - started: "2022-07-19"
         finished: "2022-07-19"
-  - started: "2021-04-15"
-    finished: "2021-04-15"
-    status: misc_launch
+  - status: misc_launch
     platform: Switch
+    sessions:
+      - started: "2021-04-15"
+        finished: "2021-04-15"
   - status: dropped
     platform: Switch
     sessions:

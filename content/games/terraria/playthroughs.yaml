@@ -5,13 +5,15 @@ playthroughs:
     sessions:
       - started: "2015-08-16"
         finished: "2015-08-16"
-  - started: "2017-01-17"
-    finished: "2017-02-26"
-    status: endless
+  - status: endless
+    sessions:
+      - started: "2017-01-17"
+        finished: "2017-02-26"
   - status: endless
     sessions:
       - started: "2020-05-16"
         finished: "2020-05-30"
-  - started: "2022-01-05"
-    finished: "2022-02-23"
-    status: endless
+  - status: endless
+    sessions:
+      - started: "2022-01-05"
+        finished: "2022-02-23"

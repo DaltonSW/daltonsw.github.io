@@ -1,7 +1,8 @@
 # Written by tools/gamelog. Safe to edit by hand, but comments are not
 # preserved: the tool rewrites this file whole. Prose belongs in _index.md.
 playthroughs:
-  - started: "2026-05-02"
-    finished: "2026-05-02"
-    status: finished
+  - status: finished
     notes: Paying off All Debts for RetroAchievements points. ACCF was 3x point bounty during the Wii launch event
+    sessions:
+      - started: "2026-05-02"
+        finished: "2026-05-02"

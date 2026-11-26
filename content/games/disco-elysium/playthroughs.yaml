@@ -13,6 +13,7 @@ playthroughs:
         finished: "2021-05-30"
       - started: "2021-06-29"
         finished: "2021-06-30"
-  - started: "2020-09-07"
-    finished: "2020-09-13"
-    status: dropped
+  - status: dropped
+    sessions:
+      - started: "2020-09-07"
+        finished: "2020-09-13"

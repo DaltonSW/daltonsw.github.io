@@ -5,9 +5,10 @@ playthroughs:
     sessions:
       - started: "2019-10-28"
         finished: "2019-10-28"
-  - started: "2026-04-26"
-    finished: "2026-04-28"
-    status: dropped
+  - status: dropped
+    sessions:
+      - started: "2026-04-26"
+        finished: "2026-04-28"
   - status: finished
     sessions:
       - started: "2020-05-07"

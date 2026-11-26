@@ -10,10 +10,11 @@ playthroughs:
         finished: "2023-12-03"
       - started: "2023-12-31"
         finished: "2024-02-11"
-  - started: "2024-11-02"
-    finished: "2024-12-25"
-    status: finished
+  - status: finished
     notes: Dark Urge
+    sessions:
+      - started: "2024-11-02"
+        finished: "2024-12-25"
   - status: finished
     notes: Honour mode
     sessions:

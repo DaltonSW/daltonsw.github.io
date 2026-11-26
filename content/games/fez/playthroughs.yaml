@@ -5,9 +5,10 @@ playthroughs:
     sessions:
       - started: "2013-09-08"
         finished: "2013-09-21"
-  - started: "2015-11-03"
-    finished: "2015-11-03"
-    status: dropped
+  - status: dropped
+    sessions:
+      - started: "2015-11-03"
+        finished: "2015-11-03"
   - status: finished
     platform: PC
     rating: 10

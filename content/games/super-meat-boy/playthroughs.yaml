@@ -7,6 +7,7 @@ playthroughs:
         finished: "2012-11-18"
       - started: "2013-10-05"
         finished: "2013-10-09"
-  - started: "2021-01-09"
-    finished: "2021-01-15"
-    status: finished
+  - status: finished
+    sessions:
+      - started: "2021-01-09"
+        finished: "2021-01-15"
