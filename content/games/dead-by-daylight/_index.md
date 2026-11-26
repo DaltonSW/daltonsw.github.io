@@ -3,7 +3,8 @@ title: Dead by Daylight
 platform: PC
 retroachievements_id: null
 steam_appid: 381210
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

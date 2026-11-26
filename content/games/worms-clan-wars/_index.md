@@ -3,7 +3,8 @@ title: Worms Clan Wars
 platform: PC
 retroachievements_id: null
 steam_appid: 233840
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

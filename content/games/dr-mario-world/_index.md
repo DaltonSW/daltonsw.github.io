@@ -4,7 +4,8 @@ platform: Android
 retroachievements_id: null
 steam_appid: null
 googleplay_id: 419844773443
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

@@ -3,7 +3,8 @@ title: Killing Floor
 platform: PC
 retroachievements_id: null
 steam_appid: 1250
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

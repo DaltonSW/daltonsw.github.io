@@ -3,7 +3,8 @@ title: Left 4 Dead 2
 platform: PC
 retroachievements_id: null
 steam_appid: 550
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

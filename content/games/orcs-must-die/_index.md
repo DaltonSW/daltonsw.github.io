@@ -3,7 +3,8 @@ title: Orcs Must Die!
 platform: PC
 retroachievements_id: null
 steam_appid: 102600
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

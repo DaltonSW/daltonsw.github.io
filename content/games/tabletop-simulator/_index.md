@@ -3,7 +3,8 @@ title: Tabletop Simulator
 platform: PC
 retroachievements_id: null
 steam_appid: 286160
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

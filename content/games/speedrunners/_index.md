@@ -3,7 +3,8 @@ title: SpeedRunners
 platform: PC
 retroachievements_id: null
 steam_appid: 207140
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

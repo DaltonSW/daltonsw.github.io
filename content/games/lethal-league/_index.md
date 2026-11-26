@@ -3,7 +3,8 @@ title: Lethal League
 platform: PC
 retroachievements_id: null
 steam_appid: 261180
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

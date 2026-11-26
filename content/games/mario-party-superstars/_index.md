@@ -4,7 +4,8 @@ platform: "Switch"
 retroachievements_id:
 steam_appid:
 nintendo_id: "01006FE013472000"
-status: "multiplayer"
+status: "endless"
+tags: [multiplayer]
 rating:
 cover:
 draft: false

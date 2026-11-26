@@ -3,7 +3,8 @@ title: Fortnite
 platform: Switch
 retroachievements_id: null
 steam_appid: null
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

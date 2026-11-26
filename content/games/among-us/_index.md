@@ -3,7 +3,8 @@ title: Among Us
 platform: PC
 retroachievements_id: null
 steam_appid: 945360
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

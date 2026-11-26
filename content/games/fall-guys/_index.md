@@ -3,7 +3,8 @@ title: Fall Guys
 platform: PC
 retroachievements_id: null
 steam_appid: 1097150
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

@@ -3,7 +3,8 @@ title: YOU DON'T KNOW JACK Vol. 4 The Ride
 platform: PC
 retroachievements_id: null
 steam_appid: 259980
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

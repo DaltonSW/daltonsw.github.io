@@ -3,7 +3,8 @@ title: SMITE
 platform: PC
 retroachievements_id: null
 steam_appid: 386360
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

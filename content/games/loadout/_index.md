@@ -3,7 +3,8 @@ title: Loadout
 platform: PC
 retroachievements_id: null
 steam_appid: 208090
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

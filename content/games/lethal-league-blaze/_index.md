@@ -3,7 +3,8 @@ title: Lethal League Blaze
 platform: PC
 retroachievements_id: null
 steam_appid: 553310
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

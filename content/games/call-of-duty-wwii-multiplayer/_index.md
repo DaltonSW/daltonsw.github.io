@@ -3,7 +3,8 @@ title: 'Call of Duty: WWII - Multiplayer'
 platform: PC
 retroachievements_id: null
 steam_appid: 476620
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

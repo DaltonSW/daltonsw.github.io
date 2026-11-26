@@ -3,7 +3,8 @@ title: RIFT
 platform: PC
 retroachievements_id: null
 steam_appid: 39120
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

@@ -3,7 +3,8 @@ title: Medal of Honor(TM) Multiplayer
 platform: PC
 retroachievements_id: null
 steam_appid: 47830
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

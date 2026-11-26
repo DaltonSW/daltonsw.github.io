@@ -3,7 +3,8 @@ title: PAYDAY 2
 platform: PC
 retroachievements_id: null
 steam_appid: 218620
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

@@ -3,7 +3,8 @@ title: The Jackbox Party Pack
 platform: PC
 retroachievements_id: null
 steam_appid: 331670
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

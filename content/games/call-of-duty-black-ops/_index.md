@@ -5,6 +5,7 @@ retroachievements_id: null
 steam_appid: null
 xbox_id: 1096157269
 status: finished
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:

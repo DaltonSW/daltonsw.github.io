@@ -3,7 +3,8 @@ title: SOULCALIBUR VI
 platform: PC
 retroachievements_id: null
 steam_appid: 544750
-status: multiplayer
+status: endless
+tags: [multiplayer]
 rating: null
 draft: false
 cascade:
