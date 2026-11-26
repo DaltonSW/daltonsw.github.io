@@ -1,0 +1,45 @@
+{{/* Per-game stats section for a single game's term page (Steam's "crops
+     shipped", "furlongs travelled", per-class damage...). Reads
+     stats-summary.yaml, written by model.writeStatsSummary
+     (tools/gamelog/internal/model/stats.go); no-op when the game has none.
+     Only stats with a reported value are projected, so every row has a number. */}}
+{{- $stats := "" -}}
+{{- with .Resources.Get "stats-summary.yaml" -}}
+  {{- $stats = . | transform.Unmarshal -}}
+{{- end -}}
+
+{{- with $stats }}
+{{- $providers := .providers | default slice -}}
+{{- $multi := gt (len $providers) 1 -}}
+{{- range $providers }}
+{{- $rows := slice }}
+{{- range .stats }}
+  {{- $label := .name | default (replace .key "_" " ") }}
+  {{- $rows = $rows | append (dict "label" $label "key" .key "value" .value) }}
+{{- end }}
+{{- $rows = sort $rows "label" }}
+<section class="game-stats" aria-label="Stats">
+  <h2>Stats{{ if $multi }} <span class="game-stats__platform">{{ .platform | default .provider }}</span>{{ end }}</h2>
+  {{/* a handful reads as a section; hundreds (Team Fortress 2) start collapsed */}}
+  <details{{ if le (len $rows) 12 }} open{{ end }}>
+    <summary class="game-stats__summary">{{ len $rows }} stat{{ if ne (len $rows) 1 }}s{{ end }}{{ with .fetched }} · captured {{ . | time.Format "Jan 2, 2006" }}{{ end }}</summary>
+    <table class="game-stats__table">
+      <tbody>
+        {{- range $rows }}
+        {{- $v := .value }}
+        <tr>
+          <th scope="row" title="{{ .key }}">{{ .label }}</th>
+          <td>
+            {{- if and (ge $v -0.01) (le $v 0.01) (ne $v 0) }}{{ printf "%.3g" $v }}
+            {{- else if ne (float $v) (math.Floor $v) }}{{ printf "%.2f" $v }}
+            {{- else if lt $v 0 }}{{ printf "%d" (int $v) }}
+            {{- else }}{{ partial "format-number.html" (int $v) }}{{ end -}}
+          </td>
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </details>
+</section>
+{{- end }}
+{{- end }}

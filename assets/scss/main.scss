@@ -935,6 +935,14 @@ $log-accents: ".log-line__verb, .log-event__glyph";
   .tm-cell__time { grid-column: 1 / -1; margin-left: 0; }
 }
 
+/* ── Per-game stats on a single game's page ─────────────────────────────── */
+.game-stats { margin: 1.5rem 0; }
+.game-stats__platform { font-size: 0.8em; font-weight: 400; color: var(--dim); }
+.game-stats__summary { cursor: pointer; font-family: $font-ui; color: var(--dim); }
+.game-stats__table { margin-top: 0.6rem; border-collapse: collapse; font-family: $font-ui; }
+.game-stats__table th { text-align: left; font-weight: 400; padding: 0.15rem 2rem 0.15rem 0; }
+.game-stats__table td { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
 /* ── BTD6 save on a single game's page ───────────────────────────────────── */
 .nk-btd6 { margin: 2rem 0 1.5rem; }
 
