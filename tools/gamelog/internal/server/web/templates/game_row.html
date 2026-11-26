@@ -1,6 +1,6 @@
 {{define "game_row"}}
 <tr id="row-{{.Slug}}"{{if .Saved}} class="row--saved"{{else if .Error}} class="row--error"{{end}}>
-  <td><a href="/games/{{.Slug}}">{{.Title}}</a></td>
+  <td><a href="/games/{{.Slug}}">{{.Title}}</a>{{range .Tags}} <span class="tag" data-tag="{{.}}">{{.}}</span>{{end}}</td>
   <td>
     {{if .StatusDerived}}<span class="dim" title="Derived from playthroughs — change a run on the game's page.">{{.Status}}</span>
     {{else}}<select name="status">{{$cur := .Status}}{{range gameStatuses}}<option value="{{.}}"{{if eq . $cur}} selected{{end}}>{{.}}</option>{{end}}</select>{{end}}

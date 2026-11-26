@@ -2,6 +2,7 @@ package model
 
 import (
 	"fmt"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
@@ -52,6 +53,31 @@ func ParseSubgames(s string) []string {
 		}
 	}
 	return out
+}
+
+// ParseTags splits a comma- or newline-separated "Tags" field into a tag
+// list: trimmed, lowercased, blanks and repeats dropped, first-seen order
+// kept. No tags round-trips to nil, so the omitempty key stays absent.
+func ParseTags(s string) []string {
+	var out []string
+	for _, part := range strings.FieldsFunc(s, func(r rune) bool { return r == ',' || r == '\n' }) {
+		t := strings.ToLower(strings.TrimSpace(part))
+		if t != "" && !slices.Contains(out, t) {
+			out = append(out, t)
+		}
+	}
+	return out
+}
+
+// ShrunkListPaths returns the loss-check paths that vanish when the list at
+// key goes from oldLen items to newLen: key[newLen]..key[oldLen-1]. A list
+// edited in place keeps its indices, so only the tail disappears.
+func ShrunkListPaths(key string, oldLen, newLen int) []string {
+	var paths []string
+	for i := newLen; i < oldLen; i++ {
+		paths = append(paths, fmt.Sprintf("%s[%d]", key, i))
+	}
+	return paths
 }
 
 func OrDash(s string) string {

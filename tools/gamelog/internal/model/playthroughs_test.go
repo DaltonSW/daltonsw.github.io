@@ -149,7 +149,7 @@ func TestUnknownFieldsSurviveARewrite(t *testing.T) {
         finished: 2026-01-09
         device: deck
 `)
-	if err := pf.UpdatePlaythrough(0, "2026-02-12", "finished", "Switch", "", "8", "done"); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2026-02-12", "finished", "Switch", "", nil, "8", "done"); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
@@ -275,7 +275,7 @@ func TestPlaythroughsCarrySeparatePlatforms(t *testing.T) {
 // game later silently fail to correct its runs.
 func TestBlankPlatformIsOmitted(t *testing.T) {
 	pf := loadFixture(t, "playthroughs:\n  - started: 2026-01-04\n    status: playing\n")
-	if err := pf.UpdatePlaythrough(0, "", "playing", "", "", "", ""); err != nil {
+	if err := pf.UpdatePlaythrough(0, "", "playing", "", "", nil, "", ""); err != nil {
 		t.Fatal(err)
 	}
 	out, err := pf.Encode()
@@ -296,7 +296,7 @@ func TestUpdateWritesFinishedToTheLastSession(t *testing.T) {
       - started: 2026-04-02
         finished:
 `)
-	if err := pf.UpdatePlaythrough(0, "2026-04-09", "finished", "", "", "", ""); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2026-04-09", "finished", "", "", nil, "", ""); err != nil {
 		t.Fatal(err)
 	}
 	got := saveAndReload(t, pf).Playthroughs[0]
@@ -419,7 +419,7 @@ func TestConversionDeclaresExactlyWhatItRemoves(t *testing.T) {
 	}
 }
 
-// A one-shot game (endless/multiplayer/software) is capped at one entry
+// A one-shot game (endless/software) is capped at one entry
 // per platform, not one entry outright. Saves don't cross consoles, so a
 // second platform is a genuinely separate record — but a second entry on the
 // same platform is the fragmentation the cap exists to prevent.
@@ -1024,7 +1024,7 @@ func TestLatestSessionIsByDateNotPosition(t *testing.T) {
 	if v.LatestDate() != "2024-06-01" || v.FinishDate() != "" {
 		t.Errorf("LatestDate/FinishDate = %q/%q", v.LatestDate(), v.FinishDate())
 	}
-	if err := pf.UpdatePlaythrough(0, "2024-06-09", "finished", "", "", "", ""); err != nil {
+	if err := pf.UpdatePlaythrough(0, "2024-06-09", "finished", "", "", nil, "", ""); err != nil {
 		t.Fatal(err)
 	}
 	if got := pf.Playthroughs[0].Sessions[0].Finished; got != "2024-06-09" {
@@ -1049,7 +1049,7 @@ func TestEntryWithNoSessionsIsNotOpen(t *testing.T) {
 	if pf.CloseLatestOpenRun("dropped", "2024-01-01") {
 		t.Error("there is no open run to close")
 	}
-	if err := pf.UpdatePlaythrough(0, "2024-01-01", "finished", "", "", "", ""); err == nil {
+	if err := pf.UpdatePlaythrough(0, "2024-01-01", "finished", "", "", nil, "", ""); err == nil {
 		t.Error("a finish date has no session to land on, expected an error")
 	}
 }

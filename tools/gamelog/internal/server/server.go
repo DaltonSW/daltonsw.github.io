@@ -217,6 +217,7 @@ var funcMap = template.FuncMap{
 	},
 	"dash":         model.OrDash,
 	"joinLines":    func(ss []string) string { return strings.Join(ss, "\n") },
+	"joinTags":     func(ss []string) string { return strings.Join(ss, ", ") },
 	"gameStatuses": func() []string { return model.GameStatuses },
 	"pthStatuses":  func() []string { return model.PlaythroughStatuses },
 	"staleQuick":   func() []string { return model.StaleQuickStatuses },

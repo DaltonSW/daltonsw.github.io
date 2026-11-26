@@ -283,7 +283,7 @@ func FindUnloggedActivity(archiveDir string, games []model.GameSummary, opts Act
 //
 //   - activity bordering a logged session (see borderingSessions): that
 //     session, extended to cover it;
-//   - a one-shot game (endless/multiplayer/software) with a run of that kind:
+//   - a one-shot game (endless/software) with a run of that kind:
 //     a session on it, spanning the uncovered activity — the run's sessions
 //     list is usually the record (a second entry is allowed, just not guessed);
 //   - an uncovered finishing award: a new finished playthrough ending on the

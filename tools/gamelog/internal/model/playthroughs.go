@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -78,6 +79,10 @@ type PlaythroughEntry struct {
 	// game with no declared roster has nothing to inherit from.
 	Subgame string `yaml:"subgame,omitempty"`
 
+	// Tags are this run's own tags, on top of the game's (FrontMatter.Tags) —
+	// e.g. the co-op run of a game that's otherwise single-player.
+	Tags []string `yaml:"tags,omitempty"`
+
 	Extra map[string]any `yaml:",inline"`
 }
 
@@ -87,9 +92,10 @@ type PlaythroughFields struct {
 	Started  string
 	Finished string
 	Beaten   string // optional: the day the run beat the game, if before Finished
-	Status   string // playing|finished|dropped|unfinished|paused|endless|multiplayer|misc_launch
+	Status   string // playing|finished|dropped|unfinished|paused|endless|misc_launch
 	Platform string // blank means "same as the game's front matter"
 	Subgame  string // blank means "the whole game"; otherwise a member of the game's subgames: roster
+	Tags     []string
 	Rating   string // 1-10 or ""
 	Notes    string
 }
@@ -270,10 +276,14 @@ type Playthrough struct {
 	Status   string
 	Platform string
 	Subgame  string
+	Tags     []string
 	Rating   string
 	Notes    string
 	Sessions []Session
 }
+
+// TagsString renders the run's own tags as the form's comma-separated text.
+func (p Playthrough) TagsString() string { return strings.Join(p.Tags, ", ") }
 
 func (p Playthrough) HasSessions() bool { return len(p.Sessions) > 0 }
 
@@ -404,6 +414,7 @@ func (f *PlaythroughsFile) Views() []Playthrough {
 			Status:   e.Status,
 			Platform: e.Platform,
 			Subgame:  e.Subgame,
+			Tags:     e.Tags,
 			Rating:   e.RatingString(),
 			Notes:    e.Notes,
 		}
@@ -423,6 +434,7 @@ func (f *PlaythroughsFile) AddPlaythrough(pf PlaythroughFields) {
 		Status:   pf.Status,
 		Platform: pf.Platform,
 		Subgame:  pf.Subgame,
+		Tags:     pf.Tags,
 		Notes:    pf.Notes,
 	}
 	e.SetRating(pf.Rating)
@@ -543,8 +555,8 @@ func InsertSessionAllowedPaths(idx int, before, after []SessionEntry) []string {
 // SplitPlaythrough moves sessions[j:] out of playthrough idx into a new
 // entry appended to the file. append always lands the new entry at the true
 // end of f.Playthroughs, so no other entry's index is ever disturbed. The
-// new entry inherits idx's Platform and Subgame — a status split over time
-// is still the same run of the same subgame; Notes/Rating start blank;
+// new entry inherits idx's Platform, Subgame and Tags — a status split over
+// time is still the same run of the same subgame; Notes/Rating start blank;
 // newStatus is required, never copied from the source. j must be >0.
 func (f *PlaythroughsFile) SplitPlaythrough(idx, j int, newStatus string) (int, error) {
 	if idx < 0 || idx >= len(f.Playthroughs) {
@@ -562,6 +574,7 @@ func (f *PlaythroughsFile) SplitPlaythrough(idx, j int, newStatus string) (int, 
 		Status:   newStatus,
 		Platform: e.Platform,
 		Subgame:  e.Subgame,
+		Tags:     slices.Clone(e.Tags),
 		Sessions: moved,
 	})
 	return len(f.Playthroughs) - 1, nil
@@ -586,6 +599,7 @@ func (f *PlaythroughsFile) GraduatePlannedPlaythrough(idx int, pf PlaythroughFie
 	e.Status = pf.Status
 	e.Platform = pf.Platform
 	e.Subgame = pf.Subgame
+	e.Tags = pf.Tags
 	e.SetRating(pf.Rating)
 	e.Notes = pf.Notes
 	return nil
@@ -682,7 +696,7 @@ func SessionPath(idx, j int, field string) string {
 
 // UpdatePlaythrough applies edited field values. The finished date belongs to
 // the latest session; an entry with no sessions has nowhere to put one.
-func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform, subgame, rating, notes string) error {
+func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform, subgame string, tags []string, rating, notes string) error {
 	if idx < 0 || idx >= len(f.Playthroughs) {
 		return fmt.Errorf("no playthrough %d to update", idx+1)
 	}
@@ -696,6 +710,7 @@ func (f *PlaythroughsFile) UpdatePlaythrough(idx int, finished, status, platform
 	e.Status = status
 	e.Platform = platform
 	e.Subgame = subgame
+	e.Tags = tags
 	e.SetRating(rating)
 	e.Notes = notes
 	return nil

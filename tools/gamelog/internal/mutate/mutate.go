@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 
 	"go.dalton.dog/gamelog/internal/model"
 )
@@ -28,19 +29,8 @@ func HasPlannedFor(playthroughs []model.PlaythroughEntry, entryPlatform, gamePla
 func SameGameInfo(a, b model.FrontMatter) bool {
 	return a.Title == b.Title && a.Platform == b.Platform && a.Status == b.Status &&
 		a.Draft == b.Draft &&
-		a.RatingString() == b.RatingString() && sameSubgames(a.Subgames, b.Subgames)
-}
-
-func sameSubgames(a, b []string) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for i := range a {
-		if a[i] != b[i] {
-			return false
-		}
-	}
-	return true
+		a.RatingString() == b.RatingString() && slices.Equal(a.Subgames, b.Subgames) &&
+		slices.Equal(a.Tags, b.Tags)
 }
 
 // WriteFrontMatter previews nothing and prompts nothing — the caller (a

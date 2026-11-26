@@ -5,7 +5,7 @@ import "slices"
 // A game's status is derived from its playthroughs whenever it can be, the
 // same way its dates and mastery are. Two kinds of status stay hand-set:
 //
-//   - the one-shot statuses (endless/multiplayer/software): they describe the
+//   - the one-shot statuses (endless/software): they describe the
 //     kind of game, not how a run went, so Hades stays "endless" even though
 //     its run is "finished";
 //   - any game with no runs that count: backlog, or a game logged before runs
@@ -17,8 +17,10 @@ import "slices"
 
 // countsForStatus reports whether a run takes part in deriving the game's
 // status. planned hasn't happened; misc_launch wasn't a real attempt; an
-// endless/multiplayer run on a game with a finish line is a side mode (and
-// deriving *into* a one-shot status would make the game hand-set for good).
+// endless run on a game with a finish line is a side mode (and deriving
+// *into* a one-shot status would make the game hand-set for good).
+// "multiplayer" is a pre-tags run status, treated like endless in case a
+// hand-edited file still says it (see GameStatuses).
 func countsForStatus(p Playthrough) bool {
 	switch p.Status {
 	case "planned", "misc_launch", "endless", "multiplayer":
@@ -95,25 +97,30 @@ func (f *PlaythroughsFile) CloseLatestOpenRun(status, closedOn string) bool {
 	return true
 }
 
-// "endless", "multiplayer", and "software" all mark an entry that
-// doesn't have a meaningful start/finish narrative — it's used in an
-// open-ended series of sessions with no state that ends play — for three
-// different reasons: endless is a replay-loop design
-// (roguelike/sandbox/idle), multiplayer is inherently social, and software
-// isn't a game at all. Steam sells tools alongside games and reports playtime
+// "endless" and "software" both mark an entry that doesn't have a
+// meaningful start/finish narrative — it's used in an open-ended series of
+// sessions with no state that ends play — for two different reasons: endless
+// is a replay-loop design (roguelike/sandbox/idle, or a competitive game with
+// no end), and software isn't a game at all. Steam sells tools alongside games and reports playtime
 // for them identically, so they arrive through the same scan; "software" says
 // the completion vocabulary simply doesn't apply rather than forcing a
 // finished/dropped answer to a question that was never asked.
 //
-// endless and multiplayer can also be set on an individual playthrough entry
-// (see PlaythroughStatuses) — a game with distinct modes (Hitman's story
-// campaign, its Freelancer roguelike, and its multiplayer contracts) is one
-// game with several differently-shaped entries, not one status forced onto
-// all of them. "software" stays game-level only: it describes the whole
+// endless can also be set on an individual playthrough entry (see
+// PlaythroughStatuses) — a game with distinct modes (Hitman's story campaign
+// and its Freelancer roguelike) is one game with differently-shaped entries,
+// not one status forced onto all of them. "software" stays game-level only: it describes the whole
 // record, not a mode a game can also have alongside others.
 //
-// There's no cap on entries of a one-shot status: a second multiplayer entry
-// on the same platform (another group, another season) is a real record.
+// There's no cap on entries of a one-shot status: a second endless entry on
+// the same platform (another group, another season) is a real record.
+//
+// "multiplayer" was a one-shot status until 2026-11-26. It's a tag now
+// (FrontMatter.Tags, PlaythroughEntry.Tags), because playing with other
+// people says nothing about whether a game can be finished: Castle Crashers
+// can, Rocket League can't. Nothing offers or writes it as a status any more;
+// IsOneShot and countsForStatus still recognise it so a hand-edited file that
+// says it keeps behaving as it did.
 //
 // "unplayed" is deliberately not here: the site derives it for any game with
 // no playthrough entries and no captured playtime (layouts/partials/
@@ -128,7 +135,7 @@ func (f *PlaythroughsFile) CloseLatestOpenRun(status, closedOn string) bool {
 // trailed off with no stated intent either way. It closes like "dropped"
 // (gets a finished/closed date, counts as a done status), it just doesn't
 // share dropped's certainty.
-var GameStatuses = []string{"backlog", "playing", "finished", "dropped", "unfinished", "paused", "endless", "multiplayer", "software"}
+var GameStatuses = []string{"backlog", "playing", "finished", "dropped", "unfinished", "paused", "endless", "software"}
 
 // IsOneShot reports whether a status is one of the one-shot statuses
 // documented above. On a game it means the status is hand-set, never derived
@@ -139,11 +146,12 @@ func IsOneShot(status string) bool {
 }
 
 // DefaultPlaythroughStatus is the status a new playthrough starts with when
-// nothing says otherwise: "playing", unless the game as a whole is one of the
-// modes that has no finish line.
+// nothing says otherwise: "playing", unless the game as a whole has no finish
+// line. A legacy "multiplayer" game gets "endless", since that's no longer a
+// run status.
 func DefaultPlaythroughStatus(gameStatus string) string {
 	if gameStatus == "endless" || gameStatus == "multiplayer" {
-		return gameStatus
+		return "endless"
 	}
 	return "playing"
 }
@@ -154,7 +162,7 @@ func DefaultPlaythroughStatus(gameStatus string) string {
 // which implies play was actually attempted and abandoned. Each launch is
 // its own unrelated occasion, so it repeats freely; it isn't one-shot (see
 // IsOneShot).
-var PlaythroughStatuses = []string{"playing", "finished", "dropped", "unfinished", "paused", "endless", "multiplayer", "misc_launch"}
+var PlaythroughStatuses = []string{"playing", "finished", "dropped", "unfinished", "paused", "endless", "misc_launch"}
 
 // IsGameStatus reports whether s is a status a game may actually be created
 // or set to. Used to check values arriving from a submitted form, which must
@@ -178,11 +186,10 @@ var StaleQuickStatuses = []string{"finished", "dropped", "unfinished", "paused"}
 //
 // "software" is in the set because Steam sells tools alongside games and
 // reports playtime for them identically — the scan can't tell them apart, and
-// the person reading the row can. "endless" and "multiplayer" are here for
-// the same reason: a scan candidate's evidence is just playtime/achievements,
+// the person reading the row can. "endless" is here for the same reason: a scan candidate's evidence is just playtime/achievements,
 // which looks identical whether the game has a finish line or not — that
 // call is the person reading the row's to make.
-var ScanQuickStatuses = []string{"playing", "finished", "dropped", "unfinished", "software", "endless", "multiplayer"}
+var ScanQuickStatuses = []string{"playing", "finished", "dropped", "unfinished", "software", "endless"}
 
 // BacklogQuickStatuses is the backlog half's set. Deliberately smaller:
 // these are games under the playtime threshold, so any status claiming real

@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"sort"
 	"strings"
 	"unicode"
@@ -32,6 +33,8 @@ type GameSummary struct {
 	// read-only — change a run to change it.
 	StatusDerived   bool
 	Platform        string
+	Tags            []string // the game's own tags (FrontMatter.Tags)
+	RunTags         []string // tags only some of its runs carry, beyond Tags
 	Rating          string
 	NumPlaythroughs int
 	// IDs is this game's id on each provider it's linked to, keyed by provider
@@ -103,6 +106,8 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 		FirstFinished:   firstFinished(views),
 		StatusDerived:   statusDerived(doc.FM.Status, views),
 		Platform:        doc.FM.Platform,
+		Tags:            doc.FM.Tags,
+		RunTags:         runOnlyTags(doc.FM.Tags, views),
 		Rating:          doc.FM.RatingString(),
 		NumPlaythroughs: len(pf.Playthroughs),
 		IDs:             doc.ProviderIDs(),
@@ -115,6 +120,35 @@ func GameSummaryFor(slug, path string, doc *Doc, pf *PlaythroughsFile) GameSumma
 func statusDerived(current string, views []Playthrough) bool {
 	_, ok := DeriveGameStatus(current, views)
 	return ok
+}
+
+// runOnlyTags returns the tags runs carry that the game itself doesn't, in
+// first-seen order.
+func runOnlyTags(gameTags []string, views []Playthrough) []string {
+	var out []string
+	for _, p := range views {
+		for _, t := range p.Tags {
+			if !slices.Contains(gameTags, t) && !slices.Contains(out, t) {
+				out = append(out, t)
+			}
+		}
+	}
+	return out
+}
+
+// KnownTags is every tag in use across games and their runs, sorted — what
+// the forms offer as suggestions.
+func KnownTags(games []GameSummary) []string {
+	var out []string
+	for _, g := range games {
+		for _, t := range slices.Concat(g.Tags, g.RunTags) {
+			if !slices.Contains(out, t) {
+				out = append(out, t)
+			}
+		}
+	}
+	slices.Sort(out)
+	return out
 }
 
 func ListGames(gamesDir string) ([]GameSummary, error) {
@@ -234,6 +268,7 @@ type NewGameFields struct {
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
 	Subgames []string
+	Tags     []string // see FrontMatter.Tags
 	// Started/Finished aren't front matter: when either is set, CreateGameFile
 	// writes them as the game's first playthrough entry.
 	Started  string
@@ -269,6 +304,12 @@ func formatNewGameFile(f NewGameFields, slug string) string {
 	)
 	for _, sg := range f.Subgames {
 		lines = append(lines, fmt.Sprintf("  - %q", sg))
+	}
+	if len(f.Tags) > 0 {
+		lines = append(lines, "tags:")
+		for _, t := range f.Tags {
+			lines = append(lines, fmt.Sprintf("  - %q", t))
+		}
 	}
 	lines = append(lines,
 		"rating: "+f.Rating,

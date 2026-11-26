@@ -44,9 +44,9 @@ type StaleCandidate struct {
 
 // FindStaleCandidates considers any currently-"playing" Steam-linked game,
 // draft or not — pre-classifying drafts before they're reviewed and published
-// is exactly what this is for. The one-shot statuses (endless,
-// multiplayer, software) are never "playing" by design, so they're naturally
-// excluded — a finished/dropped guess is meaningless for all three.
+// is exactly what this is for. The one-shot statuses (endless, software) are
+// never "playing" by design, so they're naturally excluded — a
+// finished/dropped guess is meaningless for both.
 func FindStaleCandidates(archiveDir string, games []model.GameSummary, thresholdDays int) ([]StaleCandidate, error) {
 	now := time.Now().In(model.SiteLocation)
 	var out []StaleCandidate

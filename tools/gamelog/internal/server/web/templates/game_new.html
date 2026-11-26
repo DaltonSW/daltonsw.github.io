@@ -6,7 +6,7 @@
 
   <div class="field">
     <label for="title">Title</label>
-    <input type="text" id="title" name="title" required value="{{.Title}}">
+    <input type="text" id="title" name="title" required value="{{.NewGameFields.Title}}">
   </div>
   <div class="field">
     <label for="platform">Platform</label>
@@ -32,6 +32,11 @@
   <div class="field">
     <label for="subgames">Subgames (one per line, optional — marks this as a compilation)</label>
     <textarea id="subgames" name="subgames" rows="3">{{joinLines .Subgames}}</textarea>
+  </div>
+  <div class="field">
+    <label for="tags">Tags (comma-separated, optional — e.g. multiplayer)</label>
+    <input type="text" id="tags" name="tags" value="{{joinTags .Tags}}" list="known-tags">
+    <datalist id="known-tags">{{range .KnownTags}}<option value="{{.}}">{{end}}</datalist>
   </div>
   <div class="field">
     <label for="started">First playthrough started (YYYY-MM-DD, blank for none)</label>

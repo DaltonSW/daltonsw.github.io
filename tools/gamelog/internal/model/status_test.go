@@ -22,7 +22,7 @@ func TestDeriveGameStatus(t *testing.T) {
 		{"one-shot games stay hand-set", "endless",
 			[]Playthrough{run("finished", "2020-10-23", "2022-12-20")}, "", false},
 		{"only side modes and misc launches stay hand-set", "finished",
-			[]Playthrough{run("multiplayer", "2014-06-05", "2014-06-10"), run("misc_launch", "2015-01-01", "2015-01-01")}, "", false},
+			[]Playthrough{run("endless", "2014-06-05", "2014-06-10"), run("misc_launch", "2015-01-01", "2015-01-01")}, "", false},
 		{"an open replay of a finished game reads playing", "finished",
 			[]Playthrough{run("finished", "2023-10-15", "2024-02-11"), run("playing", "2026-08-29", "")}, "playing", true},
 		{"an open paused run reads paused", "finished",
@@ -30,7 +30,7 @@ func TestDeriveGameStatus(t *testing.T) {
 		{"a later dropped run doesn't un-finish a game", "dropped",
 			[]Playthrough{run("finished", "2019-10-16", "2019-10-18"), run("dropped", "2019-10-18", "2019-10-19")}, "finished", true},
 		{"a later co-op run doesn't either", "finished",
-			[]Playthrough{run("finished", "2012-11-17", "2012-12-31"), run("multiplayer", "2016-07-09", "2016-07-13")}, "finished", true},
+			[]Playthrough{run("finished", "2012-11-17", "2012-12-31"), run("endless", "2016-07-09", "2016-07-13")}, "finished", true},
 		{"never finished: the run that ended last", "playing",
 			[]Playthrough{run("dropped", "2020-01-01", "2020-02-01"), run("unfinished", "2021-01-01", "2021-03-01")}, "unfinished", true},
 	}

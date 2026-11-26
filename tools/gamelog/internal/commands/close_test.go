@@ -83,7 +83,7 @@ func TestCloseEntry_ClosesTrailingSession(t *testing.T) {
 // check without declaring anything.
 func TestCloseEntry_ClosesFlatEntry(t *testing.T) {
 	dir := t.TempDir()
-	g := writeGameWithPlaythroughs(t, dir, "flat", "multiplayer", openFlatYAML)
+	g := writeGameWithPlaythroughs(t, dir, "flat", "endless", openFlatYAML)
 
 	if _, err := CloseEntry(OpenEntry{Game: g, Index: 0, CloseOn: "2020-07-16"}); err != nil {
 		t.Fatal(err)
@@ -232,7 +232,7 @@ func TestFindOpenEntries_PrefersTheLaterOfArchiveAndLoggedStart(t *testing.T) {
 
 	// With no archive link at all, the open session's own start date is the
 	// last day we can prove it was played.
-	g2 := writeGameWithPlaythroughs(t, dir, "unlinked", "multiplayer", openSessionsYAML)
+	g2 := writeGameWithPlaythroughs(t, dir, "unlinked", "endless", openSessionsYAML)
 	got2, err := FindOpenEntries(archiveDir, dir, []model.GameSummary{g2}, 30, false)
 	if err != nil {
 		t.Fatal(err)

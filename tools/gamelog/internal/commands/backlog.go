@@ -84,7 +84,7 @@ func FindIncomplete(archiveDir string, games []model.GameSummary, opts Incomplet
 	now := time.Now().In(model.SiteLocation)
 	var out []IncompleteCandidate
 	for _, g := range games {
-		// endless/multiplayer/software have no completion to be short of.
+		// endless/software have no completion to be short of.
 		if model.IsOneShot(g.Status) {
 			continue
 		}

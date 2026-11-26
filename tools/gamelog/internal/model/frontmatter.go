@@ -84,6 +84,13 @@ type FrontMatter struct {
 	// `subgame:` names which roster member it covers — see PlaythroughEntry.
 	Subgames []string `yaml:"subgames,omitempty"`
 
+	// Tags are free-form labels for the game — "multiplayer" is the first.
+	// They say what kind of game it is, separate from status (how play went)
+	// and orthogonal to it: a multiplayer game can be endless or finishable.
+	// A playthrough entry can carry its own tags too; a run's effective tags
+	// are the game's plus its own. Normalized by ParseTags.
+	Tags []string `yaml:"tags,omitempty"`
+
 	// There are deliberately no dates here. A game's first-played,
 	// first-finished and last-played dates are all derived from
 	// playthroughs.yaml (see GameSummaryFor). A stray `started:`/`finished:`

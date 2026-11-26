@@ -3,10 +3,13 @@
   <h1>{{.FM.Title}}</h1>
   <div class="row">
     <span class="{{pillClass .FM.Status}}">{{.FM.Status}}</span>
+    {{range .FM.Tags}}<span class="tag" data-tag="{{.}}">{{.}}</span>{{end}}
     {{if .FM.Draft}}<span class="pill pill--draft">draft</span>{{end}}
   </div>
 </div>
 <p class="dim">{{.Slug}}{{if .HasProviderLink}} · linked{{end}}</p>
+
+<datalist id="known-tags">{{range .KnownTags}}<option value="{{.}}">{{end}}</datalist>
 
 <div class="detail-layout">
 <div class="detail-main">
@@ -23,6 +26,10 @@
     <div class="field field--wide">
       <label>Subgames (one per line, optional — marks this as a compilation)</label>
       <textarea name="subgames" rows="3">{{joinLines .FM.Subgames}}</textarea>
+    </div>
+    <div class="field field--wide">
+      <label>Tags (comma-separated, e.g. multiplayer — what kind of game it is, separate from status)</label>
+      <input type="text" name="tags" value="{{joinTags .FM.Tags}}" list="known-tags">
     </div>
     <div class="field field--wide dim">First played: {{or .Started "—"}} · First finished: {{or .FirstFinished "—"}} — derived from the playthroughs below; the game itself has no dates.</div>
 
@@ -143,6 +150,7 @@
     {{if $.FM.Subgames}}
     <select name="subgame"><option value="">(none — whole game)</option>{{$sg := .Subgame}}{{range $.FM.Subgames}}<option value="{{.}}"{{if eq . $sg}} selected{{end}}>{{.}}</option>{{end}}</select>
     {{end}}
+    <input type="text" name="tags" placeholder="tags (comma-separated)" list="known-tags" title="This run's own tags, on top of the game's (e.g. multiplayer for a co-op run).">
     <input type="text" name="rating" placeholder="rating 1-10">
     <input type="text" name="notes" placeholder="notes" value="{{.Notes}}">
     <button type="submit" class="btn--primary">Start now</button>
@@ -177,6 +185,7 @@
     {{if .FM.Subgames}}
     <select name="subgame"><option value="">(none — whole game)</option>{{range .FM.Subgames}}<option value="{{.}}">{{.}}</option>{{end}}</select>
     {{end}}
+    <input type="text" name="tags" placeholder="tags (comma-separated)" list="known-tags" title="This run's own tags, on top of the game's (e.g. multiplayer for a co-op run).">
     <input type="text" name="rating" placeholder="rating 1-10">
     <input type="text" name="notes" placeholder="notes">
     <button type="submit" class="btn--primary">Start</button>

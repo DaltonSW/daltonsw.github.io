@@ -223,11 +223,19 @@ summary.tui__title::marker { color: var(--accent); font-size: 0.7em; }
 .pill--backlog     { color: var(--dim); }
 .pill--paused      { color: var(--pause); }
 .pill--endless     { color: var(--endless); }
-.pill--multiplayer { color: var(--multi); }
 .pill--software    { color: var(--software); }
 .pill--misc_launch { color: var(--misc-launch); }
 .pill--planned     { color: var(--accent); }
 .pill--draft       { color: var(--dim); border-style: dashed; }
+
+/* free-form game/run tags (FrontMatter.Tags); known ones get a color */
+.tag {
+  font-size: 0.8em;
+  color: var(--dim);
+  white-space: nowrap;
+}
+.tag::before { content: "#"; }
+.tag:where([data-tag="multiplayer"]) { color: var(--multi); }
 
 /* ── Forms ─────────────────────────────────────────────────────────────── */
 label { display: block; font-family: "MartianMono", ui-monospace, "SFMono-Regular", monospace; font-size: 0.85rem; color: var(--dim); margin: 1rem 0 0.3rem; }

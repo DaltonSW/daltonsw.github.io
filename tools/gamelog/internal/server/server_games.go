@@ -100,13 +100,30 @@ func (s *server) handleIndex(w http.ResponseWriter, r *http.Request) {
 type gameNewData struct {
 	Page
 	model.NewGameFields
+	// Title is the page's title. Page and NewGameFields both have one, and a
+	// template can't resolve the tie, so this shallower field settles it for
+	// the layout; the form reads .NewGameFields.Title.
+	Title     string
+	KnownTags []string // suggestions for the tags field
+}
+
+func newGameData(r *http.Request, f model.NewGameFields, knownTags []string) gameNewData {
+	page := newPage(r, "New game", "games")
+	return gameNewData{Page: page, NewGameFields: f, Title: page.Title, KnownTags: knownTags}
+}
+
+// knownTags is every tag in use, for the tag fields' suggestions. A listing
+// failure only costs the suggestions, so it isn't an error.
+func (s *server) knownTags() []string {
+	games, err := model.ListGames(s.gamesDir)
+	if err != nil {
+		return nil
+	}
+	return model.KnownTags(games)
 }
 
 func (s *server) handleNewGameForm(w http.ResponseWriter, r *http.Request) {
-	data := gameNewData{
-		Page:          newPage(r, "New game", "games"),
-		NewGameFields: model.NewGameFields{Status: "playing", Started: model.Today()},
-	}
+	data := newGameData(r, model.NewGameFields{Status: "playing", Started: model.Today()}, s.knownTags())
 	s.render(w, "game_new", data)
 }
 
@@ -120,6 +137,7 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 		Platform: r.FormValue("platform"),
 		Status:   r.FormValue("status"),
 		Subgames: model.ParseSubgames(r.FormValue("subgames")),
+		Tags:     model.ParseTags(r.FormValue("tags")),
 		Started:  r.FormValue("started"),
 		Finished: r.FormValue("finished"),
 		Rating:   r.FormValue("rating"),
@@ -127,7 +145,7 @@ func (s *server) handleCreateGame(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fail := func(msg string) {
-		data := gameNewData{Page: newPage(r, "New game", "games"), NewGameFields: f}
+		data := newGameData(r, f, s.knownTags())
 		data.Flash.Error = msg
 		s.render(w, "game_new", data)
 	}
@@ -270,7 +288,8 @@ type gameDetailData struct {
 	// Lists feed the add-to-list selects; ListRanks is where this game itself is ranked.
 	Lists        []model.GameList
 	ListRanks    []model.ListRank
-	SelectedList string // preselects the selectors after an add (?list=)
+	SelectedList string   // preselects the selectors after an add (?list=)
+	KnownTags    []string // suggestions for the tags fields
 	// IDs is this game's provider ids as strings, whatever the YAML scalar
 	// underneath decoded to, and ProviderFields is the provider-IDs form built
 	// from them — one input per model.Providers() entry.
@@ -365,6 +384,7 @@ func (s *server) buildGameDetail(r *http.Request, slug string, doc *model.Doc, p
 		Lists:            lists.Lists,
 		ListRanks:        lists.GameRanks(slug),
 		SelectedList:     r.URL.Query().Get("list"),
+		KnownTags:        s.knownTags(),
 		IDs:              g.IDs,
 		ProviderFields:   providerFields(g.IDs),
 		NadeoAccountID:   doc.NadeoAccountIDString(),
@@ -438,6 +458,7 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 		updated.Status = r.FormValue("status")
 	}
 	updated.Subgames = model.ParseSubgames(r.FormValue("subgames"))
+	updated.Tags = model.ParseTags(r.FormValue("tags"))
 	updated.SetRating(rating)
 	updated.Draft = r.FormValue("draft") == "1"
 
@@ -445,12 +466,17 @@ func (s *server) handleEditInfo(w http.ResponseWriter, r *http.Request) {
 		redirectOK(w, r, gamePath(slug), "No changes.")
 		return
 	}
+	old := doc.FM
 	doc.FM = updated
 
 	// Front-matter scalar fields aren't omitempty, so clearing one leaves the
-	// key present rather than dropping it — nothing here is ever a legitimate
-	// removal to declare, matching doEditGameInfo in main.go.
-	if err := mutate.WriteFrontMatter(doc); err != nil {
+	// key present. The two lists are: a shortened subgames or tags list drops
+	// its tail items, which is the edit's intent.
+	removed := slices.Concat(
+		model.ShrunkListPaths("subgames", len(old.Subgames), len(updated.Subgames)),
+		model.ShrunkListPaths("tags", len(old.Tags), len(updated.Tags)),
+	)
+	if err := mutate.WriteFrontMatter(doc, removed...); err != nil {
 		redirectErr(w, r, gamePath(slug), err)
 		return
 	}
@@ -609,6 +635,7 @@ func parsePlaythroughFields(r *http.Request) model.PlaythroughFields {
 		Status:   r.FormValue("status"),
 		Platform: r.FormValue("platform"),
 		Subgame:  r.FormValue("subgame"),
+		Tags:     model.ParseTags(r.FormValue("tags")),
 		Rating:   r.FormValue("rating"),
 		Notes:    r.FormValue("notes"),
 	}
@@ -706,11 +733,12 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	finished, status := r.FormValue("finished"), r.FormValue("status")
 	platform, subgame, rating, notes := r.FormValue("platform"), r.FormValue("subgame"), r.FormValue("rating"), r.FormValue("notes")
 	beaten := strings.TrimSpace(r.FormValue("beaten"))
+	tags := model.ParseTags(r.FormValue("tags"))
 
 	fail := func(err error) {
 		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p)
 		view.DisplayFinished, view.Status, view.Platform, view.Subgame, view.Rating, view.Notes = finished, status, platform, subgame, rating, notes
-		view.Beaten = beaten
+		view.Beaten, view.Tags = beaten, tags
 		view.Error = err.Error()
 		s.renderFragment(w, "playthrough_fragments.html", "playthrough_header", view)
 	}
@@ -728,12 +756,12 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	if finished == displayFinished && status == p.Status && platform == p.Platform &&
-		subgame == p.Subgame && rating == p.Rating && notes == p.Notes && beaten == p.Beaten {
+		subgame == p.Subgame && slices.Equal(tags, p.Tags) && rating == p.Rating && notes == p.Notes && beaten == p.Beaten {
 		s.renderFragment(w, "playthrough_fragments.html", "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p))
 		return
 	}
 
-	if err := pf.UpdatePlaythrough(idx, finished, status, platform, subgame, rating, notes); err != nil {
+	if err := pf.UpdatePlaythrough(idx, finished, status, platform, subgame, tags, rating, notes); err != nil {
 		fail(err)
 		return
 	}
@@ -763,6 +791,7 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	if beaten == "" {
 		allowed = append(allowed, base+".beaten")
 	}
+	allowed = append(allowed, model.ShrunkListPaths(base+".tags", len(p.Tags), len(tags))...)
 	if err := mutate.WriteEntry(pf, allowed...); err != nil {
 		fail(err)
 		return
