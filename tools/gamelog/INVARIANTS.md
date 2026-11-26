@@ -80,7 +80,7 @@ what's load-bearing.
   `2026-01-04` to a timestamp, and re-encoding that rewrites every date in the file as RFC3339.
 - **Every playthrough write goes through the pre-write loss check.** `mutate.VerifyNoLoss` diffs
   the pending rewrite against the bytes on disk and refuses if a field would vanish. It's reached
-  via `WriteEntry`/`WriteSplit`/`WriteFrontMatter`. Operations that
+  via `WriteEntry`/`WriteFrontMatter`. Operations that
   legitimately remove a path declare it (`RemoveSessionAllowedPaths`, `MoveSessionAllowedPaths`,
   `TruncateSessionAllowedPaths`, or explicit lists in the handlers). If a new operation trips the
   check, the operation is wrong. Don't widen the allowlist to silence it.
@@ -100,7 +100,7 @@ what's load-bearing.
   `content/games/_index.md`.
 - **Status flows from runs to the game, never the other way.** `model.DeriveGameStatus` decides
   the game's status, and `mutate.SyncGameStatus` writes it into front matter after every
-  playthrough write (`WriteEntry`/`WriteSplit`, so `close.go` too) and for
+  playthrough write (`WriteEntry`, so `close.go` too) and for
   every game in Housekeeping's Regenerate summaries (`commands.Project`). The old `SyncStatus`, which pushed a game status onto its sole
   entry, is gone. Don't add a path that edits a derived game status directly: change a run.
   Stale triage does exactly that (`CloseLatestOpenRun`).

@@ -225,13 +225,13 @@ func (s *server) handleSuggestFragment(w http.ResponseWriter, r *http.Request) {
 	slug := r.PathValue("slug")
 	report, doc, pf, err := s.suggestionFor(r.Context(), slug)
 	if err != nil {
-		s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", suggestView{Slug: slug, Error: err.Error()})
+		s.renderFragment(w, "suggest_fragments.html", "suggest_panel", suggestView{Slug: slug, Error: err.Error()})
 		return
 	}
 	status := model.DefaultPlaythroughStatus(doc.FM.Status)
 	v := buildSuggestView(report, doc, pf, status)
 	v.Providers = append(v.Providers, s.archiveSuggestion(slug, doc, pf, status))
-	s.renderFragment(w, suggestFragmentsCache, "suggest_fragments.html", "suggest_panel", v)
+	s.renderFragment(w, "suggest_fragments.html", "suggest_panel", v)
 }
 
 // archiveSuggestion is the panel's block for everything the live RA/Steam
@@ -623,7 +623,7 @@ func (s *server) handleJobProgress(w http.ResponseWriter, r *http.Request) {
 	if status == "done" && j.DoneHref != "" {
 		w.Header().Set("HX-Redirect", j.DoneHref)
 	}
-	s.renderJobProgress(w, jobData{
+	s.renderFragment(w, "job_progress.html", "job_progress", jobData{
 		ID: id, Status: status, Lines: lines, Err: errMsg,
 		Current: current, Total: total, CurrentItem: currentItem,
 	})

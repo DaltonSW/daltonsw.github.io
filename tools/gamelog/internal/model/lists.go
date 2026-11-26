@@ -85,7 +85,7 @@ func SaveLists(gamesDir string, gl GameLists) error {
 	}
 	header := "# Written by tools/gamelog (the Lists page). Safe to edit by hand, but comments\n" +
 		"# are not preserved: the tool rewrites this file whole. Order is rank.\n"
-	return os.WriteFile(path, append([]byte(header), body...), 0o644)
+	return writeFileAtomic(path, append([]byte(header), body...), 0o644)
 }
 
 // List returns the list with this id, or nil.

@@ -92,7 +92,7 @@ func SaveIgnored(archiveDir string, list IgnoredList) error {
 	}
 	header := "# Games deliberately excluded from the scan and backlog lists.\n" +
 		"# Nothing is deleted by being here — remove an entry and it comes back.\n"
-	return os.WriteFile(IgnoredPath(archiveDir), append([]byte(header), body...), 0o644)
+	return writeFileAtomic(IgnoredPath(archiveDir), append([]byte(header), body...), 0o644)
 }
 
 // AddIgnored puts one game on the list, or does nothing if it's already

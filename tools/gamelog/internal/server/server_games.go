@@ -539,7 +539,7 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 	fail := func(err error) {
 		row := model.GameSummaryFor(slug, doc.Path, doc, pf)
 		row.Status, row.Platform, row.Rating = status, platform, rating
-		s.renderRow(w, gameRowView{GameSummary: row, Error: err.Error()})
+		s.renderFragment(w, "game_row.html", "game_row", gameRowView{GameSummary: row, Error: err.Error()})
 	}
 
 	if g := model.GameSummaryFor(slug, doc.Path, doc, pf); g.StatusDerived {
@@ -567,7 +567,7 @@ func (s *server) handleQuickEditGame(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
+	s.renderFragment(w, "game_row.html", "game_row", gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
 }
 
 // handleUndraftGame is the games-index row's Undraft button — a one-field
@@ -596,7 +596,7 @@ func (s *server) handleUndraftGame(w http.ResponseWriter, r *http.Request) {
 	if doc.FM.Draft {
 		doc.FM.Draft = false
 		if err := mutate.WriteFrontMatter(doc); err != nil {
-			s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Error: err.Error()})
+			s.renderFragment(w, "game_row.html", "game_row", gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Error: err.Error()})
 			return
 		}
 	}
@@ -604,7 +604,7 @@ func (s *server) handleUndraftGame(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		return
 	}
-	s.renderRow(w, gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
+	s.renderFragment(w, "game_row.html", "game_row", gameRowView{GameSummary: model.GameSummaryFor(slug, doc.Path, doc, pf), Saved: true})
 }
 
 // ── Playthroughs ─────────────────────────────────────────────────────────
@@ -720,7 +720,7 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 		view.DisplayFinished, view.Status, view.Platform, view.Subgame, view.Rating, view.Notes = finished, status, platform, subgame, rating, notes
 		view.Beaten = beaten
 		view.Error = err.Error()
-		s.renderPlaythroughFragment(w, "playthrough_header", view)
+		s.renderFragment(w, "playthrough_fragments.html", "playthrough_header", view)
 	}
 
 	if err := model.ValidateDate(false)(finished); err != nil {
@@ -737,7 +737,7 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 	}
 	if finished == displayFinished && status == p.Status && platform == p.Platform &&
 		subgame == p.Subgame && rating == p.Rating && notes == p.Notes && beaten == p.Beaten {
-		s.renderPlaythroughFragment(w, "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p))
+		s.renderFragment(w, "playthrough_fragments.html", "playthrough_header", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, p))
 		return
 	}
 
@@ -778,7 +778,7 @@ func (s *server) handleUpdatePlaythrough(w http.ResponseWriter, r *http.Request)
 
 	view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 	view.Saved = true
-	s.renderPlaythroughFragment(w, "playthrough_header", view)
+	s.renderFragment(w, "playthrough_fragments.html", "playthrough_header", view)
 }
 
 // handleSplitPlaythrough answers with the whole playthroughs_section fragment
@@ -806,7 +806,7 @@ func (s *server) handleSplitPlaythrough(w http.ResponseWriter, r *http.Request) 
 	fail := func(err error) {
 		view := buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf)
 		view.Error = err.Error()
-		s.renderPlaythroughFragment(w, "playthroughs_section", view)
+		s.renderFragment(w, "playthrough_fragments.html", "playthroughs_section", view)
 	}
 
 	keepLast, err := strconv.Atoi(r.FormValue("keep_last"))
@@ -823,11 +823,11 @@ func (s *server) handleSplitPlaythrough(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 	allowed := model.TruncateSessionAllowedPaths(idx, before, splitFrom)
-	if err := mutate.WriteSplit(pf, allowed...); err != nil {
+	if err := mutate.WriteEntry(pf, allowed...); err != nil {
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "playthroughs_section", buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf))
+	s.renderFragment(w, "playthrough_fragments.html", "playthroughs_section", buildPlaythroughsSectionView(slug, doc.FM.Platform, doc.FM.Subgames, pf))
 }
 
 // ── Sessions ─────────────────────────────────────────────────────────────
@@ -894,7 +894,7 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 	started, finished, title := r.FormValue("started"), r.FormValue("finished"), r.FormValue("title")
 
 	fail := func(err error) {
-		s.renderPlaythroughFragment(w, "session_row", sessionRowView{
+		s.renderFragment(w, "playthrough_fragments.html", "session_row", sessionRowView{
 			Session:     model.Session{Index: j, Started: started, Finished: finished, Title: title},
 			Slug:        slug,
 			PthIndex:    idx,
@@ -912,7 +912,7 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if started == orig.Started && finished == orig.Finished && title == orig.Title {
-		s.renderPlaythroughFragment(w, "session_row", sessionRowView{
+		s.renderFragment(w, "playthrough_fragments.html", "session_row", sessionRowView{
 			Session:     model.Session{Index: j, Started: started, Finished: finished, Title: title},
 			Slug:        slug,
 			PthIndex:    idx,
@@ -932,7 +932,7 @@ func (s *server) handleEditSession(w http.ResponseWriter, r *http.Request) {
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "session_row", sessionRowView{
+	s.renderFragment(w, "playthrough_fragments.html", "session_row", sessionRowView{
 		Session:     pf.Views()[idx].Sessions[j],
 		Slug:        slug,
 		PthIndex:    idx,
@@ -961,7 +961,7 @@ func (s *server) handleSplitSession(w http.ResponseWriter, r *http.Request) {
 	fail := func(err error) {
 		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 		view.Error = err.Error()
-		s.renderPlaythroughFragment(w, "sessions_table", view)
+		s.renderFragment(w, "playthrough_fragments.html", "sessions_table", view)
 	}
 	firstEnd, secondStart := r.FormValue("split_end"), r.FormValue("split_start")
 	if err := model.ValidateDate(true)(firstEnd); err != nil {
@@ -982,7 +982,7 @@ func (s *server) handleSplitSession(w http.ResponseWriter, r *http.Request) {
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
+	s.renderFragment(w, "playthrough_fragments.html", "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
 }
 
 // handleDeleteSession answers with the whole sessions_table fragment for
@@ -1006,7 +1006,7 @@ func (s *server) handleDeleteSession(w http.ResponseWriter, r *http.Request) {
 	fail := func(err error) {
 		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 		view.Error = err.Error()
-		s.renderPlaythroughFragment(w, "sessions_table", view)
+		s.renderFragment(w, "playthrough_fragments.html", "sessions_table", view)
 	}
 
 	if err := pf.RemoveSession(idx, j); err != nil {
@@ -1017,7 +1017,7 @@ func (s *server) handleDeleteSession(w http.ResponseWriter, r *http.Request) {
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
+	s.renderFragment(w, "playthrough_fragments.html", "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
 }
 
 func (s *server) handleMoveSessionUp(w http.ResponseWriter, r *http.Request) {
@@ -1049,7 +1049,7 @@ func (s *server) moveSession(w http.ResponseWriter, r *http.Request, delta int) 
 	fail := func(err error) {
 		view := buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx])
 		view.Error = err.Error()
-		s.renderPlaythroughFragment(w, "sessions_table", view)
+		s.renderFragment(w, "playthrough_fragments.html", "sessions_table", view)
 	}
 
 	p := j
@@ -1065,7 +1065,7 @@ func (s *server) moveSession(w http.ResponseWriter, r *http.Request, delta int) 
 		fail(err)
 		return
 	}
-	s.renderPlaythroughFragment(w, "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
+	s.renderFragment(w, "playthrough_fragments.html", "sessions_table", buildPthUpdateView(slug, doc.FM.Platform, doc.FM.Subgames, pf.Views()[idx]))
 }
 
 // sessionIndices parses and bounds-checks the idx/j path values together,

@@ -293,7 +293,7 @@ func (s *server) handleCatchupScan(w http.ResponseWriter, r *http.Request) {
 		data.Scanned = strings.Join(scanned, ", ")
 		data.NumLogged = numLogged
 	}
-	s.renderFragment(w, catchupFragmentsCache, "catchup_fragments.html", "catchup_scan", data, catchupFragmentFiles[1:]...)
+	s.renderFragment(w, "catchup_fragments.html", "catchup_scan", data)
 }
 
 // ── The run ──────────────────────────────────────────────────────────────
@@ -622,7 +622,7 @@ func (s *server) handleCatchupLog(w http.ResponseWriter, r *http.Request) {
 		c.Target, c.Started, c.Finished, c.Status, c.Notes, c.Error = target, started, finished, status, notes, err.Error()
 		c.Beaten = beaten
 		c.setTargets()
-		s.renderFragment(w, catchupFragmentsCache, "catchup_fragments.html", "activity_card", c, catchupFragmentFiles[1:]...)
+		s.renderFragment(w, "catchup_fragments.html", "activity_card", c)
 		return
 	}
 	if !strings.HasSuffix(msg, ".") {

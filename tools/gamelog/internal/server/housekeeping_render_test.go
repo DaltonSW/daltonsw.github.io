@@ -2,7 +2,6 @@ package server
 
 import (
 	"bytes"
-	"html/template"
 	"strings"
 	"testing"
 
@@ -14,7 +13,7 @@ import (
 // now, the same way handleCatchupScan does.
 func renderScan(t *testing.T, data catchupScanData) string {
 	t.Helper()
-	tmpl, err := template.New("catchup_fragments.html").Funcs(funcMap).ParseFS(templatesFS, catchupFragmentFiles...)
+	tmpl, err := parseFragment("catchup_fragments.html")
 	if err != nil {
 		t.Fatal(err)
 	}

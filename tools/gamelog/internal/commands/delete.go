@@ -22,6 +22,9 @@ func DeleteGameStub(gamesDir string, g model.GameSummary, canDelete bool) error 
 	return os.RemoveAll(dir)
 }
 
+// HasArchiveRecord reports whether any of a game's provider links has a
+// captured archive record — captured history that would make deleting the
+// game's directory unsafe.
 func HasArchiveRecord(archiveDir string, links []model.ProviderLink) bool {
 	for _, l := range links {
 		if l.ID == "" {

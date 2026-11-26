@@ -45,11 +45,7 @@ var templatesFS fs.FS
 var staticFS fs.FS
 
 var pageTemplatesCache map[string]*template.Template
-var rowTemplateCache *template.Template
-var playthroughFragmentsCache *template.Template
-var jobProgressCache *template.Template
-var suggestFragmentsCache *template.Template
-var catchupFragmentsCache *template.Template
+var fragmentTemplatesCache map[string]*template.Template
 
 func init() {
 	if info, err := os.Stat(devWebRoot + "/web/templates"); err == nil && info.IsDir() {
@@ -68,16 +64,10 @@ func init() {
 		for name, spec := range pageSpecs {
 			pageTemplatesCache[name] = loadPage(spec.name, spec.partials...)
 		}
-		rowTemplateCache = template.Must(template.New("game_row.html").Funcs(funcMap).
-			ParseFS(templatesFS, "web/templates/game_row.html"))
-		playthroughFragmentsCache = template.Must(template.New("playthrough_fragments.html").Funcs(funcMap).
-			ParseFS(templatesFS, "web/templates/playthrough_fragments.html"))
-		jobProgressCache = template.Must(template.New("job_progress.html").Funcs(funcMap).
-			ParseFS(templatesFS, "web/templates/job_progress.html"))
-		suggestFragmentsCache = template.Must(template.New("suggest_fragments.html").Funcs(funcMap).
-			ParseFS(templatesFS, "web/templates/suggest_fragments.html"))
-		catchupFragmentsCache = template.Must(template.New("catchup_fragments.html").Funcs(funcMap).
-			ParseFS(templatesFS, catchupFragmentFiles...))
+		fragmentTemplatesCache = make(map[string]*template.Template, len(fragmentSpecs))
+		for file := range fragmentSpecs {
+			fragmentTemplatesCache[file] = template.Must(parseFragment(file))
+		}
 	}
 }
 
@@ -317,84 +307,33 @@ var pageSpecs = map[string]struct {
 	"lists":        {"lists.html", nil},
 }
 
-// catchupFragmentFiles are what Catch up's htmx fragments (an activity card
-// re-rendered with an error, the lazily loaded New games table) parse from:
-// the fragments themselves plus the scan rows' shared action block.
-var catchupFragmentFiles = []string{"web/templates/catchup_fragments.html", "web/templates/scan_actions.html"}
-
-// renderRow renders game_row.html on its own — the fragment
-// handleQuickEditGame swaps into the index page via htmx, as opposed to a
-// full "layout" page render.
-func (s *server) renderRow(w http.ResponseWriter, view gameRowView) {
-	tmpl := rowTemplateCache
-	if devMode {
-		var err error
-		tmpl, err = template.New("game_row.html").Funcs(funcMap).ParseFS(templatesFS, "web/templates/game_row.html")
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-	}
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	if err := tmpl.ExecuteTemplate(w, "game_row", view); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+// fragmentSpecs lists each standalone fragment file — rendered without
+// layout, as the target of an htmx swap — with every file it parses (itself
+// first, then any partials it calls into). fragmentTemplatesCache is built
+// from it once at startup unless devMode, as pageSpecs is.
+var fragmentSpecs = map[string][]string{
+	"game_row.html":              {"web/templates/game_row.html"},
+	"playthrough_fragments.html": {"web/templates/playthrough_fragments.html"},
+	"job_progress.html":          {"web/templates/job_progress.html"},
+	"suggest_fragments.html":     {"web/templates/suggest_fragments.html"},
+	"catchup_fragments.html":     {"web/templates/catchup_fragments.html", "web/templates/scan_actions.html"},
 }
 
-// renderPlaythroughFragment renders one named template out of
-// playthrough_fragments.html on its own — the htmx swap target for a
-// playthrough/session edit on the game-detail page, as opposed to the full
-// page reload that page used before. One file holds four related fragment
-// templates (playthrough_header, sessions_table, session_row,
-// playthroughs_section, each calling into the others), so this is
-// parameterized by name rather than one bespoke method per fragment.
-func (s *server) renderPlaythroughFragment(w http.ResponseWriter, name string, data any) {
-	tmpl := playthroughFragmentsCache
-	if devMode {
-		var err error
-		tmpl, err = template.New("playthrough_fragments.html").Funcs(funcMap).
-			ParseFS(templatesFS, "web/templates/playthrough_fragments.html")
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
+func parseFragment(file string) (*template.Template, error) {
+	files, ok := fragmentSpecs[file]
+	if !ok {
+		return nil, fmt.Errorf("unknown fragment file %s", file)
 	}
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	if err := tmpl.ExecuteTemplate(w, name, data); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+	return template.New(file).Funcs(funcMap).ParseFS(templatesFS, files...)
 }
 
-// renderJobProgress renders job_progress.html's "job_progress" block on its
-// own — the htmx poll target /jobs/{id}/progress swaps into the job status
-// page, as opposed to the full "layout" page handleJobStatus renders.
-func (s *server) renderJobProgress(w http.ResponseWriter, data jobData) {
-	tmpl := jobProgressCache
-	if devMode {
+// renderFragment renders one named template out of a fragment file in
+// fragmentSpecs, reparsing it per request in dev mode like render does.
+func (s *server) renderFragment(w http.ResponseWriter, file, name string, data any) {
+	tmpl := fragmentTemplatesCache[file]
+	if devMode || tmpl == nil {
 		var err error
-		tmpl, err = template.New("job_progress.html").Funcs(funcMap).
-			ParseFS(templatesFS, "web/templates/job_progress.html")
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-	}
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	if err := tmpl.ExecuteTemplate(w, "job_progress", data); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
-}
-
-// renderFragment renders one named template out of a standalone fragment
-// file (not wrapped in layout), reparsing it per request in dev mode like
-// the other render helpers. partials are any further files (paths under
-// web/templates/) the fragment calls into.
-func (s *server) renderFragment(w http.ResponseWriter, cached *template.Template, file, name string, data any, partials ...string) {
-	tmpl := cached
-	if devMode {
-		var err error
-		files := append([]string{"web/templates/" + file}, partials...)
-		tmpl, err = template.New(file).Funcs(funcMap).ParseFS(templatesFS, files...)
+		tmpl, err = parseFragment(file)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
@@ -428,7 +367,7 @@ func (s *server) render(w http.ResponseWriter, name string, data any) {
 }
 
 // redirectOK/redirectErr report a write's outcome: the submitted form is
-// already the user's confirmation (see mutate.WriteEntry/WriteSplit/
+// already the user's confirmation (see mutate.WriteEntry/
 // WriteFrontMatter), and the outcome is a flash query param on the page it
 // lands back on.
 func redirectOK(w http.ResponseWriter, r *http.Request, path, msg string) {

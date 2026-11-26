@@ -64,17 +64,12 @@ func WriteFrontMatter(doc *model.Doc, allowedRemovals ...string) error {
 	if err := model.CheckNoFieldLoss(oldFields, newFields, allowedRemovals); err != nil {
 		return err
 	}
-	if err := doc.Save(); err != nil {
-		return err
-	}
-	fmt.Printf("Saved %s\n", doc.Path)
-	return nil
+	return doc.Save()
 }
 
-// writeEntry is confirmAndWrite's no-prompt tail: verify-no-loss, save,
-// report. Split out so a caller that has already gotten its confirmation some
-// other way — a submitted web form, say — can reach the same safety net
-// without going through a terminal prompt.
+// WriteEntry writes a playthroughs file after the pre-write loss check, then
+// syncs the game's derived status. The caller (a submitted web form) is
+// already its own confirmation.
 func WriteEntry(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
 	if err := VerifyNoLoss(pf, allowedRemovals); err != nil {
 		return err
@@ -82,21 +77,6 @@ func WriteEntry(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
 	if err := pf.Save(); err != nil {
 		return err
 	}
-	fmt.Printf("Saved %s\n", pf.Path)
-	_, err := SyncGameStatus(pf)
-	return err
-}
-
-// WriteSplit previews and prompts nothing — the caller (a submitted web
-// form) is already its own confirmation. See WriteEntry.
-func WriteSplit(pf *model.PlaythroughsFile, allowedRemovals ...string) error {
-	if err := VerifyNoLoss(pf, allowedRemovals); err != nil {
-		return err
-	}
-	if err := pf.Save(); err != nil {
-		return err
-	}
-	fmt.Printf("Saved %s\n", pf.Path)
 	_, err := SyncGameStatus(pf)
 	return err
 }
