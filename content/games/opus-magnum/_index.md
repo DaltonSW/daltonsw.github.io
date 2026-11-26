@@ -11,7 +11,6 @@ cascade:
     games:
       - opus-magnum
 cover: null
-legacy_last_played: "2026-02-07"
 ---
 
 

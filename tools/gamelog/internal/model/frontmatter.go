@@ -87,8 +87,7 @@ type FrontMatter struct {
 	// There are deliberately no dates here. A game's first-played,
 	// first-finished and last-played dates are all derived from
 	// playthroughs.yaml (see GameSummaryFor). A stray `started:`/`finished:`
-	// in a hand-edited file lands in Extra and is preserved untouched, as is
-	// the inert `legacy_last_played:` some older games carry.
+	// in a hand-edited file lands in Extra and is preserved untouched.
 
 	// Rating is written bare (`rating: 9`), so it decodes as an int. `any`
 	// plus scalarString keeps whichever form the file used.

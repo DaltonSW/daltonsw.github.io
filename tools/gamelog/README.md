@@ -213,10 +213,10 @@ beside the run's dates.
 
 The new-game form's started/finished fields, and a scan candidate's finish, are written as the game's
 **first playthrough** by `CreateGameFile`. A game with no dates gets no entry. The edit forms show
-the derived dates read-only. Thirteen older games carry an inert
-`legacy_last_played:`: a Steam last-played snapshot that stale triage once wrote into front matter
-as `finished:`. The tool and site ignore it; it's kept because three of those dates exist nowhere
-else.
+the derived dates read-only. (Stale triage once wrote a Steam last-played snapshot into front
+matter as `finished:`, and it was kept for a while as an inert `legacy_last_played:`. It's gone now:
+eleven of the thirteen dates were already in the Steam archive record, and the other two became
+`misc_launch` entries.)
 
 **A game's status is derived from its runs too**, wherever it can be (`model.DeriveGameStatus`):
 
@@ -1373,8 +1373,6 @@ Things that don't exist yet, as distinct from things left out on purpose:
 - **`raParentCache` (a subset's parent lookup) is memoized per process, not persisted.** Every
   server restart pays the ~1.2s RA call again per unattached subset row. Fine at one subset; it
   needs a persisted cache before the count grows much.
-- **`legacy_last_played:` is still on 13 games.** It's inert and preserved via `Extra`. Don't
-  reintroduce `started`/`finished` on `FrontMatter`.
 - **First-finished is computed twice**, in `firstFinished` (Go) and
   `layouts/partials/game-first-finished.html`, kept in step by hand.
 

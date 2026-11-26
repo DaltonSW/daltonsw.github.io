@@ -8,7 +8,6 @@ subgames:
   - Crash Bandicoot
   - Cortex Strikes Back
   - Warped
-legacy_last_played: "2022-05-14"
 rating: null
 draft: false
 cascade:
