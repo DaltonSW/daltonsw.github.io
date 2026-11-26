@@ -5,7 +5,7 @@ providers:
       stats:
         - key: bloonsPopped
           name: Bloons Popped
-          value: 1e+08
+          value: 100000000
         - key: moabsPopped
           name: Moabs Popped
           value: 25000
@@ -89,7 +89,7 @@ providers:
           value: 200000
         - key: masterAlchemistDamage
           name: Master Alchemist Damage
-          value: 9.925189e+06
+          value: 9925189
         - key: shimmeredBloons
           name: Shimmered Bloons Popped
           value: 10000

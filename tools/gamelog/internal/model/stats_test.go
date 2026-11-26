@@ -5,6 +5,8 @@ import (
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"gopkg.in/yaml.v3"
 )
 
 func f(v float64) *float64 { return &v }
@@ -124,3 +126,17 @@ func TestWriteAchievementSummary_RemovesAStaleStatsProjection(t *testing.T) {
 }
 
 func contains(s, sub string) bool { return strings.Contains(s, sub) }
+
+func TestStatNumber_MarshalsPlainDecimalNeverExponent(t *testing.T) {
+	out, err := yaml.Marshal(StatEntry{Key: "k", Value: StatNumber(1e8)})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(string(out), "value: 100000000\n") {
+		t.Errorf("want plain 100000000, got:\n%s", out)
+	}
+	out, _ = yaml.Marshal(StatEntry{Key: "k", Value: StatNumber(0.8)})
+	if !strings.Contains(string(out), "value: 0.8\n") {
+		t.Errorf("want 0.8, got:\n%s", out)
+	}
+}
