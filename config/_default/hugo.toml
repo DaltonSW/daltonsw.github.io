@@ -21,10 +21,15 @@ timezone = "America/Chicago"
 # with a comma-joined platform string (e.g. "PC, Xbox 360") become one
 # composite term rather than two separate ones; accepted rather than
 # reshaping the platform field, since only ~4 games are affected.
+#
+# `tags` reads the games' free-form `tags:` list (multiplayer, …). A tag only a
+# run carries (playthroughs.yaml) isn't front matter, so it gets no term page;
+# it shows on the game page instead.
 [taxonomies]
     game = "games"
     platform = "platform"
     status = "status"
+    tag = "tags"
 
 # Written playthrough pages track real dates in `started`/`finished`; projects use
 # `date`. Wire both into Hugo's canonical dates so feeds, sitemap <lastmod>, and

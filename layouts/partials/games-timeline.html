@@ -4,7 +4,7 @@
      layouts/games/taxonomy.html. */}}
 {{- $fmt := "2006-01-02" -}}
 {{/* statuses with no finish line that keep stretching to "today" */}}
-{{- $openEndedStatuses := slice "playing" "endless" "multiplayer" "software" -}}
+{{- $openEndedStatuses := slice "playing" "endless" "software" -}}
 {{- $groupCandidates := slice -}}
 {{- $items := slice -}}
 {{- $earliestStart := "" -}}
@@ -28,11 +28,17 @@
       {{- $gameStatus := $game.Params.status -}}
       {{- $status := $entry.status | default $gameStatus -}}
       {{/* "software" is game-level only, so a software game's runs say "playing" and
-           mean software; every other run's own status is the truth (endless and
-           multiplayer are real per-run statuses — see tools/gamelog/README.md) */}}
+           mean software; every other run's own status is the truth (endless is a
+           real per-run status — see tools/gamelog/README.md) */}}
       {{- if and (eq $gameStatus "software") (eq $status "playing") -}}
         {{- $status = $gameStatus -}}
       {{- end -}}
+
+      {{/* pt--tag-<tag> per effective tag (the game's plus the run's own), unstyled for now,
+           so a tag can be given a look on the timeline without touching this template */}}
+      {{- $tagClasses := slice -}}
+      {{- range (union ($game.Params.tags | default slice) $entry.tags) }}{{ $tagClasses = $tagClasses | append (printf "pt--tag-%s" (urlize .)) }}{{ end -}}
+      {{- $tagClass := cond (gt (len $tagClasses) 0) (printf " %s" (delimit $tagClasses " ")) "" -}}
 
       {{/* a hand-edited status: backlog entry with real dates is excluded rather than drawn dim */}}
       {{- if ne $status "backlog" -}}
@@ -116,7 +122,7 @@
           {{- $sTitle := delimit $sTitleParts " · " -}}
           {{- $items = $items | append (dict
               "id" (printf "%s--session-%d" $baseID $sIdx) "group" $slug "subgroup" $sub
-              "type" "range" "className" (printf "pt-session pt--%s" $status)
+              "type" "range" "className" (printf "pt-session pt--%s%s" $status $tagClass)
               "content" "" "title" $sTitle "status" (replace $status "_" " " | title) "start" $sStart "end" $sEnd
             )
           -}}
@@ -124,7 +130,7 @@
       {{- else -}}
         {{- $items = $items | append (dict
             "id" $baseID "group" $slug "subgroup" $sub
-            "type" "range" "className" (printf "pt pt--%s" $status)
+            "type" "range" "className" (printf "pt pt--%s%s" $status $tagClass)
             "content" "" "title" $title "status" (replace $status "_" " " | title) "permalink" $permalink
             "start" $start "end" $end
           )

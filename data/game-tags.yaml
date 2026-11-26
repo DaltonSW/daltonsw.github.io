@@ -1,0 +1,8 @@
+# Display settings for game/run tags (front matter `tags:`, playthroughs.yaml `tags:`).
+# Tags are free-form: any tag works without an entry here, shown under its own name
+# in the neutral color. An entry only changes how a tag looks.
+#   label: shorter text for chips (defaults to the tag itself)
+#   color: any CSS color, usually one of the palette vars in assets/scss/_vars.scss
+multiplayer:
+  label: multi
+  color: var(--multi)

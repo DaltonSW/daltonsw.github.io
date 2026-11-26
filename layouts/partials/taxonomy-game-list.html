@@ -2,7 +2,7 @@
      (content/games/<slug>/_index.md — see hugo.toml's [taxonomies] comment).
      Renders each as a compact row: status pill, title, platform, and the
      played date range, newest activity first. Shared by layouts/platform/term.html
-     and layouts/status/term.html so the two stay identical in shape. */}}
+     layouts/status/term.html and layouts/tags/term.html so they stay identical in shape. */}}
 {{- $rows := slice }}
 {{- range .Pages }}
   {{- $rows = $rows | append (dict
@@ -22,6 +22,7 @@
     {{- with $page.Params.status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
     {{- with (partial "game-mastery.html" $page).date }}<span class="pill pill--mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}">mastered</span>{{ end }}
     {{- if partial "game-unplayed.html" $page }}<span class="pill pill--unplayed">unplayed</span>{{ end }}
+    {{- with $page.Params.tags }} {{ partial "game-tags.html" . }}{{ end }}
     <span class="entry__meta">
       {{- with $page.Params.platform }}{{ . }}{{ end }}
       {{- with $start }}{{ if $page.Params.platform }} · {{ end }}{{ . | time.Format "Jan 2006" }}{{ end }}

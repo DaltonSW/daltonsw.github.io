@@ -1,0 +1,4 @@
+{{ define "main" }}
+<h1>{{ .Data.Term }} {{ partial "game-tags.html" (slice .Data.Term) }}</h1>
+{{ partial "taxonomy-game-list.html" . }}
+{{ end }}

@@ -196,7 +196,6 @@ $status-colors: (
   backlog:       var(--dim),
   paused:        var(--pause),
   endless:       var(--endless),
-  multiplayer:   var(--multi),
   software:      var(--software),
   misc_launch:   var(--misc-launch),
   unplayed:      var(--unplayed),
@@ -405,6 +404,14 @@ $status-aliases: (wip: playing, stable: finished);
   color: var(--dim); letter-spacing: 0.04em; text-transform: uppercase;
 }
 .ps-status { font-weight: 600; white-space: nowrap; }
+
+// free-form tags (game-tags.html); data/game-tags.yaml sets --tag-color per known tag
+.game-tag {
+  color: var(--tag-color, var(--dim));
+  font-weight: 600; white-space: nowrap; text-decoration: none;
+}
+a.game-tag:hover { text-decoration: underline; }
+.game-tag + .game-tag { margin-left: 0.4em; }
 .ps-row__game { color: var(--fg); font-weight: 500; display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; padding-left: 0.3rem; }
 // Nerd Font glyphs (game-status-icon.html) only exist in SauceCode
 .status-icon { font-family: $font-body; font-weight: 400; line-height: 1; }
@@ -1298,7 +1305,6 @@ tbody .nk-map-table__map { color: var(--fg); }
 $timeline-status-colors: (
   playing:       color-mix(in srgb, var(--warn) 65%, var(--dim)),
   endless:       color-mix(in srgb, var(--endless) 65%, var(--dim)),
-  multiplayer:   color-mix(in srgb, var(--multi) 65%, var(--dim)),
   finished:      var(--ok),
   dropped:       var(--stop),
   unfinished:    var(--unfinished),

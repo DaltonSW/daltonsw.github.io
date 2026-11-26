@@ -3,7 +3,8 @@
 <article>
   <h1>{{ .Title }}{{ with .Params.status }} <span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
     {{- with $mastery.date }} <span class="pill pill--mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}">mastered</span>{{ end }}
-    {{- if partial "game-unplayed.html" . }} <span class="pill pill--unplayed">unplayed</span>{{ end }}</h1>
+    {{- if partial "game-unplayed.html" . }} <span class="pill pill--unplayed">unplayed</span>{{ end }}
+    {{- with .Params.tags }} {{ partial "game-tags.html" . }}{{ end }}</h1>
 
   {{/* every date is derived — from playthroughs, or achievements for Mastered and
        Last played; the game's front matter carries none */}}
@@ -29,6 +30,14 @@
   {{- range $entries }}{{ $platforms = $platforms | append (.platform | default "") }}{{ end }}
   {{- $showPlatform := gt (len (uniq $platforms)) 1 }}
 
+  {{/* a run's tags are shown only where they tell runs apart: one every run carries
+       (a multiplayer-only game's) says nothing the heading's game tags don't */}}
+  {{- $sharedRunTags := slice }}
+  {{- range $i, $e := $entries }}
+    {{- $t := $e.tags | default slice }}
+    {{- $sharedRunTags = cond (eq $i 0) $t (intersect $sharedRunTags $t) }}
+  {{- end }}
+
   {{- partial "game-campaigns.html" . }}
   {{- partial "game-ninjakiwi.html" . }}
 
@@ -44,6 +53,7 @@
       {{- end }}
       {{- with .status }}<span class="pill pill--{{ . }}">{{ . }}</span>{{ end }}
       {{- with .subgame }}<span class="entry__meta">{{ . }}</span>{{ end }}
+      {{- with complement $sharedRunTags (.tags | default slice) }} {{ partial "game-tags.html" . }}{{ end }}
       <span class="entry__meta">
         {{- with .started }}{{ . | time.Format "Jan 2006" }}{{ end }}
         {{- with .finished }} – {{ . | time.Format "Jan 2006" }}{{ end }}

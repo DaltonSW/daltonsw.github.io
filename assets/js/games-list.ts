@@ -1,5 +1,5 @@
 // Game list tab: sortable column headers, title search, and the sidebar's
-// Status/Platforms rows as filter toggles (one active per card; clicking the
+// Status/Tags/Platforms rows as filter toggles (one active per card; clicking the
 // active one clears it). Rows carry their sort/filter keys as data-* attributes
 // (games-list.html); without JS the table renders as-is, in its server-side order.
 
@@ -18,7 +18,7 @@ function initGamesList(root: HTMLElement): void {
   const buttons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-sort]"));
   const rows = Array.from(body.querySelectorAll<HTMLElement>(".ps-row"));
 
-  const active: Record<string, string> = { status: "", platform: "" };
+  const active: Record<string, string> = { status: "", tag: "", platform: "" };
 
   let sortKey = "last";
   let sortDir: Dir = "desc";
@@ -59,7 +59,7 @@ function initGamesList(root: HTMLElement): void {
     let shown = 0;
     for (const row of rows) {
       const matchesQuery = query === "" || value(row, "title").includes(query);
-      row.hidden = !(matchesQuery && matchesStatus(row) && matchesPlatform(row));
+      row.hidden = !(matchesQuery && matchesStatus(row) && matchesTag(row) && matchesPlatform(row));
       if (!row.hidden) shown++;
     }
     if (count) count.textContent = `${shown} of ${rows.length} games`;
@@ -73,6 +73,11 @@ function initGamesList(root: HTMLElement): void {
     if (wanted === "mastered" || wanted === "unplayed") return row.hasAttribute(`data-${wanted}`);
     // backlog also covers planned replays (the old Backlog tab's two sections)
     return value(row, "status") === wanted || (wanted === "backlog" && row.hasAttribute("data-planned"));
+  }
+
+  function matchesTag(row: HTMLElement): boolean {
+    // "|"-joined: the game's tags plus those only some of its runs carry
+    return active.tag === "" || value(row, "tags").split("|").includes(active.tag);
   }
 
   function matchesPlatform(row: HTMLElement): boolean {

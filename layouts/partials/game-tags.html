@@ -1,0 +1,15 @@
+{{/* Tag chips, e.g. "#multi". Context: a slice of tag names (a game's .Params.tags or a
+     run's own tags). Label and color come from data/game-tags.yaml when the tag has an
+     entry; tags are free-form, so one without falls back to its own name, neutral color.
+     Each chip links to the tag's taxonomy page when one exists (game tags only — a tag
+     that only runs carry has no page). */}}
+{{- range . -}}
+{{- $cfg := index site.Data "game-tags" . | default dict -}}
+{{- $label := $cfg.label | default . -}}
+{{- $term := site.GetPage (printf "/tags/%s" (urlize .)) -}}
+{{- $style := "" -}}
+{{- with $cfg.color }}{{ $style = printf "--tag-color: %s" . }}{{ end -}}
+{{- if $term }}<a class="game-tag" href="{{ $term.RelPermalink }}"{{ with $style }} style="{{ . | safeCSS }}"{{ end }} title="tag: {{ . }}">#{{ $label }}</a>
+{{- else }}<span class="game-tag"{{ with $style }} style="{{ . | safeCSS }}"{{ end }} title="tag: {{ . }}">#{{ $label }}</span>
+{{- end }}
+{{- end -}}

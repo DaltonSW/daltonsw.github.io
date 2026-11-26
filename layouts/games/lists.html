@@ -61,6 +61,7 @@
           {{ partial "game-status-tag.html" $status }}
           {{- if partial "game-unplayed.html" $page }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
           {{- if $planned }} {{ partial "game-status-tag.html" "planned" }}{{ end }}
+          {{- with $page.Params.tags }} {{ partial "game-tags.html" . }}{{ end }}
           {{- with $page.Params.rating }}<span class="pick__rating">{{ . }}/10</span>{{ end }}
         </div>
         <div class="pick__meta">

@@ -32,7 +32,7 @@ const MAX_PADDING_DAYS = 60; // cap on the ratio-based padding when zoomed way o
 const DEFAULT_WINDOW_DAYS = 180;
 const REGROUP_DELAY_MS = 200; // trailing delay so a pan gesture never reflows mid-swipe
 const CONNECTOR_GAP_DAYS = 180; // gap beyond which sessions no longer bridge into one bar
-const NO_CONNECTOR_CLASSES = ["pt--endless", "pt--multiplayer", "pt--software"];
+const NO_CONNECTOR_CLASSES = ["pt--endless", "pt--software"];
 
 function formatMonthYear(value: string | number | Date): string {
   return new Date(value).toLocaleDateString("en-US", { month: "short", year: "numeric" });

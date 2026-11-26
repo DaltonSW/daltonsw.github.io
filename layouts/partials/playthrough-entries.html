@@ -30,6 +30,7 @@
       "status"   .status
       "platform" $platform
       "subgame"  .subgame
+      "tags"     (.tags | default slice)
       "rating"   .rating
       "notes"    .notes
       "sessions" (.sessions | default slice)

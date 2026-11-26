@@ -1,7 +1,7 @@
 {{/* Game list tab: one row per game, backlog included, server-rendered newest
      last-played first, beside a sidebar of library-wide counts. Each row carries
      data-* sort/filter keys read by assets/js/games-list.ts, which reveals the
-     controls, re-orders rows, and turns the Status/Platforms rows into filters.
+     controls, re-orders rows, and turns the Status/Tags/Platforms rows into filters.
      Included from layouts/games/taxonomy.html. */}}
 {{/* provider keys, order and names come from data/providers.yaml */}}
 {{- $providerOrder := slice -}}
@@ -13,6 +13,7 @@
 {{- $rows := slice -}}
 {{- $statusCounts := dict -}}
 {{- $platformCounts := dict -}}
+{{- $tagCounts := dict -}}
 {{- $providerCounts := dict -}}
 {{- range $providerOrder }}{{ $providerCounts = merge $providerCounts (dict . 0) }}{{ end -}}
 {{- $playtimeMins := 0 -}}
@@ -24,9 +25,13 @@
   {{- $summary := dict -}}
   {{- with .Resources.Get "achievement-summary.yaml" }}{{ $summary = . | transform.Unmarshal }}{{ end -}}
   {{- $planned := false -}}
+  {{/* the game's tags plus any only some of its runs carry (a co-op run), for the filter */}}
+  {{- $tags := .Params.tags | default slice -}}
   {{- range partial "playthrough-entries.html" $page -}}
     {{- if eq .status "planned" }}{{ $planned = true }}{{ end -}}
+    {{- range .tags }}{{ if not (in $tags .) }}{{ $tags = $tags | append . }}{{ end }}{{ end -}}
   {{- end -}}
+  {{- range $tags }}{{ $tagCounts = merge $tagCounts (dict . (add ((index $tagCounts .) | default 0) 1)) }}{{ end -}}
   {{- $status := .Params.status | default "" -}}
   {{- $mastered := (partial "game-mastery.html" $page).date -}}
   {{- $unplayed := partial "game-unplayed.html" $page -}}
@@ -49,18 +54,22 @@
       "last"     (partial "game-last-played.html" $page)
       "summary"  $summary
       "planned"  $planned
+      "tags"     $tags
       "mastered" $mastered
       "unplayed" $unplayed
   ) -}}
 {{- end -}}
 
 {{/* lifecycle order, matching $status-colors in main.scss; unlisted statuses append at the end */}}
-{{- $statusOrder := slice "playing" "endless" "multiplayer" "paused"
+{{- $statusOrder := slice "playing" "endless" "paused"
     "finished" "software" "misc_launch"
     "dropped" "unfinished" "backlog" -}}
 {{- $statuses := slice -}}
 {{- range $statusOrder }}{{ if isset $statusCounts . }}{{ $statuses = $statuses | append . }}{{ end }}{{ end -}}
 {{- range $status, $_ := $statusCounts }}{{ if not (in $statuses $status) }}{{ $statuses = $statuses | append $status }}{{ end }}{{ end -}}
+{{- $tagRows := slice -}}
+{{- range $tag, $count := $tagCounts }}{{ $tagRows = $tagRows | append (dict "tag" $tag "count" $count) }}{{ end -}}
+{{- $tagRows = sort (sort $tagRows "tag" "asc") "count" "desc" -}}
 {{- $platformRows := slice -}}
 {{- range $platform, $count := $platformCounts }}{{ $platformRows = $platformRows | append (dict "platform" $platform "count" $count) }}{{ end -}}
 {{- $platformRows = sort (sort $platformRows "platform" "asc") "count" "desc" -}}
@@ -101,7 +110,7 @@
     </div>
     {{ partial "time-played-stat.html" $playtimeMins }}
 
-    {{/* Status and Platforms rows are filter toggles (games-list.ts): one active per
+    {{/* Status, Tags and Platforms rows are filter toggles (games-list.ts): one active per
          card, a second click clears it. Without JS they're inert counts. */}}
     <div class="side-card">
       <span class="side-card__name">Status</span>
@@ -131,6 +140,22 @@
         {{- end }}
       </ul>
     </div>
+
+    {{- with $tagRows }}
+    <div class="side-card">
+      <span class="side-card__name">Tags</span>
+      <ul class="side-card__rows">
+        {{- range . }}
+        <li class="side-row side-row--filter">
+          <button type="button" class="side-row__btn" data-filter="tag" data-value="{{ .tag }}" aria-pressed="false">
+            <span class="side-row__label">{{ partial "game-tags.html" (slice .tag) }}</span>
+            <span class="side-row__count">{{ .count }}</span>
+          </button>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
 
     <div class="side-card">
       <span class="side-card__name">Platforms</span>
@@ -182,6 +207,7 @@
     <div class="ps-row{{ with $row.status }} ps-row--{{ . }}{{ end }}" role="row"
       data-title="{{ lower $page.Title }}"
       data-status="{{ $row.status }}"
+      data-tags="{{ delimit $row.tags "|" }}"
       data-platform="{{ lower ($page.Params.platform | default "") }}"
       data-last="{{ $row.last }}"
       data-playtime="{{ $s.playtime_mins | default "" }}"
@@ -199,6 +225,7 @@
         {{- with $masteredOn }}<span class="ps-row__mastered" title="Mastered {{ . | time.Format "Jan 2, 2006" }}" aria-label="mastered">&#xf005;</span>{{ end }}
         {{- if $row.unplayed }} {{ partial "game-status-tag.html" "unplayed" }}{{ end }}
         {{- if $row.planned }} {{ partial "game-status-tag.html" "planned" }}{{ end }}
+        {{- with $page.Params.tags }} {{ partial "game-tags.html" . }}{{ end }}
         {{- with $page.Params.rating }}<span class="ps-row__rating">{{ . }}/10</span>{{ end }}
       </span>
       <span class="ps-row__platform" role="cell">
