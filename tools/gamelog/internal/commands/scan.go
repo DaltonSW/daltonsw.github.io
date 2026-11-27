@@ -113,6 +113,11 @@ func (c Candidate) WithStatus(status string) Candidate {
 		c.Finished = false
 		c.FinishedOn = ""
 	}
+	// A tried game was abandoned on the last day it was played, so it gets a
+	// closed run rather than a game status with no run behind it.
+	if status == "tried" && c.FinishedOn == "" {
+		c.FinishedOn = c.LastActivity
+	}
 	return c
 }
 

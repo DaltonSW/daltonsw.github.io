@@ -92,7 +92,7 @@ type PlaythroughFields struct {
 	Started  string
 	Finished string
 	Beaten   string // optional: the day the run beat the game, if before Finished
-	Status   string // playing|finished|dropped|unfinished|paused|endless|misc_launch
+	Status   string // playing|finished|dropped|unfinished|tried|paused|endless|misc_launch
 	Platform string // blank means "same as the game's front matter"
 	Subgame  string // blank means "the whole game"; otherwise a member of the game's subgames: roster
 	Tags     []string

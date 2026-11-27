@@ -1,0 +1,218 @@
+{
+ "provider": "steam",
+ "title": "Reigns",
+ "updated": "2026-11-26",
+ "id": "474750",
+ "fetched": "2026-11-26",
+ "last_attempt": "2026-11-26",
+ "unlocked": 0,
+ "total": 13,
+ "platform": "PC",
+ "icon": "72f6fc7c0822201ebbfbf133d98d9fc6abeabb38",
+ "achievements": [
+  {
+   "key": "allcards",
+   "name": "All the cards",
+   "description": "Read all the cards",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/dce9d69c8fc8b49f43fdad1f6ef7209cc3a4c229.jpg",
+   "rarity": 2.5
+  },
+  {
+   "key": "allcharacters",
+   "name": "All the characters",
+   "description": "Meet all the characters",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/b5837e3629bdc7d6d2eed9c8dae5176f3643a32c.jpg",
+   "rarity": 19.3
+  },
+  {
+   "key": "alldeaths",
+   "name": "All the deaths",
+   "description": "Suffer all the deaths",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/f41bacf3043331033224c202da407fb1a3369b9d.jpg",
+   "rarity": 1.3
+  },
+  {
+   "key": "below3y",
+   "name": "Shooting star",
+   "description": "Govern less than 3 years",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/c9444a7aa4a22266600ce33ede9a710fea3e64a4.jpg",
+   "rarity": 65.4
+  },
+  {
+   "key": "final_free",
+   "name": "The End n°3",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/c7cfef86f1618201b9f6f3374eabf64232226eb5.jpg",
+   "hidden": true,
+   "rarity": 3.1
+  },
+  {
+   "key": "final_hell",
+   "name": "The End n°2",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/c68a23fcf13962b5a1704569152f758f65338d27.jpg",
+   "hidden": true,
+   "rarity": 5.4
+  },
+  {
+   "key": "final_loop",
+   "name": "The End n°1",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/39ce916ee2a444e6fc217b2d2e17103864a62181.jpg",
+   "hidden": true,
+   "rarity": 11.6
+  },
+  {
+   "key": "millenium",
+   "name": "Millenium",
+   "description": "Reach year 2000",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/1c37932c0fb80607a50d79c24d61880131c65525.jpg",
+   "rarity": 16.3
+  },
+  {
+   "key": "over100deaths",
+   "name": "Hecatomb",
+   "description": "Suffer more than a 100 deaths",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/b0720967da8364d3469daaf0c8bfc7f8f1189f28.jpg",
+   "rarity": 3.5
+  },
+  {
+   "key": "over100y",
+   "name": "Mummy",
+   "description": "Govern more than 100 years",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/be895727934e2b9f668a117d90d7c1d3636962cb.jpg",
+   "rarity": 4.3
+  },
+  {
+   "key": "over50y",
+   "name": "Elder",
+   "description": "Govern more than 50 years",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/be895727934e2b9f668a117d90d7c1d3636962cb.jpg",
+   "rarity": 42.3
+  },
+  {
+   "key": "over5skeletonkill",
+   "name": "Duelist",
+   "description": "Beat the skeleton more than 5 times in a row",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/6ef95c1649311d1a7dc557d1b95d65cdd5e74c77.jpg",
+   "rarity": 8.9
+  },
+  {
+   "key": "truepacifist",
+   "name": "True pacifist",
+   "unlocked": false,
+   "icon": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/474750/dba7ab3c100733c54327a521dd616c90f71e36cc.jpg",
+   "hidden": true,
+   "rarity": 4
+  }
+ ],
+ "raw": {
+  "playerstats": {
+   "steamID": "76561198066238038",
+   "gameName": "Reigns",
+   "achievements": [
+    {
+     "apiname": "allcards",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All the cards",
+     "description": "Read all the cards"
+    },
+    {
+     "apiname": "allcharacters",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All the characters",
+     "description": "Meet all the characters"
+    },
+    {
+     "apiname": "alldeaths",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "All the deaths",
+     "description": "Suffer all the deaths"
+    },
+    {
+     "apiname": "below3y",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Shooting star",
+     "description": "Govern less than 3 years"
+    },
+    {
+     "apiname": "millenium",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Millenium",
+     "description": "Reach year 2000"
+    },
+    {
+     "apiname": "over5skeletonkill",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Duelist",
+     "description": "Beat the skeleton more than 5 times in a row"
+    },
+    {
+     "apiname": "over50y",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Elder",
+     "description": "Govern more than 50 years"
+    },
+    {
+     "apiname": "over100y",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Mummy",
+     "description": "Govern more than 100 years"
+    },
+    {
+     "apiname": "over100deaths",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "Hecatomb",
+     "description": "Suffer more than a 100 deaths"
+    },
+    {
+     "apiname": "truepacifist",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "True pacifist",
+     "description": ""
+    },
+    {
+     "apiname": "final_loop",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End n°1",
+     "description": ""
+    },
+    {
+     "apiname": "final_hell",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End n°2",
+     "description": ""
+    },
+    {
+     "apiname": "final_free",
+     "achieved": 0,
+     "unlocktime": 0,
+     "name": "The End n°3",
+     "description": ""
+    }
+   ],
+   "success": true
+  }
+ }
+}

@@ -5,7 +5,7 @@ retroachievements_id:  # numeric ID from the game's retroachievements.org URL, o
 steam_appid:           # numeric appid from the game's Steam store URL, optional
 # Also optional: psn_id, ubisoft_id, xbox_id, nadeo_account_id, ninjakiwi_user_id —
 # easiest to set from the provider-IDs form in `gamelog serve`.
-status: "playing"   # backlog | playing | finished | dropped | unfinished | paused | endless | software — "mastered" is derived from achievements, not set here
+status: "playing"   # backlog | playing | finished | dropped | unfinished | tried | paused | endless | software — "mastered" is derived from achievements, not set here
 tags: []            # free-form, e.g. [multiplayer] — what kind of game it is, separate from status
 rating:
 cover:

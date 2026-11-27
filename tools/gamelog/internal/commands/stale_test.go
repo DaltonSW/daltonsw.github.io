@@ -85,27 +85,34 @@ func TestFindStaleCandidates_RecentlyPlayedIsExcluded(t *testing.T) {
 	}
 }
 
-// High completion suggests finished at medium confidence; partial
-// completion suggests dropped; no achievement data at all still suggests
-// dropped (the safer default) but at low confidence, since playtime alone
-// can't prove completion.
+// High completion suggests finished at medium confidence, even in a short
+// session; under an hour and a half otherwise suggests tried; partial
+// completion suggests dropped; no achievement data at all suggests unfinished
+// at low confidence, since playtime alone can't prove completion. Zero
+// playtime means none captured, not a brief sample.
 func TestFindStaleCandidates_SuggestsByCompletion(t *testing.T) {
 	cases := []struct {
 		name            string
 		total, unlocked int
+		playtimeMins    int
 		wantStatus      string
 		wantConfidence  string
 	}{
-		{"100% completion", 10, 10, "finished", "medium"},
-		{"high but not full completion", 10, 9, "finished", "medium"},
-		{"partial completion", 10, 3, "dropped", "medium"},
-		{"no achievements tracked", 0, 0, "unfinished", "low"},
+		{"100% completion", 10, 10, 0, "finished", "medium"},
+		{"high but not full completion", 10, 9, 0, "finished", "medium"},
+		{"partial completion", 10, 3, 0, "dropped", "medium"},
+		{"no achievements tracked", 0, 0, 0, "unfinished", "low"},
+		{"brief sample", 10, 1, 45, "tried", "medium"},
+		{"brief sample, no achievements", 0, 0, 45, "tried", "medium"},
+		{"short game completed", 10, 10, 60, "finished", "medium"},
+		{"longer partial play", 10, 3, 300, "dropped", "medium"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
 			archiveDir := t.TempDir()
 			if _, err := model.SaveRecord(archiveDir, model.ProviderSteam, "1", "Game", &model.ProviderRecord{
 				Total: tc.total, Achievements: nUnlocked("a", tc.unlocked), LastPlayed: daysAgo(45),
+				PlaytimeMins: tc.playtimeMins,
 			}); err != nil {
 				t.Fatal(err)
 			}

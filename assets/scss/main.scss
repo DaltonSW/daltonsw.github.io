@@ -193,6 +193,7 @@ $status-colors: (
   finished:      var(--ok),
   dropped:       var(--stop),
   unfinished:    var(--unfinished),
+  tried:         var(--tried),
   backlog:       var(--dim),
   paused:        var(--pause),
   endless:       var(--endless),
@@ -1301,13 +1302,14 @@ tbody .nk-map-table__map { color: var(--fg); }
   background: var(--dim); border-color: var(--dim);
   height: 22px !important; // vis-timeline otherwise sizes bars from content
 }
-// 11 statuses collapsed into active/complete/stopped/structural families
+// statuses collapsed into active/complete/stopped/structural families
 $timeline-status-colors: (
   playing:       color-mix(in srgb, var(--warn) 65%, var(--dim)),
   endless:       color-mix(in srgb, var(--endless) 65%, var(--dim)),
   finished:      var(--ok),
   dropped:       var(--stop),
   unfinished:    var(--unfinished),
+  tried:         var(--tried),
   paused:        var(--pause),
   software:      color-mix(in srgb, var(--software) 70%, var(--dim)),
   misc_launch:   color-mix(in srgb, var(--misc-launch) 70%, var(--dim)),

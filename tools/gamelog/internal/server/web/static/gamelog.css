@@ -61,6 +61,8 @@
   --multi:    #f0a0c4;
   --software: #8b94aa;
   --misc-launch: #c2a878;
+  --unfinished: #d38a52;
+  --tried:    #a3b86c;
 
   --radius: 8px;
 }
@@ -84,6 +86,8 @@
     --multi:   #b03a70;
     --software:#5b6478;
     --misc-launch: #8a6d2f;
+    --unfinished: #9c5f24;
+    --tried:   #5f7330;
   }
 }
 
@@ -220,6 +224,8 @@ summary.tui__title::marker { color: var(--accent); font-size: 0.7em; }
 .pill--playing     { color: var(--warn); }
 .pill--finished     { color: var(--ok); }
 .pill--dropped     { color: var(--stop); }
+.pill--unfinished  { color: var(--unfinished); }
+.pill--tried       { color: var(--tried); }
 .pill--backlog     { color: var(--dim); }
 .pill--paused      { color: var(--pause); }
 .pill--endless     { color: var(--endless); }

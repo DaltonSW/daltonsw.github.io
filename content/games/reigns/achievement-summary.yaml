@@ -1,7 +1,11 @@
 unlocked: 2
-total: 13
+total: 26
 last_played: "2017-05-06"
 providers:
+    - provider: steam
+      platform: PC
+      unlocked: 0
+      total: 13
     - provider: googleplay
       platform: Google Play
       unlocked: 2

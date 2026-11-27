@@ -227,6 +227,18 @@ func TestCandidateWithStatus_DropsTheFinishWhenOverriddenToOpenStatus(t *testing
 	}
 }
 
+// A backlog Steam game created as "tried" was abandoned on the day it was
+// last played, so it gets a closed run on that day instead of a bare status.
+func TestCandidateWithStatus_TriedClosesOnLastActivity(t *testing.T) {
+	c := Candidate{Provider: model.ProviderSteam, Title: "Sampled", ID: "1", Status: "backlog", LastActivity: "2023-03-04"}
+	if got := c.WithStatus("tried").NewGameFields().Finished; got != "2023-03-04" {
+		t.Errorf("tried finished = %q, want the last-played day", got)
+	}
+	if got := c.WithStatus("software").NewGameFields().Finished; got != "" {
+		t.Errorf("software finished = %q, want empty", got)
+	}
+}
+
 // A generated file must be valid enough for the rest of the tool to load it,
 // and must carry the external ID so `suggest` works on it immediately.
 func TestCandidate_CreateFileRoundTrips(t *testing.T) {

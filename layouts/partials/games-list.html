@@ -63,7 +63,7 @@
 {{/* lifecycle order, matching $status-colors in main.scss; unlisted statuses append at the end */}}
 {{- $statusOrder := slice "playing" "endless" "paused"
     "finished" "software" "misc_launch"
-    "dropped" "unfinished" "backlog" -}}
+    "dropped" "unfinished" "tried" "backlog" -}}
 {{- $statuses := slice -}}
 {{- range $statusOrder }}{{ if isset $statusCounts . }}{{ $statuses = $statuses | append . }}{{ end }}{{ end -}}
 {{- range $status, $_ := $statusCounts }}{{ if not (in $statuses $status) }}{{ $statuses = $statuses | append $status }}{{ end }}{{ end -}}

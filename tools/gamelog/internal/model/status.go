@@ -135,7 +135,14 @@ func (f *PlaythroughsFile) CloseLatestOpenRun(status, closedOn string) bool {
 // trailed off with no stated intent either way. It closes like "dropped"
 // (gets a finished/closed date, counts as a done status), it just doesn't
 // share dropped's certainty.
-var GameStatuses = []string{"backlog", "playing", "finished", "dropped", "unfinished", "paused", "endless", "software"}
+//
+// "tried" is a brief sample — launched, played roughly an hour, never
+// resumed. Where dropped/unfinished/paused answer *why* play stopped, tried
+// answers *how much* there was, and it's preferred over them when the run was
+// that short (the intent behind abandoning an hour of play rarely matters).
+// It closes like "dropped" and counts as done. Unlike "misc_launch" it was a
+// real attempt, so it counts toward the game's derived status.
+var GameStatuses = []string{"backlog", "playing", "finished", "dropped", "unfinished", "tried", "paused", "endless", "software"}
 
 // IsOneShot reports whether a status is one of the one-shot statuses
 // documented above. On a game it means the status is hand-set, never derived
@@ -162,7 +169,7 @@ func DefaultPlaythroughStatus(gameStatus string) string {
 // which implies play was actually attempted and abandoned. Each launch is
 // its own unrelated occasion, so it repeats freely; it isn't one-shot (see
 // IsOneShot).
-var PlaythroughStatuses = []string{"playing", "finished", "dropped", "unfinished", "paused", "endless", "misc_launch"}
+var PlaythroughStatuses = []string{"playing", "finished", "dropped", "unfinished", "tried", "paused", "endless", "misc_launch"}
 
 // IsGameStatus reports whether s is a status a game may actually be created
 // or set to. Used to check values arriving from a submitted form, which must
@@ -178,7 +185,7 @@ func IsGameStatus(s string) bool {
 // distinguishing an intentional pause, or a genuinely unknown "it just
 // trailed off", from "dropped" is exactly what a quiet game with no
 // completion signal can't tell you on its own.
-var StaleQuickStatuses = []string{"finished", "dropped", "unfinished", "paused"}
+var StaleQuickStatuses = []string{"finished", "dropped", "unfinished", "tried", "paused"}
 
 // ScanQuickStatuses are the same idea for a scan candidate: the guess is
 // offered as the primary button and the rest as "create as X instead", so a
@@ -189,9 +196,11 @@ var StaleQuickStatuses = []string{"finished", "dropped", "unfinished", "paused"}
 // the person reading the row can. "endless" is here for the same reason: a scan candidate's evidence is just playtime/achievements,
 // which looks identical whether the game has a finish line or not — that
 // call is the person reading the row's to make.
-var ScanQuickStatuses = []string{"playing", "finished", "dropped", "unfinished", "software", "endless"}
+var ScanQuickStatuses = []string{"playing", "finished", "dropped", "unfinished", "tried", "software", "endless"}
 
 // BacklogQuickStatuses is the backlog half's set. Deliberately smaller:
 // these are games under the playtime threshold, so any status claiming real
 // history would be contradicted by the evidence that put them in this list.
-var BacklogQuickStatuses = []string{"backlog", "software"}
+// "tried" is the exception: it claims only a brief sample, which is exactly
+// what a short playtime is evidence of.
+var BacklogQuickStatuses = []string{"backlog", "tried", "software"}

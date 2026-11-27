@@ -264,7 +264,7 @@ type NewGameFields struct {
 	Platform string
 	// IDs is the game's id on each provider, keyed by provider; see SetProviderID.
 	IDs    map[string]string
-	Status string // backlog|playing|finished|dropped|unfinished
+	Status string // backlog|playing|finished|dropped|unfinished|tried|...
 	// Subgames is the declared roster of a compilation's parts (see
 	// FrontMatter.Subgames). Empty means this isn't a compilation.
 	Subgames []string

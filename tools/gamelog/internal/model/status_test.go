@@ -33,6 +33,10 @@ func TestDeriveGameStatus(t *testing.T) {
 			[]Playthrough{run("finished", "2012-11-17", "2012-12-31"), run("endless", "2016-07-09", "2016-07-13")}, "finished", true},
 		{"never finished: the run that ended last", "playing",
 			[]Playthrough{run("dropped", "2020-01-01", "2020-02-01"), run("unfinished", "2021-01-01", "2021-03-01")}, "unfinished", true},
+		{"a tried run counts, unlike a misc launch", "backlog",
+			[]Playthrough{run("tried", "2022-05-01", "2022-05-01"), run("misc_launch", "2023-01-01", "2023-01-01")}, "tried", true},
+		{"a later tried run doesn't un-finish a game", "finished",
+			[]Playthrough{run("finished", "2019-01-01", "2019-02-01"), run("tried", "2024-01-01", "2024-01-01")}, "finished", true},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {

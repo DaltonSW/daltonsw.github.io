@@ -30,6 +30,12 @@ const DefaultStaleDays = 30
 // status, so 100% is simply "finished" too.
 const finishedCompletionThreshold = 0.9
 
+// triedMaxMins is the playtime under which a stale game is guessed "tried":
+// launched, sampled for about an hour, never resumed. Only a near-complete
+// achievement list outranks it (a short game can be finished in that time);
+// a few early unlocks say nothing against it.
+const triedMaxMins = 90
+
 // StaleCandidate is one Steam-linked game that's gone quiet, with the
 // suggestion computed from whatever's archived for it.
 type StaleCandidate struct {
@@ -38,7 +44,7 @@ type StaleCandidate struct {
 	DaysSince       int
 	Unlocked, Total int
 	PlaytimeMins    int
-	SuggestedStatus string // "finished" | "dropped" | "unfinished"
+	SuggestedStatus string // "finished" | "dropped" | "unfinished" | "tried"
 	Confidence      string // "medium" | "low"
 }
 
@@ -75,15 +81,17 @@ func FindStaleCandidates(archiveDir string, games []model.GameSummary, threshold
 			Game: g, LastPlayed: rec.LastPlayed, DaysSince: daysSince,
 			Unlocked: rec.Unlocked, Total: rec.Total, PlaytimeMins: rec.PlaytimeMins,
 		}
-		if rec.Total > 0 {
+		switch {
+		case rec.Total > 0 && float64(rec.Unlocked)/float64(rec.Total) >= finishedCompletionThreshold:
 			c.Confidence = "medium"
-			switch {
-			case float64(rec.Unlocked)/float64(rec.Total) >= finishedCompletionThreshold:
-				c.SuggestedStatus = "finished"
-			default:
-				c.SuggestedStatus = "dropped"
-			}
-		} else {
+			c.SuggestedStatus = "finished"
+		case rec.PlaytimeMins > 0 && rec.PlaytimeMins < triedMaxMins:
+			c.Confidence = "medium"
+			c.SuggestedStatus = "tried"
+		case rec.Total > 0:
+			c.Confidence = "medium"
+			c.SuggestedStatus = "dropped"
+		default:
 			// No achievement signal at all — playtime alone doesn't prove
 			// completion, and with nothing to go on there's no basis to guess
 			// "dropped" over "paused" either, so "unfinished" is the honest

@@ -262,6 +262,14 @@ deliberate "I'm done with this" (`dropped`) and not a deliberate "I'll be back" 
 Catch up's Gone quiet list offers it alongside `dropped`/`paused` as a one-click correction, and it's the
 default guess when there's no achievement signal at all to guess `dropped` from.
 
+`status: tried` is a brief sample: launched, played roughly an hour, never resumed. The other
+stopped statuses say *why* play stopped; `tried` says *how much* there was, and it's preferred over
+them when the run was that short. It closes like `dropped` (closed date, a done status) and, unlike
+`misc_launch`, counts toward the game's derived status, because it was a real attempt. Catch up's
+Gone quiet list guesses it for a game with under 90 minutes of Steam playtime unless the
+achievements say `finished`. It's also offered on the Backlog list, where creating a game as `tried`
+writes a run closed on its last-played day.
+
 `status: misc_launch` (entry-level only, not a `gameStatuses` value) covers a playthrough entry
 that isn't a real attempt at all — booted up just to check dates, or a launch that never got past a
 broken platform port (e.g. a Linux build that wouldn't run) — as distinct from `dropped`, which
